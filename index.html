@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Quiz Infinito</title>
+    <!-- Inclui o Tailwind CSS para estilização moderna e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Define a fonte Inter para todo o corpo do documento */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Estilos para a barra de rolagem (opcional, para um visual mais limpo) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; /* gray-300 */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; /* gray-400 */
+        }
+        /* Estilo para o dropdown */
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem; /* Espaço para o ícone da seta */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+    <!-- Contêiner principal do aplicativo -->
+    <div class="bg-white rounded-xl shadow-2xl overflow-hidden w-full max-w-2xl p-6 sm:p-8 flex flex-col items-center">
+
+        <h1 class="text-3xl font-bold text-gray-900 mb-6 text-center">Gerador de Quiz Infinito</h1>
+
+        <!-- Seção de Entrada de Tema -->
+        <div class="w-full mb-4">
+            <label for="quiz-theme" class="block text-sm font-medium text-gray-700 mb-2">Escolha um tema:</label>
+            <input type="text" id="quiz-theme" placeholder="Digite o tema aqui..."
+                   class="block w-full px-4 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm bg-white">
+        </div>
+
+        <!-- Seção de Nível de Dificuldade -->
+        <div class="w-full mb-6">
+            <label for="quiz-difficulty" class="block text-sm font-medium text-gray-700 mb-2">Selecione o Nível de Dificuldade:</label>
+            <select id="quiz-difficulty" class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm bg-white">
+                <option value="FÁCIL">FÁCIL</option>
+                <option value="MÉDIO">MÉDIO</option>
+                <option value="DIFÍCIL" selected>DIFÍCIL</option>
+                <option value="MESTRE DOS MAGOS">MESTRE DOS MAGOS</option>
+            </select>
+        </div>
+
+        <!-- Botão Gerar Quiz -->
+        <button id="generate-quiz-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md shadow-lg transition-colors duration-200 mb-6">
+            Gerar Quiz
+        </button>
+
+        <!-- Indicador de Carregamento -->
+        <div id="loading-indicator" class="text-center text-blue-600 hidden mb-6">
+            <p>Gerando seu quiz, por favor aguarde...</p>
+            <div class="mt-2 animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+        </div>
+
+        <!-- Seção do Quiz -->
+        <div id="quiz-container" class="w-full hidden">
+            <p class="text-lg font-semibold text-gray-800 mb-4" id="quiz-question"></p>
+            <div id="quiz-options" class="space-y-3 mb-6">
+                <!-- Opções serão injetadas aqui -->
+            </div>
+            <div id="quiz-feedback" class="p-3 rounded-lg text-white text-center font-medium mb-6 hidden">
+                <!-- Feedback de resposta (correto/errado) e justificativa -->
+            </div>
+            <!-- Botão Próximo Quiz -->
+            <button id="next-quiz-btn" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-md shadow-lg transition-colors duration-200" disabled>
+                Próximo Quiz
+            </button>
+        </div>
+
+        <!-- Mensagem de Erro -->
+        <div id="error-message" class="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg hidden w-full">
+            <p class="font-bold">Erro!</p>
+            <p id="error-text"></p>
+        </div>
+
+    </div>
+
+    <script>
+        // Referências aos elementos do DOM
+        const quizThemeInput = document.getElementById('quiz-theme');
+        const quizDifficultySelect = document.getElementById('quiz-difficulty'); // Novo elemento
+        const generateQuizBtn = document.getElementById('generate-quiz-btn');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const quizContainer = document.getElementById('quiz-container');
+        const quizQuestion = document.getElementById('quiz-question');
+        const quizOptions = document.getElementById('quiz-options');
+        const quizFeedback = document.getElementById('quiz-feedback');
+        const nextQuizBtn = document.getElementById('next-quiz-btn');
+        const errorMessageDiv = document.getElementById('error-message');
+        const errorText = document.getElementById('error-text');
+
+        let currentQuiz = null; // Armazena o quiz atual para verificação de resposta
+
+        /**
+         * Função auxiliar para tentar fazer fetch com exponential backoff.
+         * @param {string} url - URL para a requisição.
+         * @param {Object} options - Opções para a requisição fetch.
+         * @param {number} retries - Número máximo de tentativas.
+         * @param {number} delay - Atraso inicial em milissegundos.
+         * @returns {Promise<Response>} A resposta da requisição bem-sucedida.
+         * @throws {Error} Se todas as tentativas falharem ou se houver um erro não-retentável.
+         */
+        async function retryFetch(url, options, retries = 3, delay = 1000) {
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.ok) {
+                        return response;
+                    } else {
+                        const errorBody = await response.text();
+                        const errorMessage = `Status: ${response.status}, Mensagem: ${response.statusText || 'Resposta da API vazia'}. Detalhes: ${errorBody}`;
+                        console.warn(`Tentativa ${i + 1} falhou. ${errorMessage}`);
+                        if (response.status === 429 || response.status >= 500) {
+                            await new Promise(res => setTimeout(res, delay * Math.pow(2, i)));
+                        } else {
+                            throw new Error(`Erro na API: ${errorMessage}`);
+                        }
+                    }
+                } catch (error) {
+                    const detailedErrorMessage = error.message || 'Erro de rede ou conexão desconhecido.';
+                    console.error(`Erro na tentativa ${i + 1} de fetch:`, detailedErrorMessage, error);
+                    if (i < retries - 1) {
+                        await new Promise(res => setTimeout(res, delay * Math.pow(2, i)));
+                    } else {
+                        throw new Error(`Erro de conexão ou API: ${detailedErrorMessage}`);
+                    }
+                }
+            }
+            throw new Error('Todas as tentativas de fetch falharam sem uma resposta clara.');
+        }
+
+        /**
+         * Gera um novo quiz com base no tema e nível de dificuldade fornecidos.
+         */
+        async function generateQuiz() {
+            const theme = quizThemeInput.value.trim();
+            const difficulty = quizDifficultySelect.value; // Pega o valor do seletor de dificuldade
+
+            if (!theme) {
+                showError('Por favor, digite um tema para o quiz.');
+                return;
+            }
+
+            // Esconde elementos e mostra loading
+            quizContainer.classList.add('hidden');
+            errorMessageDiv.classList.add('hidden');
+            loadingIndicator.classList.remove('hidden');
+            generateQuizBtn.disabled = true;
+            nextQuizBtn.disabled = true;
+            quizFeedback.classList.add('hidden'); // Esconde feedback anterior
+
+            const prompt = `Gere um objeto JSON para um quiz de nível ${difficulty.toUpperCase()} sobre o tema "${theme}".
+            O objeto deve conter as seguintes propriedades:
+            - "question": (STRING) A pergunta do quiz.
+            - "options": (ARRAY de STRING) Um array com exatamente 4 opções de resposta.
+            - "correctAnswer": (STRING) A resposta correta, que deve ser uma das opções fornecidas.
+            - "justification": (STRING) Uma breve explicação do porquê a resposta correta está certa e as outras erradas, ou um fato interessante relacionado.
+
+            Exemplo de formato esperado:
+            {
+              "question": "Qual é a capital de Burkina Faso?",
+              "options": ["Accra", "Ouagadougou", "Niamey", "Bamako"],
+              "correctAnswer": "Ouagadougou",
+              "justification": "Ouagadougou é a capital e maior cidade de Burkina Faso, localizada no centro do país."
+            }`;
+
+            const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+            const payload = {
+                contents: chatHistory,
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            "question": { "type": "STRING" },
+                            "options": {
+                                "type": "ARRAY",
+                                "items": { "type": "STRING" },
+                                "minItems": 4,
+                                "maxItems": 4
+                            },
+                            "correctAnswer": { "type": "STRING" },
+                            "justification": { "type": "STRING" }
+                        },
+                        "required": ["question", "options", "correctAnswer", "justification"]
+                    }
+                }
+            };
+
+            const apiKey = ""; // O Canvas fornecerá a chave em tempo de execução.
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await retryFetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const json = result.candidates[0].content.parts[0].text;
+                    try {
+                        const quizData = JSON.parse(json);
+                        // Validação básica da estrutura do quiz
+                        if (quizData.question && Array.isArray(quizData.options) && quizData.options.length === 4 && quizData.correctAnswer && quizData.justification) {
+                            currentQuiz = quizData;
+                            displayQuiz(quizData);
+                        } else {
+                            throw new Error("Estrutura do quiz inválida recebida da API.");
+                        }
+                    } catch (jsonError) {
+                        console.error('Erro ao fazer parse do JSON da API:', jsonError, 'JSON recebido:', json);
+                        showError('Erro ao processar a resposta do quiz. Tente novamente.');
+                    }
+                } else {
+                    console.warn('Resposta da API não contém candidatos ou conteúdo esperado:', result);
+                    showError('Não foi possível gerar um quiz para este tema. Tente um tema diferente ou seja mais específico.');
+                }
+            } catch (error) {
+                console.error('Erro ao gerar quiz:', error);
+                showError(`Ocorreu um erro ao gerar o quiz: ${error.message}. Por favor, tente novamente.`);
+            } finally {
+                loadingIndicator.classList.add('hidden');
+                generateQuizBtn.disabled = false;
+            }
+        }
+
+        /**
+         * Exibe a pergunta e as opções do quiz na interface.
+         * @param {Object} quizData - Objeto contendo os dados do quiz.
+         */
+        function displayQuiz(quizData) {
+            quizContainer.classList.remove('hidden');
+            quizQuestion.textContent = quizData.question;
+            quizOptions.innerHTML = ''; // Limpa opções anteriores
+            quizFeedback.classList.add('hidden'); // Esconde feedback anterior
+            quizFeedback.className = 'p-3 rounded-lg text-white text-center font-medium mb-6 hidden'; // Reseta classes de cor
+            nextQuizBtn.disabled = true; // Desabilita o botão "Próximo Quiz" até a resposta
+
+            quizData.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.className = 'quiz-option-btn w-full text-left p-3 rounded-md border border-gray-300 bg-white hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50';
+                button.textContent = option;
+                button.dataset.option = option; // Armazena a opção no dataset
+                button.addEventListener('click', checkAnswer);
+                quizOptions.appendChild(button);
+            });
+        }
+
+        /**
+         * Verifica a resposta selecionada pelo usuário.
+         * @param {Event} event - O evento de clique no botão de opção.
+         */
+        function checkAnswer(event) {
+            const selectedOption = event.target.dataset.option;
+            const allOptionButtons = quizOptions.querySelectorAll('.quiz-option-btn');
+
+            // Desabilita todos os botões de opção após a escolha
+            allOptionButtons.forEach(button => {
+                button.disabled = true;
+                button.classList.remove('hover:bg-gray-50', 'focus:ring-blue-500', 'focus:ring-opacity-50');
+            });
+
+            quizFeedback.classList.remove('hidden');
+            nextQuizBtn.disabled = false; // Habilita o botão "Próximo Quiz"
+
+            if (selectedOption === currentQuiz.correctAnswer) {
+                quizFeedback.classList.add('bg-green-500');
+                quizFeedback.textContent = 'Parabéns! Resposta Correta.';
+            } else {
+                quizFeedback.classList.add('bg-red-500');
+                quizFeedback.innerHTML = `Resposta Incorreta. A resposta correta era: <span class="font-bold">${currentQuiz.correctAnswer}</span>.<br><br>${currentQuiz.justification}`;
+                // Opcional: Destacar a resposta correta e a errada
+                allOptionButtons.forEach(button => {
+                    if (button.dataset.option === selectedOption) {
+                        button.classList.add('bg-red-200', 'border-red-500'); // Marca a opção errada
+                    } else if (button.dataset.option === currentQuiz.correctAnswer) {
+                        button.classList.add('bg-green-200', 'border-green-500'); // Marca a opção correta
+                    }
+                });
+            }
+        }
+
+        /**
+         * Exibe uma mensagem de erro na interface.
+         * @param {string} message - A mensagem de erro a ser exibida.
+         */
+        function showError(message) {
+            errorMessageDiv.classList.remove('hidden');
+            errorText.textContent = message;
+            quizContainer.classList.add('hidden'); // Esconde o quiz se houver erro
+            loadingIndicator.classList.add('hidden'); // Esconde o loading
+        }
+
+        // --- Event Listeners ---
+        generateQuizBtn.addEventListener('click', generateQuiz);
+        nextQuizBtn.addEventListener('click', generateQuiz); // O botão "Próximo Quiz" chama a mesma função
+
+        // Inicializa o site ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            // Garante que o quiz e o feedback estejam ocultos no início
+            quizContainer.classList.add('hidden');
+            quizFeedback.classList.add('hidden');
+            errorMessageDiv.classList.add('hidden');
+            loadingIndicator.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
