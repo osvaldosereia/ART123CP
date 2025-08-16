@@ -3,336 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Quiz Infinito</title>
-    <!-- Inclui o Tailwind CSS para estilização moderna e responsiva -->
+    <title>O Crime de Estupro no Direito Penal Brasileiro</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Define a fonte Inter para todo o corpo do documento */
+        /* Estilo para garantir que a rolagem seja suave e o layout ocupe a tela inteira */
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
-        /* Estilos para a barra de rolagem (opcional, para um visual mais limpo) */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1; /* gray-300 */
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; /* gray-400 */
-        }
-        /* Estilo para o dropdown */
-        select {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 0.75rem center;
-            background-size: 1.5em 1.5em;
-            padding-right: 2.5rem; /* Espaço para o ícone da seta */
+        /* Cada 'slide' (seção) ocupará a altura total da tela para criar o efeito de apresentação */
+        .slide-section {
+            min-height: calc(100vh - 80px); /* Altura da tela menos o rodapé */
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800 antialiased flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
-    <!-- Contêiner principal do aplicativo -->
-    <div class="bg-white rounded-xl shadow-2xl overflow-hidden w-full max-w-2xl p-6 sm:p-8 flex flex-col items-center">
+<body class="bg-gray-50 text-gray-800">
 
-        <h1 class="text-3xl font-bold text-gray-900 mb-6 text-center">Gerador de Quiz Infinito</h1>
-
-        <!-- Seção de Entrada de Tema -->
-        <div class="w-full mb-4">
-            <label for="quiz-theme" class="block text-sm font-medium text-gray-700 mb-2">Escolha um tema:</label>
-            <input type="text" id="quiz-theme" placeholder="Digite o tema aqui..."
-                   class="block w-full px-4 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm bg-white">
-        </div>
-
-        <!-- Seção de Nível de Dificuldade -->
-        <div class="w-full mb-6">
-            <label for="quiz-difficulty" class="block text-sm font-medium text-gray-700 mb-2">Selecione o Nível de Dificuldade:</label>
-            <select id="quiz-difficulty" class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md shadow-sm bg-white">
-                <option value="FÁCIL">FÁCIL</option>
-                <option value="MÉDIO">MÉDIO</option>
-                <option value="DIFÍCIL" selected>DIFÍCIL</option>
-                <option value="MESTRE DOS MAGOS">MESTRE DOS MAGOS</option>
-            </select>
-        </div>
-
-        <!-- Botão Gerar Quiz -->
-        <button id="generate-quiz-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md shadow-lg transition-colors duration-200 mb-6">
-            Gerar Quiz
-        </button>
-
-        <!-- Indicador de Carregamento -->
-        <div id="loading-indicator" class="text-center text-blue-600 hidden mb-6">
-            <p>Gerando seu quiz, por favor aguarde...</p>
-            <div class="mt-2 animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-        </div>
-
-        <!-- Seção do Quiz -->
-        <div id="quiz-container" class="w-full hidden">
-            <p class="text-lg font-semibold text-gray-800 mb-4" id="quiz-question"></p>
-            <div id="quiz-options" class="space-y-3 mb-6">
-                <!-- Opções serão injetadas aqui -->
+    <!-- Container Principal dos Slides -->
+    <main id="slides-container">
+        <!-- Slide 1: Título -->
+        <section id="slide-0" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-center text-gray-900 mb-6">O Crime de Estupro no Direito Penal Brasileiro</h1>
+            <h2 class="text-xl md:text-2xl text-center text-gray-700 mb-10">Análise Completa do Artigo 213 do Código Penal</h2>
+            <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <h3 class="text-lg font-bold mb-2 text-gray-800">Resumo</h3>
+                <p class="text-gray-600 mb-4">O presente artigo realiza uma análise abrangente do crime de estupro previsto no artigo 213 do Código Penal brasileiro, examinando suas transformações legislativas, elementos típicos, aspectos processuais e jurisprudenciais. Através de metodologia doutrinária e jurisprudencial, investiga-se a evolução normativa promovida pela Lei 12.015/2009 e posteriores alterações, bem como os desafios contemporâneos na aplicação do tipo penal. O estudo aborda desde os fundamentos teóricos do bem jurídico tutelado até questões práticas de competência, prescrição e dosimetria da pena, oferecendo um panorama completo para acadêmicos e operadores do direito.</p>
+                <h3 class="text-lg font-bold mb-2 text-gray-800">Palavras-chave</h3>
+                <p class="text-gray-600">Direito Penal; Estupro; Dignidade Sexual; Lei 12.015/2009; Jurisprudência.</p>
             </div>
-            <div id="quiz-feedback" class="p-3 rounded-lg text-white text-center font-medium mb-6 hidden">
-                <!-- Feedback de resposta (correto/errado) e justificativa -->
+        </section>
+
+        <!-- Slide 2: Introdução -->
+        <section id="slide-1" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">1. Introdução</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p>O crime de estupro, tipificado no artigo 213 do Código Penal brasileiro, representa uma das figuras penais mais sensíveis e complexas do ordenamento jurídico nacional. As significativas transformações legislativas ocorridas nas últimas décadas, especialmente com o advento da Lei 12.015/2009, alteraram substancialmente não apenas a redação do tipo penal, mas também sua interpretação doutrinária e aplicação jurisprudencial.</p>
+                <p>A relevância do tema transcende o âmbito puramente acadêmico, impactando diretamente na proteção de direitos fundamentais e na efetividade do sistema de justiça criminal. Este artigo propõe-se a examinar de forma sistemática todos os aspectos relacionados ao crime de estupro, desde seus fundamentos conceituais até as controvérsias jurisprudenciais contemporâneas.</p>
             </div>
-            <!-- Botão Próximo Quiz -->
-            <button id="next-quiz-btn" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-md shadow-lg transition-colors duration-200" disabled>
-                Próximo Quiz
-            </button>
-        </div>
+        </section>
 
-        <!-- Mensagem de Erro -->
-        <div id="error-message" class="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg hidden w-full">
-            <p class="font-bold">Erro!</p>
-            <p id="error-text"></p>
-        </div>
+        <!-- Slide 3: Evolução Legislativa e Bem Jurídico Protegido -->
+        <section id="slide-2" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">2. Evolução Legislativa e Bem Jurídico Protegido</h2>
+             <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">2.1. A Transformação do Título VI do Código Penal</h3>
+                <p>A Lei 12.015/2009 promoveu uma verdadeira revolução conceitual no tratamento dos crimes sexuais no direito brasileiro. A alteração da denominação do Título VI do Código Penal, de "Dos crimes contra os costumes" para "Dos crimes contra a dignidade sexual", reflete uma mudança paradigmática na compreensão do bem jurídico tutelado.</p>
+                <p>Esta transformação não se trata de mero ajuste terminológico, mas representa o reconhecimento de que o direito penal sexual deve proteger valores individuais relacionados à dignidade da pessoa humana, abandonando a perspectiva moralista que caracterizava a legislação anterior.</p>
+            </div>
+        </section>
+        
+        <!-- Slide 4: Dignidade Sexual como Bem Jurídico -->
+        <section id="slide-3" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">2. Evolução Legislativa e Bem Jurídico Protegido</h2>
+             <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">2.2. Dignidade Sexual como Bem Jurídico</h3>
+                <p>O bem jurídico "dignidade sexual" engloba duas dimensões fundamentais: a liberdade sexual e a integridade sexual. A primeira refere-se ao direito de autodeterminação sexual, ou seja, a capacidade de escolher como, quando e com quem se relacionar sexualmente. A segunda diz respeito à inviolabilidade corporal contra agressões sexuais não consentidas.</p>
+                <p>Conforme observa a doutrina especializada, a dignidade sexual constitui projeção da própria dignidade da pessoa humana, princípio fundamental consagrado constitucionalmente. Esta concepção permite uma tutela penal mais efetiva e condizente com os valores democráticos contemporâneos.</p>
+            </div>
+        </section>
 
-    </div>
+        <!-- Slide 5: A Unificação dos Crimes Sexuais -->
+        <section id="slide-4" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">2. Evolução Legislativa e Bem Jurídico Protegido</h2>
+             <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">2.3. A Unificação dos Crimes Sexuais</h3>
+                <p>A principal inovação da Lei 12.015/2009 foi a unificação dos antigos crimes de estupro (art. 213) e atentado violento ao pudor (art. 214) em um único tipo penal. Esta modificação eliminou distinções artificiais baseadas no tipo de conduta sexual praticada, criando um tipo penal único e mais abrangente.</p>
+                <p class="bg-gray-100 p-4 rounded-md border-l-4 border-blue-500">O novo artigo 213 passou a prever: "Constranger alguém, mediante violência ou grave ameaça, a ter conjunção carnal ou a praticar ou permitir que com ele se pratique outro ato libidinoso". A pena permaneceu inalterada: reclusão de 6 a 10 anos.</p>
+            </div>
+        </section>
+
+        <!-- Continue o padrão para todos os outros slides -->
+        <section id="slide-5" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">3. Elementos do Tipo Penal</h2>
+            <div class="max-w-4xl mx-auto space-y-6 text-lg text-gray-700 leading-relaxed">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">3.1.1. Núcleo do Tipo</h3>
+                    <p>O núcleo do tipo é o verbo "constranger", que significa forçar, compelir ou coagir alguém contra sua vontade. Este elemento exige a demonstração de que a vítima foi obrigada a participar do ato sexual, seja através de violência física ou grave ameaça.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">3.1.2. Meios de Execução</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Violência:</strong> Emprego de força física contra a vítima para vencer sua resistência.</li>
+                        <li><strong>Grave ameaça:</strong> Promessa de mal injusto, grave e iminente, capaz de intimidar a vítima.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="slide-6" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">3. Elementos do Tipo Penal</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">3.1.3. Modalidades de Conduta</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong>Conjunção carnal:</strong> Introdução do pênis na vagina, total ou parcialmente.</li>
+                    <li><strong>Outro ato libidinoso:</strong> Qualquer ato de natureza sexual diverso da conjunção carnal.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="slide-7" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">3. Elementos do Tipo Penal</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">3.2. Elementos Subjetivos</h3>
+                <p>O crime de estupro é punido exclusivamente a título de dolo. O agente deve ter consciência de que está constrangendo alguém à prática de ato sexual. Não existe estupro culposo.</p>
+            </div>
+        </section>
+
+        <section id="slide-8" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">3. Elementos do Tipo Penal</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-lg text-gray-700 leading-relaxed">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">3.3.1. Sujeito Ativo</h3>
+                    <p>Qualquer pessoa pode ser sujeito ativo do crime, tratando-se de crime comum.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">3.3.2. Sujeito Passivo</h3>
+                    <p>Qualquer pessoa pode ser vítima, independentemente de sexo, idade ou condição social.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="slide-9" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">4. Classificação Doutrinária</h2>
+            <div class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
+                <ul class="list-disc list-inside space-y-2 mt-4 grid grid-cols-2 gap-x-8 gap-y-2">
+                    <li>Pluriofensivo</li>
+                    <li>Comum</li>
+                    <li>Material</li>
+                    <li>Forma livre</li>
+                    <li>Instantâneo</li>
+                    <li>Comissivo</li>
+                    <li>Unissubjetivo</li>
+                    <li>Plurissubsistente</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="slide-10" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">5. Consumação e Tentativa</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p><strong>Consumação:</strong> Ocorre com a prática da conjunção carnal ou outro ato libidinoso. Admite-se o "estupro virtual".</p>
+                <p><strong>Tentativa:</strong> É admissível quando o agente não consegue consumar o crime por circunstâncias alheias à sua vontade.</p>
+            </div>
+        </section>
+
+        <section id="slide-11" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">6. Formas Qualificadas</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p>A pena é aumentada se resulta em <strong>lesão corporal grave</strong> ou se a vítima tem entre <strong>14 e 18 anos</strong>. Se resulta em <strong>morte</strong>, a pena é de 12 a 30 anos.</p>
+            </div>
+        </section>
+
+        <section id="slide-12" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">7. Questões Processuais</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Ação Penal</h3>
+                <p>Com a Lei 13.718/2018, a ação penal para crimes contra a dignidade sexual é <strong>pública incondicionada</strong>.</p>
+            </div>
+        </section>
+
+        <section id="slide-13" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">7. Questões Processuais</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Competência e Prescrição</h3>
+                <p><strong>Competência:</strong> Geralmente da Justiça Estadual. <strong>Prescrição:</strong> 16 anos para o tipo básico. Para vítimas menores de 18, o prazo só começa a contar quando atingem a maioridade (Lei Joanna Maranhão).</p>
+            </div>
+        </section>
+
+        <section id="slide-14" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">8. Aspectos Jurisprudenciais</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Súmula 593 do STJ</h3>
+                <p class="bg-gray-100 p-4 rounded-md border-l-4 border-blue-500">O estupro de vulnerável (menor de 14 anos) se configura mesmo com consentimento da vítima, sua experiência sexual anterior ou namoro com o agente.</p>
+            </div>
+        </section>
+
+        <section id="slide-15" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">8. Aspectos Jurisprudenciais</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p><strong>Estupro Virtual:</strong> O STJ admite a consumação do crime por meios eletrônicos, sem contato físico.</p>
+                <p><strong>Palavra da Vítima:</strong> Possui valor probatório especial, mas deve ser analisada em conjunto com outras provas.</p>
+            </div>
+        </section>
+
+        <section id="slide-16" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">9. Dosimetria da Pena</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p>A aplicação da pena segue o sistema trifásico. O comportamento da vítima não pode ser usado para agravar a pena, e sua experiência sexual anterior é irrelevante.</p>
+            </div>
+        </section>
+
+        <section id="slide-17" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">10. Concurso de Crimes</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p>A unificação dos tipos penais em 2009 permite o reconhecimento de <strong>crime único</strong> (se conjunção carnal e outro ato libidinoso ocorrem na mesma ocasião) e <strong>continuidade delitiva</strong>, o que pode ser benéfico ao réu.</p>
+            </div>
+        </section>
+
+        <section id="slide-18" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">11. Questões Controvertidas</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p>Debates atuais incluem a criminalização de relações consensuais entre adolescentes, o "estupro corretivo" (para "corrigir" orientação sexual) e os crimes sexuais no ambiente digital.</p>
+            </div>
+        </section>
+
+        <section id="slide-19" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">12. Críticas e Perspectivas</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p>Críticas apontam para a amplitude de alguns tipos penais. Propostas de reforma sugerem revisão dos critérios de vulnerabilidade e melhor disciplina para crimes digitais.</p>
+            </div>
+        </section>
+
+        <section id="slide-20" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">13. Direito Comparado</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p>Outros países adotam critérios diferentes, como as "Romeo and Juliet laws" nos EUA. A tendência global é de maior proteção às vítimas e reconhecimento de novas formas de violência sexual.</p>
+            </div>
+        </section>
+
+        <section id="slide-21" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">14. Considerações Finais</h2>
+            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+                <p>O direito penal brasileiro evoluiu, mas desafios persistem. O equilíbrio entre a proteção efetiva e a proporcionalidade da pena é central, e a efetividade da lei depende também do apoio às vítimas e da sensibilização social.</p>
+            </div>
+        </section>
+
+        <section id="slide-22" class="slide-section p-6 md:p-12 flex flex-col justify-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">Fim da Apresentação</h2>
+            <div class="text-center text-gray-600">
+                <p><strong>Sobre o autor:</strong> Artigo desenvolvido com base em pesquisa doutrinária e jurisprudencial especializada em Direito Penal e Criminologia.</p>
+                <p><strong>Data:</strong> Agosto de 2025</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé de Navegação Fixo -->
+    <footer class="bg-white/90 backdrop-blur-sm border-t border-gray-200 p-4 h-[80px] flex items-center justify-center sticky bottom-0 z-10">
+        <div class="flex items-center space-x-4">
+            <button id="prev-btn" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">Anterior</button>
+            <span id="slide-counter" class="text-sm text-gray-600 font-medium w-24 text-center"></span>
+            <button id="next-btn" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">Próximo</button>
+        </div>
+    </footer>
 
     <script>
-        // Referências aos elementos do DOM
-        const quizThemeInput = document.getElementById('quiz-theme');
-        const quizDifficultySelect = document.getElementById('quiz-difficulty'); // Novo elemento
-        const generateQuizBtn = document.getElementById('generate-quiz-btn');
-        const loadingIndicator = document.getElementById('loading-indicator');
-        const quizContainer = document.getElementById('quiz-container');
-        const quizQuestion = document.getElementById('quiz-question');
-        const quizOptions = document.getElementById('quiz-options');
-        const quizFeedback = document.getElementById('quiz-feedback');
-        const nextQuizBtn = document.getElementById('next-quiz-btn');
-        const errorMessageDiv = document.getElementById('error-message');
-        const errorText = document.getElementById('error-text');
-
-        let currentQuiz = null; // Armazena o quiz atual para verificação de resposta
-
-        /**
-         * Função auxiliar para tentar fazer fetch com exponential backoff.
-         * @param {string} url - URL para a requisição.
-         * @param {Object} options - Opções para a requisição fetch.
-         * @param {number} retries - Número máximo de tentativas.
-         * @param {number} delay - Atraso inicial em milissegundos.
-         * @returns {Promise<Response>} A resposta da requisição bem-sucedida.
-         * @throws {Error} Se todas as tentativas falharem ou se houver um erro não-retentável.
-         */
-        async function retryFetch(url, options, retries = 3, delay = 1000) {
-            for (let i = 0; i < retries; i++) {
-                try {
-                    const response = await fetch(url, options);
-                    if (response.ok) {
-                        return response;
-                    } else {
-                        const errorBody = await response.text();
-                        const errorMessage = `Status: ${response.status}, Mensagem: ${response.statusText || 'Resposta da API vazia'}. Detalhes: ${errorBody}`;
-                        console.warn(`Tentativa ${i + 1} falhou. ${errorMessage}`);
-                        if (response.status === 429 || response.status >= 500) {
-                            await new Promise(res => setTimeout(res, delay * Math.pow(2, i)));
-                        } else {
-                            throw new Error(`Erro na API: ${errorMessage}`);
-                        }
-                    }
-                } catch (error) {
-                    const detailedErrorMessage = error.message || 'Erro de rede ou conexão desconhecido.';
-                    console.error(`Erro na tentativa ${i + 1} de fetch:`, detailedErrorMessage, error);
-                    if (i < retries - 1) {
-                        await new Promise(res => setTimeout(res, delay * Math.pow(2, i)));
-                    } else {
-                        throw new Error(`Erro de conexão ou API: ${detailedErrorMessage}`);
-                    }
-                }
-            }
-            throw new Error('Todas as tentativas de fetch falharam sem uma resposta clara.');
-        }
-
-        /**
-         * Gera um novo quiz com base no tema e nível de dificuldade fornecidos.
-         */
-        async function generateQuiz() {
-            const theme = quizThemeInput.value.trim();
-            const difficulty = quizDifficultySelect.value; // Pega o valor do seletor de dificuldade
-
-            if (!theme) {
-                showError('Por favor, digite um tema para o quiz.');
-                return;
-            }
-
-            // Esconde elementos e mostra loading
-            quizContainer.classList.add('hidden');
-            errorMessageDiv.classList.add('hidden');
-            loadingIndicator.classList.remove('hidden');
-            generateQuizBtn.disabled = true;
-            nextQuizBtn.disabled = true;
-            quizFeedback.classList.add('hidden'); // Esconde feedback anterior
-
-            const prompt = `Gere um objeto JSON para um quiz de nível ${difficulty.toUpperCase()} sobre o tema "${theme}".
-            O objeto deve conter as seguintes propriedades:
-            - "question": (STRING) A pergunta do quiz.
-            - "options": (ARRAY de STRING) Um array com exatamente 4 opções de resposta.
-            - "correctAnswer": (STRING) A resposta correta, que deve ser uma das opções fornecidas.
-            - "justification": (STRING) Uma breve explicação do porquê a resposta correta está certa e as outras erradas, ou um fato interessante relacionado.
-
-            Exemplo de formato esperado:
-            {
-              "question": "Qual é a capital de Burkina Faso?",
-              "options": ["Accra", "Ouagadougou", "Niamey", "Bamako"],
-              "correctAnswer": "Ouagadougou",
-              "justification": "Ouagadougou é a capital e maior cidade de Burkina Faso, localizada no centro do país."
-            }`;
-
-            const chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
-            const payload = {
-                contents: chatHistory,
-                generationConfig: {
-                    responseMimeType: "application/json",
-                    responseSchema: {
-                        type: "OBJECT",
-                        properties: {
-                            "question": { "type": "STRING" },
-                            "options": {
-                                "type": "ARRAY",
-                                "items": { "type": "STRING" },
-                                "minItems": 4,
-                                "maxItems": 4
-                            },
-                            "correctAnswer": { "type": "STRING" },
-                            "justification": { "type": "STRING" }
-                        },
-                        "required": ["question", "options", "correctAnswer", "justification"]
-                    }
-                }
-            };
-
-            const apiKey = ""; // O Canvas fornecerá a chave em tempo de execução.
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
-            try {
-                const response = await retryFetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                const result = await response.json();
-
-                if (result.candidates && result.candidates.length > 0 &&
-                    result.candidates[0].content && result.candidates[0].content.parts &&
-                    result.candidates[0].content.parts.length > 0) {
-                    const json = result.candidates[0].content.parts[0].text;
-                    try {
-                        const quizData = JSON.parse(json);
-                        // Validação básica da estrutura do quiz
-                        if (quizData.question && Array.isArray(quizData.options) && quizData.options.length === 4 && quizData.correctAnswer && quizData.justification) {
-                            currentQuiz = quizData;
-                            displayQuiz(quizData);
-                        } else {
-                            throw new Error("Estrutura do quiz inválida recebida da API.");
-                        }
-                    } catch (jsonError) {
-                        console.error('Erro ao fazer parse do JSON da API:', jsonError, 'JSON recebido:', json);
-                        showError('Erro ao processar a resposta do quiz. Tente novamente.');
-                    }
-                } else {
-                    console.warn('Resposta da API não contém candidatos ou conteúdo esperado:', result);
-                    showError('Não foi possível gerar um quiz para este tema. Tente um tema diferente ou seja mais específico.');
-                }
-            } catch (error) {
-                console.error('Erro ao gerar quiz:', error);
-                showError(`Ocorreu um erro ao gerar o quiz: ${error.message}. Por favor, tente novamente.`);
-            } finally {
-                loadingIndicator.classList.add('hidden');
-                generateQuizBtn.disabled = false;
-            }
-        }
-
-        /**
-         * Exibe a pergunta e as opções do quiz na interface.
-         * @param {Object} quizData - Objeto contendo os dados do quiz.
-         */
-        function displayQuiz(quizData) {
-            quizContainer.classList.remove('hidden');
-            quizQuestion.textContent = quizData.question;
-            quizOptions.innerHTML = ''; // Limpa opções anteriores
-            quizFeedback.classList.add('hidden'); // Esconde feedback anterior
-            quizFeedback.className = 'p-3 rounded-lg text-white text-center font-medium mb-6 hidden'; // Reseta classes de cor
-            nextQuizBtn.disabled = true; // Desabilita o botão "Próximo Quiz" até a resposta
-
-            quizData.options.forEach((option, index) => {
-                const button = document.createElement('button');
-                button.className = 'quiz-option-btn w-full text-left p-3 rounded-md border border-gray-300 bg-white hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50';
-                button.textContent = option;
-                button.dataset.option = option; // Armazena a opção no dataset
-                button.addEventListener('click', checkAnswer);
-                quizOptions.appendChild(button);
-            });
-        }
-
-        /**
-         * Verifica a resposta selecionada pelo usuário.
-         * @param {Event} event - O evento de clique no botão de opção.
-         */
-        function checkAnswer(event) {
-            const selectedOption = event.target.dataset.option;
-            const allOptionButtons = quizOptions.querySelectorAll('.quiz-option-btn');
-
-            // Desabilita todos os botões de opção após a escolha
-            allOptionButtons.forEach(button => {
-                button.disabled = true;
-                button.classList.remove('hover:bg-gray-50', 'focus:ring-blue-500', 'focus:ring-opacity-50');
-            });
-
-            quizFeedback.classList.remove('hidden');
-            nextQuizBtn.disabled = false; // Habilita o botão "Próximo Quiz"
-
-            if (selectedOption === currentQuiz.correctAnswer) {
-                quizFeedback.classList.add('bg-green-500');
-                quizFeedback.textContent = 'Parabéns! Resposta Correta.';
-            } else {
-                quizFeedback.classList.add('bg-red-500');
-                quizFeedback.innerHTML = `Resposta Incorreta. A resposta correta era: <span class="font-bold">${currentQuiz.correctAnswer}</span>.<br><br>${currentQuiz.justification}`;
-                // Opcional: Destacar a resposta correta e a errada
-                allOptionButtons.forEach(button => {
-                    if (button.dataset.option === selectedOption) {
-                        button.classList.add('bg-red-200', 'border-red-500'); // Marca a opção errada
-                    } else if (button.dataset.option === currentQuiz.correctAnswer) {
-                        button.classList.add('bg-green-200', 'border-green-500'); // Marca a opção correta
-                    }
-                });
-            }
-        }
-
-        /**
-         * Exibe uma mensagem de erro na interface.
-         * @param {string} message - A mensagem de erro a ser exibida.
-         */
-        function showError(message) {
-            errorMessageDiv.classList.remove('hidden');
-            errorText.textContent = message;
-            quizContainer.classList.add('hidden'); // Esconde o quiz se houver erro
-            loadingIndicator.classList.add('hidden'); // Esconde o loading
-        }
-
-        // --- Event Listeners ---
-        generateQuizBtn.addEventListener('click', generateQuiz);
-        nextQuizBtn.addEventListener('click', generateQuiz); // O botão "Próximo Quiz" chama a mesma função
-
-        // Inicializa o site ao carregar a página
+        // Lógica simplificada para controlar a apresentação de slides
         document.addEventListener('DOMContentLoaded', () => {
-            // Garante que o quiz e o feedback estejam ocultos no início
-            quizContainer.classList.add('hidden');
-            quizFeedback.classList.add('hidden');
-            errorMessageDiv.classList.add('hidden');
-            loadingIndicator.classList.add('hidden');
+            // Seleciona todos os elementos que representam um slide
+            const slides = document.querySelectorAll('.slide-section');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const slideCounter = document.getElementById('slide-counter');
+            
+            let currentSlideIndex = 0;
+            const totalSlides = slides.length;
+
+            // Função para atualizar os controles (botões e contador)
+            function updateControls() {
+                // Atualiza o texto do contador
+                slideCounter.textContent = `Slide ${currentSlideIndex + 1} de ${totalSlides}`;
+                
+                // Desabilita o botão "Anterior" se estiver no primeiro slide
+                prevBtn.disabled = currentSlideIndex === 0;
+                // Desabilita o botão "Próximo" se estiver no último slide
+                nextBtn.disabled = currentSlideIndex === totalSlides - 1;
+            }
+
+            // Função para navegar para um slide específico
+            function goToSlide(index) {
+                // Encontra o elemento do slide pelo ID e rola a tela até ele
+                document.getElementById(`slide-${index}`).scrollIntoView();
+                currentSlideIndex = index;
+                updateControls();
+            }
+
+            // Evento de clique para o botão "Próximo"
+            nextBtn.addEventListener('click', () => {
+                if (currentSlideIndex < totalSlides - 1) {
+                    goToSlide(currentSlideIndex + 1);
+                }
+            });
+
+            // Evento de clique para o botão "Anterior"
+            prevBtn.addEventListener('click', () => {
+                if (currentSlideIndex > 0) {
+                    goToSlide(currentSlideIndex - 1);
+                }
+            });
+
+            // Observador para atualizar o slide atual se o usuário rolar a página manualmente
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // Se um slide está visível na tela
+                    if (entry.isIntersecting) {
+                        // Extrai o número do ID do slide (ex: "slide-5" -> 5)
+                        const slideIndex = parseInt(entry.target.id.split('-')[1], 10);
+                        currentSlideIndex = slideIndex;
+                        updateControls();
+                    }
+                });
+            }, { 
+                root: null, // Observa a viewport
+                threshold: 0.6 // Ativa quando 60% do slide estiver visível
+            });
+
+            // Adiciona o observador a cada slide
+            slides.forEach(slide => {
+                observer.observe(slide);
+            });
+
+            // Inicializa os controles na primeira carga da página
+            updateControls();
         });
     </script>
+
 </body>
 </html>
