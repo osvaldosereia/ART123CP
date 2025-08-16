@@ -1,413 +1,197 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Crime de Estupro no Direito Penal Brasileiro</title>
+    <title>Vade Mecum Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* Estilo para garantir que a rolagem seja suave */
-        html {
-            scroll-behavior: smooth;
-        }
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Estilo para as seções de conteúdo da landing page */
-        .content-section {
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-            border-bottom: 1px solid #e5e7eb;
+        /* Estilo para a barra de rolagem */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        /* Container para tornar as tabelas responsivas */
-        .responsive-table-container {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch; /* Rolagem suave em iOS */
-            border-radius: 0.5rem; /* Bordas arredondadas para o container */
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 600px; /* Largura mínima para evitar que a tabela quebre muito */
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px; /* Aumentar o padding para melhor leitura */
-            text-align: left;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
         }
-        th {
-            background-color: #f8fafc; /* Um cinza mais claro */
+        /* Remove o marcador padrão do <summary> */
+        summary::marker {
+            content: '';
         }
-        pre {
-            background-color: #f1f5f9;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            border: 1px solid #e2e8f0;
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        /* Animação de loading simples */
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 5px solid #cbd5e1;
+            border-bottom-color: #475569;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+            margin: 2rem auto;
+        }
+        @keyframes rotation {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-50 text-slate-700">
 
-    <!-- Container Principal da Landing Page -->
-    <main id="landing-page-container">
-        <!-- Seção 1: Título e Identificação -->
-        <section id="section-0" class="content-section p-6 md:p-12 text-center">
-            <h1 class="text-3xl md:text-5xl font-bold text-red-600 mb-4">APOSTILA DIDÁTICA - DIREITO PENAL ESPECIAL</h1>
-            <h2 class="text-2xl md:text-4xl text-gray-800 mb-10">CRIME DE ESTUPRO - Art. 213 do Código Penal</h2>
-            <div class="max-w-2xl mx-auto">
-                <h3 class="text-xl font-bold mb-4">🏷️ IDENTIFICAÇÃO DO CRIME</h3>
-                <div class="responsive-table-container bg-white">
-                    <table>
-                        <tbody>
-                            <tr><td class="font-semibold">📄 Artigo</td><td>213 do Código Penal</td></tr>
-                            <tr><td class="font-semibold">🎯 Epígrafe</td><td>Estupro</td></tr>
-                            <tr><td class="font-semibold">📅 Redação Vigente</td><td>Lei 12.015/2009</td></tr>
-                            <tr><td class="font-semibold">⚖️ Pena</td><td>Reclusão: 6-10 anos (tipo básico)</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
+    <!-- Estrutura principal com sidebar e conteúdo -->
+    <div class="relative min-h-screen md:flex">
 
-        <!-- Seção 2: Visão Geral - Bem Jurídico e Núcleo -->
-        <section id="section-1" class="content-section p-6 md:p-12">
-             <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">1. VISÃO GERAL DO ARTIGO</h2>
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">🛡️ Bem Jurídico Protegido</h3>
-                        <p class="text-lg bg-gray-100 p-4 rounded-md border-l-4 border-blue-500"><strong>DIGNIDADE SEXUAL</strong> como projeção da dignidade humana (CF, art. 1º, III)</p>
-                        <ul class="list-disc list-inside mt-2 text-lg">
-                            <li><strong>🔓 Liberdade Sexual:</strong> Autodeterminação sexual</li>
-                            <li><strong>🛡️ Integridade Sexual:</strong> Inviolabilidade corporal contra agressões sexuais</li>
-                        </ul>
+        <!-- Botão para abrir o menu no mobile -->
+        <div class="md:hidden flex justify-between items-center p-4 bg-white shadow-md sticky top-0 z-30">
+            <h1 class="text-lg font-bold text-slate-800">Direito Digital</h1>
+            <button id="mobile-menu-button" class="text-slate-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Sidebar / Navegação -->
+        <aside id="sidebar" class="bg-slate-100 text-slate-600 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out z-40 shadow-lg md:shadow-none md:h-screen md:sticky md:top-0 overflow-y-auto">
+            
+            <a href="#" class="text-slate-800 text-xl font-bold px-4 hidden md:block" onclick="loadContent('content/welcome.html')">
+                Direito Digital
+            </a>
+
+            <nav class="text-sm">
+                 <details class="group" open>
+                    <summary class="flex items-center justify-between w-full px-4 py-2 rounded-lg cursor-pointer hover:bg-slate-200 hover:text-slate-800">
+                        <span>Código Penal</span>
+                         <svg class="w-4 h-4 transform group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="pl-6 mt-1 space-y-1">
+                        <a href="#" class="block px-4 py-1.5 rounded-md hover:bg-slate-200 hover:text-slate-800 text-xs" onclick="loadContent('content/cp-parte-geral.html')">Parte Geral</a>
+                        
+                        <!-- Submenu aninhado para Parte Especial -->
+                        <details class="group">
+                            <summary class="flex items-center justify-between w-full px-4 py-1.5 rounded-md cursor-pointer hover:bg-slate-200 hover:text-slate-800 text-xs">
+                                <span>Parte Especial</span>
+                                <svg class="w-4 h-4 transform group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="pl-4 mt-1 space-y-1">
+                                <a href="#" class="block px-4 py-1.5 rounded-md hover:bg-slate-200 hover:text-slate-800 text-xs" onclick="loadContent('content/cp-parte-especial.html')">Visão Geral</a>
+                                <a href="#" class="block px-4 py-1.5 rounded-md hover:bg-slate-200 hover:text-slate-800 text-xs" onclick="loadContent('content/cp-art-213-234.html')">Art 213 a 234</a>
+                            </div>
+                        </details>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">⚡ Núcleo do Tipo</h3>
-                        <pre class="text-lg">🎯 VERBO NUCLEAR: "CONSTRANGER"
-└── Significado: Forçar, compelir, coagir contra a vontade
-└── Elemento essencial: Ausência de consentimento válido</pre>
-                    </div>
-                </div>
+                </details>
+
+            </nav>
+        </aside>
+
+        <!-- Overlay para fechar o menu no mobile -->
+        <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden"></div>
+
+        <!-- Conteúdo Principal -->
+        <main class="flex-1 p-6 md:p-10">
+            <!-- A área de conteúdo agora está vazia e será preenchida pelo JavaScript -->
+            <div id="content-area" class="text-sm leading-relaxed">
+                <!-- Conteúdo será carregado aqui -->
             </div>
-        </section>
+        </main>
+    </div>
 
-        <!-- Seção 3: Sujeitos e Classificação -->
-        <section id="section-2" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto space-y-8">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">👥 Sujeitos do Crime</h3>
-                    <div class="responsive-table-container bg-white">
-                        <table>
-                            <thead><tr><th>Tipo</th><th>Requisitos</th><th>Observações</th></tr></thead>
-                            <tbody>
-                                <tr><td>🔹 Sujeito Ativo</td><td>Qualquer pessoa</td><td>Crime comum (Lei 12.015/2009)</td></tr>
-                                <tr><td>🔸 Sujeito Passivo</td><td>Qualquer pessoa</td><td>Independe de sexo, experiência sexual</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🏷️ Classificação Doutrinária</h3>
-                     <ul class="list-disc list-inside space-y-2 mt-4 grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-2 text-lg">
-                        <li>Material</li><li>Comum</li><li>Instantâneo</li><li>Comissivo</li><li>Plurissubsistente</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <script>
+        // --- SIMULAÇÃO DE ARQUIVOS EXTERNOS ---
+        // Em um projeto real, o conteúdo abaixo estaria em arquivos .html separados.
+        // O JavaScript usaria a função fetch() para buscá-los do servidor.
+        const contentFiles = {
+            'content/welcome.html': `
+                <h2 class="text-2xl font-bold text-slate-800 mb-4">Bem-vindo ao seu Vade Mecum Digital</h2>
+                <p class="mb-4">Selecione um tópico no menu ao lado para começar a ler. Esta é uma plataforma projetada para facilitar o acesso e a leitura de textos jurídicos complexos, com um design limpo e focado no conteúdo.</p>
+                <p>A navegação foi estruturada para permitir a fácil exploração de códigos, capítulos e artigos. O conteúdo agora é carregado dinamicamente para uma melhor performance.</p>
+            `,
+            'content/cp-parte-geral.html': `
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Código Penal - Parte Geral</h3>
+                <p class="mb-2">A Parte Geral do Código Penal (art. 1º ao 120) estabelece as normas e princípios fundamentais do direito penal, como a anterioridade da lei, a teoria do crime (fato típico, ilicitude e culpabilidade), as penas e suas aplicações.</p>
+            `,
+            'content/cp-parte-especial.html': `
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Código Penal - Parte Especial (Visão Geral)</h3>
+                <p class="mb-2">A Parte Especial (a partir do art. 121) descreve os crimes em espécie, como os crimes contra a pessoa (homicídio, lesão corporal), contra o patrimônio (furto, roubo), contra a fé pública, contra a administração pública, entre outros.</p>
+            `,
+            'content/cp-art-213-234.html': `
+                <h3 class="text-xl font-bold text-slate-800 mb-3">Código Penal - Arts. 213 a 234</h3>
+                <p class="mb-2">Este capítulo trata dos Crimes Contra a Dignidade Sexual.</p>
+                <ul class="list-disc list-inside pl-4 space-y-1 text-xs">
+                    <li><strong>Art. 213:</strong> Estupro.</li>
+                    <li><strong>Art. 215:</strong> Violação sexual mediante fraude.</li>
+                    <li><strong>Art. 216-A:</strong> Assédio sexual.</li>
+                    <li><strong>Art. 217-A:</strong> Estupro de vulnerável.</li>
+                    <li>... entre outros artigos que compõem o título.</li>
+                </ul>
+                <p class="mt-2 text-xs">Esses artigos definem as condutas criminosas que atentam contra a liberdade e a dignidade sexual da pessoa, estabelecendo as respectivas penas.</p>
+            `
+        };
+        
+        // --- LÓGICA DA APLICAÇÃO ---
 
-        <!-- Seção 4: Consumação e Tentativa -->
-        <section id="section-3" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto space-y-6">
-                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">✅ Consumação e Tentativa</h3>
-                <div>
-                    <h4 class="font-bold text-lg">🏁 CONSUMAÇÃO</h4>
-                    <pre>✅ CONJUNÇÃO CARNAL
-├── Introdução do pênis na vagina (total/parcial)
-└── ❌ NÃO exige: ejaculação, defloramento ou ruptura do hímen</pre>
-                    <pre class="mt-2">✅ OUTRO ATO LIBIDINOSO
-├── Sexo anal/oral, toques íntimos
-└── 💻 Contemplação lasciva (estupro virtual)</pre>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg">⚠️ TENTATIVA</h4>
-                    <p class="text-lg">✅ <strong>Admissível</strong>: Crime plurissubsistente. Ex: Aproximação com violência + fuga da vítima.</p>
-                </div>
-            </div>
-        </section>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        const contentArea = document.getElementById('content-area');
 
-        <!-- Seção 5: Elemento Subjetivo e Formas Qualificadas -->
-        <section id="section-4" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto space-y-8">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🧠 Elemento Subjetivo</h3>
-                    <pre>🎯 DOLO DIRETO
-├── Consciência do constrangimento
-├── Vontade de praticar ato sexual
-└── ⭐ ESPECIAL FIM DE AGIR
+        function toggleMenu() {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
 
-❌ NÃO EXISTE MODALIDADE CULPOSA</pre>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">📈 Formas Qualificadas</h3>
-                    <div class="responsive-table-container bg-white">
-                        <table>
-                            <thead><tr><th>Parágrafo</th><th>Hipótese</th><th>Pena</th><th>Natureza</th></tr></thead>
-                            <tbody>
-                                <tr><td>§1º</td><td>🩸 Lesão corporal grave</td><td>8-12 anos</td><td>Crime preterdoloso</td></tr>
-                                <tr><td>§1º</td><td>👶 Vítima 14-18 anos</td><td>8-12 anos</td><td>Objetiva</td></tr>
-                                <tr><td>§2º</td><td>☠️ Morte da vítima</td><td>12-30 anos</td><td>Crime preterdoloso</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
+        mobileMenuButton.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
 
-        <!-- Seção 6: Checklist Processual - Ação Penal e Competência -->
-        <section id="section-5" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">2. CHECKLIST PROCESSUAL</h2>
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">⚖️ Ação Penal</h3>
-                        <pre>📍 ATUAL: PÚBLICA INCONDICIONADA (Lei 13.718/2018)
-📈 EVOLUÇÃO HISTÓRICA:
-├── 1940: Ação privada
-├── 2009: Pública condicionada
-└── 2018: Pública incondicionada</pre>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">🏛️ Competência Jurisdicional</h3>
-                        <div class="responsive-table-container bg-white">
-                            <table>
-                                <thead><tr><th>Regra</th><th>Competência</th><th>Observação</th></tr></thead>
-                                <tbody>
-                                    <tr><td>🎯 Geral</td><td>Justiça Estadual</td><td>Vara Criminal Comum</td></tr>
-                                    <tr><td>👩‍⚖️ Especializada</td><td>Varas Especializadas</td><td>Violência Doméstica/Sexual</td></tr>
-                                    <tr><td>🇧🇷 Federal</td><td>Excepcional</td><td>Elementos internacionais</td></tr>
-                                    <tr><td>⚖️ Júri</td><td>❌ NÃO</td><td>Salvo conexão c/ homicídio</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        // Função para carregar o conteúdo dinamicamente
+        function loadContent(filePath) {
+            // Mostra um indicador de carregamento
+            contentArea.innerHTML = '<div class="loader"></div>';
 
-        <!-- Seção 7: Checklist Processual - Rito e Prisão -->
-        <section id="section-6" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto space-y-8">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">📋 Rito Processual e Medidas Cautelares</h3>
-                    <p class="text-lg">O rito é o <strong>Ordinário</strong> (CPP, art. 394). Admite <strong>prisão em flagrante</strong> e medidas cautelares diversas, como proibição de aproximação da vítima.</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">❌ INSTITUTOS NÃO APLICÁVEIS</h3>
-                    <div class="responsive-table-container bg-white">
-                        <table>
-                            <thead><tr><th>Instituto</th><th>Aplicável?</th><th>Motivo</th></tr></thead>
-                            <tbody>
-                                <tr><td>ANPP</td><td>❌ NÃO</td><td>Crime com violência + pena > 4 anos</td></tr>
-                                <tr><td>Transação Penal</td><td>❌ NÃO</td><td>Pena máxima > 2 anos</td></tr>
-                                <tr><td>SUSP</td><td>❌ NÃO</td><td>Pena mínima > 1 ano</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
+            // Simula um pequeno atraso de rede para ver o loader
+            setTimeout(() => {
+                // Busca o conteúdo no nosso objeto de simulação
+                const content = contentFiles[filePath];
 
-        <!-- Seção 8: Prescrição -->
-        <section id="section-7" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto">
-                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">⏰ Prescrição</h3>
-                <pre>🎯 TIPO BÁSICO: 16 ANOS (art. 109, III, CP)
-└── Base: Pena máxima 10 anos
+                if (content) {
+                    contentArea.innerHTML = content;
+                } else {
+                    contentArea.innerHTML = `<p class="text-red-500">Erro: Conteúdo não encontrado em '${filePath}'.</p>`;
+                }
+            }, 200); // 200ms de atraso
 
-👶 LEI JOANNA MARANHÃO (12.650/2012):
-├── Para crimes contra < 18 anos
-├── Prescrição conta a partir dos 18 anos da vítima
-└── Reconhece dificuldades especiais da vítima jovem</pre>
-            </div>
-        </section>
+            // Fecha o menu se estiver em modo mobile
+            if (window.innerWidth < 768 && !sidebar.classList.contains('-translate-x-full')) {
+                toggleMenu();
+            }
+            
+            // Previne o comportamento padrão do link '#'
+            if(event) {
+               event.preventDefault();
+            }
+        }
 
-        <!-- Seção 9: Banco de Perguntas -->
-        <section id="section-8" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">3. BANCO DE PERGUNTAS DIDÁTICAS</h2>
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">🧱 PARTE MATERIAL</h3>
-                        <p class="text-lg"><strong>1️⃣ Qual o bem jurídico?</strong> <strong>R:</strong> Dignidade sexual (liberdade + integridade).</p>
-                        <p class="text-lg"><strong>2️⃣ Elementos essenciais?</strong> <strong>R:</strong> Constranger + violência/grave ameaça + ato sexual + dolo.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">⚖️ PARTE PROCESSUAL</h3>
-                        <p class="text-lg"><strong>1️⃣ Qual a ação penal?</strong> <strong>R:</strong> Pública incondicionada.</p>
-                        <p class="text-lg"><strong>2️⃣ Cabem benefícios (ANPP, etc.)?</strong> <strong>R:</strong> Não, devido à violência e à pena.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        // Carrega o conteúdo inicial ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            loadContent('content/welcome.html');
+        });
 
-        <!-- Seção 10: Jurisprudência Essencial -->
-        <section id="section-9" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">4. JURISPRUDÊNCIA ESSENCIAL</h2>
-                <div class="space-y-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🏛️ STF/STJ - TESES CONSOLIDADAS</h3>
-                    <p class="text-lg bg-gray-100 p-3 rounded-md"><strong>🌐 ESTUPRO VIRTUAL:</strong> "É prescindível o contato físico para configuração do estupro virtual" (STJ, HC 478310).</p>
-                    <p class="text-lg bg-gray-100 p-3 rounded-md"><strong>💋 BEIJO LASCIVO:</strong> "O beijo lascivo obtido mediante força física configura crime de estupro" (STJ, RHC 93906).</p>
-                    <p class="text-lg bg-gray-100 p-3 rounded-md"><strong>🗣️ PALAVRA DA VÍTIMA:</strong> "A palavra da vítima possui valor probatório especial em crimes sexuais".</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção 11: Doutrina e Debates -->
-        <section id="section-10" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">5. DOUTRINA E DEBATES CONTEMPORÂNEOS</h2>
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">⚔️ Controvérsias e Política Criminal</h3>
-                        <p class="text-lg">Críticas atuais apontam para a excessiva amplitude de tipos penais e a criminalização de condutas consensuais entre adolescentes.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">🌍 Direito Comparado</h3>
-                        <div class="responsive-table-container bg-white">
-                            <table>
-                                <thead><tr><th>País</th><th>Modelo</th><th>Característica</th></tr></thead>
-                                <tbody>
-                                    <tr><td>🇺🇸 EUA</td><td>Romeo and Juliet laws</td><td>Exceções para jovens</td></tr>
-                                    <tr><td>🇩🇪 Alemanha</td><td>Gradação etária</td><td>Presunções flexíveis</td></tr>
-                                    <tr><td>🇵🇹 Portugal</td><td>Adequação social</td><td>Critérios contextuais</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção 12: Quadro Comparativo -->
-        <section id="section-11" class="content-section p-6 md:p-12">
-            <div class="max-w-5xl mx-auto">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">6. QUADRO COMPARATIVO</h2>
-                <div class="responsive-table-container bg-white">
-                    <table>
-                        <thead><tr><th>Crime</th><th>Artigo</th><th>Meio de Execução</th><th>Pena</th><th>� Dica Prática</th></tr></thead>
-                        <tbody>
-                            <tr><td><strong>Estupro</strong></td><td>213</td><td>Violência/grave ameaça</td><td>6-10 anos</td><td>Com coação = estupro</td></tr>
-                            <tr><td><strong>Importunação Sexual</strong></td><td>215-A</td><td>Sem anuência</td><td>1-5 anos</td><td>Sem coação = importunação</td></tr>
-                            <tr><td><strong>Estupro de Vulnerável</strong></td><td>217-A</td><td>Dispensável coação</td><td>8-15 anos</td><td>Foco na idade da vítima (<14)</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção 13: Casos Práticos -->
-        <section id="section-12" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">7. CASOS PRÁTICOS</h2>
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">📝 CASO 1 - Básico</h3>
-                        <p class="text-lg"><strong>SITUAÇÃO:</strong> João força Maria a manter relação sexual mediante ameaça com faca.</p>
-                        <p class="text-lg bg-green-100 p-3 rounded-md"><strong>GABARITO:</strong> Crime de Estupro (art. 213, caput), consumado. Pena: 6-10 anos.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">📝 CASO 2 - Prova OAB</h3>
-                        <p class="text-lg"><strong>SITUAÇÃO:</strong> Pedro, mediante violência, obriga Ana a praticar sexo oral e conjunção carnal na mesma oportunidade.</p>
-                        <p class="text-lg bg-green-100 p-3 rounded-md"><strong>GABARITO:</strong> Crime único de estupro. A pluralidade de condutas pode agravar a pena-base, mas não há concurso de crimes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção 14: Pegadinhas e Macetes -->
-        <section id="section-13" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">9. PEGADINHAS & ERROS COMUNS</h2>
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">❌ Pegadinhas Clássicas</h3>
-                        <ul class="list-disc list-inside text-lg">
-                            <li>"Estupro exige ejaculação" ➡️ **FALSO!**</li>
-                            <li>"Só homem pode ser sujeito ativo" ➡️ **FALSO!**</li>
-                            <li>"ANPP é cabível" ➡️ **FALSO!**</li>
-                        </ul>
-                    </div>
-                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">🎯 Macetes para Memorização</h3>
-                        <pre>🔥 MNEMÔNICO "COVAC":
-C - Constranger
-O - (mediante)
-V - Violência/grave ameaça
-A - (a praticar)
-C - Conjunção carnal/ato libidinoso</pre>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção 15: Flashcards -->
-        <section id="section-14" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">10. FLASHCARDS DIGITAIS</h2>
-                <div class="responsive-table-container bg-white">
-                     <table>
-                        <thead><tr><th>🎴 PERGUNTA</th><th>🎯 RESPOSTA</th></tr></thead>
-                        <tbody>
-                            <tr><td>Bem jurídico tutelado?</td><td>Dignidade sexual (liberdade + integridade)</td></tr>
-                            <tr><td>Ação penal e rito?</td><td>Pública incondicionada, rito ordinário</td></tr>
-                            <tr><td>Cabe ANPP/JECRIM?</td><td>NÃO - violência e pena elevada</td></tr>
-                            <tr><td>Prescrição para menores?</td><td>Lei Joanna Maranhão - conta a partir dos 18 anos</td></tr>
-                            <tr><td>STJ admite estupro virtual?</td><td>SIM - contemplação lasciva mediante coação</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção 16: Resumo Executivo -->
-        <section id="section-15" class="content-section p-6 md:p-12">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">11. RESUMO EXECUTIVO (Véspera de Prova)</h2>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">🎯 10 Pontos Essenciais</h3>
-                <ol class="list-decimal list-inside space-y-2 text-lg">
-                    <li><strong>Bem jurídico</strong>: Dignidade sexual.</li>
-                    <li><strong>Elementos</strong>: Constranger + violência/grave ameaça + ato sexual.</li>
-                    <li><strong>Sujeitos</strong>: Qualquer pessoa (crime comum).</li>
-                    <li><strong>Consumação</strong>: Ato libidinoso (independe de ejaculação).</li>
-                    <li><strong>Qualificadoras</strong>: Lesão grave/idade e morte.</li>
-                    <li><strong>Ação penal</strong>: Pública incondicionada.</li>
-                    <li><strong>Competência</strong>: Justiça Estadual comum.</li>
-                    <li><strong>Prescrição</strong>: 16 anos (regra); Lei Joanna Maranhão para menores.</li>
-                    <li><strong>Vedações</strong>: Não cabe ANPP, transação ou JECRIM.</li>
-                    <li><strong>Jurisprudência</strong>: STJ admite estupro virtual; palavra da vítima tem valor especial.</li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- Seção 17: Fim -->
-        <section id="section-16" class="content-section p-6 md:p-12 text-center border-b-0">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">🏆 CONSIDERAÇÕES FINAIS</h2>
-            <div class="max-w-3xl mx-auto space-y-4 text-lg">
-                <p class="bg-blue-100 border-l-4 border-blue-500 p-4 text-left"><strong>💡 MENSAGEM DO PROFESSOR:</strong> Lembre-se, Direito Penal é sobre proteção de bens jurídicos fundamentais. O estupro atenta contra a dignidade sexual, um dos pilares da personalidade humana.</p>
-                <h3 class="text-xl font-semibold pt-4">🎯 BOA SORTE NOS ESTUDOS! 🎯</h3>
-            </div>
-        </section>
-
-    </main>
+    </script>
 
 </body>
 </html>
-�
