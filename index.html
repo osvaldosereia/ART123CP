@@ -83,7 +83,7 @@
                         <a href="#" class="block px-4 py-1.5 rounded-md hover:bg-slate-200 hover:text-slate-800 text-xs" onclick="loadContent('content/cp-parte-geral.html')">Parte Geral</a>
                         
                         <!-- Submenu aninhado para Parte Especial -->
-                        <details class="group">
+                        <details class="group" open>
                             <summary class="flex items-center justify-between w-full px-4 py-1.5 rounded-md cursor-pointer hover:bg-slate-200 hover:text-slate-800 text-xs">
                                 <span>Parte Especial</span>
                                 <svg class="w-4 h-4 transform group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -113,8 +113,7 @@
 
     <script>
         // --- SIMULAÇÃO DE ARQUIVOS EXTERNOS ---
-        // Em um projeto real, o conteúdo abaixo estaria em arquivos .html separados.
-        // O JavaScript usaria a função fetch() para buscá-los do servidor.
+        // Os arquivos abaixo ainda são locais. Apenas o 'cp-art-213-234.html' será buscado do GitHub.
         const contentFiles = {
             'content/welcome.html': `
                 <h2 class="text-2xl font-bold text-slate-800 mb-4">Bem-vindo ao seu Vade Mecum Digital</h2>
@@ -128,19 +127,8 @@
             'content/cp-parte-especial.html': `
                 <h3 class="text-xl font-bold text-slate-800 mb-3">Código Penal - Parte Especial (Visão Geral)</h3>
                 <p class="mb-2">A Parte Especial (a partir do art. 121) descreve os crimes em espécie, como os crimes contra a pessoa (homicídio, lesão corporal), contra o patrimônio (furto, roubo), contra a fé pública, contra a administração pública, entre outros.</p>
-            `,
-            'content/cp-art-213-234.html': `
-                <h3 class="text-xl font-bold text-slate-800 mb-3">Código Penal - Arts. 213 a 234</h3>
-                <p class="mb-2">Este capítulo trata dos Crimes Contra a Dignidade Sexual.</p>
-                <ul class="list-disc list-inside pl-4 space-y-1 text-xs">
-                    <li><strong>Art. 213:</strong> Estupro.</li>
-                    <li><strong>Art. 215:</strong> Violação sexual mediante fraude.</li>
-                    <li><strong>Art. 216-A:</strong> Assédio sexual.</li>
-                    <li><strong>Art. 217-A:</strong> Estupro de vulnerável.</li>
-                    <li>... entre outros artigos que compõem o título.</li>
-                </ul>
-                <p class="mt-2 text-xs">Esses artigos definem as condutas criminosas que atentam contra a liberdade e a dignidade sexual da pessoa, estabelecendo as respectivas penas.</p>
             `
+            // O conteúdo de 'cp-art-213-234.html' foi removido daqui pois será buscado online.
         };
         
         // --- LÓGICA DA APLICAÇÃO ---
@@ -159,30 +147,41 @@
         overlay.addEventListener('click', toggleMenu);
 
         // Função para carregar o conteúdo dinamicamente
-        function loadContent(filePath) {
-            // Mostra um indicador de carregamento
+        async function loadContent(filePath) {
+            if (event) {
+               event.preventDefault();
+            }
+
             contentArea.innerHTML = '<div class="loader"></div>';
 
-            // Simula um pequeno atraso de rede para ver o loader
-            setTimeout(() => {
-                // Busca o conteúdo no nosso objeto de simulação
-                const content = contentFiles[filePath];
+            // Primeiro, verifica se o conteúdo é um dos arquivos locais simulados
+            if (contentFiles[filePath]) {
+                contentArea.innerHTML = contentFiles[filePath];
+            } else {
+                // Se não for local, tenta buscar do GitHub
+                // !!! IMPORTANTE: Substitua os valores abaixo pelos seus !!!
+                const GITHUB_USERNAME = 'SEU-USUARIO-GITHUB';
+                const GITHUB_REPO = 'SEU-REPOSITORIO';
+                const GITHUB_BRANCH = 'main'; // ou 'master', etc.
+                
+                const url = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${GITHUB_REPO}/${GITHUB_BRANCH}/${filePath}`;
 
-                if (content) {
-                    contentArea.innerHTML = content;
-                } else {
-                    contentArea.innerHTML = `<p class="text-red-500">Erro: Conteúdo não encontrado em '${filePath}'.</p>`;
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`Erro de rede: ${response.status}`);
+                    }
+                    const text = await response.text();
+                    contentArea.innerHTML = text;
+                } catch (error) {
+                    console.error('Erro ao buscar o conteúdo do GitHub:', error);
+                    contentArea.innerHTML = `<p class="text-red-500 font-semibold">Erro ao carregar o conteúdo.</p><p class="text-xs mt-2">Verifique se as informações do seu repositório no script estão corretas e se o arquivo <span class="font-mono bg-red-100 p-1 rounded">${filePath}</span> existe.</p>`;
                 }
-            }, 200); // 200ms de atraso
+            }
 
             // Fecha o menu se estiver em modo mobile
             if (window.innerWidth < 768 && !sidebar.classList.contains('-translate-x-full')) {
                 toggleMenu();
-            }
-            
-            // Previne o comportamento padrão do link '#'
-            if(event) {
-               event.preventDefault();
             }
         }
 
