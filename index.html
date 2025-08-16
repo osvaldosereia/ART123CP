@@ -159,9 +159,8 @@
                 contentArea.innerHTML = contentFiles[filePath];
             } else {
                 // Se não for local, tenta buscar do GitHub
-                // !!! IMPORTANTE: Substitua os valores abaixo pelos seus !!!
-                const GITHUB_USERNAME = 'SEU-USUARIO-GITHUB';
-                const GITHUB_REPO = 'SEU-REPOSITORIO';
+                const GITHUB_USERNAME = 'osvaldosereia';
+                const GITHUB_REPO = 'ART123CP';
                 const GITHUB_BRANCH = 'main'; // ou 'master', etc.
                 
                 const url = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${GITHUB_REPO}/${GITHUB_BRANCH}/${filePath}`;
