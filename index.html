@@ -22,6 +22,28 @@
             padding-top: 2rem;
             padding-bottom: 2rem;
             border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
     </style>
 </head>
@@ -29,220 +51,333 @@
 
     <!-- Container Principal dos Slides -->
     <main id="slides-container">
-        <!-- Slide 1: Título -->
-        <section id="slide-0" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h1 class="text-3xl md:text-5xl font-bold text-center text-gray-900 mb-6">O Crime de Estupro no Direito Penal Brasileiro</h1>
-            <h2 class="text-xl md:text-2xl text-center text-gray-700 mb-10">Análise Completa do Artigo 213 do Código Penal</h2>
-            <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-sm border border-gray-200">
-                <h3 class="text-lg font-bold mb-2 text-gray-800">Resumo</h3>
-                <p class="text-gray-600 mb-4">O presente artigo realiza uma análise abrangente do crime de estupro previsto no artigo 213 do Código Penal brasileiro, examinando suas transformações legislativas, elementos típicos, aspectos processuais e jurisprudenciais. Através de metodologia doutrinária e jurisprudencial, investiga-se a evolução normativa promovida pela Lei 12.015/2009 e posteriores alterações, bem como os desafios contemporâneos na aplicação do tipo penal. O estudo aborda desde os fundamentos teóricos do bem jurídico tutelado até questões práticas de competência, prescrição e dosimetria da pena, oferecendo um panorama completo para acadêmicos e operadores do direito.</p>
-                <h3 class="text-lg font-bold mb-2 text-gray-800">Palavras-chave</h3>
-                <p class="text-gray-600">Direito Penal; Estupro; Dignidade Sexual; Lei 12.015/2009; Jurisprudência.</p>
+        <!-- Slide 1: Título e Identificação -->
+        <section id="slide-0" class="slide-section p-6 md:p-12">
+            <h1 class="text-3xl md:text-5xl font-bold text-center text-red-600 mb-4">APOSTILA DIDÁTICA - DIREITO PENAL ESPECIAL</h1>
+            <h2 class="text-2xl md:text-4xl text-center text-gray-800 mb-10">CRIME DE ESTUPRO - Art. 213 do Código Penal</h2>
+            <div class="max-w-2xl mx-auto">
+                <h3 class="text-xl font-bold mb-4 text-center">🏷️ IDENTIFICAÇÃO DO CRIME</h3>
+                <div class="overflow-x-auto bg-white p-4 rounded-lg shadow">
+                    <table>
+                        <tbody>
+                            <tr><td class="font-semibold">📄 Artigo</td><td>213 do Código Penal</td></tr>
+                            <tr><td class="font-semibold">🎯 Epígrafe</td><td>Estupro</td></tr>
+                            <tr><td class="font-semibold">📅 Redação Vigente</td><td>Lei 12.015/2009</td></tr>
+                            <tr><td class="font-semibold">⚖️ Pena</td><td>Reclusão: 6-10 anos (tipo básico)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
-        <!-- Slide 2: Introdução -->
-        <section id="slide-1" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">1. Introdução</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <p>O crime de estupro, tipificado no artigo 213 do Código Penal brasileiro, representa uma das figuras penais mais sensíveis e complexas do ordenamento jurídico nacional. As significativas transformações legislativas ocorridas nas últimas décadas, especialmente com o advento da Lei 12.015/2009, alteraram substancialmente não apenas a redação do tipo penal, mas também sua interpretação doutrinária e aplicação jurisprudencial.</p>
-                <p>A relevância do tema transcende o âmbito puramente acadêmico, impactando diretamente na proteção de direitos fundamentais e na efetividade do sistema de justiça criminal. Este artigo propõe-se a examinar de forma sistemática todos os aspectos relacionados ao crime de estupro, desde seus fundamentos conceituais até as controvérsias jurisprudenciais contemporâneas.</p>
-            </div>
-        </section>
-
-        <!-- Slide 3: Evolução Legislativa e Bem Jurídico Protegido -->
-        <section id="slide-2" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">2. Evolução Legislativa e Bem Jurídico Protegido</h2>
-             <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">2.1. A Transformação do Título VI do Código Penal</h3>
-                <p>A Lei 12.015/2009 promoveu uma verdadeira revolução conceitual no tratamento dos crimes sexuais no direito brasileiro. A alteração da denominação do Título VI do Código Penal, de "Dos crimes contra os costumes" para "Dos crimes contra a dignidade sexual", reflete uma mudança paradigmática na compreensão do bem jurídico tutelado.</p>
-                <p>Esta transformação não se trata de mero ajuste terminológico, mas representa o reconhecimento de que o direito penal sexual deve proteger valores individuais relacionados à dignidade da pessoa humana, abandonando a perspectiva moralista que caracterizava a legislação anterior.</p>
-            </div>
-        </section>
-        
-        <!-- Slide 4: Dignidade Sexual como Bem Jurídico -->
-        <section id="slide-3" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">2. Evolução Legislativa e Bem Jurídico Protegido</h2>
-             <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">2.2. Dignidade Sexual como Bem Jurídico</h3>
-                <p>O bem jurídico "dignidade sexual" engloba duas dimensões fundamentais: a liberdade sexual e a integridade sexual. A primeira refere-se ao direito de autodeterminação sexual, ou seja, a capacidade de escolher como, quando e com quem se relacionar sexualmente. A segunda diz respeito à inviolabilidade corporal contra agressões sexuais não consentidas.</p>
-                <p>Conforme observa a doutrina especializada, a dignidade sexual constitui projeção da própria dignidade da pessoa humana, princípio fundamental consagrado constitucionalmente. Esta concepção permite uma tutela penal mais efetiva e condizente com os valores democráticos contemporâneos.</p>
-            </div>
-        </section>
-
-        <!-- Slide 5: A Unificação dos Crimes Sexuais -->
-        <section id="slide-4" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">2. Evolução Legislativa e Bem Jurídico Protegido</h2>
-             <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">2.3. A Unificação dos Crimes Sexuais</h3>
-                <p>A principal inovação da Lei 12.015/2009 foi a unificação dos antigos crimes de estupro (art. 213) e atentado violento ao pudor (art. 214) em um único tipo penal. Esta modificação eliminou distinções artificiais baseadas no tipo de conduta sexual praticada, criando um tipo penal único e mais abrangente.</p>
-                <p class="bg-gray-100 p-4 rounded-md border-l-4 border-blue-500">O novo artigo 213 passou a prever: "Constranger alguém, mediante violência ou grave ameaça, a ter conjunção carnal ou a praticar ou permitir que com ele se pratique outro ato libidinoso". A pena permaneceu inalterada: reclusão de 6 a 10 anos.</p>
-            </div>
-        </section>
-
-        <!-- Continue o padrão para todos os outros slides -->
-        <section id="slide-5" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">3. Elementos do Tipo Penal</h2>
-            <div class="max-w-4xl mx-auto space-y-6 text-lg text-gray-700 leading-relaxed">
+        <!-- Slide 2: Visão Geral - Bem Jurídico e Núcleo -->
+        <section id="slide-1" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">1. VISÃO GERAL DO ARTIGO</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
                 <div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">3.1.1. Núcleo do Tipo</h3>
-                    <p>O núcleo do tipo é o verbo "constranger", que significa forçar, compelir ou coagir alguém contra sua vontade. Este elemento exige a demonstração de que a vítima foi obrigada a participar do ato sexual, seja através de violência física ou grave ameaça.</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🛡️ Bem Jurídico Protegido</h3>
+                    <p class="text-lg bg-gray-100 p-4 rounded-md border-l-4 border-blue-500"><strong>DIGNIDADE SEXUAL</strong> como projeção da dignidade humana (CF, art. 1º, III)</p>
+                    <ul class="list-disc list-inside mt-2 text-lg">
+                        <li><strong>🔓 Liberdade Sexual:</strong> Autodeterminação sexual</li>
+                        <li><strong>🛡️ Integridade Sexual:</strong> Inviolabilidade corporal contra agressões sexuais</li>
+                    </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">3.1.2. Meios de Execução</h3>
-                    <ul class="list-disc list-inside space-y-2">
-                        <li><strong>Violência:</strong> Emprego de força física contra a vítima para vencer sua resistência.</li>
-                        <li><strong>Grave ameaça:</strong> Promessa de mal injusto, grave e iminente, capaz de intimidar a vítima.</li>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">⚡ Núcleo do Tipo</h3>
+                    <pre class="text-lg">🎯 VERBO NUCLEAR: "CONSTRANGER"
+└── Significado: Forçar, compelir, coagir contra a vontade
+└── Elemento essencial: Ausência de consentimento válido</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Sujeitos e Classificação -->
+        <section id="slide-2" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">1. VISÃO GERAL DO ARTIGO</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">👥 Sujeitos do Crime</h3>
+                    <table class="bg-white shadow rounded-lg">
+                        <thead><tr><th>Tipo</th><th>Requisitos</th><th>Observações</th></tr></thead>
+                        <tbody>
+                            <tr><td>🔹 Sujeito Ativo</td><td>Qualquer pessoa</td><td>Crime comum (Lei 12.015/2009)</td></tr>
+                            <tr><td>🔸 Sujeito Passivo</td><td>Qualquer pessoa</td><td>Independe de sexo, experiência sexual</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🏷️ Classificação Doutrinária</h3>
+                     <ul class="list-disc list-inside space-y-2 mt-4 grid grid-cols-2 gap-x-8 gap-y-2 text-lg">
+                        <li>Material</li><li>Comum</li><li>Instantâneo</li><li>Comissivo</li><li>Plurissubsistente</li>
                     </ul>
                 </div>
             </div>
         </section>
-        
-        <section id="slide-6" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">3. Elementos do Tipo Penal</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">3.1.3. Modalidades de Conduta</h3>
-                <ul class="list-disc list-inside space-y-2">
-                    <li><strong>Conjunção carnal:</strong> Introdução do pênis na vagina, total ou parcialmente.</li>
-                    <li><strong>Outro ato libidinoso:</strong> Qualquer ato de natureza sexual diverso da conjunção carnal.</li>
-                </ul>
-            </div>
-        </section>
 
-        <section id="slide-7" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">3. Elementos do Tipo Penal</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">3.2. Elementos Subjetivos</h3>
-                <p>O crime de estupro é punido exclusivamente a título de dolo. O agente deve ter consciência de que está constrangendo alguém à prática de ato sexual. Não existe estupro culposo.</p>
-            </div>
-        </section>
-
-        <section id="slide-8" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">3. Elementos do Tipo Penal</h2>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-lg text-gray-700 leading-relaxed">
+        <!-- Slide 4: Consumação e Tentativa -->
+        <section id="slide-3" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">1. VISÃO GERAL DO ARTIGO</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <h3 class="text-xl font-semibold text-gray-800">✅ Consumação e Tentativa</h3>
                 <div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">3.3.1. Sujeito Ativo</h3>
-                    <p>Qualquer pessoa pode ser sujeito ativo do crime, tratando-se de crime comum.</p>
+                    <h4 class="font-bold text-lg">🏁 CONSUMAÇÃO</h4>
+                    <pre>✅ CONJUNÇÃO CARNAL
+├── Introdução do pênis na vagina (total/parcial)
+└── ❌ NÃO exige: ejaculação, defloramento ou ruptura do hímen</pre>
+                    <pre class="mt-2">✅ OUTRO ATO LIBIDINOSO
+├── Sexo anal/oral, toques íntimos
+└── 💻 Contemplação lasciva (estupro virtual)</pre>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">3.3.2. Sujeito Passivo</h3>
-                    <p>Qualquer pessoa pode ser vítima, independentemente de sexo, idade ou condição social.</p>
+                    <h4 class="font-bold text-lg">⚠️ TENTATIVA</h4>
+                    <p class="text-lg">✅ <strong>Admissível</strong>: Crime plurissubsistente. Ex: Aproximação com violência + fuga da vítima.</p>
                 </div>
             </div>
         </section>
 
-        <section id="slide-9" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">4. Classificação Doutrinária</h2>
-            <div class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
-                <ul class="list-disc list-inside space-y-2 mt-4 grid grid-cols-2 gap-x-8 gap-y-2">
-                    <li>Pluriofensivo</li>
-                    <li>Comum</li>
-                    <li>Material</li>
-                    <li>Forma livre</li>
-                    <li>Instantâneo</li>
-                    <li>Comissivo</li>
-                    <li>Unissubjetivo</li>
-                    <li>Plurissubsistente</li>
-                </ul>
+        <!-- Slide 5: Elemento Subjetivo e Formas Qualificadas -->
+        <section id="slide-4" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">1. VISÃO GERAL DO ARTIGO</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🧠 Elemento Subjetivo</h3>
+                    <pre>🎯 DOLO DIRETO
+├── Consciência do constrangimento
+├── Vontade de praticar ato sexual
+└── ⭐ ESPECIAL FIM DE AGIR
+
+❌ NÃO EXISTE MODALIDADE CULPOSA</pre>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">📈 Formas Qualificadas</h3>
+                    <table class="bg-white shadow rounded-lg">
+                        <thead><tr><th>Parágrafo</th><th>Hipótese</th><th>Pena</th><th>Natureza</th></tr></thead>
+                        <tbody>
+                            <tr><td>§1º</td><td>🩸 Lesão corporal grave</td><td>8-12 anos</td><td>Crime preterdoloso</td></tr>
+                            <tr><td>§1º</td><td>👶 Vítima 14-18 anos</td><td>8-12 anos</td><td>Objetiva</td></tr>
+                            <tr><td>§2º</td><td>☠️ Morte da vítima</td><td>12-30 anos</td><td>Crime preterdoloso</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
-        <section id="slide-10" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">5. Consumação e Tentativa</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <p><strong>Consumação:</strong> Ocorre com a prática da conjunção carnal ou outro ato libidinoso. Admite-se o "estupro virtual".</p>
-                <p><strong>Tentativa:</strong> É admissível quando o agente não consegue consumar o crime por circunstâncias alheias à sua vontade.</p>
+        <!-- Slide 6: Checklist Processual - Ação Penal e Competência -->
+        <section id="slide-5" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">2. CHECKLIST PROCESSUAL</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">⚖️ Ação Penal</h3>
+                    <pre>📍 ATUAL: PÚBLICA INCONDICIONADA (Lei 13.718/2018)
+📈 EVOLUÇÃO HISTÓRICA:
+├── 1940: Ação privada
+├── 2009: Pública condicionada
+└── 2018: Pública incondicionada</pre>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🏛️ Competência Jurisdicional</h3>
+                    <table class="bg-white shadow rounded-lg">
+                        <thead><tr><th>Regra</th><th>Competência</th><th>Observação</th></tr></thead>
+                        <tbody>
+                            <tr><td>🎯 Geral</td><td>Justiça Estadual</td><td>Vara Criminal Comum</td></tr>
+                            <tr><td>👩‍⚖️ Especializada</td><td>Varas Especializadas</td><td>Violência Doméstica/Sexual</td></tr>
+                            <tr><td>🇧🇷 Federal</td><td>Excepcional</td><td>Elementos internacionais</td></tr>
+                            <tr><td>⚖️ Júri</td><td>❌ NÃO</td><td>Salvo conexão c/ homicídio</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
-        <section id="slide-11" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">6. Formas Qualificadas</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <p>A pena é aumentada se resulta em <strong>lesão corporal grave</strong> ou se a vítima tem entre <strong>14 e 18 anos</strong>. Se resulta em <strong>morte</strong>, a pena é de 12 a 30 anos.</p>
+        <!-- Slide 7: Checklist Processual - Rito e Prisão -->
+        <section id="slide-6" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">2. CHECKLIST PROCESSUAL</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">📋 Rito Processual e Medidas Cautelares</h3>
+                    <p class="text-lg">O rito é o <strong>Ordinário</strong> (CPP, art. 394). Admite <strong>prisão em flagrante</strong> e medidas cautelares diversas, como proibição de aproximação da vítima.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">❌ INSTITUTOS NÃO APLICÁVEIS</h3>
+                    <table class="bg-white shadow rounded-lg">
+                        <thead><tr><th>Instituto</th><th>Aplicável?</th><th>Motivo</th></tr></thead>
+                        <tbody>
+                            <tr><td>ANPP</td><td>❌ NÃO</td><td>Crime com violência + pena > 4 anos</td></tr>
+                            <tr><td>Transação Penal</td><td>❌ NÃO</td><td>Pena máxima > 2 anos</td></tr>
+                            <tr><td>SUSP</td><td>❌ NÃO</td><td>Pena mínima > 1 ano</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
-        <section id="slide-12" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">7. Questões Processuais</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Ação Penal</h3>
-                <p>Com a Lei 13.718/2018, a ação penal para crimes contra a dignidade sexual é <strong>pública incondicionada</strong>.</p>
+        <!-- Slide 8: Prescrição -->
+        <section id="slide-7" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">2. CHECKLIST PROCESSUAL</h2>
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">⏰ Prescrição</h3>
+                <pre>🎯 TIPO BÁSICO: 16 ANOS (art. 109, III, CP)
+└── Base: Pena máxima 10 anos
+
+👶 LEI JOANNA MARANHÃO (12.650/2012):
+├── Para crimes contra < 18 anos
+├── Prescrição conta a partir dos 18 anos da vítima
+└── Reconhece dificuldades especiais da vítima jovem</pre>
             </div>
         </section>
 
-        <section id="slide-13" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">7. Questões Processuais</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Competência e Prescrição</h3>
-                <p><strong>Competência:</strong> Geralmente da Justiça Estadual. <strong>Prescrição:</strong> 16 anos para o tipo básico. Para vítimas menores de 18, o prazo só começa a contar quando atingem a maioridade (Lei Joanna Maranhão).</p>
+        <!-- Slide 9: Banco de Perguntas -->
+        <section id="slide-8" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">3. BANCO DE PERGUNTAS DIDÁTICAS</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🧱 PARTE MATERIAL</h3>
+                    <p class="text-lg"><strong>1️⃣ Qual o bem jurídico?</strong> <strong>R:</strong> Dignidade sexual (liberdade + integridade).</p>
+                    <p class="text-lg"><strong>2️⃣ Elementos essenciais?</strong> <strong>R:</strong> Constranger + violência/grave ameaça + ato sexual + dolo.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">⚖️ PARTE PROCESSUAL</h3>
+                    <p class="text-lg"><strong>1️⃣ Qual a ação penal?</strong> <strong>R:</strong> Pública incondicionada.</p>
+                    <p class="text-lg"><strong>2️⃣ Cabem benefícios (ANPP, etc.)?</strong> <strong>R:</strong> Não, devido à violência e à pena.</p>
+                </div>
             </div>
         </section>
 
-        <section id="slide-14" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">8. Aspectos Jurisprudenciais</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Súmula 593 do STJ</h3>
-                <p class="bg-gray-100 p-4 rounded-md border-l-4 border-blue-500">O estupro de vulnerável (menor de 14 anos) se configura mesmo com consentimento da vítima, sua experiência sexual anterior ou namoro com o agente.</p>
+        <!-- Slide 10: Jurisprudência Essencial -->
+        <section id="slide-9" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">4. JURISPRUDÊNCIA ESSENCIAL</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">🏛️ STF/STJ - TESES CONSOLIDADAS</h3>
+                <p class="text-lg bg-gray-100 p-3 rounded-md"><strong>🌐 ESTUPRO VIRTUAL:</strong> "É prescindível o contato físico para configuração do estupro virtual" (STJ, HC 478310).</p>
+                <p class="text-lg bg-gray-100 p-3 rounded-md"><strong>💋 BEIJO LASCIVO:</strong> "O beijo lascivo obtido mediante força física configura crime de estupro" (STJ, RHC 93906).</p>
+                <p class="text-lg bg-gray-100 p-3 rounded-md"><strong>🗣️ PALAVRA DA VÍTIMA:</strong> "A palavra da vítima possui valor probatório especial em crimes sexuais".</p>
             </div>
         </section>
 
-        <section id="slide-15" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">8. Aspectos Jurisprudenciais</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <p><strong>Estupro Virtual:</strong> O STJ admite a consumação do crime por meios eletrônicos, sem contato físico.</p>
-                <p><strong>Palavra da Vítima:</strong> Possui valor probatório especial, mas deve ser analisada em conjunto com outras provas.</p>
+        <!-- Slide 11: Doutrina e Debates -->
+        <section id="slide-10" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">5. DOUTRINA E DEBATES CONTEMPORÂNEOS</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">⚔️ Controvérsias e Política Criminal</h3>
+                    <p class="text-lg">Críticas atuais apontam para a excessiva amplitude de tipos penais e a criminalização de condutas consensuais entre adolescentes.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🌍 Direito Comparado</h3>
+                    <table class="bg-white shadow rounded-lg">
+                        <thead><tr><th>País</th><th>Modelo</th><th>Característica</th></tr></thead>
+                        <tbody>
+                            <tr><td>🇺🇸 EUA</td><td>Romeo and Juliet laws</td><td>Exceções para jovens</td></tr>
+                            <tr><td>🇩🇪 Alemanha</td><td>Gradação etária</td><td>Presunções flexíveis</td></tr>
+                            <tr><td>🇵🇹 Portugal</td><td>Adequação social</td><td>Critérios contextuais</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
-        <section id="slide-16" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">9. Dosimetria da Pena</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <p>A aplicação da pena segue o sistema trifásico. O comportamento da vítima não pode ser usado para agravar a pena, e sua experiência sexual anterior é irrelevante.</p>
+        <!-- Slide 12: Quadro Comparativo -->
+        <section id="slide-11" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">6. QUADRO COMPARATIVO</h2>
+            <div class="max-w-5xl mx-auto">
+                <table class="bg-white shadow rounded-lg">
+                    <thead><tr><th>Crime</th><th>Artigo</th><th>Meio de Execução</th><th>Pena</th><th>🎯 Dica Prática</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Estupro</strong></td><td>213</td><td>Violência/grave ameaça</td><td>6-10 anos</td><td>Com coação = estupro</td></tr>
+                        <tr><td><strong>Importunação Sexual</strong></td><td>215-A</td><td>Sem anuência</td><td>1-5 anos</td><td>Sem coação = importunação</td></tr>
+                        <tr><td><strong>Estupro de Vulnerável</strong></td><td>217-A</td><td>Dispensável coação</td><td>8-15 anos</td><td>Foco na idade da vítima (<14)</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
-        <section id="slide-17" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">10. Concurso de Crimes</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <p>A unificação dos tipos penais em 2009 permite o reconhecimento de <strong>crime único</strong> (se conjunção carnal e outro ato libidinoso ocorrem na mesma ocasião) e <strong>continuidade delitiva</strong>, o que pode ser benéfico ao réu.</p>
+        <!-- Slide 13: Casos Práticos -->
+        <section id="slide-12" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">7. CASOS PRÁTICOS</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">📝 CASO 1 - Básico</h3>
+                    <p class="text-lg"><strong>SITUAÇÃO:</strong> João força Maria a manter relação sexual mediante ameaça com faca.</p>
+                    <p class="text-lg bg-green-100 p-3 rounded-md"><strong>GABARITO:</strong> Crime de Estupro (art. 213, caput), consumado. Pena: 6-10 anos.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">📝 CASO 2 - Prova OAB</h3>
+                    <p class="text-lg"><strong>SITUAÇÃO:</strong> Pedro, mediante violência, obriga Ana a praticar sexo oral e conjunção carnal na mesma oportunidade.</p>
+                    <p class="text-lg bg-green-100 p-3 rounded-md"><strong>GABARITO:</strong> Crime único de estupro. A pluralidade de condutas pode agravar a pena-base, mas não há concurso de crimes.</p>
+                </div>
             </div>
         </section>
 
-        <section id="slide-18" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">11. Questões Controvertidas</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <p>Debates atuais incluem a criminalização de relações consensuais entre adolescentes, o "estupro corretivo" (para "corrigir" orientação sexual) e os crimes sexuais no ambiente digital.</p>
+        <!-- Slide 14: Pegadinhas e Macetes -->
+        <section id="slide-13" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">9. PEGADINHAS & ERROS COMUNS</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">❌ Pegadinhas Clássicas</h3>
+                    <ul class="list-disc list-inside text-lg">
+                        <li>"Estupro exige ejaculação" ➡️ **FALSO!**</li>
+                        <li>"Só homem pode ser sujeito ativo" ➡️ **FALSO!**</li>
+                        <li>"ANPP é cabível" ➡️ **FALSO!**</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">🎯 Macetes para Memorização</h3>
+                    <pre>🔥 MNEMÔNICO "COVAC":
+C - Constranger
+O - (mediante)
+V - Violência/grave ameaça
+A - (a praticar)
+C - Conjunção carnal/ato libidinoso</pre>
+                </div>
             </div>
         </section>
 
-        <section id="slide-19" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">12. Críticas e Perspectivas</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <p>Críticas apontam para a amplitude de alguns tipos penais. Propostas de reforma sugerem revisão dos critérios de vulnerabilidade e melhor disciplina para crimes digitais.</p>
+        <!-- Slide 15: Flashcards -->
+        <section id="slide-14" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">10. FLASHCARDS DIGITAIS</h2>
+            <div class="max-w-4xl mx-auto">
+                 <table class="bg-white shadow rounded-lg">
+                    <thead><tr><th>🎴 PERGUNTA</th><th>🎯 RESPOSTA</th></tr></thead>
+                    <tbody>
+                        <tr><td>Bem jurídico tutelado?</td><td>Dignidade sexual (liberdade + integridade)</td></tr>
+                        <tr><td>Ação penal e rito?</td><td>Pública incondicionada, rito ordinário</td></tr>
+                        <tr><td>Cabe ANPP/JECRIM?</td><td>NÃO - violência e pena elevada</td></tr>
+                        <tr><td>Prescrição para menores?</td><td>Lei Joanna Maranhão - conta a partir dos 18 anos</td></tr>
+                        <tr><td>STJ admite estupro virtual?</td><td>SIM - contemplação lasciva mediante coação</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
-        <section id="slide-20" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">13. Direito Comparado</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <p>Outros países adotam critérios diferentes, como as "Romeo and Juliet laws" nos EUA. A tendência global é de maior proteção às vítimas e reconhecimento de novas formas de violência sexual.</p>
+        <!-- Slide 16: Resumo Executivo -->
+        <section id="slide-15" class="slide-section p-6 md:p-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">11. RESUMO EXECUTIVO (Véspera de Prova)</h2>
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">🎯 10 Pontos Essenciais</h3>
+                <ol class="list-decimal list-inside space-y-2 text-lg">
+                    <li><strong>Bem jurídico</strong>: Dignidade sexual.</li>
+                    <li><strong>Elementos</strong>: Constranger + violência/grave ameaça + ato sexual.</li>
+                    <li><strong>Sujeitos</strong>: Qualquer pessoa (crime comum).</li>
+                    <li><strong>Consumação</strong>: Ato libidinoso (independe de ejaculação).</li>
+                    <li><strong>Qualificadoras</strong>: Lesão grave/idade e morte.</li>
+                    <li><strong>Ação penal</strong>: Pública incondicionada.</li>
+                    <li><strong>Competência</strong>: Justiça Estadual comum.</li>
+                    <li><strong>Prescrição</strong>: 16 anos (regra); Lei Joanna Maranhão para menores.</li>
+                    <li><strong>Vedações</strong>: Não cabe ANPP, transação ou JECRIM.</li>
+                    <li><strong>Jurisprudência</strong>: STJ admite estupro virtual; palavra da vítima tem valor especial.</li>
+                </ol>
             </div>
         </section>
 
-        <section id="slide-21" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">14. Considerações Finais</h2>
-            <div class="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
-                <p>O direito penal brasileiro evoluiu, mas desafios persistem. O equilíbrio entre a proteção efetiva e a proporcionalidade da pena é central, e a efetividade da lei depende também do apoio às vítimas e da sensibilização social.</p>
+        <!-- Slide 17: Fim -->
+        <section id="slide-16" class="slide-section p-6 md:p-12 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">🏆 CONSIDERAÇÕES FINAIS</h2>
+            <div class="max-w-3xl mx-auto space-y-4 text-lg">
+                <p class="bg-blue-100 border-l-4 border-blue-500 p-4 text-left"><strong>💡 MENSAGEM DO PROFESSOR:</strong> Lembre-se, Direito Penal é sobre proteção de bens jurídicos fundamentais. O estupro atenta contra a dignidade sexual, um dos pilares da personalidade humana.</p>
+                <h3 class="text-xl font-semibold pt-4">🎯 BOA SORTE NOS ESTUDOS! 🎯</h3>
             </div>
         </section>
 
-        <section id="slide-22" class="slide-section p-6 md:p-12 flex flex-col justify-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">Fim da Apresentação</h2>
-            <div class="text-center text-gray-600">
-                <p><strong>Sobre o autor:</strong> Artigo desenvolvido com base em pesquisa doutrinária e jurisprudencial especializada em Direito Penal e Criminologia.</p>
-                <p><strong>Data:</strong> Agosto de 2025</p>
-            </div>
-        </section>
     </main>
 
     <!-- Rodapé de Navegação Fixo -->
@@ -280,9 +415,12 @@
             // Função para navegar para um slide específico
             function goToSlide(index) {
                 // Encontra o elemento do slide pelo ID e rola a tela até ele
-                document.getElementById(`slide-${index}`).scrollIntoView();
-                currentSlideIndex = index;
-                updateControls();
+                const targetSlide = document.getElementById(`slide-${index}`);
+                if (targetSlide) {
+                    targetSlide.scrollIntoView();
+                    currentSlideIndex = index;
+                    updateControls();
+                }
             }
 
             // Evento de clique para o botão "Próximo"
