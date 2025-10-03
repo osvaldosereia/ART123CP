@@ -1,0 +1,142 @@
+[
+  {
+    "artigo": "60",
+    "epigrafe": "Critérios especiais da pena de multa",
+    "texto": {
+      "caput": "Na fixação da pena de multa o juiz deve atender, principalmente, à situação econômica do réu.",
+      "relacionados_inline": [
+        {
+          "local": "caput",
+          "texto": "art. 49 do CP"
+        },
+        {
+          "local": "caput",
+          "texto": "art. 50 do CP"
+        },
+        {
+          "local": "caput",
+          "texto": "art. 51 do CP"
+        },
+        {
+          "local": "caput",
+          "texto": "art. 52 do CP"
+        },
+        {
+          "local": "caput",
+          "texto": "art. 58 do CP"
+        },
+        {
+          "local": "caput",
+          "texto": "art. 72 do CP"
+        }
+      ],
+      "paragrafos": [
+        {
+          "id": "§ 1.º",
+          "texto": "A multa pode ser aumentada até o triplo, se o juiz considerar que, em virtude da situação econômica do réu, é ineficaz, embora aplicada no máximo.",
+          "relacionados_inline": [
+            {
+              "local": "§ 1.º",
+              "texto": "art. 77 do CDC"
+            }
+          ]
+        },
+        {
+          "id": "§ 2.º",
+          "texto": "A pena privativa de liberdade aplicada, não superior a 6 (seis) meses, pode ser substituída pela de multa, observados os critérios dos incisos II e III do art. 44 deste Código.",
+          "relacionados_inline": [
+            {
+              "local": "§ 2.º",
+              "texto": "art. 58 parágrafo único do CP"
+            },
+            {
+              "local": "§ 2.º",
+              "texto": "art. 387 II do CPP"
+            },
+            {
+              "local": "§ 2.º",
+              "texto": "art. 17 da Lei n. 11.340 de 7-8-2006"
+            },
+            {
+              "local": "§ 2.º",
+              "texto": "Súmula 171 do STJ"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artigo": "59",
+    "epigrafe": "Circunstâncias judiciais",
+    "texto": {
+      "caput": "O juiz, atendendo à culpabilidade, aos antecedentes, à conduta social, à personalidade do agente, aos motivos, às circunstâncias e consequências do crime, bem como ao comportamento da vítima, estabelecerá, conforme seja necessário e suficiente para reprovação e prevenção do crime:",
+      "relacionados_inline": [
+        {
+          "local": "caput",
+          "texto": "Súmula Vinculante 59"
+        },
+        {
+          "local": "caput",
+          "texto": "Súmulas 231, 269, 440, 444 e 636 do STJ"
+        },
+        {
+          "local": "caput",
+          "texto": "Súmula Vinculante 26"
+        },
+        {
+          "local": "caput",
+          "texto": "art. 2.º da Lei 8.072/1990"
+        }
+      ],
+      "incisos": [
+        {
+          "id": "I",
+          "texto": "as penas aplicáveis dentre as cominadas"
+        },
+        {
+          "id": "II",
+          "texto": "a quantidade de pena aplicável, dentro dos limites previstos",
+          "relacionados_inline": [
+            {
+              "texto": "art. 68 do CP"
+            }
+          ]
+        },
+        {
+          "id": "III",
+          "texto": "o regime inicial de cumprimento da pena privativa de liberdade",
+          "relacionados_inline": [
+            {
+              "texto": "Súmula 440 do STJ"
+            },
+            {
+              "texto": "art. 33, § 3.º, do CP"
+            },
+            {
+              "texto": "art. 387, § 2.º, do CPP"
+            }
+          ]
+        },
+        {
+          "id": "IV",
+          "texto": "a substituição da pena privativa da liberdade aplicada, por outra espécie de pena, se cabível",
+          "relacionados_inline": [
+            {
+              "texto": "arts. 33 §3º, 44, 68 e 78 §2º do CP"
+            },
+            {
+              "texto": "art. 387, II, do CPP"
+            },
+            {
+              "texto": "Lei 7.209/1984, art. 3º"
+            },
+            {
+              "texto": "art. 5º, XLVI, da CF"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

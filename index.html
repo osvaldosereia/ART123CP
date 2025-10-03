@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Meujus — Vade-mécum Digital</title>
+
+  <link rel="stylesheet" href="style/tokens.css">
+  <link rel="stylesheet" href="style/layout.css">
+  <link rel="stylesheet" href="style/components.css">
+  <link rel="stylesheet" href="style/responsive.css">
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <div class="brand">📘 Meujus</div>
+    <div class="controls">
+      <label class="sr-only" for="fonte">Fonte</label>
+      <select id="fonte" class="select">
+        <option value="CP" selected>Código Penal</option>
+      </select>
+      <input id="q" class="input" placeholder="Número do artigo ou termo… (ex: 121 ou homicídio)"/>
+      <button id="btnBuscar" class="btn btn-primary">Buscar</button>
+    </div>
+  </header>
+
+  <nav class="chipbar" id="chipbar" aria-label="Artigos encontrados"></nav>
+
+  <main id="content" class="content" tabindex="-1" aria-live="polite"></main>
+
+  <template id="ia-menu">
+    <div class="ia-menu">
+      <div class="ia-head">🧠 I.A.</div>
+      <button data-action="estudar" class="ia-item">📘 Estudar</button>
+      <button data-action="questoes" class="ia-item">📝 Questões</button>
+      <button data-action="juris" class="ia-item">⚖️ Jurisprudências</button>
+      <div class="ia-sep"></div>
+      <div class="ia-partes"></div>
+    </div>
+  </template>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
