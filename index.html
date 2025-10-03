@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Meujus — Vade-mécum Digital</title>
+  <link rel="stylesheet" href="style/tokens.css">
+  <link rel="stylesheet" href="style/layout.css">
+  <link rel="stylesheet" href="style/components.css">
+  <link rel="stylesheet" href="style/responsive.css">
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <div class="container">
+      <div class="left">
+        <picture class="logo">
+          <img src="assets/logo-quadrado.png" alt="Meujus" height="28"/>
+        </picture>
+        <button id="btnCategoria" class="btn-ghost small" aria-haspopup="listbox" aria-expanded="false" aria-label="Trocar código/lei">CP ▾</button>
+      </div>
+      <div class="search-wrap" id="searchWrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="q" class="input" autocomplete="off" placeholder="Número do artigo ou termo… (ex: 121 ou homicídio)"/>
+        <button id="btnBuscar" class="search-btn" aria-label="Buscar">Buscar</button>
+        <div id="ac" class="autocomplete" role="listbox" aria-live="polite"></div>
+      </div>
+    </div>
+    <div id="catSheet" class="catsheet" role="listbox" aria-label="Fontes disponíveis" hidden></div>
+  </header>
+
+  <nav class="chipbar is-centered" id="chipbar" aria-label="Artigos encontrados"></nav>
+
+  <main id="content" class="content" tabindex="-1" aria-live="polite"></main>
+
+  <div id="mobileBar" class="mobile-bar" role="toolbar" aria-label="Ações do artigo" hidden>
+    <button id="btnPrev" class="chip action" aria-label="Artigo anterior" title="Artigo anterior">←</button>
+    <button id="btnRem" class="chip action" aria-label="Remissões">Remissões</button>
+    <button id="btnFerr" class="chip action" aria-label="Ferramentas">Ferramentas</button>
+    <button id="btnNext" class="chip action" aria-label="Próximo artigo" title="Próximo artigo">→</button>
+  </div>
+
+  <div id="desktopPod" class="desktop-pod" hidden>
+    <button id="dPrev" class="chip action" aria-label="Artigo anterior" title="Artigo anterior">←</button>
+    <button id="dRem" class="chip action" aria-label="Remissões">Remissões</button>
+    <button id="dFerr" class="chip action" aria-label="Ferramentas">Ferramentas</button>
+    <button id="dNext" class="chip action" aria-label="Próximo artigo" title="Próximo artigo">→</button>
+  </div>
+
+  <template id="ia-menu">
+    <div class="ia-menu">
+      <div class="ia-head">Ferramentas</div>
+      <button data-action="estudar" class="ia-item">Estudar</button>
+      <button data-action="questoes" class="ia-item">Questões</button>
+      <button data-action="juris" class="ia-item">Jurisprudências</button>
+      <div class="ia-sep"></div>
+      <div class="ia-partes"></div>
+    </div>
+  </template>
+
+  <template id="modal-remissoes">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Remissões">
+      <div class="modal-head">
+        <strong>Remissões</strong>
+        <button class="icon-btn" data-close aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal-body" id="remissoesBody"></div>
+    </div>
+  </template>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

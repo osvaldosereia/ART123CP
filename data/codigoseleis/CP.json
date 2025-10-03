@@ -1,0 +1,1276 @@
+[
+  {
+    "artigo": "60",
+    "epigrafe": "Critérios especiais da pena de multa",
+    "texto": {
+      "caput": "Na fixação da pena de multa o juiz deve atender, principalmente, à situação econômica do réu.",
+      "relacionados_inline": [
+        {
+          "local": "caput",
+          "texto": "art. 49 do CP"
+        },
+        {
+          "local": "caput",
+          "texto": "art. 50 do CP"
+        },
+        {
+          "local": "caput",
+          "texto": "art. 51 do CP"
+        }
+      ],
+      "paragrafos": [
+        {
+          "id": "§ 1.º",
+          "texto": "A multa pode ser aumentada até o triplo, ...",
+          "relacionados_inline": [
+            {
+              "local": "§ 1.º",
+              "texto": "art. 77 do CDC"
+            }
+          ]
+        },
+        {
+          "id": "§ 2.º",
+          "texto": "A pena privativa de liberdade aplicada ...",
+          "relacionados_inline": [
+            {
+              "local": "§ 2.º",
+              "texto": "art. 387 II do CPP"
+            },
+            {
+              "local": "§ 2.º",
+              "texto": "Súmula 171 do STJ"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artigo": "59",
+    "epigrafe": "Circunstâncias judiciais",
+    "texto": {
+      "caput": "O juiz, atendendo à culpabilidade...",
+      "relacionados_inline": [
+        {
+          "local": "caput",
+          "texto": "Súmula Vinculante 59"
+        },
+        {
+          "local": "caput",
+          "texto": "art. 2.º da Lei 8.072/1990"
+        }
+      ],
+      "incisos": [
+        {
+          "id": "I",
+          "texto": "as penas aplicáveis ..."
+        },
+        {
+          "id": "II",
+          "texto": "a quantidade de pena ...",
+          "relacionados_inline": [
+            {
+              "local": "inciso II",
+              "texto": "art. 68 do CP"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "artigo": "101",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 101. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "102",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 102. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "103",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 103. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "104",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 104. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "105",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 105. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "106",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 106. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "107",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 107. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "108",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 108. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "109",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 109. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "110",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 110. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "111",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 111. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "112",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 112. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "113",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 113. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "114",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 114. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "115",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 115. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "116",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 116. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "117",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 117. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "118",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 118. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "119",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 119. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "120",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 120. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "121",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 121. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "122",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 122. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "123",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 123. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "124",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 124. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "125",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 125. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "126",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 126. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "127",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 127. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "128",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 128. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "129",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 129. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "130",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 130. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "131",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 131. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "132",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 132. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "133",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 133. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "134",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 134. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "135",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 135. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "136",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 136. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "137",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 137. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "138",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 138. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "139",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 139. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "140",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 140. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "141",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 141. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "142",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 142. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "143",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 143. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "144",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 144. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "145",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 145. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "146",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 146. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "147",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 147. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "148",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 148. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "149",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 149. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "150",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 150. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "151",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 151. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "152",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 152. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "153",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 153. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "154",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 154. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "155",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 155. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "156",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 156. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "157",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 157. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "158",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 158. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "159",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 159. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "160",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 160. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "161",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 161. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "162",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 162. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "163",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 163. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "164",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 164. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "165",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 165. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "166",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 166. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "167",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 167. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "168",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 168. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "169",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 169. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "170",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 170. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "171",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 171. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "172",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 172. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "173",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 173. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "174",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 174. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "175",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 175. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "176",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 176. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "177",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 177. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "178",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 178. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "179",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 179. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "180",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 180. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "181",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 181. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "182",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 182. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "183",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 183. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "184",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 184. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "185",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 185. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "186",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 186. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "187",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 187. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "188",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 188. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "189",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 189. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "190",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 190. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "191",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 191. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "192",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 192. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "193",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 193. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "194",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 194. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "195",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 195. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "196",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 196. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "197",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 197. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "198",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 198. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "199",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 199. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "200",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 200. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "201",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 201. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "202",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 202. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "203",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 203. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "204",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 204. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "205",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 205. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "206",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 206. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "207",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 207. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "208",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 208. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "209",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 209. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "210",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 210. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "211",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 211. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "212",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 212. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "213",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 213. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "214",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 214. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "215",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 215. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "216",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 216. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "217",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 217. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "218",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 218. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "219",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 219. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "220",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 220. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "221",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 221. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "222",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 222. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "223",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 223. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "224",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 224. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "225",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 225. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "226",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 226. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "227",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 227. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "228",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 228. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "229",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 229. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "230",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 230. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "231",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 231. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "232",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 232. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "233",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 233. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "234",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 234. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "235",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 235. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "236",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 236. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "237",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 237. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "238",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 238. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "239",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 239. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "240",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 240. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "241",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 241. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "242",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 242. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "243",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 243. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "244",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 244. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "245",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 245. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "246",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 246. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "247",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 247. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "248",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 248. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "249",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 249. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "250",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 250. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "251",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 251. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "252",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 252. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "253",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 253. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "254",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 254. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "255",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 255. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "256",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 256. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "257",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 257. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "258",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 258. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "259",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 259. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "260",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 260. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "261",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 261. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "262",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 262. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "263",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 263. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "264",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 264. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "265",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 265. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "266",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 266. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "267",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 267. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "268",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 268. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "269",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 269. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "270",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 270. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "271",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 271. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "272",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 272. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "273",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 273. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "274",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 274. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "275",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 275. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "276",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 276. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "277",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 277. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "278",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 278. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "279",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 279. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "280",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 280. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "281",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 281. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "282",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 282. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "283",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 283. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "284",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 284. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "285",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 285. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "286",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 286. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "287",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 287. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "288",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 288. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "289",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 289. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "290",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 290. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "291",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 291. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "292",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 292. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "293",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 293. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "294",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 294. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "295",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 295. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "296",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 296. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "297",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 297. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "298",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 298. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "299",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 299. Texto simulado para testes."
+    }
+  }
+]

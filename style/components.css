@@ -1,0 +1,4 @@
+.link-ext,.link-ia{display:inline-block;margin:0 8px 8px 0;color:#111827;text-decoration:underline;text-decoration-color:#E5E7EB;text-underline-offset:3px}
+.link-ext:hover,.link-ia:hover{background:#F9FAFB}
+.badge{font-size:var(--fs-xs);color:var(--muted)}
+.block{margin:var(--sp-2) 0}
