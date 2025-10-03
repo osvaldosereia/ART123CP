@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Meujus — Vade-mécum Digital</title>
+  <link rel="stylesheet" href="style/tokens.css">
+  <link rel="stylesheet" href="style/layout.css">
+  <link rel="stylesheet" href="style/components.css">
+  <link rel="stylesheet" href="style/responsive.css">
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <div class="container">
+      <div class="left">
+        <button id="btnMenu" class="icon-btn" aria-label="Abrir menu">☰</button>
+        <picture class="logo">
+          <source media="(min-width:860px)" srcset="assets/logo-horizontal.png">
+          <img src="assets/logo-quadrado.png" alt="Meujus"/>
+        </picture>
+      </div>
+      <div class="controls" id="controls">
+        <label class="sr-only" for="fonte">Fonte</label>
+        <select id="fonte" class="select">
+          <option value="CP" selected>Código Penal</option>
+        </select>
+        <div class="search-wrap">
+          <input id="q" class="input" autocomplete="off" placeholder="Número do artigo ou termo… (ex: 121 ou homicídio)"/>
+          <div id="ac" class="autocomplete" role="listbox" aria-live="polite"></div>
+        </div>
+        <button id="btnBuscar" class="btn btn-primary">Buscar</button>
+      </div>
+    </div>
+  </header>
+
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <strong>Meujus</strong>
+      <button id="btnCloseDrawer" class="icon-btn" aria-label="Fechar">✕</button>
+    </div>
+    <div class="drawer-body small">
+      <p>Espaço para informações extras futuras (Sobre, Ajuda, Preferências).</p>
+    </div>
+  </aside>
+  <div id="scrim" class="scrim" hidden></div>
+
+  <nav class="chipbar" id="chipbar" aria-label="Artigos encontrados"></nav>
+
+  <main id="content" class="content" tabindex="-1" aria-live="polite"></main>
+
+  <template id="ia-menu">
+    <div class="ia-menu">
+      <div class="ia-head">Ferramentas</div>
+      <button data-action="estudar" class="ia-item">Estudar</button>
+      <button data-action="questoes" class="ia-item">Questões</button>
+      <button data-action="juris" class="ia-item">Jurisprudências</button>
+      <div class="ia-sep"></div>
+      <div class="ia-partes"></div>
+    </div>
+  </template>
+
+  <template id="modal-codigo">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Código completo">
+      <div class="modal-head">
+        <strong>Código completo</strong>
+        <button class="icon-btn" data-close aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal-body" id="codigoScroll"></div>
+    </div>
+  </template>
+
+  <template id="modal-remissoes">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Remissões">
+      <div class="modal-head">
+        <strong>Remissões</strong>
+        <button class="icon-btn" data-close aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal-body" id="remissoesBody"></div>
+    </div>
+  </template>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
