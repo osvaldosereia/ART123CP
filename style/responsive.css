@@ -1,5 +1,0 @@
-@media (max-width: 860px){
-  .topbar{gap:var(--sp-2)}
-  .topbar .controls{min-width:auto;width:100%}
-  .input{min-width:0}
-}
