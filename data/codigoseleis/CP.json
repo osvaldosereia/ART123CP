@@ -1,213 +1,45 @@
 [
   {
-    "artigo": "1",
+    "artigo": "60",
+    "epigrafe": "Critérios especiais da pena de multa",
     "texto": {
-      "caput": "Toda pessoa é capaz de direitos e deveres na ordem civil.",
+      "caput": "Na fixação da pena de multa o juiz deve atender, principalmente, à situação econômica do réu.",
       "relacionados_inline": [
-        { "local": "caput", "texto": "art. 4.º do CC" },
-        { "local": "caput", "texto": "art. 5.º do CC" },
-        { "local": "caput", "texto": "art. 7.º caput da LINDB" },
-        { "local": "caput", "texto": "art. 70 do CPC" }
-      ]
-    }
-  },
-  {
-    "artigo": "2",
-    "texto": {
-      "caput": "A personalidade civil da pessoa começa do nascimento com vida; mas a lei põe a salvo, desde a concepção, os direitos do nascituro.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 5.º do CC" },
-        { "local": "caput", "texto": "art. 115 do CC" },
-        { "local": "caput", "texto": "art. 116 do CC" },
-        { "local": "caput", "texto": "art. 117 do CC" },
-        { "local": "caput", "texto": "art. 118 do CC" },
-        { "local": "caput", "texto": "art. 119 do CC" },
-        { "local": "caput", "texto": "art. 120 do CC" },
-        { "local": "caput", "texto": "art. 166 I do CC" },
-        { "local": "caput", "texto": "art. 542 do CC" },
-        { "local": "caput", "texto": "art. 1.609 parágrafo único do CC" },
-        { "local": "caput", "texto": "art. 1.690 do CC" },
-        { "local": "caput", "texto": "art. 1.779 caput do CC" },
-        { "local": "caput", "texto": "art. 1.798 do CC" },
-        { "local": "caput", "texto": "art. 1.799 I do CC" },
-        { "local": "caput", "texto": "art. 1.800 do CC" },
-        { "local": "caput", "texto": "art. 1.952 do CC" },
-        { "local": "caput", "texto": "art. 50 da LRP" },
-        { "local": "caput", "texto": "art. 51 da LRP" },
-        { "local": "caput", "texto": "art. 52 da LRP" },
-        { "local": "caput", "texto": "art. 53 da LRP" },
-        { "local": "caput", "texto": "art. 54 da LRP" },
-        { "local": "caput", "texto": "art. 55 da LRP" },
-        { "local": "caput", "texto": "art. 56 da LRP" },
-        { "local": "caput", "texto": "art. 57 da LRP" },
-        { "local": "caput", "texto": "art. 58 da LRP" },
-        { "local": "caput", "texto": "art. 59 da LRP" },
-        { "local": "caput", "texto": "art. 60 da LRP" },
-        { "local": "caput", "texto": "art. 61 da LRP" },
-        { "local": "caput", "texto": "art. 62 da LRP" },
-        { "local": "caput", "texto": "art. 63 da LRP" },
-        { "local": "caput", "texto": "art. 64 da LRP" },
-        { "local": "caput", "texto": "art. 65 da LRP" },
-        { "local": "caput", "texto": "art. 66 da LRP" },
-        { "local": "caput", "texto": "art. 7.º do ECA" },
-        { "local": "caput", "texto": "art. 8.º do ECA" },
-        { "local": "caput", "texto": "art. 9.º do ECA" },
-        { "local": "caput", "texto": "art. 10 do ECA" },
-        { "local": "caput", "texto": "art. 11 do ECA" },
-        { "local": "caput", "texto": "art. 12 do ECA" },
-        { "local": "caput", "texto": "art. 13 do ECA" },
-        { "local": "caput", "texto": "art. 14 do ECA" },
-        { "local": "caput", "texto": "art. 228 do ECA" },
-        { "local": "caput", "texto": "art. 229 do ECA" },
-        { "local": "caput", "texto": "art. 7.º da LINDB" },
-        { "local": "caput", "texto": "art. 71 do CPC" },
-        { "local": "caput", "texto": "art. 178 II do CPC" },
-        { "local": "caput", "texto": "art. 50 do CPC" },
-        { "local": "caput", "texto": "art. 896 do CPC" },
-        { "local": "caput", "texto": "art. 4.º item 1 do Decreto n. 678 de 6-11-1992" }
-      ]
-    }
-  },
-  {
-    "artigo": "3",
-    "texto": {
-      "caput": "São absolutamente incapazes de exercer pessoalmente os atos da vida civil os menores de 16 anos.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 5.º do CC" },
-        { "local": "caput", "texto": "art. 76 do CC" },
-        { "local": "caput", "texto": "art. 105 do CC" },
-        { "local": "caput", "texto": "art. 115 do CC" },
-        { "local": "caput", "texto": "art. 116 do CC" },
-        { "local": "caput", "texto": "art. 117 do CC" },
-        { "local": "caput", "texto": "art. 118 do CC" },
-        { "local": "caput", "texto": "art. 119 do CC" },
-        { "local": "caput", "texto": "art. 120 do CC" },
-        { "local": "caput", "texto": "art. 166 I do CC" },
-        { "local": "caput", "texto": "art. 198 do CC" },
-        { "local": "caput", "texto": "art. 471 do CC" },
-        { "local": "caput", "texto": "art. 543 do CC" },
-        { "local": "caput", "texto": "art. 1.634 do CC" },
-        { "local": "caput", "texto": "art. 1.690 do CC" },
-        { "local": "caput", "texto": "art. 1.728 do CC" },
-        { "local": "caput", "texto": "art. 71 do CPC" },
-        { "local": "caput", "texto": "art. 72 do CPC" },
-        { "local": "caput", "texto": "art. 447 § 1.º do CPC" }
-      ]
-    }
-  },
-  {
-    "artigo": "4",
-    "texto": {
-      "caput": "São incapazes, relativamente a certos atos ou à maneira de os exercer:",
-      "incisos": [
         {
-          "id": "I",
-          "texto": "os maiores de dezesseis e menores de dezoito anos;",
-          "relacionados_inline": [
-            { "local": "inciso I", "texto": "art. 180 do CC" },
-            { "local": "inciso I", "texto": "art. 666 do CC" },
-            { "local": "inciso I", "texto": "art. 1.634 V do CC" },
-            { "local": "inciso I", "texto": "art. 1.747 I do CC" },
-            { "local": "inciso I", "texto": "art. 1.860 parágrafo único do CC" }
-          ]
+          "local": "caput",
+          "texto": "art. 49 do CP"
         },
         {
-          "id": "II",
-          "texto": "os ébrios habituais e os viciados em tóxico;",
-          "relacionados_inline": [
-            { "local": "inciso II", "texto": "art. 1.767 III do CC" }
-          ]
+          "local": "caput",
+          "texto": "art. 50 do CP"
         },
         {
-          "id": "III",
-          "texto": "aqueles que, por causa transitória ou permanente, não puderem exprimir sua vontade;",
-          "relacionados_inline": [
-            { "local": "inciso III", "texto": "art. 1.767 do CC" }
-          ]
-        },
-        {
-          "id": "IV",
-          "texto": "os pródigos.",
-          "relacionados_inline": [
-            { "local": "inciso IV", "texto": "art. 1.767 V do CC" },
-            { "local": "inciso IV", "texto": "art. 1.782 do CC" }
-          ]
+          "local": "caput",
+          "texto": "art. 51 do CP"
         }
       ],
       "paragrafos": [
         {
-          "id": "Parágrafo único",
-          "texto": "A capacidade dos indígenas será regulada por legislação especial.",
+          "id": "§ 1.º",
+          "texto": "A multa pode ser aumentada até o triplo, ...",
           "relacionados_inline": [
-            { "local": "Parágrafo único", "texto": "art. 50 § 2.º da LRP" }
+            {
+              "local": "§ 1.º",
+              "texto": "art. 77 do CDC"
+            }
           ]
-        }
-      ],
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 71 do CPC" },
-        { "local": "caput", "texto": "art. 72 do CPC" },
-        { "local": "caput", "texto": "art. 447 § 1.º do CPC" },
-        { "local": "caput", "texto": "art. 142 do ECA" }
-      ]
-    }
-  },
-  {
-    "artigo": "5",
-    "texto": {
-      "caput": "A menoridade cessa aos dezoito anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 666 do CC" },
-        { "local": "caput", "texto": "art. 27 do CP" },
-        { "local": "caput", "texto": "art. 65 do CP" },
-        { "local": "caput", "texto": "art. 115 do CP" },
-        { "local": "caput", "texto": "art. 15 do CPP" },
-        { "local": "caput", "texto": "art. 34 do CPP" },
-        { "local": "caput", "texto": "art. 50 do CPP" },
-        { "local": "caput", "texto": "art. 52 do CPP" },
-        { "local": "caput", "texto": "art. 262 do CPP" },
-        { "local": "caput", "texto": "art. 564 III c do CPP" },
-        { "local": "caput", "texto": "art. 148 parágrafo único e do ECA" }
-      ],
-      "paragrafos": [
+        },
         {
-          "id": "Parágrafo único",
-          "texto": "Cessará, para os menores, a incapacidade:",
-          "incisos": [
+          "id": "§ 2.º",
+          "texto": "A pena privativa de liberdade aplicada ...",
+          "relacionados_inline": [
             {
-              "id": "I",
-              "texto": "pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, independentemente de homologação judicial, ou por sentença do juiz, ouvido o tutor, se o menor tiver dezesseis anos completos;",
-              "relacionados_inline": [
-                { "local": "inciso I", "texto": "art. 226 § 5.º da CF" },
-                { "local": "inciso I", "texto": "art. 1.635 II do CC" },
-                { "local": "inciso I", "texto": "art. 1.763 I do CC" },
-                { "local": "inciso I", "texto": "art. 9.º II do CC" },
-                { "local": "inciso I", "texto": "art. 89 da LRP" },
-                { "local": "inciso I", "texto": "art. 725 I do CPC" }
-              ]
+              "local": "§ 2.º",
+              "texto": "art. 387 II do CPP"
             },
             {
-              "id": "II",
-              "texto": "pelo casamento;",
-              "relacionados_inline": [
-                { "local": "inciso II", "texto": "art. 226 da CF" }
-              ]
-            },
-            {
-              "id": "III",
-              "texto": "pelo exercício de emprego público efetivo;",
-              "relacionados_inline": [
-                { "local": "inciso III", "texto": "art. 5.º V da Lei n. 8.112 de 11-12-1990" }
-              ]
-            },
-            { "id": "IV", "texto": "pela colação de grau em curso de ensino superior;" },
-            {
-              "id": "V",
-              "texto": "pelo estabelecimento civil ou comercial, ou pela existência de relação de emprego, desde que, em função deles, o menor com dezesseis anos completos tenha economia própria.",
-              "relacionados_inline": [
-                { "local": "inciso V", "texto": "art. 7.º XXXIII da CF" },
-                { "local": "inciso V", "texto": "art. 966 do CC" },
-                { "local": "inciso V", "texto": "art. 972 do CC" }
-              ]
+              "local": "§ 2.º",
+              "texto": "Súmula 171 do STJ"
             }
           ]
         }
@@ -215,1059 +47,1230 @@
     }
   },
   {
-    "artigo": "6",
+    "artigo": "59",
+    "epigrafe": "Circunstâncias judiciais",
     "texto": {
-      "caput": "A existência da pessoa natural termina com a morte; presume-se esta, quanto aos ausentes, nos casos em que a lei autoriza a abertura de sucessão definitiva.",
+      "caput": "O juiz, atendendo à culpabilidade...",
       "relacionados_inline": [
-        { "local": "caput", "texto": "art. 22 do CC" },
-        { "local": "caput", "texto": "art. 23 do CC" },
-        { "local": "caput", "texto": "art. 24 do CC" },
-        { "local": "caput", "texto": "art. 25 do CC" },
-        { "local": "caput", "texto": "art. 26 do CC" },
-        { "local": "caput", "texto": "art. 27 do CC" },
-        { "local": "caput", "texto": "art. 28 do CC" },
-        { "local": "caput", "texto": "art. 29 do CC" },
-        { "local": "caput", "texto": "art. 30 do CC" },
-        { "local": "caput", "texto": "art. 31 do CC" },
-        { "local": "caput", "texto": "art. 32 do CC" },
-        { "local": "caput", "texto": "art. 33 do CC" },
-        { "local": "caput", "texto": "art. 34 do CC" },
-        { "local": "caput", "texto": "art. 35 do CC" },
-        { "local": "caput", "texto": "art. 36 do CC" },
-        { "local": "caput", "texto": "art. 37 do CC" },
-        { "local": "caput", "texto": "art. 38 do CC" },
-        { "local": "caput", "texto": "art. 39 do CC" },
-        { "local": "caput", "texto": "art. 744 do CPC" },
-        { "local": "caput", "texto": "art. 745 do CPC" },
-        { "local": "caput", "texto": "art. 77 da LRP" },
-        { "local": "caput", "texto": "art. 78 da LRP" },
-        { "local": "caput", "texto": "art. 79 da LRP" },
-        { "local": "caput", "texto": "art. 80 da LRP" },
-        { "local": "caput", "texto": "art. 81 da LRP" },
-        { "local": "caput", "texto": "art. 82 da LRP" },
-        { "local": "caput", "texto": "art. 83 da LRP" },
-        { "local": "caput", "texto": "art. 84 da LRP" },
-        { "local": "caput", "texto": "art. 85 da LRP" },
-        { "local": "caput", "texto": "art. 86 da LRP" },
-        { "local": "caput", "texto": "art. 87 da LRP" },
-        { "local": "caput", "texto": "art. 88 da LRP" },
-        { "local": "caput", "texto": "art. 3.º da Lei n. 9.434 de 4-2-1997" },
-        { "local": "caput", "texto": "Súmula 331 do STF" }
-      ]
-    }
-  },
-  {
-    "artigo": "7",
-    "texto": {
-      "caput": "Pode ser declarada a morte presumida, sem decretação de ausência:",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 88 da LRP" }
-      ],
-      "incisos": [
-        { "id": "I", "texto": "se for extremamente provável a morte de quem estava em perigo de vida;" },
-        { "id": "II", "texto": "se alguém, desaparecido em campanha ou feito prisioneiro, não for encontrado até dois anos após o término da guerra." }
-      ],
-      "paragrafos": [
         {
-          "id": "Parágrafo único",
-          "texto": "A declaração da morte presumida, nesses casos, somente poderá ser requerida depois de esgotadas as buscas e averiguações, devendo a sentença fixar a data provável do falecimento."
+          "local": "caput",
+          "texto": "Súmula Vinculante 59"
+        },
+        {
+          "local": "caput",
+          "texto": "art. 2.º da Lei 8.072/1990"
         }
-      ]
-    }
-  },
-  {
-    "artigo": "8",
-    "texto": {
-      "caput": "Se dois ou mais indivíduos falecerem na mesma ocasião, não se podendo averiguar se algum dos comorientes precedeu aos outros, presumir-se-ão simultaneamente mortos."
-    }
-  },
-  {
-    "artigo": "9",
-    "texto": {
-      "caput": "Serão registrados em registro público:",
+      ],
       "incisos": [
         {
           "id": "I",
-          "texto": "os nascimentos, casamentos e óbitos;",
-          "relacionados_inline": [
-            { "local": "inciso I", "texto": "art. 725 I do CPC" },
-            { "local": "inciso I", "texto": "art. 18 da LINDB" },
-            { "local": "inciso I", "texto": "art. 29 da LRP" },
-            { "local": "inciso I", "texto": "art. 30 da LRP" },
-            { "local": "inciso I", "texto": "art. 31 da LRP" },
-            { "local": "inciso I", "texto": "art. 32 da LRP" },
-            { "local": "inciso I", "texto": "art. 50 da LRP" },
-            { "local": "inciso I", "texto": "art. 51 da LRP" },
-            { "local": "inciso I", "texto": "art. 52 da LRP" },
-            { "local": "inciso I", "texto": "art. 53 da LRP" },
-            { "local": "inciso I", "texto": "art. 54 da LRP" },
-            { "local": "inciso I", "texto": "art. 55 da LRP" },
-            { "local": "inciso I", "texto": "art. 56 da LRP" },
-            { "local": "inciso I", "texto": "art. 57 da LRP" },
-            { "local": "inciso I", "texto": "art. 58 da LRP" },
-            { "local": "inciso I", "texto": "art. 59 da LRP" },
-            { "local": "inciso I", "texto": "art. 60 da LRP" },
-            { "local": "inciso I", "texto": "art. 61 da LRP" },
-            { "local": "inciso I", "texto": "art. 62 da LRP" },
-            { "local": "inciso I", "texto": "art. 63 da LRP" },
-            { "local": "inciso I", "texto": "art. 64 da LRP" },
-            { "local": "inciso I", "texto": "art. 65 da LRP" },
-            { "local": "inciso I", "texto": "art. 66 da LRP" },
-            { "local": "inciso I", "texto": "art. 70 da LRP" },
-            { "local": "inciso I", "texto": "art. 77 da LRP" },
-            { "local": "inciso I", "texto": "art. 78 da LRP" },
-            { "local": "inciso I", "texto": "art. 79 da LRP" },
-            { "local": "inciso I", "texto": "art. 80 da LRP" },
-            { "local": "inciso I", "texto": "art. 81 da LRP" },
-            { "local": "inciso I", "texto": "art. 82 da LRP" },
-            { "local": "inciso I", "texto": "art. 83 da LRP" },
-            { "local": "inciso I", "texto": "art. 84 da LRP" },
-            { "local": "inciso I", "texto": "art. 85 da LRP" },
-            { "local": "inciso I", "texto": "art. 86 da LRP" },
-            { "local": "inciso I", "texto": "art. 87 da LRP" },
-            { "local": "inciso I", "texto": "art. 88 da LRP" },
-            { "local": "inciso I", "texto": "Lei n. 12.662 de 5-6-2012" }
-          ]
+          "texto": "as penas aplicáveis ..."
         },
         {
           "id": "II",
-          "texto": "a emancipação por outorga dos pais ou por sentença do juiz;",
+          "texto": "a quantidade de pena ...",
           "relacionados_inline": [
-            { "local": "inciso II", "texto": "art. 5.º parágrafo único I do CC" },
-            { "local": "inciso II", "texto": "art. 226 § 5.º da CF" },
-            { "local": "inciso II", "texto": "art. 13 § 2.º da LRP" },
-            { "local": "inciso II", "texto": "art. 29 IV da LRP" },
-            { "local": "inciso II", "texto": "art. 89 da LRP" }
-          ]
-        },
-        {
-          "id": "III",
-          "texto": "a interdição por incapacidade absoluta ou relativa;",
-          "relacionados_inline": [
-            { "local": "inciso III", "texto": "art. 13 § 2.º da LRP" },
-            { "local": "inciso III", "texto": "art. 29 IV da LRP" },
-            { "local": "inciso III", "texto": "art. 89 da LRP" }
-          ]
-        },
-        {
-          "id": "IV",
-          "texto": "a sentença declaratória de ausência e de morte presumida.",
-          "relacionados_inline": [
-            { "local": "inciso IV", "texto": "art. 13 § 2.º da LRP" },
-            { "local": "inciso IV", "texto": "art. 29 IV da LRP" },
-            { "local": "inciso IV", "texto": "art. 89 da LRP" }
+            {
+              "local": "inciso II",
+              "texto": "art. 68 do CP"
+            }
           ]
         }
       ]
     }
   },
   {
-    "artigo": "10",
+    "artigo": "101",
     "texto": {
-      "caput": "Far-se-á averbação em registro público:",
-      "incisos": [
-        {
-          "id": "I",
-          "texto": "das sentenças que decretarem a nulidade ou anulação do casamento, o divórcio, a separação judicial e o restabelecimento da sociedade conjugal;",
-          "relacionados_inline": [
-            { "local": "inciso I", "texto": "Emenda Constitucional n. 66 de 13-7-2010" },
-            { "local": "inciso I", "texto": "art. 226 § 6.º da CF" },
-            { "local": "inciso I", "texto": "art. 29 § 1.º a da LRP" },
-            { "local": "inciso I", "texto": "Lei n. 6.515 de 26-12-1977" }
-          ]
-        },
-        {
-          "id": "II",
-          "texto": "dos atos judiciais ou extrajudiciais que declararem ou reconhecerem a filiação;",
-          "relacionados_inline": [
-            { "local": "inciso II", "texto": "art. 26 do ECA" },
-            { "local": "inciso II", "texto": "art. 27 do ECA" },
-            { "local": "inciso II", "texto": "Lei n. 8.560 de 29-12-1992" }
-          ]
-        },
-        { "id": "III", "texto": "(Revogado pela Lei n. 12.010 de 3-8-2009.)" }
-      ]
-    }
-  },
-
-  /* --- 11–12 (sem epígrafe fornecida) --- */
-  {
-    "artigo": "11",
-    "texto": {
-      "caput": "Com exceção dos casos previstos em lei, os direitos da personalidade são intransmissíveis e irrenunciáveis, não podendo o seu exercício sofrer limitação voluntária.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 5.º X da CF" },
-        { "local": "caput", "texto": "art. 52 do CC" },
-        { "local": "caput", "texto": "art. 8.º da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 9.º da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 10 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 11 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 12 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 13 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 14 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 15 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 16 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 17 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 18 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 19 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 20 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 21 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 22 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 23 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 24 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 25 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 26 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 27 da Lei n. 10.741 de 1.º-10-2003" },
-        { "local": "caput", "texto": "art. 28 da Lei n. 10.741 de 1.º-10-2003" }
-      ]
+      "caput": "Caput de exemplo do artigo 101. Texto simulado para testes."
     }
   },
   {
-    "artigo": "12",
+    "artigo": "102",
     "texto": {
-      "caput": "Pode-se exigir que cesse a ameaça, ou a lesão, a direito da personalidade, e reclamar perdas e danos, sem prejuízo de outras sanções previstas em lei.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "Súmula 642 do STJ" },
-        { "local": "caput", "texto": "art. 5.º X da CF" },
-        { "local": "caput", "texto": "art. 5.º XXXV da CF" },
-        { "local": "caput", "texto": "art. 186 do CC" },
-        { "local": "caput", "texto": "art. 402 do CC" },
-        { "local": "caput", "texto": "art. 403 do CC" },
-        { "local": "caput", "texto": "art. 404 do CC" },
-        { "local": "caput", "texto": "art. 405 do CC" },
-        { "local": "caput", "texto": "art. 927 do CC" },
-        { "local": "caput", "texto": "art. 944 do CC" },
-        { "local": "caput", "texto": "art. 945 do CC" },
-        { "local": "caput", "texto": "art. 946 do CC" },
-        { "local": "caput", "texto": "art. 947 do CC" },
-        { "local": "caput", "texto": "art. 948 do CC" },
-        { "local": "caput", "texto": "art. 949 do CC" },
-        { "local": "caput", "texto": "art. 950 do CC" },
-        { "local": "caput", "texto": "art. 951 do CC" },
-        { "local": "caput", "texto": "art. 952 do CC" },
-        { "local": "caput", "texto": "art. 953 do CC" },
-        { "local": "caput", "texto": "art. 954 do CC" },
-        { "local": "caput", "texto": "art. 189 do CPC" },
-        { "local": "caput", "texto": "art. 294 do CPC" },
-        { "local": "caput", "texto": "art. 300 do CPC" },
-        { "local": "caput", "texto": "art. 368 do CPC" },
-        { "local": "caput", "texto": "art. 497 do CPC" }
-      ],
-      "paragrafos": [
-        {
-          "id": "Parágrafo único",
-          "texto": "Em se tratando de morto, terá legitimação para requerer a medida prevista neste artigo o cônjuge sobrevivente, ou qualquer parente em linha reta, ou colateral até o quarto grau.",
-          "relacionados_inline": [
-            { "local": "Parágrafo único", "texto": "art. 20 parágrafo único do CC" },
-            { "local": "Parágrafo único", "texto": "art. 943 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.591 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.592 do CC" }
-          ]
-        }
-      ],
-      "jurisprudencia": [
-        "O art. 138 § 2.º do CP dispõe sobre a possibilidade da existência do crime de calúnia contra os mortos."
-      ]
-    }
-  },
-
-  /* --- 13–21 (sem epígrafe fornecida) --- */
-  {
-    "artigo": "13",
-    "texto": {
-      "caput": "Salvo por exigência médica, é defeso o ato de disposição do próprio corpo, quando importar diminuição permanente da integridade física, ou contrariar os bons costumes.",
-      "paragrafos": [
-        {
-          "id": "Parágrafo único",
-          "texto": "O ato previsto neste artigo será admitido para fins de transplante, na forma estabelecida em lei especial.",
-          "relacionados_inline": [
-            { "local": "Parágrafo único", "texto": "art. 9.º § 3.º da Lei n. 9.434 de 4-2-1997" }
-          ]
-        }
-      ]
+      "caput": "Caput de exemplo do artigo 102. Texto simulado para testes."
     }
   },
   {
-    "artigo": "14",
+    "artigo": "103",
     "texto": {
-      "caput": "É válida, com objetivo científico, ou altruístico, a disposição gratuita do próprio corpo, no todo ou em parte, para depois da morte.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 199 § 4.º da CF" },
-        { "local": "caput", "texto": "Lei n. 8.501 de 30-11-1992" },
-        { "local": "caput", "texto": "Lei n. 9.434 de 4-2-1997" },
-        { "local": "caput", "texto": "Decreto n. 9.175 de 18-10-2017" }
-      ],
-      "paragrafos": [
-        {
-          "id": "Parágrafo único",
-          "texto": "O ato de disposição pode ser livremente revogado a qualquer tempo.",
-          "relacionados_inline": [
-            { "local": "Parágrafo único", "texto": "art. 3.º da Lei n. 9.434 de 4-2-1997" }
-          ]
-        }
-      ]
+      "caput": "Caput de exemplo do artigo 103. Texto simulado para testes."
     }
   },
   {
-    "artigo": "15",
+    "artigo": "104",
     "texto": {
-      "caput": "Ninguém pode ser constrangido a submeter-se, com risco de vida, a tratamento médico ou a intervenção cirúrgica."
+      "caput": "Caput de exemplo do artigo 104. Texto simulado para testes."
     }
   },
   {
-    "artigo": "16",
+    "artigo": "105",
     "texto": {
-      "caput": "Toda pessoa tem direito ao nome, nele compreendidos o prenome e o sobrenome.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 1.565 § 1.º do CC" },
-        { "local": "caput", "texto": "art. 1.571 § 2.º do CC" },
-        { "local": "caput", "texto": "art. 1.578 do CC" },
-        { "local": "caput", "texto": "art. 59 da LRP" },
-        { "local": "caput", "texto": "art. 60 da LRP" },
-        { "local": "caput", "texto": "art. 227 § 6.º da CF" },
-        { "local": "caput", "texto": "art. 47 § 5.º do ECA" }
-      ]
+      "caput": "Caput de exemplo do artigo 105. Texto simulado para testes."
     }
   },
   {
-    "artigo": "17",
+    "artigo": "106",
     "texto": {
-      "caput": "O nome da pessoa não pode ser empregado por outrem em publicações ou representações que a exponham ao desprezo público, ainda quando não haja intenção difamatória.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "Súmula 221 do STJ" }
-      ]
+      "caput": "Caput de exemplo do artigo 106. Texto simulado para testes."
     }
   },
   {
-    "artigo": "18",
+    "artigo": "107",
     "texto": {
-      "caput": "Sem autorização, não se pode usar o nome alheio em propaganda comercial."
+      "caput": "Caput de exemplo do artigo 107. Texto simulado para testes."
     }
   },
   {
-    "artigo": "19",
+    "artigo": "108",
     "texto": {
-      "caput": "O pseudônimo adotado para atividades lícitas goza da proteção que se dá ao nome.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 58 da LRP" },
-        { "local": "caput", "texto": "art. 12 da Lei n. 9.610 de 19-2-1998" },
-        { "local": "caput", "texto": "art. 24 II da Lei n. 9.610 de 19-2-1998" }
-      ]
+      "caput": "Caput de exemplo do artigo 108. Texto simulado para testes."
     }
   },
   {
-    "artigo": "20",
+    "artigo": "109",
     "texto": {
-      "caput": "Salvo se autorizadas, ou se necessárias à administração da justiça ou à manutenção da ordem pública, a divulgação de escritos, a transmissão da palavra, ou a publicação, a exposição ou a utilização da imagem de uma pessoa poderão ser proibidas, a seu requerimento e sem prejuízo da indenização que couber, se lhe atingirem a honra, a boa fama ou a respeitabilidade, ou se se destinarem a fins comerciais.",
-      "jurisprudencia": [
-        "O STF julgou procedente a ADI n. 4.815 de 10-6-2015 (DOU de 16-2-2016), dando a este artigo interpretação conforme à Constituição, declarando inexigível o consentimento de pessoa biografada relativamente a obras biográficas literárias ou audiovisuais, sendo também desnecessária autorização de coadjuvantes ou familiares de falecidos."
-      ],
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 5.º V da CF" },
-        { "local": "caput", "texto": "art. 5.º IX da CF" },
-        { "local": "caput", "texto": "art. 5.º X da CF" },
-        { "local": "caput", "texto": "art. 5.º XXVIII a da CF" },
-        { "local": "caput", "texto": "Lei n. 9.610 de 19-2-1998" },
-        { "local": "caput", "texto": "art. 143 do ECA" },
-        { "local": "caput", "texto": "art. 247 do ECA" },
-        { "local": "caput", "texto": "Súmula 221 do STJ" }
-      ],
-      "paragrafos": [
-        {
-          "id": "Parágrafo único",
-          "texto": "Em se tratando de morto ou de ausente, são partes legítimas para requerer essa proteção o cônjuge, os ascendentes ou os descendentes.",
-          "relacionados_inline": [
-            { "local": "Parágrafo único", "texto": "art. 12 parágrafo único do CC" },
-            { "local": "Parágrafo único", "texto": "art. 22 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 23 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 24 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 25 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 39 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 943 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.845 do CC" }
-          ]
-        }
-      ]
+      "caput": "Caput de exemplo do artigo 109. Texto simulado para testes."
     }
   },
   {
-    "artigo": "21",
+    "artigo": "110",
     "texto": {
-      "caput": "A vida privada da pessoa natural é inviolável, e o juiz, a requerimento do interessado, adotará as providências necessárias para impedir ou fazer cessar ato contrário a esta norma.",
-      "jurisprudencia": [
-        "O STF julgou procedente a ADI n. 4.815 de 10-6-2015 (DOU de 16-2-2016), dando a este artigo interpretação conforme à Constituição, declarando inexigível o consentimento de pessoa biografada relativamente a obras biográficas literárias ou audiovisuais."
-      ],
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 5.º X da CF" }
-      ]
-    }
-  },
-
-  /* --- Capítulo III - Da Ausência (aplicado a cada artigo) --- */
-  {
-    "artigo": "22",
-    "epigrafe": "Capítulo III - Da Ausência",
-    "texto": {
-      "caput": "Desaparecendo uma pessoa do seu domicílio sem dela haver notícia, se não houver deixado representante ou procurador a quem caiba administrar-lhe os bens, o juiz, a requerimento de qualquer interessado ou do Ministério Público, declarará a ausência, e nomear-lhe-á curador.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 744 do CPC" },
-        { "local": "caput", "texto": "art. 745 do CPC" },
-        { "local": "caput", "texto": "art. 71 do CPC" },
-        { "local": "caput", "texto": "art. 76 do CPC" },
-        { "local": "caput", "texto": "art. 626 do CPC" },
-        { "local": "caput", "texto": "art. 29 VI da LRP" },
-        { "local": "caput", "texto": "art. 94 III f da Lei n. 11.101 de 9-2-2005" }
-      ]
+      "caput": "Caput de exemplo do artigo 110. Texto simulado para testes."
     }
   },
   {
-    "artigo": "23",
-    "epigrafe": "Capítulo III - Da Ausência",
+    "artigo": "111",
     "texto": {
-      "caput": "Também se declarará a ausência, e se nomeará curador, quando o ausente deixar mandatário que não queira ou não possa exercer ou continuar o mandato, ou se os seus poderes forem insuficientes.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 653 do CC" },
-        { "local": "caput", "texto": "art. 682 do CC" },
-        { "local": "caput", "texto": "art. 744 do CPC" }
-      ]
+      "caput": "Caput de exemplo do artigo 111. Texto simulado para testes."
     }
   },
   {
-    "artigo": "24",
-    "epigrafe": "Capítulo III - Da Ausência",
+    "artigo": "112",
     "texto": {
-      "caput": "O juiz, que nomear o curador, fixar-lhe-á os poderes e obrigações, conforme as circunstâncias, observando, no que for aplicável, o disposto a respeito dos tutores e curadores.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 1.728 do CC" },
-        { "local": "caput", "texto": "art. 739 do CPC" },
-        { "local": "caput", "texto": "art. 759 do CPC" }
-      ]
+      "caput": "Caput de exemplo do artigo 112. Texto simulado para testes."
     }
   },
   {
-    "artigo": "25",
-    "epigrafe": "Capítulo III - Da Ausência",
+    "artigo": "113",
     "texto": {
-      "caput": "O cônjuge do ausente, sempre que não esteja separado judicialmente, ou de fato por mais de dois anos antes da declaração da ausência, será o seu legítimo curador.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 1.570 do CC" },
-        { "local": "caput", "texto": "art. 1.775 do CC" },
-        { "local": "caput", "texto": "Emenda Constitucional n. 66 de 13-7-2010" }
-      ],
-      "paragrafos": [
-        { "id": "§ 1.º", "texto": "Em falta do cônjuge, a curadoria dos bens do ausente incumbe aos pais ou aos descendentes, nesta ordem, não havendo impedimento que os iniba de exercer o cargo." },
-        { "id": "§ 2.º", "texto": "Entre os descendentes, os mais próximos precedem os mais remotos." },
-        { "id": "§ 3.º", "texto": "Na falta das pessoas mencionadas, compete ao juiz a escolha do curador." }
-      ]
-    }
-  },
-
-  /* --- Seção II - Da Sucessão Provisória --- */
-  {
-    "artigo": "26",
-    "epigrafe": "Seção II - Da Sucessão Provisória",
-    "texto": {
-      "caput": "Decorrido um ano da arrecadação dos bens do ausente, ou, se ele deixou representante ou procurador, em se passando três anos, poderão os interessados requerer que se declare a ausência e se abra provisoriamente a sucessão.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 28 § 1.º do CC" },
-        { "local": "caput", "texto": "art. 5.º XXXI da CF" },
-        { "local": "caput", "texto": "art. 745 do CPC" },
-        { "local": "caput", "texto": "art. 104 parágrafo único da LRP" }
-      ]
+      "caput": "Caput de exemplo do artigo 113. Texto simulado para testes."
     }
   },
   {
-    "artigo": "27",
-    "epigrafe": "Seção II - Da Sucessão Provisória",
+    "artigo": "114",
     "texto": {
-      "caput": "Para o efeito previsto no artigo anterior, somente se consideram interessados:",
-      "incisos": [
-        {
-          "id": "I",
-          "texto": "o cônjuge não separado judicialmente;",
-          "relacionados_inline": [
-            { "local": "inciso I", "texto": "art. 733 do CPC" }
-          ]
-        },
-        { "id": "II", "texto": "os herdeiros presumidos, legítimos ou testamentários;" },
-        {
-          "id": "III",
-          "texto": "os que tiverem sobre os bens do ausente direito dependente de sua morte;",
-          "relacionados_inline": [
-            { "local": "inciso III", "texto": "art. 1.951 do CC" }
-          ]
-        },
-        { "id": "IV", "texto": "os credores de obrigações vencidas e não pagas." }
-      ],
-      "jurisprudencia": [
-        "Não havendo interessados, pode o Ministério Público requerer a abertura da sucessão, nos termos do § 1.º do art. 28 deste Código."
-      ]
+      "caput": "Caput de exemplo do artigo 114. Texto simulado para testes."
     }
   },
   {
-    "artigo": "28",
-    "epigrafe": "Seção II - Da Sucessão Provisória",
+    "artigo": "115",
     "texto": {
-      "caput": "A sentença que determinar a abertura da sucessão provisória só produzirá efeito cento e oitenta dias depois de publicada pela imprensa; mas, logo que passe em julgado, proceder-se-á à abertura do testamento, se houver, e ao inventário e partilha dos bens, como se o ausente fosse falecido.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 104 parágrafo único da LRP" }
-      ],
-      "paragrafos": [
-        { "id": "§ 1.º", "texto": "Findo o prazo a que se refere o art. 26, e não havendo interessados na sucessão provisória, cumpre ao Ministério Público requerê-la ao juízo competente." },
-        { "id": "§ 2.º", "texto": "Não comparecendo herdeiro ou interessado para requerer o inventário até trinta dias depois de passar em julgado a sentença que mandar abrir a sucessão provisória, proceder-se-á à arrecadação dos bens do ausente pela forma estabelecida nos arts. 1.819 a 1.823." }
-      ]
+      "caput": "Caput de exemplo do artigo 115. Texto simulado para testes."
     }
   },
   {
-    "artigo": "29",
-    "epigrafe": "Seção II - Da Sucessão Provisória",
+    "artigo": "116",
     "texto": {
-      "caput": "Antes da partilha, o juiz, quando julgar conveniente, ordenará a conversão dos bens móveis, sujeitos a deterioração ou a extravio, em imóveis ou em títulos garantidos pela União.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 730 do CPC" }
-      ]
+      "caput": "Caput de exemplo do artigo 116. Texto simulado para testes."
     }
   },
   {
-    "artigo": "30",
-    "epigrafe": "Seção II - Da Sucessão Provisória",
+    "artigo": "117",
     "texto": {
-      "caput": "Os herdeiros, para se imitirem na posse dos bens do ausente, darão garantias da restituição deles, mediante penhores ou hipotecas equivalentes aos quinhões respectivos.",
-      "paragrafos": [
-        {
-          "id": "§ 1.º",
-          "texto": "Aquele que tiver direito à posse provisória, mas não puder prestar a garantia exigida neste artigo, será excluído, mantendo-se os bens que lhe deviam caber sob a administração do curador, ou de outro herdeiro designado pelo juiz, e que preste essa garantia.",
-          "relacionados_inline": [
-            { "local": "§ 1.º", "texto": "art. 34 do CC" }
-          ]
-        },
-        {
-          "id": "§ 2.º",
-          "texto": "Os ascendentes, os descendentes e o cônjuge, uma vez provada a sua qualidade de herdeiros, poderão, independentemente de garantia, entrar na posse dos bens do ausente."
-        }
-      ]
-    }
-  },
-
-  /* --- 31–36 (sem epígrafe fornecida) --- */
-  { "artigo": "31", "texto": { "caput": "Os imóveis do ausente só se poderão alienar, não sendo por desapropriação, ou hipotecar, quando o ordene o juiz, para lhes evitar a ruína." } },
-  { "artigo": "32", "texto": { "caput": "Empossados nos bens, os sucessores provisórios ficarão representando ativa e passivamente o ausente, de modo que contra eles correrão as ações pendentes e as que de futuro àquele forem movidas." } },
-  {
-    "artigo": "33",
-    "texto": {
-      "caput": "O descendente, ascendente ou cônjuge que for sucessor provisório do ausente, fará seus todos os frutos e rendimentos dos bens que a este couberem; os outros sucessores, porém, deverão capitalizar metade desses frutos e rendimentos, segundo o disposto no art. 29, de acordo com o representante do Ministério Público, e prestar anualmente contas ao juiz competente.",
-      "paragrafos": [
-        { "id": "Parágrafo único", "texto": "Se o ausente aparecer, e ficar provado que a ausência foi voluntária e injustificada, perderá ele, em favor do sucessor, sua parte nos frutos e rendimentos." }
-      ]
-    }
-  },
-  { "artigo": "34", "texto": { "caput": "O excluído, segundo o art. 30, da posse provisória poderá, justificando falta de meios, requerer lhe seja entregue metade dos rendimentos do quinhão que lhe tocaria." } },
-  {
-    "artigo": "35",
-    "texto": {
-      "caput": "Se durante a posse provisória se provar a época exata do falecimento do ausente, considerar-se-á, nessa data, aberta a sucessão em favor dos herdeiros, que o eram àquele tempo.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 1.784 do CC" }
-      ]
-    }
-  },
-  { "artigo": "36", "texto": { "caput": "Se o ausente aparecer, ou se lhe provar a existência, depois de estabelecida a posse provisória, cessarão para logo as vantagens dos sucessores nela imitidos, ficando, todavia, obrigados a tomar as medidas assecuratórias precisas, até a entrega dos bens a seu dono." } },
-
-  /* --- Seção III - Da Sucessão Definitiva --- */
-  {
-    "artigo": "37",
-    "epigrafe": "Seção III - Da Sucessão Definitiva",
-    "texto": {
-      "caput": "Dez anos depois de passada em julgado a sentença que concede a abertura da sucessão provisória, poderão os interessados requerer a sucessão definitiva e o levantamento das cauções prestadas.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 745 § 4.º do CPC" },
-        { "local": "caput", "texto": "art. 6.º do CC" },
-        { "local": "caput", "texto": "Súmula 331 do STF" }
-      ]
+      "caput": "Caput de exemplo do artigo 117. Texto simulado para testes."
     }
   },
   {
-    "artigo": "38",
-    "epigrafe": "Seção III - Da Sucessão Definitiva",
+    "artigo": "118",
     "texto": {
-      "caput": "Pode-se requerer a sucessão definitiva, também, provando-se que o ausente conta oitenta anos de idade, e que de cinco datam as últimas notícias dele.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 6.º do CC" }
-      ]
+      "caput": "Caput de exemplo do artigo 118. Texto simulado para testes."
     }
   },
   {
-    "artigo": "39",
-    "epigrafe": "Seção III - Da Sucessão Definitiva",
+    "artigo": "119",
     "texto": {
-      "caput": "Regressando o ausente nos dez anos seguintes à abertura da sucessão definitiva, ou algum de seus descendentes ou ascendentes, aquele ou estes haverão só os bens existentes no estado em que se acharem, os sub-rogados em seu lugar, ou o preço que os herdeiros e demais interessados houverem recebido pelos bens alienados depois daquele tempo.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 745 § 4.º do CPC" }
-      ],
-      "paragrafos": [
-        {
-          "id": "Parágrafo único",
-          "texto": "Se, nos dez anos a que se refere este artigo, o ausente não regressar, e nenhum interessado promover a sucessão definitiva, os bens arrecadados passarão ao domínio do Município ou do Distrito Federal, se localizados nas respectivas circunscrições, incorporando-se ao domínio da União, quando situados em território federal.",
-          "relacionados_inline": [
-            { "local": "Parágrafo único", "texto": "art. 28 § 2.º do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.822 caput do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.814 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.815 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.816 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.817 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.818 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.829 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.830 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.831 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.832 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.833 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.834 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.835 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.836 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.837 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.838 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.839 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.840 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.841 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.842 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.843 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 1.844 do CC" }
-          ]
-        }
-      ]
-    }
-  },
-
-  /* --- Título II - Das Pessoas Jurídicas (epígrafe aplicada ao art. 40) --- */
-  {
-    "artigo": "40",
-    "epigrafe": "Título II - Das Pessoas Jurídicas",
-    "texto": {
-      "caput": "As pessoas jurídicas são de direito público, interno ou externo, e de direito privado."
-    }
-  },
-
-  /* --- Capítulo I - Disposições Gerais (41–49A) --- */
-  {
-    "artigo": "41",
-    "epigrafe": "Capítulo I - Disposições Gerais",
-    "texto": {
-      "caput": "São pessoas jurídicas de direito público interno:",
-      "incisos": [
-        {
-          "id": "I",
-          "texto": "a União;",
-          "relacionados_inline": [
-            { "local": "inciso I", "texto": "Lei n. 9.636 de 15-5-1998" }
-          ]
-        },
-        { "id": "II", "texto": "os Estados, o Distrito Federal e os Territórios;" },
-        { "id": "III", "texto": "os Municípios;" },
-        {
-          "id": "IV",
-          "texto": "as autarquias, inclusive as associações públicas;",
-          "relacionados_inline": [
-            { "local": "inciso IV", "texto": "Lei n. 11.107 de 6-4-2005" },
-            { "local": "inciso IV", "texto": "art. 37 XIX da CF" },
-            { "local": "inciso IV", "texto": "Lei n. 4.717 de 29-6-1965 art. 20" },
-            { "local": "inciso IV", "texto": "Decreto-lei n. 200 de 25-2-1967 art. 5.º I" }
-          ]
-        },
-        {
-          "id": "V",
-          "texto": "as demais entidades de caráter público criadas por lei.",
-          "relacionados_inline": [
-            { "local": "inciso V", "texto": "art. 75 I do CPC" },
-            { "local": "inciso V", "texto": "art. 75 II do CPC" },
-            { "local": "inciso V", "texto": "art. 75 III do CPC" },
-            { "local": "inciso V", "texto": "Lei n. 8.448 de 21-7-1992" },
-            { "local": "inciso V", "texto": "Lei n. 9.962 de 22-2-2000" }
-          ]
-        }
-      ],
-      "paragrafos": [
-        {
-          "id": "Parágrafo único",
-          "texto": "Salvo disposição em contrário, as pessoas jurídicas de direito público, a que se tenha dado estrutura de direito privado, regem-se, no que couber, quanto ao seu funcionamento, pelas normas deste Código."
-        }
-      ]
+      "caput": "Caput de exemplo do artigo 119. Texto simulado para testes."
     }
   },
   {
-    "artigo": "42",
-    "epigrafe": "Capítulo I - Disposições Gerais",
+    "artigo": "120",
     "texto": {
-      "caput": "São pessoas jurídicas de direito público externo os Estados estrangeiros e todas as pessoas que forem regidas pelo direito internacional público.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 4.º da CF" },
-        { "local": "caput", "texto": "art. 102 I da CF" },
-        { "local": "caput", "texto": "art. 105 II c da CF" },
-        { "local": "caput", "texto": "art. 109 da CF" }
-      ]
+      "caput": "Caput de exemplo do artigo 120. Texto simulado para testes."
     }
   },
   {
-    "artigo": "43",
-    "epigrafe": "Capítulo I - Disposições Gerais",
+    "artigo": "121",
     "texto": {
-      "caput": "As pessoas jurídicas de direito público interno são civilmente responsáveis por atos dos seus agentes que nessa qualidade causem danos a terceiros, ressalvado direito regressivo contra os causadores do dano, se houver, por parte destes, culpa ou dolo.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 37 § 6.º da CF" },
-        { "local": "caput", "texto": "art. 125 II do CPC" },
-        { "local": "caput", "texto": "Lei n. 4.619 de 28-4-1965" },
-        { "local": "caput", "texto": "Lei n. 6.453 de 17-10-1977" },
-        { "local": "caput", "texto": "Lei n. 10.308 de 20-11-2001" },
-        { "local": "caput", "texto": "Lei n. 8.112 de 11-12-1990 arts. 121 a 126" },
-        { "local": "caput", "texto": "Lei n. 10.309 de 22-11-2001" },
-        { "local": "caput", "texto": "Lei n. 10.744 de 9-10-2003" },
-        { "local": "caput", "texto": "Lei n. 13.869 de 5-9-2019 arts. 6.º e 7.º" }
-      ]
+      "caput": "Caput de exemplo do artigo 121. Texto simulado para testes."
     }
   },
   {
-    "artigo": "44",
-    "epigrafe": "Capítulo I - Disposições Gerais",
+    "artigo": "122",
     "texto": {
-      "caput": "São pessoas jurídicas de direito privado:",
-      "incisos": [
-        {
-          "id": "I",
-          "texto": "as associações;",
-          "relacionados_inline": [
-            { "local": "inciso I", "texto": "art. 5.º XVII da CF" },
-            { "local": "inciso I", "texto": "art. 5.º XVIII da CF" },
-            { "local": "inciso I", "texto": "art. 5.º XIX da CF" },
-            { "local": "inciso I", "texto": "art. 5.º XX da CF" },
-            { "local": "inciso I", "texto": "art. 5.º XXI da CF" },
-            { "local": "inciso I", "texto": "arts. 53 a 61 do CC" },
-            { "local": "inciso I", "texto": "art. 2.031 do CC" },
-            { "local": "inciso I", "texto": "art. 2.033 do CC" },
-            { "local": "inciso I", "texto": "art. 2.034 do CC" }
-          ]
-        },
-        {
-          "id": "II",
-          "texto": "as sociedades;",
-          "relacionados_inline": [
-            { "local": "inciso II", "texto": "art. 981 do CC" },
-            { "local": "inciso II", "texto": "art. 2.031 do CC" },
-            { "local": "inciso II", "texto": "art. 2.033 do CC" },
-            { "local": "inciso II", "texto": "art. 2.034 do CC" },
-            { "local": "inciso II", "texto": "art. 2.037 do CC" }
-          ]
-        },
-        {
-          "id": "III",
-          "texto": "as fundações;",
-          "relacionados_inline": [
-            { "local": "inciso III", "texto": "arts. 62 a 69 do CC" },
-            { "local": "inciso III", "texto": "art. 2.031 do CC" },
-            { "local": "inciso III", "texto": "art. 2.032 do CC" },
-            { "local": "inciso III", "texto": "Lei n. 9.790 de 23-3-1999" },
-            { "local": "inciso III", "texto": "Decreto n. 3.100 de 30-6-1999" }
-          ]
-        },
-        { "id": "IV", "texto": "as organizações religiosas;", "relacionados_inline": [ { "local": "inciso IV", "texto": "Lei n. 10.825 de 22-12-2003" } ] },
-        {
-          "id": "V",
-          "texto": "os partidos políticos;",
-          "relacionados_inline": [
-            { "local": "inciso V", "texto": "Lei n. 10.825 de 22-12-2003" },
-            { "local": "inciso V", "texto": "Lei n. 9.096 de 19-9-1995" }
-          ]
-        },
-        { "id": "VI", "texto": "(Revogado pela Lei n. 14.382 de 27-6-2022)." },
-        {
-          "id": "VII",
-          "texto": "os empreendimentos de economia solidária.",
-          "relacionados_inline": [
-            { "local": "inciso VII", "texto": "Lei n. 15.068 de 23-12-2024" }
-          ]
-        }
-      ],
-      "paragrafos": [
-        {
-          "id": "§ 1.º",
-          "texto": "São livres a criação, a organização, a estruturação interna e o funcionamento das organizações religiosas, sendo vedado ao poder público negar-lhes reconhecimento ou registro dos atos constitutivos e necessários ao seu funcionamento.",
-          "relacionados_inline": [
-            { "local": "§ 1.º", "texto": "Lei n. 10.825 de 22-12-2003" }
-          ]
-        },
-        {
-          "id": "§ 2.º",
-          "texto": "As disposições concernentes às associações aplicam-se subsidiariamente aos empreendimentos de economia solidária e às sociedades que são objeto do Livro II da Parte Especial deste Código.",
-          "relacionados_inline": [
-            { "local": "§ 2.º", "texto": "Lei n. 15.068 de 23-12-2024" },
-            { "local": "§ 2.º", "texto": "arts. 966 e seguintes do CC" }
-          ]
-        },
-        {
-          "id": "§ 3.º",
-          "texto": "Os partidos políticos serão organizados e funcionarão conforme o disposto em lei específica.",
-          "relacionados_inline": [
-            { "local": "§ 3.º", "texto": "Lei n. 10.825 de 22-12-2003" },
-            { "local": "§ 3.º", "texto": "Lei n. 9.096 de 19-9-1995" }
-          ]
-        }
-      ]
+      "caput": "Caput de exemplo do artigo 122. Texto simulado para testes."
     }
   },
   {
-    "artigo": "45",
-    "epigrafe": "Capítulo I - Disposições Gerais",
+    "artigo": "123",
     "texto": {
-      "caput": "Começa a existência legal das pessoas jurídicas de direito privado com a inscrição do ato constitutivo no respectivo registro, precedida, quando necessário, de autorização ou aprovação do Poder Executivo, averbando-se no registro todas as alterações por que passar o ato constitutivo.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 985 do CC" },
-        { "local": "caput", "texto": "art. 998 do CC" },
-        { "local": "caput", "texto": "art. 1000 do CC" },
-        { "local": "caput", "texto": "art. 1150 do CC" },
-        { "local": "caput", "texto": "art. 1151 do CC" },
-        { "local": "caput", "texto": "art. 1152 do CC" },
-        { "local": "caput", "texto": "art. 1153 do CC" },
-        { "local": "caput", "texto": "art. 1154 do CC" },
-        { "local": "caput", "texto": "Lei n. 5.056 de 29-6-1966" },
-        { "local": "caput", "texto": "arts. 114 a 126 da LRP" },
-        { "local": "caput", "texto": "Lei n. 8.906 de 4-7-1994" },
-        { "local": "caput", "texto": "Lei n. 8.934 de 18-11-1994" },
-        { "local": "caput", "texto": "arts. 7.º a 11 da Lei n. 9.096 de 19-9-1995" },
-        { "local": "caput", "texto": "Lei n. 9.279 de 14-5-1996" },
-        { "local": "caput", "texto": "Instrução Normativa n. 1.863 de 27-12-2018 da SRFB" },
-        { "local": "caput", "texto": "Lei Complementar n. 123 de 14-12-2006" }
-      ],
-      "paragrafos": [
-        {
-          "id": "Parágrafo único",
-          "texto": "Decai em três anos o direito de anular a constituição das pessoas jurídicas de direito privado, por defeito do ato respectivo, contado o prazo da publicação de sua inscrição no registro."
-        }
-      ]
+      "caput": "Caput de exemplo do artigo 123. Texto simulado para testes."
     }
   },
   {
-    "artigo": "46",
-    "epigrafe": "Capítulo I - Disposições Gerais",
+    "artigo": "124",
     "texto": {
-      "caput": "O registro declarará:",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 985 do CC" },
-        { "local": "caput", "texto": "art. 998 do CC" },
-        { "local": "caput", "texto": "art. 1000 do CC" },
-        { "local": "caput", "texto": "art. 1150 do CC" },
-        { "local": "caput", "texto": "art. 1151 do CC" },
-        { "local": "caput", "texto": "art. 1152 do CC" },
-        { "local": "caput", "texto": "art. 1153 do CC" },
-        { "local": "caput", "texto": "art. 1154 do CC" },
-        { "local": "caput", "texto": "art. 120 da LRP" },
-        { "local": "caput", "texto": "art. 121 da LRP" },
-        { "local": "caput", "texto": "Lei n. 8.934 de 18-11-1994" },
-        { "local": "caput", "texto": "Decreto n. 1.800 de 30-1-1996" }
-      ],
-      "incisos": [
-        { "id": "I", "texto": "a denominação, os fins, a sede, o tempo de duração e o fundo social, quando houver;" },
-        { "id": "II", "texto": "o nome e a individualização dos fundadores ou instituidores, e dos diretores;" },
-        { "id": "III", "texto": "o modo por que se administra e representa, ativa e passivamente, judicial e extrajudicialmente;" },
-        { "id": "IV", "texto": "se o ato constitutivo é reformável no tocante à administração, e de que modo;" },
-        { "id": "V", "texto": "se os membros respondem, ou não, subsidiariamente, pelas obrigações sociais;" },
-        { "id": "VI", "texto": "as condições de extinção da pessoa jurídica e o destino do seu patrimônio, nesse caso." }
-      ]
+      "caput": "Caput de exemplo do artigo 124. Texto simulado para testes."
     }
   },
   {
-    "artigo": "47",
-    "epigrafe": "Capítulo I - Disposições Gerais",
+    "artigo": "125",
     "texto": {
-      "caput": "Obrigam a pessoa jurídica os atos dos administradores, exercidos nos limites de seus poderes definidos no ato constitutivo.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 43 do CC" },
-        { "local": "caput", "texto": "art. 989 do CC" },
-        { "local": "caput", "texto": "art. 990 do CC" },
-        { "local": "caput", "texto": "art. 997 VI do CC" }
-      ]
+      "caput": "Caput de exemplo do artigo 125. Texto simulado para testes."
     }
   },
   {
-    "artigo": "48",
-    "epigrafe": "Capítulo I - Disposições Gerais",
+    "artigo": "126",
     "texto": {
-      "caput": "Se a pessoa jurídica tiver administração coletiva, as decisões se tomarão pela maioria de votos dos presentes, salvo se o ato constitutivo dispuser de modo diverso.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 1014 do CC" }
-      ],
-      "paragrafos": [
-        {
-          "id": "Parágrafo único",
-          "texto": "Decai em três anos o direito de anular as decisões a que se refere este artigo, quando violarem a lei ou estatuto, ou forem eivadas de erro, dolo, simulação ou fraude.",
-          "relacionados_inline": [
-            { "local": "Parágrafo único", "texto": "art. 138 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 139 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 140 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 141 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 142 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 143 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 144 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 145 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 146 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 147 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 148 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 149 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 150 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 158 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 159 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 160 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 161 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 162 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 163 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 164 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 165 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 167 do CC" },
-            { "local": "Parágrafo único", "texto": "art. 171 II do CC" }
-          ]
-        }
-      ]
+      "caput": "Caput de exemplo do artigo 126. Texto simulado para testes."
     }
   },
   {
-    "artigo": "48A",
-    "aliases": ["48-A"],
-    "epigrafe": "Capítulo I - Disposições Gerais",
+    "artigo": "127",
     "texto": {
-      "caput": "As pessoas jurídicas de direito privado, sem prejuízo do previsto em legislação especial e em seus atos constitutivos, poderão realizar suas assembleias gerais por meio eletrônico, inclusive para os fins do disposto no art. 59 deste Código, respeitados os direitos previstos de participação e de manifestação.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "Lei n. 14.382 de 27-6-2022" }
-      ]
+      "caput": "Caput de exemplo do artigo 127. Texto simulado para testes."
     }
   },
   {
-    "artigo": "49",
-    "epigrafe": "Capítulo I - Disposições Gerais",
+    "artigo": "128",
     "texto": {
-      "caput": "Se a administração da pessoa jurídica vier a faltar, o juiz, a requerimento de qualquer interessado, nomear-lhe-á administrador provisório."
+      "caput": "Caput de exemplo do artigo 128. Texto simulado para testes."
     }
   },
   {
-    "artigo": "49A",
-    "aliases": ["49-A"],
-    "epigrafe": "Capítulo I - Disposições Gerais",
+    "artigo": "129",
     "texto": {
-      "caput": "A pessoa jurídica não se confunde com os seus sócios, associados, instituidores ou administradores.",
-      "paragrafos": [
-        {
-          "id": "Parágrafo único",
-          "texto": "A autonomia patrimonial das pessoas jurídicas é um instrumento lícito de alocação e segregação de riscos, estabelecido pela lei com a finalidade de estimular empreendimentos, para a geração de empregos, tributo, renda e inovação em benefício de todos.",
-          "relacionados_inline": [
-            { "local": "Parágrafo único", "texto": "Lei n. 13.874 de 20-9-2019" }
-          ]
-        }
-      ]
-    }
-  },
-
-  /* --- 50–52 (sem epígrafe fornecida) --- */
-  {
-    "artigo": "50",
-    "texto": {
-      "caput": "Em caso de abuso da personalidade jurídica, caracterizado pelo desvio de finalidade ou pela confusão patrimonial, pode o juiz, a requerimento da parte, ou do Ministério Público quando lhe couber intervir no processo, desconsiderá-la para que os efeitos de certas e determinadas relações de obrigações sejam estendidos aos bens particulares de administradores ou de sócios da pessoa jurídica beneficiados direta ou indiretamente pelo abuso.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "Lei n. 13.874 de 20-9-2019" },
-        { "local": "caput", "texto": "art. 28 do CDC" },
-        { "local": "caput", "texto": "art. 795 do CPC" },
-        { "local": "caput", "texto": "art. 2.º § 2.º da CLT" },
-        { "local": "caput", "texto": "art. 66 da Lei n. 14.597 de 14-6-2023" }
-      ],
-      "paragrafos": [
-        {
-          "id": "§ 1.º",
-          "texto": "Para os fins do disposto neste artigo, desvio de finalidade é a utilização da pessoa jurídica com o propósito de lesar credores e para a prática de atos ilícitos de qualquer natureza.",
-          "relacionados_inline": [
-            { "local": "§ 1.º", "texto": "Lei n. 13.874 de 20-9-2019" }
-          ]
-        },
-        {
-          "id": "§ 2.º",
-          "texto": "Entende-se por confusão patrimonial a ausência de separação de fato entre os patrimônios, caracterizada por:",
-          "relacionados_inline": [
-            { "local": "§ 2.º", "texto": "Lei n. 13.874 de 20-9-2019" }
-          ],
-          "incisos": [
-            { "id": "I", "texto": "cumprimento repetitivo pela sociedade de obrigações do sócio ou do administrador ou vice-versa;" },
-            { "id": "II", "texto": "transferência de ativos ou de passivos sem efetivas contraprestações, exceto os de valor proporcionalmente insignificante;" },
-            { "id": "III", "texto": "outros atos de descumprimento da autonomia patrimonial." }
-          ]
-        },
-        {
-          "id": "§ 3.º",
-          "texto": "O disposto no caput e nos §§ 1.º e 2.º deste artigo também se aplica à extensão das obrigações de sócios ou de administradores à pessoa jurídica.",
-          "relacionados_inline": [
-            { "local": "§ 3.º", "texto": "Lei n. 13.874 de 20-9-2019" }
-          ]
-        },
-        {
-          "id": "§ 4.º",
-          "texto": "A mera existência de grupo econômico sem a presença dos requisitos de que trata o caput deste artigo não autoriza a desconsideração da personalidade da pessoa jurídica.",
-          "relacionados_inline": [
-            { "local": "§ 4.º", "texto": "Lei n. 13.874 de 20-9-2019" }
-          ]
-        },
-        {
-          "id": "§ 5.º",
-          "texto": "Não constitui desvio de finalidade a mera expansão ou a alteração da finalidade original da atividade econômica específica da pessoa jurídica.",
-          "relacionados_inline": [
-            { "local": "§ 5.º", "texto": "Lei n. 13.874 de 20-9-2019" }
-          ]
-        }
-      ]
+      "caput": "Caput de exemplo do artigo 129. Texto simulado para testes."
     }
   },
   {
-    "artigo": "51",
+    "artigo": "130",
     "texto": {
-      "caput": "Nos casos de dissolução da pessoa jurídica ou cassada a autorização para seu funcionamento, ela subsistirá para os fins de liquidação, até que esta se conclua.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 1033 do CC" },
-        { "local": "caput", "texto": "art. 1125 do CC" }
-      ],
-      "paragrafos": [
-        { "id": "§ 1.º", "texto": "Far-se-á, no registro onde a pessoa jurídica estiver inscrita, a averbação de sua dissolução." },
-        { "id": "§ 2.º", "texto": "As disposições para a liquidação das sociedades aplicam-se, no que couber, às demais pessoas jurídicas de direito privado." },
-        { "id": "§ 3.º", "texto": "Encerrada a liquidação, promover-se-á o cancelamento da inscrição da pessoa jurídica." }
-      ]
+      "caput": "Caput de exemplo do artigo 130. Texto simulado para testes."
     }
   },
   {
-    "artigo": "52",
+    "artigo": "131",
     "texto": {
-      "caput": "Aplica-se às pessoas jurídicas, no que couber, a proteção dos direitos da personalidade.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "arts. 11 do CC" },
-        { "local": "caput", "texto": "arts. 12 do CC" },
-        { "local": "caput", "texto": "arts. 13 do CC" },
-        { "local": "caput", "texto": "arts. 14 do CC" },
-        { "local": "caput", "texto": "arts. 15 do CC" },
-        { "local": "caput", "texto": "arts. 16 do CC" },
-        { "local": "caput", "texto": "arts. 17 do CC" },
-        { "local": "caput", "texto": "arts. 18 do CC" },
-        { "local": "caput", "texto": "arts. 19 do CC" },
-        { "local": "caput", "texto": "arts. 20 do CC" },
-        { "local": "caput", "texto": "arts. 21 do CC" },
-        { "local": "caput", "texto": "Súmula 227 do STJ" }
-      ]
+      "caput": "Caput de exemplo do artigo 131. Texto simulado para testes."
     }
   },
-
-  /* --- Capítulo II - Das Associações (epígrafe aplicada a 53–58) --- */
   {
-    "artigo": "53",
-    "epigrafe": "Capítulo II - Das Associações",
+    "artigo": "132",
     "texto": {
-      "caput": "Constituem-se as associações pela união de pessoas que se organizem para fins não econômicos.",
-      "relacionados_inline": [
-        { "local": "caput", "texto": "art. 2031 do CC" },
-        { "local": "caput", "texto": "art. 2033 do CC" },
-        { "local": "caput", "texto": "Lei n. 9.790 de 23-3-1999" },
-        { "local": "caput", "texto": "Decreto n. 3.100 de 30-6-1999" }
-      ],
-      "paragrafos": [
-        { "id": "Parágrafo único", "texto": "Não há, entre os associados, direitos e obrigações recíprocos." }
-       }
+      "caput": "Caput de exemplo do artigo 132. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "133",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 133. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "134",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 134. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "135",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 135. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "136",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 136. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "137",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 137. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "138",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 138. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "139",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 139. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "140",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 140. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "141",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 141. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "142",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 142. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "143",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 143. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "144",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 144. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "145",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 145. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "146",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 146. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "147",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 147. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "148",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 148. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "149",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 149. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "150",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 150. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "151",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 151. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "152",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 152. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "153",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 153. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "154",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 154. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "155",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 155. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "156",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 156. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "157",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 157. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "158",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 158. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "159",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 159. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "160",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 160. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "161",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 161. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "162",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 162. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "163",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 163. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "164",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 164. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "165",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 165. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "166",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 166. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "167",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 167. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "168",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 168. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "169",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 169. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "170",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 170. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "171",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 171. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "172",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 172. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "173",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 173. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "174",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 174. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "175",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 175. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "176",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 176. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "177",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 177. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "178",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 178. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "179",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 179. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "180",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 180. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "181",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 181. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "182",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 182. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "183",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 183. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "184",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 184. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "185",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 185. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "186",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 186. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "187",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 187. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "188",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 188. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "189",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 189. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "190",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 190. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "191",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 191. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "192",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 192. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "193",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 193. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "194",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 194. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "195",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 195. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "196",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 196. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "197",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 197. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "198",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 198. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "199",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 199. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "200",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 200. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "201",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 201. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "202",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 202. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "203",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 203. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "204",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 204. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "205",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 205. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "206",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 206. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "207",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 207. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "208",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 208. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "209",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 209. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "210",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 210. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "211",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 211. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "212",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 212. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "213",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 213. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "214",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 214. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "215",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 215. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "216",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 216. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "217",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 217. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "218",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 218. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "219",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 219. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "220",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 220. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "221",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 221. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "222",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 222. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "223",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 223. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "224",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 224. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "225",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 225. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "226",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 226. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "227",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 227. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "228",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 228. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "229",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 229. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "230",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 230. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "231",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 231. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "232",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 232. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "233",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 233. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "234",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 234. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "235",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 235. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "236",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 236. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "237",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 237. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "238",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 238. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "239",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 239. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "240",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 240. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "241",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 241. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "242",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 242. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "243",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 243. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "244",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 244. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "245",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 245. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "246",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 246. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "247",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 247. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "248",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 248. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "249",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 249. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "250",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 250. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "251",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 251. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "252",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 252. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "253",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 253. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "254",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 254. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "255",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 255. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "256",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 256. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "257",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 257. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "258",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 258. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "259",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 259. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "260",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 260. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "261",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 261. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "262",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 262. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "263",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 263. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "264",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 264. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "265",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 265. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "266",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 266. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "267",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 267. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "268",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 268. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "269",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 269. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "270",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 270. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "271",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 271. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "272",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 272. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "273",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 273. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "274",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 274. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "275",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 275. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "276",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 276. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "277",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 277. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "278",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 278. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "279",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 279. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "280",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 280. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "281",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 281. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "282",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 282. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "283",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 283. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "284",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 284. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "285",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 285. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "286",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 286. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "287",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 287. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "288",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 288. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "289",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 289. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "290",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 290. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "291",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 291. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "292",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 292. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "293",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 293. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "294",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 294. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "295",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 295. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "296",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 296. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "297",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 297. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "298",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 298. Texto simulado para testes."
+    }
+  },
+  {
+    "artigo": "299",
+    "texto": {
+      "caput": "Caput de exemplo do artigo 299. Texto simulado para testes."
+    }
   }
 ]
