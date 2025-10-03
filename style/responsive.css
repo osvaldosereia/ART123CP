@@ -1,9 +1,0 @@
-@media (max-width: 860px){
-  body{line-height:1.7}
-  .topbar .container{padding:0 var(--sp-2)}
-  .logo img{height:28px}
-  .controls{gap:6px}
-  .btn{padding:0 10px}
-  .modal{inset:auto 8px 8px 8px;top:8px;max-width=100%}
-  .modal-body{max-height:78vh}
-}
