@@ -67,7 +67,7 @@ async function carregarFicha(pasta, arquivo, nome){
   $('#intro').classList.add('hidden');
   $('#ficha').classList.remove('hidden');
   $('#ficha-titulo').textContent = nome;
-  $('#ficha-sub').textContent = 'Conteúdo consolidado em abas.';
+  $('#ficha-sub').textContent = '';
 
   const txt = await fetch(`data/${pasta}/${arquivo}`).then(r=>r.text());
   FICHA = parseTXT(txt, nome);
