@@ -5,3 +5,10 @@
     "arquivo": "inquerito-policial.txt"
   }
 ]
+[
+  {
+    "nome": "Insanidade Mental do Acusado - CPP",
+    "pasta": "codigo-penal",
+    "arquivo": "insanidade_mental_acusado_cpp.txt"
+  }
+]
