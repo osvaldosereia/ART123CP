@@ -1,4 +1,5 @@
-# Analogia -- Consiste na aplicação de uma norma prevista para hipótese distinta, porém, semelhante.
+# Analogia 
+-- Consiste na aplicação de uma norma prevista para hipótese distinta, porém, semelhante.
 
   - Art. 4º, LINDB: O juiz decidirá o caso de acordo com a analogia quando a lei for omissa.
   - Art. 187, CC: A analogia pode ser usada para identificar abuso de direito em situações semelhantes.
