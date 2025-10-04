@@ -1,9 +1,8 @@
 // meujus – app.js (2025-10-04)
 // Fonte: data/temas.json -> [{ slug, title, path, tags, group? }]
-// TXT: "# Título", "-- explicação", "- Artigo: texto", opcional "## Pergunte pra I.A." com "- Perguntas"
-// Ajustes: sem botão Google IA; intro no card do título; artigos em segundo card;
-// links dos artigos abrem Google em modo IA (udm=50); hambúrguer no HTML;
-// salvar/remover tema (localStorage) e lista "Salvos" no drawer; toasts visíveis.
+// TXT: "# Título", "-- explicação", "-----", "## Artigos Relacionados" + "- itens", "-----", "## Pergunte pra I.A." + "- perguntas"
+// UI: intro no card do título; artigos em card próprio com subtítulo; links dos artigos e perguntas abrem Google em modo IA (udm=50);
+// salvar/remover tema (localStorage) e lista "Salvos" no drawer; toasts; drawer acessível; autocomplete com grupo.
 
 (function(){
   /* ===== Helpers DOM ===== */
@@ -238,7 +237,7 @@
     const key = (m?.[1]||'').toLowerCase();
     const map = { codigocivil:'Código Civil', codigopenal:'Código Penal', cpp:'Código de Processo Penal', cf88:'Constituição Federal' };
     if(map[key]) return map[key];
-    return key ? key.replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase()) : '';
+    return key ? key.replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.ToUpperCase?.()||c.toUpperCase()) : '';
   }
   function searchLocal(q){
     const v = normalizeStr((q||'').trim());
@@ -294,30 +293,42 @@
     const intro = [];
     const items = [];
     const ask   = [];
-    let section = 'body'; // body | ask
+    let itemsTitle = 'Artigos Relacionados';
+    let section = 'body'; // body | items | ask
 
     for(const ln of lines){
       const s = ln.trim();
       if(!s) continue;
 
       if(s.startsWith('# ')){ title = s.slice(2).trim(); section='body'; continue; }
+
       if(s.startsWith('## ')){
-        const h2 = s.slice(3).trim().toLowerCase();
-        section = (h2.includes('pergunte') || h2.includes('ia')) ? 'ask' : 'body';
+        const h2raw = s.slice(3).trim();
+        const h2 = h2raw.toLowerCase();
+        if(h2.includes('pergunte')){ section='ask'; continue; }
+        if(h2.includes('artigo'))  { section='items'; itemsTitle = h2raw; continue; }
+        section='body';
         continue;
       }
+
       if(s === '-----'){ section='body'; continue; }
+
       if(s.startsWith('-- ')){ if(section==='body') intro.push(s.slice(3).trim()); continue; }
-      if(s.startsWith('- ')){ (section==='ask' ? ask : items).push(s.slice(2).trim()); continue; }
+
+      if(s.startsWith('- ')){
+        if(section==='ask')   ask.push(s.slice(2).trim());
+        else if(section==='items' || section==='body') items.push(s.slice(2).trim());
+        continue;
+      }
     }
-    return { title, intro, items, ask };
+    return { title, intro, items, ask, itemsTitle };
   }
 
   /* ===== Páginas ===== */
   async function loadTema(slug){
     const titleEl   = $('#themeTitle');
     const contentEl = $('#content');
-    const headCard  = $('.ficha-head'); // card do título
+    const headCard  = $('.ficha-head');
     contentEl.textContent = 'Carregando…';
 
     const path = TEMA_MAP[slug];
@@ -327,7 +338,7 @@
 
     try{
       const raw = await fetchText(path);
-      const { title, intro, items, ask } = parseTemaText(raw);
+      const { title, intro, items, ask, itemsTitle } = parseTemaText(raw);
 
       const meta = TEMAS.find(t=>t.slug===slug);
       const tituloTema = title || meta?.title || slug.replace(/-/g,' ');
@@ -359,7 +370,7 @@
         introEl.id = 'introText';
         introEl.className = 'desc';
         introEl.style.marginTop = '10px';
-        if(headCard) headCard.appendChild(introEl);
+        headCard?.appendChild(introEl);
       }
       introEl.innerHTML = introHTML || '';
 
@@ -379,6 +390,14 @@
                 </li>`;
       }).join('');
 
+      // Bloco "Artigos Relacionados" com subtítulo
+      const itensBlock = `
+        <h2 class="h2 pane-title" style="margin:4px 0 6px">${escapeHTML(itemsTitle || 'Artigos Relacionados')}</h2>
+        <ul class="list list-plain">
+          ${itensHTML || `<li class="item muted">Sem artigos.</li>`}
+        </ul>
+      `;
+
       // Pergunte pra I.A.
       const askHTML = (ask && ask.length)
         ? `
@@ -393,14 +412,9 @@
         `
         : '';
 
-      // Card de artigos + seção IA
+      // Render final
       contentEl.classList.add('list-plain');
-      contentEl.innerHTML = `
-        <div class="card">
-          <ul class="list list-plain">${itensHTML || `<li class="item muted">Sem artigos.</li>`}</ul>
-          ${askHTML}
-        </div>
-      `;
+      contentEl.innerHTML = `<div class="card">${itensBlock}${askHTML}</div>`;
       toast('Tema carregado','success',1200);
 
     }catch(e){
@@ -437,6 +451,7 @@
   window.addEventListener('hashchange', renderByRoute);
   (async function init(){
     try{
+      $('#btnIA')?.remove(); // garante remoção do botão legado, se existir no HTML
       await loadTemas();
       await renderByRoute();
     }catch(e){
