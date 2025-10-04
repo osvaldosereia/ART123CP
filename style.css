@@ -1,21 +1,22 @@
-/* ========= BASE (iOS-like, tons de cinza, com safe areas) ========= */
+/* ===== PALETA ===== */
 :root{
-  --bg: #eaeaea;      /* fundo um pouco mais escuro */
-  --card: #ffffff;
-  --text: #141414;    /* peso normal */
-  --muted: #6b6b6b;
-  --line: #dadada;    /* linhas sutilmente mais visíveis */
-  --tap: rgba(0,0,0,.06);
-  --w: 960px;         /* largura do site no desktop */
-  --radius: 12px;
+  --primary: #1800ad;
+  --accent:  #f5c400;
+  --bg:      #ebebec;     /* fundo mais escuro que antes */
+  --card:    #ffffff;
+  --text:    #0b0b0b;
+  --muted:   #6b6b6b;
+  --line:    #dadada;
+  --tap:     rgba(0,0,0,.06);
+  --w:       960px;
+  --radius:  12px;
 
-  /* espaçamentos */
-  --px: 18px;         /* padding horizontal base */
-  --py: 10px;         /* padding vertical base */
-  --gap: 12px;
+  --px: 18px;  /* padding horizontal base */
+  --py: 10px;  /* padding vertical base */
+  --gap: 12px; /* espaçamento */
 }
 
-*{ box-sizing: border-box; }
+*{ box-sizing:border-box; }
 html,body{ height:100%; }
 body{
   margin:0;
@@ -25,14 +26,15 @@ body{
   font-weight: 400;
 }
 
+/* Container com safe areas para mobile */
 .container{
   max-width: var(--w);
   margin: 0 auto;
-  /* safe areas nas laterais no mobile (evita “encostar”) */
-  padding-left: calc(var(--px) + env(safe-area-inset-left));
-  padding-right: calc(var(--px) + env(safe-area-inset-right));
+  padding-left: calc(var(--px) + max(12px, env(safe-area-inset-left)));
+  padding-right: calc(var(--px) + max(12px, env(safe-area-inset-right)));
 }
 
+/* Cartão base (mantido só para o contêiner da ficha) */
 .card{
   background: var(--card);
   border: 1px solid var(--line);
@@ -44,31 +46,30 @@ body{
 .hidden{ display:none; }
 .muted{ color: var(--muted); }
 
-.h1{ font-size: 28px; margin: 4px 0 6px; letter-spacing: -0.2px; font-weight: 600; }
-.h2{ font-size: 18px; margin: 14px 0 8px; font-weight: 500; }
+/* Títulos com tamanhos menores */
+.h1{ font-size: 24px; margin: 2px 0 6px; letter-spacing: -0.2px; font-weight: 600; }
+.h2{ font-size: 16px; margin: 12px 0 6px; font-weight: 500; }
 .sub{ color: var(--muted); margin: 0; font-weight: 400; }
 
-/* ========= TOPBAR ========= */
+/* ===== TOPBAR ===== */
 .topbar{
-  position: sticky; top:0; z-index:10;
-  background: rgba(255,255,255,.92);
+  position: sticky; top:0; z-index:20;
+  background: rgba(255,255,255,.95);
   backdrop-filter: saturate(180%) blur(10px);
   border-bottom: 1px solid var(--line);
-  padding-top: calc(env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
 }
 .topbar-inner{
   display:flex; gap: var(--gap); align-items:center;
   padding: var(--py) 0;
 }
-.brand{
-  font-weight: 600; color: #2e2e2e; letter-spacing: -.3px;
-  padding-left: 2px; /* sutil para alinhar ótico */
-}
-.brand span{ color:#8a8a8a; }
+.brand{ font-weight: 700; letter-spacing: -.2px; display:flex; gap:2px; }
+.brand .b1{ color: var(--primary); }
+.brand .b2{ color: var(--accent); }
 
 .search-wrap{ position: relative; flex:1; }
 .search{
-  width:100%; padding: 12px 14px; /* maior altura de toque */
+  width:100%; padding: 12px 14px;
   background:#fff; border:1px solid var(--line); border-radius: 12px;
   outline: none; font-weight: 400;
   box-shadow: inset 0 0 0 1px transparent;
@@ -78,22 +79,47 @@ body{
   box-shadow: inset 0 0 0 1px #c7c7c7;
 }
 
-/* Autocomplete */
+/* Hamburger + Drawer */
+.hamburger{
+  width: 42px; height: 42px; border:1px solid var(--line); border-radius: 10px;
+  background:#fff; display:flex; align-items:center; justify-content:center; gap:4px;
+}
+.hamburger span{
+  display:block; width:18px; height:2px; background:#333; border-radius:2px;
+}
+.drawer{ position:fixed; inset:0; display:none; z-index:30; }
+.drawer.open{ display:block; }
+.drawer-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.25); }
+.drawer-panel{
+  position:absolute; top:0; right:0; height:100%; width:min(86vw, 360px);
+  background:#fff; border-left:1px solid var(--line);
+  padding: 14px;
+  display:flex; flex-direction:column; gap:10px;
+}
+.drawer-header{ display:flex; align-items:center; justify-content:space-between; }
+.drawer-brand .b1{ color: var(--primary); }
+.drawer-brand .b2{ color: var(--accent); }
+.drawer-close{
+  border:1px solid var(--line); background:#fff; border-radius:10px; padding:6px 10px; cursor:pointer;
+}
+.drawer-content{ color:#333; line-height:1.45; }
+
+/* Sugestões (autocomplete) com subtítulo e separador */
 .suggestions{
   position:absolute; left:0; right:0; top: calc(100% + 8px);
   background:#fff; border:1px solid var(--line); border-radius:12px;
-  list-style:none; padding:6px 0; margin:0;
+  list-style:none; padding:0; margin:0;
   max-height: 52vh; overflow:auto; display:none;
   box-shadow: 0 6px 18px rgba(0,0,0,.06);
 }
 .suggestions.show{ display:block; }
-.suggestions li{
-  padding: 12px 14px; cursor:pointer; line-height: 1.4;
-}
-.suggestions li:hover,
-.suggestions li:focus{ background:#f5f5f5; }
+.sug-item{ padding: 12px 14px; cursor:pointer; }
+.sug-item:hover, .sug-item:focus{ background:#f7f7f7; }
+.sug-title{ font-size: 15px; color:#111; line-height:1.2; }
+.sug-sub{ font-size: 12px; color:#8a8a8a; margin-top: 4px; }
+.sug-sep{ height:1px; background: var(--line); margin: 6px 0 0; }
 
-/* ========= TABS/PANES ========= */
+/* ===== TABS ===== */
 .tabs{
   display:flex; flex-wrap:wrap; gap:8px; border-bottom:1px solid var(--line);
   padding-bottom: 8px; margin-bottom: 8px;
@@ -101,51 +127,46 @@ body{
 .tab{
   appearance:none; border:1px solid var(--line); background:#fff;
   padding:10px 14px; border-radius: 999px; cursor:pointer; color:#333; font-weight: 400;
-  min-height: 40px; /* alvo de toque confortável */
+  min-height: 40px;
 }
-.tab.is-active{ background:#f2f2f2; }
+.tab.is-active{ background:#f2f2f2; border-color:#cfcfcf; }
 
+/* Panes */
 .pane{ display:none; }
 .pane.is-active{ display:block; }
-
 .pane-title{ margin-top: 6px; }
 
-/* grupos/listas */
-.group{
-  border:1px solid var(--line); border-radius:12px; padding:12px; margin:12px 0;
-  background:#fff;
-}
-.group h3{ margin: 0 0 8px; font-size: 15px; color:#2a2a2a; font-weight: 500; }
+/* ===== LISTAS “planas” (sem caixas internas) ===== */
 .list{ list-style:none; margin:0; padding:0; }
-.item{
+.list-plain .item{
   display:flex; gap:10px; align-items:flex-start;
   border-top:1px solid var(--line); padding:12px 0;
 }
-.item:first-child{ border-top:0; }
+.list-plain .item:first-child{ border-top:0; }
+.meta{ font-size: 12px; color: #8a8a8a; margin-right:6px; white-space: nowrap; }
 
-.meta{
-  font-size: 12px; color: #8a8a8a; margin-right:6px; white-space: nowrap;
-}
-
+/* Links/títulos */
 .title{
   color:#111; text-decoration:none; font-weight: 400;
 }
 .title:hover{ text-decoration: underline; }
-
 .desc{ color:#4a4a4a; font-weight: 400; }
 
-/* Botões IA (na aba Código) */
+/* Botões IA */
 .ai-actions{
-  display:flex; gap:10px; flex-wrap:wrap; margin: 4px 0 12px;
+  display:flex; gap:10px; flex-wrap:wrap; margin: 4px 0 8px;
 }
 .btn-ios{
   display:inline-block; padding:12px 16px; border:1px solid var(--line);
-  border-radius: 12px; background:#fff; color:#111; text-decoration:none; font-weight: 400;
-  min-height: 44px; /* alvo iOS */
+  border-radius: 12px; background:#fff; color:#111; text-decoration:none; font-weight: 500;
+  min-height: 44px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
 }
+.btn-ios:hover{ border-color:#cfcfcf; }
 .btn-ios:active{ background: var(--tap); }
 
+/* Desktop refinamentos */
 @media (min-width: 992px){
-  .h1{ font-size: 32px; }
+  .h1{ font-size: 26px; }
   .topbar-inner{ padding: 12px 0; }
 }
