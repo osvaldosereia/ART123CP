@@ -2,5 +2,7 @@
   { "slug": "dano-moral", "title": "Dano Moral", "path": "data/codigocivil/d/dano-moral.txt", "group": "Código Civil" },
   { "slug": "analogia", "title": "Analogia", "path": "data/codigocivil/a/analogia.txt", "group": "Código Civil" },
   { "slug": "direito-autoral", "title": "Direito Autoral", "path": "data/codigocivil/d/direito-autoral.txt", "group": "Código Civil" },
-  { "slug": "principio-da-sociabilidade", "title": "Princípio da Sociabilidade", "path": "data/codigocivil/p/principio-da-sociabilidade.txt", "group": "Código Civil" }
+  { "slug": "principio-da-sociabilidade", "title": "Princípio da Sociabilidade", "path": "data/codigocivil/p/principio-da-sociabilidade.txt", "group": "Código Civil" },
+    { "slug": "principio-da-eticidade", "title": "Princípio da Eticidade", "path": "data/codigocivil/p/principio-da-eticidade.txt", "group": "Código Civil" }
+
 ]
