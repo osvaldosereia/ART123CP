@@ -1,19 +1,16 @@
-// meujus – app.js (2025-10-04)
-// Regras implementadas sem alterar seu CSS global:
-// - Uma aba única por tema (renderização simples neste arquivo)
-// - URL por tema via hash: #/tema/<slug>
-// - Botão único: “Estudar com Google I.A.” logo abaixo do título
-// - Texto dos artigos SEM links; apenas mini-botão "→" ao fim que abre JusBrasil
-//   com q= prefixo até ":" de cada linha
-// - Glossário global (data/glossario.txt) sem aliases. Clique no termo abre balão discreto
-//   usando APENAS inline-style no próprio tooltip (sem classes globais).
+// meujus – app.js (UI/UX + A11y + Drawer + Toasts + Navegação)
+// Mantém seu layout. Sem CSS inline intrusivo.
 
+/* =========================
+ * Helpers DOM
+ * =======================*/
 (function(){
-  const $ = (q, el=document) => el.querySelector(q);
+  const $  = (q, el=document) => el.querySelector(q);
+  const $$ = (q, el=document) => Array.from(el.querySelectorAll(q));
 
-  // ------------------------------
-  // Router: tema via #/tema/<slug>
-  // ------------------------------
+  /* =========================
+   * Router
+   * =======================*/
   function getHashParts(){
     const h = location.hash.replace(/^#\/?/, '');
     return h.split('/');
@@ -22,28 +19,93 @@
     const p = getHashParts();
     return (p[0]==='tema' && p[1]) ? decodeURIComponent(p[1]) : null;
   }
+  function currentPage(){
+    const p = getHashParts();
+    if(p[0]==='tema' && p[1]) return {kind:'tema', slug:decodeURIComponent(p[1])};
+    if(p[0]==='sobre') return {kind:'sobre'};
+    return {kind:'home'};
+  }
   function setTemaSlug(slug){
     const safe = encodeURIComponent(slug);
     if(currentTemaSlug()!==slug) location.hash = `#/tema/${safe}`;
   }
 
-  // ------------------------------
-  // Data loaders
-  // ------------------------------
+  /* =========================
+   * Data
+   * =======================*/
   async function fetchText(url){
     const res = await fetch(url, {cache:'no-store'});
     if(!res.ok) throw new Error(`HTTP ${res.status} @ ${url}`);
     return res.text();
   }
 
-  // Mapear tema -> arquivo .txt (ajuste aqui conforme seus caminhos)
-  // Exemplo:
-  // window.TEMA_MAP = { "codigo-civil": "data/codigo-civil/codigo-civil.txt" };
+  // Configure seus temas aqui (exemplos):
+  // window.TEMA_MAP = { "codigo-civil": "data/codigo-civil/codigo-civil.txt", ... }
   const TEMA_MAP = window.TEMA_MAP || {};
 
-  // ------------------------------
-  // Glossário
-  // ------------------------------
+  /* =========================
+   * Toasts
+   * =======================*/
+  const toastsEl = $('#toasts');
+  function toast(msg, type='info', ttl=3000){
+    if(!toastsEl) return;
+    const el = document.createElement('div');
+    el.className = `toast ${type}`;
+    el.innerHTML = `<span>${msg}</span><button aria-label="Fechar">✕</button>`;
+    toastsEl.appendChild(el);
+    const close = ()=>{ el.remove(); };
+    el.querySelector('button').onclick = close;
+    setTimeout(close, ttl);
+  }
+
+  /* =========================
+   * Drawer (hamburger) A11y
+   * =======================*/
+  const drawer      = $('#drawer');
+  const drawerPanel = $('#drawer-panel');
+  const drawerBg    = $('#drawerBackdrop');
+  const btnMenu     = $('#btnMenu');
+  const btnClose    = $('#btnCloseMenu');
+  let drawerLastFocus = null;
+
+  function openDrawer(){
+    if(!drawer) return;
+    drawerLastFocus = document.activeElement;
+    drawer.classList.add('open');
+    drawer.setAttribute('aria-hidden','false');
+    btnMenu.setAttribute('aria-expanded','true');
+    // foco inicial
+    (drawerPanel.querySelector('a,button,[tabindex]')||drawerPanel).focus();
+    toast('Menu aberto','info',1600);
+  }
+  function closeDrawer(){
+    if(!drawer) return;
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden','true');
+    btnMenu.setAttribute('aria-expanded','false');
+    if(drawerLastFocus) drawerLastFocus.focus();
+  }
+  function trapFocus(e){
+    if(!drawer.classList.contains('open')) return;
+    const focusables = $$('a, button, input, [tabindex]:not([tabindex="-1"])', drawerPanel)
+      .filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
+    if(focusables.length===0) return;
+    const first = focusables[0];
+    const last  = focusables[focusables.length-1];
+    if(e.key==='Tab'){
+      if(e.shiftKey && document.activeElement===first){ last.focus(); e.preventDefault(); }
+      else if(!e.shiftKey && document.activeElement===last){ first.focus(); e.preventDefault(); }
+    } else if(e.key==='Escape'){ closeDrawer(); }
+  }
+
+  if(btnMenu){ btnMenu.addEventListener('click', openDrawer); }
+  if(btnClose){ btnClose.addEventListener('click', closeDrawer); }
+  if(drawerBg){ drawerBg.addEventListener('click', closeDrawer); }
+  document.addEventListener('keydown', trapFocus);
+
+  /* =========================
+   * Glossário
+   * =======================*/
   let GLOSS = null; // [{ termo, def, pattern }]
 
   function normalize(s){
@@ -81,9 +143,7 @@
     return GLOSS;
   }
 
-  // ------------------------------
-  // Tooltip discreto com inline-style
-  // ------------------------------
+  // Tooltip do glossário com inline style mínimo
   let tooltipEl = null;
   function hideTooltip(){ if(tooltipEl){ tooltipEl.remove(); tooltipEl=null; } }
   function showTooltip(target){
@@ -94,23 +154,14 @@
     const tip = document.createElement('div');
     tip.setAttribute('role','tooltip');
     tip.innerHTML = `<div style="font-weight:700;margin-bottom:4px">${term}</div><div>${def}</div>`;
-    // Inline style para não depender do seu CSS
-    tip.style.position = 'absolute';
-    tip.style.zIndex = '9999';
-    tip.style.maxWidth = '320px';
-    tip.style.background = '#111827';
-    tip.style.color = '#f9fafb';
-    tip.style.padding = '10px 12px';
-    tip.style.borderRadius = '10px';
-    tip.style.boxShadow = '0 8px 20px rgba(0,0,0,.15)';
-    tip.style.fontSize = '14px';
-    tip.style.lineHeight = '1.4';
-
+    tip.style.position='absolute'; tip.style.zIndex='9999'; tip.style.maxWidth='320px';
+    tip.style.background='#111827'; tip.style.color='#f9fafb';
+    tip.style.padding='10px 12px'; tip.style.borderRadius='12px';
+    tip.style.boxShadow='0 8px 20px rgba(0,0,0,.15)'; tip.style.fontSize='14px'; tip.style.lineHeight='1.4';
     document.body.appendChild(tip);
     const top = window.scrollY + rect.bottom + 8;
     const left = Math.min(window.scrollX + rect.left, window.scrollX + window.innerWidth - tip.offsetWidth - 12);
-    tip.style.top = `${top}px`;
-    tip.style.left = `${left}px`;
+    tip.style.top = `${top}px`; tip.style.left = `${left}px`;
     tooltipEl = tip;
   }
   document.addEventListener('click', (e)=>{
@@ -120,18 +171,13 @@
   });
   document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') hideTooltip(); });
 
-  // ------------------------------
-  // Marcador do glossário (não toca em âncoras nem na trilha do mini-botão)
-  // ------------------------------
   function markGlossarioInHTML(html){
     if(!GLOSS || !GLOSS.length) return html;
-    // proteger trechos clicáveis: <a>…</a> e span .mj-trail
+    // proteger <a …>…</a> e span .mj-trail
     const segments = html.split(/(<a[\s\S]*?<\/a>|<span class=(?:"|')mj-trail(?:"|')[\s\S]*?<\/span>)/gi);
     for(let i=0;i<segments.length;i++){
       const seg = segments[i];
-      if(/^<a[\s\S]*<\/a>$/i.test(seg) || /^<span class=(?:"|')mj-trail(?:"|')[\s\S]*<\/span>$/i.test(seg)){
-        continue;
-      }
+      if(/^<a[\s\S]*<\/a>$/i.test(seg) || /^<span class=(?:"|')mj-trail(?:"|')[\s\S]*<\/span>$/i.test(seg)){ continue; }
       let replaced = seg;
       for(const it of GLOSS){
         replaced = replaced.replace(it.pattern, (m)=>{
@@ -145,9 +191,9 @@
     return segments.join('');
   }
 
-  // ------------------------------
-  // Helpers
-  // ------------------------------
+  /* =========================
+   * Helpers render
+   * =======================*/
   function prefixAteDoisPontos(line){
     const idx = line.indexOf(':');
     if(idx>0) return line.slice(0, idx).trim();
@@ -157,20 +203,48 @@
   function buildJusBrasilURL(prefix){
     return `https://www.jusbrasil.com.br/legislacao/busca?q=${encodeURIComponent(prefix)}`;
   }
-  function slugify(s){
-    return normalize(String(s)).toLowerCase().replace(/[^a-z0-9\s-]/g,'').trim().replace(/\s+/g,'-').replace(/-+/g,'-');
+
+  /* =========================
+   * Search mínimo: sugere slugs
+   * =======================*/
+  const searchEl = $('#search');
+  const sugEl    = $('#suggestions');
+
+  function updateSuggestions(q){
+    if(!sugEl) return;
+    sugEl.innerHTML = '';
+    const v = (q||'').trim().toLowerCase();
+    if(!v){ sugEl.classList.remove('show'); return; }
+    const keys = Object.keys(TEMA_MAP);
+    const items = keys.filter(k => k.includes(v) || k.replace(/-/g,' ').includes(v)).slice(0,8);
+    if(items.length===0){ sugEl.classList.remove('show'); return; }
+    items.forEach(slug=>{
+      const li = document.createElement('li');
+      li.className='sug-item'; li.setAttribute('role','option'); li.tabIndex=0;
+      li.innerHTML = `<div class="sug-title">${slug.replace(/-/g,' ')}</div><div class="sug-sub">Abrir tema #/tema/${slug}</div>`;
+      li.addEventListener('click', ()=>{ setTemaSlug(slug); sugEl.classList.remove('show'); });
+      li.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ setTemaSlug(slug); sugEl.classList.remove('show'); } });
+      sugEl.appendChild(li);
+      const sep = document.createElement('div'); sep.className='sug-sep'; sugEl.appendChild(sep);
+    });
+    sugEl.classList.add('show');
+  }
+  if(searchEl){
+    searchEl.addEventListener('input', e=> updateSuggestions(e.target.value));
+    searchEl.addEventListener('focus', e=> updateSuggestions(e.target.value));
+    document.addEventListener('click', e=>{ if(!e.target.closest('.search-wrap')) sugEl.classList.remove('show'); });
   }
 
-  // ------------------------------
-  // Tema
-  // ------------------------------
+  /* =========================
+   * Páginas
+   * =======================*/
   async function loadTema(slug){
     const titleEl = $('#themeTitle');
     const contentEl = $('#content');
     contentEl.textContent = 'Carregando…';
 
     const file = TEMA_MAP[slug];
-    if(!file){ contentEl.textContent = 'Tema não encontrado.'; return; }
+    if(!file){ contentEl.textContent = 'Tema não encontrado.'; toast('Tema não encontrado','error'); return; }
 
     await loadGlossario();
 
@@ -182,43 +256,68 @@
       titleEl.textContent = tituloTema;
 
       const btnIA = $('#btnIA');
-      btnIA.onclick = ()=>{
-        const prompt = `Estudar tema: ${tituloTema}`;
-        const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
-        window.open(url, '_blank', 'noopener');
-      };
+      if(btnIA){
+        btnIA.onclick = ()=>{
+          const prompt = `Estudar tema: ${tituloTema}`;
+          const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
+          window.open(url, '_blank', 'noopener');
+        };
+      }
 
       const html = lines.map((line)=>{
         const prefix = prefixAteDoisPontos(line);
         const href = buildJusBrasilURL(prefix);
         const safe = line.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
         const withGloss = markGlossarioInHTML(safe);
-        // Sem classes de layout para não interferir no seu CSS
-        return `<p>${withGloss}<span class="mj-trail"> <a class="mj-go" href="${href}" target="_blank" rel="noopener">→</a></span></p>`;
+        return `<div class="item"><span class="desc">${withGloss}</span><span class="mj-trail"> <a class="mj-go" href="${href}" target="_blank" rel="noopener" aria-label="Abrir no JusBrasil">→</a></span></div>`;
       }).join('');
 
-      contentEl.innerHTML = html;
+      contentEl.classList.add('list-plain');
+      contentEl.innerHTML = `<ul class="list list-plain">${html}</ul>`;
+      toast('Tema carregado','success',1500);
 
     }catch(e){
       console.error(e);
-      contentEl.textContent = 'Erro ao carregar tema.';
+      toast('Erro ao carregar tema','error');
+      const contentEl = $('#content');
+      if(contentEl) contentEl.textContent = 'Erro ao carregar tema.';
     }
   }
 
-  // ------------------------------
-  // Boot
-  // ------------------------------
-  window.addEventListener('hashchange', ()=>{
-    const slug = currentTemaSlug();
-    if(slug) loadTema(slug);
-  });
+  function loadSobre(){
+    const titleEl = $('#themeTitle');
+    const contentEl = $('#content');
+    titleEl.textContent = 'Sobre';
+    contentEl.innerHTML = `
+      <div class="item">
+        <span class="desc">Meujus — estudo guiado por temas com remissões, glossário e integrações leves.</span>
+      </div>`;
+  }
+
+  async function renderByRoute(){
+    const page = currentPage();
+    if(page.kind==='tema'){ await loadTema(page.slug); }
+    else if(page.kind==='sobre'){ loadSobre(); }
+    else {
+      const titleEl = $('#themeTitle');
+      const contentEl = $('#content');
+      titleEl.textContent = 'Escolha um tema';
+      contentEl.innerHTML = `<div class="item"><span class="desc">Use o menu ☰ ou a busca para abrir um tema.</span></div>`;
+    }
+  }
+
+  /* =========================
+   * Boot
+   * =======================*/
+  window.addEventListener('hashchange', renderByRoute);
   (async function init(){
-    const slug = currentTemaSlug();
-    if(slug){
-      await loadTema(slug);
-    } else {
-      // opcional: defina um tema padrão
-      // setTemaSlug('codigo-civil');
+    try{
+      await renderByRoute();
+      toast('Pronto','info',1000);
+    }catch(e){
+      console.error(e);
+      toast('Erro ao iniciar','error');
     }
   })();
+
 })();
