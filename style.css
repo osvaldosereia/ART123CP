@@ -1,12 +1,12 @@
-/* ====== BASE (iOS-like, tons de cinza) ====== */
+/* ========= BASE (iOS-like, tons de cinza) ========= */
 :root{
-  --bg: #f7f7f7;
+  --bg: #efefef;      /* fundo um pouco mais escuro */
   --card: #ffffff;
-  --text: #111;        /* principal */
-  --muted: #6b6b6b;    /* secundário */
-  --line: #e6e6e6;     /* linhas 1px */
+  --text: #141414;    /* texto padrão (peso normal) */
+  --muted: #6b6b6b;
+  --line: #e0e0e0;    /* linhas 1px mais visíveis */
   --tap: rgba(0,0,0,.06);
-  --w: 960px;          /* largura do site no desktop */
+  --w: 960px;         /* largura do site no desktop */
   --radius: 12px;
 }
 
@@ -16,7 +16,8 @@ body{
   margin:0;
   background: var(--bg);
   color: var(--text);
-  font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Inter", system-ui, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+  font: 16px/1.48 -apple-system, BlinkMacSystemFont, "Inter", system-ui, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica;
+  font-weight: 400; /* textos e links com peso normal */
 }
 
 /* containers e cartões */
@@ -33,11 +34,11 @@ body{
 .muted{ color: var(--muted); }
 
 /* tipografia */
-.h1{ font-size: 28px; margin: 4px 0 6px; letter-spacing: -0.2px; }
-.h2{ font-size: 18px; margin: 16px 0 8px; }
-.sub{ color: var(--muted); margin: 0; }
+.h1{ font-size: 28px; margin: 4px 0 6px; letter-spacing: -0.2px; font-weight: 600; }
+.h2{ font-size: 18px; margin: 14px 0 8px; font-weight: 500; }
+.sub{ color: var(--muted); margin: 0; font-weight: 400; }
 
-/* ====== TOPBAR ====== */
+/* ========= TOPBAR ========= */
 .topbar{
   position: sticky; top:0; z-index:10;
   background: rgba(255,255,255,.92);
@@ -49,9 +50,7 @@ body{
   padding: 10px 0;
 }
 .brand{
-  font-weight: 700;
-  color: #2e2e2e;
-  letter-spacing: -.3px;
+  font-weight: 600; color: #2e2e2e; letter-spacing: -.3px;
 }
 .brand span{ color:#8a8a8a; }
 
@@ -59,7 +58,7 @@ body{
 .search{
   width:100%; padding: 10px 12px;
   background:#fff; border:1px solid var(--line); border-radius: 10px;
-  outline: none;
+  outline: none; font-weight: 400;
 }
 .search:focus{ border-color:#c9c9c9; }
 
@@ -77,46 +76,54 @@ body{
 .suggestions li:hover,
 .suggestions li:focus{ background:#f2f2f2; }
 
-/* ====== TABS/PANES ====== */
+/* ========= TABS/PANES ========= */
 .tabs{
   display:flex; flex-wrap:wrap; gap:8px; border-bottom:1px solid var(--line);
   padding-bottom: 8px; margin-bottom: 8px;
 }
 .tab{
   appearance:none; border:1px solid var(--line); background:#fff;
-  padding:8px 12px; border-radius: 999px; cursor:pointer; color:#333;
+  padding:8px 12px; border-radius: 999px; cursor:pointer; color:#333; font-weight: 400;
 }
 .tab.is-active{ background:#f2f2f2; }
 
 .pane{ display:none; }
 .pane.is-active{ display:block; }
 
-/* listas */
+.pane-title{ margin-top: 6px; }
+
+/* grupos/listas */
 .group{
   border:1px solid var(--line); border-radius:10px; padding:12px; margin:12px 0;
   background:#fff;
 }
-.group h3{ margin: 0 0 8px; font-size: 15px; color:#2a2a2a; }
+.group h3{ margin: 0 0 8px; font-size: 15px; color:#2a2a2a; font-weight: 500; }
 .list{ list-style:none; margin:0; padding:0; }
 .item{
   display:flex; gap:10px; align-items:flex-start;
   border-top:1px solid var(--line); padding:10px 0;
 }
 .item:first-child{ border-top:0; }
-.item .title{
-  font-weight:600; color:#111; text-decoration:none;
-}
-.item .desc{
-  color:#4a4a4a;
+
+.meta{
+  font-size: 12px; color: #8a8a8a; margin-right:6px; white-space: nowrap;
 }
 
-/* Botões IA (Artigos) */
+/* títulos e descrições (peso normal) */
+.title{
+  color:#111; text-decoration:none; font-weight: 400;
+}
+.title:hover{ text-decoration: underline; }
+
+.desc{ color:#4a4a4a; font-weight: 400; }
+
+/* Botões IA (na aba Código) */
 .ai-actions{
   display:flex; gap:8px; flex-wrap:wrap; margin: 4px 0 12px;
 }
 .btn-ios{
   display:inline-block; padding:10px 14px; border:1px solid var(--line);
-  border-radius: 12px; background:#fff; color:#111; text-decoration:none;
+  border-radius: 12px; background:#fff; color:#111; text-decoration:none; font-weight: 400;
 }
 .btn-ios:active{ background: var(--tap); }
 
