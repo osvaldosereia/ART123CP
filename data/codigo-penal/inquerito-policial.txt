@@ -1,103 +1,93 @@
-
-
-### **GUIA DE ESTUDOS: INQUÉRITO POLICIAL**
-
----
-
-### **1. Artigos do Código de Processo Penal**
-
-* **Art. 4º:** Define a atribuição da polícia judiciária para apurar as infrações penais e sua autoria.
-* **Art. 5º:** Trata do início do inquérito nos crimes de ação penal pública (de ofício, por requisição ou requerimento).
-* **Art. 6º:** Descreve as providências iniciais que a autoridade policial deve tomar ao saber da ocorrência de um crime.
-* **Art. 7º:** Regulamenta a reprodução simulada dos fatos (reconstituição), exigindo que não atente contra a moralidade ou a ordem pública.
-* **Art. 8º:** Normas a serem observadas nos casos de prisão em flagrante.
-* **Art. 9º:** Determina que as peças do inquérito sejam reduzidas a escrito ou datilografadas e rubricadas pela autoridade.
-* **Art. 10:** Estabelece os prazos para a conclusão do inquérito e as regras sobre o relatório final.
-* **Art. 11:** Determina que os instrumentos do crime e objetos relevantes para a prova acompanhem os autos do inquérito.
-* **Art. 12:** Prevê que o inquérito acompanhará a denúncia ou queixa, sempre que servir de base para elas.
-* **Art. 13:** Elenca outras incumbências da autoridade policial, como fornecer informações sobre a vítima e cumprir mandados de prisão.
-* **Art. 13-A e 13-B:** Tratam da requisição de dados cadastrais e de localização de vítimas ou suspeitos (inovações do Pacote Anticrime).
-* **Art. 14:** Garante ao ofendido (vítima) o direito de requerer diligências.
-* **Art. 15:** Determina a nomeação de um curador para o indiciado menor de idade.
-* **Art. 16:** Impede a devolução dos autos do inquérito à autoridade policial após o oferecimento da denúncia, salvo para novas diligências.
-* **Art. 17:** Proíbe que a autoridade policial mande arquivar os autos do inquérito.
-* **Art. 18:** Permite que, após o arquivamento judicial, a autoridade policial realize novas pesquisas se tiver notícia de provas novas.
-* **Art. 19:** Nos crimes em que não couber ação pública, os autos serão remetidos ao juízo para que o ofendido possa agir.
-* **Art. 20:** Assegura o sigilo necessário à elucidação do fato ou exigido pelo interesse da sociedade.
-* **Art. 21:** Trata da incomunicabilidade do indiciado (dispositivo de aplicação controversa frente à Constituição de 1988).
-* **Art. 22:** Permite que autoridades de uma circunscrição atuem em outra, mediante certas condições.
-* **Art. 23:** Obriga a autoridade a enviar informações sobre o indiciado ao Instituto de Identificação e Estatística.
-
-*(**Observação:** Incluí também os artigos 28 e 28-A, que são cruciais e complementam sua lista)*
-* **Art. 28:** Nova sistemática de arquivamento do inquérito policial (Pacote Anticrime).
-* **Art. 28-A:** Regulamenta o Acordo de Não Persecução Penal (ANPP).
-* **Súmula Vinculante 11 (STF):** Sobre o uso excepcional de algemas.
-* **Súmula Vinculante 14 (STF):** Garante ao advogado acesso aos autos do inquérito.
-* **Súmula 524 (STF):** Sobre o desarquivamento do inquérito mediante provas novas.
-* **Súmula 593 (STJ):** O crime de estupro de vulnerável se configura com a prática de qualquer ato libidinoso, não só a conjunção carnal. (Frequentemente apurado em sede de IP).
-* **Súmula 645 (STJ):** A competência para julgar o crime de latrocínio é do juiz singular, e não do Tribunal do Júri.
+# CÓDIGO
+- Art. 4º: Define a atribuição da polícia judiciária para apurar as infrações penais e sua autoria.
+- Art. 5º: Trata do início do inquérito nos crimes de ação penal pública (de ofício, por requisição ou requerimento).
+- Art. 6º: Descreve as providências iniciais que a autoridade policial deve tomar ao saber da ocorrência de um crime.
+- Art. 7º: Regulamenta a reprodução simulada dos fatos (reconstituição), exigindo que não atente contra a moralidade ou a ordem pública.
+- Art. 8º: Normas a serem observadas nos casos de prisão em flagrante.
+- Art. 9º: Determina que as peças do inquérito sejam reduzidas a escrito ou datilografadas e rubricadas pela autoridade.
+- Art. 10: Estabelece os prazos para a conclusão do inquérito e as regras sobre o relatório final.
+- Art. 11: Determina que os instrumentos do crime e objetos relevantes para a prova acompanhem os autos do inquérito.
+- Art. 12: Prevê que o inquérito acompanhará a denúncia ou queixa, sempre que servir de base para elas.
+- Art. 13: Elenca outras incumbências da autoridade policial, como fornecer informações sobre a vítima e cumprir mandados de prisão.
+- Art. 13-A e 13-B: Tratam da requisição de dados cadastrais e de localização de vítimas ou suspeitos (inovações do Pacote Anticrime).
+- Art. 14: Garante ao ofendido (vítima) o direito de requerer diligências.
+- Art. 15: Determina a nomeação de um curador para o indiciado menor de idade.
+- Art. 16: Impede a devolução dos autos do inquérito à autoridade policial após o oferecimento da denúncia, salvo para novas diligências.
+- Art. 17: Proíbe que a autoridade policial mande arquivar os autos do inquérito.
+- Art. 18: Permite que, após o arquivamento judicial, a autoridade policial realize novas pesquisas se tiver notícia de provas novas.
+- Art. 19: Nos crimes em que não couber ação pública, os autos serão remetidos ao juízo para que o ofendido possa agir.
+- Art. 20: Assegura o sigilo necessário à elucidação do fato ou exigido pelo interesse da sociedade.
+- Art. 21: Trata da incomunicabilidade do indiciado (dispositivo de aplicação controversa frente à Constituição de 1988).
+- Art. 22: Permite que autoridades de uma circunscrição atuem em outra, mediante certas condições.
+- Art. 23: Obriga a autoridade a enviar informações sobre o indiciado ao Instituto de Identificação e Estatística.
+- Art. 28: Nova sistemática de arquivamento do inquérito policial (Pacote Anticrime).
+- Art. 28-A: Regulamenta o Acordo de Não Persecução Penal (ANPP).
+- Súmula Vinculante 11 (STF): Sobre o uso excepcional de algemas.
+- Súmula Vinculante 14 (STF): Garante ao advogado acesso aos autos do inquérito.
+- Súmula 524 (STF): Sobre o desarquivamento do inquérito mediante provas novas.
+- Súmula 593 (STJ): O crime de estupro de vulnerável se configura com a prática de qualquer ato libidinoso, não só a conjunção carnal. (Frequentemente apurado em sede de IP).
+- Súmula 645 (STJ): A competência para julgar o crime de latrocínio é do juiz singular, e não do Tribunal do Júri.
 
 ---
 
-### **2. Vídeoaulas Recomendadas (YouTube)**
-
-1.  **Título:** Inquérito Policial - TUDO O QUE VOCÊ PRECISA SABER (Prof. Pedro Henrique)
-    * **Link:** `https://www.youtube.com/watch?v=FjS6eR5y540`
-2.  **Título:** Inquérito Policial para Concursos (Atualizado c/ Pacote Anticrime) - (Prof. Evandro Guedes)
-    * **Link:** `https://www.youtube.com/watch?v=yYvK2xXw5V0`
-3.  **Título:** INQUÉRITO POLICIAL EM 25 MINUTOS - O Resumo mais completo do Youtube
-    * **Link:** `https://www.youtube.com/watch?v=0k-sA9l259U`
-4.  **Título:** Pacote Anticrime: Arquivamento do Inquérito Policial (Art. 28) - (Prof. Nestor Távora)
-    * **Link:** `https://www.youtube.com/watch?v=F_4B4gq_g-k`
-5.  **Título:** ACORDO DE NÃO PERSECUÇÃO PENAL (ANPP) - Passo a Passo
-    * **Link:** `https://www.youtube.com/watch?v=d_iJg6b4o_Y`
-6.  **Título:** O valor probatório do inquérito policial no processo penal
-    * **Link:** `https://www.youtube.com/watch?v=eM8_iJ-s2yU`
-7.  **Título:** Notitia Criminis e Formas de Instauração do Inquérito - (Processo Penal)
-    * **Link:** `https://www.youtube.com/watch?v=p1h87N_f1qA`
-8.  **Título:** Súmulas Vinculantes de Processo Penal - (Canal Dizer o Direito)
-    * **Link:** `https://www.youtube.com/watch?v=rC2F1r83hJ0`
-9.  **Título:** Prazos no Inquérito Policial - (Estratégia Concursos)
-    * **Link:** `https://www.youtube.com/watch?v=27-mHhO6pMA`
-10. **Título:** Diferença entre Inquérito Policial e Processo Penal
-    * **Link:** `https://www.youtube.com/watch?v=6P43VwN-jAY`
-
----
-
-### **3. Artigos Recomendados (Jusbrasil)**
-
-1.  **Título:** Inquérito Policial: o que é, características, instauração e conclusão
-    * **Link:** `https://www.jusbrasil.com.br/artigos/inquerito-policial-o-que-e-caracteristicas-instauracao-e-conclusao/1162602100`
-2.  **Título:** O arquivamento do inquérito policial e o Pacote Anticrime
-    * **Link:** `https://www.jusbrasil.com.br/artigos/o-arquivamento-do-inquerito-policial-e-o-pacote-anticrime/813735071`
-3.  **Título:** A (in)dispensabilidade do Inquérito Policial
-    * **Link:** `https://www.jusbrasil.com.br/artigos/a-in-dispensabilidade-do-inquerito-policial/337169466`
-4.  **Título:** O Valor Probatório do Inquérito Policial
-    * **Link:** `https://www.jusbrasil.com.br/artigos/o-valor-probatorio-do-inquerito-policial/112002196`
-5.  **Título:** Entenda o Acordo de Não Persecução Penal (ANPP)
-    * **Link:** `https://www.jusbrasil.com.br/artigos/entenda-o-acordo-de-nao-persecucao-penal-anpp/1202867800`
-6.  **Título:** O sigilo no inquérito policial e o direito de defesa
-    * **Link:** `https://www.jusbrasil.com.br/artigos/o-sigilo-no-inquerito-policial-e-o-direito-de-defesa/418721956`
-7.  **Título:** A incomunicabilidade do preso e sua (in)constitucionalidade
-    * **Link:** `https://www.jusbrasil.com.br/artigos/a-incomunicabilidade-do-preso-e-sua-in-constitucionalidade/309117180`
-8.  **Título:** O Indiciamento no Inquérito Policial
-    * **Link:** `https://www.jusbrasil.com.br/artigos/o-indiciamento-no-inquerito-policial/111818228`
-9.  **Título:** Requisição de dados e informações cadastrais pela polícia e pelo MP
-    * **Link:** `https://www.jusbrasil.com.br/artigos/requisicao-de-dados-e-informacoes-cadastrais-pela-policia-e-pelo-mp/809835824`
-10. **Título:** Prazos para conclusão do inquérito policial
-    * **Link:** `https://www.jusbrasil.com.br/artigos/prazos-para-conclusao-do-inquerito-policial/324867975`
+# VÍDEOS
+- Título: Inquérito Policial - TUDO O QUE VOCÊ PRECISA SABER (Prof. Pedro Henrique)
+-- Link: `https://www.youtube.com/watch?v=FjS6eR5y540`
+- Título: Inquérito Policial para Concursos (Atualizado c/ Pacote Anticrime) - (Prof. Evandro Guedes)
+-- Link: `https://www.youtube.com/watch?v=yYvK2xXw5V0`
+- Título: INQUÉRITO POLICIAL EM 25 MINUTOS - O Resumo mais completo do Youtube
+-- Link: `https://www.youtube.com/watch?v=0k-sA9l259U`
+- Título: Pacote Anticrime: Arquivamento do Inquérito Policial (Art. 28) - (Prof. Nestor Távora)
+-- Link: `https://www.youtube.com/watch?v=F_4B4gq_g-k`
+- Título: ACORDO DE NÃO PERSECUÇÃO PENAL (ANPP) - Passo a Passo
+-- Link: `https://www.youtube.com/watch?v=d_iJg6b4o_Y`
+- Título: O valor probatório do inquérito policial no processo penal
+-- Link: `https://www.youtube.com/watch?v=eM8_iJ-s2yU`
+- Título: Notitia Criminis e Formas de Instauração do Inquérito - (Processo Penal)
+-- Link: `https://www.youtube.com/watch?v=p1h87N_f1qA`
+- Título: Súmulas Vinculantes de Processo Penal - (Canal Dizer o Direito)
+-- Link: `https://www.youtube.com/watch?v=rC2F1r83hJ0`
+- Título: Prazos no Inquérito Policial - (Estratégia Concursos)
+-- Link: `https://www.youtube.com/watch?v=27-mHhO6pMA`
+- Título: Diferença entre Inquérito Policial e Processo Penal
+-- Link: `https://www.youtube.com/watch?v=6P43VwN-jAY`
 
 ---
 
-### **4. Questões para Fixação**
+#ARTIGOS
 
-1.  Por que se afirma que o inquérito policial é "inquisitorial" e qual a principal consequência disso para o investigado?
-2.  De acordo com o CPP, quem pode determinar o arquivamento do inquérito policial e por quê? (Art. 17 e Art. 28)
-3.  Um juiz pode basear uma sentença condenatória unicamente em provas colhidas na fase de inquérito, como um depoimento informal? Justifique.
-4.  Explique o que é a *notitia criminis* de cognição coercitiva, prevista no Art. 8º do CPP.
-5.  Qual o impacto da Súmula Vinculante 14 do STF no trabalho da defesa durante o inquérito? O acesso do advogado é irrestrito?
-6.  Diferencie a requisição de dados prevista no Art. 13-A da requisição de localização do Art. 13-B do CPP.
-7.  O inquérito policial é indispensável para o oferecimento da denúncia? Explique.
-8.  Se um inquérito for arquivado por falta de provas, ele poderá ser reaberto? Qual a condição para isso, conforme o Art. 18 do CPP e a Súmula 524 do STF?
-9.  O que acontece se a autoridade policial não concluir o inquérito no prazo legal (Art. 10 do CPP)?
+- Título: Inquérito Policial: o que é, características, instauração e conclusão
+-- Link: `https://www.jusbrasil.com.br/artigos/inquerito-policial-o-que-e-caracteristicas-instauracao-e-conclusao/1162602100`
+- Título: O arquivamento do inquérito policial e o Pacote Anticrime
+-- Link: `https://www.jusbrasil.com.br/artigos/o-arquivamento-do-inquerito-policial-e-o-pacote-anticrime/813735071`
+- Título: A (in)dispensabilidade do Inquérito Policial
+-- Link: `https://www.jusbrasil.com.br/artigos/a-in-dispensabilidade-do-inquerito-policial/337169466`
+- Título: O Valor Probatório do Inquérito Policial
+-- Link: `https://www.jusbrasil.com.br/artigos/o-valor-probatorio-do-inquerito-policial/112002196`
+- Título: Entenda o Acordo de Não Persecução Penal (ANPP)
+-- Link: `https://www.jusbrasil.com.br/artigos/entenda-o-acordo-de-nao-persecucao-penal-anpp/1202867800`
+- Título: O sigilo no inquérito policial e o direito de defesa
+-- Link: `https://www.jusbrasil.com.br/artigos/o-sigilo-no-inquerito-policial-e-o-direito-de-defesa/418721956`
+- Título: A incomunicabilidade do preso e sua (in)constitucionalidade
+-- Link: `https://www.jusbrasil.com.br/artigos/a-incomunicabilidade-do-preso-e-sua-in-constitucionalidade/309117180`
+- Título: O Indiciamento no Inquérito Policial
+-- Link: `https://www.jusbrasil.com.br/artigos/o-indiciamento-no-inquerito-policial/111818228`
+- Título: Requisição de dados e informações cadastrais pela polícia e pelo MP
+-- Link: `https://www.jusbrasil.com.br/artigos/requisicao-de-dados-e-informacoes-cadastrais-pela-policia-e-pelo-mp/809835824`
+10. Título: Prazos para conclusão do inquérito policial
+-- Link: `https://www.jusbrasil.com.br/artigos/prazos-para-conclusao-do-inquerito-policial/324867975`
+
+---
+
+#QUESTÕES
+
+- Por que se afirma que o inquérito policial é "inquisitorial" e qual a principal consequência disso para o investigado?
+- De acordo com o CPP, quem pode determinar o arquivamento do inquérito policial e por quê? (Art. 17 e Art. 28)
+- Um juiz pode basear uma sentença condenatória unicamente em provas colhidas na fase de inquérito, como um depoimento informal? Justifique.
+- Explique o que é a *notitia criminis* de cognição coercitiva, prevista no Art. 8º do CPP.
+- Qual o impacto da Súmula Vinculante 14 do STF no trabalho da defesa durante o inquérito? O acesso do advogado é irrestrito?
+- Diferencie a requisição de dados prevista no Art. 13-A da requisição de localização do Art. 13-B do CPP.
+- O inquérito policial é indispensável para o oferecimento da denúncia? Explique.
+- Se um inquérito for arquivado por falta de provas, ele poderá ser reaberto? Qual a condição para isso, conforme o Art. 18 do CPP e a Súmula 524 do STF?
+- O que acontece se a autoridade policial não concluir o inquérito no prazo legal (Art. 10 do CPP)?
 10. Quais são os 3 principais requisitos para que o Ministério Público possa propor um Acordo de Não Persecução Penal (ANPP)?
