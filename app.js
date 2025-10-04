@@ -1,16 +1,26 @@
-// ============== UTILS ==============
+// ===== Utils =====
 const $ = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
 const esc = s => String(s ?? '').replace(/[&<>"]/g, m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[m]));
 const norm = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 const shorten = (s,n)=>{ s=String(s||''); return s.length>n ? s.slice(0,n-1)+'…' : s; };
 const gIA = prompt => `https://www.google.com/search?q=${encodeURIComponent(prompt)}&udm=50`;
+const labelizePasta = slug => {
+  if(!slug) return '';
+  const map = {
+    'codigo-penal':'Código Penal',
+    'codigo-civil':'Código Civil',
+    'cpp':'CPP',
+    'cf-88':'CF/88'
+  };
+  return map[slug] || slug.replace(/-/g,' ').replace(/\b\w/g, m=>m.toUpperCase());
+};
 
-// ============== ESTADO ==============
-let INDEX = [];  // temas.json
+// ===== Estado =====
+let INDEX = [];
 let FICHA = null;
 
-// ============== BOOT / AUTOCOMPLETE ==============
+// ===== Boot + Autocomplete =====
 (async function boot(){
   try { INDEX = await fetch('temas.json').then(r=>r.json()); } catch(e){ INDEX=[]; }
 })();
@@ -22,18 +32,37 @@ elBusca.addEventListener('input', () => {
   const termo = norm(elBusca.value);
   if(!termo){ elSug.classList.remove('show'); elSug.innerHTML=''; return; }
   const res = INDEX.filter(t => norm(t.nome).includes(termo)).slice(0,10);
-  elSug.innerHTML = res.map(r=>`<li role="option" tabindex="0" data-pasta="${esc(r.pasta)}" data-arquivo="${esc(r.arquivo)}">${esc(r.nome)}</li>`).join('');
+  elSug.innerHTML = res.map(r=>`
+    <li class="sug-item" role="option" tabindex="0" data-pasta="${esc(r.pasta)}" data-arquivo="${esc(r.arquivo)}">
+      <div class="sug-title">${esc(r.nome)}</div>
+      <div class="sug-sub">${esc(labelizePasta(r.pasta))}</div>
+      <div class="sug-sep"></div>
+    </li>`).join('');
   elSug.classList.toggle('show', res.length>0);
 });
+
 elSug.addEventListener('click', e => {
-  const li = e.target.closest('li'); if(!li) return;
+  const li = e.target.closest('.sug-item'); if(!li) return;
   elSug.classList.remove('show');
-  elBusca.value = li.textContent.trim();
-  carregarFicha(li.dataset.pasta, li.dataset.arquivo, li.textContent.trim());
+  elBusca.value = li.querySelector('.sug-title').textContent.trim();
+  carregarFicha(li.dataset.pasta, li.dataset.arquivo, elBusca.value);
 });
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') elSug.classList.remove('show'); });
 
-// ============== CARREGAR & PARSE TXT ==============
+// ===== Drawer =====
+const drawer = $('#drawer');
+const menuBtn = $('#menu-btn');
+const drawerClose = $('#drawer-close');
+const drawerBackdrop = $('#drawer-backdrop');
+
+function openDrawer(){ drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); menuBtn.setAttribute('aria-expanded','true'); }
+function closeDrawer(){ drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); menuBtn.setAttribute('aria-expanded','false'); }
+
+menuBtn.addEventListener('click', openDrawer);
+drawerClose.addEventListener('click', closeDrawer);
+drawerBackdrop.addEventListener('click', closeDrawer);
+
+// ===== Carregar & Parse TXT =====
 async function carregarFicha(pasta, arquivo, nome){
   $('#intro').classList.add('hidden');
   $('#ficha').classList.remove('hidden');
@@ -43,50 +72,30 @@ async function carregarFicha(pasta, arquivo, nome){
   const txt = await fetch(`data/${pasta}/${arquivo}`).then(r=>r.text());
   FICHA = parseTXT(txt, nome);
 
-  renderCodigo(FICHA.codigo);     // inclui botões IA aqui
-  renderVideos(FICHA.videos);     // títulos linkados, prefixo, ↗
-  renderPerguntas(FICHA.perguntas); // título interno, links ↗ sem “Google (modo IA)” e sem “?” inicial
+  renderCodigo(FICHA.codigo);
+  renderVideos(FICHA.videos);
+  renderPerguntas(FICHA.perguntas);
 
   switchTab('codigo');
 }
 
 function parseTXT(txt, tema){
   const linhas = txt.split(/\r?\n/).map(l=>l.trim()).filter(Boolean);
-
   const isHdr = l => /^#\s*(CÓDIGO|VÍDEOS|ARTIGOS|QUESTÕES)\s*$/i.test(l);
   let sec = null;
 
-  const data = {
-    tema, 
-    codigo: { grupos: [] },   // [{nome, itens:[{title, desc, href?}]}]
-    videos: [],               // [{title, href}]
-    perguntas: []             // [string]
-  };
-
-  // grupo único “Normas”, simples e limpo
-  let group = { nome: 'Normas', itens: [] };
-  data.codigo.grupos.push(group);
-
-  let tempTitulo = null; // VÍDEOS (par Título/Link)
+  const data = { tema, codigo: { itens: [] }, videos: [], perguntas: [] };
+  let tempTitulo = null;
 
   for(const l of linhas){
-    if(isHdr(l)){
-      const hdr = l.replace(/^#\s*/,'').toUpperCase();
-      sec = hdr; tempTitulo = null;
-      continue;
-    }
-
-    if(/^(INTRODUÇÃO|GUIA DE ESTUDOS)/i.test(l)) { continue; } // ignorar
+    if(isHdr(l)){ sec = l.replace(/^#\s*/,'').toUpperCase(); tempTitulo=null; continue; }
+    if(/^(INTRODUÇÃO|GUIA DE ESTUDOS)/i.test(l)) continue;
 
     if(/CÓDIGO/i.test(sec||'')){
-      // "- Art./SV/Súmula: descrição"
       const m = l.match(/^-+\s*(.+?)\s*:\s*(.+)$/);
-      if(m){
-        group.itens.push({ title: m[1].trim(), desc: m[2].trim(), href: null });
-      }
+      if(m) data.codigo.itens.push({ title: m[1].trim(), desc: m[2].trim(), href: null });
       continue;
     }
-
     if(/VÍDEOS/i.test(sec||'')){
       const t = l.match(/^-+\s*T[íi]tulo:\s*(.+)$/i);
       const k = l.match(/^--+\s*Link:\s*(https?:\/\/\S+)/i);
@@ -94,52 +103,39 @@ function parseTXT(txt, tema){
       if(k){ if(tempTitulo){ data.videos.push({ title: tempTitulo, href: k[1].trim() }); tempTitulo=null; } continue; }
       continue;
     }
-
     if(/ARTIGOS/i.test(sec||'')){
-      // aba “Artigos” foi removida — ignorar bloco mantendo compatibilidade do TXT
+      /* aba eliminada — ignorar bloco, mantendo compatibilidade do TXT */
       continue;
     }
-
     if(/QUESTÕES/i.test(sec||'')){
       const q = l.match(/^-+\s*(.+)$/);
-      if(q){ data.perguntas.push(q[1].trim()); }
+      if(q) data.perguntas.push(q[1].trim());
       continue;
     }
   }
   return data;
 }
 
-// ============== RENDER: Código (com IA buttons) ==============
+// ===== Render: Código (com IA) — lista plana =====
 function renderCodigo(cod){
   const pane = $('#wrap-codigo');
   pane.innerHTML = '';
 
-  if(!cod?.grupos?.length){
-    pane.innerHTML = `<div class="muted">Sem itens normativos.</div>`;
-  } else {
-    cod.grupos.forEach(g=>{
-      const box = document.createElement('div'); box.className='group';
-      box.innerHTML = `<h3>${esc(g.nome)}</h3><ul class="list"></ul>`;
-      const ul = box.querySelector('.list');
-      g.itens.forEach(it=>{
-        const titleEl = it.href
-          ? `<a class="title" href="${esc(it.href)}" target="_blank" rel="noopener">${esc(it.title)} ↗</a>`
-          : `<span class="title">${esc(it.title)}</span>`;
-        ul.insertAdjacentHTML('beforeend', `
-          <li class="item">
-            <div>${titleEl}<div class="desc">${esc(shorten(it.desc, 180))}</div></div>
-          </li>
-        `);
-      });
-      pane.appendChild(box);
+  if(!cod?.itens?.length){ pane.innerHTML = `<div class="muted">Sem itens normativos.</div>`; }
+  else {
+    cod.itens.forEach(it=>{
+      const titleEl = it.href
+        ? `<a class="title" href="${esc(it.href)}" target="_blank" rel="noopener">${esc(it.title)} ↗</a>`
+        : `<span class="title">${esc(it.title)}</span>`;
+      pane.insertAdjacentHTML('beforeend', `
+        <li class="item">
+          <div>${titleEl}<div class="desc">${esc(shorten(it.desc, 180))}</div></div>
+        </li>
+      `);
     });
   }
 
-  // prompts agregados agora baseados APENAS no CÓDIGO/SÚMULAS
-  const resumoCodigo = (cod?.grupos||[])
-    .flatMap(g => g.itens.map(it => `**${it.title}:** ${it.desc}`))
-    .join('\n');
-
+  const resumoCodigo = (cod?.itens||[]).map(it => `**${it.title}:** ${it.desc}`).join('\n');
   const tema = FICHA?.tema || $('#ficha-titulo').textContent.trim();
 
   const promptEstudar =
@@ -158,7 +154,7 @@ ${resumoCodigo}`;
   $('#btn-questoes').href = gIA(promptQuestoes);
 }
 
-// ============== RENDER: Vídeos (títulos + prefixo + ↗) ==============
+// ===== Render: Vídeos (títulos + prefixo + ↗) — lista plana =====
 function renderVideos(items){
   const pane = $('#pane-videos');
   pane.innerHTML = '';
@@ -168,13 +164,12 @@ function renderVideos(items){
     return;
   }
 
-  const box = document.createElement('div'); box.className='group';
-  box.innerHTML = `<h3>Vídeos</h3><ul class="list"></ul>`;
-  const ul = box.querySelector('.list');
+  const ul = document.createElement('ul');
+  ul.className = 'list list-plain';
 
   items.forEach(v=>{
     const host = v.href ? new URL(v.href).hostname.replace(/^www\./,'') : '';
-    const origem = /youtu(\.be|be\.com)$/.test(host) || host.includes('youtube') ? 'YouTube' : (host || 'link');
+    const origem = host.includes('youtube') ? 'YouTube' : (host || 'link');
     ul.insertAdjacentHTML('beforeend', `
       <li class="item">
         <span class="meta">${esc(origem)} ·</span>
@@ -182,10 +177,10 @@ function renderVideos(items){
       </li>`);
   });
 
-  pane.appendChild(box);
+  pane.appendChild(ul);
 }
 
-// ============== RENDER: Perguntas (título interno + links ↗ sem "?") ==============
+// ===== Render: Perguntas (título interno + links ↗ sem "?") — lista plana =====
 function renderPerguntas(items){
   const wrap = $('#wrap-perguntas');
   wrap.innerHTML = '';
@@ -196,27 +191,22 @@ function renderPerguntas(items){
   }
 
   const tema = FICHA?.tema || $('#ficha-titulo').textContent.trim();
-  const box = document.createElement('div'); box.className='group';
-  box.innerHTML = `<ul class="list"></ul>`;
-  const ul = box.querySelector('.list');
 
   items.forEach(q=>{
-    const texto = q.replace(/^\?+\s*/,'').trim(); // remove “?” do início se existir
+    const texto = q.replace(/^\?+\s*/,'').trim();
     const prompt =
 `Tema: ${tema}
 Pergunta: "${texto}"
 Explique objetivamente (5–7 frases), cite o dispositivo aplicável (CPP/CF/Súmulas) e dê 1 exemplo prático.`;
     const href = gIA(prompt);
-    ul.insertAdjacentHTML('beforeend', `
+    wrap.insertAdjacentHTML('beforeend', `
       <li class="item">
         <a class="title" href="${href}" target="_blank" rel="noopener" aria-label="Abrir em nova aba">${esc(shorten(texto, 160))} ↗</a>
       </li>`);
   });
-
-  wrap.appendChild(box);
 }
 
-// ============== TABS UX ==============
+// ===== Tabs =====
 $$('.tab').forEach(btn=>{
   btn.addEventListener('click', () => switchTab(btn.dataset.tab));
 });
