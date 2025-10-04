@@ -9,12 +9,12 @@
     "slug": "dano-moral",
     "title": "Dano Moral",
     "path": "data/codigocivil/d/dano-moral.txt",
-    "tags": ["civil"]
+    "tags": ["civil", "dano-moral"]
   }
   {
     "slug": "analogia",
     "title": "Analogia",
     "path": "data/codigocivil/a/analogia.txt",
-    "tags": ["civil"]
+    "tags": ["civil", "analogia"]
   }
 ]
