@@ -139,15 +139,12 @@ function renderCodigo(cod){
   const tema = FICHA?.tema || $('#ficha-titulo').textContent.trim();
 
   const promptEstudar =
-`Você é professor de Direito e vai preparar uma APOSTILA DIDÁTICA sobre ${tema} usando EXCLUSIVAMENTE o conteúdo abaixo.
-Entregue: (1) visão geral; (2) síntese comentada dos dispositivos; (3) mapa mental textual; (4) passo a passo prático; (5) erros frequentes; (6) flash points; (7) referências.
-CONTEÚDO:
+`Me explique o tema ${tema}, seja didático e organizado. Inclua na sua exmplicação todos o conteído a seguir:
 ${resumoCodigo}`;
 
   const promptQuestoes =
-`Você é professor de Direito e vai criar 10 QUESTÕES OBJETIVAS (A–E) sobre ${tema} usando EXCLUSIVAMENTE o conteúdo abaixo.
-Após as 10, traga gabarito comentado citando artigo/súmula pertinente.
-CONTEÚDO:
+`Crie 10 QUESTÕES OBJETIVAS (A–E) sobre ${tema} para eu treinar meu conhecimento.
+Após as 10, traga gabarito com breve comentário. As questões devem conter informações de todo o conteudo a seguir:
 ${resumoCodigo}`;
 
   $('#btn-estudar').href  = gIA(promptEstudar);
