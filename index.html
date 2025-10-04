@@ -1,25 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meujus - Fichas Técnicas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>meujus — Fichas</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- TOPBAR iOS-like -->
   <header class="topbar">
-    <div class="topbar-inner">
-      <div class="logo">meu<span>jus</span></div>
-      <input type="text" id="busca" placeholder="Buscar tema..." autocomplete="off" />
-      <ul id="sugestoes" class="sugestoes"></ul>
+    <div class="container topbar-inner">
+      <div class="brand" aria-label="meujus">meu<span>jus</span></div>
+
+      <div class="search-wrap">
+        <input id="busca" class="search" type="text" placeholder="Buscar tema" autocomplete="off" aria-label="Buscar tema" />
+        <ul id="sugestoes" class="suggestions" role="listbox" aria-label="Sugestões de busca"></ul>
+      </div>
     </div>
   </header>
 
-  <main id="conteudo">
-    <h1>Bem-vindo ao Meujus</h1>
-    <p>Selecione um tema na busca acima para visualizar a ficha técnica.</p>
+  <!-- CONTEÚDO -->
+  <main class="container">
+    <section id="intro" class="card muted">
+      <h1 class="h1">Selecione um tema</h1>
+      <p class="sub">Use a busca acima para carregar uma ficha. Visual iOS, tons de cinza, interação suave.</p>
+    </section>
+
+    <section id="ficha" class="card hidden">
+      <header class="ficha-head">
+        <h1 id="ficha-titulo" class="h1">—</h1>
+        <p id="ficha-sub" class="sub">Resumo visual e navegação por abas.</p>
+      </header>
+
+      <!-- TABS -->
+      <nav class="tabs" role="tablist" aria-label="Seções da ficha">
+        <button class="tab is-active" data-tab="codigo" role="tab" aria-selected="true">Código</button>
+        <button class="tab" data-tab="videos" role="tab">Vídeos</button>
+        <button class="tab" data-tab="artigos" role="tab">Artigos</button>
+        <button class="tab" data-tab="perguntas" role="tab">Perguntas</button>
+      </nav>
+
+      <!-- PAINÉIS -->
+      <section id="pane-codigo" class="pane is-active" role="tabpanel" aria-labelledby="Código"></section>
+      <section id="pane-videos" class="pane" role="tabpanel" aria-labelledby="Vídeos"></section>
+
+      <section id="pane-artigos" class="pane" role="tabpanel" aria-labelledby="Artigos">
+        <!-- Botões IA aparecem SOMENTE aqui -->
+        <div class="ai-actions">
+          <a id="btn-estudar" class="btn-ios" target="_blank" rel="noopener">Estudar</a>
+          <a id="btn-questoes" class="btn-ios" target="_blank" rel="noopener">Questões</a>
+        </div>
+        <div id="lista-artigos"></div>
+      </section>
+
+      <section id="pane-perguntas" class="pane" role="tabpanel" aria-labelledby="Perguntas"></section>
+    </section>
   </main>
+
+  <footer class="container foot">
+    <small>© meujus • UI iOS • tons de cinza</small>
+  </footer>
 
   <script src="app.js"></script>
 </body>
