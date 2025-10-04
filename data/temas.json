@@ -1,9 +1,14 @@
-data/temas.json
 [
   {
     "slug": "direito-autoral",
     "title": "Direito Autoral",
-    "path": "data/direito-autoral.txt",
+    "path": "data/codigocivil/d/direito-autoral.txt",
     "tags": ["civil","LDA","autorais"]
+  },
+  {
+    "slug": "dano-moral",
+    "title": "Dano Moral",
+    "path": "data/codigocivil/d/dano-moral.txt",
+    "tags": ["civil"]
   }
 ]
