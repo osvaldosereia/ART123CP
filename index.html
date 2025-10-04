@@ -11,14 +11,15 @@
   <!-- TOPBAR -->
   <div class="topbar">
     <div class="container topbar-inner">
-      <button id="btnMenu" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer-panel">
-        <span></span><span></span><span></span>
-      </button>
       <div class="brand"><span class="b1">Meujus</span><span class="b2">Vade</span></div>
       <div class="search-wrap" role="search">
         <input id="search" class="search" type="search" placeholder="Buscar tema ou artigo" autocomplete="off" aria-autocomplete="list" aria-controls="suggestions" aria-haspopup="listbox" />
         <ul id="suggestions" class="suggestions" role="listbox" aria-label="Sugestões"></ul>
       </div>
+      <!-- Hambúrguer à direita -->
+      <button id="btnMenu" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer-panel">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 
@@ -32,11 +33,11 @@
       </div>
       <div class="drawer-content">
         <ul class="list" id="menuList">
-          <!-- Subpáginas e temas (exemplo) -->
           <li><a class="title" href="#/tema/codigo-civil">Código Civil</a></li>
           <li><a class="title" href="#/tema/codigo-processo-penal">Código de Processo Penal</a></li>
           <li><a class="title" href="#/sobre">Sobre</a></li>
         </ul>
+        <!-- A seção "Salvos" é inserida pelo app.js -->
       </div>
     </nav>
   </div>
@@ -45,9 +46,7 @@
   <main class="container" id="theme" aria-live="polite">
     <div class="card ficha-head">
       <h1 class="h1" id="themeTitle"></h1>
-      <div class="ai-actions">
-        <button id="btnIA" class="btn-ios" type="button">Estudar com Google I.A.</button>
-      </div>
+      <!-- Intro e botão Salvar são injetados pelo app.js -->
     </div>
     <div id="content" class="list-plain"></div>
   </main>
