@@ -312,3 +312,23 @@ body{
   .topbar-inner{ gap: 12px; }
   .ai-actions{ gap: 10px; }
 }
+/* tamanho base (mobile) */
+.brand{
+  font-weight: 600;
+  letter-spacing: -.2px;
+  display:flex; gap:2px;
+  line-height: 1;
+  font-size: 18px;   /* ajuste aqui se quiser maior no mobile */
+}
+.brand .b1{ color: var(--primary); }
+.brand .b2{ color: var(--accent); }
+
+/* desktop */
+@media (min-width: 992px){
+  .brand{ font-size: 28px; }   /* aumente para 26/28 se quiser */
+}
+
+/* telas bem largas (opcional) */
+@media (min-width: 1280px){
+  .brand{ font-size: 30px; }
+}
