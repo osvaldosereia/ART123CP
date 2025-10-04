@@ -2,12 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>meujus — Fichas</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- TOPBAR (iOS-like, largura travada ao site) -->
+  <!-- TOPBAR (iOS-like, com safe areas) -->
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand" aria-label="meujus">meu<span>jus</span></div>
@@ -31,11 +31,10 @@
         <p id="ficha-sub" class="sub">Conteúdo consolidado em abas.</p>
       </header>
 
-      <!-- TABS -->
+      <!-- TABS (removido “Artigos”) -->
       <nav class="tabs" role="tablist" aria-label="Seções da ficha">
         <button class="tab is-active" data-tab="codigo" role="tab" aria-selected="true">Código</button>
         <button class="tab" data-tab="videos" role="tab">Vídeos</button>
-        <button class="tab" data-tab="artigos" role="tab">Artigos</button>
         <button class="tab" data-tab="perguntas" role="tab">Perguntas</button>
       </nav>
 
@@ -50,7 +49,6 @@
       </section>
 
       <section id="pane-videos" class="pane" role="tabpanel" aria-labelledby="Vídeos"></section>
-      <section id="pane-artigos" class="pane" role="tabpanel" aria-labelledby="Artigos"></section>
 
       <section id="pane-perguntas" class="pane" role="tabpanel" aria-labelledby="Perguntas">
         <h2 class="h2 pane-title">Estude com o modo i.a. do Google</h2>
