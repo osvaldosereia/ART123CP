@@ -1,0 +1,37 @@
+# Princípios Gerais do Direito
+
+-- Os Princípios Gerais do Direito são as bases fundamentais do ordenamento jurídico, servindo para orientar a criação, interpretação e aplicação das normas, especialmente em casos de lacunas legais. São postulados éticos e jurídicos amplamente aceitos que refletem a consciência social.
+
+## Artigos Relacionados
+
+  - Art. 4º LINDB: Aponta os princípios gerais de direito como método de integração da norma jurídica.
+  - Art. 187 CC: Abuso de direito, ao exceder limites da boa-fé, remete a princípios de eticidade.
+  - Art. 113 CC: Interpretação de negócios jurídicos pela boa-fé, um princípio basilar.
+  - Art. 422 CC: Reforça a boa-fé objetiva nos contratos, um princípio ético essencial.
+  - Art. 5º, XXXV, CF: Princípio da Inafastabilidade da Jurisdição, que impõe o julgamento mesmo sem lei.
+  - Art. 1º, III, CF: Dignidade da Pessoa Humana, princípio máximo que irradia sobre todo o direito.
+
+-----
+
+## Pergunte pra I.A.
+
+  - Aplicação das regras de compra e venda para um contrato de permuta.
+  - A analogia é um método de integração que o juiz utiliza quando há lacuna na lei, buscando uma solução em casos similares.
+  - Professor, quais são os pressupostos para que o juiz possa aplicar a analogia em um caso concreto?
+  - Existe alguma restrição legal para a aplicação da analogia no Direito Brasileiro? Em quais ramos do Direito ela é mais ou menos utilizada?
+  - Qual a diferença fundamental entre analogia e interpretação extensiva, e por que é crucial não confundi-las?
+  - A Súmula 227 do STJ, que permite à pessoa jurídica sofrer dano moral, pode ser considerada um exemplo de aplicação analógica? Justifique.
+  - Em que medida a analogia se relaciona com os princípios gerais do direito e os costumes como métodos de integração da norma jurídica?
+  - O que são os Princípios Gerais do Direito e qual a sua função no ordenamento jurídico brasileiro?
+  - Qual a importância dos Princípios Gerais do Direito diante da ausência de lei (lacuna normativa), costumes e analogia, conforme o Art. 4º da LINDB?
+  - Cite e explique brevemente três Princípios Gerais do Direito que são explicitamente mencionados ou fortemente aplicados no Código Civil.
+  - Como o princípio da Dignidade da Pessoa Humana (Art. 1º, III, CF) se manifesta como um Princípio Geral do Direito e qual seu impacto no Direito Civil contemporâneo?
+  - De que forma o princípio da boa-fé objetiva (Art. 113 e 422 do CC) atua como um Princípio Geral do Direito na interpretação e execução dos contratos?
+  - É possível um princípio geral do direito ser afastado por uma lei expressa? Justifique sua resposta.
+  - Quais são as principais teorias sobre a origem e o fundamento dos Princípios Gerais do Direito?
+  - Qual a relação entre os Princípios Gerais do Direito e os Direitos Fundamentais previstos na Constituição Federal?
+  - Explique como a "função social" (da propriedade, do contrato, etc.) pode ser considerada um Princípio Geral do Direito e como ela relativiza outros princípios tradicionais.
+  - A equidade é um Princípio Geral do Direito? Discuta a sua função no sistema jurídico brasileiro, considerando o Art. 4º da LINDB.
+  - Como a jurisprudência e a doutrina contribuem para a identificação e o desenvolvimento dos Princípios Gerais do Direito no Brasil?
+  - Em casos de colisão entre princípios, como o Poder Judiciário deve proceder para solucionar o conflito?
+  - Analise a importância do princípio da inafastabilidade da jurisdição (Art. 5º, XXXV, CF) no contexto da aplicação dos Princípios Gerais do Direito.
