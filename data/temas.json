@@ -6,5 +6,6 @@
   { "slug": "principio-da-operabilidade", "title": "Princípio da operabilidade", "path": "data/codigocivil/p/principio-da-operabilidade.txt", "group": "Código Civil" },
    { "slug": "vigencia", "title": "Vigência", "path": "data/codigocivil/v/vigencia.txt", "group": "Código Civil" },
     { "slug": "metodo-de-integracao-da-norma", "title": "Mátodo de Integração da Norma", "path": "data/codigocivil/m/metodo-de-integracao-da-norma.txt", "group": "Código Civil" },
-  { "slug": "principio-da-eticidade", "title": "Princípio da Eticidade", "path": "data/codigocivil/p/principio-da-eticidade.txt", "group": "Código Civil" }
+  { "slug": "costumes", "title": "Costumes", "path": "data/codigocivil/c/costumes.txt", "group": "Código Civil" },
+     { "slug": "principio-da-eticidade", "title": "Princípio da Eticidade", "path": "data/codigocivil/p/principio-da-eticidade.txt", "group": "Código Civil" }
 ]
