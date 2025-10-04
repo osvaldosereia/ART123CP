@@ -1,3 +1,5 @@
-{ "slug":"dano-moral", "title":"Dano Moral", "path":"data/codigocivil/d/dano-moral.txt", "group":"Código Civil" }
-{ "slug":"analogia", "title":"Analogia", "path":"data/codigocivil/a/analogia.txt", "group":"Código Civil" }
-{ "slug":"direito-autoral", "title":"Direito Autoral", "path":"data/codigocivil/d/direito-autoral.txt", "group":"Código Civil" }
+[
+  { "slug": "dano-moral", "title": "Dano Moral", "path": "data/codigocivil/d/dano-moral.txt", "group": "Código Civil" },
+  { "slug": "analogia", "title": "Analogia", "path": "data/codigocivil/a/analogia.txt", "group": "Código Civil" },
+  { "slug": "direito-autoral", "title": "Direito Autoral", "path": "data/codigocivil/d/direito-autoral.txt", "group": "Código Civil" }
+]
