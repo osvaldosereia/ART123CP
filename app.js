@@ -44,9 +44,8 @@ async function carregarFicha(pasta, arquivo, nome){
   FICHA = parseTXT(txt, nome);
 
   renderCodigo(FICHA.codigo);     // inclui botões IA aqui
-  renderVideos(FICHA.videos);     // títulos linkados, prefixo discreto, ↗
-  renderArtigos(FICHA.artigos);   // títulos linkados, prefixo discreto, ↗
-  renderPerguntas(FICHA.perguntas); // título interno "Estude com o modo i.a. do Google", sem "Google (modo IA)" e com ↗
+  renderVideos(FICHA.videos);     // títulos linkados, prefixo, ↗
+  renderPerguntas(FICHA.perguntas); // título interno, links ↗ sem “Google (modo IA)” e sem “?” inicial
 
   switchTab('codigo');
 }
@@ -59,17 +58,16 @@ function parseTXT(txt, tema){
 
   const data = {
     tema, 
-    codigo: { grupos: [] },   // grupos: [{nome, itens:[{title, desc, href?}]}]
+    codigo: { grupos: [] },   // [{nome, itens:[{title, desc, href?}]}]
     videos: [],               // [{title, href}]
-    artigos: [],              // [{title, href}]
     perguntas: []             // [string]
   };
 
-  // para "Código", usamos um grupo único "Geral" (ou poderíamos expandir por subheaders futuros)
+  // grupo único “Normas”, simples e limpo
   let group = { nome: 'Normas', itens: [] };
   data.codigo.grupos.push(group);
 
-  let tempTitulo = null; // VÍDEOS/ARTIGOS par Título/Link
+  let tempTitulo = null; // VÍDEOS (par Título/Link)
 
   for(const l of linhas){
     if(isHdr(l)){
@@ -78,10 +76,10 @@ function parseTXT(txt, tema){
       continue;
     }
 
-    if(/^(INTRODUÇÃO|GUIA DE ESTUDOS)/i.test(l)) { continue; } // ignorar se aparecer
+    if(/^(INTRODUÇÃO|GUIA DE ESTUDOS)/i.test(l)) { continue; } // ignorar
 
     if(/CÓDIGO/i.test(sec||'')){
-      // padrão: "- Art. ..: descrição" ou "- SV ..: descrição" ou "- Súmula ..: descrição"
+      // "- Art./SV/Súmula: descrição"
       const m = l.match(/^-+\s*(.+?)\s*:\s*(.+)$/);
       if(m){
         group.itens.push({ title: m[1].trim(), desc: m[2].trim(), href: null });
@@ -98,15 +96,11 @@ function parseTXT(txt, tema){
     }
 
     if(/ARTIGOS/i.test(sec||'')){
-      const t = l.match(/^-+\s*T[íi]tulo:\s*(.+)$/i);
-      const k = l.match(/^--+\s*Link:\s*(https?:\/\/\S+)/i);
-      if(t){ tempTitulo = t[1].trim(); continue; }
-      if(k){ if(tempTitulo){ data.artigos.push({ title: tempTitulo, href: k[1].trim() }); tempTitulo=null; } continue; }
+      // aba “Artigos” foi removida — ignorar bloco mantendo compatibilidade do TXT
       continue;
     }
 
     if(/QUESTÕES/i.test(sec||'')){
-      // "- Pergunta..."  (sem ? obrigatório)
       const q = l.match(/^-+\s*(.+)$/);
       if(q){ data.perguntas.push(q[1].trim()); }
       continue;
@@ -141,13 +135,10 @@ function renderCodigo(cod){
     });
   }
 
-  // montar prompts agregados (Código + Súmulas + títulos/links dos artigos)
+  // prompts agregados agora baseados APENAS no CÓDIGO/SÚMULAS
   const resumoCodigo = (cod?.grupos||[])
     .flatMap(g => g.itens.map(it => `**${it.title}:** ${it.desc}`))
     .join('\n');
-
-  const listaArt = (FICHA?.artigos||[])
-    .map(a => `• ${a.title}${a.href?` — ${a.href}`:''}`).join('\n');
 
   const tema = FICHA?.tema || $('#ficha-titulo').textContent.trim();
 
@@ -155,17 +146,13 @@ function renderCodigo(cod){
 `Você é professor de Direito e vai preparar uma APOSTILA DIDÁTICA sobre ${tema} usando EXCLUSIVAMENTE o conteúdo abaixo.
 Entregue: (1) visão geral; (2) síntese comentada dos dispositivos; (3) mapa mental textual; (4) passo a passo prático; (5) erros frequentes; (6) flash points; (7) referências.
 CONTEÚDO:
-${resumoCodigo}
-Artigos citados:
-${listaArt}`;
+${resumoCodigo}`;
 
   const promptQuestoes =
 `Você é professor de Direito e vai criar 10 QUESTÕES OBJETIVAS (A–E) sobre ${tema} usando EXCLUSIVAMENTE o conteúdo abaixo.
 Após as 10, traga gabarito comentado citando artigo/súmula pertinente.
 CONTEÚDO:
-${resumoCodigo}
-Artigos citados:
-${listaArt}`;
+${resumoCodigo}`;
 
   $('#btn-estudar').href  = gIA(promptEstudar);
   $('#btn-questoes').href = gIA(promptQuestoes);
@@ -198,33 +185,6 @@ function renderVideos(items){
   pane.appendChild(box);
 }
 
-// ============== RENDER: Artigos (títulos + prefixo + ↗) ==============
-function renderArtigos(items){
-  const pane = $('#pane-artigos');
-  pane.innerHTML = '';
-
-  if(!items?.length){
-    pane.innerHTML = `<div class="muted">Sem artigos.</div>`;
-    return;
-  }
-
-  const box = document.createElement('div'); box.className='group';
-  box.innerHTML = `<h3>Artigos</h3><ul class="list"></ul>`;
-  const ul = box.querySelector('.list');
-
-  items.forEach(a=>{
-    const host = a.href ? new URL(a.href).hostname.replace(/^www\./,'') : '';
-    const origem = host.includes('jusbrasil') ? 'Jusbrasil' : (host || 'link');
-    ul.insertAdjacentHTML('beforeend', `
-      <li class="item">
-        <span class="meta">${esc(origem)} ·</span>
-        <a class="title" href="${esc(a.href||'#')}" target="_blank" rel="noopener" aria-label="Abrir em nova aba">${esc(a.title)} ↗</a>
-      </li>`);
-  });
-
-  pane.appendChild(box);
-}
-
 // ============== RENDER: Perguntas (título interno + links ↗ sem "?") ==============
 function renderPerguntas(items){
   const wrap = $('#wrap-perguntas');
@@ -241,7 +201,7 @@ function renderPerguntas(items){
   const ul = box.querySelector('.list');
 
   items.forEach(q=>{
-    const texto = q.replace(/^\?+\s*/,'').trim(); // remove "?" do início se existir
+    const texto = q.replace(/^\?+\s*/,'').trim(); // remove “?” do início se existir
     const prompt =
 `Tema: ${tema}
 Pergunta: "${texto}"
