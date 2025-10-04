@@ -1,9 +1,0 @@
-@media (max-width: 860px){
-  .topbar .container{padding:0 var(--sp-3)}
-  .desktop-pod{display:none !important}
-  body{padding-bottom:84px} /* espaço para a barra mobile */
-}
-@media (min-width: 1024px){
-  .mobile-bar{display:none !important}
-  body{padding-bottom:0}
-}
