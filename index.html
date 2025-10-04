@@ -7,22 +7,42 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- TOPBAR (iOS-like, com safe areas) -->
+  <!-- TOPBAR -->
   <header class="topbar">
     <div class="container topbar-inner">
-      <div class="brand" aria-label="meujus">meu<span>jus</span></div>
+      <div class="brand" aria-label="meujus"><span class="b1">meu</span><span class="b2">jus</span></div>
 
       <div class="search-wrap">
         <input id="busca" class="search" type="text" placeholder="Buscar tema" autocomplete="off" aria-label="Buscar tema" />
         <ul id="sugestoes" class="suggestions" role="listbox" aria-label="Sugestões de busca"></ul>
       </div>
+
+      <button id="menu-btn" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
+
+  <!-- DRAWER -->
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <header class="drawer-header">
+        <div class="brand drawer-brand"><span class="b1">meu</span><span class="b2">jus</span></div>
+        <button id="drawer-close" class="drawer-close" aria-label="Fechar">✕</button>
+      </header>
+      <div class="drawer-content">
+        <p><strong>Sobre</strong><br/>Fichas técnicas para estudo jurídico.</p>
+        <p><strong>Como usar</strong><br/>Busque um tema, navegue pelas abas e use “Estudar”/“Questões”.</p>
+        <p class="muted">v1.0 • UI iOS · tons de cinza com acentos de cor.</p>
+      </div>
+    </div>
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  </aside>
 
   <main class="container">
     <section id="intro" class="card muted">
       <h1 class="h1">Selecione um tema</h1>
-      <p class="sub">Use a busca acima para carregar a ficha. Visual iOS, tons de cinza, interação suave.</p>
+      <p class="sub">Use a busca acima para carregar a ficha.</p>
     </section>
 
     <section id="ficha" class="card hidden">
@@ -31,34 +51,31 @@
         <p id="ficha-sub" class="sub">Conteúdo consolidado em abas.</p>
       </header>
 
-      <!-- TABS (removido “Artigos”) -->
       <nav class="tabs" role="tablist" aria-label="Seções da ficha">
         <button class="tab is-active" data-tab="codigo" role="tab" aria-selected="true">Código</button>
         <button class="tab" data-tab="videos" role="tab">Vídeos</button>
         <button class="tab" data-tab="perguntas" role="tab">Perguntas</button>
       </nav>
 
-      <!-- PAINÉIS -->
       <section id="pane-codigo" class="pane is-active" role="tabpanel" aria-labelledby="Código">
-        <!-- IA BUTTONS (apenas aqui) -->
         <div class="ai-actions">
           <a id="btn-estudar" class="btn-ios" target="_blank" rel="noopener">Estudar</a>
           <a id="btn-questoes" class="btn-ios" target="_blank" rel="noopener">Questões</a>
         </div>
-        <div id="wrap-codigo"></div>
+        <div id="wrap-codigo" class="list list-plain"></div>
       </section>
 
       <section id="pane-videos" class="pane" role="tabpanel" aria-labelledby="Vídeos"></section>
 
       <section id="pane-perguntas" class="pane" role="tabpanel" aria-labelledby="Perguntas">
         <h2 class="h2 pane-title">Estude com o modo i.a. do Google</h2>
-        <div id="wrap-perguntas"></div>
+        <div id="wrap-perguntas" class="list list-plain"></div>
       </section>
     </section>
   </main>
 
   <footer class="container foot">
-    <small>© meujus • UI iOS • tons de cinza</small>
+    <small>© meujus</small>
   </footer>
 
   <script src="app.js"></script>
