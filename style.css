@@ -2,7 +2,7 @@
 :root{
   --primary: #1800ad;
   --accent:  #f5c400;
-  --bg:      #ebebec;     /* fundo mais escuro que antes */
+  --bg:      #ebebec;     /* fundo */
   --card:    #ffffff;
   --text:    #0b0b0b;
   --muted:   #6b6b6b;
@@ -34,7 +34,7 @@ body{
   padding-right: calc(var(--px) + max(12px, env(safe-area-inset-right)));
 }
 
-/* Cartão base (mantido só para o contêiner da ficha) */
+/* Cartão base (apenas para o contêiner da ficha/intro) */
 .card{
   background: var(--card);
   border: 1px solid var(--line);
@@ -81,7 +81,7 @@ body{
 
 /* Hamburger + Drawer */
 .hamburger{
-  width: 42px; height: 42px; border:1px solid var(--line); border-radius: 10px;
+  width: 42px; height: 42px; border:1px solid var(--line); border-radius: 12px;
   background:#fff; display:flex; align-items:center; justify-content:center; gap:4px;
 }
 .hamburger span{
@@ -100,7 +100,7 @@ body{
 .drawer-brand .b1{ color: var(--primary); }
 .drawer-brand .b2{ color: var(--accent); }
 .drawer-close{
-  border:1px solid var(--line); background:#fff; border-radius:10px; padding:6px 10px; cursor:pointer;
+  border:1px solid var(--line); background:#fff; border-radius:12px; padding:6px 10px; cursor:pointer;
 }
 .drawer-content{ color:#333; line-height:1.45; }
 
@@ -136,7 +136,7 @@ body{
 .pane.is-active{ display:block; }
 .pane-title{ margin-top: 6px; }
 
-/* ===== LISTAS “planas” (sem caixas internas) ===== */
+/* ===== LISTAS planas (sem caixas internas) ===== */
 .list{ list-style:none; margin:0; padding:0; }
 .list-plain .item{
   display:flex; gap:10px; align-items:flex-start;
@@ -152,12 +152,13 @@ body{
 .title:hover{ text-decoration: underline; }
 .desc{ color:#4a4a4a; font-weight: 400; }
 
-/* Botões IA */
+/* ===== Botões IA ===== */
 .ai-actions{
   display:flex; gap:10px; flex-wrap:wrap; margin: 4px 0 8px;
 }
 .btn-ios{
-  display:inline-block; padding:12px 16px; border:1px solid var(--line);
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:12px 16px; border:1px solid var(--line);
   border-radius: 12px; background:#fff; color:#111; text-decoration:none; font-weight: 500;
   min-height: 44px;
   box-shadow: 0 1px 0 rgba(0,0,0,.03);
@@ -165,33 +166,59 @@ body{
 .btn-ios:hover{ border-color:#cfcfcf; }
 .btn-ios:active{ background: var(--tap); }
 
-/* Desktop refinamentos */
-@media (min-width: 992px){
-  .h1{ font-size: 26px; }
-  .topbar-inner{ padding: 12px 0; }
-}
-/* Botões IA — variantes */
+/* Variantes */
 #btn-estudar{
-  background: #1800ad;
-  color: #fff;
-  border: 1px solid #1800ad;
+  background: #1800ad; color: #fff; border: 1px solid #1800ad;
 }
 #btn-estudar:hover{ filter: brightness(0.95); }
 #btn-estudar:focus{ outline: 2px solid #f5c400; outline-offset: 2px; }
 
-/* secundário (contornado) */
 #btn-questoes{
-  background: #fff;
-  color: #0b0b0b;
-  border: 1px solid #f5c400;
+  background: #fff; color: #0b0b0b; border: 1px solid #f5c400;
 }
 #btn-questoes:hover{ background: #fffaf0; }
 #btn-questoes:focus{ outline: 2px solid #f5c400; outline-offset: 2px; }
 
-/* ícone ↗ nos botões (opcional, sem mexer no HTML) */
 #btn-estudar::after,
-#btn-questoes::after{
-  content: " ↗";
-  font-weight: 400;
+#btn-questoes::after{ content: " ↗"; font-weight: 400; }
+
+/* ===== Padronização global de botões (mesma altura e raio) ===== */
+.btn-ios,
+#btn-estudar,
+#btn-questoes,
+.hamburger,
+.drawer-close{
+  min-height: 44px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
+/* ===== Desktop refinamentos ===== */
+@media (min-width: 992px){
+  .h1{ font-size: 26px; }
+  .topbar-inner{ padding: 12px 0; }
+}
+
+/* ===== TOPBAR MOBILE FIX: evita “encostar” nas laterais ===== */
+@media (max-width: 480px){
+  :root{ --px: 14px; }
+  .topbar .container{
+    padding-left: calc(20px + env(safe-area-inset-left));
+    padding-right: calc(20px + env(safe-area-inset-right));
+  }
+  .topbar-inner{ gap: 10px; }
+  .search{ margin-left: 2px; margin-right: 2px; }
+  .hamburger{ margin-left: 2px; }
+}
+
+/* Safe-area extra quando suportado */
+@supports (padding: max(0px)){
+  .topbar .container{
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+  }
+}
