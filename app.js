@@ -1,7 +1,8 @@
 // meujus – app.js (2025-10-04)
 // Integração com data/temas.json (manifesto único)
+// Formato do tema: "# Título", "-- explicação", "- Artigos"
 // UI/UX: Drawer acessível, toasts, autocomplete, glossário, rota #/tema/<slug>
-// Render: cada linha sem link; mini-botão → para JusBrasil com prefixo até ":".
+// Render: texto sem link; mini-botão → para JusBrasil com prefixo até ":".
 
 (function(){
   /* ========== DOM helpers ========== */
@@ -9,9 +10,9 @@
   const $$ = (q, el=document) => Array.from(el.querySelectorAll(q));
 
   /* ========== Estado global ========== */
-  let TEMAS = [];                 // [{slug,title,path,tags}]
-  const TEMA_MAP = Object.create(null); // slug -> path
-  let GLOSS = null;               // [{ termo, def, pattern }]
+  let TEMAS = [];                        // [{slug,title,path,tags}]
+  const TEMA_MAP = Object.create(null);  // slug -> path
+  let GLOSS = null;                      // [{ termo, def, pattern }]
 
   /* ========== Router ========== */
   function getHashParts(){
@@ -158,10 +159,10 @@
   function markGlossarioInHTML(html){
     if(!GLOSS || !GLOSS.length) return html;
     // proteger <a…>…</a> e a trilha do mini-botão
-    const segments = html.split(/(<a[\s\S]*?<\/a>|<span class=(?:"|')mj-trail(?:"|')[\s\S]*?<\/span>)/gi);
+    const segments = html.split(/(<a[\s\\S]*?<\/a>|<span class=(?:"|')mj-trail(?:"|')[\s\\S]*?<\/span>)/gi);
     for(let i=0;i<segments.length;i++){
       const seg = segments[i];
-      if(/^<a[\s\S]*<\/a>$/i.test(seg) || /^<span class=(?:"|')mj-trail(?:"|')[\s\S]*<\/span>$/i.test(seg)){ continue; }
+      if(/^<a[\s\\S]*<\/a>$/i.test(seg) || /^<span class=(?:"|')mj-trail(?:"|')[\s\\S]*<\/span>$/i.test(seg)){ continue; }
       let replaced = seg;
       for(const it of GLOSS){
         replaced = replaced.replace(it.pattern, (m)=>{
@@ -250,7 +251,7 @@
   searchEl?.addEventListener('focus', e=> updateSuggestions(e.target.value));
   document.addEventListener('click', e=>{ if(!e.target.closest('.search-wrap')) sugEl?.classList.remove('show'); });
 
-  /* ========== Render helpers ========== */
+  /* ========== Helpers de render ========== */
   function prefixAteDoisPontos(line){
     const idx = line.indexOf(':');
     if(idx>0) return line.slice(0, idx).trim();
@@ -259,6 +260,34 @@
   }
   function buildJusBrasilURL(prefix){
     return `https://www.jusbrasil.com.br/legislacao/busca?q=${encodeURIComponent(prefix)}`;
+  }
+  function escapeHTML(s){
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  /* ========== Parser de tema (#, --, -) ========== */
+  function parseTemaText(raw){
+    const lines = raw.split(/\r?\n/);
+    let title = null;
+    const intro = [];
+    const items = [];
+    for(const ln of lines){
+      const s = ln.trim();
+      if(!s) continue;
+      if(s.startsWith('# ')){           // título
+        title = s.slice(2).trim();
+        continue;
+      }
+      if(s.startsWith('-- ')){          // explicação
+        intro.push(s.slice(3).trim());
+        continue;
+      }
+      if(s.startsWith('- ')){           // item
+        items.push(s.slice(2).trim());
+        continue;
+      }
+    }
+    return { title, intro, items };
   }
 
   /* ========== Páginas ========== */
@@ -273,29 +302,40 @@
     await loadGlossario();
 
     try{
-      const raw   = await fetchText(path);
-      const lines = raw.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+      const raw         = await fetchText(path);
+      const { title, intro, items } = parseTemaText(raw);
 
-      const tema = TEMAS.find(t=>t.slug===slug);
-      titleEl.textContent = tema?.title || slug.replace(/-/g,' ');
+      const temaMeta = TEMAS.find(t=>t.slug===slug);
+      const tituloTema = title || temaMeta?.title || slug.replace(/-/g,' ');
+      titleEl.textContent = tituloTema;
 
       const btnIA = $('#btnIA');
       btnIA && (btnIA.onclick = ()=>{
-        const prompt = `Estudar tema: ${titleEl.textContent}`;
+        const prompt = `Estudar tema: ${tituloTema}`;
         const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
         window.open(url, '_blank', 'noopener');
       });
 
-      const html = lines.map(line=>{
-        const prefix   = prefixAteDoisPontos(line);
-        const href     = buildJusBrasilURL(prefix);
-        const safeLine = line.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-        const withGloss= markGlossarioInHTML(safeLine);
+      // Intro card
+      const introHTML = intro.length
+        ? `<div class="card"><p class="desc">${markGlossarioInHTML(escapeHTML(intro.join(' ')))}</p></div>`
+        : '';
+
+      // Itens com botão →
+      function prefixFromItem(line){
+        const idx = line.indexOf(':');
+        return idx>0 ? line.slice(0, idx).trim() : line;
+      }
+      const itensHTML = items.map(line=>{
+        const safe = escapeHTML(line);
+        const withGloss = markGlossarioInHTML(safe);
+        const prefix = prefixFromItem(line);
+        const href = buildJusBrasilURL(prefix);
         return `<li class="item"><span class="desc">${withGloss}</span><span class="mj-trail"> <a class="mj-go" href="${href}" target="_blank" rel="noopener" aria-label="Abrir no JusBrasil">→</a></span></li>`;
       }).join('');
 
       contentEl.classList.add('list-plain');
-      contentEl.innerHTML = `<ul class="list list-plain">${html}</ul>`;
+      contentEl.innerHTML = `${introHTML}<ul class="list list-plain">${itensHTML}</ul>`;
       toast('Tema carregado','success',1500);
 
     }catch(e){
