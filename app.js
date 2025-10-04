@@ -1,51 +1,47 @@
-// meujus – app.js (UI/UX + A11y + Drawer + Toasts + Navegação)
-// Mantém seu layout. Sem CSS inline intrusivo.
+// meujus – app.js (2025-10-04)
+// Integração com data/temas.json (manifesto único)
+// UI/UX: Drawer acessível, toasts, autocomplete, glossário, rota #/tema/<slug>
+// Render: cada linha sem link; mini-botão → para JusBrasil com prefixo até ":".
 
-/* =========================
- * Helpers DOM
- * =======================*/
 (function(){
+  /* ========== DOM helpers ========== */
   const $  = (q, el=document) => el.querySelector(q);
   const $$ = (q, el=document) => Array.from(el.querySelectorAll(q));
 
-  /* =========================
-   * Router
-   * =======================*/
+  /* ========== Estado global ========== */
+  let TEMAS = [];                 // [{slug,title,path,tags}]
+  const TEMA_MAP = Object.create(null); // slug -> path
+  let GLOSS = null;               // [{ termo, def, pattern }]
+
+  /* ========== Router ========== */
   function getHashParts(){
     const h = location.hash.replace(/^#\/?/, '');
     return h.split('/');
   }
-  function currentTemaSlug(){
-    const p = getHashParts();
-    return (p[0]==='tema' && p[1]) ? decodeURIComponent(p[1]) : null;
-  }
   function currentPage(){
     const p = getHashParts();
     if(p[0]==='tema' && p[1]) return {kind:'tema', slug:decodeURIComponent(p[1])};
-    if(p[0]==='sobre') return {kind:'sobre'};
+    if(p[0]==='sobre')        return {kind:'sobre'};
     return {kind:'home'};
   }
   function setTemaSlug(slug){
     const safe = encodeURIComponent(slug);
-    if(currentTemaSlug()!==slug) location.hash = `#/tema/${safe}`;
+    if(location.hash !== `#/tema/${safe}`) location.hash = `#/tema/${safe}`;
   }
 
-  /* =========================
-   * Data
-   * =======================*/
+  /* ========== Fetch utils ========== */
   async function fetchText(url){
     const res = await fetch(url, {cache:'no-store'});
     if(!res.ok) throw new Error(`HTTP ${res.status} @ ${url}`);
     return res.text();
   }
+  async function fetchJSON(url){
+    const res = await fetch(url, {cache:'no-store'});
+    if(!res.ok) throw new Error(`HTTP ${res.status} @ ${url}`);
+    return res.json();
+  }
 
-  // Configure seus temas aqui (exemplos):
-  // window.TEMA_MAP = { "codigo-civil": "data/codigo-civil/codigo-civil.txt", ... }
-  const TEMA_MAP = window.TEMA_MAP || {};
-
-  /* =========================
-   * Toasts
-   * =======================*/
+  /* ========== Toasts ========== */
   const toastsEl = $('#toasts');
   function toast(msg, type='info', ttl=3000){
     if(!toastsEl) return;
@@ -58,9 +54,7 @@
     setTimeout(close, ttl);
   }
 
-  /* =========================
-   * Drawer (hamburger) A11y
-   * =======================*/
+  /* ========== Drawer acessível ========== */
   const drawer      = $('#drawer');
   const drawerPanel = $('#drawer-panel');
   const drawerBg    = $('#drawerBackdrop');
@@ -73,8 +67,7 @@
     drawerLastFocus = document.activeElement;
     drawer.classList.add('open');
     drawer.setAttribute('aria-hidden','false');
-    btnMenu.setAttribute('aria-expanded','true');
-    // foco inicial
+    btnMenu?.setAttribute('aria-expanded','true');
     (drawerPanel.querySelector('a,button,[tabindex]')||drawerPanel).focus();
     toast('Menu aberto','info',1600);
   }
@@ -82,11 +75,11 @@
     if(!drawer) return;
     drawer.classList.remove('open');
     drawer.setAttribute('aria-hidden','true');
-    btnMenu.setAttribute('aria-expanded','false');
+    btnMenu?.setAttribute('aria-expanded','false');
     if(drawerLastFocus) drawerLastFocus.focus();
   }
   function trapFocus(e){
-    if(!drawer.classList.contains('open')) return;
+    if(!drawer?.classList.contains('open')) return;
     const focusables = $$('a, button, input, [tabindex]:not([tabindex="-1"])', drawerPanel)
       .filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
     if(focusables.length===0) return;
@@ -97,24 +90,16 @@
       else if(!e.shiftKey && document.activeElement===last){ first.focus(); e.preventDefault(); }
     } else if(e.key==='Escape'){ closeDrawer(); }
   }
-
-  if(btnMenu){ btnMenu.addEventListener('click', openDrawer); }
-  if(btnClose){ btnClose.addEventListener('click', closeDrawer); }
-  if(drawerBg){ drawerBg.addEventListener('click', closeDrawer); }
+  btnMenu?.addEventListener('click', openDrawer);
+  btnClose?.addEventListener('click', closeDrawer);
+  drawerBg?.addEventListener('click', closeDrawer);
   document.addEventListener('keydown', trapFocus);
 
-  /* =========================
-   * Glossário
-   * =======================*/
-  let GLOSS = null; // [{ termo, def, pattern }]
-
-  function normalize(s){
-    return s.normalize('NFD').replace(/\p{Diacritic}/gu,'');
-  }
+  /* ========== Glossário ========== */
   function wordBoundaryPattern(term){
     const esc = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const flex = `(?:${esc}(?:es|s|a|as|is|os|oes)?)`; // heurístico simples
-    return new RegExp(`(?<![\u00A0\w])(${flex})(?![\w])`, 'giu');
+    return new RegExp(`(?<![\\u00A0\\w])(${flex})(?![\\w])`, 'giu');
   }
   function parseGloss(txt){
     const blocks = txt.split(/^-{5,}\s*$/m).map(s=>s.trim()).filter(Boolean);
@@ -124,7 +109,7 @@
       const mDef  = b.match(/^@def:\s*([\s\S]+)$/mi);
       if(!mTerm || !mDef) continue;
       const termo = mTerm[1].trim();
-      const def = mDef[1].trim();
+      const def   = mDef[1].trim();
       items.push({ termo, def });
     }
     items.sort((a,b)=>b.termo.length - a.termo.length);
@@ -142,16 +127,14 @@
     }
     return GLOSS;
   }
-
-  // Tooltip do glossário com inline style mínimo
   let tooltipEl = null;
   function hideTooltip(){ if(tooltipEl){ tooltipEl.remove(); tooltipEl=null; } }
   function showTooltip(target){
     hideTooltip();
     const term = target.getAttribute('data-term') || '';
-    const def = target.getAttribute('data-def') || '';
+    const def  = target.getAttribute('data-def')  || '';
     const rect = target.getBoundingClientRect();
-    const tip = document.createElement('div');
+    const tip  = document.createElement('div');
     tip.setAttribute('role','tooltip');
     tip.innerHTML = `<div style="font-weight:700;margin-bottom:4px">${term}</div><div>${def}</div>`;
     tip.style.position='absolute'; tip.style.zIndex='9999'; tip.style.maxWidth='320px';
@@ -161,7 +144,8 @@
     document.body.appendChild(tip);
     const top = window.scrollY + rect.bottom + 8;
     const left = Math.min(window.scrollX + rect.left, window.scrollX + window.innerWidth - tip.offsetWidth - 12);
-    tip.style.top = `${top}px`; tip.style.left = `${left}px`;
+    tip.style.top  = `${top}px`;
+    tip.style.left = `${left}px`;
     tooltipEl = tip;
   }
   document.addEventListener('click', (e)=>{
@@ -173,7 +157,7 @@
 
   function markGlossarioInHTML(html){
     if(!GLOSS || !GLOSS.length) return html;
-    // proteger <a …>…</a> e span .mj-trail
+    // proteger <a…>…</a> e a trilha do mini-botão
     const segments = html.split(/(<a[\s\S]*?<\/a>|<span class=(?:"|')mj-trail(?:"|')[\s\S]*?<\/span>)/gi);
     for(let i=0;i<segments.length;i++){
       const seg = segments[i];
@@ -191,9 +175,82 @@
     return segments.join('');
   }
 
-  /* =========================
-   * Helpers render
-   * =======================*/
+  /* ========== Temas.json ========== */
+  async function loadTemas(){
+    try{
+      TEMAS = await fetchJSON('data/temas.json');
+      TEMAS.forEach(t => { TEMA_MAP[t.slug] = t.path; });
+      hydrateMenu();
+    }catch(e){
+      console.error(e);
+      toast('Erro ao carregar temas','error');
+      TEMAS = [];
+    }
+  }
+  function hydrateMenu(){
+    const ul = $('#menuList');
+    if(!ul) return;
+    // evita menu gigante; mostre primeiros 60 itens ordenados por título
+    const items = [...TEMAS].sort((a,b)=>a.title.localeCompare(b.title)).slice(0,60);
+    ul.innerHTML = items.map(t => `<li><a class="title" href="#/tema/${t.slug}">${t.title}</a></li>`).join('');
+  }
+
+  /* ========== Busca local (autocomplete) ========== */
+  const searchEl = $('#search');
+  const sugEl    = $('#suggestions');
+
+  function normalizeStr(s){
+    return s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'');
+  }
+  function searchLocal(q){
+    const v = normalizeStr((q||'').trim());
+    if(!v) return [];
+    const scoreStr = s => {
+      const n = normalizeStr(s);
+      if(n.startsWith(v)) return 3;
+      if(n.includes(v))   return 1;
+      return 0;
+    };
+    return TEMAS
+      .map(t => {
+        const s = Math.max(scoreStr(t.title), scoreStr(t.slug), ...(t.tags||[]).map(scoreStr));
+        return s ? {t,s} : null;
+      })
+      .filter(Boolean)
+      .sort((a,b)=>b.s-a.s || a.t.title.localeCompare(b.t.title))
+      .slice(0,10)
+      .map(x=>x.t);
+  }
+
+  function renderSuggestions(list){
+    if(!sugEl) return;
+    if(!list.length){ sugEl.classList.remove('show'); sugEl.innerHTML=''; return; }
+    sugEl.innerHTML = list.map(t =>
+      `<li class="sug-item" role="option" tabindex="0" data-slug="${t.slug}">
+         <div class="sug-title">${t.title}</div>
+         <div class="sug-sub">#/tema/${t.slug}</div>
+       </li><div class="sug-sep"></div>`
+    ).join('');
+    sugEl.classList.add('show');
+    $$('.sug-item', sugEl).forEach(el=>{
+      el.addEventListener('click', ()=>{ setTemaSlug(el.dataset.slug); sugEl.classList.remove('show'); });
+      el.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ setTemaSlug(el.dataset.slug); sugEl.classList.remove('show'); } });
+    });
+  }
+
+  let sugTimer = null;
+  function updateSuggestions(q){
+    clearTimeout(sugTimer);
+    sugTimer = setTimeout(()=>{
+      const list = searchLocal(q||'');
+      renderSuggestions(list);
+    }, 120);
+  }
+  searchEl?.addEventListener('input', e=> updateSuggestions(e.target.value));
+  searchEl?.addEventListener('focus', e=> updateSuggestions(e.target.value));
+  document.addEventListener('click', e=>{ if(!e.target.closest('.search-wrap')) sugEl?.classList.remove('show'); });
+
+  /* ========== Render helpers ========== */
   function prefixAteDoisPontos(line){
     const idx = line.indexOf(':');
     if(idx>0) return line.slice(0, idx).trim();
@@ -204,72 +261,37 @@
     return `https://www.jusbrasil.com.br/legislacao/busca?q=${encodeURIComponent(prefix)}`;
   }
 
-  /* =========================
-   * Search mínimo: sugere slugs
-   * =======================*/
-  const searchEl = $('#search');
-  const sugEl    = $('#suggestions');
-
-  function updateSuggestions(q){
-    if(!sugEl) return;
-    sugEl.innerHTML = '';
-    const v = (q||'').trim().toLowerCase();
-    if(!v){ sugEl.classList.remove('show'); return; }
-    const keys = Object.keys(TEMA_MAP);
-    const items = keys.filter(k => k.includes(v) || k.replace(/-/g,' ').includes(v)).slice(0,8);
-    if(items.length===0){ sugEl.classList.remove('show'); return; }
-    items.forEach(slug=>{
-      const li = document.createElement('li');
-      li.className='sug-item'; li.setAttribute('role','option'); li.tabIndex=0;
-      li.innerHTML = `<div class="sug-title">${slug.replace(/-/g,' ')}</div><div class="sug-sub">Abrir tema #/tema/${slug}</div>`;
-      li.addEventListener('click', ()=>{ setTemaSlug(slug); sugEl.classList.remove('show'); });
-      li.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ setTemaSlug(slug); sugEl.classList.remove('show'); } });
-      sugEl.appendChild(li);
-      const sep = document.createElement('div'); sep.className='sug-sep'; sugEl.appendChild(sep);
-    });
-    sugEl.classList.add('show');
-  }
-  if(searchEl){
-    searchEl.addEventListener('input', e=> updateSuggestions(e.target.value));
-    searchEl.addEventListener('focus', e=> updateSuggestions(e.target.value));
-    document.addEventListener('click', e=>{ if(!e.target.closest('.search-wrap')) sugEl.classList.remove('show'); });
-  }
-
-  /* =========================
-   * Páginas
-   * =======================*/
+  /* ========== Páginas ========== */
   async function loadTema(slug){
-    const titleEl = $('#themeTitle');
+    const titleEl   = $('#themeTitle');
     const contentEl = $('#content');
     contentEl.textContent = 'Carregando…';
 
-    const file = TEMA_MAP[slug];
-    if(!file){ contentEl.textContent = 'Tema não encontrado.'; toast('Tema não encontrado','error'); return; }
+    const path = TEMA_MAP[slug];
+    if(!path){ contentEl.textContent = 'Tema não encontrado.'; toast('Tema não encontrado','error'); return; }
 
     await loadGlossario();
 
     try{
-      const raw = await fetchText(file);
+      const raw   = await fetchText(path);
       const lines = raw.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
 
-      const tituloTema = slug.replace(/-/g,' ');
-      titleEl.textContent = tituloTema;
+      const tema = TEMAS.find(t=>t.slug===slug);
+      titleEl.textContent = tema?.title || slug.replace(/-/g,' ');
 
       const btnIA = $('#btnIA');
-      if(btnIA){
-        btnIA.onclick = ()=>{
-          const prompt = `Estudar tema: ${tituloTema}`;
-          const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
-          window.open(url, '_blank', 'noopener');
-        };
-      }
+      btnIA && (btnIA.onclick = ()=>{
+        const prompt = `Estudar tema: ${titleEl.textContent}`;
+        const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
+        window.open(url, '_blank', 'noopener');
+      });
 
-      const html = lines.map((line)=>{
-        const prefix = prefixAteDoisPontos(line);
-        const href = buildJusBrasilURL(prefix);
-        const safe = line.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-        const withGloss = markGlossarioInHTML(safe);
-        return `<div class="item"><span class="desc">${withGloss}</span><span class="mj-trail"> <a class="mj-go" href="${href}" target="_blank" rel="noopener" aria-label="Abrir no JusBrasil">→</a></span></div>`;
+      const html = lines.map(line=>{
+        const prefix   = prefixAteDoisPontos(line);
+        const href     = buildJusBrasilURL(prefix);
+        const safeLine = line.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        const withGloss= markGlossarioInHTML(safeLine);
+        return `<li class="item"><span class="desc">${withGloss}</span><span class="mj-trail"> <a class="mj-go" href="${href}" target="_blank" rel="noopener" aria-label="Abrir no JusBrasil">→</a></span></li>`;
       }).join('');
 
       contentEl.classList.add('list-plain');
@@ -278,41 +300,36 @@
 
     }catch(e){
       console.error(e);
-      toast('Erro ao carregar tema','error');
-      const contentEl = $('#content');
-      if(contentEl) contentEl.textContent = 'Erro ao carregar tema.';
+      toast('Erro ao carregar conteúdo','error');
+      contentEl.textContent = 'Erro ao carregar tema.';
     }
   }
 
   function loadSobre(){
-    const titleEl = $('#themeTitle');
+    const titleEl   = $('#themeTitle');
     const contentEl = $('#content');
     titleEl.textContent = 'Sobre';
-    contentEl.innerHTML = `
-      <div class="item">
-        <span class="desc">Meujus — estudo guiado por temas com remissões, glossário e integrações leves.</span>
-      </div>`;
+    contentEl.innerHTML = `<div class="item"><span class="desc">Meujus — estudo guiado por temas com remissões, glossário e integrações leves.</span></div>`;
   }
 
   async function renderByRoute(){
     const page = currentPage();
-    if(page.kind==='tema'){ await loadTema(page.slug); }
-    else if(page.kind==='sobre'){ loadSobre(); }
+    if(page.kind==='tema')      await loadTema(page.slug);
+    else if(page.kind==='sobre')      loadSobre();
     else {
-      const titleEl = $('#themeTitle');
+      const titleEl   = $('#themeTitle');
       const contentEl = $('#content');
       titleEl.textContent = 'Escolha um tema';
       contentEl.innerHTML = `<div class="item"><span class="desc">Use o menu ☰ ou a busca para abrir um tema.</span></div>`;
     }
   }
 
-  /* =========================
-   * Boot
-   * =======================*/
+  /* ========== Boot ========== */
   window.addEventListener('hashchange', renderByRoute);
   (async function init(){
     try{
-      await renderByRoute();
+      await loadTemas();      // carrega data/temas.json
+      await renderByRoute();  // renderiza rota atual
       toast('Pronto','info',1000);
     }catch(e){
       console.error(e);
