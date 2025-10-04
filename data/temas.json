@@ -1,0 +1,9 @@
+data/temas.json
+[
+  {
+    "slug": "direito-autoral",
+    "title": "Direito Autoral",
+    "path": "data/direito-autoral.txt",
+    "tags": ["civil","LDA","autorais"]
+  }
+]

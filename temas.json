@@ -1,7 +1,0 @@
-[
-  { "slug": "Inquérito Policial", "title": "codigo-penal", "path": "inquerito_policial.txt",  "tags":["inquerito"] },
-  { "slug": "Prisão em Flagrante", "title": "codigo-penal", "path": "prisao-em-flagrante.txt",  "tags":["prisao"] },
-  { "slug": "Insanidade Mental do Acusado - CPP", "title": "codigo-penal", "path": "insanidade_mental_acusado_cpp.txt",  "tags":["insanidade"] },
-  { "slug": "Capacidade Civil", "title": "codigo-civil", "path": "capacidade-civil.txt",  "tags":["capacidade"] }
-  
-]
