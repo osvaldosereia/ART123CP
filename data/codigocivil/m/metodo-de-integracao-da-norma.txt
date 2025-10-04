@@ -1,0 +1,31 @@
+# Método de Integração da Norma
+
+-- Os métodos de integração da norma são mecanismos utilizados pelo juiz para preencher lacunas na lei, garantindo que nenhum caso fique sem solução jurídica. Eles asseguram a completude do ordenamento jurídico.
+
+## Artigos Relacionados
+
+  - Art. 4º LINDB: Quando a lei for omissa, o juiz decidirá o caso de acordo com a analogia, os costumes e os princípios gerais de direito.
+  - Art. 187 CC: Abuso de direito, ao exceder limites da boa-fé, pode ensejar integração da norma.
+  - Art. 1.196 CC: O conceito de posse, mesmo que fato, é interpretado para integração de lacunas.
+  - Art. 1.201 CC: Presunção de boa-fé na posse serve como base para integração da norma.
+  - Súmula 227 STJ: Permite à pessoa jurídica sofrer dano moral, aplicando analogia e princípios.
+  - Enunciado 37 CJF: A responsabilidade objetiva no abuso de direito, integrando a norma.
+  - Enunciado 409 CJF: Usos e costumes, e práticas habituais, devem ser considerados na interpretação.
+  - Enunciado 583 CJF: Vícios redibitórios em contratos aleatórios integram a norma por equilíbrio.
+
+-----
+
+## Pergunte pra I.A.
+
+  - Aplicação das regras de compra e venda para um contrato de permuta.
+  - A analogia é um método de integração que o juiz utiliza quando há lacuna na lei, buscando uma solução em casos similares.
+  - Professor, quais são os pressupostos para que o juiz possa aplicar a analogia em um caso concreto?
+  - Existe alguma restrição legal para a aplicação da analogia no Direito Brasileiro? Em quais ramos do Direito ela é mais ou menos utilizada?
+  - Qual a diferença fundamental entre analogia e interpretação extensiva, e por que é crucial não confundi-las?
+  - A Súmula 227 do STJ, que permite à pessoa jurídica sofrer dano moral, pode ser considerada um exemplo de aplicação analógica? Justifique.
+  - Em que medida a analogia se relaciona com os princípios gerais do direito e os costumes como métodos de integração da norma jurídica?
+  - Considerando a distinção entre lacuna normativa, axiológica e de conflito, como a escolha do método de integração (analogia, costumes, princípios gerais de direito) pode variar dependendo do tipo de lacuna identificada?
+  - A LINDB, como "norma de sobredireito", estabelece uma hierarquia entre os métodos de integração? Qual a ordem de preferência e por que ela é importante para a segurança jurídica?
+  - De que forma a "Teoria do Diálogo das Fontes" pode influenciar a aplicação dos métodos de integração da norma quando há conflito entre diferentes sistemas normativos, como o Código Civil e o Código de Defesa do Consumidor?
+  - A Súmula 370 do STJ, ao considerar dano moral a apresentação antecipada de cheque pré-datado, é um exemplo de aplicação dos costumes como método de integração da norma? Como esse costume se tornou juridicamente obrigatório?
+  - Como o princípio da operabilidade (ou simplicidade/concretude) se manifesta na prática judicial ao utilizar os métodos de integração, e quais os desafios para o juiz ao aplicar "cláusulas gerais" ou "conceitos indeterminados" para preencher lacunas?
