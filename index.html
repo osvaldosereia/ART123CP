@@ -4,18 +4,56 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Meujus</title>
-  <!-- Mantém seu CSS existente; não adiciono estilos inline para não mudar o layout -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Mantém a página limpa. Só IDs necessários para o JS. Nenhum CSS novo. -->
-  <main id="theme" aria-live="polite">
-    <h1 id="themeTitle"></h1>
-    <div>
-      <button id="btnIA">Estudar com Google I.A.</button>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <button id="btnMenu" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer-panel">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="brand"><span class="b1">Meujus</span><span class="b2">Vade</span></div>
+      <div class="search-wrap" role="search">
+        <input id="search" class="search" type="search" placeholder="Buscar tema ou artigo" autocomplete="off" aria-autocomplete="list" aria-controls="suggestions" aria-haspopup="listbox" />
+        <ul id="suggestions" class="suggestions" role="listbox" aria-label="Sugestões"></ul>
+      </div>
     </div>
-    <div id="content"></div>
+  </div>
+
+  <!-- DRAWER -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1"></div>
+    <nav class="drawer-panel" id="drawer-panel" aria-label="Menu lateral">
+      <div class="drawer-header">
+        <div class="drawer-brand brand"><span class="b1">Meujus</span><span class="b2">Menu</span></div>
+        <button class="drawer-close" id="btnCloseMenu" aria-label="Fechar menu">Fechar</button>
+      </div>
+      <div class="drawer-content">
+        <ul class="list" id="menuList">
+          <!-- Subpáginas e temas (exemplo) -->
+          <li><a class="title" href="#/tema/codigo-civil">Código Civil</a></li>
+          <li><a class="title" href="#/tema/codigo-processo-penal">Código de Processo Penal</a></li>
+          <li><a class="title" href="#/sobre">Sobre</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <main class="container" id="theme" aria-live="polite">
+    <div class="card ficha-head">
+      <h1 class="h1" id="themeTitle"></h1>
+      <div class="ai-actions">
+        <button id="btnIA" class="btn-ios" type="button">Estudar com Google I.A.</button>
+      </div>
+    </div>
+    <div id="content" class="list-plain"></div>
   </main>
+
+  <!-- TOASTS -->
+  <div id="toasts" aria-live="polite" aria-atomic="true"></div>
 
   <script src="app.js"></script>
 </body>
