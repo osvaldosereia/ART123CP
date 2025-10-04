@@ -170,3 +170,28 @@ body{
   .h1{ font-size: 26px; }
   .topbar-inner{ padding: 12px 0; }
 }
+/* Botões IA — variantes */
+#btn-estudar{
+  background: #1800ad;
+  color: #fff;
+  border: 1px solid #1800ad;
+}
+#btn-estudar:hover{ filter: brightness(0.95); }
+#btn-estudar:focus{ outline: 2px solid #f5c400; outline-offset: 2px; }
+
+/* secundário (contornado) */
+#btn-questoes{
+  background: #fff;
+  color: #0b0b0b;
+  border: 1px solid #f5c400;
+}
+#btn-questoes:hover{ background: #fffaf0; }
+#btn-questoes:focus{ outline: 2px solid #f5c400; outline-offset: 2px; }
+
+/* ícone ↗ nos botões (opcional, sem mexer no HTML) */
+#btn-estudar::after,
+#btn-questoes::after{
+  content: " ↗";
+  font-weight: 400;
+}
+
