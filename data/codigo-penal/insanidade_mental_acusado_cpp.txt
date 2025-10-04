@@ -1,4 +1,4 @@
-# CÓDIGO
+# ARTIGOS, SUMULAS, ENUNCIADOS E O QUE MAIS TIVER RELACIONADO NO PDF
 - Art. 149: Trata da instauração do incidente. Estabelece que, havendo dúvida sobre a integridade mental do acusado, o juiz ordenará o exame, seja por iniciativa própria (de ofício), a requerimento do Ministério Público, do defensor, do curador, do ascendente, descendente, irmão ou cônjuge do acusado.
 - Art. 150: Descreve os procedimentos do exame, incluindo a nomeação de um curador para o acusado e a formulação de quesitos (perguntas) para os peritos.
 - Art. 151: Determina a suspensão obrigatória do processo principal durante a realização do exame, com exceção de diligências urgentes que possam ser prejudicadas pelo adiamento.
@@ -7,7 +7,7 @@
 - Art. 154: Cuida da hipótese de doença mental superveniente à sentença, ou seja, que surge durante a execução da pena. Neste caso, o sentenciado é recolhido a hospital de custódia e tratamento psiquiátrico ou outro estabelecimento adequado.
 - Art. 26 do CP: Define o conceito de inimputabilidade (a isenção de pena para quem, por doença mental, era inteiramente incapaz de entender o caráter ilícito do fato).
 
-# VÍDEOS
+# DICAS DE VÍDEOS COM LINK (MÁXIMO 10)
 - Título: Incidente de Insanidade Mental - Art. 149 do CPP | Prof.ª Geilza Diniz
 -- Link: https://www.youtube.com/watch?v=7hXzM731m9w
 - Título: Inimputabilidade - Art. 26 do Código Penal - (Gran Cursos Online)
@@ -29,7 +29,7 @@
 - Título: Incidente de Falsidade e de Insanidade Mental | Processo Penal
 -- Link: https://www.youtube.com/watch?v=S0Yg4jQ5v2Y
 
-# QUESTÕES
+# PERGUNTAS PARA APROFUNDAR NO TEMA (MÁXIMO 10)
 - O incidente de insanidade mental pode ser instaurado na fase de inquérito policial. Caso o delegado de polícia represente pela sua instauração, qual o procedimento a ser adotado pelo juiz e quais os efeitos práticos dessa decisão para o andamento da investigação?
 - O Art. 149, § 2º, do CPP determina a suspensão do processo principal durante o incidente. Conforme o entendimento consolidado do Superior Tribunal de Justiça (STJ), essa suspensão também paralisa o curso do prazo prescricional? Justifique sua resposta com base no fundamento utilizado pela Corte.
 - Imagine que um laudo pericial atesta a inimputabilidade do réu ao tempo da ação. O juiz está vinculado a essa conclusão e deve proferir uma sentença de absolvição imprópria imediatamente? Discorra sobre o sistema do livre convencimento motivado (art. 182 do CPP) aplicado à prova pericial neste contexto.
