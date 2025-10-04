@@ -1,5 +1,7 @@
 [
   { "nome": "Inquérito Policial", "pasta": "codigo-penal", "arquivo": "inquerito-policial.txt" },
   { "nome": "Prisão em Flagrante", "pasta": "codigo-penal", "arquivo": "prisao-em-flagrante.txt" },
+  { "nome": "Insanidade Mental do Acusado - CPP", "pasta": "codigo-penal", "arquivo": "insanidade_mental_acusado_cpp.txt" },
   { "nome": "Capacidade Civil", "pasta": "codigo-civil", "arquivo": "capacidade-civil.txt" }
+  
 ]
