@@ -37,8 +37,9 @@ body{
   text-rendering:optimizeLegibility;
 }
 
-/* A11y e iOS feel */
+/* A11y */
 :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
 @media (prefers-reduced-motion:reduce){
   *{ transition:none !important; animation:none !important; }
 }
@@ -173,7 +174,7 @@ body{
 .title:hover{ text-decoration:underline; }
 .desc{ color:#4a4a4a; font-weight:400; line-height:1.55; }
 
-/* ===== BOTÕES (padrão iOS-like) ===== */
+/* ===== BOTÕES ===== */
 .btn-ios,
 #btn-estudar,
 #btn-questoes,
@@ -199,10 +200,56 @@ body{
 .btn-ios:focus,
 #btn-estudar:focus,
 #btn-questoes:focus{ outline:2px solid var(--accent); outline-offset:2px; }
+#btn-estudar::after{ content:" ↗"; font-weight:400; }
 
-/* Indicativo externo discreto */
-#btn-estudar::after,
-#btn-questoes::after{ content:" ↗"; font-weight:400; }
-
-/* ===== MARCAS DO GLOSSÁRIO (somente estilo mínimo) ===== */
+/* ===== GLOSSÁRIO ===== */
 .mj-gloss{ border-bottom:1px dotted var(--primary); cursor:pointer; }
+
+/* ===== MINI LINK (trilha) ===== */
+.mj-trail{ margin-left:6px; }
+.mj-go{
+  color:#111; text-decoration:none; border:1px solid var(--line);
+  border-radius:999px; padding:2px 8px; font-size:12px; background:#fff;
+}
+.mj-go:hover{ background:#f7f7fb; }
+
+/* ===== TOASTS ===== */
+#toasts{
+  position:fixed; right:16px; bottom:16px; z-index:100;
+  display:flex; flex-direction:column; gap:8px;
+}
+.toast{
+  background:#111827; color:#fff; padding:10px 12px; border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.15); font-size:14px; line-height:1.4;
+  display:flex; align-items:center; gap:8px;
+}
+.toast.info{ background:#111827; }
+.toast.success{ background:#065f46; }
+.toast.error{ background:#7f1d1d; }
+.toast button{
+  appearance:none; background:transparent; border:0; color:#fff; cursor:pointer;
+  opacity:.9; padding:2px 4px; border-radius:8px;
+}
+.toast button:hover{ opacity:1; }
+
+/* ===== RESPONSIVO ===== */
+@media (min-width:992px){
+  .h1{ font-size:var(--fs-2xl); }
+  .topbar-inner{ padding:12px 0; }
+  .container{
+    padding-left:calc(var(--px) + 6px);
+    padding-right:calc(var(--px) + 6px);
+  }
+  .brand{ font-size:28px; }
+}
+@media (min-width:1280px){ .brand{ font-size:30px; } }
+@media (max-width:480px){
+  :root{ --px:14px; }
+  .topbar .container{
+    padding-left:calc(24px + env(safe-area-inset-left));
+    padding-right:calc(24px + env(safe-area-inset-right));
+  }
+  .topbar-inner{ gap:12px; }
+  .search{ margin-left:2px; margin-right:2px; }
+  .hamburger{ margin-left:2px; }
+}
