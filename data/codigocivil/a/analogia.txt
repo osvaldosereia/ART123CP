@@ -1,11 +1,15 @@
 # Analogia 
 -- Consiste na aplicação de uma norma prevista para hipótese distinta, porém, semelhante.
 
-  - Art. 4º, LINDB: O juiz decidirá o caso de acordo com a analogia quando a lei for omissa.
-  - Art. 187, CC: A analogia pode ser usada para identificar abuso de direito em situações semelhantes.
-  - Exemplo: Aplicação das regras de compra e venda para um contrato de permuta.
-  - Comentário: A analogia é um método de integração que o juiz utiliza quando há lacuna na lei, buscando uma solução em casos similares.
+- Art. 4º, LINDB: O juiz decidirá o caso de acordo com a analogia quando a lei for omissa.
+- Art. 187, CC: A analogia pode ser usada para identificar abuso de direito em situações semelhantes.
+
 -----
+
+## Pergunte pra I.A.
+
+- Aplicação das regras de compra e venda para um contrato de permuta.
+- A analogia é um método de integração que o juiz utiliza quando há lacuna na lei, buscando uma solução em casos similares.
 - Professor, quais são os pressupostos para que o juiz possa aplicar a analogia em um caso concreto?
 - Existe alguma restrição legal para a aplicação da analogia no Direito Brasileiro? Em quais ramos do Direito ela é mais ou menos utilizada?
 - Qual a diferença fundamental entre analogia e interpretação extensiva, e por que é crucial não confundi-las?
