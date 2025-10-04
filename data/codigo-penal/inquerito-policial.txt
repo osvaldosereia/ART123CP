@@ -1,29 +1,29 @@
 # CÓDIGO
-- Art. 4º: Atribuição da polícia judiciária para apurar infrações penais e autoria.
-- Art. 5º: Início do inquérito nos crimes de ação penal pública (de ofício, por requisição ou requerimento).
-- Art. 6º: Providências iniciais da autoridade policial ao tomar ciência do crime.
-- Art. 7º: Reprodução simulada dos fatos (reconstituição) com limites de moralidade e ordem pública.
-- Art. 8º: Normas a serem observadas nos casos de prisão em flagrante.
-- Art. 9º: Peças do inquérito reduzidas a escrito/datilografadas e rubricadas pela autoridade.
-- Art. 10: Prazos para conclusão do inquérito e regras sobre o relatório final.
-- Art. 11: Instrumentos do crime e objetos relevantes para a prova acompanham os autos do inquérito.
-- Art. 12: O inquérito acompanha a denúncia ou queixa quando servir de base.
-- Art. 13: Outras incumbências da autoridade (informações sobre vítima, cumprimento de mandados etc.).
-- Art. 13-A e 13-B: Requisição de dados cadastrais e de localização (Pacote Anticrime).
-- Art. 14: Direito do ofendido de requerer diligências.
-- Art. 15: Nomeação de curador ao indiciado menor.
-- Art. 16: Vedada a devolução dos autos após a denúncia, salvo para novas diligências.
-- Art. 17: Autoridade policial não pode arquivar o inquérito.
-- Art. 18: Novas pesquisas após arquivamento judicial quando houver prova nova.
-- Art. 19: Nos crimes sem ação pública, remessa ao juízo para iniciativa do ofendido.
-- Art. 20: Sigilo necessário à elucidação do fato ou exigido pelo interesse social.
-- Art. 21: Incomunicabilidade do indiciado (tema controvertido frente à CF/88).
-- Art. 22: Atuação de autoridades fora da circunscrição em condições específicas.
-- Art. 23: Envio de informações do indiciado ao Instituto de Identificação e Estatística.
-- Art. 28: Nova sistemática de arquivamento do inquérito policial (Pacote Anticrime).
-- Art. 28-A: Acordo de Não Persecução Penal (ANPP).
-- SV 11 (STF): Uso excepcional de algemas.
-- SV 14 (STF): Acesso do defensor aos elementos já documentados no inquérito.
+- Art. 4º CPP: Atribuição da polícia judiciária para apurar infrações penais e autoria.
+- Art. 5º CPP: Início do inquérito nos crimes de ação penal pública (de ofício, por requisição ou requerimento).
+- Art. 6º CPP: Providências iniciais da autoridade policial ao tomar ciência do crime.
+- Art. 7º CPP: Reprodução simulada dos fatos (reconstituição) com limites de moralidade e ordem pública.
+- Art. 8º CPP: Normas a serem observadas nos casos de prisão em flagrante.
+- Art. 9º CPP: Peças do inquérito reduzidas a escrito/datilografadas e rubricadas pela autoridade.
+- Art. 10 CPP: Prazos para conclusão do inquérito e regras sobre o relatório final.
+- Art. 11 CPP: Instrumentos do crime e objetos relevantes para a prova acompanham os autos do inquérito.
+- Art. 12 CPP: O inquérito acompanha a denúncia ou queixa quando servir de base.
+- Art. 13 CPP: Outras incumbências da autoridade (informações sobre vítima, cumprimento de mandados etc.).
+- Art. 13-A e 13-B CPP: Requisição de dados cadastrais e de localização (Pacote Anticrime).
+- Art. 14 CPP: Direito do ofendido de requerer diligências.
+- Art. 15 CPP: Nomeação de curador ao indiciado menor.
+- Art. 16 CPP: Vedada a devolução dos autos após a denúncia, salvo para novas diligências.
+- Art. 17 CPP: Autoridade policial não pode arquivar o inquérito.
+- Art. 18 CPP: Novas pesquisas após arquivamento judicial quando houver prova nova.
+- Art. 19 CPP: Nos crimes sem ação pública, remessa ao juízo para iniciativa do ofendido.
+- Art. 20 CPP: Sigilo necessário à elucidação do fato ou exigido pelo interesse social.
+- Art. 21 CPP: Incomunicabilidade do indiciado (tema controvertido frente à CF/88).
+- Art. 22 CPP: Atuação de autoridades fora da circunscrição em condições específicas.
+- Art. 23 CPP: Envio de informações do indiciado ao Instituto de Identificação e Estatística.
+- Art. 28 CPP: Nova sistemática de arquivamento do inquérito policial (Pacote Anticrime).
+- Art. 28-A CPP: Acordo de Não Persecução Penal (ANPP).
+- Súmula Vinculante 11 (STF): Uso excepcional de algemas.
+- Súmula Vinculante 14 (STF): Acesso do defensor aos elementos já documentados no inquérito.
 - Súmula 524 (STF): Reabertura da ação apenas com prova nova após arquivamento do inquérito.
 - Súmula 593 (STJ): Estupro de vulnerável pode ocorrer por qualquer ato libidinoso (não só conjunção carnal).
 - Súmula 645 (STJ): Latrocínio é julgado pelo juiz singular (não Tribunal do Júri).
