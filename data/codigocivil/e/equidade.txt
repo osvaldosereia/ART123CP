@@ -1,0 +1,35 @@
+# Equidade
+
+-- A equidade, embora não seja um método de integração da norma jurídica listado no Art. 4º da LINDB, é uma fonte informal do direito que busca a justiça no caso concreto, atenuando o rigor da lei para alcançar um resultado mais justo. Ela permite ao juiz afastar a aplicação estrita da norma quando esta levar a uma injustiça flagrante, agindo como um critério de ponderação.
+
+## Artigos Relacionados
+
+  - Art. 4º LINDB: Não a elenca como método de integração direto, mas a equidade exerce função integrativa.
+  - Art. 140, parágrafo único, CPC: Autoriza o juiz a decidir por equidade apenas nos casos previstos em lei.
+  - Art. 723, parágrafo único, CPC: Permite a decisão por equidade em jurisdição voluntária.
+  - Art. 413 CC: Redução equitativa da penalidade pelo juiz, se a obrigação foi parcialmente cumprida ou excessiva.
+
+-----
+
+## Pergunte pra I.A.
+
+  - Aplicação das regras de compra e venda para um contrato de permuta.
+  - A analogia é um método de integração que o juiz utiliza quando há lacuna na lei, buscando uma solução em casos similares.
+  - Professor, quais são os pressupostos para que o juiz possa aplicar a analogia em um caso concreto?
+  - Existe alguma restrição legal para a aplicação da analogia no Direito Brasileiro? Em quais ramos do Direito ela é mais ou menos utilizada?
+  - Qual a diferença fundamental entre analogia e interpretação extensiva, e por que é crucial não confundi-las?
+  - A Súmula 227 do STJ, que permite à pessoa jurídica sofrer dano moral, pode ser considerada um exemplo de aplicação analógica? Justifique.
+  - Em que medida a analogia se relaciona com os princípios gerais do direito e os costumes como métodos de integração da norma jurídica?
+  - Qual a diferença entre "decidir com equidade" e "decidir por equidade" no Direito Brasileiro?
+  - A equidade é considerada uma fonte do direito no Brasil? Se sim, qual sua natureza e onde se insere no sistema de fontes?
+  - Em que situações o juiz é autorizado legalmente a decidir por equidade, de acordo com o Código de Processo Civil?
+  - Poderia dar exemplos práticos da aplicação da equidade no Direito Civil, para além da redução da cláusula penal?
+  - Como a equidade se relaciona com os Princípios Gerais do Direito na resolução de casos concretos? Há alguma hierarquia?
+  - Discuta a afirmação de que a equidade não é um método de integração da norma, mas exerce função integrativa. Qual a relevância dessa distinção?
+  - A equidade possui alguma limitação em sua aplicação no ordenamento jurídico brasileiro?
+  - Qual a influência da equidade na interpretação das cláusulas contratuais, especialmente em contratos de adesão ou com partes hipossuficientes?
+  - Como a equidade contribui para a concretização do princípio da dignidade da pessoa humana no Direito Civil?
+  - Quais são os principais desafios e críticas à aplicação da equidade pelos magistrados no Brasil?
+  - A Lei de Introdução às Normas do Direito Brasileiro (LINDB) faz alguma menção à equidade? Qual o impacto dessa menção ou ausência dela?
+  - Em que medida a equidade se distingue dos costumes como ferramenta para a solução de lacunas ou injustiças legais?
+  - Poderia a equidade ser utilizada para afastar a aplicação de uma súmula vinculante, em caso de manifesta injustiça no caso concreto? Justifique.
