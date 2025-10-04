@@ -1,13 +1,18 @@
-/* ========= BASE (iOS-like, tons de cinza) ========= */
+/* ========= BASE (iOS-like, tons de cinza, com safe areas) ========= */
 :root{
-  --bg: #efefef;      /* fundo um pouco mais escuro */
+  --bg: #eaeaea;      /* fundo um pouco mais escuro */
   --card: #ffffff;
-  --text: #141414;    /* texto padrão (peso normal) */
+  --text: #141414;    /* peso normal */
   --muted: #6b6b6b;
-  --line: #e0e0e0;    /* linhas 1px mais visíveis */
+  --line: #dadada;    /* linhas sutilmente mais visíveis */
   --tap: rgba(0,0,0,.06);
   --w: 960px;         /* largura do site no desktop */
   --radius: 12px;
+
+  /* espaçamentos */
+  --px: 18px;         /* padding horizontal base */
+  --py: 10px;         /* padding vertical base */
+  --gap: 12px;
 }
 
 *{ box-sizing: border-box; }
@@ -16,12 +21,18 @@ body{
   margin:0;
   background: var(--bg);
   color: var(--text);
-  font: 16px/1.48 -apple-system, BlinkMacSystemFont, "Inter", system-ui, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica;
-  font-weight: 400; /* textos e links com peso normal */
+  font: 16px/1.52 -apple-system, BlinkMacSystemFont, "Inter", system-ui, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica;
+  font-weight: 400;
 }
 
-/* containers e cartões */
-.container{ max-width: var(--w); margin: 0 auto; padding: 0 16px; }
+.container{
+  max-width: var(--w);
+  margin: 0 auto;
+  /* safe areas nas laterais no mobile (evita “encostar”) */
+  padding-left: calc(var(--px) + env(safe-area-inset-left));
+  padding-right: calc(var(--px) + env(safe-area-inset-right));
+}
+
 .card{
   background: var(--card);
   border: 1px solid var(--line);
@@ -33,7 +44,6 @@ body{
 .hidden{ display:none; }
 .muted{ color: var(--muted); }
 
-/* tipografia */
 .h1{ font-size: 28px; margin: 4px 0 6px; letter-spacing: -0.2px; font-weight: 600; }
 .h2{ font-size: 18px; margin: 14px 0 8px; font-weight: 500; }
 .sub{ color: var(--muted); margin: 0; font-weight: 400; }
@@ -44,37 +54,44 @@ body{
   background: rgba(255,255,255,.92);
   backdrop-filter: saturate(180%) blur(10px);
   border-bottom: 1px solid var(--line);
+  padding-top: calc(env(safe-area-inset-top));
 }
 .topbar-inner{
-  display:flex; gap:12px; align-items:center;
-  padding: 10px 0;
+  display:flex; gap: var(--gap); align-items:center;
+  padding: var(--py) 0;
 }
 .brand{
   font-weight: 600; color: #2e2e2e; letter-spacing: -.3px;
+  padding-left: 2px; /* sutil para alinhar ótico */
 }
 .brand span{ color:#8a8a8a; }
 
 .search-wrap{ position: relative; flex:1; }
 .search{
-  width:100%; padding: 10px 12px;
-  background:#fff; border:1px solid var(--line); border-radius: 10px;
+  width:100%; padding: 12px 14px; /* maior altura de toque */
+  background:#fff; border:1px solid var(--line); border-radius: 12px;
   outline: none; font-weight: 400;
+  box-shadow: inset 0 0 0 1px transparent;
 }
-.search:focus{ border-color:#c9c9c9; }
+.search:focus{
+  border-color:#c7c7c7;
+  box-shadow: inset 0 0 0 1px #c7c7c7;
+}
 
 /* Autocomplete */
 .suggestions{
-  position:absolute; left:0; right:0; top: calc(100% + 6px);
-  background:#fff; border:1px solid var(--line); border-radius:10px;
+  position:absolute; left:0; right:0; top: calc(100% + 8px);
+  background:#fff; border:1px solid var(--line); border-radius:12px;
   list-style:none; padding:6px 0; margin:0;
-  max-height:260px; overflow:auto; display:none;
+  max-height: 52vh; overflow:auto; display:none;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
 }
 .suggestions.show{ display:block; }
 .suggestions li{
-  padding:10px 12px; cursor:pointer;
+  padding: 12px 14px; cursor:pointer; line-height: 1.4;
 }
 .suggestions li:hover,
-.suggestions li:focus{ background:#f2f2f2; }
+.suggestions li:focus{ background:#f5f5f5; }
 
 /* ========= TABS/PANES ========= */
 .tabs{
@@ -83,7 +100,8 @@ body{
 }
 .tab{
   appearance:none; border:1px solid var(--line); background:#fff;
-  padding:8px 12px; border-radius: 999px; cursor:pointer; color:#333; font-weight: 400;
+  padding:10px 14px; border-radius: 999px; cursor:pointer; color:#333; font-weight: 400;
+  min-height: 40px; /* alvo de toque confortável */
 }
 .tab.is-active{ background:#f2f2f2; }
 
@@ -94,14 +112,14 @@ body{
 
 /* grupos/listas */
 .group{
-  border:1px solid var(--line); border-radius:10px; padding:12px; margin:12px 0;
+  border:1px solid var(--line); border-radius:12px; padding:12px; margin:12px 0;
   background:#fff;
 }
 .group h3{ margin: 0 0 8px; font-size: 15px; color:#2a2a2a; font-weight: 500; }
 .list{ list-style:none; margin:0; padding:0; }
 .item{
   display:flex; gap:10px; align-items:flex-start;
-  border-top:1px solid var(--line); padding:10px 0;
+  border-top:1px solid var(--line); padding:12px 0;
 }
 .item:first-child{ border-top:0; }
 
@@ -109,7 +127,6 @@ body{
   font-size: 12px; color: #8a8a8a; margin-right:6px; white-space: nowrap;
 }
 
-/* títulos e descrições (peso normal) */
 .title{
   color:#111; text-decoration:none; font-weight: 400;
 }
@@ -119,15 +136,15 @@ body{
 
 /* Botões IA (na aba Código) */
 .ai-actions{
-  display:flex; gap:8px; flex-wrap:wrap; margin: 4px 0 12px;
+  display:flex; gap:10px; flex-wrap:wrap; margin: 4px 0 12px;
 }
 .btn-ios{
-  display:inline-block; padding:10px 14px; border:1px solid var(--line);
+  display:inline-block; padding:12px 16px; border:1px solid var(--line);
   border-radius: 12px; background:#fff; color:#111; text-decoration:none; font-weight: 400;
+  min-height: 44px; /* alvo iOS */
 }
 .btn-ios:active{ background: var(--tap); }
 
-/* Responsivo */
 @media (min-width: 992px){
   .h1{ font-size: 32px; }
   .topbar-inner{ padding: 12px 0; }
