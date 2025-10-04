@@ -1,25 +1,22 @@
 // meujus – app.js (2025-10-04)
-// Fonte dos temas: data/temas.json -> [{ slug, title, path, tags, group? }]
-// Formato TXT: "# Título", linhas "-- explicação", linhas "- Artigo: texto"
-// Ajustes: sem botão Google IA; intro dentro do card do título; artigos em segundo card;
-// links dos artigos abrem Google em modo IA (udm=50); hambúrguer tratado no HTML;
-// salvar/remover tema com localStorage e lista "Salvos" no drawer; toasts visíveis.
+// Fonte: data/temas.json -> [{ slug, title, path, tags, group? }]
+// TXT: "# Título", "-- explicação", "- Artigo: texto", opcional "## Pergunte pra I.A." com "- Perguntas"
+// Ajustes: sem botão Google IA; intro no card do título; artigos em segundo card;
+// links dos artigos abrem Google em modo IA (udm=50); hambúrguer no HTML;
+// salvar/remover tema (localStorage) e lista "Salvos" no drawer; toasts visíveis.
 
 (function(){
-  /* ========== DOM helpers ========== */
+  /* ===== Helpers DOM ===== */
   const $  = (q, el=document) => el.querySelector(q);
   const $$ = (q, el=document) => Array.from(el.querySelectorAll(q));
 
-  /* ========== Estado global ========== */
+  /* ===== Estado ===== */
   let TEMAS = [];                        // [{slug,title,path,tags,group?}]
   const TEMA_MAP = Object.create(null);  // slug -> path
   let GLOSS = null;                      // [{ termo, def, pattern }]
 
-  /* ========== Router ========== */
-  function getHashParts(){
-    const h = location.hash.replace(/^#\/?/, '');
-    return h.split('/');
-  }
+  /* ===== Router ===== */
+  function getHashParts(){ return location.hash.replace(/^#\/?/, '').split('/'); }
   function currentPage(){
     const p = getHashParts();
     if(p[0]==='tema' && p[1]) return {kind:'tema', slug:decodeURIComponent(p[1])};
@@ -31,7 +28,7 @@
     if(location.hash !== `#/tema/${safe}`) location.hash = `#/tema/${safe}`;
   }
 
-  /* ========== Fetch utils ========== */
+  /* ===== Fetch ===== */
   async function fetchText(url){
     const res = await fetch(url, {cache:'no-store'});
     if(!res.ok) throw new Error(`HTTP ${res.status} @ ${url}`);
@@ -43,7 +40,7 @@
     return res.json();
   }
 
-  /* ========== Toasts ========== */
+  /* ===== Toasts ===== */
   const toastsEl = $('#toasts');
   function toast(msg, type='info', ttl=3000){
     if(!toastsEl) return;
@@ -51,12 +48,12 @@
     el.className = `toast ${type}`;
     el.innerHTML = `<span>${msg}</span><button aria-label="Fechar">✕</button>`;
     toastsEl.appendChild(el);
-    const close = ()=>{ el.remove(); };
+    const close = ()=> el.remove();
     el.querySelector('button').onclick = close;
     setTimeout(close, ttl);
   }
 
-  /* ========== Drawer acessível ========== */
+  /* ===== Drawer ===== */
   const drawer      = $('#drawer');
   const drawerPanel = $('#drawer-panel');
   const drawerBg    = $('#drawerBackdrop');
@@ -84,8 +81,7 @@
     const focusables = $$('a, button, input, [tabindex]:not([tabindex="-1"])', drawerPanel)
       .filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
     if(focusables.length===0) return;
-    const first = focusables[0];
-    const last  = focusables[focusables.length-1];
+    const [first,last] = [focusables[0], focusables[focusables.length-1]];
     if(e.key==='Tab'){
       if(e.shiftKey && document.activeElement===first){ last.focus(); e.preventDefault(); }
       else if(!e.shiftKey && document.activeElement===last){ first.focus(); e.preventDefault(); }
@@ -96,7 +92,7 @@
   drawerBg?.addEventListener('click', closeDrawer);
   document.addEventListener('keydown', trapFocus);
 
-  /* ========== Glossário ========== */
+  /* ===== Glossário ===== */
   function wordBoundaryPattern(term){
     const esc = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const flex = `(?:${esc}(?:es|s|a|as|is|os|oes)?)`;
@@ -119,13 +115,8 @@
   }
   async function loadGlossario(){
     if(GLOSS!==null) return GLOSS;
-    try{
-      const txt = await fetchText('data/glossario.txt');
-      GLOSS = parseGloss(txt);
-    }catch(e){
-      console.warn('Glossário ausente/erro:', e);
-      GLOSS = [];
-    }
+    try{ GLOSS = parseGloss(await fetchText('data/glossario.txt')); }
+    catch{ GLOSS = []; }
     return GLOSS;
   }
   let tooltipEl = null;
@@ -143,7 +134,7 @@
     tip.style.padding='10px 12px'; tip.style.borderRadius='12px';
     tip.style.boxShadow='0 8px 20px rgba(0,0,0,.15)'; tip.style.fontSize='14px'; tip.style.lineHeight='1.4';
     document.body.appendChild(tip);
-    const top = window.scrollY + rect.bottom + 8;
+    const top  = window.scrollY + rect.bottom + 8;
     const left = Math.min(window.scrollX + rect.left, window.scrollX + window.innerWidth - tip.offsetWidth - 12);
     tip.style.top  = `${top}px`;
     tip.style.left = `${left}px`;
@@ -161,7 +152,7 @@
     const segments = html.split(/(<a[\s\S]*?<\/a>|<span class=(?:"|')mj-trail(?:"|')[\s\S]*?<\/span>)/gi);
     for(let i=0;i<segments.length;i++){
       const seg = segments[i];
-      if(/^<a[\s\S]*<\/a>$/i.test(seg) || /^<span class=(?:"|')mj-trail(?:"|')[\s\S]*<\/span>$/i.test(seg)){ continue; }
+      if(/^<a[\s\S]*<\/a>$/i.test(seg) || /^<span class=(?:"|')mj-trail(?:"|')[\s\S]*<\/span>$/i.test(seg)) continue;
       let replaced = seg;
       for(const it of GLOSS){
         replaced = replaced.replace(it.pattern, (m)=>{
@@ -175,11 +166,9 @@
     return segments.join('');
   }
 
-  /* ========== Persistência: Salvos ========== */
+  /* ===== Persistência: Salvos ===== */
   const SAVED_KEY = 'mj_saved_v1';
-  function readSaved(){
-    try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch{ return []; }
-  }
+  function readSaved(){ try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch{ return []; } }
   function writeSaved(list){ localStorage.setItem(SAVED_KEY, JSON.stringify(list)); }
   function isSaved(slug){ return readSaved().includes(slug); }
   function toggleSaved(slug){
@@ -188,7 +177,7 @@
     cur.add(slug); writeSaved([...cur]); return true;
   }
 
-  /* ========== Temas.json e Drawer ======== */
+  /* ===== Temas + Drawer ===== */
   async function loadTemas(){
     try{
       TEMAS = await fetchJSON('data/temas.json');
@@ -198,40 +187,31 @@
       renderSavedList();
     }catch(e){
       console.error(e);
-      toast('Erro ao carregar temas','error');
+      toast('Erro ao carregar temas','error',2500);
       TEMAS = [];
     }
   }
   function hydrateMenu(){
-    const ul = $('#menuList');
-    if(!ul) return;
+    const ul = $('#menuList'); if(!ul) return;
     const items = [...TEMAS].sort((a,b)=>a.title.localeCompare(b.title)).slice(0,60);
     ul.innerHTML = items.map(t => `<li><a class="title" href="#/tema/${t.slug}">${t.title}</a></li>`).join('');
   }
-
   function ensureSavedSection(){
     const cont = $('.drawer-content', drawerPanel) || drawerPanel;
     if(!$('#savedWrap')){
       const wrap = document.createElement('div');
       wrap.id='savedWrap';
-      wrap.innerHTML = `
-        <h3 class="h2" style="margin-top:8px">Salvos</h3>
-        <ul id="savedList" class="list"></ul>
-      `;
+      wrap.innerHTML = `<h3 class="h2" style="margin-top:8px">Salvos</h3><ul id="savedList" class="list"></ul>`;
       cont.appendChild(wrap);
     }
   }
   function renderSavedList(){
     const ul = $('#savedList'); if(!ul) return;
     const saved = readSaved();
-    if(saved.length===0){
-      ul.innerHTML = `<li class="item muted">Nenhum tema salvo.</li>`;
-      return;
-    }
+    if(saved.length===0){ ul.innerHTML = `<li class="item muted">Nenhum tema salvo.</li>`; return; }
     const map = new Map(TEMAS.map(t=>[t.slug,t]));
     ul.innerHTML = saved.map(slug=>{
-      const t = map.get(slug);
-      if(!t) return '';
+      const t = map.get(slug); if(!t) return '';
       return `<li class="item">
         <a class="title" href="#/tema/${t.slug}">${t.title}</a>
         <button class="btn-ios" data-remove="${t.slug}" style="margin-left:8px">Remover</button>
@@ -247,13 +227,11 @@
     });
   }
 
-  /* ========== Busca local (autocomplete) ========== */
+  /* ===== Busca ===== */
   const searchEl = $('#search');
   const sugEl    = $('#suggestions');
 
-  function normalizeStr(s){
-    return s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'');
-  }
+  function normalizeStr(s){ return s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,''); }
   function groupLabel(t){
     if(t.group) return t.group;
     const m = (t.path||'').match(/^data\/([^/]+)/i);
@@ -299,65 +277,43 @@
   let sugTimer = null;
   function updateSuggestions(q){
     clearTimeout(sugTimer);
-    sugTimer = setTimeout(()=>{
-      const list = searchLocal(q||'');
-      renderSuggestions(list);
-    }, 120);
+    sugTimer = setTimeout(()=>{ renderSuggestions(searchLocal(q||'')); }, 120);
   }
   searchEl?.addEventListener('input', e=> updateSuggestions(e.target.value));
   searchEl?.addEventListener('focus', e=> updateSuggestions(e.target.value));
   document.addEventListener('click', e=>{ if(!e.target.closest('.search-wrap')) sugEl?.classList.remove('show'); });
 
-  /* ========== Helpers ========== */
-  function googleAIURL(prefix){
-    return `https://www.google.com/search?udm=50&q=${encodeURIComponent(prefix)}`;
-  }
-  function escapeHTML(s){
-    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  }
+  /* ===== Utils ===== */
+  function googleAIURL(prefix){ return `https://www.google.com/search?udm=50&q=${encodeURIComponent(prefix)}`; }
+  function escapeHTML(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-  /* ========== Parser de tema (#, --, -) ========== */
+  /* ===== Parser TXT ===== */
   function parseTemaText(raw){
-  const lines = raw.split(/\r?\n/);
-  let title = null;
-  const intro = [];
-  const items = [];
-  const ask   = [];
-  let section = 'body'; // body | ask
+    const lines = raw.split(/\r?\n/);
+    let title = null;
+    const intro = [];
+    const items = [];
+    const ask   = [];
+    let section = 'body'; // body | ask
 
-  for(const ln of lines){
-    const s = ln.trim();
-    if(!s) continue;
+    for(const ln of lines){
+      const s = ln.trim();
+      if(!s) continue;
 
-    if(s.startsWith('# ')){                  // título
-      title = s.slice(2).trim();
-      section = 'body';
-      continue;
+      if(s.startsWith('# ')){ title = s.slice(2).trim(); section='body'; continue; }
+      if(s.startsWith('## ')){
+        const h2 = s.slice(3).trim().toLowerCase();
+        section = (h2.includes('pergunte') || h2.includes('ia')) ? 'ask' : 'body';
+        continue;
+      }
+      if(s === '-----'){ section='body'; continue; }
+      if(s.startsWith('-- ')){ if(section==='body') intro.push(s.slice(3).trim()); continue; }
+      if(s.startsWith('- ')){ (section==='ask' ? ask : items).push(s.slice(2).trim()); continue; }
     }
-    if(s.startsWith('## ')){                 // subtítulos
-      const h2 = s.slice(3).trim().toLowerCase();
-      section = (h2.includes('pergunte') || h2.includes('ia')) ? 'ask' : 'body';
-      continue;
-    }
-    if(s === '-----'){                       // separador opcional
-      section = 'body';
-      continue;
-    }
-    if(s.startsWith('-- ')){                 // explicação
-      if(section==='body') intro.push(s.slice(3).trim());
-      continue;
-    }
-    if(s.startsWith('- ')){                  // itens
-      if(section==='ask') ask.push(s.slice(2).trim());
-      else items.push(s.slice(2).trim());
-      continue;
-    }
+    return { title, intro, items, ask };
   }
-  return { title, intro, items, ask };
-}
 
-
-  /* ========== Páginas ========== */
+  /* ===== Páginas ===== */
   async function loadTema(slug){
     const titleEl   = $('#themeTitle');
     const contentEl = $('#content');
@@ -365,19 +321,19 @@
     contentEl.textContent = 'Carregando…';
 
     const path = TEMA_MAP[slug];
-    if(!path){ contentEl.textContent = 'Tema não encontrado.'; toast('Tema não encontrado','error'); return; }
+    if(!path){ contentEl.textContent = 'Tema não encontrado.'; toast('Tema não encontrado','error',2200); return; }
 
     await loadGlossario();
 
     try{
-      const raw               = await fetchText(path);
+      const raw = await fetchText(path);
       const { title, intro, items, ask } = parseTemaText(raw);
 
       const meta = TEMAS.find(t=>t.slug===slug);
       const tituloTema = title || meta?.title || slug.replace(/-/g,' ');
       titleEl.textContent = tituloTema;
 
-      // Botão Salvar no card do título
+      // Botão Salvar
       let saveBtn = $('#saveBtn');
       if(!saveBtn){
         saveBtn = document.createElement('button');
@@ -386,10 +342,7 @@
         saveBtn.style.marginTop = '8px';
         headCard?.appendChild(saveBtn);
       }
-      function refreshSaveBtn(){
-        if(isSaved(slug)){ saveBtn.textContent = 'Remover dos salvos'; }
-        else { saveBtn.textContent = 'Salvar'; }
-      }
+      function refreshSaveBtn(){ saveBtn.textContent = isSaved(slug) ? 'Remover dos salvos' : 'Salvar'; }
       refreshSaveBtn();
       saveBtn.onclick = ()=>{
         const added = toggleSaved(slug);
@@ -398,7 +351,7 @@
         toast(added ? 'Tema salvo' : 'Removido dos salvos', added ? 'success' : 'info', 1600);
       };
 
-      // Intro dentro do card do título
+      // Intro no card do título
       let introEl = $('#introText');
       const introHTML = intro.length ? markGlossarioInHTML(escapeHTML(intro.join(' '))) : '';
       if(!introEl){
@@ -410,7 +363,7 @@
       }
       introEl.innerHTML = introHTML || '';
 
-      // Itens dentro de um segundo card
+      // Artigos
       function prefixFromItem(line){
         const idx = line.indexOf(':');
         return idx>0 ? line.slice(0, idx).trim() : line;
@@ -419,24 +372,40 @@
         const safe = escapeHTML(line);
         const withGloss = markGlossarioInHTML(safe);
         const prefix = prefixFromItem(line);
-        const href = googleAIURL(prefix); // Google IA
+        const href = googleAIURL(prefix);
         return `<li class="item">
                   <span class="desc">${withGloss}</span>
                   <span class="mj-trail"> <a class="mj-go" href="${href}" target="_blank" rel="noopener" aria-label="Abrir no Google IA">→</a></span>
                 </li>`;
       }).join('');
 
+      // Pergunte pra I.A.
+      const askHTML = (ask && ask.length)
+        ? `
+          <h2 class="h2 pane-title" style="margin-top:10px">Pergunte pra I.A.</h2>
+          <ul class="list list-plain">
+            ${ask.map(q=>{
+              const safe = escapeHTML(q);
+              const href = googleAIURL(q);
+              return `<li class="item"><span class="desc">${safe}</span><span class="mj-trail"> <a class="mj-go" href="${href}" target="_blank" rel="noopener" aria-label="Abrir no Google IA">↗</a></span></li>`;
+            }).join('')}
+          </ul>
+        `
+        : '';
+
+      // Card de artigos + seção IA
       contentEl.classList.add('list-plain');
       contentEl.innerHTML = `
         <div class="card">
           <ul class="list list-plain">${itensHTML || `<li class="item muted">Sem artigos.</li>`}</ul>
+          ${askHTML}
         </div>
       `;
-      toast('Tema carregado','success',1300);
+      toast('Tema carregado','success',1200);
 
     }catch(e){
       console.error(e);
-      toast('Erro ao carregar conteúdo','error');
+      toast('Erro ao carregar conteúdo','error',2500);
       contentEl.textContent = 'Erro ao carregar tema.';
     }
   }
@@ -447,13 +416,13 @@
     titleEl.textContent = 'Sobre';
     $('#introText')?.remove();
     $('#saveBtn')?.remove();
-    contentEl.innerHTML = `<div class="card"><div class="item"><span class="desc">Meujus — estudo guiado por temas com remissões, glossário e recursos de salvamento.</span></div></div>`;
+    contentEl.innerHTML = `<div class="card"><div class="item"><span class="desc">Meujus — estudo guiado por temas com remissões, glossário e salvos.</span></div></div>`;
   }
 
   async function renderByRoute(){
     const page = currentPage();
-    if(page.kind==='tema')      await loadTema(page.slug);
-    else if(page.kind==='sobre')      loadSobre();
+    if(page.kind==='tema') await loadTema(page.slug);
+    else if(page.kind==='sobre') loadSobre();
     else {
       const titleEl   = $('#themeTitle');
       const contentEl = $('#content');
@@ -464,7 +433,7 @@
     }
   }
 
-  /* ========== Boot ========== */
+  /* ===== Boot ===== */
   window.addEventListener('hashchange', renderByRoute);
   (async function init(){
     try{
@@ -472,7 +441,7 @@
       await renderByRoute();
     }catch(e){
       console.error(e);
-      toast('Erro ao iniciar','error');
+      toast('Erro ao iniciar','error',2500);
     }
   })();
 
