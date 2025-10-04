@@ -4,5 +4,6 @@
   { "slug": "direito-autoral", "title": "Direito Autoral", "path": "data/codigocivil/d/direito-autoral.txt", "group": "Código Civil" },
   { "slug": "principio-da-sociabilidade", "title": "Princípio da Sociabilidade", "path": "data/codigocivil/p/principio-da-sociabilidade.txt", "group": "Código Civil" },
   { "slug": "principio-da-operabilidade", "title": "Princípio da operabilidade", "path": "data/codigocivil/p/principio-da-operabilidade.txt", "group": "Código Civil" },
+   { "slug": "vigência", "title": "Vigência", "path": "data/codigocivil/v/vigencia.txt", "group": "Código Civil" },
   { "slug": "principio-da-eticidade", "title": "Princípio da Eticidade", "path": "data/codigocivil/p/principio-da-eticidade.txt", "group": "Código Civil" }
 ]
