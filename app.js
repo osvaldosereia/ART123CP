@@ -1,8 +1,9 @@
 // meujus – app.js (2025-10-04)
-// Fonte dos temas: data/temas.json  ->  [{ slug, title, path, tags }]
-// Formato de cada TXT: "# Título", linhas "-- explicação", linhas "- Artigo: texto"
-// UI: Drawer acessível, toasts, autocomplete, glossário, rota #/tema/<slug>
-// Render: corpo sem links; botão → para JusBrasil com o prefixo até ":".
+// Fonte dos temas: data/temas.json -> [{ slug, title, path, tags, group? }]
+// Formato TXT: "# Título", linhas "-- explicação", linhas "- Artigo: texto"
+// Ajustes: sem botão Google IA; intro dentro do card do título; artigos em segundo card;
+// links dos artigos abrem Google em modo IA (udm=50); hambúrguer tratado no HTML;
+// salvar/remover tema com localStorage e lista "Salvos" no drawer; toasts visíveis.
 
 (function(){
   /* ========== DOM helpers ========== */
@@ -10,7 +11,7 @@
   const $$ = (q, el=document) => Array.from(el.querySelectorAll(q));
 
   /* ========== Estado global ========== */
-  let TEMAS = [];                        // [{slug,title,path,tags}]
+  let TEMAS = [];                        // [{slug,title,path,tags,group?}]
   const TEMA_MAP = Object.create(null);  // slug -> path
   let GLOSS = null;                      // [{ termo, def, pattern }]
 
@@ -70,7 +71,6 @@
     drawer.setAttribute('aria-hidden','false');
     btnMenu?.setAttribute('aria-expanded','true');
     (drawerPanel.querySelector('a,button,[tabindex]')||drawerPanel).focus();
-    toast('Menu aberto','info',1600);
   }
   function closeDrawer(){
     if(!drawer) return;
@@ -99,7 +99,7 @@
   /* ========== Glossário ========== */
   function wordBoundaryPattern(term){
     const esc = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const flex = `(?:${esc}(?:es|s|a|as|is|os|oes)?)`; // heurístico simples
+    const flex = `(?:${esc}(?:es|s|a|as|is|os|oes)?)`;
     return new RegExp(`(?<![\\u00A0\\w])(${flex})(?![\\w])`, 'giu');
   }
   function parseGloss(txt){
@@ -158,7 +158,6 @@
 
   function markGlossarioInHTML(html){
     if(!GLOSS || !GLOSS.length) return html;
-    // proteger <a…>…</a> e a trilha do mini-botão
     const segments = html.split(/(<a[\s\S]*?<\/a>|<span class=(?:"|')mj-trail(?:"|')[\s\S]*?<\/span>)/gi);
     for(let i=0;i<segments.length;i++){
       const seg = segments[i];
@@ -176,12 +175,27 @@
     return segments.join('');
   }
 
-  /* ========== Temas.json ========== */
+  /* ========== Persistência: Salvos ========== */
+  const SAVED_KEY = 'mj_saved_v1';
+  function readSaved(){
+    try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch{ return []; }
+  }
+  function writeSaved(list){ localStorage.setItem(SAVED_KEY, JSON.stringify(list)); }
+  function isSaved(slug){ return readSaved().includes(slug); }
+  function toggleSaved(slug){
+    const cur = new Set(readSaved());
+    if(cur.has(slug)){ cur.delete(slug); writeSaved([...cur]); return false; }
+    cur.add(slug); writeSaved([...cur]); return true;
+  }
+
+  /* ========== Temas.json e Drawer ======== */
   async function loadTemas(){
     try{
       TEMAS = await fetchJSON('data/temas.json');
       TEMAS.forEach(t => { TEMA_MAP[t.slug] = t.path; });
       hydrateMenu();
+      ensureSavedSection();
+      renderSavedList();
     }catch(e){
       console.error(e);
       toast('Erro ao carregar temas','error');
@@ -195,12 +209,58 @@
     ul.innerHTML = items.map(t => `<li><a class="title" href="#/tema/${t.slug}">${t.title}</a></li>`).join('');
   }
 
+  function ensureSavedSection(){
+    const cont = $('.drawer-content', drawerPanel) || drawerPanel;
+    if(!$('#savedWrap')){
+      const wrap = document.createElement('div');
+      wrap.id='savedWrap';
+      wrap.innerHTML = `
+        <h3 class="h2" style="margin-top:8px">Salvos</h3>
+        <ul id="savedList" class="list"></ul>
+      `;
+      cont.appendChild(wrap);
+    }
+  }
+  function renderSavedList(){
+    const ul = $('#savedList'); if(!ul) return;
+    const saved = readSaved();
+    if(saved.length===0){
+      ul.innerHTML = `<li class="item muted">Nenhum tema salvo.</li>`;
+      return;
+    }
+    const map = new Map(TEMAS.map(t=>[t.slug,t]));
+    ul.innerHTML = saved.map(slug=>{
+      const t = map.get(slug);
+      if(!t) return '';
+      return `<li class="item">
+        <a class="title" href="#/tema/${t.slug}">${t.title}</a>
+        <button class="btn-ios" data-remove="${t.slug}" style="margin-left:8px">Remover</button>
+      </li>`;
+    }).join('');
+    ul.querySelectorAll('button[data-remove]').forEach(b=>{
+      b.onclick = ()=>{
+        const s = b.getAttribute('data-remove');
+        toggleSaved(s);
+        renderSavedList();
+        toast('Removido dos salvos','info',1600);
+      };
+    });
+  }
+
   /* ========== Busca local (autocomplete) ========== */
   const searchEl = $('#search');
   const sugEl    = $('#suggestions');
 
   function normalizeStr(s){
     return s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'');
+  }
+  function groupLabel(t){
+    if(t.group) return t.group;
+    const m = (t.path||'').match(/^data\/([^/]+)/i);
+    const key = (m?.[1]||'').toLowerCase();
+    const map = { codigocivil:'Código Civil', codigopenal:'Código Penal', cpp:'Código de Processo Penal', cf88:'Constituição Federal' };
+    if(map[key]) return map[key];
+    return key ? key.replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase()) : '';
   }
   function searchLocal(q){
     const v = normalizeStr((q||'').trim());
@@ -227,7 +287,7 @@
     sugEl.innerHTML = list.map(t =>
       `<li class="sug-item" role="option" tabindex="0" data-slug="${t.slug}">
          <div class="sug-title">${t.title}</div>
-         <div class="sug-sub">#/tema/${t.slug}</div>
+         <div class="sug-sub">${groupLabel(t)}</div>
        </li><div class="sug-sep"></div>`
     ).join('');
     sugEl.classList.add('show');
@@ -249,8 +309,8 @@
   document.addEventListener('click', e=>{ if(!e.target.closest('.search-wrap')) sugEl?.classList.remove('show'); });
 
   /* ========== Helpers ========== */
-  function buildJusBrasilURL(prefix){
-    return `https://www.jusbrasil.com.br/legislacao/busca?q=${encodeURIComponent(prefix)}`;
+  function googleAIURL(prefix){
+    return `https://www.google.com/search?udm=50&q=${encodeURIComponent(prefix)}`;
   }
   function escapeHTML(s){
     return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -285,6 +345,7 @@
   async function loadTema(slug){
     const titleEl   = $('#themeTitle');
     const contentEl = $('#content');
+    const headCard  = $('.ficha-head'); // card do título
     contentEl.textContent = 'Carregando…';
 
     const path = TEMA_MAP[slug];
@@ -300,17 +361,40 @@
       const tituloTema = title || meta?.title || slug.replace(/-/g,' ');
       titleEl.textContent = tituloTema;
 
-      const btnIA = $('#btnIA');
-      btnIA && (btnIA.onclick = ()=>{
-        const prompt = `Estudar tema: ${tituloTema}`;
-        const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
-        window.open(url, '_blank', 'noopener');
-      });
+      // Botão Salvar no card do título
+      let saveBtn = $('#saveBtn');
+      if(!saveBtn){
+        saveBtn = document.createElement('button');
+        saveBtn.id = 'saveBtn';
+        saveBtn.className = 'btn-ios';
+        saveBtn.style.marginTop = '8px';
+        headCard?.appendChild(saveBtn);
+      }
+      function refreshSaveBtn(){
+        if(isSaved(slug)){ saveBtn.textContent = 'Remover dos salvos'; }
+        else { saveBtn.textContent = 'Salvar'; }
+      }
+      refreshSaveBtn();
+      saveBtn.onclick = ()=>{
+        const added = toggleSaved(slug);
+        refreshSaveBtn();
+        renderSavedList();
+        toast(added ? 'Tema salvo' : 'Removido dos salvos', added ? 'success' : 'info', 1600);
+      };
 
-      const introHTML = intro.length
-        ? `<div class="card"><p class="desc">${markGlossarioInHTML(escapeHTML(intro.join(' ')))}</p></div>`
-        : '';
+      // Intro dentro do card do título
+      let introEl = $('#introText');
+      const introHTML = intro.length ? markGlossarioInHTML(escapeHTML(intro.join(' '))) : '';
+      if(!introEl){
+        introEl = document.createElement('p');
+        introEl.id = 'introText';
+        introEl.className = 'desc';
+        introEl.style.marginTop = '10px';
+        if(headCard) headCard.appendChild(introEl);
+      }
+      introEl.innerHTML = introHTML || '';
 
+      // Itens dentro de um segundo card
       function prefixFromItem(line){
         const idx = line.indexOf(':');
         return idx>0 ? line.slice(0, idx).trim() : line;
@@ -319,13 +403,20 @@
         const safe = escapeHTML(line);
         const withGloss = markGlossarioInHTML(safe);
         const prefix = prefixFromItem(line);
-        const href = buildJusBrasilURL(prefix);
-        return `<li class="item"><span class="desc">${withGloss}</span><span class="mj-trail"> <a class="mj-go" href="${href}" target="_blank" rel="noopener" aria-label="Abrir no JusBrasil">→</a></span></li>`;
+        const href = googleAIURL(prefix); // Google IA
+        return `<li class="item">
+                  <span class="desc">${withGloss}</span>
+                  <span class="mj-trail"> <a class="mj-go" href="${href}" target="_blank" rel="noopener" aria-label="Abrir no Google IA">→</a></span>
+                </li>`;
       }).join('');
 
       contentEl.classList.add('list-plain');
-      contentEl.innerHTML = `${introHTML}<ul class="list list-plain">${itensHTML}</ul>`;
-      toast('Tema carregado','success',1500);
+      contentEl.innerHTML = `
+        <div class="card">
+          <ul class="list list-plain">${itensHTML || `<li class="item muted">Sem artigos.</li>`}</ul>
+        </div>
+      `;
+      toast('Tema carregado','success',1300);
 
     }catch(e){
       console.error(e);
@@ -338,7 +429,9 @@
     const titleEl   = $('#themeTitle');
     const contentEl = $('#content');
     titleEl.textContent = 'Sobre';
-    contentEl.innerHTML = `<div class="item"><span class="desc">Meujus — estudo guiado por temas com remissões, glossário e integrações leves.</span></div>`;
+    $('#introText')?.remove();
+    $('#saveBtn')?.remove();
+    contentEl.innerHTML = `<div class="card"><div class="item"><span class="desc">Meujus — estudo guiado por temas com remissões, glossário e recursos de salvamento.</span></div></div>`;
   }
 
   async function renderByRoute(){
@@ -348,8 +441,10 @@
     else {
       const titleEl   = $('#themeTitle');
       const contentEl = $('#content');
+      $('#introText')?.remove();
+      $('#saveBtn')?.remove();
       titleEl.textContent = 'Escolha um tema';
-      contentEl.innerHTML = `<div class="item"><span class="desc">Use o menu ☰ ou a busca para abrir um tema.</span></div>`;
+      contentEl.innerHTML = `<div class="card"><div class="item"><span class="desc">Use o menu ☰ ou a busca para abrir um tema.</span></div></div>`;
     }
   }
 
@@ -357,9 +452,8 @@
   window.addEventListener('hashchange', renderByRoute);
   (async function init(){
     try{
-      await loadTemas();      // carrega data/temas.json
-      await renderByRoute();  // renderiza rota atual
-      toast('Pronto','info',1000);
+      await loadTemas();
+      await renderByRoute();
     }catch(e){
       console.error(e);
       toast('Erro ao iniciar','error');
