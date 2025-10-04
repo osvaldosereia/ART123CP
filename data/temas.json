@@ -11,4 +11,10 @@
     "path": "data/codigocivil/d/dano-moral.txt",
     "tags": ["civil"]
   }
+  {
+    "slug": "analogia",
+    "title": "Analogia",
+    "path": "data/codigocivil/a/analogia.txt",
+    "tags": ["civil"]
+  }
 ]
