@@ -151,7 +151,7 @@ ${resumoCodigo}`;
   $('#btn-questoes').href = gIA(promptQuestoes);
 }
 
-// ===== Render: Vídeos (títulos + prefixo + ↗) — lista plana =====
+// ===== Render: Vídeos (usa busca do YouTube pelo título) =====
 function renderVideos(items){
   const pane = $('#pane-videos');
   pane.innerHTML = '';
@@ -165,17 +165,20 @@ function renderVideos(items){
   ul.className = 'list list-plain';
 
   items.forEach(v=>{
-    const host = v.href ? new URL(v.href).hostname.replace(/^www\./,'') : '';
-    const origem = host.includes('youtube') ? 'YouTube' : (host || 'link');
+    const q = encodeURIComponent(v.title.trim()); // título -> query
+    const href = `https://www.youtube.com/results?search_query=${q}`;
     ul.insertAdjacentHTML('beforeend', `
       <li class="item">
-        <span class="meta">${esc(origem)} ·</span>
-        <a class="title" href="${esc(v.href||'#')}" target="_blank" rel="noopener" aria-label="Abrir em nova aba">${esc(v.title)} ↗</a>
+        <span class="meta">YouTube ·</span>
+        <a class="title" href="${href}" target="_blank" rel="noopener" aria-label="Abrir em nova aba">
+          ${esc(v.title)} ↗
+        </a>
       </li>`);
   });
 
   pane.appendChild(ul);
 }
+
 
 // ===== Render: Perguntas (título interno + links ↗ sem "?") — lista plana =====
 function renderPerguntas(items){
