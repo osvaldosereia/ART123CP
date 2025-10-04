@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- TOPBAR iOS-like -->
+  <!-- TOPBAR (iOS-like, largura travada ao site) -->
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand" aria-label="meujus">meu<span>jus</span></div>
@@ -19,17 +19,16 @@
     </div>
   </header>
 
-  <!-- CONTEÚDO -->
   <main class="container">
     <section id="intro" class="card muted">
       <h1 class="h1">Selecione um tema</h1>
-      <p class="sub">Use a busca acima para carregar uma ficha. Visual iOS, tons de cinza, interação suave.</p>
+      <p class="sub">Use a busca acima para carregar a ficha. Visual iOS, tons de cinza, interação suave.</p>
     </section>
 
     <section id="ficha" class="card hidden">
       <header class="ficha-head">
         <h1 id="ficha-titulo" class="h1">—</h1>
-        <p id="ficha-sub" class="sub">Resumo visual e navegação por abas.</p>
+        <p id="ficha-sub" class="sub">Conteúdo consolidado em abas.</p>
       </header>
 
       <!-- TABS -->
@@ -41,19 +40,22 @@
       </nav>
 
       <!-- PAINÉIS -->
-      <section id="pane-codigo" class="pane is-active" role="tabpanel" aria-labelledby="Código"></section>
-      <section id="pane-videos" class="pane" role="tabpanel" aria-labelledby="Vídeos"></section>
-
-      <section id="pane-artigos" class="pane" role="tabpanel" aria-labelledby="Artigos">
-        <!-- Botões IA aparecem SOMENTE aqui -->
+      <section id="pane-codigo" class="pane is-active" role="tabpanel" aria-labelledby="Código">
+        <!-- IA BUTTONS (apenas aqui) -->
         <div class="ai-actions">
           <a id="btn-estudar" class="btn-ios" target="_blank" rel="noopener">Estudar</a>
           <a id="btn-questoes" class="btn-ios" target="_blank" rel="noopener">Questões</a>
         </div>
-        <div id="lista-artigos"></div>
+        <div id="wrap-codigo"></div>
       </section>
 
-      <section id="pane-perguntas" class="pane" role="tabpanel" aria-labelledby="Perguntas"></section>
+      <section id="pane-videos" class="pane" role="tabpanel" aria-labelledby="Vídeos"></section>
+      <section id="pane-artigos" class="pane" role="tabpanel" aria-labelledby="Artigos"></section>
+
+      <section id="pane-perguntas" class="pane" role="tabpanel" aria-labelledby="Perguntas">
+        <h2 class="h2 pane-title">Estude com o modo i.a. do Google</h2>
+        <div id="wrap-perguntas"></div>
+      </section>
     </section>
   </main>
 
