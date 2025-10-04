@@ -318,28 +318,44 @@
 
   /* ========== Parser de tema (#, --, -) ========== */
   function parseTemaText(raw){
-    const lines = raw.split(/\r?\n/);
-    let title = null;
-    const intro = [];
-    const items = [];
-    for(const ln of lines){
-      const s = ln.trim();
-      if(!s) continue;
-      if(s.startsWith('# ')){           // título
-        title = s.slice(2).trim();
-        continue;
-      }
-      if(s.startsWith('-- ')){          // explicação
-        intro.push(s.slice(3).trim());
-        continue;
-      }
-      if(s.startsWith('- ')){           // item
-        items.push(s.slice(2).trim());
-        continue;
-      }
+  const lines = raw.split(/\r?\n/);
+  let title = null;
+  const intro = [];
+  const items = [];
+  const ask   = [];
+  let section = 'body'; // body | ask
+
+  for(const ln of lines){
+    const s = ln.trim();
+    if(!s) continue;
+
+    if(s.startsWith('# ')){                  // título
+      title = s.slice(2).trim();
+      section = 'body';
+      continue;
     }
-    return { title, intro, items };
+    if(s.startsWith('## ')){                 // subtítulos
+      const h2 = s.slice(3).trim().toLowerCase();
+      section = (h2.includes('pergunte') || h2.includes('ia')) ? 'ask' : 'body';
+      continue;
+    }
+    if(s === '-----'){                       // separador opcional
+      section = 'body';
+      continue;
+    }
+    if(s.startsWith('-- ')){                 // explicação
+      if(section==='body') intro.push(s.slice(3).trim());
+      continue;
+    }
+    if(s.startsWith('- ')){                  // itens
+      if(section==='ask') ask.push(s.slice(2).trim());
+      else items.push(s.slice(2).trim());
+      continue;
+    }
   }
+  return { title, intro, items, ask };
+}
+
 
   /* ========== Páginas ========== */
   async function loadTema(slug){
@@ -355,7 +371,7 @@
 
     try{
       const raw               = await fetchText(path);
-      const { title, intro, items } = parseTemaText(raw);
+      const { title, intro, items, ask } = parseTemaText(raw);
 
       const meta = TEMAS.find(t=>t.slug===slug);
       const tituloTema = title || meta?.title || slug.replace(/-/g,' ');
