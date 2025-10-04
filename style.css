@@ -1,3 +1,228 @@
+/* ===== PALETA ===== */
+:root{
+  --primary: #1800ad;
+  --accent:  #f5c400;
+  --bg:      #ebebec;     /* fundo */
+  --card:    #ffffff;
+  --text:    #0b0b0b;
+  --muted:   #6b6b6b;
+  --line:    #dadada;
+  --tap:     rgba(0,0,0,.06);
+  --w:       960px;
+  --radius:  12px;
+
+  --px: 18px;  /* padding horizontal base */
+  --py: 10px;  /* padding vertical base */
+  --gap: 12px; /* espaçamento */
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.52 -apple-system, BlinkMacSystemFont, "Inter", system-ui, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica;
+  font-weight: 400;
+}
+
+/* Container com safe areas para mobile */
+.container{
+  max-width: var(--w);
+  margin: 0 auto;
+  padding-left: calc(var(--px) + max(12px, env(safe-area-inset-left)));
+  padding-right: calc(var(--px) + max(12px, env(safe-area-inset-right)));
+}
+
+/* Cartão base (apenas para o contêiner da ficha/intro) */
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  padding: 16px;
+  margin: 16px 0;
+}
+.hidden{ display:none; }
+.muted{ color: var(--muted); }
+
+/* Títulos com tamanhos menores */
+.h1{ font-size: 24px; margin: 2px 0 6px; letter-spacing: -0.2px; font-weight: 600; }
+.h2{ font-size: 16px; margin: 12px 0 6px; font-weight: 500; }
+.sub{ color: var(--muted); margin: 0; font-weight: 400; }
+
+/* ===== TOPBAR ===== */
+.topbar{
+  position: sticky; top:0; z-index:20;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding-top: env(safe-area-inset-top);
+}
+.topbar-inner{
+  display:flex; gap: var(--gap); align-items:center;
+  padding: var(--py) 0;
+}
+.brand{ font-weight: 700; letter-spacing: -.2px; display:flex; gap:2px; }
+.brand .b1{ color: var(--primary); }
+.brand .b2{ color: var(--accent); }
+
+.search-wrap{ position: relative; flex:1; }
+.search{
+  width:100%; padding: 12px 14px;
+  background:#fff; border:1px solid var(--line); border-radius: 12px;
+  outline: none; font-weight: 400;
+  box-shadow: inset 0 0 0 1px transparent;
+}
+.search:focus{
+  border-color:#c7c7c7;
+  box-shadow: inset 0 0 0 1px #c7c7c7;
+}
+
+/* Hamburger + Drawer */
+.hamburger{
+  width: 42px; height: 42px; border:1px solid var(--line); border-radius: 12px;
+  background:#fff; display:flex; align-items:center; justify-content:center; gap:4px;
+}
+.hamburger span{
+  display:block; width:18px; height:2px; background:#333; border-radius:2px;
+}
+.drawer{ position:fixed; inset:0; display:none; z-index:30; }
+.drawer.open{ display:block; }
+.drawer-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.25); }
+.drawer-panel{
+  position:absolute; top:0; right:0; height:100%; width:min(86vw, 360px);
+  background:#fff; border-left:1px solid var(--line);
+  padding: 14px;
+  display:flex; flex-direction:column; gap:10px;
+}
+.drawer-header{ display:flex; align-items:center; justify-content:space-between; }
+.drawer-brand .b1{ color: var(--primary); }
+.drawer-brand .b2{ color: var(--accent); }
+.drawer-close{
+  border:1px solid var(--line); background:#fff; border-radius:12px; padding:6px 10px; cursor:pointer;
+}
+.drawer-content{ color:#333; line-height:1.45; }
+
+/* Sugestões (autocomplete) com subtítulo e separador */
+.suggestions{
+  position:absolute; left:0; right:0; top: calc(100% + 8px);
+  background:#fff; border:1px solid var(--line); border-radius:12px;
+  list-style:none; padding:0; margin:0;
+  max-height: 52vh; overflow:auto; display:none;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+.suggestions.show{ display:block; }
+.sug-item{ padding: 12px 14px; cursor:pointer; }
+.sug-item:hover, .sug-item:focus{ background:#f7f7f7; }
+.sug-title{ font-size: 15px; color:#111; line-height:1.2; }
+.sug-sub{ font-size: 12px; color:#8a8a8a; margin-top: 4px; }
+.sug-sep{ height:1px; background: var(--line); margin: 6px 0 0; }
+
+/* ===== TABS ===== */
+.tabs{
+  display:flex; flex-wrap:wrap; gap:8px; border-bottom:1px solid var(--line);
+  padding-bottom: 8px; margin-bottom: 8px;
+}
+.tab{
+  appearance:none; border:1px solid var(--line); background:#fff;
+  padding:10px 14px; border-radius: 999px; cursor:pointer; color:#333; font-weight: 400;
+  min-height: 40px;
+}
+.tab.is-active{ background:#f2f2f2; border-color:#cfcfcf; }
+
+/* Panes */
+.pane{ display:none; }
+.pane.is-active{ display:block; }
+.pane-title{ margin-top: 6px; }
+
+/* ===== LISTAS planas (sem caixas internas) ===== */
+.list{ list-style:none; margin:0; padding:0; }
+.list-plain .item{
+  display:flex; gap:10px; align-items:flex-start;
+  border-top:1px solid var(--line); padding:12px 0;
+}
+.list-plain .item:first-child{ border-top:0; }
+.meta{ font-size: 12px; color: #8a8a8a; margin-right:6px; white-space: nowrap; }
+
+/* Links/títulos */
+.title{
+  color:#111; text-decoration:none; font-weight: 400;
+}
+.title:hover{ text-decoration: underline; }
+.desc{ color:#4a4a4a; font-weight: 400; }
+
+/* ===== Botões IA ===== */
+.ai-actions{
+  display:flex; gap:10px; flex-wrap:wrap; margin: 4px 0 8px;
+}
+.btn-ios{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:12px 16px; border:1px solid var(--line);
+  border-radius: 12px; background:#fff; color:#111; text-decoration:none; font-weight: 500;
+  min-height: 44px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+.btn-ios:hover{ border-color:#cfcfcf; }
+.btn-ios:active{ background: var(--tap); }
+
+/* Variantes */
+#btn-estudar{
+  background: #1800ad; color: #fff; border: 1px solid #1800ad;
+}
+#btn-estudar:hover{ filter: brightness(0.95); }
+#btn-estudar:focus{ outline: 2px solid #f5c400; outline-offset: 2px; }
+
+#btn-questoes{
+  background: #fff; color: #0b0b0b; border: 1px solid #f5c400;
+}
+#btn-questoes:hover{ background: #fffaf0; }
+#btn-questoes:focus{ outline: 2px solid #f5c400; outline-offset: 2px; }
+
+#btn-estudar::after,
+#btn-questoes::after{ content: " ↗"; font-weight: 400; }
+
+/* ===== Padronização global de botões (mesma altura e raio) ===== */
+.btn-ios,
+#btn-estudar,
+#btn-questoes,
+.hamburger,
+.drawer-close{
+  min-height: 44px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ===== Desktop refinamentos ===== */
+@media (min-width: 992px){
+  .h1{ font-size: 26px; }
+  .topbar-inner{ padding: 12px 0; }
+}
+
+/* ===== TOPBAR MOBILE FIX: evita “encostar” nas laterais ===== */
+@media (max-width: 480px){
+  :root{ --px: 14px; }
+  .topbar .container{
+    padding-left: calc(20px + env(safe-area-inset-left));
+    padding-right: calc(20px + env(safe-area-inset-right));
+  }
+  .topbar-inner{ gap: 10px; }
+  .search{ margin-left: 2px; margin-right: 2px; }
+  .hamburger{ margin-left: 2px; }
+}
+
+/* Safe-area extra quando suportado */
+@supports (padding: max(0px)){
+  .topbar .container{
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+  }
+}
+
 /* ========== BOTÕES — mesmo padrão, menores, sem “efeito pressionado” ========== */
 .btn-ios,
 #btn-estudar,
