@@ -85,17 +85,32 @@ function parseTXT(txt, tema){
   let sec = null;
 
   const data = { tema, codigo: { itens: [] }, videos: [], perguntas: [] };
-  let tempTitulo = null;
+
+  let tempTitulo = null;      // para VÍDEOS (Título -> Link)
+  let lastCodeItem = null;    // para CÓDIGO (item -> Link)
 
   for(const l of linhas){
     if(isHdr(l)){ sec = l.replace(/^#\s*/,'').toUpperCase(); tempTitulo=null; continue; }
     if(/^(INTRODUÇÃO|GUIA DE ESTUDOS)/i.test(l)) continue;
 
+    // ---------- CÓDIGO ----------
     if(/CÓDIGO/i.test(sec||'')){
+      // linha principal: "- Art. ...: descrição"
       const m = l.match(/^-+\s*(.+?)\s*:\s*(.+)$/);
-      if(m) data.codigo.itens.push({ title: m[1].trim(), desc: m[2].trim(), href: null });
+      if(m){
+        lastCodeItem = { title: m[1].trim(), desc: m[2].trim(), href: null };
+        data.codigo.itens.push(lastCodeItem);
+        continue;
+      }
+      // link opcional na linha seguinte: "-- Link: https://..."
+      const k = l.match(/^--+\s*Link:\s*(https?:\/\/\S+)/i);
+      if(k && lastCodeItem){
+        lastCodeItem.href = k[1].trim();
+      }
       continue;
     }
+
+    // ---------- VÍDEOS ----------
     if(/VÍDEOS/i.test(sec||'')){
       const t = l.match(/^-+\s*T[íi]tulo:\s*(.+)$/i);
       const k = l.match(/^--+\s*Link:\s*(https?:\/\/\S+)/i);
@@ -103,10 +118,10 @@ function parseTXT(txt, tema){
       if(k){ if(tempTitulo){ data.videos.push({ title: tempTitulo, href: k[1].trim() }); tempTitulo=null; } continue; }
       continue;
     }
-    if(/ARTIGOS/i.test(sec||'')){
-      /* aba eliminada — ignorar bloco, mantendo compatibilidade do TXT */
-      continue;
-    }
+
+    // (ARTIGOS removido — ignorar)
+
+    // ---------- QUESTÕES ----------
     if(/QUESTÕES/i.test(sec||'')){
       const q = l.match(/^-+\s*(.+)$/);
       if(q) data.perguntas.push(q[1].trim());
@@ -115,6 +130,7 @@ function parseTXT(txt, tema){
   }
   return data;
 }
+
 
 // ===== Render: Código (com IA) — lista plana =====
 function renderCodigo(cod){
