@@ -132,7 +132,7 @@ body.noscroll{overflow:hidden}
 .badge.t{background:#eef2ff}     /* Título   */
 .badge.i{background:#fef3c7}     /* Intro    */
 .badge.p{background:#dcfce7}     /* Perguntas*/
-.suggestions mark{background:#fff3; background: #c1e1ff; padding:0 2px; border-radius:3px}
+.suggestions mark{background:#c1e1ff; background: #c1e1ff; padding:0 2px; border-radius:3px}
 
 /* Ajustes extras */
 .s1{display:flex;align-items:baseline;gap:6px}
