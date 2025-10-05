@@ -1,7 +1,7 @@
 // meujus – app.js (2025-10-04)
 // Fonte: data/temas.json -> [{ slug, title, path, tags, group? }]
-// TXT: "# Título", "-- explicação", "-----", "## Artigos Relacionados" + "- itens", "-----", "## Pergunte pra I.A." + "- perguntas"
-// UI: intro no card do título; artigos em card próprio com subtítulo; links dos artigos e perguntas abrem Google em modo IA (udm=50);
+// TXT: "# Título", "-- explicação", "-----", "## Artigos Relaci...os" + "- itens", "-----", "## Pergunte pra I.A." + "- perguntas"
+// UI: intro no card do título; artigos em card próprio com subt... links dos artigos e perguntas abrem Google em modo IA (udm=50);
 // salvar/remover tema (localStorage) e lista "Salvos" no drawer; toasts; drawer acessível; autocomplete com grupo.
 
 (function(){
@@ -14,20 +14,60 @@
   const TEMA_MAP = Object.create(null);  // slug -> path
   let GLOSS = null;                      // [{ termo, def, pattern }]
 
-  /* ===== Router ===== */
-  function getHashParts(){ return location.hash.replace(/^#\/?/, '').split('/'); }
-  function currentPage(){
-    const p = getHashParts();
-    if(p[0]==='tema' && p[1]) return {kind:'tema', slug:decodeURIComponent(p[1])};
-    if(p[0]==='sobre')        return {kind:'sobre'};
-    return {kind:'home'};
+  /* ===== Drawer ===== */
+  const drawer    = $('#drawer');
+  const drawerBtn = $('#drawerBtn');
+  const drawerPanel = $('#drawer-panel');
+  drawerBtn?.addEventListener('click', ()=>{
+    const open = drawer?.getAttribute('data-open') === '1';
+    drawer?.setAttribute('data-open', open ? '0' : '1');
+    drawerBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+  });
+
+  /* ===== Persistência (Salvos) ===== */
+  const SAVED_KEY = 'meujus:saved';
+  function readSaved(){
+    try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch(_){ return []; }
   }
-  function setTemaSlug(slug){
-    const safe = encodeURIComponent(slug);
-    if(location.hash !== `#/tema/${safe}`) location.hash = `#/tema/${safe}`;
+  function writeSaved(list){
+    localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(new Set(list))));
+  }
+  function isSaved(slug){ return readSaved().includes(slug); }
+  function toggleSaved(slug){
+    const cur = new Set(readSaved());
+    if(cur.has(slug)) cur.delete(slug); else cur.add(slug);
+    writeSaved([...cur]);
+    return cur.has(slug);
   }
 
-  /* ===== Fetch ===== */
+  /* ===== Roteamento ===== */
+  function currentPage(){
+    const h = location.hash || '';
+    const mTema  = h.match(/^#\/tema\/([^?#]+)/);
+    const mSobre = h.match(/^#\/sobre\b/);
+    if(mTema)  return { kind:'tema', slug: decodeURIComponent(mTema[1]) };
+    if(mSobre) return { kind:'sobre' };
+    return { kind:'home' };
+  }
+
+  /* ===== Util ===== */
+  function escapeHTML(s){
+    return String(s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+  }
+  function splitBlocks(raw){
+    const lines = raw.replace(/\r\n?/g,'\n').split('\n');
+    const blocks = [];
+    let cur = [];
+    for(const ln of lines){
+      if(ln.trim()==='-----'){
+        if(cur.length){ blocks.push(cur.join('\n').trim()); cur=[]; }
+      }else cur.push(ln);
+    }
+    if(cur.length) blocks.push(cur.join('\n').trim());
+    return blocks;
+  }
   async function fetchText(url){
     const res = await fetch(url, {cache:'no-store'});
     if(!res.ok) throw new Error(`HTTP ${res.status} @ ${url}`);
@@ -45,143 +85,296 @@
     if(!toastsEl) return;
     const el = document.createElement('div');
     el.className = `toast ${type}`;
-    el.innerHTML = `<span>${msg}</span><button aria-label="Fechar">✕</button>`;
+    el.innerHTML = `<span>${msg}</span>`;
     toastsEl.appendChild(el);
-    const close = ()=> el.remove();
-    el.querySelector('button').onclick = close;
-    setTimeout(close, ttl);
+    setTimeout(()=>{ el.classList.add('show'); }, 30);
+    setTimeout(()=>{
+      el.classList.remove('show');
+      setTimeout(()=> el.remove(), 400);
+    }, ttl);
   }
 
-  /* ===== Drawer ===== */
-  const drawer      = $('#drawer');
-  const drawerPanel = $('#drawer-panel');
-  const drawerBg    = $('#drawerBackdrop');
-  const btnMenu     = $('#btnMenu');
-  const btnClose    = $('#btnCloseMenu');
-  let drawerLastFocus = null;
+  /* ===== Autocomplete ===== */
+  const input = $('#search');
+  const acList = $('#suggestions');
+  input?.addEventListener('input', onSearchInput);
+  input?.addEventListener('keydown', onSearchKey);
+  acList?.addEventListener('click', onSuggestionClick);
 
-  function openDrawer(){
-    if(!drawer) return;
-    drawerLastFocus = document.activeElement;
-    drawer.classList.add('open');
-    drawer.setAttribute('aria-hidden','false');
-    btnMenu?.setAttribute('aria-expanded','true');
-    (drawerPanel.querySelector('a,button,[tabindex]')||drawerPanel).focus();
+  function onSearchInput(e){
+    const q = (e.target.value||'').trim().toLowerCase();
+    if(!q){ acList.innerHTML=''; acList.hidden=true; return; }
+    const all = TEMAS.map(t=>({
+      slug:t.slug, title:t.title, group:t.group||'',
+      score: scoreTitle(q, t.title) + scoreTags(q, t.tags||[])
+    }));
+    const top = all.filter(a=>a.score>0).sort((a,b)=>b.score-a.score).slice(0,8);
+    if(top.length===0){ acList.innerHTML=''; acList.hidden=true; return; }
+    acList.innerHTML = top.map(item => `
+      <li role="option">
+        <a href="#/tema/${item.slug}">
+          <div class="s1">${escapeHTML(item.title)}</div>
+          <div class="s2">${escapeHTML(item.group||'')}</div>
+        </a>
+      </li>
+    `).join('');
+    acList.hidden=false;
   }
-  function closeDrawer(){
-    if(!drawer) return;
-    drawer.classList.remove('open');
-    drawer.setAttribute('aria-hidden','true');
-    btnMenu?.setAttribute('aria-expanded','false');
-    if(drawerLastFocus) drawerLastFocus.focus();
-  }
-  function trapFocus(e){
-    if(!drawer?.classList.contains('open')) return;
-    const focusables = $$('a, button, input, [tabindex]:not([tabindex="-1"])', drawerPanel)
-      .filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
-    if(focusables.length===0) return;
-    const [first,last] = [focusables[0], focusables[focusables.length-1]];
-    if(e.key==='Tab'){
-      if(e.shiftKey && document.activeElement===first){ last.focus(); e.preventDefault(); }
-      else if(!e.shiftKey && document.activeElement===last){ first.focus(); e.preventDefault(); }
-    } else if(e.key==='Escape'){ closeDrawer(); }
-  }
-  btnMenu?.addEventListener('click', openDrawer);
-  btnClose?.addEventListener('click', closeDrawer);
-  drawerBg?.addEventListener('click', closeDrawer);
-  document.addEventListener('keydown', trapFocus);
-
-  /* ===== Glossário ===== */
-  function wordBoundaryPattern(term){
-    const esc = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const flex = `(?:${esc}(?:es|s|a|as|is|os|oes)?)`;
-    return new RegExp(`(?<![\\u00A0\\w])(${flex})(?![\\w])`, 'giu');
-  }
-  function parseGloss(txt){
-    const blocks = txt.split(/^-{5,}\s*$/m).map(s=>s.trim()).filter(Boolean);
-    const items = [];
-    for(const b of blocks){
-      const mTerm = b.match(/^@termo:\s*(.+)$/mi);
-      const mDef  = b.match(/^@def:\s*([\s\S]+)$/mi);
-      if(!mTerm || !mDef) continue;
-      const termo = mTerm[1].trim();
-      const def   = mDef[1].trim();
-      items.push({ termo, def });
+  function onSearchKey(ev){
+    if(ev.key==='Enter'){
+      const q = (input.value||'').trim().toLowerCase();
+      if(!q) return;
+      const best = TEMAS
+        .map(t=>({t, s: scoreTitle(q,t.title)+scoreTags(q,t.tags||[])}))
+        .sort((a,b)=>b.s-a.s)[0];
+      if(best && best.s>0) location.hash = `#/tema/${best.t.slug}`;
+      acList.hidden=true;
     }
-    items.sort((a,b)=>b.termo.length - a.termo.length);
-    for(const it of items){ it.pattern = wordBoundaryPattern(it.termo); }
-    return items;
   }
+  function onSuggestionClick(ev){
+    const a = ev.target.closest('a'); if(!a) return;
+    acList.hidden=true;
+  }
+  function scoreTitle(q, title){
+    const t = (title||'').toLowerCase();
+    if(t===q) return 100;
+    if(t.includes(q)) return 60;
+    const words = q.split(/\s+/).filter(Boolean);
+    let s=0; for(const w of words){ if(t.includes(w)) s+=10; }
+    return s;
+  }
+  function scoreTags(q, tags){
+    const t = (tags||[]).map(s=>s.toLowerCase()).join(' ');
+    if(!t) return 0;
+    let s=0; if(t.includes(q)) s+=20;
+    return s;
+  }
+
+  /* ===== GLOSSÁRIO (opcional) ===== */
   async function loadGlossario(){
-    if(GLOSS!==null) return GLOSS;
-    try{ GLOSS = parseGloss(await fetchText('data/glossario.txt')); }
-    catch{ GLOSS = []; }
-    return GLOSS;
-  }
-  let tooltipEl = null;
-  function hideTooltip(){ if(tooltipEl){ tooltipEl.remove(); tooltipEl=null; } }
-  function showTooltip(target){
-    hideTooltip();
-    const term = target.getAttribute('data-term') || '';
-    const def  = target.getAttribute('data-def')  || '';
-    const rect = target.getBoundingClientRect();
-    const tip  = document.createElement('div');
-    tip.setAttribute('role','tooltip');
-    tip.innerHTML = `<div style="font-weight:700;margin-bottom:4px">${term}</div><div>${def}</div>`;
-    tip.style.position='absolute'; tip.style.zIndex='9999'; tip.style.maxWidth='320px';
-    tip.style.background='#111827'; tip.style.color='#f9fafb';
-    tip.style.padding='10px 12px'; tip.style.borderRadius='12px';
-    tip.style.boxShadow='0 8px 20px rgba(0,0,0,.15)'; tip.style.fontSize='14px'; tip.style.lineHeight='1.4';
-    document.body.appendChild(tip);
-    const top  = window.scrollY + rect.bottom + 8;
-    const left = Math.min(window.scrollX + rect.left, window.scrollX + window.innerWidth - tip.offsetWidth - 12);
-    tip.style.top  = `${top}px`;
-    tip.style.left = `${left}px`;
-    tooltipEl = tip;
-  }
-  document.addEventListener('click', (e)=>{
-    const g = e.target.closest('.mj-gloss');
-    if(g){ showTooltip(g); return; }
-    if(!e.target.closest('[role="tooltip"]')) hideTooltip();
-  });
-  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') hideTooltip(); });
-
-  function markGlossarioInHTML(html){
-    if(!GLOSS || !GLOSS.length) return html;
-    const segments = html.split(/(<a[\s\S]*?<\/a>|<span class=(?:"|')mj-trail(?:"|')[\s\S]*?<\/span>)/gi);
-    for(let i=0;i<segments.length;i++){
-      const seg = segments[i];
-      if(/^<a[\s\S]*<\/a>$/i.test(seg) || /^<span class=(?:"|')mj-trail(?:"|')[\s\S]*<\/span>$/i.test(seg)) continue;
-      let replaced = seg;
-      for(const it of GLOSS){
-        replaced = replaced.replace(it.pattern, (m)=>{
-          const safeTerm = it.termo.replace(/"/g,'&quot;');
-          const safeDef  = it.def.replace(/"/g,'&quot;');
-          return `<span class="mj-gloss" data-term="${safeTerm}" data-def="${safeDef}">${m}</span>`;
-        });
-      }
-      segments[i] = replaced;
+    if(GLOSS!==null) return;
+    try{
+      const raw = await fetchText('data/glossario.txt');
+      const blocks = splitBlocks(raw);
+      GLOSS = blocks.map(b=>{
+        const m1 = b.match(/^\s*@termo:\s*(.+)$/m);
+        const m2 = b.match(/^\s*@def:\s*(.+)$/m);
+        if(!m1||!m2) return null;
+        const termo = m1[1].trim();
+        const def   = m2[1].trim();
+        const pattern = new RegExp(`\\b${escapeRegex(termo)}\\b`,'i');
+        return { termo, def, pattern };
+      }).filter(Boolean);
+    }catch(_){
+      GLOSS = [];
     }
-    return segments.join('');
+  }
+  function escapeRegex(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
+  function markGlossarioInHTML(html){
+    if(!Array.isArray(GLOSS) || GLOSS.length===0) return html;
+    let out = html;
+    for(const g of GLOSS){
+      out = out.replace(g.pattern, m => `<abbr title="${escapeHTML(g.def)}">${escapeHTML(m)}</abbr>`);
+    }
+    return out;
   }
 
-  /* ===== Persistência: Salvos ===== */
-  const SAVED_KEY = 'mj_saved_v1';
-  function readSaved(){ try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch{ return []; } }
-  function writeSaved(list){ localStorage.setItem(SAVED_KEY, JSON.stringify(list)); }
-  function isSaved(slug){ return readSaved().includes(slug); }
-  function toggleSaved(slug){
-    const cur = new Set(readSaved());
-    if(cur.has(slug)){ cur.delete(slug); writeSaved([...cur]); return false; }
-    cur.add(slug); writeSaved([...cur]); return true;
+  /* ===== Parser de TXT do tema ===== */
+  function parseTemaText(raw){
+    const blocks = splitBlocks(raw);
+    // Espera:
+    // [0]: "# Título" + "-- intro (opcional)"
+    // [1..N]: listas ou seções subsequentes
+    let title = 'Tema';
+    let intro = [];
+    let items = [];
+    let itemsTitle = 'Artigos e materiais';
+    let ask = [];
+
+    if(blocks.length>0){
+      const head = blocks[0];
+      const t = head.match(/^#\s*(.+)$/m);
+      if(t) title = t[1].trim();
+      intro = Array.from(head.matchAll(/^\s*--\s+(.+)$/mg)).map(m=>m[1].trim());
+    }
+    for(let i=1;i<blocks.length;i++){
+      const b = blocks[i];
+      if(/^##\s*Pergunte pra I\.A\./mi.test(b)){
+        ask = Array.from(b.matchAll(/^\s*-\s+(.+)$/mg)).map(m=>m[1].trim());
+      }else if(/^##\s*Artigos Relaci.*$/mi.test(b)){
+        itemsTitle = (b.match(/^##\s*(.+)$/m)||[])[1] || itemsTitle;
+        const list = Array.from(b.matchAll(/^\s*-\s+(.+)$/mg)).map(m=>m[1].trim());
+        items = items.concat(list);
+      }else{
+        // bloco genérico vira itens também
+        const list = Array.from(b.matchAll(/^\s*-\s+(.+)$/mg)).map(m=>m[1].trim());
+        if(list.length) items = items.concat(list);
+      }
+    }
+    return { title, intro, items, ask, itemsTitle };
   }
 
-  /* ===== Temas + Drawer ===== */
+  /* ===== Render ===== */
+  async function loadTema(slug){
+    const titleEl   = $('#themeTitle');
+    const contentEl = $('#content');
+    const headCard  = $('.ficha-head');
+    contentEl.textContent = 'Carregando…';
+
+    const path = TEMA_MAP[slug];
+    if(!path){ contentEl.textContent = 'Tema não encontrado.'; toast('Tema não encontrado','error',2200); return; }
+
+    await loadGlossario();
+
+    try{
+      const raw = await fetchText(path);
+      const { title, intro, items, ask, itemsTitle } = parseTemaText(raw);
+
+      const meta = TEMAS.find(t=>t.slug===slug);
+      // Título
+      titleEl.textContent = meta?.title || title || slug;
+
+      // Botão Salvar
+      let saveBtn = $('#saveBtn');
+      if(!saveBtn){
+        saveBtn = document.createElement('button');
+        saveBtn.id = 'saveBtn';
+        saveBtn.className = 'btn-ios';
+        saveBtn.type = 'button';
+        saveBtn.setAttribute('aria-live','polite');
+        headCard?.appendChild(saveBtn);
+      }
+      function refreshSaveBtn(){
+        const saved = isSaved(slug);
+        saveBtn.textContent = saved ? 'Remover dos salvos' : 'Salvar tema';
+        saveBtn.setAttribute('data-variant', saved ? 'secondary' : 'primary');
+      }
+      refreshSaveBtn();
+      saveBtn.onclick = ()=>{
+        const added = toggleSaved(slug);
+        refreshSaveBtn();
+        renderSavedList();
+        toast(added ? 'Tema salvo' : 'Removido dos salvos', added ? 'success' : 'info', 1600);
+      };
+
+      // Intro no card do título
+      let introEl = $('#introText');
+      const introHTML = intro.length ? markGlossarioInHTML(escapeHTML(intro.join(' '))) : '';
+      if(!introEl){
+        introEl = document.createElement('p');
+        introEl.id = 'introText';
+        introEl.className = 'muted';
+        headCard?.appendChild(introEl);
+      }
+      introEl.innerHTML = introHTML;
+
+      // Conteúdo
+      const htmlItems = items.map(renderItem).join('');
+      const htmlAsk   = ask.length ? renderAsk(ask) : '';
+      const titleBlock = itemsTitle ? `<h3 class="h2">${escapeHTML(itemsTitle)}</h3>` : '';
+      contentEl.innerHTML = `
+        <div class="card">
+          ${titleBlock}
+          <div class="list">${htmlItems || '<div class="item muted">Sem itens.</div>'}</div>
+        </div>
+        ${htmlAsk}
+      `;
+    }catch(e){
+      console.error(e);
+      contentEl.innerHTML = `<div class="card"><div class="item error">Erro ao carregar o tema.</div></div>`;
+    }
+  }
+
+  function renderItem(txt){
+    // Transforma um "- Artigo: texto" em link IA (udm=50)
+    const query = encodeURIComponent(txt);
+    const href  = `https://www.google.com/search?udm=50&q=${query}`;
+    return `<div class="item"><a class="title" href="${href}" target="_blank" rel="noopener">${escapeHTML(txt)}</a></div>`;
+  }
+  function renderAsk(list){
+    const lis = list.map(q=>{
+      const href = `https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}`;
+      return `<li><a href="${href}" target="_blank" rel="noopener">${escapeHTML(q)}</a></li>`;
+    }).join('');
+    return `
+      <div class="card">
+        <h3 class="h2">Pergunte pra I.A.</h3>
+        <ul class="list">${lis}</ul>
+      </div>
+    `;
+  }
+
+  function loadSobre(){
+    const titleEl   = $('#themeTitle');
+    const contentEl = $('#content');
+    $('#introText')?.remove();
+    $('#saveBtn')?.remove();
+    titleEl.textContent = 'Sobre';
+    contentEl.innerHTML = `
+      <div class="card"><div class="item">
+        <p>Projeto de estudo jurídico com arquivos TXT simples, busca local e links para modo IA.</p>
+      </div></div>
+    `;
+  }
+
+  async function renderByRoute(){
+    const page = currentPage();
+    if(page.kind==='tema') await loadTema(page.slug);
+    else if(page.kind==='sobre') loadSobre();
+    else {
+      const titleEl   = $('#themeTitle');
+      const contentEl = $('#content');
+      $('#introText')?.remove();
+      $('#saveBtn')?.remove();
+      titleEl.textContent = 'Escolha um tema';
+      contentEl.innerHTML = `<div class="card"><div class="item"><span class="muted">Use o menu ☰ ou a busca para abrir um tema.</span></div></div>`;
+    }
+  }
+
+  /* ===== Temas via MENU (sem temas.json) ===== */
+  function collectTemasFromMenu(){
+    const links = Array.from(document.querySelectorAll('#menuList a.title'));
+    const out = [];
+    for(const a of links){
+      const href = a.getAttribute('href') || '';
+      const m = href.match(/#\/tema\/([^?#]+)/);
+      const slug = m ? decodeURIComponent(m[1]) : (a.dataset.slug || (a.textContent||'').trim().toLowerCase().replace(/\s+/g,'-'));
+      const title = (a.dataset.title || a.textContent || '').trim();
+      const path  = (a.dataset.path || guessPathFromSlug(slug)).trim();
+      const tags  = (a.dataset.tags||'').split(',').map(s=>s.trim()).filter(Boolean);
+      const group = inferGroupFromPath(path) || inferGroupFromSlug(slug);
+      if(!slug || !path) continue;
+      out.push({ slug, title: title || slug, path, tags, group });
+    }
+    return out;
+  }
+  function guessPathFromSlug(slug){
+    if(!slug) return '';
+    // Padrão: data/<slug>.txt
+    return `data/${slug}.txt`;
+  }
+  function inferGroupFromPath(p){
+    const m = (p||'').match(/^data\/([^/]+)/i);
+    const key = (m?.[1]||'').toLowerCase();
+    const map = { 'codigo-civil':'Código Civil', 'codigo-penal':'Código Penal', 'codigo-processo-penal':'Código de Processo Penal', 'cpp':'Código de Processo Penal', 'cf88':'Constituição Federal' };
+    if(map[key]) return map[key];
+    return key ? key.replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase()) : '';
+  }
+  function inferGroupFromSlug(slug){
+    const key = (slug||'').toLowerCase();
+    if(key.includes('penal') && key.includes('process')) return 'Código de Processo Penal';
+    if(key.includes('penal')) return 'Código Penal';
+    if(key.includes('civil')) return 'Código Civil';
+    return '';
+  }
+
   async function loadTemas(){
     try{
-      TEMAS = await fetchJSON('data/temas.json');
+      TEMAS = collectTemasFromMenu();
+      // reset TEMA_MAP
+      for(const k in TEMA_MAP) delete TEMA_MAP[k];
       TEMAS.forEach(t => { TEMA_MAP[t.slug] = t.path; });
-      hydrateMenu();
+      // não re-renderiza o menu; ele já é a fonte de verdade
       ensureSavedSection();
       renderSavedList();
     }catch(e){
@@ -191,9 +384,7 @@
     }
   }
   function hydrateMenu(){
-    const ul = $('#menuList'); if(!ul) return;
-    const items = [...TEMAS].sort((a,b)=>a.title.localeCompare(b.title)).slice(0,60);
-    ul.innerHTML = items.map(t => `<li><a class="title" href="#/tema/${t.slug}">${t.title}</a></li>`).join('');
+    /* Sem efeito: o menu no HTML é a fonte de verdade. */
   }
   function ensureSavedSection(){
     const cont = $('.drawer-content', drawerPanel) || drawerPanel;
@@ -212,7 +403,7 @@
     ul.innerHTML = saved.map(slug=>{
       const t = map.get(slug); if(!t) return '';
       return `<li class="item">
-        <a class="title" href="#/tema/${t.slug}">${t.title}</a>
+        <a class="title" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
         <button class="btn-ios" data-remove="${t.slug}" style="margin-left:8px">Remover</button>
       </li>`;
     }).join('');
@@ -224,227 +415,6 @@
         toast('Removido dos salvos','info',1600);
       };
     });
-  }
-
-  /* ===== Busca ===== */
-  const searchEl = $('#search');
-  const sugEl    = $('#suggestions');
-
-  function normalizeStr(s){ return s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,''); }
-  function groupLabel(t){
-    if(t.group) return t.group;
-    const m = (t.path||'').match(/^data\/([^/]+)/i);
-    const key = (m?.[1]||'').toLowerCase();
-    const map = { codigocivil:'Código Civil', codigopenal:'Código Penal', cpp:'Código de Processo Penal', cf88:'Constituição Federal' };
-    if(map[key]) return map[key];
-    return key ? key.replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.ToUpperCase?.()||c.toUpperCase()) : '';
-  }
-  function searchLocal(q){
-    const v = normalizeStr((q||'').trim());
-    if(!v) return [];
-    const scoreStr = s => {
-      const n = normalizeStr(s);
-      if(n.startsWith(v)) return 3;
-      if(n.includes(v))   return 1;
-      return 0;
-    };
-    return TEMAS
-      .map(t => {
-        const s = Math.max(scoreStr(t.title), scoreStr(t.slug), ...(t.tags||[]).map(scoreStr));
-        return s ? {t,s} : null;
-      })
-      .filter(Boolean)
-      .sort((a,b)=>b.s-a.s || a.t.title.localeCompare(b.t.title))
-      .slice(0,10)
-      .map(x=>x.t);
-  }
-  function renderSuggestions(list){
-    if(!sugEl) return;
-    if(!list.length){ sugEl.classList.remove('show'); sugEl.innerHTML=''; return; }
-    sugEl.innerHTML = list.map(t =>
-      `<li class="sug-item" role="option" tabindex="0" data-slug="${t.slug}">
-         <div class="sug-title">${t.title}</div>
-         <div class="sug-sub">${groupLabel(t)}</div>
-       </li><div class="sug-sep"></div>`
-    ).join('');
-    sugEl.classList.add('show');
-    $$('.sug-item', sugEl).forEach(el=>{
-      el.addEventListener('click', ()=>{ setTemaSlug(el.dataset.slug); sugEl.classList.remove('show'); });
-      el.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ setTemaSlug(el.dataset.slug); sugEl.classList.remove('show'); } });
-    });
-  }
-  let sugTimer = null;
-  function updateSuggestions(q){
-    clearTimeout(sugTimer);
-    sugTimer = setTimeout(()=>{ renderSuggestions(searchLocal(q||'')); }, 120);
-  }
-  searchEl?.addEventListener('input', e=> updateSuggestions(e.target.value));
-  searchEl?.addEventListener('focus', e=> updateSuggestions(e.target.value));
-  document.addEventListener('click', e=>{ if(!e.target.closest('.search-wrap')) sugEl?.classList.remove('show'); });
-
-  /* ===== Utils ===== */
-  function googleAIURL(prefix){ return `https://www.google.com/search?udm=50&q=${encodeURIComponent(prefix)}`; }
-  function escapeHTML(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-
-  /* ===== Parser TXT ===== */
-  function parseTemaText(raw){
-    const lines = raw.split(/\r?\n/);
-    let title = null;
-    const intro = [];
-    const items = [];
-    const ask   = [];
-    let itemsTitle = 'Artigos Relacionados';
-    let section = 'body'; // body | items | ask
-
-    for(const ln of lines){
-      const s = ln.trim();
-      if(!s) continue;
-
-      if(s.startsWith('# ')){ title = s.slice(2).trim(); section='body'; continue; }
-
-      if(s.startsWith('## ')){
-        const h2raw = s.slice(3).trim();
-        const h2 = h2raw.toLowerCase();
-        if(h2.includes('pergunte')){ section='ask'; continue; }
-        if(h2.includes('artigo'))  { section='items'; itemsTitle = h2raw; continue; }
-        section='body';
-        continue;
-      }
-
-      if(s === '-----'){ section='body'; continue; }
-
-      if(s.startsWith('-- ')){ if(section==='body') intro.push(s.slice(3).trim()); continue; }
-
-      if(s.startsWith('- ')){
-        if(section==='ask')   ask.push(s.slice(2).trim());
-        else if(section==='items' || section==='body') items.push(s.slice(2).trim());
-        continue;
-      }
-    }
-    return { title, intro, items, ask, itemsTitle };
-  }
-
-  /* ===== Páginas ===== */
-  async function loadTema(slug){
-    const titleEl   = $('#themeTitle');
-    const contentEl = $('#content');
-    const headCard  = $('.ficha-head');
-    contentEl.textContent = 'Carregando…';
-
-    const path = TEMA_MAP[slug];
-    if(!path){ contentEl.textContent = 'Tema não encontrado.'; toast('Tema não encontrado','error',2200); return; }
-
-    await loadGlossario();
-
-    try{
-      const raw = await fetchText(path);
-      const { title, intro, items, ask, itemsTitle } = parseTemaText(raw);
-
-      const meta = TEMAS.find(t=>t.slug===slug);
-      const tituloTema = title || meta?.title || slug.replace(/-/g,' ');
-      titleEl.textContent = tituloTema;
-
-      // Botão Salvar
-      let saveBtn = $('#saveBtn');
-      if(!saveBtn){
-        saveBtn = document.createElement('button');
-        saveBtn.id = 'saveBtn';
-        saveBtn.className = 'btn-ios';
-        saveBtn.style.marginTop = '8px';
-        headCard?.appendChild(saveBtn);
-      }
-      function refreshSaveBtn(){ saveBtn.textContent = isSaved(slug) ? 'Remover dos salvos' : 'Salvar'; }
-      refreshSaveBtn();
-      saveBtn.onclick = ()=>{
-        const added = toggleSaved(slug);
-        refreshSaveBtn();
-        renderSavedList();
-        toast(added ? 'Tema salvo' : 'Removido dos salvos', added ? 'success' : 'info', 1600);
-      };
-
-      // Intro no card do título
-      let introEl = $('#introText');
-      const introHTML = intro.length ? markGlossarioInHTML(escapeHTML(intro.join(' '))) : '';
-      if(!introEl){
-        introEl = document.createElement('p');
-        introEl.id = 'introText';
-        introEl.className = 'desc';
-        introEl.style.marginTop = '10px';
-        headCard?.appendChild(introEl);
-      }
-      introEl.innerHTML = introHTML || '';
-
-      // Artigos
-      function prefixFromItem(line){
-        const idx = line.indexOf(':');
-        return idx>0 ? line.slice(0, idx).trim() : line;
-      }
-      const itensHTML = items.map(line=>{
-        const safe = escapeHTML(line);
-        const withGloss = markGlossarioInHTML(safe);
-        const prefix = prefixFromItem(line);
-        const href = googleAIURL(prefix);
-        return `<li class="item">
-                  <span class="desc">${withGloss}</span>
-                  <span class="mj-trail"> <a class="mj-go" href="${href}" target="_blank" rel="noopener" aria-label="Abrir no Google IA">→</a></span>
-                </li>`;
-      }).join('');
-
-      // Bloco "Artigos Relacionados" com subtítulo
-      const itensBlock = `
-        <h2 class="h2 pane-title" style="margin:4px 0 6px">${escapeHTML(itemsTitle || 'Artigos Relacionados')}</h2>
-        <ul class="list list-plain">
-          ${itensHTML || `<li class="item muted">Sem artigos.</li>`}
-        </ul>
-      `;
-
-      // Pergunte pra I.A.
-      const askHTML = (ask && ask.length)
-        ? `
-          <h2 class="h2 pane-title" style="margin-top:10px">Pergunte pra I.A.</h2>
-          <ul class="list list-plain">
-            ${ask.map(q=>{
-              const safe = escapeHTML(q);
-              const href = googleAIURL(q);
-              return `<li class="item"><span class="desc">${safe}</span><span class="mj-trail"> <a class="mj-go" href="${href}" target="_blank" rel="noopener" aria-label="Abrir no Google IA">↗</a></span></li>`;
-            }).join('')}
-          </ul>
-        `
-        : '';
-
-      // Render final
-      contentEl.classList.add('list-plain');
-      contentEl.innerHTML = `<div class="card">${itensBlock}${askHTML}</div>`;
-      toast('Tema carregado','success',1200);
-
-    }catch(e){
-      console.error(e);
-      toast('Erro ao carregar conteúdo','error',2500);
-      contentEl.textContent = 'Erro ao carregar tema.';
-    }
-  }
-
-  function loadSobre(){
-    const titleEl   = $('#themeTitle');
-    const contentEl = $('#content');
-    titleEl.textContent = 'Sobre';
-    $('#introText')?.remove();
-    $('#saveBtn')?.remove();
-    contentEl.innerHTML = `<div class="card"><div class="item"><span class="desc">Meujus — estudo guiado por temas com remissões, glossário e salvos.</span></div></div>`;
-  }
-
-  async function renderByRoute(){
-    const page = currentPage();
-    if(page.kind==='tema') await loadTema(page.slug);
-    else if(page.kind==='sobre') loadSobre();
-    else {
-      const titleEl   = $('#themeTitle');
-      const contentEl = $('#content');
-      $('#introText')?.remove();
-      $('#saveBtn')?.remove();
-      titleEl.textContent = 'Escolha um tema';
-      contentEl.innerHTML = `<div class="card"><div class="item"><span class="desc">Use o menu ☰ ou a busca para abrir um tema.</span></div></div>`;
-    }
   }
 
   /* ===== Boot ===== */
