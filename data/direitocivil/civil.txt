@@ -83,3 +83,32 @@ Diferentemente do direito objetivo, que jamais será lacunoso. O art. 4º da Lei
 - Relacione o conceito de Direito Objetivo com a ideia de "Estado de Direito". Como um influencia o outro?
 - Imagine um novo cenário social não previsto em lei. Como o Direito Objetivo, por meio dos mecanismos da LINDB, atuaria para regular essa nova situação?
 -----
+Com certeza, entendi. Segue a análise e as perguntas para o tema "Direito Subjetivo", com a explicação mais concisa e a formatação solicitada para as perguntas.
+
+-----
+
+# Direito Subjetivo 
+-- É a faculdade de agir conforme a vontade individual, visando satisfazer interesses próprios, mas sempre dentro dos limites do ordenamento jurídico. É a expressão da vontade que busca um resultado, reconhecendo que não há vontade sem um objetivo, e que o Estado impõe limites para garantir o Estado Democrático de Direito.
+
+## Pergunte pra I.A.
+
+  - Como a *facultas agendi* se manifesta na prática e qual sua relação com a autonomia da vontade individual na esfera jurídica?
+  - De que maneira a satisfação de "interesses próprios" se encaixa no conceito de direito subjetivo?
+  - Quais são os "limites impostos pelo Estado" ao exercício do direito subjetivo, e por que sua observância é crucial para o Estado Democrático de Direito?
+  - Analise a afirmação de que "não há manifestação de vontade sem um objetivo" no contexto do direito subjetivo.
+  - Explique a distinção entre o direito subjetivo como "expressão da vontade individual" e o Direito Objetivo como "conjunto das normas jurídicas".
+  - Cite exemplos concretos de direitos subjetivos e demonstre como eles são exercidos dentro dos limites do ordenamento jurídico.
+  - O que acontece quando o exercício de um direito subjetivo excede os limites impostos pelo ordenamento jurídico? Quais as consequências?
+  - De que maneira os princípios jurídicos, como a boa-fé objetiva e a função social, atuam como balizadores do exercício do direito subjetivo?
+  - A doutrina majoritária defende que o direito subjetivo se concretiza na busca de um resultado. Discuta a importância desse resultado para sua existência.
+  - Quais são as garantias oferecidas pelo Estado para assegurar o exercício dos direitos subjetivos dos indivíduos?
+  - O que significa a afirmação de que a observância dos limites ao direito subjetivo é "pressuposto do Estado Democrático de Direito"?
+  - No contexto do Direito Civil, como a celebração de um negócio jurídico exemplifica o exercício de um direito subjetivo?
+  - Analise criticamente a relação entre o direito subjetivo e a responsabilidade social, conforme sugerido pelos exemplos.
+  - Como o direito subjetivo é diferente de um "direito potestativo", especialmente no que tange à oponibilidade e à sujeição da outra parte?
+  - Em um conflito entre direitos subjetivos de diferentes indivíduos, quais critérios seriam utilizados para a sua resolução?
+  - De que forma o direito subjetivo atua na proteção de bens patrimoniais e existenciais, e quais as diferenças na sua aplicação para cada tipo de bem?
+  - Explique o papel da "vontade do indivíduo" na constituição do direito subjetivo, e se essa vontade é absoluta ou pode ser condicionada.
+  - Considerando a natureza do direito subjetivo, como ele contribui para a autonomia e a liberdade individual dentro de um sistema jurídico?
+  - Como o entendimento do direito subjetivo é fundamental para a compreensão de outras áreas do Direito, além do Direito Civil, como o Direito Constitucional?
+  - Proponha um caso prático onde o exercício de um direito subjetivo pode ser considerado abusivo e justifique o porquê, utilizando o conceito de abuso de direito.
