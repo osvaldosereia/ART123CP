@@ -1,7 +1,7 @@
-// meujus – app.js (fix)
+// meujus – app.js (fix+actions)
 // Manifesto por semente de categoria. Sem temas.json.
-// TXT com N temas separados por linhas contendo só "-----" (tolerante a espaços).
-// Render: box único (Título • Intro • Perguntas / Estudo).
+// TXT com N temas separados por "-----".
+// Render: box único (Intro • Perguntas). Título aparece só no cabeçalho da página.
 
 (function(){
   /* ===== Helpers DOM ===== */
@@ -54,13 +54,11 @@
   /* ===== Split por delimitador robusto ===== */
   function splitThemesByDelim(raw){
     const txt = raw.replace(/\r\n?/g,'\n').trim();
-    // quebra em QUALQUER linha que contenha só dashes com espaços: "-----", " ----- ", "--------"
     return txt.split(/^\s*-{3,}\s*$/m).map(s=>s.trim()).filter(Boolean);
   }
 
   /* ===== Parser de um tema ===== */
   function parseTemaFromChunk(chunk){
-    // normaliza cabeçalhos mal formatados tipo "## ## XYZ"
     const fixed = chunk.replace(/^\s*##\s+##\s+/mg, '## ');
     const titleMatch = fixed.match(/^\s*#\s+(.+)$/m);
     if(!titleMatch) return null;
@@ -69,7 +67,6 @@
     const slug  = normalizeSlug(title);
     const intro = Array.from(fixed.matchAll(/^\s*--\s+(.+)$/mg)).map(m=>m[1].trim());
 
-    // Seções "## …"
     const secRx = /^\s*#{2,}\s+(.+?)\s*$/mg;
     const secs = [];
     let m;
@@ -85,7 +82,6 @@
     for(const s of secs){
       const nameNorm = normalizeHeading(s.name);
       const body = fixed.slice(s.start, s.end);
-      // Lista de perguntas aceita "- " com qualquer indentação
       const list = Array.from(body.matchAll(/^\s*-\s+(.+?)\s*$/mg)).map(x=>x[1].trim());
       if(isQASection(nameNorm)) ask = ask.concat(list);
     }
@@ -94,7 +90,6 @@
   }
 
   function normalizeHeading(h){
-    // remove pontuação comum e hashes restantes, tira acentos
     return (h||'').toLowerCase()
       .replace(/[.#:]/g,' ')
       .replace(/\s+/g,' ')
@@ -102,11 +97,9 @@
       .trim();
   }
   function isQASection(nameNorm){
-  // tolera "I.A.", "IA", "i a", "modo IA"
-  if (/\bpergunte\s+pra\s+i\s*\.?\s*a\b/.test(nameNorm)) return true;
-  return /estude\s+com\s+o\s+google/.test(nameNorm) && /\bi\s*\.?\s*a\b/.test(nameNorm);
-}
-
+    if (/\bpergunte\s+pra\s+i\s*\.?\s*a\b/.test(nameNorm)) return true;
+    return /estude\s+com\s+o\s+google/.test(nameNorm) && /\bi\s*\.?\s*a\b/.test(nameNorm);
+  }
 
   /* ===== Glossário opcional ===== */
   async function loadGlossario(){
@@ -298,7 +291,7 @@
       const t = map.get(slug); if(!t) return '';
       return `<li class="item">
         <a class="title" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
-        <button class="btn-ios" data-remove="${t.slug}" style="margin-left:8px">Remover</button>
+        <button class="btn-ios is-small" data-remove="${t.slug}" style="margin-left:8px">Remover</button>
       </li>`;
     }).join('');
     ul.querySelectorAll('button[data-remove]').forEach(b=>{
@@ -315,7 +308,7 @@
   async function loadTema(slug){
     const titleEl   = $('#themeTitle');
     const contentEl = $('#content');
-    const headCard  = $('.ficha-head');
+    const actionsEl = $('#actions');
     contentEl.textContent = 'Carregando…';
 
     const meta = TEMAS.find(t=>t.slug===slug);
@@ -338,20 +331,19 @@
         return;
       }
 
-      titleEl.textContent = meta?.title || pick.title;
+      const pageTitle = meta?.title || pick.title;
+      titleEl.textContent = pageTitle;
 
-      // Botão Salvar
-      let saveBtn = $('#saveBtn');
-      if(!saveBtn){
-        saveBtn = document.createElement('button');
-        saveBtn.id = 'saveBtn';
-        saveBtn.className = 'btn-ios';
-        saveBtn.type = 'button';
-        headCard?.appendChild(saveBtn);
-      }
+      // ===== Ações (Salvar | Estudar | Treinar) =====
+      actionsEl.innerHTML = ''; // limpa para navegações subsequentes
+
+      // Salvar
+      const saveBtn = document.createElement('button');
+      saveBtn.id = 'saveBtn';
+      saveBtn.className = 'btn-ios is-small';
       function refreshSaveBtn(){
         const saved = isSaved(slug);
-        saveBtn.textContent = saved ? 'Remover dos salvos' : 'Salvar tema';
+        saveBtn.textContent = saved ? 'Remover' : 'Salvar';
         saveBtn.setAttribute('data-variant', saved ? 'secondary' : 'primary');
       }
       refreshSaveBtn();
@@ -362,6 +354,28 @@
         toast(added ? 'Tema salvo' : 'Removido dos salvos', added ? 'success' : 'info', 1600);
       };
 
+      // Estudar -> Google IA com o título do tema
+      const studyBtn = document.createElement('button');
+      studyBtn.className = 'btn-ios is-small';
+      studyBtn.textContent = 'Estudar';
+      studyBtn.onclick = ()=>{
+        const q = pageTitle;
+        window.open(`https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}`, '_blank', 'noopener');
+      };
+
+      // Treinar -> Google IA com "questões" do tema
+      const trainBtn = document.createElement('button');
+      trainBtn.className = 'btn-ios is-small';
+      trainBtn.textContent = 'Treinar';
+      trainBtn.onclick = ()=>{
+        const q = `${pageTitle} questões objetivas`;
+        window.open(`https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}`, '_blank', 'noopener');
+      };
+
+      actionsEl.appendChild(saveBtn);
+      actionsEl.appendChild(studyBtn);
+      actionsEl.appendChild(trainBtn);
+
       // Intro
       const introHTML = pick.intro.length ? markGlossarioInHTML(escapeHTML(pick.intro.join(' '))) : '';
 
@@ -371,12 +385,9 @@
         return `<li><a href="${href}" target="_blank" rel="noopener">${escapeHTML(q)}</a></li>`;
       }).join('');
 
-      // Box único
+      // Box único — sem repetir o título aqui
       contentEl.innerHTML = `
         <article class="card ubox" role="article">
-          <header class="ubox-header">
-            <h2 class="ubox-title">${escapeHTML(meta?.title || pick.title)}</h2>
-          </header>
           ${introHTML ? `<p class="ubox-intro">${introHTML}</p>` : ''}
           <section class="ubox-section">
             <h3 class="ubox-sub">Estude com o Google I.A.</h3>
@@ -393,7 +404,7 @@
   function loadSobre(){
     const titleEl   = $('#themeTitle');
     const contentEl = $('#content');
-    $('#saveBtn')?.remove();
+    $('#actions')?.innerHTML = '';
     titleEl.textContent = 'Sobre';
     contentEl.innerHTML = `
       <div class="card ubox">
@@ -410,7 +421,7 @@
     else {
       const titleEl   = $('#themeTitle');
       const contentEl = $('#content');
-      $('#saveBtn')?.remove(); // <— corrigido (antes estava com colchete errado)
+      $('#actions')?.innerHTML = '';
       titleEl.textContent = 'Escolha um tema';
       contentEl.innerHTML = `<div class="card"><div class="item"><span class="muted">Use o menu ☰ ou a busca.</span></div></div>`;
     }
