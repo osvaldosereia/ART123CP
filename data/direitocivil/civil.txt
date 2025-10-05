@@ -2,7 +2,146 @@
 
 -----
 
-# Nascer 
+# Princípio da Boa-Fé Objetiva 
+-- O Princípio da Boa-Fé Objetiva exige um padrão de conduta pautado na lealdade, honestidade e confiança mútua entre as partes nas relações jurídicas, tanto na fase pré-contratual quanto na execução e pós-contratual. Diferencia-se da boa-fé subjetiva por focar no comportamento esperado e não apenas na intenção. Atua como balizador e integrador de deveres, influenciando a interpretação dos negócios e a limitação do exercício de direitos.
+
+## Pergunte pra I.A.
+
+  - Como a boa-fé objetiva, ao ser um "padrão de comportamento", se distingue da boa-fé subjetiva ou "boa-fé psicológica"?
+  - Quais são as três principais funções desempenhadas pela boa-fé objetiva e como cada uma delas impacta as relações contratuais?
+  - De que forma a função interpretativa da boa-fé objetiva, prevista no Art. 113 do Código Civil, se relaciona com a teoria da declaração da vontade?
+  - Cite e explique os "deveres anexos ou laterais" que surgem a partir da função integrativa da boa-fé objetiva (Art. 422 do Código Civil).
+  - Como a função de controle ou limitativa da boa-fé objetiva (Art. 187 do Código Civil) se manifesta para coibir o abuso do direito?
+  - O que são as "figuras parcelares da boa-fé" (*supressio*, *surrectio*, *tu quoque*, etc.) e como elas exemplificam a aplicação do princípio?
+  - Explique o conceito de *supressio* e *surrectio* como manifestações da boa-fé objetiva, fornecendo um exemplo prático para cada.
+  - De que maneira o princípio *nemo potest venire contra factum proprium* se insere na função de controle da boa-fé objetiva?
+  - Como o Art. 476 do Código Civil (*exceptio non adimpleti contractus*) pode ser interpretado à luz do princípio da boa-fé objetiva e da figura do *tu quoque*?
+  - No contexto do "adimplemento substancial" ou "inadimplemento mínimo", como a boa-fé objetiva impede a resolução do contrato?
+  - Qual o impacto da boa-fé objetiva na responsabilidade pré-contratual e quais as consequências de sua violação nessa fase?
+  - Como a boa-fé objetiva atua na fase pós-contratual, mesmo após a extinção das obrigações principais?
+  - De que forma o Princípio da Boa-Fé Objetiva se relaciona com a "função social do contrato", outro princípio contratual contemporâneo?
+  - A inclusão da boa-fé objetiva como "cláusula geral" no Código Civil de 2002 confere maior flexibilidade ou segurança jurídica às relações? Justifique.
+  - Como a Lei de Liberdade Econômica (Lei n. 13.874/2019) dialoga com o Princípio da Boa-Fé Objetiva nas relações contratuais privadas?
+  - No Direito Comparado, como a boa-fé objetiva é tratada em outros sistemas jurídicos (como o alemão ou o francês) em comparação com o modelo brasileiro?
+  - Quais são os desafios enfrentados pelos juízes na aplicação da boa-fé objetiva em casos complexos e com grande carga de subjetividade?
+  - A violação da boa-fé objetiva gera apenas responsabilidade contratual ou pode configurar também um ato ilícito extracontratual?
+  - Como o princípio da boa-fé objetiva contribui para a ética e a moralidade nas relações negociais, indo além do mero cumprimento formal da lei?
+  - Proponha um cenário hipotético em que a ausência de boa-fé objetiva por uma das partes em um contrato levaria a um desfecho injusto, e como o princípio interviria.
+
+-----
+# Sanção Coercitiva 
+-- A sanção coercitiva é a resposta do Estado à transgressão da norma jurídica, visando impor o cumprimento do preceito ou a reparação do dano causado. É o elemento distintivo do jurídico frente a outras normas, fundamental para a efetividade do Direito e a manutenção da ordem social, manifestando-se de diversas formas em diferentes ramos do sistema legal.
+
+## Pergunte pra I.A.
+
+  - Qual a característica essencial da sanção coercitiva que a distingue de outras formas de sanção, como as morais ou sociais?
+  - De que maneira a sanção coercitiva atua como um elemento fundamental para a efetividade da norma jurídica?
+  - Como a ameaça ou a aplicação de uma sanção coercitiva contribui para a manutenção da ordem e da paz social?
+  - Em quais ramos do Direito a sanção coercitiva se manifesta de forma mais evidente e quais são suas particularidades em cada um?
+  - Explique a relação entre a norma jurídica e a sanção coercitiva, conforme o conceito de norma jurídica apresentado no material.
+  - Qual o papel do Estado na aplicação da sanção coercitiva e como essa prerrogativa se relaciona com a soberania?
+  - De que forma a existência de sanções coercitivas impacta a liberdade e a autonomia dos indivíduos na sociedade?
+  - Analise a distinção entre a sanção coercitiva que visa o cumprimento do preceito e aquela que busca a reparação do dano.
+  - Cite exemplos de sanções coercitivas no Direito Civil, Penal e Administrativo, destacando suas finalidades específicas.
+  - Como o princípio da legalidade se aplica à imposição e execução da sanção coercitiva, e qual a importância disso?
+  - A proporcionalidade da sanção coercitiva em relação à gravidade da transgressão é um princípio a ser observado? Justifique.
+  - De que maneira a evolução histórica do Direito influenciou a natureza e a aplicação das sanções coercitivas?
+  - A sanção coercitiva pode ter efeitos preventivos, além de repressivos? Explique.
+  - Qual a diferença entre a sanção coercitiva e a medida administrativa, e em que situações elas podem se sobrepor ou se complementar?
+  - Como a ineficácia de uma sanção coercitiva pode levar a mudanças na legislação ou na interpretação da norma jurídica?
+  - Discuta a afirmação de que "a sanção coercitiva é o preço pago pela transgressão da lei".
+  - Em um sistema jurídico que valoriza a reabilitação, como a sanção coercitiva se adapta a esse objetivo?
+  - A sanção coercitiva pode ser aplicada a pessoas jurídicas? Quais os desafios e particularidades dessa aplicação?
+  - De que forma a sanção coercitiva se relaciona com os direitos e garantias fundamentais do transgressor?
+  - Proponha um caso hipotético em que a ausência de uma sanção coercitiva adequada comprometeria gravemente a ordem jurídica e social.
+
+-----
+
+# Concepturo 
+-- O concepturo, ou prole eventual, é o ser que ainda não foi concebido. No Direito Civil brasileiro, embora a personalidade jurídica se inicie com o nascimento com vida, a lei resguarda direitos a esses seres futuros, principalmente no âmbito sucessório e testamentário, condicionado à sua concepção dentro de um prazo legal, como reflexo da autonomia da vontade e da intenção do testador.
+
+## Pergunte pra I.A.
+
+  - Como o ordenamento jurídico brasileiro, ao resguardar direitos ao concepturo, harmoniza o princípio do nascimento com vida com a proteção de expectativas futuras?
+  - Quais são as principais situações jurídicas em que o concepturo pode ser beneficiado no Direito Civil brasileiro?
+  - Qual o prazo decadencial estabelecido pelo Código Civil para que o concepturo seja concebido e possa efetivamente adquirir os direitos a ele destinados?
+  - De que forma a figura do curador, em relação ao concepturo, difere da curatela aplicada a pessoas já existentes, sejam elas nascituros ou incapazes?
+  - Como a autonomia da vontade do testador se manifesta na possibilidade de destinar bens a um concepturo, e quais os limites dessa disposição?
+  - Na prática, quais são os procedimentos necessários para a reserva e administração dos bens destinados a um concepturo até a sua eventual concepção e nascimento com vida?
+  - O reconhecimento de direitos ao concepturo reflete uma visão teleológica do Direito, que antecipa a proteção a interesses futuros? Justifique.
+  - Qual a distinção entre concepturo e nascituro no que tange à aquisição da personalidade jurídica e à titularidade de direitos?
+  - Em que medida a proteção ao concepturo contribui para a segurança jurídica e a estabilidade das relações familiares e sucessórias?
+  - Poderia haver uma doação em favor de um concepturo? Quais requisitos seriam necessários para a validade e eficácia desse ato jurídico?
+  - Analise as implicações da ausência de concepção do concepturo dentro do prazo legal. Para quem se destinariam os bens reservados?
+  - Como a legislação comparada trata a figura do concepturo, e quais as semelhanças ou diferenças com o modelo brasileiro?
+  - A possibilidade de designar um concepturo como beneficiário em testamento poderia gerar conflitos com herdeiros necessários já existentes? Como o Direito resolve essas tensões?
+  - Qual o papel da concepção na aquisição definitiva dos direitos para o concepturo, e o que ocorre se a concepção não se concretizar?
+  - De que forma a proteção ao concepturo se alinha com o princípio da dignidade da pessoa humana, mesmo antes da existência física do indivíduo?
+  - Em quais contextos históricos e sociais a figura do concepturo ganhou relevância no Direito?
+  - A desconsideração de direitos para o concepturo em casos específicos poderia ser vista como uma forma de desincentivar a natalidade ou o planejamento familiar?
+  - Como a jurisprudência brasileira tem interpretado e aplicado as normas relativas ao concepturo em casos práticos?
+  - Quais os desafios éticos e bioéticos que a figura do concepturo pode levantar, especialmente com o avanço das tecnologias de reprodução assistida?
+  - Proponha um cenário hipotético em que a ausência de normas claras sobre o concepturo causaria uma grave insegurança jurídica, e como a lei atual evita essa situação.
+
+-----
+
+# Natimorto 
+-- O natimorto, ser que nasce sem vida, não adquire personalidade jurídica no Direito Civil brasileiro, que a condiciona ao nascimento com vida. Contudo, em uma perspectiva contemporânea e humanista, a doutrina e a jurisprudência reconhecem a titularidade de direitos da personalidade ao natimorto desde a concepção, como forma de proteger a sua dignidade e a memória, gerando efeitos jurídicos relevantes para a família.
+
+## Pergunte pra I.A.
+
+  - Como o conceito de "nascimento com vida", essencial para a aquisição da personalidade jurídica, se relaciona com o status jurídico do natimorto no Brasil?
+  - Explique quais são os direitos da personalidade que, mesmo sem personalidade jurídica, são reconhecidos ao natimorto pela doutrina e jurisprudência majoritárias.
+  - De que forma a proteção dos direitos da personalidade do natimorto se alinha com o princípio da dignidade da pessoa humana, previsto na Constituição Federal?
+  - Quais são os principais efeitos jurídicos que a existência do natimorto pode gerar para seus genitores, mesmo sem a aquisição de personalidade civil?
+  - Como a certidão de óbito do natimorto se diferencia da certidão de nascimento de um indivíduo que nasceu com vida, e qual a relevância dessa distinção para o direito?
+  - Em que medida a possibilidade de sepultamento do natimorto reflete o reconhecimento de sua existência como um ser humano, ainda que sem vida?
+  - Discuta a relação entre o natimorto e a figura do nascituro no direito brasileiro, destacando as semelhanças e diferenças em sua proteção legal.
+  - Quais são as implicações da ausência de personalidade jurídica para o natimorto em relação a direitos de cunho patrimonial?
+  - Como a jurisprudência tem abordado casos que envolvem a memória e a dignidade do natimorto, e quais as formas de reparação admitidas?
+  - A inclusão da titularidade de direitos da personalidade para o natimorto demonstra uma evolução do Direito Civil em uma perspectiva mais humanista? Justifique.
+  - Quais as principais teorias sobre o início da personalidade jurídica e como elas influenciam a discussão sobre o status do natimorto?
+  - O que significa dizer que o nascituro tem "expectativa de direitos patrimoniais", e como isso se compara com a situação do natimorto?
+  - Em que situações específicas a família do natimorto pode buscar reparação por danos morais, e quais os fundamentos jurídicos para tal?
+  - Como a medicina e o direito dialogam na determinação do "nascimento com vida" e na constatação do natimorto?
+  - Qual a importância do registro de natimorto para a família e para o ordenamento jurídico, e o que ele comprova?
+  - Discuta a possibilidade de o natimorto ser incluído em questões de herança ou sucessão, e quais os limites dessa inclusão.
+  - A proteção ao natimorto se estende à sua imagem e honra? Como esses direitos seriam exercidos ou defendidos?
+  - Existem previsões legais ou projetos de lei no Brasil que busquem ampliar ou detalhar a proteção dos direitos do natimorto?
+  - Como a experiência internacional e o direito comparado tratam a questão do natimorto e a proteção de seus direitos?
+  - Proponha um caso hipotético que ilustre a importância do reconhecimento dos direitos da personalidade do natimorto e a necessidade de sua proteção jurídica.
+
+-----
+
+# Nascituro 
+-- No Direito Civil brasileiro, o nascituro, embora ainda não nascido com vida, possui seus direitos resguardados desde a concepção. A compreensão de seu status jurídico envolve teorias e a distinção entre a capacidade para titularizar direitos da personalidade e as expectativas de direitos patrimoniais, marcando a importância da proteção da vida em formação no ordenamento.
+
+## Pergunte pra I.A.
+
+  - Qual a definição jurídica de nascituro no ordenamento brasileiro e como ele se distingue de um ser já nascido com vida?
+  - Como o Código Civil aborda o início da personalidade jurídica e qual a relação entre o nascimento com vida e a proteção dos direitos do nascituro?
+  - Explique as principais teorias doutrinárias (natalista, concepcionista e da personalidade condicionada) sobre o início da personalidade e qual a relevância de cada uma para o nascituro.
+  - De que forma o direito brasileiro protege os direitos da personalidade do nascituro desde a concepção?
+  - Quais são os direitos patrimoniais que o nascituro pode vir a titularizar e como esses se diferenciam dos direitos da personalidade?
+  - Discuta a importância da *vacatio legis* para a proteção dos direitos do nascituro em relação a novas leis.
+  - O que significa dizer que o nascituro possui "expectativa de direito" em relação a bens patrimoniais?
+  - Como a lei resguarda os direitos do nascituro e quais são os instrumentos jurídicos disponíveis para essa proteção?
+  - Analise a relevância da distinção entre nascituro e "nascido com vida" para o direito sucessório.
+  - Em que medida a proteção do nascituro se estende a casos de danos morais, mesmo antes do nascimento?
+  - Como a situação do nascituro se compara com a figura da "prole eventual" no Direito Civil?
+  - Quais são os desafios práticos na aplicação dos direitos do nascituro, especialmente em contextos de reprodução assistida?
+  - A interrupção voluntária da gravidez impacta o status jurídico do nascituro no Brasil?
+  - De que forma a lei garante a representação legal dos interesses do nascituro?
+  - Como o conceito de dignidade da pessoa humana se aplica ao nascituro e qual sua influência na interpretação de seus direitos?
+  - Existem diferenças na proteção do nascituro em comparação com outros países ou sistemas jurídicos?
+  - O que é o "natimorto" e qual o seu status jurídico em relação aos direitos da personalidade e patrimoniais?
+  - Como a capacidade de gozo e a capacidade de fato se relacionam com a situação do nascituro?
+  - Discorra sobre a importância do registro de nascimento para a consolidação dos direitos do indivíduo que foi nascituro.
+  - Proponha um caso hipotético em que a proteção dos direitos do nascituro seja fundamental e justifique a aplicação da legislação pertinente.
+
+-----
+
+# Nascer com Vida
 -- O nascimento com vida marca o início da personalidade civil, embora a lei resguarde os direitos do nascituro desde a concepção. Compreender as diferentes teorias e o status jurídico do nascituro e natimorto é fundamental para a aplicação de diversas normas civis, que se estendem da proteção de direitos da personalidade a expectativas de direitos patrimoniais.
 
 ## Pergunte pra I.A.
