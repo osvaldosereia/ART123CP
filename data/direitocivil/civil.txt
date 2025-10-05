@@ -1,8 +1,60 @@
 
 
+-----
+# Temporariedade da Lei 
+-- Leis não são eternas, nascendo para viger por tempo determinado ou indeterminado. A temporariedade refere-se a normas com prazo certo de existência ou que se extinguem ao cessarem os fatos que as motivaram. A compreensão da sua vigência, prorrogação e perda de eficácia é crucial para a segurança jurídica e a aplicação do direito no tempo.
 
+## Pergunte pra I.A.
 
+  - O que caracteriza uma lei temporária e como ela se diferencia de uma lei de vigência indeterminada?
+  - Quais são os principais motivos que levam o legislador a criar leis com caráter temporário?
+  - De que forma a "perda de vigência" de uma lei temporária ocorre, e quais os seus efeitos no ordenamento jurídico?
+  - É possível prorrogar a vigência de uma lei temporária? Se sim, quais os requisitos para essa prorrogação?
+  - Como a Lei de Introdução às Normas do Direito Brasileiro (LINDB) aborda a temporariedade da lei?
+  - Uma lei temporária pode ser revogada antes do término do seu prazo de vigência? Explique.
+  - Quais as implicações da temporariedade da lei para a segurança jurídica, especialmente em relações de longo prazo?
+  - Como a aplicação de uma lei temporária se harmoniza com o princípio da irretroatividade da lei?
+  - Cite um exemplo prático de lei temporária no ordenamento jurídico brasileiro e analise sua finalidade.
+  - A "cessação dos fatos que a ensejaram" é uma condição para a perda de vigência de uma lei temporária. Explique como isso funciona.
+  - Quais os efeitos sobre os "atos jurídicos perfeitos" e "direitos adquiridos" constituídos sob a vigência de uma lei temporária que perde sua eficácia?
+  - De que maneira a declaração de inconstitucionalidade de uma lei temporária se relaciona com sua perda de eficácia?
+  - Pode o "desuso" de uma lei temporária levá-la a perder a sua eficácia antes do prazo estipulado? Por que sim ou por que não?
+  - Como a temporariedade da lei se relaciona com a "necessidade de regulamentação" pelo Poder Executivo para sua eficácia plena?
+  - No contexto de uma emergência sanitária, como a criação de leis temporárias pode ser justificada e quais os desafios para sua aplicação?
+  - Quais são os mecanismos de controle que o sistema jurídico prevê para evitar abusos na criação de leis temporárias?
+  - A prorrogação sucessiva de uma lei temporária pode desvirtuar seu caráter, transformando-a em lei de vigência indeterminada? Discuta.
+  - Como o fim de uma lei temporária pode influenciar a criação de novas normas permanentes sobre o mesmo assunto?
+  - De que forma a "ultratividade" de uma lei temporária se manifesta após a perda de sua vigência?
+  - Proponha um cenário hipotético em que a correta identificação da temporariedade de uma lei seja crucial para a resolução de um caso concreto.
 
+-----
+# Revogação da Lei
+-- A revogação é o ato que retira a eficácia de uma lei ou ato normativo, fazendo-o cessar seus efeitos no ordenamento jurídico. Pode ser total ou parcial, expressa ou tácita, e sua compreensão é essencial para a dinâmica do Direito, especialmente ao considerar a segurança jurídica e a sucessão de normas no tempo. A LINDB estabelece as diretrizes para esse processo, crucial para a aplicação da lei.
+
+## Pergunte pra I.A.
+
+  - O que significa a revogação de uma lei e quais são as principais formas pelas quais ela pode ocorrer?
+  - Qual a diferença entre a revogação total (*ab-rogação*) e a revogação parcial (*derrogação*) de uma norma jurídica?
+  - De que maneira a Lei de Introdução às Normas do Direito Brasileiro (LINDB) trata a revogação expressa e a revogação tácita de uma lei?
+  - Como o princípio da segurança jurídica é afetado pela revogação de leis, e quais mecanismos buscam mitigar esse impacto?
+  - Em um cenário de revogação tácita, quais critérios hermenêuticos (como o cronológico, hierárquico e da especialidade) são utilizados para resolver antinomias entre normas?
+  - A revogação de uma lei que, por sua vez, havia revogado outra lei, gera automaticamente o "efeito repristinatório"? Explique.
+  - Quais são os requisitos para que o efeito repristinatório seja válido no ordenamento jurídico brasileiro, segundo a LINDB?
+  - Pode o desuso prolongado de uma lei ser considerado uma forma de revogação tácita no Direito brasileiro? Quais correntes doutrinárias debatem esse ponto?
+  - Como a Lei Complementar n. 95/98 impacta a forma da revogação, especialmente no que tange à enumeração expressa das leis revogadas?
+  - A revogação de uma lei afeta os direitos adquiridos sob sua vigência? Qual a relação com o princípio da irretroatividade?
+  - De que forma a "cessação da eficácia" por declaração de inconstitucionalidade se distingue tecnicamente da revogação de uma lei?
+  - Pode uma norma geral revogar uma norma especial, e vice-versa, no contexto das antinomias e da revogação tácita?
+  - Qual o papel do Poder Judiciário na constatação e declaração da revogação tácita de uma lei?
+  - A revogação de uma lei temporária se dá com o advento do termo designado? Existem exceções a essa regra?
+  - Em que medida a "nova lei" se aplica a fatos ocorridos sob a "lei revogada" no Direito intertemporal?
+  - Quais são as consequências práticas para o ordenamento jurídico quando uma lei é revogada sem que se estabeleçam regras de transição claras?
+  - Como a revogação de leis pode influenciar a estabilidade e a previsibilidade das relações jurídicas em um Estado Democrático de Direito?
+  - Em quais casos a revogação de um ato normativo pode ser interpretada de forma restritiva para preservar a coerência do sistema jurídico?
+  - Discuta a importância da clareza na redação das cláusulas de revogação para evitar incertezas e litígios.
+  - Proponha um exemplo prático de situação em que a correta aplicação das regras de revogação é crucial para a justiça do caso.
+
+-----
 # Iura Novit Curia 
 -- O princípio "Iura Novit Curia" significa "o juiz conhece o direito". Implica que as partes não precisam provar o direito aplicável em juízo, pois se presume que o magistrado detém o conhecimento das leis. Este princípio é fundamental para a celeridade processual e a efetividade da justiça, garantindo que o foco da disputa seja nos fatos e não na existência ou validade das normas jurídicas nacionais.
 
