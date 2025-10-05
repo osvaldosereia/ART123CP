@@ -1,6 +1,34 @@
 
 
 
+-----
+# Ultratividade da Lei Revogada 
+-- A ultratividade da lei revogada é um princípio do direito intertemporal que permite que uma lei, mesmo após ser revogada, continue a produzir efeitos para fatos ocorridos sob sua vigência. Essencial para a segurança jurídica e a proteção de atos jurídicos perfeitos, direitos adquiridos e coisa julgada, garante a estabilidade das relações jurídicas no tempo, apesar das mudanças legislativas.
+
+## Pergunte pra I.A.
+
+  - Como o princípio da ultratividade da lei revogada se diferencia da retroatividade e irretroatividade da lei?
+  - Em quais situações específicas o ordenamento jurídico brasileiro permite a aplicação de uma lei revogada, e qual a finalidade dessa aplicação?
+  - De que forma a ultratividade da lei revogada protege os conceitos de "ato jurídico perfeito", "direito adquirido" e "coisa julgada"?
+  - Quais são os fundamentos constitucionais que sustentam a aplicação da ultratividade da lei revogada no Brasil?
+  - Como a ultratividade atua em contraste com o princípio de que "a lei nova se aplica a todos os fatos que ocorrerem durante sua vigência"?
+  - O que significa dizer que o Código Civil de 1916 ainda é aplicável a certas situações jurídicas no contexto da ultratividade?
+  - Em que medida a ultratividade da lei revogada contribui para a segurança jurídica e a previsibilidade das relações sociais?
+  - Há limites para a aplicação da ultratividade da lei revogada? Se sim, quais são e por que existem?
+  - Como a ausência de previsão expressa de ultratividade em uma lei pode afetar sua aplicação a fatos pretéritos?
+  - Compare a ultratividade da lei revogada com o efeito repristinatório, destacando suas semelhanças e diferenças.
+  - Em casos de revogação de leis tributárias, como a ultratividade pode impactar a cobrança de tributos referentes a fatos geradores anteriores à revogação?
+  - Discuta a relação da ultratividade com a estabilidade das normas contratuais, especialmente em contratos de longa duração.
+  - De que maneira a jurisprudência dos tribunais superiores tem interpretado e aplicado o princípio da ultratividade em casos concretos?
+  - A ultratividade pode gerar conflitos com novos princípios ou normas introduzidas por uma lei posterior? Como esses conflitos são resolvidos?
+  - Em que situações específicas, no Direito Penal ou Administrativo, a ultratividade de uma lei revogada é particularmente relevante?
+  - Qual o papel da vontade das partes ou do legislador na determinação da ultratividade de uma norma?
+  - Explique como a ultratividade se relaciona com a "Lei de Introdução às Normas do Direito Brasileiro (LINDB)".
+  - A ultratividade pode ser afastada por disposição expressa de uma lei nova? Em que condições?
+  - Como a ultratividade da lei revogada se aplica a normas de Direito de Família ou Sucessório, considerando a dinamicidade dessas áreas?
+  - Proponha um cenário hipotético em que a aplicação da ultratividade de uma lei revogada seja crucial para garantir a justiça em um caso jurídico.
+
+-----
 # Efeito Repristinatório 
 -- O efeito repristinatório é o fenômeno jurídico em que uma lei revogada "ressuscita" e volta a produzir efeitos caso a norma que a havia revogado seja, por sua vez, revogada. No Direito brasileiro, este efeito não ocorre automaticamente, sendo exigida expressa previsão legal. É um tema crucial para a segurança jurídica e a estabilidade do ordenamento, especialmente na análise da sucessão de normas no tempo.
 
