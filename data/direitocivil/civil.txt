@@ -1,5 +1,142 @@
 
 
+
+
+-----
+# Carta Maior 
+-- No contexto jurídico, a "Carta Maior" é a denominação comum para a Constituição de um país. Ela representa o conjunto de normas supremas que organiza o Estado, define os direitos e deveres dos cidadãos, estrutura os poderes e estabelece os princípios fundamentais da nação. Sua importância é tamanha que todas as demais leis devem estar em conformidade com seus preceitos, garantindo a estabilidade e a legitimidade do ordenamento jurídico.
+
+## Pergunte pra I.A.
+
+  - Como a Constituição Federal de 1988, enquanto "Carta Maior", se posiciona como o centro do sistema jurídico brasileiro?
+  - Quais são os marcos históricos e filosóficos que definem a trajetória do constitucionalismo moderno e do neoconstitucionalismo, culminando na ideia de "Carta Maior" no Brasil?
+  - De que forma a "dignidade da pessoa humana" se estabelece como um dos fundamentos essenciais da República Federativa do Brasil, conforme a Carta Maior de 1988?
+  - Quais são os principais métodos de interpretação constitucional e como eles são aplicados para garantir a máxima efetividade das normas da Carta Maior?
+  - Explique como a "força normativa" da Constituição assegura sua superioridade e o caráter vinculante de suas decisões, mesmo diante de outros poderes.
+  - Como a ideia de "mutação constitucional" permite a adaptação da Carta Maior às novas realidades sociais sem a necessidade de uma reforma formal?
+  - Quais são as principais "limitações ao poder de tributar" estabelecidas na Constituição Federal e por que elas são consideradas garantias fundamentais ao contribuinte?
+  - De que maneira a "separação de Poderes" é um elemento essencial da Carta Maior, e como o sistema de "freios e contrapesos" garante o equilíbrio entre eles?
+  - Como a Carta Maior aborda a proteção dos "Direitos Humanos", e qual o status dos tratados internacionais de direitos humanos no ordenamento jurídico brasileiro?
+  - Quais são as diferentes "espécies de nacionalidade" e como a Constituição Federal define quem é "brasileiro nato" e "brasileiro naturalizado"?
+  - De que forma a "autonomia partidária" e o "pluralismo político" são princípios fundamentais assegurados pela Carta Maior para a democracia brasileira?
+  - Quais são as principais "competências legislativas" e "competências administrativas" atribuídas aos entes federativos pela Constituição Federal, especialmente em matéria ambiental?
+  - Como a "responsabilidade civil do Estado" é configurada pela Constituição Federal e quais são os elementos e excludentes dessa responsabilidade?
+  - Explique o conceito de "imunidade tributária" e como a Carta Maior a estabelece para proteger certas entidades e atividades da incidência de impostos.
+  - De que forma a "repartição das receitas tributárias" é estruturada pela Constituição Federal para equilibrar os recursos entre União, Estados e Municípios?
+  - Quais são os "Princípios Orçamentários" previstos na Carta Maior e como eles guiam a elaboração e execução do orçamento público?
+  - Como a Constituição Federal trata a "intervenção estatal na propriedade", e quais são as diferentes formas de intervenção (supressivas e restritivas)?
+  - Quais são as "funções essenciais à Justiça" consagradas na Carta Maior, e qual o papel do Ministério Público, Advocacia e Defensoria Pública?
+  - De que maneira a Carta Maior, ao estabelecer a "organização da Justiça Eleitoral", garante a lisura e a legitimidade dos pleitos democráticos?
+  - Como a Emenda Constitucional n. 132/2023, ao promover a "Reforma Tributária", alterou os princípios e a estrutura de tributação do consumo na Carta Maior?
+
+-----
+# Leis Temporárias 
+-- São normas jurídicas que, ao contrário da regra geral de vigência indeterminada, nascem com prazo certo para sua extinção ou condicionadas à ocorrência de um evento específico. Sua natureza transitória atende a necessidades pontuais, como a regulamentação de eventos específicos ou a resposta a situações emergenciais, e sua eficácia cessa automaticamente ao atingir o termo ou a condição predefinida.
+
+## Pergunte pra I.A.
+
+  - O que caracteriza uma lei temporária e como ela se diferencia das leis de vigência indeterminada no ordenamento jurídico brasileiro?
+  - Quais são os principais motivos que levam o legislador a criar leis com caráter temporário, conforme o texto de estudo?
+  - De que forma a "temporariedade da lei" impacta a sua "eficácia" e quais as consequências da sua "morte" jurídica?
+  - O que acontece com os atos e fatos jurídicos ocorridos durante a vigência de uma lei temporária após a sua extinção?
+  - Analise a distinção entre leis temporárias que se extinguem por "advento do termo designado" e aquelas que cessam por "extinção dos fatos que a ensejaram".
+  - Cite um exemplo de lei temporária mencionada no material e explique o contexto de sua criação.
+  - A "prorrogação" de uma lei temporária altera sua natureza jurídica ou apenas estende seu período de vigência?
+  - Como a "Lei Orçamentária Anual" e a "Lei Geral da Copa" exemplificam a natureza de leis temporárias e qual o impacto de seu término?
+  - Uma lei temporária pode ser "revogada" antes do seu término? Quais seriam as consequências dessa revogação?
+  - De que maneira a eficácia de uma lei temporária se relaciona com o princípio da "continuidade da lei", e quais exceções podem existir?
+  - A criação de uma lei temporária pode gerar expectativas de direito após seu término? Como o ordenamento jurídico lida com isso?
+  - Existem limites constitucionais para a duração ou para o objeto das leis temporárias?
+  - Como a flexibilidade na criação e extinção das leis temporárias contribui para a adaptabilidade do Direito às mudanças sociais?
+  - Uma lei temporária, após sua extinção, pode ser "repristinada"? Em que condições?
+  - Qual o papel dos "atos administrativos" e "decretos" na aplicação e gestão das leis temporárias?
+  - A inobservância de uma lei temporária durante sua vigência gera quais tipos de sanções?
+  - De que forma a "segurança jurídica" é garantida ou desafiada pela existência de leis temporárias?
+  - Como a "vontade do legislador" é crucial para determinar a natureza temporária de uma lei e seus termos de extinção?
+  - Em um cenário de crise ou emergência, a criação de leis temporárias pode flexibilizar outros princípios jurídicos?
+  - Proponha um cenário hipotético em que a aplicação de uma lei temporária gere um conflito com direitos adquiridos, e discuta a solução à luz do princípio da irretroatividade.
+
+-----
+# Derrogação 
+-- A derrogação, ou revogação parcial, ocorre quando apenas parte dos dispositivos de uma lei perde sua eficácia, sendo suprimidos ou modificados por uma norma posterior. Essencial para a dinâmica legislativa, permite a atualização do ordenamento jurídico sem anular integralmente diplomas que ainda possuem relevância, garantindo a adaptação contínua do direito às necessidades sociais.
+
+## Pergunte pra I.A.
+
+  - Como a derrogação se distingue da ab-rogação no contexto da cessação da eficácia de uma lei?
+  - Quais são as formas pelas quais a derrogação de uma lei pode ocorrer no ordenamento jurídico, segundo o material?
+  - De que maneira a derrogação contribui para a adaptabilidade e coerência do sistema legal?
+  - O que significa dizer que uma revogação parcial é tácita ou indireta, e como isso é determinado?
+  - Quais critérios hermenêuticos são empregados para resolver incompatibilidades entre normas que levam à derrogação tácita?
+  - Como a preferência pela revogação expressa, estabelecida pela LC n. 95/98, busca trazer maior segurança jurídica em casos de derrogação?
+  - A derrogação de uma lei pode afetar apenas um de seus dispositivos, mantendo os demais em vigor. Explique a importância dessa seletividade.
+  - Quais são as consequências práticas para as relações jurídicas que estavam sendo regidas pelos dispositivos derrogados?
+  - Como a derrogação se relaciona com o princípio da irretroatividade da lei, especialmente em relação a atos jurídicos perfeitos e direitos adquiridos?
+  - Pode uma norma geral derrogar uma norma especial, e vice-versa? Qual o entendimento predominante sobre essa situação?
+  - Em que medida a derrogação contribui para evitar lacunas no ordenamento jurídico, ao permitir a substituição pontual de normas?
+  - Quais os desafios para os operadores do direito na identificação e aplicação de normas que foram parcialmente derrogadas por leis posteriores?
+  - A derrogação pode ser resultado de uma decisão judicial que declara a inconstitucionalidade parcial de uma lei?
+  - Como a dinâmica social e as mudanças de valores podem impulsionar a derrogação de determinados preceitos legais?
+  - Explique o conceito de "antinomia aparente" no contexto da derrogação, e como ela é resolvida.
+  - Quais são as implicações da derrogação para a "ultratividade da lei revogada" em casos específicos?
+  - Como a clareza e a precisão na redação de uma lei são importantes para evitar ambiguidades que possam levar a derrogações tácitas?
+  - Em um cenário de constante atualização legislativa, como o estudante de direito pode se preparar para lidar com a derrogação de normas?
+  - A derrogação de uma lei que institui um tributo pode ter efeitos retroativos? Se sim, em que condições?
+  - Proponha um exemplo hipotético de uma situação em que a derrogação de um dispositivo legal traria um impacto significativo em um caso concreto.
+
+-----
+# Ab-rogação 
+-- A ab-rogação, ou revogação total, representa a cessação integral da eficácia de uma lei, seja por outra lei de mesma hierarquia ou por declaração de inconstitucionalidade. É um processo fundamental para a dinâmica do ordenamento jurídico, assegurando que normas superadas ou incompatíveis sejam retiradas, mantendo a coerência e a atualidade do sistema legal.
+
+## Pergunte pra I.A.
+
+  - Como a ab-rogação se diferencia da derrogação no contexto da cessação da eficácia de uma lei?
+  - Quais são as principais formas pelas quais a ab-rogação de uma lei pode ocorrer no ordenamento jurídico brasileiro?
+  - De que maneira a declaração de inconstitucionalidade da lei se relaciona com a ab-rogação?
+  - A ab-rogação de uma lei sempre implica o desaparecimento completo de seus efeitos pretéritos?
+  - Qual o papel do "efeito repristinatório" no cenário da ab-rogação, e em que condições ele pode ser aplicado?
+  - Por que a Lei de Introdução às Normas do Direito Brasileiro (LINDB) não prevê a repristinação automática?
+  - Como a ab-rogação contribui para a segurança jurídica e a adaptabilidade do sistema legal às novas realidades sociais?
+  - Em um caso de ab-rogação, qual o impacto imediato sobre os direitos e deveres que estavam sendo regulados pela lei revogada?
+  - A ab-rogação de uma lei pode ser tácita? Se sim, como essa forma de revogação é determinada?
+  - Quais são os critérios hermenêuticos utilizados para resolver conflitos entre uma lei nova e uma lei anterior, quando a ab-rogação não é expressa?
+  - Como a ab-rogação se relaciona com o princípio da irretroatividade da lei, especialmente em relação a atos jurídicos perfeitos e direitos adquiridos?
+  - Em que situações uma lei temporária pode ser considerada ab-rogada, mesmo antes do seu termo final?
+  - A revogação total de uma lei, por si só, é suficiente para criar uma lacuna no ordenamento jurídico?
+  - De que forma a hierarquia das normas é relevante para determinar a validade de uma ab-rogação?
+  - Quais são as consequências práticas para a Administração Pública quando uma lei que fundamentava suas ações é ab-rogada?
+  - A ab-rogação de uma lei que institui um tributo tem efeitos imediatos na sua cobrança?
+  - Como a ab-rogação de um tratado internacional se compara à ab-rogação de uma lei interna?
+  - Discuta a importância da clareza na redação das leis para evitar dúvidas sobre a ocorrência de ab-rogação tácita.
+  - Em um cenário de constante atualização legislativa, como os operadores do direito lidam com a identificação de leis ab-rogadas?
+  - Proponha um exemplo concreto de uma lei que foi ab-rogada e analise os efeitos dessa ab-rogação no tempo.
+
+-----
+# Declaração de Inconstitucionalidade da Lei 
+-- A declaração de inconstitucionalidade da lei é o reconhecimento judicial de que uma norma é incompatível com a Constituição. Essencial para a supremacia constitucional, esse controle afasta a lei do ordenamento jurídico, garantindo a coesão do sistema. Sua compreensão envolve analisar vícios formais e materiais, bem como os efeitos temporais e a abrangência da decisão que a decreta.
+
+## Pergunte pra I.A.
+
+  - Qual o principal objetivo da declaração de inconstitucionalidade de uma lei no sistema jurídico brasileiro?
+  - Quais são os dois tipos fundamentais de vícios que podem levar à declaração de inconstitucionalidade de uma lei?
+  - Como a inconstitucionalidade formal (nomodinâmica) se diferencia da inconstitucionalidade material (nomoestática)? Cite um exemplo para cada.
+  - Quais são os efeitos clássicos de uma decisão que declara a inconstitucionalidade de uma lei no controle difuso?
+  - Explique o princípio da nulidade *ex tunc* e como ele se aplica à declaração de inconstitucionalidade.
+  - O que significa a "modulação de efeitos" na declaração de inconstitucionalidade, e em que situações ela pode ser aplicada pelo STF?
+  - Quais são os critérios que o STF utiliza para modular os efeitos de uma declaração de inconstitucionalidade?
+  - Como a declaração de inconstitucionalidade se relaciona com a supremacia da Constituição?
+  - De que forma a declaração de inconstitucionalidade por omissão busca tornar efetivas normas constitucionais de eficácia limitada?
+  - Quais são os órgãos competentes para processar e julgar uma Ação Direta de Inconstitucionalidade (ADI) e uma Ação Declaratória de Constitucionalidade (ADC)?
+  - Qual a diferença na natureza do objeto entre uma ADI genérica e uma ADC?
+  - Como a "perda de objeto" de uma ADI pode ser evitada em casos de revogação da lei impugnada?
+  - Explique a distinção entre a declaração de inconstitucionalidade e a revogação de uma lei.
+  - O que é a "cláusula de reserva de plenário" (full bench) e qual sua relevância no controle difuso de constitucionalidade pelos tribunais?
+  - Quais são as exceções à aplicação da cláusula de reserva de plenário?
+  - Como a declaração de inconstitucionalidade afeta a "força normativa" de uma lei no ordenamento jurídico?
+  - Em que medida a Lei nº 9.868/99 contribuiu para a flexibilização da teoria da nulidade no direito brasileiro?
+  - Discuta a relação entre a declaração de inconstitucionalidade e a segurança jurídica.
+  - Como o "estado de coisas inconstitucional" se relaciona com a declaração de inconstitucionalidade e quais são as suas implicações práticas?
+  - Proponha um caso hipotético em que uma lei, embora aprovada por ampla maioria legislativa, seria passível de declaração de inconstitucionalidade material. Justifique.
+
 -----
 # Temporariedade da Lei 
 -- Leis não são eternas, nascendo para viger por tempo determinado ou indeterminado. A temporariedade refere-se a normas com prazo certo de existência ou que se extinguem ao cessarem os fatos que as motivaram. A compreensão da sua vigência, prorrogação e perda de eficácia é crucial para a segurança jurídica e a aplicação do direito no tempo.
