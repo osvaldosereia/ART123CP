@@ -1,6 +1,118 @@
 
 
 -----
+
+# Capacidade de Direito 
+-- A capacidade de direito (ou de gozo) é a aptidão genérica para ser titular de direitos e deveres na ordem civil, inerente a toda pessoa e indissociável da personalidade jurídica. Diferente da capacidade de fato, que se refere ao exercício desses direitos, a capacidade de direito não admite graduações, sendo pressuposto para a existência de qualquer relação jurídica.
+
+## Pergunte pra I.A.
+
+  - O que significa a capacidade de direito e qual sua relação intrínseca com o conceito de personalidade jurídica?
+  - De que forma a capacidade de direito se distingue da capacidade de fato (ou de exercício) no Direito Civil?
+  - Por que se afirma que a capacidade de direito não admite graduações, sendo uma condição "estática"?
+  - Qual o papel do Art. 1º do Código Civil ("Toda pessoa é capaz de direitos e deveres na ordem civil") na definição da capacidade de direito?
+  - Pode uma pessoa desprovida de capacidade de fato possuir capacidade de direito? Cite um exemplo para ilustrar.
+  - Em que momento a pessoa natural adquire a capacidade de direito no ordenamento jurídico brasileiro?
+  - Qual a relevância da capacidade de direito para a constituição de uma relação jurídica?
+  - A capacidade de direito de uma pessoa jurídica se inicia em que momento e como isso se compara à pessoa natural?
+  - Quais seriam as consequências no ordenamento jurídico se uma pessoa fosse considerada sem capacidade de direito?
+  - Como a proteção aos direitos do nascituro se relaciona com a capacidade de direito, considerando que ele ainda não nasceu?
+  - A capacidade de direito pode ser perdida? Em quais situações o ordenamento jurídico prevê essa perda para a pessoa natural ou jurídica?
+  - Como a capacidade de direito influencia a titularidade de bens e a possibilidade de contrair obrigações?
+  - De que maneira a incapacidade civil absoluta (Art. 3º do CC) afeta a capacidade de direito de um indivíduo?
+  - É possível que uma pessoa tenha capacidade de direito, mas não possa exercer seus direitos pessoalmente? Explique e exemplifique.
+  - A capacidade de direito pode ser limitada por lei em alguma circunstância, ou ela é absoluta para toda pessoa?
+  - Como o conceito de capacidade de direito é aplicado em situações que envolvem direitos da personalidade, como o direito ao nome ou à imagem?
+  - Qual a importância da capacidade de direito para a validade de um negócio jurídico?
+  - Em que medida a capacidade de direito se relaciona com a ideia de ser um "sujeito de direito"?
+  - A capacidade de direito é um conceito exclusivo do Direito Civil ou possui relevância em outros ramos do Direito?
+  - Considerando a distinção entre capacidade de direito e de fato, como a lei brasileira protege aqueles que possuem capacidade de direito, mas têm sua capacidade de fato limitada?
+
+-----
+
+# Absolutamente Incapaz 
+-- No Direito Civil brasileiro, a incapacidade absoluta designa a condição de pessoas que não possuem discernimento para exprimir sua vontade nos atos da vida civil. Essa condição exige representação legal e visa proteger o indivíduo e seu patrimônio, sendo hoje restrita a uma única hipótese legal após as alterações legislativas, garantindo um regime protetivo específico.
+
+## Pergunte pra I.A.
+
+  - Qual é a única hipótese de pessoa considerada absolutamente incapaz, de acordo com a redação atual do Código Civil brasileiro?
+  - Como a Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência) impactou a Teoria das Incapacidades no Código Civil, especialmente em relação à pessoa com deficiência?
+  - Qual o principal objetivo da legislação ao declarar uma pessoa como absolutamente incapaz?
+  - Qual a diferença entre "representação" e "assistência" no contexto da prática de atos da vida civil e qual se aplica ao absolutamente incapaz?
+  - Quais as consequências jurídicas para um ato praticado por um absolutamente incapaz sem a devida representação legal?
+  - Um absolutamente incapaz pode ser titular de direitos e deveres na ordem civil? Explique.
+  - De que forma a doutrina majoritária interpreta a proteção dos direitos da personalidade do absolutamente incapaz desde a concepção?
+  - A emancipação é um instituto que se aplica a pessoas absolutamente incapazes? Justifique sua resposta.
+  - Considerando o princípio da dignidade da pessoa humana, como a legislação busca conciliar a proteção do absolutamente incapaz com sua autonomia?
+  - Quais são as responsabilidades dos pais, tutores ou curadores em relação aos atos praticados pelo absolutamente incapaz que representam?
+  - Em que situações específicas a vontade de um absolutamente incapaz pode ser considerada para a prática de atos jurídicos, como na doação?
+  - Analise a distinção entre a "capacidade de direito" e a "capacidade de fato" no contexto do absolutamente incapaz.
+  - A capacidade civil do absolutamente incapaz pode ser recuperada ou alterada? Explique os mecanismos.
+  - No âmbito processual, como a incapacidade absoluta de uma das partes afeta o andamento de uma ação judicial?
+  - Quais são os deveres do juiz ao lidar com a questão da capacidade de uma pessoa em um processo de interdição, conforme o Estatuto da Pessoa com Deficiência?
+  - Discuta a importância do "melhor interesse" do absolutamente incapaz na tomada de decisões que afetam sua vida e patrimônio.
+  - A declaração de ausência de uma pessoa, antes de seu óbito, pode ser equiparada à condição de absolutamente incapaz para fins patrimoniais?
+  - Em um contrato de fiança, se o afiançado for um absolutamente incapaz, como isso afeta a validade e exigibilidade da fiança?
+  - Como a proteção do absolutamente incapaz se reflete na disciplina dos direitos sucessórios, especialmente na ordem de vocação hereditária?
+  - Proponha um caso prático em que a distinção entre capacidade absoluta e relativa é crucial para a validade de um negócio jurídico.
+
+-----
+
+# Emancipação Voluntária 
+-- É a aquisição antecipada da plena capacidade de fato de um menor com 16 anos completos, por manifestação consensual dos pais, formalizada por instrumento público. Esse ato extrajudicial confere ao menor a aptidão para praticar atos da vida civil, distinguindo-se das outras modalidades de emancipação e gerando importantes efeitos jurídicos.
+
+## Pergunte pra I.A.
+
+  - Quais os requisitos de idade e consenso parental essenciais para a validade da emancipação voluntária, conforme o Código Civil?
+  - De que maneira o instrumento público é a forma legalmente exigida para a emancipação voluntária e qual a consequência de sua ausência?
+  - A emancipação voluntária pode ser revogada pelos pais após sua concessão? Se sim, em quais condições?
+  - Como a doutrina majoritária e a jurisprudência entendem a relação entre a emancipação voluntária e a responsabilidade civil dos pais por atos ilícitos do menor?
+  - Quais são os limites da capacidade do menor emancipado voluntariamente, especialmente em relação a atos que a lei reserva a maiores de 18 anos?
+  - Em que consiste a "plena capacidade de fato" adquirida pela emancipação voluntária e como ela se distingue da capacidade de direito?
+  - Um dos pais pode conceder a emancipação voluntária unilateralmente? Em quais circunstâncias o consentimento de apenas um seria válido?
+  - Qual a natureza jurídica do ato de emancipação voluntária (negócio jurídico, ato-fato jurídico, etc.) e por que essa classificação é relevante?
+  - A emancipação voluntária pode ser condicionada ou ter termo? Explique a justificativa para a regra.
+  - De que forma a emancipação voluntária se diferencia das outras espécies de emancipação (judicial e legal)?
+  - O consentimento do menor é um requisito para a emancipação voluntária? Qual o posicionamento doutrinário sobre essa questão?
+  - Quais são os principais efeitos jurídicos da emancipação voluntária para o menor em relação aos seus bens e à sua autonomia patrimonial?
+  - A emancipação voluntária tem alguma influência sobre a proteção do menor pelo Estatuto da Criança e do Adolescente (ECA)?
+  - Em um caso de vício de consentimento (erro, dolo, coação) na emancipação voluntária, qual seria a sanção aplicável ao ato?
+  - Como a emancipação voluntária se relaciona com a capacidade para ser empresário individual ou sócio de uma sociedade?
+  - Um menor emancipado voluntariamente pode contrair matrimônio sem autorização parental ou judicial? Justifique.
+  - Quais os impactos da emancipação voluntária na esfera da previdência e da assistência social do menor?
+  - Se um menor emancipado voluntariamente cometer um ato infracional, como sua condição de emancipado afeta a aplicação das medidas socioeducativas?
+  - Compare a emancipação voluntária com a "tomada de decisão apoiada" do Estatuto da Pessoa com Deficiência, identificando semelhanças e diferenças no objetivo de autonomia.
+  - Proponha um caso hipotético em que a emancipação voluntária, embora lícita, possa ser questionada sob a perspectiva dos "melhores interesses do menor", justificando a análise.
+
+-----
+
+# Emancipação Judicial 
+-- É a aquisição antecipada da plena capacidade de fato do menor com 16 anos, por decisão judicial, para aqueles sob tutela. Constitui um procedimento de jurisdição voluntária, onde o juiz avalia o melhor interesse do tutelado, considerando a falta dos pais e a necessidade de conferir autonomia ao adolescente, sempre com oitiva do tutor.
+
+## Pergunte pra I.A.
+
+  - Quais são os requisitos essenciais para a concessão da emancipação judicial, conforme o Código Civil?
+  - Em que situações um menor se encontra sob o regime de tutela, tornando-se apto à emancipação judicial?
+  - Qual o papel da sentença judicial no processo de emancipação judicial e qual sua natureza jurídica?
+  - A emancipação judicial depende da vontade do menor tutelado? E do tutor?
+  - De que maneira a emancipação judicial difere da emancipação voluntária e da emancipação legal?
+  - Quais são as principais consequências da emancipação judicial para a capacidade civil do adolescente?
+  - Um adolescente emancipado judicialmente pode praticar todos os atos da vida civil, incluindo aqueles que a lei reserva a maiores de 18 anos? Justifique.
+  - Como a emancipação judicial dialoga com o princípio do "melhor interesse da criança e do adolescente" no Direito de Família?
+  - A decisão de emancipação judicial pode ser revogada? Em que circunstâncias?
+  - Quais são os efeitos da emancipação judicial na responsabilidade civil dos pais ou responsáveis pelo menor?
+  - Pode haver oposição à emancipação judicial por parte de familiares do tutelado? Como o juiz deve proceder nesses casos?
+  - A ausência de oitiva do tutor no processo de emancipação judicial pode gerar a nulidade do ato?
+  - Em que medida a emancipação judicial se alinha ou se contrapõe à doutrina da proteção integral da criança e do adolescente?
+  - Um adolescente com 15 anos pode requerer a emancipação judicial se comprovar maturidade suficiente? Explique.
+  - Quais são os desafios práticos na avaliação da maturidade de um adolescente para fins de emancipação judicial?
+  - Como a emancipação judicial pode impactar os direitos sucessórios do menor em relação ao seu tutor ou pais?
+  - A emancipação judicial exige a nomeação de um curador para auxiliar o adolescente? Por que?
+  - Se o tutelado emancipado judicialmente vier a falecer, qual o impacto na sucessão de seus bens?
+  - Discuta a importância do acompanhamento psicossocial do adolescente no processo de emancipação judicial.
+  - Proponha um caso hipotético em que a emancipação judicial seria a solução mais adequada para um adolescente, justificando os motivos.
+
+-----
 # Emancipação Legal 
 -- A emancipação legal é a aquisição antecipada da plena capacidade de fato, permitida em situações específicas e independentemente de decisão judicial ou da vontade dos pais. Ocorre em hipóteses como casamento, exercício de emprego público efetivo, colação de grau em curso superior ou estabelecimento civil/comercial com economia própria, conforme o Código Civil brasileiro.
 
