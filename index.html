@@ -27,7 +27,7 @@
   <!-- DRAWER -->
   <div class="drawer" id="drawer" aria-hidden="true">
     <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1"></div>
-    <nav class="drawer-panel" id="drawer-panel" aria-label="Menu lateral">
+    <nav class="drawer-panel" id="drawer-panel" aria-label="Menu lateral" tabindex="-1">
       <div class="drawer-header">
         <div class="drawer-brand brand">
           <span class="b1">Meu</span><span class="b2">Jus</span>
@@ -35,43 +35,32 @@
         <button class="drawer-close" id="btnCloseMenu" aria-label="Fechar menu">Fechar</button>
       </div>
       <div class="drawer-content">
-        <h3 class="h2">Direito Civil • Temas</h3>
+        <h3 class="h2">Categorias</h3>
         <ul class="list" id="menuList">
-          <!-- Manifesto: cada link é um tema, todos no MESMO TXT -->
+          <!-- SEMENTE: 1 item por categoria. O app lerá o TXT, criará os temas e preencherá o menu. -->
           <li>
             <a class="title"
-               href="#/tema/direitocivil-eticidade"
-               data-path="data/direitocivil/civil.txt"
-               data-frag="principio-da-eticidade"
-               data-title="Princípio da Eticidade"
-               data-tags="civil,boa-fe,eticidade">
-              Princípio da Eticidade
-            </a>
-          </li>
-          <li>
-            <a class="title"
-               href="#/tema/direitocivil-operabilidade"
-               data-path="data/direitocivil/civil.txt"
-               data-frag="principio-da-operabilidade"
-               data-title="Princípio da Operabilidade"
-               data-tags="civil,clausulas-gerais,operabilidade">
-              Princípio da Operabilidade
-            </a>
-          </li>
-          <li>
-            <a class="title"
-               href="#/tema/direitocivil-sociabilidade"
-               data-path="data/direitocivil/civil.txt"
-               data-frag="principio-da-sociabilidade"
-               data-title="Princípio da Sociabilidade"
-               data-tags="civil,funcao-social,sociabilidade">
-              Princípio da Sociabilidade
+               data-auto="1"
+               data-group="Direito Civil"
+               data-path="data/direitocivil/civil.txt">
+               Direito Civil
             </a>
           </li>
 
+          <!-- Exemplo para futuras categorias:
+          <li>
+            <a class="title"
+               data-auto="1"
+               data-group="Direito Penal"
+               data-path="data/penal/penal.txt">
+               Direito Penal
+            </a>
+          </li>
+          -->
+
           <li><a class="title" href="#/sobre" data-title="Sobre" data-tags="info">Sobre</a></li>
         </ul>
-        <!-- "Salvos" é inserido pelo app.js -->
+        <!-- A seção "Salvos" é injetada pelo app.js abaixo deste bloco -->
       </div>
     </nav>
   </div>
@@ -88,7 +77,7 @@
   <!-- TOASTS -->
   <div id="toasts" aria-live="polite" aria-atomic="true"></div>
 
-  <!-- Script mínimo do drawer -->
+  <!-- Script do drawer -->
   <script>
     (function(){
       const drawer   = document.getElementById('drawer');
