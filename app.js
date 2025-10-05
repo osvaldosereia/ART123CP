@@ -7,6 +7,7 @@
 
   let TEMAS = [];
   let GLOSS = null;
+  let activeCat = 'Todos'; // filtro de categoria nas sugestões
 
   const SAVED_KEY = 'meujus:saved';
   const LAST_KEY  = 'meujus:last';
@@ -98,26 +99,20 @@
       .filter(w => w.length >= 4 && /[\p{L}]/u.test(w) && !/^\d+$/.test(w))
       .map(w => w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
     if(!parts.length) return null;
-    // fallback sem lookbehind para navegadores antigos
     try{
       return new RegExp(`(?<!\\p{L})(` + parts.join('|') + `)(?!\\p{L})`, 'uig');
     }catch(_){
       return new RegExp(`(^|[^\\p{L}])(` + parts.join('|') + `)(?!\\p{L})`, 'uig');
     }
   }
-
-  // Realce em HTML ESCAPADO (conteúdo do tema)
   function highlightHTML(escapedHtml, q){
     const rx = _buildHighlightRegex(q);
     if(!rx) return escapedHtml;
-    // se fallback sem lookbehind, preserva prefixo no replace
     if(rx.source.startsWith('(^|')){
       return escapedHtml.replace(rx, (m,prefix,word)=> (prefix||'') + '<mark>'+word+'</mark>');
     }
     return escapedHtml.replace(rx, '<mark>$1</mark>');
   }
-
-  // Realce no título das sugestões
   function highlightTitle(title, q){
     const esc = String(title).replace(/</g,'&lt;');
     const rx = _buildHighlightRegex(q);
@@ -133,7 +128,6 @@
   const acList = document.querySelector('#suggestions');
   if (acList) acList.hidden = true;
 
-  // scoring por campo
   function _hit(hay,q){
     if(!hay) return 0;
     if(hay===q) return 100;
@@ -151,14 +145,36 @@
     const q=(e.target.value||'').trim().toLowerCase();
     if(q.length<2 || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; return; }
 
-    const arr = TEMAS.map(t=>({ t, ...scoreFields(q,t) }))
+    // ranqueia amplo; depois filtramos por categoria
+    let arr = TEMAS.map(t=>({ t, ...scoreFields(q,t) }))
       .filter(x=>x.score>0)
       .sort((a,b)=> b.score-a.score || a.t.title.localeCompare(b.t.title,'pt-BR'))
-      .slice(0,8);
+      .slice(0,40);
 
     if(!arr.length){ acList.innerHTML=''; acList.hidden=true; return; }
 
-    acList.innerHTML = arr.map(x=>{
+    // contagem por categoria das sugestões atuais
+    const counts = new Map();
+    for(const x of arr){ const g=x.t.group||'Geral'; counts.set(g,(counts.get(g)||0)+1); }
+    const catList = [...counts.keys()].sort((a,b)=> a.localeCompare(b,'pt-BR'));
+
+    // aplica filtro ativo
+    if(activeCat && activeCat!=='Todos'){
+      const filtered = arr.filter(x => (x.t.group||'Geral')===activeCat);
+      arr = filtered.length ? filtered : arr;
+    }
+
+    // chips
+    const chipsHTML = `
+      <div class="ac-chips" role="group" aria-label="Filtrar sugestões por categoria">
+        <button type="button" class="ac-chip" data-cat="Todos" aria-pressed="${activeCat==='Todos'}">Todos</button>
+        ${catList.map(cat=>`
+          <button type="button" class="ac-chip" data-cat="${cat.replace(/"/g,'&quot;')}"
+            aria-pressed="${activeCat===cat}">${cat}</button>`).join('')}
+      </div>`;
+
+    // lista final
+    const listHTML = arr.slice(0,8).map(x=>{
       const {t, flags} = x;
       const titleHTML = highlightTitle(t.title, q);
       const badges = [
@@ -174,7 +190,17 @@
           </a>
         </li>`;
     }).join('');
+
+    acList.innerHTML = chipsHTML + listHTML;
     acList.hidden=false;
+
+    // listeners dos chips
+    acList.querySelectorAll('.ac-chip').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        activeCat = btn.getAttribute('data-cat')||'Todos';
+        input.dispatchEvent(new Event('input', {bubbles:false}));
+      });
+    });
   });
 
   input?.addEventListener('keydown', ev=>{
