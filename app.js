@@ -102,10 +102,11 @@
       .trim();
   }
   function isQASection(nameNorm){
-    // cobre: "pergunte pra i.a." e "estude com o google i.a./modo i.a."
-    if (/pergunte pra ia/.test(nameNorm)) return true;
-    return /estude com o google/.test(nameNorm) && /\bia\b/.test(nameNorm);
-  }
+  // tolera "I.A.", "IA", "i a", "modo IA"
+  if (/\bpergunte\s+pra\s+i\s*\.?\s*a\b/.test(nameNorm)) return true;
+  return /estude\s+com\s+o\s+google/.test(nameNorm) && /\bi\s*\.?\s*a\b/.test(nameNorm);
+}
+
 
   /* ===== Glossário opcional ===== */
   async function loadGlossario(){
