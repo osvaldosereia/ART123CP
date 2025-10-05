@@ -83,9 +83,6 @@ Diferentemente do direito objetivo, que jamais será lacunoso. O art. 4º da Lei
 - Relacione o conceito de Direito Objetivo com a ideia de "Estado de Direito". Como um influencia o outro?
 - Imagine um novo cenário social não previsto em lei. Como o Direito Objetivo, por meio dos mecanismos da LINDB, atuaria para regular essa nova situação?
 -----
-Com certeza, entendi. Segue a análise e as perguntas para o tema "Direito Subjetivo", com a explicação mais concisa e a formatação solicitada para as perguntas.
-
------
 
 # Direito Subjetivo 
 -- É a faculdade de agir conforme a vontade individual, visando satisfazer interesses próprios, mas sempre dentro dos limites do ordenamento jurídico. É a expressão da vontade que busca um resultado, reconhecendo que não há vontade sem um objetivo, e que o Estado impõe limites para garantir o Estado Democrático de Direito.
@@ -112,3 +109,33 @@ Com certeza, entendi. Segue a análise e as perguntas para o tema "Direito Subje
   - Considerando a natureza do direito subjetivo, como ele contribui para a autonomia e a liberdade individual dentro de um sistema jurídico?
   - Como o entendimento do direito subjetivo é fundamental para a compreensão de outras áreas do Direito, além do Direito Civil, como o Direito Constitucional?
   - Proponha um caso prático onde o exercício de um direito subjetivo pode ser considerado abusivo e justifique o porquê, utilizando o conceito de abuso de direito.
+-----
+# Abuso do Direito 
+-- O abuso do direito configura-se quando o exercício de um direito subjetivo persegue apenas o interesse próprio, esquecendo-se do interesse social. O legítimo exercício de direito subjetivo deve atender a interesses próprios (individuais) e aos da coletividade. Caso contrário, tem-se a figura do abuso do direito. A verificação do cumprimento do atendimento de uma função social e dos demais limites impostos pela lei será realizada por um juiz, diante das circunstâncias de um caso concreto que lhe seja apresentado. Portanto, quando se fala em abuso de direito, o primeiro conceito que deve ser lembrado é o de direito subjetivo. 
+
+A lei, exemplificativamente, elenca os limites que devem ser respeitados, sob pena de se caracterizar o abuso de direito: bons costumes, boa-fé objetiva, função social e função econômica. O legislador brasileiro optou por considerar o abuso do direito como ato ilícito, o que traz como via de consequência a possibilidade de responsabilização civil do titular que exerce o direito subjetivo de forma indevida. Assim, o art. 187 deve ser lido da seguinte maneira: também comete ato ilícito o titular de um direito (subjetivo) que, ao exercê-lo, excede manifestamente os limites impostos pelo seu fim econômico ou social, pela boa-fé ou pelos bons costumes (limites estes que serão analisados no caso concreto pelo magistrado). 
+
+Deve-se recordar que a figura do abuso do direito foi inserida pelo legislador no Código Civil de 2002 como verdadeira “cláusula geral", ou seja, ao se elaborar a norma, deixou-se uma janela proposital por onde o juiz fará penetrar os valores consagrados pela Constituição. A norma é vaga, cabendo ao juiz concretizá-la. Hoje o direito subjetivo não é uma expressão ilimitada do poder individual, devendo haver então uma conjugação dos interesses particulares com os da coletividade.
+
+## Pergunte pra I.A.
+
+  - Como o conceito de "Direito Subjetivo" é fundamental para a compreensão do "Abuso do Direito"?
+  - Quais são os limites impostos pelo ordenamento jurídico ao exercício de um direito subjetivo que, se desrespeitados, configuram o abuso de direito?
+  - De que forma a "função social" e a "boa-fé objetiva" atuam como balizadores do exercício dos direitos, prevenindo o abuso?
+  - Por que o legislador brasileiro classificou o abuso do direito como um "ato ilícito" e quais as consequências dessa classificação?
+  - Explique o papel do juiz na concretização da "cláusula geral" de abuso do direito, considerando que a norma é "vaga".
+  - Como a ideia de que "o direito subjetivo não é uma expressão ilimitada do poder individual" se relaciona com o princípio da dignidade da pessoa humana?
+  - Cite um exemplo prático de exercício de direito que, embora inicialmente lícito, pode se tornar abusivo por exceder seus limites.
+  - De que maneira o abuso do direito difere de um mero exercício irregular ou desfavorável de um direito, mas sem má-fé?
+  - Quais são os principais desafios na identificação e comprovação do abuso do direito em um caso concreto?
+  - Como a jurisprudência brasileira tem interpretado e aplicado o conceito de abuso do direito em diferentes ramos, como o Direito de Família ou do Consumidor?
+  - A inclusão do abuso do direito como ato ilícito no Código Civil de 2002 demonstra uma mudança de paradigma em relação ao Código Civil de 1916? Justifique.
+  - Em que medida a "função econômica" de um direito subjetivo deve ser considerada para determinar se o seu exercício é ou não abusivo?
+  - Como o "consequencialismo judicial", ao considerar as consequências práticas das decisões, pode auxiliar na aplicação do abuso do direito?
+  - De que forma a "má-fé" do agente se diferencia do "excesso manifestamente" dos limites, no contexto do abuso do direito?
+  - Quais mecanismos podem ser utilizados pela parte prejudicada para buscar a responsabilização civil decorrente do abuso do direito?
+  - A "inércia prolongada" no exercício de um direito pode configurar um abuso do direito, como nos conceitos de *supressio* e *surrectio*?
+  - Como o abuso do direito se relaciona com a proteção de "interesses da coletividade" em contraposição a "interesses próprios"?
+  - Discuta a afirmação de que "o abuso do direito não é uma manifestação ilimitada do poder individual", mas sim uma conjugação de interesses.
+  - Quais são as possíveis sanções que podem ser aplicadas ao titular de um direito que praticar o abuso do direito?
+  - Proponha um caso hipotético em que a aplicação do conceito de abuso do direito seja essencial para a resolução de um conflito jurídico, justificando o porquê.
