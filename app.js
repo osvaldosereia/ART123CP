@@ -1,5 +1,5 @@
-// Lateral: Sobre (modal) • Salvos (colapsado) • divisor • "Categorias" • grupos.
-// Salvos com mini botão Remover. Menu re-renderiza após salvar/remover.
+// SPA com página inicial minimalista abaixo da topbar.
+// Rotas: #/ (home) • #/tema/:slug • #/sobre
 
 (function(){
   const $  = (q, el=document) => el.querySelector(q);
@@ -9,6 +9,8 @@
   let GLOSS = null;
 
   const SAVED_KEY = 'meujus:saved';
+  const LAST_KEY  = 'meujus:last';
+
   const readSaved  = () => { try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch(_){ return []; } };
   const writeSaved = (list) => localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(new Set(list))));
   const isSaved    = (slug) => readSaved().includes(slug);
@@ -18,11 +20,13 @@
   const slugify = (s)=>(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
 
   function currentPage(){
-    const h = location.hash || '';
+    const h = location.hash || '#/';
     const mTema  = h.match(/^#\/tema\/([^?#]+)/);
     const mSobre = h.match(/^#\/sobre\b/);
+    const mHome  = /^#\/?$/.test(h) || /^#\/home\b/.test(h);
     if(mTema)  return { kind:'tema', slug: decodeURIComponent(mTema[1]) };
     if(mSobre) return { kind:'sobre' };
+    if(mHome)  return { kind:'home' };
     return { kind:'home' };
   }
 
@@ -85,42 +89,41 @@
     return out;
   }
 
-/* ===== Busca (autocomplete) ===== */
-const input = document.querySelector('#search');
-const acList = document.querySelector('#suggestions');
-if (acList) acList.hidden = true;
+  /* ===== Busca (autocomplete) ===== */
+  const input = document.querySelector('#search');
+  const acList = document.querySelector('#suggestions');
+  if (acList) acList.hidden = true;
 
-function score(q,t){ return hit((t.title||'').toLowerCase(), q) + hit((t.tags||[]).join(' ').toLowerCase(), q); }
-function hit(hay,q){ if(!hay) return 0; if(hay===q) return 100; if(hay.includes(q)) return 60; return q.split(/\s+/).reduce((s,w)=>s+(hay.includes(w)?10:0),0); }
+  function score(q,t){ return hit((t.title||'').toLowerCase(), q) + hit((t.tags||[]).join(' ').toLowerCase(), q); }
+  function hit(hay,q){ if(!hay) return 0; if(hay===q) return 100; if(hay.includes(q)) return 60; return q.split(/\s+/).reduce((s,w)=>s+(hay.includes(w)?10:0),0); }
 
-input?.addEventListener('input', e=>{
-  const q=(e.target.value||'').trim().toLowerCase();
-  if(!q || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; return; }
-  const arr = TEMAS.map(t=>({ slug:t.slug, title:t.title, group:t.group||'', score:score(q,t) }))
-    .filter(a=>a.score>0).sort((a,b)=>b.score-a.score).slice(0,8);
-  if(!arr.length){ acList.innerHTML=''; acList.hidden=true; return; }
-  acList.innerHTML = arr.map(a=>`
-    <li role="option">
-      <a href="#/tema/${a.slug}">
-        <div class="s1">${a.title.replace(/</g,'&lt;')}</div>
-        <div class="s2">${(a.group||'').replace(/</g,'&lt;')}</div>
-      </a>
-    </li>`).join('');
-  acList.hidden = false;
-});
-input?.addEventListener('keydown', ev=>{
-  if(ev.key==='Enter'){
-    const a = acList?.querySelector('a');
-    if(a){ location.hash = a.getAttribute('href'); acList.hidden = true; }
-  }
-});
-acList?.addEventListener('click', ev=>{
-  const a = ev.target.closest('a'); if(!a) return;
-  acList.hidden = true;
-});
-window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
+  input?.addEventListener('input', e=>{
+    const q=(e.target.value||'').trim().toLowerCase();
+    if(!q || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; return; }
+    const arr = TEMAS.map(t=>({ slug:t.slug, title:t.title, group:t.group||'', score:score(q,t) }))
+      .filter(a=>a.score>0).sort((a,b)=>b.score-a.score).slice(0,8);
+    if(!arr.length){ acList.innerHTML=''; acList.hidden=true; return; }
+    acList.innerHTML = arr.map(a=>`
+      <li role="option">
+        <a href="#/tema/${a.slug}">
+          <div class="s1">${a.title.replace(/</g,'&lt;')}</div>
+          <div class="s2">${(a.group||'').replace(/</g,'&lt;')}</div>
+        </a>
+      </li>`).join('');
+    acList.hidden = false;
+  });
+  input?.addEventListener('keydown', ev=>{
+    if(ev.key==='Enter'){
+      const a = acList?.querySelector('a');
+      if(a){ location.hash = a.getAttribute('href'); acList.hidden = true; }
+    }
+  });
+  acList?.addEventListener('click', ev=>{
+    const a = ev.target.closest('a'); if(!a) return;
+    acList.hidden = true;
+  });
+  window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
 
-  
   /* ===== Seeds ===== */
   async function readAllSeeds(){
     const seeds=$$('#menuList a.title[data-auto="1"][data-path]');
@@ -141,22 +144,41 @@ window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
     return temas;
   }
 
+  /* ===== Helpers: drawer e categorias ===== */
+  function openDrawer(){
+    const d = document.getElementById('drawer');
+    if(d && !d.classList.contains('open')){
+      const btn = document.getElementById('btnMenu');
+      btn?.click();
+    }
+  }
+  function expandSectionByLabel(label){
+    const btns = $$('.drawer .cat-btn');
+    const btn = btns.find(b => (b.textContent||'').trim().startsWith(label));
+    if(!btn) return;
+    const li = btn.parentElement;
+    const ul = li?.querySelector('.sublist');
+    btn.setAttribute('aria-expanded','true');
+    if(ul) ul.hidden=false;
+  }
+  function expandSaved(){ expandSectionByLabel('Salvos'); }
+  function expandCategory(name){ expandSectionByLabel(name); }
+
   /* ===== Menu lateral ===== */
   function renderMenu(){
     const menu=$('#menuList'); if(!menu) return;
     menu.innerHTML='';
 
-    // 1) Sobre (botão abre modal)
+    // 1) Sobre
     const liSobre=document.createElement('li');
     const btnSobre=document.createElement('button');
-    btnSobre.className='cat-btn';
-    btnSobre.type='button';
+    btnSobre.className='cat-btn'; btnSobre.type='button';
     btnSobre.innerHTML=`<span>Sobre</span><span class="caret">▸</span>`;
     btnSobre.addEventListener('click', ()=> window.__openSobre?.());
     liSobre.appendChild(btnSobre);
     menu.appendChild(liSobre);
 
-    // 2) Salvos (colapsado)
+    // 2) Salvos
     const saved=readSaved();
     const liSaved=document.createElement('li'); liSaved.className='item';
     const btnSaved=document.createElement('button');
@@ -192,17 +214,17 @@ window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
         const slug=b.getAttribute('data-remove');
         const now=toggleSaved(slug);
         toast(now?'Salvo adicionado':'Removido dos salvos', now?'success':'info', 1400);
-        renderMenu(); // re-render
+        renderMenu();
       });
     });
 
-    // 3) divisor visível
+    // 3) divisor
     const div=document.createElement('div'); div.className='divider'; menu.appendChild(div);
 
-    // 4) título "Categorias"
+    // 4) título
     const title=document.createElement('div'); title.className='menu-title'; title.textContent='Categorias'; menu.appendChild(title);
 
-    // 5) categorias em acordeão
+    // 5) categorias
     const byCat=new Map();
     for(const t of TEMAS){
       const key=t.group||'Geral';
@@ -225,6 +247,111 @@ window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
       });
       li.appendChild(btn); li.appendChild(ul); menu.appendChild(li);
     }
+  }
+
+  /* ===== Home ===== */
+  function renderHome(){
+    const actionsEl=$('#actions'); const titleEl=$('#themeTitle'); const contentEl=$('#content');
+    actionsEl.innerHTML='';
+    titleEl.textContent='Estudo jurídico direto ao ponto';
+    const lastSlug = localStorage.getItem(LAST_KEY)||'';
+    const saved = readSaved();
+    const bySlug = new Map(TEMAS.map(t=>[t.slug,t]));
+    const last = bySlug.get(lastSlug);
+
+    // escolher 6 temas para "Descobrir"
+    const discover = TEMAS.slice().sort((a,b)=>a.title.localeCompare(b.title,'pt-BR')).slice(0,6);
+
+    contentEl.innerHTML = `
+      <section class="home-hero">
+        <p class="home-sub">Busque temas, salve e treine.</p>
+      </section>
+
+      ${ last ? `
+      <section class="card home-card" id="home-continue">
+        <div>
+          <div class="t">${escapeHTML(last.title)}</div>
+          <div class="s">${escapeHTML(last.group||'')}</div>
+        </div>
+        <div class="home-actions">
+          <a class="btn-ios is-small" data-go="#/tema/${last.slug}" data-variant="primary">Retomar</a>
+        </div>
+      </section>` : '' }
+
+      <section class="card">
+        <h3 class="ubox-sub">Meus salvos</h3>
+        <ul class="home-list" id="home-saved">
+          ${
+            saved.length
+            ? saved.slice(0,4).map(sl=>{
+                const t=bySlug.get(sl); if(!t) return '';
+                return `<li class="home-item">
+                  <a class="tt" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
+                  <span class="gg">${escapeHTML(t.group||'')}</span>
+                  <span class="act"><button class="mini" data-remove="${t.slug}">Remover</button></span>
+                </li>`;
+              }).join('')
+            : `<li class="home-item"><span class="gg">Você ainda não salvou temas.</span></li>`
+          }
+        </ul>
+        <div class="home-actions">
+          <button class="btn-ios is-small" id="btnSavedAll">Ver todos</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3 class="ubox-sub">Categorias essenciais</h3>
+        <div class="chips">
+          <button class="chip" data-cat="Direito Civil">Civil</button>
+          <button class="chip" data-cat="Direito Penal">Penal</button>
+          <button class="chip" data-cat="Processo Civil">Proc. Civil</button>
+          <button class="chip" data-cat="Direito Constitucional">Constitucional</button>
+        </div>
+        <div class="home-actions">
+          <button class="btn-ios is-small" id="btnMoreCats">Mais categorias</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3 class="ubox-sub">Descobrir temas</h3>
+        <div class="grid-mini">
+          ${discover.map(t=>`
+            <div class="home-item">
+              <a class="tt" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
+              <span class="gg">${escapeHTML(t.group||'')}</span>
+              <span class="act">
+                <a class="mini" href="https://www.google.com/search?udm=50&q=${encodeURIComponent(t.title)}" target="_blank" rel="noopener">Estudar</a>
+                <a class="mini" href="https://www.google.com/search?udm=50&q=${encodeURIComponent(t.title+' questões objetivas')}" target="_blank" rel="noopener">Treinar</a>
+              </span>
+            </div>`).join('')}
+        </div>
+      </section>
+    `;
+
+    // eventos
+    contentEl.querySelectorAll('[data-go]').forEach(a=>{
+      a.addEventListener('click', (e)=>{ e.preventDefault(); location.hash = a.getAttribute('data-go')||'#/'; });
+    });
+    contentEl.querySelectorAll('#home-saved .mini[data-remove]').forEach(b=>{
+      b.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const slug=b.getAttribute('data-remove');
+        const now=toggleSaved(slug);
+        toast(now?'Salvo adicionado':'Removido dos salvos', now?'success':'info', 1400);
+        renderHome(); renderMenu();
+      });
+    });
+    $('#btnSavedAll')?.addEventListener('click', ()=>{
+      openDrawer(); expandSaved();
+    });
+    $('#btnMoreCats')?.addEventListener('click', ()=>{
+      openDrawer();
+    });
+    contentEl.querySelectorAll('.chip[data-cat]')?.forEach(c=>{
+      c.addEventListener('click', ()=>{
+        const name=c.getAttribute('data-cat'); openDrawer(); expandCategory(name);
+      });
+    });
   }
 
   /* ===== Páginas ===== */
@@ -251,6 +378,9 @@ window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
 
       const pageTitle=meta.title || pick.title;
       titleEl.textContent=pageTitle;
+
+      // guarda "continuar"
+      try{ localStorage.setItem(LAST_KEY, slug); }catch(_){}
 
       actionsEl.innerHTML='';
       const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
@@ -293,11 +423,7 @@ window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
     if(!TEMAS.length) await loadTemas();
     if(page.kind==='tema') await loadTema(page.slug);
     else if(page.kind==='sobre') loadSobre();
-    else{
-      $('#actions').innerHTML='';
-      $('#themeTitle').textContent='Escolha um tema';
-      $('#content').innerHTML=`<div class="card"><div class="item muted">Use o menu ☰ ou a busca.</div></div>`;
-    }
+    else renderHome(); // home
   }
 
   window.addEventListener('hashchange', renderByRoute);
