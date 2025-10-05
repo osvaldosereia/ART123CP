@@ -1,26 +1,19 @@
-// meujus – app.js (fix+actions)
-// Manifesto por semente de categoria. Sem temas.json.
-// TXT com N temas separados por "-----".
-// Render: box único (Intro • Perguntas). Título aparece só no cabeçalho da página.
+// meujus – app.js (revert: fetch relativo simples)
 
 (function(){
-  /* ===== Helpers DOM ===== */
   const $  = (q, el=document) => el.querySelector(q);
   const $$ = (q, el=document) => Array.from(el.querySelectorAll(q));
 
-  /* ===== Estado ===== */
-  let TEMAS = [];                        // [{slug,title,path,tags,group?,frag?}]
-  const TEMA_MAP = Object.create(null);  // slug -> path
-  let GLOSS = null;                      // [{ termo, def, pattern }]
+  let TEMAS = [];
+  const TEMA_MAP = Object.create(null);
+  let GLOSS = null;
 
-  /* ===== Persistência (Salvos) ===== */
   const SAVED_KEY = 'meujus:saved';
-  function readSaved(){ try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch(_){ return []; } }
-  function writeSaved(list){ localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(new Set(list)))); }
-  function isSaved(slug){ return readSaved().includes(slug); }
-  function toggleSaved(slug){ const cur = new Set(readSaved()); cur.has(slug)?cur.delete(slug):cur.add(slug); writeSaved([...cur]); return cur.has(slug); }
+  const readSaved = () => { try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch(_){ return []; } };
+  const writeSaved = (list) => localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(new Set(list))));
+  const isSaved = (slug) => readSaved().includes(slug);
+  const toggleSaved = (slug) => { const cur=new Set(readSaved()); cur.has(slug)?cur.delete(slug):cur.add(slug); writeSaved([...cur]); return cur.has(slug); };
 
-  /* ===== Roteamento ===== */
   function currentPage(){
     const h = location.hash || '';
     const mTema  = h.match(/^#\/tema\/([^?#]+)/);
@@ -30,7 +23,6 @@
     return { kind:'home' };
   }
 
-  /* ===== Util ===== */
   function escapeHTML(s){
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
       .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
@@ -40,24 +32,29 @@
       .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
       .replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
   }
-  function slugify(s){ // slug global <categoria>-<tema>
+  function slugify(s){
     return (s||'').toLowerCase()
       .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
       .replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
   }
-  async function fetchText(url){
+
+  // ---------- FETCH RELATIVO ----------
+  async function fetchText(path){
+    const url = path.replace(/^\.?\//,''); // relativo à raiz do site
     const res = await fetch(url, {cache:'no-store'});
-    if(!res.ok) throw new Error(`HTTP ${res.status} @ ${url}`);
+    if(!res.ok){
+      console.error('404/erro ao buscar:', url);
+      toast(`Erro ao carregar ${url}`, 'error', 3200);
+      throw new Error(`HTTP ${res.status} @ ${url}`);
+    }
     return res.text();
   }
 
-  /* ===== Split por delimitador robusto ===== */
   function splitThemesByDelim(raw){
     const txt = raw.replace(/\r\n?/g,'\n').trim();
     return txt.split(/^\s*-{3,}\s*$/m).map(s=>s.trim()).filter(Boolean);
   }
 
-  /* ===== Parser de um tema ===== */
   function parseTemaFromChunk(chunk){
     const fixed = chunk.replace(/^\s*##\s+##\s+/mg, '## ');
     const titleMatch = fixed.match(/^\s*#\s+(.+)$/m);
@@ -101,7 +98,6 @@
     return /estude\s+com\s+o\s+google/.test(nameNorm) && /\bi\s*\.?\s*a\b/.test(nameNorm);
   }
 
-  /* ===== Glossário opcional ===== */
   async function loadGlossario(){
     if(GLOSS!==null) return;
     try{
@@ -118,27 +114,20 @@
       }).filter(Boolean);
     }catch(_){ GLOSS = []; }
   }
-  function escapeRegex(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
-  function markGlossarioInHTML(html){
-    if(!Array.isArray(GLOSS) || GLOSS.length===0) return html;
-    let out = html;
-    for(const g of GLOSS){ out = out.replace(g.pattern, m => `<abbr title="${escapeHTML(g.def)}">${escapeHTML(m)}</abbr>`); }
-    return out;
-  }
+  const escapeRegex = (s)=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
-  /* ===== Toasts ===== */
   const toastsEl = $('#toasts');
   function toast(msg, type='info', ttl=3000){
     if(!toastsEl) return;
     const el = document.createElement('div');
     el.className = `toast ${type}`;
-    el.innerHTML = `<span>${msg}</span>`;
+    el.innerHTML = `<span>${escapeHTML(msg)}</span>`;
     toastsEl.appendChild(el);
     setTimeout(()=>{ el.classList.add('show'); }, 30);
     setTimeout(()=>{ el.classList.remove('show'); setTimeout(()=> el.remove(), 400); }, ttl);
   }
 
-  /* ===== Autocomplete ===== */
+  // ---------- Autocomplete ----------
   const input = $('#search');
   const acList = $('#suggestions');
   input?.addEventListener('input', onSearchInput);
@@ -171,7 +160,7 @@
   function scoreTitle(q, title){ const t=(title||'').toLowerCase(); if(t===q) return 100; if(t.includes(q)) return 60; return q.split(/\s+/).reduce((s,w)=>s+(t.includes(w)?10:0),0); }
   function scoreTags(q, tags){ const t=(tags||[]).map(s=>s.toLowerCase()).join(' '); return t && t.includes(q) ? 20 : 0; }
 
-  /* ===== SEMENTES -> indexação automática ===== */
+  // ---------- Seeds -> indexação automática ----------
   async function buildTemasFromSeeds(){
     const seedLinks = Array.from(document.querySelectorAll('#menuList a.title[data-auto="1"][data-path]'));
     const temas = [];
@@ -183,7 +172,7 @@
       try{
         const raw    = await fetchText(path);
         const chunks = splitThemesByDelim(raw);
-        const parsed = chunks.map(parseTemaFromChunk).filter(Boolean); // {slug,title,intro,ask}
+        const parsed = chunks.map(parseTemaFromChunk).filter(Boolean);
 
         injectGroupAndItemsIntoMenu(a, group, path, parsed);
 
@@ -192,7 +181,10 @@
           const slug = `${slugify(group)}-${frag}`;
           temas.push({ slug, title: t.title, path, tags: [], group, frag });
         }
-      }catch(e){ console.error('Falha ao indexar', path, e); }
+      }catch(e){
+        console.error('Falha ao indexar', path, e);
+        toast(`Erro ao ler ${path}`, 'error', 3000);
+      }
     }
     return temas;
   }
@@ -221,7 +213,6 @@
     li.remove();
   }
 
-  /* ===== Fallback: coletar temas já listados no HTML ===== */
   function collectTemasFromMenu(){
     const links = Array.from(document.querySelectorAll('#menuList a.title[data-path]'));
     const out = [];
@@ -253,7 +244,6 @@
     return '';
   }
 
-  /* ===== Carregar TEMAS ===== */
   async function loadTemas(){
     try{
       const hasSeeds = document.querySelector('#menuList a.title[data-auto="1"]');
@@ -304,7 +294,6 @@
     });
   }
 
-  /* ===== Páginas ===== */
   async function loadTema(slug){
     const titleEl   = $('#themeTitle');
     const contentEl = $('#content');
@@ -334,10 +323,8 @@
       const pageTitle = meta?.title || pick.title;
       titleEl.textContent = pageTitle;
 
-      // ===== Ações (Salvar | Estudar | Treinar) =====
-      actionsEl.innerHTML = ''; // limpa para navegações subsequentes
+      actionsEl.innerHTML = '';
 
-      // Salvar
       const saveBtn = document.createElement('button');
       saveBtn.id = 'saveBtn';
       saveBtn.className = 'btn-ios is-small';
@@ -354,7 +341,6 @@
         toast(added ? 'Tema salvo' : 'Removido dos salvos', added ? 'success' : 'info', 1600);
       };
 
-      // Estudar -> Google IA com o título do tema
       const studyBtn = document.createElement('button');
       studyBtn.className = 'btn-ios is-small';
       studyBtn.textContent = 'Estudar';
@@ -363,7 +349,6 @@
         window.open(`https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}`, '_blank', 'noopener');
       };
 
-      // Treinar -> Google IA com "questões" do tema
       const trainBtn = document.createElement('button');
       trainBtn.className = 'btn-ios is-small';
       trainBtn.textContent = 'Treinar';
@@ -376,16 +361,12 @@
       actionsEl.appendChild(studyBtn);
       actionsEl.appendChild(trainBtn);
 
-      // Intro
       const introHTML = pick.intro.length ? markGlossarioInHTML(escapeHTML(pick.intro.join(' '))) : '';
-
-      // Perguntas -> Google modo IA
       const qList = (pick.ask||[]).map((q)=>{
         const href = `https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}`;
         return `<li><a href="${href}" target="_blank" rel="noopener">${escapeHTML(q)}</a></li>`;
       }).join('');
 
-      // Box único — sem repetir o título aqui
       contentEl.innerHTML = `
         <article class="card ubox" role="article">
           ${introHTML ? `<p class="ubox-intro">${introHTML}</p>` : ''}
@@ -427,7 +408,6 @@
     }
   }
 
-  /* ===== Boot ===== */
   window.addEventListener('hashchange', renderByRoute);
   (async function init(){
     try{
@@ -438,5 +418,4 @@
       toast('Erro ao iniciar','error',2500);
     }
   })();
-
 })();
