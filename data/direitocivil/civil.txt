@@ -105,3 +105,29 @@
   - Discuta a afirmação de que "o abuso do direito não é uma manifestação ilimitada do poder individual", mas sim uma conjugação de interesses.
   - Quais são as possíveis sanções que podem ser aplicadas ao titular de um direito que praticar o abuso do direito?
   - Proponha um caso hipotético em que a aplicação do conceito de abuso do direito seja essencial para a resolução de um conflito jurídico, justificando o porquê.
+-----
+# Direito Potestativo 
+-- É um poder que a lei ou o contrato concede ao seu titular para atuar unilateralmente, criando, modificando ou extinguindo direitos na esfera jurídica alheia. A outra parte encontra-se em um estado de sujeição, sem poder opor-se a esse exercício, sendo sua única ação suportar os efeitos. Por isso, são considerados direitos sem prestação, e seu exercício geralmente é limitado por prazos decadenciais, visando à segurança jurídica.
+
+## Pergunte pra I.A.
+
+  - Como o conceito de "sujeição" se manifesta na prática quando um direito potestativo é exercido, e o que o diferencia da obrigação de "prestar"?
+  - Quais são as fontes que podem dar origem a um direito potestativo, e como essas fontes influenciam sua natureza e limites?
+  - Por que os direitos potestativos são frequentemente denominados "direitos sem prestações" ou "invioláveis"?
+  - De que forma a "segurança jurídica" é protegida pela imposição de prazos decadenciais para o exercício dos direitos potestativos?
+  - Cite e explique um exemplo prático de direito potestativo no Direito Civil, descrevendo a atuação do titular e a sujeição da outra parte.
+  - Como o direito potestativo se distingue de um direito subjetivo comum, como o direito de propriedade?
+  - Quais as consequências para o titular de um direito potestativo que não o exerce dentro do prazo decadencial legalmente estabelecido?
+  - O que significa dizer que o exercício de um direito potestativo atua "unilateralmente, criando, modificando ou extinguindo direitos na esfera alheia"?
+  - No contexto do Direito de Família, qual direito pode ser considerado potestativo e como ele impacta a esfera jurídica do outro cônjuge/companheiro?
+  - Como a "autonomia privada" se relaciona com a criação de direitos potestativos em contratos, e quais são os limites dessa autonomia?
+  - Explique a diferença entre um prazo prescricional e um prazo decadencial, e por que os direitos potestativos estão atrelados à decadência.
+  - De que maneira a figura do "abuso do direito" pode ser aplicada ao exercício de um direito potestativo?
+  - A irrenunciabilidade é uma característica comum a muitos direitos. Os direitos potestativos podem ser renunciados pelo seu titular?
+  - Quais são os principais desafios enfrentados pelo juiz ao interpretar a extensão e os limites de um direito potestativo em um caso concreto?
+  - Como a falta de oposição da parte sujeita ao direito potestativo é crucial para a sua efetivação jurídica?
+  - O direito de resilir um contrato unilateralmente é um direito potestativo. Quais são as implicações para a outra parte nessa situação?
+  - A anulação de um negócio jurídico por vício de consentimento é um direito potestativo. Qual o prazo e o termo inicial para seu exercício?
+  - Em que medida a proteção do direito potestativo do titular pode gerar insegurança ou desequilíbrio para a parte em estado de sujeição?
+  - Como a disciplina dos vícios redibitórios, que concede ao adquirente a faculdade de redibir o contrato ou pedir abatimento do preço, ilustra um direito potestativo?
+  - Proponha um cenário em que a ausência de um prazo decadencial para um direito potestativo poderia gerar instabilidade nas relações jurídicas.
