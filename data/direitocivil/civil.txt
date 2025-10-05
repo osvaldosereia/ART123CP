@@ -392,3 +392,30 @@ LINDB para a sua resolução.
   - De que forma a teoria das incapacidades equilibra a proteção do incapaz com a segurança jurídica nas relações da vida civil?
   - Qual a relevância de se estudar a necessidade de representante ou assistente para a prática dos atos da vida civil no contexto de um Estado Democrático de Direito?
   - Proponha um exemplo em que a ausência de representação ou assistência para um incapaz gere um conflito de interesses e discuta como o Direito Civil buscaria resolvê-lo.
+-----
+# Invalidade dos atos praticados pelo incapaz, sem a presença do representante ou assistente 
+-- A lei civil estabelece categorias de incapacidade para proteger aqueles sem discernimento pleno. Atos praticados por absolutamente incapazes sem representante são nulos, e por relativamente incapazes sem assistente são anuláveis. Essa distinção é crucial para a segurança jurídica e a proteção do patrimônio do incapaz.
+
+## Pergunte pra I.A.
+
+  - Qual o fundamento da invalidade dos atos praticados por incapazes sem a devida representação ou assistência?
+  - Quais as principais diferenças entre a nulidade e a anulabilidade dos atos jurídicos, e como se aplicam aos atos dos incapazes?
+  - Quais são os critérios legais para a definição da incapacidade absoluta e relativa no Código Civil brasileiro, especialmente após o Estatuto da Pessoa com Deficiência?
+  - De que forma a presença de um representante ou assistente valida os atos do incapaz, e qual a natureza da manifestação de vontade desses auxiliares?
+  - Cite exemplos de atos que um relativamente incapaz pode praticar validamente sem a assistência, e qual a justificativa legal para isso.
+  - Como o Estatuto da Pessoa com Deficiência impactou a teoria das incapacidades, especialmente em relação à capacidade das pessoas com deficiência?
+  - Qual a relevância da "tomada de decisão apoiada" nesse contexto, e como ela se diferencia da curatela tradicional?
+  - Quais são as consequências jurídicas para um absolutamente incapaz que pratica um ato da vida civil sem representante?
+  - Em que prazo um ato praticado por um relativamente incapaz sem assistência pode ser anulado, e quem pode requerer essa anulação?
+  - Como a "capacidade de fato" se relaciona com a "teoria das incapacidades", conforme o Código Civil?
+  - A validade de um ato praticado por um incapaz sem a intervenção legal pode ser convalidada? De que forma?
+  - Em um contrato celebrado por um absolutamente incapaz sem representante, qual o tipo de vício que se configura e quais os seus efeitos?
+  - Em que situações um menor emancipado pode praticar atos que não seriam permitidos a um menor não emancipado, mesmo sendo ambos menores de idade?
+  - Qual o papel do Ministério Público nos processos que envolvem a necessidade de representante ou assistente para a prática dos atos da vida civil por incapazes?
+  - Como a "proteção ao patrimônio" do incapaz é um dos principais objetivos da teoria das incapacidades?
+  - Quais são os efeitos de um ato praticado por um incapaz que é declarado nulo em comparação com um que é declarado anulável, especialmente quanto à retroatividade?
+  - De que maneira a "vontade do menor" é considerada nos processos de nomeação de representante ou assistente, especialmente após as reformas legislativas?
+  - Como a distinção entre "ato personalíssimo" e "ato que exige representante/assistente" se manifesta na prática?
+  - Quais são os desafios práticos para identificar e comprovar a incapacidade de fato de um indivíduo em um processo judicial?
+  - Proponha um cenário em que um ato praticado por um incapaz sem assistência, embora anulável, seja mantido por decisão judicial, justificando com os princípios do Direito Civil.
+-----
