@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- TOPBAR -->
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="brand"><span class="b1">Meu</span><span class="b2">Jus</span></div>
@@ -21,7 +20,7 @@
     </div>
   </div>
 
-  <!-- DRAWER -->
+  <!-- Drawer -->
   <div class="drawer" id="drawer" aria-hidden="true">
     <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1"></div>
     <nav class="drawer-panel" id="drawer-panel" aria-label="Menu lateral" tabindex="-1">
@@ -31,8 +30,8 @@
       </div>
       <div class="drawer-content">
         <h3 class="h2">Categorias</h3>
-        <ul class="list" id="menuList">
-          <!-- Ajuste o data-path para o caminho real do TXT no seu repositório -->
+        <ul class="list menu" id="menuList">
+          <!-- Seeds: 1 por categoria -->
           <li>
             <a class="title"
                data-auto="1"
@@ -41,13 +40,14 @@
                Direito Civil
             </a>
           </li>
-          <li><a class="title" href="#/sobre" data-title="Sobre" data-tags="info">Sobre</a></li>
+          <!-- Ex.: mais seeds
+          <li><a class="title" data-auto="1" data-group="Direito Penal" data-path="data/penal/penal.txt">Direito Penal</a></li>
+          -->
         </ul>
       </div>
     </nav>
   </div>
 
-  <!-- CONTEÚDO -->
   <main class="container" id="theme" aria-live="polite">
     <div class="card ficha-head">
       <h1 class="h1" id="themeTitle"></h1>
@@ -56,10 +56,8 @@
     <div id="content" class="list-plain"></div>
   </main>
 
-  <!-- TOASTS -->
   <div id="toasts" aria-live="polite" aria-atomic="true"></div>
 
-  <!-- Drawer JS mínimo -->
   <script>
     (function(){
       const drawer   = document.getElementById('drawer');
@@ -67,8 +65,8 @@
       const openBtn  = document.getElementById('btnMenu');
       const closeBtn = document.getElementById('btnCloseMenu');
       const backdrop = document.getElementById('drawerBackdrop');
-      function open(){ drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); openBtn.setAttribute('aria-expanded','true'); panel.focus?.(); }
-      function close(){ drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); openBtn.setAttribute('aria-expanded','false'); openBtn.focus?.(); }
+      function open(){ drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); openBtn.setAttribute('aria-expanded','true'); document.body.classList.add('noscroll'); panel.focus?.(); }
+      function close(){ drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); openBtn.setAttribute('aria-expanded','false'); document.body.classList.remove('noscroll'); openBtn.focus?.(); }
       openBtn?.addEventListener('click', open);
       closeBtn?.addEventListener('click', close);
       backdrop?.addEventListener('click', close);
