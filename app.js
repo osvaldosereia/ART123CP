@@ -91,32 +91,61 @@
   }
 
   // regex de destaque: palavras com ≥4 letras, ignora números
-function _buildHighlightRegex(q){
-  const parts = String(q||'')
-    .toLowerCase()
-    .split(/\s+/)
-    .filter(w => w.length >= 4 && /[\p{L}]/u.test(w) && !/^\d+$/.test(w)) // tem letra e não é só número
-    .map(w => w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
-  if(!parts.length) return null;
-  // limites por letras unicode para não marcar dentro de outras palavras
-  return new RegExp(`(?<!\\p{L})(` + parts.join('|') + `)(?!\\p{L})`, 'uig');
-}
+  function _buildHighlightRegex(q){
+    const parts = String(q||'')
+      .toLowerCase()
+      .split(/\s+/)
+      .filter(w => w.length >= 4 && /[\p{L}]/u.test(w) && !/^\d+$/.test(w))
+      .map(w => w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+    if(!parts.length) return null;
+    // fallback sem lookbehind para navegadores antigos
+    try{
+      return new RegExp(`(?<!\\p{L})(` + parts.join('|') + `)(?!\\p{L})`, 'uig');
+    }catch(_){
+      return new RegExp(`(^|[^\\p{L}])(` + parts.join('|') + `)(?!\\p{L})`, 'uig');
+    }
+  }
 
-// Realce em HTML ESCAPADO (conteúdo do tema)
-function highlightHTML(escapedHtml, q){
-  const rx = _buildHighlightRegex(q);
-  if(!rx) return escapedHtml;
-  return escapedHtml.replace(rx, '<mark>$1</mark>');
-}
+  // Realce em HTML ESCAPADO (conteúdo do tema)
+  function highlightHTML(escapedHtml, q){
+    const rx = _buildHighlightRegex(q);
+    if(!rx) return escapedHtml;
+    // se fallback sem lookbehind, preserva prefixo no replace
+    if(rx.source.startsWith('(^|')){
+      return escapedHtml.replace(rx, (m,prefix,word)=> (prefix||'') + '<mark>'+word+'</mark>');
+    }
+    return escapedHtml.replace(rx, '<mark>$1</mark>');
+  }
 
-// Realce no título das sugestões
-function highlightTitle(title, q){
-  const esc = String(title).replace(/</g,'&lt;');
-  const rx = _buildHighlightRegex(q);
-  if(!rx) return esc;
-  return esc.replace(rx, '<mark>$1</mark>');
-}
+  // Realce no título das sugestões
+  function highlightTitle(title, q){
+    const esc = String(title).replace(/</g,'&lt;');
+    const rx = _buildHighlightRegex(q);
+    if(!rx) return esc;
+    if(rx.source.startsWith('(^|')){
+      return esc.replace(rx, (m,prefix,word)=> (prefix||'') + '<mark>'+word+'</mark>');
+    }
+    return esc.replace(rx, '<mark>$1</mark>');
+  }
 
+  /* ===== Busca (autocomplete) ===== */
+  const input  = document.querySelector('#search');
+  const acList = document.querySelector('#suggestions');
+  if (acList) acList.hidden = true;
+
+  // scoring por campo
+  function _hit(hay,q){
+    if(!hay) return 0;
+    if(hay===q) return 100;
+    if(hay.includes(q)) return 60;
+    return q.split(/\s+/).reduce((s,w)=> s + (w && hay.includes(w) ? 10 : 0), 0);
+  }
+  function scoreFields(q, t){
+    const sT = _hit(t.titleL, q);
+    const sI = _hit(t.introL, q);
+    const sP = _hit(t.askL,   q);
+    return { score: 1.0*sT + 0.5*sI + 0.8*sP, flags: { t: sT>0, i: sI>0, p: sP>0 } };
+  }
 
   input?.addEventListener('input', e=>{
     const q=(e.target.value||'').trim().toLowerCase();
@@ -137,7 +166,6 @@ function highlightTitle(title, q){
         flags.i?'<span class="badge i">I</span>':'',
         flags.p?'<span class="badge p">P</span>':'',
       ].join('');
-      // data-q e data-flags para sabermos a origem do match
       return `
         <li role="option">
           <a href="#/tema/${t.slug}" data-q="${q}" data-flags="${['t','i','p'].filter(k=>flags[k]).join('')}">
@@ -319,7 +347,6 @@ function highlightTitle(title, q){
     const bySlug = new Map(TEMAS.map(t=>[t.slug,t]));
     const last = bySlug.get(lastSlug);
 
-    // escolher 6 temas para "Descobrir"
     const discover = TEMAS.slice().sort((a,b)=>a.title.localeCompare(b.title,'pt-BR')).slice(0,6);
 
     contentEl.innerHTML = `
@@ -388,7 +415,6 @@ function highlightTitle(title, q){
       </section>
     `;
 
-    // eventos
     contentEl.querySelectorAll('[data-go]').forEach(a=>{
       a.addEventListener('click', (e)=>{ e.preventDefault(); location.hash = a.getAttribute('data-go')||'#/'; });
     });
@@ -401,12 +427,8 @@ function highlightTitle(title, q){
         renderHome(); renderMenu();
       });
     });
-    $('#btnSavedAll')?.addEventListener('click', ()=>{
-      openDrawer(); expandSaved();
-    });
-    $('#btnMoreCats')?.addEventListener('click', ()=>{
-      openDrawer();
-    });
+    $('#btnSavedAll')?.addEventListener('click', ()=>{ openDrawer(); expandSaved(); });
+    $('#btnMoreCats')?.addEventListener('click', ()=>{ openDrawer(); });
     contentEl.querySelectorAll('.chip[data-cat]')?.forEach(c=>{
       c.addEventListener('click', ()=>{
         const name=c.getAttribute('data-cat'); openDrawer(); expandCategory(name);
@@ -439,10 +461,8 @@ function highlightTitle(title, q){
       const pageTitle=meta.title || pick.title;
       titleEl.textContent=pageTitle;
 
-      // guarda "continuar"
       try{ localStorage.setItem(LAST_KEY, slug); }catch(_){}
 
-      // verifica última busca e se veio de Intro/Perguntas
       let lastSearch = null;
       try{ lastSearch = JSON.parse(sessionStorage.getItem(LAST_SEARCH_KEY)||'null'); }catch(_){}
       const shouldHighlight = !!(lastSearch && /[ip]/.test(lastSearch.flags||''));
@@ -479,7 +499,6 @@ function highlightTitle(title, q){
           </section>
         </article>`;
 
-      // limpa a indicação após usar, para não “vazar” para outras navegações
       try{ sessionStorage.removeItem(LAST_SEARCH_KEY); }catch(_){}
 
     }catch(e){
@@ -499,7 +518,7 @@ function highlightTitle(title, q){
     if(!TEMAS.length) await loadTemas();
     if(page.kind==='tema') await loadTema(page.slug);
     else if(page.kind==='sobre') loadSobre();
-    else renderHome(); // home
+    else renderHome();
   }
 
   window.addEventListener('hashchange', renderByRoute);
