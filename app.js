@@ -1,5 +1,5 @@
-// Menu colapsável + ordem alfabética + início com “Sobre”.
-// Mantém busca e página de tema.
+// Lateral: Sobre (modal) • Salvos (colapsado) • divisor • "Categorias" • grupos.
+// Salvos com mini botão Remover. Menu re-renderiza após salvar/remover.
 
 (function(){
   const $  = (q, el=document) => el.querySelector(q);
@@ -27,7 +27,7 @@
   }
 
   const toastsEl = $('#toasts');
-  function toast(msg, type='info', ttl=2400){
+  function toast(msg, type='info', ttl=2200){
     if(!toastsEl) return;
     const el = document.createElement('div');
     el.className = `toast ${type}`;
@@ -61,7 +61,8 @@
     let ask=[]; for(const s of secs){const nm=normalizeHeading(s.name); if(isQA(nm)){ const body=fixed.slice(s.start,s.end); ask=ask.concat(Array.from(body.matchAll(/^\s*-\s+(.+?)\s*$/mg)).map(x=>x[1].trim()));}}
     return { slug, title, intro, ask };
   }
-  const normalizeHeading=(h)=> (h||'').toLowerCase().replace(/[.#:]/g,' ').replace(/\s+/g,' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
+  const normalizeHeading=(h)=> (h||'').toLowerCase().replace(/[.#:]/g,' ').replace(/\s+/g,' ')
+                      .normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
   const isQA=(nm)=> /\bpergunte\s+pra\s+i\s*\.?\s*a\b/.test(nm) || (/estude\s+com\s+o\s+google/.test(nm) && /\bi\s*\.?\s*a\b/.test(nm));
 
   let GLOSS_PATTERNS=[];
@@ -84,23 +85,7 @@
     return out;
   }
 
-  /* ===== Busca ===== */
-  const input=$('#search'); const acList=$('#suggestions'); if(acList) acList.hidden=true;
-  input?.addEventListener('input', e=>{
-    const q=(e.target.value||'').trim().toLowerCase();
-    if(!q||!TEMAS.length){ acList.innerHTML=''; acList.hidden=true; return; }
-    const arr=TEMAS.map(t=>({slug:t.slug,title:t.title,group:t.group||'',score:score(q,t)}))
-      .filter(a=>a.score>0).sort((a,b)=>b.score-a.score).slice(0,8);
-    if(!arr.length){ acList.innerHTML=''; acList.hidden=true; return; }
-    acList.innerHTML=arr.map(a=>`<li role="option"><a href="#/tema/${a.slug}"><div class="s1">${escapeHTML(a.title)}</div><div class="s2">${escapeHTML(a.group||'')}</div></a></li>`).join('');
-    acList.hidden=false;
-  });
-  input?.addEventListener('keydown', ev=>{ if(ev.key==='Enter'){ const a=acList?.querySelector('a'); if(a){ location.hash=a.getAttribute('href'); acList.hidden=true; } } });
-  acList?.addEventListener('click', ev=>{ const a=ev.target.closest('a'); if(a){ acList.hidden=true; } });
-  const score=(q,t)=> hit((t.title||'').toLowerCase(),q)+hit((t.tags||[]).join(' ').toLowerCase(),q);
-  const hit=(hay,q)=>!hay?0:(hay===q?100:(hay.includes(q)?60:q.split(/\s+/).reduce((s,w)=>s+(hay.includes(w)?10:0),0)));
-
-  /* ===== Seeds -> lê todos os TXT e guarda ===== */
+  /* ===== Seeds ===== */
   async function readAllSeeds(){
     const seeds=$$('#menuList a.title[data-auto="1"][data-path]');
     const temas=[];
@@ -120,28 +105,75 @@
     return temas;
   }
 
-  /* ===== Render do menu: Sobre + categorias em acordeão, ordenadas ===== */
+  /* ===== Menu lateral ===== */
   function renderMenu(){
     const menu=$('#menuList'); if(!menu) return;
     menu.innerHTML='';
 
-    // item Sobre primeiro
+    // 1) Sobre (botão abre modal)
     const liSobre=document.createElement('li');
-    liSobre.innerHTML=`<a class="title" href="#/sobre" data-title="Sobre">Sobre</a>`;
+    const btnSobre=document.createElement('button');
+    btnSobre.className='cat-btn';
+    btnSobre.type='button';
+    btnSobre.innerHTML=`<span>Sobre</span><span class="caret">▸</span>`;
+    btnSobre.addEventListener('click', ()=> window.__openSobre?.());
+    liSobre.appendChild(btnSobre);
     menu.appendChild(liSobre);
-    const sep=document.createElement('div'); sep.className='sep'; menu.appendChild(sep);
 
-    // agrupa por categoria
+    // 2) Salvos (colapsado)
+    const saved=readSaved();
+    const liSaved=document.createElement('li'); liSaved.className='item';
+    const btnSaved=document.createElement('button');
+    btnSaved.className='cat-btn'; btnSaved.setAttribute('aria-expanded','false');
+    btnSaved.innerHTML=`<span>Salvos</span><span class="caret">▸</span>`;
+    const ulSaved=document.createElement('ul'); ulSaved.className='sublist'; ulSaved.hidden=true;
+
+    if(saved.length){
+      const map=new Map(TEMAS.map(t=>[t.slug,t]));
+      ulSaved.innerHTML = saved
+        .map(slug=>{
+          const t=map.get(slug); if(!t) return '';
+          return `<li>
+            <a class="title" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
+            <button class="mini" data-remove="${t.slug}">Remover</button>
+          </li>`;
+        }).join('');
+    }else{
+      ulSaved.innerHTML = `<li><a class="title" href="#/sobre">Nenhum tema salvo</a></li>`;
+    }
+
+    btnSaved.addEventListener('click',()=>{
+      const open=btnSaved.getAttribute('aria-expanded')==='true';
+      btnSaved.setAttribute('aria-expanded', String(!open));
+      ulSaved.hidden = open;
+    });
+    liSaved.appendChild(btnSaved); liSaved.appendChild(ulSaved); menu.appendChild(liSaved);
+
+    // remover salvo inline
+    ulSaved.querySelectorAll('button[data-remove]').forEach(b=>{
+      b.addEventListener('click',(ev)=>{
+        ev.preventDefault();
+        const slug=b.getAttribute('data-remove');
+        const now=toggleSaved(slug);
+        toast(now?'Salvo adicionado':'Removido dos salvos', now?'success':'info', 1400);
+        renderMenu(); // re-render
+      });
+    });
+
+    // 3) divisor visível
+    const div=document.createElement('div'); div.className='divider'; menu.appendChild(div);
+
+    // 4) título "Categorias"
+    const title=document.createElement('div'); title.className='menu-title'; title.textContent='Categorias'; menu.appendChild(title);
+
+    // 5) categorias em acordeão
     const byCat=new Map();
     for(const t of TEMAS){
       const key=t.group||'Geral';
       if(!byCat.has(key)) byCat.set(key, []);
       byCat.get(key).push(t);
     }
-
-    // categorias em ordem alfabética
     const cats=[...byCat.keys()].sort((a,b)=>a.localeCompare(b,'pt-BR'));
-
     for(const cat of cats){
       const temas=byCat.get(cat).slice().sort((a,b)=>a.title.localeCompare(b.title,'pt-BR'));
       const li=document.createElement('li'); li.className='item';
@@ -149,26 +181,22 @@
       btn.className='cat-btn'; btn.setAttribute('aria-expanded','false');
       btn.innerHTML=`<span>${escapeHTML(cat)}</span><span class="caret">▸</span>`;
       const ul=document.createElement('ul'); ul.className='sublist'; ul.hidden=true;
-
       ul.innerHTML=temas.map(t=>`<li><a class="title" href="#/tema/${t.slug}" data-path="${t.path}" data-frag="${t.frag}" data-title="${escapeHTML(t.title)}">${escapeHTML(t.title)}</a></li>`).join('');
-
       btn.addEventListener('click',()=>{
         const open=btn.getAttribute('aria-expanded')==='true';
         btn.setAttribute('aria-expanded', String(!open));
         ul.hidden = open;
       });
-
       li.appendChild(btn); li.appendChild(ul); menu.appendChild(li);
     }
   }
 
+  /* ===== Páginas ===== */
   async function loadTemas(){
     TEMAS = await readAllSeeds();
-    if(!TEMAS.length) console.warn('Nenhum tema indexado. Verifique data-path e TXT.');
     renderMenu();
   }
 
-  /* ===== Páginas ===== */
   async function loadTema(slug){
     const titleEl=$('#themeTitle'); const contentEl=$('#content'); const actionsEl=$('#actions');
     contentEl.textContent='Carregando…';
@@ -179,7 +207,8 @@
 
     try{
       const raw=await fetchText(path);
-      const parsed=splitThemesByDelim(raw).map(parseTemaFromChunk).filter(Boolean);
+      const chunks=splitThemesByDelim(raw);
+      const parsed=chunks.map(parseTemaFromChunk).filter(Boolean);
       const pick = frag ? parsed.find(t=>t.slug===frag)
                         : (parsed.find(t=>`${slugify(meta.group)}-${t.slug}`===slug) || parsed[0]);
       if(!pick){ contentEl.innerHTML=`<div class="card"><div class="item muted">Tema não encontrado no TXT.</div></div>`; return; }
@@ -194,6 +223,7 @@
         const added=toggleSaved(slug);
         saveBtn.textContent=added?'Remover':'Salvar';
         saveBtn.setAttribute('data-variant', added?'secondary':'primary');
+        renderMenu();
         toast(added?'Tema salvo':'Removido dos salvos', added?'success':'info', 1400);
       });
       const studyBtn=mkBtn('Estudar','', ()=>window.open(`https://www.google.com/search?udm=50&q=${encodeURIComponent(pageTitle)}`,'_blank','noopener'));
