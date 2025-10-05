@@ -1,7 +1,7 @@
-// meujus – app.js (2025-10-04)
+// meujus – app.js (fix)
 // Manifesto por semente de categoria. Sem temas.json.
 // TXT com N temas separados por linhas contendo só "-----" (tolerante a espaços).
-// Render: box único (Título • Intro • Estude com o Google I.A.).
+// Render: box único (Título • Intro • Perguntas / Estudo).
 
 (function(){
   /* ===== Helpers DOM ===== */
@@ -60,7 +60,7 @@
 
   /* ===== Parser de um tema ===== */
   function parseTemaFromChunk(chunk){
-    // normaliza cabeçalhos mal formatados tipo "## ## Estude …"
+    // normaliza cabeçalhos mal formatados tipo "## ## XYZ"
     const fixed = chunk.replace(/^\s*##\s+##\s+/mg, '## ');
     const titleMatch = fixed.match(/^\s*#\s+(.+)$/m);
     if(!titleMatch) return null;
@@ -87,7 +87,7 @@
       const body = fixed.slice(s.start, s.end);
       // Lista de perguntas aceita "- " com qualquer indentação
       const list = Array.from(body.matchAll(/^\s*-\s+(.+?)\s*$/mg)).map(x=>x[1].trim());
-      if(isEstudeIA(nameNorm)) ask = ask.concat(list);
+      if(isQASection(nameNorm)) ask = ask.concat(list);
     }
 
     return { slug, title, intro, ask };
@@ -101,8 +101,9 @@
       .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
       .trim();
   }
-  function isEstudeIA(nameNorm){
-    // cobre: "estude com o google ia", "estude com o google i.a.", "estude com o google modo ia"
+  function isQASection(nameNorm){
+    // cobre: "pergunte pra i.a." e "estude com o google i.a./modo i.a."
+    if (/pergunte pra ia/.test(nameNorm)) return true;
     return /estude com o google/.test(nameNorm) && /\bia\b/.test(nameNorm);
   }
 
@@ -408,7 +409,7 @@
     else {
       const titleEl   = $('#themeTitle');
       const contentEl = $('#content');
-      $('#saveBtn']?.remove();
+      $('#saveBtn')?.remove(); // <— corrigido (antes estava com colchete errado)
       titleEl.textContent = 'Escolha um tema';
       contentEl.innerHTML = `<div class="card"><div class="item"><span class="muted">Use o menu ☰ ou a busca.</span></div></div>`;
     }
