@@ -1,7 +1,60 @@
 
 
 
+-----
 
+# Direitos Vitalícios 
+-- Direitos vitalícios são aqueles cuja duração se estende por toda a vida de seu titular, não se extinguindo com o decurso do tempo, mas sim com o falecimento do indivíduo ou, em casos específicos, com o desaparecimento da condição que os fundamenta. Essenciais para a estabilidade em certas carreiras e para a proteção de atributos existenciais, manifestam-se em diversos ramos do Direito, como no usufruto vitalício e na garantia da vitaliciedade em cargos públicos, sendo sua principal característica a perenidade enquanto o titular viver.
+
+## Pergunte pra I.A.
+
+  - Como a vitaliciedade dos magistrados, prevista na Constituição Federal (mencionada em Direito Administrativo, p. 1588 e 1749), exemplifica o conceito de direito vitalício?
+  - De que forma a imprescritibilidade das ações para proteção de direitos da personalidade da pessoa falecida (Direito Civil, p. 1951) se relaciona com a ideia de vitaliciedade, mesmo após a morte do titular?
+  - No contexto do usufruto (Direito Civil, p. 2209), como se distingue o usufruto vitalício das outras modalidades e qual o impacto do falecimento do usufrutuário?
+  - Explique como a garantia da vitaliciedade para membros do Ministério Público (Direito Constitucional, p. 579) e para juízes (Direito Constitucional, p. 569) se alinha com o conceito de direito vitalício.
+  - A proteção ao bem de família, enquanto garantia da moradia (Direito Civil, p. 2285-2287), pode ser considerada um direito de caráter vitalício, especialmente para os cônjuges?
+  - Como a "imprescritibilidade" dos direitos da personalidade (Direito Civil, p. 1951), embora distinta da vitaliciedade, converge na proteção da pessoa por toda a sua existência?
+  - De que forma a remuneração de parlamentares e a sua proteção por prerrogativas (Direito Constitucional, p. 515-516) não se enquadram como direitos vitalícios, mesmo que durem o mandato?
+  - O que são as "limitações gerais" à propriedade, como as Áreas de Preservação Permanente (Direito Ambiental, p. 1816), e como elas podem ser consideradas "vitalícias" em seu caráter restritivo?
+  - Analise a distinção entre um "direito adquirido" (Direito Civil, p. 1919) e um direito vitalício, focando na causa de sua irrenunciabilidade ou permanência.
+  - Como a "aposentadoria dos servidores públicos" (Direito Administrativo, p. 1601-1603) reflete uma aspiração a um benefício de caráter vitalício, e quais são as condições para sua aquisição?
+  - A irredutibilidade de subsídios de magistrados e membros do MP (Direito Constitucional, p. 569 e 579) é uma garantia vitalícia? Qual o seu propósito?
+  - De que maneira o "direito à herança" (Direito Civil, p. 2302), embora decorrente da morte, se projeta como uma expectativa de direito vitalício para o herdeiro?
+  - A proteção da "imagem e honra" de pessoas falecidas por seus herdeiros (Direito Civil, p. 1951) reflete uma extensão da vitaliciedade ou um novo direito?
+  - Como o "mandato de Senador" (Direito Constitucional, p. 504), com duração de 8 anos, diferencia-se de um direito vitalício?
+  - A existência de "cláusulas pétreas" na Constituição Federal (Direito Constitucional, p. 531) pode ser comparada, em termos de perenidade, a direitos vitalícios? Qual a analogia?
+  - Em que medida a "perda da nacionalidade" (Direito Internacional, p. 993-994), que pode ser reaquida, se opõe à noção de um direito vitalício?
+  - O "direito real de habitação" do cônjuge sobrevivente (Direito Civil, p. 2211) é um exemplo de direito vitalício? Quais suas características?
+  - Discuta a "imprescritibilidade" dos crimes ambientais (Direito Ambiental, p. 1847-1848) e como isso, indiretamente, confere uma "vida longa" à pretensão de reparação.
+  - Qual a relevância da "vitaliciedade" em cargos de direção de órgãos de controle, como os Ministros do TCU (Direito Financeiro, p. 1141)?
+  - Proponha um cenário hipotético em que um direito inicialmente concebido como vitalício sofra uma limitação legal que altere sua natureza.
+
+-----
+# Legitimidade Post Mortem 
+-- A legitimidade *post mortem* refere-se à possibilidade de proteção de direitos da personalidade após o falecimento do seu titular. Embora a personalidade civil se extinga com a morte, o ordenamento jurídico, em especial o Código Civil (arts. 12, parágrafo único, e 20, parágrafo único) e a Constituição Federal, permite que familiares e outros interessados prossigam na defesa da imagem, honra e outros atributos do *de cujus*, refletindo a projeção da dignidade humana.
+
+## Pergunte pra I.A.
+
+  - Como o Código Civil, em seus artigos 12, parágrafo único, e 20, parágrafo único, permite a proteção de direitos da personalidade de pessoas falecidas?
+  - De que forma a "dignidade da pessoa humana" (CF, art. 1º, III) serve de fundamento para a tutela da personalidade *post mortem*?
+  - Quais são os sujeitos legitimados a defender os direitos da personalidade de uma pessoa falecida, e o que fundamenta essa legitimação?
+  - O que significa a afirmação de que a ação para proteção dos direitos da personalidade da pessoa falecida é "imprescritível", conforme o texto?
+  - Como a "violação ao nome e à honra do morto" pode gerar "dano moral reflexo" ou "por ricochete" aos parentes vivos, e qual a relevância do REsp 521.697 do STJ nesse tema?
+  - A inclusão do "companheiro" na legitimação *post mortem* é um entendimento doutrinário. Como isso se alinha com a equiparação constitucional entre casamento e união estável?
+  - Qual a distinção entre a imprescritibilidade da ação de proteção e o prazo prescricional de 3 anos para a "reparação civil decorrente da violação dos direitos da personalidade", conforme o art. 206, § 3º, V, do CC?
+  - Em um contexto de produção biográfica (livros, filmes), como o art. 20 do CC e a ADIn 4.815 do STF tratam da necessidade de autorização para o uso da imagem e honra de pessoas falecidas?
+  - A "Súmula 227 do STJ", que permite à pessoa jurídica sofrer dano moral, pode ser analogicamente aplicada para fundamentar a proteção *post mortem* de direitos da personalidade?
+  - Quais seriam os "bens da personalidade" mais frequentemente protegidos judicialmente após a morte do titular?
+  - Como a natureza "existencial" dos direitos da personalidade justifica sua proteção mesmo após a extinção da "personalidade jurídica" do indivíduo?
+  - De que maneira a tutela *post mortem* reflete uma "eficácia horizontal dos direitos fundamentais" nas relações entre particulares?
+  - Se o documento não menciona a possibilidade de um testamento dispor sobre a proteção da personalidade *post mortem*, qual seria a interpretação a ser dada?
+  - A ausência de um "prazo para que os parentes ingressem com essa ação de proteção ao morto" poderia gerar insegurança jurídica? Como isso é mitigado?
+  - Considerando a "atipicidade" dos direitos da personalidade (CC, art. 12), como o juiz pode estender a proteção *post mortem* a direitos não explicitamente listados na lei?
+  - Como a "liberdade de expressão" (CF, art. 5º, IV e IX) se equilibra com a proteção da honra e imagem de pessoas falecidas, e o papel do Judiciário nesse balanceamento?
+  - A tutela *post mortem* dos direitos da personalidade difere significativamente da proteção de bens patrimoniais herdados? Em que aspectos?
+  - Se houver um conflito entre a vontade expressa pelo *de cujus* em vida e a interpretação dos familiares sobre a proteção *post mortem* de sua imagem, qual deveria prevalecer?
+  - De que forma a "indisponibilidade" e o caráter "relativamente indisponível" dos direitos da personalidade influenciam a legitimidade para sua defesa *post mortem*?
+  - Proponha um caso prático que exemplifique a atuação da legitimidade *post mortem* em defesa da privacidade de uma figura pública falecida, considerando o interesse jornalístico.
 
 -----
 # Direitos Inatos 
