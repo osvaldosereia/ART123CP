@@ -1,3 +1,170 @@
+
+
+
+
+
+# Iura Novit Curia 
+-- O princípio "Iura Novit Curia" significa "o juiz conhece o direito". Implica que as partes não precisam provar o direito aplicável em juízo, pois se presume que o magistrado detém o conhecimento das leis. Este princípio é fundamental para a celeridade processual e a efetividade da justiça, garantindo que o foco da disputa seja nos fatos e não na existência ou validade das normas jurídicas nacionais.
+
+## Pergunte pra I.A.
+
+  - O que significa o princípio "Iura Novit Curia" no contexto jurídico?
+  - Como o princípio "Iura Novit Curia" contribui para a celeridade e efetividade da justiça?
+  - Em quais situações o princípio "Iura Novit Curia" se aplica de forma irrestrita no ordenamento jurídico brasileiro?
+  - Qual a relação entre "Iura Novit Curia" e o ônus da prova das partes em um processo judicial?
+  - O princípio "Iura Novit Curia" desobriga as partes de fundamentar juridicamente seus pedidos? Explique.
+  - Quando a lei estrangeira é aplicável, o princípio "Iura Novit Curia" ainda se aplica? Quais as ressalvas?
+  - De que forma a Lei de Introdução às Normas do Direito Brasileiro (LINDB) aborda a aplicação do "Iura Novit Curia" em relação à lei estrangeira?
+  - O que acontece se o juiz não conhecer a lei estrangeira invocada pelas partes?
+  - O princípio "Iura Novit Curia" se estende ao conhecimento de costumes e normas consuetudinárias?
+  - Qual o papel do advogado em relação ao direito invocado, considerando que o juiz já o conhece?
+  - A alegação de desconhecimento da lei por parte da população pode ser escusada com base no "Iura Novit Curia"?
+  - Como a "hiperinflação legislativa" pode desafiar a aplicação prática do princípio "Iura Novit Curia"?
+  - Em um caso concreto, como o juiz deve proceder se as partes invocarem interpretações divergentes de uma mesma norma legal?
+  - O princípio "Iura Novit Curia" se aplica a normas infralegais, como decretos e portarias?
+  - De que maneira o "Iura Novit Curia" se harmoniza com a autonomia da vontade das partes na escolha do direito aplicável em contratos internacionais?
+  - Qual a distinção entre "Iura Novit Curia" e a necessidade de comprovar a vigência de uma norma, quando aplicável?
+  - O princípio "Iura Novit Curia" pode ser invocado para suprir a falta de um pedido específico da parte em um processo?
+  - Como a atuação do Ministério Público se beneficia ou é limitada pelo princípio "Iura Novit Curia" em suas manifestações?
+  - Em quais ramos do Direito o princípio "Iura Novit Curia" tem sua aplicação mais evidente?
+  - Qual a importância do "Iura Novit Curia" para a manutenção da segurança jurídica e da previsibilidade das decisões judiciais?
+
+-----
+# Sub Judice 
+-- O termo "sub judice" significa "sob julgamento" ou "pendente de decisão judicial". Refere-se a uma questão ou processo que ainda está em análise perante o Poder Judiciário, sem uma decisão final transitada em julgado. Durante esse período, as partes envolvidas aguardam a resolução do conflito, e a situação jurídica da matéria pode ser incerta, sujeita a alterações.
+
+## Pergunte pra I.A.
+
+  - O que significa a expressão "sub judice" no contexto jurídico?
+  - Qual a principal característica de um processo ou questão que se encontra "sub judice"?
+  - De que forma a situação "sub judice" difere de um caso já transitado em julgado?
+  - Quais são as implicações práticas para as partes quando um processo está "sub judice"?
+  - Um bem ou direito pode estar "sub judice"? Cite um exemplo.
+  - Como a publicidade de informações sobre um caso "sub judice" pode impactar o andamento do processo?
+  - Em que medida o princípio da presunção de inocência se aplica a indivíduos envolvidos em questões "sub judice"?
+  - Quais são os riscos e incertezas associados a uma situação "sub judice" para as partes envolvidas?
+  - Um contrato pode ser considerado "sub judice"? Quais seriam as consequências?
+  - Como a "Lei da Ficha Limpa" se relaciona com a condição de um candidato que possui um processo "sub judice"?
+  - De que forma a decisão final de um processo "sub judice" altera a situação jurídica das partes e da matéria em questão?
+  - Quais são os mecanismos legais disponíveis para as partes influenciarem o andamento de um processo "sub judice"?
+  - A duração de uma situação "sub judice" é predeterminada? O que pode influenciá-la?
+  - Como a existência de um processo "sub judice" pode afetar a negociação ou alienação de bens envolvidos na disputa?
+  - Em que situações um "ato administrativo" pode estar "sub judice"?
+  - Quais são os direitos e deveres dos advogados e procuradores em relação a casos "sub judice"?
+  - A mídia tem alguma restrição na divulgação de informações sobre casos "sub judice"?
+  - Um processo de "desapropriação" pode estar "sub judice"? Como isso afeta o proprietário?
+  - De que maneira o tempo de duração de uma situação "sub judice" pode ser mitigado ou acelerado pelo sistema judicial?
+  - Como a incerteza de uma questão "sub judice" impacta a tomada de decisões por parte de empresas ou indivíduos?
+
+-----
+# Vacatio Legis 
+-- É o período entre a publicação de uma lei e sua entrada em vigor. Esse interregno temporal permite que a sociedade e os operadores do direito tomem conhecimento da nova norma e se preparem para seus efeitos. Embora a lei já exista, ela não produz efeitos obrigatórios durante a *vacatio legis*, configurando um período de maturação e adaptação. Sua duração visa garantir a segurança jurídica e a efetividade da legislação.
+
+## Pergunte pra I.A.
+
+  - O que caracteriza o período de *vacatio legis* e qual sua importância para a segurança jurídica?
+  - Como a promulgação e a publicação da lei se relacionam com o início da *vacatio legis*?
+  - Qual é a regra geral para o início da vigência de uma lei, na ausência de disposição expressa, conforme a LINDB?
+  - Em que medida a duração da *vacatio legis* pode ser influenciada pela complexidade da lei ou pelo impacto que ela causará na sociedade?
+  - A nova contagem de prazos para a entrada em vigor das leis, incluindo a data da publicação e o último dia do prazo, impacta a interpretação da *vacatio legis*?
+  - Se uma lei é republicada para corrigir erros durante a *vacatio legis*, qual é o efeito dessa republicação sobre o prazo de sua entrada em vigor?
+  - Quais são as consequências de uma lei ser alterada em seu conteúdo após a *vacatio legis* ter expirado?
+  - O que significa dizer que uma lei, durante a *vacatio legis*, "já existe, está perfeita e completa", mas "não obriga, não pode ser invocada e consequentemente não cria direitos ou deveres"?
+  - Como a *vacatio legis* contribui para o princípio da inescusabilidade do desconhecimento da lei, conforme o Art. 3º da LINDB?
+  - Diferencie o "efetivo conhecimento" do "conhecimento possível" da lei no contexto da *vacatio legis*.
+  - A necessidade de regulamentação da lei pelo Poder Executivo pode afetar a eficácia da norma durante a *vacatio legis*? De que forma?
+  - Em quais situações a lei brasileira pode ser aplicada no estrangeiro e como isso influencia o período de sua *vacatio legis*?
+  - A *vacatio legis* se aplica a todos os tipos de normas jurídicas ou existem exceções?
+  - Quais são os principais objetivos do legislador ao estabelecer um período de *vacatio legis*?
+  - Pode o desuso de uma lei ser considerado um fator que influi em sua vigência após o período de *vacatio legis*?
+  - Como a *vacatio legis* se relaciona com o princípio da não surpresa, especialmente em matéria tributária?
+  - A concessão de uma medida liminar em um mandado de segurança pode ter impacto sobre a aplicação de uma lei que está em período de *vacatio legis*?
+  - Em que situações um tratado internacional, após ser ratificado, mas antes de sua promulgação interna, pode ter seus efeitos considerados no ordenamento jurídico brasileiro?
+  - Se uma lei entra em vigor imediatamente após sua publicação, quais são as implicações para o preparo da sociedade e dos operadores do direito?
+  - Considerando o dinamismo da sociedade, como a *vacatio legis* busca conciliar a necessidade de progresso social com a segurança jurídica e a paz social?
+
+-----
+# Promulgação 
+-- A promulgação é o ato jurídico pelo qual a autoridade competente atesta a existência válida e a executoriedade de uma lei. É a chancela final que certifica que a norma completou seu processo legislativo e está pronta para produzir efeitos. Distingue-se da publicação, que visa dar conhecimento público do texto legal, sendo a promulgação um passo crucial para a efetiva entrada em vigor da lei no ordenamento jurídico.
+
+## Pergunte pra I.A.
+
+  - Qual o significado da promulgação no processo de criação de uma lei e como ela se diferencia da publicação?
+  - Quem é a autoridade constitucionalmente competente para promulgar uma lei no Brasil?
+  - De que maneira a promulgação de uma lei atesta sua "existência válida" e "executoriedade"?
+  - Em que momento do "processo legislativo" a promulgação se insere e qual sua importância nessa sequência de atos?
+  - A ausência de promulgação, mesmo após a aprovação legislativa, impediria a produção de efeitos jurídicos de uma lei? Justifique.
+  - Quais são os "atos marcantes" que precedem a promulgação e o que cada um deles significa?
+  - Se uma lei é promulgada, mas não publicada, ela pode ser considerada vigente? Por quê?
+  - Como a promulgação se relaciona com o conceito de *vacatio legis* e o início da vigência da lei?
+  - Existe alguma situação em que a promulgação pode ser realizada por uma autoridade diferente da usualmente competente? Cite um exemplo.
+  - A promulgação garante a "obrigatoriedade" da lei? Qual o princípio da LINDB que trata desse aspecto?
+  - Se uma lei for alterada antes de sua promulgação, quais são as implicações para o processo legislativo?
+  - A promulgação de emendas constitucionais segue o mesmo rito da promulgação de leis ordinárias? Explique as diferenças.
+  - Em casos de "sanção tácita" ou "derrubada de veto" pelo Congresso Nacional, como a promulgação é efetuada?
+  - Qual o impacto da promulgação de uma lei na segurança jurídica e na previsibilidade do ordenamento?
+  - Considerando a "vida" da lei (nascimento, existência e morte), qual a "fase" que a promulgação representa?
+  - De que forma a promulgação de uma lei se alinha com os princípios do Estado Democrático de Direito?
+  - Se houver erros ou incorreções materiais em uma lei já promulgada, mas ainda não vigente, como isso é tratado?
+  - O que o Código Civil estabelece sobre a contagem de prazos em relação à entrada em vigor de uma lei, após sua promulgação?
+  - A promulgação de uma lei pode ser considerada um "comando geral" para a sociedade antes de sua publicação?
+  - Em que medida a promulgação de tratados internacionais se assemelha ou difere da promulgação de leis internas?
+
+-----
+# Segurança Jurídica 
+-- A segurança jurídica é um princípio fundamental do Direito que busca garantir a estabilidade e a previsibilidade das relações jurídicas, assegurando aos indivíduos e à sociedade a confiança de que as normas serão aplicadas de forma consistente e que seus direitos serão protegidos. Ela é essencial para a ordem social, para o planejamento das condutas e para a própria legitimação do ordenamento jurídico, evitando o arbítrio e a retroatividade inesperada de normas.
+
+## Pergunte pra I.A.
+
+  - Como o princípio da segurança jurídica se manifesta na irretroatividade das leis, especialmente no que tange ao ato jurídico perfeito, direito adquirido e coisa julgada?
+  - De que maneira a estabilidade da jurisprudência, através de súmulas e precedentes, contribui para a segurança jurídica no sistema brasileiro?
+  - Quais são os principais mecanismos legais e constitucionais que o ordenamento jurídico brasileiro emprega para garantir a segurança jurídica aos cidadãos?
+  - A flexibilização da teoria da nulidade no controle de constitucionalidade, com a modulação de efeitos, pode ser vista como uma forma de conciliar segurança jurídica e justiça? Explique.
+  - Como o princípio da segurança jurídica dialoga com a necessidade de adaptação das leis às novas realidades sociais e tecnológicas?
+  - Em que medida a clareza e a precisão da redação das normas jurídicas são cruciais para a promoção da segurança jurídica?
+  - O que significa dizer que a segurança jurídica é um "valor constitucionalizado", e quais as implicações dessa classificação?
+  - Como a inescusabilidade do desconhecimento da lei, prevista na LINDB, se relaciona com o princípio da segurança jurídica?
+  - Quais os riscos de um sistema jurídico onde a segurança jurídica é constantemente mitigada ou ignorada?
+  - De que forma a Lei n. 13.655/2018, ao introduzir o princípio do consequencialismo judicial na LINDB, busca reforçar a segurança jurídica na aplicação do direito público?
+  - Como a "interpretação conforme a Constituição" pode ser um instrumento de segurança jurídica ao buscar harmonizar normas e princípios?
+  - Discuta o papel do devido processo legal e da ampla defesa na garantia da segurança jurídica em procedimentos judiciais e administrativos.
+  - Em que situações específicas a ausência de um "prazo razoável" para a resolução de processos pode comprometer a segurança jurídica dos envolvidos?
+  - Como a existência de "lacunas" no ordenamento jurídico, e os métodos de sua colmatação, podem impactar a previsibilidade e, consequentemente, a segurança jurídica?
+  - De que forma a "boa-fé objetiva" contribui para a segurança jurídica nas relações contratuais, especialmente na prevenção de comportamentos contraditórios?
+  - Quais são os desafios de se manter a segurança jurídica em um cenário de constantes reformas legislativas, como as que ocorreram recentemente no Brasil?
+  - Como o princípio da segurança jurídica atua na proteção do direito de propriedade, considerando as intervenções estatais na propriedade?
+  - Em que medida a proteção da "confiança legítima" dos administrados frente à atuação do Poder Público é um aspecto da segurança jurídica?
+  - Como a estabilidade das relações tributárias é garantida pela segurança jurídica, especialmente no que tange à anterioridade e irretroatividade tributária?
+  - Proponha um exemplo concreto onde a falta de segurança jurídica em um setor específico gerou impactos negativos significativos para indivíduos ou para a economia.
+
+------
+# Estado de Sujeição 
+-- O estado de sujeição, diferentemente do dever jurídico, surge quando um sujeito não pode opor resistência ao exercício de um poder alheio. No Direito Civil, é a condição daquele que se submete ao "direito potestativo" de outrem, sem que haja uma prestação a ser cumprida. Essa situação é inseparável do conceito de direito potestativo, caracterizando-se pela impossibilidade de reação da parte sujeitada.
+
+## Pergunte pra I.A.
+
+  - Como o estado de sujeição se diferencia do dever jurídico, e qual a principal característica que os distingue?
+  - De que maneira o "direito potestativo" se relaciona com o estado de sujeição, e por que um não existe sem o outro?
+  - Cite um exemplo prático de uma relação em que um sujeito se encontra em estado de sujeição e explique o porquê.
+  - O que significa dizer que, no estado de sujeição, a parte sujeitada "não tem qualquer conduta exigível a não ser suportar o exercício dessa potestade"?
+  - Quais são as consequências jurídicas para a parte que se encontra em estado de sujeição?
+  - Em que medida a autonomia da vontade do sujeito é afetada quando ele se encontra em estado de sujeição?
+  - Como a lei ou o contrato podem criar um estado de sujeição?
+  - O estado de sujeição pode ser transitório ou permanente? Justifique com exemplos.
+  - Qual o papel do ordenamento jurídico em proteger ou limitar o estado de sujeição?
+  - Em contextos de direito de família, como a relação entre pais e filhos pode exemplificar, em certos aspectos, um estado de sujeição?
+  - Compare o estado de sujeição com a "relação jurídica", identificando semelhanças e diferenças.
+  - A "segurança jurídica" é preservada ou comprometida pela existência de estados de sujeição?
+  - Como a doutrina majoritária aborda o estado de sujeição e quais são as principais críticas a esse conceito?
+  - O "abuso do direito" pode ocorrer no exercício de um direito potestativo que coloca outro em estado de sujeição?
+  - De que forma o estado de sujeição se manifesta em institutos como a "decadência"?
+  - Pode haver a renúncia ao estado de sujeição por parte do indivíduo? Por que ou por que não?
+  - Como o estado de sujeição, em um contexto de "relações jurídicas verticais", difere das "relações jurídicas horizontais"?
+  - Em que situações o "interesse social" pode justificar a imposição de um estado de sujeição?
+  - Quais são os mecanismos legais ou contratuais que podem mitigar os efeitos de um estado de sujeição?
+  - Imagine um cenário em que a ausência de um estado de sujeição geraria um problema social ou jurídico. Descreva o cenário e a relevância do estado de sujeição.
+
+-----
 # Ato Ilícito
 -- É a conduta humana que, ao transgredir a ordem jurídica, viola direitos alheios e causa danos. Essencialmente, não há ato ilícito civil sem dano. As excludentes de ilicitude, como legítima defesa e estado de necessidade, afastam a conduta do campo do ilícito, embora, em alguns casos, o dever de indenizar possa persistir.
 
