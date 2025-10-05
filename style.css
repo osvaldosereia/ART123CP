@@ -16,7 +16,7 @@ body.noscroll{overflow:hidden}
   font-weight:800;
   letter-spacing:-.3px;
   display:flex;gap:2px;
-  font-size:clamp(20px,3vw,30px);   /* <<< tamanho da logo */
+  font-size:clamp(16px,2.6vw,24px);   /* <<< tamanho da logo */
   line-height:1;
 }
 .brand .b1{color:var(--primary)} .brand .b2{color:var(--accent)}
