@@ -126,3 +126,10 @@ body.noscroll{overflow:hidden}
   .ficha-head{flex-direction:column;align-items:flex-start;gap:8px}
   .actions{margin-left:0}
 }
+/* badges e realce nas sugestões */
+.badges{display:flex;gap:4px;margin-left:6px}
+.badge{border:1px solid var(--line);border-radius:6px;padding:0 6px;font-size:11px}
+.badge.t{background:#eef2ff}     /* Título   */
+.badge.i{background:#fef3c7}     /* Intro    */
+.badge.p{background:#dcfce7}     /* Perguntas*/
+.suggestions mark{background:#fff3; background: #fff59d; padding:0 2px; border-radius:3px}
