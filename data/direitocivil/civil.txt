@@ -3,6 +3,34 @@
 
 
 
+-----
+# Direitos Inatos 
+-- Os direitos inatos, no contexto da personalidade, são aqueles inerentes à condição humana, protegidos desde a concepção e que acompanham o indivíduo por toda a vida. Distinguem-se dos direitos adquiridos e são um pilar fundamental para a dignidade da pessoa, garantindo a tutela de bens existenciais como a vida, a integridade física, a honra e a privacidade, conforme previsto no Código Civil e na Constituição Federal.
+
+## Pergunte pra I.A.
+
+  - Como a proteção legal dos direitos inatos se inicia desde a concepção, conforme o art. 2º do Código Civil, e qual a relevância do nascituro nesse contexto?
+  - De que forma o "natimorto", embora não adquira personalidade jurídica, ainda é considerado titular de direitos da personalidade, em virtude de sua natureza inata?
+  - Quais são os principais direitos da personalidade que podem ser classificados como inatos, e como se relacionam com a "dignidade da pessoa humana" (CF, art. 1º, III)?
+  - No caso de conflito entre um direito inato (existencial) e um direito patrimonial, qual a tendência de prevalência e por quê?
+  - Como o caráter "vitalício" dos direitos inatos se manifesta, e quais as implicações dessa característica para a pessoa natural?
+  - A afirmação de que os direitos da personalidade são "direitos absolutos e limitados" (parágrafo 4.2.4) se aplica aos direitos inatos? De que forma?
+  - De que maneira a tutela dos direitos da personalidade da pessoa falecida por parentes próximos (CC, arts. 12, parágrafo único, e 20, parágrafo único) exemplifica a natureza inata e vitalícia desses direitos?
+  - Qual a relevância da imprescritibilidade da ação de proteção aos direitos inatos da pessoa falecida, conforme entendimento jurisprudencial mencionado no material?
+  - Como o "direito ao corpo" (CC, arts. 13 a 15) se encaixa na categoria de direitos inatos, e quais são os limites para sua disposição?
+  - A Lei n. 14.382/2022, ao permitir a alteração do prenome, afeta o caráter inato do direito ao nome? Justifique.
+  - De que forma o "direito à imagem e à honra" (CC, art. 20) é tutelado, e quais as exceções para sua divulgação sem autorização?
+  - Como o "direito à privacidade e à intimidade" (CC, art. 21) é um direito inato, e quais as providências que o juiz pode adotar para protegê-lo?
+  - O reconhecimento da união homoafetiva pelo STF (ADIn 4.277 e ADPF 132) reforça a ideia de que a personalidade e os direitos inatos não se restringem a modelos preestabelecidos?
+  - Considerando a "atipicidade" dos direitos da personalidade (parágrafo 4.2.6), como o juiz pode reconhecer e proteger outros direitos inatos não expressamente listados no Código Civil?
+  - Como a Lei n. 13.146/2015 (Estatuto da Pessoa com Deficiência) impactou a compreensão da capacidade e dos direitos inatos, especialmente ao afastar a deficiência como causa de incapacidade?
+  - A "teoria da actio nata", mencionada na prescrição (parágrafo 10.1), pode ser relacionada à proteção dos direitos inatos, especialmente quando o termo inicial para sua exigibilidade é o conhecimento da lesão?
+  - Em que medida a "cláusula geral" prevista no art. 12 do Código Civil é essencial para a proteção dos direitos inatos, dado seu rol exemplificativo?
+  - Como a "perspectiva histórica" da proteção dos direitos da personalidade (parágrafo 4.1) demonstra a evolução do reconhecimento dos direitos inatos?
+  - Qual a diferença entre a proteção dos direitos inatos na "eficácia vertical" (Estado x particular) e na "eficácia horizontal" (particular x particular) dos direitos fundamentais?
+  - Proponha um caso concreto em que um conflito entre direitos inatos de duas pessoas exija a "ponderação de interesses" para sua resolução, e justifique a possível decisão.
+
+-----
 # Sucessão Definitiva 
 -- A sucessão definitiva, prevista no Código Civil (Art. 6º, c/c Arts. 37 e ss.), encerra o processo de declaração de ausência, presumindo a morte do desaparecido após um longo período. É um marco crucial no Direito das Sucessões, permitindo a consolidação da propriedade dos bens aos herdeiros e encerrando a incerteza jurídica que paira sobre o patrimônio do ausente.
 
