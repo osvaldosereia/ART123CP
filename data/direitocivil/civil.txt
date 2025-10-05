@@ -263,3 +263,132 @@ LINDB para a sua resolução.
   - Quais são as "três correntes" da doutrina em relação ao início da personalidade da pessoa natural e qual delas é a mais aceita na jurisprudência para a proteção de "direitos patrimoniais"?
   - Como a súmula do STJ sobre a pessoa jurídica poder sofrer dano moral se relaciona com a proteção dos "direitos da personalidade" da pessoa natural?
 -----
+# Personalidade 
+-- Personalidade é a aptidão para ser sujeito de direitos e obrigações. No Código Civil, abrange a personalidade jurídica (capacidade civil) e os direitos da personalidade (existenciais). A jurídica confere aptidão para titularizar bens patrimoniais, enquanto a dos direitos da personalidade protege atributos essenciais do ser humano, como vida, imagem e honra, sendo ambos fundamentais para a dignidade da pessoa.
+
+## Pergunte pra I.A.
+
+  - Qual a distinção fundamental entre "personalidade jurídica" e "direitos da personalidade" segundo o Código Civil?
+  - De que forma a Súmula 227 do STJ, que reconhece o dano moral à pessoa jurídica, se alinha com a proteção dos "direitos da personalidade"?
+  - Como as teorias natalista, concepcionista e da personalidade condicionada se relacionam com o Art. 2º do Código Civil no que tange ao início da personalidade da pessoa natural?
+  - Por que a proteção dos direitos da personalidade é defendida "desde a concepção", mesmo que a personalidade jurídica se inicie com o nascimento com vida?
+  - Quais são os principais "direitos da personalidade" elencados no Código Civil, e quais características os tornam "relativamente indisponíveis"?
+  - Como o princípio da dignidade da pessoa humana fundamenta a prevalência dos direitos da personalidade em caso de conflito com direitos patrimoniais?
+  - De que maneira a "atipicidade" dos direitos da personalidade permite ao juiz reconhecer a proteção de direitos não expressamente previstos no Código Civil?
+  - Quais são os requisitos para a validade da "disposição gratuita do próprio corpo" para depois da morte, segundo o Art. 14 do Código Civil?
+  - Como a jurisprudência tem interpretado o "direito ao esquecimento" à luz da liberdade de expressão e dos direitos da personalidade?
+  - Quais são as principais modalidades de alteração do nome no registro civil e como a Lei n. 14.382/2022 impactou essas possibilidades?
+  - De que forma a "inviolabilidade da vida privada" (Art. 21 do CC) se relaciona com o poder do titular de controlar informações a seu respeito?
+  - Por que a proteção ao nome e à imagem da pessoa falecida pode ser pleiteada por seus parentes próximos, mesmo após a extinção da personalidade com a morte?
+  - Quais são os requisitos para que a cessão do exercício de direitos da personalidade (como o direito de imagem) seja considerada válida?
+  - Como a "personalidade jurídica autônoma" da pessoa jurídica, conforme o Art. 49-A do CC, se relaciona com o princípio da "alocação e segregação de riscos"?
+  - Quais são as "características" da pessoa jurídica que a distinguem da pessoa natural, e qual a importância de seu registro para a aquisição da personalidade?
+  - De que maneira o "desvio de finalidade" e a "confusão patrimonial" são requisitos para a desconsideração da personalidade jurídica, segundo o Art. 50 do Código Civil?
+  - Qual a diferença entre a "teoria maior" e a "teoria menor" da desconsideração da personalidade jurídica no Direito Civil e no Direito do Consumidor?
+  - Como a Lei da Liberdade Econômica, ao introduzir parágrafos ao Art. 50 do Código Civil, reforça a "segurança jurídica" para a desconsideração da personalidade jurídica?
+  - Por que o "patrimônio mínimo" ou "mínimo existencial" é um conceito relevante para a proteção da personalidade e dos direitos da personalidade?
+  - Em um caso concreto, como a análise da personalidade (jurídica e direitos da personalidade) pode influenciar a concessão de indenização por danos morais?
+-----
+# Início da Personalidade 
+-- No Direito Civil, a personalidade jurídica de uma pessoa natural começa com o nascimento com vida, conforme a teoria natalista. Contudo, a lei resguarda os direitos do nascituro desde a concepção, especialmente os direitos da personalidade, reconhecendo que, para fins existenciais, a proteção pode retroagir, enquanto os direitos patrimoniais dependem do nascimento.
+
+## Pergunte pra I.A.
+
+  - Como o Art. 2º do Código Civil, ao afirmar que "a personalidade civil da pessoa começa do nascimento com vida", fundamenta a teoria natalista no direito brasileiro?
+  - Qual a importância da ressalva "a lei põe a salvo, desde a concepção, os direitos do nascituro" no Art. 2º do Código Civil para a proteção de seus interesses?
+  - De que maneira os "direitos da personalidade" são protegidos desde a concepção, mesmo que a personalidade jurídica só se inicie com o nascimento com vida?
+  - Discuta a relevância da distinção entre os direitos patrimoniais e os direitos da personalidade no que tange ao momento do início da proteção legal.
+  - Explique o conceito de "nascimento com vida" e como ele é verificado juridicamente para determinar o início da personalidade.
+  - Qual a diferença entre "nascituro" e "natimorto" em relação à aquisição da personalidade jurídica e dos direitos da personalidade?
+  - Como a jurisprudência e a doutrina têm interpretado o Art. 2º do Código Civil para conciliar a teoria natalista com a proteção do nascituro?
+  - De que forma a "capacidade de direito" se relaciona com o início da personalidade e com a aptidão para ser sujeito de direitos e deveres?
+  - Quais são os argumentos da teoria concepcionista sobre o início da personalidade e por que ela não é a teoria majoritária no Brasil para a personalidade jurídica?
+  - Em um caso hipotético de adoção, como o início da personalidade jurídica do adotado se daria e quais direitos estariam protegidos desde a concepção?
+  - Como a Lei nº 11.804/2008 (Lei de Alimentos Gravídicos) reforça a proteção dos direitos do nascituro desde a concepção?
+  - Quais são os efeitos jurídicos do registro de nascimento, especialmente no que concerne ao reconhecimento da personalidade?
+  - A inclusão da personalidade jurídica da pessoa natural na "Parte Geral" do Código Civil de 2002 indica a importância do tema para todo o direito privado. Comente.
+  - De que modo o conceito de "expectativa de direito" se aplica aos direitos patrimoniais do nascituro antes do nascimento com vida?
+  - Como a proteção do nascituro se manifesta em situações práticas, como a possibilidade de ser beneficiado em testamento?
+  - Discuta o papel da "dignidade da pessoa humana" como princípio fundamental que permeia a proteção do nascituro e o início da personalidade.
+  - Em um cenário de avanços da biotecnologia, como a legislação brasileira pode se adaptar para continuar protegendo o "início da personalidade" diante de novas realidades?
+  - A ausência de personalidade jurídica para o natimorto significa que ele não possui nenhum tipo de proteção legal? Justifique.
+  - Como a responsabilidade civil por atos que causem dano a um nascituro é tratada, considerando o momento do início da personalidade?
+  - Proponha um caso complexo que envolva o início da personalidade e a proteção dos direitos do nascituro, e justifique a solução jurídica.
+-----
+# Capacidade 
+-- Capacidade é a medida da personalidade jurídica. Divide-se em capacidade de direito (aptidão para ser titular de direitos e deveres, inerente a toda pessoa) e capacidade de fato (possibilidade de exercer atos da vida civil pessoalmente). A teoria das incapacidades visa proteger aqueles sem pleno discernimento, balizando a prática dos atos civis por representantes ou assistentes, e foi significativamente alterada pelo Estatuto da Pessoa com Deficiência.
+
+## Pergunte pra I.A.
+
+  - Como a capacidade de direito se distingue da capacidade de fato, e qual a relevância dessa distinção para o Direito Civil?
+  - De que forma o Art. 1º do Código Civil, ao afirmar que "toda pessoa é capaz de direitos e deveres na ordem civil", se relaciona com a capacidade de direito?
+  - Quais são as principais categorias de pessoas consideradas absolutamente incapazes pelo Código Civil, após as alterações do Estatuto da Pessoa com Deficiência?
+  - Explique por que a proteção dos absolutamente incapazes exige a figura do "representante", e como este atua na prática dos atos da vida civil.
+  - Quais são as categorias de pessoas consideradas relativamente incapazes e qual a função do "assistente" na prática de seus atos civis?
+  - Como a Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência) alterou o regime das incapacidades no Código Civil, e qual o seu principal objetivo?
+  - De que maneira a deficiência, por si só, não é mais considerada causa de incapacidade no direito brasileiro, e o que passou a ser o foco da análise?
+  - Quais são os requisitos para a prática de atos da vida civil pelos relativamente incapazes, com a presença de um assistente?
+  - Quando os atos praticados por incapazes, sem a devida representação ou assistência, são considerados nulos ou anuláveis, e qual a diferença entre essas sanções?
+  - Como a "tomada de decisão apoiada" se apresenta como uma alternativa à curatela para pessoas com deficiência, visando preservar sua autonomia?
+  - Quais os requisitos para a instituição da "tomada de decisão apoiada" e como ela se diferencia da curatela?
+  - De que forma a emancipação antecipa a plena capacidade de fato, e quais são as suas três espécies (voluntária, judicial e legal)?
+  - Quais são os requisitos específicos para a emancipação voluntária, e por que a vontade dos pais é crucial nesse processo?
+  - Em que consiste a emancipação judicial, e quais as circunstâncias que a justificam, especialmente em relação a menores sob tutela?
+  - Cite e explique duas das hipóteses de emancipação legal previstas no Código Civil, e por que a lei as estabelece.
+  - Como a emancipação afeta a responsabilidade civil dos pais pelos atos ilícitos praticados pelo menor emancipado?
+  - Quais os limites de idade para a aquisição da plena capacidade civil e como se relaciona com a menoridade e a maioridade?
+  - De que maneira o juiz atua na nomeação do curador para os relativamente incapazes, considerando o grau de insanidade ou a impossibilidade de exprimir vontade?
+  - Como a proteção ao patrimônio dos incapazes é o principal objetivo da teoria das incapacidades?
+  - Em um caso prático, como a ausência de discernimento de um indivíduo afetaria sua capacidade de celebrar um contrato, e quais seriam as implicações legais?
+-----
+# Teoria das Incapacidades 
+-- A teoria das incapacidades visa proteger pessoas que não possuem pleno discernimento para praticar os atos da vida civil pessoalmente. Fundamenta-se na necessidade de representação ou assistência e foi substancialmente alterada pelo Estatuto da Pessoa com Deficiência, que foca na autonomia do indivíduo e na excepcionalidade da curatela.
+
+## Pergunte pra I.A.
+
+  - Como o conceito de capacidade de fato se relaciona com a teoria das incapacidades, e qual sua importância para a prática dos atos da vida civil?
+  - De que forma o legislador civilista, ao longo do tempo, tem buscado proteger os indivíduos considerados incapazes para os atos da vida civil?
+  - Quais são as principais razões que justificam a necessidade de um "representante" para os absolutamente incapazes e de um "assistente" para os relativamente incapazes?
+  - Quais são as categorias de pessoas consideradas absolutamente incapazes pelo Código Civil, após as alterações promovidas pelo Estatuto da Pessoa com Deficiência?
+  - Explique as consequências da prática de atos da vida civil por um absolutamente incapaz sem a presença de seu representante.
+  - Quais são as categorias de pessoas consideradas relativamente incapazes pelo Código Civil, após as alterações promovidas pelo Estatuto da Pessoa com Deficiência?
+  - Discuta a função do assistente na prática dos atos da vida civil pelos relativamente incapazes.
+  - De que maneira o Estatuto da Pessoa com Deficiência (Lei nº 13.146/2015) alterou a compreensão tradicional da incapacidade civil no Brasil?
+  - Como a deficiência, por si só, deixou de ser causa de incapacidade no direito brasileiro, e o que passou a ser o foco da análise para a restrição da capacidade?
+  - O que é a "tomada de decisão apoiada" e como ela se diferencia da curatela como instrumento de proteção e promoção da autonomia da pessoa com deficiência?
+  - Quais são os requisitos para a instituição da "tomada de decisão apoiada" e como ela se processa judicialmente?
+  - Como a emancipação permite a aquisição antecipada da plena capacidade de fato e quais são as suas três espécies (voluntária, judicial e legal)?
+  - Quais são os requisitos específicos para a "emancipação voluntária" e por que a vontade dos pais é um elemento crucial nesse processo?
+  - De que forma a "emancipação judicial" se aplica aos menores sob tutela e qual o papel do juiz nesse procedimento?
+  - Cite e explique duas das hipóteses de "emancipação legal" previstas no Código Civil.
+  - A emancipação exonera os pais da responsabilidade civil pelos atos ilícitos praticados pelo menor emancipado? Justifique.
+  - Quais são os efeitos da prática de atos da vida civil por um relativamente incapaz sem a devida assistência?
+  - Em um caso prático, como um juiz decidiria sobre a validade de um contrato celebrado por um relativamente incapaz sem assistência, à luz da teoria das incapacidades?
+  - Discuta a importância da proteção ao patrimônio dos incapazes na teoria das incapacidades, e como essa proteção se reflete nas sanções de nulidade e anulabilidade.
+  - Analise criticamente a afirmação de que "o deficiente jamais será considerado absolutamente incapaz" e suas implicações para a inclusão social e jurídica.
+-----
+# Necessidade de representante ou assistente para a prática dos atos da vida civil 
+-- Para proteger indivíduos sem pleno discernimento, a lei exige que atos da vida civil sejam praticados por representante (absolutamente incapazes) ou assistente (relativamente incapazes). Essa intervenção visa garantir a validade dos atos e a proteção dos interesses do incapaz, sendo um pilar da teoria das incapacidades no Direito Civil.
+
+## Pergunte pra I.A.
+
+  - Qual o objetivo principal da lei ao exigir a presença de um representante ou assistente para a prática de atos da vida civil por pessoas incapazes?
+  - Quais as categorias de incapacidade civil (absoluta e relativa) e a quem cada uma se aplica, conforme o Código Civil após o Estatuto da Pessoa com Deficiência?
+  - Qual a diferença fundamental na atuação de um "representante" e um "assistente" em relação à manifestação da vontade do incapaz?
+  - Explique as consequências jurídicas da prática de um ato da vida civil por um absolutamente incapaz sem a devida representação.
+  - De que forma o Código Civil trata a validade dos atos praticados por um relativamente incapaz sem a necessária assistência?
+  - Em quais situações específicas os pais assumem a condição de representante ou assistente de seus filhos menores?
+  - Como a nomeação de um "curador" se relaciona com a representação ou assistência de um incapaz, especialmente nos casos de insanidade ou discernimento reduzido?
+  - Quais atos da vida civil, por sua natureza, podem ser praticados por um relativamente incapaz sem a assistência de um terceiro, conforme o Código Civil?
+  - De que maneira o Estatuto da Pessoa com Deficiência alterou o entendimento sobre a capacidade das pessoas com deficiência, impactando a necessidade de representação ou assistência?
+  - O que é a "tomada de decisão apoiada" e como ela se apresenta como uma alternativa à curatela, promovendo a autonomia do deficiente?
+  - Em um cenário prático, como um juiz avalia o "grau de insanidade" para determinar se um curador atuará como representante ou assistente?
+  - Como a "emancipação" afeta a necessidade de representante ou assistente para o menor, e quais as suas diferentes espécies?
+  - A emancipação exonera os pais da responsabilidade civil por atos ilícitos praticados pelo menor emancipado? Explique.
+  - Qual o impacto do princípio da "proteção ao patrimônio" na teoria das incapacidades, justificando a intervenção de terceiros?
+  - Por que a lei considera os atos praticados por incapazes sem a devida representação/assistência como "nulos" ou "anuláveis", e qual a distinção entre essas invalidades?
+  - Como a vontade do incapaz é considerada nos processos de nomeação de representante ou assistente, especialmente para garantir seus interesses?
+  - Em um caso hipotético de um contrato celebrado por um relativamente incapaz sem assistência, como um juiz decidiria a validade desse contrato e quais fatores consideraria?
+  - De que forma a teoria das incapacidades equilibra a proteção do incapaz com a segurança jurídica nas relações da vida civil?
+  - Qual a relevância de se estudar a necessidade de representante ou assistente para a prática dos atos da vida civil no contexto de um Estado Democrático de Direito?
+  - Proponha um exemplo em que a ausência de representação ou assistência para um incapaz gere um conflito de interesses e discuta como o Direito Civil buscaria resolvê-lo.
