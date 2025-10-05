@@ -158,7 +158,8 @@
   - Discorra sobre a relação entre a eficácia social e a eficácia jurídica de uma lei, e como a ausência de uma pode afetar a outra.
   - Proponha um caso hipotético em que a aplicação das regras da LINDB sobre a eficácia da lei é crucial para resolver um conflito jurídico, justificando o porquê.
 -----
-# Interpretação e integração -- O ordenamento jurídico, embora pretenda ser completo, pode apresentar lacunas. A interpretação busca o sentido da norma, enquanto a integração visa preencher essas lacunas, garantindo a coerência e a completude do sistema. A LINDB fornece os métodos para essa tarefa, essenciais à aplicação justa e eficaz do Direito.
+# Interpretação e integração 
+-- O ordenamento jurídico, embora pretenda ser completo, pode apresentar lacunas. A interpretação busca o sentido da norma, enquanto a integração visa preencher essas lacunas, garantindo a coerência e a completude do sistema. A LINDB fornece os métodos para essa tarefa, essenciais à aplicação justa e eficaz do Direito.
 
 ## Pergunte pra I.A.
 
@@ -182,3 +183,83 @@
   - De que forma a doutrina e a jurisprudência contribuem para o desenvolvimento e aprimoramento dos métodos de interpretação e integração?
   - Quais são os riscos de uma interpretação puramente literal da lei e como a LINDB busca mitigá-los?
   - Imagine um caso concreto de lacuna na lei. Descreva a situação e demonstre como os métodos de integração seriam aplicados para resolvê-la.
+-----
+# Lei no Tempo 
+-- A lei, como reguladora da vida social, é dinâmica. A Lei no Tempo busca harmonizar o progresso social, ditado por novas leis, com a segurança jurídica de situações passadas e seus efeitos contínuos. Enfrenta o desafio de aplicar a lei nova sem prejudicar direitos adquiridos, atos jurídicos perfeitos e a coisa julgada.
+
+## Pergunte pra I.A.
+
+  - Como o princípio da irretroatividade da lei se manifesta no Direito brasileiro e quais são seus pilares constitucionais?
+  - Qual a distinção entre a aplicação da lei nova a fatos futuros e a sua aplicação a situações passadas já consolidadas?
+  - O que o material de estudo quer dizer com "ultratividade da lei revogada" e em que situações isso ocorre?
+  - Explique o conceito de "efeito imediato da lei nova" e sua relevância para a segurança jurídica.
+  - Quais são as exceções ao princípio da irretroatividade da lei, mesmo com a proteção ao ato jurídico perfeito, direito adquirido e coisa julgada?
+  - De que forma o Código Civil de 2002, ao revogar o Código Civil de 1916, exemplifica a ultratividade da lei revogada?
+  - Qual a diferença conceitual entre "direito adquirido" e "expectativa de direito" no contexto da sucessão de leis no tempo?
+  - Como o "ato jurídico perfeito" é conceituado pela LINDB e qual a sua importância na proteção contra a retroatividade da lei?
+  - A "coisa julgada", como conceituada na LINDB, é suscetível de relativização em face de uma "coisa julgada inconstitucional"?
+  - De que maneira a capacidade jurídica das pessoas é afetada pela entrada em vigor de uma nova lei?
+  - Como a "forma dos atos" jurídicos é regulada pela lei no tempo, e o que ocorre com atos praticados sob legislação anterior?
+  - Quais são os efeitos da lei nova sobre o "estado da pessoa" e os "direitos obrigacionais"?
+  - Explique como a "responsabilidade civil" é regida pela lei no tempo, considerando o momento do ato ilícito.
+  - De que forma os "direitos sucessórios" são afetados pela lei no tempo, especialmente em relação à abertura da sucessão?
+  - O que o material de estudo quer dizer com "não há direito adquirido a um determinado regime jurídico"?
+  - Como a LINDB aborda a "retroatividade benéfica" em matéria tributária, e qual a distinção em relação à retroatividade em geral?
+  - Em que medida a discussão sobre "coisa julgada inconstitucional" reflete a tensão entre segurança jurídica e justiça?
+  - Qual o impacto da mutação constitucional no entendimento da aplicação da lei no tempo?
+  - A autonomia da vontade das partes na criação de um contrato é absoluta diante da superveniência de uma nova lei?
+  - Proponha um exemplo prático que demonstre a aplicação simultânea dos princípios da irretroatividade e do efeito imediato da lei nova.
+-----
+# Lei no Espaço 
+-- A soberania estatal impõe que a lei brasileira se aplique primariamente em nosso território. Contudo, a globalização e os interesses individuais exigem o reconhecimento da extraterritorialidade, onde leis de diferentes nações se interligam para resolver conflitos e atender demandas, evitando antinomias e buscando conciliação de sistemas.
+
+## Pergunte pra I.A.
+
+  - Como o princípio da territorialidade é fundamental para a aplicação da lei no Brasil, conforme o conceito de soberania estatal?
+  - De que forma a "extraterritorialidade da lei" permite que normas brasileiras sejam aplicadas fora do território nacional?
+  - Quais são os principais critérios utilizados pelo Direito Internacional Privado para determinar a lei aplicável em situações com elementos estrangeiros?
+  - Explique como o "princípio do domicílio", adotado pelo Direito brasileiro, rege questões de personalidade, nome, capacidade e direitos de família em casos internacionais.
+  - O que acontece quando um brasileiro é domiciliado no exterior? Qual lei se aplica à sua personalidade e capacidade?
+  - Em quais situações específicas a "lei do lugar em que se localizem os bens" prevalece sobre o princípio do domicílio, conforme a LINDB?
+  - Como as "obrigações" são regidas pela "lei do local em que se constituírem", e qual a importância desse critério?
+  - De que maneira a "sucessão por morte ou ausência" é regulada pela lei do domicílio do *de cujus* ou desaparecido?
+  - Quais são as "três restrições" fundamentais (soberania nacional, ordem pública, bons costumes) que a lei brasileira impõe para a eficácia de leis, atos ou sentenças estrangeiras no Brasil?
+  - Discuta o caso das "dívidas de jogo ou aposta" contraídas no exterior por brasileiros, e como o STJ resolveu o conflito de leis.
+  - Como os "tratados internacionais" influenciam a aplicação da lei no espaço, especialmente na escolha do direito a ser aplicado?
+  - Qual o papel das "autoridades consulares brasileiras no estrangeiro" na aplicação de atos de Registro Civil e tabelionato?
+  - Quando a LINDB menciona "Direito Internacional Privado", qual a sua natureza: é um ramo do direito internacional ou do direito interno? Justifique.
+  - De que forma a "Lei n. 13.655/2018", ao introduzir novos artigos à LINDB, impacta a aplicação da lei no espaço?
+  - Como a necessidade de "prova da lei estrangeira" se relaciona com o princípio *iura novit curia*?
+  - Quais são os "critérios para a definição do efeito extraterritorial da lei" estabelecidos por tratados internacionais?
+  - Explique a diferença entre "conflito de leis no espaço" e "conciliação de sistemas distintos" na perspectiva do texto.
+  - Em que medida a "autonomia privada" é preservada ou limitada pela aplicação da lei no espaço?
+  - Quais as consequências para um ato jurídico celebrado no exterior se ele "ofender a soberania nacional, a ordem pública ou os bons costumes" do Brasil?
+  - Proponha um cenário hipotético em que um conflito de leis no espaço exija a aplicação de diferentes critérios da-----
+LINDB para a sua resolução.
+-----
+# Pessoa Natural 
+-- Pessoa é o ser dotado de personalidade jurídica, que se inicia com o nascimento com vida, salvaguardando os direitos do nascituro desde a concepção. A capacidade civil permite praticar atos da vida civil, sendo modulada pela idade ou condição, buscando proteger os vulneráveis.
+
+## Pergunte pra I.A.
+
+  - Como a teoria natalista e a concepcionista se relacionam para definir o início da personalidade civil e a proteção dos direitos do nascituro no Brasil?
+  - Quais são os principais efeitos jurídicos da "morte encefálica" e como se diferencia da morte presumida sem declaração de ausência?
+  - De que forma a teoria das incapacidades protege a "pessoa natural", e qual a distinção entre a necessidade de representante e de assistente?
+  - Como a Lei n. 13.146/2015 (Estatuto da Pessoa com Deficiência) impactou a teoria das incapacidades no Código Civil, e qual a situação atual da pessoa com deficiência em relação à sua capacidade?
+  - Quais são as modalidades de emancipação e quais seus requisitos específicos?
+  - Como a "economia própria" de um menor, antes dos 18 anos, pode levá-lo à emancipação legal?
+  - De que forma a "morte civil" se diferencia da morte real e da morte presumida no ordenamento jurídico brasileiro?
+  - Quais são as fases da declaração de ausência e qual o objetivo primordial de cada uma delas?
+  - Como a "comoriência" é definida no Código Civil e quais são os seus efeitos práticos na sucessão hereditária?
+  - Quais são os "direitos da personalidade" e quais suas características principais (prevalência, absolutismo, vitaliciedade, indisponibilidade relativa e atipicidade)?
+  - Em que medida o direito ao nome, à imagem e à privacidade são protegidos no Código Civil e na Constituição Federal?
+  - Como a "capacidade de direito" se distingue da "capacidade de fato" no Direito Civil, e por que essa diferenciação é importante para a teoria das incapacidades?
+  - Quais são os atos que um menor relativamente incapaz pode praticar validamente sem a assistência de seu curador, e por que são considerados "personalíssimos"?
+  - De que forma a emancipação, embora confira plena capacidade civil, não permite ao menor praticar atos legalmente reservados a maiores de 18 anos?
+  - Como o "nome social" e o "reconhecimento da identidade de gênero" são tratados na legislação brasileira em relação aos direitos da personalidade?
+  - Quais são as consequências jurídicas para os pais que promovem a emancipação voluntária de seus filhos menores, especialmente em relação à responsabilidade civil por atos ilícitos?
+  - Explique a distinção entre "livre-arbítrio" e "autodeterminação" no contexto da vontade humana e como isso se aplica à "pessoa natural".
+  - De que forma a "presunção de morte simultânea" na comoriência impacta a ordem de vocação hereditária entre os comorientes?
+  - Quais são as "três correntes" da doutrina em relação ao início da personalidade da pessoa natural e qual delas é a mais aceita na jurisprudência para a proteção de "direitos patrimoniais"?
+  - Como a súmula do STJ sobre a pessoa jurídica poder sofrer dano moral se relaciona com a proteção dos "direitos da personalidade" da pessoa natural?
+-----
