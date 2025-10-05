@@ -1,3 +1,58 @@
+
+# Morte Real 
+-- Juridicamente, a morte real é o fim da personalidade civil e dos direitos da personalidade, configurando um fato jurídico em sentido estrito. É atestada por médico, diante de um cadáver, e seu marco legal é a morte encefálica, com efeitos jurídicos imediatos como a abertura da sucessão.
+
+## Pergunte pra I.A.
+
+  - O que caracteriza a morte real no ordenamento jurídico brasileiro e como ela se diferencia da morte presumida?
+  - Qual o marco legal para a constatação da morte real no Brasil e quais as implicações dessa definição?
+  - De que maneira a morte, enquanto fato jurídico em sentido estrito, desencadeia efeitos na esfera do Direito?
+  - Quais são os principais efeitos jurídicos da morte real, com base no princípio da *saisine*?
+  - Como a morte real impacta os vínculos personalíssimos do falecido, como o poder familiar e o casamento?
+  - Explique a função do atestado de óbito e da certidão de óbito no contexto da morte real.
+  - Em que medida a Lei n. 9.434/1997 (que trata do transplante de órgãos) estabelece o marco legal da morte encefálica?
+  - Por que a constatação da morte encefálica exige a participação de dois médicos não integrantes da equipe de transplante?
+  - Quais são os direitos da personalidade que são extintos com a morte real e como essa extinção afeta a tutela desses direitos?
+  - Como a morte real se relaciona com a extinção de contratos personalíssimos, como o de prestação de serviço e o de mandato?
+  - De que forma a morte de um dos devedores ou credores solidários afeta a solidariedade da obrigação em relação aos seus herdeiros?
+  - Aponte a diferença entre "morte civil" e "morte real" e explique a relevância da morte civil no Direito brasileiro atual.
+  - Quais os direitos que o nascituro não chega a adquirir em caso de morte intrauterina, e quais direitos ele pode ter?
+  - Como a ausência de cadáver pode, excepcionalmente, levar à consideração de morte real no contexto de eventos específicos?
+  - Analise a importância da precisão na determinação da data e hora da morte real para fins sucessórios e de outros efeitos jurídicos.
+  - Se uma pessoa é declarada legalmente morta por morte presumida e, posteriormente, seu corpo é encontrado, como o Direito lida com essa situação?
+  - Discuta o impacto da tecnologia médica e dos avanços científicos na conceituação e constatação da morte real.
+  - Como a morte real do autor da herança se relaciona com a capacidade de testar e a validade das disposições testamentárias?
+  - Explique a relevância da morte real para a consolidação de bens e a dissolução de condomínios no Direito das Coisas.
+  - Proponha um caso hipotético em que a determinação incorreta da morte real possa gerar consequências jurídicas complexas para os envolvidos.
+
+-----
+# Modalidades de Morte 
+-- Juridicamente, a morte é o fim da personalidade, civil e dos direitos da personalidade, configurando um fato jurídico em sentido estrito. O marco legal é a morte encefálica, e sua presunção, por declaração de ausência ou em perigo de vida, visa proteger o patrimônio e os direitos sucessórios.
+
+## Pergunte pra I.A.
+
+  - Qual é a diferença fundamental entre morte real e morte presumida no Direito Civil brasileiro?
+  - Como a morte encefálica é definida no ordenamento jurídico brasileiro e qual sua importância legal?
+  - Quais são as duas situações em que a morte presumida pode ocorrer sem declaração de ausência, conforme o Código Civil?
+  - Descreva as fases da declaração de ausência e o objetivo primário da primeira fase.
+  - Qual o papel do curador na primeira fase da declaração de ausência e como ele se relaciona com o patrimônio do ausente?
+  - Em que momento da declaração de ausência os herdeiros podem solicitar a sucessão provisória e qual a condição para os herdeiros não necessários?
+  - Explique a diferença entre a declaração de ausência com e sem procurador deixado pelo desaparecido.
+  - Quando a sucessão definitiva pode ser requerida na declaração de ausência e qual a principal presunção jurídica que a fundamenta?
+  - Qual a situação legal específica para idosos com mais de 80 anos em relação às fases da declaração de ausência?
+  - Como a propriedade transmitida aos herdeiros do ausente é caracterizada nos 10 anos seguintes à sucessão definitiva?
+  - O que acontece se o ausente reaparecer antes da sucessão definitiva em relação aos bens e a eventuais indenizações?
+  - Defina comoriência e explique por que ela só possui relevância jurídica quando os falecidos simultaneamente são herdeiros entre si.
+  - Quais são os efeitos da comoriência na transmissão da herança entre as pessoas envolvidas?
+  - A morte é um fato jurídico em sentido estrito. Como isso se enquadra na classificação geral dos fatos jurídicos?
+  - Como a morte extingue vínculos personalíssimos, como o poder familiar e o casamento?
+  - Qual a relevância do princípio da *saisine* no contexto da morte e da imediata transferência do patrimônio aos herdeiros?
+  - Historicamente, existiu a "morte civil". Qual era esse conceito e ele ainda é admitido no Direito brasileiro atual?
+  - Como a morte do credor ou devedor solidário afeta a solidariedade da obrigação em relação aos seus herdeiros?
+  - Em um acidente de avião onde não é possível determinar quem morreu primeiro, como o Direito lida com a sucessão de bens entre os envolvidos?
+  - Considerando a proteção ao nascituro, como a morte (ou a ausência de nascimento com vida) impacta seus direitos, especialmente os da personalidade?
+
+-----
 # Norma Jurídica 
 -- A norma jurídica, fundamental para o ordenamento, é o preceito que determina um comportamento e prevê uma sanção coercitiva em caso de transgressão. Ela se distingue de outras normas por sua coercibilidade e é essencial para a organização social e a aplicação do Direito. As normas jurídicas podem ter origem na vontade estatal (leis) ou na autonomia privada (negócios jurídicos), e sua compreensão é a base para o estudo de todo o sistema legal.
 
