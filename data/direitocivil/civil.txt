@@ -1,5 +1,193 @@
 
 
+-----
+# Teoria Natalista 
+-- A Teoria Natalista, predominante no Direito Civil brasileiro para o início da personalidade jurídica, postula que a personalidade civil da pessoa natural começa com o nascimento com vida. Embora reconheça a salvaguarda dos direitos do nascituro desde a concepção (expectativa de direitos patrimoniais e titularidade de direitos da personalidade), a aquisição plena da personalidade e dos direitos patrimoniais ocorre apenas com a efetiva separação do corpo materno e a respiração autônoma.
+
+## Pergunte pra I.A.
+
+  - Como a Teoria Natalista se posiciona em relação ao momento exato do "nascimento com vida" para o início da personalidade civil?
+  - De que forma o Código Civil brasileiro, em seu Art. 2º, expressa a Teoria Natalista e ao mesmo tempo protege os interesses do nascituro?
+  - Quais são as principais diferenças entre "personalidade jurídica" e "direitos da personalidade" à luz da Teoria Natalista?
+  - Como a Teoria Natalista lida com a questão do "natimorto" e quais são os seus direitos, se houver, nessa perspectiva?
+  - Explique a distinção entre "expectativa de direitos patrimoniais" e "titularidade de direitos da personalidade" para o nascituro, segundo a Teoria Natalista.
+  - Quais seriam os desafios práticos ou éticos da aplicação estrita da Teoria Natalista em casos que envolvem avanços da medicina, como a fertilização *in vitro*?
+  - Compare a Teoria Natalista com outras teorias sobre o início da personalidade (como a concepcionista), destacando as principais críticas a cada uma.
+  - De que maneira a Teoria Natalista contribui para a segurança jurídica nas relações patrimoniaiais, ao definir um marco claro para a aquisição de direitos?
+  - Como a Teoria Natalista se harmoniza com a proteção constitucional da dignidade da pessoa humana, mesmo ao postergar a aquisição da personalidade jurídica para o nascimento com vida?
+  - Quais são os principais argumentos doutrinários que sustentam a prevalência da Teoria Natalista no ordenamento jurídico brasileiro?
+  - Em que cenários jurídicos específicos a distinção entre nascituro e pessoa nascida com vida se torna mais relevante, segundo a Teoria Natalista?
+  - Discuta a afirmação de que a Teoria Natalista representa uma abordagem "tradicional" ou "clássica" no Direito Civil.
+  - Como a Teoria Natalista influencia o Direito das Sucessões, especialmente no que se refere aos direitos do nascituro na herança?
+  - Quais são as implicações da Teoria Natalista para a aplicação de normas relacionadas à capacidade civil, como as que tratam da idade?
+  - De que forma a Teoria Natalista pode ser vista como um equilíbrio entre a proteção da vida em seu estágio inicial e a necessidade de um marco objetivo para a atribuição de personalidade?
+  - Analise a importância do "nascimento com vida" como um critério objetivo, em contraposição a critérios mais subjetivos, para o início da personalidade jurídica.
+  - Como a Teoria Natalista se reflete na interpretação de contratos ou atos jurídicos que buscam beneficiar um ser ainda não nascido?
+  - Quais são as possíveis exceções ou flexibilizações à aplicação da Teoria Natalista que são reconhecidas pela doutrina ou jurisprudência?
+  - Em um caso prático, como a aplicação da Teoria Natalista determinaria o momento a partir do qual um indivíduo pode ser sujeito de deveres e obrigações?
+  - De que modo a Teoria Natalista se insere no contexto mais amplo da Parte Geral do Código Civil, interligando-se com outros conceitos fundamentais?
+
+-----
+# Direitos da Personalidade 
+-- Os direitos da personalidade são direitos subjetivos existenciais, inatos e vitalícios, tutelados desde a concepção. Essenciais para a dignidade humana, são oponíveis *erga omnes* e, embora absolutos em sua proteção, são limitados em seu exercício. O Código Civil os trata como rol exemplificativo, permitindo a proteção judicial contra violações à vida, integridade, honra, imagem e privacidade, sem prejuízo de sua natureza relativamente indisponível.
+
+## Pergunte pra I.A.
+
+  - Como a proteção dos direitos da personalidade se relaciona com a dignidade da pessoa humana como princípio fundamental da República Federativa do Brasil?
+  - Quais são as principais características dos direitos da personalidade e como elas se distinguem de outros direitos subjetivos, como os patrimoniais?
+  - De que forma a "atipicidade" dos direitos da personalidade, conforme o Código Civil, permite a tutela de novos bens existenciais não expressamente previstos em lei?
+  - Explique a distinção entre a "personalidade jurídica" e os "direitos da personalidade" e como essa diferenciação impacta a pessoa jurídica.
+  - Como a Súmula 227 do STJ ("A pessoa jurídica pode sofrer dano moral") se alinha com a proteção dos direitos da personalidade?
+  - Quais são os limites ao exercício dos direitos da personalidade, especialmente em casos de conflito com outros direitos, como a liberdade de expressão?
+  - De que maneira a cessão do "exercício" de um direito da personalidade, como o de imagem, difere da "transmissão" do direito em si?
+  - Qual o impacto da morte do titular na proteção dos direitos da personalidade, e quem possui legitimidade para essa defesa *post mortem*?
+  - Como a "relativa indisponibilidade" dos direitos da personalidade se manifesta em situações como a doação de órgãos ou a cessão do direito de imagem?
+  - No contexto do "direito ao corpo", como os arts. 13 a 15 do Código Civil regulam a disposição do próprio corpo, e quais as exceções?
+  - De que forma a Lei nº 14.382/2022 impactou o "direito ao nome", permitindo a alteração do prenome e a inclusão de sobrenomes?
+  - Como o "direito à imagem e à honra" é protegido pelo art. 20 do Código Civil, especialmente em relação a produções biográficas e à liberdade de expressão?
+  - Analise a tese firmada pelo STF sobre o "direito ao esquecimento" e sua compatibilidade com a Constituição Federal.
+  - O que significa a afirmação de que os direitos da personalidade são "inatos e vitalícios", e como isso se relaciona com o início e o fim da personalidade?
+  - Como a proteção do "nascituro" em relação aos direitos da personalidade se alinha com as teorias natalista e concepcionista?
+  - De que forma a violação de um direito da personalidade dá origem ao "dano moral", e quais as espécies de danos morais reconhecidas?
+  - Quais os requisitos para a proteção dos direitos da personalidade da pessoa falecida por seus parentes próximos, e quais são os prazos aplicáveis?
+  - Como a "presença de bens sobre os quais a vontade recairá" se relaciona com a distinção entre direitos patrimoniais e existenciais?
+  - Discuta a importância da proteção da "vida privada e da intimidade" no contexto digital, considerando o art. 21 do Código Civil.
+  - Proponha um caso concreto em que a ponderação entre dois direitos da personalidade se faça necessária, justificando a solução mais adequada.
+
+-----
+# Personalidade Jurídica 
+-- A personalidade jurídica é a aptidão para ser titular de direitos e deveres na ordem civil. No Código Civil, ela se manifesta de dois sentidos técnicos: a personalidade jurídica em si (capacidade de direito) e os direitos da personalidade (direitos subjetivos existenciais). O início e o fim da personalidade, bem como suas capacidades, são temas centrais para a compreensão da aptidão do sujeito no Direito.
+
+## Pergunte pra I.A.
+
+  - Como o conceito de personalidade jurídica se diferencia dos "direitos da personalidade" no Código Civil?
+  - De que maneira a "teoria natalista" e a "teoria concepcionista" abordam o início da personalidade da pessoa natural, e qual prevalece para a aquisição de direitos patrimoniais?
+  - Quais são os requisitos para o início da personalidade jurídica da pessoa jurídica, conforme o Código Civil?
+  - O que significa a afirmação de que a personalidade jurídica é a "medida da personalidade civil", e como isso se relaciona com a capacidade de fato e de direito?
+  - Em que situações a doutrina majoritária entende que as pessoas jurídicas podem "emprestar" a tutela dos direitos da personalidade da pessoa natural?
+  - Como a Súmula 227 do STJ ("A pessoa jurídica pode sofrer dano moral") se alinha ou se desalinha com a distinção entre personalidade jurídica e direitos da personalidade?
+  - Explique a diferença entre "nascituro", "natimorto" e "concepturo" no contexto do início da personalidade.
+  - De que forma a Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência) alterou o regime de incapacidades no Código Civil e o impacto na personalidade jurídica?
+  - Quais são as três teorias principais sobre o início da personalidade (natalista, da personalidade condicionada e concepcionista) e as características de cada uma?
+  - Como a capacidade de direito (capacidade de gozo) e a capacidade de fato (capacidade de exercício) se relacionam com a personalidade jurídica da pessoa natural?
+  - Quais são os atos que a pessoa relativamente incapaz pode praticar validamente sem a necessidade de assistência?
+  - Por que o deficiente jamais será considerado absolutamente incapaz após a vigência do Estatuto da Pessoa com Deficiência?
+  - Como a "tomada de decisão apoiada" se posiciona como um novo modelo protetivo para pessoas com deficiência, sem restringir sua capacidade civil?
+  - De que forma a morte encefálica se tornou o marco legal da morte real no Brasil, e qual o seu impacto na personalidade jurídica?
+  - Explique as "fases da declaração de ausência" e como elas visam proteger a pessoa e o patrimônio do desaparecido.
+  - Qual a importância da distinção entre "morte real" e "morte presumida" para o direito sucessório e para a liquidação de outros vínculos jurídicos?
+  - Como a Lei nº 14.382/2022 impactou a capacidade das pessoas jurídicas de direito privado de realizarem assembleias por meio eletrônico?
+  - De que maneira a personalidade jurídica autônoma das pessoas jurídicas contribui para a "alocação e segregação de riscos" nos empreendimentos?
+  - Quais são os requisitos cumulativos para a desconsideração da personalidade jurídica no Código Civil, e como eles se relacionam com o "desvio de finalidade" e a "confusão patrimonial"?
+  - Como a personalidade jurídica é um pressuposto para o exercício de direitos subjetivos patrimoniais, como a titularidade de bens e a celebração de contratos?
+
+-----
+# Motivação das Decisões 
+-- A motivação é a explicitação das razões de fato e de direito que fundamentam um ato ou decisão. No Direito Administrativo, é um requisito essencial de validade, garantindo transparência e controle sobre a atuação do Poder Público. É crucial para o Estado Democrático de Direito, assegurando que as decisões não sejam arbitrárias e possam ser compreendidas e contestadas.
+
+## Pergunte pra I.A.
+
+  - Qual a diferença entre "motivo" e "motivação" de um ato administrativo e por que essa distinção é relevante no Direito Administrativo?
+  - Em que situações a Lei nº 9.784/99 (Lei do Processo Administrativo Federal) torna a motivação um requisito obrigatório para os atos administrativos?
+  - Como a ausência de motivação, em casos onde ela é exigida, pode impactar a validade de um ato administrativo?
+  - De que forma a "Teoria dos Motivos Determinantes" se aplica à motivação das decisões administrativas e quais suas consequências?
+  - Como o Princípio da Juridicidade, ao ampliar o conceito de legalidade, reforça o dever de motivação das decisões?
+  - Em que medida o Princípio do Consequencialismo Judicial, introduzido pela Lei nº 13.655/2018 na LINDB, exige uma motivação mais detalhada das decisões administrativas e judiciais?
+  - Explique o conceito de "motivação *aliunde*" e como ele se insere na prática administrativa brasileira.
+  - Quais são os desafios práticos para a Administração Pública em garantir a motivação explícita, clara e congruente em todas as suas decisões?
+  - Como a motivação das decisões se relaciona com os princípios constitucionais da publicidade e da transparência na Administração Pública?
+  - De que forma a motivação de uma decisão pode ser utilizada como instrumento de defesa para o administrado que se sente lesado por um ato do Poder Público?
+  - Em um processo de licitação, como a motivação das decisões em cada fase do certame contribui para a isonomia e a escolha da proposta mais vantajosa?
+  - Pode uma decisão judicial ser considerada nula por falta de motivação, mesmo que o seu conteúdo pareça justo? Explique.
+  - Quais são os impactos da falta de motivação em decisões que afetam direitos ou impõem obrigações aos administrados?
+  - Como a Lei Geral de Proteção de Dados (LGPD) pode influenciar a motivação das decisões que envolvem tratamento de dados pessoais pela Administração Pública?
+  - Em processos disciplinares contra agentes públicos, como a motivação das sanções aplicadas garante o devido processo legal e a ampla defesa?
+  - De que maneira a motivação de decisões em Agências Reguladoras, ao alterar atos normativos de interesse geral, deve considerar a "Análise de Impacto Regulatório"?
+  - Qual o papel da motivação na distinção entre atos administrativos vinculados e discricionários?
+  - Como a exigência de motivação contribui para a prestação de contas dos administradores públicos e para o controle externo exercido pelo Tribunal de Contas?
+  - A modulação dos efeitos de uma decisão, prevista na LINDB, exige uma motivação específica? Se sim, quais elementos devem ser considerados?
+  - Proponha um exemplo em que a falta de motivação em uma decisão administrativa poderia gerar insegurança jurídica e quais seriam os mecanismos para contestá-la.
+
+-----
+# Princípio do Consequencialismo Judicial 
+-- Este princípio, introduzido na LINDB pela Lei nº 13.655/2018, impõe aos aplicadores do direito (Judiciário, Administração e órgãos de controle) o dever de considerar as consequências práticas de suas decisões. Busca-se afastar o abstracionismo, valorizando a realidade concreta e a efetividade das normas, para que as escolhas não gerem ônus anormais ou excessivos aos envolvidos, nem se afastem dos interesses públicos e do bem comum.
+
+## Pergunte pra I.A.
+
+  - Como o Princípio do Consequencialismo Judicial, ao exigir a análise das consequências práticas, redefine o papel do juiz e dos administradores públicos?
+  - De que forma a Lei nº 13.655/2018 busca reduzir o "abstracionismo" nas decisões judiciais e administrativas através da consideração das consequências práticas?
+  - Quais são os riscos de decisões baseadas apenas em "valores jurídicos abstratos", sem a ponderação das suas consequências no mundo real?
+  - Como o dever de motivar as decisões, de acordo com o Princípio do Consequencialismo Judicial, deve demonstrar a necessidade e a adequação da medida imposta?
+  - Explique a importância da "modulação de efeitos" das decisões para evitar ônus ou perdas anormais ou excessivos aos sujeitos atingidos.
+  - De que maneira os "obstáculos e as dificuldades reais do gestor" e as "exigências das políticas públicas" devem ser considerados na aplicação do consequencialismo judicial?
+  - Como a "gradação das sanções" se alinha ao Princípio do Consequencialismo Judicial, considerando a natureza, gravidade e danos da infração?
+  - A "revisão de ato, contrato, ajuste, processo ou norma administrativa" deve levar em conta as orientações gerais da época. Como isso se relaciona com a segurança jurídica e a confiança legítima?
+  - De que forma o Princípio do Consequencialismo Judicial incentiva o "controle consensual da administração pública" através de compromissos e ajustamento de conduta?
+  - Quais são as implicações da responsabilização pessoal do agente público por suas decisões em caso de "dolo ou erro grosseiro" para a aplicação do consequencialismo judicial?
+  - Como o Princípio do Consequencialismo Judicial, ao exigir a ponderação de efeitos, pode influenciar a criação de novas normas e políticas públicas?
+  - Discuta como a "transparência" nos processos decisórios é essencial para a aplicação efetiva do Princípio do Consequencialismo Judicial.
+  - A consideração das "consequências jurídicas e administrativas" das decisões é um pilar do consequencialismo. Que tipo de análise isso exige dos operadores do direito?
+  - Em que situações específicas, a ausência de um olhar consequencialista poderia levar a decisões que, embora formalmente corretas, seriam socialmente injustas ou ineficazes?
+  - Como o Princípio do Consequencialismo Judicial se relaciona com o Princípio da Eficiência na Administração Pública?
+  - Quais são os desafios práticos para o Judiciário e a Administração Pública ao implementar o Princípio do Consequencialismo Judicial, especialmente em casos de grande complexidade?
+  - De que forma o consequencialismo judicial busca conciliar a "segurança jurídica" com a "necessidade de adaptação do direito à realidade social"?
+  - Pode o Princípio do Consequencialismo Judicial levar a uma maior flexibilização da legalidade em prol da efetividade? Como esse equilíbrio é mantido?
+  - Como a "análise de impacto regulatório", mencionada em outros contextos, pode ser vista como uma manifestação do Princípio do Consequencialismo Judicial?
+  - Proponha um caso concreto em que a aplicação do Princípio do Consequencialismo Judicial seria decisiva para uma decisão justa e eficaz, detalhando os elementos a serem ponderados.
+
+-----
+# Princípio do Domicílio 
+-- A soberania estatal, embora fundamental, encontra limites nas relações internacionais. O princípio do domicílio surge como um critério chave no Direito Internacional Privado para determinar a lei aplicável a questões como começo e fim da personalidade, capacidade, nome e direitos de família. Ele busca conciliar sistemas jurídicos distintos e garantir a segurança jurídica em um mundo globalizado, priorizando o local onde a pessoa física estabelece sua residência com ânimo definitivo.
+
+## Pergunte pra I.A.
+
+  - Como o princípio da soberania estatal se relaciona e se limita diante do princípio do domicílio no contexto do Direito Internacional Privado?
+  - Quais são os principais aspectos da personalidade e da capacidade da pessoa física que são regidos pela lei do domicílio, segundo a LINDB?
+  - De que forma o "ânimo definitivo" na residência é crucial para a determinação do domicílio da pessoa natural?
+  - Quais são as consequências quando a pessoa natural possui múltiplas residências no que tange à definição de seu domicílio?
+  - Como o Código Civil brasileiro trata a ausência de residência habitual de uma pessoa para fins de determinação do domicílio?
+  - Em que medida a eleição de domicílio pelas partes em um contrato se diferencia do domicílio legal ou necessário?
+  - Qual a relação entre o princípio do domicílio e as regras de competência jurisdicional, especialmente no que tange ao local de julgamento de causas?
+  - De que maneira o domicílio da pessoa jurídica se difere do domicílio da pessoa natural, e quais são os critérios para sua definição?
+  - Em casos de casamento, como a LINDB utiliza o domicílio dos nubentes ou o primeiro domicílio conjugal para reger os impedimentos e o regime de bens?
+  - O divórcio realizado no estrangeiro, envolvendo brasileiros, tem seu reconhecimento no Brasil influenciado pelo princípio do domicílio?
+  - Como o princípio do domicílio se aplica à sucessão por morte ou ausência, e qual a lei competente para regê-la?
+  - Quais são as exceções expressas na LINDB que afastam a aplicação do princípio do domicílio, optando por outros critérios de conexão?
+  - De que forma a lei do local da situação dos bens pode prevalecer sobre a lei do domicílio em certas relações jurídicas?
+  - Como o local de constituição das obrigações se relaciona com o princípio do domicílio na determinação da lei aplicável?
+  - Para a prova de fatos ocorridos no estrangeiro, como a LINDB conjuga o princípio do domicílio com a exigência de comprovação da lei estrangeira?
+  - Em situações de conflito entre o princípio do domicílio e a ordem pública ou os bons costumes brasileiros, qual critério a LINDB prioriza?
+  - Discuta a importância do princípio do domicílio na proteção dos direitos individuais em um contexto de mobilidade internacional e interações transnacionais.
+  - Como o princípio do domicílio é aplicado na determinação da lei competente para reger os elementos do direito subjetivo, como o nome da pessoa?
+  - Em que cenários o princípio do domicílio, ao invés de evitar, pode gerar "conflitos de leis no espaço", exigindo métodos de conciliação?
+  - Proponha um caso hipotético em que a aplicação do princípio do domicílio seja crucial para resolver um conflito de leis envolvendo um brasileiro com residência em outro país.
+
+-----
+# Princípio da Extraterritorialidade da Lei 
+-- A soberania estatal, embora fundamental, encontra limites nas relações internacionais. O princípio da extraterritorialidade da lei surge para conciliar a aplicação da lei nacional fora do território do país, ou da lei estrangeira dentro dele. Isso é essencial para harmonizar sistemas jurídicos distintos, atendendo demandas individuais e evitando conflitos de leis no espaço em um mundo globalizado, como regulado pela LINDB.
+
+## Pergunte pra I.A.
+
+  - Como o princípio da soberania estatal se relaciona e ao mesmo tempo se limita diante do princípio da extraterritorialidade da lei?
+  - Quais são as principais finalidades do princípio da extraterritorialidade da lei no contexto de uma sociedade globalizada?
+  - De que forma a Lei de Introdução às Normas do Direito Brasileiro (LINDB) regula a aplicação da lei nacional em território estrangeiro?
+  - O que significa "conflito de leis no espaço" e como a extraterritorialidade busca solucionar essa questão?
+  - Quais critérios são utilizados pelo Direito Internacional Privado para determinar qual lei deve ser aplicada em casos com elementos internacionais?
+  - No Brasil, o princípio do domicílio é central para a aplicação da lei extraterritorialmente. Explique como ele funciona para a personalidade e capacidade da pessoa.
+  - Quais são as exceções ao princípio do domicílio, conforme previsto na LINDB?
+  - Como a lei do local de situação dos bens opera na regulação dos direitos reais em casos de extraterritorialidade?
+  - De que maneira as obrigações são regidas pela lei do local em que se constituem, segundo a LINDB?
+  - Há alguma situação em que a lei estrangeira não terá eficácia no Brasil, mesmo que os critérios de extraterritorialidade apontem para ela? Quais são?
+  - O que o STJ entendeu sobre a antinomia entre os artigos 9º e 17 da LINDB em relação a dívidas de jogo contraídas por brasileiros no exterior?
+  - Como a extraterritorialidade da lei contribui para a segurança jurídica em transações e relações que transcendem as fronteiras nacionais?
+  - Qual a importância dos tratados internacionais na definição e aplicação do princípio da extraterritorialidade da lei?
+  - O princípio da territorialidade é a regra geral. Em que situações e por que o ordenamento jurídico opta por afastá-lo?
+  - De que forma a Lei n. 13.655/2018, ao adicionar novos artigos à LINDB, impacta a aplicação do princípio da extraterritorialidade, especialmente em relação à eficiência do direito público?
+  - Explique como a distinção entre "efetivo conhecimento" e "possibilidade de conhecimento" da lei se aplica quando consideramos a lei estrangeira.
+  - Em que medida a autonomia da vontade das partes em um contrato internacional pode influenciar a escolha da lei aplicável, e como isso se encaixa na extraterritorialidade?
+  - Quais são os desafios práticos para os operadores do direito ao aplicar a lei estrangeira em um processo judicial no Brasil?
+  - Como a extraterritorialidade da lei contribui para a proteção dos direitos individuais e a cooperação jurídica internacional?
+  - Considerando um cenário hipotético de um casamento entre estrangeiros no Brasil, como a LINDB determina a lei aplicável para os impedimentos e formalidades da celebração, bem como para o regime de bens?
 
 -----
 # Ultratividade da Lei Revogada 
