@@ -1,4 +1,58 @@
 
+# Fases da Declaração de Ausência 
+-- A declaração de ausência é um procedimento legal para proteger o patrimônio de uma pessoa que desapareceu, sem deixar notícias ou representante. Envolve etapas como a nomeação de curador, a sucessão provisória e, eventualmente, a sucessão definitiva, culminando na presunção de morte. É crucial para a segurança jurídica e a destinação dos bens do ausente.
+
+## Pergunte pra I.A.
+
+  - Como a declaração de ausência difere da morte presumida sem declaração de ausência, e quais os requisitos para cada uma?
+  - Qual o principal objetivo da primeira fase da declaração de ausência e que figura jurídica é nomeada nesse estágio?
+  - Quais são as responsabilidades primárias do curador do ausente na fase da declaração de ausência?
+  - Quais são os requisitos temporais para se passar da primeira fase (declaração de ausência e nomeação de curador) para a segunda fase (sucessão provisória)?
+  - Quem tem legitimidade para requerer a declaração de ausência, e o que ocorre se o ausente havia deixado procurador?
+  - De que forma a sucessão provisória protege os herdeiros e qual a distinção entre herdeiros necessários e os demais herdeiros quanto à posse dos bens?
+  - Qual o prazo necessário para a transição da sucessão provisória para a sucessão definitiva?
+  - Em que momento a lei considera o ausente como presumidamente morto para fins de abertura da sucessão definitiva?
+  - Quais são os direitos do ausente caso ele reapareça após a declaração de sucessão definitiva, e como isso afeta a propriedade dos bens?
+  - Como o Código Civil trata a situação de idosos com mais de 80 anos no que tange às fases da declaração de ausência?
+  - Explique a natureza da propriedade dos bens transmitidos aos herdeiros durante os 10 anos seguintes à sucessão definitiva.
+  - De que maneira a ausência de um indivíduo é tratada no Código Civil quando ele não deixa procurador?
+  - Qual a finalidade da caução exigida de alguns herdeiros na fase da sucessão provisória?
+  - Como a declaração de ausência protege o patrimônio do desaparecido, mesmo antes da sucessão provisória?
+  - O que ocorre com os atos jurídicos praticados pelo ausente antes de sua declaração de ausência?
+  - Em que consiste a "sub-rogação" do curador na administração dos bens do ausente?
+  - Como a presunção de morte é estabelecida no Código Civil e qual seu impacto nas relações jurídicas do ausente?
+  - Qual a diferença entre a função do Ministério Público na fase da declaração de ausência e na sucessão definitiva?
+  - De que modo a declaração de ausência e suas fases se relacionam com o princípio da segurança jurídica?
+  - Discuta um caso hipotético em que um indivíduo desaparece e não há testemunhas. Como as fases da declaração de ausência se aplicariam a essa situação?
+
+-----
+# Morte Presumida 
+-- Ocorre quando uma pessoa natural desaparece, gerando incerteza sobre sua morte. Pode ser declarada sem ou com a prévia decretação de ausência, conforme o Código Civil, visando proteger o patrimônio do ausente e, eventualmente, abrir a sucessão.
+
+## Pergunte pra I.A.
+
+  - Quais são as duas modalidades de morte presumida e o que as distingue juridicamente?
+  - Em quais situações a morte presumida pode ser declarada sem a prévia decretação de ausência, conforme o Código Civil?
+  - Qual o principal objetivo jurídico da declaração de ausência, e como ela se relaciona com a proteção patrimonial do desaparecido?
+  - Quais são as fases da declaração de ausência e qual a duração de cada uma, segundo a legislação civil brasileira?
+  - O que acontece com o patrimônio do ausente na primeira fase da declaração de ausência?
+  - Quem tem legitimidade para requerer a declaração de ausência e como essa legitimidade se manifesta na prática?
+  - De que forma o novo Código Civil alterou a concepção do ausente, especialmente em relação à sua capacidade jurídica?
+  - Como a *vacatio legis* se aplica à declaração de ausência, considerando o prazo para a sucessão provisória?
+  - Quais são os requisitos para a concessão da sucessão provisória e como ela se diferencia da sucessão definitiva?
+  - Em que momento a lei considera o ausente como presumidamente morto para fins de abertura da sucessão definitiva?
+  - Qual o prazo necessário para requerer a sucessão definitiva e como ele é contado?
+  - Se o ausente reaparecer após a sucessão definitiva, quais são os seus direitos sobre os bens, e em que estado ele os reaverá?
+  - A quem é atribuída a responsabilidade pela administração do patrimônio do ausente durante a primeira fase da declaração de ausência?
+  - Como a morte presumida se distingue da morte real, no contexto da comprovação do falecimento?
+  - Quais são as implicações da presunção de morte simultânea (comoriência) em casos de desaparecimento de pessoas, e sua relação com a sucessão?
+  - De que maneira a declaração de morte presumida impacta os vínculos personalíssimos do desaparecido, como o casamento e o poder familiar?
+  - Explique a relação entre a morte presumida e a necessidade de comprovação de boa-fé dos herdeiros que administram os bens do ausente.
+  - Como o direito comparado aborda a morte presumida e a declaração de ausência em outros sistemas jurídicos?
+  - A ausência de notícias do desaparecido é um elemento central para a morte presumida. Qual o período mínimo dessa ausência em cada modalidade?
+  - Quais os direitos do idoso desaparecido, em relação aos prazos da declaração de ausência, conforme a legislação civil?
+
+-----
 # Morte Real 
 -- Juridicamente, a morte real é o fim da personalidade civil e dos direitos da personalidade, configurando um fato jurídico em sentido estrito. É atestada por médico, diante de um cadáver, e seu marco legal é a morte encefálica, com efeitos jurídicos imediatos como a abertura da sucessão.
 
