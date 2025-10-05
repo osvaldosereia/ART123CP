@@ -1,5 +1,30 @@
 
 
+# Irretroatividade da Lei 
+-- O princípio da irretroatividade da lei é uma garantia fundamental que impede que uma nova lei atinja fatos ocorridos e consolidados no passado, protegendo o ato jurídico perfeito, o direito adquirido e a coisa julgada. Essencial para a segurança jurídica e a estabilidade das relações sociais, ele assegura que as expectativas legítimas dos indivíduos, formadas sob a égide da lei anterior, não sejam arbitrariamente modificadas por legislações supervenientes, salvo exceções expressamente previstas.
+
+## Pergunte pra I.A.
+
+  - O que estabelece o princípio da irretroatividade da lei e qual sua importância para o ordenamento jurídico brasileiro?
+  - Quais são os três pilares protegidos pelo princípio da irretroatividade da lei no Brasil, conforme o texto constitucional?
+  - Diferencie "direito adquirido" de "expectativa de direito" no contexto da irretroatividade da lei, com um exemplo prático.
+  - O que se entende por "ato jurídico perfeito" e "coisa julgada" na perspectiva da aplicação da lei no tempo?
+  - Em que consiste a "ultratividade da lei revogada" e como ela se relaciona com o princípio da irretroatividade?
+  - Quando e em que condições uma lei pode, excepcionalmente, ter efeito retroativo no Direito brasileiro?
+  - Como a irretroatividade da lei se aplica às alterações de critérios legais sobre a capacidade civil das pessoas?
+  - Qual o impacto do princípio da irretroatividade da lei na validade e eficácia de contratos celebrados sob a égide de uma lei anterior?
+  - De que forma a irretroatividade da lei se manifesta em relação à responsabilidade civil, especialmente quando uma lei nova cria uma hipótese mais gravosa após a consumação do dano?
+  - O que significa dizer que "não há direito adquirido a um determinado regime jurídico"?
+  - Como a LINDB aborda a irretroatividade da lei e quais são as suas disposições nesse sentido?
+  - Quais as consequências de uma lei nova que, sem previsão expressa, tenta atingir um ato jurídico perfeito?
+  - Explique a relação entre o princípio da irretroatividade e a segurança jurídica nas relações sociais.
+  - A irretroatividade da lei pode ser flexibilizada em casos de interesse público relevante? Justifique.
+  - Como a jurisprudência dos tribunais superiores tem interpretado e aplicado o princípio da irretroatividade em casos complexos?
+  - Em que situações a retroatividade benéfica é admitida no Direito brasileiro e como ela se diferencia da irretroatividade em matéria tributária?
+  - De que maneira a irretroatividade da lei tributária, conforme o CTN, difere da irretroatividade em outros ramos do direito?
+  - Quais são as exceções expressas ao princípio da irretroatividade da lei que o próprio ordenamento jurídico prevê?
+  - Um novo Código Civil que altera a idade da maioridade civil produz efeitos imediatos. Como isso se harmoniza com a irretroatividade da lei?
+  - Proponha um caso hipotético em que o desrespeito ao princípio da irretroatividade da lei geraria uma grave violação de direitos e aponte a solução jurídica adequada.
 
 -----
 # Comoriência 
