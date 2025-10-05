@@ -2,6 +2,34 @@
 
 -----
 
+# Nascer 
+-- O nascimento com vida marca o início da personalidade civil, embora a lei resguarde os direitos do nascituro desde a concepção. Compreender as diferentes teorias e o status jurídico do nascituro e natimorto é fundamental para a aplicação de diversas normas civis, que se estendem da proteção de direitos da personalidade a expectativas de direitos patrimoniais.
+
+## Pergunte pra I.A.
+
+  - O que significa "nascimento com vida" para o Direito Civil e qual sua relevância para o início da personalidade?
+  - Explique a diferença entre a capacidade de direito (ou de gozo) e a capacidade de fato (ou de exercício), e como elas se relacionam com o conceito de "nascer".
+  - Qual a teoria sobre o início da personalidade que o Código Civil brasileiro adota como regra geral?
+  - Como o Código Civil de 2002 protege os direitos do nascituro e qual a distinção entre direitos da personalidade e direitos patrimoniais nesse contexto?
+  - Discuta o status jurídico do nascituro no ordenamento brasileiro, exemplificando quais direitos são garantidos a ele desde a concepção.
+  - Qual a relevância do "natimorto" para o Direito Civil, considerando a ausência de personalidade jurídica?
+  - De que maneira a frase "nascer é ser separado do corpo da mãe" e "respirar autonomamente" complementam a compreensão do conceito de nascimento com vida?
+  - Quais são as principais teorias doutrinárias sobre o início da personalidade jurídica e quais argumentos as sustentam?
+  - Como a proteção do nascituro se estende à esfera dos danos morais, mesmo antes do nascimento com vida?
+  - O conceito de "prole eventual" (concepturo) no direito sucessório se harmoniza com a proteção do nascituro. Explique essa relação.
+  - Em que situações práticas a distinção entre "nascimento com vida" e "concepção" se torna crucial para a atribuição de direitos?
+  - Como a capacidade civil plena é alcançada no Brasil e quais são os marcos etários estabelecidos por lei?
+  - A capacidade de fato admite gradações. Como essa ideia se aplica aos recém-nascidos e às crianças?
+  - De que forma a doutrina entende a aplicação do artigo 2º do Código Civil, equilibrando a teoria natalista e a concepcionista?
+  - Quais são os principais requisitos para a validação dos atos da vida civil e como a ausência de capacidade de fato impacta essa validação?
+  - Analise a importância do registro de nascimento para a formalização do início da personalidade civil.
+  - A proteção legal da vida se inicia em que momento, segundo o ordenamento jurídico brasileiro, e quais as implicações dessa definição?
+  - Como o conceito de "nascer" é abordado em outros ramos do direito, além do civil, como o Direito Penal ou o Direito Constitucional, em relação à proteção da vida?
+  - Em um cenário de avanços da biotecnologia e reprodução assistida, como o Direito Civil tem se adaptado para regular o "nascer" e o status do nascituro?
+  - Discuta a frase "a personalidade jurídica é a aptidão genérica para ser titular de direitos e obrigações". Como o "nascer" concretiza essa aptidão?
+
+-----
+
 # Capacidade de Direito 
 -- A capacidade de direito (ou de gozo) é a aptidão genérica para ser titular de direitos e deveres na ordem civil, inerente a toda pessoa e indissociável da personalidade jurídica. Diferente da capacidade de fato, que se refere ao exercício desses direitos, a capacidade de direito não admite graduações, sendo pressuposto para a existência de qualquer relação jurídica.
 
