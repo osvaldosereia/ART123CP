@@ -1,33 +1,3 @@
-# Princípio da Eticidade
--- O Princípio da Eticidade impõe a probidade (boa-fé) nas relações privadas, buscando uma reaproximação do Direito com a Ética, Justiça e Moral. Ele se manifesta em diversas funções da boa-fé, como integrativa, de controle e interpretativa, refletindo o pós-positivismo.
-## Pergunte pra I.A.
-- Como o Princípio da Eticidade, por meio da boa-fé objetiva, atua na fase pré-contratual e pós-contratual das relações jurídicas, e quais as consequências de sua violação nesses momentos?
-- O que são os "conceitos parcelares da boa-fé objetiva" (supressio, surrectio, tu quoque, exceptio doli, venire contra factum proprium) e como eles se aplicam em situações práticas do Direito Civil?
-- De que forma a Lei de Liberdade Econômica (Lei 13.874/19) e o artigo 421-A do Código Civil, ao presumir a simetria e paridade nos contratos civis e empresariais, dialogam com o Princípio da Eticidade e a proteção da boa-fé?
-- Considerando a "reaproximação entre Direito, Ética, Justiça e Moral" no neoconstitucionalismo, como o Princípio da Eticidade se posiciona diante de novas formas de contratação e negócios jurídicos digitais?
-- A Súmula 370 do STJ, que considera dano moral a apresentação antecipada de cheque pré-datado, é um exemplo claro da aplicação do Princípio da Eticidade. Explique como essa súmula protege a boa-fé e a confiança nas relações comerciais.
------
-# Princípio da Operabilidade
--- O Princípio da Operabilidade (ou simplicidade ou concretude) preconiza que o Direito deve ser concebido para ser efetivado na prática. Para isso, o legislador insere cláusulas gerais e conceitos indeterminados, permitindo ao operador do direito interpretar a norma a partir das particularidades de cada caso concreto. Ele busca a aplicação da lei de forma simples e direta.
-## Pergunte pra I.A.
-- Como o Princípio da Operabilidade se manifesta na utilização de "cláusulas gerais" e "conceitos indeterminados" no Código Civil, e qual o impacto prático dessa técnica legislativa na atuação do juiz?
-- De que maneira a Lei de Liberdade Econômica (Lei 13.874/19), ao buscar reduzir a intervenção estatal nas relações privadas, dialoga com o Princípio da Operabilidade e a efetividade das normas?
-- Quais são os principais desafios enfrentados pelos operadores do direito para aplicar o Princípio da Operabilidade em um cenário de complexidade social e tecnológica, especialmente no que tange a novas formas de contratos e negócios jurídicos digitais?
-- Compare a aplicação do Princípio da Operabilidade no Direito Civil com sua relevância em outros ramos do Direito, como o Direito Administrativo ou o Direito do Consumidor, identificando semelhanças e diferenças.
-- A flexibilização da interpretação legal promovida pelo Princípio da Operabilidade pode gerar insegurança jurídica? Quais mecanismos podem ser utilizados para mitigar esse risco?
-- Em que medida o Princípio da Operabilidade se relaciona com a concretização da dignidade da pessoa humana nas relações privadas, especialmente ao considerar a vulnerabilidade de uma das partes em um contrato?
-- Analisando a Teoria do Adimplemento Substancial, como ela exemplifica a busca pela concretude e operabilidade do direito contratual, evitando a resolução do contrato em prol de sua manutenção?
-- A adoção do Princípio da Operabilidade tem impacto na formação e qualificação dos profissionais do Direito? Quais habilidades se tornam mais relevantes nesse contexto?
------
-# Princípio da Sociabilidade
--- O Princípio da Sociabilidade impõe uma função social a institutos aparentemente isolados, ou seja, busca a prevalência dos valores coletivos sobre os individuais no Direito Civil. Ele se manifesta na função social da empresa, do contrato, da posse, dentre outros, e reflete a leitura constitucionalista do Direito Civil, onde a Constituição Federal de 1988 ressalta o existencialismo e a dignidade da pessoa humana.
-## Pergunte pra I.A.
-- Como o Princípio da Sociabilidade se manifesta na interpretação de contratos de adesão, especialmente aqueles que envolvem cláusulas de renúncia antecipada de direitos, considerando a presunção de simetria estabelecida pelo art. 421-A do Código Civil?
-- De que forma a "concepção existencialista da Constituição Federal" e o "Princípio da Dignidade da Pessoa Humana" influenciam a aplicação do Princípio da Sociabilidade em casos de conflito entre interesses individuais e coletivos no Direito Civil, como na proteção do bem de família?
-- Quais são as principais diferenças e semelhanças entre a função social da propriedade e a função social do contrato, sob a ótica do Princípio da Sociabilidade?
-- A inclusão do direito de laje no rol dos direitos reais pode ser vista como um avanço na concretização do Princípio da Sociabilidade, ao permitir um melhor aproveitamento do espaço urbano? Justifique.
-- Como o Princípio da Sociabilidade se relaciona com as teorias da personalidade jurídica, especialmente no que tange à atribuição de direitos da personalidade a pessoas jurídicas e a proteção do nascituro?
------
 # Norma Jurídica 
 -- A norma jurídica, fundamental para o ordenamento, é o preceito que determina um comportamento e prevê uma sanção coercitiva em caso de transgressão. Ela se distingue de outras normas por sua coercibilidade e é essencial para a organização social e a aplicação do Direito. As normas jurídicas podem ter origem na vontade estatal (leis) ou na autonomia privada (negócios jurídicos), e sua compreensão é a base para o estudo de todo o sistema legal.
 
@@ -56,9 +26,8 @@
 -----
 
 # Direito Objetivo 
--- Direito objetivo é o conjunto das normas jurídicas que, quando transgredidas pelo homem, desencadearão a aplicação de sanções coercitivas pelo Estado. É conhecido também como *norma agendi*. O direito objetivo não se confunde com a usual expressão "ordenamento jurídico”. Quando se fala em ordenamento jurídico, refere-se, em verdade, ao conjunto das normas positivadas pelo Estado. O conceito de direito objetivo é mais amplo, englobando inclusive o conceito de ordenamento jurídico. Assim, ordenamento jurídico é o conjunto de normas positivadas que esteja em vigor, em um Estado, em determinado momento histórico. Em relação ao ordenamento jurídico, vale ressaltar que este não contempla todos os fatos da vida em sociedade, ocasionando a existência de espaços não preenchidos por normas, que são reconhecidamente denominados lacunas. Estas são observadas no ordenamento jurídico. 
+-- Direito objetivo: normas que regem a conduta e, se violadas, geram sanção estatal (norma agendi). Ordenamento jurídico: normas positivadas em vigor, com lacunas. Direito objetivo não é lacunoso: art. 4º da LINDB manda colmatar por analogia, princípios, costumes, equidade ou direito comparado.
 
-Diferentemente do direito objetivo, que jamais será lacunoso. O art. 4º da Lei de Introdução às Normas do Direito Brasileiro estabelece que, havendo lacuna no ordenamento jurídico, esta deverá ser preenchida por meio do método da colmatação, que se concretizará por meio da aplicação de alguma das formas expressas no rol exemplificativo constante do sobredito artigo, quais sejam: analogia, princípios gerais de direito, costumes, equidade, direito comparado etc. Nesse contexto, tais formas são utilizadas pelo juiz quando presente alguma lacuna no ordenamento jurídico. É correto, então, dizer que a lei brasileira traz expressamente um método para preencher as eventuais lacunas existentes.
 
 ## Pergunte pra I.A.
 
@@ -111,11 +80,8 @@ Diferentemente do direito objetivo, que jamais será lacunoso. O art. 4º da Lei
   - Proponha um caso prático onde o exercício de um direito subjetivo pode ser considerado abusivo e justifique o porquê, utilizando o conceito de abuso de direito.
 -----
 # Abuso do Direito 
--- O abuso do direito configura-se quando o exercício de um direito subjetivo persegue apenas o interesse próprio, esquecendo-se do interesse social. O legítimo exercício de direito subjetivo deve atender a interesses próprios (individuais) e aos da coletividade. Caso contrário, tem-se a figura do abuso do direito. A verificação do cumprimento do atendimento de uma função social e dos demais limites impostos pela lei será realizada por um juiz, diante das circunstâncias de um caso concreto que lhe seja apresentado. Portanto, quando se fala em abuso de direito, o primeiro conceito que deve ser lembrado é o de direito subjetivo. 
+-- Abuso de direito ocorre quando o titular exerce seu direito visando só interesse próprio, violando limites de boa-fé, bons costumes, função social e econômica. É ato ilícito (art. 187 CC), avaliado pelo juiz no caso concreto. O direito subjetivo deve harmonizar indivíduo e coletividade.
 
-A lei, exemplificativamente, elenca os limites que devem ser respeitados, sob pena de se caracterizar o abuso de direito: bons costumes, boa-fé objetiva, função social e função econômica. O legislador brasileiro optou por considerar o abuso do direito como ato ilícito, o que traz como via de consequência a possibilidade de responsabilização civil do titular que exerce o direito subjetivo de forma indevida. Assim, o art. 187 deve ser lido da seguinte maneira: também comete ato ilícito o titular de um direito (subjetivo) que, ao exercê-lo, excede manifestamente os limites impostos pelo seu fim econômico ou social, pela boa-fé ou pelos bons costumes (limites estes que serão analisados no caso concreto pelo magistrado). 
-
-Deve-se recordar que a figura do abuso do direito foi inserida pelo legislador no Código Civil de 2002 como verdadeira “cláusula geral", ou seja, ao se elaborar a norma, deixou-se uma janela proposital por onde o juiz fará penetrar os valores consagrados pela Constituição. A norma é vaga, cabendo ao juiz concretizá-la. Hoje o direito subjetivo não é uma expressão ilimitada do poder individual, devendo haver então uma conjugação dos interesses particulares com os da coletividade.
 
 ## Pergunte pra I.A.
 
