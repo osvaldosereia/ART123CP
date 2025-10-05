@@ -1,4 +1,4 @@
-// meujus – app.js (revert: fetch relativo simples)
+// meujus – app.js (fetch relativo; seeds só removidos após sucesso; sugestões começam hidden)
 
 (function(){
   const $  = (q, el=document) => el.querySelector(q);
@@ -23,27 +23,19 @@
     return { kind:'home' };
   }
 
-  function escapeHTML(s){
-    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
-      .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
-  }
+  const escapeHTML = (s)=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
   function normalizeSlug(s){
-    return (s||'').toLowerCase()
-      .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')
       .replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
   }
-  function slugify(s){
-    return (s||'').toLowerCase()
-      .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
-      .replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
-  }
+  const slugify = normalizeSlug;
 
-  // ---------- FETCH RELATIVO ----------
+  // ---- FETCH RELATIVO ----
   async function fetchText(path){
-    const url = path.replace(/^\.?\//,''); // relativo à raiz do site
+    const url = (path||'').replace(/^\.?\//,''); // sem barra inicial
     const res = await fetch(url, {cache:'no-store'});
     if(!res.ok){
-      console.error('404/erro ao buscar:', url);
+      console.error('Erro ao buscar:', url, res.status);
       toast(`Erro ao carregar ${url}`, 'error', 3200);
       throw new Error(`HTTP ${res.status} @ ${url}`);
     }
@@ -59,7 +51,6 @@
     const fixed = chunk.replace(/^\s*##\s+##\s+/mg, '## ');
     const titleMatch = fixed.match(/^\s*#\s+(.+)$/m);
     if(!titleMatch) return null;
-
     const title = titleMatch[1].trim();
     const slug  = normalizeSlug(title);
     const intro = Array.from(fixed.matchAll(/^\s*--\s+(.+)$/mg)).map(m=>m[1].trim());
@@ -87,11 +78,8 @@
   }
 
   function normalizeHeading(h){
-    return (h||'').toLowerCase()
-      .replace(/[.#:]/g,' ')
-      .replace(/\s+/g,' ')
-      .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
-      .trim();
+    return (h||'').toLowerCase().replace(/[.#:]/g,' ').replace(/\s+/g,' ')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
   }
   function isQASection(nameNorm){
     if (/\bpergunte\s+pra\s+i\s*\.?\s*a\b/.test(nameNorm)) return true;
@@ -115,7 +103,6 @@
     }catch(_){ GLOSS = []; }
   }
   const escapeRegex = (s)=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-
   const toastsEl = $('#toasts');
   function toast(msg, type='info', ttl=3000){
     if(!toastsEl) return;
@@ -127,9 +114,10 @@
     setTimeout(()=>{ el.classList.remove('show'); setTimeout(()=> el.remove(), 400); }, ttl);
   }
 
-  // ---------- Autocomplete ----------
+  // ---- Autocomplete ----
   const input = $('#search');
   const acList = $('#suggestions');
+  if(acList) acList.hidden = true; // inicia oculto
   input?.addEventListener('input', onSearchInput);
   input?.addEventListener('keydown', onSearchKey);
   acList?.addEventListener('click', onSuggestionClick);
@@ -160,7 +148,7 @@
   function scoreTitle(q, title){ const t=(title||'').toLowerCase(); if(t===q) return 100; if(t.includes(q)) return 60; return q.split(/\s+/).reduce((s,w)=>s+(t.includes(w)?10:0),0); }
   function scoreTags(q, tags){ const t=(tags||[]).map(s=>s.toLowerCase()).join(' '); return t && t.includes(q) ? 20 : 0; }
 
-  // ---------- Seeds -> indexação automática ----------
+  // ---- Seeds -> indexação automática ----
   async function buildTemasFromSeeds(){
     const seedLinks = Array.from(document.querySelectorAll('#menuList a.title[data-auto="1"][data-path]'));
     const temas = [];
@@ -169,21 +157,25 @@
       const path  = (a.dataset.path||'').trim();
       if(!path) continue;
 
+      let parsed = [];
       try{
         const raw    = await fetchText(path);
         const chunks = splitThemesByDelim(raw);
-        const parsed = chunks.map(parseTemaFromChunk).filter(Boolean);
-
-        injectGroupAndItemsIntoMenu(a, group, path, parsed);
-
-        for (const t of parsed){
-          const frag = t.slug;
-          const slug = `${slugify(group)}-${frag}`;
-          temas.push({ slug, title: t.title, path, tags: [], group, frag });
-        }
+        parsed = chunks.map(parseTemaFromChunk).filter(Boolean);
+        if(parsed.length === 0) throw new Error('Nenhum tema encontrado no TXT');
       }catch(e){
         console.error('Falha ao indexar', path, e);
         toast(`Erro ao ler ${path}`, 'error', 3000);
+        // mantém o seed no menu para o usuário ajustar o caminho
+        continue;
+      }
+
+      injectGroupAndItemsIntoMenu(a, group, path, parsed);
+
+      for (const t of parsed){
+        const frag = t.slug;
+        const slug = `${slugify(group)}-${frag}`;
+        temas.push({ slug, title: t.title, path, tags: [], group, frag });
       }
     }
     return temas;
@@ -210,7 +202,7 @@
       fragList.appendChild(liItem);
     }
     ul.insertBefore(fragList, li);
-    li.remove();
+    li.remove(); // só remove quando deu certo
   }
 
   function collectTemasFromMenu(){
@@ -253,7 +245,6 @@
       for(const k in TEMA_MAP) delete TEMA_MAP[k];
       TEMAS.forEach(t => { TEMA_MAP[t.slug] = t.path; });
 
-      ensureSavedSection();
       renderSavedList();
     }catch(e){
       console.error(e);
@@ -262,16 +253,6 @@
     }
   }
 
-  function ensureSavedSection(){
-    const drawerPanel = $('#drawer-panel');
-    const cont = $('.drawer-content', drawerPanel) || drawerPanel;
-    if(!$('#savedWrap')){
-      const wrap = document.createElement('div');
-      wrap.id='savedWrap';
-      wrap.innerHTML = `<h3 class="h2" style="margin-top:8px">Salvos</h3><ul id="savedList" class="list"></ul>`;
-      cont.appendChild(wrap);
-    }
-  }
   function renderSavedList(){
     const ul = $('#savedList'); if(!ul) return;
     const saved = readSaved();
@@ -303,7 +284,6 @@
     const meta = TEMAS.find(t=>t.slug===slug);
     const path = meta?.path;
     const frag = meta?.frag;
-
     if(!path){ contentEl.textContent='Tema não encontrado.'; toast('Tema não encontrado','error',2200); return; }
 
     await loadGlossario();
@@ -323,8 +303,8 @@
       const pageTitle = meta?.title || pick.title;
       titleEl.textContent = pageTitle;
 
+      // Ações
       actionsEl.innerHTML = '';
-
       const saveBtn = document.createElement('button');
       saveBtn.id = 'saveBtn';
       saveBtn.className = 'btn-ios is-small';
@@ -334,33 +314,23 @@
         saveBtn.setAttribute('data-variant', saved ? 'secondary' : 'primary');
       }
       refreshSaveBtn();
-      saveBtn.onclick = ()=>{
-        const added = toggleSaved(slug);
-        refreshSaveBtn();
-        renderSavedList();
-        toast(added ? 'Tema salvo' : 'Removido dos salvos', added ? 'success' : 'info', 1600);
-      };
+      saveBtn.onclick = ()=>{ const added = toggleSaved(slug); refreshSaveBtn(); renderSavedList(); toast(added ? 'Tema salvo' : 'Removido dos salvos', added ? 'success' : 'info', 1600); };
 
       const studyBtn = document.createElement('button');
       studyBtn.className = 'btn-ios is-small';
       studyBtn.textContent = 'Estudar';
-      studyBtn.onclick = ()=>{
-        const q = pageTitle;
-        window.open(`https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}`, '_blank', 'noopener');
-      };
+      studyBtn.onclick = ()=>{ window.open(`https://www.google.com/search?udm=50&q=${encodeURIComponent(pageTitle)}`, '_blank', 'noopener'); };
 
       const trainBtn = document.createElement('button');
       trainBtn.className = 'btn-ios is-small';
       trainBtn.textContent = 'Treinar';
-      trainBtn.onclick = ()=>{
-        const q = `${pageTitle} questões objetivas`;
-        window.open(`https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}`, '_blank', 'noopener');
-      };
+      trainBtn.onclick = ()=>{ window.open(`https://www.google.com/search?udm=50&q=${encodeURIComponent(pageTitle+' questões objetivas')}`, '_blank', 'noopener'); };
 
       actionsEl.appendChild(saveBtn);
       actionsEl.appendChild(studyBtn);
       actionsEl.appendChild(trainBtn);
 
+      // Conteúdo
       const introHTML = pick.intro.length ? markGlossarioInHTML(escapeHTML(pick.intro.join(' '))) : '';
       const qList = (pick.ask||[]).map((q)=>{
         const href = `https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}`;
@@ -418,4 +388,11 @@
       toast('Erro ao iniciar','error',2500);
     }
   })();
+
+  function markGlossarioInHTML(html){
+    if(!Array.isArray(GLOSS) || GLOSS.length===0) return html;
+    let out = html;
+    for(const g of GLOSS){ out = out.replace(g.pattern, m => `<abbr title="${escapeHTML(g.def)}">${escapeHTML(m)}</abbr>`); }
+    return out;
+  }
 })();
