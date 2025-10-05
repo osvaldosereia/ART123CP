@@ -11,12 +11,13 @@
   <!-- TOPBAR -->
   <div class="topbar">
     <div class="container topbar-inner">
-      <div class="brand"><span class="b1">Meu<span class="b2">Jus</span></div>
+      <div class="brand">
+        <span class="b1">Meu</span><span class="b2">Jus</span>
+      </div>
       <div class="search-wrap" role="search">
-        <input id="search" class="search" type="search" placeholder="Buscar tema ou artigo" autocomplete="off" aria-autocomplete="list" aria-controls="suggestions" aria-haspopup="listbox" />
+        <input id="search" class="search" type="search" placeholder="Buscar tema" autocomplete="off" aria-autocomplete="list" aria-controls="suggestions" aria-haspopup="listbox" />
         <ul id="suggestions" class="suggestions" role="listbox" aria-label="Sugestões"></ul>
       </div>
-      <!-- Hambúrguer à direita -->
       <button id="btnMenu" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer-panel">
         <span></span><span></span><span></span>
       </button>
@@ -28,16 +29,49 @@
     <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1"></div>
     <nav class="drawer-panel" id="drawer-panel" aria-label="Menu lateral">
       <div class="drawer-header">
-        <div class="drawer-brand brand"><span class="b1">Meujus</span><span class="b2">Menu</span></div>
+        <div class="drawer-brand brand">
+          <span class="b1">Meu</span><span class="b2">Jus</span>
+        </div>
         <button class="drawer-close" id="btnCloseMenu" aria-label="Fechar menu">Fechar</button>
       </div>
       <div class="drawer-content">
+        <h3 class="h2">Direito Civil • Temas</h3>
         <ul class="list" id="menuList">
-          <li><a class="title" href="#/tema/codigo-civil">Código Civil</a></li>
-          <li><a class="title" href="#/tema/codigo-processo-penal">Código de Processo Penal</a></li>
-          <li><a class="title" href="#/sobre">Sobre</a></li>
+          <!-- Manifesto: cada link é um tema, todos no MESMO TXT -->
+          <li>
+            <a class="title"
+               href="#/tema/direitocivil-eticidade"
+               data-path="data/direitocivil/civil.txt"
+               data-frag="principio-da-eticidade"
+               data-title="Princípio da Eticidade"
+               data-tags="civil,boa-fe,eticidade">
+              Princípio da Eticidade
+            </a>
+          </li>
+          <li>
+            <a class="title"
+               href="#/tema/direitocivil-operabilidade"
+               data-path="data/direitocivil/civil.txt"
+               data-frag="principio-da-operabilidade"
+               data-title="Princípio da Operabilidade"
+               data-tags="civil,clausulas-gerais,operabilidade">
+              Princípio da Operabilidade
+            </a>
+          </li>
+          <li>
+            <a class="title"
+               href="#/tema/direitocivil-sociabilidade"
+               data-path="data/direitocivil/civil.txt"
+               data-frag="principio-da-sociabilidade"
+               data-title="Princípio da Sociabilidade"
+               data-tags="civil,funcao-social,sociabilidade">
+              Princípio da Sociabilidade
+            </a>
+          </li>
+
+          <li><a class="title" href="#/sobre" data-title="Sobre" data-tags="info">Sobre</a></li>
         </ul>
-        <!-- A seção "Salvos" é inserida pelo app.js -->
+        <!-- "Salvos" é inserido pelo app.js -->
       </div>
     </nav>
   </div>
@@ -53,6 +87,35 @@
 
   <!-- TOASTS -->
   <div id="toasts" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Script mínimo do drawer -->
+  <script>
+    (function(){
+      const drawer   = document.getElementById('drawer');
+      const panel    = document.getElementById('drawer-panel');
+      const openBtn  = document.getElementById('btnMenu');
+      const closeBtn = document.getElementById('btnCloseMenu');
+      const backdrop = document.getElementById('drawerBackdrop');
+
+      function open(){
+        drawer.classList.add('open');
+        drawer.setAttribute('aria-hidden','false');
+        openBtn.setAttribute('aria-expanded','true');
+        panel.focus?.();
+      }
+      function close(){
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden','true');
+        openBtn.setAttribute('aria-expanded','false');
+        openBtn.focus?.();
+      }
+
+      openBtn?.addEventListener('click', open);
+      closeBtn?.addEventListener('click', close);
+      backdrop?.addEventListener('click', close);
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
+    })();
+  </script>
 
   <script src="app.js"></script>
 </body>
