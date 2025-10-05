@@ -1,5 +1,170 @@
 
 
+
+
+
+# Sucessão Definitiva 
+-- A sucessão definitiva, prevista no Código Civil (Art. 6º, c/c Arts. 37 e ss.), encerra o processo de declaração de ausência, presumindo a morte do desaparecido após um longo período. É um marco crucial no Direito das Sucessões, permitindo a consolidação da propriedade dos bens aos herdeiros e encerrando a incerteza jurídica que paira sobre o patrimônio do ausente.
+
+## Pergunte pra I.A.
+
+  - Como o Art. 6º do Código Civil se relaciona com a sucessão definitiva e qual a sua importância para a extinção da personalidade do ausente?
+  - Qual o prazo mínimo para se requerer a sucessão definitiva, contado a partir da declaração da sucessão provisória? (Art. 38 do CC)
+  - Em que situação específica a lei autoriza um procedimento diferenciado para a sucessão definitiva, dispensando as fases anteriores da declaração de ausência? (Art. 38 do CC)
+  - O que significa dizer que a propriedade transmitida aos herdeiros do ausente, nos 10 anos seguintes à sucessão definitiva, será uma "propriedade resolúvel"? (Art. 39 do CC)
+  - Quais são os direitos do ausente que reaparece nos 10 anos seguintes à abertura da sucessão definitiva em relação aos bens existentes? (Art. 39 do CC)
+  - Como a "ausência" de um indivíduo é tratada em relação à "morte presumida" e à abertura da sucessão definitiva?
+  - De que forma a "declaração de ausência" e a "sucessão provisória" são etapas preliminares e necessárias para se chegar à sucessão definitiva?
+  - No caso de o ausente reaparecer, ele terá direito a indenizar por benfeitorias e frutos. Em que circunstâncias ele terá ou não que indenizar?
+  - Qual o papel do Ministério Público no processo de declaração de ausência e no pedido de sucessão definitiva?
+  - A sucessão definitiva é um ato declaratório ou constitutivo do direito de propriedade dos herdeiros? Justifique.
+  - Como a sucessão definitiva busca harmonizar a necessidade de segurança jurídica para os herdeiros com a proteção da pessoa do ausente?
+  - Em que medida a "indeterminação temporária de sua titularidade" dos bens se resolve com a decretação da sucessão definitiva?
+  - Explique a diferença entre a "sucessão provisória" e a "sucessão definitiva" em termos de posse e propriedade dos bens.
+  - Quais são as consequências para os herdeiros se o ausente reaparecer após o prazo de 10 anos da abertura da sucessão definitiva?
+  - Como a sucessão definitiva se alinha ao princípio da "função social da propriedade", especialmente no que tange à circulação de riquezas?
+  - A sucessão definitiva, ao presumir a morte, extingue quais vínculos personalíssimos do ausente, como o poder familiar ou o casamento?
+  - De que forma a distinção entre "morte real" e "morte presumida" é crucial para a compreensão da sucessão definitiva?
+  - Qual o impacto da sucessão definitiva na legitimidade para o exercício dos direitos políticos do ausente, caso ele reapareça?
+  - A ausência da manifestação de vontade do indivíduo é um elemento essencial para a declaração de ausência. Como isso se reflete na sucessão definitiva?
+  - Imagine um cenário onde o ausente tinha dívidas. Como a sucessão definitiva afeta a responsabilidade dos herdeiros por essas dívidas?
+
+-----
+# Herdeiros Necessários 
+-- Os herdeiros necessários são aqueles que a lei protege, garantindo-lhes uma porção mínima da herança (a legítima), mesmo contra a vontade do falecido expressa em testamento. Conforme o Art. 1.845 do Código Civil, descendentes, ascendentes e cônjuge são considerados herdeiros necessários, assegurando-lhes o direito de suceder e limitando a autonomia do autor da herança na disposição de seus bens. É um tema crucial do Direito das Sucessões, com forte influência na organização familiar.
+
+## Pergunte pra I.A.
+
+  - Como o Art. 1.845 do Código Civil define quem são os herdeiros necessários e qual a finalidade dessa proteção legal?
+  - Qual a porção da herança reservada aos herdeiros necessários e como ela se relaciona com a "legítima", conforme o Art. 1.846 do Código Civil?
+  - De que forma a existência de herdeiros necessários limita a autonomia do autor da herança para dispor de seus bens por testamento, segundo o Art. 1.789 do Código Civil?
+  - Explique a distinção entre herdeiro legítimo e herdeiro necessário. Todos os herdeiros legítimos são necessários?
+  - Como a "ordem de vocação hereditária" (Art. 1.829 do Código Civil) se aplica na presença de herdeiros necessários?
+  - Quais são os efeitos da deserdação e da indignidade sobre os herdeiros necessários, e como esses institutos se relacionam com a privação da legítima?
+  - Em que situações as cláusulas de inalienabilidade, impenhorabilidade e incomunicabilidade podem ser impostas sobre os bens da legítima dos herdeiros necessários, de acordo com o Art. 1.848 do Código Civil?
+  - O que significa dizer que o "cônjuge pode receber bens como meeiro e herdeiro" na sucessão, especialmente em concorrência com os descendentes ou ascendentes?
+  - Como a Lei nº 14.661/2023 alterou o Art. 1.815-A do Código Civil em relação à exclusão do herdeiro indigno, e qual o impacto prático dessa mudança?
+  - A inclusão de herdeiros necessários na ordem de vocação hereditária visa proteger apenas interesses patrimoniais ou também existenciais? Justifique.
+  - De que forma a jurisprudência, como os enunciados do CJF, tem interpretado a divisão das quotas hereditárias entre descendentes e cônjuge, especialmente em casos de filiação híbrida?
+  - O que acontece com a herança no caso de "ausência" do autor da herança e como os herdeiros necessários são protegidos nessa situação?
+  - Como o cálculo da "legítima" é realizado, considerando o valor dos bens existentes, as dívidas e os bens sujeitos à colação (Art. 1.847 do Código Civil)?
+  - Discuta a afirmação de que "não há necessidade de justa causa para a clausulação da parte disponível da herança" em contraste com a legítima.
+  - Em casos de "união estável", como a jurisprudência do STF (RE 878.694/MG) equiparou os regimes sucessórios de cônjuges e companheiros em relação aos herdeiros necessários?
+  - Quais são as "causas de perda do poder familiar" que podem influenciar a sucessão e como isso afeta os direitos dos herdeiros necessários menores?
+  - Como o "direito de representação" (Art. 1.851 do Código Civil) se aplica na sucessão legítima, permitindo que descendentes representem um ascendente pré-morto, e quais seus limites?
+  - Analise a importância do "inventário e partilha" na efetivação dos direitos dos herdeiros necessários e quais procedimentos devem ser observados.
+  - Qual o prazo prescricional para a "petição de herança" e como a Súmula 149 do STF diferencia o reconhecimento de estado dos direitos patrimoniais?
+  - Proponha um cenário em que a proteção dos herdeiros necessários seja confrontada com a liberdade de testar do falecido, e discuta como o sistema jurídico busca harmonizar esses interesses.
+
+-----
+# Morte Encefálica 
+-- A morte encefálica é o marco legal da morte no Brasil, conforme o Art. 3º da Lei nº 9.434/97. Ela representa a cessação irreversível das funções do tronco encefálico, que comanda as atividades vitais do corpo. Sua correta constatação é crucial, pois, como professor de Direito, destaco que dela dependem importantes efeitos jurídicos, especialmente a possibilidade de doação de órgãos e o encerramento da personalidade civil.
+
+## Pergunte pra I.A.
+
+  - Como a Lei nº 9.434/97, em seu Art. 3º, define a morte encefálica e qual a sua relevância jurídica no ordenamento brasileiro?
+  - Qual a diferença fundamental entre morte real com constatação de morte encefálica e morte presumida, conforme o Código Civil?
+  - De que maneira a determinação da morte encefálica se relaciona com a possibilidade de doação de órgãos, e quais profissionais são envolvidos nesse processo?
+  - Por que a Lei exige que a constatação da morte encefálica seja feita por "dois médicos, não integrantes da equipe que irá realizar o transplante"?
+  - Como a morte encefálica encerra a "personalidade civil" da pessoa, e quais efeitos jurídicos dela decorrem, além da doação de órgãos?
+  - Discuta a afirmação de que a morte encefálica é o "marco legal da morte". Quais implicações isso tem para outras áreas do Direito?
+  - Quais são os principais protocolos e critérios médicos utilizados para a constatação da morte encefálica no Brasil?
+  - Em que medida a evolução científica e tecnológica na área da medicina intensificou a discussão jurídica sobre o conceito e os efeitos da morte encefálica?
+  - Como a "incerteza quanto à sua morte ou não" é tratada juridicamente nas situações de desaparecimento, em contraste com a morte encefálica?
+  - Pode haver alguma controvérsia na prática médica ou jurídica em torno da declaração de morte encefálica, e como o sistema busca resolvê-las?
+  - Qual a relação entre a morte encefálica e os "direitos da personalidade" da pessoa, e como esses direitos são afetados por essa constatação?
+  - A família do indivíduo diagnosticado com morte encefálica possui algum poder de decisão sobre a doação de órgãos, e quais os limites legais para essa decisão?
+  - Como a determinação da morte encefálica se distingue da "morte civil", um conceito que não é mais admitido no Brasil?
+  - Quais são os efeitos da morte encefálica no contexto do Direito das Sucessões, especialmente em relação à transmissão da herança?
+  - Discuta o papel dos conselhos de medicina e da legislação infraconstitucional na complementação das normas sobre a constatação da morte encefálica.
+  - A "autonomia da vontade" do indivíduo, expressa em vida, pode influenciar as decisões sobre a doação de órgãos após a morte encefálica?
+  - Em um cenário de escassez de órgãos para transplante, como o Direito lida com a urgência da constatação da morte encefálica e a necessidade de consentimento para a doação?
+  - Quais os riscos de se confundir a morte encefálica com outros estados neurológicos graves, e quais as salvaguardas legais para evitar erros nesse diagnóstico?
+  - Como a jurisprudência dos tribunais superiores (STJ e STF) tem se posicionado em casos que envolvem a declaração de morte encefálica e seus efeitos jurídicos?
+  - Imagine um caso concreto em que a correta determinação da morte encefálica é essencial para a resolução de um conflito jurídico. Descreva-o e justifique a importância.
+
+-----
+
+# Efeitos *Ex Lege* 
+-- Os efeitos *ex lege* são aqueles que derivam diretamente da lei, independentemente da vontade das partes envolvidas em um ato ou fato jurídico. A lei impõe determinadas consequências, criando, modificando ou extinguindo direitos e deveres de forma cogente.
+
+## Pergunte pra I.A.
+
+  - Como a "capacidade tributária passiva" (Art. 126 do CTN) exemplifica um efeito *ex lege*, e por que ela independe da capacidade civil das pessoas naturais?
+  - De que maneira o "cancelamento da naturalização por sentença judicial transitada em julgado" (Art. 12, § 4º, I, da CF/88 e Art. 15, I, da CF) demonstra a imposição de um efeito *ex lege* sobre a nacionalidade?
+  - Explique como a "morte" (Art. 6º do CC) é um fato jurídico que produz efeitos *ex lege*, e quais são as principais consequências patrimoniais e personalíssimas que dela decorrem.
+  - No contexto do "Poder Familiar" (Art. 1.630 do CC), como a sua constituição e extinção se dão por efeitos *ex lege*, e quais são os deveres e direitos que a lei impõe aos pais?
+  - De que forma a "adoção" (Art. 227, § 5º, da CF, e Art. 39 do ECA), embora dependa de vontade, tem seus principais efeitos jurídicos definidos *ex lege*, e como isso se manifesta nos laços de parentesco?
+  - Como a "sucessão legítima" (Art. 1.829 do CC) é um exemplo claro de efeitos *ex lege*, e qual o critério legal para a definição da "ordem de vocação hereditária"?
+  - A "tutela" (Art. 1.728 do CC) e a "curatela" (Art. 1.774 do CC), como *munus* públicos, têm seus efeitos e poderes definidos *ex lege*. Explique como isso se reflete na representação de incapazes.
+  - De que maneira a "função social da propriedade" (Art. 5º, XXIII, e Art. 170, III, da CRFB/88) impõe limites e deveres ao proprietário por força de lei, mesmo que não haja vontade expressa do indivíduo?
+  - Como a "impenhorabilidade do bem de família" (Art. 1º da Lei n. 8.009/90) é um efeito *ex lege* que protege o direito à moradia, e quais são as exceções a essa regra?
+  - No "abuso do direito" (Art. 187 do CC), embora envolva o exercício de um direito subjetivo, as consequências de sua transgressão são determinadas *ex lege*. Detalhe essa relação.
+  - A "prescrição" (Art. 189 do CC) e a "decadência" (Art. 205 e 206 do CC) são institutos que extinguem direitos ou pretensões por decurso de tempo. Como se caracterizam como efeitos *ex lege*?
+  - Como a LINDB (Lei de Introdução às Normas do Direito Brasileiro) estabelece a "eficácia da lei" (Art. 1º da LINDB) e sua "obrigatoriedade" (Art. 3º da LINDB) como efeitos *ex lege* fundamentais para o sistema jurídico?
+  - De que forma a "inscrição suplementar" na OAB (Art. 10, § 2º, do EOAB) é um efeito *ex lege* que surge da habitualidade do exercício profissional em outro Conselho Seccional?
+  - Analise a "imunidade recíproca" (Art. 150, VI, a, da CF/88) como um efeito *ex lege* que impede a tributação entre entes federativos, e qual o seu fundamento constitucional.
+  - Como o "princípio da irretroatividade" (Art. 5º, XXXVI, da CRFB/88) é um efeito *ex lege* que protege o "ato jurídico perfeito", o "direito adquirido" e a "coisa julgada"?
+  - A "relação jurídica" em si (Art. 1.907 do CC, referindo-se a bens da personalidade, ou Art. 104 e s. do CC, referindo-se ao negócio jurídico) é um conceito que, embora possa depender de vontade para se iniciar, gera direitos e deveres *ex lege* uma vez estabelecida. Explique.
+  - De que maneira a "responsabilidade civil" (Art. 927 do CC) pode ter seus elementos e consequências definidos *ex lege*, especialmente nas hipóteses de responsabilidade objetiva?
+  - Como o "domicílio necessário" (Art. 76 do CC) para certas pessoas (incapazes, servidores públicos, militares, etc.) é imposto *ex lege*, independentemente de sua vontade?
+  - A "Lei n. 13.655, de 25 de abril de 2018", ao introduzir novos artigos à LINDB (Arts. 20 a 30), estabeleceu princípios e deveres para o administrador público que geram efeitos *ex lege*. Comente sobre a "modulação de efeitos" e a "responsabilização pessoal" nesse contexto.
+  - Em que situações o "contrato de sociedade" (Art. 981 do CC), que normalmente decorre da vontade das partes, pode ter aspectos de sua validade ou efeitos de sua dissolução determinados *ex lege*, como a "sociedade unipessoal" (Art. 1.052, § 1º, do CC)?
+
+-----
+# Curador 
+-- A curatela é o encargo conferido a um sujeito capaz para representar maiores incapazes, ou, em casos excepcionais, menores e até o nascituro, protegendo sua pessoa e bens. Alterada profundamente pelo Estatuto da Pessoa com Deficiência (Lei n. 13.146/2015), busca-se hoje reconhecer a autonomia do deficiente, focando na verificação de limitações para exprimir vontade e priorizando a capacidade relativa. Aplica-se subsidiariamente as normas da tutela (Art. 1.774 do CC) e é um *múnus* público e assistencial.
+
+## Pergunte pra I.A.
+
+  - Como o Estatuto da Pessoa com Deficiência (Lei n. 13.146/2015) alterou a disciplina da curatela, especialmente no que tange ao reconhecimento da autonomia do deficiente?
+  - De que forma a verificação de "limitações na aptidão para exprimir vontade" se tornou o foco principal para o estabelecimento da curatela, afastando a deficiência como causa *per se* de incapacidade?
+  - Quais são as hipóteses em que a curatela pode ser estabelecida para menores, ou até mesmo para o nascituro, e como essas situações se diferenciam da curatela para maiores incapazes?
+  - Analise a aplicação subsidiária das normas da tutela à curatela (Art. 1.774 do CC), identificando as principais adaptações necessárias para essa aplicação.
+  - Quais são as principais diferenças entre a tutela e a curatela, especialmente no que diz respeito à idade do pupilo/curatelado e aos poderes conferidos ao tutor/curador?
+  - O que significa o "caráter residual" da incapacidade no novo regime protetivo da curatela, e como isso impacta a extensão dos atos para os quais o curatelado precisa de assistência?
+  - Em que situações o juiz é obrigado a detalhar para quais atos o incapaz precisa de representação ou assistência, ou pode atuar de maneira autônoma?
+  - Explique a modalidade de curatela do nascituro, onde se nomeia um curador ao ventre para a defesa de seus interesses.
+  - O que são os requisitos para a propositura de uma ação de curatela (ou interdição) e quem são os legitimados ativos para tal ação, conforme o Art. 747 do CPC?
+  - Como o juiz define quem será o curador, seguindo a ordem legal de preferência, e em que casos pode haver a constituição de uma curatela dativa?
+  - De que forma a Lei n. 13.146/2015 revogou a modalidade especial de curatela do enfermo ou portador de deficiência física?
+  - Analise a previsão de "curatela compartilhada" (Art. 1.775-A do CC) e como ela se alinha à busca por maior autonomia do curatelado.
+  - Quais são os limites estabelecidos para a interdição do pródigo (Art. 1.782 do CC), e como esses limites se relacionam com a capacidade para atos de disposição patrimonial?
+  - Como o cônjuge casado com o curatelado pelo regime da comunhão universal é dispensado da prestação de contas (Art. 1.783 do CC)?
+  - Quais são os requisitos e o procedimento para o ajuizamento de uma ação para levantamento da interdição ou curatela (Art. 756 do CPC)?
+  - De que maneira a "tomada de decisão apoiada" (Art. 1.783-A do CC) se apresenta como uma alternativa à curatela, sem restringir a capacidade civil da pessoa com deficiência?
+  - Quais são os requisitos para que uma pessoa com deficiência eleja apoiadores na tomada de decisão, e o que ocorre em caso de divergência entre apoiado e apoiadores?
+  - O texto menciona que a curatela pode ser fixada em relação a "menores". Como o Art. 1.767 do CC, ao tratar da incapacidade relativa, influencia essa possibilidade?
+  - Considere um caso de curatela onde o curatelado recupera parte de sua capacidade. Como o ordenamento jurídico prevê a readequação dos termos da curatela a essa nova realidade?
+  - Explique como a curatela, como *múnus* público, reflete o caráter assistencial do Estado na proteção de indivíduos vulneráveis.
+
+-----
+# Teoria Concepcionista 
+-- Para a Teoria Concepcionista, a personalidade civil tem início desde a concepção, atribuindo ao nascituro direitos desde o momento da formação. Essa perspectiva diverge da natalista, que exige o nascimento com vida para a aquisição da personalidade jurídica, mas busca resguardar os direitos do ser humano desde seus primeiros estágios, especialmente os direitos da personalidade.
+
+## Pergunte pra I.A.
+
+  - Como a Teoria Concepcionista se alinha com o Art. 2º do Código Civil, que "põe a salvo, desde a concepção, os direitos do nascituro", e qual a interpretação predominante para essa salvaguarda?
+  - Quais são os principais argumentos que a Teoria Concepcionista utiliza para defender a aquisição da personalidade civil desde a concepção, mesmo sem o nascimento com vida?
+  - De que forma a Teoria Concepcionista impacta a discussão sobre o reconhecimento de danos morais ao nascituro?
+  - Quais são as "expectativas de direitos patrimoniais" do nascituro, segundo a teoria majoritária, e como a Teoria Concepcionista se posiciona sobre isso?
+  - Em que medida a Teoria Concepcionista pode influenciar o Direito das Sucessões, especialmente no que tange à prole eventual?
+  - Como a Teoria Concepcionista se diferencia da Teoria Natalista pura, considerando o momento exato do início da personalidade civil?
+  - Quais são as principais críticas dirigidas à Teoria Concepcionista e como ela responde a elas?
+  - A Teoria Concepcionista atribui ao nascituro a capacidade de ser sujeito de deveres? Justifique sua resposta.
+  - Como a Teoria Concepcionista se relaciona com a proteção da vida humana desde o seu início, e quais os reflexos disso em debates éticos e jurídicos?
+  - No contexto de tecnologias de reprodução assistida, como a Teoria Concepcionista se aplica para definir o início da personalidade civil?
+  - De que maneira a Teoria Concepcionista poderia influenciar a legislação sobre o aborto, caso fosse a teoria dominante no ordenamento jurídico?
+  - Quais são os argumentos que sustentam a coexistência da Teoria Natalista para direitos patrimoniais e da Teoria Concepcionista para direitos da personalidade, como sugerido pelo texto?
+  - A Teoria Concepcionista reconhece ao nascituro a titularidade de quais tipos de direitos, para além dos patrimoniais?
+  - Como a expressão "nascimento com vida" é interpretada pela Teoria Concepcionista em relação à aquisição de direitos?
+  - Em um cenário de comoriência entre a mãe e o nascituro, como a Teoria Concepcionista determinaria a sucessão?
+  - Quais são os desafios práticos na aplicação da Teoria Concepcionista em um sistema jurídico que adota o nascimento com vida como marco para a personalidade civil?
+  - De que forma a Teoria Concepcionista se relaciona com a "dignidade da pessoa humana" desde a concepção, um princípio fundamental da Constituição Federal?
+  - Como a Súmula \[Não há menção a súmulas específicas relacionadas à Teoria Concepcionista ou à personalidade do nascituro no texto fornecido, além do Art. 2º do CC. Se houvesse, seria inserida aqui.\] se alinha ou se contrapõe à Teoria Concepcionista?
+  - Quais enunciados ou artigos da legislação brasileira, além do Art. 2º do Código Civil, podem ser interpretados em conformidade com a Teoria Concepcionista para a proteção dos direitos do nascituro?
+  - Proponha um caso prático complexo em que a aplicação da Teoria Concepcionista seria crucial para a resolução do conflito, destacando as implicações jurídicas.
+
 -----
 # Teoria Natalista 
 -- A Teoria Natalista, predominante no Direito Civil brasileiro para o início da personalidade jurídica, postula que a personalidade civil da pessoa natural começa com o nascimento com vida. Embora reconheça a salvaguarda dos direitos do nascituro desde a concepção (expectativa de direitos patrimoniais e titularidade de direitos da personalidade), a aquisição plena da personalidade e dos direitos patrimoniais ocorre apenas com a efetiva separação do corpo materno e a respiração autônoma.
