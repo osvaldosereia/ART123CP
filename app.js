@@ -1,6 +1,6 @@
 // meujus – app.js (2025-10-04)
-// Manifesto via MENU. Sem temas.json.
-// Suporta 1 TXT por categoria com N temas separados por "-----".
+// Manifesto via MENU (semente por categoria). Sem temas.json.
+// 1 TXT por categoria com N temas separados por "-----".
 // Cada tema renderiza em um único box: Título • Intro • Estude com o Google I.A.
 
 (function(){
@@ -46,6 +46,11 @@
       .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
   }
   function normalizeSlug(s){
+    return (s||'').toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+      .replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
+  }
+  function slugify(s){ // para slug global <categoria>-<tema>
     return (s||'').toLowerCase()
       .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
       .replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
@@ -193,9 +198,65 @@
     return s;
   }
 
-  /* ===== Menu -> TEMAS (sem temas.json) ===== */
+  /* ===== Indexação automática a partir de SEMENTES =====
+     <a class="title" data-auto="1" data-group="Direito Civil" data-path="data/direitocivil/civil.txt">
+  */
+  async function buildTemasFromSeeds(){
+    const seedLinks = Array.from(document.querySelectorAll('#menuList a.title[data-auto="1"][data-path]'));
+    const temas = [];
+    for (const a of seedLinks){
+      const group = (a.dataset.group||'').trim() || 'Geral';
+      const path  = (a.dataset.path||'').trim();
+      if(!path) continue;
+
+      try{
+        const raw    = await fetchText(path);
+        const chunks = splitThemesByDelim(raw);
+        const parsed = chunks.map(parseTemaFromChunk).filter(Boolean); // {slug,title,intro,ask}
+
+        // Inserir visualmente no menu
+        injectGroupAndItemsIntoMenu(a, group, path, parsed);
+
+        // Alimentar TEMAS
+        for (const t of parsed){
+          const frag = t.slug;                       // slug interno do tema
+          const slug = `${slugify(group)}-${frag}`;  // slug global da rota
+          temas.push({ slug, title: t.title, path, tags: [], group, frag });
+        }
+      }catch(e){
+        console.error('Falha ao indexar', path, e);
+      }
+    }
+    return temas;
+  }
+
+  function injectGroupAndItemsIntoMenu(seedA, group, path, parsed){
+    const li = seedA.closest('li'); if(!li) return;
+    const ul = li.parentElement;
+
+    const header = document.createElement('li');
+    header.className = 'item muted';
+    header.textContent = group;
+    ul.insertBefore(header, li);
+
+    const fragList = document.createDocumentFragment();
+    for (const t of parsed){
+      const slug = `${slugify(group)}-${t.slug}`;
+      const liItem = document.createElement('li');
+      liItem.innerHTML = `<a class="title"
+          href="#/tema/${slug}"
+          data-path="${path}"
+          data-frag="${t.slug}"
+          data-title="${escapeHTML(t.title)}">${escapeHTML(t.title)}</a>`;
+      fragList.appendChild(liItem);
+    }
+    ul.insertBefore(fragList, li);
+    li.remove(); // remove a semente
+  }
+
+  /* ===== Fallback: coletar temas já listados no HTML ===== */
   function collectTemasFromMenu(){
-    const links = Array.from(document.querySelectorAll('#menuList a.title'));
+    const links = Array.from(document.querySelectorAll('#menuList a.title[data-path]'));
     const out = [];
     for(const a of links){
       const href = a.getAttribute('href') || '';
@@ -205,7 +266,7 @@
       const path  = (a.dataset.path || '').trim();
       const tags  = (a.dataset.tags||'').split(',').map(s=>s.trim()).filter(Boolean);
       const frag  = (a.dataset.frag||'').trim();
-      const group = inferGroupFromPath(path) || inferGroupFromSlug(slug);
+      const group = a.dataset.group || inferGroupFromPath(path) || inferGroupFromSlug(slug);
       if(!slug || !path) continue;
       out.push({ slug, title: title || slug, path, tags, group, frag });
     }
@@ -224,11 +285,22 @@
     if(key.includes('civil')) return 'Direito Civil';
     return '';
   }
+
+  /* ===== Carregar TEMAS ===== */
   async function loadTemas(){
     try{
-      TEMAS = collectTemasFromMenu();
+      // prioridade: sementes automáticas
+      const hasSeeds = document.querySelector('#menuList a.title[data-auto="1"]');
+      if(hasSeeds){
+        TEMAS = await buildTemasFromSeeds();
+      }else{
+        // fallback: usa os itens já listados
+        TEMAS = collectTemasFromMenu();
+      }
+
       for(const k in TEMA_MAP) delete TEMA_MAP[k];
       TEMAS.forEach(t => { TEMA_MAP[t.slug] = t.path; });
+
       ensureSavedSection();
       renderSavedList();
     }catch(e){
@@ -237,6 +309,7 @@
       TEMAS = [];
     }
   }
+
   function ensureSavedSection(){
     const drawerPanel = $('#drawer-panel');
     const cont = $('.drawer-content', drawerPanel) || drawerPanel;
