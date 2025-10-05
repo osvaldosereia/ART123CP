@@ -139,3 +139,16 @@ body.noscroll{overflow:hidden}
 .badges{display:inline-flex;gap:4px;margin-left:6px;vertical-align:middle}
 .suggestions{-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
 .suggestions mark{background:#fff59d;padding:0 2px;border-radius:3px}
+
+.ac-chips{
+  position:sticky; top:0; background:#fff;
+  display:flex; gap:6px; padding:6px;
+  border-bottom:1px solid var(--line);
+  overflow-x:auto; overscroll-behavior-x:contain; -webkit-overflow-scrolling:touch;
+}
+.ac-chip{
+  flex:0 0 auto; font-size:11px; padding:3px 8px;
+  border:1px solid var(--line); border-radius:999px; background:#fff; cursor:pointer;
+}
+.ac-chip[aria-pressed="true"]{ background:#111827; color:#fff; border-color:#111827; }
+
