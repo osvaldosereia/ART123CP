@@ -90,39 +90,33 @@
     return out;
   }
 
-  // Realce genérico para HTML já escapado
-  function highlightHTML(escapedHtml, q){
-    const parts = String(q||'').toLowerCase().split(/\s+/).filter(Boolean).map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
-    if(!parts.length) return escapedHtml;
-    const rx = new RegExp('(' + parts.join('|') + ')','ig');
-    return escapedHtml.replace(rx, '<mark>$1</mark>');
-  }
+  // regex de destaque: palavras com ≥4 letras, ignora números
+function _buildHighlightRegex(q){
+  const parts = String(q||'')
+    .toLowerCase()
+    .split(/\s+/)
+    .filter(w => w.length >= 4 && /[\p{L}]/u.test(w) && !/^\d+$/.test(w)) // tem letra e não é só número
+    .map(w => w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+  if(!parts.length) return null;
+  // limites por letras unicode para não marcar dentro de outras palavras
+  return new RegExp(`(?<!\\p{L})(` + parts.join('|') + `)(?!\\p{L})`, 'uig');
+}
 
-  /* ===== Busca (autocomplete) ===== */
-  const input = document.querySelector('#search');
-  const acList = document.querySelector('#suggestions');
-  if (acList) acList.hidden = true;
+// Realce em HTML ESCAPADO (conteúdo do tema)
+function highlightHTML(escapedHtml, q){
+  const rx = _buildHighlightRegex(q);
+  if(!rx) return escapedHtml;
+  return escapedHtml.replace(rx, '<mark>$1</mark>');
+}
 
-  // pesos por campo
-  function _hit(hay,q){
-    if(!hay) return 0;
-    if(hay===q) return 100;
-    if(hay.includes(q)) return 60;
-    return q.split(/\s+/).reduce((s,w)=> s + (w && hay.includes(w) ? 10 : 0), 0);
-  }
-  function scoreFields(q, t){
-    const sT = _hit(t.titleL, q);
-    const sI = _hit(t.introL, q);
-    const sP = _hit(t.askL,   q);
-    return { score: 1.0*sT + 0.5*sI + 0.8*sP, flags: { t: sT>0, i: sI>0, p: sP>0 } };
-  }
-  function highlightTitle(title, q){
-    const esc = String(title).replace(/</g,'&lt;');
-    const parts = q.split(/\s+/).filter(Boolean).map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
-    if(!parts.length) return esc;
-    const rx = new RegExp('(' + parts.join('|') + ')','ig');
-    return esc.replace(rx, '<mark>$1</mark>');
-  }
+// Realce no título das sugestões
+function highlightTitle(title, q){
+  const esc = String(title).replace(/</g,'&lt;');
+  const rx = _buildHighlightRegex(q);
+  if(!rx) return esc;
+  return esc.replace(rx, '<mark>$1</mark>');
+}
+
 
   input?.addEventListener('input', e=>{
     const q=(e.target.value||'').trim().toLowerCase();
