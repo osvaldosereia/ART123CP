@@ -94,55 +94,102 @@
   const acList = document.querySelector('#suggestions');
   if (acList) acList.hidden = true;
 
-  function score(q,t){ return hit((t.title||'').toLowerCase(), q) + hit((t.tags||[]).join(' ').toLowerCase(), q); }
-  function hit(hay,q){ if(!hay) return 0; if(hay===q) return 100; if(hay.includes(q)) return 60; return q.split(/\s+/).reduce((s,w)=>s+(hay.includes(w)?10:0),0); }
+ // pesos por campo
+function _hit(hay,q){
+  if(!hay) return 0;
+  if(hay===q) return 100;
+  if(hay.includes(q)) return 60;
+  return q.split(/\s+/).reduce((s,w)=> s + (w && hay.includes(w) ? 10 : 0), 0);
+}
+function scoreFields(q, t){
+  const sT = _hit(t.titleL, q);
+  const sI = _hit(t.introL, q);
+  const sP = _hit(t.askL,   q);
+  return { score: 1.0*sT + 0.5*sI + 0.8*sP, flags: { t: sT>0, i: sI>0, p: sP>0 } };
+}
+function highlightTitle(title, q){
+  const esc = String(title).replace(/</g,'&lt;');
+  const parts = q.split(/\s+/).filter(Boolean).map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+  if(!parts.length) return esc;
+  const rx = new RegExp('(' + parts.join('|') + ')','ig');
+  return esc.replace(rx, '<mark>$1</mark>');
+}
 
-  input?.addEventListener('input', e=>{
-    const q=(e.target.value||'').trim().toLowerCase();
-    if(!q || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; return; }
-    const arr = TEMAS.map(t=>({ slug:t.slug, title:t.title, group:t.group||'', score:score(q,t) }))
-      .filter(a=>a.score>0).sort((a,b)=>b.score-a.score).slice(0,8);
-    if(!arr.length){ acList.innerHTML=''; acList.hidden=true; return; }
-    acList.innerHTML = arr.map(a=>`
+input?.addEventListener('input', e=>{
+  const q=(e.target.value||'').trim().toLowerCase();
+  if(q.length<2 || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; return; }
+
+  const arr = TEMAS.map(t=>({ t, ...scoreFields(q,t) }))
+    .filter(x=>x.score>0)
+    .sort((a,b)=> b.score-a.score || a.t.title.localeCompare(b.t.title,'pt-BR'))
+    .slice(0,8);
+
+  if(!arr.length){ acList.innerHTML=''; acList.hidden=true; return; }
+
+  acList.innerHTML = arr.map(x=>{
+    const {t, flags} = x;
+    const titleHTML = highlightTitle(t.title, q);
+    const badges = [
+      flags.t?'<span class="badge t">T</span>':'',
+      flags.i?'<span class="badge i">I</span>':'',
+      flags.p?'<span class="badge p">P</span>':'',
+    ].join('');
+    return `
       <li role="option">
-        <a href="#/tema/${a.slug}">
-          <div class="s1">${a.title.replace(/</g,'&lt;')}</div>
-          <div class="s2">${(a.group||'').replace(/</g,'&lt;')}</div>
+        <a href="#/tema/${t.slug}">
+          <div class="s1">${titleHTML}<span class="badges">${badges}</span></div>
+          <div class="s2">${(t.group||'').replace(/</g,'&lt;')}</div>
         </a>
-      </li>`).join('');
-    acList.hidden = false;
-  });
-  input?.addEventListener('keydown', ev=>{
-    if(ev.key==='Enter'){
-      const a = acList?.querySelector('a');
-      if(a){ location.hash = a.getAttribute('href'); acList.hidden = true; }
-    }
-  });
-  acList?.addEventListener('click', ev=>{
-    const a = ev.target.closest('a'); if(!a) return;
-    acList.hidden = true;
-  });
-  window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
+      </li>`;
+  }).join('');
+  acList.hidden=false;
+});
+
+input?.addEventListener('keydown', ev=>{
+  if(ev.key==='Enter'){
+    const a = acList?.querySelector('a');
+    if(a){ location.hash = a.getAttribute('href'); acList.hidden = true; }
+  }
+});
+acList?.addEventListener('click', ev=>{
+  const a = ev.target.closest('a'); if(!a) return;
+  acList.hidden = true;
+});
+window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
+
 
   /* ===== Seeds ===== */
-  async function readAllSeeds(){
-    const seeds=$$('#menuList a.title[data-auto="1"][data-path]');
-    const temas=[];
-    for(const a of seeds){
-      const group=(a.dataset.group||'').trim()||'Geral';
-      const path =(a.dataset.path||'').trim();
-      if(!path) continue;
-      try{
-        const raw=await fetchText(path);
-        const chunks=splitThemesByDelim(raw);
-        const parsed=chunks.map(parseTemaFromChunk).filter(Boolean);
-        for(const t of parsed){
-          temas.push({ slug:`${slugify(group)}-${t.slug}`, title:t.title, path, tags:[], group, frag:t.slug });
-        }
-      }catch(e){ console.error('Seed falhou', path, e); toast(`Erro ao ler ${path}`, 'error', 2800); }
+async function readAllSeeds(){
+  const seeds = $$('#menuList a.title[data-auto="1"][data-path]');
+  const temas = [];
+  for (const a of seeds){
+    const group = (a.dataset.group||'').trim() || 'Geral';
+    const path  = (a.dataset.path||'').trim();
+    if(!path) continue;
+    try{
+      const raw    = await fetchText(path);
+      const chunks = splitThemesByDelim(raw);
+      const parsed = chunks.map(parseTemaFromChunk).filter(Boolean);
+      for (const t of parsed){
+        const slug  = `${slugify(group)}-${t.slug}`;
+        const intro = (t.intro||[]).join(' ');
+        const ask   = (t.ask||[]).join(' ');
+        temas.push({
+          slug, title: t.title, path, tags: [], group, frag: t.slug,
+          titleL: (t.title||'').toLowerCase(),
+          introL: intro.toLowerCase(),
+          askL:   ask.toLowerCase(),
+          blob:   (t.title + ' ' + intro + ' ' + ask).toLowerCase()
+        });
+      }
+    }catch(e){
+      console.error('Seed falhou', path, e);
+      toast(`Erro ao ler ${path}`, 'error', 2800);
     }
-    return temas;
   }
+  return temas;
+}
+
 
   /* ===== Helpers: drawer e categorias ===== */
   function openDrawer(){
