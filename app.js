@@ -1,7 +1,7 @@
 // meujus – app.js (2025-10-04)
-// Manifesto via MENU (semente por categoria). Sem temas.json.
-// 1 TXT por categoria com N temas separados por "-----".
-// Cada tema renderiza em um único box: Título • Intro • Estude com o Google I.A.
+// Manifesto por semente de categoria. Sem temas.json.
+// TXT com N temas separados por linhas contendo só "-----" (tolerante a espaços).
+// Render: box único (Título • Intro • Estude com o Google I.A.).
 
 (function(){
   /* ===== Helpers DOM ===== */
@@ -15,19 +15,10 @@
 
   /* ===== Persistência (Salvos) ===== */
   const SAVED_KEY = 'meujus:saved';
-  function readSaved(){
-    try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch(_){ return []; }
-  }
-  function writeSaved(list){
-    localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(new Set(list))));
-  }
+  function readSaved(){ try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch(_){ return []; } }
+  function writeSaved(list){ localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(new Set(list)))); }
   function isSaved(slug){ return readSaved().includes(slug); }
-  function toggleSaved(slug){
-    const cur = new Set(readSaved());
-    if(cur.has(slug)) cur.delete(slug); else cur.add(slug);
-    writeSaved([...cur]);
-    return cur.has(slug);
-  }
+  function toggleSaved(slug){ const cur = new Set(readSaved()); cur.has(slug)?cur.delete(slug):cur.add(slug); writeSaved([...cur]); return cur.has(slug); }
 
   /* ===== Roteamento ===== */
   function currentPage(){
@@ -41,8 +32,7 @@
 
   /* ===== Util ===== */
   function escapeHTML(s){
-    return String(s)
-      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
       .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
   }
   function normalizeSlug(s){
@@ -50,7 +40,7 @@
       .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
       .replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
   }
-  function slugify(s){ // para slug global <categoria>-<tema>
+  function slugify(s){ // slug global <categoria>-<tema>
     return (s||'').toLowerCase()
       .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
       .replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
@@ -61,41 +51,59 @@
     return res.text();
   }
 
-  /* ===== Separação em TEMAS por '-----' ===== */
+  /* ===== Split por delimitador robusto ===== */
   function splitThemesByDelim(raw){
     const txt = raw.replace(/\r\n?/g,'\n').trim();
-    return txt.split(/\n-{5,}\n/g).map(s=>s.trim()).filter(Boolean);
+    // quebra em QUALQUER linha que contenha só dashes com espaços: "-----", " ----- ", "--------"
+    return txt.split(/^\s*-{3,}\s*$/m).map(s=>s.trim()).filter(Boolean);
   }
 
   /* ===== Parser de um tema ===== */
   function parseTemaFromChunk(chunk){
-    const titleMatch = chunk.match(/^\s*#\s+(.+)$/m);
+    // normaliza cabeçalhos mal formatados tipo "## ## Estude …"
+    const fixed = chunk.replace(/^\s*##\s+##\s+/mg, '## ');
+    const titleMatch = fixed.match(/^\s*#\s+(.+)$/m);
     if(!titleMatch) return null;
 
     const title = titleMatch[1].trim();
     const slug  = normalizeSlug(title);
-    const intro = Array.from(chunk.matchAll(/^\s*--\s+(.+)$/mg)).map(m=>m[1].trim());
+    const intro = Array.from(fixed.matchAll(/^\s*--\s+(.+)$/mg)).map(m=>m[1].trim());
 
-    // Seções iniciadas por "##", tolera "## ##"
-    const secRx = /^\s*##+\s+(.+?)\s*$/mg;
+    // Seções "## …"
+    const secRx = /^\s*#{2,}\s+(.+?)\s*$/mg;
     const secs = [];
     let m;
-    while((m = secRx.exec(chunk)) !== null){
+    while((m = secRx.exec(fixed)) !== null){
       const name  = m[1].trim();
       const start = m.index + m[0].length;
       const prev  = secs[secs.length-1];
       if(prev) prev.end = m.index;
-      secs.push({ name, start, end: chunk.length });
+      secs.push({ name, start, end: fixed.length });
     }
 
     let ask = [];
     for(const s of secs){
-      const body = chunk.slice(s.start, s.end);
-      const list = Array.from(body.matchAll(/^\s*-\s+(.+)$/mg)).map(x=>x[1].trim());
-      if(/estude\s+com\s+o\s+google.*i\.a\./i.test(s.name)) ask = ask.concat(list);
+      const nameNorm = normalizeHeading(s.name);
+      const body = fixed.slice(s.start, s.end);
+      // Lista de perguntas aceita "- " com qualquer indentação
+      const list = Array.from(body.matchAll(/^\s*-\s+(.+?)\s*$/mg)).map(x=>x[1].trim());
+      if(isEstudeIA(nameNorm)) ask = ask.concat(list);
     }
 
     return { slug, title, intro, ask };
+  }
+
+  function normalizeHeading(h){
+    // remove pontuação comum e hashes restantes, tira acentos
+    return (h||'').toLowerCase()
+      .replace(/[.#:]/g,' ')
+      .replace(/\s+/g,' ')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+      .trim();
+  }
+  function isEstudeIA(nameNorm){
+    // cobre: "estude com o google ia", "estude com o google i.a.", "estude com o google modo ia"
+    return /estude com o google/.test(nameNorm) && /\bia\b/.test(nameNorm);
   }
 
   /* ===== Glossário opcional ===== */
@@ -103,7 +111,7 @@
     if(GLOSS!==null) return;
     try{
       const raw = await fetchText('data/glossario.txt');
-      const blocks = raw.replace(/\r\n?/g,'\n').split(/\n-{5,}\n/).map(s=>s.trim()).filter(Boolean);
+      const blocks = splitThemesByDelim(raw);
       GLOSS = blocks.map(b=>{
         const m1 = b.match(/^\s*@termo:\s*(.+)$/m);
         const m2 = b.match(/^\s*@def:\s*(.+)$/m);
@@ -113,17 +121,13 @@
         const pattern = new RegExp(`\\b${escapeRegex(termo)}\\b`,'i');
         return { termo, def, pattern };
       }).filter(Boolean);
-    }catch(_){
-      GLOSS = [];
-    }
+    }catch(_){ GLOSS = []; }
   }
   function escapeRegex(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
   function markGlossarioInHTML(html){
     if(!Array.isArray(GLOSS) || GLOSS.length===0) return html;
     let out = html;
-    for(const g of GLOSS){
-      out = out.replace(g.pattern, m => `<abbr title="${escapeHTML(g.def)}">${escapeHTML(m)}</abbr>`);
-    }
+    for(const g of GLOSS){ out = out.replace(g.pattern, m => `<abbr title="${escapeHTML(g.def)}">${escapeHTML(m)}</abbr>`); }
     return out;
   }
 
@@ -136,10 +140,7 @@
     el.innerHTML = `<span>${msg}</span>`;
     toastsEl.appendChild(el);
     setTimeout(()=>{ el.classList.add('show'); }, 30);
-    setTimeout(()=>{
-      el.classList.remove('show');
-      setTimeout(()=> el.remove(), 400);
-    }, ttl);
+    setTimeout(()=>{ el.classList.remove('show'); setTimeout(()=> el.remove(), 400); }, ttl);
   }
 
   /* ===== Autocomplete ===== */
@@ -148,14 +149,10 @@
   input?.addEventListener('input', onSearchInput);
   input?.addEventListener('keydown', onSearchKey);
   acList?.addEventListener('click', onSuggestionClick);
-
   function onSearchInput(e){
     const q = (e.target.value||'').trim().toLowerCase();
     if(!q){ acList.innerHTML=''; acList.hidden=true; return; }
-    const all = TEMAS.map(t=>({
-      slug:t.slug, title:t.title, group:t.group||'',
-      score: scoreTitle(q, t.title) + scoreTags(q, t.tags||[])
-    }));
+    const all = TEMAS.map(t=>({ slug:t.slug, title:t.title, group:t.group||'', score: scoreTitle(q, t.title) + scoreTags(q, t.tags||[]) }));
     const top = all.filter(a=>a.score>0).sort((a,b)=>b.score-a.score).slice(0,8);
     if(top.length===0){ acList.innerHTML=''; acList.hidden=true; return; }
     acList.innerHTML = top.map(item => `
@@ -164,43 +161,22 @@
           <div class="s1">${escapeHTML(item.title)}</div>
           <div class="s2">${escapeHTML(item.group||'')}</div>
         </a>
-      </li>
-    `).join('');
+      </li>`).join('');
     acList.hidden=false;
   }
   function onSearchKey(ev){
     if(ev.key==='Enter'){
-      const q = (input.value||'').trim().toLowerCase();
-      if(!q) return;
-      const best = TEMAS
-        .map(t=>({t, s: scoreTitle(q,t.title)+scoreTags(q,t.tags||[])}))
-        .sort((a,b)=>b.s-a.s)[0];
+      const q = (input.value||'').trim().toLowerCase(); if(!q) return;
+      const best = TEMAS.map(t=>({t, s: scoreTitle(q,t.title)+scoreTags(q,t.tags||[])})).sort((a,b)=>b.s-a.s)[0];
       if(best && best.s>0) location.hash = `#/tema/${best.t.slug}`;
       acList.hidden=true;
     }
   }
-  function onSuggestionClick(ev){
-    const a = ev.target.closest('a'); if(!a) return;
-    acList.hidden=true;
-  }
-  function scoreTitle(q, title){
-    const t = (title||'').toLowerCase();
-    if(t===q) return 100;
-    if(t.includes(q)) return 60;
-    const words = q.split(/\s+/).filter(Boolean);
-    let s=0; for(const w of words){ if(t.includes(w)) s+=10; }
-    return s;
-  }
-  function scoreTags(q, tags){
-    const t = (tags||[]).map(s=>s.toLowerCase()).join(' ');
-    if(!t) return 0;
-    let s=0; if(t.includes(q)) s+=20;
-    return s;
-  }
+  function onSuggestionClick(ev){ const a = ev.target.closest('a'); if(!a) return; acList.hidden=true; }
+  function scoreTitle(q, title){ const t=(title||'').toLowerCase(); if(t===q) return 100; if(t.includes(q)) return 60; return q.split(/\s+/).reduce((s,w)=>s+(t.includes(w)?10:0),0); }
+  function scoreTags(q, tags){ const t=(tags||[]).map(s=>s.toLowerCase()).join(' '); return t && t.includes(q) ? 20 : 0; }
 
-  /* ===== Indexação automática a partir de SEMENTES =====
-     <a class="title" data-auto="1" data-group="Direito Civil" data-path="data/direitocivil/civil.txt">
-  */
+  /* ===== SEMENTES -> indexação automática ===== */
   async function buildTemasFromSeeds(){
     const seedLinks = Array.from(document.querySelectorAll('#menuList a.title[data-auto="1"][data-path]'));
     const temas = [];
@@ -214,18 +190,14 @@
         const chunks = splitThemesByDelim(raw);
         const parsed = chunks.map(parseTemaFromChunk).filter(Boolean); // {slug,title,intro,ask}
 
-        // Inserir visualmente no menu
         injectGroupAndItemsIntoMenu(a, group, path, parsed);
 
-        // Alimentar TEMAS
         for (const t of parsed){
-          const frag = t.slug;                       // slug interno do tema
-          const slug = `${slugify(group)}-${frag}`;  // slug global da rota
+          const frag = t.slug;
+          const slug = `${slugify(group)}-${frag}`;
           temas.push({ slug, title: t.title, path, tags: [], group, frag });
         }
-      }catch(e){
-        console.error('Falha ao indexar', path, e);
-      }
+      }catch(e){ console.error('Falha ao indexar', path, e); }
     }
     return temas;
   }
@@ -251,7 +223,7 @@
       fragList.appendChild(liItem);
     }
     ul.insertBefore(fragList, li);
-    li.remove(); // remove a semente
+    li.remove();
   }
 
   /* ===== Fallback: coletar temas já listados no HTML ===== */
@@ -289,14 +261,9 @@
   /* ===== Carregar TEMAS ===== */
   async function loadTemas(){
     try{
-      // prioridade: sementes automáticas
       const hasSeeds = document.querySelector('#menuList a.title[data-auto="1"]');
-      if(hasSeeds){
-        TEMAS = await buildTemasFromSeeds();
-      }else{
-        // fallback: usa os itens já listados
-        TEMAS = collectTemasFromMenu();
-      }
+      if(hasSeeds){ TEMAS = await buildTemasFromSeeds(); }
+      else{ TEMAS = collectTemasFromMenu(); }
 
       for(const k in TEMA_MAP) delete TEMA_MAP[k];
       TEMAS.forEach(t => { TEMA_MAP[t.slug] = t.path; });
@@ -429,7 +396,7 @@
     contentEl.innerHTML = `
       <div class="card ubox">
         <h2 class="ubox-title">Sobre o projeto</h2>
-        <p class="ubox-intro">TXT único por categoria, vários temas separados por <code>-----</code>, busca local e links em modo Google I.A.</p>
+        <p class="ubox-intro">TXT único por categoria, temas separados por <code>-----</code>, busca local e links no Google I.A.</p>
       </div>
     `;
   }
@@ -441,7 +408,7 @@
     else {
       const titleEl   = $('#themeTitle');
       const contentEl = $('#content');
-      $('#saveBtn')?.remove();
+      $('#saveBtn']?.remove();
       titleEl.textContent = 'Escolha um tema';
       contentEl.innerHTML = `<div class="card"><div class="item"><span class="muted">Use o menu ☰ ou a busca.</span></div></div>`;
     }
