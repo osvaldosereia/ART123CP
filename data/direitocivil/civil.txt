@@ -1,4 +1,34 @@
 
+
+
+-----
+# Comoriência 
+-- A comoriência é a presunção legal de morte simultânea de duas ou mais pessoas, quando não é possível determinar a ordem dos falecimentos. Esse instituto é crucial no Direito Sucessório, pois, para que haja sucessão entre indivíduos, é fundamental que um sobreviva ao outro. Sem essa certeza, e na ausência de prova em contrário, o Código Civil estabelece essa presunção, impactando diretamente a transmissão de direitos hereditários entre os comorientes.
+
+## Pergunte pra I.A.
+
+  - O que é o instituto da comoriência e qual a sua finalidade no contexto do Direito Civil?
+  - Como a comoriência se diferencia da morte real e da morte presumida com declaração de ausência?
+  - Quais são os requisitos essenciais para que se configure a comoriência, conforme o Código Civil brasileiro?
+  - Por que a determinação da ordem dos falecimentos é crucial para a aplicação das regras de sucessão hereditária?
+  - A comoriência pode ser aplicada a pessoas que não possuem nenhum vínculo familiar ou sucessório entre si? Justifique.
+  - De que maneira o artigo 8º do Código Civil disciplina a comoriência?
+  - Quais são as consequências jurídicas da declaração de comoriência para a transmissão da herança entre os comorientes?
+  - Em um acidente de grande repercussão, como um desastre aéreo, quem teria o ônus de provar a não simultaneidade das mortes?
+  - Como a comoriência impacta a aplicação do princípio da *saisine*?
+  - A comoriência pode ser afastada por prova em contrário? Que tipo de prova seria necessária?
+  - Cite um exemplo prático em que a aplicação da comoriência seria fundamental para resolver um conflito sucessório.
+  - Quais são os efeitos da comoriência em relação aos direitos de representação na sucessão legítima?
+  - O que ocorre com os bens dos comorientes se eles não possuírem outros herdeiros além de si próprios?
+  - A comoriência gera a extinção da personalidade jurídica dos falecidos? Explique.
+  - Em que situações a presunção de comoriência pode ser contestada judicialmente?
+  - Como a doutrina e a jurisprudência abordam a comoriência em casos de falecimentos ocorridos em eventos distintos, mas muito próximos no tempo?
+  - A comoriência tem relevância apenas para o Direito das Sucessões ou possui impactos em outros ramos do Direito?
+  - Qual a importância de um laudo pericial detalhado em casos que podem envolver comoriência?
+  - O que aconteceria se a lei não previsse o instituto da comoriência em situações de falecimento simultâneo sem prova da precedência?
+  - Como o entendimento da comoriência contribui para a segurança jurídica nas relações sucessórias complexas?
+
+-----
 # Fases da Declaração de Ausência 
 -- A declaração de ausência é um procedimento legal para proteger o patrimônio de uma pessoa que desapareceu, sem deixar notícias ou representante. Envolve etapas como a nomeação de curador, a sucessão provisória e, eventualmente, a sucessão definitiva, culminando na presunção de morte. É crucial para a segurança jurídica e a destinação dos bens do ausente.
 
