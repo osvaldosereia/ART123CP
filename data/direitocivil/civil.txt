@@ -1,3 +1,56 @@
+# Ato Ilícito
+-- É a conduta humana que, ao transgredir a ordem jurídica, viola direitos alheios e causa danos. Essencialmente, não há ato ilícito civil sem dano. As excludentes de ilicitude, como legítima defesa e estado de necessidade, afastam a conduta do campo do ilícito, embora, em alguns casos, o dever de indenizar possa persistir.
+
+## Pergunte pra I.A.
+
+  - Como a violação de direitos alheios e a produção de um dano são elementos indissociáveis para a caracterização do ato ilícito no Direito Civil?
+  - Qual a diferença entre o ato ilícito no Direito Civil e a ilicitude no Direito Penal ou Administrativo, especialmente quanto à necessidade de um resultado danoso?
+  - De que forma o "abuso do direito", conforme o Art. 187 do Código Civil, se enquadra na categoria de ato ilícito objetivo e quais são os limites para o exercício de um direito subjetivo?
+  - Analise o conceito de "neminem laedere" como dever jurídico primário e como sua transgressão leva ao surgimento da responsabilidade civil extracontratual.
+  - Quais são as excludentes de ilicitude previstas no Art. 188 do Código Civil e como elas afetam a imputação de um comportamento como ato ilícito?
+  - Explique como o estado de necessidade, embora seja uma excludente de ilicitude, pode, excepcionalmente, gerar um dever de reparação, conforme o Art. 929 do Código Civil.
+  - De que maneira a "legítima defesa" e o "exercício regular de um direito" operam como excludentes de ilicitude, e quais os seus limites?
+  - Como a conduta que "excede manifestamente os limites impostos pelo seu fim econômico ou social, pela boa-fé ou pelos bons costumes" caracteriza o abuso do direito?
+  - Quais as consequências jurídicas da prática de um ato ilícito no Direito Civil, e como a responsabilidade civil se estrutura a partir dele?
+  - Pode-se alegar a ausência de dano para afastar a caracterização do ato ilícito? Justifique sua resposta com base no texto.
+  - Como a evolução da responsabilidade civil, do caráter subjetivo ao objetivo, impactou a exigência da prova da culpa na configuração do ato ilícito?
+  - De que forma a "ilicitude" se liga à "antijuridicidade" na análise de uma conduta, e qual a importância dessa ligação para o Direito?
+  - Em um caso prático, como um juiz distinguiria um exercício regular de um direito de um abuso de direito, utilizando os balizadores legais?
+  - Qual o papel da "vítima" na configuração do ato ilícito civil e como seus direitos são protegidos a partir da ocorrência do dano?
+  - Se um ato ilícito gera dano moral, qual a sua natureza e como ele se diferencia de um dano patrimonial?
+  - Como o ato ilícito é a base para a responsabilidade civil contratual e extracontratual? Quais as diferenças?
+  - A inclusão do abuso do direito como ato ilícito no Código Civil de 2002 reflete uma mudança de paradigma em relação à interpretação dos direitos subjetivos? Explique.
+  - Quais são os "grandes princípios do bem comum, do direito natural, da moral, da razão" que limitam um poder arbitrário e como se relacionam com a repressão do ato ilícito?
+  - De que forma a indenização decorrente de um ato ilícito busca a "restitutio in integrum", e quais os desafios para sua plena efetivação?
+  - Um comportamento que, embora não cause dano direto, transgride uma norma e é considerado ilícito em outros ramos do direito (penal, administrativo) poderia ser reclassificado como ato ilícito civil se, posteriormente, gerasse um prejuízo? Discuta.
+
+-----
+
+# Relação jurídica 
+-- É o elo de ligação entre dois ou mais sujeitos, integrando a vontade destes, e se forma a partir da manifestação de vontade, que busca a satisfação de interesses. Essa relação é essencial, pois sem ela não há como os sujeitos exercerem poderes sobre objetos no âmbito do Direito.
+
+## Pergunte pra I.A.
+
+  - Como a "manifestação de vontade" é o elemento central para o estabelecimento de uma relação jurídica?
+  - De que maneira a relação jurídica concretiza o conceito de "Direito Subjetivo", conforme o material de estudo?
+  - Quais são os elementos indispensáveis para a configuração de uma relação jurídica, e como eles interagem entre si?
+  - Explique por que o material afirma que "não há direito subjetivo sem a presença de bens sobre os quais a vontade recairá" no contexto da relação jurídica.
+  - Como a relação jurídica diferencia-se de uma mera relação social, e qual o papel da sanção coercitiva nessa distinção?
+  - De que forma a "Parte Geral do Código Civil" organiza seus livros para refletir os elementos da relação jurídica?
+  - A ausência de um "Sujeito" ou "Objeto" inviabilizaria a existência de uma relação jurídica? Justifique.
+  - Como a relação jurídica estabelece um vínculo que gera "direitos e deveres recíprocos" entre as partes?
+  - Pode haver uma relação jurídica com "indeterminação temporária de sua titularidade"? Cite exemplos.
+  - De que maneira o Direito Civil lida com a autonomia da vontade na criação de relações jurídicas, e quais são os limites impostos?
+  - Como a relação jurídica se conecta com o conceito de "abuso do direito", especialmente quando os interesses são meramente próprios?
+  - Qual o papel do "ordenamento jurídico" na delimitação e regulamentação das relações jurídicas?
+  - Em um contrato de compra e venda, quais elementos da relação jurídica estão presentes, e como eles se interligam?
+  - A "satisfação de um interesse próprio" é sempre o objetivo de uma relação jurídica? Há exceções?
+  - Como a relação jurídica é essencial para a "aplicação do Direito" e para a "organização social"?
+  - Discuta a importância de a relação jurídica ser "estável" e "previsível" para a segurança jurídica.
+  - De que forma a "lei" atua na criação e na modificação das relações jurídicas?
+  - Como a "natureza do objeto" (patrimonial ou existencial) influencia a caracterização da relação jurídica?
+  - Em um caso de direito de família (como o casamento), como se manifestam os elementos da relação jurídica?
+  - Proponha um exemplo de situação cotidiana que demonstre claramente a formação e os elementos de uma relação jurídica.
 
 -----
 
