@@ -1,6 +1,34 @@
 
 -----
 
+# Título ao portador 
+-- O título ao portador é um documento que incorpora um direito, cuja titularidade é transferida pela simples tradição (entrega), sem necessidade de endosso ou registro. Sua principal característica é a facilidade de circulação, pois quem o detém é presumido o legítimo titular do direito nele expresso. No Direito moderno, sua utilização é restrita, em virtude da busca por maior segurança e rastreabilidade nas relações jurídicas e financeiras.
+
+## Pergunte pra I.A.
+
+  - Qual a característica fundamental de um título ao portador que o diferencia de outros títulos de crédito, como o título nominativo e o à ordem?
+  - Como a "simples tradição" do título ao portador influencia a segurança jurídica para o devedor que realiza o pagamento?
+  - Qual o principal motivo para a restrição da utilização do título ao portador no Direito moderno?
+  - De que maneira o princípio da "literalidade" se aplica ao título ao portador, mesmo sem a identificação expressa do beneficiário?
+  - Quais os riscos associados à "falta de identificação do titular" em um título ao portador?
+  - No contexto histórico do Direito Empresarial, qual o papel do título ao portador na fase subjetivista e objetivista?
+  - Como o "princípio da autonomia" se manifesta nos títulos ao portador e qual sua importância para a circulação desses documentos?
+  - Em que medida a "cartularidade" é um requisito essencial para a existência e validade de um título ao portador?
+  - Quais as implicações da perda ou roubo de um título ao portador para o legítimo proprietário?
+  - Compare a circulação de um título ao portador com a de uma ação em bolsa de valores no mercado atual.
+  - A "presunção de legitimidade" de quem detém o título ao portador pode gerar alguma forma de fraude? Como?
+  - Existem remanescentes do conceito de título ao portador no ordenamento jurídico brasileiro atual? Onde se manifestam?
+  - De que forma a digitalização e desmaterialização de documentos financeiros impactam a relevância do título ao portador?
+  - Qual a relação entre o título ao portador e a ideia de "obrigações naturais", onde o pagamento pode ser feito sem coercibilidade judicial?
+  - A inclusão de uma cláusula "não à ordem" em um título transformaria um título ao portador em outro tipo de título? Qual?
+  - Como os "usos e costumes" do mercado influenciaram a aceitação e a circulação dos títulos ao portador em períodos passados?
+  - Quais são os mecanismos jurídicos que um devedor poderia utilizar para se proteger ao pagar um título ao portador, caso suspeite da legitimidade do apresentante?
+  - Em um cenário de insolvência ou falência, como a natureza de um título ao portador poderia afetar a recuperação de crédito pelo seu detentor?
+  - A emissão de um cheque "ao portador" ainda possui as mesmas características e riscos que um título ao portador tradicional?
+  - Qual a importância de estudar o conceito de título ao portador para um estudante de Direito, mesmo diante de sua reduzida aplicação prática atual?
+
+-----
+
 # Princípio da Função Social da Propriedade 
 -- A Constituição Federal assegura o direito de propriedade, exigindo seu cumprimento da função social (art. 5º, XXII e XXIII, e art. 170, III). Isso significa que a propriedade não serve apenas ao interesse individual, mas também ao coletivo, promovendo o bem-estar social e ambiental. O Código Civil de 2002 reforça essa ideia, e o Estatuto da Cidade e a legislação agrária estabelecem as sanções para o descumprimento, visando garantir uma propriedade que dialogue com as necessidades da sociedade.
 
