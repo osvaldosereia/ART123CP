@@ -1,5 +1,60 @@
 
 
+-----
+# Emancipação Legal 
+-- A emancipação legal é a aquisição antecipada da plena capacidade de fato, permitida em situações específicas e independentemente de decisão judicial ou da vontade dos pais. Ocorre em hipóteses como casamento, exercício de emprego público efetivo, colação de grau em curso superior ou estabelecimento civil/comercial com economia própria, conforme o Código Civil brasileiro.
+
+## Pergunte pra I.A.
+
+  - Quais são as quatro hipóteses de emancipação legal previstas no Código Civil brasileiro?
+  - Qual a idade mínima para que um menor possa se emancipar pelo casamento?
+  - De que forma a Lei n. 13.811/2019 impactou a emancipação pelo casamento, proibindo matrimônios de menores de 16 anos?
+  - A separação judicial ou o divórcio de um menor emancipado pelo casamento o faz retornar à condição de incapaz? Justifique.
+  - O que significa "emprego público efetivo" para fins de emancipação legal, e como essa expressão é interpretada na prática?
+  - A emancipação pela colação de grau em curso de ensino superior é comum na prática? Por que?
+  - Como o "desenvolvimento de estabelecimento civil ou comercial" ou a "relação de emprego" podem levar à emancipação legal de um menor?
+  - O que o conceito de "economia própria" representa no contexto da emancipação legal e quem o define em um caso concreto?
+  - Quais as diferenças entre a emancipação legal e a emancipação voluntária ou judicial?
+  - A emancipação legal, ao antecipar a capacidade de fato, confere ao menor todas as prerrogativas de um maior de 18 anos? Cite exemplos.
+  - Um menor emancipado legalmente continua sob a proteção do Estatuto da Criança e do Adolescente (ECA)?
+  - Em que medida a emancipação legal é considerada um "ato-fato jurídico"?
+  - Como a emancipação legal se relaciona com a responsabilidade civil dos pais pelos atos ilícitos praticados pelo menor emancipado?
+  - Se o casamento de um menor emancipado for invalidado, quais são os efeitos sobre sua emancipação?
+  - Discuta a relevância de cada uma das modalidades de emancipação legal para a autonomia do adolescente.
+  - Quais são os requisitos para a emancipação pelo casamento e como eles são verificados?
+  - Como a emancipação pelo exercício de emprego público efetivo se compara àquela por desenvolvimento de estabelecimento civil ou comercial?
+  - Em um cenário de mudanças sociais e tecnológicas, qual a relevância atual do critério de "colação de grau em curso de ensino superior" para a emancipação legal?
+  - Quais os possíveis desafios e benefícios da emancipação legal para o desenvolvimento integral do adolescente?
+  - A emancipação legal pode ser revogada? Em que situações?
+
+-----
+# Princípio da Saisine 
+-- Com a morte de uma pessoa, seu patrimônio é imediatamente transferido aos herdeiros, independentemente de qualquer formalidade. Este princípio, conhecido como *droit de saisine* no direito francês, assegura que não haja interrupção na titularidade dos bens, garantindo que o domínio e a posse da herança se transmitam aos sucessores no exato momento do falecimento, conforme o Código Civil brasileiro.
+
+## Pergunte pra I.A.
+
+  - O que significa o princípio da *saisine* no direito sucessório brasileiro?
+  - Qual o marco temporal para a aplicação do princípio da *saisine*?
+  - De que maneira o Código Civil brasileiro aborda a transmissão do patrimônio aos herdeiros no momento da morte?
+  - O princípio da *saisine* transfere a propriedade e a posse da herança simultaneamente?
+  - A quem se transfere a herança imediatamente após a morte, de acordo com este princípio?
+  - Qual a relevância da ficção jurídica da *saisine* para a continuidade da titularidade dos bens?
+  - O que acontece com a herança antes da realização do inventário, à luz do princípio da *saisine*?
+  - Como o princípio da *saisine* se relaciona com o conceito de "abertura da sucessão"?
+  - A aplicação da *saisine* exige alguma formalidade por parte dos herdeiros?
+  - O que o material de estudo menciona sobre a legislação aplicável à sucessão no tempo, considerando o momento da abertura?
+  - De que forma o princípio da *saisine* se aplica aos herdeiros legítimos e testamentários?
+  - O que ocorre se um herdeiro falecer logo após o *de cujus*, mas antes de qualquer formalidade de inventário?
+  - O princípio da *saisine* garante a aceitação da herança pelos herdeiros?
+  - Como o princípio da *saisine* impacta a responsabilidade dos herdeiros em relação às dívidas do *de cujus*?
+  - A posse transferida pela *saisine* é direta ou indireta? Explique.
+  - Quais são as implicações do caráter universal da herança em relação à *saisine*?
+  - O que se entende por "universalidade do patrimônio do *de cujus*" no contexto da transmissão da herança pela *saisine*?
+  - Em casos de comoriência, como o princípio da *saisine* se aplica à sucessão entre os comorientes?
+  - O princípio da *saisine* pode ser afastado por vontade das partes ou por alguma disposição legal?
+  - Como a *saisine* contribui para a segurança jurídica e a estabilidade das relações patrimoniais após a morte?
+
+-----
 # Irretroatividade da Lei 
 -- O princípio da irretroatividade da lei é uma garantia fundamental que impede que uma nova lei atinja fatos ocorridos e consolidados no passado, protegendo o ato jurídico perfeito, o direito adquirido e a coisa julgada. Essencial para a segurança jurídica e a estabilidade das relações sociais, ele assegura que as expectativas legítimas dos indivíduos, formadas sob a égide da lei anterior, não sejam arbitrariamente modificadas por legislações supervenientes, salvo exceções expressamente previstas.
 
