@@ -27,3 +27,31 @@
 - Quais são as principais diferenças e semelhanças entre a função social da propriedade e a função social do contrato, sob a ótica do Princípio da Sociabilidade?
 - A inclusão do direito de laje no rol dos direitos reais pode ser vista como um avanço na concretização do Princípio da Sociabilidade, ao permitir um melhor aproveitamento do espaço urbano? Justifique.
 - Como o Princípio da Sociabilidade se relaciona com as teorias da personalidade jurídica, especialmente no que tange à atribuição de direitos da personalidade a pessoas jurídicas e a proteção do nascituro?
+-----
+# Norma Jurídica 
+-- A norma jurídica, fundamental para o ordenamento, é o preceito que determina um comportamento e prevê uma sanção coercitiva em caso de transgressão. Ela se distingue de outras normas por sua coercibilidade e é essencial para a organização social e a aplicação do Direito. As normas jurídicas podem ter origem na vontade estatal (leis) ou na autonomia privada (negócios jurídicos), e sua compreensão é a base para o estudo de todo o sistema legal.
+
+## Pergunte pra I.A.
+
+  - Qual a distinção fundamental entre norma jurídica e norma moral, e como a coercibilidade estatal atua nesse processo de diferenciação?
+  - Quais são as principais fontes de onde emanam as normas jurídicas no ordenamento brasileiro?
+  - De que forma a "vontade estatal" e a "autonomia privada" contribuem para a criação e validade das normas jurídicas?
+  - Como a estrutura de "preceito" e "sanção coercitiva" se manifesta nas normas jurídicas e qual a importância dessa estrutura para a eficácia do Direito?
+  - Explique o papel da norma jurídica na organização social e na manutenção da paz, considerando a ausência de outras formas de controle social.
+  - Em que medida a norma jurídica se relaciona com o conceito de "Direito Objetivo" e qual a abrangência dessa relação?
+  - Quais são os limites impostos à atuação da autonomia privada na criação de normas jurídicas convencionais, e quem os estabelece?
+  - Como a evolução histórica e as transformações sociais impactam a formulação e a interpretação das normas jurídicas?
+  - Cite um exemplo prático de uma norma jurídica e analise como a sua transgressão levaria à aplicação de uma sanção coercitiva pelo Estado.
+  - De que forma a ausência de conhecimento sobre uma norma jurídica, por parte de um indivíduo, é tratada pelo sistema legal em relação à sua obrigatoriedade?
+  - Qual a relação entre a norma jurídica e os princípios constitucionais na hierarquia do ordenamento jurídico brasileiro?
+  - Como a norma jurídica, mesmo em um contexto de "hiperinflação legislativa", consegue manter sua função de orientar e regular condutas?
+  - Analise a distinção entre "efetivo conhecimento" e "possibilidade de conhecimento" da lei, no contexto da obrigatoriedade da norma jurídica.
+  - Quais são as principais formas de "cessação da eficácia" de uma norma jurídica e como elas se diferenciam entre si?
+  - Em que situações específicas o "desuso" de uma lei pode ou não ser considerado uma causa para a cessação de sua eficácia, e qual o entendimento predominante no Brasil?
+  - O que é o "efeito repristinatório" e em que condições uma norma jurídica revogada pode voltar a produzir efeitos no ordenamento jurídico brasileiro?
+  - Como a interpretação teleológica da norma jurídica, que busca o "fim social e o bem comum", se contrapõe a uma interpretação puramente literal?
+  - De que maneira as "lacunas" no ordenamento jurídico são tratadas e quais os métodos de integração de normas previstos para preenchê-las?
+  - Como a jurisprudência e a doutrina contribuem para a compreensão e aplicação das normas jurídicas, especialmente diante de conceitos abertos ou indeterminados?
+  - Proponha um cenário em que a aplicação de uma norma jurídica gere um conflito com outro ramo do Direito e discuta como essa tensão seria resolvida.
+-----
+
