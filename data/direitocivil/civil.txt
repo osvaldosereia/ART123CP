@@ -55,3 +55,31 @@
   - Proponha um cenário em que a aplicação de uma norma jurídica gere um conflito com outro ramo do Direito e discuta como essa tensão seria resolvida.
 -----
 
+# Direito Objetivo 
+-- Direito objetivo é o conjunto das normas jurídicas que, quando transgredidas pelo homem, desencadearão a aplicação de sanções coercitivas pelo Estado. É conhecido também como *norma agendi*. O direito objetivo não se confunde com a usual expressão "ordenamento jurídico”. Quando se fala em ordenamento jurídico, refere-se, em verdade, ao conjunto das normas positivadas pelo Estado. O conceito de direito objetivo é mais amplo, englobando inclusive o conceito de ordenamento jurídico. Assim, ordenamento jurídico é o conjunto de normas positivadas que esteja em vigor, em um Estado, em determinado momento histórico. Em relação ao ordenamento jurídico, vale ressaltar que este não contempla todos os fatos da vida em sociedade, ocasionando a existência de espaços não preenchidos por normas, que são reconhecidamente denominados lacunas. Estas são observadas no ordenamento jurídico. 
+
+Diferentemente do direito objetivo, que jamais será lacunoso. O art. 4º da Lei de Introdução às Normas do Direito Brasileiro estabelece que, havendo lacuna no ordenamento jurídico, esta deverá ser preenchida por meio do método da colmatação, que se concretizará por meio da aplicação de alguma das formas expressas no rol exemplificativo constante do sobredito artigo, quais sejam: analogia, princípios gerais de direito, costumes, equidade, direito comparado etc. Nesse contexto, tais formas são utilizadas pelo juiz quando presente alguma lacuna no ordenamento jurídico. É correto, então, dizer que a lei brasileira traz expressamente um método para preencher as eventuais lacunas existentes.
+
+## Pergunte pra I.A.
+
+- Qual a distinção crucial entre Direito Objetivo e ordenamento jurídico, e por que essa diferença é fundamental para a compreensão do sistema legal?
+- De que forma a coercibilidade estatal se manifesta no Direito Objetivo, e qual sua relevância para a efetividade das normas?
+- Como a LINDB aborda as lacunas no ordenamento jurídico, e quais métodos de colmatação o juiz pode empregar para preenchê-las?
+- Analise a afirmação de que o Direito Objetivo "jamais será lacunoso", considerando a possibilidade de lacunas no ordenamento jurídico.
+- Quais são as principais "formas expressas no rol exemplificativo" do Art. 4º da LINDB, e como elas são utilizadas para integrar o direito?
+- Discuta a relação entre Direito Objetivo e o conceito de "norma agendi". Como essa perspectiva influencia a aplicação do direito?
+- A ausência de leis específicas para "todos os fatos da vida em sociedade" é uma característica inerente ao ordenamento jurídico. Como o sistema lida com essa realidade?
+- Em que medida o Direito Objetivo, sendo "mais amplo" que o ordenamento jurídico, influencia a formulação e a interpretação das normas positivadas?
+- Considerando o papel do juiz na colmatação das lacunas, qual a importância de sua atuação para a completude e adaptabilidade do Direito Objetivo?
+- Como a LINDB, ao prever métodos de integração, reforça a ideia de que o sistema jurídico busca ser um todo coerente e sem falhas?
+- Explore a natureza do Direito Objetivo como "conjunto das normas jurídicas", e como isso o diferencia de outros sistemas normativos (morais, sociais).
+- De que forma a aplicação de "sanções coercitivas pelo Estado" é um pilar do Direito Objetivo e o que aconteceria na sua ausência?
+- Analise o impacto da evolução histórica na compreensão do Direito Objetivo e do ordenamento jurídico, como se reflete na LINDB.
+- Quais os riscos de um ordenamento jurídico com lacunas, e como os métodos de integração mitigam esses riscos?
+- A distinção entre Direito Objetivo e ordenamento jurídico implica diferentes abordagens para a análise de sua aplicação prática? Justifique.
+- Como a previsibilidade e a segurança jurídica são garantidas pelo Direito Objetivo, mesmo diante da existência de lacunas no ordenamento jurídico?
+- Discuta a relevância do Art. 4º da LINDB como um "método expresso" para preencher lacunas, e o que isso significa para a discricionariedade judicial.
+- Em que situações o juiz teria maior liberdade para usar os métodos de integração da LINDB, e por que essa liberdade é controlada?
+- Relacione o conceito de Direito Objetivo com a ideia de "Estado de Direito". Como um influencia o outro?
+- Imagine um novo cenário social não previsto em lei. Como o Direito Objetivo, por meio dos mecanismos da LINDB, atuaria para regular essa nova situação?
+-----
