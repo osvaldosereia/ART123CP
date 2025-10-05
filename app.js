@@ -85,6 +85,42 @@
     return out;
   }
 
+/* ===== Busca (autocomplete) ===== */
+const input = document.querySelector('#search');
+const acList = document.querySelector('#suggestions');
+if (acList) acList.hidden = true;
+
+function score(q,t){ return hit((t.title||'').toLowerCase(), q) + hit((t.tags||[]).join(' ').toLowerCase(), q); }
+function hit(hay,q){ if(!hay) return 0; if(hay===q) return 100; if(hay.includes(q)) return 60; return q.split(/\s+/).reduce((s,w)=>s+(hay.includes(w)?10:0),0); }
+
+input?.addEventListener('input', e=>{
+  const q=(e.target.value||'').trim().toLowerCase();
+  if(!q || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; return; }
+  const arr = TEMAS.map(t=>({ slug:t.slug, title:t.title, group:t.group||'', score:score(q,t) }))
+    .filter(a=>a.score>0).sort((a,b)=>b.score-a.score).slice(0,8);
+  if(!arr.length){ acList.innerHTML=''; acList.hidden=true; return; }
+  acList.innerHTML = arr.map(a=>`
+    <li role="option">
+      <a href="#/tema/${a.slug}">
+        <div class="s1">${a.title.replace(/</g,'&lt;')}</div>
+        <div class="s2">${(a.group||'').replace(/</g,'&lt;')}</div>
+      </a>
+    </li>`).join('');
+  acList.hidden = false;
+});
+input?.addEventListener('keydown', ev=>{
+  if(ev.key==='Enter'){
+    const a = acList?.querySelector('a');
+    if(a){ location.hash = a.getAttribute('href'); acList.hidden = true; }
+  }
+});
+acList?.addEventListener('click', ev=>{
+  const a = ev.target.closest('a'); if(!a) return;
+  acList.hidden = true;
+});
+window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
+
+  
   /* ===== Seeds ===== */
   async function readAllSeeds(){
     const seeds=$$('#menuList a.title[data-auto="1"][data-path]');
