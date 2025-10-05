@@ -131,3 +131,54 @@
   - Em que medida a proteção do direito potestativo do titular pode gerar insegurança ou desequilíbrio para a parte em estado de sujeição?
   - Como a disciplina dos vícios redibitórios, que concede ao adquirente a faculdade de redibir o contrato ou pedir abatimento do preço, ilustra um direito potestativo?
   - Proponha um cenário em que a ausência de um prazo decadencial para um direito potestativo poderia gerar instabilidade nas relações jurídicas.
+-----
+# Eficácia da lei 
+-- A eficácia da lei diz respeito à sua capacidade de produzir efeitos jurídicos após a promulgação e publicação. Compreende sua vigência, obrigatoriedade e cessação de efeitos. A LINDB estabelece as regras gerais, como o período de *vacatio legis* e a inescusabilidade do desconhecimento, fundamentais para a segurança jurídica e a organização social. Inclui também o impacto de revogações e a não repristinação automática.
+
+## Pergunte pra I.A.
+
+  - Como a promulgação e a publicação da lei se relacionam com o início de sua vigência e quais são os prazos gerais estabelecidos na LINDB para que isso ocorra?
+  - Explique o conceito de *vacatio legis* e quais são seus efeitos práticos para a sociedade e para o ordenamento jurídico.
+  - De que forma o princípio da inescusabilidade do desconhecimento da lei (Art. 3º da LINDB) contribui para a segurança jurídica e a obrigatoriedade da norma?
+  - Quais são as exceções aos prazos gerais de vigência da lei previstos na LINDB, e por que essas exceções são importantes?
+  - Analise a distinção entre revogação total (*ab-rogação*) e revogação parcial (*derrogação*) de uma lei, e como a LINDB orienta o legislador nesse processo.
+  - Descreva o que é o efeito repristinatório e em que condições uma lei revogada pode voltar a produzir efeitos no ordenamento jurídico brasileiro.
+  - Como a LINDB trata a situação de leis que contêm erros ou incorreções e que necessitam de uma nova publicação durante a *vacatio legis*?
+  - Qual a diferença entre o início da vigência de uma lei aplicável no território nacional e de uma lei brasileira aplicável no estrangeiro, segundo a LINDB?
+  - De que maneira a Lei Complementar n. 95/98 complementa as disposições da LINDB sobre a eficácia da lei, especialmente quanto à revogação expressa?
+  - A ineficácia de uma norma regulamentadora por parte do Poder Executivo suspende a obrigatoriedade da lei? Justifique com base na LINDB.
+  - Discuta o impacto do fenômeno da "hiperinflação legislativa" na efetiva possibilidade de conhecimento da lei e como isso dialoga com o princípio da obrigatoriedade.
+  - Como a extinção de uma lei por "temporariedade" difere de sua extinção por "declaração de inconstitucionalidade" em termos de eficácia?
+  - Analise o papel da jurisprudência na interpretação da eficácia da lei, especialmente em casos de lacunas ou ambiguidades no texto legal.
+  - Quais as consequências da revogação tácita de uma lei em um sistema jurídico e como os critérios hermenêuticos são utilizados para resolver antinomias?
+  - Em que medida a teoria do erro (de fato ou de direito) pode ser considerada uma exceção ao princípio da inescusabilidade do desconhecimento da lei?
+  - Considerando a regra do *iura novit curia*, em que situações o juiz pode exigir das partes a prova da vigência de uma norma?
+  - Explique a diferença entre a "ultratividade da lei revogada" e a aplicação do "efeito imediato da lei nova" em relação à lei no tempo.
+  - Como a flexibilização do efeito repristinatório automático, com a necessidade de previsão expressa, contribui para a segurança jurídica?
+  - Discorra sobre a relação entre a eficácia social e a eficácia jurídica de uma lei, e como a ausência de uma pode afetar a outra.
+  - Proponha um caso hipotético em que a aplicação das regras da LINDB sobre a eficácia da lei é crucial para resolver um conflito jurídico, justificando o porquê.
+-----
+# Interpretação e integração -- O ordenamento jurídico, embora pretenda ser completo, pode apresentar lacunas. A interpretação busca o sentido da norma, enquanto a integração visa preencher essas lacunas, garantindo a coerência e a completude do sistema. A LINDB fornece os métodos para essa tarefa, essenciais à aplicação justa e eficaz do Direito.
+
+## Pergunte pra I.A.
+
+  - Como a Lei de Introdução às Normas do Direito Brasileiro (LINDB) define e diferencia os conceitos de "interpretação" e "integração" do Direito?
+  - Quais são os principais métodos de integração das normas jurídicas previstos no Art. 4º da LINDB?
+  - De que forma a "analogia" é utilizada para preencher lacunas no ordenamento jurídico, e quais os seus limites?
+  - Qual o papel dos "costumes" como fonte subsidiária na integração das normas, e quando podem ser aplicados pelo juiz?
+  - Explique a importância dos "princípios gerais de direito" na integração do ordenamento jurídico e como se diferenciam das normas positivadas.
+  - Como a "equidade" pode ser empregada pelo juiz na integração do direito, e em que situações ela é mais adequada?
+  - Em que consiste o método do "direito comparado" na integração das normas, e qual a sua relevância para o sistema jurídico brasileiro?
+  - O texto menciona que o "ordenamento jurídico não pode ser lacunoso". Analise essa afirmação, distinguindo-a da possibilidade de lacunas na lei.
+  - De que maneira a interpretação teleológica, que busca o "fim social e o bem comum", orienta o aplicador do direito, conforme o Art. 5º da LINDB?
+  - Como a "vontade do legislador" e a "realidade social" se equilibram no processo de interpretação da lei?
+  - Quais são as consequências de um juiz que se recusa a aplicar a lei por considerar a existência de uma lacuna, e como a LINDB busca evitar essa situação?
+  - Discuta a afirmação de que a lei brasileira "traz expressamente um método para preencher as eventuais lacunas existentes".
+  - Como a interpretação e a integração do direito se relacionam com o princípio da segurança jurídica?
+  - Em que medida a mutabilidade da sociedade e a dinamicidade do direito exigem uma constante atividade de interpretação e integração?
+  - Quais os desafios enfrentados pelos juízes ao aplicar métodos de integração em casos complexos e de grande repercussão social?
+  - A LINDB, ao estabelecer os métodos de integração, cria uma hierarquia entre eles? Justifique sua resposta.
+  - Como o "sentido e alcance de uma norma" são determinados pela interpretação, e por que isso é crucial para a aplicação do direito?
+  - De que forma a doutrina e a jurisprudência contribuem para o desenvolvimento e aprimoramento dos métodos de interpretação e integração?
+  - Quais são os riscos de uma interpretação puramente literal da lei e como a LINDB busca mitigá-los?
+  - Imagine um caso concreto de lacuna na lei. Descreva a situação e demonstre como os métodos de integração seriam aplicados para resolvê-la.
