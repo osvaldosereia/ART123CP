@@ -1,6 +1,31 @@
 
 
 
+# Efeito Repristinatório 
+-- O efeito repristinatório é o fenômeno jurídico em que uma lei revogada "ressuscita" e volta a produzir efeitos caso a norma que a havia revogado seja, por sua vez, revogada. No Direito brasileiro, este efeito não ocorre automaticamente, sendo exigida expressa previsão legal. É um tema crucial para a segurança jurídica e a estabilidade do ordenamento, especialmente na análise da sucessão de normas no tempo.
+
+## Pergunte pra I.A.
+
+  - O que significa o efeito repristinatório e em quais circunstâncias ele se manifesta no ordenamento jurídico brasileiro?
+  - Qual a principal diferença entre a repristinação automática e a não automática no Direito brasileiro?
+  - O que o Art. 2º, § 3º, da Lei de Introdução às Normas do Direito Brasileiro (LINDB) estabelece sobre a ocorrência do efeito repristinatório?
+  - Cite um exemplo prático de uma sequência de revogações de leis que, no Brasil, NÃO resultaria em efeito repristinatório automático.
+  - Quais são os fundamentos para a não adoção da repristinação automática no sistema jurídico brasileiro?
+  - Em que medida a segurança jurídica é protegida (ou não) pela regra da não repristinação automática?
+  - Como a declaração de inconstitucionalidade de uma lei que revogou outra lei se relaciona com o efeito repristinatório?
+  - Se uma lei, ao ser revogada, expressamente prevê que a lei anterior a ela revogada voltará a viger, essa situação caracteriza o efeito repristinatório? Justifique.
+  - O que acontece com os atos jurídicos praticados sob a égide da lei revogadora, se a lei revogada por ela repristinar?
+  - Qual a importância de uma análise cuidadosa da intenção do legislador ao elaborar normas que revogam outras, sob a ótica do efeito repristinatório?
+  - Como o efeito repristinatório se diferencia da recepção de normas, no contexto de uma nova Constituição e a ordem jurídica anterior?
+  - Em quais situações o legislador brasileiro poderia optar por estabelecer a repristinação expressa de uma lei?
+  - Quais são os potenciais impactos sociais e econômicos da repristinação de uma lei, caso ela ocorra?
+  - Se houver conflito entre uma lei repristinada e uma nova lei, qual delas prevaleceria, e por quê?
+  - O princípio da irretroatividade da lei se aplica ao efeito repristinatório? De que forma?
+  - Em que situações, historicamente, a repristinação automática foi adotada em outros sistemas jurídicos?
+  - Quais são os desafios interpretativos que a falta de clareza sobre o efeito repristinatório pode gerar para os operadores do Direito?
+  - Como a doutrina e a jurisprudência contribuem para a delimitação da aplicação do efeito repristinatório no Brasil?
+  - Se uma medida provisória for revogada por outra medida provisória, e esta segunda for rejeitada pelo Congresso Nacional, ocorreria o efeito repristinatório da primeira medida provisória?
+  - Discuta a relação do efeito repristinatório com a estabilidade e a previsibilidade do ordenamento jurídico em um Estado Democrático de Direito.
 
 -----
 # Carta Maior 
