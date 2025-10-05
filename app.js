@@ -10,6 +10,7 @@
 
   const SAVED_KEY = 'meujus:saved';
   const LAST_KEY  = 'meujus:last';
+  const LAST_SEARCH_KEY = 'meujus:lastSearch';
 
   const readSaved  = () => { try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch(_){ return []; } };
   const writeSaved = (list) => localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(new Set(list))));
@@ -89,107 +90,125 @@
     return out;
   }
 
+  // Realce genérico para HTML já escapado
+  function highlightHTML(escapedHtml, q){
+    const parts = String(q||'').toLowerCase().split(/\s+/).filter(Boolean).map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+    if(!parts.length) return escapedHtml;
+    const rx = new RegExp('(' + parts.join('|') + ')','ig');
+    return escapedHtml.replace(rx, '<mark>$1</mark>');
+  }
+
   /* ===== Busca (autocomplete) ===== */
   const input = document.querySelector('#search');
   const acList = document.querySelector('#suggestions');
   if (acList) acList.hidden = true;
 
- // pesos por campo
-function _hit(hay,q){
-  if(!hay) return 0;
-  if(hay===q) return 100;
-  if(hay.includes(q)) return 60;
-  return q.split(/\s+/).reduce((s,w)=> s + (w && hay.includes(w) ? 10 : 0), 0);
-}
-function scoreFields(q, t){
-  const sT = _hit(t.titleL, q);
-  const sI = _hit(t.introL, q);
-  const sP = _hit(t.askL,   q);
-  return { score: 1.0*sT + 0.5*sI + 0.8*sP, flags: { t: sT>0, i: sI>0, p: sP>0 } };
-}
-function highlightTitle(title, q){
-  const esc = String(title).replace(/</g,'&lt;');
-  const parts = q.split(/\s+/).filter(Boolean).map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
-  if(!parts.length) return esc;
-  const rx = new RegExp('(' + parts.join('|') + ')','ig');
-  return esc.replace(rx, '<mark>$1</mark>');
-}
-
-input?.addEventListener('input', e=>{
-  const q=(e.target.value||'').trim().toLowerCase();
-  if(q.length<2 || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; return; }
-
-  const arr = TEMAS.map(t=>({ t, ...scoreFields(q,t) }))
-    .filter(x=>x.score>0)
-    .sort((a,b)=> b.score-a.score || a.t.title.localeCompare(b.t.title,'pt-BR'))
-    .slice(0,8);
-
-  if(!arr.length){ acList.innerHTML=''; acList.hidden=true; return; }
-
-  acList.innerHTML = arr.map(x=>{
-    const {t, flags} = x;
-    const titleHTML = highlightTitle(t.title, q);
-    const badges = [
-      flags.t?'<span class="badge t">T</span>':'',
-      flags.i?'<span class="badge i">I</span>':'',
-      flags.p?'<span class="badge p">P</span>':'',
-    ].join('');
-    return `
-      <li role="option">
-        <a href="#/tema/${t.slug}">
-          <div class="s1">${titleHTML}<span class="badges">${badges}</span></div>
-          <div class="s2">${(t.group||'').replace(/</g,'&lt;')}</div>
-        </a>
-      </li>`;
-  }).join('');
-  acList.hidden=false;
-});
-
-input?.addEventListener('keydown', ev=>{
-  if(ev.key==='Enter'){
-    const a = acList?.querySelector('a');
-    if(a){ location.hash = a.getAttribute('href'); acList.hidden = true; }
+  // pesos por campo
+  function _hit(hay,q){
+    if(!hay) return 0;
+    if(hay===q) return 100;
+    if(hay.includes(q)) return 60;
+    return q.split(/\s+/).reduce((s,w)=> s + (w && hay.includes(w) ? 10 : 0), 0);
   }
-});
-acList?.addEventListener('click', ev=>{
-  const a = ev.target.closest('a'); if(!a) return;
-  acList.hidden = true;
-});
-window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
+  function scoreFields(q, t){
+    const sT = _hit(t.titleL, q);
+    const sI = _hit(t.introL, q);
+    const sP = _hit(t.askL,   q);
+    return { score: 1.0*sT + 0.5*sI + 0.8*sP, flags: { t: sT>0, i: sI>0, p: sP>0 } };
+  }
+  function highlightTitle(title, q){
+    const esc = String(title).replace(/</g,'&lt;');
+    const parts = q.split(/\s+/).filter(Boolean).map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+    if(!parts.length) return esc;
+    const rx = new RegExp('(' + parts.join('|') + ')','ig');
+    return esc.replace(rx, '<mark>$1</mark>');
+  }
 
+  input?.addEventListener('input', e=>{
+    const q=(e.target.value||'').trim().toLowerCase();
+    if(q.length<2 || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; return; }
+
+    const arr = TEMAS.map(t=>({ t, ...scoreFields(q,t) }))
+      .filter(x=>x.score>0)
+      .sort((a,b)=> b.score-a.score || a.t.title.localeCompare(b.t.title,'pt-BR'))
+      .slice(0,8);
+
+    if(!arr.length){ acList.innerHTML=''; acList.hidden=true; return; }
+
+    acList.innerHTML = arr.map(x=>{
+      const {t, flags} = x;
+      const titleHTML = highlightTitle(t.title, q);
+      const badges = [
+        flags.t?'<span class="badge t">T</span>':'',
+        flags.i?'<span class="badge i">I</span>':'',
+        flags.p?'<span class="badge p">P</span>':'',
+      ].join('');
+      // data-q e data-flags para sabermos a origem do match
+      return `
+        <li role="option">
+          <a href="#/tema/${t.slug}" data-q="${q}" data-flags="${['t','i','p'].filter(k=>flags[k]).join('')}">
+            <div class="s1">${titleHTML}<span class="badges">${badges}</span></div>
+            <div class="s2">${(t.group||'').replace(/</g,'&lt;')}</div>
+          </a>
+        </li>`;
+    }).join('');
+    acList.hidden=false;
+  });
+
+  input?.addEventListener('keydown', ev=>{
+    if(ev.key==='Enter'){
+      const a = acList?.querySelector('a');
+      if(a){
+        const q = a.getAttribute('data-q')||'';
+        const flags = a.getAttribute('data-flags')||'';
+        try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q, flags})); }catch(_){}
+        location.hash = a.getAttribute('href');
+        acList.hidden = true;
+      }
+    }
+  });
+
+  acList?.addEventListener('click', ev=>{
+    const a = ev.target.closest('a'); if(!a) return;
+    const q = a.getAttribute('data-q')||'';
+    const flags = a.getAttribute('data-flags')||'';
+    try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q, flags})); }catch(_){}
+    acList.hidden = true;
+  });
+
+  window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
 
   /* ===== Seeds ===== */
-async function readAllSeeds(){
-  const seeds = $$('#menuList a.title[data-auto="1"][data-path]');
-  const temas = [];
-  for (const a of seeds){
-    const group = (a.dataset.group||'').trim() || 'Geral';
-    const path  = (a.dataset.path||'').trim();
-    if(!path) continue;
-    try{
-      const raw    = await fetchText(path);
-      const chunks = splitThemesByDelim(raw);
-      const parsed = chunks.map(parseTemaFromChunk).filter(Boolean);
-      for (const t of parsed){
-        const slug  = `${slugify(group)}-${t.slug}`;
-        const intro = (t.intro||[]).join(' ');
-        const ask   = (t.ask||[]).join(' ');
-        temas.push({
-          slug, title: t.title, path, tags: [], group, frag: t.slug,
-          titleL: (t.title||'').toLowerCase(),
-          introL: intro.toLowerCase(),
-          askL:   ask.toLowerCase(),
-          blob:   (t.title + ' ' + intro + ' ' + ask).toLowerCase()
-        });
+  async function readAllSeeds(){
+    const seeds = $$('#menuList a.title[data-auto="1"][data-path]');
+    const temas = [];
+    for (const a of seeds){
+      const group = (a.dataset.group||'').trim() || 'Geral';
+      const path  = (a.dataset.path||'').trim();
+      if(!path) continue;
+      try{
+        const raw    = await fetchText(path);
+        const chunks = splitThemesByDelim(raw);
+        const parsed = chunks.map(parseTemaFromChunk).filter(Boolean);
+        for (const t of parsed){
+          const slug  = `${slugify(group)}-${t.slug}`;
+          const intro = (t.intro||[]).join(' ');
+          const ask   = (t.ask||[]).join(' ');
+          temas.push({
+            slug, title: t.title, path, tags: [], group, frag: t.slug,
+            titleL: (t.title||'').toLowerCase(),
+            introL: intro.toLowerCase(),
+            askL:   ask.toLowerCase(),
+            blob:   (t.title + ' ' + intro + ' ' + ask).toLowerCase()
+          });
+        }
+      }catch(e){
+        console.error('Seed falhou', path, e);
+        toast(`Erro ao ler ${path}`, 'error', 2800);
       }
-    }catch(e){
-      console.error('Seed falhou', path, e);
-      toast(`Erro ao ler ${path}`, 'error', 2800);
     }
+    return temas;
   }
-  return temas;
-}
-
 
   /* ===== Helpers: drawer e categorias ===== */
   function openDrawer(){
@@ -429,6 +448,11 @@ async function readAllSeeds(){
       // guarda "continuar"
       try{ localStorage.setItem(LAST_KEY, slug); }catch(_){}
 
+      // verifica última busca e se veio de Intro/Perguntas
+      let lastSearch = null;
+      try{ lastSearch = JSON.parse(sessionStorage.getItem(LAST_SEARCH_KEY)||'null'); }catch(_){}
+      const shouldHighlight = !!(lastSearch && /[ip]/.test(lastSearch.flags||''));
+
       actionsEl.innerHTML='';
       const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
       const saved=isSaved(slug);
@@ -443,8 +467,15 @@ async function readAllSeeds(){
       const trainBtn=mkBtn('Treinar','', ()=>window.open(`https://www.google.com/search?udm=50&q=${encodeURIComponent(pageTitle+' questões objetivas')}`,'_blank','noopener'));
       actionsEl.append(saveBtn, studyBtn, trainBtn);
 
-      const introHTML = pick.intro.length ? markGlossarioInHTML(escapeHTML(pick.intro.join(' '))) : '';
-      const qList=(pick.ask||[]).map(q=>`<li><a href="https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}" target="_blank" rel="noopener">${escapeHTML(q)}</a></li>`).join('');
+      const introRaw = pick.intro.length ? escapeHTML(pick.intro.join(' ')) : '';
+      const introHTML = shouldHighlight ? highlightHTML(introRaw, lastSearch.q) : introRaw;
+
+      const qList=(pick.ask||[]).map(q=>{
+        const qEsc = escapeHTML(q);
+        const qHi  = shouldHighlight ? highlightHTML(qEsc, lastSearch.q) : qEsc;
+        return `<li><a href="https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}" target="_blank" rel="noopener">${qHi}</a></li>`;
+      }).join('');
+
       contentEl.innerHTML=`
         <article class="card ubox" role="article">
           ${introHTML ? `<p class="ubox-intro">${introHTML}</p>` : ''}
@@ -453,6 +484,10 @@ async function readAllSeeds(){
             ${qList ? `<ol class="q-list">${qList}</ol>` : `<p class="muted">Sem perguntas cadastradas.</p>`}
           </section>
         </article>`;
+
+      // limpa a indicação após usar, para não “vazar” para outras navegações
+      try{ sessionStorage.removeItem(LAST_SEARCH_KEY); }catch(_){}
+
     }catch(e){
       console.error(e);
       contentEl.innerHTML=`<div class="card"><div class="item error">Erro ao carregar o tema.</div></div>`;
