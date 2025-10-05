@@ -419,3 +419,55 @@ LINDB para a sua resolução.
   - Quais são os desafios práticos para identificar e comprovar a incapacidade de fato de um indivíduo em um processo judicial?
   - Proponha um cenário em que um ato praticado por um incapaz sem assistência, embora anulável, seja mantido por decisão judicial, justificando com os princípios do Direito Civil.
 -----
+# Emancipação 
+-- É a aquisição antecipada da plena capacidade de fato, ou seja, o menor adquire a situação jurídica de plenamente capaz antes da maioridade legal. Permite ao sujeito praticar os atos da vida civil pessoalmente, embora continue sendo menor e, por isso, ainda sob a proteção de legislações específicas.
+
+## Pergunte pra I.A.
+
+  - O que caracteriza a emancipação e qual a sua principal finalidade no ordenamento jurídico brasileiro?
+  - Quais são as três espécies de emancipação previstas no Código Civil e como cada uma delas se concretiza?
+  - A emancipação confere ao menor todas as capacidades, inclusive aquelas que exigem idade específica em leis especiais? Justifique.
+  - De que forma a emancipação voluntária se distingue da judicial, especialmente quanto à forma e à necessidade de intervenção judicial?
+  - A emancipação legal pelo casamento possui alguma restrição etária após as reformas legislativas?
+  - Quais são os requisitos para a emancipação voluntária e como a ausência de consentimento do menor é tratada pela doutrina?
+  - A emancipação judicial é aplicável a quais categorias de menores e qual o papel do tutor nesse processo?
+  - Quais são as quatro hipóteses de emancipação legal e como a "economia própria" é avaliada pelo juiz?
+  - A emancipação voluntária é irrevogável? E quais situações podem levar à sua invalidação?
+  - Como a emancipação do menor impacta a responsabilidade civil dos pais por atos ilícitos praticados pelo filho emancipado?
+  - De que maneira a emancipação pelo casamento difere daquela pela união estável, e qual a justificativa para tal distinção?
+  - Quais são as implicações da emancipação para o menor em relação a atos que exigem maioridade específica, como a obtenção da Carteira Nacional de Habilitação?
+  - Como a emancipação se relaciona com o Estatuto da Criança e do Adolescente, e se o menor emancipado perde a proteção desse diploma legal?
+  - Discuta a importância do "melhor interesse do menor" na concessão da emancipação, especialmente nas modalidades voluntária e judicial.
+  - A emancipação pode ser considerada um direito potestativo do menor ou de seus representantes legais? Justifique.
+  - Em que medida a "colação de grau em curso de ensino superior" como causa de emancipação legal é uma hipótese de difícil concretização na prática?
+  - Quais os efeitos da anulação do casamento sobre a emancipação concedida por essa via legal?
+  - A emancipação altera o regime de capacidade em todas as esferas do direito ou se restringe a alguns ramos específicos?
+  - Como a Lei nº 13.811/2019 alterou as regras de idade para o casamento e quais os reflexos dessa mudança na emancipação?
+  - Proponha um caso prático em que a distinção entre a capacidade plena do emancipado e os limites impostos por leis especiais seja crucial para a resolução de um conflito jurídico.
+-----
+# Morte 
+-- Juridicamente, a morte é o fim da personalidade, tanto civil quanto dos direitos da personalidade, configurando um fato jurídico em sentido estrito que desencadeia diversos efeitos na esfera do Direito. O marco legal é a morte encefálica, e sua presunção, por declaração de ausência ou em perigo de vida, visa proteger o patrimônio e os direitos sucessórios.
+
+## Pergunte pra I.A.
+
+  - Qual é o conceito jurídico de morte e como ele se diferencia de um fato natural no Direito Civil?
+  - De que forma a morte encefálica se estabelece como o marco legal da morte no ordenamento jurídico brasileiro?
+  - Quais são as duas modalidades de morte presumida e em que situações cada uma delas se aplica?
+  - Explique o que é um nascituro e como a morte o afeta em relação à aquisição da personalidade civil e dos direitos da personalidade.
+  - Como a morte de uma pessoa extingue vínculos personalíssimos, como o poder familiar e o casamento, conforme o Código Civil?
+  - Quais são as fases da declaração de ausência e qual a finalidade de cada uma delas na proteção do patrimônio do ausente?
+  - De que maneira a figura do curador é utilizada na primeira fase da declaração de ausência e qual seu papel?
+  - Qual o prazo necessário para que os herdeiros solicitem a sucessão provisória na declaração de ausência, e o que ocorre se o indivíduo deixar um procurador?
+  - O que é a sucessão definitiva na declaração de ausência e como ela se relaciona com a presunção de morte do ausente?
+  - Como o Código Civil trata a situação de um idoso com mais de 80 anos em relação às fases da declaração de ausência?
+  - Qual a relevância da distinção entre morte real e morte presumida para o direito sucessório?
+  - Explique o conceito de comoriência e por que ela só faz sentido jurídico se as pessoas falecidas simultaneamente forem herdeiras entre si.
+  - Quais são os efeitos da comoriência na sucessão de bens entre os comorientes?
+  - De que forma a proteção ao nascituro em relação aos direitos da personalidade é compatível com a teoria natalista da personalidade civil?
+  - Como o "poder familiar" é afetado pela morte de um dos pais, e qual a importância desse evento para a sua extinção?
+  - A doutrina menciona a "morte civil" no passado. Explique esse conceito e se ele ainda é aplicável no Brasil atualmente.
+  - Qual o impacto da morte de um cônjuge sobre o regime de bens do casamento e quais as consequências para o cônjuge sobrevivente?
+  - De que maneira a morte do devedor solidário ou do credor solidário extingue a solidariedade, mas não necessariamente a dívida, para os herdeiros?
+  - Como o "princípio da saisine" se relaciona com a morte do *de cujus* e a imediata transferência do patrimônio aos herdeiros?
+  - Imagine um cenário em que uma pessoa desaparece em uma catástrofe natural e não há certeza de sua morte. Como o ordenamento jurídico lida com essa situação para proteger os interesses dos herdeiros e credores?
+-----
