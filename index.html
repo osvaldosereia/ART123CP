@@ -7,16 +7,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- TOPBAR -->
   <div class="topbar">
     <div class="container topbar-inner">
-      <div class="brand">
-        <span class="b1">Meu</span><span class="b2">Jus</span>
-      </div>
+      <div class="brand"><span class="b1">Meu</span><span class="b2">Jus</span></div>
       <div class="search-wrap" role="search">
         <input id="search" class="search" type="search" placeholder="Buscar tema" autocomplete="off" aria-autocomplete="list" aria-controls="suggestions" aria-haspopup="listbox" />
-        <ul id="suggestions" class="suggestions" role="listbox" aria-label="Sugestões"></ul>
+        <ul id="suggestions" class="suggestions" role="listbox" aria-label="Sugestões" hidden></ul>
       </div>
       <button id="btnMenu" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer-panel">
         <span></span><span></span><span></span>
@@ -29,15 +26,13 @@
     <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1"></div>
     <nav class="drawer-panel" id="drawer-panel" aria-label="Menu lateral" tabindex="-1">
       <div class="drawer-header">
-        <div class="drawer-brand brand">
-          <span class="b1">Meu</span><span class="b2">Jus</span>
-        </div>
+        <div class="drawer-brand brand"><span class="b1">Meu</span><span class="b2">Jus</span></div>
         <button class="drawer-close" id="btnCloseMenu" aria-label="Fechar menu">Fechar</button>
       </div>
       <div class="drawer-content">
         <h3 class="h2">Categorias</h3>
         <ul class="list" id="menuList">
-          <!-- SEMENTE: 1 item por categoria. O app lerá o TXT, criará os temas e preencherá o menu. -->
+          <!-- Ajuste o data-path para o caminho real do TXT no seu repositório -->
           <li>
             <a class="title"
                data-auto="1"
@@ -46,21 +41,8 @@
                Direito Civil
             </a>
           </li>
-
-          <!-- Exemplo para futuras categorias:
-          <li>
-            <a class="title"
-               data-auto="1"
-               data-group="Direito Penal"
-               data-path="data/penal/penal.txt">
-               Direito Penal
-            </a>
-          </li>
-          -->
-
           <li><a class="title" href="#/sobre" data-title="Sobre" data-tags="info">Sobre</a></li>
         </ul>
-        <!-- A seção "Salvos" é injetada pelo app.js abaixo deste bloco -->
       </div>
     </nav>
   </div>
@@ -77,7 +59,7 @@
   <!-- TOASTS -->
   <div id="toasts" aria-live="polite" aria-atomic="true"></div>
 
-  <!-- Script do drawer -->
+  <!-- Drawer JS mínimo -->
   <script>
     (function(){
       const drawer   = document.getElementById('drawer');
@@ -85,20 +67,8 @@
       const openBtn  = document.getElementById('btnMenu');
       const closeBtn = document.getElementById('btnCloseMenu');
       const backdrop = document.getElementById('drawerBackdrop');
-
-      function open(){
-        drawer.classList.add('open');
-        drawer.setAttribute('aria-hidden','false');
-        openBtn.setAttribute('aria-expanded','true');
-        panel.focus?.();
-      }
-      function close(){
-        drawer.classList.remove('open');
-        drawer.setAttribute('aria-hidden','true');
-        openBtn.setAttribute('aria-expanded','false');
-        openBtn.focus?.();
-      }
-
+      function open(){ drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); openBtn.setAttribute('aria-expanded','true'); panel.focus?.(); }
+      function close(){ drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); openBtn.setAttribute('aria-expanded','false'); openBtn.focus?.(); }
       openBtn?.addEventListener('click', open);
       closeBtn?.addEventListener('click', close);
       backdrop?.addEventListener('click', close);
