@@ -1,4 +1,60 @@
 
+-----
+
+# Princípio da Função Social da Propriedade 
+-- A Constituição Federal assegura o direito de propriedade, exigindo seu cumprimento da função social (art. 5º, XXII e XXIII, e art. 170, III). Isso significa que a propriedade não serve apenas ao interesse individual, mas também ao coletivo, promovendo o bem-estar social e ambiental. O Código Civil de 2002 reforça essa ideia, e o Estatuto da Cidade e a legislação agrária estabelecem as sanções para o descumprimento, visando garantir uma propriedade que dialogue com as necessidades da sociedade.
+
+## Pergunte pra I.A.
+
+  - Como a Constituição Federal de 1988, ao garantir o direito de propriedade, o condiciona ao cumprimento de sua função social, conforme o Art. 5°, XXIII, e Art. 170, III?
+  - De que forma a função social da propriedade pode ser entendida não como uma restrição, mas como a própria definição jurídica do direito de propriedade?
+  - Quais são os requisitos para que a propriedade urbana cumpra sua função social, de acordo com o Art. 182, § 2º, da CF/88, e o Estatuto da Cidade?
+  - Quais são as sanções aplicáveis ao proprietário de imóvel urbano que descumpre a função social da propriedade, conforme o Art. 182, § 4º, da CF/88?
+  - Como a função social da propriedade rural é caracterizada e quais são os requisitos para seu cumprimento, de acordo com o Art. 186 da CF/88?
+  - Analise a relação entre a função social da propriedade e a teoria do patrimônio mínimo ou do mínimo existencial.
+  - De que forma o Código Civil, em seu Art. 1.228, § 1º, estabelece a necessidade de preservação da flora, fauna e equilíbrio ecológico no exercício do direito de propriedade?
+  - Como a intervenção do Estado na propriedade, por meio de desapropriação ou limitações administrativas, se justifica no princípio da supremacia do interesse público sobre o privado?
+  - Qual a distinção entre as intervenções supressivas (desapropriação) e as restritivas (servidão administrativa, tombamento) da propriedade no contexto da função social?
+  - O que significa dizer que a propriedade tem uma "função extrapatrimonial" e como isso se conecta com a dignidade da pessoa humana?
+  - De que maneira a jurisprudência tem aplicado o princípio da função social da propriedade em casos de conflitos entre o interesse individual do proprietário e o interesse coletivo?
+  - Como o conceito de "função socioambiental da propriedade" se integra ao princípio da função social da propriedade, conforme a doutrina?
+  - Quais são as discussões doutrinárias sobre a indenizabilidade ou não da propriedade quando esta cumpre os ônus intrínsecos à sua função social?
+  - Em que medida a desapropriação-confisco, prevista no Art. 243 da CF/88, é uma manifestação extrema do descumprimento da função social da propriedade?
+  - Como a usucapião, como forma de aquisição originária da propriedade, se relaciona com o não cumprimento da função social pelo proprietário anterior?
+  - Discuta o papel do Poder Público na fiscalização do cumprimento da função social da propriedade e as ferramentas que possui para tal.
+  - A flexibilização das regras urbanísticas em favor da moradia popular pode ser considerada uma concretização da função social da propriedade? Justifique.
+  - Como a função social da propriedade pode influenciar a interpretação de contratos de compra e venda ou locação de imóveis?
+  - Em um cenário de mudanças climáticas, como o princípio da função social da propriedade pode ser adaptado para exigir dos proprietários ações mais ativas de proteção ambiental?
+  - Qual a relevância do princípio da função social da propriedade na promoção de um desenvolvimento urbano e rural mais equitativo e sustentável no Brasil?
+
+-----
+
+# Princípio da Função Social do Contrato 
+-- A função social do contrato impõe que a liberdade contratual seja exercida dentro dos limites que garantam a circulação de riquezas e o atendimento aos interesses da coletividade, superando o individualismo. É um princípio de ordem pública que coíbe o abuso de direito, permitindo ao juiz adequar a vontade das partes aos valores sociais, sem suprimir a autonomia privada.
+
+## Pergunte pra I.A.
+
+  - Como o princípio da função social do contrato se relaciona com a "função social da propriedade", especialmente no contexto da constitucionalização do Direito Civil?
+  - De que maneira a "eficácia externa" da função social do contrato permite que ele produza efeitos para terceiros não contratantes?
+  - Quais são as "três manifestações" que o material de estudo aponta para a possível violação da função social dos contratos?
+  - O que o Código Civil de 2002 prevê como "sanção direta e específica" para o descumprimento da função social dos contratos, conforme a doutrina?
+  - Como o artigo 421 do Código Civil, ao prever que "a liberdade contratual será exercida nos limites da função social do contrato", é interpretado para conciliar interesses individuais e coletivos?
+  - Explique a afirmação de que "a função social não aniquila a autonomia privada, mas apenas a conforma, sempre que possível."
+  - Em que situações o "ativismo judicial", ao concretizar a função social do contrato, pode ser justificado pelo próprio legislador?
+  - De que forma a Lei da Liberdade Econômica (Lei n. 13.874/2019) e o artigo 421-A do Código Civil, ao presumir a "paridade e simetria" nos contratos, dialogam com a função social?
+  - Quais são os "interesses difusos" cuja violação por um contrato pode caracterizar o descumprimento de sua função social?
+  - Como o "princípio da intervenção mínima" nas relações contratuais privadas, trazido pela Lei da Liberdade Econômica, se harmoniza com a função social do contrato?
+  - A inclusão da função social do contrato como "cláusula geral" no Código Civil de 2002 demonstra uma abertura do sistema jurídico? De que maneira?
+  - No caso de um contrato que prejudique um "terceiro determinado", como o direito age para proteger esse terceiro à luz da função social do contrato?
+  - Qual a relação entre a função social do contrato e o conceito de "abuso do direito", especialmente quando a liberdade de contratar é exercida de forma indevida?
+  - O que significa dizer que o contrato, à luz da função social, é um "verdadeiro manto protetor" que o blinda contra efeitos indevidos?
+  - Como a "teoria do patrimônio mínimo ou do mínimo existencial" pode ser invocada para fundamentar a aplicação da função social do contrato?
+  - Em um caso concreto de "aliciamento indevido" de um contratante, como a função social do contrato pode justificar uma indenização ao prejudicado?
+  - Discuta a importância da função social do contrato para a "circulação de riquezas" e como ela coíbe práticas monopolistas ou abusivas no mercado.
+  - A despeito da crítica sobre a "simplicidade" do artigo 421 do Código Civil, qual é a principal vantagem de sua redação concisa para a aplicação do princípio?
+  - Como a função social do contrato pode ser invocada para modular a "força obrigatória dos contratos" (pacta sunt servanda), permitindo a revisão em casos excepcionais?
+  - Imagine um contrato que, embora lícito e válido, gere um impacto ambiental negativo significativo. Como a função social do contrato permitiria a intervenção judicial nesse cenário?
+
 
 -----
 
