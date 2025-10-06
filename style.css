@@ -193,15 +193,32 @@ mark{
 .ubox mark,
 .card mark{ background: var(--mark-bg); color: var(--mark-txt); }
 
-/* Respiro entre as perguntas (q-list) */
-:root{ --q-gap: 10px; }         /* ajuste aqui: 10–20px */
+/* Respiro entre as perguntas — estável com marcadores */
+:root{ --q-gap: 14px; } /* ajuste 10–20px */
+
 .q-list{
-  display: flex;
-  flex-direction: column;
-  gap: var(--q-gap);
-  padding-left: 1.35rem;        /* mantém numeração legível */
+  list-style: decimal;
+  list-style-position: outside;
+  margin: 0;
+  padding-left: 1.4rem; /* alinha os números */
 }
+
 .q-list li{
+  margin: 0;
+  padding: 0;
   line-height: 1.55;
-  padding: 8px 0;               /* micro respiro interno */
+}
+
+.q-list li + li{
+  margin-top: var(--q-gap); /* respiro entre itens */
+}
+
+.q-list li::marker{
+  font-variant-numeric: tabular-nums;
+  color: var(--primary, #1f2937);
+}
+
+.q-list a{
+  display: inline;
+  text-decoration-thickness: .08em;
 }
