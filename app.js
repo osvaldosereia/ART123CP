@@ -1,4 +1,3 @@
-<script>
 // SPA com página inicial minimalista abaixo da topbar.
 // Rotas: #/ (home) • #/tema/:slug • #/sobre
 
@@ -7,7 +6,6 @@
   const $$ = (q, el=document) => Array.from(el.querySelectorAll(q));
 
   let TEMAS = [];
-  let GLOSS = null;
   let activeCat = 'Todos'; // filtro de categoria nas sugestões
 
   const SAVED_KEY        = 'meujus:saved';
@@ -104,37 +102,32 @@
     if(!mTitle) return null;
     const title = mTitle[1].trim();
     const slug  = slugify(title);
+
+    // introdução: linhas que começam com "-- "
     const intro = Array.from(fixed.matchAll(/^\s*--\s+(.+)$/mg)).map(m=>m[1].trim());
+
+    // dividir por headings de 2+ "##"
     const secs = []; const rx=/^\s*#{2,}\s+(.+?)\s*$/mg; let m;
     while((m=rx.exec(fixed))){const name=m[1].trim();const start=rx.lastIndex;const prev=secs.at(-1);if(prev)prev.end=m.index;secs.push({name,start,end:fixed.length});}
-    let ask=[]; for(const s of secs){const nm=normalizeHeading(s.name); if(isQA(nm)){ const body=fixed.slice(s.start,s.end); ask=ask.concat(Array.from(body.matchAll(/^\s*-\s+(.+?)\s*$/mg)).map(x=>x[1].trim()));}}
-    return { slug, title, intro, ask };
+
+    // perguntas e referências (se existirem no TXT)
+    let ask=[]; let refs=[];
+    for(const s of secs){
+      const nm=normalizeHeading(s.name);
+      const body=fixed.slice(s.start,s.end);
+      if(isQA(nm)){
+        ask=ask.concat(Array.from(body.matchAll(/^\s*-\s+(.+?)\s*$/mg)).map(x=>x[1].trim()));
+      }else if(/^(referencias?|refer\u00eancias?)\s+do\s+tema\b/.test(nm)){
+        refs=refs.concat(Array.from(body.matchAll(/^\s*---\s+(.+?)\s*$/mg)).map(x=>x[1].trim()));
+      }
+    }
+    return { slug, title, intro, ask, refs };
   }
   const normalizeHeading=(h)=> (h||'').toLowerCase().replace(/[.#:]/g,' ').replace(/\s+/g,' ')
                       .normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
   const isQA=(nm)=> /\bpergunte\s+pra\s+i\s*\.?\s*a\b/.test(nm) || (/estude\s+com\s+o\s+google/.test(nm) && /\bi\s*\.?\s*a\b/.test(nm));
 
-  let GLOSS_PATTERNS=[];
-  async function loadGlossario(){
-    if(GLOSS!==null) return;
-    try{
-      const raw = await fetchText('data/glossario.txt');
-      const blocks = splitThemesByDelim(raw);
-      GLOSS = blocks.map(b=>{
-        const t=b.match(/^\s*@termo:\s*(.+)$/m)?.[1]?.trim();
-        const d=b.match(/^\s*@def:\s*(.+)$/m)?.[1]?.trim();
-        if(!t||!d) return null; return {termo:t,def:d};
-      }).filter(Boolean);
-      GLOSS_PATTERNS = GLOSS.map(g=>({ re:new RegExp(`\\b${g.termo.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}\\b`,'i'), def:g.def }));
-    }catch{ GLOSS=[]; GLOSS_PATTERNS=[]; }
-  }
-  function markGlossarioInHTML(html){
-    if(!GLOSS_PATTERNS.length) return html; let out=html;
-    for(const g of GLOSS_PATTERNS){ out = out.replace(g.re, m=>`<abbr title="${escapeHTML(g.def)}">${escapeHTML(m)}</abbr>`); }
-    return out;
-  }
-
-  // regex de destaque: palavras com ≥4 letras, ignora números
+  // ===== Destaque de palavras (>=4 letras)
   function _buildHighlightRegex(q){
     const parts = String(q||'')
       .toLowerCase()
@@ -210,7 +203,6 @@
     __popEl.style.maxHeight = '70vh';
     __popEl.style.overflowY = 'auto';
     __popEl.style.overscrollBehavior = 'contain';
-
 
     setTimeout(()=>{
       document.addEventListener('click', onDocClickClose, true);
@@ -374,6 +366,7 @@
           const ask   = (t.ask||[]).join(' ');
           temas.push({
             slug, title: t.title, path, tags: [], group, frag: t.slug,
+            refs: t.refs||[],
             titleL: (t.title||'').toLowerCase(),
             introL: intro.toLowerCase(),
             askL:   ask.toLowerCase(),
@@ -570,7 +563,6 @@
                 <a class="mini"
                    href="https://www.google.com/search?udm=50&q=${encodeURIComponent('Explique o tema de forma rápida e objetiva utilizando apenas informações vindas de sites jurídicos. Ao final apresente as fontes. Tema: ' + t.title)}"
                    target="_blank" rel="noopener">Explicação Rápida</a>
-
                 <a class="mini"
                    href="https://www.google.com/search?udm=50&q=${encodeURIComponent('Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), apenas com base em fontes jurídicas confiáveis. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + t.title)}"
                    target="_blank" rel="noopener">10 Questões</a>
@@ -613,8 +605,6 @@
     const meta=TEMAS.find(t=>t.slug===slug); const path=meta?.path; const frag=meta?.frag;
     if(!path){ contentEl.textContent='Tema não encontrado.'; toast('Tema não encontrado','error'); return; }
 
-    await loadGlossario();
-
     try{
       const raw=await fetchText(path);
       const chunks=splitThemesByDelim(raw);
@@ -643,11 +633,11 @@
         toast(added?'Tema salvo':'Removido dos salvos', added?'success':'info', 1400);
       });
       const studyBtn=mkBtn('Explicação Rápida','', ()=>window.open(
-        `https://www.google.com/search?udm=50&q=${encodeURIComponent('Explique o tema de forma rápida e objetiva para estudantes de direito, seja oranizado e didático, utilizando apenas informações vindas de sites jurídicos. Ao final apresente as fontes. Tema: ' + pageTitle)}`,
+        `https://www.google.com/search?udm=50&q=${encodeURIComponent('Explique o tema de forma rápida e objetiva para estudantes de direito, seja organizado e didático, utilizando apenas informações vindas de sites jurídicos. Ao final apresente as fontes. Tema: ' + pageTitle)}`,
         '_blank','noopener'
       ));
       const trainBtn=mkBtn('10 Questões','', ()=>window.open(
-        `https://www.google.com/search?udm=50&q=${encodeURIComponent('Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), inspiradas em questões da UFG, cespe e cebraspe. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + pageTitle)}`,
+        `https://www.google.com/search?udm=50&q=${encodeURIComponent('Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), inspiradas em bancas como Cebraspe, Cespe e UFG. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + pageTitle)}`,
         '_blank','noopener'
       ));
       actionsEl.append(saveBtn, studyBtn, trainBtn);
@@ -662,15 +652,10 @@
         : introParas.slice();
       const introHTML = introHTMLParas.map(p => `<p class="ubox-intro" style="margin:0 0 .75rem 0">${p}</p>`).join('');
 
-      // ===== Nova seção: Referências do Tema (links para Google I.A.) =====
-      const referencias = [
-        'Art. 5º, caput e X, da CF/88',
-        'ADI 4815 do STF',
-        'Súmula 403 do STJ',
-        'Lei 9.610'
-      ];
-      const refListHTML = referencias.map(ref => {
-        const prompt = `Localize o texto oficial em sites do governo (ex.: DOU, Planalto, STF, STJ, CNJ). Traga o link oficial no topo. Referência: ${ref}`;
+      // ===== Referências do Tema (lidas do TXT: linhas que começam com '--- ')
+      const refs = (pick.refs || []).filter(Boolean);
+      const refListHTML = refs.map(ref => {
+        const prompt = `Localize o texto ORIGINAL em sites oficiais do governo (Planalto, STF, STJ, DOU, CNJ). Traga o link oficial primeiro. Referência: ${ref}`;
         const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
         return `<li><a href="${url}" target="_blank" rel="noopener">${escapeHTML(ref)}</a></li>`;
       }).join('');
@@ -678,7 +663,7 @@
       // ===== Perguntas (mantidas, com destaque quando houver) =====
       const qList=(pick.ask||[]).map(q=>{
         const qEsc = escapeHTML(q);
-        const qHi  = shouldHighlight ? highlightHTML(qEsc, lastSearch.q) : qEsc;
+        const qHi  = shouldHighlight && lastSearch?.q ? highlightHTML(qEsc, lastSearch.q) : qEsc;
         return `<li><a href="https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}" target="_blank" rel="noopener">${qHi}</a></li>`;
       }).join('');
 
@@ -688,13 +673,15 @@
       $('#content').innerHTML=`
         <article class="card ubox" role="article">
           ${introHTML}
-          ${introHTML ? sep : ''}
-          <section class="ubox-section">
-            <h3 class="ubox-sub">Referências do Tema</h3>
-            <ul class="ref-list">
-              ${refListHTML}
-            </ul>
-          </section>
+          ${introHTML && refs.length ? sep : ''}
+          ${refs.length ? `
+            <section class="ubox-section">
+              <h3 class="ubox-sub">Referências do Tema</h3>
+              <ul class="ref-list">
+                ${refListHTML}
+              </ul>
+            </section>` : ''
+          }
           ${sep}
           <section class="ubox-section">
             <h3 class="ubox-sub">Estude com o Google I.A.</h3>
@@ -730,4 +717,3 @@
   window.addEventListener('hashchange', renderByRoute);
   (async function init(){ await renderByRoute(); })();
 })();
-</script>
