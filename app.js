@@ -554,21 +554,27 @@
         </div>
       </section>
 
-      <section class="card">
-        <h3 class="ubox-sub">Descobrir temas</h3>
-        <div class="grid-mini">
-          ${discover.map(t=>`
-            <div class="home-item">
-              <a class="tt" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
-              <span class="gg">${escapeHTML(t.group||'')}</span>
-              <span class="act">
-                <a class="mini" href="https://www.google.com/search?udm=50&q=${encodeURIComponent(t.title)}" target="_blank" rel="noopener">Estudar</a>
-                <a class="mini" href="https://www.google.com/search?udm=50&q=${encodeURIComponent(t.title+' questões objetivas')}" target="_blank" rel="noopener">Treinar</a>
-              </span>
-            </div>`).join('')}
-        </div>
-      </section>
-    `;
+     ```html
+<section class="card">
+  <h3 class="ubox-sub">Descobrir temas</h3>
+  <div class="grid-mini">
+    ${discover.map(t=>`
+      <div class="home-item">
+        <a class="tt" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
+        <span class="gg">${escapeHTML(t.group||'')}</span>
+        <span class="act">
+          <a class="mini"
+             href="https://www.google.com/search?udm=50&q=${encodeURIComponent('Explique o tema de forma rápida e objetiva utilizando apenas informações vindas de sites jurídicos. Ao final apresente as fontes. Tema: ' + t.title)}"
+             target="_blank" rel="noopener">Explicação Rápida</a>
+
+          <a class="mini"
+             href="https://www.google.com/search?udm=50&q=${encodeURIComponent('Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), apenas com base em fontes jurídicas confiáveis. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + t.title)}"
+             target="_blank" rel="noopener">10 Questões Objetivas</a>
+        </span>
+      </div>`).join('')}
+  </div>
+</section>
+```
 
     contentEl.querySelectorAll('[data-go]').forEach(a=>{
       a.addEventListener('click', (e)=>{ e.preventDefault(); location.hash = a.getAttribute('data-go')||'#/'; });
