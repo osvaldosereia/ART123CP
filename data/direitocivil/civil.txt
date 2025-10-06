@@ -1,6 +1,973 @@
 
+# Sociedades empresárias e simples
 
+-- A distinção central entre sociedades simples e empresárias reside no objeto social. A sociedade empresária exerce atividade econômica organizada para a produção ou circulação de bens ou serviços (Artigo 966 e 982 do Código Civil de 2002), sujeita a registro na Junta Comercial e ao regime de falência.
 
+-- Já a sociedade simples explora atividades de natureza intelectual, científica, literária ou artística (Artigo 966, p. único, e Artigo 997, Código Civil de 2002), salvo se o exercício da profissão constituir elemento de empresa. Seu registro é feito no Cartório de Registro Civil das Pessoas Jurídicas.
+
+## Referências do Tema
+
+--- Artigo 966 do Código Civil (Lei nº 10.406/2002)
+--- Artigo 982 do Código Civil (Lei nº 10.406/2002)
+--- Artigo 997 do Código Civil (Lei nº 10.406/2002)
+--- Enunciado 193 da III Jornada de Direito Civil
+--- Lei nº 11.101/2005 (Lei de Recuperação de Empresas e Falência)
+
+## Pergunte pra I.A.
+
+- Defina o conceito de empresário segundo o Artigo 966 do Código Civil.
+- Explique o que caracteriza uma atividade como "elemento de empresa".
+- Diferencie o regime de responsabilidade dos sócios na sociedade simples e na sociedade limitada (empresária).
+- Qual a natureza jurídica da sociedade de advogados e onde ela é registrada?
+- Discuta o conceito de profissional intelectual e sua relação com a caracterização da sociedade como simples.
+- Quais as consequências jurídicas do registro da sociedade na Junta Comercial em vez do cartório competente?
+- Uma cooperativa é considerada uma sociedade simples ou empresária? Fundamente.
+- Explique por que a sociedade empresária está sujeita à Lei de Falências e a sociedade simples não.
+- Analise a transformação de uma sociedade simples em empresária, e vice-versa.
+- Discorra sobre a aplicação do Enunciado 193 da III Jornada de Direito Civil na prática.
+
+### Fontes
+- Sociedade simples e sociedade empresária: qual a diferença? - Jusbrasil
+- Do Direito de Empresa e as Sociedades Simples e Empresária - Migalhas
+- Sociedades Simples e Empresárias: Entenda as Diferenças - Contabilizei
+- O que é sociedade simples? Saiba tudo sobre esse tipo societário - Aurum
+
+-----
+
+# Empresa Individual de Responsabilidade Limitada – Eireli
+
+-- A Eireli, criada pela Lei nº 12.441/2011, permitia a constituição de uma pessoa jurídica por um único titular com responsabilidade limitada ao capital social, que não poderia ser inferior a 100 salários mínimos (antigo Artigo 980-A, Código Civil de 2002). Buscava separar o patrimônio pessoal do empresarial.
+
+-- Contudo, a Lei nº 14.195/2021 extinguiu a Eireli, determinando a transformação automática de todas as existentes em Sociedades Limitadas Unipessoais (SLU). A SLU (Artigo 1.052, §1º, Código Civil de 2002) também oferece limitação de responsabilidade, mas sem a exigência de capital social mínimo.
+
+## Referências do Tema
+
+--- Artigo 980-A do Código Civil (revogado)
+--- Artigo 1.052, §§ 1º e 2º, do Código Civil (Lei nº 10.406/2002)
+--- Lei nº 12.441/2011 (que instituiu a Eireli)
+--- Lei nº 14.195/2021 (que extinguiu a Eireli)
+--- Artigo 41 da Lei nº 14.195/2021 (que trata da transformação automática)
+
+## Pergunte pra I.A.
+
+- Quais eram os requisitos para a constituição de uma Eireli?
+- Explique o principal objetivo da criação da figura da Eireli em 2011.
+- Quais foram as principais críticas ao modelo da Eireli, especialmente quanto ao capital social mínimo?
+- Detalhe o processo de extinção da Eireli e a transformação em SLU, conforme a Lei nº 14.195/2021.
+- Compare a Eireli com a Sociedade Limitada Unipessoal (SLU), destacando as vantagens da SLU.
+- Qual a diferença fundamental entre o Microempreendedor Individual (MEI) e a SLU?
+- Como a extinção da Eireli impactou os empresários individuais que já atuavam nesse modelo?
+- Discuta o princípio da autonomia patrimonial no contexto da Eireli e da SLU.
+- Uma pessoa poderia ser titular de mais de uma Eireli? E de quantas SLUs ela pode ser titular?
+- Analise os motivos que levaram o legislador a substituir a Eireli pela SLU.
+
+### Fontes
+- Eireli: o que é, como funciona e como abrir - Jusbrasil
+- Lei nº 14.195, de 26 de agosto de 2021 - Planalto
+- Fim da EIRELI: entenda o que muda com a nova lei - Sebrae
+- A EXTINÇÃO DA EIRELI E A SUA SUBSTITUIÇÃO PELA SOCIEDADE LIMITADA UNIPESSOAL - Migalhas
+
+-----
+
+# Organizações religiosas
+
+-- Organizações religiosas são pessoas jurídicas de direito privado, conforme o Artigo 44, IV, do Código Civil de 2002. Possuem livre criação, organização, estruturação interna e funcionamento, sendo vedado ao poder público negar-lhes reconhecimento ou registro dos atos constitutivos (Artigo 44, §1º, Código Civil de 2002).
+
+-- A Constituição Federal (Artigo 5º, VI, e Artigo 19, I) garante a liberdade de crença e culto, e a imunidade tributária de templos de qualquer culto (Artigo 150, VI, 'b', CF). A autonomia delas é ampla, mas atos com efeitos civis devem observar a lei, conforme jurisprudência do STJ.
+
+## Referências do Tema
+
+--- Artigo 44, IV e §1º, do Código Civil (Lei nº 10.406/2002)
+--- Artigo 5º, VI, da Constituição Federal de 1988
+--- Artigo 19, I, da Constituição Federal de 1988
+--- Artigo 150, VI, 'b', da Constituição Federal de 1988
+--- REsp 1.678.963-SP (Superior Tribunal de Justiça)
+
+## Pergunte pra I.A.
+
+- Qual a natureza jurídica das organizações religiosas segundo o Código Civil?
+- Explique o princípio da não intervenção estatal na organização interna das igrejas.
+- Discorra sobre a imunidade tributária dos templos de qualquer culto, prevista na Constituição.
+- A imunidade tributária se estende a bens e rendas da organização religiosa não ligados ao culto?
+- Qual o procedimento para o registro de uma organização religiosa?
+- As organizações religiosas podem ser consideradas fornecedoras segundo o Código de Defesa do Consumidor?
+- Analise a responsabilidade civil das organizações religiosas por atos de seus membros ou prepostos.
+- As relações entre ministros de confissão religiosa (pastores, padres) e a igreja configuram vínculo empregatício?
+- Limites da autonomia: um ato de exclusão de um membro pode ser revisto pelo Poder Judiciário?
+- Explique o entendimento do STJ sobre o controle de legalidade dos atos de organizações religiosas.
+
+### Fontes
+- Natureza Jurídica das Organizações Religiosas - Jusbrasil
+- Imunidade tributária de templos de qualquer culto - Supremo Tribunal Federal (STF)
+- A natureza jurídica das organizações religiosas - Migalhas
+- A relação de trabalho do ministro de confissão religiosa - Tribunal Superior do Trabalho (TST)
+-----
+# Pessoas jurídicas de direito privado
+
+-- Pessoas jurídicas de direito privado são entes formados pela união de indivíduos ou patrimônios para fins particulares, com existência distinta dos seus membros (Artigo 44 do Código Civil de 2002). Sua existência legal começa com a inscrição do ato constitutivo no registro, conforme o Artigo 45 do Código Civil de 2002.
+
+-- O rol do Artigo 44 do Código Civil de 2002 inclui associações, sociedades, fundações, organizações religiosas, partidos políticos e as EIRELI (extintas pela Lei 14.195/21, mas com referência ainda presente). Cada tipo possui regras específicas de constituição, funcionamento e dissolução no Código.
+
+## Referências do Tema
+
+--- Artigo 44 do Código Civil
+--- Artigo 45 do Código Civil
+--- Artigo 46 do Código Civil
+--- Lei nº 14.195/2021
+--- Enunciado 144 da III Jornada de Direito Civil
+
+## Pergunte pra I.A.
+
+- Quais são as pessoas jurídicas de direito privado listadas no Artigo 44 do Código Civil?
+- Explique o princípio da autonomia existencial e patrimonial da pessoa jurídica.
+- Descreva o processo de constituição e registro de uma pessoa jurídica de direito privado.
+- O que acontece com o patrimônio de uma pessoa jurídica em caso de dissolução?
+- Diferencie as associações das sociedades empresárias quanto ao seu objetivo principal.
+- Qual foi o impacto da Lei 14.195/21 na Empresa Individual de Responsabilidade Limitada (EIRELI)?
+- Como a teoria da desconsideração da personalidade jurídica (Artigo 50 do Código Civil de 2002) afeta esses entes?
+- Explique como as organizações religiosas e os partidos políticos se enquadram no direito privado.
+- Quais são os requisitos para a anulação dos atos constitutivos de uma pessoa jurídica?
+- Analise a responsabilidade dos administradores nas diferentes pessoas jurídicas de direito privado.
+
+### Fontes
+- Das Pessoas Jurídicas - Resumo de Direito Civil - Jusbrasil
+- Pessoa Jurídica de Direito Privado - Dicionário Jurídico - Projuris
+- Artigo 44 do Código Civil - Jusbrasil
+- Registro da pessoa jurídica de direito privado - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+
+---
+
+# Associações
+
+-- Associações são pessoas jurídicas formadas pela união de pessoas que se organizam para fins não econômicos, conforme o Artigo 53 do Código Civil de 2002. Sua constituição se dá por estatuto, que deve conter os requisitos do Artigo 54 do Código Civil de 2002, como a denominação, os fins, a sede e os direitos dos associados.
+
+-- A qualidade de associado é intransmissível, salvo disposição estatutária (Artigo 56 do Código Civil de 2002). A exclusão de um associado só é admitida se houver justa causa e for assegurado o direito de defesa e recurso, conforme tese fixada pelo STF no Tema 99 de Repercussão Geral (RE 594.770).
+
+## Referências do Tema
+
+--- Artigo 53 do Código Civil
+--- Artigo 54 do Código Civil
+--- Artigo 56 do Código Civil
+--- Artigo 57 do Código Civil
+--- Artigo 60 do Código Civil
+--- Tema 99 de Repercussão Geral (STF - RE 594.770)
+
+## Pergunte pra I.A.
+
+- Defina o que é uma associação e qual seu principal objetivo, com base no Artigo 53 do Código Civil de 2002.
+- Quais são os elementos obrigatórios que devem constar no estatuto de uma associação (Artigo 54 do Código Civil de 2002)?
+- Explique o princípio da não transmissibilidade da qualidade de associado.
+- Detalhe o procedimento para a exclusão de um associado, conforme o Código Civil e o STF.
+- Quem tem competência para alterar o estatuto da associação?
+- Qual o destino do patrimônio de uma associação em caso de sua dissolução (Artigo 61 do Código Civil de 2002)?
+- Os associados respondem pelas obrigações da associação? Explique.
+- Diferencie associações de sociedades empresárias e de fundações.
+- É possível uma associação desenvolver atividade econômica? Como isso se compatibiliza com a ausência de fins lucrativos?
+- Analise a autonomia das associações frente ao poder estatal, conforme o Artigo 5º, XVII a XXI, da Constituição.
+
+### Fontes
+- O que é uma associação? - Politize!
+- Como abrir uma associação civil: passo a passo definitivo - Projuris
+- Estatuto e o Regimento Interno de uma associação - Sebrae
+- Tema 99 de Repercussão Geral - Supremo Tribunal Federal (STF)
+
+---
+
+# Fundação privada
+
+-- Fundação é um ente jurídico que personifica um patrimônio destinado a um fim específico, geralmente de interesse público, como cultural ou assistencial (Artigo 62 do Código Civil de 2002). É constituída por escritura pública ou testamento, onde o instituidor especifica o fim e dota os bens livres.
+
+-- A criação e o funcionamento das fundações são velados pelo Ministério Público do estado onde situadas (Artigo 66 do Código Civil de 2002). Caso o estatuto não seja elaborado pelo instituidor, a tarefa caberá à instituição por ele indicada ou, no silêncio, ao próprio Ministério Público (Artigo 65 do Código Civil de 2002).
+
+## Referências do Tema
+
+--- Artigo 62 do Código Civil
+--- Artigo 63 do Código Civil
+--- Artigo 65 do Código Civil
+--- Artigo 66 do Código Civil
+--- Artigo 69 do Código Civil
+--- Súmula 634 do STJ
+
+## Pergunte pra I.A.
+
+- O que é uma fundação e como ela se diferencia de uma associação em sua estrutura?
+- Descreva as duas formas de instituição de uma fundação privada.
+- Explique o papel do Ministério Público na criação, fiscalização e extinção de uma fundação.
+- O que acontece se os bens doados para criar a fundação forem insuficientes (Artigo 63 do Código Civil de 2002)?
+- É possível alterar o fim (a finalidade) para o qual a fundação foi criada? Se sim, em que condições?
+- Quem é responsável por elaborar o estatuto da fundação se o instituidor não o fizer?
+- Qual o destino do patrimônio de uma fundação quando sua extinção é aprovada?
+- O que significa a expressão "velar pelas fundações", atribuída ao Ministério Público?
+- Explique o teor da Súmula 634 do STJ sobre a competência para julgar ações de fundações.
+- Analise a responsabilidade dos administradores de uma fundação por eventuais prejuízos ao seu patrimônio.
+
+### Fontes
+- Fundações - Ministério Público de Santa Catarina (MPSC)
+- Fundações Privadas: Saiba o que são e como funcionam - Politize!
+- O que é uma Fundação Privada? - Aurum
+- O papel do Ministério Público na fiscalização das fundações privadas - Jusbrasil
+-----
+# Modificação e extinção da pessoa jurídica
+
+-- A modificação da pessoa jurídica ocorre por alteração de seus atos constitutivos, deliberada na forma do estatuto. Já a extinção segue um processo que, usualmente, envolve as fases de dissolução, liquidação do patrimônio e, por fim, a averbação do seu cancelamento (Artigo 51 do Código Civil de 2002).
+
+-- A dissolução pode ser judicial ou administrativa. Após liquidar os ativos e pagar os passivos, o remanescente, se houver, terá o destino previsto no ato constitutivo ou em lei (Artigo 51, § 1º, e Artigo 61 do Código Civil de 2002). A extinção só se conclui com o fim das obrigações pendentes.
+
+## Referências do Tema
+
+--- Artigo 51 do Código Civil de 2002
+--- Artigo 61 do Código Civil de 2002
+--- Arts. 1.033 a 1.038 do Código Civil de 2002 (Dissolução da Sociedade)
+--- Arts. 1.102 a 1.112 do Código Civil de 2002 (Liquidação da Sociedade)
+
+## Pergunte pra I.A.
+
+  - Explique o que significa a dissolução da pessoa jurídica e quais são suas principais causas.
+  - Diferencie as fases de dissolução, liquidação e extinção da pessoa jurídica.
+  - Como ocorre a modificação dos atos constitutivos de uma associação ou fundação?
+  - Qual o papel do liquidante no processo de extinção da pessoa jurídica?
+  - O que acontece com o patrimônio remanescente de uma associação extinta?
+  - A extinção da pessoa jurídica extingue automaticamente todas as suas dívidas?
+  - Descreva o procedimento para o cancelamento do registro da pessoa jurídica.
+  - Compare a extinção de uma sociedade empresária com a de uma associação civil.
+  - É possível a reativação de uma pessoa jurídica após sua dissolução?
+  - Analise a responsabilidade dos administradores após a liquidação da pessoa jurídica.
+
+### Fontes
+
+  - Da extinção da personalidade jurídica da sociedade empresária - Jusbrasil
+  - Dissolução, liquidação e extinção de sociedades - Dicionário Financeiro
+  - Artigo 51º do Código Civil Comentado - https://www.google.com/search?q=EstudoPratico.com.br
+
+-----
+
+# Pessoas jurídicas de direito público externo e interno
+
+-- O Código Civil, em seu Artigo 40, classifica as pessoas jurídicas em direito público e privado. As de direito público se dividem em externo, que são os Estados estrangeiros e organismos internacionais (ONU, OEA), e interno, que compõem a estrutura político-administrativa do Brasil.
+
+-- As pessoas jurídicas de direito público interno, listadas no Artigo 41 do Código Civil de 2002, incluem a União, os Estados, o Distrito Federal, os Territórios, os Municípios, além das autarquias e demais entidades de caráter público criadas por lei, que formam a Administração Direta e Indireta.
+
+## Referências do Tema
+
+--- Artigo 40 do Código Civil de 2002
+--- Artigo 41 do Código Civil de 2002
+--- Artigo 42 do Código Civil de 2002
+--- Artigo 43 do Código Civil de 2002
+
+## Pergunte pra I.A.
+
+  - Defina o que são pessoas jurídicas de direito público e qual seu principal traço distintivo.
+  - Liste as entidades consideradas pessoas jurídicas de direito público interno pelo Código Civil.
+  - Forneça exemplos de pessoas jurídicas de direito público externo.
+  - Qual a relevância da soberania para a atuação das pessoas jurídicas de direito público externo no Brasil?
+  - Explique o conceito de imunidade de jurisdição para os Estados estrangeiros.
+  - Diferencie a Administração Pública Direta da Indireta, com base nas pessoas jurídicas que as compõem.
+  - Como são criadas as pessoas jurídicas de direito público interno?
+  - Discuta a responsabilidade civil das pessoas jurídicas de direito público interno, conforme o Artigo 43 do Código Civil de 2002.
+  - Uma empresa estatal é considerada pessoa jurídica de direito público ou privado? Justifique.
+  - Analise a relação entre o Direito Internacional Público e as pessoas jurídicas de direito público externo.
+
+### Fontes
+
+  - Pessoa Jurídica de Direito Público: o que é e como funciona? - Projuris
+  - Das Pessoas Jurídicas - Arts. 40 a 69 do Código Civil - Jusbrasil
+  - Pessoa Jurídica - Enciclopédia Jurídica da PUCSP
+
+-----
+
+# Autarquias, associações públicas e outras entidades de caráter público, criadas por lei
+
+-- As autarquias (ex: INSS, BACEN) são pessoas jurídicas de direito público interno, criadas por lei específica, com autonomia administrativa e financeira para executar atividades típicas do Estado de forma descentralizada, conforme o Artigo 41, IV, do Código Civil de 2002 e o Decreto-Lei nº 200/67.
+
+-- As associações públicas, por sua vez, são consórcios públicos com personalidade jurídica de direito público, também criadas por lei, para a gestão associada de serviços públicos pelos entes federados (Artigo 41, V, do Código Civil de 2002 e Lei nº 11.107/05), integrando a administração indireta.
+
+## Referências do Tema
+
+--- Artigo 41, IV e V do Código Civil de 2002
+--- Artigo 37, XIX da Constituição Federal/88
+--- Decreto-Lei nº 200/1967
+--- Lei nº 11.107/2005 (Lei dos Consórcios Públicos)
+
+## Pergunte pra I.A.
+
+  - Defina o que é uma autarquia e qual sua finalidade na estrutura do Estado.
+  - Explique o princípio da especialidade, aplicável às autarquias.
+  - Como uma autarquia é criada e como ela é extinta?
+  - O que são associações públicas (consórcios públicos de direito público) e para que servem?
+  - Diferencie uma autarquia de uma empresa pública.
+  - Forneça três exemplos de autarquias federais e suas respectivas funções.
+  - Qual o regime jurídico aplicável aos servidores de uma autarquia?
+  - Os bens de uma autarquia podem ser penhorados? Justifique.
+  - Diferencie uma associação pública de um convênio administrativo.
+  - Analise o controle exercido pela Administração Direta sobre as autarquias (tutela ou supervisão ministerial).
+
+### Fontes
+
+  - Autarquias: o que são, tipos, exemplos e características - Dicionário Direitos
+  - Consórcios públicos: o que são e como funcionam - Politize!
+  - Administração Indireta - Mundo Educação
+-----
+# Responsabilidade Direta dos Administradores vs. Desconsideração
+
+-- A responsabilidade direta do administrador ocorre quando ele age com culpa ou dolo, violando a lei ou o estatuto social, respondendo pessoalmente pelos prejuízos que causar (Artigo 158 da Lei nº 6.404/76 e Arts. 186 e 927 do Código Civil de 2002). É uma ação contra o próprio gestor pelo seu ato ilícito.
+
+-- A desconsideração (Artigo 50 do Código Civil de 2002) é diferente: ela não anula a personalidade jurídica, mas a ignora temporariamente para atingir o patrimônio dos sócios por abuso (confusão patrimonial ou desvio de finalidade), sendo a empresa a devedora original. É uma medida contra o mau uso da pessoa jurídica.
+
+## Referências do Tema
+
+--- Artigo 50 do Código Civil (Lei nº 10.406/2002)
+--- Artigo 158 da Lei das Sociedades por Ações (Lei nº 6.404/76)
+--- Arts. 186 e 927 do Código Civil (Lei nº 10.406/2002)
+--- Artigo 1.016 do Código Civil (Lei nº 10.406/2002)
+
+## Pergunte pra I.A.
+
+  - Diferencie a responsabilidade subjetiva do administrador da responsabilidade objetiva no âmbito da desconsideração.
+  - A ação de responsabilidade civil contra o administrador exclui a possibilidade de desconsideração da personalidade jurídica?
+  - Em que situações o administrador responde solidariamente com a sociedade?
+  - Explique o conceito de "ato ultra vires" e sua relação com a responsabilidade do administrador.
+  - A desconsideração atinge apenas sócios ou também administradores não-sócios?
+  - Qual o fundamento legal para a responsabilidade direta de um administrador em uma sociedade limitada?
+  - Analise a responsabilidade do administrador por dívidas tributárias da empresa, conforme o Artigo 135 do CTN.
+  - Discuta a aplicação da "business judgment rule" no direito brasileiro como excludente de responsabilidade.
+  - É possível responsabilizar diretamente um administrador e, ao mesmo tempo, desconsiderar a personalidade jurídica no mesmo processo?
+  - Compare a responsabilidade do administrador na Lei das S.A. com a prevista para as sociedades limitadas no Código Civil.
+
+### Fontes
+
+  - Da Responsabilidade Civil dos Administradores de Sociedades Anônimas - https://www.google.com/search?q=Jus.com.br
+  - Responsabilidade do sócio e do administrador na sociedade limitada - Migalhas
+  - A responsabilidade dos administradores e a desconsideração da personalidade jurídica - Conjur
+
+-----
+
+# Incidente de Desconsideração da Personalidade Jurídica
+
+-- O incidente de desconsideração é o meio processual para aplicar o Artigo 50 do Código Civil de 2002, garantindo contraditório e ampla defesa. Regulado pelos Arts. 133 a 137 do CPC, pode ser instaurado em qualquer fase do processo, suspendendo-o até a sua resolução (Artigo 134, § 3º, do CPC).
+
+-- O pedido deve demonstrar os pressupostos legais (abuso da personalidade). O sócio ou a pessoa jurídica é citado para se manifestar e requerer provas (Artigo 135 do CPC). A decisão que resolve o incidente é uma decisão interlocutória, sendo cabível o recurso de agravo de instrumento.
+
+## Referências do Tema
+
+--- Arts. 133 a 137 do Código de Processo Civil (Lei nº 13.105/2015)
+--- Artigo 134, § 3º do Código de Processo Civil (Lei nº 13.105/2015)
+--- Artigo 135 do Código de Processo Civil (Lei nº 13.105/2015)
+--- Artigo 1.015, IV do Código de Processo Civil (Lei nº 13.105/2015)
+
+## Pergunte pra I.A.
+
+  - Descreva o passo a passo para a instauração do incidente de desconsideração da personalidade jurídica.
+  - Quais são os requisitos que a petição inicial do incidente deve conter?
+  - A instauração do incidente sempre suspende o processo principal? Explique.
+  - O que é a "dispensa do incidente" prevista no Artigo 134, § 2º, do CPC?
+  - Qual o recurso cabível contra a decisão que acolhe ou rejeita o incidente de desconsideração?
+  - É possível pedir a desconsideração da personalidade jurídica já na petição inicial do processo de conhecimento?
+  - Explique como funciona a citação do sócio ou da pessoa jurídica no incidente.
+  - O que acontece se o incidente for julgado improcedente? A parte pode ser condenada por litigância de má-fé?
+  - Discuta a aplicação do incidente de desconsideração da personalidade jurídica no âmbito dos Juizados Especiais Cíveis.
+  - Analise a (im)possibilidade de instauração do incidente de ofício pelo juiz após as alterações do CPC/15.
+
+### Fontes
+
+  - Incidente de desconsideração da personalidade jurídica – procedimento - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - Incidente de Desconsideração da Personalidade Jurídica no Novo CPC - Aurum
+  - O incidente de desconsideração da personalidade jurídica e o CPC/15 - Migalhas
+-----
+# Desconsideração da personalidade jurídica
+
+-- A desconsideração da personalidade jurídica, medida excepcional, afasta a autonomia patrimonial para coibir fraudes. No Código Civil de 2002, a Teoria Maior exige prova de abuso (desvio de finalidade ou confusão patrimonial), conforme o Artigo 50 do Código Civil de 2002 e o Enunciado 146 da III Jornada de Direito Civil.
+
+-- A responsabilização direta do administrador por ato ilícito próprio não se confunde com a desconsideração. O CPC regula o procedimento para a desconsideração através de um incidente processual específico, previsto nos Arts. 133 a 137, que garante o contraditório e a ampla defesa.
+
+## Referências do Tema
+
+--- Artigo 50 do Código Civil (Lei nº 10.406/2002)
+--- Arts. 133 a 137 do Código de Processo Civil (Lei nº 13.105/2015)
+--- Enunciado 146 da III Jornada de Direito Civil
+--- Artigo 28 do Código de Defesa do Consumidor (Lei nº 8.078/1990)
+
+## Pergunte pra I.A.
+
+- Explique a Teoria Maior da desconsideração da personalidade jurídica, adotada pelo Artigo 50 do Código Civil.
+- Diferencie desvio de finalidade e confusão patrimonial como pressupostos para a desconsideração.
+- Qual a diferença entre a Teoria Maior (Código Civil) e a Teoria Menor (Código de Defesa do Consumidor)?
+- Diferencie a responsabilidade direta do administrador por ato ilícito e a responsabilidade via desconsideração.
+- Descreva as etapas do incidente de desconsideração da personalidade jurídica conforme o CPC.
+- O que é a desconsideração inversa da personalidade jurídica, prevista no Artigo 50, § 3º, do Código Civil de 2002?
+- A mera existência de grupo econômico ou a insolvência da empresa autoriza a desconsideração pelo Código Civil?
+- Quais os efeitos do acolhimento do pedido de desconsideração da personalidade jurídica?
+- Analise criticamente a aplicação da teoria da desconsideração e a segurança jurídica nas relações empresariais.
+- É possível a desconsideração da personalidade jurídica de ofício pelo juiz, segundo o CPC?
+
+### Fontes
+- Desconsideração da personalidade jurídica – teoria maior - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+- Incidente de desconsideração da personalidade jurídica – procedimento - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+- Artigo 133 a 137 do Novo CPC: desconsideração da personalidade jurídica - Projuris
+- DISTINÇÕES ENTRE A DESCONSIDERAÇÃO DA PERSONALIDADE JURÍDICA E A RESPONSABILIZAÇÃO PESSOAL - Index Law Journals
+-----
+# Evolução da teoria disregard doctrine
+
+-- A desconsideração da personalidade jurídica (disregard doctrine) no Brasil evoluiu de uma construção jurisprudencial para a positivação no Artigo 50 do Código Civil de 2002, que em sua redação original já buscava coibir a fraude e o abuso de direito por meio da pessoa jurídica.
+
+-- A Lei nº 13.874/19 (Lei de Liberdade Econômica) alterou o Artigo 50 do Código Civil de 2002, estabelecendo requisitos mais objetivos e restritos, como o desvio de finalidade e a confusão patrimonial, para afastar a autonomia patrimonial da empresa e atingir os bens dos sócios.
+
+## Referências do Tema
+
+--- Artigo 50 do Código Civil (Lei nº 10.406/02)
+--- Lei nº 13.874/2019 (Lei de Liberdade Econômica)
+--- Enunciado 146 da III Jornada de Direito Civil do CJF
+--- Enunciado 281 da IV Jornada de Direito Civil do CJF
+--- Enunciado 282 da IV Jornada de Direito Civil do CJF
+
+## Pergunte pra I.A.
+
+- O que é a disregard doctrine e qual seu principal objetivo no ordenamento jurídico brasileiro?
+- Como era a aplicação da desconsideração da personalidade jurídica antes da sua previsão expressa no Código Civil de 2002?
+- Quais eram os requisitos para a desconsideração da personalidade jurídica na redação original do Artigo 50 do Código Civil de 2002?
+- Detalhe as principais alterações no Artigo 50 do Código Civil de 2002 introduzidas pela Lei de Liberdade Econômica (Lei nº 13.874/19).
+- Explique os conceitos de "desvio de finalidade" e "confusão patrimonial" conforme a nova redação do Artigo 50 do Código Civil de 2002.
+- Qual o impacto da Lei de Liberdade Econômica para a segurança jurídica e o ambiente de negócios no Brasil?
+- Como o Superior Tribunal de Justiça (STJ) interpretava o Artigo 50 do Código Civil de 2002 antes e depois da reforma de 2019?
+- Discorra sobre a criação do incidente de desconsideração da personalidade jurídica pelo Código de Processo Civil de 2015.
+- Compare a evolução da disregard doctrine no Brasil com sua aplicação no direito norte-americano (piercing the corporate veil).
+- Analise um caso prático sobre a aplicação da desconsideração da personalidade jurídica com base na jurisprudência recente do STJ.
+
+### Fontes
+- A nova disciplina da desconsideração da personalidade jurídica no Código Civil - Portal Migalhas
+- A desconsideração da personalidade jurídica e os impactos da Lei da Liberdade Econômica - Conjur
+- A evolução da desconsideração da personalidade jurídica no direito brasileiro - Âmbito Jurídico
+
+-----
+
+# Teoria maior e teoria menor da desconsideração
+
+-- A Teoria Maior, regra geral adotada pelo Artigo 50 do Código Civil de 2002, é mais restritiva. Exige a comprovação do abuso da personalidade, caracterizado pelo desvio de finalidade ou pela confusão patrimonial, não bastando a mera insolvência da pessoa jurídica para sua aplicação.
+
+-- A Teoria Menor, de caráter excepcional, é mais branda. Prevista no Artigo 28, § 5º, do CDC e no Artigo 4º da Lei 9.605/98 (Crimes Ambientais), autoriza a desconsideração bastando que a personalidade jurídica seja um obstáculo ao ressarcimento de prejuízos.
+
+## Referências do Tema
+
+--- Artigo 50 do Código Civil (Lei nº 10.406/02)
+--- Artigo 28, § 5º, do Código de Defesa do Consumidor (Lei nº 8.078/90)
+--- Artigo 4º da Lei de Crimes Ambientais (Lei nº 9.605/98)
+--- Artigo 2º, § 2º, da Consolidação das Leis do Trabalho (CLT)
+--- REsp 1.900.843/DF (Julgado do STJ sobre o tema)
+
+## Pergunte pra I.A.
+
+- Defina a Teoria Maior da desconsideração da personalidade jurídica e indique seu principal fundamento legal.
+- Defina a Teoria Menor da desconsideração da personalidade jurídica e aponte seus fundamentos legais.
+- Qual a principal diferença entre os pressupostos de aplicação da Teoria Maior e da Teoria Menor?
+- Por que a Teoria Menor é aplicada nas relações de consumo e no direito ambiental? Qual a justificativa para essa exceção?
+- Explique, com exemplos, uma situação em que seria aplicada a Teoria Maior e outra em que se aplicaria a Teoria Menor.
+- Como a jurisprudência do Superior Tribunal de Justiça (STJ) diferencia a aplicação das duas teorias?
+- A Teoria Menor pode ser aplicada em relações de natureza civil ou empresarial? Justifique com base na legislação e jurisprudência.
+- Discuta a aplicação da desconsideração da personalidade jurídica no Direito do Trabalho e qual teoria é predominantemente utilizada.
+- Quais são as críticas doutrinárias à ampla aplicação da Teoria Menor no ordenamento jurídico brasileiro?
+- Analise o REsp 1.900.843/DF e explique como o STJ aplicou a teoria da desconsideração no caso concreto.
+
+### Fontes
+- Teoria maior e teoria menor da desconsideração da personalidade jurídica - Jusbrasil
+- Desconsideração da personalidade jurídica: teoria maior e menor - Aurum
+- O STJ e a teoria menor da desconsideração da personalidade jurídica - Portal Migalhas
+-----
+# Pessoa Jurídica. Direitos que decorrem da personalidade
+
+-- A pessoa jurídica possui direitos da personalidade, no que couber, conforme o Artigo 52 do Código Civil de 2002. A proteção abrange direitos como nome, imagem e, especialmente, a honra objetiva, que é a sua reputação e bom nome no meio social e comercial em que atua.
+
+-- A Súmula 227 do STJ pacificou o entendimento de que a pessoa jurídica pode sofrer dano moral, sendo este aferível objetivamente. A violação de sua honra objetiva, por exemplo, por meio de protesto indevido ou ofensa pública, gera o dever de indenizar.
+
+## Referências do Tema
+
+--- Artigo 52 do Código Civil de 2002
+--- Súmula 227 do STJ
+
+## Pergunte pra I.A.
+
+- O que são os direitos da personalidade da pessoa jurídica e qual seu fundamento legal?
+- Explique a diferença entre a honra objetiva da pessoa jurídica e a honra subjetiva da pessoa natural.
+- Com base na Súmula 227 do STJ, exemplifique situações que configuram dano moral à pessoa jurídica.
+- Quais direitos da personalidade, além da honra, são aplicáveis às pessoas jurídicas?
+- Como se comprova o dano moral sofrido por uma empresa em um processo judicial?
+- Discorra sobre a proteção ao nome e à imagem da pessoa jurídica.
+- A aplicação dos direitos da personalidade à pessoa jurídica é irrestrita? Quais são as limitações?
+- Analise a responsabilidade civil por atos que violem a reputação de uma pessoa jurídica na internet.
+- Diferencie o dano moral coletivo do dano moral sofrido individualmente pela pessoa jurídica.
+- Compare a abordagem dos direitos da personalidade da pessoa jurídica no Brasil com a de outro sistema jurídico.
+
+### Fontes
+- Análise da Súmula 227 do STJ - Jusbrasil
+- Direitos da Personalidade da Pessoa Jurídica - Âmbito Jurídico
+- O artigo 52 do Código Civil e os Direitos da Personalidade da Pessoa Jurídica - Migalhas
+- A Pessoa Jurídica pode sofrer Dano Moral? - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+
+-----
+
+# Desconsideração da personalidade da pessoa jurídica no Código Civil
+
+-- A desconsideração da personalidade jurídica é medida excepcional que afasta a autonomia patrimonial da empresa para atingir bens de sócios ou administradores, conforme o Artigo 50 do Código Civil de 2002. Exige-se prova do abuso da personalidade, caracterizado pelo desvio de finalidade ou pela confusão patrimonial.
+
+-- A Lei nº 13.874/2019 (Lei da Liberdade Econômica) reforçou o caráter restritivo da medida, detalhando os conceitos de desvio de finalidade e confusão patrimonial. O CPC/15, nos Arts. 133 a 137, regulamentou o "incidente de desconsideração", garantindo o contraditório antes de sua efetivação.
+
+## Referências do Tema
+
+--- Artigo 50 do Código Civil de 2002
+--- Lei nº 13.874/2019
+--- Arts. 133 a 137 do CPC/15
+--- Enunciado 282 da IV Jornada de Direito Civil (CJF)
+
+## Pergunte pra I.A.
+
+- O que é a desconsideração da personalidade jurídica e qual sua finalidade no Código Civil?
+- Explique os requisitos do Artigo 50 do Código Civil de 2002 para a aplicação da desconsideração.
+- Defina "desvio de finalidade" e "confusão patrimonial" nos termos da Lei da Liberdade Econômica.
+- Diferencie a Teoria Maior (adotada pelo Código Civil) da Teoria Menor da desconsideração.
+- Como funciona o incidente de desconsideração da personalidade jurídica previsto no CPC/15?
+- O que é a desconsideração inversa da personalidade jurídica e quando ela é aplicável?
+- Quais foram as principais alterações no Artigo 50 do Código Civil promovidas pela Lei nº 13.874/2019?
+- A mera insolvência ou o encerramento irregular da empresa autorizam a desconsideração? Justifique.
+- Quem pode ser responsabilizado quando a desconsideração da personalidade jurídica é decretada?
+- Analise um julgado recente do STJ sobre a aplicação da Teoria Maior da desconsideração.
+
+### Fontes
+- A desconsideração da personalidade jurídica no Código Civil - Jusbrasil
+- Desconsideração da personalidade jurídica à luz da Lei de Liberdade Econômica - Migalhas
+- Do Incidente de Desconsideração da Personalidade Jurídica no CPC/2015 - Consultor Jurídico (Conjur)
+- Desconsideração da personalidade jurídica - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+- Artigo 50 do Código Civil - Presidência da República (planalto.gov.br)
+-----
+# Responsabilidade civil das pessoas jurídicas de direito público
+
+-- A responsabilidade civil do Estado é, em regra, objetiva, sob a modalidade do risco administrativo, conforme o Artigo 37, § 6º, da CF/88. Isso significa que o dever de indenizar independe da comprovação de dolo ou culpa, bastando a demonstração do dano e do nexo causal com a conduta estatal, seja ela comissiva ou omissiva.
+
+-- O STF, no RE 841.526, consolidou a responsabilidade objetiva mesmo em omissões específicas, quando o Estado tinha o dever de agir. A teoria do risco administrativo admite excludentes de responsabilidade, como culpa exclusiva da vítima ou caso fortuito, diferenciando-se da teoria do risco integral.
+
+## Referências do Tema
+
+--- Artigo 37, § 6º, da Constituição Federal
+--- RE 841.526 (STF)
+
+## Pergunte pra I.A.
+
+- Defina a responsabilidade civil objetiva do Estado e seus elementos essenciais.
+- Diferencie as teorias do risco administrativo e do risco integral.
+- Explique como se configura a responsabilidade do Estado por atos comissivos.
+- Discorra sobre a responsabilidade do Estado por omissão, diferenciando a genérica da específica.
+- Analise o nexo de causalidade como pressuposto da responsabilidade estatal.
+- Apresente as causas excludentes da responsabilidade civil do Estado.
+- Comente o direito de regresso da Administração Pública contra o agente causador do dano.
+- Discuta a responsabilidade das pessoas jurídicas de direito privado prestadoras de serviço público.
+- Analise o entendimento do STF sobre a responsabilidade do Estado pela morte de detento.
+- Pesquise e explique a teoria da "dupla garantia" no contexto da responsabilidade civil do Estado.
+
+### Fontes
+- Resumo sobre Responsabilidade Civil do Estado - Estratégia Concursos
+- Responsabilidade civil do Estado - Tribunal de Justiça do Estado de São Paulo
+- Admite-se a responsabilização objetiva do Estado em caso de omissão específica? - TJDFT
+
+-----
+
+# Responsabilidade penal das pessoas jurídicas
+
+-- A responsabilidade penal da pessoa jurídica é uma exceção no direito brasileiro, prevista no Artigo 225, § 3º, da CF/88, e regulamentada pela Lei nº 9.605/98 (Lei de Crimes Ambientais). A punição do ente coletivo não exclui a responsabilidade da pessoa física, coautora ou partícipe do fato (Artigo 3º, parágrafo único, da Lei 9.605/98).
+
+-- Para que a pessoa jurídica seja responsabilizada, a infração deve ser cometida por decisão de seu representante legal ou contratual, ou de seu órgão colegiado, e no interesse ou benefício da entidade, conforme o Artigo 3º da Lei nº 9.605/98. As penas são adaptadas à sua natureza, como multas e restrição de direitos.
+
+## Referências do Tema
+
+--- Artigo 225, § 3º, da Constituição Federal
+--- Artigo 173, § 5º, da Constituição Federal
+--- Artigo 3º da Lei nº 9.605/98
+
+## Pergunte pra I.A.
+
+- Explique o princípio "societas delinquere non potest" e sua superação no direito brasileiro.
+- Descreva os requisitos para a responsabilização penal da pessoa jurídica segundo a Lei 9.605/98.
+- Analise a teoria da "dupla imputação" na responsabilidade penal da pessoa jurídica.
+- Diferencie a responsabilidade penal da pessoa jurídica da responsabilidade civil e administrativa.
+- Quais são as penas aplicáveis às pessoas jurídicas por crimes ambientais?
+- Discuta a possibilidade de responsabilidade penal de pessoas jurídicas de direito público.
+- Comente a jurisprudência do STF sobre a responsabilidade penal da pessoa jurídica.
+- Explique como funciona a desconsideração da personalidade jurídica no âmbito dos crimes ambientais.
+- Pesquise sobre a aplicação da responsabilidade penal da pessoa jurídica em outros crimes além dos ambientais.
+- Elabore um paralelo entre a responsabilidade penal da pessoa jurídica no Brasil e em outros países.
+
+### Fontes
+- L9605 - Planalto
+- A Responsabilidade Penal da Pessoa Jurídica - Repositório IDP
+- Responsabilidade penal das pessoas jurídicas de Direito Público na Lei nº 9.605/98 - Senado Federal
+
+-----
+# Teoria Ultra Vires e Teoria da Aparência
+
+-- A teoria ultra vires, de origem inglesa, anula atos do administrador que extrapolam o objeto social. Já a teoria da aparência protege terceiros de boa-fé que contratam com quem aparenta ter poderes, mesmo que não os tenha, privilegiando a segurança jurídica.
+
+-- O Código Civil, no Artigo 47, mitiga a teoria ultra vires, responsabilizando a pessoa jurídica pelos atos de seus administradores, mesmo que estranhos ao objeto social, se o terceiro estiver de boa-fé. Assim, adota-se uma solução que se aproxima da teoria da aparência.
+
+## Referências do Tema
+
+--- Artigo 47 do Código Civil (Código Civil de 2002)
+
+## Pergunte pra I.A.
+
+  - O que é a teoria ultra vires e qual sua origem no direito?
+  - Explique o conceito da teoria da aparência e sua finalidade.
+  - Como o Artigo 47 do Código Civil brasileiro aborda os atos praticados pelos administradores?
+  - Qual teoria o Código Civil de 2002 parece ter adotado em relação aos atos dos administradores?
+  - Analise a relação entre a teoria da aparência e o princípio da boa-fé objetiva.
+  - Compare a aplicação da teoria ultra vires no Brasil antes e depois do Código Civil de 2002.
+  - Discuta a proteção do terceiro de boa-fé no confronto entre as teorias ultra vires e da aparência.
+  - De que forma a jurisprudência brasileira tem interpretado o Artigo 47 do Código Civil?
+  - Quais são as consequências práticas da mitigação da teoria ultra vires para as empresas?
+  - Elabore um caso prático que ilustre a aplicação do Artigo 47 do Código Civil de 2002 em detrimento da teoria ultra vires.
+
+### Fontes
+
+  - A teoria "ultra vires" e sua mitigação no Código Civil brasileiro - https://www.google.com/search?q=Jus.com.br
+  - A Teoria da Aparência e a sua aplicação no Direito Empresarial - Jusbrasil
+  - O artigo 47 do código civil e a teoria ultra vires - Âmbito Jurídico
+  - A teoria da aparência e a validade dos atos jurídicos - Migalhas
+-----
+# Responsabilidade Civil da Pessoa Jurídica
+
+-- A responsabilidade civil da pessoa jurídica pode ser contratual, por descumprimento de obrigação, ou extracontratual (aquiliana), por violação de um dever legal. A teoria da aparência protege terceiros de boa-fé que contratam com quem aparenta ter poderes para representar a empresa, mesmo que o ato extrapole o objeto social (Artigo 47 do Código Civil de 2002).
+
+-- A teoria *ultra vires* busca invalidar atos que excedem os poderes do administrador, mas o Código Civil (Artigo 47) a mitiga, responsabilizando a pessoa jurídica pelos atos de seus administradores, alinhando-se mais à teoria da aparência para garantir a segurança jurídica nas relações negociais com terceiros de boa-fé.
+
+## Referências do Tema
+
+--- Artigo 47 do Código Civil (Lei nº 10.406/2002)
+
+## Pergunte pra I.A.
+
+- Defina responsabilidade civil contratual e extracontratual no contexto das pessoas jurídicas.
+- O que é a teoria da aparência e como ela se aplica às pessoas jurídicas?
+- Explique a teoria *ultra vires* e sua aplicação original no direito societário.
+- Analise o Artigo 47 do Código Civil, explicando como ele dialoga com as teorias da aparência e *ultra vires*.
+- Discorra sobre o conceito de terceiro de boa-fé na relação com a pessoa jurídica.
+- Compare a abordagem do Código Civil de 2002 com sistemas jurídicos que adotam a teoria *ultra vires* de forma mais estrita.
+- Apresente um exemplo prático onde a teoria da aparência seria aplicada para proteger um credor da pessoa jurídica.
+- Discuta a responsabilidade dos administradores pelos atos praticados *ultra vires*.
+- Como a jurisprudência do Superior Tribunal de Justiça (STJ) tem interpretado o Artigo 47 do Código Civil?
+- Avalie o impacto da mitigação da teoria *ultra vires* para a segurança jurídica e o ambiente de negócios no Brasil.
+
+### Fontes
+- A teoria ultra vires societatis e sua (in)aplicabilidade no direito brasileiro - Jus Navigandi
+- A Teoria da Aparência no Código Civil e sua aplicação nos contratos empresariais - Âmbito Jurídico
+- Responsabilidade civil da pessoa jurídica - Conteúdo Jurídico
+- Código Civil Comentado: com jurisprudência anotada e enunciados do CJF - (Coautoria de Nelson Nery Junior e Rosa Maria de Andrade Nery) - Editora Revista dos Tribunais
+-----
+# Aquisição da Personalidade Jurídica
+
+-- A existência legal da pessoa jurídica de direito privado e, consequentemente, sua personalidade jurídica, inicia-se com a inscrição de seu ato constitutivo no registro competente, como a Junta Comercial, conforme dispõe o Artigo 45 do Código Civil.
+
+-- Os requisitos essenciais para sua constituição incluem a vontade humana, a liceidade do objeto e a observância da forma prescrita em lei. O rol do Artigo 44 do Código Civil de 2002 não é exaustivo, segundo o Enunciado 144 da III Jornada de Direito Civil.
+
+## Referências do Tema
+
+--- Artigo 44 do Código Civil de 2002
+--- Artigo 45 do Código Civil de 2002
+--- Enunciado 144 da III Jornada de Direito Civil
+
+## Pergunte pra I.A.
+
+- Quais são os requisitos essenciais para a constituição de uma pessoa jurídica no Brasil?
+- Explique o significado e a importância do registro do ato constitutivo para a aquisição da personalidade jurídica.
+- Diferencie o início da personalidade jurídica da pessoa natural e da pessoa jurídica.
+- O que significa o princípio da autonomia patrimonial da pessoa jurídica?
+- Discorra sobre a Teoria da Realidade Técnica, adotada pelo Código Civil brasileiro.
+- Quais são as principais espécies de pessoas jurídicas de direito privado elencadas no Código Civil?
+- Explique o que o Enunciado 144 da III Jornada de Direito Civil estabelece sobre o rol de pessoas jurídicas.
+- Como ocorre o processo de registro de uma sociedade empresária na Junta Comercial?
+- Discuta a possibilidade de anulação do ato constitutivo da pessoa jurídica, conforme o parágrafo único do Artigo 45 do Código Civil de 2002.
+- Analise a teoria da desconsideração da personalidade jurídica, prevista no Artigo 50 do Código Civil.
+
+### Fontes
+- Personalidade Jurídica - Modelo Inicial
+- A PESSOA JURÍDICA NO DIREITO CIVIL BRASILEIRO - Revista Científica Semana Acadêmica
+- Pessoas Jurídicas - I - Trilhante
+- Artigo 45 - Código Civil - Existência legal da Pessoa Jurídica - YouTube
+- ENUNCIADOS APROVADOS – III JORNADA DE DIREITO CIVIL SUMÁRIO Parte Geral - Migalhas
+-----
+# Pessoa Jurídica
+
+-- Pessoa jurídica é uma entidade formada pela união de indivíduos ou patrimônios que a lei reconhece como sujeito de direitos e obrigações, distinta de seus membros (Artigo 40 e 41 do Código Civil de 2002). Sua existência legal começa com a inscrição do ato constitutivo no registro competente, conforme o Artigo 45 do Código Civil de 2002.
+
+-- Para existir, requer vontade humana criadora, observância das condições legais e um fim lícito (Enunciado 144 CJF). A aquisição da personalidade jurídica, ou seja, a aptidão para ter direitos e deveres, se dá a partir do registro dos seus atos constitutivos (Artigo 45, Código Civil de 2002).
+
+## Referências do Tema
+
+--- Artigo 40 do Código Civil de 2002
+--- Artigo 41 do Código Civil de 2002
+--- Artigo 45 do Código Civil de 2002
+--- Enunciado 144 da III Jornada de Direito Civil (CJF)
+
+## Pergunte pra I.A.
+
+- Defina o que é pessoa jurídica e quais são as principais teorias que explicam sua natureza.
+- Quais são os elementos essenciais para a constituição de uma pessoa jurídica segundo o Código Civil?
+- Explique o processo de aquisição da personalidade jurídica, desde o ato constitutivo até o registro.
+- Diferencie as pessoas jurídicas de direito público interno e externo das de direito privado.
+- Discorra sobre o princípio da separação patrimonial entre a pessoa jurídica e seus sócios.
+- O que é a desconsideração da personalidade jurídica e quais são os requisitos para sua aplicação, conforme o Artigo 50 do Código Civil de 2002?
+- Analise a capacidade e a representação das pessoas jurídicas, incluindo a teoria dos atos ultra vires.
+- Como ocorre a extinção da pessoa jurídica e quais são as fases do procedimento de liquidação?
+- Explique a responsabilidade civil da pessoa jurídica por atos de seus administradores e prepostos.
+- Compare a natureza e o regime jurídico das associações, fundações e sociedades empresárias.
+
+### Fontes
+- Das Pessoas Naturais e Jurídicas - Site do Planalto
+- O que é pessoa jurídica? - Aurum
+- Pessoa Jurídica: o que é, tipos, como abrir e exemplos - Jusbrasil
+- Pessoa jurídica: o que é, tipos e como funciona a PJ - Dicionário Financeiro
+- Enunciado 144 da III Jornada de Direito Civil - Conselho da Justiça Federal
+-----
+# Integridade Moral – Imagem e Honra
+
+-- A integridade moral (honra e imagem) é direito da personalidade (Artigo 5º, V e X, CF/88; Artigo 20, Código Civil de 2002). A Súmula 403 do STJ prevê indenização por uso indevido da imagem para fins comerciais, independentemente da prova do prejuízo.
+
+-- Sua tutela protege a reputação contra ofensas e exposições não autorizadas, garantindo reparação por dano material ou moral. São direitos irrenunciáveis cuja violação acarreta sanções cíveis, conforme a legislação vigente.
+
+## Referências do Tema
+
+--- Artigo 5º, V da CF/88
+--- Artigo 5º, X da CF/88
+--- Artigo 20 do Código Civil de 2002
+--- Súmula 403 do STJ
+
+## Pergunte pra I.A.
+
+  - Defina direitos da personalidade e sua base constitucional e legal no ordenamento jurídico brasileiro.
+  - Diferencie os conceitos de honra objetiva e honra subjetiva, exemplificando violações a cada uma.
+  - Explique o direito de imagem e como ele se distingue do direito à honra.
+  - Analise o conteúdo da Súmula 403 do STJ e sua aplicação prática nos tribunais.
+  - Discuta a colisão entre a liberdade de imprensa e o direito de imagem.
+  - O que é o "direito ao esquecimento" e qual o posicionamento do STF sobre o tema (Tema 786)?
+  - Analise a responsabilidade civil por danos morais decorrentes da violação da honra e imagem na internet.
+  - Quais são os limites para a disposição do próprio corpo e imagem?
+  - Como a Lei Geral de Proteção de Dados (LGPD) se relaciona com o direito à imagem?
+  - Discorra sobre a proteção da imagem de pessoas públicas versus pessoas privadas.
+
+### Fontes
+
+  - Direitos da Personalidade - Enciclopédia Jurídica da PUCSP
+  - O direito à imagem e a sua proteção jurídica - https://www.google.com/search?q=Jus.com.br
+  - O que são os Direitos da Personalidade? - Blog da Aurum
+  - A proteção ao direito à honra no ordenamento jurídico brasileiro - Âmbito Jurídico
+  - A Súmula 403 do STJ e o dano moral pela utilização indevida da imagem - Consultor Jurídico (Conjur)
+
+-----
+
+# Direito à Intimidade e Vida Privada
+
+-- O direito à intimidade e à vida privada é inviolável (Artigo 5º, X, CF/88) e sua proteção é detalhada no Artigo 21 do Código Civil de 2002. Resguarda-se a esfera pessoal e familiar do indivíduo de interferências e exposições alheias indevidas.
+
+-- A divulgação não autorizada de informações da vida privada de alguém acarreta o dever de indenizar, exceto se houver autorização ou for necessária à administração da justiça ou à manutenção da ordem pública, conforme prevê a lei.
+
+## Referências do Tema
+
+--- Artigo 5º, X da CF/88
+--- Artigo 21 do Código Civil de 2002
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de direito à intimidade e à vida privada, fornecendo sua base constitucional e legal.
+  - Diferencie os conceitos de "vida privada", "intimidade" e "segredo".
+  - Discuta a importância da proteção da vida privada para a dignidade da pessoa humana.
+  - Como o Artigo 21 do Código Civil protege a vida privada e quais são suas exceções?
+  - Analise a colisão entre o direito à privacidade e a liberdade de informação jornalística.
+  - Qual a relação entre a inviolabilidade de domicílio e correspondência e o direito à privacidade?
+  - De que forma a Lei Geral de Proteção de Dados (LGPD) ampliou a tutela da privacidade no Brasil?
+  - Discorra sobre o direito à privacidade no ambiente de trabalho (e.g., monitoramento de e-mails).
+  - Analise a proteção da privacidade em face de investigações criminais e quebra de sigilo.
+  - Elabore uma tese sobre os desafios ao direito à privacidade na era digital e das redes sociais.
+
+### Fontes
+
+  - O direito fundamental à privacidade na Constituição de 1988 - Portal do Senado Federal
+  - Intimidade e vida privada: aspectos relevantes e controvertidos - https://www.google.com/search?q=Jus.com.br
+  - A tutela da privacidade no Código Civil - Portal Migalhas
+  - A proteção de dados pessoais como direito fundamental - Consultor Jurídico (Conjur)
+  - Direito à privacidade e à intimidade - Politize!
+-----
+
+# Alteração do prenome
+
+-- A regra da imutabilidade do nome foi flexibilizada. A Lei 14.382/22 permite que qualquer maior de 18 anos altere o prenome diretamente no cartório, sem justificativa, uma única vez (Artigo 56 da Lei 6.015/73).
+
+-- A via judicial se mantém para outras hipóteses, como exposição ao ridículo, inclusão de apelido notório ou para pessoas transgênero, conforme entendimento do STF (RE 670.422) e (Artigo 57 e 58 da Lei 6.015/73).
+
+## Referências do Tema
+
+--- Artigo 56 da Lei nº 6.015/73 (Lei de Registros Públicos)
+--- Artigo 57 da Lei nº 6.015/73 (Lei de Registros Públicos)
+--- Artigo 58 da Lei nº 6.015/73 (Lei de Registros Públicos)
+--- Lei nº 14.382/2022
+--- RE 670.422/RS (STF)
+
+## Pergunte pra I.A.
+
+  - Explique o princípio da imutabilidade do nome e a nova regra para alteração extrajudicial do prenome trazida pela Lei 14.382/22.
+  - Quais são as hipóteses que ainda exigem processo judicial para a alteração do prenome?
+  - Discorra sobre a importância da decisão do STF no RE 670.422 para o direito ao nome das pessoas transgênero.
+  - Analise os requisitos e o procedimento para a inclusão de um apelido público e notório ao prenome.
+  - Compare os procedimentos de alteração de prenome para maiores de 18 anos e para menores de idade, destacando as diferenças e justificativas legais.
+
+### Fontes
+
+  - Lei nº 14.382, de 2022, facilita a alteração do nome e sobrenome - Senado Federal
+  - Alteração de nome no cartório: como funciona a nova lei - Politize!
+  - Nova lei permite alteração de nome e sobrenome direto no cartório - Migalhas
+
+-----
+
+# Alteração do sobrenome
+
+-- A alteração do sobrenome, ou patronímico, tem por objetivo principal refletir a estirpe familiar do indivíduo, sendo regida pelo Artigo 57 da Lei de Registros Públicos (Lei 6.015/73).
+
+-- As hipóteses mais comuns são por casamento ou união estável (Artigo 1.565, §1º, Código Civil de 2002), divórcio, viuvez, inclusão de sobrenome de ascendentes ou exclusão do patronímico de genitor por abandono afetivo, conforme jurisprudência.
+
+## Referências do Tema
+
+--- Artigo 57 da Lei nº 6.015/73 (Lei de Registros Públicos)
+--- Artigo 1.565, § 1º, do Código Civil (Código Civil de 2002)
+--- Enunciado nº 6 da I Jornada de Direito Civil do CJF
+--- Resp 1.304.972/SP (STJ)
+
+## Pergunte pra I.A.
+
+  - Descreva as situações mais comuns em que a legislação permite a alteração do sobrenome.
+  - Explique o procedimento e a justificativa para a inclusão de um sobrenome de um avô ou avó que não foi registrado originalmente.
+  - Discuta a possibilidade jurídica da exclusão do sobrenome de um dos pais em casos de abandono afetivo, com base na jurisprudência do STJ.
+  - Analise a diferença entre a alteração de sobrenome por casamento e por união estável.
+  - Critique o princípio da imutabilidade do nome sob a ótica do direito à identidade e à ancestralidade.
+
+### Fontes
+
+  - É possível incluir sobrenome de avós? - Jusbrasil
+  - Direito ao nome e sua possível alteração - Âmbito Jurídico
+  - Abandono afetivo autoriza supressão de sobrenome paterno no registro civil - Superior Tribunal de Justiça (STJ)
+
+-----
+
+# Tutela especial do nome
+
+-- O nome civil é um direito da personalidade, recebendo tutela jurídica especial nos artigos 16 a 19 do Código Civil. Ele goza de proteção contra o uso não autorizado e a exposição ao desprezo público.
+
+-- O uso indevido do nome alheio em publicidade ou de qualquer forma que ofenda a reputação, mesmo sem intenção de lucro, enseja reparação por dano moral e material (Arts. 17 e 18 do Código Civil de 2002).
+
+## Referências do Tema
+
+--- Artigo 16 do Código Civil (Código Civil de 2002)
+--- Artigo 17 do Código Civil (Código Civil de 2002)
+--- Artigo 18 do Código Civil (Código Civil de 2002)
+--- Artigo 19 do Código Civil (Código Civil de 2002)
+
+## Pergunte pra I.A.
+
+  - Defina o nome civil como um direito da personalidade e explique sua importância jurídica.
+  - Diferencie as hipóteses de proteção ao nome previstas nos artigos 17 e 18 do Código Civil.
+  - Explique quem possui legitimidade para proteger o nome de uma pessoa já falecida, conforme o Artigo 19 do Código Civil.
+  - Discorra sobre a reparação por danos morais e materiais decorrente do uso não autorizado do nome de uma pessoa.
+  - Analise a colisão de direitos entre a liberdade de expressão/imprensa e o direito à proteção do nome, apresentando critérios de ponderação.
+
+### Fontes
+
+  - Os Direitos da Personalidade no Código Civil - https://www.google.com/search?q=Jus.com.br
+  - O direito ao nome da pessoa natural - Âmbito Jurídico
+  - A proteção ao nome e a imagem como um direito da personalidade - Conteúdo Jurídico
+
+-----
+# A Gestação por Substituição (Barriga Solidária)
+
+-- A gestação por substituição, popularmente conhecida como "barriga de aluguel", não possui lei específica no Brasil, sendo regulada por normas éticas do Conselho Federal de Medicina (CFM). A prática é permitida desde que não tenha caráter lucrativo ou comercial, sendo por isso chamada de "cessão temporária do útero" ou "barriga solidária".
+
+-- A Resolução CFM nº 2.320/2022 estabelece os requisitos: a cedente do útero deve ser parente de até quarto grau de um dos parceiros (mãe, irmã, tia, prima); deve haver um laudo médico que ateste a impossibilidade de gestação da mãe genética; e todos os envolvidos devem assinar um termo de consentimento informado.
+
+## Referências do Tema
+
+--- Resolução CFM nº 2.320/2022
+--- Artigo 1.597, V, do Código Civil de 2002
+--- Artigo 226, § 7º, da CF/88
+--- Enunciado 129 da I Jornada de Direito Civil (CJF)
+
+## Pergunte pra I.A.
+
+  - A "barriga de aluguel" é permitida no Brasil? Explique a terminologia correta.
+  - Quais são as principais regras impostas pelo Conselho Federal de Medicina para a gestação por substituição?
+  - Quem pode ser a cedente temporária do útero, de acordo com as normas atuais?
+  - A gestação por substituição pode envolver pagamento à gestante no Brasil?
+  - Discuta os direitos e deveres da gestante e dos pais intencionais durante o processo.
+
+### Fontes
+
+  - Resolução CFM Nº 2.320/2022 - Conselho Federal de Medicina (CFM)
+  - Gestação por substituição: as regras da “barriga de aluguel” no Brasil - Migalhas
+  - Barriga solidária: o que é e como funciona no Brasil - CNN Brasil
+  - As novas regras para a reprodução assistida no Brasil - Consultor Jurídico (Conjur)
+  - A filiação na gestação por substituição - Instituto Brasileiro de Direito de Família (IBDFAM)
+
+-----
+
+# A Disposição do Corpo Após a Morte
+
+-- Os direitos da personalidade se prolongam para além da vida, protegendo a dignidade do corpo morto. O titular pode dispor gratuitamente do próprio corpo, no todo ou em parte, para fins científicos ou altruísticos (Artigo 14 do Código Civil de 2002). Essa declaração de vontade, feita em vida, pode ser livremente revogada a qualquer tempo.
+
+-- No entanto, para a doação de órgãos e tecidos para transplante, a Lei nº 9.434/1997 (Lei de Transplantes) confere à família o poder de decisão final. A autorização deve ser dada pelo cônjuge ou parentes maiores de idade, até o segundo grau (Artigo 4º da Lei), o que pode criar um conflito entre a vontade expressa do falecido e a de seus familiares.
+
+## Referências do Tema
+
+--- Artigo 12, parágrafo único, do Código Civil de 2002
+--- Artigo 14 do Código Civil de 2002
+--- Lei nº 9.434/1997 (Lei de Transplantes)
+
+## Pergunte pra I.A.
+
+  - Uma pessoa pode determinar em vida qual será o destino do seu corpo após a morte?
+  - O que diz o Artigo 14 do Código Civil sobre a disposição do corpo para fins científicos ou altruísticos?
+  - Para a doação de órgãos, qual vontade prevalece hoje no Brasil: a do falecido ou a da família?
+  - Quem são os familiares que podem autorizar a retirada de órgãos e tecidos de uma pessoa falecida?
+  - Discuta o conflito entre a autonomia da vontade (Artigo 14 do Código Civil de 2002) e o poder de decisão da família (Lei de Transplantes).
+
+### Fontes
+
+  - Lei nº 9.434, de 4 de fevereiro de 1997 - Presidência da República (planalto.gov.br)
+  - Doação de órgãos: o conflito entre a vontade do doador e a de sua família - Consultor Jurídico (Conjur)
+  - A tutela jurídica do corpo humano morto - https://www.google.com/search?q=Jus.com.br
+  - Direitos da personalidade post mortem - Migalhas
+  - A disposição do corpo para depois da morte - Âmbito Jurídico
+
+-----
+
+# Intervenções Cirúrgicas e o Consentimento Informado
+
+-- O princípio do consentimento informado é a materialização da autonomia do paciente na relação médica. Conforme o Artigo 15 do Código Civil de 2002, ninguém pode ser constrangido a submeter-se, com risco de vida, a tratamento médico ou intervenção cirúrgica, salvo em caso de iminente perigo de morte, onde o consentimento é presumido.
+
+-- O consentimento só é válido se for "informado", ou seja, precedido de explicações claras sobre o diagnóstico, os riscos, os benefícios e as alternativas ao procedimento. A violação do dever de informar pelo médico fere a autonomia do paciente e pode gerar o dever de indenizar, ainda que a cirurgia seja tecnicamente bem-sucedida.
+
+## Referências do Tema
+
+--- Artigo 15 do Código Civil de 2002
+--- Artigo 5º, II e III, da CF/88
+--- Código de Ética Médica (Capítulos IV e V)
+--- Enunciado 530 da VI Jornada de Direito Civil (CJF)
+
+## Pergunte pra I.A.
+
+  - O que é o princípio do consentimento informado e qual sua importância?
+  - Um médico pode operar um paciente contra a sua vontade? Quais as exceções legais?
+  - Quais informações são essenciais para que o consentimento seja considerado "esclarecido"?
+  - A ausência de consentimento informado pode gerar responsabilidade civil para o médico, mesmo que a cirurgia seja um sucesso?
+  - Discuta a situação das Testemunhas de Jeová e o direito de recusa à transfusão de sangue.
+
+### Fontes
+
+  - Consentimento informado: o que é e qual sua importância - Aurum
+  - O dever de informar e a responsabilidade civil médica - Migalhas
+  - A Responsabilidade Civil Médica pela Perda de uma Chance em face do Consentimento Informado - Superior Tribunal de Justiça (STJ)
+  - O Consentimento Informado na Atividade Médica e o Direito do Paciente - Jusbrasil
+  - Código de Ética Médica - Conselho Federal de Medicina (CFM)
+-----
 # O Direito à Integridade Física e as Cirurgias Estéticas
 
 -- A cirurgia estética é um exercício da autonomia privada sobre o próprio corpo, encontrando limites no direito à integridade física (Artigo 13 do Código Civil de 2002) e na vedação a procedimentos de risco desnecessário à vida ou à saúde (Artigo 15 do Código Civil de 2002). É lícita quando busca o aprimoramento estético sem violar a dignidade ou a saúde do paciente.
