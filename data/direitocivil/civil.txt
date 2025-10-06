@@ -1,4 +1,73 @@
 
+
+-----
+
+# Desconsideração da Personalidade da Pessoa Jurídica  
+-- A desconsideração da personalidade jurídica é medida excepcional para coibir o abuso de direito (Art. 50, CC/02), permitindo que, em casos de desvio de finalidade ou confusão patrimonial, os efeitos de certas obrigações sejam estendidos aos bens particulares dos sócios ou administradores.  
+-- A Lei 13.874/19 (Lei da Liberdade Econômica) endureceu os requisitos, distinguindo claramente o desvio de finalidade e a confusão patrimonial, com o objetivo de proteger a autonomia da pessoa jurídica e a segurança jurídica nas relações empresariais.
+
+# Referências do Tema  
+--- Art. 50, CC/02  
+--- Art. 1.052, §1º, CC/02  
+--- Lei 13.874/19  
+--- Art. 28, CDC  
+--- Art. 135, CTN  
+--- Enunciado 7 do CJF (Conselho da Justiça Federal)  
+--- Enunciado 282 da IV Jornada de Direito Civil  
+--- Súmula 284 do STJ  
+--- STJ – REsp: 1.729.076/SP
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de desconsideração da personalidade jurídica e seu caráter excepcional no ordenamento jurídico brasileiro.
+  - Diferencie "desvio de finalidade" e "confusão patrimonial" como requisitos para a desconsideração da personalidade jurídica, à luz da Lei 13.874/19.
+  - Discorra sobre a Teoria Maior e a Teoria Menor da desconsideração da personalidade jurídica, indicando qual delas é a regra no Código Civil e qual é aplicada no Direito do Consumidor e do Trabalho.
+  - Analise o impacto da Lei da Liberdade Econômica (Lei 13.874/19) nos requisitos para a desconsideração da personalidade jurídica, especialmente no Art. 50 do Código Civil.
+  - Explique o procedimento processual da desconsideração da personalidade jurídica, incluindo o incidente de desconsideração no CPC.
+  - Apresente um caso prático que demonstre a aplicação da desconsideração da personalidade jurídica por desvio de finalidade.
+  - Discuta a responsabilidade dos sócios e administradores cujos bens são atingidos pela desconsideração.
+  - Analise se a mera insolvência da pessoa jurídica é suficiente para a desconsideração de sua personalidade.
+  - Compare a desconsideração da personalidade jurídica com a responsabilidade solidária ou subsidiária dos sócios em certas sociedades.
+  - Explique a Súmula 284 do STJ e o Enunciado 7 do CJF sobre a desconsideração da personalidade jurídica inversa.
+
+-----
+
+# Associação  
+-- A associação é uma pessoa jurídica de direito privado (Art. 44, I, CC/02) formada pela união de pessoas que se organizam para fins não econômicos (Art. 53, CC/02), como culturais, religiosos, recreativos ou assistenciais. Não há, portanto, distribuição de lucros entre seus associados.  
+-- Caracteriza-se pela *affectio societatis* e pela liberdade de associação (Art. 5º, XVII a XXI, CF). Seus associados têm direitos e deveres definidos no estatuto, e sua exclusão deve seguir o devido processo legal, garantindo ampla defesa.
+
+# Referências do Tema  
+--- Art. 5º, XVII, CF  
+--- Art. 5º, XVIII, CF  
+--- Art. 5º, XIX, CF  
+--- Art. 5º, XX, CF  
+--- Art. 5º, XXI, CF  
+--- Art. 44, I, CC/02  
+--- Art. 53, CC/02  
+--- Art. 54, CC/02  
+--- Art. 55, CC/02  
+--- Art. 56, CC/02  
+--- Art. 57, CC/02  
+--- Art. 58, CC/02  
+--- Art. 59, CC/02  
+--- Art. 60, CC/02  
+--- Art. 61, CC/02  
+--- STJ – REsp 1.839.889-DF
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de associação e suas principais características, destacando a finalidade não econômica.
+  - Discorra sobre a liberdade de associação garantida pela Constituição Federal (Art. 5º, XVII a XXI) e suas implicações.
+  - Analise os requisitos para a constituição de uma associação, incluindo a elaboração do estatuto e o registro.
+  - Diferencie a associação da sociedade, com foco na finalidade (não econômica vs. econômica) e na distribuição de lucros.
+  - Explique os direitos e deveres dos associados, e as regras para sua exclusão, garantindo o devido processo legal.
+  - Apresente um caso prático que ilustre o funcionamento de uma associação e as relações entre seus membros.
+  - Discuta a responsabilidade da associação por atos de seus administradores e associados.
+  - Analise a possibilidade de uma associação ter fins lucrativos indiretamente (e.g., venda de produtos para manutenção).
+  - De que forma o patrimônio da associação se forma e é administrado, e qual seu destino em caso de dissolução.
+  - Explique a distinção entre associação civil e organização não governamental (ONG).
+
+
 -----
 
 # Comoriência  
