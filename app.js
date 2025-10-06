@@ -6,7 +6,6 @@
   const $$ = (q, el=document) => Array.from(el.querySelectorAll(q));
 
   let TEMAS = [];
-  let GLOSS = null;
   let activeCat = 'Todos'; // filtro de categoria nas sugestões
 
   const SAVED_KEY        = 'meujus:saved';
@@ -113,27 +112,7 @@
                       .normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
   const isQA=(nm)=> /\bpergunte\s+pra\s+i\s*\.?\s*a\b/.test(nm) || (/estude\s+com\s+o\s+google/.test(nm) && /\bi\s*\.?\s*a\b/.test(nm));
 
-  let GLOSS_PATTERNS=[];
-  async function loadGlossario(){
-    if(GLOSS!==null) return;
-    try{
-      const raw = await fetchText('data/glossario.txt');
-      const blocks = splitThemesByDelim(raw);
-      GLOSS = blocks.map(b=>{
-        const t=b.match(/^\s*@termo:\s*(.+)$/m)?.[1]?.trim();
-        const d=b.match(/^\s*@def:\s*(.+)$/m)?.[1]?.trim();
-        if(!t||!d) return null; return {termo:t,def:d};
-      }).filter(Boolean);
-      GLOSS_PATTERNS = GLOSS.map(g=>({ re:new RegExp(`\\b${g.termo.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}\\b`,'i'), def:g.def }));
-    }catch{ GLOSS=[]; GLOSS_PATTERNS=[]; }
-  }
-  function markGlossarioInHTML(html){
-    if(!GLOSS_PATTERNS.length) return html; let out=html;
-    for(const g of GLOSS_PATTERNS){ out = out.replace(g.re, m=>`<abbr title="${escapeHTML(g.def)}">${escapeHTML(m)}</abbr>`); }
-    return out;
-  }
-
-  // regex de destaque: palavras com ≥4 letras, ignora números
+  // ===== Destaque de palavras (>=4 letras)
   function _buildHighlightRegex(q){
     const parts = String(q||'')
       .toLowerCase()
@@ -495,6 +474,186 @@
     }
   }
 
+  /* ===== RECONHECIMENTO DE CITAÇÕES E POPOVER ===== */
+
+  // Normalizador e padrões
+  const normSpace = s => String(s||'').replace(/\s+/g,' ').trim();
+
+  const RX = {
+    lei: /\bLei\s*(?:n[ºo]\s*)?\d{1,5}(?:\.\d+)?\/\d{2,4}\b/gi,
+    sumula: /\bS[úu]mula\s*\d+\s*(?:STJ|STF)\b/gi,
+    enunciado: /\bEnunciado\s*\d+\s*(?:CJF|FPPC|ENFAM)?\b/gi,
+    artigo: new RegExp(
+      String.raw`\b(?:art(?:s?)\.?|artigos?)\s*` +
+      String.raw`(\d+[A-Za-z]?)` +
+      String.raw`(?:\s*,?\s*§\s*\d+º?)?` +
+      String.raw`(?:\s*,?\s*[IVXLCDM]+)?` +
+      String.raw`(?:\s*,?\s*["“”'a-z])?` +
+      String.raw`(?:\s*(?:,|\bem\b)?\s*(?:CF/?88|CF|CC|CPC|CP|LINDB))?`,
+      'gi'
+    ),
+    faixa: /\barts?\.\s*\d+\s*(?:-|a)\s*\d+(?:\s*(?:,|\bem\b)?\s*(?:CF\/?88|CF|CC|CPC|CP|LINDB))?/gi
+  };
+
+  function kindFor(text){
+    const t = text.toUpperCase();
+    if (/S[ÚU]MULA/.test(t)) return {kind:'sumula', label:'Consultar Súmula'};
+    if (/ENUNCIADO/.test(t)) return {kind:'enunciado', label:'Consultar Enunciado'};
+    if (/LEI\s*/.test(t)) return {kind:'lei', label:'Consultar Lei'};
+    return {kind:'artigo', label:'Consultar Artigo'};
+  }
+  function describeFor(text){
+    const s = normSpace(text);
+    if (/\bCF\b/i.test(s)) return s.replace(/\bCF\b/gi,'Constituição');
+    if (/\bCF\/?88\b/i.test(s)) return s.replace(/\bCF\/?88\b/gi,'Constituição de 1988');
+    if (/\bCC\b/i.test(s)) return s.replace(/\bCC\b/gi,'Código Civil');
+    if (/\bCPC\b/i.test(s)) return s.replace(/\bCPC\b/gi,'Código de Processo Civil');
+    if (/\bCP\b/i.test(s)) return s.replace(/\bCP\b/gi,'Código Penal');
+    return s;
+  }
+  function urlGoogleIA(prompt, context){
+    const q = `${prompt} Contexto: ${context}`;
+    return `https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}`;
+  }
+  function urlPlanalto(desc){
+    return `https://www.google.com/search?q=${encodeURIComponent(`site:planalto.gov.br ${desc}`)}`;
+  }
+
+  function legalRefify(raw, contextSrc){
+    const patterns = [RX.faixa, RX.artigo, RX.lei, RX.sumula, RX.enunciado];
+    let html = escapeHTML(raw);
+    for (const pat of patterns){
+      html = html.replace(pat, (m)=>{
+        const meta = kindFor(m);
+        const desc = describeFor(m);
+        const ctx  = normSpace(contextSrc || raw);
+        const dataAttr =
+          `data-kind="${escapeHTML(meta.kind)}" `+
+          `data-label="${escapeHTML(meta.label)}" `+
+          `data-desc="${escapeHTML(desc)}" `+
+          `data-ctx="${escapeHTML(ctx)}"`;
+        return (
+          `<span class="ref-chip" ${dataAttr}>` +
+            `<button class="ref-btn" type="button">${escapeHTML(meta.label)}</button>` +
+            `<span class="ref-mark" title="Ajustar contexto">▢</span>` +
+            `<span class="ref-text">${escapeHTML(m)}</span>` +
+          `</span>`
+        );
+      });
+    }
+    return html;
+  }
+
+  let __refPopover = null;
+  function closeRefPopover(){ if(__refPopover){ __refPopover.remove(); __refPopover=null; } }
+  function openRefPopover(anchor, kind, label, desc, ctx){
+    closeRefPopover();
+
+    const pop = document.createElement('div');
+    pop.className = 'ref-pop';
+    pop.innerHTML = `
+      <div class="ref-pop-row t">${escapeHTML(desc)}</div>
+      <div class="ref-pop-row">
+        <button class="ref-go-ia">Google I.A.</button>
+        <button class="ref-go-planalto">Planalto</button>
+      </div>
+      <div class="ref-pop-row sub">
+        <span>Contexto:</span>
+        <button class="ref-ctx-minus" title="Reduzir contexto">−</button>
+        <button class="ref-ctx-plus" title="Ampliar contexto">+</button>
+      </div>
+    `;
+    document.body.appendChild(pop);
+    __refPopover = pop;
+
+    const r = anchor.getBoundingClientRect();
+    const top = r.bottom + window.scrollY + 6;
+    const left = Math.max(8, Math.min(window.scrollX + r.left, window.scrollX + document.documentElement.clientWidth - pop.offsetWidth - 8));
+    pop.style.top  = `${top}px`;
+    pop.style.left = `${left}px`;
+
+    const chip = anchor.closest('.ref-chip');
+    const baseCtx = chip?.getAttribute('data-ctx') || ctx || '';
+    const baseDesc= chip?.getAttribute('data-desc')|| desc||'';
+    let delta = Number(chip?.dataset.delta||'0');
+
+    function ctxSlice(){
+      const span = Math.max(80, 160 + delta*60);
+      const c = baseCtx;
+      if (c.length <= span) return c;
+      const at = Math.max(0, c.indexOf(baseDesc));
+      const start = Math.max(0, at - Math.floor((span - baseDesc.length)/2));
+      return c.slice(start, start + span);
+    }
+
+    pop.querySelector('.ref-ctx-minus')?.addEventListener('click', ()=>{
+      delta = Math.max(-3, delta-1);
+      chip.dataset.delta = String(delta);
+    });
+    pop.querySelector('.ref-ctx-plus')?.addEventListener('click', ()=>{
+      delta = Math.min(6, delta+1);
+      chip.dataset.delta = String(delta);
+    });
+
+    pop.querySelector('.ref-go-ia')?.addEventListener('click', ()=>{
+      const kindName = (kind==='sumula'?'Súmula': kind==='enunciado'?'Enunciado': kind==='lei'?'Lei':'Artigo');
+      const prompt = `Explique de forma objetiva com base em fontes jurídicas. Cite fontes ao final. ${kindName}: "${baseDesc}".`;
+      const url = urlGoogleIA(prompt, ctxSlice());
+      window.open(url, '_blank', 'noopener');
+      closeRefPopover();
+    });
+
+    pop.querySelector('.ref-go-planalto')?.addEventListener('click', ()=>{
+      const url = urlPlanalto(baseDesc);
+      window.open(url, '_blank', 'noopener');
+      closeRefPopover();
+    });
+
+    setTimeout(()=>{
+      const onDoc = (e)=>{
+        if (!pop.contains(e.target)) { closeRefPopover(); document.removeEventListener('mousedown', onDoc, true); }
+      };
+      document.addEventListener('mousedown', onDoc, true);
+    }, 0);
+  }
+
+  // Delegação global para chips
+  document.addEventListener('click', (e)=>{
+    const btn = e.target.closest('.ref-btn, .ref-mark');
+    if(!btn) return;
+    const chip = btn.closest('.ref-chip'); if(!chip) return;
+    const kind  = chip.getAttribute('data-kind')  || 'artigo';
+    const label = chip.getAttribute('data-label') || 'Consultar';
+    const desc  = chip.getAttribute('data-desc')  || '';
+    const ctx   = chip.getAttribute('data-ctx')   || '';
+    openRefPopover(btn, kind, label, desc, ctx);
+  });
+  window.addEventListener('hashchange', closeRefPopover);
+  window.addEventListener('scroll', ()=> closeRefPopover(), {passive:true});
+
+  // Injeta CSS mínimo dos chips/popover
+  function injectRefStyles(){
+    if (document.getElementById('ref-css')) return;
+    const css = `
+      .ref-chip{display:inline-flex;align-items:center;gap:.35rem;padding:.2rem .35rem;border-radius:.5rem;background:#f4f7ff;border:1px solid #dbe5ff}
+      .ref-chip .ref-text{ text-decoration: underline dotted; text-underline-offset:.15em; }
+      .ref-chip .ref-btn{ font:inherit;font-size:.78rem;line-height:1;padding:.28rem .5rem;border-radius:.4rem;border:1px solid #c7d6ff;background:#eaf0ff;cursor:pointer}
+      .ref-chip .ref-btn:hover{background:#e1eaff}
+      .ref-chip .ref-mark{font-size:.8rem;color:#3973ff;cursor:pointer;user-select:none}
+      .ref-pop{position:absolute;z-index:9999;background:#fff;border:1px solid #cfd7e6;border-radius:.6rem;box-shadow:0 10px 24px rgba(0,0,0,.12);min-width:220px;max-width:min(92vw,360px);padding:.5rem}
+      .ref-pop .ref-pop-row{display:flex;gap:.5rem;align-items:center;margin:.35rem 0;flex-wrap:wrap}
+      .ref-pop .ref-pop-row.t{font-weight:600}
+      .ref-pop .ref-pop-row.sub{font-size:.85rem;color:#546;opacity:.9}
+      .ref-pop button{font:inherit;font-size:.85rem;padding:.35rem .6rem;border-radius:.4rem;border:1px solid #d0d7ff;background:#eef2ff;cursor:pointer}
+      .ref-pop button:hover{background:#e5ebff}
+      @media (max-width:768px){.ref-pop{left:4vw !important;right:4vw !important;max-width:92vw}}
+    `;
+    const style = document.createElement('style');
+    style.id = 'ref-css';
+    style.textContent = css;
+    document.head.appendChild(style);
+  }
+
   /* ===== Home ===== */
   function renderHome(){
     const actionsEl=$('#actions'); const titleEl=$('#themeTitle'); const contentEl=$('#content');
@@ -606,12 +765,12 @@
   }
 
   async function loadTema(slug){
+    injectRefStyles();
+
     const titleEl=$('#themeTitle'); const contentEl=$('#content'); const actionsEl=$('#actions');
     contentEl.textContent='Carregando…';
     const meta=TEMAS.find(t=>t.slug===slug); const path=meta?.path; const frag=meta?.frag;
     if(!path){ contentEl.textContent='Tema não encontrado.'; toast('Tema não encontrado','error'); return; }
-
-    await loadGlossario();
 
     try{
       const raw=await fetchText(path);
@@ -653,13 +812,15 @@
       // montar chips pós-busca abaixo da topbar (requer #postAc no HTML)
       renderPostSearchChips();
 
-      const introRaw = pick.intro.length ? escapeHTML(pick.intro.join(' ')) : '';
-      const introHTML = shouldHighlight ? highlightHTML(introRaw, lastSearch.q) : introRaw;
+      // ===== INTRO E PERGUNTAS COM MARCAÇÃO DE CITAÇÕES =====
+      const introRawSrc = pick.intro.length ? pick.intro.join(' ') : '';
+      const introHTMLRaw = legalRefify(introRawSrc, introRawSrc);
+      const introHTML = shouldHighlight ? highlightHTML(introHTMLRaw, lastSearch?.q||'') : introHTMLRaw;
 
-      const qList=(pick.ask||[]).map(q=>{
-        const qEsc = escapeHTML(q);
-        const qHi  = shouldHighlight ? highlightHTML(qEsc, lastSearch.q) : qEsc;
-        return `<li><a href="https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}" target="_blank" rel="noopener">${qHi}</a></li>`;
+      const qItems = (pick.ask||[]).map(q => {
+        const qHTMLRaw = legalRefify(q, q);
+        const qHTML = shouldHighlight ? highlightHTML(qHTMLRaw, lastSearch?.q||'') : qHTMLRaw;
+        return `<li>${qHTML}</li>`;
       }).join('');
 
       $('#content').innerHTML=`
@@ -667,7 +828,7 @@
           ${introHTML ? `<p class="ubox-intro">${introHTML}</p>` : ''}
           <section class="ubox-section">
             <h3 class="ubox-sub">Estude com o Google I.A.</h3>
-            ${qList ? `<ol class="q-list">${qList}</ol>` : `<p class="muted">Sem perguntas cadastradas.</p>`}
+            ${qItems ? `<ol class="q-list">${qItems}</ol>` : `<p class="muted">Sem perguntas cadastradas.</p>`}
           </section>
         </article>`;
 
