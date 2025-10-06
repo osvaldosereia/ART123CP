@@ -2,8 +2,131 @@
 
 
 
+------
+# Neoconstitucionalismo
+O Neoconstitucionalismo é um movimento de revalorização do Direito Constitucional, surgido no final do século XX. Caracteriza-se pela constitucionalização do direito, força normativa da Constituição e dos princípios jurídicos, efetivação dos Direitos Fundamentais (especialmente a dignidade humana - Art. 1º, III, CF), reaproximação entre Direito, Ética, Justiça e Moral, e judicialização das políticas. Implica uma releitura de diversos institutos jurídicos, inclusive no Direito Civil.
+
+## Pergunte pra I.A.
+
+  - Quais são os três marcos principais do Neoconstitucionalismo e como eles contribuem para a compreensão do Direito contemporâneo?
+  - De que forma a "constitucionalização do direito" se manifesta na relação entre a Constituição e os demais ramos do Direito, como o Direito Civil?
+  - Explique o conceito de "eficácia irradiante dos direitos fundamentais" no contexto do Neoconstitucionalismo e sua aplicação nas relações entre particulares.
+  - Como o pós-positivismo, enquanto marco filosófico do Neoconstitucionalismo, se diferencia do jusnaturalismo e do positivismo estrito?
+  - Quais são as principais características do Neoconstitucionalismo e como elas impactam a atuação dos operadores do direito?
+  - De que maneira a valorização da Dignidade da Pessoa Humana (Art. 1º, III, CF) se tornou o núcleo axiológico do sistema jurídico no Neoconstitucionalismo?
+  - Cite exemplos práticos da releitura de institutos do Direito Civil à luz da Dignidade da Pessoa Humana, conforme a perspectiva neoconstitucionalista.
+  - Como a "judicialização das políticas das relações sociais" se insere como uma característica do Neoconstitucionalismo?
+  - No contexto do Neoconstitucionalismo, qual a importância da "nova teoria da norma jurídica" e do reconhecimento da força normativa dos princípios?
+  - Discuta o papel do Poder Judiciário na concretização da Constituição sob a ótica do Neoconstitucionalismo, considerando a "nova teoria das fontes".
+  - A "nova teoria da interpretação", com seus novos métodos, é uma consequência do Neoconstitucionalismo. Quais são esses métodos e como eles se aplicam?
+  - Como o princípio da solidariedade social se relaciona com o Neoconstitucionalismo e a releitura dos institutos do Direito Civil?
+  - De que forma a "igualdade substancial" é promovida pelo Neoconstitucionalismo nas relações privadas?
+  - Aponte os desafios que o Neoconstitucionalismo pode trazer para a segurança jurídica e para a previsibilidade das decisões.
+  - Compare a abordagem do Código Civil de 1916 (liberalismo econômico) com a do Código Civil de 2002, influenciado pelo Neoconstitucionalismo, em relação a conceitos como propriedade e contrato.
+  - Qual a relevância da distinção entre "vínculo obrigacional" e "relação jurídica" na perspectiva neoconstitucionalista das obrigações?
+  - Aponte a influência do Neoconstitucionalismo em debates como a união homoafetiva e a proteção do patrimônio mínimo.
+  - Como o princípio da intervenção mínima do Estado nas relações privadas pode dialogar ou entrar em conflito com o Neoconstitucionalismo e a busca pela efetivação dos direitos fundamentais?
 
 
+-----
+# Técnica de Ponderação
+A técnica de ponderação é um método de resolução de conflitos entre princípios jurídicos ou direitos fundamentais, que visa encontrar a solução mais adequada para o caso concreto. No contexto do neoconstitucionalismo, ela busca harmonizar valores e princípios, evitando que um prevaleça de forma absoluta sobre o outro. É essencial para a eficácia irradiante dos direitos fundamentais, como a dignidade da pessoa humana (Art. 1º, III, CF), e para a constitucionalização do direito. O Enunciado 274 da IV Jornada de Direito Civil (CJF) sobre direitos da personalidade, em caso de colisão, recomenda sua aplicação.
+
+## Pergunte pra I.A.
+
+  - Explique o que é a técnica de ponderação e qual sua importância na resolução de conflitos jurídicos, especialmente no âmbito do neoconstitucionalismo e da colisão de princípios e direitos fundamentais.
+  - De que forma a técnica da ponderação se relaciona com o princípio da Dignidade da Pessoa Humana (Art. 1º, III, CF) e a ideia de eficácia irradiante dos direitos fundamentais no Direito Civil?
+  - Como o Enunciado 274 da IV Jornada de Direito Civil (CJF) exemplifica a aplicação da técnica de ponderação na resolução de conflitos entre direitos da personalidade?
+  - Quais são os principais desafios práticos na aplicação da técnica de ponderação por parte dos operadores do direito em casos de colisão de normas e princípios?
+  - Diferencie a técnica de ponderação de outros métodos de resolução de antinomias jurídicas, como os critérios hierárquico, cronológico e da especialidade.
+  - A aplicação da ponderação pode gerar insegurança jurídica? Quais mecanismos ou limites podem ser utilizados para mitigar esse risco?
+  - Em que medida a Lei de Introdução às Normas do Direito Brasileiro (LINDB), especialmente após as alterações da Lei 13.655/18, oferece diretrizes para a aplicação da técnica de ponderação no Direito Público?
+  - Quais são os papéis da doutrina e da jurisprudência na consolidação e no desenvolvimento da técnica de ponderação no ordenamento jurídico brasileiro?
+  - Analisando casos concretos em que houve colisão de princípios (ex: liberdade de expressão vs. direito à privacidade), como a técnica de ponderação foi aplicada para se chegar a uma solução justa?
+  - A ponderação é compatível com o positivismo jurídico ou é uma característica exclusiva do pós-positivismo? Justifique.
+  - Como a "Teoria do Diálogo das Fontes" pode complementar a técnica da ponderação na resolução de conflitos entre normas jurídicas?
+  - Quais são as críticas mais comuns à técnica de ponderação e como elas são abordadas pela doutrina e jurisprudência?
+  - De que forma a técnica de ponderação contribui para a concretização da justiça social e para a adaptação do direito às mudanças sociais e tecnológicas?
+  - Em um cenário de constitucionalização do direito, qual o impacto da técnica de ponderação na autonomia dos diversos ramos do direito, como o Direito Civil e o Direito Administrativo?
+  - Como a atuação dos tribunais superiores (STF e STJ) tem influenciado a aplicação e a compreensão da técnica de ponderação no Brasil?
+  - A técnica de ponderação pode ser aplicada em todos os ramos do direito ou existem áreas em que sua utilização é mais restrita ou vedada?
+  - Quais habilidades são mais desenvolvidas nos estudantes de direito que aprendem a aplicar a técnica de ponderação para a prática da advocacia e para provas de concurso?
+  - Considerando a complexidade do tema, quais recursos didáticos (além de explicações e perguntas) poderiam auxiliar um estudante a dominar a técnica de ponderação?
+
+-----
+# Pessoa Jurídica de Direito Público
+
+A pessoa jurídica de direito público é um ente que integra a Administração Pública Direta (União, Estados, DF, Municípios - Art. 44, I e II, CC) ou Indireta (autarquias e fundações públicas de direito público - Art. 44, IV, CC). Sua existência legal começa com a vigência da lei que a instituiu (Art. 45, CC). Gozam de prerrogativas como imunidade tributária recíproca (Art. 150, VI, "a", CF) e regime de precatórios (Art. 100, CF), mas também se sujeitam a deveres como a responsabilidade civil objetiva (Art. 37, § 6º, CF). A súmula 227 do STJ, ao reconhecer dano moral para PJ, reforça a amplitude de seus direitos da personalidade.
+
+## Pergunte pra I.A.
+
+  - Quais são as principais características que distinguem uma pessoa jurídica de direito público de uma pessoa jurídica de direito privado no ordenamento jurídico brasileiro?
+  - De que forma a existência legal das pessoas jurídicas de direito público é estabelecida, e qual a diferença em relação ao início da personalidade jurídica das pessoas de direito privado, conforme o Código Civil?
+  - Explique o alcance e a razão de ser da imunidade tributária recíproca (Art. 150, VI, "a", CF) para as pessoas jurídicas de direito público, e como ela se manifesta na prática.
+  - Como o regime de precatórios (Art. 100, CF) se aplica à execução de dívidas das pessoas jurídicas de direito público, e quais são os prazos e procedimentos envolvidos?
+  - Analise a responsabilidade civil objetiva (Art. 37, § 6º, CF) das pessoas jurídicas de direito público, diferenciando-a da responsabilidade subjetiva e abordando suas excludentes.
+  - A Súmula 227 do STJ reconhece a possibilidade de dano moral para a pessoa jurídica. De que maneira esse entendimento se aplica às pessoas jurídicas de direito público, considerando a natureza de seus bens e a proteção da dignidade da pessoa humana?
+  - Quais são as prerrogativas e os deveres específicos das autarquias e fundações públicas de direito público em comparação com as pessoas jurídicas de direito público da Administração Direta?
+  - Discorra sobre o conceito de "autonomia" das pessoas jurídicas de direito público, abordando a autonomia gerencial, orçamentária e financeira, e como ela se relaciona com o controle exercido pelo ente criador.
+  - Em que situações o Poder Judiciário pode intervir nos atos praticados pelas pessoas jurídicas de direito público, respeitando o princípio da separação de poderes?
+  - Como as inovações legislativas e os entendimentos jurisprudenciais mais recentes têm impactado a definição e o regime jurídico das pessoas jurídicas de direito público no Brasil?
+  - Quais os desafios na aplicação do princípio da função social às pessoas jurídicas de direito público, considerando a primazia do interesse público e a indisponibilidade do patrimônio?
+  - De que forma a distinção entre pessoa jurídica de direito público e de direito privado da Administração Indireta (empresas públicas e sociedades de economia mista) afeta o regime jurídico aplicável (licitações, concursos, etc.)?
+  - Explique as implicações da desconsideração da personalidade jurídica no contexto das pessoas jurídicas de direito público e se há alguma peculiaridade em sua aplicação.
+  - Quais são os principais "direitos da personalidade" que as pessoas jurídicas de direito público podem titularizar, e como eles se distinguem daqueles atribuídos às pessoas naturais?
+  - Aborde a questão da "desafetação" e "afetação" de bens públicos e como isso influencia a aplicação do regime jurídico desses bens pelas pessoas jurídicas de direito público.
+
+-----
+# Pessoa Jurídica de Direito Privado
+--- A pessoa jurídica de direito privado é um ente dotado de personalidade jurídica, criada pela coletividade de pessoas ou bens, com finalidade lícita e não econômica (associações e fundações) ou com intuito de lucro (sociedades). Sua existência legal começa com o registro de seus atos constitutivos (Art. 45 CC). Pode sofrer dano moral (Súmula 227 STJ) e sua autonomia patrimonial é um instrumento de segregação de riscos, visando estimular empreendimentos (Art. 49-A CC, incluído pela Lei 13.874/2019). A Lei 14.195/2021 transformou EIRELI em sociedade limitada unipessoal (Art. 1.052, §§ 1º e 2º, CC), simplificando a constituição por um único indivíduo. A responsabilidade por atos dos administradores é da pessoa jurídica, nos limites de seus poderes (Art. 47 CC), mas a teoria da aparência mitiga essa regra em relação a terceiros de boa-fé (Enunciado 147 da III Jornada de Direito Civil).
+
+## Pergunte pra I.A.
+
+  - Quais são os elementos essenciais para a constituição de uma pessoa jurídica de direito privado no ordenamento jurídico brasileiro, conforme o Código Civil?
+  - De que forma a Súmula 227 do STJ, ao reconhecer a possibilidade de dano moral à pessoa jurídica, se alinha com a proteção dos direitos da personalidade e a dignidade da pessoa humana?
+  - Explique o impacto da Lei da Liberdade Econômica (Lei 13.874/2019) na autonomia patrimonial da pessoa jurídica de direito privado e quais os objetivos dessa mudança legislativa.
+  - Diferencie as principais espécies de pessoas jurídicas de direito privado (associações, sociedades e fundações), destacando suas finalidades e características distintivas.
+  - Analisando o Art. 47 do Código Civil, como a teoria da aparência pode mitigar a regra da responsabilidade da pessoa jurídica pelos atos de seus administradores, especialmente em relação a terceiros de boa-fé?
+  - Discorra sobre a relevância da distinção entre os conceitos de "animus lucrandi" e "animus distribuendi" para a classificação das pessoas jurídicas de direito privado.
+  - Como a extinção da EIRELI e a criação da sociedade limitada unipessoal, introduzidas pela Lei 14.195/2021, contribuíram para a simplificação da constituição de pessoas jurídicas no Brasil?
+  - Quais são os desafios e as críticas doutrinárias e jurisprudenciais em relação à aplicação da desconsideração da personalidade jurídica no Código Civil, considerando a proteção da autonomia patrimonial promovida pela Lei da Liberdade Econômica?
+  - Em que medida a função social da pessoa jurídica, conforme os valores constitucionais, pode influenciar sua interpretação e aplicação no Direito Civil contemporâneo?
+  - Compare a teoria da realidade técnica da pessoa jurídica, adotada pelo Código Civil, com as correntes formalista e realista, destacando como essa abordagem busca um equilíbrio entre a ficção legal e a existência material da pessoa jurídica.
+
+-----
+# Princípio da Intervenção Mínima
+-- O Princípio da Intervenção Mínima, também conhecido como *ultima ratio*, preconiza que o Direito Penal deve ser a última ferramenta a ser utilizada pelo Estado para dirimir conflitos sociais. Isso significa que, somente quando outros ramos do Direito (como o Direito Civil ou Administrativo) se mostrarem insuficientes para proteger os bens jurídicos mais relevantes, é que o Direito Penal deverá ser acionado. No contexto da Administração Pública, este princípio se alinha à ideia de que o Estado deve priorizar meios menos gravosos para manter o controle social, evitando a pena criminal sempre que houver alternativas. A Lei de Liberdade Econômica (Lei 13.874/19), ao buscar reduzir a intervenção estatal nas relações privadas, dialoga com este princípio, promovendo a desjudicialização e a autonomia individual. A sua aplicação visa garantir que a punição criminal seja utilizada apenas em casos de real necessidade, preservando a liberdade individual e a subsidiariedade da atuação estatal.
+
+## Pergunte pra I.A.
+
+  - Qual a definição básica do Princípio da Intervenção Mínima e em que contexto ele se aplica no ordenamento jurídico brasileiro?
+  - De que forma o Princípio da Intervenção Mínima se relaciona com a ideia de o Direito Penal ser a "ultima ratio"?
+  - Cite exemplos de situações em que outros ramos do Direito (Civil ou Administrativo) podem ser suficientes para resolver conflitos, evitando a intervenção do Direito Penal.
+  - Como a Lei de Liberdade Econômica (Lei 13.874/19) e o princípio da intervenção mínima se complementam na redução da intervenção estatal nas relações privadas?
+  - Quais são os principais argumentos que justificam a aplicação do Princípio da Intervenção Mínima para a preservação da liberdade individual?
+  - A adoção do Princípio da Intervenção Mínima pode gerar um ambiente de maior impunidade? Quais mecanismos podem ser utilizados para mitigar esse risco?
+  - Em que medida a subsidiariedade do Direito Penal, decorrente do Princípio da Intervenção Mínima, influencia a criação de novas leis penais?
+  - Como a jurisprudência brasileira tem aplicado o Princípio da Intervenção Mínima, e quais são os principais desafios de sua concretização em um cenário de alta criminalidade?
+  - Analise a relação entre o Princípio da Intervenção Mínima e o Princípio da Insignificância, discutindo como ambos contribuem para a racionalização do Direito Penal.
+  - Compare a aplicação do Princípio da Intervenção Mínima no Direito Penal com sua relevância em outros ramos do Direito, como o Direito Administrativo Sancionador, identificando semelhanças e diferenças nos limites da atuação estatal.
+
+-----
+
+# Doação feita a nascituro
+-- A doação feita ao nascituro é um tema relevante no Direito Civil que envolve o início da personalidade jurídica e a proteção de direitos futuros. Conforme o Art. 542 do Código Civil, "a doação feita ao nascituro valerá, sendo aceita pelo seu representante legal". Para sua validade, a doação a nascituro depende da aceitação do representante e, crucialmente, do nascimento com vida. A jurisprudência e a doutrina debatem qual teoria da personalidade jurídica melhor se alinha a essa situação. Embora o Art. 2º do Código Civil adote a Teoria Natalista ("a personalidade civil da pessoa começa do nascimento com vida"), a proteção de direitos do nascituro, como na doação, é explicada pela Teoria Concepcionista Moderada. Esta teoria distingue a personalidade jurídica formal (direitos da personalidade, que se iniciam com a concepção) da personalidade jurídica material (direitos patrimoniais, que se iniciam com o nascimento com vida). Desse modo, o nascituro, mesmo sem personalidade jurídica plena, tem seus direitos patrimoniais assegurados desde a concepção, mas sua concretização fica condicionada ao nascimento com vida.
+
+## Pergunte pra I.A.
+
+  - Qual a condição primordial para a validade de uma doação feita a um nascituro, conforme o Código Civil brasileiro?
+  - O que o Art. 542 do Código Civil estabelece sobre a aceitação da doação destinada ao nascituro?
+  - De que forma a Teoria Natalista, expressa no Art. 2º do Código Civil, se relaciona com a validade da doação ao nascituro?
+  - Explique como a Teoria Concepcionista Moderada elucida a proteção dos direitos do nascituro no contexto da doação, diferenciando personalidade jurídica formal e material.
+  - Qual o impacto prático do requisito de "nascimento com vida" para que a doação feita ao nascituro se torne plenamente eficaz?
+  - Considerando que o nascituro não possui personalidade jurídica plena para a Teoria Natalista, como a legislação civil consegue salvaguardar seus direitos em casos como a doação?
+  - Além da doação, cite outro exemplo em que o ordenamento jurídico brasileiro confere proteção ao nascituro, mesmo antes do nascimento com vida, e explique a justificativa para tal proteção.
+  - De que maneira a discussão sobre o início da personalidade jurídica (Teoria Natalista vs. Teoria Concepcionista) influencia a interpretação e aplicação das normas sobre doação ao nascituro?
+  - Se um nascituro, beneficiário de uma doação, não nascer com vida, qual o destino dos bens doados e a justificativa legal para tal desfecho?
+  - Analise criticamente a aparente "incoerência" entre o Art. 2º do Código Civil e a proteção conferida ao nascituro em diversos institutos jurídicos, propondo uma solução interpretativa que harmonize o sistema.
 
 -----
 
