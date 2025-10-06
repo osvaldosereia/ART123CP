@@ -227,3 +227,14 @@ mark{
 .q-list li{ counter-increment: none !important; }
 .q-list li::before,
 .q-list li::after{ content: none !important; }  /* desliga números/badges custom */
+
+/* Mobile: dropdown de sugestões com 90% da largura */
+@media (max-width: 768px){
+  .suggestions,
+  .suggestions.pop{
+    width: 90vw !important;
+    max-width: 90vw !important;
+    left: 5vw !important;     /* centraliza */
+    right: auto !important;
+  }
+}
