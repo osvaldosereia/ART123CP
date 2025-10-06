@@ -1,3 +1,4 @@
+<script>
 // SPA com página inicial minimalista abaixo da topbar.
 // Rotas: #/ (home) • #/tema/:slug • #/sobre
 
@@ -29,7 +30,6 @@
 
   const escRx = x => x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
-  // Gera padrão que casa singular/plural comum em PT
   function pluralRegexToken(w){
     if(w.length<=2) return escRx(w);
     const stem2 = w.slice(0,-2);
@@ -42,7 +42,7 @@
     if(/il$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'is')})`;
     if(/ol$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'ois')})`;
     if(/ul$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'uis')})`;
-    return `(?:${escRx(w)}s?)`; // fallback simples
+    return `(?:${escRx(w)}s?)`;
   }
 
   function _hitPT(hayRaw, qRaw){
@@ -369,284 +369,223 @@
     return temas;
   }
 
-  /* ===== Helpers: drawer e categorias ===== */
-  function openDrawer(){
-    const d = document.getElementById('drawer');
-    if(d && !d.classList.contains('open')){
-      const btn = document.getElementById('btnMenu');
-      btn?.click();
-    }
-  }
-  function expandSectionByLabel(label){
-    const btns = $$('.drawer .cat-btn');
-    const btn = btns.find(b => (b.textContent||'').trim().startsWith(label));
-    if(!btn) return;
-    const li = btn.parentElement;
-    const ul = li?.querySelector('.sublist');
-    btn.setAttribute('aria-expanded','true');
-    if(ul) ul.hidden=false;
-  }
-  function expandSaved(){ expandSectionByLabel('Salvos'); }
-  function expandCategory(name){ expandSectionByLabel(name); }
+  /* ===== RECONHECIMENTO DE CITAÇÕES (intro + perguntas) ===== */
 
-  /* ===== Menu lateral ===== */
-  function renderMenu(){
-    const menu=$('#menuList'); if(!menu) return;
-    menu.innerHTML='';
-
-    // 1) Sobre
-    const liSobre=document.createElement('li');
-    const btnSobre=document.createElement('button');
-    btnSobre.className='cat-btn'; btnSobre.type='button';
-    btnSobre.innerHTML=`<span>Sobre</span><span class="caret">▸</span>`;
-    btnSobre.addEventListener('click', ()=> window.__openSobre?.());
-    liSobre.appendChild(btnSobre);
-    menu.appendChild(liSobre);
-
-    // 2) Salvos
-    const saved=readSaved();
-    const liSaved=document.createElement('li'); liSaved.className='item';
-    const btnSaved=document.createElement('button');
-    btnSaved.className='cat-btn'; btnSaved.setAttribute('aria-expanded','false');
-    btnSaved.innerHTML=`<span>Salvos</span><span class="caret">▸</span>`;
-    const ulSaved=document.createElement('ul'); ulSaved.className='sublist'; ulSaved.hidden=true;
-
-    if(saved.length){
-      const map=new Map(TEMAS.map(t=>[t.slug,t]));
-      ulSaved.innerHTML = saved
-        .map(slug=>{
-          const t=map.get(slug); if(!t) return '';
-          return `<li>
-            <a class="title" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
-            <button class="mini" data-remove="${t.slug}">Remover</button>
-          </li>`;
-        }).join('');
-    }else{
-      ulSaved.innerHTML = `<li><a class="title" href="#/sobre">Nenhum tema salvo</a></li>`;
-    }
-
-    btnSaved.addEventListener('click',()=>{
-      const open=btnSaved.getAttribute('aria-expanded')==='true';
-      btnSaved.setAttribute('aria-expanded', String(!open));
-      ulSaved.hidden = open;
-    });
-    liSaved.appendChild(btnSaved); liSaved.appendChild(ulSaved); menu.appendChild(liSaved);
-
-    // remover salvo inline
-    ulSaved.querySelectorAll('button[data-remove]')?.forEach(b=>{
-      b.addEventListener('click',(ev)=>{
-        ev.preventDefault();
-        const slug=b.getAttribute('data-remove');
-        const now=toggleSaved(slug);
-        toast(now?'Salvo adicionado':'Removido dos salvos', now?'success':'info', 1400);
-        renderMenu();
-      });
-    });
-
-    // 3) divisor
-    const div=document.createElement('div'); div.className='divider'; menu.appendChild(div);
-
-    // 4) título
-    const title=document.createElement('div'); title.className='menu-title'; title.textContent='Categorias'; menu.appendChild(title);
-
-    // 5) categorias
-    const byCat=new Map();
-    for(const t of TEMAS){
-      const key=t.group||'Geral';
-      if(!byCat.has(key)) byCat.set(key, []);
-      byCat.get(key).push(t);
-    }
-    const cats=[...byCat.keys()].sort((a,b)=>a.localeCompare(b,'pt-BR'));
-    for(const cat of cats){
-      const temas=byCat.get(cat).slice().sort((a,b)=>a.title.localeCompare(b.title,'pt-BR'));
-      const li=document.createElement('li'); li.className='item';
-      const btn=document.createElement('button');
-      btn.className='cat-btn'; btn.setAttribute('aria-expanded','false');
-      btn.innerHTML=`<span>${escapeHTML(cat)}</span><span class="caret">▸</span>`;
-      const ul=document.createElement('ul'); ul.className='sublist'; ul.hidden=true;
-      ul.innerHTML=temas.map(t=>`<li><a class="title" href="#/tema/${t.slug}" data-path="${t.path}" data-frag="${t.frag}" data-title="${escapeHTML(t.title)}">${escapeHTML(t.title)}</a></li>`).join('');
-      btn.addEventListener('click',()=>{
-        const open=btn.getAttribute('aria-expanded')==='true';
-        btn.setAttribute('aria-expanded', String(!open));
-        ul.hidden = open;
-      });
-      li.appendChild(btn); li.appendChild(ul); menu.appendChild(li);
-    }
-  }
-
-  /* ===== RECONHECIMENTO DE CITAÇÕES E POPOVER ===== */
-
-  // Normalizador e padrões
   const normSpace = s => String(s||'').replace(/\s+/g,' ').trim();
 
+  // Gatilhos de início (não-exaustivo, mas amplo)
   const RX = {
+    // bloco entre parênteses contendo palavras-gatilho
+    parenBlock: /\((?:(?:(?!\)).){0,280})(?:art\.?|artigo|arts?\.?|lei\s*(?:n[ºo]\s*)?|s[úu]mula|enunciado|tema|resp?|are|agrg|edcl)[^)]{0,280})\)/gi,
+    artigoSolto: /\b(?:art(?:s?)\.?|artigo|arts?\.?)\s*\d+[A-Za-z]?(?:\s*,?\s*§\s*\d+º?)?(?:\s*,?\s*[IVXLCDM]+)?(?:\s*,?\s*["“”'a-z])?(?:\s*(?:,|\bem\b)?\s*(?:CF\/?88|CF|CC|CPC|CPP|CP|LINDB))?/gi,
     lei: /\bLei\s*(?:n[ºo]\s*)?\d{1,5}(?:\.\d+)?\/\d{2,4}\b/gi,
-    sumula: /\bS[úu]mula\s*\d+\s*(?:STJ|STF)\b/gi,
+    sumula: /\bS[úu]mula\s*\d+\s*(?:STJ|STF)?\b/gi,
     enunciado: /\bEnunciado\s*\d+\s*(?:CJF|FPPC|ENFAM)?\b/gi,
-    artigo: new RegExp(
-      String.raw`\b(?:art(?:s?)\.?|artigos?)\s*` +
-      String.raw`(\d+[A-Za-z]?)` +
-      String.raw`(?:\s*,?\s*§\s*\d+º?)?` +
-      String.raw`(?:\s*,?\s*[IVXLCDM]+)?` +
-      String.raw`(?:\s*,?\s*["“”'a-z])?` +
-      String.raw`(?:\s*(?:,|\bem\b)?\s*(?:CF/?88|CF|CC|CPC|CP|LINDB))?`,
-      'gi'
-    ),
-    faixa: /\barts?\.\s*\d+\s*(?:-|a)\s*\d+(?:\s*(?:,|\bem\b)?\s*(?:CF\/?88|CF|CC|CPC|CP|LINDB))?/gi
+    tema: /\bTema\s*\d+\s*(?:STJ|STF)?\b/gi,
+    julgado: /\b(?:REsp|RE|ARE)\s*\d[\d\.\-\/]*\/?[A-Z]{0,2}\b/gi
   };
 
-  function kindFor(text){
+  function kindLabel(text){
     const t = text.toUpperCase();
-    if (/S[ÚU]MULA/.test(t)) return {kind:'sumula', label:'Consultar Súmula'};
-    if (/ENUNCIADO/.test(t)) return {kind:'enunciado', label:'Consultar Enunciado'};
-    if (/LEI\s*/.test(t)) return {kind:'lei', label:'Consultar Lei'};
-    return {kind:'artigo', label:'Consultar Artigo'};
-  }
-  function describeFor(text){
-    const s = normSpace(text);
-    if (/\bCF\b/i.test(s)) return s.replace(/\bCF\b/gi,'Constituição');
-    if (/\bCF\/?88\b/i.test(s)) return s.replace(/\bCF\/?88\b/gi,'Constituição de 1988');
-    if (/\bCC\b/i.test(s)) return s.replace(/\bCC\b/gi,'Código Civil');
-    if (/\bCPC\b/i.test(s)) return s.replace(/\bCPC\b/gi,'Código de Processo Civil');
-    if (/\bCP\b/i.test(s)) return s.replace(/\bCP\b/gi,'Código Penal');
-    return s;
-  }
-  function urlGoogleIA(prompt, context){
-    const q = `${prompt} Contexto: ${context}`;
-    return `https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}`;
-  }
-  function urlPlanalto(desc){
-    return `https://www.google.com/search?q=${encodeURIComponent(`site:planalto.gov.br ${desc}`)}`;
+    if (/\bS[ÚU]MULA\b/.test(t)) return 'Súmula';
+    if (/\bENUNCIADO\b/.test(t)) return 'Enunciado';
+    if (/\bTEMA\b/.test(t)) return 'Tema';
+    if (/\bLEI\b/.test(t)) return 'Lei';
+    if (/\bRESP\b|\bRE\b|\bARE\b/.test(t)) return 'Julgado';
+    return 'Artigo';
   }
 
-  function legalRefify(raw, contextSrc){
-    const patterns = [RX.faixa, RX.artigo, RX.lei, RX.sumula, RX.enunciado];
-    let html = escapeHTML(raw);
-    for (const pat of patterns){
-      html = html.replace(pat, (m)=>{
-        const meta = kindFor(m);
-        const desc = describeFor(m);
-        const ctx  = normSpace(contextSrc || raw);
-        const dataAttr =
-          `data-kind="${escapeHTML(meta.kind)}" `+
-          `data-label="${escapeHTML(meta.label)}" `+
-          `data-desc="${escapeHTML(desc)}" `+
-          `data-ctx="${escapeHTML(ctx)}"`;
-        return (
-          `<span class="ref-chip" ${dataAttr}>` +
-            `<button class="ref-btn" type="button">${escapeHTML(meta.label)}</button>` +
-            `<span class="ref-mark" title="Ajustar contexto">▢</span>` +
-            `<span class="ref-text">${escapeHTML(m)}</span>` +
-          `</span>`
-        );
-      });
+  function urlGoogleIA(prompt){
+    return `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
+  }
+
+  function buildCitationPrompt(desc, ctx){
+    const d = normSpace(desc);
+    const c = normSpace(ctx||'');
+    return `Explique de forma objetiva com base em fontes jurídicas confiáveis. Cite as fontes ao final. Referência: "${d}". Contexto: ${c}`;
+  }
+
+  // Divide texto cru em partes e envolve matches com wrapper que inclui a ✨
+  function wrapCitations(raw){
+    const parts = [];
+    let i = 0;
+    // conjunto de padrões em ordem de confiança
+    const pats = [RX.parenBlock, RX.artigoSolto, RX.lei, RX.sumula, RX.enunciado, RX.tema, RX.julgado];
+
+    // Para evitar matches sobrepostos, aplicamos varredura manual
+    const text = String(raw||'');
+    const marks = [];
+    for (const pat of pats){
+      pat.lastIndex = 0;
+      let m;
+      while ((m = pat.exec(text))){
+        const s = m.index, e = pat.lastIndex;
+        // evita sobreposição grosseira
+        if (marks.some(r => !(e<=r.s || s>=r.e))) continue;
+        marks.push({s,e});
+      }
     }
-    return html;
+    marks.sort((a,b)=>a.s-b.s);
+
+    for (const r of marks){
+      if (i<r.s) parts.push({kind:'text', value: escapeHTML(text.slice(i, r.s))});
+      const frag = text.slice(r.s, r.e);
+      parts.push({kind:'cite', value: frag});
+      i = r.e;
+    }
+    if (i<text.length) parts.push({kind:'text', value: escapeHTML(text.slice(i)));
+
+    // Montagem HTML
+    return parts.map(p=>{
+      if (p.kind==='text') return p.value;
+      const desc = normSpace(p.value);
+      const label = kindLabel(desc);
+      return `<span class="ref-wrap" data-desc="${escapeHTML(desc)}" data-kind="${escapeHTML(label)}">
+        <button class="ref-star" type="button" aria-label="Consultar Google I.A." title="Consultar Google I.A.">✨</button>
+        <span class="ref-target">${escapeHTML(p.value)}</span>
+      </span>`;
+    }).join('');
   }
 
-  let __refPopover = null;
-  function closeRefPopover(){ if(__refPopover){ __refPopover.remove(); __refPopover=null; } }
-  function openRefPopover(anchor, kind, label, desc, ctx){
-    closeRefPopover();
+  // Seleciona do início do alvo até o primeiro ")" adiante;
+  // fallback: até fim de bloco normativo ou pontuação final.
+  function selectAutoFrom(targetEl){
+    if (!targetEl) return null;
+    const sel = window.getSelection();
+    if (!sel) return null;
+    sel.removeAllRanges();
 
-    const pop = document.createElement('div');
-    pop.className = 'ref-pop';
-    pop.innerHTML = `
-      <div class="ref-pop-row t">${escapeHTML(desc)}</div>
-      <div class="ref-pop-row">
-        <button class="ref-go-ia">Google I.A.</button>
-        <button class="ref-go-planalto">Planalto</button>
-      </div>
-      <div class="ref-pop-row sub">
-        <span>Contexto:</span>
-        <button class="ref-ctx-minus" title="Reduzir contexto">−</button>
-        <button class="ref-ctx-plus" title="Ampliar contexto">+</button>
-      </div>
-    `;
-    document.body.appendChild(pop);
-    __refPopover = pop;
+    const range = document.createRange();
 
-    const r = anchor.getBoundingClientRect();
-    const top = r.bottom + window.scrollY + 6;
-    const left = Math.max(8, Math.min(window.scrollX + r.left, window.scrollX + document.documentElement.clientWidth - pop.offsetWidth - 8));
-    pop.style.top  = `${top}px`;
-    pop.style.left = `${left}px`;
+    // ponto inicial: início do ref-target
+    const startNode = (function findText(n){
+      if (n.nodeType===3) return n;
+      for (const ch of n.childNodes){ const t = findText(ch); if (t) return t; }
+      return null;
+    })(targetEl);
+    if (!startNode) return null;
 
-    const chip = anchor.closest('.ref-chip');
-    const baseCtx = chip?.getAttribute('data-ctx') || ctx || '';
-    const baseDesc= chip?.getAttribute('data-desc')|| desc||'';
-    let delta = Number(chip?.dataset.delta||'0');
-
-    function ctxSlice(){
-      const span = Math.max(80, 160 + delta*60);
-      const c = baseCtx;
-      if (c.length <= span) return c;
-      const at = Math.max(0, c.indexOf(baseDesc));
-      const start = Math.max(0, at - Math.floor((span - baseDesc.length)/2));
-      return c.slice(start, start + span);
+    // Procura primeiro ')' adiante no mesmo bloco
+    function nextTextNode(node){
+      let n = node;
+      while (n){
+        if (n.nextSibling){
+          n = n.nextSibling;
+          while (n && n.firstChild) n = n.firstChild;
+          if (n && n.nodeType===3) return n;
+          continue;
+        }
+        n = n.parentNode;
+        if (!n || n===targetEl.closest('.ubox, .card, article')) return null;
+      }
+      return null;
     }
 
-    pop.querySelector('.ref-ctx-minus')?.addEventListener('click', ()=>{
-      delta = Math.max(-3, delta-1);
-      chip.dataset.delta = String(delta);
-    });
-    pop.querySelector('.ref-ctx-plus')?.addEventListener('click', ()=>{
-      delta = Math.min(6, delta+1);
-      chip.dataset.delta = String(delta);
-    });
+    let endNode = startNode;
+    let endOffset = startNode.textContent.length;
+    // busca ')'
+    let cursor = startNode;
+    let found = false;
+    while (cursor){
+      const idx = cursor.textContent.indexOf(')');
+      if (idx !== -1){
+        endNode = cursor;
+        endOffset = idx+1;
+        found = true;
+        break;
+      }
+      cursor = nextTextNode(cursor);
+    }
 
-    pop.querySelector('.ref-go-ia')?.addEventListener('click', ()=>{
-      const kindName = (kind==='sumula'?'Súmula': kind==='enunciado'?'Enunciado': kind==='lei'?'Lei':'Artigo');
-      const prompt = `Explique de forma objetiva com base em fontes jurídicas. Cite fontes ao final. ${kindName}: "${baseDesc}".`;
-      const url = urlGoogleIA(prompt, ctxSlice());
-      window.open(url, '_blank', 'noopener');
-      closeRefPopover();
-    });
+    // fallback: termina em pontuação final
+    if (!found){
+      const stopRe = /[.;:—–-](\s|$)/;
+      cursor = startNode;
+      while (cursor){
+        const m = cursor.textContent.match(stopRe);
+        if (m){
+          endNode = cursor;
+          endOffset = cursor.textContent.indexOf(m[0]) + m[0].length;
+          found = true;
+          break;
+        }
+        cursor = nextTextNode(cursor);
+      }
+    }
 
-    pop.querySelector('.ref-go-planalto')?.addEventListener('click', ()=>{
-      const url = urlPlanalto(baseDesc);
-      window.open(url, '_blank', 'noopener');
-      closeRefPopover();
-    });
-
-    setTimeout(()=>{
-      const onDoc = (e)=>{
-        if (!pop.contains(e.target)) { closeRefPopover(); document.removeEventListener('mousedown', onDoc, true); }
-      };
-      document.addEventListener('mousedown', onDoc, true);
-    }, 0);
+    range.setStart(startNode, 0);
+    range.setEnd(endNode, endOffset);
+    sel.addRange(range);
+    return range;
   }
 
-  // Delegação global para chips
-  document.addEventListener('click', (e)=>{
-    const btn = e.target.closest('.ref-btn, .ref-mark');
-    if(!btn) return;
-    const chip = btn.closest('.ref-chip'); if(!chip) return;
-    const kind  = chip.getAttribute('data-kind')  || 'artigo';
-    const label = chip.getAttribute('data-label') || 'Consultar';
-    const desc  = chip.getAttribute('data-desc')  || '';
-    const ctx   = chip.getAttribute('data-ctx')   || '';
-    openRefPopover(btn, kind, label, desc, ctx);
+  // Cancela seleção ativa e desativa estrelas
+  function clearRefSelection(){
+    const sel = window.getSelection();
+    if (sel) sel.removeAllRanges();
+    $$('.ref-star.active').forEach(el=> el.classList.remove('active'));
+  }
+
+  // Delegação de eventos para ✨ e chips de pergunta
+  document.addEventListener('click', (ev)=>{
+    // chip final da pergunta
+    const qbtn = ev.target.closest('.q-ia');
+    if (qbtn){
+      const li = qbtn.closest('li');
+      const rawQ = (li?.getAttribute('data-raw') || li?.innerText || '').trim();
+      if (rawQ){
+        const prompt = `Explique de forma objetiva com base em fontes jurídicas confiáveis. Cite as fontes ao final. Pergunta: "${rawQ}"`;
+        window.open(urlGoogleIA(prompt), '_blank', 'noopener');
+      }
+      return;
+    }
+
+    // estrela de citação
+    const star = ev.target.closest('.ref-star');
+    if (!star) {
+      // clique fora
+      clearRefSelection();
+      return;
+    }
+
+    const wrap = star.closest('.ref-wrap');
+    const target = wrap?.querySelector('.ref-target');
+    if (!wrap || !target) return;
+
+    if (!star.classList.contains('active')){
+      clearRefSelection();
+      star.classList.add('active');
+      selectAutoFrom(target);
+      toast('Selecione para consultar', 'info', 1600);
+      return;
+    }
+
+    // 2º clique: enviar
+    const sel = window.getSelection();
+    const selected = (sel && sel.toString().trim()) || (target?.innerText||'').trim();
+    const ctx = (wrap?.closest('.ubox')?.innerText || '').slice(0, 600);
+    const prompt = buildCitationPrompt(selected, ctx);
+    window.open(urlGoogleIA(prompt), '_blank', 'noopener');
+    clearRefSelection();
   });
-  window.addEventListener('hashchange', closeRefPopover);
-  window.addEventListener('scroll', ()=> closeRefPopover(), {passive:true});
 
-  // Injeta CSS mínimo dos chips/popover
+  // ESC cancela seleção
+  document.addEventListener('keydown', (e)=>{
+    if (e.key==='Escape') clearRefSelection();
+  });
+
+  // CSS mínimo para ✨ e seleção
   function injectRefStyles(){
     if (document.getElementById('ref-css')) return;
     const css = `
-      .ref-chip{display:inline-flex;align-items:center;gap:.35rem;padding:.2rem .35rem;border-radius:.5rem;background:#f4f7ff;border:1px solid #dbe5ff}
-      .ref-chip .ref-text{ text-decoration: underline dotted; text-underline-offset:.15em; }
-      .ref-chip .ref-btn{ font:inherit;font-size:.78rem;line-height:1;padding:.28rem .5rem;border-radius:.4rem;border:1px solid #c7d6ff;background:#eaf0ff;cursor:pointer}
-      .ref-chip .ref-btn:hover{background:#e1eaff}
-      .ref-chip .ref-mark{font-size:.8rem;color:#3973ff;cursor:pointer;user-select:none}
-      .ref-pop{position:absolute;z-index:9999;background:#fff;border:1px solid #cfd7e6;border-radius:.6rem;box-shadow:0 10px 24px rgba(0,0,0,.12);min-width:220px;max-width:min(92vw,360px);padding:.5rem}
-      .ref-pop .ref-pop-row{display:flex;gap:.5rem;align-items:center;margin:.35rem 0;flex-wrap:wrap}
-      .ref-pop .ref-pop-row.t{font-weight:600}
-      .ref-pop .ref-pop-row.sub{font-size:.85rem;color:#546;opacity:.9}
-      .ref-pop button{font:inherit;font-size:.85rem;padding:.35rem .6rem;border-radius:.4rem;border:1px solid #d0d7ff;background:#eef2ff;cursor:pointer}
-      .ref-pop button:hover{background:#e5ebff}
-      @media (max-width:768px){.ref-pop{left:4vw !important;right:4vw !important;max-width:92vw}}
+      .ref-wrap{display:inline-flex;align-items:baseline;gap:.25rem}
+      .ref-star{border:0;background:transparent;cursor:pointer;line-height:1;padding:0 .1rem;font-size:.9em;opacity:.45;transition:opacity .15s, transform .05s}
+      .ref-star:hover{opacity:.75}
+      .ref-star.active{opacity:1;filter:drop-shadow(0 0 0 rgba(0,0,0,0));}
+      .ref-target{ text-decoration: underline dotted; text-underline-offset:.15em; }
+      ::selection{background:#fff0a6;color:inherit}
+      .q-ia{margin-left:.5rem;border:0;background:transparent;cursor:pointer;padding:0 .2rem;font-size:.9em;opacity:.7}
+      .q-ia:hover{opacity:1}
     `;
     const style = document.createElement('style');
     style.id = 'ref-css';
@@ -812,15 +751,16 @@
       // montar chips pós-busca abaixo da topbar (requer #postAc no HTML)
       renderPostSearchChips();
 
-      // ===== INTRO E PERGUNTAS COM MARCAÇÃO DE CITAÇÕES =====
+      // ===== INTRO E PERGUNTAS COM ✨ E CHIPS =====
       const introRawSrc = pick.intro.length ? pick.intro.join(' ') : '';
-      const introHTMLRaw = legalRefify(introRawSrc, introRawSrc);
+      const introHTMLRaw = wrapCitations(introRawSrc);
       const introHTML = shouldHighlight ? highlightHTML(introHTMLRaw, lastSearch?.q||'') : introHTMLRaw;
 
       const qItems = (pick.ask||[]).map(q => {
-        const qHTMLRaw = legalRefify(q, q);
+        const qHTMLRaw = wrapCitations(q);
         const qHTML = shouldHighlight ? highlightHTML(qHTMLRaw, lastSearch?.q||'') : qHTMLRaw;
-        return `<li>${qHTML}</li>`;
+        // chip ✨ ao final (envio direto da pergunta)
+        return `<li data-raw="${escapeHTML(q)}">${qHTML}<button class="q-ia" title="Consultar Google I.A.">✨</button></li>`;
       }).join('');
 
       $('#content').innerHTML=`
@@ -831,8 +771,6 @@
             ${qItems ? `<ol class="q-list">${qItems}</ol>` : `<p class="muted">Sem perguntas cadastradas.</p>`}
           </section>
         </article>`;
-
-      try{ sessionStorage.removeItem(LAST_SEARCH_KEY); }catch(_){}
 
     }catch(e){
       console.error(e);
@@ -860,3 +798,4 @@
   window.addEventListener('hashchange', renderByRoute);
   (async function init(){ await renderByRoute(); })();
 })();
+</script>
