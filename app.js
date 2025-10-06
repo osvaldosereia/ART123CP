@@ -691,7 +691,7 @@
       // ===== Referências do Tema (TXT: linhas '--- ...')
       const refs = (pick.refs || []).filter(Boolean);
       const refListHTML = refs.map(ref => {
-        const prompt = `Pesquise em sites oficiais e me traga o texto original do: ${ref}`;
+        const prompt = `Pesquise em sites oficiais do governo e transcreva o texto original do: ${ref}`;
         const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
         return `<li><a href="${url}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(ref))}</a></li>`;
       }).join('');
