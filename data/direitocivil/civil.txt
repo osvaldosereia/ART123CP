@@ -1,6 +1,65 @@
 
 
-Compreendido, Osvaldo. Seguirei a sequência exata do sumário, apresentando os temas de dois em dois, e buscarei extrair conceitos relevantes dentro de cada um.
+Certo, Osvaldo. Continuarei com a análise dos temas de Direito Civil, apresentando-os em duplas, conforme a sequência exata do sumário do seu documento e extraindo os conceitos mais relevantes.
+
+-----
+
+# Emancipação  
+-- A emancipação antecipa a capacidade de fato do menor (16 a 18 anos), permitindo-lhe atos da vida civil (Art. 5º, parágrafo único, CC/02). Contudo, não afasta a responsabilidade civil dos pais, a inimputabilidade penal (Art. 27, CP), nem a aplicação do ECA (Enunciado 630 da VI Jornada de Direito Civil).  
+-- Pode ser voluntária (acordo dos pais), judicial (discordância dos pais ou pedido do tutor) ou legal (casamento, emprego público efetivo, colação de grau superior, estabelecimento civil/comercial ou economia própria), sempre exigindo registro público, exceto na legal.
+
+## Referências do Tema  
+--- Art. 5º, parágrafo único, V, CC/02  
+--- Art. 9º, II, CC/02  
+--- Art. 27, CP  
+--- Art. 1.517, CC/02  
+--- Art. 1.520, CC/02  
+--- Art. 1.631, parágrafo único, CC/02  
+--- ADI 4277 do STF  
+--- RE 898.060 do STF  
+--- Enunciado 630 da VI Jornada de Direito Civil  
+--- Provimento 37 do CNJ
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de emancipação e como ela antecipa a capacidade de fato, diferenciando-a da capacidade de direito.
+  - Quais são as modalidades de emancipação (voluntária, judicial e legal) e quais os requisitos para cada uma?
+  - Analise por que a emancipação não afasta a responsabilidade civil dos pais, a inimputabilidade penal e a aplicação do ECA.
+  - Discorra sobre as hipóteses de emancipação legal, como casamento, emprego público efetivo, colação de grau em curso superior e economia própria.
+  - Explique o que é "economia própria" no contexto da emancipação pelo estabelecimento civil/comercial ou relação de emprego.
+  - Avalie a controvérsia sobre a emancipação por união estável, considerando a ausência de publicidade do fato.
+  - Discuta a importância do registro público para a validade da emancipação voluntária e judicial, e a dispensa para a legal.
+  - Apresente um caso prático que demonstre os efeitos e limites da emancipação na vida de um menor.
+  - Como a dignidade da pessoa humana e a autonomia do menor são consideradas no instituto da emancipação?
+  - Analise a diferença de tratamento legal para a emancipação em relação à interdição, considerando os princípios que regem cada um.
+
+-----
+
+# Emancipação pelo casamento  
+-- A emancipação pelo casamento, após a Lei 13.811/19, exige que ambos os nubentes tenham 16 anos ou mais (Art. 1.520, CC/02), necessitando de autorização dos pais ou representantes legais (Art. 1.517, CC/02). A divergência dos pais pode ser suprida judicialmente (Art. 1.631, parágrafo único, CC/02).  
+-- O divórcio não reverte a emancipação. A união estável, em tese, não gera emancipação pela falta de publicidade, embora doutrina e jurisprudência debatam sua aplicação analógica se registrada publicamente (Provimento 37 do CNJ), alinhando-se à nova concepção de família e à dignidade da pessoa humana.
+
+## Referências do Tema  
+--- Art. 1.517, CC/02  
+--- Art. 1.520, CC/02  
+--- Art. 1.631, parágrafo único, CC/02  
+--- ADI 4277 do STF  
+--- RE 898.060 do STF  
+--- Provimento 37 do CNJ
+
+## Pergunte pra I.A.
+
+  - Explique os requisitos de idade e autorização parental para a emancipação pelo casamento, conforme o Código Civil.
+  - Discorra sobre como a ausência de consenso dos pais para o casamento pode ser resolvida judicialmente.
+  - Analise se o divórcio posterior ao casamento reverte a emancipação do menor.
+  - Avalie a controvérsia sobre a emancipação por união estável, considerando a necessidade de publicidade e registro para sua equiparação ao casamento.
+  - De que forma a nova concepção de família (homoafetiva, monoparental, multiparental) e o princípio da dignidade da pessoa humana influenciam a interpretação da emancipação pelo casamento?
+  - Explique a relevância do Provimento 37 do CNJ no debate sobre a emancipação por união estável.
+  - Apresente um caso prático que demonstre a aplicação das regras de emancipação pelo casamento e suas consequências jurídicas.
+  - Discuta se a emancipação pelo casamento concede ao menor todos os direitos e deveres de um maior de 18 anos em todas as esferas do direito.
+  - Analise a distinção entre a emancipação pelo casamento e outras formas de emancipação legal em termos de requisitos e efeitos.
+  - Quais são os principais argumentos a favor e contra a equiparação da união estável ao casamento para fins de emancipação?
+
 
 -----
 
@@ -60,9 +119,6 @@ Compreendido, Osvaldo. Seguirei a sequência exata do sumário, apresentando os 
   - Analise a diferença entre a interdição de um menor púbere e a emancipação, e como cada instituto afeta a capacidade de fato.
   - Discorra sobre a importância de uma ponderação entre a autonomia do menor e a necessidade de proteção em situações de vulnerabilidade.
 
------
-
-Estou pronto para continuar com os próximos dois temas quando você desejar.
 
 -----
 
