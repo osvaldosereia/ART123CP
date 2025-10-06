@@ -1,6 +1,58 @@
 
 
 
+
+
+-----
+
+# Pessoa Jurídica no Ordenamento Jurídico  
+-- A pessoa jurídica é um ente, formado por pessoas ou bens, que adquire personalidade jurídica por determinação legal, sendo sujeito de direitos e obrigações. O Direito atual, sob influência da Constituição Federal (Art. 170, CF), a compreende com caráter instrumental e função social.  
+-- Inicia sua personalidade com o registro (Art. 45, CC/02) para as de direito privado, e com a vigência da lei instituidora para as de direito público. A Súmula 227 do STJ, ao admitir dano moral à pessoa jurídica, reflete a adaptação do conceito aos direitos da personalidade.
+
+# Referências do Tema  
+--- Art. 45, CC/02  
+--- Art. 52, CC/02  
+--- Art. 170, CF  
+--- Súmula 227 do STJ  
+--- Lei 14.195/2021
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de pessoa jurídica e como ela se distingue da pessoa física no ordenamento jurídico brasileiro.
+  - Discorra sobre a diferença no início da personalidade jurídica entre pessoas jurídicas de direito público e de direito privado.
+  - Analise a relevância da Súmula 227 do STJ, que permite o dano moral à pessoa jurídica, para a compreensão dos direitos da personalidade nesse contexto.
+  - Explique o que são as "pessoas jurídicas intersubjetivas" e "patrimoniais", fornecendo exemplos de cada.
+  - De que forma o princípio da "função social" da pessoa jurídica, à luz da Constituição Federal, influencia sua atuação e responsabilidade.
+  - Avalie o impacto da extinção da EIRELI e a consolidação da sociedade limitada unipessoal na estrutura das pessoas jurídicas de direito privado.
+  - Discuta as teorias afirmativas da pessoa jurídica (ficção jurídica, realidade objetiva, realidade técnica) e qual delas é a mais adotada no Brasil.
+  - Explique como a "ubiquidade constitucional" se manifesta na interpretação das normas sobre pessoa jurídica, conectando-as aos direitos fundamentais.
+  - Apresente um caso prático que envolva a personalidade jurídica de um ente despersonificado e os desafios de sua atuação em juízo.
+  - Discorra sobre as implicações da responsabilidade penal da pessoa jurídica, conforme a Constituição Federal e a Lei de Crimes Ambientais.
+
+-----
+
+# Teorias Afirmativas da Pessoa Jurídica  
+-- As teorias afirmativas buscam explicar a existência da pessoa jurídica. Correntes formalistas, como a da ficção jurídica, a veem como uma abstração legal. Realistas, pela teoria da realidade objetiva, a consideram um organismo social vivo, com vontade própria.  
+-- O Brasil adota a teoria da realidade técnica (Art. 45, CC/02), que concilia a criação legal com a existência real. Essa abordagem reconhece a pessoa jurídica como fruto da lei, mas com autonomia para agir, sempre buscando aprimorar sua função social e valores constitucionais.
+
+# Referências do Tema  
+--- Art. 40 a 69 do Código Civil  
+--- Art. 45, CC/02  
+--- Art. 170, CF
+
+## Pergunte pra I.A.
+
+  - Explique as principais diferenças entre as teorias formalistas e realistas da pessoa jurídica.
+  - Analise a teoria da realidade técnica, adotada pelo Código Civil brasileiro, e como ela se posiciona entre as teorias da ficção jurídica e da realidade objetiva.
+  - Discorra sobre o impacto da escolha de uma teoria da pessoa jurídica na interpretação de sua capacidade, autonomia e responsabilidade.
+  - De que forma a "função social" da pessoa jurídica se integra às teorias afirmativas, especialmente no contexto do neoconstitucionalismo?
+  - Apresente as críticas às teorias da ficção jurídica e da realidade objetiva que levaram à adoção da teoria da realidade técnica no Brasil.
+  - Explique como a "chancela do Estado" para o início da personalidade jurídica se alinha com a teoria da realidade técnica.
+  - Discuta a relação entre a autonomia da pessoa jurídica e a aplicação dos direitos da personalidade, como a honra objetiva.
+  - Quais são as implicações práticas da aplicação da teoria da realidade técnica em litígios que envolvem pessoas jurídicas?
+  - Analise como as pessoas jurídicas de direito público se encaixam nas teorias afirmativas da pessoa jurídica.
+  - Proponha um debate sobre como as novas formas de organização empresarial (como startups e cooperativas) desafiam as teorias tradicionais da pessoa jurídica.
+
 -----
 
 # Emancipação pelo exercício de emprego público efetivo  
