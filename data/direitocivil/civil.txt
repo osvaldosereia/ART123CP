@@ -1,7 +1,311 @@
 
 
 
+-----
+# Término da Personalidade Civil
 
+-- A personalidade civil, que se inicia com o nascimento com vida, extingue-se com a morte, conforme estabelece o art. 6º do Código Civil. Este evento põe fim à titularidade de direitos e deveres da pessoa natural e, pelo princípio da saisine (art. 1.784 do CC/02), opera a imediata transmissão da herança aos herdeiros legítimos e testamentários.
+
+-- A morte, para o direito, pode ser real, constatada pela cessação da atividade encefálica (art. 3º da Lei nº 9.434/97), ou presumida. A presunção de morte pode ocorrer com ou sem a decretação de ausência (arts. 7º, 22 e seguintes do CC/02), a depender das circunstâncias fáticas do desaparecimento da pessoa e da probabilidade do óbito.
+
+## Referências do Tema
+
+--- Art. 6º do CC/02
+--- Art. 7º do CC/02
+--- Art. 22 do CC/02
+--- Art. 1.784 do CC/02
+--- Art. 3º da Lei nº 9.434/97 (Lei de Transplantes)
+
+## Pergunte pra I.A.
+
+  - Qual é o marco que define o fim da personalidade jurídica da pessoa natural no Brasil?
+  - Explique o que é o princípio da saisine e qual sua relação com o momento da morte.
+  - Diferencie morte real de morte presumida no ordenamento jurídico brasileiro.
+  - Qual o critério legal para a constatação da morte real para fins de transplante de órgãos?
+  - Em linhas gerais, quando se aplica a morte presumida com e sem decretação de ausência?
+
+### Fontes
+
+  - O Fim da Pessoa Natural: Morte Real e Morte Presumida - Jusbrasil
+  - O princípio da Saisine no Direito Sucessório - Aurum
+  - O término da personalidade jurídica: a morte e seus desdobramentos - Âmbito Jurídico
+  - Lei nº 9.434 de 4 de Fevereiro de 1997 - Presidência da República (planalto.gov.br)
+  - A morte e o direito: uma análise do art. 6º do Código Civil - https://www.google.com/search?q=Jus.com.br
+
+-----
+
+# Morte Real
+
+-- A morte real é o fim da existência da pessoa natural, cujo critério de constatação no Brasil é a morte encefálica, ou seja, a parada total e irreversível das funções do cérebro. Este critério está previsto no art. 3º da Lei nº 9.434/97 (Lei de Transplantes) e é detalhado em resoluções do Conselho Federal de Medicina.
+
+-- A prova material da morte real é feita pela Declaração de Óbito, documento emitido por médico. Com base nela, é lavrada a Certidão de Óbito no Cartório de Registro Civil das Pessoas Naturais (art. 77 da Lei nº 6.015/73), ato que formaliza o óbito perante o Estado e a sociedade, permitindo a produção de todos os seus efeitos jurídicos.
+
+## Referências do Tema
+
+--- Art. 6º do CC/02
+--- Art. 8º do CC/02 (Comoriência)
+--- Art. 3º da Lei nº 9.434/97
+--- Art. 77 da Lei nº 6.015/73 (Lei de Registros Públicos)
+--- Resolução CFM nº 2.173/2017
+
+## Pergunte pra I.A.
+
+  - Defina morte real e qual o critério legal e médico para sua constatação no Brasil.
+  - Qual a diferença entre a Declaração de Óbito e a Certidão de Óbito e qual a finalidade de cada uma?
+  - Explique o que é a morte encefálica e sua relevância para o direito.
+  - O que é comoriência (art. 8º do CC/02) e qual sua implicação no direito sucessório?
+  - Quais são os principais efeitos jurídicos decorrentes do registro da morte real?
+
+### Fontes
+
+  - Morte Encefálica - Conselho Federal de Medicina
+  - Lei de Registros Públicos (Lei nº 6.015/73) - Presidência da República (planalto.gov.br)
+  - A morte real e seus efeitos no mundo jurídico - Conteúdo Jurídico
+  - Comoriência: o que é e quais os efeitos? - Dizer o Direito
+  - O Diagnóstico de Morte Encefálica - Ministério da Saúde (bvsms.saude.gov.br)
+
+-----
+
+# Morte Presumida sem Decretação de Ausência
+
+-- A morte presumida sem decretação de ausência é a declaração judicial de óbito em situações de altíssima probabilidade de morte, nas quais não foi possível localizar o corpo da vítima. Este procedimento, previsto no art. 7º do CC/02, é mais célere que o da ausência, pois a certeza moral do falecimento é elevada.
+
+-- As duas hipóteses legais são: I - se for extremamente provável a morte de quem estava em perigo de vida (ex: acidentes aéreos, desastres); e II - se alguém, desaparecido em campanha ou feito prisioneiro, não for encontrado até dois anos após o fim da guerra. A declaração requer um processo de justificação judicial para o assento de óbito (art. 88 da Lei nº 6.015/73).
+
+## Referências do Tema
+
+--- Art. 7º do CC/02
+--- Art. 88 da Lei nº 6.015/73
+--- Art. 40 da Lei nº 9.140/95 (Pessoas desaparecidas em razão de participação em atividades políticas)
+--- Enunciado 13 da I Jornada de Direito Civil (CJF)
+
+## Pergunte pra I.A.
+
+  - O que é a morte presumida sem decretação de ausência e quando ela se aplica?
+  - Quais são as duas hipóteses legais para a declaração de morte presumida sem ausência?
+  - Diferencie a morte presumida com ausência da morte presumida sem ausência.
+  - Como funciona o procedimento de justificação judicial para o registro do óbito presumido?
+  - Quais as consequências patrimoniais se a pessoa, declarada morta nessas circunstâncias, reaparecer?
+
+### Fontes
+
+  - Art. 7º do Código Civil Comentado - Jusbrasil
+  - Morte presumida e declaração de ausência no Código Civil - Aurum
+  - A Morte Presumida no Direito Brasileiro - Âmbito Jurídico
+  - Morte presumida sem declaração de ausência - https://www.google.com/search?q=Jus.com.br
+  - A Lei nº 9.140/95 e o Reconhecimento dos Mortos e Desaparecidos Políticos - Câmara dos Deputados
+-----
+# Proteção dos Incapazes e Benefício de Restituição
+
+-- O ordenamento jurídico protege os incapazes de diversas formas, como na suspensão do prazo prescricional contra os absolutamente incapazes (art. 198, I, do CC/02) e na invalidação dos atos praticados em seu prejuízo (arts. 166, I, e 171, I, do CC/02), visando resguardar a integridade de seu patrimônio e de sua pessoa.
+
+-- Uma proteção específica é o "benefício de restituição" (restitutio in integrum), previsto no art. 180 do CC/02. Por ele, o incapaz que participa de um negócio inválido não é obrigado a devolver o que recebeu, a menos que a outra parte prove que o valor foi revertido em seu proveito, invertendo-se o ônus da prova para proteger o vulnerável.
+
+## Referências do Tema
+
+--- Art. 166, I, do CC/02
+--- Art. 171, I, do CC/02
+--- Art. 180 do CC/02
+--- Art. 198, I, do CC/02
+
+## Pergunte pra I.A.
+
+  - Quais são os principais mecanismos de proteção patrimonial dos incapazes no Código Civil?
+  - Explique o que é o "benefício de restituição" do art. 180 do CC/02.
+  - A prescrição corre contra um jovem de 17 anos? E contra uma criança de 10 anos? Justifique.
+  - Em um contrato anulado, um adolescente de 17 anos deve devolver o celular que comprou? Explique o ônus da prova.
+  - O benefício de restituição se aplica caso o relativamente incapaz tenha agido com malícia para ocultar sua idade?
+
+### Fontes
+
+  - Da invalidade do negócio jurídico - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - A proteção da pessoa incapaz no Código Civil - https://www.google.com/search?q=Jus.com.br
+  - Prescrição e Decadência no Código Civil: Prazos e Causas Impeditivas - Aurum
+  - O artigo 180 do Código Civil e a proteção do incapaz - Migalhas
+  - A restitutio in integrum e o direito do consumidor - Jusbrasil
+
+-----
+
+# Incapacidade vs. Legitimação
+
+-- A incapacidade, prevista nos arts. 3º e 4º do CC/02, é uma restrição genérica, de natureza subjetiva, que impede a pessoa de exercer por si só os atos da vida civil. Ela decorre de fatores como idade ou falta de discernimento e é suprida pela representação ou assistência, sendo uma norma de proteção ao próprio agente.
+
+-- Já a legitimação é uma aptidão específica, exigida por lei, para a prática de um determinado ato jurídico, mesmo por pessoa plenamente capaz. A falta de legitimação é uma restrição objetiva. Exemplos clássicos são a proibição de venda de ascendente a descendente sem anuência dos demais (art. 496 do CC/02) e a do tutor de adquirir bens do tutelado.
+
+## Referências do Tema
+
+--- Art. 3º do CC/02
+--- Art. 4º do CC/02
+--- Art. 496 do CC/02
+--- Art. 1.647 do CC/02 (Outorga conjugal)
+--- Art. 1.749, I, do CC/02
+
+## Pergunte pra I.A.
+
+  - Diferencie, conceitualmente, incapacidade e falta de legitimação.
+  - Uma pessoa casada e plenamente capaz pode vender um imóvel sem a autorização do cônjuge? Isso é um caso de incapacidade ou de falta de legitimação?
+  - Dê um exemplo de um ato jurídico para o qual uma pessoa, embora capaz, não possui legitimação.
+  - A incapacidade é uma condição subjetiva da pessoa, enquanto a falta de legitimação é uma condição objetiva para o ato. Explique essa afirmação.
+  - Qual a consequência jurídica do ato praticado com falta de legitimação, como no caso da venda entre ascendente e descendente?
+
+### Fontes
+
+  - Legitimidade e capacidade: qual a diferença? - Jusbrasil
+  - Qual a diferença entre capacidade e legitimação? - Dizer o Direito
+  - A distinção entre capacidade e legitimação para a prática de atos jurídicos - Âmbito Jurídico
+  - Outorga Uxória e Marital: O que são e quando são necessárias? - Aurum
+  - A Venda de Ascendente a Descendente no Código Civil - Migalhas
+
+-----
+
+# Cessação da Incapacidade e Emancipação
+
+-- A incapacidade civil cessa, como regra, aos 18 anos completos, quando a pessoa se torna plenamente capaz para todos os atos (art. 5º, caput, do CC/02). Nos casos de incapacidade relativa por outra causa (art. 4º), ela se extingue quando o motivo que a determinou deixa de existir, como na recuperação da capacidade de exprimir a vontade.
+
+-- Para os menores, a capacidade plena pode ser antecipada pela emancipação. As hipóteses legais (art. 5º, parágrafo único, do CC/02) são: concessão dos pais ou sentença judicial; casamento; exercício de emprego público efetivo; colação de grau em nível superior; ou estabelecimento comercial com economia própria.
+
+## Referências do Tema
+
+--- Art. 5º, caput e parágrafo único, do CC/02
+
+## Pergunte pra I.A.
+
+  - Quais são as formas pelas quais a incapacidade civil pode ser extinta?
+  - O que é emancipação e qual é a sua principal consequência jurídica?
+  - Diferencie as modalidades de emancipação: voluntária, judicial e legal.
+  - Um jovem de 16 anos que se casa torna-se plenamente capaz? E se ele se divorciar aos 17?
+  - Um influenciador digital de 17 anos com renda própria pode ser considerado emancipado pela lei? Justifique.
+
+### Fontes
+
+  - Artigo 5º do Código Civil - Presidência da República (planalto.gov.br)
+  - Emancipação de menor: O que é, como funciona e quais os tipos - Aurum
+  - Atingi a maioridade, e agora? A cessação da incapacidade civil - Jusbrasil
+  - Emancipação: quando o menor de idade vira maior - Politize!
+  - Cessação da incapacidade no Código Civil - Conteúdo Jurídico
+-----
+# Incapacidade Material vs. Incapacidade Formal
+
+-- A incapacidade material é a ausência fática de discernimento para entender ou se autodeterminar, independentemente da previsão legal. Um ato praticado nesse estado pode ser invalidado por vício de consentimento (art. 171, II, do CC/02), pois a declaração de vontade não corresponde à realidade psicológica do agente.
+
+-- Já a incapacidade formal é a qualificação jurídica atribuída pela lei a certos grupos, criando uma presunção de falta de discernimento. As hipóteses estão taxativamente previstas nos arts. 3º (absoluta) e 4º (relativa) do CC/02, e a consequência da prática de um ato sem representação ou assistência é a nulidade (art. 166, I) ou a anulabilidade (art. 171, I).
+
+## Referências do Tema
+
+--- Art. 3º do CC/02
+--- Art. 4º do CC/02
+--- Art. 166, I, do CC/02
+--- Art. 171, I e II, do CC/02
+
+## Pergunte pra I.A.
+
+  - Diferencie a incapacidade material (fática) da incapacidade formal (legal).
+  - Um negócio jurídico celebrado por pessoa plenamente capaz, mas em estado de embriaguez completa e acidental, é válido?
+  - Qual a consequência de um ato praticado por incapaz formalmente, sem a devida representação ou assistência?
+  - Um jovem de 17 anos (relativamente incapaz) vende sua motocicleta sem a assistência dos pais. O negócio é nulo ou anulável?
+  - É possível que uma pessoa seja formalmente capaz, mas materialmente incapaz no momento de um ato? Qual a solução jurídica?
+
+### Fontes
+
+  - Teoria das incapacidades no Código Civil - Jusbrasil
+  - A Teoria das Incapacidades e o Estatuto da Pessoa com Deficiência - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - Incapacidade Civil: Absoluta e Relativa - Entenda as Diferenças - Aurum
+  - A validade do negócio jurídico e a incapacidade acidental - Consultor Jurídico (Conjur)
+  - Nulidade e Anulabilidade do Negócio Jurídico - https://www.google.com/search?q=Jus.com.br
+
+-----
+
+# Incapacidade Formal Absoluta
+
+-- Após as profundas alterações da Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência), a incapacidade absoluta foi reduzida a uma única hipótese legal. Conforme a redação atual do art. 3º do Código Civil, são considerados absolutamente incapazes de exercer pessoalmente os atos da vida civil apenas os menores de 16 anos.
+
+-- A sanção para o ato praticado pelo menor de 16 anos sem a devida representação de seus pais ou tutores é a nulidade absoluta (art. 166, I, do CC/02). Tal ato não produz efeitos jurídicos e sua nulidade não pode ser suprida pelo juiz nem se convalida com o tempo, podendo ser arguida por qualquer interessado ou pelo Ministério Público.
+
+## Referências do Tema
+
+--- Art. 3º do CC/02
+--- Art. 166, I, do CC/02
+--- Art. 169 do CC/02
+--- Art. 1.634, VII, do CC/02
+--- Art. 1.747, I, do CC/02
+
+## Pergunte pra I.A.
+
+  - Quem é o único sujeito considerado absolutamente incapaz pelo Código Civil brasileiro atualmente?
+  - Diferencie os institutos da representação (para incapazes absolutos) e da assistência (para incapazes relativos).
+  - Qual a consequência jurídica de um contrato assinado por um jovem de 15 anos sem a presença de seus responsáveis?
+  - Um ato nulo, praticado por menor de 16 anos, pode ser confirmado posteriormente por seus pais?
+  - Como o direito lida com os pequenos atos da vida cotidiana praticados por absolutamente incapazes, como a compra de alimentos?
+
+### Fontes
+
+  - Artigo 3º do Código Civil - Presidência da República (planalto.gov.br)
+  - A incapacidade civil absoluta após o Estatuto da Pessoa com Deficiência - Migalhas
+  - A teoria da incapacidade no direito civil brasileiro - Âmbito Jurídico
+  - Nulidade do Negócio Jurídico - Enciclopédia Jurídica da PUCSP
+  - O regime das incapacidades após o Estatuto da Pessoa com Deficiência - Jus Navigandi
+
+-----
+
+# Incapacidade Formal Relativa
+
+-- A incapacidade relativa aplica-se àqueles que possuem discernimento, mas este é considerado reduzido pela lei, exigindo assistência para a prática de atos. O rol do art. 4º do CC/02 abrange: os maiores de 16 e menores de 18 anos; os ébrios habituais e viciados em tóxicos; aqueles que, por causa transitória ou permanente, não puderem exprimir sua vontade; e os pródigos.
+
+-- O ato praticado por um relativamente incapaz sem a devida assistência de seu curador ou responsável legal é anulável, conforme o art. 171, I, do CC/02. Isso significa que o ato é válido e produz efeitos até que uma sentença o anule, podendo também ser confirmado pelas partes se cessada a incapacidade ou pelo representante (art. 172 do CC/02).
+
+## Referências do Tema
+
+--- Art. 4º do CC/02
+--- Art. 171, I, do CC/02
+--- Art. 172 do CC/02
+--- Art. 1.767 do CC/02 (Interdição e Curatela)
+--- Art. 1.782 do CC/02 (Curatela do pródigo)
+
+## Pergunte pra I.A.
+
+  - Cite três grupos de pessoas considerados relativamente incapazes pelo Código Civil.
+  - Qual a diferença prática entre um ato nulo e um ato anulável no Direito Civil?
+  - Quem são os pródigos e quais atos eles são impedidos de praticar sem a assistência de um curador?
+  - Explique a situação jurídica de uma pessoa em coma induzido quanto à sua capacidade civil.
+  - Um contrato assinado por um jovem de 17 anos pode ser considerado válido se ficar provado que não lhe causou prejuízo?
+
+### Fontes
+
+  - Artigo 4º do Código Civil - Presidência da República (planalto.gov.br)
+  - Incapacidade Relativa: o que é e quem se enquadra? - Dizer o Direito
+  - Anulabilidade do Negócio Jurídico - Enciclopédia Jurídica da PUCSP
+  - Curatela: o que é e como funciona? - Aurum
+  - O pródigo e a curatela no Direito Civil - Jusbrasil
+-----
+# Pessoa com Deficiência e o Regime das Incapacidades
+
+-- O Estatuto da Pessoa com Deficiência (Lei nº 13.146/2015) revolucionou o regime das incapacidades, afirmando que a deficiência não afeta a plena capacidade civil da pessoa (art. 6º da Lei). A regra agora é a capacidade, dissociando a condição de deficiente da presunção de incapacidade, que antes era a norma para diversas condições.
+
+-- Consequentemente, o rol de incapacidade formal foi drasticamente alterado. A incapacidade absoluta ficou restrita aos menores de 16 anos (art. 3º do CC/02). As pessoas com deficiência, caso necessitem, serão assistidas por meio da curatela (art. 1.767 do CC/02) ou da tomada de decisão apoiada, sendo enquadradas como relativamente incapazes (art. 4º do CC/02).
+
+## Referências do Tema
+
+--- Art. 3º do CC/02
+--- Art. 4º do CC/02
+--- Art. 6º da Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência)
+--- Art. 84 da Lei nº 13.146/2015
+--- Art. 1.767 do CC/02
+
+## Pergunte pra I.A.
+
+  - Explique a principal mudança trazida pelo Estatuto da Pessoa com Deficiência (Lei nº 13.146/2015) ao regime de incapacidades do Código Civil.
+  - Quem é considerado absolutamente incapaz para a prática dos atos da vida civil após a vigência do Estatuto?
+  - Diferencie os institutos da curatela e da tomada de decisão apoiada como ferramentas de proteção à pessoa com deficiência.
+  - Uma pessoa com deficiência intelectual pode, por si só, vender um imóvel de sua propriedade? Justifique.
+  - Analise criticamente o impacto da nova sistemática das incapacidades na segurança jurídica dos negócios celebrados por pessoas com deficiência.
+
+### Fontes
+
+  - O Estatuto da Pessoa com Deficiência e as mudanças no Código Civil - Consultor Jurídico (Conjur)
+  - A capacidade civil da pessoa com deficiência após o Estatuto - https://www.google.com/search?q=Jus.com.br
+  - Estatuto da Pessoa com Deficiência (L13146) - Presidência da República (planalto.gov.br)
+  - A Teoria das Incapacidades e o Estatuto da Pessoa com Deficiência - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - O regime de incapacidades e o Estatuto da Pessoa com Deficiência - Migalhas
 -----
 # A Incapacidade Civil e a Pessoa com Deficiência
 
