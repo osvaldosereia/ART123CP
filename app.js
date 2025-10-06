@@ -22,6 +22,47 @@
   const escapeHTML = (s)=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
   const slugify = (s)=>(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
 
+  // ===== Normalização PT-BR e plural =====
+  const normPT = s => String(s||'')
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'') // remove acentos
+    .replace(/ç/g,'c');
+
+  const escRx = x => x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+
+  // Gera padrão que casa singular/plural comum em PT
+  function pluralRegexToken(w){
+    if(w.length<=2) return escRx(w);
+    const stem2 = w.slice(0,-2);
+    const stem1 = w.slice(0,-1);
+    if(/ao$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'oes')}|${escRx(stem2+'aes')}|${escRx(stem2+'aos')})`;
+    if(/m$/.test(w))  return `(?:${escRx(w)}|${escRx(stem1+'ns')})`;
+    if(/[rz]$/.test(w)) return `(?:${escRx(w)}|${escRx(w+'es')})`;
+    if(/al$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'ais')})`;
+    if(/el$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'eis')})`;
+    if(/il$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'is')})`;
+    if(/ol$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'ois')})`;
+    if(/ul$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'uis')})`;
+    return `(?:${escRx(w)}s?)`; // fallback simples
+  }
+
+  function _hitPT(hayRaw, qRaw){
+    const hay = normPT(hayRaw);
+    const qn  = normPT(qRaw);
+    if(!hay || !qn) return 0;
+
+    let s = 0;
+    if(hay===qn) s += 100;
+    if(hay.includes(qn)) s += 60;
+
+    const toks = qn.split(/\s+/).filter(Boolean);
+    for(const t of toks){
+      const rx = new RegExp(`(?<![a-z0-9])${pluralRegexToken(t)}(?![a-z0-9])`, 'g');
+      if(rx.test(hay)) s += 10;
+    }
+    return s;
+  }
+
   function currentPage(){
     const h = location.hash || '#/';
     const mTema  = h.match(/^#\/tema\/([^?#]+)/);
@@ -206,21 +247,15 @@
   const acList = document.querySelector('#suggestions');
   if (acList) acList.hidden = true;
 
-  function _hit(hay,q){
-    if(!hay) return 0;
-    if(hay===q) return 100;
-    if(hay.includes(q)) return 60;
-    return q.split(/\s+/).reduce((s,w)=> s + (w && hay.includes(w) ? 10 : 0), 0);
-  }
   function scoreFields(q, t){
-    const sT = _hit(t.titleL, q);
-    const sI = _hit(t.introL, q);
-    const sP = _hit(t.askL,   q);
+    const sT = _hitPT(t.titleN, q);
+    const sI = _hitPT(t.introN, q);
+    const sP = _hitPT(t.askN,   q);
     return { score: 1.0*sT + 0.5*sI + 0.8*sP, flags: { t: sT>0, i: sI>0, p: sP>0 } };
   }
 
   input?.addEventListener('input', e=>{
-    const q=(e.target.value||'').trim().toLowerCase();
+    const q=(e.target.value||'').trim();
     if(q.length<2 || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; closeAcDropdown(); return; }
 
     // ranqueia amplo; depois filtramos por categoria
@@ -274,7 +309,7 @@
       ].join('');
       return `
         <li role="option">
-          <a href="#/tema/${t.slug}" data-q="${q}" data-flags="${['t','i','p'].filter(k=>flags[k]).join('')}">
+          <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['t','i','p'].filter(k=>flags[k]).join('')}">
             <div class="s1">${titleHTML}<span class="badges">${badges}</span></div>
             <div class="s2">${(t.group||'').replace(/</g,'&lt;')}</div>
           </a>
@@ -337,7 +372,11 @@
             titleL: (t.title||'').toLowerCase(),
             introL: intro.toLowerCase(),
             askL:   ask.toLowerCase(),
-            blob:   (t.title + ' ' + intro + ' ' + ask).toLowerCase()
+            blob:   (t.title + ' ' + intro + ' ' + ask).toLowerCase(),
+            // normalizados para busca PT
+            titleN: normPT(t.title),
+            introN: normPT(intro),
+            askN:   normPT(ask)
           });
         }
       }catch(e){
@@ -412,7 +451,7 @@
     liSaved.appendChild(btnSaved); liSaved.appendChild(ulSaved); menu.appendChild(liSaved);
 
     // remover salvo inline
-    ulSaved.querySelectorAll('button[data-remove]').forEach(b=>{
+    ulSaved.querySelectorAll('button[data-remove]')?.forEach(b=>{
       b.addEventListener('click',(ev)=>{
         ev.preventDefault();
         const slug=b.getAttribute('data-remove');
@@ -528,7 +567,6 @@
               </span>
             </div>`).join('')}
         </div>
-      </section>
       </section>
     `;
 
