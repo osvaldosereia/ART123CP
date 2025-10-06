@@ -9,9 +9,10 @@
   let GLOSS = null;
   let activeCat = 'Todos'; // filtro de categoria nas sugestões
 
-  const SAVED_KEY = 'meujus:saved';
-  const LAST_KEY  = 'meujus:last';
-  const LAST_SEARCH_KEY = 'meujus:lastSearch';
+  const SAVED_KEY        = 'meujus:saved';
+  const LAST_KEY         = 'meujus:last';
+  const LAST_SEARCH_KEY  = 'meujus:lastSearch';
+  const LAST_AC_KEY      = 'meujus:lastAc'; // snapshot das sugestões para chips pós-busca
 
   const readSaved  = () => { try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch(_){ return []; } };
   const writeSaved = (list) => localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(new Set(list))));
@@ -123,6 +124,83 @@
     return esc.replace(rx, '<mark>$1</mark>');
   }
 
+  /* ===== Chips pós-busca: helpers ===== */
+  function getLastAc(){
+    try{ return JSON.parse(sessionStorage.getItem(LAST_AC_KEY)||'null'); }catch(_){ return null; }
+  }
+  let __popEl = null;
+  function closeAcDropdown(){
+    if(__popEl){ __popEl.remove(); __popEl=null; }
+    document.removeEventListener('click', onDocClickClose, true);
+    window.removeEventListener('hashchange', closeAcDropdown, {once:true});
+  }
+  function onDocClickClose(e){
+    if(__popEl && !__popEl.contains(e.target)) closeAcDropdown();
+  }
+  function openAcDropdown(anchorBtn, cat, data){
+    closeAcDropdown();
+    const list = (cat && cat!=='Todos')
+      ? data.items.filter(it => (it.group||'Geral')===cat)
+      : data.items.slice();
+
+    if(!list.length) return;
+
+    __popEl = document.createElement('ul');
+    __popEl.className = 'suggestions pop';
+    __popEl.setAttribute('role','listbox');
+    __popEl.innerHTML = list.slice(0,12).map(it=>`
+      <li role="option">
+        <a href="#/tema/${it.slug}">
+          <div class="s1">${escapeHTML(it.title)}</div>
+          <div class="s2">${escapeHTML(it.group||'')}</div>
+        </a>
+      </li>`).join('');
+
+    document.body.appendChild(__popEl);
+
+    const r = anchorBtn.getBoundingClientRect();
+    const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    const padX = 8;
+    const left = Math.min(Math.max(r.left, padX), vw - padX - 320);
+    __popEl.style.left = left + 'px';
+    __popEl.style.top  = (r.bottom + window.scrollY + 6) + 'px';
+    __popEl.style.width = Math.min(640, vw - padX*2) + 'px';
+
+    setTimeout(()=>{
+      document.addEventListener('click', onDocClickClose, true);
+      window.addEventListener('hashchange', closeAcDropdown, {once:true});
+    }, 0);
+  }
+  function renderPostSearchChips(){
+    const host  = document.getElementById('postAc');
+    const track = document.getElementById('postAcTrack');
+    if(!host || !track) return;
+
+    const data = getLastAc();
+    if(!data || !data.items?.length){
+      host?.classList?.add('hidden');
+      host?.setAttribute?.('aria-hidden','true');
+      return;
+    }
+
+    track.innerHTML = '';
+    for(const cat of data.categories||[]){
+      const btn = document.createElement('button');
+      btn.type='button';
+      btn.className='ac-chip';
+      btn.textContent=cat;
+      btn.dataset.cat = cat;
+      btn.addEventListener('click', (ev)=> openAcDropdown(ev.currentTarget, cat, data));
+      track.appendChild(btn);
+    }
+
+    document.getElementById('postAcPrev')?.addEventListener('click', ()=> track.scrollBy({left:-track.clientWidth*0.8, behavior:'smooth'}));
+    document.getElementById('postAcNext')?.addEventListener('click', ()=> track.scrollBy({left:+track.clientWidth*0.8, behavior:'smooth'}));
+
+    host.classList.remove('hidden');
+    host.setAttribute('aria-hidden','false');
+  }
+
   /* ===== Busca (autocomplete) ===== */
   const input  = document.querySelector('#search');
   const acList = document.querySelector('#suggestions');
@@ -143,7 +221,7 @@
 
   input?.addEventListener('input', e=>{
     const q=(e.target.value||'').trim().toLowerCase();
-    if(q.length<2 || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; return; }
+    if(q.length<2 || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; closeAcDropdown(); return; }
 
     // ranqueia amplo; depois filtramos por categoria
     let arr = TEMAS.map(t=>({ t, ...scoreFields(q,t) }))
@@ -151,7 +229,7 @@
       .sort((a,b)=> b.score-a.score || a.t.title.localeCompare(b.t.title,'pt-BR'))
       .slice(0,40);
 
-    if(!arr.length){ acList.innerHTML=''; acList.hidden=true; return; }
+    if(!arr.length){ acList.innerHTML=''; acList.hidden=true; closeAcDropdown(); return; }
 
     // contagem por categoria das sugestões atuais
     const counts = new Map();
@@ -163,6 +241,18 @@
       const filtered = arr.filter(x => (x.t.group||'Geral')===activeCat);
       arr = filtered.length ? filtered : arr;
     }
+
+    // snapshot para chips pós-busca
+    const lastAc = {
+      q,
+      categories: ['Todos', ...catList],
+      items: arr.slice(0, 20).map(x => ({
+        slug: x.t.slug,
+        title: x.t.title,
+        group: x.t.group || 'Geral'
+      }))
+    };
+    try{ sessionStorage.setItem(LAST_AC_KEY, JSON.stringify(lastAc)); }catch(_){}
 
     // chips
     const chipsHTML = `
@@ -224,7 +314,7 @@
     acList.hidden = true;
   });
 
-  window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; });
+  window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; closeAcDropdown(); });
 
   /* ===== Seeds ===== */
   async function readAllSeeds(){
@@ -439,7 +529,7 @@
             </div>`).join('')}
         </div>
       </section>
-    `;
+    ";
 
     contentEl.querySelectorAll('[data-go]').forEach(a=>{
       a.addEventListener('click', (e)=>{ e.preventDefault(); location.hash = a.getAttribute('data-go')||'#/'; });
@@ -507,6 +597,9 @@
       const trainBtn=mkBtn('Treinar','', ()=>window.open(`https://www.google.com/search?udm=50&q=${encodeURIComponent(pageTitle+' questões objetivas')}`,'_blank','noopener'));
       actionsEl.append(saveBtn, studyBtn, trainBtn);
 
+      // montar chips pós-busca abaixo da topbar (requer #postAc no HTML)
+      renderPostSearchChips();
+
       const introRaw = pick.intro.length ? escapeHTML(pick.intro.join(' ')) : '';
       const introHTML = shouldHighlight ? highlightHTML(introRaw, lastSearch.q) : introRaw;
 
@@ -516,7 +609,7 @@
         return `<li><a href="https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}" target="_blank" rel="noopener">${qHi}</a></li>`;
       }).join('');
 
-      contentEl.innerHTML=`
+      $('#content').innerHTML=`
         <article class="card ubox" role="article">
           ${introHTML ? `<p class="ubox-intro">${introHTML}</p>` : ''}
           <section class="ubox-section">
@@ -546,6 +639,9 @@
     else if(page.kind==='sobre') loadSobre();
     else renderHome();
   }
+
+  // Fechar dropdown pop ao focar o campo de busca
+  document.querySelector('#search')?.addEventListener('focus', closeAcDropdown);
 
   window.addEventListener('hashchange', renderByRoute);
   (async function init(){ await renderByRoute(); })();
