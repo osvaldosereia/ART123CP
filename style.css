@@ -228,13 +228,17 @@ mark{
 .q-list li::before,
 .q-list li::after{ content: none !important; }  /* desliga números/badges custom */
 
-/* Mobile: dropdown de sugestões com 90% da largura */
+/* Mobile: dropdown centralizado e 90% da largura */
 @media (max-width: 768px){
   .suggestions,
   .suggestions.pop{
+    position: fixed !important;
+    left: 50vw !important;
+    transform: translateX(-50%) !important;
     width: 90vw !important;
     max-width: 90vw !important;
-    left: 5vw !important;     /* centraliza */
     right: auto !important;
+    z-index: 90;
   }
 }
+
