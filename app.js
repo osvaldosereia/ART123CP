@@ -159,6 +159,12 @@
     return esc.replace(rx, '<mark>$1</mark>');
   }
 
+  // *texto* -> <strong>texto</strong> (aplica em HTML já escapado)
+function fmtInlineBold(escapedHtml){
+  return String(escapedHtml).replace(/\*([^*]+)\*/g, '<strong>$1</strong>');
+}
+
+
   /* ===== Chips pós-busca: helpers ===== */
   function getLastAc(){
     try{ return JSON.parse(sessionStorage.getItem(LAST_AC_KEY)||'null'); }catch(_){ return null; }
@@ -656,8 +662,8 @@ const trainBtn = mkBtn('10 Questões','', ()=>window.open(
       // ===== Introdução em até 2 parágrafos =====
       const introParas = (pick.intro || []).slice(0,2).map(txt => escapeHTML(txt));
       const introHTMLParas = shouldHighlight && lastSearch?.q
-        ? introParas.map(p => highlightHTML(p, lastSearch.q))
-        : introParas.slice();
+          ? introParas.map(p => fmtInlineBold(highlightHTML(p, lastSearch.q)))
+  : introParas.map(p => fmtInlineBold(p));
       const introHTML = introHTMLParas.map(p => `<p class="ubox-intro" style="margin:0 0 .75rem 0">${p}</p>`).join('');
 
       // ===== Referências do Tema (lidas do TXT: linhas que começam com '--- ')
@@ -665,14 +671,14 @@ const trainBtn = mkBtn('10 Questões','', ()=>window.open(
       const refListHTML = refs.map(ref => {
         const prompt = `Localize o texto ORIGINAL em sites oficiais do governo (Planalto, STF, STJ, DOU, CNJ). Traga o link oficial primeiro. Referência: ${ref}`;
         const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
-        return `<li><a href="${url}" target="_blank" rel="noopener">${escapeHTML(ref)}</a></li>`;
+    return `<li><a href="${url}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(ref))}</a></li>`;
       }).join('');
 
       // ===== Perguntas (mantidas, com destaque quando houver) =====
       const qList=(pick.ask||[]).map(q=>{
         const qEsc = escapeHTML(q);
         const qHi  = shouldHighlight && lastSearch?.q ? highlightHTML(qEsc, lastSearch.q) : qEsc;
-        return `<li><a href="https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}" target="_blank" rel="noopener">${qHi}</a></li>`;
+    return `<li><a href="https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}" target="_blank" rel="noopener">${fmtInlineBold(qHi)}</a></li>`;
       }).join('');
 
       // ===== Render com separadores discretos =====
