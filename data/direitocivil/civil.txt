@@ -3,12 +3,179 @@
 
 -----
 
+# Imprescritíveis  
+-- A imprescritibilidade dos direitos da personalidade significa que eles não se perdem pelo decurso do tempo (Art. 189 do CC/02). Essa característica decorre de sua natureza inata e vitalícia, ligada à própria existência e dignidade da pessoa humana (Art. 1º, III, CF).  
+-- No entanto, a imprescritibilidade aplica-se à essência do direito, e não à pretensão de reparação por sua violação, que possui prazo prescricional (Art. 206, §3°, V, CC/02). O STJ, contudo, reconhece a imprescritibilidade da pretensão de reconhecimento de ofensa a direitos da personalidade.
+
+## Referências do Tema
+--- Art. 1º, III, CF
+--- Art. 189, CC/02
+--- Art. 206, §3°, V, CC/02
+--- Art. 27, CDC
+--- STJ – AREsp: 1179890 SC 2017/0252143-5
+
+## Pergunte pra I.A.
+
+  - Explique a diferença entre a imprescritibilidade do direito da personalidade e a prescritibilidade da pretensão indenizatória por sua violação, citando os artigos do Código Civil.
+  - Discorra sobre como a natureza inata e vitalícia dos direitos da personalidade fundamenta sua imprescritibilidade.
+  - Analise o entendimento do STJ sobre a imprescritibilidade da pretensão de reconhecimento de ofensa a direitos da personalidade, mesmo que a ação de reparação seja prescritível.
+  - De que forma o princípio da dignidade da pessoa humana (Art. 1º, III, CF) justifica a imprescritibilidade dos direitos da personalidade no Direito Civil?
+  - Compare a imprescritibilidade dos direitos da personalidade com a prescrição em outros ramos do direito, como o Direito Penal e o Direito Tributário.
+
+-----
+
+# Intransmissíveis e Irrenunciáveis  
+-- Os direitos da personalidade são, em regra, intransmissíveis e irrenunciáveis, não podendo seu exercício sofrer limitação voluntária (Art. 11 do CC/02). Isso se justifica pela sua ligação intrínseca à pessoa e à sua dignidade, protegendo a essência do indivíduo.  
+-- Contudo, essa intransmissibilidade e irrenunciabilidade são relativas, admitindo-se limitações voluntárias parciais e temporárias, conforme o Enunciado 4 da I Jornada de Direito Civil, e a possibilidade de disposição *post mortem* para fins altruísticos ou científicos (Art. 14 do CC/02).
+
+## Referências do Tema
+--- Art. 11, CC/02
+--- Art. 14, CC/02
+--- Enunciado 4 da I Jornada de Direito Civil do CJF
+
+## Pergunte pra I.A.
+
+  - Explique por que os direitos da personalidade são, em regra, intransmissíveis e irrenunciáveis, com base no Art. 11 do Código Civil.
+  - Discorra sobre as exceções à irrenunciabilidade e intransmissibilidade dos direitos da personalidade, como as limitações voluntárias parciais e temporárias (Enunciado 4 da I Jornada de Direito Civil).
+  - Analise a disposição *post mortem* do próprio corpo para fins científicos ou altruísticos (Art. 14 do Código Civil) como uma forma de relativização da intransmissibilidade.
+  - Apresente um caso prático que ilustre a aplicação e os limites da irrenunciabilidade e intransmissibilidade dos direitos da personalidade.
+  - De que forma a dignidade da pessoa humana influencia a interpretação dessas características dos direitos da personalidade?
+
+-----
+
+# Relativamente Indisponível  
+-- Os direitos da personalidade são considerados relativamente indisponíveis, pois sua disposição é limitada pela lei e por valores inerentes à dignidade da pessoa humana. Embora, em regra, não possam ser alienados ou renunciados de forma plena, admitem-se restrições pontuais e temporárias.  
+-- Essa relativização permite, por exemplo, a disposição do próprio corpo para fins de transplante ou pesquisa (Art. 13 da Lei 9434/97) e a limitação voluntária do exercício de direitos em situações como contratos de imagem ou participação em *reality shows*, desde que não sejam permanentes ou gerais, conforme o Enunciado 278 da IV Jornada de Direito Civil.
+
+## Referências do Tema
+--- Art. 13, CC/02
+--- Lei 9.434/97
+--- Enunciado 278 da IV Jornada de Direito Civil do CJF
+
+## Pergunte pra I.A.
+
+  - Explique o que significa dizer que os direitos da personalidade são "relativamente indisponíveis" e como isso se diferencia da indisponibilidade absoluta.
+  - Discorra sobre a possibilidade de disposição do próprio corpo para fins de transplante ou pesquisa científica (Art. 13 do Código Civil e Lei 9434/97) como uma exceção à indisponibilidade.
+  - Analise como a doutrina e a jurisprudência conciliam a relativização da indisponibilidade com a proteção da dignidade da pessoa humana.
+  - Apresente exemplos de situações em que a limitação voluntária dos direitos da personalidade é admitida, e quais são os seus limites.
+  - De que forma a "autodeterminação da pessoa natural" atua como fundamento para a relativização da indisponibilidade dos direitos da personalidade?
+
+-----
+
+# Ilimitado.  
+-- A característica de "ilimitado" dos direitos da personalidade não significa que não possuam limites, mas sim que seu rol é exemplificativo, não exaustivo. Isso permite que novos direitos, essenciais à dignidade da pessoa humana, sejam reconhecidos, como o estado de filiação (STJ – AREsp: 1179890 SC 2017/0252143-5).  
+-- Dessa forma, o Direito Civil, sob a influência do neoconstitucionalismo, adapta-se às evoluções sociais, tutelando valores que nascem e se desenvolvem com o ser humano, garantindo a proteção de sua honra, identidade, imagem e outros aspectos existenciais, que formam a essência da pessoa.
+
+## Referências do Tema  
+--- Art. 52, CC/02  
+--- STJ – AREsp: 1179890 SC 2017/0252143-5
+
+## Pergunte pra I.A.
+
+  - Explique o que significa a característica de "ilimitado" dos direitos da personalidade e como ela se diferencia de uma ausência de limites para esses direitos.
+  - Discorra sobre como o reconhecimento de novos direitos da personalidade, como o estado de filiação, exemplifica a natureza "ilimitada" desses direitos.
+  - De que forma a interpretação "não exaustiva" do rol dos direitos da personalidade no Código Civil contribui para a sua adaptação às mudanças sociais e tecnológicas?
+  - Analise a influência do neoconstitucionalismo e do princípio da dignidade da pessoa humana na evolução e no reconhecimento de novos direitos da personalidade no ordenamento jurídico brasileiro.
+  - Apresente exemplos de outros direitos que, embora não expressamente listados no Código Civil, são considerados direitos da personalidade pela doutrina ou jurisprudência.
+
+-----
+
+# Inato.  
+-- Os direitos da personalidade são inatos, o que significa que pertencem ao ser humano desde o seu nascimento, independentemente de reconhecimento legal (Art. 1º, III, CF). Essa característica ressalta sua ligação intrínseca à própria existência da pessoa e sua relevância essencial, como vida, honra e identidade.  
+-- São, assim, tutelados desde os primeiros estágios da vida (como o nascituro, que tem seus direitos salvaguardados desde a concepção) e acompanham o indivíduo até a morte. Contudo, excepcionalmente, alguns direitos da personalidade podem ser adquiridos, como o direito autoral, demonstrando a adaptabilidade do conceito a diversas realidades.
+
+## Referências do Tema  
+--- Art. 1º, III, CF  
+--- Art. 2º, CC/02  
+--- Enunciado 4 da I Jornada de Direito Civil do CJF
+
+## Pergunte pra I.A.
+
+  - Explique a característica "inato" dos direitos da personalidade, diferenciando-a de "inatismo absoluto" e "inatismo relativo".
+  - Discorra sobre a proteção dos direitos do nascituro desde a concepção e como essa tutela se alinha à característica "inato" dos direitos da personalidade, mesmo antes do nascimento com vida.
+  - Analise como a dignidade da pessoa humana serve de fundamento para a compreensão da natureza inata dos direitos da personalidade.
+  - Apresente exemplos de direitos da personalidade que, embora inatos, podem ter um aspecto adquirido, como o direito autoral.
+  - De que forma a característica "inato" dos direitos da personalidade influencia sua interpretação e aplicação em casos de colisão com outros direitos ou interesses?
+
+-----
+
+# Extrapatrimoniais.  
+-- Os direitos da personalidade são extrapatrimoniais, o que significa que não comportam avaliação econômica direta (não possuem valor pecuniário imediato). Contudo, sua violação pode ensejar pretensão de reparação por dano moral (Art. 5º, V, CF/88), que, embora de natureza patrimonial, visa compensar a lesão a um bem imaterial e tem caráter educativo e preventivo.  
+-- Essa distinção é crucial, pois, como demonstrado pela Súmula 227 do STJ, a pessoa jurídica pode sofrer dano moral, mesmo não experimentando dor ou sofrimento. Isso reforça a ideia de que o dano moral não se restringe a aspectos subjetivos de dor, mas abrange a lesão à honra objetiva e à reputação, que são bens extrapatrimoniais.
+
+## Referências do Tema  
+--- Art. 5º, V, CF/88  
+--- Súmula 227 do STJ
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de "extrapatrimonialidade" dos direitos da personalidade e como isso se diferencia da impossibilidade de qualquer tipo de compensação financeira.
+  - Discorra sobre a Súmula 227 do STJ, que reconhece a possibilidade de dano moral à pessoa jurídica, e como isso ilustra a natureza extrapatrimonial dos direitos da personalidade, sem a necessidade de "dor e sofrimento".
+  - Analise a função da reparação por dano moral como forma de compensar a violação de um direito da personalidade, mesmo que este seja extrapatrimonial.
+  - De que forma o caráter "extrapatrimonial" dos direitos da personalidade influencia a sua proteção em face de colisão com direitos patrimoniais, como a liberdade de expressão em biografias?
+  - Apresente a distinção entre "honra subjetiva" e "honra objetiva" e como essa diferenciação se relaciona com a extrapatrimonialidade e a possibilidade de dano moral a pessoas físicas e jurídicas.
+
+-----
+
+# Quais são as características dos Direitos da Personalidade?  
+-- As características dos Direitos da Personalidade, embora amplas e não exaustivas (Art. 52, CC), são vitais à proteção da dignidade da pessoa humana (Art. 1º, III, CF). São vitalícios, acompanhando a pessoa durante toda a vida, e absolutos, sendo oponíveis a todos (erga omnes) e exigindo uma postura de respeito e promoção por parte do Estado e da coletividade.
+-- São, também, ilimitados em seu rol, pois o Código Civil não os enumera de forma taxativa, permitindo o reconhecimento de novos direitos, como o estado de filiação. Adicionalmente, são inatos, extrapatrimoniais (não possuem valor econômico direto, mas sua violação pode gerar indenização), imprescritíveis na sua essão, e relativamente intransmissíveis e irrenunciáveis, admitindo limitações parciais e temporárias (Art. 11, CC), desde que não sejam permanentes ou gerais, conforme o Enunciado 4 da I Jornada de Direito Civil.
+
+## Referências do Tema
+--- Art. 1º, III, CF
+--- Art. 6º, CC/02
+--- Art. 11, CC/02
+--- Art. 12, CC/02
+--- Art. 52, CC/02
+--- Art. 189, CC/02
+--- Enunciado 4 da I Jornada de Direito Civil do CJF
+--- STJ – AREsp: 1179890 SC 2017/0252143-5
+
+## Pergunte pra I.A.
+
+  - Explique cada uma das características dos direitos da personalidade (vitaliciedade, absolutez, ilimitação, inatismo, extrapatrimonialidade, imprescritibilidade, intransmissibilidade e irrenunciabilidade), exemplificando como se manifestam na prática jurídica.
+  - Analise a flexibilização da intransmissibilidade e irrenunciabilidade dos direitos da personalidade, com base no Art. 11 do Código Civil e no Enunciado 4 da I Jornada de Direito Civil.
+  - Discorra sobre a diferença entre a imprescritibilidade dos direitos da personalidade e a prescritibilidade da pretensão indenizatória por sua violação.
+
+-----
+
+# Vitalício
+-- Os direitos da personalidade são vitalícios, ou seja, acompanham a pessoa durante toda a sua existência, desde o nascimento com vida (Art. 2º do CC/02). Essa característica diferencia-os da perpetuidade, pois cessam com a morte do indivíduo (Art. 6º do CC/02), que põe fim à personalidade jurídica e, consequentemente, à titularidade de direitos.
+-- São, assim, um reflexo da dignidade da pessoa humana e são inatos, consubstanciando valores intrínsecos ao ser. Embora não se estendam *post mortem*, sua violação em vida pode gerar pretensão indenizatória transmissível aos herdeiros, que buscam a reparação do dano moral sofrido pelo falecido, e não do dano moral próprio dos sucessores.
+
+## Referências do Tema
+--- Art. 2º, CC/02
+--- Art. 6º, CC/02
+
+## Pergunte pra I.A.
+
+  - Explique a distinção entre direitos da personalidade "vitalícios" e "perpétuos", contextualizando essa diferença com o início e o fim da personalidade jurídica.
+  - Discorra sobre a transmissibilidade da pretensão de reparação por dano moral sofrido pelo *de cujus*, e como isso não confere caráter perpétuo aos direitos da personalidade.
+  - Analise como a vitaliciedade dos direitos da personalidade se coaduna com as teorias do início da personalidade jurídica, especialmente a natalista e concepcionista.
+
+-----
+
+# Absoluto
+-- Os direitos da personalidade são absolutos, o que significa que são oponíveis a todos (eficácia *erga omnes*). Essa característica impõe à coletividade e ao Estado um dever geral de abstenção, ou seja, de não violar tais direitos.
+-- Além do dever de abstenção, o caráter absoluto dos direitos da personalidade também implica um dever de promoção por parte do Estado. Assim, a Administração Pública deve atuar para garantir a efetivação desses direitos, como a educação, saúde e igualdade, que são pilares da dignidade da pessoa humana (Art. 1º, III, CF), e que irradiam sua eficácia para as relações entre particulares.
+
+## Referências do Tema
+--- Art. 1º, III, CF
+
+## Pergunte pra I.A.
+
+  - Defina o conceito de absolutez dos direitos da personalidade e sua implicação de oponibilidade *erga omnes*.
+  - Explique o duplo dever do Estado em relação aos direitos da personalidade: o dever de abstenção e o dever de promoção.
+  - Discorra sobre a "eficácia irradiante" ou "horizontal" dos direitos fundamentais, e como isso se relaciona com o caráter absoluto dos direitos da personalidade nas relações privadas.
+
+-----
+
 # Direitos da Personalidade (Direito Civil)  
 -- Os direitos da personalidade são direitos essenciais à proteção da dignidade da pessoa humana (Art. 1º, III, CF), funcionando como expressões da cláusula geral de tutela da pessoa humana. O Código Civil os regula de forma não exaustiva, permitindo a ponderação em caso de colisão entre eles, pois nenhum se sobrepõe aos demais.
 
 -- Esses direitos, influenciados pelo neoconstitucionalismo, possuem eficácia irradiante, aplicando-se também nas relações entre particulares. São vitalícios, absolutos e, embora ilimitados em seu rol (Art. 52, CC), sua intransmissibilidade e irrenunciabilidade são relativas (Art. 11, CC), admitindo limitação voluntária parcial e temporária, como na proteção da voz humana (Art. 5º, XXII, CF/88 e Lei 9.610).
 
-# Referências do Tema  
+## Referências do Tema  
 --- Art. 1º, III, CF  
 --- Art. 5º, XXII, CF/88  
 --- Art. 6º, CC/02  
