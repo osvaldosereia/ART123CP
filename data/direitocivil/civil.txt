@@ -3,12 +3,12 @@
 -----
 
 # Desconsideração da Personalidade da Pessoa Jurídica  
--- A desconsideração da personalidade jurídica é medida excepcional para coibir o abuso de direito (Art. 50, CC/02), permitindo que, em casos de desvio de finalidade ou confusão patrimonial, os efeitos de certas obrigações sejam estendidos aos bens particulares dos sócios ou administradores.  
+-- A desconsideração da personalidade jurídica é medida excepcional para coibir o abuso de direito (Art. 50, Código Civil 2002), permitindo que, em casos de desvio de finalidade ou confusão patrimonial, os efeitos de certas obrigações sejam estendidos aos bens particulares dos sócios ou administradores.  
 -- A Lei 13.874/19 (Lei da Liberdade Econômica) endureceu os requisitos, distinguindo claramente o desvio de finalidade e a confusão patrimonial, com o objetivo de proteger a autonomia da pessoa jurídica e a segurança jurídica nas relações empresariais.
 
 # Referências do Tema  
---- Art. 50, CC/02  
---- Art. 1.052, §1º, CC/02  
+--- Art. 50, Código Civil 2002  
+--- Art. 1.052, §1º, Código Civil 2002  
 --- Lei 13.874/19  
 --- Art. 28, CDC  
 --- Art. 135, CTN  
@@ -33,25 +33,25 @@
 -----
 
 # Associação  
--- A associação é uma pessoa jurídica de direito privado (Art. 44, I, CC/02) formada pela união de pessoas que se organizam para fins não econômicos (Art. 53, CC/02), como culturais, religiosos, recreativos ou assistenciais. Não há, portanto, distribuição de lucros entre seus associados.  
--- Caracteriza-se pela *affectio societatis* e pela liberdade de associação (Art. 5º, XVII a XXI, CF). Seus associados têm direitos e deveres definidos no estatuto, e sua exclusão deve seguir o devido processo legal, garantindo ampla defesa.
+-- A associação é uma pessoa jurídica de direito privado (Art. 44, I, Código Civil 2002) formada pela união de pessoas que se organizam para fins não econômicos (Art. 53, Código Civil 2002), como culturais, religiosos, recreativos ou assistenciais. Não há, portanto, distribuição de lucros entre seus associados.  
+-- Caracteriza-se pela *affectio societatis* e pela liberdade de associação (Art. 5º, XVII a XXI, Constituição Federal de 1988). Seus associados têm direitos e deveres definidos no estatuto, e sua exclusão deve seguir o devido processo legal, garantindo ampla defesa.
 
 # Referências do Tema  
---- Art. 5º, XVII, CF  
---- Art. 5º, XVIII, CF  
---- Art. 5º, XIX, CF  
---- Art. 5º, XX, CF  
---- Art. 5º, XXI, CF  
---- Art. 44, I, CC/02  
---- Art. 53, CC/02  
---- Art. 54, CC/02  
---- Art. 55, CC/02  
---- Art. 56, CC/02  
---- Art. 57, CC/02  
---- Art. 58, CC/02  
---- Art. 59, CC/02  
---- Art. 60, CC/02  
---- Art. 61, CC/02  
+--- Art. 5º, XVII, Constituição Federal de 1988  
+--- Art. 5º, XVIII, Constituição Federal de 1988  
+--- Art. 5º, XIX, Constituição Federal de 1988  
+--- Art. 5º, XX, Constituição Federal de 1988  
+--- Art. 5º, XXI, Constituição Federal de 1988  
+--- Art. 44, I, Código Civil 2002  
+--- Art. 53, Código Civil 2002  
+--- Art. 54, Código Civil 2002  
+--- Art. 55, Código Civil 2002  
+--- Art. 56, Código Civil 2002  
+--- Art. 57, Código Civil 2002  
+--- Art. 58, Código Civil 2002  
+--- Art. 59, Código Civil 2002  
+--- Art. 60, Código Civil 2002  
+--- Art. 61, Código Civil 2002  
 --- STJ – REsp 1.839.889-DF
 
 ## Pergunte pra I.A.
@@ -75,7 +75,7 @@
 -- Se não houver relação sucessória entre os comorientes, o instituto da comoriência não produz efeitos jurídicos, ressaltando-se a necessidade de interesse sucessório para sua aplicação.
 
 # Referências do Tema  
---- Art. 8º do CC02
+--- Art. 8º do Código Civil 2002
 
 ## Pergunte pra I.A.
 
@@ -94,8 +94,8 @@
 -- Contudo, a Teoria da Aparência prevalece, fazendo com que a pessoa jurídica responda por atos de seus gestores, mesmo *ultra vires*, se o terceiro estiver de boa-fé. A Lei 14.1952021 revogou dispositivos que limitavam essa responsabilidade, reforçando a boa-fé objetiva.
 
 # Referências do Tema  
---- Art. 47, CC02  
---- Art. 1.015, parágrafo único (revogado), CC02  
+--- Art. 47, Código Civil 2002  
+--- Art. 1.015, parágrafo único (revogado), Código Civil 2002  
 --- Enunciado 147 da III Jornada de Direito Civil  
 --- Lei 14.1952021
 
@@ -119,7 +119,7 @@
 -- Assim, a pessoa jurídica é titular de honra objetiva (reputação) e privacidade (e.g., contas bancárias), podendo sofrer dano moral (Súmula 227 do STJ). Contudo, não possui honra subjetiva (autoestima), vida ou atributos físicos, o que limita a extensão dessa proteção.
 
 # Referências do Tema  
---- Art. 52, CC02  
+--- Art. 52, Código Civil 2002  
 --- Súmula 227 do STJ
 
 ## Pergunte pra I.A.
@@ -141,10 +141,10 @@
 
 # Extinção da EIRELI pela Lei  
 -- A EIRELI (Empresa Individual de Responsabilidade Limitada) foi extinta pela Lei 14.1952021, sendo suas empresas transformadas em sociedades limitadas unipessoais. Essa mudança busca simplificar as formas societárias.  
--- A sociedade limitada unipessoal (Art. 1.052, §§ 1º e 2º, CC02, alterado pela Lei 13.8742019) permite a constituição de pessoa jurídica por um único indivíduo, substituindo a EIRELI como forma de empreendedorismo individual com responsabilidade limitada.
+-- A sociedade limitada unipessoal (Art. 1.052, §§ 1º e 2º, Código Civil 2002, alterado pela Lei 13.8742019) permite a constituição de pessoa jurídica por um único indivíduo, substituindo a EIRELI como forma de empreendedorismo individual com responsabilidade limitada.
 
 # Referências do Tema  
---- Art. 1.052, §§ 1º e 2º, CC02  
+--- Art. 1.052, §§ 1º e 2º, Código Civil 2002  
 --- Lei 13.8742019  
 --- Lei 14.1952021
 
@@ -164,12 +164,12 @@
 -----
 
 # Autonomia da Pessoa Jurídica  
--- A autonomia da pessoa jurídica garante a separação entre o patrimônio da empresa e o de seus sócios, administradores ou instituidores (Art. 49-A, CC02). Essa segregação de riscos visa estimular empreendimentos e gerar benefícios sociais e econômicos.  
--- Essa autonomia, contudo, não é absoluta. Em casos de abuso da personalidade jurídica, caracterizado por desvio de finalidade ou confusão patrimonial, a desconsideração pode estender os efeitos das obrigações aos bens particulares dos responsáveis (Art. 50, CC02).
+-- A autonomia da pessoa jurídica garante a separação entre o patrimônio da empresa e o de seus sócios, administradores ou instituidores (Art. 49-A, Código Civil 2002). Essa segregação de riscos visa estimular empreendimentos e gerar benefícios sociais e econômicos.  
+-- Essa autonomia, contudo, não é absoluta. Em casos de abuso da personalidade jurídica, caracterizado por desvio de finalidade ou confusão patrimonial, a desconsideração pode estender os efeitos das obrigações aos bens particulares dos responsáveis (Art. 50, Código Civil 2002).
 
 # Referências do Tema  
---- Art. 49-A, CC02  
---- Art. 50, CC02  
+--- Art. 49-A, Código Civil 2002  
+--- Art. 50, Código Civil 2002  
 --- Lei 13.8742019
 
 ## Pergunte pra I.A.
@@ -189,12 +189,12 @@
 
 # Como será o processo de interdição?  
 -- O processo de interdição, iniciado com petição especificando a incapacidade e laudo médico (Art. 749 e 750, CPC), prevê citação e oitiva do interditando, que pode impugnar em 15 dias com apoio de especialista e recursos tecnológicos (Art. 751, CPC).  
--- Em urgência, o juiz nomeia curador provisório. A interdição é excepcional, restrita a atos patrimoniais, e a sentença é constitutiva *ex nunc* (Art. 9º, III, CC02). O MP atua como fiscal, e a curatela pode ser compartilhada.
+-- Em urgência, o juiz nomeia curador provisório. A interdição é excepcional, restrita a atos patrimoniais, e a sentença é constitutiva *ex nunc* (Art. 9º, III, Código Civil 2002). O MP atua como fiscal, e a curatela pode ser compartilhada.
 
 # Referências do Tema  
---- Art. 9º, III, CC02  
---- Art. 1.767, I, CC02  
---- Art. 1.775-A do CC02  
+--- Art. 9º, III, Código Civil 2002  
+--- Art. 1.767, I, Código Civil 2002  
+--- Art. 1.775-A do Código Civil 2002  
 --- Art. 749 do CPC  
 --- Art. 749, parágrafo único, CPC  
 --- Art. 750 do CPC  
@@ -214,20 +214,20 @@
   - Avalie a natureza jurídica da sentença de interdição (*ex nunc*) e suas implicações para os atos praticados antes e depois da decisão.
   - Explique o conceito de curatela provisória e quando ela pode ser nomeada pelo juiz.
   - Discuta a flexibilização da interdição pela Lei 13.14615, limitando-a a atos patrimoniais, e os debates doutrinários sobre a possível desproteção de vulneráveis.
-  - Aborde a possibilidade da curatela compartilhada (Art. 1.775-A do CC02) e como ela se alinha aos princípios de inclusão e autodeterminação.
+  - Aborde a possibilidade da curatela compartilhada (Art. 1.775-A do Código Civil 2002) e como ela se alinha aos princípios de inclusão e autodeterminação.
   - Quais são os efeitos práticos da decisão do STJ que dispensou a nomeação de curador especial quando o Ministério Público atua como fiscal da ordem jurídica?
   - Explique como a falta de intervenção do Ministério Público no processo de interdição pode gerar nulidade, e quais são os requisitos para a comprovação de prejuízo.
 
 -----
 
 # Pessoa Jurídica no Ordenamento Jurídico  
--- A pessoa jurídica é um ente, formado por pessoas ou bens, que adquire personalidade jurídica por determinação legal, sendo sujeito de direitos e obrigações. O Direito atual, sob influência da Constituição Federal (Art. 170, CF), a compreende com caráter instrumental e função social.  
--- Inicia sua personalidade com o registro (Art. 45, CC02) para as de direito privado, e com a vigência da lei instituidora para as de direito público. A Súmula 227 do STJ, ao admitir dano moral à pessoa jurídica, reflete a adaptação do conceito aos direitos da personalidade.
+-- A pessoa jurídica é um ente, formado por pessoas ou bens, que adquire personalidade jurídica por determinação legal, sendo sujeito de direitos e obrigações. O Direito atual, sob influência da Constituição Federal (Art. 170, Constituição Federal de 1988), a compreende com caráter instrumental e função social.  
+-- Inicia sua personalidade com o registro (Art. 45, Código Civil 2002) para as de direito privado, e com a vigência da lei instituidora para as de direito público. A Súmula 227 do STJ, ao admitir dano moral à pessoa jurídica, reflete a adaptação do conceito aos direitos da personalidade.
 
 # Referências do Tema  
---- Art. 45, CC02  
---- Art. 52, CC02  
---- Art. 170, CF  
+--- Art. 45, Código Civil 2002  
+--- Art. 52, Código Civil 2002  
+--- Art. 170, Constituição Federal de 1988  
 --- Súmula 227 do STJ  
 --- Lei 14.1952021
 
@@ -248,12 +248,12 @@
 
 # Teorias Afirmativas da Pessoa Jurídica  
 -- As teorias afirmativas buscam explicar a existência da pessoa jurídica. Correntes formalistas, como a da ficção jurídica, a veem como uma abstração legal. Realistas, pela teoria da realidade objetiva, a consideram um organismo social vivo, com vontade própria.  
--- O Brasil adota a teoria da realidade técnica (Art. 45, CC02), que concilia a criação legal com a existência real. Essa abordagem reconhece a pessoa jurídica como fruto da lei, mas com autonomia para agir, sempre buscando aprimorar sua função social e valores constitucionais.
+-- O Brasil adota a teoria da realidade técnica (Art. 45, Código Civil 2002), que concilia a criação legal com a existência real. Essa abordagem reconhece a pessoa jurídica como fruto da lei, mas com autonomia para agir, sempre buscando aprimorar sua função social e valores constitucionais.
 
 # Referências do Tema  
 --- Art. 40 a 69 do Código Civil  
---- Art. 45, CC02  
---- Art. 170, CF
+--- Art. 45, Código Civil 2002  
+--- Art. 170, Constituição Federal de 1988
 
 ## Pergunte pra I.A.
 
@@ -271,12 +271,12 @@
 -----
 
 # Emancipação pelo exercício de emprego público efetivo  
--- A emancipação legal ocorre por vínculo profissional com a Administração Pública (Art. 5º, parágrafo único, V, CC02), pressupondo que o menor, ao ocupar cargo público, demonstra capacidade para atos civis.  
+-- A emancipação legal ocorre por vínculo profissional com a Administração Pública (Art. 5º, parágrafo único, V, Código Civil 2002), pressupondo que o menor, ao ocupar cargo público, demonstra capacidade para atos civis.  
 -- Essa modalidade se estende a vínculos estatutários ou celetistas, mas não a cargos temporários ou em comissão, refletindo a lógica de coerência da Administração Pública ao reconhecer a maturidade do menor para a vida civil.
 
 # Referências do Tema  
---- Art. 5º, parágrafo único, V, CC02  
---- Art. 37, II, CF
+--- Art. 5º, parágrafo único, V, Código Civil 2002  
+--- Art. 37, II, Constituição Federal de 1988
 
 ## Pergunte pra I.A.
 
@@ -289,11 +289,11 @@
 -----
 
 # Emancipação em razão de colação de grau em curso superior  
--- A colação de grau em curso superior antecipa a capacidade de fato (Art. 5º, parágrafo único, V, CC02), presumindo que o conhecimento adquirido confere ao menor aptidão para os atos da vida civil por si só.  
+-- A colação de grau em curso superior antecipa a capacidade de fato (Art. 5º, parágrafo único, V, Código Civil 2002), presumindo que o conhecimento adquirido confere ao menor aptidão para os atos da vida civil por si só.  
 -- Este tipo de emancipação legal reflete a confiança do Estado na maturidade intelectual e cognitiva do indivíduo que conclui o ensino superior, entendendo que essa formação é suficiente para o pleno exercício da vida civil.
 
 ## Referências do Tema  
---- Art. 5º, parágrafo único, V, CC02
+--- Art. 5º, parágrafo único, V, Código Civil 2002
 
 ## Pergunte pra I.A.
 
@@ -308,16 +308,16 @@ Estou pronto para continuar com os próximos dois temas quando você desejar.
 -----
 
 # Emancipação  
--- A emancipação antecipa a capacidade de fato do menor (16 a 18 anos), permitindo-lhe atos da vida civil (Art. 5º, parágrafo único, CC02). Contudo, não afasta a responsabilidade civil dos pais, a inimputabilidade penal (Art. 27, CP), nem a aplicação do ECA (Enunciado 630 da VI Jornada de Direito Civil).  
+-- A emancipação antecipa a capacidade de fato do menor (16 a 18 anos), permitindo-lhe atos da vida civil (Art. 5º, parágrafo único, Código Civil 2002). Contudo, não afasta a responsabilidade civil dos pais, a inimputabilidade penal (Art. 27, CP), nem a aplicação do ECA (Enunciado 630 da VI Jornada de Direito Civil).  
 -- Pode ser voluntária (acordo dos pais), judicial (discordância dos pais ou pedido do tutor) ou legal (casamento, emprego público efetivo, colação de grau superior, estabelecimento civilcomercial ou economia própria), sempre exigindo registro público, exceto na legal.
 
 ## Referências do Tema  
---- Art. 5º, parágrafo único, V, CC02  
---- Art. 9º, II, CC02  
+--- Art. 5º, parágrafo único, V, Código Civil 2002  
+--- Art. 9º, II, Código Civil 2002  
 --- Art. 27, CP  
---- Art. 1.517, CC02  
---- Art. 1.520, CC02  
---- Art. 1.631, parágrafo único, CC02  
+--- Art. 1.517, Código Civil 2002  
+--- Art. 1.520, Código Civil 2002  
+--- Art. 1.631, parágrafo único, Código Civil 2002  
 --- ADI 4277 do STF  
 --- RE 898.060 do STF  
 --- Enunciado 630 da VI Jornada de Direito Civil  
@@ -339,13 +339,13 @@ Estou pronto para continuar com os próximos dois temas quando você desejar.
 -----
 
 # Emancipação pelo casamento  
--- A emancipação pelo casamento, após a Lei 13.81119, exige que ambos os nubentes tenham 16 anos ou mais (Art. 1.520, CC02), necessitando de autorização dos pais ou representantes legais (Art. 1.517, CC02). A divergência dos pais pode ser suprida judicialmente (Art. 1.631, parágrafo único, CC02).  
+-- A emancipação pelo casamento, após a Lei 13.81119, exige que ambos os nubentes tenham 16 anos ou mais (Art. 1.520, Código Civil 2002), necessitando de autorização dos pais ou representantes legais (Art. 1.517, Código Civil 2002). A divergência dos pais pode ser suprida judicialmente (Art. 1.631, parágrafo único, Código Civil 2002).  
 -- O divórcio não reverte a emancipação. A união estável, em tese, não gera emancipação pela falta de publicidade, embora doutrina e jurisprudência debatam sua aplicação analógica se registrada publicamente (Provimento 37 do CNJ), alinhando-se à nova concepção de família e à dignidade da pessoa humana.
 
 ## Referências do Tema  
---- Art. 1.517, CC02  
---- Art. 1.520, CC02  
---- Art. 1.631, parágrafo único, CC02  
+--- Art. 1.517, Código Civil 2002  
+--- Art. 1.520, Código Civil 2002  
+--- Art. 1.631, parágrafo único, Código Civil 2002  
 --- ADI 4277 do STF  
 --- RE 898.060 do STF  
 --- Provimento 37 do CNJ
@@ -368,12 +368,12 @@ Estou pronto para continuar com os próximos dois temas quando você desejar.
 
 # Como será o processo de interdição?  
 -- O processo de interdição, iniciado com petição especificando a incapacidade e laudo médico (Art. 749 e 750, CPC), prevê citação e oitiva do interditando, que pode impugnar em 15 dias com apoio de especialista e recursos tecnológicos (Art. 751, CPC).  
--- Em urgência, o juiz nomeia curador provisório. A interdição é excepcional, restrita a atos patrimoniais, e a sentença é constitutiva *ex nunc* (Art. 9º, III, CC02). O MP atua como fiscal, e a curatela pode ser compartilhada.
+-- Em urgência, o juiz nomeia curador provisório. A interdição é excepcional, restrita a atos patrimoniais, e a sentença é constitutiva *ex nunc* (Art. 9º, III, Código Civil 2002). O MP atua como fiscal, e a curatela pode ser compartilhada.
 
 ## Referências do Tema  
---- Art. 9º, III, CC02  
---- Art. 1.767, I, CC02  
---- Art. 1.775-A do CC02  
+--- Art. 9º, III, Código Civil 2002  
+--- Art. 1.767, I, Código Civil 2002  
+--- Art. 1.775-A do Código Civil 2002  
 --- Art. 749 do CPC  
 --- Art. 749, parágrafo único, CPC  
 --- Art. 750 do CPC  
@@ -393,7 +393,7 @@ Estou pronto para continuar com os próximos dois temas quando você desejar.
   - Avalie a natureza jurídica da sentença de interdição (*ex nunc*) e suas implicações para os atos praticados antes e depois da decisão.
   - Explique o conceito de curatela provisória e quando ela pode ser nomeada pelo juiz.
   - Discuta a flexibilização da interdição pela Lei 13.14615, limitando-a a atos patrimoniais, e os debates doutrinários sobre a possível desproteção de vulneráveis.
-  - Aborde a possibilidade da curatela compartilhada (Art. 1.775-A do CC02) e como ela se alinha aos princípios de inclusão e autodeterminação.
+  - Aborde a possibilidade da curatela compartilhada (Art. 1.775-A do Código Civil 2002) e como ela se alinha aos princípios de inclusão e autodeterminação.
   - Quais são os efeitos práticos da decisão do STJ que dispensou a nomeação de curador especial quando o Ministério Público atua como fiscal da ordem jurídica?
   - Explique como a falta de intervenção do Ministério Público no processo de interdição pode gerar nulidade, e quais são os requisitos para a comprovação de prejuízo.
 
@@ -404,8 +404,8 @@ Estou pronto para continuar com os próximos dois temas quando você desejar.
 -- A curatela, medida excepcional, restringe-se a atos patrimoniais de maiores de 18 anos que não podem exprimir sua vontade. Embora a lei não proíba expressamente, sua aplicação a essa faixa etária exige ponderação para evitar desproteção, dada a assistência natural dos pais.
 
 ## Referências do Tema  
---- Art. 3º do CC02  
---- Art. 4º, III, CC02  
+--- Art. 3º do Código Civil 2002  
+--- Art. 4º, III, Código Civil 2002  
 --- Art. 85 da Lei 13.14615  
 --- Lei 13.14615
 
@@ -426,14 +426,14 @@ Estou pronto para continuar com os próximos dois temas quando você desejar.
 -----
 
 # Interdição  
--- Para afastar a presunção de capacidade de fato, a interdição visa nomear um curador para indivíduos que, por causa transitória ou permanente, não podem exprimir sua vontade, além de ébrios habituais, viciados em tóxico e pródigos (Art. 1.767, CC02). A Lei 13.14615 (Estatuto da Pessoa com Deficiência) limitou a interdição a atos patrimoniais, presumindo a plena capacidade civil para pessoas com deficiência.  
--- O processo de interdição pode ser promovido por cônjuge, companheiro, parentes, tutores, ou representantes de entidades (Art. 747, CPC), com atuação subsidiária do Ministério Público. A interdição é medida excepcional, com sentença constitutiva *ex nunc* (Art. 9º, III, CC02), visando preservar a dignidade e autodeterminação do interditando, embora sua abrangência tenha gerado debates doutrinários sobre a possível desproteção de vulneráveis.
+-- Para afastar a presunção de capacidade de fato, a interdição visa nomear um curador para indivíduos que, por causa transitória ou permanente, não podem exprimir sua vontade, além de ébrios habituais, viciados em tóxico e pródigos (Art. 1.767, Código Civil 2002). A Lei 13.14615 (Estatuto da Pessoa com Deficiência) limitou a interdição a atos patrimoniais, presumindo a plena capacidade civil para pessoas com deficiência.  
+-- O processo de interdição pode ser promovido por cônjuge, companheiro, parentes, tutores, ou representantes de entidades (Art. 747, CPC), com atuação subsidiária do Ministério Público. A interdição é medida excepcional, com sentença constitutiva *ex nunc* (Art. 9º, III, Código Civil 2002), visando preservar a dignidade e autodeterminação do interditando, embora sua abrangência tenha gerado debates doutrinários sobre a possível desproteção de vulneráveis.
 
 ## Referências do Tema  
---- Art. 9º, III, CC02  
---- Art. 4º, III, CC02  
---- Art. 1.767, CC02  
---- Art. 1.775-A do CC02  
+--- Art. 9º, III, Código Civil 2002  
+--- Art. 4º, III, Código Civil 2002  
+--- Art. 1.767, Código Civil 2002  
+--- Art. 1.775-A do Código Civil 2002  
 --- Art. 747 do CPC  
 --- Art. 747, § único, do CPC  
 --- Art. 749 do CPC  
@@ -456,7 +456,7 @@ Estou pronto para continuar com os próximos dois temas quando você desejar.
   - Detalhe os legitimados para promover a interdição, incluindo a atuação subsidiária do Ministério Público.
   - Explique as etapas do processo de interdição, desde a petição inicial até o registro da sentença.
   - Analise a controvérsia sobre a nomeação de curador especial para o interditando e o posicionamento do STJ sobre a atuação do Ministério Público como fiscal da ordem jurídica.
-  - Discuta a possibilidade da curatela compartilhada (Art. 1.775-A, CC02) e como ela se alinha aos princípios de inclusão e autodeterminação.
+  - Discuta a possibilidade da curatela compartilhada (Art. 1.775-A, Código Civil 2002) e como ela se alinha aos princípios de inclusão e autodeterminação.
   - Avalie a natureza jurídica da sentença de interdição (*ex nunc*) e suas implicações práticas.
   - Aborde a discussão sobre a interdição do menor púbere (maior de 16 anos) e os argumentos que justificam sua admissibilidade em casos específicos.
   - Explique como a Lei 13.14615 buscou evitar a discriminação da pessoa com deficiência, ao mesmo tempo em que a doutrina civilista critica a possível desproteção gerada.
@@ -488,16 +488,16 @@ Estou pronto para continuar com os próximos dois temas quando você desejar.
 -----
 
 # Fraude Contra Credores  
--- A fraude contra credores é um vício social que ocorre quando o devedor, já insolvente ou na iminência de se tornar, dispõe de seu patrimônio de forma maliciosa para frustrar a satisfação dos créditos de seus credores. Para sua configuração, exige-se o *eventus damni* (prejuízo ao credor) e o *consilium fraudis* (intenção de fraudar) ou *scientia fraudis* (ciência da fraude pelo terceiro adquirente), sendo este último presumido em negócios gratuitos (Art. 158, CC02).  
--- A ação pauliana (ou revocatória) é o instrumento para anular o negócio jurídico fraudulento, com prazo decadencial de 4 anos (Art. 178, II, CC02). Contudo, a Lei da Liberdade Econômica (Lei 13.87419) e a jurisprudência têm mitigado a rigidez da *scientia fraudis*, especialmente em negócios onerosos, priorizando a boa-fé do terceiro adquirente e a segurança jurídica nas relações.
+-- A fraude contra credores é um vício social que ocorre quando o devedor, já insolvente ou na iminência de se tornar, dispõe de seu patrimônio de forma maliciosa para frustrar a satisfação dos créditos de seus credores. Para sua configuração, exige-se o *eventus damni* (prejuízo ao credor) e o *consilium fraudis* (intenção de fraudar) ou *scientia fraudis* (ciência da fraude pelo terceiro adquirente), sendo este último presumido em negócios gratuitos (Art. 158, Código Civil 2002).  
+-- A ação pauliana (ou revocatória) é o instrumento para anular o negócio jurídico fraudulento, com prazo decadencial de 4 anos (Art. 178, II, Código Civil 2002). Contudo, a Lei da Liberdade Econômica (Lei 13.87419) e a jurisprudência têm mitigado a rigidez da *scientia fraudis*, especialmente em negócios onerosos, priorizando a boa-fé do terceiro adquirente e a segurança jurídica nas relações.
 
 ## Referências do Tema  
---- Art. 158, CC02  
---- Art. 159, CC02  
---- Art. 160, CC02  
---- Art. 161, CC02  
---- Art. 162, CC02  
---- Art. 178, II, CC02  
+--- Art. 158, Código Civil 2002  
+--- Art. 159, Código Civil 2002  
+--- Art. 160, Código Civil 2002  
+--- Art. 161, Código Civil 2002  
+--- Art. 162, Código Civil 2002  
+--- Art. 178, II, Código Civil 2002  
 --- Lei 13.87419  
 --- Enunciado 15 da I Jornada de Direito Civil do CJF
 
@@ -517,22 +517,22 @@ Estou pronto para continuar com os próximos dois temas quando você desejar.
 -----
 
 # Simulação  
--- A simulação é um vício social do negócio jurídico que ocorre quando as partes celebram um ato jurídico que não corresponde à sua real intenção, visando enganar terceiros ou burlar a lei (Art. 167, CC02). Pode ser absoluta (o negócio simulado não tem nenhuma correspondência com a vontade das partes) ou relativa (o negócio simulado esconde um negócio dissimulado).  
+-- A simulação é um vício social do negócio jurídico que ocorre quando as partes celebram um ato jurídico que não corresponde à sua real intenção, visando enganar terceiros ou burlar a lei (Art. 167, Código Civil 2002). Pode ser absoluta (o negócio simulado não tem nenhuma correspondência com a vontade das partes) ou relativa (o negócio simulado esconde um negócio dissimulado).  
 -- A Lei 13.87419, ao presumir a simetria e paridade nos contratos civis e empresariais, e ao valorizar a boa-fé objetiva, reforça a necessidade de combater a simulação. O negócio simulado é nulo, imprescritível e não pode ser convalidado, sendo a nulidade passível de ser alegada por qualquer interessado ou reconhecida de ofício pelo juiz.
 
 ## Referências do Tema  
---- Art. 167, CC02  
---- Art. 168, CC02  
---- Art. 169, CC02  
+--- Art. 167, Código Civil 2002  
+--- Art. 168, Código Civil 2002  
+--- Art. 169, Código Civil 2002  
 --- Lei 13.87419  
---- Art. 421-A, CC02
+--- Art. 421-A, Código Civil 2002
 
 ## Pergunte pra I.A.
 
   - Explique o conceito de simulação como vício social do negócio jurídico e suas principais características.
   - Diferencie simulação absoluta de simulação relativa, fornecendo exemplos práticos de cada modalidade.
   - Discorra sobre as consequências jurídicas da simulação (nulidade) e as diferenças em relação à anulabilidade de outros vícios do consentimento.
-  - Analise como a Lei da Liberdade Econômica (Lei 13.87419), ao presumir a simetria nos contratos (Art. 421-A, CC02), pode impactar a detecção e o combate à simulação.
+  - Analise como a Lei da Liberdade Econômica (Lei 13.87419), ao presumir a simetria nos contratos (Art. 421-A, Código Civil 2002), pode impactar a detecção e o combate à simulação.
   - Explique por que o negócio jurídico simulado é nulo e não anulável, e quais as implicações dessa distinção para o prazo e a legitimidade para alegar o vício.
   - Discuta o papel da boa-fé objetiva na identificação da simulação e na proteção de terceiros que agem de boa-fé.
   - Apresente um caso prático que demonstre a ocorrência de simulação e a eventual solução judicial para o reconhecimento da nulidade.
@@ -543,17 +543,17 @@ Estou pronto para continuar com os próximos dois temas quando você desejar.
 -----
 # Administração dos bens dos filhos menores
 
--- A administração dos bens dos filhos menores é um dever dos pais no exercício do poder familiar, visando à proteção e à conservação do patrimônio do filho (Art. 1.689, CC02). Os pais são os usufrutuários legais dos bens dos filhos, o que lhes confere o direito de administrar e usar esses bens, mas com responsabilidades específicas.
+-- A administração dos bens dos filhos menores é um dever dos pais no exercício do poder familiar, visando à proteção e à conservação do patrimônio do filho (Art. 1.689, Código Civil 2002). Os pais são os usufrutuários legais dos bens dos filhos, o que lhes confere o direito de administrar e usar esses bens, mas com responsabilidades específicas.
 
--- Os pais não podem, sem autorização judicial, alienar ou gravar de ônus real os bens imóveis dos filhos, nem contrair dívidas em nome deles (Art. 1.691, CC02). A inobservância dessas regras pode gerar a anulação dos atos e a responsabilidade dos pais pelos prejuízos causados, além da possibilidade de perda do poder familiar em casos graves (Art. 1.693, II, CC02).
+-- Os pais não podem, sem autorização judicial, alienar ou gravar de ônus real os bens imóveis dos filhos, nem contrair dívidas em nome deles (Art. 1.691, Código Civil 2002). A inobservância dessas regras pode gerar a anulação dos atos e a responsabilidade dos pais pelos prejuízos causados, além da possibilidade de perda do poder familiar em casos graves (Art. 1.693, II, Código Civil 2002).
 
 ## Referências do Tema
 
---- Art. 1.689, CC02
+--- Art. 1.689, Código Civil 2002
 
---- Art. 1.691, CC02
+--- Art. 1.691, Código Civil 2002
 
---- Art. 1.693, II, CC02
+--- Art. 1.693, II, Código Civil 2002
 
 --- Enunciado 33 da I Jornada de Direito Civil
 
@@ -575,35 +575,35 @@ Estou pronto para continuar com os próximos dois temas quando você desejar.
 -----
 # Poder Familiar
 
--- O poder familiar é o conjunto de direitos e deveres atribuídos aos pais em relação aos filhos menores e seus bens, visando à proteção, educação e desenvolvimento integral da criança e do adolescente (Art. 1.630, CC02). É um munus público, irrenunciável e imprescritível, exercido em nome do melhor interesse do filho.
+-- O poder familiar é o conjunto de direitos e deveres atribuídos aos pais em relação aos filhos menores e seus bens, visando à proteção, educação e desenvolvimento integral da criança e do adolescente (Art. 1.630, Código Civil 2002). É um munus público, irrenunciável e imprescritível, exercido em nome do melhor interesse do filho.
 
--- É, em regra, exercido em conjunto por ambos os pais, buscando o consenso nas decisões. No entanto, em caso de divergência, a questão será submetida à apreciação judicial (Art. 1.631, CC02). A Lei 13.05814 estabeleceu a guarda compartilhada como regra, reforçando a participação de ambos os genitores na vida dos filhos, mesmo após a separação.
+-- É, em regra, exercido em conjunto por ambos os pais, buscando o consenso nas decisões. No entanto, em caso de divergência, a questão será submetida à apreciação judicial (Art. 1.631, Código Civil 2002). A Lei 13.05814 estabeleceu a guarda compartilhada como regra, reforçando a participação de ambos os genitores na vida dos filhos, mesmo após a separação.
 
 ## Referências do Tema
 
---- Art. 1.630, CC02
+--- Art. 1.630, Código Civil 2002
 
---- Art. 1.631, CC02
+--- Art. 1.631, Código Civil 2002
 
---- Art. 1.632, CC02
+--- Art. 1.632, Código Civil 2002
 
---- Art. 1.633, CC02
+--- Art. 1.633, Código Civil 2002
 
---- Art. 1.634, CC02
+--- Art. 1.634, Código Civil 2002
 
---- Art. 1.635, CC02
+--- Art. 1.635, Código Civil 2002
 
---- Art. 1.636, CC02
+--- Art. 1.636, Código Civil 2002
 
---- Art. 1.637, CC02
+--- Art. 1.637, Código Civil 2002
 
---- Art. 1.638, CC02
+--- Art. 1.638, Código Civil 2002
 
---- Art. 1.689, I, CC02
+--- Art. 1.689, I, Código Civil 2002
 
---- Art. 1.691, CC02
+--- Art. 1.691, Código Civil 2002
 
---- Art. 1.693, II, CC02
+--- Art. 1.693, II, Código Civil 2002
 
 --- Art. 10 da Lei 8.00990
 
@@ -649,11 +649,11 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
 -----
 
 # Tomada de Decisão Apoiada (T.D.A)
--- A Tomada de Decisão Apoiada (T.D.A.) é um processo pelo qual a pessoa com deficiência elege pelo menos duas pessoas de sua confiança para prestar-lhe apoio na tomada de decisões sobre atos da vida civil (Art. 1.783-A do CC02). É um instituto que visa aprimorar a autonomia e a inclusão social, garantindo que a pessoa com deficiência exerça sua plena capacidade civil (Art. 6º da Lei 13.14615).
+-- A Tomada de Decisão Apoiada (T.D.A.) é um processo pelo qual a pessoa com deficiência elege pelo menos duas pessoas de sua confiança para prestar-lhe apoio na tomada de decisões sobre atos da vida civil (Art. 1.783-A do Código Civil 2002). É um instituto que visa aprimorar a autonomia e a inclusão social, garantindo que a pessoa com deficiência exerça sua plena capacidade civil (Art. 6º da Lei 13.14615).
 -- Diferentemente da curatela, a T.D.A. não retira a capacidade do apoiado, mas a complementa, oferecendo assistência em decisões complexas, especialmente no âmbito patrimonial e negocial. A Lei 13.14615 reforça que esse apoio não afasta a plena capacidade do indivíduo, mas busca facilitar seu exercício, com responsabilidade solidária dos apoiadores pelos danos causados por sua atuação negligente ou dolosa.
 
 # Referências do Tema
---- Art. 1.783-A, CC02
+--- Art. 1.783-A, Código Civil 2002
 --- Art. 6º, Lei 13.14615
 --- Lei 13.14615
 
@@ -673,49 +673,49 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
 -----
 
 # Tutela  
--- A tutela é um encargo imposto por lei a um terceiro, para cuidar da pessoa e administrar os bens de menores de 18 anos que não possuem pais ou que tiveram seu poder familiar destituído ou suspenso (Art. 1.728 do CC02). É um dever de assistência que visa proteger o incapaz e seus interesses.  
+-- A tutela é um encargo imposto por lei a um terceiro, para cuidar da pessoa e administrar os bens de menores de 18 anos que não possuem pais ou que tiveram seu poder familiar destituído ou suspenso (Art. 1.728 do Código Civil 2002). É um dever de assistência que visa proteger o incapaz e seus interesses.  
 -- A lei prevê diferentes espécies de tutela: legítima (determinada pela lei), testamentária (por testamento) e dativa (nomeada pelo juiz). O tutor deve zelar pelo bem-estar do tutelado, prestando contas de sua administração e defendendo seus direitos em juízo, com a fiscalização do Ministério Público.
 
 ## Referências do Tema  
---- Art. 1.728, CC02  
---- Art. 1.729, CC02  
---- Art. 1.730, CC02  
---- Art. 1.731, CC02  
---- Art. 1.732, CC02  
---- Art. 1.733, CC02  
---- Art. 1.734, CC02  
---- Art. 1.735, CC02  
---- Art. 1.736, CC02  
---- Art. 1.737, CC02  
---- Art. 1.738, CC02  
---- Art. 1.739, CC02  
---- Art. 1.740, CC02  
---- Art. 1.741, CC02  
---- Art. 1.742, CC02  
---- Art. 1.743, CC02  
---- Art. 1.744, CC02  
---- Art. 1.745, CC02  
---- Art. 1.746, CC02  
---- Art. 1.747, CC02  
---- Art. 1.748, CC02  
---- Art. 1.749, CC02  
---- Art. 1.750, CC02  
---- Art. 1.751, CC02  
---- Art. 1.752, CC02  
---- Art. 1.753, CC02  
---- Art. 1.754, CC02  
---- Art. 1.755, CC02  
---- Art. 1.756, CC02  
---- Art. 1.757, CC02  
---- Art. 1.758, CC02  
---- Art. 1.759, CC02  
---- Art. 1.760, CC02  
---- Art. 1.761, CC02  
---- Art. 1.762, CC02  
---- Art. 1.763, CC02  
---- Art. 1.764, CC02  
---- Art. 1.765, CC02  
---- Art. 1.766, CC02
+--- Art. 1.728, Código Civil 2002  
+--- Art. 1.729, Código Civil 2002  
+--- Art. 1.730, Código Civil 2002  
+--- Art. 1.731, Código Civil 2002  
+--- Art. 1.732, Código Civil 2002  
+--- Art. 1.733, Código Civil 2002  
+--- Art. 1.734, Código Civil 2002  
+--- Art. 1.735, Código Civil 2002  
+--- Art. 1.736, Código Civil 2002  
+--- Art. 1.737, Código Civil 2002  
+--- Art. 1.738, Código Civil 2002  
+--- Art. 1.739, Código Civil 2002  
+--- Art. 1.740, Código Civil 2002  
+--- Art. 1.741, Código Civil 2002  
+--- Art. 1.742, Código Civil 2002  
+--- Art. 1.743, Código Civil 2002  
+--- Art. 1.744, Código Civil 2002  
+--- Art. 1.745, Código Civil 2002  
+--- Art. 1.746, Código Civil 2002  
+--- Art. 1.747, Código Civil 2002  
+--- Art. 1.748, Código Civil 2002  
+--- Art. 1.749, Código Civil 2002  
+--- Art. 1.750, Código Civil 2002  
+--- Art. 1.751, Código Civil 2002  
+--- Art. 1.752, Código Civil 2002  
+--- Art. 1.753, Código Civil 2002  
+--- Art. 1.754, Código Civil 2002  
+--- Art. 1.755, Código Civil 2002  
+--- Art. 1.756, Código Civil 2002  
+--- Art. 1.757, Código Civil 2002  
+--- Art. 1.758, Código Civil 2002  
+--- Art. 1.759, Código Civil 2002  
+--- Art. 1.760, Código Civil 2002  
+--- Art. 1.761, Código Civil 2002  
+--- Art. 1.762, Código Civil 2002  
+--- Art. 1.763, Código Civil 2002  
+--- Art. 1.764, Código Civil 2002  
+--- Art. 1.765, Código Civil 2002  
+--- Art. 1.766, Código Civil 2002
 
 ## Pergunte pra I.A.
 
@@ -738,14 +738,14 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
 -----
 
 # Curatela  
--- A curatela é um encargo imposto a um terceiro para administrar a vida patrimonial de maiores de 18 anos que não podem exprimir sua vontade ou que se enquadram em hipóteses de incapacidade relativa, como ébrios habituais, viciados em tóxico e pródigos (Art. 1.767, CC02). É uma medida protetiva que visa à inclusão e autodeterminação.  
+-- A curatela é um encargo imposto a um terceiro para administrar a vida patrimonial de maiores de 18 anos que não podem exprimir sua vontade ou que se enquadram em hipóteses de incapacidade relativa, como ébrios habituais, viciados em tóxico e pródigos (Art. 1.767, Código Civil 2002). É uma medida protetiva que visa à inclusão e autodeterminação.  
 -- Após a Lei 13.14615 (Estatuto da Pessoa com Deficiência), a curatela se tornou excepcional e limitada a atos patrimoniais, presumindo-se a plena capacidade civil para a pessoa com deficiência. A curatela pode ser compartilhada e o curador deve, no melhor interesse do curatelado, prestar contas de sua gestão e promover sua inclusão social.
 
 ## Referências do Tema  
---- Art. 4º, CC02  
+--- Art. 4º, Código Civil 2002  
 --- Art. 85, Lei 13.14615  
---- Art. 1.767, CC02  
---- Art. 1.775-A, CC02  
+--- Art. 1.767, Código Civil 2002  
+--- Art. 1.775-A, Código Civil 2002  
 --- Art. 747, CPC  
 --- Art. 749, CPC  
 --- Art. 750, CPC  
@@ -761,7 +761,7 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
   - Explique o conceito de curatela e as hipóteses que a justificam, à luz das alterações promovidas pela Lei 13.14615.
   - Discorra sobre a distinção entre a curatela e a interdição, e como o Estatuto da Pessoa com Deficiência impactou essa relação.
   - Analise o objetivo de proteção patrimonial da curatela e a presunção de plena capacidade civil para as pessoas com deficiência em atos existenciais.
-  - Detalhe a possibilidade de curatela compartilhada (Art. 1.775-A do CC02) e como ela se alinha aos princípios de inclusão e autodeterminação.
+  - Detalhe a possibilidade de curatela compartilhada (Art. 1.775-A do Código Civil 2002) e como ela se alinha aos princípios de inclusão e autodeterminação.
   - Explique o papel do Ministério Público no processo de curatela, tanto como legitimado quanto como fiscal da ordem jurídica.
   - Apresente um caso prático que demonstre a aplicação da curatela a um pródigo ou a alguém que não pode exprimir sua vontade.
   - Discuta as críticas doutrinárias sobre a Lei 13.14615 e a possível "desproteção" de alguns indivíduos ao reduzir o rol de incapazes para a curatela.
@@ -772,10 +772,10 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
 
 # A capacidade do surdo-mudo, segundo o ordenamento jurídico  
 -- O surdo-mudo é hoje plenamente capaz, superando a visão obsoleta do Código Civil de 1916 e reafirmando a dignidade da pessoa com deficiência (Art. 6º da Lei 13.14615). Essa plena capacidade, no entanto, encontra limitações funcionais em atos específicos.  
--- Tais limitações se manifestam em situações como ser testemunha em testamento público (Art. 1.864, II, CC02) ou em processo judicial, quando a ciência do fato depender do sentido que lhe falta (Art. 447, §1°, IV, CPC).
+-- Tais limitações se manifestam em situações como ser testemunha em testamento público (Art. 1.864, II, Código Civil 2002) ou em processo judicial, quando a ciência do fato depender do sentido que lhe falta (Art. 447, §1°, IV, CPC).
 
 ## Referências do Tema  
---- Art. 1.864, II, CC02  
+--- Art. 1.864, II, Código Civil 2002  
 --- Art. 447, §1°, IV, CPC  
 --- Lei 13.14615
 
@@ -795,11 +795,11 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
 -----
 
 # A capacidade do índio no Código Civil  
--- O Código Civil remete à legislação especial para regulamentar a capacidade do indígena (Art. 4°, parágrafo único, CC02), sendo o Estatuto do Índio (Lei 6.00173) a norma aplicável. Este estatuto diferencia o indígena integrado à comunhão nacional, considerado plenamente capaz.  
+-- O Código Civil remete à legislação especial para regulamentar a capacidade do indígena (Art. 4°, parágrafo único, Código Civil 2002), sendo o Estatuto do Índio (Lei 6.00173) a norma aplicável. Este estatuto diferencia o indígena integrado à comunhão nacional, considerado plenamente capaz.  
 -- Já o indígena não integrado necessita de assistência do órgão tutelar competente, sob pena de nulidade dos atos praticados (Art. 8º da Lei 6.00173). Tal nulidade difere da anulabilidade de atos de relativamente incapazes, evidenciando um regime de tutela específico.
 
 ## Referências do Tema  
---- Art. 4°, parágrafo único, CC02  
+--- Art. 4°, parágrafo único, Código Civil 2002  
 --- Lei 6.00173  
 --- Art. 8º da Lei 6.00173
 
@@ -819,17 +819,17 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
 -----
 
 # Emancipação  
--- A emancipação é um instituto que antecipa a capacidade de fato, permitindo que o menor, entre 16 e 18 anos, exerça os atos da vida civil por si só (Art. 5º, parágrafo único, CC02). Ela se distingue da capacidade de direito, que toda pessoa possui (Art. 1º, CC02), e visa promover a autonomia do indivíduo.  
+-- A emancipação é um instituto que antecipa a capacidade de fato, permitindo que o menor, entre 16 e 18 anos, exerça os atos da vida civil por si só (Art. 5º, parágrafo único, Código Civil 2002). Ela se distingue da capacidade de direito, que toda pessoa possui (Art. 1º, Código Civil 2002), e visa promover a autonomia do indivíduo.  
 -- Contudo, a emancipação não afasta a responsabilidade civil dos pais por atos ilícitos dos filhos, nem a inimputabilidade penal do menor de 18 anos (Art. 27, CP). Também não afasta a incidência do Estatuto da Criança e do Adolescente (Enunciado 630 da VI Jornada de Direito Civil). Pode ser voluntária (acordo dos pais), judicial (discordância dos pais ou pedido do tutor) ou legal (casamento, emprego público efetivo, colação de grau superior, estabelecimento civilcomercial ou economia própria).
 
  ## Referências do Tema   
---- Art. 1º, CC02  
---- Art. 5º, parágrafo único, V, CC02  
---- Art. 9º, II, CC02  
+--- Art. 1º, Código Civil 2002  
+--- Art. 5º, parágrafo único, V, Código Civil 2002  
+--- Art. 9º, II, Código Civil 2002  
 --- Art. 27, CP  
---- Art. 1.517, CC02  
---- Art. 1.520, CC02  
---- Art. 1.631, parágrafo único, CC02  
+--- Art. 1.517, Código Civil 2002  
+--- Art. 1.520, Código Civil 2002  
+--- Art. 1.631, parágrafo único, Código Civil 2002  
 --- ADI 4277 do STF  
 --- RE 898.060 do STF  
 --- Enunciado 630 da VI Jornada de Direito Civil  
@@ -851,15 +851,15 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
 -----
 
 # Pessoa Jurídica  
--- A pessoa jurídica é um sujeito de direitos e obrigações, distinto de seus membros, e sua existência inicia com o registro de seu ato constitutivo (Art. 45, CC02). Sua análise, além da estrutura formal, exige a compreensão de sua finalidade social, alinhada aos valores constitucionais, como a dignidade da pessoa humana (Art. 170, CF88).  
--- Caracteriza-se por seu caráter instrumental, visando à geração de empregos, tributos e inovação (Art. 49-A, parágrafo único, CC02). A legislação recente, como a Lei 14.1952021, buscou simplificar as formas societárias, extinguindo a EIRELI e consolidando a sociedade limitada unipessoal, reafirmando a autonomia patrimonial da pessoa jurídica.
+-- A pessoa jurídica é um sujeito de direitos e obrigações, distinto de seus membros, e sua existência inicia com o registro de seu ato constitutivo (Art. 45, Código Civil 2002). Sua análise, além da estrutura formal, exige a compreensão de sua finalidade social, alinhada aos valores constitucionais, como a dignidade da pessoa humana (Art. 170, Constituição Federal de 198888).  
+-- Caracteriza-se por seu caráter instrumental, visando à geração de empregos, tributos e inovação (Art. 49-A, parágrafo único, Código Civil 2002). A legislação recente, como a Lei 14.1952021, buscou simplificar as formas societárias, extinguindo a EIRELI e consolidando a sociedade limitada unipessoal, reafirmando a autonomia patrimonial da pessoa jurídica.
 
  ## Referências do Tema   
---- Art. 45, CC02  
---- Art. 49-A, CC02  
---- Art. 50, CC02  
---- Art. 52, CC02  
---- Art. 170, CF88  
+--- Art. 45, Código Civil 2002  
+--- Art. 49-A, Código Civil 2002  
+--- Art. 50, Código Civil 2002  
+--- Art. 52, Código Civil 2002  
+--- Art. 170, Constituição Federal de 198888  
 --- Súmula 227 do STJ  
 --- Lei 14.1952021  
 --- Lei 13.8742019
@@ -868,7 +868,7 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
 
   - Explique o conceito de pessoa jurídica no ordenamento jurídico brasileiro, diferenciando-a das pessoas físicas e dos entes despersonificados.
   - Discorra sobre as teorias afirmativas da pessoa jurídica (formalista, realista e da realidade técnica), explicando qual é a adotada pelo Código Civil e suas implicações.
-  - Analise como o "caráter instrumental" e a "função social" da pessoa jurídica se manifestam no Direito Civil e na Constituição Federal, citando o Art. 170 da CF88.
+  - Analise como o "caráter instrumental" e a "função social" da pessoa jurídica se manifestam no Direito Civil e na Constituição Federal, citando o Art. 170 da Constituição Federal de 198888.
   - Aborde as principais alterações legislativas recentes, como a extinção da EIRELI e a consolidação da sociedade limitada unipessoal, e seus impactos na autonomia da pessoa jurídica.
   - Explique a Súmula 227 do STJ, que reconhece a possibilidade de dano moral à pessoa jurídica, e como isso se relaciona com os direitos da personalidade e a honra objetiva.
   - Discuta a "autonomia patrimonial" da pessoa jurídica e como a Lei da Liberdade Econômica (Lei 13.8742019) buscou reforçá-la, especialmente no que tange à segregação de riscos.
@@ -884,12 +884,12 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
 -----
 
 # Autonomia da Pessoa Jurídica  
--- A autonomia da pessoa jurídica é o princípio que garante a separação entre o patrimônio da empresa e o de seus sócios, administradores ou instituidores (Art. 49-A, CC02). Essa separação é fundamental para estimular empreendimentos, gerar empregos, tributos, renda e inovação, conforme previsto pela Lei da Liberdade Econômica (Lei 13.8742019).  
--- No entanto, essa autonomia não é absoluta. Em casos de abuso da personalidade jurídica, caracterizado por desvio de finalidade ou confusão patrimonial, o juiz pode desconsiderá-la para estender os efeitos das obrigações aos bens particulares dos responsáveis (Art. 50, CC02).
+-- A autonomia da pessoa jurídica é o princípio que garante a separação entre o patrimônio da empresa e o de seus sócios, administradores ou instituidores (Art. 49-A, Código Civil 2002). Essa separação é fundamental para estimular empreendimentos, gerar empregos, tributos, renda e inovação, conforme previsto pela Lei da Liberdade Econômica (Lei 13.8742019).  
+-- No entanto, essa autonomia não é absoluta. Em casos de abuso da personalidade jurídica, caracterizado por desvio de finalidade ou confusão patrimonial, o juiz pode desconsiderá-la para estender os efeitos das obrigações aos bens particulares dos responsáveis (Art. 50, Código Civil 2002).
 
  ## Referências do Tema   
---- Art. 49-A, CC02  
---- Art. 50, CC02  
+--- Art. 49-A, Código Civil 2002  
+--- Art. 50, Código Civil 2002  
 --- Lei 13.8742019  
 --- Lei 14.1952021
 
@@ -921,12 +921,12 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
 
 ## Como será o processo de interdição?  
 -- O processo de interdição exige que o demandante especifique os fatos que demonstram a incapacidade na petição inicial, acompanhada de laudo médico ou justificativa (Art. 749 e 750 do CPC). O interditando é citado, ouvido, e pode impugnar o pedido em 15 dias, com assistência de especialista e uso de recursos tecnológicos para exprimir sua vontade (Art. 751 do CPC).  
--- O juiz pode nomear curador provisório em caso de urgência (Art. 749, parágrafo único, CPC). A interdição é medida excepcional e limitada a atos patrimoniais, e a sentença tem natureza constitutiva *ex nunc* (Art. 9º, III, CC02). O MP atua como fiscal da ordem jurídica, embora o STJ tenha flexibilizado a necessidade de curador especial em jurisdição voluntária.
+-- O juiz pode nomear curador provisório em caso de urgência (Art. 749, parágrafo único, CPC). A interdição é medida excepcional e limitada a atos patrimoniais, e a sentença tem natureza constitutiva *ex nunc* (Art. 9º, III, Código Civil 2002). O MP atua como fiscal da ordem jurídica, embora o STJ tenha flexibilizado a necessidade de curador especial em jurisdição voluntária.
 
  ## Referências do Tema    
---- Art. 9º, III, CC02  
---- Art. 1.767, I, CC02  
---- Art. 1.775-A do CC02  
+--- Art. 9º, III, Código Civil 2002  
+--- Art. 1.767, I, Código Civil 2002  
+--- Art. 1.775-A do Código Civil 2002  
 --- Art. 749 do CPC  
 --- Art. 749, parágrafo único, CPC  
 --- Art. 750 do CPC  
@@ -942,7 +942,7 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
   - Descreva as etapas do processo de interdição, desde a petição inicial até o registro da sentença, destacando a função do laudo médico.
   - Analise a posição do Ministério Público no processo de interdição, considerando sua atuação como legitimado e como fiscal da ordem jurídica.
   - Discorra sobre a controvérsia da dispensa do curador especial pelo STJ, mesmo havendo previsão legal, e os argumentos a favor e contra essa interpretação.
-  - Explique a possibilidade da curatela compartilhada (Art. 1.775-A do CC02) e como essa medida se alinha aos princípios de inclusão da pessoa com deficiência.
+  - Explique a possibilidade da curatela compartilhada (Art. 1.775-A do Código Civil 2002) e como essa medida se alinha aos princípios de inclusão da pessoa com deficiência.
   - De que forma os recursos tecnológicos podem facilitar a manifestação de vontade do interditando durante a oitiva judicial?
 
 -----
@@ -952,8 +952,8 @@ Analise como o poder familiar se adapta a novas configurações familiares, como
 -- A curatela, hoje, é medida excepcional e restrita a atos patrimoniais de maiores de 18 anos que não possam exprimir sua vontade. Embora a lei não impeça expressamente a interdição do menor púbere, a aplicação da curatela a essa faixa etária, à luz da dignidade da pessoa humana, exige ponderação para evitar a desproteção.
 
  ## Referências do Tema    
---- Art. 3º do CC02  
---- Art. 4º, III, CC02  
+--- Art. 3º do Código Civil 2002  
+--- Art. 4º, III, Código Civil 2002  
 --- Art. 85 da Lei 13.14615  
 --- Lei 13.14615
 
@@ -970,21 +970,21 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Capacidade   
--- A capacidade, no Direito Civil, é a aptidão para exercer atos da vida civil. Não se confunde com a personalidade jurídica, que é a aptidão genérica para ser titular de direitos e obrigações (Art. 1º e 2º, CC02). A capacidade se divide em de direito (todas as pessoas a possuem) e de fato (aptidão para praticar atos por si só, presumida aos 18 anos).  
+-- A capacidade, no Direito Civil, é a aptidão para exercer atos da vida civil. Não se confunde com a personalidade jurídica, que é a aptidão genérica para ser titular de direitos e obrigações (Art. 1º e 2º, Código Civil 2002). A capacidade se divide em de direito (todas as pessoas a possuem) e de fato (aptidão para praticar atos por si só, presumida aos 18 anos).  
 -- A lei 13.14615 (Estatuto da Pessoa com Deficiência), com status de emenda constitucional, alterou significativamente o rol de incapazes, visando a dignidade e a autodeterminação. Atualmente, apenas o menor de 16 anos é considerado absolutamente incapaz, e a curatela é medida excepcional, limitada a aspectos patrimoniais.
 
  ## Referências do Tema    
---- Art. 1º, CC02  
---- Art. 2º, CC02  
---- Art. 3º, CC02  
---- Art. 4º, CC02  
---- Art. 166, I, CC02  
---- Art. 171, I, CC02  
---- Art. 198, I, CC02  
---- Art. 208, CC02  
---- Art. 666, CC02  
---- Art. 974, § 2º, CC02  
---- Art. 1.860, parágrafo único, CC02  
+--- Art. 1º, Código Civil 2002  
+--- Art. 2º, Código Civil 2002  
+--- Art. 3º, Código Civil 2002  
+--- Art. 4º, Código Civil 2002  
+--- Art. 166, I, Código Civil 2002  
+--- Art. 171, I, Código Civil 2002  
+--- Art. 198, I, Código Civil 2002  
+--- Art. 208, Código Civil 2002  
+--- Art. 666, Código Civil 2002  
+--- Art. 974, § 2º, Código Civil 2002  
+--- Art. 1.860, parágrafo único, Código Civil 2002  
 --- Art. 447, §1°, IV, CPC  
 --- Lei 6.00173  
 --- Lei 9.60590  
@@ -1009,13 +1009,13 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 # Incapacidade Absoluta  
 -- Anteriormente, o rol de absolutamente incapazes era mais amplo, incluindo pessoas com deficiência mental que não possuíam o discernimento necessário. No entanto, a Lei 13.14615 (Estatuto da Pessoa com Deficiência), com força de emenda constitucional, visou proteger a dignidade da pessoa com deficiência.  
--- Atualmente, apenas os menores de 16 anos são considerados absolutamente incapazes (Art. 3º, CC02). Essa mudança implica que, para as pessoas com deficiência, a plena capacidade civil é presumida a partir dos 18 anos, afastando estigmas e promovendo a autodeterminação, embora possa gerar debates sobre a desproteção em certos casos.
+-- Atualmente, apenas os menores de 16 anos são considerados absolutamente incapazes (Art. 3º, Código Civil 2002). Essa mudança implica que, para as pessoas com deficiência, a plena capacidade civil é presumida a partir dos 18 anos, afastando estigmas e promovendo a autodeterminação, embora possa gerar debates sobre a desproteção em certos casos.
 
  ## Referências do Tema    
---- Art. 3º, CC02  
---- Art. 4º, CC02  
+--- Art. 3º, Código Civil 2002  
+--- Art. 4º, Código Civil 2002  
 --- Art. 6º, Lei 13.14615  
---- Art. 166, I, CC02  
+--- Art. 166, I, Código Civil 2002  
 --- Enunciado 138 da III Jornada de Direito Civil do CJF  
 --- Lei 13.14615  
 --- Decreto 6.9492009
@@ -1031,14 +1031,14 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Incapacidade Relativa  
--- A Lei 13.14615 (Estatuto da Pessoa com Deficiência) também redefiniu o rol dos relativamente incapazes, excluindo aqueles com discernimento reduzido por deficiência mental ou excepcionais sem desenvolvimento mental completo. Hoje, são relativamente incapazes os maiores de dezesseis e menores de dezoito anos, os ébrios habituais e os viciados em tóxico, aqueles que não puderem exprimir sua vontade (por causa transitória ou permanente), e os pródigos (Art. 4º, CC02).  
+-- A Lei 13.14615 (Estatuto da Pessoa com Deficiência) também redefiniu o rol dos relativamente incapazes, excluindo aqueles com discernimento reduzido por deficiência mental ou excepcionais sem desenvolvimento mental completo. Hoje, são relativamente incapazes os maiores de dezesseis e menores de dezoito anos, os ébrios habituais e os viciados em tóxico, aqueles que não puderem exprimir sua vontade (por causa transitória ou permanente), e os pródigos (Art. 4º, Código Civil 2002).  
 -- Essa alteração, embora visando à inclusão, gera discussões sobre a proteção de indivíduos em situações de vulnerabilidade, como pessoas em coma que, antes consideradas absolutamente incapazes, agora são relativamente incapazes. A capacidade de alguns relativamente incapazes de praticar atos jurídicos sem assistência, como aceitar mandato ou fazer testamento, demonstra a complexidade da interpretação atual.
 
  ## Referências do Tema    
---- Art. 4º, CC02  
---- Art. 974, § 2º, CC02  
---- Art. 666, CC02  
---- Art. 1.860, parágrafo único, CC02  
+--- Art. 4º, Código Civil 2002  
+--- Art. 974, § 2º, Código Civil 2002  
+--- Art. 666, Código Civil 2002  
+--- Art. 1.860, parágrafo único, Código Civil 2002  
 --- Lei 13.14615
 
 ## Pergunte pra I.A.
@@ -1052,11 +1052,11 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # O morto pode sofrer dano moral?  
--- No âmbito técnico-jurídico, a atribuição de dano moral a um falecido é inviável, visto que a morte põe fim à personalidade jurídica (Art. 6º, CC02), cessando a titularidade de direitos. Contudo, a jurisprudência, ao reconhecer a transmissão da pretensão indenizatória aos herdeiros, dissocia a ideia de que dor e sofrimento são elementos indispensáveis do dano moral (Súmula 227 do STJ).  
+-- No âmbito técnico-jurídico, a atribuição de dano moral a um falecido é inviável, visto que a morte põe fim à personalidade jurídica (Art. 6º, Código Civil 2002), cessando a titularidade de direitos. Contudo, a jurisprudência, ao reconhecer a transmissão da pretensão indenizatória aos herdeiros, dissocia a ideia de que dor e sofrimento são elementos indispensáveis do dano moral (Súmula 227 do STJ).  
 -- Os herdeiros podem, sim, buscar a reparação de dano moral sofrido pelo *de cujus* em vida, ou postular por "dano moral reflexo" (ou "em ricochete") por ofensa direta à sua própria honra em decorrência da violação da memória ou imagem do falecido. Ambas as hipóteses configuram indenizações autônomas, e não a atribuição de dano moral ao próprio morto.
 
  ## Referências do Tema  
---- Art. 6º, CC02
+--- Art. 6º, Código Civil 2002
 --- Súmula 227 do STJ
 
 ## Pergunte pra I.A.
@@ -1070,20 +1070,20 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # O que diz o Código Civil sobre os Direitos da Personalidade?  
--- O Código Civil (CC02) aborda os direitos da personalidade de forma não exaustiva (Art. 52, CC), definindo-os como essenciais à dignidade da pessoa humana (Art. 1º, III, CF). Eles são vitalícios, ilimitados e, embora em regra intransmissíveis e irrenunciáveis, podem sofrer limitações voluntárias parciais e temporárias (Art. 11, CC), conforme Enunciado 4 da I Jornada de Direito Civil.  
--- Quem se sentir ameaçado ou sofrer prejuízo pode exigir que a ameaça cesse e pleitear perdas e danos (Art. 12, CC02), incluindo herdeiros em caso de falecimento (Art. 12, parágrafo único, CC02). A disposição do próprio corpo é admitida apenas para exigência médica ou transplante (Art. 13, CC02 e Lei 9.43497), e a imagem publicada sem autorização e com fins comerciais enseja reparação, dispensando prova de prejuízo (Súmula 403 do STJ).
+-- O Código Civil (Código Civil 2002) aborda os direitos da personalidade de forma não exaustiva (Art. 52, CC), definindo-os como essenciais à dignidade da pessoa humana (Art. 1º, III, Constituição Federal de 1988). Eles são vitalícios, ilimitados e, embora em regra intransmissíveis e irrenunciáveis, podem sofrer limitações voluntárias parciais e temporárias (Art. 11, CC), conforme Enunciado 4 da I Jornada de Direito Civil.  
+-- Quem se sentir ameaçado ou sofrer prejuízo pode exigir que a ameaça cesse e pleitear perdas e danos (Art. 12, Código Civil 2002), incluindo herdeiros em caso de falecimento (Art. 12, parágrafo único, Código Civil 2002). A disposição do próprio corpo é admitida apenas para exigência médica ou transplante (Art. 13, Código Civil 2002 e Lei 9.43497), e a imagem publicada sem autorização e com fins comerciais enseja reparação, dispensando prova de prejuízo (Súmula 403 do STJ).
 
  ## Referências do Tema    
---- Art. 1º, III, CF  
---- Art. 5º, XXII, CF88  
---- Art. 11, CC02  
---- Art. 12, CC02  
---- Art. 13, CC02  
---- Art. 14, CC02  
---- Art. 15, CC02  
---- Art. 16, CC02  
---- Art. 19, CC02  
---- Art. 52, CC02  
+--- Art. 1º, III, Constituição Federal de 1988  
+--- Art. 5º, XXII, Constituição Federal de 198888  
+--- Art. 11, Código Civil 2002  
+--- Art. 12, Código Civil 2002  
+--- Art. 13, Código Civil 2002  
+--- Art. 14, Código Civil 2002  
+--- Art. 15, Código Civil 2002  
+--- Art. 16, Código Civil 2002  
+--- Art. 19, Código Civil 2002  
+--- Art. 52, Código Civil 2002  
 --- Enunciado 4 da I Jornada de Direito Civil do CJF  
 --- Enunciado 274 da IV Jornada de Direito Civil do CJF  
 --- Enunciado 278 da IV Jornada de Direito Civil do CJF  
@@ -1097,10 +1097,10 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 ## Pergunte pra I.A.
 
-  - Explique a cláusula geral de tutela da pessoa humana (Art. 1º, III, CF) e como ela fundamenta os direitos da personalidade no Código Civil.
+  - Explique a cláusula geral de tutela da pessoa humana (Art. 1º, III, Constituição Federal de 1988) e como ela fundamenta os direitos da personalidade no Código Civil.
   - De que forma a jurisprudência e a doutrina expandiram o rol de direitos da personalidade, indo além do que está expressamente previsto no Código Civil?
   - Analise a flexibilização da intransmissibilidade e irrenunciabilidade dos direitos da personalidade, considerando as limitações voluntárias parciais e temporárias.
-  - Discorra sobre a proteção da imagem e voz como direitos da personalidade, com base no Art. 5º, XXII, CF88, Súmula 403 do STJ e Lei 9.610.
+  - Discorra sobre a proteção da imagem e voz como direitos da personalidade, com base no Art. 5º, XXII, Constituição Federal de 198888, Súmula 403 do STJ e Lei 9.610.
   - Explique a decisão do STF na ADI 4815 sobre a inexigibilidade de autorização prévia para biografias e o impacto na liberdade de expressão versus direitos da personalidade.
   - Aborde a possibilidade de dano moral à pessoa jurídica (Súmula 227 do STJ), e como isso se concilia com a natureza dos direitos da personalidade.
   - Quais são os limites da disposição do próprio corpo, conforme o Art. 13 do Código Civil e a Lei 9.43497?
@@ -1111,19 +1111,19 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Morte no Direito Civil (Declaração de Ausência)  
--- A morte, no Direito Civil, extingue a personalidade jurídica (Art. 6º, CC02), implicando a transmissão de herança e o término de relações. A definição do momento da morte adota a morte encefálica (Art. 3º da Lei 9.43497). Quando não há corpo, a morte é presumida, dividindo-se em sem decretação de ausência (alta probabilidade, como em catástrofes) e com decretação de ausência (baixa probabilidade).  
--- A morte sem decretação de ausência é mais célere (Art. 7º, parágrafo único, CC02), enquanto a com decretação de ausência é um processo judicial dividido em três fases: curadoria dos bens (Art. 22 e ss. CC02), sucessão provisória (Art. 26 e ss. CC02) e sucessão definitiva (Art. 37 e ss. CC02). A comoriência (Art. 8º, CC02) define mortes simultâneas para fins sucessórios.
+-- A morte, no Direito Civil, extingue a personalidade jurídica (Art. 6º, Código Civil 2002), implicando a transmissão de herança e o término de relações. A definição do momento da morte adota a morte encefálica (Art. 3º da Lei 9.43497). Quando não há corpo, a morte é presumida, dividindo-se em sem decretação de ausência (alta probabilidade, como em catástrofes) e com decretação de ausência (baixa probabilidade).  
+-- A morte sem decretação de ausência é mais célere (Art. 7º, parágrafo único, Código Civil 2002), enquanto a com decretação de ausência é um processo judicial dividido em três fases: curadoria dos bens (Art. 22 e ss. Código Civil 2002), sucessão provisória (Art. 26 e ss. Código Civil 2002) e sucessão definitiva (Art. 37 e ss. Código Civil 2002). A comoriência (Art. 8º, Código Civil 2002) define mortes simultâneas para fins sucessórios.
 
  ## Referências do Tema    
---- Art. 6º, CC02  
---- Art. 7º, CC02  
---- Art. 8º, CC02  
---- Art. 22 e ss., CC02  
---- Art. 26 e ss., CC02  
---- Art. 30, § 2º, CC02  
---- Art. 31, CC02  
---- Art. 34, CC02  
---- Art. 37 e ss., CC02  
+--- Art. 6º, Código Civil 2002  
+--- Art. 7º, Código Civil 2002  
+--- Art. 8º, Código Civil 2002  
+--- Art. 22 e ss., Código Civil 2002  
+--- Art. 26 e ss., Código Civil 2002  
+--- Art. 30, § 2º, Código Civil 2002  
+--- Art. 31, Código Civil 2002  
+--- Art. 34, Código Civil 2002  
+--- Art. 37 e ss., Código Civil 2002  
 --- Art. 88 da Lei 6.01573  
 --- Lei 9.43497
 
@@ -1133,7 +1133,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
   - Diferencie "morte real" de "morte presumida", e em que contextos cada uma é aplicável, com exemplos práticos.
   - Detalhe as duas categorias de "morte presumida" (com e sem decretação de ausência), apontando os requisitos e o procedimento para cada uma.
   - Descreva as três fases do procedimento de "declaração de ausência" no Direito Civil: curadoria dos bens, sucessão provisória e sucessão definitiva.
-  - Aborde a figura da "comoriência" (Art. 8º, CC02), explicando seu objetivo e suas implicações para o direito sucessório.
+  - Aborde a figura da "comoriência" (Art. 8º, Código Civil 2002), explicando seu objetivo e suas implicações para o direito sucessório.
   - Analise a proteção dos "interesses futuros e possíveis" do ausente durante a curadoria dos bens e a sucessão provisória.
   - Quais são os direitos e obrigações dos herdeiros durante as fases de sucessão provisória e definitiva, especialmente em relação à caução e à alienação de bens?
   - Explique o conceito de "propriedade resolúvel" na fase de sucessão definitiva e quais são os direitos do ausente caso ele retorne.
@@ -1142,13 +1142,13 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Direitos da Personalidade: Imprescritíveis  
--- A imprescritibilidade dos direitos da personalidade significa que eles não se perdem pelo decurso do tempo (Art. 189 do CC02). Essa característica decorre de sua natureza inata e vitalícia, ligada à própria existência e dignidade da pessoa humana (Art. 1º, III, CF).  
--- No entanto, a imprescritibilidade aplica-se à essência do direito, e não à pretensão de reparação por sua violação, que possui prazo prescricional (Art. 206, §3°, V, CC02). O STJ, contudo, reconhece a imprescritibilidade da pretensão de reconhecimento de ofensa a direitos da personalidade.
+-- A imprescritibilidade dos direitos da personalidade significa que eles não se perdem pelo decurso do tempo (Art. 189 do Código Civil 2002). Essa característica decorre de sua natureza inata e vitalícia, ligada à própria existência e dignidade da pessoa humana (Art. 1º, III, Constituição Federal de 1988).  
+-- No entanto, a imprescritibilidade aplica-se à essência do direito, e não à pretensão de reparação por sua violação, que possui prazo prescricional (Art. 206, §3°, V, Código Civil 2002). O STJ, contudo, reconhece a imprescritibilidade da pretensão de reconhecimento de ofensa a direitos da personalidade.
 
  ## Referências do Tema  
---- Art. 1º, III, CF
---- Art. 189, CC02
---- Art. 206, §3°, V, CC02
+--- Art. 1º, III, Constituição Federal de 1988
+--- Art. 189, Código Civil 2002
+--- Art. 206, §3°, V, Código Civil 2002
 --- Art. 27, CDC
 --- STJ – AREsp: 1179890 SC 20170252143-5
 
@@ -1157,18 +1157,18 @@ Estou pronto para continuar com os próximos temas quando você desejar!
   - Explique a diferença entre a imprescritibilidade do direito da personalidade e a prescritibilidade da pretensão indenizatória por sua violação, citando os artigos do Código Civil.
   - Discorra sobre como a natureza inata e vitalícia dos direitos da personalidade fundamenta sua imprescritibilidade.
   - Analise o entendimento do STJ sobre a imprescritibilidade da pretensão de reconhecimento de ofensa a direitos da personalidade, mesmo que a ação de reparação seja prescritível.
-  - De que forma o princípio da dignidade da pessoa humana (Art. 1º, III, CF) justifica a imprescritibilidade dos direitos da personalidade no Direito Civil?
+  - De que forma o princípio da dignidade da pessoa humana (Art. 1º, III, Constituição Federal de 1988) justifica a imprescritibilidade dos direitos da personalidade no Direito Civil?
   - Compare a imprescritibilidade dos direitos da personalidade com a prescrição em outros ramos do direito, como o Direito Penal e o Direito Tributário.
 
 -----
 
 # Direitos da Personalidade: Intransmissíveis e Irrenunciáveis  
--- Os direitos da personalidade são, em regra, intransmissíveis e irrenunciáveis, não podendo seu exercício sofrer limitação voluntária (Art. 11 do CC02). Isso se justifica pela sua ligação intrínseca à pessoa e à sua dignidade, protegendo a essência do indivíduo.  
--- Contudo, essa intransmissibilidade e irrenunciabilidade são relativas, admitindo-se limitações voluntárias parciais e temporárias, conforme o Enunciado 4 da I Jornada de Direito Civil, e a possibilidade de disposição *post mortem* para fins altruísticos ou científicos (Art. 14 do CC02).
+-- Os direitos da personalidade são, em regra, intransmissíveis e irrenunciáveis, não podendo seu exercício sofrer limitação voluntária (Art. 11 do Código Civil 2002). Isso se justifica pela sua ligação intrínseca à pessoa e à sua dignidade, protegendo a essência do indivíduo.  
+-- Contudo, essa intransmissibilidade e irrenunciabilidade são relativas, admitindo-se limitações voluntárias parciais e temporárias, conforme o Enunciado 4 da I Jornada de Direito Civil, e a possibilidade de disposição *post mortem* para fins altruísticos ou científicos (Art. 14 do Código Civil 2002).
 
  ## Referências do Tema  
---- Art. 11, CC02
---- Art. 14, CC02
+--- Art. 11, Código Civil 2002
+--- Art. 14, Código Civil 2002
 --- Enunciado 4 da I Jornada de Direito Civil do CJF
 
 ## Pergunte pra I.A.
@@ -1186,7 +1186,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -- Essa relativização permite, por exemplo, a disposição do próprio corpo para fins de transplante ou pesquisa (Art. 13 da Lei 943497) e a limitação voluntária do exercício de direitos em situações como contratos de imagem ou participação em *reality shows*, desde que não sejam permanentes ou gerais, conforme o Enunciado 278 da IV Jornada de Direito Civil.
 
  ## Referências do Tema  
---- Art. 13, CC02
+--- Art. 13, Código Civil 2002
 --- Lei 9.43497
 --- Enunciado 278 da IV Jornada de Direito Civil do CJF
 
@@ -1205,7 +1205,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -- Dessa forma, o Direito Civil, sob a influência do neoconstitucionalismo, adapta-se às evoluções sociais, tutelando valores que nascem e se desenvolvem com o ser humano, garantindo a proteção de sua honra, identidade, imagem e outros aspectos existenciais, que formam a essência da pessoa.
 
  ## Referências do Tema    
---- Art. 52, CC02  
+--- Art. 52, Código Civil 2002  
 --- STJ – AREsp: 1179890 SC 20170252143-5
 
 ## Pergunte pra I.A.
@@ -1219,12 +1219,12 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Direitos da Personalidade: Inato.  
--- Os direitos da personalidade são inatos, o que significa que pertencem ao ser humano desde o seu nascimento, independentemente de reconhecimento legal (Art. 1º, III, CF). Essa característica ressalta sua ligação intrínseca à própria existência da pessoa e sua relevância essencial, como vida, honra e identidade.  
+-- Os direitos da personalidade são inatos, o que significa que pertencem ao ser humano desde o seu nascimento, independentemente de reconhecimento legal (Art. 1º, III, Constituição Federal de 1988). Essa característica ressalta sua ligação intrínseca à própria existência da pessoa e sua relevância essencial, como vida, honra e identidade.  
 -- São, assim, tutelados desde os primeiros estágios da vida (como o nascituro, que tem seus direitos salvaguardados desde a concepção) e acompanham o indivíduo até a morte. Contudo, excepcionalmente, alguns direitos da personalidade podem ser adquiridos, como o direito autoral, demonstrando a adaptabilidade do conceito a diversas realidades.
 
  ## Referências do Tema    
---- Art. 1º, III, CF  
---- Art. 2º, CC02  
+--- Art. 1º, III, Constituição Federal de 1988  
+--- Art. 2º, Código Civil 2002  
 --- Enunciado 4 da I Jornada de Direito Civil do CJF
 
 ## Pergunte pra I.A.
@@ -1238,11 +1238,11 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Direitos da Personalidade: Extrapatrimoniais.  
--- Os direitos da personalidade são extrapatrimoniais, o que significa que não comportam avaliação econômica direta (não possuem valor pecuniário imediato). Contudo, sua violação pode ensejar pretensão de reparação por dano moral (Art. 5º, V, CF88), que, embora de natureza patrimonial, visa compensar a lesão a um bem imaterial e tem caráter educativo e preventivo.  
+-- Os direitos da personalidade são extrapatrimoniais, o que significa que não comportam avaliação econômica direta (não possuem valor pecuniário imediato). Contudo, sua violação pode ensejar pretensão de reparação por dano moral (Art. 5º, V, Constituição Federal de 198888), que, embora de natureza patrimonial, visa compensar a lesão a um bem imaterial e tem caráter educativo e preventivo.  
 -- Essa distinção é crucial, pois, como demonstrado pela Súmula 227 do STJ, a pessoa jurídica pode sofrer dano moral, mesmo não experimentando dor ou sofrimento. Isso reforça a ideia de que o dano moral não se restringe a aspectos subjetivos de dor, mas abrange a lesão à honra objetiva e à reputação, que são bens extrapatrimoniais.
 
  ## Referências do Tema    
---- Art. 5º, V, CF88  
+--- Art. 5º, V, Constituição Federal de 198888  
 --- Súmula 227 do STJ
 
 ## Pergunte pra I.A.
@@ -1256,16 +1256,16 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Quais são as características dos Direitos da Personalidade?  
--- As características dos Direitos da Personalidade, embora amplas e não exaustivas (Art. 52, CC), são vitais à proteção da dignidade da pessoa humana (Art. 1º, III, CF). São vitalícios, acompanhando a pessoa durante toda a vida, e absolutos, sendo oponíveis a todos (erga omnes) e exigindo uma postura de respeito e promoção por parte do Estado e da coletividade.
+-- As características dos Direitos da Personalidade, embora amplas e não exaustivas (Art. 52, CC), são vitais à proteção da dignidade da pessoa humana (Art. 1º, III, Constituição Federal de 1988). São vitalícios, acompanhando a pessoa durante toda a vida, e absolutos, sendo oponíveis a todos (erga omnes) e exigindo uma postura de respeito e promoção por parte do Estado e da coletividade.
 -- São, também, ilimitados em seu rol, pois o Código Civil não os enumera de forma taxativa, permitindo o reconhecimento de novos direitos, como o estado de filiação. Adicionalmente, são inatos, extrapatrimoniais (não possuem valor econômico direto, mas sua violação pode gerar indenização), imprescritíveis na sua essão, e relativamente intransmissíveis e irrenunciáveis, admitindo limitações parciais e temporárias (Art. 11, CC), desde que não sejam permanentes ou gerais, conforme o Enunciado 4 da I Jornada de Direito Civil.
 
  ## Referências do Tema  
---- Art. 1º, III, CF
---- Art. 6º, CC02
---- Art. 11, CC02
---- Art. 12, CC02
---- Art. 52, CC02
---- Art. 189, CC02
+--- Art. 1º, III, Constituição Federal de 1988
+--- Art. 6º, Código Civil 2002
+--- Art. 11, Código Civil 2002
+--- Art. 12, Código Civil 2002
+--- Art. 52, Código Civil 2002
+--- Art. 189, Código Civil 2002
 --- Enunciado 4 da I Jornada de Direito Civil do CJF
 --- STJ – AREsp: 1179890 SC 20170252143-5
 
@@ -1278,12 +1278,12 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Direitos da Personalidade: Vitalício
--- Os direitos da personalidade são vitalícios, ou seja, acompanham a pessoa durante toda a sua existência, desde o nascimento com vida (Art. 2º do CC02). Essa característica diferencia-os da perpetuidade, pois cessam com a morte do indivíduo (Art. 6º do CC02), que põe fim à personalidade jurídica e, consequentemente, à titularidade de direitos.
+-- Os direitos da personalidade são vitalícios, ou seja, acompanham a pessoa durante toda a sua existência, desde o nascimento com vida (Art. 2º do Código Civil 2002). Essa característica diferencia-os da perpetuidade, pois cessam com a morte do indivíduo (Art. 6º do Código Civil 2002), que põe fim à personalidade jurídica e, consequentemente, à titularidade de direitos.
 -- São, assim, um reflexo da dignidade da pessoa humana e são inatos, consubstanciando valores intrínsecos ao ser. Embora não se estendam *post mortem*, sua violação em vida pode gerar pretensão indenizatória transmissível aos herdeiros, que buscam a reparação do dano moral sofrido pelo falecido, e não do dano moral próprio dos sucessores.
 
  ## Referências do Tema  
---- Art. 2º, CC02
---- Art. 6º, CC02
+--- Art. 2º, Código Civil 2002
+--- Art. 6º, Código Civil 2002
 
 ## Pergunte pra I.A.
 
@@ -1295,10 +1295,10 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 # Direitos da Personalidade: Absoluto
 -- Os direitos da personalidade são absolutos, o que significa que são oponíveis a todos (eficácia *erga omnes*). Essa característica impõe à coletividade e ao Estado um dever geral de abstenção, ou seja, de não violar tais direitos.
--- Além do dever de abstenção, o caráter absoluto dos direitos da personalidade também implica um dever de promoção por parte do Estado. Assim, a Administração Pública deve atuar para garantir a efetivação desses direitos, como a educação, saúde e igualdade, que são pilares da dignidade da pessoa humana (Art. 1º, III, CF), e que irradiam sua eficácia para as relações entre particulares.
+-- Além do dever de abstenção, o caráter absoluto dos direitos da personalidade também implica um dever de promoção por parte do Estado. Assim, a Administração Pública deve atuar para garantir a efetivação desses direitos, como a educação, saúde e igualdade, que são pilares da dignidade da pessoa humana (Art. 1º, III, Constituição Federal de 1988), e que irradiam sua eficácia para as relações entre particulares.
 
  ## Referências do Tema  
---- Art. 1º, III, CF
+--- Art. 1º, III, Constituição Federal de 1988
 
 ## Pergunte pra I.A.
 
@@ -1309,23 +1309,23 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Direitos da Personalidade (Direito Civil)  
--- Os direitos da personalidade são direitos essenciais à proteção da dignidade da pessoa humana (Art. 1º, III, CF), funcionando como expressões da cláusula geral de tutela da pessoa humana. O Código Civil os regula de forma não exaustiva, permitindo a ponderação em caso de colisão entre eles, pois nenhum se sobrepõe aos demais.
+-- Os direitos da personalidade são direitos essenciais à proteção da dignidade da pessoa humana (Art. 1º, III, Constituição Federal de 1988), funcionando como expressões da cláusula geral de tutela da pessoa humana. O Código Civil os regula de forma não exaustiva, permitindo a ponderação em caso de colisão entre eles, pois nenhum se sobrepõe aos demais.
 
--- Esses direitos, influenciados pelo neoconstitucionalismo, possuem eficácia irradiante, aplicando-se também nas relações entre particulares. São vitalícios, absolutos e, embora ilimitados em seu rol (Art. 52, CC), sua intransmissibilidade e irrenunciabilidade são relativas (Art. 11, CC), admitindo limitação voluntária parcial e temporária, como na proteção da voz humana (Art. 5º, XXII, CF88 e Lei 9.610).
+-- Esses direitos, influenciados pelo neoconstitucionalismo, possuem eficácia irradiante, aplicando-se também nas relações entre particulares. São vitalícios, absolutos e, embora ilimitados em seu rol (Art. 52, CC), sua intransmissibilidade e irrenunciabilidade são relativas (Art. 11, CC), admitindo limitação voluntária parcial e temporária, como na proteção da voz humana (Art. 5º, XXII, Constituição Federal de 198888 e Lei 9.610).
 
  ## Referências do Tema    
---- Art. 1º, III, CF  
---- Art. 5º, XXII, CF88  
---- Art. 6º, CC02  
---- Art. 11, CC02  
---- Art. 12, CC02  
---- Art. 13, CC02  
---- Art. 14, CC02  
---- Art. 15, CC02  
---- Art. 16, CC02  
---- Art. 19, CC02  
---- Art. 52, CC02  
---- Art. 206, §3º, V, CC02  
+--- Art. 1º, III, Constituição Federal de 1988  
+--- Art. 5º, XXII, Constituição Federal de 198888  
+--- Art. 6º, Código Civil 2002  
+--- Art. 11, Código Civil 2002  
+--- Art. 12, Código Civil 2002  
+--- Art. 13, Código Civil 2002  
+--- Art. 14, Código Civil 2002  
+--- Art. 15, Código Civil 2002  
+--- Art. 16, Código Civil 2002  
+--- Art. 19, Código Civil 2002  
+--- Art. 52, Código Civil 2002  
+--- Art. 206, §3º, V, Código Civil 2002  
 --- Art. 27, CDC  
 --- Enunciado 4 da I Jornada de Direito Civil do CJF  
 --- Enunciado 274 da IV Jornada de Direito Civil do CJF  
@@ -1344,7 +1344,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
   - Quais são as características dos direitos da personalidade (vitaliciedade, absolutez, ilimitação, inatismo, extrapatrimonialidade, imprescritibilidade, intransmissibilidade e irrenunciabilidade), e como cada uma se manifesta no Direito Civil?
   - Analise a distinção entre a imprescritibilidade dos direitos da personalidade e a prescritibilidade da pretensão indenizatória por danos morais.
   - Discorra sobre a relativização da intransmissibilidade e irrenunciabilidade dos direitos da personalidade, conforme o Art. 11 do Código Civil e o Enunciado 4 da I Jornada de Direito Civil.
-  - Apresente um caso prático que ilustre a aplicação do direito à imagem e voz (Art. 5º, XXII, CF88 e Súmula 403 do STJ) como direitos da personalidade.
+  - Apresente um caso prático que ilustre a aplicação do direito à imagem e voz (Art. 5º, XXII, Constituição Federal de 198888 e Súmula 403 do STJ) como direitos da personalidade.
   - Explique a decisão do STF na ADI 4815 sobre a inexigibilidade de autorização prévia para biografias, e como ela se relaciona com os direitos da personalidade e a liberdade de expressão.
   - De que forma a Súmula 227 do STJ, ao reconhecer o dano moral à pessoa jurídica, impactou a compreensão dos direitos da personalidade.
   - Aborde o direito à disposição do próprio corpo (Art. 13 e 14 do Código Civil) e seus limites, como a exigência médica e os transplantes.
@@ -1358,13 +1358,13 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 -----
 # Início da personalidade jurídica da Pessoa Jurídica  
--- Para a pessoa jurídica de direito privado, a personalidade jurídica tem início com o registro do seu ato constitutivo no órgão competente (Art. 45 do CC02), como o Registro Civil de Pessoas Jurídicas ou a Junta Comercial. Antes do registro, a pessoa jurídica existe como um "ente despersonificado", com capacidade limitada para certos atos.
+-- Para a pessoa jurídica de direito privado, a personalidade jurídica tem início com o registro do seu ato constitutivo no órgão competente (Art. 45 do Código Civil 2002), como o Registro Civil de Pessoas Jurídicas ou a Junta Comercial. Antes do registro, a pessoa jurídica existe como um "ente despersonificado", com capacidade limitada para certos atos.
 
 -- Já para as pessoas jurídicas de direito público, a personalidade jurídica inicia com a vigência da lei que as institui. A Súmula 227 do STJ, ao reconhecer a possibilidade de dano moral à pessoa jurídica, reforça a autonomia da sua personalidade e a proteção de sua honra objetiva, mesmo não possuindo atributos como dor e sofrimento.
 
  ## Referências do Tema    
---- Art. 45 do CC02  
---- Art. 985 do CC02  
+--- Art. 45 do Código Civil 2002  
+--- Art. 985 do Código Civil 2002  
 --- Súmula 227 do STJ
 
 ## Pergunte pra I.A.
@@ -1384,10 +1384,10 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 # Liberdade de Expressão
 -- A liberdade de expressão é um direito fundamental garantido pela Constituição Federal (art. 5º, caput e incisos), abrangendo manifestações intelectuais, artísticas, científicas e de comunicação, sem censura ou licença. O STF, na ADI 4815, reforçou a inexigibilidade de autorização prévia para biografias.
 
--- Contudo, não é um direito absoluto e encontra limites na proteção de outros direitos, como a honra e a imagem (art. 5º, X, da CF88). A Súmula 403 do STJ, por exemplo, baliza seu uso, especialmente contra a apropriação indevida de imagem para fins comerciais, e a voz humana é protegida pela Lei 9.610.
+-- Contudo, não é um direito absoluto e encontra limites na proteção de outros direitos, como a honra e a imagem (art. 5º, X, da Constituição Federal de 198888). A Súmula 403 do STJ, por exemplo, baliza seu uso, especialmente contra a apropriação indevida de imagem para fins comerciais, e a voz humana é protegida pela Lei 9.610.
 
  ## Referências do Tema  
---- Art. 5º, caput e X, da CF88
+--- Art. 5º, caput e X, da Constituição Federal de 198888
 --- ADI 4815 do STF
 --- Súmula 403 do STJ
 --- Lei 9.610
@@ -1414,13 +1414,13 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 # Direito Civil Constitucional
 
--- O Direito Civil Constitucional surge do neoconstitucionalismo, valorizando a dignidade da pessoa humana (Art. 1º, III, CF88) e os direitos fundamentais. Supera a visão patrimonialista do Código Civil de 1916, adotando uma perspectiva existencialista que permeia institutos como família, contratos e propriedade, garantindo sua eficácia horizontal nas relações privadas.
+-- O Direito Civil Constitucional surge do neoconstitucionalismo, valorizando a dignidade da pessoa humana (Art. 1º, III, Constituição Federal de 198888) e os direitos fundamentais. Supera a visão patrimonialista do Código Civil de 1916, adotando uma perspectiva existencialista que permeia institutos como família, contratos e propriedade, garantindo sua eficácia horizontal nas relações privadas.
 -- Essa nova leitura do direito civil constitucionaliza as relações privadas, mitigando a dicotomia entre Constituição e Direito Privado. Promove a solidariedade social e a igualdade substancial, redefinindo conceitos como patrimônio mínimo e família, e impulsionando o intervencionismo estatal para proteger o hipossuficiente.
 
  ## Referências do Tema  
---- Art. 1º, III, CF88
---- Art. 5º, XXXVI, CF88
---- Art. 170, CF88
+--- Art. 1º, III, Constituição Federal de 198888
+--- Art. 5º, XXXVI, Constituição Federal de 198888
+--- Art. 170, Constituição Federal de 198888
 --- Enunciado 274 da IV Jornada de Direito Civil
 --- ADI 4277 do STF
 --- RE 898.060 do STF
@@ -1434,7 +1434,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
   - Explique como o neoconstitucionalismo impactou a relação entre o Direito Civil e a Constituição Federal, transformando a interpretação de institutos clássicos como a família e a propriedade.
   - Discorra sobre a eficácia horizontal dos direitos fundamentais no Direito Civil, apresentando exemplos práticos de como a dignidade da pessoa humana se manifesta nas relações entre particulares.
   - Analise a transição da concepção patrimonialista para a existencialista no Direito Civil, destacando as principais diferenças e os novos valores incorporados.
-  - De que maneira o princípio da solidariedade social (Art. 3º, I, CF88) se reflete nas relações contratuais e familiares no contexto do Direito Civil Constitucional?
+  - De que maneira o princípio da solidariedade social (Art. 3º, I, Constituição Federal de 198888) se reflete nas relações contratuais e familiares no contexto do Direito Civil Constitucional?
   - Avalie a Teoria do Patrimônio Mínimo à luz da dignidade da pessoa humana, explicando como essa teoria busca proteger a subsistência do indivíduo e qual a sua relevância prática.
   - Explique como a Lei de Liberdade Econômica (Lei 13.87419) se alinha ou se contrapõe aos princípios do Direito Civil Constitucional, especialmente no que tange à intervenção estatal e à autonomia privada.
   - Analise a Súmula 227 do STJ, que reconhece o dano moral à pessoa jurídica, e discuta sua compatibilidade com a concepção existencialista da Constituição.
@@ -1448,21 +1448,21 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 -- O Princípio da Sociabilidade impõe a prevalência dos valores coletivos sobre os individuais no Direito Civil, consagrando a função social dos institutos jurídicos como empresa, contrato e posse. Ele exige que a interpretação e aplicação do direito considerem o interesse da coletividade, superando a ótica individualista.
 
--- Este princípio reflete a transição para uma concepção existencialista da Constituição, onde a dignidade da pessoa humana (Art. 1º, III, CF88) e a solidariedade social (Art. 3º, I, CF88) guiam o ordenamento jurídico, transformando a leitura dos direitos e deveres nas relações privadas.
+-- Este princípio reflete a transição para uma concepção existencialista da Constituição, onde a dignidade da pessoa humana (Art. 1º, III, Constituição Federal de 198888) e a solidariedade social (Art. 3º, I, Constituição Federal de 198888) guiam o ordenamento jurídico, transformando a leitura dos direitos e deveres nas relações privadas.
 
  ## Referências do Tema  
---- Art. 1º, III, CF88
---- Art. 3º, I, CF88
+--- Art. 1º, III, Constituição Federal de 198888
+--- Art. 3º, I, Constituição Federal de 198888
 --- Art. 421 do Código Civil
 --- Art. 1.228, § 1º, do Código Civil
---- Art. 186, CF88
+--- Art. 186, Constituição Federal de 198888
 --- Enunciado 492 da V Jornada de Direito Civil
 
 ## Pergunte pra I.A.
 
   - Explique a relação entre o Princípio da Sociabilidade e a Dignidade da Pessoa Humana, demonstrando como um reforça o outro na aplicação dos institutos de Direito Civil.
-  - Discuta a função social da propriedade (Art. 1.228, § 1º, CC02; Art. 186, CF88) como uma manifestação do Princípio da Sociabilidade, apresentando exemplos de como a propriedade deve atender aos interesses coletivos.
-  - Analise a função social do contrato (Art. 421, CC02) e como ela mitiga o princípio da força obrigatória dos contratos, promovendo a justiça e a equidade nas relações contratuais.
+  - Discuta a função social da propriedade (Art. 1.228, § 1º, Código Civil 2002; Art. 186, Constituição Federal de 198888) como uma manifestação do Princípio da Sociabilidade, apresentando exemplos de como a propriedade deve atender aos interesses coletivos.
+  - Analise a função social do contrato (Art. 421, Código Civil 2002) e como ela mitiga o princípio da força obrigatória dos contratos, promovendo a justiça e a equidade nas relações contratuais.
   - De que maneira o Princípio da Sociabilidade se manifesta na interpretação de institutos como a posse, especialmente à luz do Enunciado 492 da V Jornada de Direito Civil?
   - Compare a aplicação do Princípio da Sociabilidade em legislações específicas, como a proteção ao bem de família (Lei 8.00990) e a Lei do Superendividado (Lei 14.18121), demonstrando seus impactos práticos.
   - Explique como a coletividade se beneficia da aplicação do Princípio da Sociabilidade, mesmo quando há restrições a direitos individuais, e discuta a ponderação de interesses envolvida.
@@ -1474,7 +1474,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 # Princípio da Eticidade
 
 -- O Princípio da Eticidade impõe a probidade e a boa-fé nas relações privadas, influenciando a interpretação, controle e integração dos contratos. Ele se manifesta principalmente através da boa-fé objetiva, que estabelece deveres anexos de conduta, como lealdade e transparência, moldando o comportamento esperado das partes.
--- Este princípio, alinhado ao pós-positivismo, busca uma reaproximação do Direito com a Ética, Justiça e Moral, superando a legalidade estrita. Sua aplicação evita o abuso de direito (Art. 187, CC02) e promove a colaboração contínua entre as partes na relação obrigacional, contribuindo para a segurança jurídica e a justiça social.
+-- Este princípio, alinhado ao pós-positivismo, busca uma reaproximação do Direito com a Ética, Justiça e Moral, superando a legalidade estrita. Sua aplicação evita o abuso de direito (Art. 187, Código Civil 2002) e promove a colaboração contínua entre as partes na relação obrigacional, contribuindo para a segurança jurídica e a justiça social.
 
  ## Referências do Tema  
 --- Art. 113 do Código Civil
@@ -1488,7 +1488,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
   - Explique as três funções da boa-fé objetiva (interpretativa, de controle e integrativa) no contexto do Direito Civil e apresente exemplos práticos de cada uma.
   - Discorra sobre os deveres anexos ou laterais de conduta, como lealdade, transparência e cooperação, e como a violação desses deveres se configura como inadimplemento contratual, mesmo sem quebra das cláusulas expressas.
-  - Analise como o Princípio da Eticidade, através da boa-fé objetiva, atua como um limite ao exercício de direitos subjetivos, configurando o abuso de direito (Art. 187, CC02).
+  - Analise como o Princípio da Eticidade, através da boa-fé objetiva, atua como um limite ao exercício de direitos subjetivos, configurando o abuso de direito (Art. 187, Código Civil 2002).
   - De que maneira a interpretação dos negócios jurídicos deve considerar os usos, costumes e práticas do mercado, conforme o Art. 113 do Código Civil, e qual o impacto da Lei 13.87419 (Lei da Liberdade Econômica) nesse aspecto?
   - Avalie o conceito de "tu quoque" como um desdobramento da boa-fé objetiva, explicando como ele impede um comportamento contraditório das partes nas relações jurídicas.
   - Explique como a Súmula 370 do STJ, sobre a apresentação antecipada de cheque pré-datado, se alinha ao Princípio da Eticidade e à proteção da boa-fé objetiva.
@@ -1597,7 +1597,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
  ## Referências do Tema    
 --- Art. 4º da LINDB  
---- Art. 1º, III, da CF88 (implícito)  
+--- Art. 1º, III, da Constituição Federal de 198888 (implícito)  
 --- Art. 187 do Código Civil (implícito na eticidade)
 
 ## Pergunte pra I.A.
@@ -1605,7 +1605,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
   - Explique a natureza dos "Princípios Gerais de Direito" e como eles se diferenciam dos costumes e da analogia como métodos de integração do ordenamento jurídico (Art. 4º da LINDB).
   - Discorra sobre como os princípios da Sociabilidade, Eticidade e Operabilidade, presentes no Direito Civil Constitucional, influenciam a interpretação e a aplicação de normas, mesmo quando não explicitamente codificados.
   - Apresente um exemplo prático de como um "Princípio Geral de Direito" foi utilizado por um julgador para resolver um caso de lacuna normativa no Direito Civil, especialmente em temas sensíveis como direitos de família ou contratos.
-  - Analise a relação entre os "Princípios Gerais de Direito" e a dignidade da pessoa humana (Art. 1º, III, da CF88), demonstrando como esses princípios atuam na proteção dos direitos fundamentais nas relações privadas.
+  - Analise a relação entre os "Princípios Gerais de Direito" e a dignidade da pessoa humana (Art. 1º, III, da Constituição Federal de 198888), demonstrando como esses princípios atuam na proteção dos direitos fundamentais nas relações privadas.
   - De que forma a flexibilização do *pacta sunt servanda* e a função social do contrato são reflexos diretos da aplicação dos "Princípios Gerais de Direito" no Direito Civil contemporâneo.
 
 **Autorização para continuar:** Sim, estou pronto para continuar com os próximos três temas quando você desejar.
@@ -1616,12 +1616,12 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 -- A equidade, embora não explicitamente um método de integração no Art. 4º da LINDB, serve como fonte informal do direito, buscando a justiça no caso concreto. Ela pode se manifestar em diferentes graus (estrita, latíssima, em sentido lato), mas decidir **por** equidade só é permitido quando a lei expressamente o autoriza, como na jurisdição voluntária (Art. 140, parágrafo único, do CPC).
 
--- Sua aplicação mais comum é para mitigar rigor excessivo, como na redução equitativa de cláusulas penais manifestamente excessivas (Art. 413 do CC02). A equidade legal, portanto, encontra respaldo em previsões normativas que permitem ao juiz ajustar a aplicação da lei a situações particulares para evitar injustiças.
+-- Sua aplicação mais comum é para mitigar rigor excessivo, como na redução equitativa de cláusulas penais manifestamente excessivas (Art. 413 do Código Civil 2002). A equidade legal, portanto, encontra respaldo em previsões normativas que permitem ao juiz ajustar a aplicação da lei a situações particulares para evitar injustiças.
 
  ## Referências do Tema 
 --- Art. 4º da LINDB
 --- Art. 140, parágrafo único, do CPC
---- Art. 413 do CC02
+--- Art. 413 do Código Civil 2002
 
 ## Pergunte pra I.A.
 
@@ -1635,22 +1635,22 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 # Conflito de Leis no Tempo
 
--- O conflito de leis no tempo rege a aplicação de novas leis a fatos ocorridos sob a égide de legislação anterior, pautado pelo princípio da irretroatividade da lei (Art. 5º, XXXVI, da CF; Art. 6º da LINDB). A lei nova, em regra, não retroage, garantindo a proteção do direito adquirido, do ato jurídico perfeito e da coisa julgada.
+-- O conflito de leis no tempo rege a aplicação de novas leis a fatos ocorridos sob a égide de legislação anterior, pautado pelo princípio da irretroatividade da lei (Art. 5º, XXXVI, da Constituição Federal de 1988; Art. 6º da LINDB). A lei nova, em regra, não retroage, garantindo a proteção do direito adquirido, do ato jurídico perfeito e da coisa julgada.
 
 -- Contudo, essa proteção não é absoluta, sendo mitigada em situações excepcionais, especialmente diante de valores constitucionais superiores, como na busca pela identidade genética, onde a coisa julgada pode ser relativizada para evitar a perpetuação de injustiças (Enunciado 109 da I Jornada de Direito Civil). A lei nova terá aplicação **prospectiva**, salvo disposições transitórias ou situações em que a retroatividade beneficie as partes sem violar princípios basilares.
 
  ## Referências do Tema 
---- Art. 5º, XXXVI, da CF
+--- Art. 5º, XXXVI, da Constituição Federal de 1988
 --- Art. 6º da LINDB
 --- Enunciado 109 da I Jornada de Direito Civil
 
 ## Pergunte pra I.A.
 
-  - Explique o princípio da irretroatividade da lei e suas exceções, conforme o Art. 5º, XXXVI, da CF, e como a LINDB o complementa.
+  - Explique o princípio da irretroatividade da lei e suas exceções, conforme o Art. 5º, XXXVI, da Constituição Federal de 1988, e como a LINDB o complementa.
   - Discorra sobre o papel do "direito adquirido", "ato jurídico perfeito" e "coisa julgada" na resolução de conflitos de leis no tempo, e quais os limites de sua proteção.
   - Analise o Enunciado 109 da I Jornada de Direito Civil, que relativiza a coisa julgada em ações de investigação de paternidade, e como ele reflete a ponderação de princípios constitucionais.
   - Apresente um caso concreto em que uma lei nova, mais benéfica, retroagiu para beneficiar uma parte, e como essa aplicação se harmoniza com o princípio da segurança jurídica.
-  - Compare a irretroatividade da lei penal (Art. 5º, XL, da CF) com a irretroatividade da lei civil, identificando semelhanças e diferenças na proteção dos direitos.
+  - Compare a irretroatividade da lei penal (Art. 5º, XL, da Constituição Federal de 1988) com a irretroatividade da lei civil, identificando semelhanças e diferenças na proteção dos direitos.
 
 -----
 
@@ -1658,12 +1658,12 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 -- A interpretação da norma busca o sentido e o alcance da regra jurídica, sendo a hermenêutica a ciência que estuda esses meios. Todos os tipos de normas exigem interpretação, que pode ser gramatical, lógica, sistemática, histórica, ontológica ou teleológica. A interpretação teleológica, por exemplo, foca na finalidade da norma, adaptando-a aos valores sociais atuais, como se vê na Súmula 364 do STJ sobre a impenhorabilidade do bem de família, que visa proteger a dignidade da pessoa humana e não apenas o núcleo familiar.
 
--- Quanto aos resultados, a interpretação pode ser declarativa, extensiva (quando o legislador disse menos do que queria, expandindo o alcance da norma) ou restritiva (quando o legislador disse mais do que queria, limitando-o). Contratos benéficos e renúncias, por exemplo, são interpretados restritivamente (Art. 114 do CC02).
+-- Quanto aos resultados, a interpretação pode ser declarativa, extensiva (quando o legislador disse menos do que queria, expandindo o alcance da norma) ou restritiva (quando o legislador disse mais do que queria, limitando-o). Contratos benéficos e renúncias, por exemplo, são interpretados restritivamente (Art. 114 do Código Civil 2002).
 
  ## Referências do Tema 
 --- Súmula 364 do STJ
---- Art. 1º, III, da CF
---- Art. 114 do CC02
+--- Art. 1º, III, da Constituição Federal de 1988
+--- Art. 114 do Código Civil 2002
 
 ## Pergunte pra I.A.
 
@@ -1697,18 +1697,18 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 # Vigência da Lei no Espaço
 
--- No Brasil, adota-se o princípio da territorialidade moderada (ou temperada), que permite a aplicação da lei brasileira em seu território, mas também, excepcionalmente, a aplicação de leis estrangeiras. Para tanto, a lei estrangeira não pode ofender a soberania nacional, a ordem pública ou os bons costumes, e deve ser homologada pelo STJ (Art. 105 da CF88).
+-- No Brasil, adota-se o princípio da territorialidade moderada (ou temperada), que permite a aplicação da lei brasileira em seu território, mas também, excepcionalmente, a aplicação de leis estrangeiras. Para tanto, a lei estrangeira não pode ofender a soberania nacional, a ordem pública ou os bons costumes, e deve ser homologada pelo STJ (Art. 105 da Constituição Federal de 198888).
 
 -- A lei do país de domicílio da pessoa determina regras sobre personalidade, nome, capacidade e família (Art. 7º da LINDB). Decisões estrangeiras, após homologação, geram título executivo judicial, mas a homologação se restringe à verificação das formalidades, sem reexame do mérito.
 
  ## Referências do Tema 
 --- Art. 7º da LINDB
---- Art. 105 da CF88
+--- Art. 105 da Constituição Federal de 198888
 
 ## Pergunte pra I.A.
 
   - Explique o princípio da territorialidade moderada e suas implicações para a aplicação de leis estrangeiras no Brasil, citando exemplos de situações em que a lei brasileira cede espaço à lei estrangeira.
-  - Discorra sobre o processo de homologação de sentença estrangeira pelo STJ (Art. 105 da CF88) e detalhe os requisitos formais que devem ser observados para que uma decisão estrangeira tenha validade no território brasileiro.
+  - Discorra sobre o processo de homologação de sentença estrangeira pelo STJ (Art. 105 da Constituição Federal de 198888) e detalhe os requisitos formais que devem ser observados para que uma decisão estrangeira tenha validade no território brasileiro.
   - Analise como o Art. 7º da LINDB, ao determinar a aplicação da lei do país de domicílio da pessoa para regras de personalidade, nome, capacidade e família, pode gerar conflitos com a lei brasileira e como esses conflitos são resolvidos na prática.
   - Discuta a diferença entre "validade formal" e "mérito" de uma sentença estrangeira no processo de homologação, explicando por que o STJ se restringe à verálise das formalidades.
   - Proponha um caso hipotético em que uma lei estrangeira sobre capacidade civil colide com a lei brasileira, e como os princípios da territorialidade moderada e da ordem pública seriam aplicados para resolver o conflito.
@@ -1752,12 +1752,12 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Aplicação da Lei  
--- A aplicação da lei é a subsunção do fato à norma. As normas de Direito Privado aplicam-se a todo o ordenamento jurídico, salvo se contrárias aos princípios do Direito Público. A lei nova não retroage, protegendo o direito adquirido, ato jurídico perfeito e coisa julgada (art. 5º, XXXVI, CF; art. 6º LINDB), exceto se mais benéfica ou em casos excepcionais onde há ponderação de valores, como na busca pela identidade genética (Enunciado 109 da I Jornada de Direito Civil). A ignorância da lei não é escusa (Art. 3º LINDB).  
+-- A aplicação da lei é a subsunção do fato à norma. As normas de Direito Privado aplicam-se a todo o ordenamento jurídico, salvo se contrárias aos princípios do Direito Público. A lei nova não retroage, protegendo o direito adquirido, ato jurídico perfeito e coisa julgada (art. 5º, XXXVI, Constituição Federal de 1988; art. 6º LINDB), exceto se mais benéfica ou em casos excepcionais onde há ponderação de valores, como na busca pela identidade genética (Enunciado 109 da I Jornada de Direito Civil). A ignorância da lei não é escusa (Art. 3º LINDB).  
 
 -- Contudo, em matéria processual, a lei tem aplicação imediata. Excepcionalmente, leis tributárias podem retroagir para beneficiar o contribuinte, como em leis interpretativas que excluem penalidades ou em leis mais benéficas não definitivamente julgadas (art. 106 do CTN). O Brasil se aproxima do *common law*, valorizando precedentes e a segurança jurídica.
 
  ## Referências do Tema    
---- Art. 5º, XXXVI, da CF  
+--- Art. 5º, XXXVI, da Constituição Federal de 1988  
 --- Art. 6º da LINDB  
 --- Art. 3º da LINDB  
 --- Enunciado 109 da I Jornada de Direito Civil  
@@ -1780,14 +1780,14 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Direito Internacional  
--- A LINDB aborda a aplicação do direito internacional privado, definindo qual lei de qual país deve ser aplicada em relações com conexão internacional. O Brasil adota o princípio da territorialidade moderada, aplicando a lei brasileira em seu território, mas permitindo, excepcionalmente, a aplicação de lei estrangeira, desde que não ofenda a soberania nacional, a ordem pública ou os bons costumes (Art. 17 da LINDB). Decisões estrangeiras, para terem validade no Brasil, precisam ser homologadas pelo STJ (Art. 105 da CF88), sem reexame do mérito, apenas das formalidades. 
+-- A LINDB aborda a aplicação do direito internacional privado, definindo qual lei de qual país deve ser aplicada em relações com conexão internacional. O Brasil adota o princípio da territorialidade moderada, aplicando a lei brasileira em seu território, mas permitindo, excepcionalmente, a aplicação de lei estrangeira, desde que não ofenda a soberania nacional, a ordem pública ou os bons costumes (Art. 17 da LINDB). Decisões estrangeiras, para terem validade no Brasil, precisam ser homologadas pelo STJ (Art. 105 da Constituição Federal de 198888), sem reexame do mérito, apenas das formalidades. 
 
 -- A lei do domicílio da pessoa, por exemplo, rege o começo e fim da personalidade, nome, capacidade e direitos de família (Art. 7º da LINDB). A pluralidade de nacionalidades e domicílios pode gerar conflitos, exigindo a aplicação de critérios específicos para determinar a lei aplicável, sempre em busca da maior efetividade dos direitos e da segurança jurídica.
 
  ## Referências do Tema    
 --- Art. 7º da LINDB  
 --- Art. 17 da LINDB  
---- Art. 105 da CF88
+--- Art. 105 da Constituição Federal de 198888
 
 ## Pergunte pra I.A.
 
@@ -1807,10 +1807,10 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 # Segurança Jurídica  
 -- A segurança jurídica, reforçada pelas alterações na LINDB (Lei 13.65518), é um pilar do ordenamento jurídico que busca estabilidade e previsibilidade nas relações jurídicas. Ela exige que o Estado considere as consequências práticas de suas decisões e a adequação das medidas impostas, vedando julgamentos baseados apenas em valores abstratos (Art. 20 da LINDB). Além disso, proíbe a aplicação retroativa de novas interpretações que invalidem situações consolidadas, exceto com regime de transição (Art. 23 da LINDB).  
 
--- A segurança jurídica também se manifesta na proteção do direito adquirido, do ato jurídico perfeito e da coisa julgada (Art. 5º, XXXVI, CF), limitando a retroatividade das leis. A exigência de motivação explícita e clara para atos administrativos e a eliminação de incertezas jurídicas mediante compromissos processuais são outros exemplos de sua concretização, visando a proporcionalidade e a eficiência na aplicação do Direito Público.
+-- A segurança jurídica também se manifesta na proteção do direito adquirido, do ato jurídico perfeito e da coisa julgada (Art. 5º, XXXVI, Constituição Federal de 1988), limitando a retroatividade das leis. A exigência de motivação explícita e clara para atos administrativos e a eliminação de incertezas jurídicas mediante compromissos processuais são outros exemplos de sua concretização, visando a proporcionalidade e a eficiência na aplicação do Direito Público.
 
  ## Referências do Tema    
---- Art. 5º, XXXVI, da CF  
+--- Art. 5º, XXXVI, da Constituição Federal de 1988  
 --- Art. 20 da LINDB  
 --- Art. 21 da LINDB  
 --- Art. 23 da LINDB  
@@ -1834,20 +1834,20 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 # Início da Personalidade Jurídica
 
--- O início da personalidade jurídica varia entre pessoa física e jurídica. Para pessoa física, a teoria natalista (Art. 2º, CC02) prevalece, reconhecendo a personalidade com o nascimento com vida. Contudo, os direitos do nascituro são salvaguardados desde a concepção, como na estabilidade gestacional (ADI 497 do STF) e no seguro DPVAT, refletindo uma proteção integral influenciada pelo neoconstitucionalismo e pela dignidade da pessoa humana.
+-- O início da personalidade jurídica varia entre pessoa física e jurídica. Para pessoa física, a teoria natalista (Art. 2º, Código Civil 2002) prevalece, reconhecendo a personalidade com o nascimento com vida. Contudo, os direitos do nascituro são salvaguardados desde a concepção, como na estabilidade gestacional (ADI 497 do STF) e no seguro DPVAT, refletindo uma proteção integral influenciada pelo neoconstitucionalismo e pela dignidade da pessoa humana.
 
--- Para a pessoa jurídica de direito privado, a personalidade inicia com o registro do ato constitutivo (Art. 45 e Art. 985, CC02), enquanto para a de direito público, com a vigência da lei instituidora. A Súmula 227 do STJ, ao permitir dano moral à pessoa jurídica, reforça a autonomia da personalidade e a natureza não exclusiva de dor e sofrimento como consequências do dano moral.
+-- Para a pessoa jurídica de direito privado, a personalidade inicia com o registro do ato constitutivo (Art. 45 e Art. 985, Código Civil 2002), enquanto para a de direito público, com a vigência da lei instituidora. A Súmula 227 do STJ, ao permitir dano moral à pessoa jurídica, reforça a autonomia da personalidade e a natureza não exclusiva de dor e sofrimento como consequências do dano moral.
 
  ## Referências do Tema  
---- Art. 2º do CC02
---- Art. 45 do CC02
---- Art. 985 do CC02
+--- Art. 2º do Código Civil 2002
+--- Art. 45 do Código Civil 2002
+--- Art. 985 do Código Civil 2002
 --- Súmula 227 do STJ
 --- ADI 497 do STF
 
 ## Pergunte pra I.A.
 
-  - Explique as teorias natalista, da personalidade condicionada e concepcionista (radical e moderada) sobre o início da personalidade jurídica da pessoa física, e qual delas é a mais aceita no Brasil, considerando o Art. 2º do CC02.
+  - Explique as teorias natalista, da personalidade condicionada e concepcionista (radical e moderada) sobre o início da personalidade jurídica da pessoa física, e qual delas é a mais aceita no Brasil, considerando o Art. 2º do Código Civil 2002.
   - Analise como a proteção dos direitos do nascituro, como a estabilidade gestacional e o seguro DPVAT, desafia a teoria natalista pura e se alinha à concepção existencialista da Constituição Federal.
   - De que forma a Súmula 227 do STJ, que permite o dano moral à pessoa jurídica, impacta a compreensão dos direitos da personalidade e do próprio conceito de "dor e sofrimento" no Direito Civil.
   - Compare o início da personalidade jurídica para pessoas físicas e jurídicas no Brasil, detalhando os requisitos e formalidades para cada uma.
@@ -1857,14 +1857,14 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 # Teorias da Personalidade Jurídica
 
--- As teorias da personalidade jurídica buscam explicar a existência da pessoa jurídica, que é um sujeito de direitos recente no sistema. As correntes formalistas (teoria da ficção jurídica) veem a pessoa jurídica como uma abstração para centralizar interesses, enquanto as realistas (teoria da realidade objetiva) a consideram uma realidade com vontade própria. O Brasil adota uma posição intermediária, a teoria da realidade técnica, que reconhece a pessoa jurídica como fruto da lei e de um processo de personificação (Art. 45 do CC02).
+-- As teorias da personalidade jurídica buscam explicar a existência da pessoa jurídica, que é um sujeito de direitos recente no sistema. As correntes formalistas (teoria da ficção jurídica) veem a pessoa jurídica como uma abstração para centralizar interesses, enquanto as realistas (teoria da realidade objetiva) a consideram uma realidade com vontade própria. O Brasil adota uma posição intermediária, a teoria da realidade técnica, que reconhece a pessoa jurídica como fruto da lei e de um processo de personificação (Art. 45 do Código Civil 2002).
 
--- A pessoa jurídica contemporânea, contudo, tem um caráter instrumental e sua função transcende a mera estrutura, alinhando-se a valores constitucionais, como a dignidade da pessoa humana (Art. 170 da CF88). Essa abordagem funcionalista e existencialista exige que os objetivos da pessoa jurídica estejam em harmonia com os interesses coletivos, o que pode levar à desconsideração da personalidade jurídica em casos de desvio de finalidade.
+-- A pessoa jurídica contemporânea, contudo, tem um caráter instrumental e sua função transcende a mera estrutura, alinhando-se a valores constitucionais, como a dignidade da pessoa humana (Art. 170 da Constituição Federal de 198888). Essa abordagem funcionalista e existencialista exige que os objetivos da pessoa jurídica estejam em harmonia com os interesses coletivos, o que pode levar à desconsideração da personalidade jurídica em casos de desvio de finalidade.
 
  ## Referências do Tema  
 --- Art. 40 a 69 do Código Civil
---- Art. 45 do CC02
---- Art. 170 da CF88
+--- Art. 45 do Código Civil 2002
+--- Art. 170 da Constituição Federal de 198888
 
 ## Pergunte pra I.A.
 
@@ -1878,12 +1878,12 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 # Teoria Natalista
 
--- A Teoria Natalista afirma que a personalidade jurídica tem início com o nascimento com vida (Art. 2º do CC02). No entanto, essa teoria foi relativizada para proteger os direitos do nascituro desde a concepção, como na estabilidade gestacional (ADI 497 do STF) e no seguro DPVAT. Essa proteção se justifica pela dignidade da pessoa humana e a concepção existencialista da Constituição, que valoriza o ser humano desde seus primeiros estágios.
+-- A Teoria Natalista afirma que a personalidade jurídica tem início com o nascimento com vida (Art. 2º do Código Civil 2002). No entanto, essa teoria foi relativizada para proteger os direitos do nascituro desde a concepção, como na estabilidade gestacional (ADI 497 do STF) e no seguro DPVAT. Essa proteção se justifica pela dignidade da pessoa humana e a concepção existencialista da Constituição, que valoriza o ser humano desde seus primeiros estágios.
 
 -- A proteção do nascituro, que não possui personalidade jurídica plena segundo a teoria natalista, é um exemplo da flexibilização do Direito para garantir a tutela de interesses relevantes. Assim, mesmo sem ser sujeito de direitos formalmente, o nascituro é objeto de tutela jurídica, o que demonstra a adaptabilidade do ordenamento jurídico frente a valores constitucionais.
 
  ## Referências do Tema  
---- Art. 2º do CC02
+--- Art. 2º do Código Civil 2002
 --- ADI 497 do STF
 
 ## Pergunte pra I.A.
@@ -1899,12 +1899,12 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Teoria da Personalidade Condicionada  
--- A Teoria da Personalidade Condicionada entende que a personalidade inicia com a concepção, sob condição suspensiva, ou seja, seus efeitos jurídicos dependem do nascimento com vida (Art. 2º do CC02). Essa abordagem busca conciliar a proteção ao nascituro com a literalidade do Código Civil.
+-- A Teoria da Personalidade Condicionada entende que a personalidade inicia com a concepção, sob condição suspensiva, ou seja, seus efeitos jurídicos dependem do nascimento com vida (Art. 2º do Código Civil 2002). Essa abordagem busca conciliar a proteção ao nascituro com a literalidade do Código Civil.
 
 -- Assim, enquanto a condição de nascer com vida não se concretiza, o nascituro tem apenas expectativa de direitos, que se transformam em direitos adquiridos com o nascimento. Essa teoria é frequentemente utilizada para justificar a tutela de interesses do nascituro, como o direito à vida e à integridade, sem conceder-lhe plena personalidade jurídica antes do nascimento.
 
  ## Referências do Tema    
---- Art. 2º do CC02  
+--- Art. 2º do Código Civil 2002  
 --- Enunciado 4 da I Jornada de Direito Civil do CJF (implícito)
 
 ## Pergunte pra I.A.
@@ -1918,12 +1918,12 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 -----
 
 # Teoria da Concepção (ou concepcionista)  
--- A Teoria Concepcionista defende que a personalidade jurídica tem início com a concepção. Para conciliar essa visão com o Art. 2º do CC02, que estabelece o nascimento com vida, surgiu a Teoria Concepcionista Moderada, que distingue entre personalidade jurídica formal (direitos da personalidade) e material (direitos patrimoniais).
+-- A Teoria Concepcionista defende que a personalidade jurídica tem início com a concepção. Para conciliar essa visão com o Art. 2º do Código Civil 2002, que estabelece o nascimento com vida, surgiu a Teoria Concepcionista Moderada, que distingue entre personalidade jurídica formal (direitos da personalidade) e material (direitos patrimoniais).
 
 -- Assim, a concepção daria início à personalidade jurídica formal, protegendo direitos existenciais do nascituro, enquanto o nascimento com vida inauguraria a personalidade material, para direitos patrimoniais. Essa abordagem busca garantir uma proteção mais abrangente ao nascituro, especialmente à luz da dignidade da pessoa humana e dos direitos fundamentais.
 
  ## Referências do Tema    
---- Art. 2º do CC02  
+--- Art. 2º do Código Civil 2002  
 --- Enunciado 4 da I Jornada de Direito Civil do CJF  
 --- STF (ADI 497) - implícito na proteção da estabilidade gestacional
 
@@ -1931,6 +1931,6 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
   - Detalhe a diferença entre as vertentes "radical" e "moderada" da Teoria Concepcionista, explicando como a vertente moderada tenta se compatibilizar com a literalidade do Art. 2º do Código Civil.
   - Aborde a distinção proposta pela Teoria Concepcionista Moderada entre "personalidade jurídica formal" (direitos da personalidade) e "personalidade jurídica material" (direitos patrimoniais), exemplificando como cada uma se aplicaria ao nascituro.
-  - Discuta como a dignidade da pessoa humana (Art. 1º, III, da CF) e o neoconstitucionalismo servem de fundamento para a crescente valorização da proteção jurídica do nascituro, alinhando-se à Teoria Concepcionista.
+  - Discuta como a dignidade da pessoa humana (Art. 1º, III, da Constituição Federal de 1988) e o neoconstitucionalismo servem de fundamento para a crescente valorização da proteção jurídica do nascituro, alinhando-se à Teoria Concepcionista.
   - Analise as implicações práticas da aplicação da Teoria Concepcionista, especialmente em casos como doações a nascituros ou a proteção de sua integridade em contextos como acidentes.
   - Compare a Teoria Concepcionista com a Teoria Natalista e a Teoria da Personalidade Condicionada, indicando os pontos de convergência e divergência em relação ao início da personalidade jurídica.
