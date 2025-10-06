@@ -210,7 +210,6 @@
     __popEl.style.overflowY = 'auto';
     __popEl.style.overscrollBehavior = 'contain';
 
-
     setTimeout(()=>{
       document.addEventListener('click', onDocClickClose, true);
       window.addEventListener('hashchange', closeAcDropdown, {once:true});
@@ -642,11 +641,11 @@
         toast(added?'Tema salvo':'Removido dos salvos', added?'success':'info', 1400);
       });
       const studyBtn=mkBtn('Explicação Rápida','', ()=>window.open(
-        `https://www.google.com/search?udm=50&q=${encodeURIComponent('Explique o tema de forma rápida e objetiva para estudantes de direito, seja oranizado e didático, utilizando apenas informações vindas de sites jurídicos. Ao final apresente as fontes. Tema: ' + pageTitle)}`,
+        `https://www.google.com/search?udm=50&q=${encodeURIComponent('Explique o tema de forma rápida e objetiva para estudantes de direito, seja organizado e didático, utilizando apenas informações vindas de sites jurídicos. Ao final apresente as fontes. Tema: ' + pageTitle)}`,
         '_blank','noopener'
       ));
       const trainBtn=mkBtn('10 Questões','', ()=>window.open(
-        `https://www.google.com/search?udm=50&q=${encodeURIComponent('Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), inspiradas em questões da UFG, cespe e cebraspe. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + pageTitle)}`,
+        `https://www.google.com/search?udm=50&q=${encodeURIComponent('Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), inspiradas em bancas como Cebraspe, Cespe e UFG. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + pageTitle)}`,
         '_blank','noopener'
       ));
       actionsEl.append(saveBtn, studyBtn, trainBtn);
