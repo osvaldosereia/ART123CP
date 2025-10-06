@@ -106,14 +106,13 @@
     // introdução: linhas que começam com "-- "
     const intro = Array.from(fixed.matchAll(/^\s*--\s+(.+)$/mg)).map(m=>m[1].trim());
 
-    // dividir por headings: >=2 "#", e também aceitar "# Referências do Tema"
+   // dividir por headings: >=2 "#", e também aceitar "# Referências do Tema"
 const secs = [];
 const rx = /^\s*#{1,}\s+(.+?)\s*$/mg;
 let m;
 
-// posição do título (primeiro "# ...")
-const mTitle = fixed.match(/^\s*#\s+(.+)$/m);
-const titlePos = mTitle ? mTitle.index : -1;
+// posição do título (primeiro "# ...") — reaproveita mTitle já definido acima
+const titlePos = (mTitle && typeof mTitle.index === 'number') ? mTitle.index : -1;
 
 while ((m = rx.exec(fixed))) {
   const name = m[1].trim();
@@ -130,6 +129,7 @@ while ((m = rx.exec(fixed))) {
   if (prev) prev.end = m.index;
   secs.push({ name, start, end: fixed.length });
 }
+
 
     // perguntas e referências (se existirem no TXT)
     let ask=[]; let refs=[];
