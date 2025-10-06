@@ -3,14 +3,14 @@
 
 # O Direito à Integridade Física e as Cirurgias Estéticas
 
--- A cirurgia estética é um exercício da autonomia privada sobre o próprio corpo, encontrando limites no direito à integridade física (art. 13 do CC/02) e na vedação a procedimentos de risco desnecessário à vida ou à saúde (art. 15 do CC/02). É lícita quando busca o aprimoramento estético sem violar a dignidade ou a saúde do paciente.
+-- A cirurgia estética é um exercício da autonomia privada sobre o próprio corpo, encontrando limites no direito à integridade física (Artigo 13 do Código Civil de 2002) e na vedação a procedimentos de risco desnecessário à vida ou à saúde (Artigo 15 do Código Civil de 2002). É lícita quando busca o aprimoramento estético sem violar a dignidade ou a saúde do paciente.
 
 -- A jurisprudência do Superior Tribunal de Justiça (STJ) consolidou o entendimento de que a obrigação do cirurgião plástico em procedimentos puramente estéticos é de resultado (REsp 1.979.813). Isso significa que o profissional se compromete a atingir o embelezamento prometido, e a falha em alcançá-lo pode gerar o dever de indenizar.
 
 ## Referências do Tema
 
---- Art. 13 do CC/02
---- Art. 15 do CC/02
+--- Artigo 13 do Código Civil de 2002
+--- Artigo 15 do Código Civil de 2002
 --- REsp 1.979.813/RJ do STJ
 --- Código de Ética Médica
 
@@ -34,14 +34,14 @@
 
 # A Esterilização Voluntária e o Planejamento Familiar
 
--- A esterilização voluntária (laqueadura e vasectomia) é um direito relacionado ao planejamento familiar, garantido pela Constituição (art. 226, § 7º, da CF/88). Configura uma exceção legal à regra que proíbe a diminuição permanente da integridade física (art. 13 do CC/02), sendo um exercício da autonomia sobre a função reprodutiva.
+-- A esterilização voluntária (laqueadura e vasectomia) é um direito relacionado ao planejamento familiar, garantido pela Constituição (Artigo 226, § 7º, da Constituição Federal de 1988). Configura uma exceção legal à regra que proíbe a diminuição permanente da integridade física (Artigo 13 do Código Civil de 2002), sendo um exercício da autonomia sobre a função reprodutiva.
 
 -- Os critérios para sua realização são definidos pela Lei nº 9.263/1996, recentemente alterada pela Lei nº 14.443/2022. Exige-se capacidade civil e idade mínima de 21 anos ou, no mínimo, dois filhos vivos. Uma mudança fundamental da nova lei foi a exclusão da necessidade de consentimento do cônjuge, reforçando a autonomia individual.
 
 ## Referências do Tema
 
---- Art. 226, § 7º, da CF/88
---- Art. 13 do CC/02
+--- Artigo 226, § 7º, da Constituição Federal de 1988
+--- Artigo 13 do Código Civil de 2002
 --- Lei nº 9.263/1996 (Lei do Planejamento Familiar)
 --- Lei nº 14.443/2022
 
@@ -65,16 +65,16 @@
 
 # Limites à Integridade Física: Wannabes e Pesquisa Científica
 
--- O desejo de amputar membros sadios, condição conhecida como "wannabe" ou Transtorno de Identidade da Integridade Corporal, encontra uma barreira legal intransponível. O art. 13 do CC/02 proíbe a diminuição permanente da integridade física, e a realização de tal procedimento pelo médico configuraria crime de lesão corporal gravíssima e grave infração ética.
+-- O desejo de amputar membros sadios, condição conhecida como "wannabe" ou Transtorno de Identidade da Integridade Corporal, encontra uma barreira legal intransponível. O Artigo 13 do Código Civil de 2002 proíbe a diminuição permanente da integridade física, e a realização de tal procedimento pelo médico configuraria crime de lesão corporal gravíssima e grave infração ética.
 
 -- Já a participação em pesquisas científicas, que pode envolver riscos, é permitida, mas estritamente regulada. A Resolução CNS nº 466/2012 exige a submissão do projeto a um Comitê de Ética, a assinatura do Termo de Consentimento Livre e Esclarecido (TCLE) pelo voluntário e a garantia de que os benefícios superem os riscos para os participantes.
 
 ## Referências do Tema
 
---- Art. 13 do CC/02
---- Art. 15 do CC/02
+--- Artigo 13 do Código Civil de 2002
+--- Artigo 15 do Código Civil de 2002
 --- Resolução nº 466/2012 do Conselho Nacional de Saúde (CNS)
---- Art. 129, § 2º, do Código Penal
+--- Artigo 129, § 2º, do Código Penal
 
 ## Pergunte pra I.A.
 
@@ -94,22 +94,22 @@
 -----
 # Direito à Vida e à Integridade Física
 
--- O direito à vida (art. 5º, caput, CF/88) é o mais fundamental dos direitos, sendo a base para todos os demais. No plano civil, ele se desdobra na proteção à integridade física e psíquica. O art. 13 do CC/02 veda atos de disposição do próprio corpo que importem em diminuição permanente da integridade física ou contrariem os bons costumes, salvo por exigência médica.
+-- O direito à vida (Artigo 5º, caput, Constituição Federal de 1988) é o mais fundamental dos direitos, sendo a base para todos os demais. No plano civil, ele se desdobra na proteção à integridade física e psíquica. O Artigo 13 do Código Civil de 2002 veda atos de disposição do próprio corpo que importem em diminuição permanente da integridade física ou contrariem os bons costumes, salvo por exigência médica.
 
--- Essa proteção, contudo, é relativizada. A lei permite a disposição gratuita do corpo, no todo ou em parte, para depois da morte com objetivos científicos ou altruísticos (art. 14 do CC/02). A doação de órgãos para transplante em vida é permitida para órgãos duplos, desde que não prejudique as funções vitais do doador (Lei nº 9.434/97).
+-- Essa proteção, contudo, é relativizada. A lei permite a disposição gratuita do corpo, no todo ou em parte, para depois da morte com objetivos científicos ou altruísticos (Artigo 14 do Código Civil de 2002). A doação de órgãos para transplante em vida é permitida para órgãos duplos, desde que não prejudique as funções vitais do doador (Lei nº 9.434/97).
 
 ## Referências do Tema
 
---- Art. 5º, caput, da CF/88
---- Art. 13 do CC/02
---- Art. 14 do CC/02
---- Art. 15 do CC/02
+--- Artigo 5º, caput, da Constituição Federal de 1988
+--- Artigo 13 do Código Civil de 2002
+--- Artigo 14 do Código Civil de 2002
+--- Artigo 15 do Código Civil de 2002
 --- Lei nº 9.434/1997 (Lei de Transplantes)
 
 ## Pergunte pra I.A.
 
   - Qual a relação entre o direito fundamental à vida e o direito à integridade física no Código Civil?
-  - Quais são os limites impostos pelo art. 13 do Código Civil à disposição do próprio corpo?
+  - Quais são os limites impostos pelo Artigo 13 do Código Civil à disposição do próprio corpo?
   - A doação de órgãos em vida é permitida em quais circunstâncias, segundo a Lei de Transplantes?
   - É possível revogar a autorização para doação de órgãos após a morte?
   - Analise a legalidade dos contratos que envolvem práticas perigosas, como em esportes radicais, à luz do direito à integridade física.
@@ -126,14 +126,14 @@
 
 # A Questão do Transexual e os Direitos da Personalidade
 
--- O direito à identidade de gênero, como expressão da dignidade da pessoa humana (art. 1º, III, da CF/88), é um direito da personalidade. O Supremo Tribunal Federal (STF), no julgamento da ADI 4275 e do RE 670.422, consolidou o entendimento de que pessoas transexuais têm o direito de alterar seu prenome e gênero diretamente no registro civil.
+-- O direito à identidade de gênero, como expressão da dignidade da pessoa humana (Artigo 1º, III, da Constituição Federal de 1988), é um direito da personalidade. O Supremo Tribunal Federal (STF), no julgamento da ADI 4275 e do RE 670.422, consolidou o entendimento de que pessoas transexuais têm o direito de alterar seu prenome e gênero diretamente no registro civil.
 
--- Essa alteração não exige a realização prévia da cirurgia de transgenitalização (redesignação sexual). Garante-se, assim, o direito à autoidentificação, adequando o registro público à realidade social e psíquica do indivíduo, protegendo seu direito ao nome, à identidade e à vida privada (art. 16 do CC/02), em respeito à sua integridade.
+-- Essa alteração não exige a realização prévia da cirurgia de transgenitalização (redesignação sexual). Garante-se, assim, o direito à autoidentificação, adequando o registro público à realidade social e psíquica do indivíduo, protegendo seu direito ao nome, à identidade e à vida privada (Artigo 16 do Código Civil de 2002), em respeito à sua integridade.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 16 do CC/02
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 16 do Código Civil de 2002
 --- ADI 4275 do STF
 --- RE 670.422 do STF
 --- Provimento nº 73/2018 do CNJ
@@ -156,17 +156,17 @@
 -----
 # Direitos da Personalidade e Eficácia Horizontal
 
--- Os direitos da personalidade, embora positivados no Código Civil, possuem status de direitos fundamentais, o que atrai a teoria da eficácia horizontal. Isso significa que sua aplicação não se restringe à relação entre o cidadão e o Estado (eficácia vertical), mas irradia para as relações entre particulares (art. 5º, § 1º, da CF/88), como em contratos e relações de trabalho.
+-- Os direitos da personalidade, embora positivados no Código Civil, possuem status de direitos fundamentais, o que atrai a teoria da eficácia horizontal. Isso significa que sua aplicação não se restringe à relação entre o cidadão e o Estado (eficácia vertical), mas irradia para as relações entre particulares (Artigo 5º, § 1º, da Constituição Federal de 1988), como em contratos e relações de trabalho.
 
 -- Assim, liberdades públicas como a de expressão ou informação encontram limites nos direitos da personalidade de terceiros (honra, imagem, privacidade). A colisão entre esses direitos é resolvida no caso concreto por meio da ponderação, buscando a harmonização dos valores constitucionais sem aniquilar nenhum deles.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 5º, § 1º, da CF/88
---- Art. 5º, X, da CF/88
---- Art. 11 do CC/02
---- Art. 12 do CC/02
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 5º, § 1º, da Constituição Federal de 1988
+--- Artigo 5º, X, da Constituição Federal de 1988
+--- Artigo 11 do Código Civil de 2002
+--- Artigo 12 do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -190,14 +190,14 @@
 
 -- Embora protejam o mesmo núcleo de valores — a dignidade humana —, esses conceitos se distinguem pelo plano em que atuam. Os Direitos da Personalidade são a positivação desses valores no âmbito do Direito Civil (relações privadas), previstos no Código Civil (arts. 11 a 21) e voltados para a tutela do indivíduo.
 
--- Os Direitos Fundamentais são a sua consagração no plano do direito interno de um Estado, protegendo o cidadão contra o poder estatal (eficácia vertical) e nas relações privadas (eficácia horizontal), como no art. 5º da CF/88. Já os Direitos Humanos são sua afirmação no plano internacional, em tratados e convenções.
+-- Os Direitos Fundamentais são a sua consagração no plano do direito interno de um Estado, protegendo o cidadão contra o poder estatal (eficácia vertical) e nas relações privadas (eficácia horizontal), como no Artigo 5º da Constituição Federal de 1988. Já os Direitos Humanos são sua afirmação no plano internacional, em tratados e convenções.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 4º, II, da CF/88
---- Art. 5º, § 2º, da CF/88
---- Arts. 11 a 21 do CC/02
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 4º, II, da Constituição Federal de 1988
+--- Artigo 5º, § 2º, da Constituição Federal de 1988
+--- Arts. 11 a 21 do Código Civil de 2002
 --- Declaração Universal dos Direitos Humanos (1948)
 
 ## Pergunte pra I.A.
@@ -221,13 +221,13 @@
 
 -- A imprescritibilidade significa que os direitos da personalidade não se extinguem pelo não uso. O direito à honra, ao nome ou à imagem de uma pessoa não acaba com o decurso do tempo, pois é um atributo inerente e permanente do indivíduo, não estando sujeito à prescrição ou decadência.
 
--- É crucial, contudo, diferenciar o direito em si da pretensão de reparação por sua violação. A ação para pleitear indenização por danos morais e materiais decorrentes de uma ofensa é sujeita à prescrição, que, em regra, é de três anos, conforme o art. 206, § 3º, V, do Código Civil.
+-- É crucial, contudo, diferenciar o direito em si da pretensão de reparação por sua violação. A ação para pleitear indenização por danos morais e materiais decorrentes de uma ofensa é sujeita à prescrição, que, em regra, é de três anos, conforme o Artigo 206, § 3º, V, do Código Civil.
 
 ## Referências do Tema
 
---- Art. 11 do CC/02
---- Art. 189 do CC/02
---- Art. 206, § 3º, V, do CC/02
+--- Artigo 11 do Código Civil de 2002
+--- Artigo 189 do Código Civil de 2002
+--- Artigo 206, § 3º, V, do Código Civil de 2002
 --- Súmula 278 do STJ
 
 ## Pergunte pra I.A.
@@ -250,15 +250,15 @@
 
 # Direitos da Personalidade: Inatos
 
--- A característica de serem inatos significa que os direitos da personalidade nascem com o próprio indivíduo. Eles são adquiridos com o nascimento com vida (art. 2º do CC/02) e não dependem de qualquer concessão do Estado ou de negócio jurídico. A pessoa já nasce titular desses direitos essenciais.
+-- A característica de serem inatos significa que os direitos da personalidade nascem com o próprio indivíduo. Eles são adquiridos com o nascimento com vida (Artigo 2º do Código Civil de 2002) e não dependem de qualquer concessão do Estado ou de negócio jurídico. A pessoa já nasce titular desses direitos essenciais.
 
 -- Essa característica reforça que a proteção à pessoa é um dado pré-jurídico, que o Direito apenas reconhece e tutela. Embora a personalidade plena se inicie com o nascimento, a lei já protege o nascituro, garantindo-lhe direitos fundamentais como a vida e a integridade, o que demonstra a força do caráter inato desses direitos.
 
 ## Referências do Tema
 
---- Art. 1º do CC/02
---- Art. 2º do CC/02
---- Art. 5º, caput, da CF/88
+--- Artigo 1º do Código Civil de 2002
+--- Artigo 2º do Código Civil de 2002
+--- Artigo 5º, caput, da Constituição Federal de 1988
 
 ## Pergunte pra I.A.
 
@@ -280,15 +280,15 @@
 
 # Direitos da Personalidade: Vitalícios e Impenhoráveis
 
--- Os direitos da personalidade são vitalícios, ou seja, acompanham a pessoa durante toda a sua vida, extinguindo-se, em regra, com a morte. Contudo, a lei estende a proteção para depois da morte, conferindo ao cônjuge, ascendentes ou descendentes a legitimidade para defender a memória do falecido (art. 12, parágrafo único, do CC/02).
+-- Os direitos da personalidade são vitalícios, ou seja, acompanham a pessoa durante toda a sua vida, extinguindo-se, em regra, com a morte. Contudo, a lei estende a proteção para depois da morte, conferindo ao cônjuge, ascendentes ou descendentes a legitimidade para defender a memória do falecido (Artigo 12, parágrafo único, do Código Civil de 2002).
 
 -- A impenhorabilidade é uma consequência da extrapatrimonialidade. Como esses direitos não possuem valor econômico direto, eles não podem ser penhorados ou dados em garantia para o pagamento de dívidas, pois não compõem o patrimônio executável do devedor.
 
 ## Referências do Tema
 
---- Art. 12, parágrafo único, do CC/02
---- Art. 20, parágrafo único, do CC/02
---- Art. 833 do CPC/15
+--- Artigo 12, parágrafo único, do Código Civil de 2002
+--- Artigo 20, parágrafo único, do Código Civil de 2002
+--- Artigo 833 do CPC/15
 
 ## Pergunte pra I.A.
 
@@ -310,16 +310,16 @@
 
 # Direitos da Personalidade: Ampla Tutela
 
--- A proteção aos direitos da personalidade é ampla, abrangendo tanto a tutela preventiva quanto a repressiva. A tutela preventiva visa impedir a ocorrência ou a continuação da lesão, utilizando-se de medidas inibitórias para que o ilícito não se concretize (art. 12 do CC/02 e art. 497 do CPC/15).
+-- A proteção aos direitos da personalidade é ampla, abrangendo tanto a tutela preventiva quanto a repressiva. A tutela preventiva visa impedir a ocorrência ou a continuação da lesão, utilizando-se de medidas inibitórias para que o ilícito não se concretize (Artigo 12 do Código Civil de 2002 e Artigo 497 do CPC/15).
 
--- A tutela repressiva, por sua vez, atua após a ocorrência do dano, buscando a sua reparação. A principal forma é a compensação pecuniária por danos morais e materiais (art. 5º, V e X, da CF/88), mas também pode incluir outras medidas, como o direito de resposta e a retratação pública.
+-- A tutela repressiva, por sua vez, atua após a ocorrência do dano, buscando a sua reparação. A principal forma é a compensação pecuniária por danos morais e materiais (Artigo 5º, V e X, da Constituição Federal de 1988), mas também pode incluir outras medidas, como o direito de resposta e a retratação pública.
 
 ## Referências do Tema
 
---- Art. 12 do CC/02
---- Art. 5º, V e X, da CF/88
---- Art. 497 do CPC/15
---- Art. 500 do CPC/15
+--- Artigo 12 do Código Civil de 2002
+--- Artigo 5º, V e X, da Constituição Federal de 1988
+--- Artigo 497 do CPC/15
+--- Artigo 500 do CPC/15
 --- Súmula 403 do STJ
 
 ## Pergunte pra I.A.
@@ -340,15 +340,15 @@
 -----
 # Direitos da Personalidade: Indisponíveis e Irrenunciáveis
 
--- Os direitos da personalidade são, em regra, intransmissíveis e irrenunciáveis, não podendo seu titular se desfazer deles de forma permanente (art. 11 do CC/02). Essa indisponibilidade protege a dignidade da pessoa, impedindo que ela negocie os atributos que a definem como ser humano, como a vida, a honra ou a integridade.
+-- Os direitos da personalidade são, em regra, intransmissíveis e irrenunciáveis, não podendo seu titular se desfazer deles de forma permanente (Artigo 11 do Código Civil de 2002). Essa indisponibilidade protege a dignidade da pessoa, impedindo que ela negocie os atributos que a definem como ser humano, como a vida, a honra ou a integridade.
 
--- Contudo, essa característica não é absoluta. A lei permite a disposição voluntária e limitada do exercício de alguns desses direitos, como no uso consentido da imagem ou na doação de órgãos (art. 14 do CC/02), desde que não haja ofensa aos bons costumes. Trata-se de limitação ao exercício, e não de renúncia ao direito em si.
+-- Contudo, essa característica não é absoluta. A lei permite a disposição voluntária e limitada do exercício de alguns desses direitos, como no uso consentido da imagem ou na doação de órgãos (Artigo 14 do Código Civil de 2002), desde que não haja ofensa aos bons costumes. Trata-se de limitação ao exercício, e não de renúncia ao direito em si.
 
 ## Referências do Tema
 
---- Art. 11 do CC/02
---- Art. 13 do CC/02
---- Art. 14 do CC/02
+--- Artigo 11 do Código Civil de 2002
+--- Artigo 13 do Código Civil de 2002
+--- Artigo 14 do Código Civil de 2002
 --- Enunciado 4 da I Jornada de Direito Civil (CJF)
 
 ## Pergunte pra I.A.
@@ -356,12 +356,12 @@
   - O que significa dizer que os direitos da personalidade são indisponíveis e irrenunciáveis?
   - Explique por que a indisponibilidade desses direitos é considerada relativa e não absoluta.
   - Dê um exemplo prático de um ato de disposição válido sobre um direito da personalidade.
-  - Analise a legalidade de um contrato de participação em "reality show" à luz do art. 11 do Código Civil.
+  - Analise a legalidade de um contrato de participação em "reality show" à luz do Artigo 11 do Código Civil.
   - Discuta os limites da autonomia privada na disposição sobre o próprio corpo.
 
 ### Fontes
 
-  - Art. 11 do Código Civil e a renúncia aos direitos da personalidade - Jusbrasil
+  - Artigo 11 do Código Civil e a renúncia aos direitos da personalidade - Jusbrasil
   - A relatividade da irrenunciabilidade dos direitos da personalidade - Migalhas
   - A disposição do próprio corpo no Código Civil - Consultor Jurídico (Conjur)
   - Direitos da Personalidade - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
@@ -373,13 +373,13 @@
 
 -- O caráter absoluto dos direitos da personalidade significa que eles são oponíveis contra todos (*erga omnes*). Diferentemente de um direito de crédito, que só pode ser exigido do devedor, a honra, a imagem ou a privacidade de uma pessoa devem ser respeitadas por toda a coletividade, que possui um dever geral de abstenção.
 
--- Essa eficácia *erga omnes* fundamenta a ampla tutela jurídica conferida a esses direitos. Qualquer pessoa que os viole pode ser obrigada a cessar a lesão e a reparar os danos causados (art. 12 do CC/02), independentemente da existência de um vínculo jurídico prévio com a vítima, bastando a prova do ato ilícito.
+-- Essa eficácia *erga omnes* fundamenta a ampla tutela jurídica conferida a esses direitos. Qualquer pessoa que os viole pode ser obrigada a cessar a lesão e a reparar os danos causados (Artigo 12 do Código Civil de 2002), independentemente da existência de um vínculo jurídico prévio com a vítima, bastando a prova do ato ilícito.
 
 ## Referências do Tema
 
---- Art. 12 do CC/02
---- Art. 927 do CC/02
---- Art. 5º, V e X, da CF/88
+--- Artigo 12 do Código Civil de 2002
+--- Artigo 927 do Código Civil de 2002
+--- Artigo 5º, V e X, da Constituição Federal de 1988
 
 ## Pergunte pra I.A.
 
@@ -403,12 +403,12 @@
 
 -- A extrapatrimonialidade é a característica que define os direitos da personalidade como insuscetíveis de valoração econômica direta. Eles não integram o patrimônio de uma pessoa e não podem ser comprados ou vendidos, pois seu valor reside na própria dignidade humana, e não em uma equivalência monetária.
 
--- Embora não tenham preço, a violação a um direito da personalidade gera uma consequência patrimonial: o dever de indenizar o dano moral (art. 5º, V e X, da CF/88). Essa indenização não é o pagamento pelo direito, mas uma forma de compensar a vítima pelo sofrimento e punir o ofensor, conforme a Súmula 37 do STJ.
+-- Embora não tenham preço, a violação a um direito da personalidade gera uma consequência patrimonial: o dever de indenizar o dano moral (Artigo 5º, V e X, da Constituição Federal de 1988). Essa indenização não é o pagamento pelo direito, mas uma forma de compensar a vítima pelo sofrimento e punir o ofensor, conforme a Súmula 37 do STJ.
 
 ## Referências do Tema
 
---- Art. 12 do CC/02
---- Art. 5º, V e X, da CF/88
+--- Artigo 12 do Código Civil de 2002
+--- Artigo 5º, V e X, da Constituição Federal de 1988
 --- Súmula 37 do STJ
 --- Súmula 227 do STJ
 
@@ -433,14 +433,14 @@
 
 -- Embora o Direito Romano protegesse a integridade física e a honra através da *actio iniuriarum*, a noção de uma categoria autônoma de direitos da personalidade é moderna. Ela floresceu com o Iluminismo, mas foi a doutrina alemã do século XIX que a sistematizou, trazendo-a do campo do direito público para o cerne das relações privadas.
 
--- Sua consagração definitiva veio no pós-guerra, com a dignidade da pessoa humana como pilar dos novos ordenamentos. No Brasil, a Constituição de 1988 os alçou a direitos fundamentais (art. 5º, V e X) e o Código Civil de 2002 dedicou-lhes um capítulo próprio (arts. 11 a 21), consolidando sua importância e eficácia nas relações civis.
+-- Sua consagração definitiva veio no pós-guerra, com a dignidade da pessoa humana como pilar dos novos ordenamentos. No Brasil, a Constituição de 1988 os alçou a direitos fundamentais (Artigo 5º, V e X) e o Código Civil de 2002 dedicou-lhes um capítulo próprio (arts. 11 a 21), consolidando sua importância e eficácia nas relações civis.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 5º, V e X, da CF/88
---- Art. 11 do CC/02
---- Art. 21 do CC/02
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 5º, V e X, da Constituição Federal de 1988
+--- Artigo 11 do Código Civil de 2002
+--- Artigo 21 do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -467,17 +467,17 @@
 
 # Conceito e Objeto dos Direitos da Personalidade
 
--- Os direitos da personalidade são a categoria de direitos subjetivos que conferem ao seu titular o poder de proteger os atributos essenciais de sua pessoa. Têm como fundamento a dignidade humana (art. 1º, III, da CF/88) e são, em regra, intransmissíveis e irrenunciáveis (art. 11 do CC/02), além de absolutos, imprescritíveis e extrapatrimoniais.
+-- Os direitos da personalidade são a categoria de direitos subjetivos que conferem ao seu titular o poder de proteger os atributos essenciais de sua pessoa. Têm como fundamento a dignidade humana (Artigo 1º, III, da Constituição Federal de 1988) e são, em regra, intransmissíveis e irrenunciáveis (Artigo 11 do Código Civil de 2002), além de absolutos, imprescritíveis e extrapatrimoniais.
 
--- Seu objeto é a tutela da integridade humana em três dimensões: a integridade física (direito à vida, ao corpo - art. 13 do CC/02); a integridade intelectual (direito de autor, criações); e a integridade moral (direito à honra, imagem, nome, privacidade - arts. 16 a 20 do CC/02), formando um escudo de proteção ao indivíduo.
+-- Seu objeto é a tutela da integridade humana em três dimensões: a integridade física (direito à vida, ao corpo - Artigo 13 do Código Civil de 2002); a integridade intelectual (direito de autor, criações); e a integridade moral (direito à honra, imagem, nome, privacidade - arts. 16 a 20 do Código Civil de 2002), formando um escudo de proteção ao indivíduo.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 11 do CC/02
---- Art. 12 do CC/02
---- Art. 13 do CC/02
---- Arts. 16 a 20 do CC/02
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 11 do Código Civil de 2002
+--- Artigo 12 do Código Civil de 2002
+--- Artigo 13 do Código Civil de 2002
+--- Arts. 16 a 20 do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -486,7 +486,7 @@
   - A regra da irrenunciabilidade dos direitos da personalidade é absoluta?
   - Qual é o objeto dos direitos da personalidade? Descreva suas três esferas de proteção.
   - Diferencie o direito à imagem-retrato (imagem física) do direito à imagem-atributo (reputação).
-  - O direito sobre o próprio corpo é ilimitado? Analise à luz do art. 13 do Código Civil.
+  - O direito sobre o próprio corpo é ilimitado? Analise à luz do Artigo 13 do Código Civil.
   - Como o Código Civil protege o direito ao nome e ao pseudônimo?
   - Explique a diferença entre honra objetiva e honra subjetiva para o Direito Civil.
   - Uma pessoa jurídica pode ser titular de direitos da personalidade? Quais?
@@ -502,14 +502,14 @@
 -----
 # Hipótese Especial de Sucessão Definitiva
 
--- Além da regra geral dos dez anos, o Código Civil prevê uma hipótese especial que acelera a conversão para a sucessão definitiva. Esta via alternativa se baseia na altíssima probabilidade de falecimento do ausente em razão da idade avançada, conforme o disposto no art. 38 do Código Civil.
+-- Além da regra geral dos dez anos, o Código Civil prevê uma hipótese especial que acelera a conversão para a sucessão definitiva. Esta via alternativa se baseia na altíssima probabilidade de falecimento do ausente em razão da idade avançada, conforme o disposto no Artigo 38 do Código Civil.
 
 -- Para sua aplicação, dois requisitos cumulativos devem ser provados: que o ausente já teria completado 80 anos de idade e que as últimas notícias dele datam de, no mínimo, cinco anos. Presentes ambas as condições, os herdeiros podem requerer a sucessão definitiva, independentemente do prazo de dez anos da sucessão provisória.
 
 ## Referências do Tema
 
---- Art. 37 do CC/02
---- Art. 38 do CC/02
+--- Artigo 37 do Código Civil de 2002
+--- Artigo 38 do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -529,23 +529,23 @@
   - Artigo 38 do Código Civil - Jusbrasil
   - A sucessão definitiva do ausente com mais de 80 anos - https://www.google.com/search?q=Jus.com.br
   - A hipótese excepcional de sucessão definitiva - Âmbito Jurídico
-  - Análise do Art. 38 do Código Civil - Migalhas
+  - Análise do Artigo 38 do Código Civil - Migalhas
   - Código Civil (Lei nº 10.406/02) - Presidência da República (planalto.gov.br)
 
 -----
 
 # Efeitos Extrapatrimoniais da Sucessão Definitiva
 
--- A sucessão definitiva transcende a esfera patrimonial, gerando importantes efeitos na situação jurídica pessoal do ausente. Ao se declarar a morte presumida (art. 6º do CC/02), o estado civil e as relações familiares da pessoa desaparecida são diretamente afetados, resolvendo incertezas que vão além da gestão de seus bens.
+-- A sucessão definitiva transcende a esfera patrimonial, gerando importantes efeitos na situação jurídica pessoal do ausente. Ao se declarar a morte presumida (Artigo 6º do Código Civil de 2002), o estado civil e as relações familiares da pessoa desaparecida são diretamente afetados, resolvendo incertezas que vão além da gestão de seus bens.
 
--- O principal efeito extrapatrimonial é a dissolução do vínculo matrimonial, conforme autoriza o art. 1.571, § 1º, do CC/02. Com isso, o cônjuge sobrevivente recupera a liberdade de estado, podendo contrair novo casamento. Consequentemente, o poder familiar que o ausente exercia sobre os filhos também se extingue (art. 1.635, I, do CC/02).
+-- O principal efeito extrapatrimonial é a dissolução do vínculo matrimonial, conforme autoriza o Artigo 1.571, § 1º, do Código Civil de 2002. Com isso, o cônjuge sobrevivente recupera a liberdade de estado, podendo contrair novo casamento. Consequentemente, o poder familiar que o ausente exercia sobre os filhos também se extingue (Artigo 1.635, I, do Código Civil de 2002).
 
 ## Referências do Tema
 
---- Art. 6º do CC/02
---- Art. 37 do CC/02
---- Art. 1.571, § 1º, do CC/02
---- Art. 1.635, I, do CC/02
+--- Artigo 6º do Código Civil de 2002
+--- Artigo 37 do Código Civil de 2002
+--- Artigo 1.571, § 1º, do Código Civil de 2002
+--- Artigo 1.635, I, do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -570,18 +570,18 @@
 -----
 # Sucessão Provisória (2ª Fase)
 
--- A sucessão provisória é a segunda fase do processo, que pode ser requerida um ano após a arrecadação dos bens, ou três anos, se o ausente deixou representante (art. 26 do CC/02). A sentença que a concede determina a abertura do testamento e o inventário, mas só produz efeitos 180 dias após a sua publicação na imprensa.
+-- A sucessão provisória é a segunda fase do processo, que pode ser requerida um ano após a arrecadação dos bens, ou três anos, se o ausente deixou representante (Artigo 26 do Código Civil de 2002). A sentença que a concede determina a abertura do testamento e o inventário, mas só produz efeitos 180 dias após a sua publicação na imprensa.
 
--- Nesta etapa, os herdeiros são imitidos na posse provisória e resolúvel dos bens, devendo prestar caução para garantir sua conservação (art. 28 do CC/02). A lei dispensa dessa garantia o cônjuge, os ascendentes e os descendentes (art. 30 do CC/02). A alienação de imóveis só é permitida com autorização judicial para evitar dilapidação.
+-- Nesta etapa, os herdeiros são imitidos na posse provisória e resolúvel dos bens, devendo prestar caução para garantir sua conservação (Artigo 28 do Código Civil de 2002). A lei dispensa dessa garantia o cônjuge, os ascendentes e os descendentes (Artigo 30 do Código Civil de 2002). A alienação de imóveis só é permitida com autorização judicial para evitar dilapidação.
 
 ## Referências do Tema
 
---- Art. 26 do CC/02
---- Art. 27 do CC/02
---- Art. 28 do CC/02
---- Art. 30 do CC/02
---- Art. 31 do CC/02
---- Art. 745, § 2º, do CPC/15
+--- Artigo 26 do Código Civil de 2002
+--- Artigo 27 do Código Civil de 2002
+--- Artigo 28 do Código Civil de 2002
+--- Artigo 30 do Código Civil de 2002
+--- Artigo 31 do Código Civil de 2002
+--- Artigo 745, § 2º, do CPC/15
 
 ## Pergunte pra I.A.
 
@@ -608,17 +608,17 @@
 
 # Sucessão Definitiva (3ª Fase)
 
--- A sucessão definitiva é a última fase do processo de ausência, na qual se consolida a propriedade dos bens para os herdeiros. Pode ser requerida dez anos após o trânsito em julgado da sentença que concedeu a sucessão provisória (art. 37 do CC/02), momento em que se declara a morte presumida do ausente e se levantam as cauções.
+-- A sucessão definitiva é a última fase do processo de ausência, na qual se consolida a propriedade dos bens para os herdeiros. Pode ser requerida dez anos após o trânsito em julgado da sentença que concedeu a sucessão provisória (Artigo 37 do Código Civil de 2002), momento em que se declara a morte presumida do ausente e se levantam as cauções.
 
--- Alternativamente, a lei permite a conversão em sucessão definitiva se for provado que o ausente já teria 80 anos de idade e que as últimas notícias dele datam de mais de cinco anos (art. 38 do CC/02). Com isso, a propriedade torna-se plena (art. 39 do CC/02) e o casamento do ausente é considerado dissolvido (art. 1.571, § 1º, do CC/02).
+-- Alternativamente, a lei permite a conversão em sucessão definitiva se for provado que o ausente já teria 80 anos de idade e que as últimas notícias dele datam de mais de cinco anos (Artigo 38 do Código Civil de 2002). Com isso, a propriedade torna-se plena (Artigo 39 do Código Civil de 2002) e o casamento do ausente é considerado dissolvido (Artigo 1.571, § 1º, do Código Civil de 2002).
 
 ## Referências do Tema
 
---- Art. 6º do CC/02
---- Art. 37 do CC/02
---- Art. 38 do CC/02
---- Art. 39 do CC/02
---- Art. 1.571, § 1º, do CC/02
+--- Artigo 6º do Código Civil de 2002
+--- Artigo 37 do Código Civil de 2002
+--- Artigo 38 do Código Civil de 2002
+--- Artigo 39 do Código Civil de 2002
+--- Artigo 1.571, § 1º, do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -643,15 +643,15 @@
 -----
 # Cessação da Fase de Curadoria
 
--- A fase de curadoria é transitória e pode ser encerrada por quatro motivos principais. As primeiras hipóteses são o retorno do próprio ausente ou de seu procurador, o que resolve a incerteza e faz com que a administração dos bens seja restituída, pondo fim ao procedimento (art. 36 do CC/02, por analogia inicial).
+-- A fase de curadoria é transitória e pode ser encerrada por quatro motivos principais. As primeiras hipóteses são o retorno do próprio ausente ou de seu procurador, o que resolve a incerteza e faz com que a administração dos bens seja restituída, pondo fim ao procedimento (Artigo 36 do Código Civil de 2002, por analogia inicial).
 
--- Outra causa de cessação é a confirmação da morte do ausente, o que transforma o procedimento de ausência em um inventário comum (art. 35 do CC/02). Por fim, se ele não retornar, a curadoria cessa pelo decurso do tempo, dando lugar à abertura da sucessão provisória após um ano da arrecadação, ou três anos se deixou representante (art. 26 do CC/02).
+-- Outra causa de cessação é a confirmação da morte do ausente, o que transforma o procedimento de ausência em um inventário comum (Artigo 35 do Código Civil de 2002). Por fim, se ele não retornar, a curadoria cessa pelo decurso do tempo, dando lugar à abertura da sucessão provisória após um ano da arrecadação, ou três anos se deixou representante (Artigo 26 do Código Civil de 2002).
 
 ## Referências do Tema
 
---- Art. 26 do CC/02
---- Art. 35 do CC/02
---- Art. 36 do CC/02
+--- Artigo 26 do Código Civil de 2002
+--- Artigo 35 do Código Civil de 2002
+--- Artigo 36 do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -677,15 +677,15 @@
 
 # Requisitos para a Declaração de Ausência
 
--- Para a decretação judicial da ausência, são necessários dois requisitos cumulativos: um fático e um jurídico. O requisito fático é o desaparecimento de uma pessoa de seu domicílio sem que dela haja notícias (art. 22 do CC/02), sendo a prova desse sumiço essencial para o início do processo.
+-- Para a decretação judicial da ausência, são necessários dois requisitos cumulativos: um fático e um jurídico. O requisito fático é o desaparecimento de uma pessoa de seu domicílio sem que dela haja notícias (Artigo 22 do Código Civil de 2002), sendo a prova desse sumiço essencial para o início do processo.
 
--- O requisito jurídico é a inexistência de um representante ou procurador a quem caiba administrar-lhe os bens (art. 22 do CC/02). Caso o ausente tenha deixado mandatário, a ausência só poderá ser declarada se os poderes forem insuficientes ou se o procurador não quiser ou não puder exercer o mandato (art. 23 do CC/02).
+-- O requisito jurídico é a inexistência de um representante ou procurador a quem caiba administrar-lhe os bens (Artigo 22 do Código Civil de 2002). Caso o ausente tenha deixado mandatário, a ausência só poderá ser declarada se os poderes forem insuficientes ou se o procurador não quiser ou não puder exercer o mandato (Artigo 23 do Código Civil de 2002).
 
 ## Referências do Tema
 
---- Art. 22 do CC/02
---- Art. 23 do CC/02
---- Art. 744 do CPC/15
+--- Artigo 22 do Código Civil de 2002
+--- Artigo 23 do Código Civil de 2002
+--- Artigo 744 do CPC/15
 
 ## Pergunte pra I.A.
 
@@ -712,16 +712,16 @@
 
 # O Curador do Ausente
 
--- Uma vez declarada a ausência, o juiz nomeará um curador para administrar os bens, visando sua conservação. A escolha do curador não é aleatória, devendo seguir uma ordem de preferência legal estabelecida no art. 25 do Código Civil, que elenca as pessoas com laços mais próximos ao ausente.
+-- Uma vez declarada a ausência, o juiz nomeará um curador para administrar os bens, visando sua conservação. A escolha do curador não é aleatória, devendo seguir uma ordem de preferência legal estabelecida no Artigo 25 do Código Civil, que elenca as pessoas com laços mais próximos ao ausente.
 
--- A curatela caberá, primeiramente, ao cônjuge do ausente, desde que não esteja separado judicialmente ou de fato. Na sua falta, a preferência passa aos pais e, em seguida, aos descendentes, sendo os mais próximos preferidos aos mais remotos. Na ausência de todos eles, o juiz fará uma escolha livre (art. 25 do CC/02).
+-- A curatela caberá, primeiramente, ao cônjuge do ausente, desde que não esteja separado judicialmente ou de fato. Na sua falta, a preferência passa aos pais e, em seguida, aos descendentes, sendo os mais próximos preferidos aos mais remotos. Na ausência de todos eles, o juiz fará uma escolha livre (Artigo 25 do Código Civil de 2002).
 
 ## Referências do Tema
 
---- Art. 24 do CC/02
---- Art. 25 do CC/02
---- Art. 1.775 do CC/02 (aplicado por analogia)
---- Art. 745, § 1º, do CPC/15
+--- Artigo 24 do Código Civil de 2002
+--- Artigo 25 do Código Civil de 2002
+--- Artigo 1.775 do Código Civil de 2002 (aplicado por analogia)
+--- Artigo 745, § 1º, do CPC/15
 
 ## Pergunte pra I.A.
 
@@ -748,14 +748,14 @@
 
 # Providências na Fase de Curadoria
 
--- Durante a fase de curadoria, o objetivo é proteger o patrimônio e dar publicidade ao desaparecimento. A principal providência é a arrecadação judicial dos bens do ausente, que consiste em um inventário detalhado de todo o seu patrimônio, para que o curador possa iniciar a administração (art. 745 do CPC/15).
+-- Durante a fase de curadoria, o objetivo é proteger o patrimônio e dar publicidade ao desaparecimento. A principal providência é a arrecadação judicial dos bens do ausente, que consiste em um inventário detalhado de todo o seu patrimônio, para que o curador possa iniciar a administração (Artigo 745 do CPC/15).
 
--- Outra medida essencial é a publicação de editais na internet e em jornais de grande circulação, por um ano, a cada dois meses, convocando o ausente a reaparecer (art. 24 do CC/02 e art. 745 do CPC/15). Essa publicidade é crucial para informar terceiros e o próprio ausente, se possível, sobre o processo em curso.
+-- Outra medida essencial é a publicação de editais na internet e em jornais de grande circulação, por um ano, a cada dois meses, convocando o ausente a reaparecer (Artigo 24 do Código Civil de 2002 e Artigo 745 do CPC/15). Essa publicidade é crucial para informar terceiros e o próprio ausente, se possível, sobre o processo em curso.
 
 ## Referências do Tema
 
---- Art. 24 do CC/02
---- Art. 745 do CPC/15
+--- Artigo 24 do Código Civil de 2002
+--- Artigo 745 do CPC/15
 
 ## Pergunte pra I.A.
 
@@ -780,18 +780,18 @@
 -----
 # Curadoria dos Bens do Ausente (1ª Fase)
 
--- A curadoria é a fase inicial do processo de ausência, cujos requisitos são o desaparecimento da pessoa de seu domicílio sem deixar notícias nem representante (art. 22 do CC/02). O juiz, a pedido de um interessado ou do MP, nomeia um curador para administrar os bens, seguindo a ordem de preferência do art. 25 do CC/02 (cônjuge, pais, etc.).
+-- A curadoria é a fase inicial do processo de ausência, cujos requisitos são o desaparecimento da pessoa de seu domicílio sem deixar notícias nem representante (Artigo 22 do Código Civil de 2002). O juiz, a pedido de um interessado ou do MP, nomeia um curador para administrar os bens, seguindo a ordem de preferência do Artigo 25 do Código Civil de 2002 (cônjuge, pais, etc.).
 
--- As providências incluem a arrecadação dos bens e a publicação de editais (art. 745 do CPC/15), visando proteger o patrimônio. A fase cessa com o retorno do ausente, a notícia de sua morte ou, após um ano (ou três, se deixou mandatário), com o requerimento de abertura da sucessão provisória (art. 26 do CC/02), passando-se à próxima etapa.
+-- As providências incluem a arrecadação dos bens e a publicação de editais (Artigo 745 do CPC/15), visando proteger o patrimônio. A fase cessa com o retorno do ausente, a notícia de sua morte ou, após um ano (ou três, se deixou mandatário), com o requerimento de abertura da sucessão provisória (Artigo 26 do Código Civil de 2002), passando-se à próxima etapa.
 
 ## Referências do Tema
 
---- Art. 22 do CC/02
---- Art. 23 do CC/02
---- Art. 25 do CC/02
---- Art. 26 do CC/02
---- Art. 744 do CPC/15
---- Art. 745 do CPC/15
+--- Artigo 22 do Código Civil de 2002
+--- Artigo 23 do Código Civil de 2002
+--- Artigo 25 do Código Civil de 2002
+--- Artigo 26 do Código Civil de 2002
+--- Artigo 744 do CPC/15
+--- Artigo 745 do CPC/15
 
 ## Pergunte pra I.A.
 
@@ -816,19 +816,19 @@
 -----
 # Ausência no Direito Civil
 
--- A ausência é o instituto que visa proteger o patrimônio da pessoa que desaparece de seu domicílio sem deixar notícias ou representante (art. 22 do CC/02). Não se confunde com o mero desaparecimento, pois exige uma declaração judicial que dá início a um procedimento escalonado, começando pela nomeação de um curador para os bens (art. 25 do CC/02).
+-- A ausência é o instituto que visa proteger o patrimônio da pessoa que desaparece de seu domicílio sem deixar notícias ou representante (Artigo 22 do Código Civil de 2002). Não se confunde com o mero desaparecimento, pois exige uma declaração judicial que dá início a um procedimento escalonado, começando pela nomeação de um curador para os bens (Artigo 25 do Código Civil de 2002).
 
--- O procedimento evolui em três fases: curadoria dos bens, sucessão provisória (art. 26 do CC/02) e sucessão definitiva (art. 37 do CC/02). Na sucessão provisória, os herdeiros são imitidos na posse, sob caução. Na definitiva, declara-se a morte presumida, e a propriedade dos bens é consolidada, resolvendo a situação patrimonial.
+-- O procedimento evolui em três fases: curadoria dos bens, sucessão provisória (Artigo 26 do Código Civil de 2002) e sucessão definitiva (Artigo 37 do Código Civil de 2002). Na sucessão provisória, os herdeiros são imitidos na posse, sob caução. Na definitiva, declara-se a morte presumida, e a propriedade dos bens é consolidada, resolvendo a situação patrimonial.
 
 ## Referências do Tema
 
---- Art. 22 do CC/02
---- Art. 25 do CC/02
---- Art. 26 do CC/02
---- Art. 28 do CC/02
---- Art. 37 do CC/02
---- Art. 744 do CPC/15
---- Art. 745 do CPC/15
+--- Artigo 22 do Código Civil de 2002
+--- Artigo 25 do Código Civil de 2002
+--- Artigo 26 do Código Civil de 2002
+--- Artigo 28 do Código Civil de 2002
+--- Artigo 37 do Código Civil de 2002
+--- Artigo 744 do CPC/15
+--- Artigo 745 do CPC/15
 
 ## Pergunte pra I.A.
 
@@ -839,7 +839,7 @@
   - Quais garantias os herdeiros devem prestar para tomar posse provisória dos bens do ausente?
   - O que acontece se o ausente retornar durante a fase da sucessão provisória?
   - Detalhe os requisitos e os efeitos da abertura da "sucessão definitiva".
-  - Diferencie a morte presumida com declaração de ausência da morte presumida sem declaração de ausência (art. 7º do CC/02).
+  - Diferencie a morte presumida com declaração de ausência da morte presumida sem declaração de ausência (Artigo 7º do Código Civil de 2002).
   - Analise a situação do cônjuge do ausente, considerando o vínculo matrimonial e o divórcio durante o processo.
   - Discuta quais são os direitos do ausente que retorna após a conversão da sucessão em definitiva.
 
@@ -853,17 +853,17 @@
 -----
 # Término da Personalidade Civil
 
--- A personalidade civil, que se inicia com o nascimento com vida, extingue-se com a morte, conforme estabelece o art. 6º do Código Civil. Este evento põe fim à titularidade de direitos e deveres da pessoa natural e, pelo princípio da saisine (art. 1.784 do CC/02), opera a imediata transmissão da herança aos herdeiros legítimos e testamentários.
+-- A personalidade civil, que se inicia com o nascimento com vida, extingue-se com a morte, conforme estabelece o Artigo 6º do Código Civil. Este evento põe fim à titularidade de direitos e deveres da pessoa natural e, pelo princípio da saisine (Artigo 1.784 do Código Civil de 2002), opera a imediata transmissão da herança aos herdeiros legítimos e testamentários.
 
--- A morte, para o direito, pode ser real, constatada pela cessação da atividade encefálica (art. 3º da Lei nº 9.434/97), ou presumida. A presunção de morte pode ocorrer com ou sem a decretação de ausência (arts. 7º, 22 e seguintes do CC/02), a depender das circunstâncias fáticas do desaparecimento da pessoa e da probabilidade do óbito.
+-- A morte, para o direito, pode ser real, constatada pela cessação da atividade encefálica (Artigo 3º da Lei nº 9.434/97), ou presumida. A presunção de morte pode ocorrer com ou sem a decretação de ausência (arts. 7º, 22 e seguintes do Código Civil de 2002), a depender das circunstâncias fáticas do desaparecimento da pessoa e da probabilidade do óbito.
 
 ## Referências do Tema
 
---- Art. 6º do CC/02
---- Art. 7º do CC/02
---- Art. 22 do CC/02
---- Art. 1.784 do CC/02
---- Art. 3º da Lei nº 9.434/97 (Lei de Transplantes)
+--- Artigo 6º do Código Civil de 2002
+--- Artigo 7º do Código Civil de 2002
+--- Artigo 22 do Código Civil de 2002
+--- Artigo 1.784 do Código Civil de 2002
+--- Artigo 3º da Lei nº 9.434/97 (Lei de Transplantes)
 
 ## Pergunte pra I.A.
 
@@ -879,30 +879,30 @@
   - O princípio da Saisine no Direito Sucessório - Aurum
   - O término da personalidade jurídica: a morte e seus desdobramentos - Âmbito Jurídico
   - Lei nº 9.434 de 4 de Fevereiro de 1997 - Presidência da República (planalto.gov.br)
-  - A morte e o direito: uma análise do art. 6º do Código Civil - https://www.google.com/search?q=Jus.com.br
+  - A morte e o direito: uma análise do Artigo 6º do Código Civil - https://www.google.com/search?q=Jus.com.br
 
 -----
 
 # Morte Real
 
--- A morte real é o fim da existência da pessoa natural, cujo critério de constatação no Brasil é a morte encefálica, ou seja, a parada total e irreversível das funções do cérebro. Este critério está previsto no art. 3º da Lei nº 9.434/97 (Lei de Transplantes) e é detalhado em resoluções do Conselho Federal de Medicina.
+-- A morte real é o fim da existência da pessoa natural, cujo critério de constatação no Brasil é a morte encefálica, ou seja, a parada total e irreversível das funções do cérebro. Este critério está previsto no Artigo 3º da Lei nº 9.434/97 (Lei de Transplantes) e é detalhado em resoluções do Conselho Federal de Medicina.
 
--- A prova material da morte real é feita pela Declaração de Óbito, documento emitido por médico. Com base nela, é lavrada a Certidão de Óbito no Cartório de Registro Civil das Pessoas Naturais (art. 77 da Lei nº 6.015/73), ato que formaliza o óbito perante o Estado e a sociedade, permitindo a produção de todos os seus efeitos jurídicos.
+-- A prova material da morte real é feita pela Declaração de Óbito, documento emitido por médico. Com base nela, é lavrada a Certidão de Óbito no Cartório de Registro Civil das Pessoas Naturais (Artigo 77 da Lei nº 6.015/73), ato que formaliza o óbito perante o Estado e a sociedade, permitindo a produção de todos os seus efeitos jurídicos.
 
 ## Referências do Tema
 
---- Art. 6º do CC/02
---- Art. 8º do CC/02 (Comoriência)
---- Art. 3º da Lei nº 9.434/97
---- Art. 77 da Lei nº 6.015/73 (Lei de Registros Públicos)
---- Resolução CFM nº 2.173/2017
+--- Artigo 6º do Código Civil de 2002
+--- Artigo 8º do Código Civil de 2002 (Comoriência)
+--- Artigo 3º da Lei nº 9.434/97
+--- Artigo 77 da Lei nº 6.015/73 (Lei de Registros Públicos)
+--- Resolução Constituição Federal de 1988M nº 2.173/2017
 
 ## Pergunte pra I.A.
 
   - Defina morte real e qual o critério legal e médico para sua constatação no Brasil.
   - Qual a diferença entre a Declaração de Óbito e a Certidão de Óbito e qual a finalidade de cada uma?
   - Explique o que é a morte encefálica e sua relevância para o direito.
-  - O que é comoriência (art. 8º do CC/02) e qual sua implicação no direito sucessório?
+  - O que é comoriência (Artigo 8º do Código Civil de 2002) e qual sua implicação no direito sucessório?
   - Quais são os principais efeitos jurídicos decorrentes do registro da morte real?
 
 ### Fontes
@@ -917,15 +917,15 @@
 
 # Morte Presumida sem Decretação de Ausência
 
--- A morte presumida sem decretação de ausência é a declaração judicial de óbito em situações de altíssima probabilidade de morte, nas quais não foi possível localizar o corpo da vítima. Este procedimento, previsto no art. 7º do CC/02, é mais célere que o da ausência, pois a certeza moral do falecimento é elevada.
+-- A morte presumida sem decretação de ausência é a declaração judicial de óbito em situações de altíssima probabilidade de morte, nas quais não foi possível localizar o corpo da vítima. Este procedimento, previsto no Artigo 7º do Código Civil de 2002, é mais célere que o da ausência, pois a certeza moral do falecimento é elevada.
 
--- As duas hipóteses legais são: I - se for extremamente provável a morte de quem estava em perigo de vida (ex: acidentes aéreos, desastres); e II - se alguém, desaparecido em campanha ou feito prisioneiro, não for encontrado até dois anos após o fim da guerra. A declaração requer um processo de justificação judicial para o assento de óbito (art. 88 da Lei nº 6.015/73).
+-- As duas hipóteses legais são: I - se for extremamente provável a morte de quem estava em perigo de vida (ex: acidentes aéreos, desastres); e II - se alguém, desaparecido em campanha ou feito prisioneiro, não for encontrado até dois anos após o fim da guerra. A declaração requer um processo de justificação judicial para o assento de óbito (Artigo 88 da Lei nº 6.015/73).
 
 ## Referências do Tema
 
---- Art. 7º do CC/02
---- Art. 88 da Lei nº 6.015/73
---- Art. 40 da Lei nº 9.140/95 (Pessoas desaparecidas em razão de participação em atividades políticas)
+--- Artigo 7º do Código Civil de 2002
+--- Artigo 88 da Lei nº 6.015/73
+--- Artigo 40 da Lei nº 9.140/95 (Pessoas desaparecidas em razão de participação em atividades políticas)
 --- Enunciado 13 da I Jornada de Direito Civil (CJF)
 
 ## Pergunte pra I.A.
@@ -938,7 +938,7 @@
 
 ### Fontes
 
-  - Art. 7º do Código Civil Comentado - Jusbrasil
+  - Artigo 7º do Código Civil Comentado - Jusbrasil
   - Morte presumida e declaração de ausência no Código Civil - Aurum
   - A Morte Presumida no Direito Brasileiro - Âmbito Jurídico
   - Morte presumida sem declaração de ausência - https://www.google.com/search?q=Jus.com.br
@@ -946,21 +946,21 @@
 -----
 # Proteção dos Incapazes e Benefício de Restituição
 
--- O ordenamento jurídico protege os incapazes de diversas formas, como na suspensão do prazo prescricional contra os absolutamente incapazes (art. 198, I, do CC/02) e na invalidação dos atos praticados em seu prejuízo (arts. 166, I, e 171, I, do CC/02), visando resguardar a integridade de seu patrimônio e de sua pessoa.
+-- O ordenamento jurídico protege os incapazes de diversas formas, como na suspensão do prazo prescricional contra os absolutamente incapazes (Artigo 198, I, do Código Civil de 2002) e na invalidação dos atos praticados em seu prejuízo (arts. 166, I, e 171, I, do Código Civil de 2002), visando resguardar a integridade de seu patrimônio e de sua pessoa.
 
--- Uma proteção específica é o "benefício de restituição" (restitutio in integrum), previsto no art. 180 do CC/02. Por ele, o incapaz que participa de um negócio inválido não é obrigado a devolver o que recebeu, a menos que a outra parte prove que o valor foi revertido em seu proveito, invertendo-se o ônus da prova para proteger o vulnerável.
+-- Uma proteção específica é o "benefício de restituição" (restitutio in integrum), previsto no Artigo 180 do Código Civil de 2002. Por ele, o incapaz que participa de um negócio inválido não é obrigado a devolver o que recebeu, a menos que a outra parte prove que o valor foi revertido em seu proveito, invertendo-se o ônus da prova para proteger o vulnerável.
 
 ## Referências do Tema
 
---- Art. 166, I, do CC/02
---- Art. 171, I, do CC/02
---- Art. 180 do CC/02
---- Art. 198, I, do CC/02
+--- Artigo 166, I, do Código Civil de 2002
+--- Artigo 171, I, do Código Civil de 2002
+--- Artigo 180 do Código Civil de 2002
+--- Artigo 198, I, do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
   - Quais são os principais mecanismos de proteção patrimonial dos incapazes no Código Civil?
-  - Explique o que é o "benefício de restituição" do art. 180 do CC/02.
+  - Explique o que é o "benefício de restituição" do Artigo 180 do Código Civil de 2002.
   - A prescrição corre contra um jovem de 17 anos? E contra uma criança de 10 anos? Justifique.
   - Em um contrato anulado, um adolescente de 17 anos deve devolver o celular que comprou? Explique o ônus da prova.
   - O benefício de restituição se aplica caso o relativamente incapaz tenha agido com malícia para ocultar sua idade?
@@ -977,17 +977,17 @@
 
 # Incapacidade vs. Legitimação
 
--- A incapacidade, prevista nos arts. 3º e 4º do CC/02, é uma restrição genérica, de natureza subjetiva, que impede a pessoa de exercer por si só os atos da vida civil. Ela decorre de fatores como idade ou falta de discernimento e é suprida pela representação ou assistência, sendo uma norma de proteção ao próprio agente.
+-- A incapacidade, prevista nos arts. 3º e 4º do Código Civil de 2002, é uma restrição genérica, de natureza subjetiva, que impede a pessoa de exercer por si só os atos da vida civil. Ela decorre de fatores como idade ou falta de discernimento e é suprida pela representação ou assistência, sendo uma norma de proteção ao próprio agente.
 
--- Já a legitimação é uma aptidão específica, exigida por lei, para a prática de um determinado ato jurídico, mesmo por pessoa plenamente capaz. A falta de legitimação é uma restrição objetiva. Exemplos clássicos são a proibição de venda de ascendente a descendente sem anuência dos demais (art. 496 do CC/02) e a do tutor de adquirir bens do tutelado.
+-- Já a legitimação é uma aptidão específica, exigida por lei, para a prática de um determinado ato jurídico, mesmo por pessoa plenamente capaz. A falta de legitimação é uma restrição objetiva. Exemplos clássicos são a proibição de venda de ascendente a descendente sem anuência dos demais (Artigo 496 do Código Civil de 2002) e a do tutor de adquirir bens do tutelado.
 
 ## Referências do Tema
 
---- Art. 3º do CC/02
---- Art. 4º do CC/02
---- Art. 496 do CC/02
---- Art. 1.647 do CC/02 (Outorga conjugal)
---- Art. 1.749, I, do CC/02
+--- Artigo 3º do Código Civil de 2002
+--- Artigo 4º do Código Civil de 2002
+--- Artigo 496 do Código Civil de 2002
+--- Artigo 1.647 do Código Civil de 2002 (Outorga conjugal)
+--- Artigo 1.749, I, do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -1009,13 +1009,13 @@
 
 # Cessação da Incapacidade e Emancipação
 
--- A incapacidade civil cessa, como regra, aos 18 anos completos, quando a pessoa se torna plenamente capaz para todos os atos (art. 5º, caput, do CC/02). Nos casos de incapacidade relativa por outra causa (art. 4º), ela se extingue quando o motivo que a determinou deixa de existir, como na recuperação da capacidade de exprimir a vontade.
+-- A incapacidade civil cessa, como regra, aos 18 anos completos, quando a pessoa se torna plenamente capaz para todos os atos (Artigo 5º, caput, do Código Civil de 2002). Nos casos de incapacidade relativa por outra causa (Artigo 4º), ela se extingue quando o motivo que a determinou deixa de existir, como na recuperação da capacidade de exprimir a vontade.
 
--- Para os menores, a capacidade plena pode ser antecipada pela emancipação. As hipóteses legais (art. 5º, parágrafo único, do CC/02) são: concessão dos pais ou sentença judicial; casamento; exercício de emprego público efetivo; colação de grau em nível superior; ou estabelecimento comercial com economia própria.
+-- Para os menores, a capacidade plena pode ser antecipada pela emancipação. As hipóteses legais (Artigo 5º, parágrafo único, do Código Civil de 2002) são: concessão dos pais ou sentença judicial; casamento; exercício de emprego público efetivo; colação de grau em nível superior; ou estabelecimento comercial com economia própria.
 
 ## Referências do Tema
 
---- Art. 5º, caput e parágrafo único, do CC/02
+--- Artigo 5º, caput e parágrafo único, do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -1035,16 +1035,16 @@
 -----
 # Incapacidade Material vs. Incapacidade Formal
 
--- A incapacidade material é a ausência fática de discernimento para entender ou se autodeterminar, independentemente da previsão legal. Um ato praticado nesse estado pode ser invalidado por vício de consentimento (art. 171, II, do CC/02), pois a declaração de vontade não corresponde à realidade psicológica do agente.
+-- A incapacidade material é a ausência fática de discernimento para entender ou se autodeterminar, independentemente da previsão legal. Um ato praticado nesse estado pode ser invalidado por vício de consentimento (Artigo 171, II, do Código Civil de 2002), pois a declaração de vontade não corresponde à realidade psicológica do agente.
 
--- Já a incapacidade formal é a qualificação jurídica atribuída pela lei a certos grupos, criando uma presunção de falta de discernimento. As hipóteses estão taxativamente previstas nos arts. 3º (absoluta) e 4º (relativa) do CC/02, e a consequência da prática de um ato sem representação ou assistência é a nulidade (art. 166, I) ou a anulabilidade (art. 171, I).
+-- Já a incapacidade formal é a qualificação jurídica atribuída pela lei a certos grupos, criando uma presunção de falta de discernimento. As hipóteses estão taxativamente previstas nos arts. 3º (absoluta) e 4º (relativa) do Código Civil de 2002, e a consequência da prática de um ato sem representação ou assistência é a nulidade (Artigo 166, I) ou a anulabilidade (Artigo 171, I).
 
 ## Referências do Tema
 
---- Art. 3º do CC/02
---- Art. 4º do CC/02
---- Art. 166, I, do CC/02
---- Art. 171, I e II, do CC/02
+--- Artigo 3º do Código Civil de 2002
+--- Artigo 4º do Código Civil de 2002
+--- Artigo 166, I, do Código Civil de 2002
+--- Artigo 171, I e II, do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -1066,17 +1066,17 @@
 
 # Incapacidade Formal Absoluta
 
--- Após as profundas alterações da Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência), a incapacidade absoluta foi reduzida a uma única hipótese legal. Conforme a redação atual do art. 3º do Código Civil, são considerados absolutamente incapazes de exercer pessoalmente os atos da vida civil apenas os menores de 16 anos.
+-- Após as profundas alterações da Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência), a incapacidade absoluta foi reduzida a uma única hipótese legal. Conforme a redação atual do Artigo 3º do Código Civil, são considerados absolutamente incapazes de exercer pessoalmente os atos da vida civil apenas os menores de 16 anos.
 
--- A sanção para o ato praticado pelo menor de 16 anos sem a devida representação de seus pais ou tutores é a nulidade absoluta (art. 166, I, do CC/02). Tal ato não produz efeitos jurídicos e sua nulidade não pode ser suprida pelo juiz nem se convalida com o tempo, podendo ser arguida por qualquer interessado ou pelo Ministério Público.
+-- A sanção para o ato praticado pelo menor de 16 anos sem a devida representação de seus pais ou tutores é a nulidade absoluta (Artigo 166, I, do Código Civil de 2002). Tal ato não produz efeitos jurídicos e sua nulidade não pode ser suprida pelo juiz nem se convalida com o tempo, podendo ser arguida por qualquer interessado ou pelo Ministério Público.
 
 ## Referências do Tema
 
---- Art. 3º do CC/02
---- Art. 166, I, do CC/02
---- Art. 169 do CC/02
---- Art. 1.634, VII, do CC/02
---- Art. 1.747, I, do CC/02
+--- Artigo 3º do Código Civil de 2002
+--- Artigo 166, I, do Código Civil de 2002
+--- Artigo 169 do Código Civil de 2002
+--- Artigo 1.634, VII, do Código Civil de 2002
+--- Artigo 1.747, I, do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -1098,17 +1098,17 @@
 
 # Incapacidade Formal Relativa
 
--- A incapacidade relativa aplica-se àqueles que possuem discernimento, mas este é considerado reduzido pela lei, exigindo assistência para a prática de atos. O rol do art. 4º do CC/02 abrange: os maiores de 16 e menores de 18 anos; os ébrios habituais e viciados em tóxicos; aqueles que, por causa transitória ou permanente, não puderem exprimir sua vontade; e os pródigos.
+-- A incapacidade relativa aplica-se àqueles que possuem discernimento, mas este é considerado reduzido pela lei, exigindo assistência para a prática de atos. O rol do Artigo 4º do Código Civil de 2002 abrange: os maiores de 16 e menores de 18 anos; os ébrios habituais e viciados em tóxicos; aqueles que, por causa transitória ou permanente, não puderem exprimir sua vontade; e os pródigos.
 
--- O ato praticado por um relativamente incapaz sem a devida assistência de seu curador ou responsável legal é anulável, conforme o art. 171, I, do CC/02. Isso significa que o ato é válido e produz efeitos até que uma sentença o anule, podendo também ser confirmado pelas partes se cessada a incapacidade ou pelo representante (art. 172 do CC/02).
+-- O ato praticado por um relativamente incapaz sem a devida assistência de seu curador ou responsável legal é anulável, conforme o Artigo 171, I, do Código Civil de 2002. Isso significa que o ato é válido e produz efeitos até que uma sentença o anule, podendo também ser confirmado pelas partes se cessada a incapacidade ou pelo representante (Artigo 172 do Código Civil de 2002).
 
 ## Referências do Tema
 
---- Art. 4º do CC/02
---- Art. 171, I, do CC/02
---- Art. 172 do CC/02
---- Art. 1.767 do CC/02 (Interdição e Curatela)
---- Art. 1.782 do CC/02 (Curatela do pródigo)
+--- Artigo 4º do Código Civil de 2002
+--- Artigo 171, I, do Código Civil de 2002
+--- Artigo 172 do Código Civil de 2002
+--- Artigo 1.767 do Código Civil de 2002 (Interdição e Curatela)
+--- Artigo 1.782 do Código Civil de 2002 (Curatela do pródigo)
 
 ## Pergunte pra I.A.
 
@@ -1128,17 +1128,17 @@
 -----
 # Pessoa com Deficiência e o Regime das Incapacidades
 
--- O Estatuto da Pessoa com Deficiência (Lei nº 13.146/2015) revolucionou o regime das incapacidades, afirmando que a deficiência não afeta a plena capacidade civil da pessoa (art. 6º da Lei). A regra agora é a capacidade, dissociando a condição de deficiente da presunção de incapacidade, que antes era a norma para diversas condições.
+-- O Estatuto da Pessoa com Deficiência (Lei nº 13.146/2015) revolucionou o regime das incapacidades, afirmando que a deficiência não afeta a plena capacidade civil da pessoa (Artigo 6º da Lei). A regra agora é a capacidade, dissociando a condição de deficiente da presunção de incapacidade, que antes era a norma para diversas condições.
 
--- Consequentemente, o rol de incapacidade formal foi drasticamente alterado. A incapacidade absoluta ficou restrita aos menores de 16 anos (art. 3º do CC/02). As pessoas com deficiência, caso necessitem, serão assistidas por meio da curatela (art. 1.767 do CC/02) ou da tomada de decisão apoiada, sendo enquadradas como relativamente incapazes (art. 4º do CC/02).
+-- Consequentemente, o rol de incapacidade formal foi drasticamente alterado. A incapacidade absoluta ficou restrita aos menores de 16 anos (Artigo 3º do Código Civil de 2002). As pessoas com deficiência, caso necessitem, serão assistidas por meio da curatela (Artigo 1.767 do Código Civil de 2002) ou da tomada de decisão apoiada, sendo enquadradas como relativamente incapazes (Artigo 4º do Código Civil de 2002).
 
 ## Referências do Tema
 
---- Art. 3º do CC/02
---- Art. 4º do CC/02
---- Art. 6º da Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência)
---- Art. 84 da Lei nº 13.146/2015
---- Art. 1.767 do CC/02
+--- Artigo 3º do Código Civil de 2002
+--- Artigo 4º do Código Civil de 2002
+--- Artigo 6º da Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência)
+--- Artigo 84 da Lei nº 13.146/2015
+--- Artigo 1.767 do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -1158,16 +1158,16 @@
 -----
 # A Incapacidade Civil e a Pessoa com Deficiência
 
--- A Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência) alterou radicalmente o Código Civil, estabelecendo a capacidade plena como regra (art. 6º da Lei). A deficiência, por si só, não afeta mais a capacidade civil (art. 84 da Lei). Com isso, o rol de absolutamente incapazes do art. 3º do CC/02 foi restrito aos menores de 16 anos.
+-- A Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência) alterou radicalmente o Código Civil, estabelecendo a capacidade plena como regra (Artigo 6º da Lei). A deficiência, por si só, não afeta mais a capacidade civil (Artigo 84 da Lei). Com isso, o rol de absolutamente incapazes do Artigo 3º do Código Civil de 2002 foi restrito aos menores de 16 anos.
 
--- Para o exercício de atos patrimoniais, a pessoa com deficiência pode contar com a curatela, medida extraordinária (art. 85 da Lei), ou com a inovadora tomada de decisão apoiada (art. 1.783-A do CC/02), na qual elege duas pessoas de confiança para auxiliá-la. A regra é a promoção da autonomia, e não mais a interdição da pessoa.
+-- Para o exercício de atos patrimoniais, a pessoa com deficiência pode contar com a curatela, medida extraordinária (Artigo 85 da Lei), ou com a inovadora tomada de decisão apoiada (Artigo 1.783-A do Código Civil de 2002), na qual elege duas pessoas de confiança para auxiliá-la. A regra é a promoção da autonomia, e não mais a interdição da pessoa.
 
 ## Referências do Tema
 
 --- Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência)
---- Art. 3º do CC/02
---- Art. 4º do CC/02
---- Art. 1.783-A do CC/02
+--- Artigo 3º do Código Civil de 2002
+--- Artigo 4º do Código Civil de 2002
+--- Artigo 1.783-A do Código Civil de 2002
 --- Enunciado 574 da VI Jornada de Direito Civil (CJF)
 
 ## Pergunte pra I.A.
@@ -1190,13 +1190,13 @@
 
 # Convenção de Nova Iorque e a Pessoa com Deficiência
 
--- A Convenção sobre os Direitos das Pessoas com Deficiência (Convenção de Nova Iorque), internalizada pelo Decreto nº 6.949/2009, possui status de Emenda Constitucional no Brasil. Isso ocorre pois foi aprovada na forma do art. 5º, § 3º, da CF/88, sendo um marco normativo para a inclusão e o respeito à autonomia da pessoa com deficiência.
+-- A Convenção sobre os Direitos das Pessoas com Deficiência (Convenção de Nova Iorque), internalizada pelo Decreto nº 6.949/2009, possui status de Emenda Constitucional no Brasil. Isso ocorre pois foi aprovada na forma do Artigo 5º, § 3º, da Constituição Federal de 1988, sendo um marco normativo para a inclusão e o respeito à autonomia da pessoa com deficiência.
 
 -- Seu artigo 12 foi disruptivo ao determinar que os Estados reconheçam a capacidade legal da pessoa com deficiência em igualdade de condições com as demais. Essa diretriz obrigou a reforma do sistema de incapacidades do Código Civil brasileiro, sendo o principal fundamento para a criação da Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência).
 
 ## Referências do Tema
 
---- Art. 5º, § 3º, da CF/88
+--- Artigo 5º, § 3º, da Constituição Federal de 1988
 --- Decreto nº 6.949, de 25 de agosto de 2009
 --- Artigo 12 da Convenção sobre os Direitos das Pessoas com Deficiência
 --- Lei nº 13.146/2015
@@ -1219,14 +1219,14 @@
 -----
 # Capacidade de Direito
 
--- A capacidade de direito, também conhecida como capacidade de gozo, é a aptidão genérica para ser titular de direitos e contrair deveres na ordem civil. Segundo o art. 1º do CC/02, "toda pessoa é capaz de direitos e deveres", o que significa que este tipo de capacidade é um atributo indissociável da personalidade jurídica.
+-- A capacidade de direito, também conhecida como capacidade de gozo, é a aptidão genérica para ser titular de direitos e contrair deveres na ordem civil. Segundo o Artigo 1º do Código Civil de 2002, "toda pessoa é capaz de direitos e deveres", o que significa que este tipo de capacidade é um atributo indissociável da personalidade jurídica.
 
--- Ela é adquirida com o nascimento com vida (art. 2º do CC/02), sendo universal e inata a todo ser humano, não comportando qualquer tipo de restrição ou gradação. Não se confunde com a capacidade de fato (de exercício) nem com a legitimação, que é uma aptidão específica para a prática de certos atos jurídicos.
+-- Ela é adquirida com o nascimento com vida (Artigo 2º do Código Civil de 2002), sendo universal e inata a todo ser humano, não comportando qualquer tipo de restrição ou gradação. Não se confunde com a capacidade de fato (de exercício) nem com a legitimação, que é uma aptidão específica para a prática de certos atos jurídicos.
 
 ## Referências do Tema
 
---- Art. 1º do CC/02
---- Art. 2º do CC/02
+--- Artigo 1º do Código Civil de 2002
+--- Artigo 2º do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -1250,14 +1250,14 @@
 
 -- A capacidade de fato, ou de exercício, é a aptidão para exercer pessoalmente os atos da vida civil, manifestando a própria vontade. A união da capacidade de direito com a de fato resulta na capacidade civil plena. A ausência ou a limitação da capacidade de fato caracteriza a incapacidade, que demanda proteção jurídica.
 
--- O Código Civil estabelece graus de incapacidade: a absoluta, restrita aos menores de 16 anos (art. 3º do CC/02), cujos atos exigem representação, sob pena de nulidade (art. 166, I); e a relativa (art. 4º do CC/02), que exige assistência para a validade do ato, sob pena de ser anulável (art. 171, I).
+-- O Código Civil estabelece graus de incapacidade: a absoluta, restrita aos menores de 16 anos (Artigo 3º do Código Civil de 2002), cujos atos exigem representação, sob pena de nulidade (Artigo 166, I); e a relativa (Artigo 4º do Código Civil de 2002), que exige assistência para a validade do ato, sob pena de ser anulável (Artigo 171, I).
 
 ## Referências do Tema
 
---- Art. 3º do CC/02
---- Art. 4º do CC/02
---- Art. 166, I, do CC/02
---- Art. 171, I, do CC/02
+--- Artigo 3º do Código Civil de 2002
+--- Artigo 4º do Código Civil de 2002
+--- Artigo 166, I, do Código Civil de 2002
+--- Artigo 171, I, do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -1265,7 +1265,7 @@
   - Diferencie incapacidade absoluta de incapacidade relativa, explicando as consequências de cada uma para os atos praticados.
   - Quais são os papéis do representante e do assistente na vida civil de um incapaz?
   - Explique como o Estatuto da Pessoa com Deficiência (Lei 13.146/2015) alterou o rol de incapazes do Código Civil.
-  - Discorra sobre as hipóteses de cessação da incapacidade para os menores, previstas no art. 5º do Código Civil.
+  - Discorra sobre as hipóteses de cessação da incapacidade para os menores, previstas no Artigo 5º do Código Civil.
 
 ### Fontes
 
@@ -1277,16 +1277,16 @@
 -----
 # Personalidade Jurídica e Capacidade
 
--- Personalidade jurídica é a aptidão para ser titular de direitos e obrigações (art. 1º do CC/02), adquirida com o nascimento com vida (art. 2º do CC/02). Ela se confunde com a capacidade de direito ou de gozo, que todo ser humano possui. É o "poder ser" sujeito de uma relação jurídica, sendo um atributo estático e universal para a pessoa humana.
+-- Personalidade jurídica é a aptidão para ser titular de direitos e obrigações (Artigo 1º do Código Civil de 2002), adquirida com o nascimento com vida (Artigo 2º do Código Civil de 2002). Ela se confunde com a capacidade de direito ou de gozo, que todo ser humano possui. É o "poder ser" sujeito de uma relação jurídica, sendo um atributo estático e universal para a pessoa humana.
 
--- Já a capacidade de fato ou de exercício é a aptidão para exercer, por si só, os atos da vida civil. A falta desta aptidão gera a incapacidade, que pode ser absoluta para menores de 16 anos (art. 3º do CC/02) ou relativa em outras hipóteses (art. 4º do CC/02), demandando representação ou assistência para a validade dos atos praticados.
+-- Já a capacidade de fato ou de exercício é a aptidão para exercer, por si só, os atos da vida civil. A falta desta aptidão gera a incapacidade, que pode ser absoluta para menores de 16 anos (Artigo 3º do Código Civil de 2002) ou relativa em outras hipóteses (Artigo 4º do Código Civil de 2002), demandando representação ou assistência para a validade dos atos praticados.
 
 ## Referências do Tema
 
---- Art. 1º do CC/02
---- Art. 2º do CC/02
---- Art. 3º do CC/02
---- Art. 4º do CC/02
+--- Artigo 1º do Código Civil de 2002
+--- Artigo 2º do Código Civil de 2002
+--- Artigo 3º do Código Civil de 2002
+--- Artigo 4º do Código Civil de 2002
 --- Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência)
 
 ## Pergunte pra I.A.
@@ -1309,15 +1309,15 @@
 
 # Aquisição da Personalidade (Nascimento com Vida)
 
--- O Código Civil brasileiro, em seu art. 2º, adota a teoria natalista, segundo a qual "a personalidade civil da pessoa começa do nascimento com vida". Este marco objetivo se perfaz com a primeira respiração autônoma do recém-nascido, ainda que por um instante, o que pode ser comprovado por meios como o exame de docimasia hidrostática de Galeno.
+-- O Código Civil brasileiro, em seu Artigo 2º, adota a teoria natalista, segundo a qual "a personalidade civil da pessoa começa do nascimento com vida". Este marco objetivo se perfaz com a primeira respiração autônoma do recém-nascido, ainda que por um instante, o que pode ser comprovado por meios como o exame de docimasia hidrostática de Galeno.
 
--- Apesar de condicionar a personalidade ao nascimento, a lei não desampara o nascituro. A parte final do mesmo art. 2º do CC/02 resguarda seus direitos desde a concepção. Assim, o nascituro é titular de uma expectativa de direitos, que se consolidam sob a condição suspensiva do nascimento com vida, garantindo-lhe proteção fundamental.
+-- Apesar de condicionar a personalidade ao nascimento, a lei não desampara o nascituro. A parte final do mesmo Artigo 2º do Código Civil de 2002 resguarda seus direitos desde a concepção. Assim, o nascituro é titular de uma expectativa de direitos, que se consolidam sob a condição suspensiva do nascimento com vida, garantindo-lhe proteção fundamental.
 
 ## Referências do Tema
 
---- Art. 2º do CC/02
---- Art. 542 do CC/02 (Doação ao nascituro)
---- Art. 1.798 do CC/02 (Legitimação para suceder)
+--- Artigo 2º do Código Civil de 2002
+--- Artigo 542 do Código Civil de 2002 (Doação ao nascituro)
+--- Artigo 1.798 do Código Civil de 2002 (Legitimação para suceder)
 --- Lei nº 11.804/2008 (Lei de Alimentos Gravídicos)
 
 ## Pergunte pra I.A.
@@ -1334,19 +1334,19 @@
   - O Início da Personalidade Jurídica no Ordenamento Brasileiro - Âmbito Jurídico
   - Direitos do nascituro e o início da personalidade jurídica - Jusbrasil
   - A Docimasia Hidrostática de Galeno e suas implicações jurídicas - Migalhas
-  - Código Civil Comentado - Art. 2º - Dizer o Direito
+  - Código Civil Comentado - Artigo 2º - Dizer o Direito
 
 -----
 
 # Nascituro e Embrião – Personalidade Jurídica
 
--- Embora a teoria natalista (art. 2º do CC/02) prevaleça, negando personalidade ao nascituro, a jurisprudência e a doutrina concepcionista avançam em sua proteção. Ele já é titular de direitos da personalidade, podendo receber doação (art. 542 do CC/02), ser herdeiro (art. 1.798 do CC/02) e ter direito a alimentos (Lei nº 11.804/08) e à reparação por dano moral.
+-- Embora a teoria natalista (Artigo 2º do Código Civil de 2002) prevaleça, negando personalidade ao nascituro, a jurisprudência e a doutrina concepcionista avançam em sua proteção. Ele já é titular de direitos da personalidade, podendo receber doação (Artigo 542 do Código Civil de 2002), ser herdeiro (Artigo 1.798 do Código Civil de 2002) e ter direito a alimentos (Lei nº 11.804/08) e à reparação por dano moral.
 
 -- O embrião pré-implantação (in vitro) possui proteção jurídica ainda mais restrita. O STF, na ADI 3510, autorizou o uso de embriões para pesquisa, conforme a Lei de Biossegurança (Lei nº 11.105/05), entendendo que não haveria violação ao direito à vida. Assim, embora tutelado, o embrião não é equiparado ao nascituro nem considerado pessoa.
 
 ## Referências do Tema
 
---- Art. 2º do CC/02
+--- Artigo 2º do Código Civil de 2002
 --- Lei nº 11.804/2008 (Alimentos Gravídicos)
 --- Lei nº 11.105/2005 (Lei de Biossegurança)
 --- ADI 3510 do STF
@@ -1370,15 +1370,15 @@
 -----
 # Teoria Geral da Personalidade Civil
 
--- A personalidade civil é a aptidão genérica para adquirir direitos e contrair obrigações, sendo um atributo inerente a todo ser humano. Conforme o art. 1º do CC/02, "toda pessoa é capaz de direitos e deveres". Pela teoria natalista, adotada no art. 2º do CC/02, a personalidade se inicia com o nascimento com vida, embora a lei proteja os direitos do nascituro.
+-- A personalidade civil é a aptidão genérica para adquirir direitos e contrair obrigações, sendo um atributo inerente a todo ser humano. Conforme o Artigo 1º do Código Civil de 2002, "toda pessoa é capaz de direitos e deveres". Pela teoria natalista, adotada no Artigo 2º do Código Civil de 2002, a personalidade se inicia com o nascimento com vida, embora a lei proteja os direitos do nascituro.
 
--- Essencialmente extrapatrimonial, irrenunciável e intransmissível, a personalidade é o alicerce para todos os outros direitos, em especial os da personalidade (art. 11 a 21 do CC/02). Ela não se confunde com a capacidade, que é a medida ou a extensão da personalidade para a prática dos atos da vida civil por si mesmo.
+-- Essencialmente extrapatrimonial, irrenunciável e intransmissível, a personalidade é o alicerce para todos os outros direitos, em especial os da personalidade (Artigo 11 a 21 do Código Civil de 2002). Ela não se confunde com a capacidade, que é a medida ou a extensão da personalidade para a prática dos atos da vida civil por si mesmo.
 
 ## Referências do Tema
 
---- Art. 1º do CC/02
---- Art. 2º do CC/02
---- Arts. 11 a 21 do CC/02
+--- Artigo 1º do Código Civil de 2002
+--- Artigo 2º do Código Civil de 2002
+--- Arts. 11 a 21 do Código Civil de 2002
 --- Enunciado 1 da I Jornada de Direito Civil (CJF)
 
 ## Pergunte pra I.A.
@@ -1403,12 +1403,12 @@
 
 -- Historicamente, o conceito de "pessoa" era restritivo e não se confundia com "ser humano". No Direito Romano, a personalidade dependia de três status (liberdade, cidadania e família), de modo que escravos eram considerados coisas (*res*) e não sujeitos de direito (*persona*). A personalidade era, portanto, uma concessão da ordem jurídica.
 
--- A universalização do conceito foi impulsionada pelo cristianismo, pelo jusnaturalismo e pela filosofia kantiana, que via a pessoa como um fim em si mesma. Hoje, a personalidade é um atributo inerente à condição humana, indissociável do princípio da dignidade da pessoa humana (art. 1º, III, CF/88), sendo o valor-fonte de todo o direito privado.
+-- A universalização do conceito foi impulsionada pelo cristianismo, pelo jusnaturalismo e pela filosofia kantiana, que via a pessoa como um fim em si mesma. Hoje, a personalidade é um atributo inerente à condição humana, indissociável do princípio da dignidade da pessoa humana (Artigo 1º, III, Constituição Federal de 1988), sendo o valor-fonte de todo o direito privado.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 1º do CC/02
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 1º do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -1428,21 +1428,21 @@
 -----
 # Solidariedade Social e Igualdade Substancial
 
--- A Solidariedade Social (art. 3º, I, CF/88) é um objetivo da República que impõe um dever jurídico de cooperação nas relações privadas, superando o individualismo. No Direito Civil, materializa-se na função social do contrato (art. 421 do CC/02) e da propriedade (art. 1.228, § 1º, do CC/02), que exigem o respeito aos interesses da coletividade.
+-- A Solidariedade Social (Artigo 3º, I, Constituição Federal de 1988) é um objetivo da República que impõe um dever jurídico de cooperação nas relações privadas, superando o individualismo. No Direito Civil, materializa-se na função social do contrato (Artigo 421 do Código Civil de 2002) e da propriedade (Artigo 1.228, § 1º, do Código Civil de 2002), que exigem o respeito aos interesses da coletividade.
 
--- A Igualdade Substancial, por sua vez, visa corrigir desequilíbrios fáticos, tratando os desiguais de forma desigual. É o fundamento da proteção de vulneráveis em microssistemas como o Código de Defesa do Consumidor (art. 4º, I, do CDC) e o Estatuto do Idoso, garantindo um reequilíbrio de forças nas relações jurídicas civis.
+-- A Igualdade Substancial, por sua vez, visa corrigir desequilíbrios fáticos, tratando os desiguais de forma desigual. É o fundamento da proteção de vulneráveis em microssistemas como o Código de Defesa do Consumidor (Artigo 4º, I, do CDC) e o Estatuto do Idoso, garantindo um reequilíbrio de forças nas relações jurídicas civis.
 
 ## Referências do Tema
 
---- Art. 3º, I, da CF/88
---- Art. 4º, I, da Lei nº 8.078/90 (CDC)
---- Art. 421 do CC/02
---- Art. 1.228, § 1º, do CC/02
+--- Artigo 3º, I, da Constituição Federal de 1988
+--- Artigo 4º, I, da Lei nº 8.078/90 (CDC)
+--- Artigo 421 do Código Civil de 2002
+--- Artigo 1.228, § 1º, do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
   - Explique como o princípio da solidariedade social se manifesta na teoria da função social do contrato.
-  - Diferencie igualdade formal (art. 5º, caput, CF/88) de igualdade substancial, com exemplos do Direito Civil.
+  - Diferencie igualdade formal (Artigo 5º, caput, Constituição Federal de 1988) de igualdade substancial, com exemplos do Direito Civil.
   - De que maneira o Código de Defesa do Consumidor concretiza o mandamento da igualdade material?
   - Analise a função social da propriedade como uma expressão do princípio da solidariedade.
   - Discuta como a solidariedade social pode justificar a revisão de um contrato excessivamente oneroso para uma das partes.
@@ -1461,14 +1461,14 @@
 
 -- O Direito Civil contemporâneo superou o paradigma individualista e patrimonialista do Código de 1916. O novo eixo é a pessoa humana e sua dignidade, em um processo de "constitucionalização" que coloca a Carta Magna como filtro de validade e interpretação de toda a legislação civil, consagrando a eficácia horizontal dos direitos fundamentais.
 
--- Seus paradigmas operacionais, idealizados por Miguel Reale, são a eticidade (valorização da boa-fé objetiva - art. 422 do CC/02), a socialidade (prevalência do coletivo sobre o individual - art. 421 do CC/02) e a operabilidade (uso de cláusulas gerais que conferem maior poder ao juiz para buscar a justiça no caso concreto).
+-- Seus paradigmas operacionais, idealizados por Miguel Reale, são a eticidade (valorização da boa-fé objetiva - Artigo 422 do Código Civil de 2002), a socialidade (prevalência do coletivo sobre o individual - Artigo 421 do Código Civil de 2002) e a operabilidade (uso de cláusulas gerais que conferem maior poder ao juiz para buscar a justiça no caso concreto).
 
 ## Referências do Tema
 
---- Art. 421 do CC/02
---- Art. 422 do CC/02
---- Art. 187 do CC/02
---- Art. 2.035, parágrafo único, do CC/02
+--- Artigo 421 do Código Civil de 2002
+--- Artigo 422 do Código Civil de 2002
+--- Artigo 187 do Código Civil de 2002
+--- Artigo 2.035, parágrafo único, do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -1492,12 +1492,12 @@
 
 -- O controle de convencionalidade é a análise da compatibilidade das leis brasileiras com os tratados de direitos humanos ratificados pelo país. Conforme o STF (RE 466.343), tratados como o Pacto de São José da Costa Rica possuem status supralegal, ou seja, estão abaixo da Constituição, mas acima da legislação ordinária, como o Código Civil.
 
--- Um exemplo notório no Direito Civil foi a superação da prisão do depositário infiel. Embora prevista no Código Civil e na Constituição (art. 5º, LXVII), foi paralisada por ser incompatível com o Pacto de São José da Costa Rica, o que deu origem à Súmula Vinculante 25 do STF, demonstrando a submissão da lei civil às normas internacionais.
+-- Um exemplo notório no Direito Civil foi a superação da prisão do depositário infiel. Embora prevista no Código Civil e na Constituição (Artigo 5º, LXVII), foi paralisada por ser incompatível com o Pacto de São José da Costa Rica, o que deu origem à Súmula Vinculante 25 do STF, demonstrando a submissão da lei civil às normas internacionais.
 
 ## Referências do Tema
 
---- Art. 5º, § 2º e § 3º, da CF/88
---- Art. 5º, LXVII, da CF/88
+--- Artigo 5º, § 2º e § 3º, da Constituição Federal de 1988
+--- Artigo 5º, LXVII, da Constituição Federal de 1988
 --- RE 466.343/SP
 --- Súmula Vinculante 25 do STF
 --- Decreto nº 678/1992 (Pacto de São José da Costa Rica)
@@ -1524,14 +1524,14 @@
 
 -- O Estado de Coisas Inconstitucional (ECI) é uma doutrina jurídica, acolhida pelo STF na ADPF 347, para reconhecer uma violação massiva e sistemática de direitos fundamentais decorrente da inércia de múltiplos órgãos estatais. Embora sua origem seja no Direito Público, possui reflexos diretos nas relações cíveis.
 
--- A falha estrutural do Estado (ex: na segurança ou saúde pública) pode ser considerada um fato superveniente que impacta contratos privados, ensejando sua revisão por onerosidade excessiva (art. 478 do CC/02). Além disso, pode fundamentar ações de responsabilidade civil em massa contra o Estado (art. 37, § 6º, da CF/88).
+-- A falha estrutural do Estado (ex: na segurança ou saúde pública) pode ser considerada um fato superveniente que impacta contratos privados, ensejando sua revisão por onerosidade excessiva (Artigo 478 do Código Civil de 2002). Além disso, pode fundamentar ações de responsabilidade civil em massa contra o Estado (Artigo 37, § 6º, da Constituição Federal de 1988).
 
 ## Referências do Tema
 
 --- ADPF 347 do STF
---- Art. 37, § 6º, da CF/88
---- Art. 393 do CC/02 (Caso fortuito ou força maior)
---- Art. 478 do CC/02 (Resolução por onerosidade excessiva)
+--- Artigo 37, § 6º, da Constituição Federal de 1988
+--- Artigo 393 do Código Civil de 2002 (Caso fortuito ou força maior)
+--- Artigo 478 do Código Civil de 2002 (Resolução por onerosidade excessiva)
 
 ## Pergunte pra I.A.
 
@@ -1551,17 +1551,17 @@
 -----
 # Princípios Constitucionais nas Relações Particulares
 
--- A Constituição irradia seus efeitos para as relações privadas, fenômeno conhecido como eficácia horizontal dos direitos fundamentais (art. 5º, §1º, CF/88). Assim, valores constitucionais não se limitam a regular a relação entre Estado e cidadão, mas também se impõem aos negócios jurídicos celebrados entre particulares, mitigando a autonomia da vontade.
+-- A Constituição irradia seus efeitos para as relações privadas, fenômeno conhecido como eficácia horizontal dos direitos fundamentais (Artigo 5º, §1º, Constituição Federal de 1988). Assim, valores constitucionais não se limitam a regular a relação entre Estado e cidadão, mas também se impõem aos negócios jurídicos celebrados entre particulares, mitigando a autonomia da vontade.
 
--- Princípios como a isonomia, a solidariedade e a função social da propriedade e dos contratos (art. 5º, XXIII e art. 170, III, CF/88) passam a ser de observância obrigatória. Desse modo, a liberdade de contratar, por exemplo, encontra limites na dignidade humana e na boa-fé, redefinindo o equilíbrio das relações civis sob um filtro de constitucionalidade.
+-- Princípios como a isonomia, a solidariedade e a função social da propriedade e dos contratos (Artigo 5º, XXIII e Artigo 170, III, Constituição Federal de 1988) passam a ser de observância obrigatória. Desse modo, a liberdade de contratar, por exemplo, encontra limites na dignidade humana e na boa-fé, redefinindo o equilíbrio das relações civis sob um filtro de constitucionalidade.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 3º, I, da CF/88
---- Art. 5º, § 1º, da CF/88
---- Art. 5º, XXIII, da CF/88
---- Art. 170, III, da CF/88
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 3º, I, da Constituição Federal de 1988
+--- Artigo 5º, § 1º, da Constituição Federal de 1988
+--- Artigo 5º, XXIII, da Constituição Federal de 1988
+--- Artigo 170, III, da Constituição Federal de 1988
 
 ## Pergunte pra I.A.
 
@@ -1583,15 +1583,15 @@
 
 # Diferença entre Regras e Princípios
 
--- As regras são normas que se aplicam na lógica do "tudo ou nada" (all-or-nothing). Elas prescrevem condutas específicas e, preenchido seu suporte fático, a consequência jurídica é aplicada compulsoriamente, via subsunção. Em caso de conflito, uma regra invalida a outra. Exemplo: a maioridade civil aos 18 anos (art. 5º do CC/02).
+-- As regras são normas que se aplicam na lógica do "tudo ou nada" (all-or-nothing). Elas prescrevem condutas específicas e, preenchido seu suporte fático, a consequência jurídica é aplicada compulsoriamente, via subsunção. Em caso de conflito, uma regra invalida a outra. Exemplo: a maioridade civil aos 18 anos (Artigo 5º do Código Civil de 2002).
 
--- Princípios são mandamentos de otimização, com alto grau de abstração, que orientam a interpretação de todo o sistema. Ordenam que algo seja realizado na maior medida possível. Quando colidem, não se excluem; são sopesados (ponderação) para definir qual terá mais peso no caso concreto. A boa-fé objetiva (art. 422 do CC/02) é um exemplo clássico.
+-- Princípios são mandamentos de otimização, com alto grau de abstração, que orientam a interpretação de todo o sistema. Ordenam que algo seja realizado na maior medida possível. Quando colidem, não se excluem; são sopesados (ponderação) para definir qual terá mais peso no caso concreto. A boa-fé objetiva (Artigo 422 do Código Civil de 2002) é um exemplo clássico.
 
 ## Referências do Tema
 
---- Art. 5º do CC/02
---- Art. 422 do CC/02
---- Art. 8º do CPC/15
+--- Artigo 5º do Código Civil de 2002
+--- Artigo 422 do Código Civil de 2002
+--- Artigo 8º do CPC/15
 
 ## Pergunte pra I.A.
 
@@ -1613,15 +1613,15 @@
 
 # Princípio da Dignidade da Pessoa Humana
 
--- A dignidade da pessoa humana (art. 1º, III, da CF/88) é o fundamento do Estado brasileiro e o valor-fonte de todo o ordenamento jurídico. No Direito Civil, atua como um escudo de proteção do indivíduo, vedando sua "coisificação" ou instrumentalização em qualquer relação jurídica, seja ela contratual, familiar ou obrigacional.
+-- A dignidade da pessoa humana (Artigo 1º, III, da Constituição Federal de 1988) é o fundamento do Estado brasileiro e o valor-fonte de todo o ordenamento jurídico. No Direito Civil, atua como um escudo de proteção do indivíduo, vedando sua "coisificação" ou instrumentalização em qualquer relação jurídica, seja ela contratual, familiar ou obrigacional.
 
--- Sua aplicação concreta se manifesta na proteção aos direitos da personalidade (art. 11 a 21 do CC/02), na fundamentação da reparação por dano moral (art. 5º, V e X, CF/88) e na limitação da autonomia privada, conforme o Enunciado 23 da I Jornada de Direito Civil. É o epicentro axiológico do sistema jurídico privado contemporâneo.
+-- Sua aplicação concreta se manifesta na proteção aos direitos da personalidade (Artigo 11 a 21 do Código Civil de 2002), na fundamentação da reparação por dano moral (Artigo 5º, V e X, Constituição Federal de 1988) e na limitação da autonomia privada, conforme o Enunciado 23 da I Jornada de Direito Civil. É o epicentro axiológico do sistema jurídico privado contemporâneo.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 5º, V e X, da CF/88
---- Arts. 11 a 21 do CC/02
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 5º, V e X, da Constituição Federal de 1988
+--- Arts. 11 a 21 do Código Civil de 2002
 --- Enunciado 23 da I Jornada de Direito Civil (CJF)
 
 ## Pergunte pra I.A.
@@ -1642,17 +1642,17 @@
 -----
 # Características do Direito Civil Contemporâneo
 
--- O Direito Civil contemporâneo, influenciado pelo Pós-Positivismo, abandona o legalismo estrito e valoriza a força normativa dos princípios constitucionais. A dignidade da pessoa humana (art. 1º, III, CF/88) e a solidariedade (art. 3º, I, CF/88) tornam-se vetores de interpretação, promovendo a "repersonalização" das relações privadas em detrimento do viés puramente patrimonial.
+-- O Direito Civil contemporâneo, influenciado pelo Pós-Positivismo, abandona o legalismo estrito e valoriza a força normativa dos princípios constitucionais. A dignidade da pessoa humana (Artigo 1º, III, Constituição Federal de 1988) e a solidariedade (Artigo 3º, I, Constituição Federal de 1988) tornam-se vetores de interpretação, promovendo a "repersonalização" das relações privadas em detrimento do viés puramente patrimonial.
 
--- Essa fase é marcada pela ética e socialidade, manifestadas em cláusulas gerais como a boa-fé objetiva (art. 422 do CC/02) e a função social (art. 421 do CC/02 e art. 2.035, par. único, do CC/02). O juiz assume um papel ativo na concretização da justiça, superando a mera aplicação formal da lei para adequá-la aos valores da sociedade e à equidade.
+-- Essa fase é marcada pela ética e socialidade, manifestadas em cláusulas gerais como a boa-fé objetiva (Artigo 422 do Código Civil de 2002) e a função social (Artigo 421 do Código Civil de 2002 e Artigo 2.035, par. único, do Código Civil de 2002). O juiz assume um papel ativo na concretização da justiça, superando a mera aplicação formal da lei para adequá-la aos valores da sociedade e à equidade.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 3º, I, da CF/88
---- Art. 421 do CC/02
---- Art. 422 do CC/02
---- Art. 2.035, parágrafo único, do CC/02
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 3º, I, da Constituição Federal de 1988
+--- Artigo 421 do Código Civil de 2002
+--- Artigo 422 do Código Civil de 2002
+--- Artigo 2.035, parágrafo único, do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -1673,15 +1673,15 @@
 
 # Direito Civil Constitucional
 
--- O Direito Civil Constitucional resulta da releitura do direito privado sob a ótica da Constituição, superando a visão patrimonialista. A eficácia horizontal dos direitos fundamentais (art. 5º, §1º, CF/88) irradia seus valores, como a dignidade da pessoa humana (art. 1º, III, CF/88), para as relações entre particulares, funcionalizando os institutos civis a um propósito social.
+-- O Direito Civil Constitucional resulta da releitura do direito privado sob a ótica da Constituição, superando a visão patrimonialista. A eficácia horizontal dos direitos fundamentais (Artigo 5º, §1º, Constituição Federal de 1988) irradia seus valores, como a dignidade da pessoa humana (Artigo 1º, III, Constituição Federal de 1988), para as relações entre particulares, funcionalizando os institutos civis a um propósito social.
 
--- Essa constitucionalização impõe a observância de princípios como a solidariedade social (art. 3º, I, CF/88) e a igualdade substancial. A aplicação de tratados internacionais (art. 5º, §2º, CF/88) e o reconhecimento do Estado de Coisas Inconstitucional (ADPF 347) também impactam diretamente as relações cíveis, exigindo uma nova hermenêutica do Código Civil.
+-- Essa constitucionalização impõe a observância de princípios como a solidariedade social (Artigo 3º, I, Constituição Federal de 1988) e a igualdade substancial. A aplicação de tratados internacionais (Artigo 5º, §2º, Constituição Federal de 1988) e o reconhecimento do Estado de Coisas Inconstitucional (ADPF 347) também impactam diretamente as relações cíveis, exigindo uma nova hermenêutica do Código Civil.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 3º, I, da CF/88
---- Art. 5º, §1º e §2º, da CF/88
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 3º, I, da Constituição Federal de 1988
+--- Artigo 5º, §1º e §2º, da Constituição Federal de 1988
 --- ADPF 347 do STF
 
 ## Pergunte pra I.A.
@@ -1703,16 +1703,16 @@
 -----
 # PRINCÍPIOS CONSTITUCIONAIS NO DIREITO CIVIL CONTEMPORÂNEO
 
--- O Direito Civil contemporâneo é fruto da transição para o Estado Social, superando o paradigma individualista. A CF/88 impõe um filtro axiológico, onde a dignidade da pessoa humana (Art. 1º, III) e a solidariedade social (Art. 3º, I) passam a nortear as relações privadas.
+-- O Direito Civil contemporâneo é fruto da transição para o Estado Social, superando o paradigma individualista. A Constituição Federal de 1988 impõe um filtro axiológico, onde a dignidade da pessoa humana (Artigo 1º, III) e a solidariedade social (Artigo 3º, I) passam a nortear as relações privadas.
 
--- Essa constitucionalização se materializa no CC/02 através de cláusulas gerais como a função social do contrato (Art. 421) e a boa-fé objetiva (Art. 422), conforme reforça o Enunciado 23 do CJF, que funcionaliza o direito subjetivo, atrelando-o a deveres sociais.
+-- Essa constitucionalização se materializa no Código Civil de 2002 através de cláusulas gerais como a função social do contrato (Artigo 421) e a boa-fé objetiva (Artigo 422), conforme reforça o Enunciado 23 do CJF, que funcionaliza o direito subjetivo, atrelando-o a deveres sociais.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 3º, I, da CF/88
---- Art. 421 do CC/02
---- Art. 422 do CC/02
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 3º, I, da Constituição Federal de 1988
+--- Artigo 421 do Código Civil de 2002
+--- Artigo 422 do Código Civil de 2002
 --- Enunciado 23 da I Jornada de Direito Civil do CJF
 
 ## Pergunte pra I.A.
@@ -1735,20 +1735,20 @@
 
 -- Conceitos jurídicos indeterminados são termos de conteúdo vago na norma, como "justo motivo" ou "boa-fé", cujo sentido o juiz busca preencher analisando fatos preexistentes no caso concreto. Ele declara um sentido que já estava contido potencialmente na realidade social.
 
--- Já as cláusulas gerais são mais que isso: são uma delegação legislativa ao juiz para que ele crie a norma do caso concreto, como ao definir o "abuso de direito" (Art. 187 do CC/02). A cláusula geral abre o sistema legal para a realidade, permitindo a criação judicial do direito.
+-- Já as cláusulas gerais são mais que isso: são uma delegação legislativa ao juiz para que ele crie a norma do caso concreto, como ao definir o "abuso de direito" (Artigo 187 do Código Civil de 2002). A cláusula geral abre o sistema legal para a realidade, permitindo a criação judicial do direito.
 
 ## Referências do Tema
 
---- Art. 187 do CC/02
---- Art. 421 do CC/02
---- Art. 422 do CC/02
---- Art. 927 do CC/02
+--- Artigo 187 do Código Civil de 2002
+--- Artigo 421 do Código Civil de 2002
+--- Artigo 422 do Código Civil de 2002
+--- Artigo 927 do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
 - Defina e diferencie conceito jurídico indeterminado e cláusula geral, oferecendo dois exemplos de cada no Código Civil.
 - Explique a atuação do juiz ao aplicar um conceito jurídico indeterminado versus uma cláusula geral.
-- Analise o Art. 187 do CC/02 ("abuso de direito") como um exemplo de cláusula geral e suas implicações práticas.
+- Analise o Artigo 187 do Código Civil de 2002 ("abuso de direito") como um exemplo de cláusula geral e suas implicações práticas.
 - Discuta se a expressão "ordem pública" em diversos dispositivos legais é um conceito jurídico indeterminado ou uma cláusula geral.
 - Avalie o papel das cláusulas gerais na concretização dos princípios constitucionais no Direito Civil contemporâneo.
 
@@ -1757,21 +1757,21 @@
 - Cláusulas Gerais e Conceitos Jurídicos Indeterminados - Jusbrasil
 - Qual a diferença entre conceito jurídico indeterminado e cláusula geral? - Dizer o Direito
 - Conceitos Jurídicos Indeterminados e Cláusulas Gerais no Código Civil - Jus Navigandi
-- Cláusulas abertas e conceitos jurídicos indeterminados no CC - Migalhas
+- Cláusulas abertas e conceitos jurídicos indeterminados no Código Civil de 2002 - Migalhas
 - O juiz e a aplicação das cláusulas gerais no novo Código Civil - Âmbito Jurídico
 -----
 # Como compreender o Direito Civil contemporâneo?
 
--- A compreensão do Direito Civil atual exige um método de estudo que parte da Constituição para o Código. Superou-se a visão do direito privado como um campo autônomo, imune aos valores e princípios da Carta Magna, como a dignidade da pessoa humana (Art. 1º, III, CF/88).
+-- A compreensão do Direito Civil atual exige um método de estudo que parte da Constituição para o Código. Superou-se a visão do direito privado como um campo autônomo, imune aos valores e princípios da Carta Magna, como a dignidade da pessoa humana (Artigo 1º, III, Constituição Federal de 1988).
 
--- Deve-se analisá-lo sob a ótica da "repersonalização" e "despatrimonialização", onde a pessoa é o centro do sistema. Isso se concretiza pela aplicação de cláusulas gerais como a boa-fé objetiva (Art. 422 do CC/02) e a função social (Art. 421 do CC/02) nas relações privadas.
+-- Deve-se analisá-lo sob a ótica da "repersonalização" e "despatrimonialização", onde a pessoa é o centro do sistema. Isso se concretiza pela aplicação de cláusulas gerais como a boa-fé objetiva (Artigo 422 do Código Civil de 2002) e a função social (Artigo 421 do Código Civil de 2002) nas relações privadas.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 421 do CC/02
---- Art. 422 do CC/02
---- Art. 187 do CC/02
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 421 do Código Civil de 2002
+--- Artigo 422 do Código Civil de 2002
+--- Artigo 187 do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
@@ -1779,7 +1779,7 @@
 - Explique os conceitos de "despatrimonialização" e "repersonalização" do Direito Civil, fornecendo exemplos práticos.
 - Analise a importância do "diálogo das fontes" entre o Código Civil e microssistemas como o Código de Defesa do Consumidor.
 - Discuta como a constitucionalização do Direito Civil impactou a interpretação da autonomia privada nos contratos.
-- Avalie criticamente como as cláusulas gerais (arts. 187, 421, 422 do CC/02) funcionam como janelas do sistema para a realidade social.
+- Avalie criticamente como as cláusulas gerais (arts. 187, 421, 422 do Código Civil de 2002) funcionam como janelas do sistema para a realidade social.
 
 ### Fontes
 
@@ -1793,20 +1793,20 @@
 
 -- No Estado Liberal, o Direito Civil (Código de 1916) era a "constituição do privado", focado na proteção da propriedade, na autonomia da vontade e na igualdade formal. A intervenção estatal era mínima, e as relações eram vistas como um assunto estritamente particular.
 
--- Com o Estado Social (CF/88), o Direito Civil foi publicizado. Os direitos subjetivos foram relativizados pela sua função social (Art. 5º, XXIII, e Art. 170, III, da CF/88), buscando a igualdade material e a justiça social, o que se reflete no dirigismo contratual e na proteção dos vulneráveis.
+-- Com o Estado Social (Constituição Federal de 1988), o Direito Civil foi publicizado. Os direitos subjetivos foram relativizados pela sua função social (Artigo 5º, XXIII, e Artigo 170, III, da Constituição Federal de 1988), buscando a igualdade material e a justiça social, o que se reflete no dirigismo contratual e na proteção dos vulneráveis.
 
 ## Referências do Tema
 
---- Art. 5º, XXIII, da CF/88
---- Art. 170, III, da CF/88
---- Art. 421 do CC/02
+--- Artigo 5º, XXIII, da Constituição Federal de 1988
+--- Artigo 170, III, da Constituição Federal de 1988
+--- Artigo 421 do Código Civil de 2002
 
 ## Pergunte pra I.A.
 
 - Caracterize o papel do Direito Civil e seus pilares (propriedade, contrato, família) durante a vigência do Estado Liberal no Brasil.
 - Explique como a ascensão do Estado Social alterou a concepção de autonomia da vontade nos contratos cíveis.
 - Compare o tratamento dado à função social da propriedade no Código Civil de 1916 e no ordenamento jurídico atual.
-- Discorra sobre a importância da CF/88 como marco da transição de um Direito Civil individualista para um paradigma social.
+- Discorra sobre a importância da Constituição Federal de 1988 como marco da transição de um Direito Civil individualista para um paradigma social.
 - Analise criticamente de que forma o dirigismo contratual reflete a passagem do Estado Liberal para o Estado Social.
 
 ### Fontes
@@ -1847,19 +1847,19 @@
 
 -- No Estado Social, o Direito Civil é ressignificado para servir à coletividade. Os institutos privados, como o contrato e a propriedade, passam a ser "funcionalizados", ou seja, seu exercício só é legítimo se atender a uma finalidade socialmente útil e não prejudicar a coletividade.
 
--- Essa mudança se opera por meio de normas de ordem pública e cláusulas gerais, como a boa-fé objetiva (Art. 422, CC/02) e o abuso de direito (Art. 187, CC/02). A proteção de vulneráveis, como o consumidor (Súmula 297, STJ), torna-se um objetivo central do sistema.
+-- Essa mudança se opera por meio de normas de ordem pública e cláusulas gerais, como a boa-fé objetiva (Artigo 422, Código Civil de 2002) e o abuso de direito (Artigo 187, Código Civil de 2002). A proteção de vulneráveis, como o consumidor (Súmula 297, STJ), torna-se um objetivo central do sistema.
 
 ## Referências do Tema
 
---- Art. 187 do CC/02
---- Art. 421 do CC/02
---- Art. 422 do CC/02
+--- Artigo 187 do Código Civil de 2002
+--- Artigo 421 do Código Civil de 2002
+--- Artigo 422 do Código Civil de 2002
 --- Súmula 297 do STJ
 
 ## Pergunte pra I.A.
 
 - Defina o que se entende por "funcionalização" dos institutos de Direito Civil no contexto do Estado Social.
-- Explique como o princípio da boa-fé objetiva (Art. 422, CC/02) atua como um limitador da autonomia individual nos contratos.
+- Explique como o princípio da boa-fé objetiva (Artigo 422, Código Civil de 2002) atua como um limitador da autonomia individual nos contratos.
 - Discorra sobre o impacto do Código de Defesa do Consumidor (Lei 8.078/90) como marco da transição para um Direito Civil mais social.
 - Analise a Súmula 297 do STJ ("O Código de Defesa do Consumidor é aplicável às instituições financeiras") como exemplo da aplicação de uma ótica social.
 - Critique as tensões existentes entre a autonomia privada e o dirigismo contratual no Estado Social Democrático de Direito.
@@ -1874,15 +1874,15 @@
 -----
 # Princípios constitucionais e sua relevância para o Direito Civil
 
--- Os princípios constitucionais são o fundamento de validade de todo o Direito Civil. A dignidade da pessoa humana (Art. 1º, III, CF/88) e a solidariedade (Art. 3º, I, CF/88) não são meras diretrizes, mas normas jurídicas de aplicação direta e imediata nas relações privadas.
+-- Os princípios constitucionais são o fundamento de validade de todo o Direito Civil. A dignidade da pessoa humana (Artigo 1º, III, Constituição Federal de 1988) e a solidariedade (Artigo 3º, I, Constituição Federal de 1988) não são meras diretrizes, mas normas jurídicas de aplicação direta e imediata nas relações privadas.
 
 -- Sua relevância é máxima, pois determinam a interpretação de qualquer norma infraconstitucional (filtragem constitucional) e podem ser aplicados diretamente a litígios entre particulares (eficácia horizontal), como decidido pelo STF no RE 201.819, superando a separação entre público e privado.
 
 ## Referências do Tema
 
---- Art. 1º, III, da CF/88
---- Art. 3º, I, da CF/88
---- Art. 5º, caput, da CF/88
+--- Artigo 1º, III, da Constituição Federal de 1988
+--- Artigo 3º, I, da Constituição Federal de 1988
+--- Artigo 5º, caput, da Constituição Federal de 1988
 --- STF, RE 201.819
 
 ## Pergunte pra I.A.
@@ -1903,20 +1903,20 @@
 -----
 # Casamento: Regras sobre direito espacial
 
--- O casamento de brasileiros no exterior, perante autoridades estrangeiras, será reconhecido no Brasil se registrado em repartição consular brasileira e, posteriormente, transcrito em Cartório do 1º Ofício do Registro Civil (Art. 1.544 do CC/02; Art. 32 da Lei 6.015/73).
+-- O casamento de brasileiros no exterior, perante autoridades estrangeiras, será reconhecido no Brasil se registrado em repartição consular brasileira e, posteriormente, transcrito em Cartório do 1º Ofício do Registro Civil (Artigo 1.544 do Código Civil de 2002; Artigo 32 da Lei 6.015/73).
 
--- A Lei de Introdução às Normas do Direito Brasileiro (LINDB) estabelece a lei do domicílio dos nubentes para reger as relações pessoais e patrimoniais do casamento (Art. 7º da LINDB), visando solucionar conflitos de leis no espaço.
+-- A Lei de Introdução às Normas do Direito Brasileiro (LINDB) estabelece a lei do domicílio dos nubentes para reger as relações pessoais e patrimoniais do casamento (Artigo 7º da LINDB), visando solucionar conflitos de leis no espaço.
 
 ## Referências do Tema
 
---- Art. 1.544 do Código Civil (CC/02)
---- Art. 32 da Lei nº 6.015/73 (Lei de Registros Públicos)
---- Art. 7º do Decreto-Lei nº 4.657/42 (LINDB)
+--- Artigo 1.544 do Código Civil (Código Civil de 2002)
+--- Artigo 32 da Lei nº 6.015/73 (Lei de Registros Públicos)
+--- Artigo 7º do Decreto-Lei nº 4.657/42 (LINDB)
 
 ## Pergunte pra I.A.
 
   - Quais são os requisitos para a validade no Brasil de um casamento celebrado no exterior?
-  - Explique a regra "lex domicilii" e sua aplicação ao casamento conforme o Art. 7º da LINDB.
+  - Explique a regra "lex domicilii" e sua aplicação ao casamento conforme o Artigo 7º da LINDB.
   - Como a ausência do registro consular e da transcrição afeta a eficácia do casamento estrangeiro no Brasil?
   - Discorra sobre o regime de bens no casamento internacional, considerando as regras da LINDB.
   - Analise a jurisprudência do STJ sobre o divórcio e a partilha de bens de casamentos celebrados no exterior.
@@ -1931,16 +1931,16 @@
 -----
 # Relações Jurídicas cujo objeto seja imóvel e móvel
 
--- A qualificação do bem como móvel ou imóvel define o regime jurídico aplicável, especialmente quanto à forma de aquisição da propriedade. Para imóveis, exige-se registro no Cartório de Registro de Imóveis (Art. 1.245 do CC/02); para móveis, a simples tradição (entrega) é suficiente (Art. 1.267 do CC/02).
+-- A qualificação do bem como móvel ou imóvel define o regime jurídico aplicável, especialmente quanto à forma de aquisição da propriedade. Para imóveis, exige-se registro no Cartório de Registro de Imóveis (Artigo 1.245 do Código Civil de 2002); para móveis, a simples tradição (entrega) é suficiente (Artigo 1.267 do Código Civil de 2002).
 
--- A natureza do bem também impacta as garantias reais. A hipoteca recai sobre imóveis (Art. 1.473 do CC/02), enquanto o penhor incide sobre bens móveis (Art. 1.431 do CC/02), estabelecendo-se formalidades distintas para a constituição de cada direito real de garantia.
+-- A natureza do bem também impacta as garantias reais. A hipoteca recai sobre imóveis (Artigo 1.473 do Código Civil de 2002), enquanto o penhor incide sobre bens móveis (Artigo 1.431 do Código Civil de 2002), estabelecendo-se formalidades distintas para a constituição de cada direito real de garantia.
 
 ## Referências do Tema
 
---- Art. 1.245 do Código Civil (CC/02)
---- Art. 1.267 do Código Civil (CC/02)
---- Art. 1.473 do Código Civil (CC/02)
---- Art. 1.431 do Código Civil (CC/02)
+--- Artigo 1.245 do Código Civil (Código Civil de 2002)
+--- Artigo 1.267 do Código Civil (Código Civil de 2002)
+--- Artigo 1.473 do Código Civil (Código Civil de 2002)
+--- Artigo 1.431 do Código Civil (Código Civil de 2002)
 
 ## Pergunte pra I.A.
 
@@ -1960,18 +1960,18 @@
 -----
 # Obrigações
 
--- A obrigação é a relação jurídica transitória em que o devedor tem o dever de cumprir uma prestação (dar, fazer ou não fazer) em favor do credor (Art. 233, 247 e 250 do CC/02). Seu descumprimento gera responsabilidade patrimonial, sujeitando os bens do devedor à satisfação do crédito (Art. 391 do CC/02).
+-- A obrigação é a relação jurídica transitória em que o devedor tem o dever de cumprir uma prestação (dar, fazer ou não fazer) em favor do credor (Artigo 233, 247 e 250 do Código Civil de 2002). Seu descumprimento gera responsabilidade patrimonial, sujeitando os bens do devedor à satisfação do crédito (Artigo 391 do Código Civil de 2002).
 
--- As fontes das obrigações são a lei, os contratos, os atos ilícitos e os atos unilaterais de vontade, como a promessa de recompensa (Arts. 854 e 186 do CC/02). A estrutura da obrigação compreende os sujeitos (credor e devedor), o objeto (prestação) e o vínculo jurídico.
+-- As fontes das obrigações são a lei, os contratos, os atos ilícitos e os atos unilaterais de vontade, como a promessa de recompensa (Arts. 854 e 186 do Código Civil de 2002). A estrutura da obrigação compreende os sujeitos (credor e devedor), o objeto (prestação) e o vínculo jurídico.
 
 ## Referências do Tema
 
---- Art. 233 do Código Civil (CC/02)
---- Art. 247 do Código Civil (CC/02)
---- Art. 250 do Código Civil (CC/02)
---- Art. 391 do Código Civil (CC/02)
---- Art. 186 do Código Civil (CC/02)
---- Art. 854 do Código Civil (CC/02)
+--- Artigo 233 do Código Civil (Código Civil de 2002)
+--- Artigo 247 do Código Civil (Código Civil de 2002)
+--- Artigo 250 do Código Civil (Código Civil de 2002)
+--- Artigo 391 do Código Civil (Código Civil de 2002)
+--- Artigo 186 do Código Civil (Código Civil de 2002)
+--- Artigo 854 do Código Civil (Código Civil de 2002)
 
 ## Pergunte pra I.A.
 
@@ -1991,15 +1991,15 @@
 -----
 # Fontes de Direito, Interpretação e Integração das Normas
 
--- As fontes do direito são os meios pelos quais as normas jurídicas se manifestam. A lei é a principal (art. 1º da LINDB), mas na sua ausência, o juiz decidirá o caso de acordo com a analogia, os costumes e os princípios gerais de direito (Art. 4º da LINDB).
+-- As fontes do direito são os meios pelos quais as normas jurídicas se manifestam. A lei é a principal (Artigo 1º da LINDB), mas na sua ausência, o juiz decidirá o caso de acordo com a analogia, os costumes e os princípios gerais de direito (Artigo 4º da LINDB).
 
--- Para a correta aplicação da lei, o juiz atenderá aos fins sociais a que ela se dirige e às exigências do bem comum (Art. 5º da LINDB). A jurisprudência e a doutrina, embora não listadas no Art. 4º, são fontes secundárias essenciais para a interpretação do direito.
+-- Para a correta aplicação da lei, o juiz atenderá aos fins sociais a que ela se dirige e às exigências do bem comum (Artigo 5º da LINDB). A jurisprudência e a doutrina, embora não listadas no Artigo 4º, são fontes secundárias essenciais para a interpretação do direito.
 
 ## Referências do Tema
 
---- Art. 1º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
---- Art. 4º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
---- Art. 5º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Artigo 1º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Artigo 4º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Artigo 5º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
 
 ## Pergunte pra I.A.
 
@@ -2007,7 +2007,7 @@
 - Explique os métodos de interpretação da norma jurídica (gramatical, lógico, sistemático, histórico e teleológico).
 - Discorra sobre os mecanismos de integração de normas: analogia, costumes e princípios gerais de direito.
 - Analise a importância da jurisprudência e da doutrina como fontes do direito no ordenamento jurídico brasileiro.
-- Avalie o papel do Art. 5º da LINDB como um critério fundamental para a interpretação e aplicação do direito.
+- Avalie o papel do Artigo 5º da LINDB como um critério fundamental para a interpretação e aplicação do direito.
 
 ### Fontes
 - Fontes do Direito: o que são, quais são, exemplos e mais - Blog da Aurum
@@ -2017,22 +2017,22 @@
 
 -- A lei brasileira, em regra, só tem eficácia no território nacional (princípio da territorialidade). Contudo, o Direito Internacional Privado regula a aplicação de leis em relações com elementos estrangeiros, conforme os Arts. 7º a 19 da LINDB.
 
--- A lei do país de domicílio da pessoa determina as regras sobre o começo e o fim da personalidade, o nome e a capacidade (Art. 7º da LINDB). Já para qualificar e reger as relações sobre bens, aplica-se a lei do país em que estiverem situados (Art. 8º da LINDB).
+-- A lei do país de domicílio da pessoa determina as regras sobre o começo e o fim da personalidade, o nome e a capacidade (Artigo 7º da LINDB). Já para qualificar e reger as relações sobre bens, aplica-se a lei do país em que estiverem situados (Artigo 8º da LINDB).
 
 ## Referências do Tema
 
 --- Arts. 7º a 19 da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
---- Art. 7º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
---- Art. 8º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
---- Art. 9º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
---- Art. 10 da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
---- Art. 12 da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Artigo 7º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Artigo 8º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Artigo 9º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Artigo 10 da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Artigo 12 da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
 
 ## Pergunte pra I.A.
 
 - Explique o princípio da territorialidade da lei e suas principais exceções no direito brasileiro.
 - Defina os elementos de conexão do Direito Internacional Privado, como "lex domicilii", "lex loci executionis" e "lex rei sitae".
-- Discorra sobre a aplicação da lei estrangeira no Brasil e as limitações impostas pela ordem pública e bons costumes (Art. 17 da LINDB).
+- Discorra sobre a aplicação da lei estrangeira no Brasil e as limitações impostas pela ordem pública e bons costumes (Artigo 17 da LINDB).
 - Analise as regras de competência internacional da autoridade judiciária brasileira, conforme o Código de Processo Civil.
 - Discuta o procedimento de homologação de sentenças estrangeiras e sua importância para a eficácia de decisões proferidas em outros países.
 
@@ -2042,19 +2042,19 @@
 -----
 # Competência e Jurisdição
 
--- Jurisdição é o poder-dever do Estado de dizer o direito, sendo una e exercida por todos os juízes (Art. 5º, XXXV, CF/88). A competência é a delimitação dessa jurisdição, distribuindo os casos entre os diversos órgãos judiciários segundo critérios definidos em lei.
+-- Jurisdição é o poder-dever do Estado de dizer o direito, sendo una e exercida por todos os juízes (Artigo 5º, XXXV, Constituição Federal de 1988). A competência é a delimitação dessa jurisdição, distribuindo os casos entre os diversos órgãos judiciários segundo critérios definidos em lei.
 
--- A competência é determinada no momento do registro ou da distribuição da petição inicial, sendo irrelevantes as modificações do estado de fato ou de direito ocorridas posteriormente (Art. 43 do CPC). Ninguém será processado senão pela autoridade competente (Art. 5º, LIII, CF/88).
+-- A competência é determinada no momento do registro ou da distribuição da petição inicial, sendo irrelevantes as modificações do estado de fato ou de direito ocorridas posteriormente (Artigo 43 do CPC). Ninguém será processado senão pela autoridade competente (Artigo 5º, LIII, Constituição Federal de 1988).
 
 ## Referências do Tema
 
---- Art. 5º, XXXV, da Constituição Federal
---- Art. 5º, LIII, da Constituição Federal
---- Art. 16 do Código de Processo Civil
---- Art. 43 do Código de Processo Civil
---- Art. 44 do Código de Processo Civil
---- Art. 62 do Código de Processo Civil
---- Art. 63 do Código de Processo Civil
+--- Artigo 5º, XXXV, da Constituição Federal
+--- Artigo 5º, LIII, da Constituição Federal
+--- Artigo 16 do Código de Processo Civil
+--- Artigo 43 do Código de Processo Civil
+--- Artigo 44 do Código de Processo Civil
+--- Artigo 62 do Código de Processo Civil
+--- Artigo 63 do Código de Processo Civil
 
 ## Pergunte pra I.A.
 
@@ -2070,13 +2070,13 @@
 -----
 # Vigência da Lei
 
--- A vigência determina o período em que a lei possui força obrigatória. Após a publicação oficial, inicia-se a *vacatio legis*, prazo para a norma ser conhecida antes de se tornar obrigatória, conforme o Art. 1º da Lei de Introdução às Normas do Direito Brasileiro (LINDB).
+-- A vigência determina o período em que a lei possui força obrigatória. Após a publicação oficial, inicia-se a *vacatio legis*, prazo para a norma ser conhecida antes de se tornar obrigatória, conforme o Artigo 1º da Lei de Introdução às Normas do Direito Brasileiro (LINDB).
 
--- O prazo geral da *vacatio legis* é de 45 dias no Brasil e 3 meses no exterior. Contudo, a própria lei pode estipular um período diferente, adequando sua entrada em vigor à complexidade da matéria tratada ou à necessidade de adaptação social, como previsto no Art. 1º da LINDB.
+-- O prazo geral da *vacatio legis* é de 45 dias no Brasil e 3 meses no exterior. Contudo, a própria lei pode estipular um período diferente, adequando sua entrada em vigor à complexidade da matéria tratada ou à necessidade de adaptação social, como previsto no Artigo 1º da LINDB.
 
 ## Referências do Tema
 
---- Art. 1º do Decreto-Lei nº 4.657/42 (LINDB)
+--- Artigo 1º do Decreto-Lei nº 4.657/42 (LINDB)
 
 ## Pergunte pra I.A.
 
@@ -2095,18 +2095,18 @@
 
 # Obrigatoriedade das Leis
 
--- O princípio da obrigatoriedade determina que, uma vez vigente, a lei se impõe a todos de forma coercitiva, sendo seu cumprimento um dever. A ninguém é dado descumprir a lei sob a alegação de desconhecimento, estabelecendo uma presunção absoluta de ciência da norma (Art. 3º da LINDB).
+-- O princípio da obrigatoriedade determina que, uma vez vigente, a lei se impõe a todos de forma coercitiva, sendo seu cumprimento um dever. A ninguém é dado descumprir a lei sob a alegação de desconhecimento, estabelecendo uma presunção absoluta de ciência da norma (Artigo 3º da LINDB).
 
--- Esta presunção de conhecimento é uma ficção jurídica necessária para a segurança e estabilidade das relações sociais. A inescusabilidade do erro de direito garante a força normativa do ordenamento jurídico, impedindo que a ignorância individual paralise a aplicação da justiça.
+-- Esta presunção de conhecimento é uma fiCódigo Civil de 2002ão jurídica necessária para a segurança e estabilidade das relações sociais. A inescusabilidade do erro de direito garante a força normativa do ordenamento jurídico, impedindo que a ignorância individual paralise a aplicação da justiça.
 
 ## Referências do Tema
 
---- Art. 3º do Decreto-Lei nº 4.657/42 (LINDB)
+--- Artigo 3º do Decreto-Lei nº 4.657/42 (LINDB)
 
 ## Pergunte pra I.A.
 
 - Defina o princípio da obrigatoriedade das leis e sua fundamentação na LINDB.
-- Explique a ficção jurídica do conhecimento da lei e por que ela é essencial ao Estado de Direito.
+- Explique a fiCódigo Civil de 2002ão jurídica do conhecimento da lei e por que ela é essencial ao Estado de Direito.
 - O princípio da obrigatoriedade é absoluto? Discuta a exceção do erro de proibição no Direito Penal.
 - Analise a relação entre o princípio da publicidade dos atos normativos e a obrigatoriedade da lei.
 - Compare o tratamento dado à alegação de desconhecimento da lei no Direito Civil e no Direito Penal brasileiro.
@@ -2120,14 +2120,14 @@
 
 # Eficácia da Lei no Tempo
 
--- A eficácia da lei no tempo define sua aplicabilidade a fatos ocorridos durante sua vigência. A regra é o efeito imediato e geral da lei nova, não podendo ela retroagir para prejudicar o direito adquirido, o ato jurídico perfeito e a coisa julgada, garantias fundamentais (Art. 5º, XXXVI, CF/88).
+-- A eficácia da lei no tempo define sua aplicabilidade a fatos ocorridos durante sua vigência. A regra é o efeito imediato e geral da lei nova, não podendo ela retroagir para prejudicar o direito adquirido, o ato jurídico perfeito e a coisa julgada, garantias fundamentais (Artigo 5º, XXXVI, Constituição Federal de 1988).
 
--- Essa proteção, detalhada no Art. 6º da LINDB, confere segurança jurídica às relações consolidadas sob a égide da lei anterior. O ato jurídico perfeito é o já consumado, o direito adquirido é o incorporado ao patrimônio do titular, e a coisa julgada é a decisão judicial irrecorrível.
+-- Essa proteção, detalhada no Artigo 6º da LINDB, confere segurança jurídica às relações consolidadas sob a égide da lei anterior. O ato jurídico perfeito é o já consumado, o direito adquirido é o incorporado ao patrimônio do titular, e a coisa julgada é a decisão judicial irrecorrível.
 
 ## Referências do Tema
 
---- Art. 5º, XXXVI, da Constituição Federal de 1988
---- Art. 6º do Decreto-Lei nº 4.657/42 (LINDB)
+--- Artigo 5º, XXXVI, da Constituição Federal de 1988
+--- Artigo 6º do Decreto-Lei nº 4.657/42 (LINDB)
 
 ## Pergunte pra I.A.
 
