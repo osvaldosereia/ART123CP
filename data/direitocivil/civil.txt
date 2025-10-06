@@ -5,11 +5,46 @@
 
 
 
+-----
+
+# Subsunção
+-- A subsunção é o processo de aplicação direta da norma jurídica ao caso concreto. O Direito a divide em duas espécies: subsunção clássica e subsunção moderna. A subsunção clássica consiste no enquadramento do fato concreto ao conceito abstrato contido na norma, sendo um meio de verificar qual foi o fato e qual foi a norma jurídica. A subsunção moderna, por sua vez, defende que o aplicador da lei deve observar, além do fato e da norma, os valores, caracterizando uma corrente mais científica. A subsunção não se confunde com os métodos de integração, que são utilizados diante da ausência de lei.
+
+## Pergunte pra I.A.
+
+  - Qual a definição mais básica de subsunção no contexto jurídico e como ela se relaciona com a aplicação de uma norma a um fato?
+  - Explique a diferença fundamental entre a subsunção clássica e a subsunção moderna, destacando os elementos que cada uma considera em sua análise.
+  - Como a subsunção clássica auxilia o operador do direito na identificação da norma aplicável e do fato a ser regulado?
+  - De que maneira a introdução da "corrente moderna ou científica" na subsunção impacta o papel do juiz, para além do mero enquadramento lógico-formal?
+  - A inclusão de "valores" na subsunção moderna pode gerar maior discricionariedade judicial? Quais seriam os prós e contras dessa abordagem?
+  - Em quais ramos do Direito a distinção entre subsunção clássica e moderna se mostra mais relevante na prática?
+  - Compare a subsunção com outros conceitos jurídicos, como a hermenêutica ou a qualificação jurídica, identificando semelhanças e diferenças em seus objetivos.
+  - Poderia um caso de "lacuna axiológica" (norma que enseja injustiça) ser abordado pela subsunção moderna de uma forma que a subsunção clássica não conseguiria? Justifique.
+  - Como a evolução da teoria do direito, em especial o neoconstitucionalismo, influenciou a transição da subsunção clássica para a moderna?
+  - Quais os principais desafios práticos para o aplicador do direito ao tentar realizar uma subsunção moderna em um cenário jurídico complexo e com múltiplos princípios em colisão?
+
+-----
+
+# Integração da Norma
+-- Segundo o art. 4º da LINDB, quando a lei for omissa, o juiz decidirá o caso de acordo com a analogia, os costumes e os princípios gerais de direito. Diante da omissão, então, não pode o juiz deixar de julgar (Princípio da Inafastabilidade da Jurisdição). O método de integração é utilizado diante da ausência de lei. Há lacuna normativa (lacuna propriamente dita ou lacuna de omissão), lacuna axiológica e lacuna de conflito (ou antinomia). A lacuna normativa é a ausência total de norma para o caso. A lacuna axiológica, por sua vez, há norma que se aplica ao caso, porém de aplicação que enseja injustiça. A lacuna de conflito (ou antinomia) é o confronto de 2 ou mais normas válidas e aplicáveis. Os métodos de integração são a analogia, os costumes e os princípios gerais de direito. A equidade, embora não esteja no rol do art. 4º da LINDB, exerce função integrativa e é considerada fonte informal (ou indireta) do direito, consistindo na justiça do caso concreto.
+
+## Pergunte pra I.A.
+
+  - O que o Art. 4º da LINDB estabelece como dever do juiz diante de uma omissão legal e qual princípio jurídico fundamenta essa determinação?
+  - Quais são os três métodos de integração da norma expressamente previstos na LINDB?
+  - Explique o conceito de "lacuna normativa" e como os métodos de integração atuam para supri-la.
+  - Diferencie "lacuna normativa" de "lacuna axiológica", fornecendo um exemplo de cada e indicando como a integração pode ser necessária em ambos os casos.
+  - A "antinomia" é uma forma de lacuna? Justifique sua resposta com base na definição de lacuna de conflito e nos critérios de resolução de antinomias.
+  - Descreva o método da analogia como ferramenta de integração, destacando o princípio que a fundamenta e a diferença em relação à interpretação extensiva.
+  - Como os "costumes" podem ser utilizados na integração da norma e quais os requisitos para que sejam considerados uma fonte formal do direito?
+  - Embora não mencionada no Art. 4º da LINDB, a "equidade" pode ser utilizada para integrar a norma? Explique seu papel como fonte informal do direito.
+  - Em que situações um juiz pode decidir "por equidade" e qual a distinção entre decidir "com equidade" e "por equidade"?
+  - Analise a ordem de aplicação dos métodos de integração (analogia, costumes e princípios gerais do direito) e a importância dessa hierarquia na busca por uma solução jurídica coerente.
 
 -----
 
 # Antinomia
-- A antinomia, ou lacuna de conflito, ocorre quando há um confronto entre duas ou mais normas válidas e aplicáveis. A antinomia se manifesta quando as soluções oferecidas por essas normas são divergentes, impedindo a aplicação simultânea de todas. É um problema de coerência dentro do ordenamento jurídico, que exige a utilização de critérios específicos para sua resolução. No caso de soluções convergentes, onde ambas as normas podem ser aplicadas para alcançar a melhor solução jurídica sem que uma exclua a outra, fala-se na Teoria do Diálogo das Fontes, que se distingue da antinomia propriamente dita. As antinomias podem ser aparentes (de primeiro grau), quando a solução é encontrada nas normas do próprio ordenamento jurídico através de um único critério, ou reais (de segundo grau), quando não há critério normativo para solucionar o conflito ou quando há conflito entre os próprios critérios. Os principais critérios para resolver antinomias são o hierárquico (norma superior prevalece sobre inferior), da especialidade (norma especial prevalece sobre geral) e cronológico (norma posterior prevalece sobre anterior).
+-- A antinomia, ou lacuna de conflito, ocorre quando há um confronto entre duas ou mais normas válidas e aplicáveis. A antinomia se manifesta quando as soluções oferecidas por essas normas são divergentes, impedindo a aplicação simultânea de todas. É um problema de coerência dentro do ordenamento jurídico, que exige a utilização de critérios específicos para sua resolução. No caso de soluções convergentes, onde ambas as normas podem ser aplicadas para alcançar a melhor solução jurídica sem que uma exclua a outra, fala-se na Teoria do Diálogo das Fontes, que se distingue da antinomia propriamente dita. As antinomias podem ser aparentes (de primeiro grau), quando a solução é encontrada nas normas do próprio ordenamento jurídico através de um único critério, ou reais (de segundo grau), quando não há critério normativo para solucionar o conflito ou quando há conflito entre os próprios critérios. Os principais critérios para resolver antinomias são o hierárquico (norma superior prevalece sobre inferior), da especialidade (norma especial prevalece sobre geral) e cronológico (norma posterior prevalece sobre anterior).
 
 ## Pergunte pra I.A.
 
