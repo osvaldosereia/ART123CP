@@ -1,3 +1,920 @@
+
+
+
+
+-----
+# A Incapacidade Civil e a Pessoa com Deficiência
+
+-- A Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência) alterou radicalmente o Código Civil, estabelecendo a capacidade plena como regra (art. 6º da Lei). A deficiência, por si só, não afeta mais a capacidade civil (art. 84 da Lei). Com isso, o rol de absolutamente incapazes do art. 3º do CC/02 foi restrito aos menores de 16 anos.
+
+-- Para o exercício de atos patrimoniais, a pessoa com deficiência pode contar com a curatela, medida extraordinária (art. 85 da Lei), ou com a inovadora tomada de decisão apoiada (art. 1.783-A do CC/02), na qual elege duas pessoas de confiança para auxiliá-la. A regra é a promoção da autonomia, e não mais a interdição da pessoa.
+
+## Referências do Tema
+
+--- Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência)
+--- Art. 3º do CC/02
+--- Art. 4º do CC/02
+--- Art. 1.783-A do CC/02
+--- Enunciado 574 da VI Jornada de Direito Civil (CJF)
+
+## Pergunte pra I.A.
+
+  - Qual foi a principal mudança na teoria das incapacidades trazida pela Lei nº 13.146/2015?
+  - Após o Estatuto da Pessoa com Deficiência, quem são os únicos considerados absolutamente incapazes no Direito Civil?
+  - Diferencie os institutos da curatela e da tomada de decisão apoiada.
+  - Uma pessoa com deficiência intelectual severa é considerada plenamente capaz para se casar e ter filhos? Justifique.
+  - Analise os desafios práticos da aplicação da tomada de decisão apoiada para a segurança jurídica dos negócios celebrados.
+
+### Fontes
+
+  - O Estatuto da Pessoa com Deficiência e as mudanças no Código Civil - Consultor Jurídico
+  - Lei nº 13.146 de 6 de Julho de 2015 - Presidência da República
+  - A teoria das incapacidades e o estatuto da pessoa com deficiência - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - A Tomada de Decisão Apoiada no Estatuto da Pessoa com Deficiência - https://www.google.com/search?q=Jus.com.br
+  - O novo regime de incapacidades - Migalhas
+
+-----
+
+# Convenção de Nova Iorque e a Pessoa com Deficiência
+
+-- A Convenção sobre os Direitos das Pessoas com Deficiência (Convenção de Nova Iorque), internalizada pelo Decreto nº 6.949/2009, possui status de Emenda Constitucional no Brasil. Isso ocorre pois foi aprovada na forma do art. 5º, § 3º, da CF/88, sendo um marco normativo para a inclusão e o respeito à autonomia da pessoa com deficiência.
+
+-- Seu artigo 12 foi disruptivo ao determinar que os Estados reconheçam a capacidade legal da pessoa com deficiência em igualdade de condições com as demais. Essa diretriz obrigou a reforma do sistema de incapacidades do Código Civil brasileiro, sendo o principal fundamento para a criação da Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência).
+
+## Referências do Tema
+
+--- Art. 5º, § 3º, da CF/88
+--- Decreto nº 6.949, de 25 de agosto de 2009
+--- Artigo 12 da Convenção sobre os Direitos das Pessoas com Deficiência
+--- Lei nº 13.146/2015
+
+## Pergunte pra I.A.
+
+  - Qual é a hierarquia da Convenção de Nova Iorque no ordenamento jurídico brasileiro e qual a sua consequência prática?
+  - Explique o "modelo social" da deficiência, adotado pela Convenção.
+  - Qual o impacto direto do artigo 12 da Convenção na teoria das incapacidades do Código Civil?
+  - A Convenção de Nova Iorque pode ser usada como parâmetro para o controle de constitucionalidade e convencionalidade das leis?
+  - O que é "adaptação razoável" segundo a Convenção e como esse conceito se aplica nas relações de consumo?
+
+### Fontes
+
+  - Decreto nº 6.949 de 2009 - Presidência da República
+  - O que é a Convenção sobre os Direitos das Pessoas com Deficiência? - Unicef
+  - O Status Constitucional da Convenção de Nova Iorque - Consultor Jurídico
+  - A Convenção Internacional sobre os Direitos das Pessoas com Deficiência - Tribunal Superior do Trabalho (TST)
+  - A Convenção da ONU sobre os Direitos das Pessoas com Deficiência e seu Protocolo Facultativo - Secretaria de Direitos Humanos
+-----
+# Capacidade de Direito
+
+-- A capacidade de direito, também conhecida como capacidade de gozo, é a aptidão genérica para ser titular de direitos e contrair deveres na ordem civil. Segundo o art. 1º do CC/02, "toda pessoa é capaz de direitos e deveres", o que significa que este tipo de capacidade é um atributo indissociável da personalidade jurídica.
+
+-- Ela é adquirida com o nascimento com vida (art. 2º do CC/02), sendo universal e inata a todo ser humano, não comportando qualquer tipo de restrição ou gradação. Não se confunde com a capacidade de fato (de exercício) nem com a legitimação, que é uma aptidão específica para a prática de certos atos jurídicos.
+
+## Referências do Tema
+
+--- Art. 1º do CC/02
+--- Art. 2º do CC/02
+
+## Pergunte pra I.A.
+
+  - O que é capacidade de direito e qual seu fundamento legal no Código Civil?
+  - Explique por que toda pessoa que possui personalidade jurídica também possui capacidade de direito.
+  - Diferencie capacidade de direito e legitimação, fornecendo um exemplo prático dessa distinção.
+  - Uma pessoa pode ser privada de sua capacidade de direito? Justifique.
+  - Analise a relação intrínseca entre a capacidade de direito e o princípio da dignidade da pessoa humana.
+
+### Fontes
+
+  - Personalidade e Capacidade no Direito Civil - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - Capacidade Civil: O que é e quais os tipos? - Aurum
+  - A diferença entre personalidade e capacidade jurídica - Jusbrasil
+  - Capacidade de direito e capacidade de fato - Âmbito Jurídico
+  - Capacidade de gozo e de exercício. Qual a diferença? - https://www.google.com/search?q=Jus.com.br
+
+-----
+
+# Capacidade de Fato
+
+-- A capacidade de fato, ou de exercício, é a aptidão para exercer pessoalmente os atos da vida civil, manifestando a própria vontade. A união da capacidade de direito com a de fato resulta na capacidade civil plena. A ausência ou a limitação da capacidade de fato caracteriza a incapacidade, que demanda proteção jurídica.
+
+-- O Código Civil estabelece graus de incapacidade: a absoluta, restrita aos menores de 16 anos (art. 3º do CC/02), cujos atos exigem representação, sob pena de nulidade (art. 166, I); e a relativa (art. 4º do CC/02), que exige assistência para a validade do ato, sob pena de ser anulável (art. 171, I).
+
+## Referências do Tema
+
+--- Art. 3º do CC/02
+--- Art. 4º do CC/02
+--- Art. 166, I, do CC/02
+--- Art. 171, I, do CC/02
+
+## Pergunte pra I.A.
+
+  - O que é capacidade de fato e como ela se diferencia da capacidade de direito?
+  - Diferencie incapacidade absoluta de incapacidade relativa, explicando as consequências de cada uma para os atos praticados.
+  - Quais são os papéis do representante e do assistente na vida civil de um incapaz?
+  - Explique como o Estatuto da Pessoa com Deficiência (Lei 13.146/2015) alterou o rol de incapazes do Código Civil.
+  - Discorra sobre as hipóteses de cessação da incapacidade para os menores, previstas no art. 5º do Código Civil.
+
+### Fontes
+
+  - O que é Capacidade Civil e quem são os capazes e incapazes? - Aurum
+  - Incapacidade Absoluta e Relativa: Entenda a Diferença - Jusbrasil
+  - Artigos 3 e 4 do Código Civil - Site do Planalto
+  - A capacidade de fato após o Estatuto da Pessoa com Deficiência - Conjur
+  - Capacidade de Fato ou de Exercício - DireitoNet
+-----
+# Personalidade Jurídica e Capacidade
+
+-- Personalidade jurídica é a aptidão para ser titular de direitos e obrigações (art. 1º do CC/02), adquirida com o nascimento com vida (art. 2º do CC/02). Ela se confunde com a capacidade de direito ou de gozo, que todo ser humano possui. É o "poder ser" sujeito de uma relação jurídica, sendo um atributo estático e universal para a pessoa humana.
+
+-- Já a capacidade de fato ou de exercício é a aptidão para exercer, por si só, os atos da vida civil. A falta desta aptidão gera a incapacidade, que pode ser absoluta para menores de 16 anos (art. 3º do CC/02) ou relativa em outras hipóteses (art. 4º do CC/02), demandando representação ou assistência para a validade dos atos praticados.
+
+## Referências do Tema
+
+--- Art. 1º do CC/02
+--- Art. 2º do CC/02
+--- Art. 3º do CC/02
+--- Art. 4º do CC/02
+--- Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência)
+
+## Pergunte pra I.A.
+
+  - Qual a diferença fundamental entre personalidade jurídica e capacidade civil?
+  - Explique a distinção entre capacidade de direito (gozo) e capacidade de fato (exercício).
+  - Quem o Código Civil considera como absolutamente e relativamente incapazes?
+  - Como o Estatuto da Pessoa com Deficiência (Lei 13.146/15) alterou o regime das incapacidades no Brasil?
+  - Uma pessoa declarada pródiga (relativamente incapaz) perde sua personalidade jurídica? Justifique.
+
+### Fontes
+
+  - Personalidade e Capacidade no Direito Civil - TJDFT
+  - A diferença entre personalidade e capacidade jurídica - Jusbrasil
+  - O que é Capacidade Civil e quem são os capazes e incapazes? - Aurum
+  - O Estatuto da Pessoa com Deficiência e as mudanças no Código Civil - Conjur
+  - Artigos 3 e 4 do Código Civil - Planalto
+
+-----
+
+# Aquisição da Personalidade (Nascimento com Vida)
+
+-- O Código Civil brasileiro, em seu art. 2º, adota a teoria natalista, segundo a qual "a personalidade civil da pessoa começa do nascimento com vida". Este marco objetivo se perfaz com a primeira respiração autônoma do recém-nascido, ainda que por um instante, o que pode ser comprovado por meios como o exame de docimasia hidrostática de Galeno.
+
+-- Apesar de condicionar a personalidade ao nascimento, a lei não desampara o nascituro. A parte final do mesmo art. 2º do CC/02 resguarda seus direitos desde a concepção. Assim, o nascituro é titular de uma expectativa de direitos, que se consolidam sob a condição suspensiva do nascimento com vida, garantindo-lhe proteção fundamental.
+
+## Referências do Tema
+
+--- Art. 2º do CC/02
+--- Art. 542 do CC/02 (Doação ao nascituro)
+--- Art. 1.798 do CC/02 (Legitimação para suceder)
+--- Lei nº 11.804/2008 (Lei de Alimentos Gravídicos)
+
+## Pergunte pra I.A.
+
+  - O que a teoria natalista estabelece sobre o início da personalidade jurídica?
+  - O que significa a expressão "nascimento com vida" e como isso pode ser provado em juízo?
+  - Se a personalidade só começa com o nascimento, como se explicam os direitos do nascituro?
+  - Diferencie as implicações sucessórias de um natimorto e de um bebê que viveu por apenas alguns minutos.
+  - Discuta a compatibilidade da teoria natalista com a Lei de Alimentos Gravídicos.
+
+### Fontes
+
+  - Teoria Natalista: o início da personalidade jurídica da pessoa natural - https://www.google.com/search?q=Jus.com.br
+  - O Início da Personalidade Jurídica no Ordenamento Brasileiro - Âmbito Jurídico
+  - Direitos do nascituro e o início da personalidade jurídica - Jusbrasil
+  - A Docimasia Hidrostática de Galeno e suas implicações jurídicas - Migalhas
+  - Código Civil Comentado - Art. 2º - Dizer o Direito
+
+-----
+
+# Nascituro e Embrião – Personalidade Jurídica
+
+-- Embora a teoria natalista (art. 2º do CC/02) prevaleça, negando personalidade ao nascituro, a jurisprudência e a doutrina concepcionista avançam em sua proteção. Ele já é titular de direitos da personalidade, podendo receber doação (art. 542 do CC/02), ser herdeiro (art. 1.798 do CC/02) e ter direito a alimentos (Lei nº 11.804/08) e à reparação por dano moral.
+
+-- O embrião pré-implantação (in vitro) possui proteção jurídica ainda mais restrita. O STF, na ADI 3510, autorizou o uso de embriões para pesquisa, conforme a Lei de Biossegurança (Lei nº 11.105/05), entendendo que não haveria violação ao direito à vida. Assim, embora tutelado, o embrião não é equiparado ao nascituro nem considerado pessoa.
+
+## Referências do Tema
+
+--- Art. 2º do CC/02
+--- Lei nº 11.804/2008 (Alimentos Gravídicos)
+--- Lei nº 11.105/2005 (Lei de Biossegurança)
+--- ADI 3510 do STF
+--- Enunciado 1 da I Jornada de Direito Civil (CJF)
+
+## Pergunte pra I.A.
+
+  - O nascituro tem personalidade jurídica no Brasil? Compare as teorias Natalista e Concepcionista.
+  - Cite três direitos já reconhecidos ao nascituro pela legislação ou jurisprudência.
+  - Qual a diferença fundamental entre a proteção jurídica do nascituro e a do embrião criopreservado?
+  - Explique os principais argumentos utilizados pelo STF para permitir a pesquisa com células-tronco embrionárias na ADI 3510.
+  - O nascituro pode ser vítima de dano moral? Justifique com base em entendimentos do STJ.
+
+### Fontes
+
+  - O STJ e os direitos do nascituro - Portal do STJ
+  - ADI 3510 - Pesquisas com células-tronco embrionárias - Portal do STF
+  - O embrião, o nascituro e a pessoa natural - Migalhas
+  - Teoria Concepcionista e os Direitos do Nascituro - Jusbrasil
+  - O Estatuto do Nascituro e o Direito Brasileiro - Âmbito Jurídico
+-----
+# Teoria Geral da Personalidade Civil
+
+-- A personalidade civil é a aptidão genérica para adquirir direitos e contrair obrigações, sendo um atributo inerente a todo ser humano. Conforme o art. 1º do CC/02, "toda pessoa é capaz de direitos e deveres". Pela teoria natalista, adotada no art. 2º do CC/02, a personalidade se inicia com o nascimento com vida, embora a lei proteja os direitos do nascituro.
+
+-- Essencialmente extrapatrimonial, irrenunciável e intransmissível, a personalidade é o alicerce para todos os outros direitos, em especial os da personalidade (art. 11 a 21 do CC/02). Ela não se confunde com a capacidade, que é a medida ou a extensão da personalidade para a prática dos atos da vida civil por si mesmo.
+
+## Referências do Tema
+
+--- Art. 1º do CC/02
+--- Art. 2º do CC/02
+--- Arts. 11 a 21 do CC/02
+--- Enunciado 1 da I Jornada de Direito Civil (CJF)
+
+## Pergunte pra I.A.
+
+  - O que é personalidade jurídica e qual teoria sobre seu início foi adotada pelo Código Civil de 2002?
+  - Diferencie personalidade, capacidade de direito (gozo) e capacidade de fato (exercício).
+  - Quais são os direitos assegurados ao nascituro pelo ordenamento jurídico brasileiro?
+  - Explique as características da personalidade civil, como a irrenunciabilidade e a extrapatrimonialidade.
+  - Discuta a situação jurídica dos embriões excedentários (criopreservados) à luz da teoria da personalidade.
+
+### Fontes
+
+  - Personalidade e Capacidade no Direito Civil - TJDFT
+  - O que é personalidade jurídica? - Aurum
+  - Direitos do Nascituro e o Início da Personalidade Jurídica - Jusbrasil
+  - Teoria Natalista: o início da personalidade jurídica da pessoa natural - https://www.google.com/search?q=Jus.com.br
+  - Enunciados Aprovados da I Jornada de Direito Civil - Portal do CJF
+
+-----
+
+# Evolução da Ideia de Pessoa e Personalidade
+
+-- Historicamente, o conceito de "pessoa" era restritivo e não se confundia com "ser humano". No Direito Romano, a personalidade dependia de três status (liberdade, cidadania e família), de modo que escravos eram considerados coisas (*res*) e não sujeitos de direito (*persona*). A personalidade era, portanto, uma concessão da ordem jurídica.
+
+-- A universalização do conceito foi impulsionada pelo cristianismo, pelo jusnaturalismo e pela filosofia kantiana, que via a pessoa como um fim em si mesma. Hoje, a personalidade é um atributo inerente à condição humana, indissociável do princípio da dignidade da pessoa humana (art. 1º, III, CF/88), sendo o valor-fonte de todo o direito privado.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 1º do CC/02
+
+## Pergunte pra I.A.
+
+  - Como o Direito Romano diferenciava os conceitos de "homo", "caput" e "persona"?
+  - Qual foi a influência do pensamento cristão e do jusnaturalismo na transformação do conceito de pessoa?
+  - Explique a contribuição de Immanuel Kant para a noção contemporânea de personalidade, associada à dignidade.
+  - Compare a visão sobre a personalidade no Código Civil de 1916 com a do Código de 2002.
+  - Discuta os desafios atuais sobre a titularidade de personalidade jurídica, como os direitos dos animais e da inteligência artificial.
+
+### Fontes
+
+  - A Evolução Histórica do Conceito de Pessoa - Âmbito Jurídico
+  - A noção de pessoa no Direito Romano - Jus Navigandi
+  - Breve evolução histórica do conceito de pessoa - Jusbrasil
+  - O conceito de pessoa: da antiguidade clássica à atualidade - Scielo
+  - A construção do conceito de pessoa no Direito - Migalhas
+-----
+# Solidariedade Social e Igualdade Substancial
+
+-- A Solidariedade Social (art. 3º, I, CF/88) é um objetivo da República que impõe um dever jurídico de cooperação nas relações privadas, superando o individualismo. No Direito Civil, materializa-se na função social do contrato (art. 421 do CC/02) e da propriedade (art. 1.228, § 1º, do CC/02), que exigem o respeito aos interesses da coletividade.
+
+-- A Igualdade Substancial, por sua vez, visa corrigir desequilíbrios fáticos, tratando os desiguais de forma desigual. É o fundamento da proteção de vulneráveis em microssistemas como o Código de Defesa do Consumidor (art. 4º, I, do CDC) e o Estatuto do Idoso, garantindo um reequilíbrio de forças nas relações jurídicas civis.
+
+## Referências do Tema
+
+--- Art. 3º, I, da CF/88
+--- Art. 4º, I, da Lei nº 8.078/90 (CDC)
+--- Art. 421 do CC/02
+--- Art. 1.228, § 1º, do CC/02
+
+## Pergunte pra I.A.
+
+  - Explique como o princípio da solidariedade social se manifesta na teoria da função social do contrato.
+  - Diferencie igualdade formal (art. 5º, caput, CF/88) de igualdade substancial, com exemplos do Direito Civil.
+  - De que maneira o Código de Defesa do Consumidor concretiza o mandamento da igualdade material?
+  - Analise a função social da propriedade como uma expressão do princípio da solidariedade.
+  - Discuta como a solidariedade social pode justificar a revisão de um contrato excessivamente oneroso para uma das partes.
+
+### Fontes
+
+  - O princípio da solidariedade social no direito contratual brasileiro - Jusbrasil
+  - O princípio da solidariedade social no direito civil-constitucional - Migalhas
+  - A igualdade material (substancial) e a igualdade formal - Âmbito Jurídico
+  - O princípio da solidariedade social e sua aplicação no Direito Civil - https://www.google.com/search?q=Jus.com.br
+  - Função social do contrato e da propriedade - Enciclopédia Jurídica da PUCSP
+
+-----
+
+# Paradigmas do Direito Civil Contemporâneo
+
+-- O Direito Civil contemporâneo superou o paradigma individualista e patrimonialista do Código de 1916. O novo eixo é a pessoa humana e sua dignidade, em um processo de "constitucionalização" que coloca a Carta Magna como filtro de validade e interpretação de toda a legislação civil, consagrando a eficácia horizontal dos direitos fundamentais.
+
+-- Seus paradigmas operacionais, idealizados por Miguel Reale, são a eticidade (valorização da boa-fé objetiva - art. 422 do CC/02), a socialidade (prevalência do coletivo sobre o individual - art. 421 do CC/02) e a operabilidade (uso de cláusulas gerais que conferem maior poder ao juiz para buscar a justiça no caso concreto).
+
+## Referências do Tema
+
+--- Art. 421 do CC/02
+--- Art. 422 do CC/02
+--- Art. 187 do CC/02
+--- Art. 2.035, parágrafo único, do CC/02
+
+## Pergunte pra I.A.
+
+  - Quais são os três pilares paradigmáticos do Código Civil de 2002 (eticidade, socialidade e operabilidade)?
+  - Explique o que foi a "virada de Copérnico" do Direito Civil, que deslocou o eixo do patrimônio para a pessoa.
+  - Compare o paradigma do Código Civil de 1916 com o do Código Civil de 2002.
+  - De que forma as cláusulas gerais (como a de boa-fé) representam o paradigma da operabilidade?
+  - Analise criticamente se o paradigma da socialidade conseguiu efetivamente superar o caráter individualista das relações civis no Brasil.
+
+### Fontes
+
+  - Os novos paradigmas do direito civil constitucionalizado - Âmbito Jurídico
+  - As cláusulas gerais no novo Código Civil - Jus Navigandi
+  - Os princípios norteadores do Código Civil de 2002 - Jusbrasil
+  - A Boa-Fé Objetiva no Código Civil - Migalhas
+  - Eticidade, socialidade e operabilidade - Enciclopédia Jurídica da PUCSP
+
+-----
+
+# Direito Civil e o Controle de Convencionalidade
+
+-- O controle de convencionalidade é a análise da compatibilidade das leis brasileiras com os tratados de direitos humanos ratificados pelo país. Conforme o STF (RE 466.343), tratados como o Pacto de São José da Costa Rica possuem status supralegal, ou seja, estão abaixo da Constituição, mas acima da legislação ordinária, como o Código Civil.
+
+-- Um exemplo notório no Direito Civil foi a superação da prisão do depositário infiel. Embora prevista no Código Civil e na Constituição (art. 5º, LXVII), foi paralisada por ser incompatível com o Pacto de São José da Costa Rica, o que deu origem à Súmula Vinculante 25 do STF, demonstrando a submissão da lei civil às normas internacionais.
+
+## Referências do Tema
+
+--- Art. 5º, § 2º e § 3º, da CF/88
+--- Art. 5º, LXVII, da CF/88
+--- RE 466.343/SP
+--- Súmula Vinculante 25 do STF
+--- Decreto nº 678/1992 (Pacto de São José da Costa Rica)
+
+## Pergunte pra I.A.
+
+  - O que é controle de convencionalidade e qual o seu fundamento no ordenamento jurídico brasileiro?
+  - Qual a hierarquia dos tratados internacionais de direitos humanos no Brasil, segundo o STF?
+  - Explique o caso da prisão civil do depositário infiel e sua relação com o controle de convencionalidade.
+  - Pode uma norma de um contrato de consumo ser afastada por contrariar a Convenção Americana de Direitos Humanos?
+  - Discuta o papel do juiz de primeira instância na realização do controle de convencionalidade.
+
+### Fontes
+
+  - O que é o controle de convencionalidade? - Dizer o Direito
+  - O status dos tratados internacionais de direitos humanos no Brasil - Conjur
+  - A Súmula Vinculante 25 do STF e a prisão civil do depositário infiel - STF
+  - Controle de Convencionalidade e sua aplicação no Direito Civil - https://www.google.com/search?q=Jus.com.br
+  - RE 466.343 (leading case sobre hierarquia de tratados) - Portal do STF
+
+-----
+
+# O Direito Civil e o Estado de Coisas Inconstitucionais
+
+-- O Estado de Coisas Inconstitucional (ECI) é uma doutrina jurídica, acolhida pelo STF na ADPF 347, para reconhecer uma violação massiva e sistemática de direitos fundamentais decorrente da inércia de múltiplos órgãos estatais. Embora sua origem seja no Direito Público, possui reflexos diretos nas relações cíveis.
+
+-- A falha estrutural do Estado (ex: na segurança ou saúde pública) pode ser considerada um fato superveniente que impacta contratos privados, ensejando sua revisão por onerosidade excessiva (art. 478 do CC/02). Além disso, pode fundamentar ações de responsabilidade civil em massa contra o Estado (art. 37, § 6º, da CF/88).
+
+## Referências do Tema
+
+--- ADPF 347 do STF
+--- Art. 37, § 6º, da CF/88
+--- Art. 393 do CC/02 (Caso fortuito ou força maior)
+--- Art. 478 do CC/02 (Resolução por onerosidade excessiva)
+
+## Pergunte pra I.A.
+
+  - O que é o Estado de Coisas Inconstitucional (ECI) e quais são seus requisitos de configuração?
+  - Como a declaração de um ECI na segurança pública pode afetar a validade ou eficácia de um contrato de seguro?
+  - A falha sistêmica do Estado em garantir moradia pode ser usada como argumento em ações possessórias entre particulares?
+  - Discuta a relação entre o ECI e a teoria da imprevisão (onerosidade excessiva) nos contratos de longa duração.
+  - Analise os limites e os riscos de se aplicar a noção de ECI para justificar o inadimplemento de obrigações entre particulares.
+
+### Fontes
+
+  - O que é o Estado de Coisas Inconstitucional? - Politize
+  - ADPF 347 e o Estado de Coisas Inconstitucional no sistema prisional - Portal do STF
+  - Os reflexos do Estado de Coisas Inconstitucional no Direito Privado - Jusbrasil
+  - O Estado de Coisas Inconstitucional e a Responsabilidade Civil do Estado - Conjur
+  - Estado de Coisas Inconstitucional e seus impactos no Direito Civil - Migalhas
+-----
+# Princípios Constitucionais nas Relações Particulares
+
+-- A Constituição irradia seus efeitos para as relações privadas, fenômeno conhecido como eficácia horizontal dos direitos fundamentais (art. 5º, §1º, CF/88). Assim, valores constitucionais não se limitam a regular a relação entre Estado e cidadão, mas também se impõem aos negócios jurídicos celebrados entre particulares, mitigando a autonomia da vontade.
+
+-- Princípios como a isonomia, a solidariedade e a função social da propriedade e dos contratos (art. 5º, XXIII e art. 170, III, CF/88) passam a ser de observância obrigatória. Desse modo, a liberdade de contratar, por exemplo, encontra limites na dignidade humana e na boa-fé, redefinindo o equilíbrio das relações civis sob um filtro de constitucionalidade.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 3º, I, da CF/88
+--- Art. 5º, § 1º, da CF/88
+--- Art. 5º, XXIII, da CF/88
+--- Art. 170, III, da CF/88
+
+## Pergunte pra I.A.
+
+  - O que se entende por eficácia horizontal (ou privada) dos direitos fundamentais?
+  - De que forma o princípio da função social dos contratos limita a liberdade contratual?
+  - Apresente um exemplo prático de aplicação do princípio da isonomia em uma relação entre particulares.
+  - Discuta as teorias da eficácia direta e indireta dos direitos fundamentais nas relações privadas.
+  - Analise um julgado do STF que tenha aplicado um direito fundamental para resolver um litígio entre particulares.
+
+### Fontes
+
+  - Eficácia horizontal dos direitos fundamentais - Enciclopédia Jurídica da PUCSP
+  - A eficácia dos direitos fundamentais nas relações privadas - https://www.google.com/search?q=Jus.com.br
+  - A eficácia horizontal dos direitos fundamentais - Âmbito Jurídico
+  - A aplicação dos direitos fundamentais às relações privadas - Migalhas
+  - A Eficácia Horizontal dos Direitos Fundamentais - Conteúdo Jurídico
+
+-----
+
+# Diferença entre Regras e Princípios
+
+-- As regras são normas que se aplicam na lógica do "tudo ou nada" (all-or-nothing). Elas prescrevem condutas específicas e, preenchido seu suporte fático, a consequência jurídica é aplicada compulsoriamente, via subsunção. Em caso de conflito, uma regra invalida a outra. Exemplo: a maioridade civil aos 18 anos (art. 5º do CC/02).
+
+-- Princípios são mandamentos de otimização, com alto grau de abstração, que orientam a interpretação de todo o sistema. Ordenam que algo seja realizado na maior medida possível. Quando colidem, não se excluem; são sopesados (ponderação) para definir qual terá mais peso no caso concreto. A boa-fé objetiva (art. 422 do CC/02) é um exemplo clássico.
+
+## Referências do Tema
+
+--- Art. 5º do CC/02
+--- Art. 422 do CC/02
+--- Art. 8º do CPC/15
+
+## Pergunte pra I.A.
+
+  - Explique, com base na teoria de Robert Alexy, o que distingue as regras dos princípios.
+  - O que é o método da subsunção, aplicado às regras, e o que é o método da ponderação, aplicado aos princípios?
+  - Dê um exemplo de conflito aparente entre regras no Código Civil e como ele é solucionado.
+  - Apresente um caso hipotético de colisão entre os princípios da autonomia privada e da função social do contrato.
+  - Discuta o papel dos princípios no preenchimento de lacunas e na superação da rigidez do positivismo legalista.
+
+### Fontes
+
+  - A Distinção entre Princípios e Regras segundo Robert Alexy - Jusbrasil
+  - Regras e Princípios: qual a diferença? - Aurum
+  - A distinção entre regras e princípios em Dworkin e Alexy - Jus Navigandi
+  - A Colisão de Princípios e a Técnica da Ponderação - Migalhas
+  - A diferença entre regras e princípios na teoria de Robert Alexy - Conteúdo Jurídico
+
+-----
+
+# Princípio da Dignidade da Pessoa Humana
+
+-- A dignidade da pessoa humana (art. 1º, III, da CF/88) é o fundamento do Estado brasileiro e o valor-fonte de todo o ordenamento jurídico. No Direito Civil, atua como um escudo de proteção do indivíduo, vedando sua "coisificação" ou instrumentalização em qualquer relação jurídica, seja ela contratual, familiar ou obrigacional.
+
+-- Sua aplicação concreta se manifesta na proteção aos direitos da personalidade (art. 11 a 21 do CC/02), na fundamentação da reparação por dano moral (art. 5º, V e X, CF/88) e na limitação da autonomia privada, conforme o Enunciado 23 da I Jornada de Direito Civil. É o epicentro axiológico do sistema jurídico privado contemporâneo.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 5º, V e X, da CF/88
+--- Arts. 11 a 21 do CC/02
+--- Enunciado 23 da I Jornada de Direito Civil (CJF)
+
+## Pergunte pra I.A.
+
+  - Qual o conceito e o alcance do princípio da dignidade da pessoa humana no Direito Civil brasileiro?
+  - Como a dignidade humana se relaciona com os direitos da personalidade e a tutela contra o dano moral?
+  - De que maneira o Enunciado 23 do CJF utiliza a dignidade humana para limitar a autonomia contratual?
+  - Analise um caso de direito de família (como a multiparentalidade) à luz do princípio da dignidade da pessoa humana.
+  - Discuta os desafios e os riscos da aplicação indiscriminada do princípio da dignidade humana como argumento decisório.
+
+### Fontes
+
+  - O princípio da dignidade da pessoa humana e sua aplicação no âmbito do STF - Portal do STF
+  - A Aplicação do Princípio da Dignidade da Pessoa Humana no Direito Civil - TJDFT
+  - A dignidade da pessoa humana como pilar do Direito Civil Constitucional - https://www.google.com/search?q=Jus.com.br
+  - O princípio da dignidade da pessoa humana e o direito civil - Migalhas
+  - O que diz o Enunciado 23 do CJF/STJ? - Dizer o Direito
+-----
+# Características do Direito Civil Contemporâneo
+
+-- O Direito Civil contemporâneo, influenciado pelo Pós-Positivismo, abandona o legalismo estrito e valoriza a força normativa dos princípios constitucionais. A dignidade da pessoa humana (art. 1º, III, CF/88) e a solidariedade (art. 3º, I, CF/88) tornam-se vetores de interpretação, promovendo a "repersonalização" das relações privadas em detrimento do viés puramente patrimonial.
+
+-- Essa fase é marcada pela ética e socialidade, manifestadas em cláusulas gerais como a boa-fé objetiva (art. 422 do CC/02) e a função social (art. 421 do CC/02 e art. 2.035, par. único, do CC/02). O juiz assume um papel ativo na concretização da justiça, superando a mera aplicação formal da lei para adequá-la aos valores da sociedade e à equidade.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 3º, I, da CF/88
+--- Art. 421 do CC/02
+--- Art. 422 do CC/02
+--- Art. 2.035, parágrafo único, do CC/02
+
+## Pergunte pra I.A.
+
+  - O que define o paradigma do Pós-Positivismo e como ele impactou o Direito Civil brasileiro?
+  - Explique os conceitos de "repersonalização", "socialidade" e "eticidade" no Direito Civil Contemporâneo.
+  - Discorra sobre a função das cláusulas gerais, como a boa-fé objetiva e a função social, na interpretação dos negócios jurídicos.
+  - Analise como a aplicação de princípios constitucionais flexibiliza a rigidez das regras do Código Civil.
+  - Critique o papel do magistrado no Direito Civil Pós-Positivista, considerando os limites entre interpretação e ativismo judicial.
+
+### Fontes
+
+  - As características do Direito Civil Constitucional - Conteúdo Jurídico
+  - Pós-positivismo e o Direito Civil Constitucional - https://www.google.com/search?q=Jus.com.br
+  - Os novos paradigmas do direito civil constitucionalizado - Âmbito Jurídico
+  - O Pós-Positivismo e a Releitura do Direito Civil - Jusbrasil
+  - O novo direito civil e a quebra de paradigmas - Migalhas
+-----
+
+# Direito Civil Constitucional
+
+-- O Direito Civil Constitucional resulta da releitura do direito privado sob a ótica da Constituição, superando a visão patrimonialista. A eficácia horizontal dos direitos fundamentais (art. 5º, §1º, CF/88) irradia seus valores, como a dignidade da pessoa humana (art. 1º, III, CF/88), para as relações entre particulares, funcionalizando os institutos civis a um propósito social.
+
+-- Essa constitucionalização impõe a observância de princípios como a solidariedade social (art. 3º, I, CF/88) e a igualdade substancial. A aplicação de tratados internacionais (art. 5º, §2º, CF/88) e o reconhecimento do Estado de Coisas Inconstitucional (ADPF 347) também impactam diretamente as relações cíveis, exigindo uma nova hermenêutica do Código Civil.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 3º, I, da CF/88
+--- Art. 5º, §1º e §2º, da CF/88
+--- ADPF 347 do STF
+
+## Pergunte pra I.A.
+
+- Explique o que é o Direito Civil Constitucional e como a Constituição Federal de 1988 influenciou a interpretação das relações privadas.
+- Diferencie regras e princípios no ordenamento jurídico, exemplificando com normas de Direito Civil.
+- Discorra sobre a aplicação do princípio da dignidade da pessoa humana nos contratos e nas relações familiares.
+- Analise como o princípio da solidariedade social e a busca pela igualdade substancial transformam institutos como a propriedade e a responsabilidade civil.
+- Comente sobre o impacto do controle de convencionalidade e do reconhecimento do Estado de Coisas Inconstitucional na aplicação do Direito Civil.
+
+### Fontes
+- A Constitucionalização do Direito Civil e o Novo Código Civil - Jus Navigandi
+- O que se entende por Constitucionalização do Direito Civil? - Jusbrasil
+- A constitucionalização do direito civil e seus principais princípios - Âmbito Jurídico
+- Estado de Coisas Inconstitucional (ECI) - Dizer o Direito
+- O que é o controle de convencionalidade? - Aurum
+
+
+-----
+# PRINCÍPIOS CONSTITUCIONAIS NO DIREITO CIVIL CONTEMPORÂNEO
+
+-- O Direito Civil contemporâneo é fruto da transição para o Estado Social, superando o paradigma individualista. A CF/88 impõe um filtro axiológico, onde a dignidade da pessoa humana (Art. 1º, III) e a solidariedade social (Art. 3º, I) passam a nortear as relações privadas.
+
+-- Essa constitucionalização se materializa no CC/02 através de cláusulas gerais como a função social do contrato (Art. 421) e a boa-fé objetiva (Art. 422), conforme reforça o Enunciado 23 do CJF, que funcionaliza o direito subjetivo, atrelando-o a deveres sociais.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 3º, I, da CF/88
+--- Art. 421 do CC/02
+--- Art. 422 do CC/02
+--- Enunciado 23 da I Jornada de Direito Civil do CJF
+
+## Pergunte pra I.A.
+
+- Explique o fenômeno da "constitucionalização do Direito Civil" e seus principais marcos no ordenamento jurídico brasileiro.
+- Discorra sobre como o princípio da dignidade da pessoa humana redefine a autonomia privada nas relações contratuais.
+- Analise de que forma os princípios da função social da propriedade e do contrato mitigam o caráter individualista do Direito Civil.
+- Compare a abordagem do Direito Civil sob a égide do Código de 1916 e do Código de 2002, à luz dos princípios constitucionais.
+- Critique a eficácia da aplicação dos princípios da solidariedade social e da boa-fé objetiva na jurisprudência recente do STJ.
+
+### Fontes
+
+- A Constitucionalização do Direito Civil e o Novo Código Civil - Jus Navigandi
+- A constitucionalização do direito civil - Âmbito Jurídico
+- A Função Social do Contrato no Código Civil de 2002 - Migalhas
+- Princípios do direito contratual: o que são e quais os principais - Aurum Blog
+- A Boa-Fé Objetiva no Direito Civil Brasileiro - Jusbrasil
+-----
+# Diferença básica entre cláusula geral e conceito jurídico indeterminado
+
+-- Conceitos jurídicos indeterminados são termos de conteúdo vago na norma, como "justo motivo" ou "boa-fé", cujo sentido o juiz busca preencher analisando fatos preexistentes no caso concreto. Ele declara um sentido que já estava contido potencialmente na realidade social.
+
+-- Já as cláusulas gerais são mais que isso: são uma delegação legislativa ao juiz para que ele crie a norma do caso concreto, como ao definir o "abuso de direito" (Art. 187 do CC/02). A cláusula geral abre o sistema legal para a realidade, permitindo a criação judicial do direito.
+
+## Referências do Tema
+
+--- Art. 187 do CC/02
+--- Art. 421 do CC/02
+--- Art. 422 do CC/02
+--- Art. 927 do CC/02
+
+## Pergunte pra I.A.
+
+- Defina e diferencie conceito jurídico indeterminado e cláusula geral, oferecendo dois exemplos de cada no Código Civil.
+- Explique a atuação do juiz ao aplicar um conceito jurídico indeterminado versus uma cláusula geral.
+- Analise o Art. 187 do CC/02 ("abuso de direito") como um exemplo de cláusula geral e suas implicações práticas.
+- Discuta se a expressão "ordem pública" em diversos dispositivos legais é um conceito jurídico indeterminado ou uma cláusula geral.
+- Avalie o papel das cláusulas gerais na concretização dos princípios constitucionais no Direito Civil contemporâneo.
+
+### Fontes
+
+- Cláusulas Gerais e Conceitos Jurídicos Indeterminados - Jusbrasil
+- Qual a diferença entre conceito jurídico indeterminado e cláusula geral? - Dizer o Direito
+- Conceitos Jurídicos Indeterminados e Cláusulas Gerais no Código Civil - Jus Navigandi
+- Cláusulas abertas e conceitos jurídicos indeterminados no CC - Migalhas
+- O juiz e a aplicação das cláusulas gerais no novo Código Civil - Âmbito Jurídico
+-----
+# Como compreender o Direito Civil contemporâneo?
+
+-- A compreensão do Direito Civil atual exige um método de estudo que parte da Constituição para o Código. Superou-se a visão do direito privado como um campo autônomo, imune aos valores e princípios da Carta Magna, como a dignidade da pessoa humana (Art. 1º, III, CF/88).
+
+-- Deve-se analisá-lo sob a ótica da "repersonalização" e "despatrimonialização", onde a pessoa é o centro do sistema. Isso se concretiza pela aplicação de cláusulas gerais como a boa-fé objetiva (Art. 422 do CC/02) e a função social (Art. 421 do CC/02) nas relações privadas.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 421 do CC/02
+--- Art. 422 do CC/02
+--- Art. 187 do CC/02
+
+## Pergunte pra I.A.
+
+- Descreva as principais características do Direito Civil contemporâneo em contraste com o Direito Civil liberal clássico.
+- Explique os conceitos de "despatrimonialização" e "repersonalização" do Direito Civil, fornecendo exemplos práticos.
+- Analise a importância do "diálogo das fontes" entre o Código Civil e microssistemas como o Código de Defesa do Consumidor.
+- Discuta como a constitucionalização do Direito Civil impactou a interpretação da autonomia privada nos contratos.
+- Avalie criticamente como as cláusulas gerais (arts. 187, 421, 422 do CC/02) funcionam como janelas do sistema para a realidade social.
+
+### Fontes
+
+- A Constitucionalização do Direito Civil - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+- Direito Civil Contemporâneo: Novos Paradigmas - Âmbito Jurídico
+- Os novos paradigmas do direito civil brasileiro - Jus Navigandi
+- O Direito Civil Constitucional e a Repersonalização das Relações Civis - Conteúdo Jurídico
+- O que se entende por Constitucionalização do Direito Civil? - Dizer o Direito
+-----
+# O Direito Civil e a transição do Estado Liberal para o Estado Social democrático de direito
+
+-- No Estado Liberal, o Direito Civil (Código de 1916) era a "constituição do privado", focado na proteção da propriedade, na autonomia da vontade e na igualdade formal. A intervenção estatal era mínima, e as relações eram vistas como um assunto estritamente particular.
+
+-- Com o Estado Social (CF/88), o Direito Civil foi publicizado. Os direitos subjetivos foram relativizados pela sua função social (Art. 5º, XXIII, e Art. 170, III, da CF/88), buscando a igualdade material e a justiça social, o que se reflete no dirigismo contratual e na proteção dos vulneráveis.
+
+## Referências do Tema
+
+--- Art. 5º, XXIII, da CF/88
+--- Art. 170, III, da CF/88
+--- Art. 421 do CC/02
+
+## Pergunte pra I.A.
+
+- Caracterize o papel do Direito Civil e seus pilares (propriedade, contrato, família) durante a vigência do Estado Liberal no Brasil.
+- Explique como a ascensão do Estado Social alterou a concepção de autonomia da vontade nos contratos cíveis.
+- Compare o tratamento dado à função social da propriedade no Código Civil de 1916 e no ordenamento jurídico atual.
+- Discorra sobre a importância da CF/88 como marco da transição de um Direito Civil individualista para um paradigma social.
+- Analise criticamente de que forma o dirigismo contratual reflete a passagem do Estado Liberal para o Estado Social.
+
+### Fontes
+
+- Do Estado Liberal ao Estado Social: Uma Breve Análise da Evolução do Estado - Jusbrasil
+- A evolução histórica do direito de propriedade e sua função social - Jus Navigandi
+- O Estado Social e a Constituição de 1988 - Âmbito Jurídico
+- A transição do Estado Liberal para o Estado Social - direitonet
+- A crise do Estado Liberal e a emergência do Estado Social - Mundo Educação
+-----
+# Liberalismo e Direito Civil
+
+-- O Direito Civil de matriz liberal, cujo ápice foi o Código Civil de 1916, era fundado em uma tríade: o indivíduo como centro de vontades, o contrato como expressão máxima dessa autonomia (pacta sunt servanda) e a propriedade como um direito absoluto e intocável.
+
+-- Sua estrutura visava garantir a segurança jurídica para a livre circulação de riquezas, com mínima intervenção do Estado. Partia-se da premissa de uma igualdade formal, ignorando as desigualdades materiais e tratando os contratantes como forças abstratamente equivalentes.
+
+## Referências do Tema
+
+--- Código Civil de 1916 (Lei nº 3.071/1916)
+
+## Pergunte pra I.A.
+
+- Descreva os três pilares fundamentais do Direito Civil na era do liberalismo clássico.
+- Explique o conceito de "autonomia da vontade" e como ele se manifestava nos contratos sob a égide do Código Civil de 1916.
+- Analise a concepção do direito de propriedade no liberalismo e suas principais características (absolutismo, exclusividade, perpetuidade).
+- Discuta o papel do Estado nas relações privadas segundo a doutrina liberal e como isso se refletia no Direito Civil da época.
+- Critique o princípio da igualdade formal entre os contratantes no contexto liberal, considerando as desigualdades materiais existentes.
+
+### Fontes
+
+- Direito Civil liberal-burguês: uma análise de seus principais institutos sob a ótica da Escola do Recife - Jus Navigandi
+- O Individualismo no Código Civil de 1916 - Jusbrasil
+- A Evolução do Conceito de Contrato: Do Liberalismo ao Dirigismo Contratual - Âmbito Jurídico
+- O direito de propriedade no Estado Liberal - direitonet
+- Liberalismo: o que é, características, história - Brasil Escola
+-----
+# Estado Social (e democrático de direito) e o Direito Civil
+
+-- No Estado Social, o Direito Civil é ressignificado para servir à coletividade. Os institutos privados, como o contrato e a propriedade, passam a ser "funcionalizados", ou seja, seu exercício só é legítimo se atender a uma finalidade socialmente útil e não prejudicar a coletividade.
+
+-- Essa mudança se opera por meio de normas de ordem pública e cláusulas gerais, como a boa-fé objetiva (Art. 422, CC/02) e o abuso de direito (Art. 187, CC/02). A proteção de vulneráveis, como o consumidor (Súmula 297, STJ), torna-se um objetivo central do sistema.
+
+## Referências do Tema
+
+--- Art. 187 do CC/02
+--- Art. 421 do CC/02
+--- Art. 422 do CC/02
+--- Súmula 297 do STJ
+
+## Pergunte pra I.A.
+
+- Defina o que se entende por "funcionalização" dos institutos de Direito Civil no contexto do Estado Social.
+- Explique como o princípio da boa-fé objetiva (Art. 422, CC/02) atua como um limitador da autonomia individual nos contratos.
+- Discorra sobre o impacto do Código de Defesa do Consumidor (Lei 8.078/90) como marco da transição para um Direito Civil mais social.
+- Analise a Súmula 297 do STJ ("O Código de Defesa do Consumidor é aplicável às instituições financeiras") como exemplo da aplicação de uma ótica social.
+- Critique as tensões existentes entre a autonomia privada e o dirigismo contratual no Estado Social Democrático de Direito.
+
+### Fontes
+
+- O Estado Social e sua influência no Direito Civil - Âmbito Jurídico
+- A função social dos contratos no Código Civil de 2002 e no Código de Defesa do Consumidor - Jus Navigandi
+- A boa-fé objetiva e sua aplicação nas relações contratuais - Migalhas
+- O que diz a Súmula 297 do STJ? - Dizer o Direito
+- O Estado Democrático de Direito e o Direito Civil - Conjur
+-----
+# Princípios constitucionais e sua relevância para o Direito Civil
+
+-- Os princípios constitucionais são o fundamento de validade de todo o Direito Civil. A dignidade da pessoa humana (Art. 1º, III, CF/88) e a solidariedade (Art. 3º, I, CF/88) não são meras diretrizes, mas normas jurídicas de aplicação direta e imediata nas relações privadas.
+
+-- Sua relevância é máxima, pois determinam a interpretação de qualquer norma infraconstitucional (filtragem constitucional) e podem ser aplicados diretamente a litígios entre particulares (eficácia horizontal), como decidido pelo STF no RE 201.819, superando a separação entre público e privado.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 3º, I, da CF/88
+--- Art. 5º, caput, da CF/88
+--- STF, RE 201.819
+
+## Pergunte pra I.A.
+
+- Explique o conceito de "eficácia horizontal dos direitos fundamentais" e sua importância para o Direito Civil.
+- Cite três princípios constitucionais e descreva como cada um deles se aplica diretamente às relações contratuais privadas.
+- Analise a decisão do STF no RE 201.819 (caso da exclusão de sócio de associação) e seu impacto na aplicação de normas constitucionais em conflitos entre particulares.
+- Discuta como o princípio da isonomia (igualdade) é interpretado no Direito Civil contemporâneo para proteger partes vulneráveis.
+- Avalie criticamente a possibilidade de um negócio jurídico ser considerado nulo por violação direta a um princípio constitucional.
+
+### Fontes
+
+- A Constitucionalização do Direito Civil e a Eficácia Horizontal dos Direitos Fundamentais - Conjur
+- A Influência dos Princípios Constitucionais no Direito Civil - Jusbrasil
+- A eficácia dos direitos fundamentais nas relações privadas - Supremo Tribunal Federal (STF)
+- A relevância dos princípios constitucionais para o direito civil - Migalhas
+- O Recurso Extraordinário 201.819-RS e a Eficácia dos Direitos Fundamentais nas Relações Privadas - Âmbito Jurídico
+-----
+# Casamento: Regras sobre direito espacial
+
+-- O casamento de brasileiros no exterior, perante autoridades estrangeiras, será reconhecido no Brasil se registrado em repartição consular brasileira e, posteriormente, transcrito em Cartório do 1º Ofício do Registro Civil (Art. 1.544 do CC/02; Art. 32 da Lei 6.015/73).
+
+-- A Lei de Introdução às Normas do Direito Brasileiro (LINDB) estabelece a lei do domicílio dos nubentes para reger as relações pessoais e patrimoniais do casamento (Art. 7º da LINDB), visando solucionar conflitos de leis no espaço.
+
+## Referências do Tema
+
+--- Art. 1.544 do Código Civil (CC/02)
+--- Art. 32 da Lei nº 6.015/73 (Lei de Registros Públicos)
+--- Art. 7º do Decreto-Lei nº 4.657/42 (LINDB)
+
+## Pergunte pra I.A.
+
+  - Quais são os requisitos para a validade no Brasil de um casamento celebrado no exterior?
+  - Explique a regra "lex domicilii" e sua aplicação ao casamento conforme o Art. 7º da LINDB.
+  - Como a ausência do registro consular e da transcrição afeta a eficácia do casamento estrangeiro no Brasil?
+  - Discorra sobre o regime de bens no casamento internacional, considerando as regras da LINDB.
+  - Analise a jurisprudência do STJ sobre o divórcio e a partilha de bens de casamentos celebrados no exterior.
+
+### Fontes
+
+  - O casamento celebrado no exterior - Migalhas
+  - O casamento de brasileiros no exterior e seus efeitos no Brasil - Jusbrasil
+  - Registro de casamento celebrado no exterior - Consulado-Geral do Brasil em Miami
+  - Validade do Casamento no Estrangeiro - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - A Lei de Introdução às Normas do Direito Brasileiro (LINDB) e o Direito Internacional Privado - Âmbito Jurídico
+-----
+# Relações Jurídicas cujo objeto seja imóvel e móvel
+
+-- A qualificação do bem como móvel ou imóvel define o regime jurídico aplicável, especialmente quanto à forma de aquisição da propriedade. Para imóveis, exige-se registro no Cartório de Registro de Imóveis (Art. 1.245 do CC/02); para móveis, a simples tradição (entrega) é suficiente (Art. 1.267 do CC/02).
+
+-- A natureza do bem também impacta as garantias reais. A hipoteca recai sobre imóveis (Art. 1.473 do CC/02), enquanto o penhor incide sobre bens móveis (Art. 1.431 do CC/02), estabelecendo-se formalidades distintas para a constituição de cada direito real de garantia.
+
+## Referências do Tema
+
+--- Art. 1.245 do Código Civil (CC/02)
+--- Art. 1.267 do Código Civil (CC/02)
+--- Art. 1.473 do Código Civil (CC/02)
+--- Art. 1.431 do Código Civil (CC/02)
+
+## Pergunte pra I.A.
+
+  - Diferencie as formas de aquisição de propriedade para bens móveis e imóveis, conforme o Código Civil.
+  - Explique o que é a tradição e qual sua importância para a transferência de propriedade de bens móveis.
+  - Quais são os requisitos legais para a constituição de uma hipoteca sobre um bem imóvel?
+  - Compare os contratos de penhor e hipoteca, destacando o tipo de bem que serve de objeto para cada um.
+  - Discuta as implicações processuais da distinção entre bens móveis e imóveis em ações de execução e inventário.
+
+### Fontes
+
+  - Dos Bens - Direito Civil Brasileiro (Carlos Roberto Gonçalves) - Saraiva Jur
+  - Direito das Coisas: o que é, princípios e como funciona - Aurum
+  - Diferença entre bens móveis e imóveis - Jusbrasil
+  - Direitos Reais de Garantia: Penhor, Hipoteca e Anticrese - Âmbito Jurídico
+  - Aquisição da Propriedade Imóvel pelo Registro do Título - https://www.google.com/search?q=Jus.com.br
+-----
+# Obrigações
+
+-- A obrigação é a relação jurídica transitória em que o devedor tem o dever de cumprir uma prestação (dar, fazer ou não fazer) em favor do credor (Art. 233, 247 e 250 do CC/02). Seu descumprimento gera responsabilidade patrimonial, sujeitando os bens do devedor à satisfação do crédito (Art. 391 do CC/02).
+
+-- As fontes das obrigações são a lei, os contratos, os atos ilícitos e os atos unilaterais de vontade, como a promessa de recompensa (Arts. 854 e 186 do CC/02). A estrutura da obrigação compreende os sujeitos (credor e devedor), o objeto (prestação) e o vínculo jurídico.
+
+## Referências do Tema
+
+--- Art. 233 do Código Civil (CC/02)
+--- Art. 247 do Código Civil (CC/02)
+--- Art. 250 do Código Civil (CC/02)
+--- Art. 391 do Código Civil (CC/02)
+--- Art. 186 do Código Civil (CC/02)
+--- Art. 854 do Código Civil (CC/02)
+
+## Pergunte pra I.A.
+
+  - Defina o conceito de obrigação jurídica e explique seus três elementos essenciais: sujeitos, objeto e vínculo.
+  - Quais são as principais fontes das obrigações no Direito Civil brasileiro?
+  - Diferencie as obrigações de dar, fazer e não fazer, fornecendo um exemplo para cada modalidade.
+  - Explique o princípio da responsabilidade patrimonial do devedor em caso de inadimplemento da obrigação.
+  - Analise as diferenças entre responsabilidade civil contratual e extracontratual como fontes de obrigações.
+
+### Fontes
+
+  - Direito das Obrigações: o que é e modalidades - Aurum
+  - Teoria Geral das Obrigações - Jusbrasil
+  - O que se entende por obrigação? - https://www.google.com/search?q=Jus.com.br
+  - Direito das Obrigações - Manual de Direito Civil (Flávio Tartuce) - Editora Método
+  - Fontes das Obrigações no Direito Civil - Âmbito Jurídico
+-----
+# Fontes de Direito, Interpretação e Integração das Normas
+
+-- As fontes do direito são os meios pelos quais as normas jurídicas se manifestam. A lei é a principal (art. 1º da LINDB), mas na sua ausência, o juiz decidirá o caso de acordo com a analogia, os costumes e os princípios gerais de direito (Art. 4º da LINDB).
+
+-- Para a correta aplicação da lei, o juiz atenderá aos fins sociais a que ela se dirige e às exigências do bem comum (Art. 5º da LINDB). A jurisprudência e a doutrina, embora não listadas no Art. 4º, são fontes secundárias essenciais para a interpretação do direito.
+
+## Referências do Tema
+
+--- Art. 1º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Art. 4º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Art. 5º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+
+## Pergunte pra I.A.
+
+- Diferencie as fontes formais e materiais do direito, exemplificando cada uma delas.
+- Explique os métodos de interpretação da norma jurídica (gramatical, lógico, sistemático, histórico e teleológico).
+- Discorra sobre os mecanismos de integração de normas: analogia, costumes e princípios gerais de direito.
+- Analise a importância da jurisprudência e da doutrina como fontes do direito no ordenamento jurídico brasileiro.
+- Avalie o papel do Art. 5º da LINDB como um critério fundamental para a interpretação e aplicação do direito.
+
+### Fontes
+- Fontes do Direito: o que são, quais são, exemplos e mais - Blog da Aurum
+- A Lei de Introdução às Normas do Direito Brasileiro (LINDB) - Jusbrasil
+-----
+# Eficácia da Lei no Espaço (questão territorial) – Regras sobre Direito Internacional Privado
+
+-- A lei brasileira, em regra, só tem eficácia no território nacional (princípio da territorialidade). Contudo, o Direito Internacional Privado regula a aplicação de leis em relações com elementos estrangeiros, conforme os Arts. 7º a 19 da LINDB.
+
+-- A lei do país de domicílio da pessoa determina as regras sobre o começo e o fim da personalidade, o nome e a capacidade (Art. 7º da LINDB). Já para qualificar e reger as relações sobre bens, aplica-se a lei do país em que estiverem situados (Art. 8º da LINDB).
+
+## Referências do Tema
+
+--- Arts. 7º a 19 da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Art. 7º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Art. 8º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Art. 9º da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Art. 10 da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+--- Art. 12 da Lei de Introdução às Normas do Direito Brasileiro (LINDB)
+
+## Pergunte pra I.A.
+
+- Explique o princípio da territorialidade da lei e suas principais exceções no direito brasileiro.
+- Defina os elementos de conexão do Direito Internacional Privado, como "lex domicilii", "lex loci executionis" e "lex rei sitae".
+- Discorra sobre a aplicação da lei estrangeira no Brasil e as limitações impostas pela ordem pública e bons costumes (Art. 17 da LINDB).
+- Analise as regras de competência internacional da autoridade judiciária brasileira, conforme o Código de Processo Civil.
+- Discuta o procedimento de homologação de sentenças estrangeiras e sua importância para a eficácia de decisões proferidas em outros países.
+
+### Fontes
+- Eficácia da lei no espaço e os elementos de conexão do Direito Internacional Privado - Jusbrasil
+- Da Aplicação da Lei no Espaço no Direito Internacional Privado - ambitojuridico.com.br
+-----
+# Competência e Jurisdição
+
+-- Jurisdição é o poder-dever do Estado de dizer o direito, sendo una e exercida por todos os juízes (Art. 5º, XXXV, CF/88). A competência é a delimitação dessa jurisdição, distribuindo os casos entre os diversos órgãos judiciários segundo critérios definidos em lei.
+
+-- A competência é determinada no momento do registro ou da distribuição da petição inicial, sendo irrelevantes as modificações do estado de fato ou de direito ocorridas posteriormente (Art. 43 do CPC). Ninguém será processado senão pela autoridade competente (Art. 5º, LIII, CF/88).
+
+## Referências do Tema
+
+--- Art. 5º, XXXV, da Constituição Federal
+--- Art. 5º, LIII, da Constituição Federal
+--- Art. 16 do Código de Processo Civil
+--- Art. 43 do Código de Processo Civil
+--- Art. 44 do Código de Processo Civil
+--- Art. 62 do Código de Processo Civil
+--- Art. 63 do Código de Processo Civil
+
+## Pergunte pra I.A.
+
+- Defina jurisdição e competência, explicando a relação entre os dois conceitos.
+- Diferencie competência absoluta e competência relativa, abordando os critérios de fixação (matéria, pessoa, valor e território).
+- Explique o princípio da "perpetuatio jurisdictionis" (perpetuação da jurisdição) e suas exceções legais.
+- Discuta as possibilidades de modificação da competência, como a conexão, a continência e o foro de eleição.
+- Analise os conflitos de competência (positivo e negativo) e o procedimento para sua resolução nos tribunais.
+
+### Fontes
+- Jurisdição e competência: entenda os conceitos e as diferenças - Blog da Aurum
+- Resumo sobre jurisdição e competência - Dizer o Direito
+-----
 # Vigência da Lei
 
 -- A vigência determina o período em que a lei possui força obrigatória. Após a publicação oficial, inicia-se a *vacatio legis*, prazo para a norma ser conhecida antes de se tornar obrigatória, conforme o Art. 1º da Lei de Introdução às Normas do Direito Brasileiro (LINDB).
