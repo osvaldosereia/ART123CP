@@ -2,6 +2,32 @@
 
 
 
+
+-----
+# Direitos da Personalidade (Direito Civil)
+-- Os Direitos da Personalidade são essenciais à proteção da dignidade da pessoa humana (Art. 1º, III, CF), sendo expressões da cláusula geral de tutela da pessoa humana. São vitalícios, absolutos, ilimitados (não exaustivos), inatos e extrapatrimoniais. São também, em regra, intransmissíveis e irrenunciáveis, embora possam ser limitados voluntariamente de forma parcial e temporária, desde que previsto em lei (Art. 11, CC). Permitem a reparação por dano moral (Súmula 227 STJ).
+
+## Pergunte pra I.A.
+
+  - Qual a relação fundamental entre os Direitos da Personalidade e a Dignidade da Pessoa Humana no ordenamento jurídico brasileiro?
+  - De que maneira o Neoconstitucionalismo influenciou a concepção e a aplicação dos Direitos da Personalidade no Direito Civil?
+  - Explique a característica "absoluto" dos Direitos da Personalidade, diferenciando a postura de abstenção e de promoção que o Estado deve adotar.
+  - Como a característica "ilimitado" dos Direitos da Personalidade impacta a interpretação jurídica, especialmente considerando o rol exemplificativo do Código Civil?
+  - Diferencie as características "vitalício" e "perpétuo" em relação aos Direitos da Personalidade, e qual o seu fim com a morte da pessoa natural.
+  - A imprescritibilidade dos Direitos da Personalidade se estende à pretensão de reparação por dano moral? Explique a posição do STJ sobre o tema.
+  - De que forma a intransmissibilidade e irrenunciabilidade dos Direitos da Personalidade são relativizadas pela lei e pela jurisprudência, e quais os limites dessa flexibilização? (Art. 11, CC; Enunciado 4 da I Jornada de Direito Civil do CJF)
+  - Analise a disposição do próprio corpo (Art. 13, CC) como um Direito da Personalidade. Quais as exceções e a relação com o consentimento informado?
+  - Como a proteção do nome (Art. 16, CC) e do pseudônimo (Art. 19, CC) se manifesta como Direito da Personalidade, e quais as possibilidades de alteração do nome?
+  - Discorra sobre a proteção à imagem (Súmula 403, STJ; Enunciado 278 da IV Jornada de Direito Civil do CJF) e à voz humana como Direitos da Personalidade.
+  - Qual foi o impacto do julgamento da ADI 4815 pelo STF na exigência de autorização prévia para a publicação de biografias, e como isso se relaciona com os Direitos da Personalidade?
+  - A Súmula 227 do STJ, ao reconhecer que a pessoa jurídica pode sofrer dano moral, modifica a compreensão dos Direitos da Personalidade?
+  - Como a "concepção existencialista da Constituição Federal" (p. 2389) se reflete na proteção dos Direitos da Personalidade no Direito Civil contemporâneo, exemplificando com institutos como o patrimônio mínimo e a proteção ao bem de família?
+  - De que maneira a lei 13.146/15 (Estatuto da Pessoa com Deficiência) influenciou a compreensão da capacidade e, consequentemente, a proteção dos Direitos da Personalidade das pessoas com deficiência? (Art. 6º, Lei 13.146/15)
+  - Explique como o Direito Civil Constitucional, ao reler institutos como casamento, propriedade e contrato à luz da Dignidade da Pessoa Humana, impacta os Direitos da Personalidade.
+  - Quais as garantias dos Direitos da Personalidade em face da utilização de tecnologias e da era digital?
+  - O que significa dizer que os Direitos da Personalidade são "relativamente indisponíveis" e como isso se materializa na prática jurídica?
+  - Analise a colisão entre Direitos da Personalidade e a técnica da ponderação para a sua resolução, conforme o Enunciado 274 da IV Jornada de Direito Civil.
+
 ------
 # Neoconstitucionalismo
 -- O Neoconstitucionalismo é um movimento de revalorização do Direito Constitucional, surgido no final do século XX. Caracteriza-se pela constitucionalização do direito, força normativa da Constituição e dos princípios jurídicos, efetivação dos Direitos Fundamentais (especialmente a dignidade humana - Art. 1º, III, CF), reaproximação entre Direito, Ética, Justiça e Moral, e judicialização das políticas. Implica uma releitura de diversos institutos jurídicos, inclusive no Direito Civil.
@@ -113,7 +139,9 @@
 -----
 
 # Doação feita a nascituro
--- A doação feita ao nascituro é um tema relevante no Direito Civil que envolve o início da personalidade jurídica e a proteção de direitos futuros. Conforme o Art. 542 do Código Civil, "a doação feita ao nascituro valerá, sendo aceita pelo seu representante legal". Para sua validade, a doação a nascituro depende da aceitação do representante e, crucialmente, do nascimento com vida. A jurisprudência e a doutrina debatem qual teoria da personalidade jurídica melhor se alinha a essa situação. Embora o Art. 2º do Código Civil adote a Teoria Natalista ("a personalidade civil da pessoa começa do nascimento com vida"), a proteção de direitos do nascituro, como na doação, é explicada pela Teoria Concepcionista Moderada. Esta teoria distingue a personalidade jurídica formal (direitos da personalidade, que se iniciam com a concepção) da personalidade jurídica material (direitos patrimoniais, que se iniciam com o nascimento com vida). Desse modo, o nascituro, mesmo sem personalidade jurídica plena, tem seus direitos patrimoniais assegurados desde a concepção, mas sua concretização fica condicionada ao nascimento com vida.
+-- A doação feita ao nascituro é um tema relevante no Direito Civil que envolve o início da personalidade jurídica e a proteção de direitos futuros. Conforme o Art. 542 do Código Civil, "a doação feita ao nascituro valerá, sendo aceita pelo seu representante legal". Para sua validade, a doação a nascituro depende da aceitação do representante e, crucialmente, do nascimento com vida. A jurisprudência e a doutrina debatem qual teoria da personalidade jurídica melhor se alinha a essa situação. 
+
+-- Embora o Art. 2º do Código Civil adote a Teoria Natalista ("a personalidade civil da pessoa começa do nascimento com vida"), a proteção de direitos do nascituro, como na doação, é explicada pela Teoria Concepcionista Moderada. Esta teoria distingue a personalidade jurídica formal (direitos da personalidade, que se iniciam com a concepção) da personalidade jurídica material (direitos patrimoniais, que se iniciam com o nascimento com vida). Desse modo, o nascituro, mesmo sem personalidade jurídica plena, tem seus direitos patrimoniais assegurados desde a concepção, mas sua concretização fica condicionada ao nascimento com vida.
 
 ## Pergunte pra I.A.
 
