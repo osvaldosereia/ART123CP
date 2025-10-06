@@ -1,7 +1,135 @@
+Certo, Osvaldo. Continuarei com a análise dos temas de Direito Civil, apresentando-os de dois em dois, conforme a sequência exata do sumário do seu documento e extraindo os conceitos mais relevantes.
+
+-----
+
+# Responsabilidade da Pessoa Jurídica  
+-- A pessoa jurídica possui responsabilidade jurídica própria nas esferas civil, administrativa e penal. O Código Civil (Art. 47) estabelece que atos dos administradores, nos limites de seus poderes, obrigam a pessoa jurídica.  
+-- Contudo, a Teoria da Aparência prevalece, fazendo com que a pessoa jurídica responda por atos de seus gestores, mesmo *ultra vires*, se o terceiro estiver de boa-fé. A Lei 14.195/2021 revogou dispositivos que limitavam essa responsabilidade, reforçando a boa-fé objetiva.
+
+# Referências do Tema  
+--- Art. 47, CC/02  
+--- Art. 1.015, parágrafo único (revogado), CC/02  
+--- Enunciado 147 da III Jornada de Direito Civil  
+--- Lei 14.195/2021
+
+## Pergunte pra I.A.
+
+  - Explique o princípio da responsabilidade própria da pessoa jurídica e como ela se manifesta nas esferas civil, administrativa e penal.
+  - Discorra sobre a Teoria *Ultra Vires Societatis* e a Teoria da Aparência no contexto da responsabilidade da pessoa jurídica, indicando qual delas é a predominante no Brasil.
+  - Analise o impacto da revogação do parágrafo único do Art. 1.015 do Código Civil pela Lei 14.195/2021 na responsabilidade da pessoa jurídica por atos de seus administradores.
+  - Explique como a boa-fé objetiva de terceiros influencia a responsabilização da pessoa jurídica por atos praticados por seus gestores.
+  - Apresente um caso prático que demonstre a aplicação da responsabilidade da pessoa jurídica por atos de seus administradores, considerando a Teoria da Aparência.
+  - Discuta a responsabilidade da pessoa jurídica em crimes ambientais, conforme a Constituição Federal e a Lei 9.605/98.
+  - Explique a diferença entre responsabilidade primária e responsabilidade subsidiária no contexto da pessoa jurídica.
+  - Analise se a responsabilidade da pessoa jurídica abrange apenas atos praticados com dolo ou também atos culposos.
+  - Como a separação patrimonial entre a pessoa jurídica e seus sócios é um pilar para a autonomia da empresa e qual a sua relação com a responsabilidade?
+  - Discorra sobre a aplicação da Súmula 227 do STJ, que permite o dano moral à pessoa jurídica, no contexto da responsabilidade da empresa.
+
+-----
+
+# Direitos da Personalidade da Pessoa Jurídica  
+-- Embora os direitos da personalidade tenham sido criados para pessoas naturais, o Código Civil (Art. 52) estende sua proteção às pessoas jurídicas "no que couber". Isso se alinha à ideia da função social da pessoa jurídica, que deve harmonizar interesses privados com valores constitucionais.  
+-- Assim, a pessoa jurídica é titular de honra objetiva (reputação) e privacidade (e.g., contas bancárias), podendo sofrer dano moral (Súmula 227 do STJ). Contudo, não possui honra subjetiva (autoestima), vida ou atributos físicos, o que limita a extensão dessa proteção.
+
+# Referências do Tema  
+--- Art. 52, CC/02  
+--- Súmula 227 do STJ
+
+## Pergunte pra I.A.
+
+  - Explique o fundamento para a aplicação dos direitos da personalidade às pessoas jurídicas, considerando que esses direitos foram originalmente concebidos para pessoas naturais.
+  - Discorra sobre a distinção entre honra objetiva (reputação) e honra subjetiva (autoestima) e como essa diferença impacta a proteção dos direitos da personalidade da pessoa jurídica.
+  - Analise a Súmula 227 do STJ, que reconhece a possibilidade de dano moral à pessoa jurídica, e discuta suas implicações para o conceito de dano moral no ordenamento jurídico.
+  - Apresente exemplos de direitos da personalidade que podem ser atribuídos à pessoa jurídica (e.g., nome, privacidade, imagem) e de outros que são incompatíveis (e.g., vida, integridade física).
+  - De que forma a "função social" da pessoa jurídica, à luz da Constituição Federal, justifica a extensão de alguns direitos da personalidade a esses entes.
+  - Discuta a proteção da imagem da pessoa jurídica e como ela pode ser violada por atos de terceiros, gerando o direito à reparação por danos.
+  - Explique como a privacidade de uma pessoa jurídica se manifesta e quais são os limites de sua violação, especialmente em face da fiscalização estatal.
+  - Analise se a pessoa jurídica pode ser sujeito passivo de crimes contra a honra, e quais crimes seriam compatíveis com a sua natureza.
+  - Apresente um caso prático que ilustre a violação de um direito da personalidade da pessoa jurídica e a eventual solução judicial.
+  - Discorra sobre a relação entre os direitos da personalidade da pessoa jurídica e a proteção ao nome empresarial.
 
 
 
+-----
 
+# Extinção da EIRELI pela Lei  
+-- A EIRELI (Empresa Individual de Responsabilidade Limitada) foi extinta pela Lei 14.195/2021, sendo suas empresas transformadas em sociedades limitadas unipessoais. Essa mudança busca simplificar as formas societárias.  
+-- A sociedade limitada unipessoal (Art. 1.052, §§ 1º e 2º, CC/02, alterado pela Lei 13.874/2019) permite a constituição de pessoa jurídica por um único indivíduo, substituindo a EIRELI como forma de empreendedorismo individual com responsabilidade limitada.
+
+# Referências do Tema  
+--- Art. 1.052, §§ 1º e 2º, CC/02  
+--- Lei 13.874/2019  
+--- Lei 14.195/2021
+
+## Pergunte pra I.A.
+
+  - Explique o que era a EIRELI e qual o seu objetivo antes da Lei 14.195/2021.
+  - Descreva as principais mudanças trazidas pela Lei 14.195/2021 em relação à EIRELI e à sociedade limitada unipessoal.
+  - Analise como a extinção da EIRELI e a consolidação da sociedade limitada unipessoal buscam simplificar o ambiente de negócios no Brasil.
+  - Discuta a importância da responsabilidade limitada para o empreendedor individual e como as novas formas societárias garantem essa proteção.
+  - Compare a EIRELI com a sociedade limitada unipessoal em termos de características, requisitos e proteção patrimonial.
+  - Quais os desafios e benefícios dessa transição para os empresários individuais e para o registro de empresas no Brasil?
+  - Explique como a Lei da Liberdade Econômica (Lei 13.874/2019) já havia pavimentado o caminho para a criação da sociedade limitada unipessoal.
+  - Discorra sobre a importância da publicidade dos atos constitutivos de uma pessoa jurídica para sua regularidade e oponibilidade a terceiros.
+  - Apresente um caso prático em que a distinção entre EIRELI e sociedade limitada unipessoal seria relevante para a solução de um litígio.
+  - Avalie as críticas doutrinárias e os debates sobre a eficácia da extinção da EIRELI e a transição para a sociedade limitada unipessoal.
+
+-----
+
+# Autonomia da Pessoa Jurídica  
+-- A autonomia da pessoa jurídica garante a separação entre o patrimônio da empresa e o de seus sócios, administradores ou instituidores (Art. 49-A, CC/02). Essa segregação de riscos visa estimular empreendimentos e gerar benefícios sociais e econômicos.  
+-- Essa autonomia, contudo, não é absoluta. Em casos de abuso da personalidade jurídica, caracterizado por desvio de finalidade ou confusão patrimonial, a desconsideração pode estender os efeitos das obrigações aos bens particulares dos responsáveis (Art. 50, CC/02).
+
+# Referências do Tema  
+--- Art. 49-A, CC/02  
+--- Art. 50, CC/02  
+--- Lei 13.874/2019
+
+## Pergunte pra I.A.
+
+  - Explique o princípio da autonomia patrimonial da pessoa jurídica e sua importância para o estímulo ao empreendedorismo.
+  - Discorra sobre os conceitos de "desvio de finalidade" e "confusão patrimonial" como requisitos para a desconsideração da personalidade jurídica.
+  - Analise como a Lei da Liberdade Econômica (Lei 13.874/2019) buscou reforçar a autonomia da pessoa jurídica e quais foram as principais alterações no Art. 50 do Código Civil.
+  - Explique a Teoria Maior e a Teoria Menor da desconsideração da personalidade jurídica, e qual delas é a regra no Código Civil.
+  - Apresente um caso prático que demonstre a aplicação da desconsideração da personalidade jurídica por confusão patrimonial.
+  - Discuta a responsabilidade dos sócios e administradores nos casos de desconsideração da personalidade jurídica, especialmente em relação àqueles beneficiados direta ou indiretamente pelo abuso.
+  - De que forma a "segregação de riscos" é um conceito-chave para entender a autonomia da pessoa jurídica e seus limites.
+  - Analise as críticas e os debates doutrinários sobre o impacto da Lei da Liberdade Econômica na efetividade da desconsideração da personalidade jurídica.
+  - Explique por que a mera existência de um grupo econômico não autoriza, por si só, a desconsideração da personalidade jurídica.
+  - Discorra sobre a "responsabilidade da pessoa jurídica" e como ela se diferencia da responsabilidade pessoal de seus membros.
+
+-----
+
+# Como será o processo de interdição?  
+-- O processo de interdição, iniciado com petição especificando a incapacidade e laudo médico (Art. 749 e 750, CPC), prevê citação e oitiva do interditando, que pode impugnar em 15 dias com apoio de especialista e recursos tecnológicos (Art. 751, CPC).  
+-- Em urgência, o juiz nomeia curador provisório. A interdição é excepcional, restrita a atos patrimoniais, e a sentença é constitutiva *ex nunc* (Art. 9º, III, CC/02). O MP atua como fiscal, e a curatela pode ser compartilhada.
+
+# Referências do Tema  
+--- Art. 9º, III, CC/02  
+--- Art. 1.767, I, CC/02  
+--- Art. 1.775-A do CC/02  
+--- Art. 749 do CPC  
+--- Art. 749, parágrafo único, CPC  
+--- Art. 750 do CPC  
+--- Art. 751 do CPC  
+--- Art. 752, § 2º e 3º, CPC  
+--- Art. 753, § 2º, CPC  
+--- STJ – AgInt no REsp: 1707902 SP 2017/0287364-0  
+--- STJ – REsp: 1694984 MS 2017/0012081-0  
+--- Lei 13.146/15
+
+## Pergunte pra I.A.
+
+  - Descreva as etapas do processo de interdição, desde a petição inicial até o registro da sentença, e qual a finalidade de cada uma.
+  - Explique a importância do laudo médico no processo de interdição, especialmente após a Lei 13.146/15, e o que deve conter.
+  - Analise o papel do Ministério Público no processo de interdição, diferenciando sua atuação como legitimado para propor a ação e como fiscal da ordem jurídica.
+  - Discorra sobre a oitiva do interditando e a possibilidade de uso de recursos tecnológicos para facilitar a expressão de sua vontade.
+  - Avalie a natureza jurídica da sentença de interdição (*ex nunc*) e suas implicações para os atos praticados antes e depois da decisão.
+  - Explique o conceito de curatela provisória e quando ela pode ser nomeada pelo juiz.
+  - Discuta a flexibilização da interdição pela Lei 13.146/15, limitando-a a atos patrimoniais, e os debates doutrinários sobre a possível desproteção de vulneráveis.
+  - Aborde a possibilidade da curatela compartilhada (Art. 1.775-A do CC/02) e como ela se alinha aos princípios de inclusão e autodeterminação.
+  - Quais são os efeitos práticos da decisão do STJ que dispensou a nomeação de curador especial quando o Ministério Público atua como fiscal da ordem jurídica?
+  - Explique como a falta de intervenção do Ministério Público no processo de interdição pode gerar nulidade, e quais são os requisitos para a comprovação de prejuízo.
 
 -----
 
