@@ -4,7 +4,7 @@
 
 ------
 # Neoconstitucionalismo
-O Neoconstitucionalismo é um movimento de revalorização do Direito Constitucional, surgido no final do século XX. Caracteriza-se pela constitucionalização do direito, força normativa da Constituição e dos princípios jurídicos, efetivação dos Direitos Fundamentais (especialmente a dignidade humana - Art. 1º, III, CF), reaproximação entre Direito, Ética, Justiça e Moral, e judicialização das políticas. Implica uma releitura de diversos institutos jurídicos, inclusive no Direito Civil.
+-- O Neoconstitucionalismo é um movimento de revalorização do Direito Constitucional, surgido no final do século XX. Caracteriza-se pela constitucionalização do direito, força normativa da Constituição e dos princípios jurídicos, efetivação dos Direitos Fundamentais (especialmente a dignidade humana - Art. 1º, III, CF), reaproximação entre Direito, Ética, Justiça e Moral, e judicialização das políticas. Implica uma releitura de diversos institutos jurídicos, inclusive no Direito Civil.
 
 ## Pergunte pra I.A.
 
@@ -30,7 +30,7 @@ O Neoconstitucionalismo é um movimento de revalorização do Direito Constituci
 
 -----
 # Técnica de Ponderação
-A técnica de ponderação é um método de resolução de conflitos entre princípios jurídicos ou direitos fundamentais, que visa encontrar a solução mais adequada para o caso concreto. No contexto do neoconstitucionalismo, ela busca harmonizar valores e princípios, evitando que um prevaleça de forma absoluta sobre o outro. É essencial para a eficácia irradiante dos direitos fundamentais, como a dignidade da pessoa humana (Art. 1º, III, CF), e para a constitucionalização do direito. O Enunciado 274 da IV Jornada de Direito Civil (CJF) sobre direitos da personalidade, em caso de colisão, recomenda sua aplicação.
+-- A técnica de ponderação é um método de resolução de conflitos entre princípios jurídicos ou direitos fundamentais, que visa encontrar a solução mais adequada para o caso concreto. No contexto do neoconstitucionalismo, ela busca harmonizar valores e princípios, evitando que um prevaleça de forma absoluta sobre o outro. É essencial para a eficácia irradiante dos direitos fundamentais, como a dignidade da pessoa humana (Art. 1º, III, CF), e para a constitucionalização do direito. O Enunciado 274 da IV Jornada de Direito Civil (CJF) sobre direitos da personalidade, em caso de colisão, recomenda sua aplicação.
 
 ## Pergunte pra I.A.
 
@@ -56,7 +56,7 @@ A técnica de ponderação é um método de resolução de conflitos entre princ
 -----
 # Pessoa Jurídica de Direito Público
 
-A pessoa jurídica de direito público é um ente que integra a Administração Pública Direta (União, Estados, DF, Municípios - Art. 44, I e II, CC) ou Indireta (autarquias e fundações públicas de direito público - Art. 44, IV, CC). Sua existência legal começa com a vigência da lei que a instituiu (Art. 45, CC). Gozam de prerrogativas como imunidade tributária recíproca (Art. 150, VI, "a", CF) e regime de precatórios (Art. 100, CF), mas também se sujeitam a deveres como a responsabilidade civil objetiva (Art. 37, § 6º, CF). A súmula 227 do STJ, ao reconhecer dano moral para PJ, reforça a amplitude de seus direitos da personalidade.
+-- A pessoa jurídica de direito público é um ente que integra a Administração Pública Direta (União, Estados, DF, Municípios - Art. 44, I e II, CC) ou Indireta (autarquias e fundações públicas de direito público - Art. 44, IV, CC). Sua existência legal começa com a vigência da lei que a instituiu (Art. 45, CC). Gozam de prerrogativas como imunidade tributária recíproca (Art. 150, VI, "a", CF) e regime de precatórios (Art. 100, CF), mas também se sujeitam a deveres como a responsabilidade civil objetiva (Art. 37, § 6º, CF). A súmula 227 do STJ, ao reconhecer dano moral para PJ, reforça a amplitude de seus direitos da personalidade.
 
 ## Pergunte pra I.A.
 
@@ -78,7 +78,7 @@ A pessoa jurídica de direito público é um ente que integra a Administração 
 
 -----
 # Pessoa Jurídica de Direito Privado
---- A pessoa jurídica de direito privado é um ente dotado de personalidade jurídica, criada pela coletividade de pessoas ou bens, com finalidade lícita e não econômica (associações e fundações) ou com intuito de lucro (sociedades). Sua existência legal começa com o registro de seus atos constitutivos (Art. 45 CC). Pode sofrer dano moral (Súmula 227 STJ) e sua autonomia patrimonial é um instrumento de segregação de riscos, visando estimular empreendimentos (Art. 49-A CC, incluído pela Lei 13.874/2019). A Lei 14.195/2021 transformou EIRELI em sociedade limitada unipessoal (Art. 1.052, §§ 1º e 2º, CC), simplificando a constituição por um único indivíduo. A responsabilidade por atos dos administradores é da pessoa jurídica, nos limites de seus poderes (Art. 47 CC), mas a teoria da aparência mitiga essa regra em relação a terceiros de boa-fé (Enunciado 147 da III Jornada de Direito Civil).
+-- A pessoa jurídica de direito privado é um ente dotado de personalidade jurídica, criada pela coletividade de pessoas ou bens, com finalidade lícita e não econômica (associações e fundações) ou com intuito de lucro (sociedades). Sua existência legal começa com o registro de seus atos constitutivos (Art. 45 CC). Pode sofrer dano moral (Súmula 227 STJ) e sua autonomia patrimonial é um instrumento de segregação de riscos, visando estimular empreendimentos (Art. 49-A CC, incluído pela Lei 13.874/2019). A Lei 14.195/2021 transformou EIRELI em sociedade limitada unipessoal (Art. 1.052, §§ 1º e 2º, CC), simplificando a constituição por um único indivíduo. A responsabilidade por atos dos administradores é da pessoa jurídica, nos limites de seus poderes (Art. 47 CC), mas a teoria da aparência mitiga essa regra em relação a terceiros de boa-fé (Enunciado 147 da III Jornada de Direito Civil).
 
 ## Pergunte pra I.A.
 
