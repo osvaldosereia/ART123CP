@@ -1,6 +1,94 @@
 
+-----
 
+# O morto pode sofrer dano moral?  
+-- No âmbito técnico-jurídico, a atribuição de dano moral a um falecido é inviável, visto que a morte põe fim à personalidade jurídica (Art. 6º, CC/02), cessando a titularidade de direitos. Contudo, a jurisprudência, ao reconhecer a transmissão da pretensão indenizatória aos herdeiros, dissocia a ideia de que dor e sofrimento são elementos indispensáveis do dano moral (Súmula 227 do STJ).  
+-- Os herdeiros podem, sim, buscar a reparação de dano moral sofrido pelo *de cujus* em vida, ou postular por "dano moral reflexo" (ou "em ricochete") por ofensa direta à sua própria honra em decorrência da violação da memória ou imagem do falecido. Ambas as hipóteses configuram indenizações autônomas, e não a atribuição de dano moral ao próprio morto.
 
+## Referências do Tema
+--- Art. 6º, CC/02
+--- Súmula 227 do STJ
+
+## Pergunte pra I.A.
+
+  - Explique a premissa fundamental que torna inviável a atribuição de dano moral ao *de cujus* no Direito Civil brasileiro.
+  - Analise como a Súmula 227 do STJ, ao reconhecer a possibilidade de dano moral à pessoa jurídica, influenciou a compreensão sobre os elementos essenciais do dano moral, para além da dor e do sofrimento.
+  - Diferencie a "transmissão do direito à reparação de dano moral" sofrido em vida pelo falecido de "dano moral reflexo" ou "em ricochete" sofrido pelos herdeiros, e quais as implicações práticas de cada um.
+  - Discorra sobre a titularidade da pretensão de reparação de dano moral após o falecimento da vítima direta, e quais são os limites dessa titularidade para os herdeiros.
+  - Apresente um caso prático (real ou hipotético) em que os herdeiros buscaram a reparação por dano moral sofrido pelo *de cujus* ou por dano moral reflexo, e como o tribunal resolveu a questão.
+
+-----
+
+# O que diz o Código Civil sobre os Direitos da Personalidade?  
+-- O Código Civil (CC/02) aborda os direitos da personalidade de forma não exaustiva (Art. 52, CC), definindo-os como essenciais à dignidade da pessoa humana (Art. 1º, III, CF). Eles são vitalícios, ilimitados e, embora em regra intransmissíveis e irrenunciáveis, podem sofrer limitações voluntárias parciais e temporárias (Art. 11, CC), conforme Enunciado 4 da I Jornada de Direito Civil.  
+-- Quem se sentir ameaçado ou sofrer prejuízo pode exigir que a ameaça cesse e pleitear perdas e danos (Art. 12, CC/02), incluindo herdeiros em caso de falecimento (Art. 12, parágrafo único, CC/02). A disposição do próprio corpo é admitida apenas para exigência médica ou transplante (Art. 13, CC/02 e Lei 9.434/97), e a imagem publicada sem autorização e com fins comerciais enseja reparação, dispensando prova de prejuízo (Súmula 403 do STJ).
+
+## Referências do Tema  
+--- Art. 1º, III, CF  
+--- Art. 5º, XXII, CF/88  
+--- Art. 11, CC/02  
+--- Art. 12, CC/02  
+--- Art. 13, CC/02  
+--- Art. 14, CC/02  
+--- Art. 15, CC/02  
+--- Art. 16, CC/02  
+--- Art. 19, CC/02  
+--- Art. 52, CC/02  
+--- Enunciado 4 da I Jornada de Direito Civil do CJF  
+--- Enunciado 274 da IV Jornada de Direito Civil do CJF  
+--- Enunciado 278 da IV Jornada de Direito Civil do CJF  
+--- Súmula 227 do STJ  
+--- Súmula 403 do STJ  
+--- ADI 4815 do STF  
+--- Lei 9.434/97  
+--- Lei 9.610  
+--- STJ – AREsp: 1179890 SC 2017/0252143-5  
+--- TJ-RJ – APL: 00210033920198190002
+
+## Pergunte pra I.A.
+
+  - Explique a cláusula geral de tutela da pessoa humana (Art. 1º, III, CF) e como ela fundamenta os direitos da personalidade no Código Civil.
+  - De que forma a jurisprudência e a doutrina expandiram o rol de direitos da personalidade, indo além do que está expressamente previsto no Código Civil?
+  - Analise a flexibilização da intransmissibilidade e irrenunciabilidade dos direitos da personalidade, considerando as limitações voluntárias parciais e temporárias.
+  - Discorra sobre a proteção da imagem e voz como direitos da personalidade, com base no Art. 5º, XXII, CF/88, Súmula 403 do STJ e Lei 9.610.
+  - Explique a decisão do STF na ADI 4815 sobre a inexigibilidade de autorização prévia para biografias e o impacto na liberdade de expressão versus direitos da personalidade.
+  - Aborde a possibilidade de dano moral à pessoa jurídica (Súmula 227 do STJ), e como isso se concilia com a natureza dos direitos da personalidade.
+  - Quais são os limites da disposição do próprio corpo, conforme o Art. 13 do Código Civil e a Lei 9.434/97?
+  - De que forma a imutabilidade do nome, como direito da personalidade, pode ser relativizada à luz da dignidade da pessoa humana e do direito à autodeterminação?
+  - Apresente um caso prático em que a colisão entre diferentes direitos da personalidade exige a aplicação da técnica da ponderação.
+  - Discuta a diferença entre a pretensão de reparação de dano moral (prescritível) e a pretensão de proteção ou reconhecimento de ofensa a direito da personalidade (imprescritível).
+
+-----
+
+# Morte no Direito Civil (Declaração de Ausência)  
+-- A morte, no Direito Civil, extingue a personalidade jurídica (Art. 6º, CC/02), implicando a transmissão de herança e o término de relações. A definição do momento da morte adota a morte encefálica (Art. 3º da Lei 9.434/97). Quando não há corpo, a morte é presumida, dividindo-se em sem decretação de ausência (alta probabilidade, como em catástrofes) e com decretação de ausência (baixa probabilidade).  
+-- A morte sem decretação de ausência é mais célere (Art. 7º, parágrafo único, CC/02), enquanto a com decretação de ausência é um processo judicial dividido em três fases: curadoria dos bens (Art. 22 e ss. CC/02), sucessão provisória (Art. 26 e ss. CC/02) e sucessão definitiva (Art. 37 e ss. CC/02). A comoriência (Art. 8º, CC/02) define mortes simultâneas para fins sucessórios.
+
+## Referências do Tema  
+--- Art. 6º, CC/02  
+--- Art. 7º, CC/02  
+--- Art. 8º, CC/02  
+--- Art. 22 e ss., CC/02  
+--- Art. 26 e ss., CC/02  
+--- Art. 30, § 2º, CC/02  
+--- Art. 31, CC/02  
+--- Art. 34, CC/02  
+--- Art. 37 e ss., CC/02  
+--- Art. 88 da Lei 6.015/73  
+--- Lei 9.434/97
+
+## Pergunte pra I.A.
+
+  - Explique como o conceito de "morte encefálica" (Art. 3º da Lei 9.434/97) se tornou o marco definidor do fim da personalidade jurídica no Brasil.
+  - Diferencie "morte real" de "morte presumida", e em que contextos cada uma é aplicável, com exemplos práticos.
+  - Detalhe as duas categorias de "morte presumida" (com e sem decretação de ausência), apontando os requisitos e o procedimento para cada uma.
+  - Descreva as três fases do procedimento de "declaração de ausência" no Direito Civil: curadoria dos bens, sucessão provisória e sucessão definitiva.
+  - Aborde a figura da "comoriência" (Art. 8º, CC/02), explicando seu objetivo e suas implicações para o direito sucessório.
+  - Analise a proteção dos "interesses futuros e possíveis" do ausente durante a curadoria dos bens e a sucessão provisória.
+  - Quais são os direitos e obrigações dos herdeiros durante as fases de sucessão provisória e definitiva, especialmente em relação à caução e à alienação de bens?
+  - Explique o conceito de "propriedade resolúvel" na fase de sucessão definitiva e quais são os direitos do ausente caso ele retorne.
+  - Discuta a importância do "critério de probabilidade de morte" na distinção entre a morte presumida com e sem decretação de ausência.
+  - Apresente um caso concreto em que a definição da morte ou a aplicação de suas teorias foi crucial para a resolução de um conflito jurídico.
 -----
 
 # Direitos da Personalidade: Imprescritíveis  
