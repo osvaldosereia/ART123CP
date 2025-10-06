@@ -1,3 +1,4 @@
+<script>
 // SPA com página inicial minimalista abaixo da topbar.
 // Rotas: #/ (home) • #/tema/:slug • #/sobre
 
@@ -654,18 +655,47 @@
       // montar chips pós-busca abaixo da topbar (requer #postAc no HTML)
       renderPostSearchChips();
 
-      const introRaw = pick.intro.length ? escapeHTML(pick.intro.join(' ')) : '';
-      const introHTML = shouldHighlight ? highlightHTML(introRaw, lastSearch.q) : introRaw;
+      // ===== Introdução em até 2 parágrafos =====
+      const introParas = (pick.intro || []).slice(0,2).map(txt => escapeHTML(txt));
+      const introHTMLParas = shouldHighlight && lastSearch?.q
+        ? introParas.map(p => highlightHTML(p, lastSearch.q))
+        : introParas.slice();
+      const introHTML = introHTMLParas.map(p => `<p class="ubox-intro" style="margin:0 0 .75rem 0">${p}</p>`).join('');
 
+      // ===== Nova seção: Referências do Tema (links para Google I.A.) =====
+      const referencias = [
+        'Art. 5º, caput e X, da CF/88',
+        'ADI 4815 do STF',
+        'Súmula 403 do STJ',
+        'Lei 9.610'
+      ];
+      const refListHTML = referencias.map(ref => {
+        const prompt = `Localize o texto oficial em sites do governo (ex.: DOU, Planalto, STF, STJ, CNJ). Traga o link oficial no topo. Referência: ${ref}`;
+        const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
+        return `<li><a href="${url}" target="_blank" rel="noopener">${escapeHTML(ref)}</a></li>`;
+      }).join('');
+
+      // ===== Perguntas (mantidas, com destaque quando houver) =====
       const qList=(pick.ask||[]).map(q=>{
         const qEsc = escapeHTML(q);
         const qHi  = shouldHighlight ? highlightHTML(qEsc, lastSearch.q) : qEsc;
         return `<li><a href="https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}" target="_blank" rel="noopener">${qHi}</a></li>`;
       }).join('');
 
+      // ===== Render com separadores discretos =====
+      const sep = `<hr style="border:none;border-top:1px solid #e9ecef;margin:16px 0">`;
+
       $('#content').innerHTML=`
         <article class="card ubox" role="article">
-          ${introHTML ? `<p class="ubox-intro">${introHTML}</p>` : ''}
+          ${introHTML}
+          ${introHTML ? sep : ''}
+          <section class="ubox-section">
+            <h3 class="ubox-sub">Referências do Tema</h3>
+            <ul class="ref-list">
+              ${refListHTML}
+            </ul>
+          </section>
+          ${sep}
           <section class="ubox-section">
             <h3 class="ubox-sub">Estude com o Google I.A.</h3>
             ${qList ? `<ol class="q-list">${qList}</ol>` : `<p class="muted">Sem perguntas cadastradas.</p>`}
@@ -700,3 +730,4 @@
   window.addEventListener('hashchange', renderByRoute);
   (async function init(){ await renderByRoute(); })();
 })();
+</script>
