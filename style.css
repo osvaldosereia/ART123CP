@@ -286,3 +286,13 @@ body.search-open::before{
     right:auto !important;
   }
 }
+/* Desktop: lista de sugestões com rolagem vertical */
+@media (min-width: 769px){
+  #suggestions,
+  .suggestions.pop{
+    max-height: 70vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+}
