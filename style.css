@@ -192,3 +192,16 @@ mark{
 .suggestions mark,
 .ubox mark,
 .card mark{ background: var(--mark-bg); color: var(--mark-txt); }
+
+/* Respiro entre as perguntas (q-list) */
+:root{ --q-gap: 14px; }         /* ajuste aqui: 10–20px */
+.q-list{
+  display: flex;
+  flex-direction: column;
+  gap: var(--q-gap);
+  padding-left: 1.25rem;        /* mantém numeração legível */
+}
+.q-list li{
+  line-height: 1.55;
+  padding: 4px 0;               /* micro respiro interno */
+}
