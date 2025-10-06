@@ -3,7 +3,7 @@
 
 -----
 
-# Imprescritíveis  
+# Direitos da Personalidade: Imprescritíveis  
 -- A imprescritibilidade dos direitos da personalidade significa que eles não se perdem pelo decurso do tempo (Art. 189 do CC/02). Essa característica decorre de sua natureza inata e vitalícia, ligada à própria existência e dignidade da pessoa humana (Art. 1º, III, CF).  
 -- No entanto, a imprescritibilidade aplica-se à essência do direito, e não à pretensão de reparação por sua violação, que possui prazo prescricional (Art. 206, §3°, V, CC/02). O STJ, contudo, reconhece a imprescritibilidade da pretensão de reconhecimento de ofensa a direitos da personalidade.
 
@@ -24,7 +24,7 @@
 
 -----
 
-# Intransmissíveis e Irrenunciáveis  
+# Direitos da Personalidade: Intransmissíveis e Irrenunciáveis  
 -- Os direitos da personalidade são, em regra, intransmissíveis e irrenunciáveis, não podendo seu exercício sofrer limitação voluntária (Art. 11 do CC/02). Isso se justifica pela sua ligação intrínseca à pessoa e à sua dignidade, protegendo a essência do indivíduo.  
 -- Contudo, essa intransmissibilidade e irrenunciabilidade são relativas, admitindo-se limitações voluntárias parciais e temporárias, conforme o Enunciado 4 da I Jornada de Direito Civil, e a possibilidade de disposição *post mortem* para fins altruísticos ou científicos (Art. 14 do CC/02).
 
@@ -43,7 +43,7 @@
 
 -----
 
-# Relativamente Indisponível  
+# Direitos da Personalidade: Relativamente Indisponível  
 -- Os direitos da personalidade são considerados relativamente indisponíveis, pois sua disposição é limitada pela lei e por valores inerentes à dignidade da pessoa humana. Embora, em regra, não possam ser alienados ou renunciados de forma plena, admitem-se restrições pontuais e temporárias.  
 -- Essa relativização permite, por exemplo, a disposição do próprio corpo para fins de transplante ou pesquisa (Art. 13 da Lei 9434/97) e a limitação voluntária do exercício de direitos em situações como contratos de imagem ou participação em *reality shows*, desde que não sejam permanentes ou gerais, conforme o Enunciado 278 da IV Jornada de Direito Civil.
 
@@ -62,7 +62,7 @@
 
 -----
 
-# Ilimitado.  
+# Direitos da Personalidade: Ilimitado.  
 -- A característica de "ilimitado" dos direitos da personalidade não significa que não possuam limites, mas sim que seu rol é exemplificativo, não exaustivo. Isso permite que novos direitos, essenciais à dignidade da pessoa humana, sejam reconhecidos, como o estado de filiação (STJ – AREsp: 1179890 SC 2017/0252143-5).  
 -- Dessa forma, o Direito Civil, sob a influência do neoconstitucionalismo, adapta-se às evoluções sociais, tutelando valores que nascem e se desenvolvem com o ser humano, garantindo a proteção de sua honra, identidade, imagem e outros aspectos existenciais, que formam a essência da pessoa.
 
@@ -80,7 +80,7 @@
 
 -----
 
-# Inato.  
+# Direitos da Personalidade: Inato.  
 -- Os direitos da personalidade são inatos, o que significa que pertencem ao ser humano desde o seu nascimento, independentemente de reconhecimento legal (Art. 1º, III, CF). Essa característica ressalta sua ligação intrínseca à própria existência da pessoa e sua relevância essencial, como vida, honra e identidade.  
 -- São, assim, tutelados desde os primeiros estágios da vida (como o nascituro, que tem seus direitos salvaguardados desde a concepção) e acompanham o indivíduo até a morte. Contudo, excepcionalmente, alguns direitos da personalidade podem ser adquiridos, como o direito autoral, demonstrando a adaptabilidade do conceito a diversas realidades.
 
@@ -99,7 +99,7 @@
 
 -----
 
-# Extrapatrimoniais.  
+# Direitos da Personalidade: Extrapatrimoniais.  
 -- Os direitos da personalidade são extrapatrimoniais, o que significa que não comportam avaliação econômica direta (não possuem valor pecuniário imediato). Contudo, sua violação pode ensejar pretensão de reparação por dano moral (Art. 5º, V, CF/88), que, embora de natureza patrimonial, visa compensar a lesão a um bem imaterial e tem caráter educativo e preventivo.  
 -- Essa distinção é crucial, pois, como demonstrado pela Súmula 227 do STJ, a pessoa jurídica pode sofrer dano moral, mesmo não experimentando dor ou sofrimento. Isso reforça a ideia de que o dano moral não se restringe a aspectos subjetivos de dor, mas abrange a lesão à honra objetiva e à reputação, que são bens extrapatrimoniais.
 
@@ -139,7 +139,7 @@
 
 -----
 
-# Vitalício
+# Direitos da Personalidade: Vitalício
 -- Os direitos da personalidade são vitalícios, ou seja, acompanham a pessoa durante toda a sua existência, desde o nascimento com vida (Art. 2º do CC/02). Essa característica diferencia-os da perpetuidade, pois cessam com a morte do indivíduo (Art. 6º do CC/02), que põe fim à personalidade jurídica e, consequentemente, à titularidade de direitos.
 -- São, assim, um reflexo da dignidade da pessoa humana e são inatos, consubstanciando valores intrínsecos ao ser. Embora não se estendam *post mortem*, sua violação em vida pode gerar pretensão indenizatória transmissível aos herdeiros, que buscam a reparação do dano moral sofrido pelo falecido, e não do dano moral próprio dos sucessores.
 
@@ -155,7 +155,7 @@
 
 -----
 
-# Absoluto
+# Direitos da Personalidade: Absoluto
 -- Os direitos da personalidade são absolutos, o que significa que são oponíveis a todos (eficácia *erga omnes*). Essa característica impõe à coletividade e ao Estado um dever geral de abstenção, ou seja, de não violar tais direitos.
 -- Além do dever de abstenção, o caráter absoluto dos direitos da personalidade também implica um dever de promoção por parte do Estado. Assim, a Administração Pública deve atuar para garantir a efetivação desses direitos, como a educação, saúde e igualdade, que são pilares da dignidade da pessoa humana (Art. 1º, III, CF), e que irradiam sua eficácia para as relações entre particulares.
 
@@ -537,10 +537,6 @@
 
 -----
 
-Sim, estou pronto para continuar com os próximos três temas quando você desejar.
-
------
-
 # Antinomia
 
 -- A antinomia é o conflito entre duas ou mais normas válidas e aplicáveis, sendo resolvida por critérios como hierarquia, especialidade e cronologia. Se as soluções convergem, aplica-se a Teoria do Diálogo das Fontes. Se divergem, critérios legais ou doutrinários solucionam a aparente contradição.
@@ -800,26 +796,3 @@ Estou pronto para continuar com os próximos temas quando você desejar!
   - Discuta como a dignidade da pessoa humana (Art. 1º, III, da CF) e o neoconstitucionalismo servem de fundamento para a crescente valorização da proteção jurídica do nascituro, alinhando-se à Teoria Concepcionista.
   - Analise as implicações práticas da aplicação da Teoria Concepcionista, especialmente em casos como doações a nascituros ou a proteção de sua integridade em contextos como acidentes.
   - Compare a Teoria Concepcionista com a Teoria Natalista e a Teoria da Personalidade Condicionada, indicando os pontos de convergência e divergência em relação ao início da personalidade jurídica.
-
------
-
-# Qual é a situação hoje?  
--- Atualmente, a leitura do Direito Civil é fortemente influenciada pelo neoconstitucionalismo e a dignidade da pessoa humana (Art. 1º, III, CF), gerando uma concepção existencialista que permeia a interpretação de diversos institutos, incluindo o início da personalidade jurídica e a proteção do nascituro.
-
--- Essa abordagem, que valoriza a igualdade material e o intervencionismo estatal para proteger o hipossuficiente, tende a prestigiar a Teoria Concepcionista Moderada e a proteção integral do nascituro, apesar de uma aparente tendência liberal em outras áreas do direito (Lei 13.874/19).
-
-## Referências do Tema  
---- Art. 1º, III, da CF  
---- Art. 421, parágrafo único, e Art. 421-A do Código Civil (Lei 13.874/19)  
---- Lei 8.009/90 (implícito na teoria do patrimônio mínimo)  
---- Lei 10.820/03 (implícito na proteção do superendividado)  
---- ADI 4277 do STF e RE 898.060 do STF (implícito na mudança do conceito de família)  
---- PL 478/2007 (Estatuto do Nascituro)
-
-## Pergunte pra I.A.
-
-  - Explique como o neoconstitucionalismo e o princípio da dignidade da pessoa humana (Art. 1º, III, CF) influenciam a interpretação atual do Direito Civil, gerando uma "concepção existencialista".
-  - Discorra sobre a "ubiquidade constitucional" e a "eficácia horizontal dos direitos fundamentais" no contexto do Direito Civil, e como isso se reflete na proteção de institutos como contratos, família e propriedade.
-  - Analise a aparente contradição entre a tendência de "menor intervenção estatal nas relações privadas" (Lei 13.874/19) e a crescente proteção do nascituro e do hipossuficiente no Direito Civil contemporâneo.
-  - Detalhe como a Teoria do Patrimônio Mínimo e a proteção ao bem de família (Lei 8.009/90) são desdobramentos da dignidade da pessoa humana no Direito Civil.
-  - Avalie a importância de decisões jurisprudenciais (como as do STF sobre união homoafetiva e família multiparental) para a redefinição de conceitos no Direito Civil sob a ótica constitucional.
