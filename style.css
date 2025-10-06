@@ -222,3 +222,8 @@ mark{
   display: inline;
   text-decoration-thickness: .08em;
 }
+/* Corrigir numeração dupla na q-list */
+.q-list{ list-style: decimal; list-style-position: outside; counter-reset: none !important; }
+.q-list li{ counter-increment: none !important; }
+.q-list li::before,
+.q-list li::after{ content: none !important; }  /* desliga números/badges custom */
