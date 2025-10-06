@@ -1,21 +1,74 @@
-# Princípio da Sociabilidade
+# Vigência da Lei
 
--- O Princípio da Sociabilidade (ou socialidade) prioriza os valores coletivos em detrimento dos individuais, mitigando o individualismo do código anterior e fundamentando a função social.
+-- A vigência determina o período em que a lei possui força obrigatória. Após a publicação oficial, inicia-se a *vacatio legis*, prazo para a norma ser conhecida antes de se tornar obrigatória, conforme o Art. 1º da Lei de Introdução às Normas do Direito Brasileiro (LINDB).
 
--- Manifesta-se na boa-fé objetiva, no abuso de direito e na função social dos contratos e da propriedade (Arts. 187, 421, 1.228, §1º, e 2.035, p. único, do CC/02; En. 23 do CJF).
+-- O prazo geral da *vacatio legis* é de 45 dias no Brasil e 3 meses no exterior. Contudo, a própria lei pode estipular um período diferente, adequando sua entrada em vigor à complexidade da matéria tratada ou à necessidade de adaptação social, como previsto no Art. 1º da LINDB.
 
 ## Referências do Tema
 
---- Art. 187 do CC/02
---- Art. 421 do CC/02
---- Art. 1.228, §1º, do CC/02
---- Art. 2.035, parágrafo único, do CC/02
---- Enunciado n. 23 da I Jornada de Direito Civil do CJF
+--- Art. 1º do Decreto-Lei nº 4.657/42 (LINDB)
 
 ## Pergunte pra I.A.
 
-- Defina o Princípio da Sociabilidade no Direito Civil e explique seu principal objetivo no Código Civil de 2002.
-- Relacione o Princípio da Sociabilidade com a função social do contrato e da propriedade, indicando os artigos correspondentes.
-- Diferencie a concepção individualista do Código Civil de 1916 da perspectiva social do Código Civil de 2002.
-- Apresente exemplos práticos de como o Princípio da Sociabilidade é aplicado na jurisprudência para resolver conflitos de direito.
-- Analise criticamente os limites da aplicação do Princípio da Sociabilidade frente à segurança jurídica e à autonomia privada.
+- O que é vigência da lei e qual sua diferença para publicação e promulgação?
+- Explique o conceito e a finalidade do período de *vacatio legis*, conforme a LINDB.
+- Diferencie a *vacatio legis* expressa da tácita, apresentando exemplos práticos.
+- Como se dá a contagem do prazo da *vacatio legis* e o que ocorre em caso de correção do texto legal?
+- Analise a aplicabilidade da lei brasileira em estados estrangeiros e o prazo de vigência correspondente.
+
+### Fontes
+- LINDB para Concurso SEFAZ-RJ: Direito Civil - Estratégia Concursos
+- Vacatio legis [RESUMO ESQUEMATIZADO + MAPA MENTAL] - Dicas Concursos
+- Legislação Informatizada - DECRETO-LEI Nº 4.657, DE 4 DE SETEMBRO DE 1942 - Câmara dos Deputados
+
+---
+
+# Obrigatoriedade das Leis
+
+-- O princípio da obrigatoriedade determina que, uma vez vigente, a lei se impõe a todos de forma coercitiva, sendo seu cumprimento um dever. A ninguém é dado descumprir a lei sob a alegação de desconhecimento, estabelecendo uma presunção absoluta de ciência da norma (Art. 3º da LINDB).
+
+-- Esta presunção de conhecimento é uma ficção jurídica necessária para a segurança e estabilidade das relações sociais. A inescusabilidade do erro de direito garante a força normativa do ordenamento jurídico, impedindo que a ignorância individual paralise a aplicação da justiça.
+
+## Referências do Tema
+
+--- Art. 3º do Decreto-Lei nº 4.657/42 (LINDB)
+
+## Pergunte pra I.A.
+
+- Defina o princípio da obrigatoriedade das leis e sua fundamentação na LINDB.
+- Explique a ficção jurídica do conhecimento da lei e por que ela é essencial ao Estado de Direito.
+- O princípio da obrigatoriedade é absoluto? Discuta a exceção do erro de proibição no Direito Penal.
+- Analise a relação entre o princípio da publicidade dos atos normativos e a obrigatoriedade da lei.
+- Compare o tratamento dado à alegação de desconhecimento da lei no Direito Civil e no Direito Penal brasileiro.
+
+### Fontes
+- Lei de Introdução às normas do Direito Brasileiro (LINDB/1942) - Modelo Inicial
+- DIREITO CIVIL - Verbo Jurídico
+- o dever de informar e a tutela do artigo 3º da lei de introdução às normas do direito brasileiro - Unignet
+
+---
+
+# Eficácia da Lei no Tempo
+
+-- A eficácia da lei no tempo define sua aplicabilidade a fatos ocorridos durante sua vigência. A regra é o efeito imediato e geral da lei nova, não podendo ela retroagir para prejudicar o direito adquirido, o ato jurídico perfeito e a coisa julgada, garantias fundamentais (Art. 5º, XXXVI, CF/88).
+
+-- Essa proteção, detalhada no Art. 6º da LINDB, confere segurança jurídica às relações consolidadas sob a égide da lei anterior. O ato jurídico perfeito é o já consumado, o direito adquirido é o incorporado ao patrimônio do titular, e a coisa julgada é a decisão judicial irrecorrível.
+
+## Referências do Tema
+
+--- Art. 5º, XXXVI, da Constituição Federal de 1988
+--- Art. 6º do Decreto-Lei nº 4.657/42 (LINDB)
+
+## Pergunte pra I.A.
+
+- Qual é a regra geral de aplicação da lei no tempo e quais são suas exceções constitucionais?
+- Conceitue direito adquirido, ato jurídico perfeito e coisa julgada, com base na LINDB e na Constituição.
+- Diferencie retroatividade, ultratividade e aplicação imediata da lei, exemplificando cada fenômeno.
+- A lei nova pode retroagir para beneficiar um indivíduo? Analise essa questão no âmbito penal e civil.
+- Discuta o conflito de leis no tempo em contratos de trato sucessivo e suas possíveis soluções.
+
+### Fontes
+- Inciso XXXVI - Princípio da segurança jurídica - Politize!
+- Artigo 6 - LINDB / 1942 - Modelo Inicial
+- A Lei em vigor terá efeito imediato e geral, respeitados o ato jurídico perfeito, o direito adquirido e a coisa julgada - Jusbrasil
+- O princípio do direito adquirido no direito constitucional - Senado Federal
