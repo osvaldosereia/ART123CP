@@ -1,7 +1,61 @@
+
+
+
+-----
+
+# Direitos da Personalidade (Direito Civil)  
+-- Os direitos da personalidade são direitos essenciais à proteção da dignidade da pessoa humana (Art. 1º, III, CF), funcionando como expressões da cláusula geral de tutela da pessoa humana. O Código Civil os regula de forma não exaustiva, permitindo a ponderação em caso de colisão entre eles, pois nenhum se sobrepõe aos demais.
+
+-- Esses direitos, influenciados pelo neoconstitucionalismo, possuem eficácia irradiante, aplicando-se também nas relações entre particulares. São vitalícios, absolutos e, embora ilimitados em seu rol (Art. 52, CC), sua intransmissibilidade e irrenunciabilidade são relativas (Art. 11, CC), admitindo limitação voluntária parcial e temporária, como na proteção da voz humana (Art. 5º, XXII, CF/88 e Lei 9.610).
+
+# Referências do Tema  
+--- Art. 1º, III, CF  
+--- Art. 5º, XXII, CF/88  
+--- Art. 6º, CC/02  
+--- Art. 11, CC/02  
+--- Art. 12, CC/02  
+--- Art. 13, CC/02  
+--- Art. 14, CC/02  
+--- Art. 15, CC/02  
+--- Art. 16, CC/02  
+--- Art. 19, CC/02  
+--- Art. 52, CC/02  
+--- Art. 206, §3º, V, CC/02  
+--- Art. 27, CDC  
+--- Enunciado 4 da I Jornada de Direito Civil do CJF  
+--- Enunciado 274 da IV Jornada de Direito Civil do CJF  
+--- Enunciado 278 da IV Jornada de Direito Civil do CJF  
+--- Súmula 227 do STJ  
+--- Súmula 403 do STJ  
+--- ADI 4815 do STF  
+--- Lei 9.434/97  
+--- Lei 9.610  
+--- STJ – AREsp: 1179890 SC 2017/0252143-5  
+--- TJ-RJ – APL: 00210033920198190002
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de "Direitos da Personalidade" e sua relação fundamental com o princípio da dignidade da pessoa humana.
+  - Quais são as características dos direitos da personalidade (vitaliciedade, absolutez, ilimitação, inatismo, extrapatrimonialidade, imprescritibilidade, intransmissibilidade e irrenunciabilidade), e como cada uma se manifesta no Direito Civil?
+  - Analise a distinção entre a imprescritibilidade dos direitos da personalidade e a prescritibilidade da pretensão indenizatória por danos morais.
+  - Discorra sobre a relativização da intransmissibilidade e irrenunciabilidade dos direitos da personalidade, conforme o Art. 11 do Código Civil e o Enunciado 4 da I Jornada de Direito Civil.
+  - Apresente um caso prático que ilustre a aplicação do direito à imagem e voz (Art. 5º, XXII, CF/88 e Súmula 403 do STJ) como direitos da personalidade.
+  - Explique a decisão do STF na ADI 4815 sobre a inexigibilidade de autorização prévia para biografias, e como ela se relaciona com os direitos da personalidade e a liberdade de expressão.
+  - De que forma a Súmula 227 do STJ, ao reconhecer o dano moral à pessoa jurídica, impactou a compreensão dos direitos da personalidade.
+  - Aborde o direito à disposição do próprio corpo (Art. 13 e 14 do Código Civil) e seus limites, como a exigência médica e os transplantes.
+  - Discorra sobre a proteção do nome e pseudônimo (Art. 16 e 19 do Código Civil), e as possibilidades de alteração do nome à luz da dignidade da pessoa humana.
+  - Analise como a "eficácia irradiante da Dignidade da Pessoa Humana" influencia a interpretação e aplicação dos direitos da personalidade nas relações entre particulares.
+  - Explique o conceito de "dano moral reflexo" ou "em ricochete" e a titularidade desse direito, especialmente após a morte da vítima direta.
+  - De que maneira a tutela inibitória (Art. 12 do Código Civil) atua na proteção dos direitos da personalidade, prevenindo a continuidade ou a repetição da ameaça ou lesão.
+  - Discuta a aplicação dos direitos da personalidade em face de novas tecnologias e mídias digitais, como a proteção de dados pessoais e a privacidade online.
+  - Aborde o conceito de "colisão de direitos da personalidade" e a técnica da ponderação para resolver esses conflitos, conforme o Enunciado 274 da IV Jornada de Direito Civil.
+  - Quais são as tendências futuras na proteção dos direitos da personalidade no Direito Civil brasileiro, considerando a constante evolução social e tecnológica?
+
+-----
 # Início da personalidade jurídica da Pessoa Jurídica  
 -- Para a pessoa jurídica de direito privado, a personalidade jurídica tem início com o registro do seu ato constitutivo no órgão competente (Art. 45 do CC/02), como o Registro Civil de Pessoas Jurídicas ou a Junta Comercial. Antes do registro, a pessoa jurídica existe como um "ente despersonificado", com capacidade limitada para certos atos.
 
-Já para as pessoas jurídicas de direito público, a personalidade jurídica inicia com a vigência da lei que as institui. A Súmula 227 do STJ, ao reconhecer a possibilidade de dano moral à pessoa jurídica, reforça a autonomia da sua personalidade e a proteção de sua honra objetiva, mesmo não possuindo atributos como dor e sofrimento.
+-- Já para as pessoas jurídicas de direito público, a personalidade jurídica inicia com a vigência da lei que as institui. A Súmula 227 do STJ, ao reconhecer a possibilidade de dano moral à pessoa jurídica, reforça a autonomia da sua personalidade e a proteção de sua honra objetiva, mesmo não possuindo atributos como dor e sofrimento.
 
 ## Referências do Tema  
 --- Art. 45 do CC/02  
