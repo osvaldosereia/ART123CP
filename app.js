@@ -701,7 +701,20 @@ const trainBtn = mkBtn('10 Questões','', ()=>window.open(
         const qHi  = shouldHighlight && lastSearch?.q ? highlightHTML(qEsc, lastSearch.q) : qEsc;
     return `<li><a href="https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}" target="_blank" rel="noopener">${fmtInlineBold(qHi)}</a></li>`;
       }).join('');
-
+      
+ // ===== Referências adicionais após "Estude com o Google I.A."
+      const extraRefs = [
+        'Migalhas. A Função Social do Contrato e sua Aplicação.',
+        'Jusbrasil. Os Princípios Norteadores do Código Civil de 2002.',
+        'Conselho da Justiça Federal. Enunciados Aprovados na I Jornada de Direito Civil.',
+        'Planalto. Código Civil (Lei nº 10.406, de 10 de janeiro de 2002).'
+      ];
+      const extraRefListHTML = extraRefs.map(ref => {
+        const prompt = `Pesquise em sites oficiais e traga o texto original ou resumo fiel: ${ref}`;
+        const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
+        return `<li><a href="${url}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(ref))}</a></li>`;
+      }).join('');
+      
       // ===== Render com separadores discretos =====
       const sep = `<hr style="border:none;border-top:1px solid #e9ecef;margin:16px 0">`;
 
