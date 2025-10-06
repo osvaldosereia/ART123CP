@@ -1,6 +1,146 @@
 
 
 
+
+
+# Origem e Evolução dos Direitos da Personalidade
+
+-- Embora o Direito Romano protegesse a integridade física e a honra através da *actio iniuriarum*, a noção de uma categoria autônoma de direitos da personalidade é moderna. Ela floresceu com o Iluminismo, mas foi a doutrina alemã do século XIX que a sistematizou, trazendo-a do campo do direito público para o cerne das relações privadas.
+
+-- Sua consagração definitiva veio no pós-guerra, com a dignidade da pessoa humana como pilar dos novos ordenamentos. No Brasil, a Constituição de 1988 os alçou a direitos fundamentais (art. 5º, V e X) e o Código Civil de 2002 dedicou-lhes um capítulo próprio (arts. 11 a 21), consolidando sua importância e eficácia nas relações civis.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 5º, V e X, da CF/88
+--- Art. 11 do CC/02
+--- Art. 21 do CC/02
+
+## Pergunte pra I.A.
+
+  - Existia no Direito Romano uma categoria específica para os "direitos da personalidade"?
+  - Qual foi a contribuição do Iluminismo e da doutrina alemã para a evolução do tema?
+  - Como a dignidade da pessoa humana, no pós-Segunda Guerra, impulsionou a proteção à personalidade?
+  - De que forma a Constituição Federal de 1988 e o Código Civil de 2002 representam o ápice dessa evolução no Brasil?
+  - Compare a proteção à personalidade no Código Civil de 1916 com a do código atual.
+  - Explique a teoria monista e a teoria pluralista sobre a natureza dos direitos da personalidade.
+  - Discuta o fenômeno da "constitucionalização" do Direito Civil a partir do exemplo dos direitos da personalidade.
+  - Analise a origem histórica da proteção à imagem e à vida privada.
+  - A proteção à personalidade é uma ideia exclusiva do direito ocidental?
+  - Pesquise a evolução de novos direitos da personalidade, como o direito ao esquecimento e a identidade digital.
+
+### Fontes
+
+  - A evolução histórica dos direitos da personalidade - Âmbito Jurídico
+  - A tutela dos direitos da personalidade: da Roma Antiga ao Código Civil de 2002 - https://www.google.com/search?q=Jus.com.br
+  - Direitos da personalidade e sua evolução histórica - Jusbrasil
+  - A proteção da pessoa: das actiones iniuriarum aos direitos da personalidade - Migalhas
+  - Direitos da personalidade - Enciclopédia Jurídica da PUCSP
+
+-----
+
+# Conceito e Objeto dos Direitos da Personalidade
+
+-- Os direitos da personalidade são a categoria de direitos subjetivos que conferem ao seu titular o poder de proteger os atributos essenciais de sua pessoa. Têm como fundamento a dignidade humana (art. 1º, III, da CF/88) e são, em regra, intransmissíveis e irrenunciáveis (art. 11 do CC/02), além de absolutos, imprescritíveis e extrapatrimoniais.
+
+-- Seu objeto é a tutela da integridade humana em três dimensões: a integridade física (direito à vida, ao corpo - art. 13 do CC/02); a integridade intelectual (direito de autor, criações); e a integridade moral (direito à honra, imagem, nome, privacidade - arts. 16 a 20 do CC/02), formando um escudo de proteção ao indivíduo.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 11 do CC/02
+--- Art. 12 do CC/02
+--- Art. 13 do CC/02
+--- Arts. 16 a 20 do CC/02
+
+## Pergunte pra I.A.
+
+  - O que são direitos da personalidade e qual o seu fundamento constitucional?
+  - Explique as principais características dos direitos da personalidade (irrenunciabilidade, imprescritibilidade, etc.).
+  - A regra da irrenunciabilidade dos direitos da personalidade é absoluta?
+  - Qual é o objeto dos direitos da personalidade? Descreva suas três esferas de proteção.
+  - Diferencie o direito à imagem-retrato (imagem física) do direito à imagem-atributo (reputação).
+  - O direito sobre o próprio corpo é ilimitado? Analise à luz do art. 13 do Código Civil.
+  - Como o Código Civil protege o direito ao nome e ao pseudônimo?
+  - Explique a diferença entre honra objetiva e honra subjetiva para o Direito Civil.
+  - Uma pessoa jurídica pode ser titular de direitos da personalidade? Quais?
+  - Como o Judiciário resolve a colisão entre a liberdade de imprensa e os direitos da personalidade?
+
+### Fontes
+
+  - Direitos da Personalidade - Conceito, Objeto e Características - TJDFT
+  - O que são direitos da personalidade? - Aurum
+  - Direitos da personalidade no Código Civil: conceito e classificação - Jusbrasil
+  - O objeto dos direitos da personalidade: integridade física, moral e intelectual - Jus Navigandi
+  - As Características dos Direitos da Personalidade - Migalhas
+-----
+# Hipótese Especial de Sucessão Definitiva
+
+-- Além da regra geral dos dez anos, o Código Civil prevê uma hipótese especial que acelera a conversão para a sucessão definitiva. Esta via alternativa se baseia na altíssima probabilidade de falecimento do ausente em razão da idade avançada, conforme o disposto no art. 38 do Código Civil.
+
+-- Para sua aplicação, dois requisitos cumulativos devem ser provados: que o ausente já teria completado 80 anos de idade e que as últimas notícias dele datam de, no mínimo, cinco anos. Presentes ambas as condições, os herdeiros podem requerer a sucessão definitiva, independentemente do prazo de dez anos da sucessão provisória.
+
+## Referências do Tema
+
+--- Art. 37 do CC/02
+--- Art. 38 do CC/02
+
+## Pergunte pra I.A.
+
+  - O que é a hipótese especial de sucessão definitiva e qual artigo do Código Civil a prevê?
+  - Quais são os dois requisitos que devem ser cumpridos simultaneamente para a sua aplicação?
+  - Essa regra permite que os herdeiros pulem a fase de sucessão provisória?
+  - Como se faz a prova da idade que o ausente teria para fins de aplicação desta regra?
+  - O prazo de cinco anos sem notícias começa a ser contado a partir de que momento?
+  - Qual a lógica do legislador ao criar essa exceção à regra geral dos dez anos?
+  - Os efeitos da sucessão definitiva aberta por esta via são os mesmos da regra geral?
+  - Uma pessoa desaparece aos 76 anos. Quando seus herdeiros poderão pedir a sucessão definitiva por esta hipótese?
+  - É possível aplicar essa regra se o ausente tiver 85 anos, mas as últimas notícias datarem de 4 anos?
+  - Discuta a razoabilidade da idade de 80 anos como critério para a presunção de morte.
+
+### Fontes
+
+  - Artigo 38 do Código Civil - Jusbrasil
+  - A sucessão definitiva do ausente com mais de 80 anos - https://www.google.com/search?q=Jus.com.br
+  - A hipótese excepcional de sucessão definitiva - Âmbito Jurídico
+  - Análise do Art. 38 do Código Civil - Migalhas
+  - Código Civil (Lei nº 10.406/02) - Presidência da República (planalto.gov.br)
+
+-----
+
+# Efeitos Extrapatrimoniais da Sucessão Definitiva
+
+-- A sucessão definitiva transcende a esfera patrimonial, gerando importantes efeitos na situação jurídica pessoal do ausente. Ao se declarar a morte presumida (art. 6º do CC/02), o estado civil e as relações familiares da pessoa desaparecida são diretamente afetados, resolvendo incertezas que vão além da gestão de seus bens.
+
+-- O principal efeito extrapatrimonial é a dissolução do vínculo matrimonial, conforme autoriza o art. 1.571, § 1º, do CC/02. Com isso, o cônjuge sobrevivente recupera a liberdade de estado, podendo contrair novo casamento. Consequentemente, o poder familiar que o ausente exercia sobre os filhos também se extingue (art. 1.635, I, do CC/02).
+
+## Referências do Tema
+
+--- Art. 6º do CC/02
+--- Art. 37 do CC/02
+--- Art. 1.571, § 1º, do CC/02
+--- Art. 1.635, I, do CC/02
+
+## Pergunte pra I.A.
+
+  - Além dos efeitos patrimoniais, quais os efeitos pessoais da sucessão definitiva?
+  - Qual o dispositivo legal que permite a dissolução do casamento pela morte presumida do ausente?
+  - A partir de qual momento o cônjuge do ausente pode se casar novamente?
+  - O que acontece com o poder familiar que o ausente exercia sobre seus filhos menores?
+  - O retorno do ausente tem o poder de restabelecer o casamento que foi dissolvido?
+  - A sucessão provisória já produz algum efeito extrapatrimonial, como a dissolução do casamento?
+  - Os direitos da personalidade do ausente (honra, imagem) continuam protegidos após a morte presumida?
+  - O nome de casado(a) do cônjuge sobrevivente é alterado com a sucessão definitiva?
+  - Compare os efeitos extrapatrimoniais da morte presumida com os da morte real.
+  - Discuta se a união estável também é dissolvida com a declaração de morte presumida do companheiro ausente.
+
+### Fontes
+
+  - A dissolução do casamento pela morte presumida do ausente - Instituto Brasileiro de Direito de Família (IBDFAM)
+  - Os efeitos pessoais e familiares da declaração de ausência - https://www.google.com/search?q=Jus.com.br
+  - Morte Presumida e o Fim do Casamento - Consultor Jurídico (Conjur)
+  - O fim do poder familiar pela morte presumida - Âmbito Jurídico
+  - Efeitos extrapatrimoniais da ausência - Migalhas
 -----
 # Sucessão Provisória (2ª Fase)
 
