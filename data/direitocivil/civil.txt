@@ -2,6 +2,289 @@
 
 
 -----
+# Sucessão Provisória (2ª Fase)
+
+-- A sucessão provisória é a segunda fase do processo, que pode ser requerida um ano após a arrecadação dos bens, ou três anos, se o ausente deixou representante (art. 26 do CC/02). A sentença que a concede determina a abertura do testamento e o inventário, mas só produz efeitos 180 dias após a sua publicação na imprensa.
+
+-- Nesta etapa, os herdeiros são imitidos na posse provisória e resolúvel dos bens, devendo prestar caução para garantir sua conservação (art. 28 do CC/02). A lei dispensa dessa garantia o cônjuge, os ascendentes e os descendentes (art. 30 do CC/02). A alienação de imóveis só é permitida com autorização judicial para evitar dilapidação.
+
+## Referências do Tema
+
+--- Art. 26 do CC/02
+--- Art. 27 do CC/02
+--- Art. 28 do CC/02
+--- Art. 30 do CC/02
+--- Art. 31 do CC/02
+--- Art. 745, § 2º, do CPC/15
+
+## Pergunte pra I.A.
+
+  - O que caracteriza a fase de sucessão provisória no instituto da ausência?
+  - Quais são os prazos legais que devem ser observados para o requerimento da sucessão provisória?
+  - O que acontece com o testamento do ausente quando a sucessão provisória é aberta?
+  - Por que os herdeiros precisam prestar uma garantia (caução) para tomar posse dos bens?
+  - Quais herdeiros estão dispensados de prestar a caução, conforme o Código Civil?
+  - É possível vender um imóvel do ausente durante a fase de sucessão provisória?
+  - Explique a natureza jurídica da posse dos herdeiros durante a sucessão provisória.
+  - Qual o destino dos frutos e rendimentos dos bens do ausente nesta fase?
+  - O que acontece se um herdeiro necessário e não previsto na sucessão provisória aparecer?
+  - Analise o que ocorre com os bens se o ausente retornar durante esta fase.
+
+### Fontes
+
+  - Da Sucessão Provisória no Código Civil - https://www.google.com/search?q=Jus.com.br
+  - Sucessão Provisória: entenda o que é e como funciona - Aurum
+  - A sucessão provisória do ausente - Âmbito Jurídico
+  - Ausência e Sucessão Provisória - Jus Navigandi
+  - A posse dos herdeiros na sucessão provisória - Migalhas
+
+-----
+
+# Sucessão Definitiva (3ª Fase)
+
+-- A sucessão definitiva é a última fase do processo de ausência, na qual se consolida a propriedade dos bens para os herdeiros. Pode ser requerida dez anos após o trânsito em julgado da sentença que concedeu a sucessão provisória (art. 37 do CC/02), momento em que se declara a morte presumida do ausente e se levantam as cauções.
+
+-- Alternativamente, a lei permite a conversão em sucessão definitiva se for provado que o ausente já teria 80 anos de idade e que as últimas notícias dele datam de mais de cinco anos (art. 38 do CC/02). Com isso, a propriedade torna-se plena (art. 39 do CC/02) e o casamento do ausente é considerado dissolvido (art. 1.571, § 1º, do CC/02).
+
+## Referências do Tema
+
+--- Art. 6º do CC/02
+--- Art. 37 do CC/02
+--- Art. 38 do CC/02
+--- Art. 39 do CC/02
+--- Art. 1.571, § 1º, do CC/02
+
+## Pergunte pra I.A.
+
+  - O que é a sucessão definitiva e quais são seus principais efeitos jurídicos?
+  - Quais são as duas hipóteses legais que autorizam a abertura da sucessão definitiva?
+  - Como a declaração de morte presumida na ausência difere da morte real?
+  - Qual o destino das garantias (cauções) prestadas pelos herdeiros na fase anterior?
+  - A abertura da sucessão definitiva extingue o casamento do ausente?
+  - A partir de qual momento os herdeiros passam a ser considerados proprietários plenos dos bens?
+  - O que acontece se o ausente não tiver deixado herdeiros?
+  - A sentença que declara a morte presumida deve ser registrada no Registro Civil?
+  - Pode-se abrir a sucessão definitiva diretamente, sem passar pela provisória?
+  - Compare os efeitos da sucessão definitiva com os efeitos de uma sucessão por morte real.
+
+### Fontes
+
+  - Da Sucessão Definitiva - Artigos 37 a 39 do Código Civil - Jusbrasil
+  - Morte Presumida e Sucessão Definitiva - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - Sucessão Definitiva: Quando o ausente é considerado morto - https://www.google.com/search?q=Jus.com.br
+  - A dissolução do casamento pela morte presumida do ausente - Instituto Brasileiro de Direito de Família (IBDFAM)
+  - A morte presumida e a sucessão definitiva - Migalhas
+-----
+# Cessação da Fase de Curadoria
+
+-- A fase de curadoria é transitória e pode ser encerrada por quatro motivos principais. As primeiras hipóteses são o retorno do próprio ausente ou de seu procurador, o que resolve a incerteza e faz com que a administração dos bens seja restituída, pondo fim ao procedimento (art. 36 do CC/02, por analogia inicial).
+
+-- Outra causa de cessação é a confirmação da morte do ausente, o que transforma o procedimento de ausência em um inventário comum (art. 35 do CC/02). Por fim, se ele não retornar, a curadoria cessa pelo decurso do tempo, dando lugar à abertura da sucessão provisória após um ano da arrecadação, ou três anos se deixou representante (art. 26 do CC/02).
+
+## Referências do Tema
+
+--- Art. 26 do CC/02
+--- Art. 35 do CC/02
+--- Art. 36 do CC/02
+
+## Pergunte pra I.A.
+
+  - Quais são as quatro causas que podem levar ao encerramento da fase de curadoria do ausente?
+  - O que acontece com a administração dos bens se o ausente retornar durante esta fase?
+  - Como a comprovação da morte do ausente altera o andamento do processo?
+  - Qual é o prazo legal para que se possa requerer o fim da curadoria e o início da sucessão provisória?
+  - Por que o prazo para passar à próxima fase é maior quando o ausente deixou um procurador?
+  - Se o procurador do ausente, e não o próprio ausente, reaparecer, a curadoria é extinta?
+  - O que acontece com os atos praticados pelo curador após a cessação desta fase?
+  - A morte do curador encerra a fase de curadoria? Justifique.
+  - Descreva a transição processual da fase de curadoria para a de sucessão provisória.
+  - Analise se a descoberta de que o ausente cometeu um crime e está foragido impactaria a cessação da curadoria.
+
+### Fontes
+
+  - O fim da curadoria do ausente - Jusbrasil
+  - Cessação da curatela de ausentes - Âmbito Jurídico
+  - As fases da declaração de ausência e seus termos finais - Migalhas
+  - Do término da curadoria no processo de ausência - https://www.google.com/search?q=Jus.com.br
+  - Código Civil (Lei nº 10.406/02) - Presidência da República (planalto.gov.br)
+-----
+
+# Requisitos para a Declaração de Ausência
+
+-- Para a decretação judicial da ausência, são necessários dois requisitos cumulativos: um fático e um jurídico. O requisito fático é o desaparecimento de uma pessoa de seu domicílio sem que dela haja notícias (art. 22 do CC/02), sendo a prova desse sumiço essencial para o início do processo.
+
+-- O requisito jurídico é a inexistência de um representante ou procurador a quem caiba administrar-lhe os bens (art. 22 do CC/02). Caso o ausente tenha deixado mandatário, a ausência só poderá ser declarada se os poderes forem insuficientes ou se o procurador não quiser ou não puder exercer o mandato (art. 23 do CC/02).
+
+## Referências do Tema
+
+--- Art. 22 do CC/02
+--- Art. 23 do CC/02
+--- Art. 744 do CPC/15
+
+## Pergunte pra I.A.
+
+  - Quais são os dois requisitos essenciais que devem ser provados para a declaração de ausência?
+  - O que significa "desaparecer do domicílio sem deixar notícias"?
+  - Quem tem legitimidade para requerer a declaração de ausência de uma pessoa?
+  - A existência de um procurador sempre impede a declaração de ausência?
+  - Explique a situação em que o procurador deixado pelo ausente não quer mais exercer o mandato.
+  - É necessário um prazo mínimo de desaparecimento para que a ausência possa ser declarada?
+  - A simples falta de comunicação com a família caracteriza o requisito do desaparecimento?
+  - Qual a diferença entre ausência e desaparecimento comum para o Direito?
+  - Analise a importância da prova do sumiço no processo de declaração de ausência.
+  - Discuta se a declaração de ausência pode ser pedida pelos credores da pessoa desaparecida.
+
+### Fontes
+
+  - Os pressupostos da declaração de ausência - https://www.google.com/search?q=Jus.com.br
+  - Requisitos para a declaração de ausência - Âmbito Jurídico
+  - Ausência: Requisitos, Fases e Efeitos - Jusbrasil
+  - O instituto da ausência e seus requisitos - Migalhas
+  - Código Civil (Lei nº 10.406/02) - Presidência da República (planalto.gov.br)
+
+-----
+
+# O Curador do Ausente
+
+-- Uma vez declarada a ausência, o juiz nomeará um curador para administrar os bens, visando sua conservação. A escolha do curador não é aleatória, devendo seguir uma ordem de preferência legal estabelecida no art. 25 do Código Civil, que elenca as pessoas com laços mais próximos ao ausente.
+
+-- A curatela caberá, primeiramente, ao cônjuge do ausente, desde que não esteja separado judicialmente ou de fato. Na sua falta, a preferência passa aos pais e, em seguida, aos descendentes, sendo os mais próximos preferidos aos mais remotos. Na ausência de todos eles, o juiz fará uma escolha livre (art. 25 do CC/02).
+
+## Referências do Tema
+
+--- Art. 24 do CC/02
+--- Art. 25 do CC/02
+--- Art. 1.775 do CC/02 (aplicado por analogia)
+--- Art. 745, § 1º, do CPC/15
+
+## Pergunte pra I.A.
+
+  - Qual é a principal função do curador nomeado para o ausente?
+  - Descreva a ordem de preferência legal para a nomeação do curador.
+  - O que acontece se as pessoas na ordem de preferência não existirem, não puderem ou não quiserem assumir a curatela?
+  - Quais são os deveres e responsabilidades do curador na administração dos bens?
+  - O curador do ausente é remunerado por sua função?
+  - A curatela do ausente se confunde com a curatela dos incapazes?
+  - O curador pode ser removido da sua função? Em quais hipóteses?
+  - O Ministério Público pode fiscalizar os atos do curador do ausente?
+  - Analise a situação em que o cônjuge do ausente estava separado de fato há mais de dois anos. Ele ainda tem preferência?
+  - Discuta a aplicação subsidiária das regras da tutela e da curatela dos incapazes à curatela do ausente.
+
+### Fontes
+
+  - Da nomeação do curador do ausente - Jusbrasil
+  - Quem pode ser o curador do ausente? - Aurum
+  - A escolha do curador na declaração de ausência - Jus Navigandi
+  - As responsabilidades do curador do ausente - Migalhas
+  - A ordem de nomeação do curador - Âmbito Jurídico
+
+-----
+
+# Providências na Fase de Curadoria
+
+-- Durante a fase de curadoria, o objetivo é proteger o patrimônio e dar publicidade ao desaparecimento. A principal providência é a arrecadação judicial dos bens do ausente, que consiste em um inventário detalhado de todo o seu patrimônio, para que o curador possa iniciar a administração (art. 745 do CPC/15).
+
+-- Outra medida essencial é a publicação de editais na internet e em jornais de grande circulação, por um ano, a cada dois meses, convocando o ausente a reaparecer (art. 24 do CC/02 e art. 745 do CPC/15). Essa publicidade é crucial para informar terceiros e o próprio ausente, se possível, sobre o processo em curso.
+
+## Referências do Tema
+
+--- Art. 24 do CC/02
+--- Art. 745 do CPC/15
+
+## Pergunte pra I.A.
+
+  - O que significa "arrecadação dos bens do ausente" e como ela é feita?
+  - Qual é a finalidade da publicação dos editais durante a fase de curadoria?
+  - Com que frequência e por quanto tempo os editais devem ser publicados?
+  - O que acontece se o ausente não possuir bens a serem arrecadados?
+  - O curador pode tomar outras providências além da simples administração, como pagar dívidas do ausente?
+  - Como os credores do ausente devem proceder durante esta fase?
+  - Qual o papel do Ministério Público na fiscalização das providências tomadas?
+  - A arrecadação de bens abrange também os bens digitais do ausente?
+  - Analise a eficácia dos editais como meio de convocação do ausente na sociedade atual.
+  - Discuta se a falta de publicação dos editais gera a nulidade do processo de ausência.
+
+### Fontes
+
+  - Procedimento da declaração de ausência no Novo CPC - https://www.google.com/search?q=Jus.com.br
+  - A arrecadação de bens do ausente e a publicação de editais - Âmbito Jurídico
+  - Providências na curatela do ausente - Jusbrasil
+  - Código de Processo Civil (Lei nº 13.105/15) - Presidência da República (planalto.gov.br)
+  - Editais no processo de ausência - Migalhas
+-----
+# Curadoria dos Bens do Ausente (1ª Fase)
+
+-- A curadoria é a fase inicial do processo de ausência, cujos requisitos são o desaparecimento da pessoa de seu domicílio sem deixar notícias nem representante (art. 22 do CC/02). O juiz, a pedido de um interessado ou do MP, nomeia um curador para administrar os bens, seguindo a ordem de preferência do art. 25 do CC/02 (cônjuge, pais, etc.).
+
+-- As providências incluem a arrecadação dos bens e a publicação de editais (art. 745 do CPC/15), visando proteger o patrimônio. A fase cessa com o retorno do ausente, a notícia de sua morte ou, após um ano (ou três, se deixou mandatário), com o requerimento de abertura da sucessão provisória (art. 26 do CC/02), passando-se à próxima etapa.
+
+## Referências do Tema
+
+--- Art. 22 do CC/02
+--- Art. 23 do CC/02
+--- Art. 25 do CC/02
+--- Art. 26 do CC/02
+--- Art. 744 do CPC/15
+--- Art. 745 do CPC/15
+
+## Pergunte pra I.A.
+
+  - Quais são os requisitos indispensáveis para a declaração de ausência e instauração da curadoria?
+  - Quem possui legitimidade para requerer ao juiz a nomeação de um curador para o ausente?
+  - Descreva a ordem legal de preferência para a escolha do curador, conforme o Código Civil.
+  - Quais são as principais providências judiciais tomadas nesta fase inicial, como a arrecadação de bens e a publicação de editais?
+  - Detalhe as responsabilidades e os limites de atuação do curador na administração do patrimônio.
+  - O curador pode vender um bem imóvel do ausente durante a fase de curadoria?
+  - Explique as três hipóteses que levam à cessação da fase de curadoria.
+  - Qual é o prazo legal que deve transcorrer para que se possa passar da curadoria para a sucessão provisória?
+  - O que acontece se o ausente retornar durante a fase de curadoria?
+  - Analise a situação de um ausente que deixou um procurador, mas cujos poderes são insuficientes para a gestão de todos os bens.
+
+### Fontes
+
+  - Da Curadoria dos Bens do Ausente - Código Civil - Jusbrasil
+  - Procedimento da declaração de ausência no Novo CPC - https://www.google.com/search?q=Jus.com.br
+  - Curatela de ausentes: o que é e como funciona? - Aurum
+  - A primeira fase do processo de ausência: a curadoria dos bens - Migalhas
+  - Código de Processo Civil (Lei nº 13.105/15) - Presidência da República (planalto.gov.br)
+-----
+# Ausência no Direito Civil
+
+-- A ausência é o instituto que visa proteger o patrimônio da pessoa que desaparece de seu domicílio sem deixar notícias ou representante (art. 22 do CC/02). Não se confunde com o mero desaparecimento, pois exige uma declaração judicial que dá início a um procedimento escalonado, começando pela nomeação de um curador para os bens (art. 25 do CC/02).
+
+-- O procedimento evolui em três fases: curadoria dos bens, sucessão provisória (art. 26 do CC/02) e sucessão definitiva (art. 37 do CC/02). Na sucessão provisória, os herdeiros são imitidos na posse, sob caução. Na definitiva, declara-se a morte presumida, e a propriedade dos bens é consolidada, resolvendo a situação patrimonial.
+
+## Referências do Tema
+
+--- Art. 22 do CC/02
+--- Art. 25 do CC/02
+--- Art. 26 do CC/02
+--- Art. 28 do CC/02
+--- Art. 37 do CC/02
+--- Art. 744 do CPC/15
+--- Art. 745 do CPC/15
+
+## Pergunte pra I.A.
+
+  - O que é o instituto da ausência no Direito Civil e qual seu principal objetivo?
+  - Quais são os pressupostos fáticos e jurídicos para a decretação da ausência de alguém?
+  - Descreva a primeira fase do procedimento de ausência, a "curadoria dos bens do ausente".
+  - Explique o que é a "sucessão provisória" e quais são os prazos legais para a sua abertura.
+  - Quais garantias os herdeiros devem prestar para tomar posse provisória dos bens do ausente?
+  - O que acontece se o ausente retornar durante a fase da sucessão provisória?
+  - Detalhe os requisitos e os efeitos da abertura da "sucessão definitiva".
+  - Diferencie a morte presumida com declaração de ausência da morte presumida sem declaração de ausência (art. 7º do CC/02).
+  - Analise a situação do cônjuge do ausente, considerando o vínculo matrimonial e o divórcio durante o processo.
+  - Discuta quais são os direitos do ausente que retorna após a conversão da sucessão em definitiva.
+
+### Fontes
+
+  - Da Ausência no Código Civil - https://www.google.com/search?q=Jus.com.br
+  - O que é declaração de ausência? - Aurum
+  - Morte presumida e declaração de ausência - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - O procedimento especial da declaração de ausência - Âmbito Jurídico
+  - As fases da declaração de ausência no Código Civil - Jusbrasil
+-----
 # Término da Personalidade Civil
 
 -- A personalidade civil, que se inicia com o nascimento com vida, extingue-se com a morte, conforme estabelece o art. 6º do Código Civil. Este evento põe fim à titularidade de direitos e deveres da pessoa natural e, pelo princípio da saisine (art. 1.784 do CC/02), opera a imediata transmissão da herança aos herdeiros legítimos e testamentários.
