@@ -1,11 +1,639 @@
 
+
+
+-----
+
+# Interdição  
+-- Para afastar a presunção de capacidade de fato, a interdição visa nomear um curador para indivíduos que, por causa transitória ou permanente, não podem exprimir sua vontade, além de ébrios habituais, viciados em tóxico e pródigos (Art. 1.767, CC/02). A Lei 13.146/15 (Estatuto da Pessoa com Deficiência) limitou a interdição a atos patrimoniais, presumindo a plena capacidade civil para pessoas com deficiência.  
+-- O processo de interdição pode ser promovido por cônjuge, companheiro, parentes, tutores, ou representantes de entidades (Art. 747, CPC), com atuação subsidiária do Ministério Público. A interdição é medida excepcional, com sentença constitutiva *ex nunc* (Art. 9º, III, CC/02), visando preservar a dignidade e autodeterminação do interditando, embora sua abrangência tenha gerado debates doutrinários sobre a possível desproteção de vulneráveis.
+
+## Referências do Tema  
+--- Art. 9º, III, CC/02  
+--- Art. 4º, III, CC/02  
+--- Art. 1.767, CC/02  
+--- Art. 1.775-A do CC/02  
+--- Art. 747 do CPC  
+--- Art. 747, § único, do CPC  
+--- Art. 749 do CPC  
+--- Art. 749, parágrafo único, CPC  
+--- Art. 750 do CPC  
+--- Art. 751 do CPC  
+--- Art. 751, §2º e 3º, CPC  
+--- Art. 752, §2º e 3°, do CPC  
+--- Art. 753, §2º, CPC  
+--- Art. 85, § 1º e 2º, Lei 13.146/15  
+--- Lei 13.146/15  
+--- STJ – AgInt no REsp: 1707902 SP 2017/0287364-0  
+--- STJ – REsp: 1694984 MS 2017/0012081-0
+
+## Pergunte pra I.A.
+
+  - Explique a distinção entre capacidade de direito e capacidade de fato, e como a interdição se relaciona com a capacidade de fato.
+  - Analise as alterações promovidas pela Lei 13.146/15 no rol das pessoas que podem ser interditadas, destacando o novo foco na impossibilidade de exprimir a vontade.
+  - Discorra sobre a importância do laudo médico no processo de interdição e como ele deve ser elaborado após a vigência da Lei 13.146/15.
+  - Detalhe os legitimados para promover a interdição, incluindo a atuação subsidiária do Ministério Público.
+  - Explique as etapas do processo de interdição, desde a petição inicial até o registro da sentença.
+  - Analise a controvérsia sobre a nomeação de curador especial para o interditando e o posicionamento do STJ sobre a atuação do Ministério Público como fiscal da ordem jurídica.
+  - Discuta a possibilidade da curatela compartilhada (Art. 1.775-A, CC/02) e como ela se alinha aos princípios de inclusão e autodeterminação.
+  - Avalie a natureza jurídica da sentença de interdição (*ex nunc*) e suas implicações práticas.
+  - Aborde a discussão sobre a interdição do menor púbere (maior de 16 anos) e os argumentos que justificam sua admissibilidade em casos específicos.
+  - Explique como a Lei 13.146/15 buscou evitar a discriminação da pessoa com deficiência, ao mesmo tempo em que a doutrina civilista critica a possível desproteção gerada.
+
+-----
+
+# Quem pode promover a interdição?  
+-- A interdição, para afastar a presunção de capacidade de fato, pode ser promovida por cônjuge ou companheiro, parentes, tutores, ou representantes de entidades que abriguem o interditando (Art. 747 do CPC). O Ministério Público (MP) também possui legitimidade, porém de forma subsidiária.  
+-- O MP atua quando não há pessoas legitimadas, se elas não promoverem a interdição, ou se forem incapazes (Art. 747, § único, do CPC). A alteração do CPC pela Lei 13.146/15 visa proteger a autodeterminação e dignidade da pessoa com deficiência, limitando a interdição a questões patrimoniais.
+
+## Referências do Tema  
+--- Art. 747 do CPC  
+--- Art. 747, § único, do CPC  
+--- Lei 13.146/15
+
+## Pergunte pra I.A.
+
+  - Explique as hipóteses em que o Ministério Público pode promover a interdição, destacando o caráter subsidiário de sua atuação.
+  - Analise como a Lei 13.146/15 (Estatuto da Pessoa com Deficiência) impactou a legitimidade para propor a interdição, especialmente no que tange à proteção da autonomia da pessoa com deficiência.
+  - Discorra sobre a importância da "dignidade da pessoa humana" e da "autodeterminação" na interpretação atual das regras de interdição.
+  - Compare a legitimidade para promover a interdição no Código de Processo Civil (antes e depois da Lei 13.146/15), apontando as principais mudanças.
+  - Proponha um caso prático que ilustre a atuação do representante de entidade de acolhimento como legitimado para propor a interdição.
+  - Explique a diferença entre a interdição e a tomada de decisão apoiada no que se refere à legitimidade para propor a medida.
+  - Quais são os riscos e benefícios de se conceder ampla legitimidade para propor a interdição, considerando a autonomia da pessoa?
+  - Analise a relevância do requisito objetivo (doença grave) e subjetivo (legitimados não existem, não promovem a ação ou são incapazes) para a atuação do Ministério Público.
+  - Discuta o papel do advogado do interditando no processo de interdição e sua legitimidade para contestar o pedido.
+  - Como a capacidade do interditando de exprimir sua vontade influencia a legitimidade para propor a interdição?
+
+-----
+
+# Fraude Contra Credores  
+-- A fraude contra credores é um vício social que ocorre quando o devedor, já insolvente ou na iminência de se tornar, dispõe de seu patrimônio de forma maliciosa para frustrar a satisfação dos créditos de seus credores. Para sua configuração, exige-se o *eventus damni* (prejuízo ao credor) e o *consilium fraudis* (intenção de fraudar) ou *scientia fraudis* (ciência da fraude pelo terceiro adquirente), sendo este último presumido em negócios gratuitos (Art. 158, CC/02).  
+-- A ação pauliana (ou revocatória) é o instrumento para anular o negócio jurídico fraudulento, com prazo decadencial de 4 anos (Art. 178, II, CC/02). Contudo, a Lei da Liberdade Econômica (Lei 13.874/19) e a jurisprudência têm mitigado a rigidez da *scientia fraudis*, especialmente em negócios onerosos, priorizando a boa-fé do terceiro adquirente e a segurança jurídica nas relações.
+
+## Referências do Tema  
+--- Art. 158, CC/02  
+--- Art. 159, CC/02  
+--- Art. 160, CC/02  
+--- Art. 161, CC/02  
+--- Art. 162, CC/02  
+--- Art. 178, II, CC/02  
+--- Lei 13.874/19  
+--- Enunciado 15 da I Jornada de Direito Civil do CJF
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de fraude contra credores como vício social do negócio jurídico, diferenciando-o da simulação.
+  - Quais são os requisitos para a configuração da fraude contra credores (*eventus damni* e *consilium fraudis*/*scientia fraudis*) e como a jurisprudência os interpreta?
+  - Discorra sobre a ação pauliana (ou revocatória) como instrumento processual para anular negócios jurídicos em fraude contra credores, incluindo o prazo decadencial para seu ajuizamento.
+  - Analise a distinção entre negócios jurídicos gratuitos e onerosos no contexto da fraude contra credores e como a prova da *scientia fraudis* se manifesta em cada caso.
+  - De que forma a Lei da Liberdade Econômica (Lei 13.874/19) influenciou a interpretação da fraude contra credores, especialmente no que tange à proteção de terceiros de boa-fé.
+  - Apresente um caso prático que ilustre a aplicação da fraude contra credores, incluindo a análise dos requisitos e a eventual solução judicial.
+  - Discuta a relação entre a fraude contra credores e a execução fiscal, e como a *presunção de fraude* pode ser afastada.
+  - Explique a diferença entre a fraude contra credores e a fraude à execução, e as implicações práticas de cada uma.
+  - Como a prova da insolvência do devedor é crucial para a configuração da fraude contra credores?
+  - Analise o princípio da boa-fé objetiva no contexto da fraude contra credores e o dever de mitigar o próprio prejuízo para o credor.
+
+-----
+
+# Simulação  
+-- A simulação é um vício social do negócio jurídico que ocorre quando as partes celebram um ato jurídico que não corresponde à sua real intenção, visando enganar terceiros ou burlar a lei (Art. 167, CC/02). Pode ser absoluta (o negócio simulado não tem nenhuma correspondência com a vontade das partes) ou relativa (o negócio simulado esconde um negócio dissimulado).  
+-- A Lei 13.874/19, ao presumir a simetria e paridade nos contratos civis e empresariais, e ao valorizar a boa-fé objetiva, reforça a necessidade de combater a simulação. O negócio simulado é nulo, imprescritível e não pode ser convalidado, sendo a nulidade passível de ser alegada por qualquer interessado ou reconhecida de ofício pelo juiz.
+
+## Referências do Tema  
+--- Art. 167, CC/02  
+--- Art. 168, CC/02  
+--- Art. 169, CC/02  
+--- Lei 13.874/19  
+--- Art. 421-A, CC/02
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de simulação como vício social do negócio jurídico e suas principais características.
+  - Diferencie simulação absoluta de simulação relativa, fornecendo exemplos práticos de cada modalidade.
+  - Discorra sobre as consequências jurídicas da simulação (nulidade) e as diferenças em relação à anulabilidade de outros vícios do consentimento.
+  - Analise como a Lei da Liberdade Econômica (Lei 13.874/19), ao presumir a simetria nos contratos (Art. 421-A, CC/02), pode impactar a detecção e o combate à simulação.
+  - Explique por que o negócio jurídico simulado é nulo e não anulável, e quais as implicações dessa distinção para o prazo e a legitimidade para alegar o vício.
+  - Discuta o papel da boa-fé objetiva na identificação da simulação e na proteção de terceiros que agem de boa-fé.
+  - Apresente um caso prático que demonstre a ocorrência de simulação e a eventual solução judicial para o reconhecimento da nulidade.
+  - Compare a simulação com a fraude contra credores, destacando as principais diferenças e semelhanças entre esses vícios sociais.
+  - Explique como a nulidade do negócio simulado pode ser reconhecida de ofício pelo juiz ou alegada por qualquer interessado.
+  - Analise a possibilidade de o negócio jurídico dissimulado (oculto pela simulação) ter validade, desde que não ofenda a lei nem prejudique terceiros.
+
+-----
+# Administração dos bens dos filhos menores
+
+-- A administração dos bens dos filhos menores é um dever dos pais no exercício do poder familiar, visando à proteção e à conservação do patrimônio do filho (Art. 1.689, CC/02). Os pais são os usufrutuários legais dos bens dos filhos, o que lhes confere o direito de administrar e usar esses bens, mas com responsabilidades específicas.
+
+-- Os pais não podem, sem autorização judicial, alienar ou gravar de ônus real os bens imóveis dos filhos, nem contrair dívidas em nome deles (Art. 1.691, CC/02). A inobservância dessas regras pode gerar a anulação dos atos e a responsabilidade dos pais pelos prejuízos causados, além da possibilidade de perda do poder familiar em casos graves (Art. 1.693, II, CC/02).
+
+## Referências do Tema
+
+--- Art. 1.689, CC/02
+
+--- Art. 1.691, CC/02
+
+--- Art. 1.693, II, CC/02
+
+--- Enunciado 33 da I Jornada de Direito Civil
+
+--- Enunciado 101 da I Jornada de Direito Civil
+
+--- Enunciado 103 da I Jornada de Direito Civil
+
+## Pergunte pra I.A.
+- Explique o usufruto legal dos pais sobre os bens dos filhos menores, diferenciando-o do usufruto convencional.
+- Detalhe os limites da administração dos bens dos filhos pelos pais, especialmente em relação à alienação e oneração de bens imóveis.
+- Analise as consequências jurídicas da prática de atos pelos pais em nome dos filhos menores sem a devida autorização judicial.
+- Discorra sobre as hipóteses em que os pais podem perder o poder familiar em razão de má administração dos bens dos filhos.
+- Explique o papel do Ministério Público na fiscalização da administração dos bens dos filhos menores pelos pais.
+- Apresente um caso prático que demonstre um conflito de interesses entre pais e filhos na administração de bens.
+- De que forma os Enunciados da Jornada de Direito Civil complementam a interpretação das normas sobre a administração dos bens dos filhos.
+- Avalie como a legislação busca conciliar a autonomia dos pais com a proteção do patrimônio dos filhos menores.
+- Discuta a responsabilidade dos pais por dívidas contraídas em nome dos filhos e a necessidade de autorização judicial.
+- Quais são os mecanismos de controle e fiscalização da administração dos bens dos filhos, e como eles atuam na prática?
+-----
+# Poder Familiar
+
+-- O poder familiar é o conjunto de direitos e deveres atribuídos aos pais em relação aos filhos menores e seus bens, visando à proteção, educação e desenvolvimento integral da criança e do adolescente (Art. 1.630, CC/02). É um munus público, irrenunciável e imprescritível, exercido em nome do melhor interesse do filho.
+
+-- É, em regra, exercido em conjunto por ambos os pais, buscando o consenso nas decisões. No entanto, em caso de divergência, a questão será submetida à apreciação judicial (Art. 1.631, CC/02). A Lei 13.058/14 estabeleceu a guarda compartilhada como regra, reforçando a participação de ambos os genitores na vida dos filhos, mesmo após a separação.
+
+## Referências do Tema
+
+--- Art. 1.630, CC/02
+
+--- Art. 1.631, CC/02
+
+--- Art. 1.632, CC/02
+
+--- Art. 1.633, CC/02
+
+--- Art. 1.634, CC/02
+
+--- Art. 1.635, CC/02
+
+--- Art. 1.636, CC/02
+
+--- Art. 1.637, CC/02
+
+--- Art. 1.638, CC/02
+
+--- Art. 1.689, I, CC/02
+
+--- Art. 1.691, CC/02
+
+--- Art. 1.693, II, CC/02
+
+--- Art. 10 da Lei 8.009/90
+
+--- Art. 21 da Lei 13.431/17
+
+--- Lei 13.058/14
+
+--- Lei 13.105/15 (CPC)
+
+--- Lei 13.146/15 (Estatuto da Pessoa com Deficiência)
+
+--- Lei 14.711/23
+
+--- Enunciado 33 da I Jornada de Direito Civil
+
+--- Enunciado 101 da I Jornada de Direito Civil
+
+--- Enunciado 103 da I Jornada de Direito Civil
+
+--- Enunciado 334 da IV Jornada de Direito Civil
+
+--- STJ – REsp: 1622378 MS 2016/0225101-7
+
+--- STJ – REsp: 1542617 MT 2015/0166299-1
+
+## Pergunte pra I.A.
+- Explique o conceito de poder familiar, sua natureza jurídica (munus público) e a importância do "melhor interesse do filho".
+- Discorra sobre o exercício conjunto do poder familiar e as soluções legais para casos de divergência entre os pais.
+Analise os direitos e deveres dos pais no exercício do poder familiar, com foco na proteção, educação e administração dos bens dos filhos.
+- De que forma a Lei 13.058/14, que estabeleceu a guarda compartilhada como regra, impactou o exercício do poder familiar.
+Explique como o poder familiar se diferencia da tutela e da curatela, e quais as suas implicações para a capacidade civil dos filhos menores.
+- Aborde as hipóteses de suspensão e extinção do poder familiar, e as consequências para os pais e para os filhos.
+Discuta a validade de atos praticados pelos pais que excedam os limites do poder familiar, especialmente em relação à alienação de bens imóveis dos filhos.
+- Analise como a Lei 13.146/15 (Estatuto da Pessoa com Deficiência) alterou a compreensão do poder familiar em relação aos filhos com deficiência.
+- Explique a responsabilidade civil dos pais pelos atos dos filhos menores, e como isso se relaciona com o poder familiar.
+Discorra sobre o papel do Ministério Público na fiscalização do exercício do poder familiar e na proteção dos direitos dos menores.
+- Apresente um caso prático que ilustre um conflito no exercício do poder familiar e a solução adotada pela justiça.
+Avalie a relação entre o poder familiar e os princípios constitucionais da dignidade da pessoa humana e da proteção integral da criança e do adolescente.
+- Explique a diferença entre poder familiar e autoridade parental.
+- Discorra sobre a importância do diálogo entre os pais para o exercício adequado do poder familiar.
+Analise como o poder familiar se adapta a novas configurações familiares, como a família multiparental.
+
+-----
+
+# Tomada de Decisão Apoiada (T.D.A)
+-- A Tomada de Decisão Apoiada (T.D.A.) é um processo pelo qual a pessoa com deficiência elege pelo menos duas pessoas de sua confiança para prestar-lhe apoio na tomada de decisões sobre atos da vida civil (Art. 1.783-A do CC/02). É um instituto que visa aprimorar a autonomia e a inclusão social, garantindo que a pessoa com deficiência exerça sua plena capacidade civil (Art. 6º da Lei 13.146/15).
+-- Diferentemente da curatela, a T.D.A. não retira a capacidade do apoiado, mas a complementa, oferecendo assistência em decisões complexas, especialmente no âmbito patrimonial e negocial. A Lei 13.146/15 reforça que esse apoio não afasta a plena capacidade do indivíduo, mas busca facilitar seu exercício, com responsabilidade solidária dos apoiadores pelos danos causados por sua atuação negligente ou dolosa.
+
+# Referências do Tema
+--- Art. 1.783-A, CC/02
+--- Art. 6º, Lei 13.146/15
+--- Lei 13.146/15
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de Tomada de Decisão Apoiada (T.D.A.) e seus objetivos, conforme o Art. 1.783-A do Código Civil.
+  - Diferencie a T.D.A. da curatela, destacando como cada instituto afeta (ou não) a capacidade civil da pessoa com deficiência.
+  - Discorra sobre o papel dos apoiadores na T.D.A. e a natureza de sua responsabilidade pelos danos causados em decorrência do apoio.
+  - Analise como a T.D.A. se alinha aos princípios da dignidade da pessoa humana e da autodeterminação, conforme o Estatuto da Pessoa com Deficiência.
+  - Quais são os requisitos para a instituição da T.D.A. e o procedimento judicial para sua formalização?
+  - Explique como a T.D.A. pode contribuir para a inclusão social da pessoa com deficiência no exercício de seus direitos civis.
+  - Discuta as críticas e os debates doutrinários em torno da T.D.A., especialmente em relação à efetividade da proteção oferecida e aos desafios práticos de sua aplicação.
+  - Apresente um caso prático que ilustre a aplicação da T.D.A. para auxiliar uma pessoa com deficiência em decisões patrimoniais.
+  - De que forma a T.D.A. se posiciona no sistema de proteção da pessoa com deficiência, complementando outros institutos legais?
+  - Avalie o impacto da T.D.A. na autonomia da pessoa com deficiência, permitindo-lhe exercer suas escolhas com o devido suporte.
+
+-----
+
+# Tutela  
+-- A tutela é um encargo imposto por lei a um terceiro, para cuidar da pessoa e administrar os bens de menores de 18 anos que não possuem pais ou que tiveram seu poder familiar destituído ou suspenso (Art. 1.728 do CC/02). É um dever de assistência que visa proteger o incapaz e seus interesses.  
+-- A lei prevê diferentes espécies de tutela: legítima (determinada pela lei), testamentária (por testamento) e dativa (nomeada pelo juiz). O tutor deve zelar pelo bem-estar do tutelado, prestando contas de sua administração e defendendo seus direitos em juízo, com a fiscalização do Ministério Público.
+
+## Referências do Tema  
+--- Art. 1.728, CC/02  
+--- Art. 1.729, CC/02  
+--- Art. 1.730, CC/02  
+--- Art. 1.731, CC/02  
+--- Art. 1.732, CC/02  
+--- Art. 1.733, CC/02  
+--- Art. 1.734, CC/02  
+--- Art. 1.735, CC/02  
+--- Art. 1.736, CC/02  
+--- Art. 1.737, CC/02  
+--- Art. 1.738, CC/02  
+--- Art. 1.739, CC/02  
+--- Art. 1.740, CC/02  
+--- Art. 1.741, CC/02  
+--- Art. 1.742, CC/02  
+--- Art. 1.743, CC/02  
+--- Art. 1.744, CC/02  
+--- Art. 1.745, CC/02  
+--- Art. 1.746, CC/02  
+--- Art. 1.747, CC/02  
+--- Art. 1.748, CC/02  
+--- Art. 1.749, CC/02  
+--- Art. 1.750, CC/02  
+--- Art. 1.751, CC/02  
+--- Art. 1.752, CC/02  
+--- Art. 1.753, CC/02  
+--- Art. 1.754, CC/02  
+--- Art. 1.755, CC/02  
+--- Art. 1.756, CC/02  
+--- Art. 1.757, CC/02  
+--- Art. 1.758, CC/02  
+--- Art. 1.759, CC/02  
+--- Art. 1.760, CC/02  
+--- Art. 1.761, CC/02  
+--- Art. 1.762, CC/02  
+--- Art. 1.763, CC/02  
+--- Art. 1.764, CC/02  
+--- Art. 1.765, CC/02  
+--- Art. 1.766, CC/02
+
+## Pergunte pra I.A.
+
+  - Explique o que é a tutela, seus objetivos e as diferentes espécies (legítima, testamentária e dativa), conforme o Código Civil.
+  - Discorra sobre os requisitos para ser nomeado tutor e as hipóteses de incapacidade ou escusa para o exercício da tutela.
+  - Analise os deveres do tutor em relação à pessoa e aos bens do tutelado, incluindo a obrigatoriedade de prestação de contas.
+  - Detalhe o papel do Ministério Público na fiscalização da tutela e as consequências do descumprimento dos deveres do tutor.
+  - Compare a tutela com a curatela, identificando as principais diferenças e semelhanças entre os institutos.
+  - Apresente um caso prático que demonstre a importância da tutela na proteção dos interesses de um menor órfão.
+  - Explique como a tutela se encerra e quais as implicações para o tutelado ao atingir a maioridade ou ter o poder familiar restabelecido.
+  - Discuta o conceito de "remuneração do tutor" e as condições para sua concessão, à luz do Código Civil.
+  - Aborde a questão da responsabilidade do tutor por danos causados ao tutelado e as formas de apuração dessa responsabilidade.
+  - Quais são as discussões doutrinárias sobre a modernização do instituto da tutela no contexto do direito de família contemporâneo?
+  - Explique a ordem de preferência para a nomeação de tutor na tutela legítima.
+  - Quais são os atos que o tutor não pode praticar sem autorização judicial?
+  - Discorra sobre a importância do balanço geral e da prestação de contas na administração dos bens do tutelado.
+  - Analise a possibilidade de o tutelado impugnar a prestação de contas do tutor.
+  - Como a tutela se relaciona com o princípio da proteção integral da criança e do adolescente?
+
+-----
+
+# Curatela  
+-- A curatela é um encargo imposto a um terceiro para administrar a vida patrimonial de maiores de 18 anos que não podem exprimir sua vontade ou que se enquadram em hipóteses de incapacidade relativa, como ébrios habituais, viciados em tóxico e pródigos (Art. 1.767, CC/02). É uma medida protetiva que visa à inclusão e autodeterminação.  
+-- Após a Lei 13.146/15 (Estatuto da Pessoa com Deficiência), a curatela se tornou excepcional e limitada a atos patrimoniais, presumindo-se a plena capacidade civil para a pessoa com deficiência. A curatela pode ser compartilhada e o curador deve, no melhor interesse do curatelado, prestar contas de sua gestão e promover sua inclusão social.
+
+## Referências do Tema  
+--- Art. 4º, CC/02  
+--- Art. 85, Lei 13.146/15  
+--- Art. 1.767, CC/02  
+--- Art. 1.775-A, CC/02  
+--- Art. 747, CPC  
+--- Art. 749, CPC  
+--- Art. 750, CPC  
+--- Art. 751, CPC  
+--- Art. 752, CPC  
+--- Art. 753, CPC  
+--- Lei 13.146/15  
+--- STJ – AgInt no REsp: 1707902 SP 2017/0287364-0  
+--- STJ – REsp: 1694984 MS 2017/0012081-0
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de curatela e as hipóteses que a justificam, à luz das alterações promovidas pela Lei 13.146/15.
+  - Discorra sobre a distinção entre a curatela e a interdição, e como o Estatuto da Pessoa com Deficiência impactou essa relação.
+  - Analise o objetivo de proteção patrimonial da curatela e a presunção de plena capacidade civil para as pessoas com deficiência em atos existenciais.
+  - Detalhe a possibilidade de curatela compartilhada (Art. 1.775-A do CC/02) e como ela se alinha aos princípios de inclusão e autodeterminação.
+  - Explique o papel do Ministério Público no processo de curatela, tanto como legitimado quanto como fiscal da ordem jurídica.
+  - Apresente um caso prático que demonstre a aplicação da curatela a um pródigo ou a alguém que não pode exprimir sua vontade.
+  - Discuta as críticas doutrinárias sobre a Lei 13.146/15 e a possível "desproteção" de alguns indivíduos ao reduzir o rol de incapazes para a curatela.
+  - Quais são os atos que o curador não pode praticar sem autorização judicial, e qual a importância da prestação de contas na sua gestão?
+  - Explique
+
+-----
+
+# A capacidade do surdo-mudo, segundo o ordenamento jurídico  
+-- O surdo-mudo é hoje plenamente capaz, superando a visão obsoleta do Código Civil de 1916 e reafirmando a dignidade da pessoa com deficiência (Art. 6º da Lei 13.146/15). Essa plena capacidade, no entanto, encontra limitações funcionais em atos específicos.  
+-- Tais limitações se manifestam em situações como ser testemunha em testamento público (Art. 1.864, II, CC/02) ou em processo judicial, quando a ciência do fato depender do sentido que lhe falta (Art. 447, §1°, IV, CPC).
+
+## Referências do Tema  
+--- Art. 1.864, II, CC/02  
+--- Art. 447, §1°, IV, CPC  
+--- Lei 13.146/15
+
+## Pergunte pra I.A.
+
+  - Explique a evolução do conceito de capacidade do surdo-mudo no Direito Civil brasileiro, desde o Código de 1916 até o Estatuto da Pessoa com Deficiência.
+  - Analise as limitações funcionais específicas que o surdo-mudo pode enfrentar em certos atos jurídicos, como a elaboração de testamentos e a participação como testemunha em processos.
+  - Discorra sobre como a Lei 13.146/15 (Estatuto da Pessoa com Deficiência) promove a dignidade e a autodeterminação da pessoa com deficiência, mesmo diante das limitações funcionais.
+  - Apresente um caso prático que ilustre a aplicação das normas de capacidade do surdo-mudo em um contexto de negócio jurídico ou processual.
+  - Compare a capacidade do surdo-mudo com a capacidade de outros grupos protegidos pela legislação, como os indígenas, identificando semelhanças e diferenças.
+  - Explique o papel da tecnologia e dos recursos de acessibilidade na garantia do pleno exercício dos direitos civis do surdo-mudo.
+  - Discuta as críticas doutrinárias sobre as eventuais lacunas ou desafios na plena efetivação da capacidade do surdo-mudo no ordenamento jurídico atual.
+  - Analise de que forma a interpretação jurisprudencial contribui para a construção de um entendimento mais inclusivo da capacidade civil do surdo-mudo.
+  - Avalie o impacto das convenções internacionais sobre os direitos das pessoas com deficiência na legislação brasileira relativa à capacidade do surdo-mudo.
+  - Descreva como a atuação de intérpretes de Libras em atos jurídicos e processuais se relaciona com a garantia da capacidade plena do surdo-mudo.
+
+-----
+
+# A capacidade do índio no Código Civil  
+-- O Código Civil remete à legislação especial para regulamentar a capacidade do indígena (Art. 4°, parágrafo único, CC/02), sendo o Estatuto do Índio (Lei 6.001/73) a norma aplicável. Este estatuto diferencia o indígena integrado à comunhão nacional, considerado plenamente capaz.  
+-- Já o indígena não integrado necessita de assistência do órgão tutelar competente, sob pena de nulidade dos atos praticados (Art. 8º da Lei 6.001/73). Tal nulidade difere da anulabilidade de atos de relativamente incapazes, evidenciando um regime de tutela específico.
+
+## Referências do Tema  
+--- Art. 4°, parágrafo único, CC/02  
+--- Lei 6.001/73  
+--- Art. 8º da Lei 6.001/73
+
+## Pergunte pra I.A.
+
+  - Explique como o Código Civil e o Estatuto do Índio tratam a capacidade jurídica dos indígenas, diferenciando os integrados dos não integrados à comunhão nacional.
+  - Analise a consequência jurídica da prática de atos por indígena não integrado sem a devida assistência do órgão tutelar, e compare essa nulidade com a anulabilidade dos atos de relativamente incapazes.
+  - Discorra sobre o papel do órgão tutelar (FUNAI) na proteção dos direitos dos indígenas, especialmente os não integrados, e como essa atuação se coaduna com os princípios constitucionais.
+  - Avalie as discussões doutrinárias sobre os critérios para determinar a "integração à comunhão nacional" e os desafios na aplicação desse conceito.
+  - Apresente um caso prático em que a capacidade de um indígena para realizar um negócio jurídico é questionada, e como a legislação especial e a jurisprudência abordariam a situação.
+  - De que forma a autodeterminação dos povos indígenas é conciliada com a necessidade de proteção jurídica por meio do regime de assistência.
+  - Discuta a importância do respeito às particularidades culturais e sociais das comunidades indígenas na interpretação e aplicação das normas sobre sua capacidade.
+  - Analise as eventuais tensões entre o regime de tutela previsto no Estatuto do Índio e os princípios de autonomia da pessoa humana defendidos em legislações mais recentes.
+  - Explique como as convenções internacionais de direitos humanos, como a Convenção 169 da OIT, influenciam a interpretação da capacidade do indígena no Brasil.
+  - Quais são os principais desafios na garantia dos direitos civis e patrimoniais dos indígenas, considerando sua capacidade jurídica diferenciada?
+
+-----
+
+# Emancipação  
+-- A emancipação é um instituto que antecipa a capacidade de fato, permitindo que o menor, entre 16 e 18 anos, exerça os atos da vida civil por si só (Art. 5º, parágrafo único, CC/02). Ela se distingue da capacidade de direito, que toda pessoa possui (Art. 1º, CC/02), e visa promover a autonomia do indivíduo.  
+-- Contudo, a emancipação não afasta a responsabilidade civil dos pais por atos ilícitos dos filhos, nem a inimputabilidade penal do menor de 18 anos (Art. 27, CP). Também não afasta a incidência do Estatuto da Criança e do Adolescente (Enunciado 630 da VI Jornada de Direito Civil). Pode ser voluntária (acordo dos pais), judicial (discordância dos pais ou pedido do tutor) ou legal (casamento, emprego público efetivo, colação de grau superior, estabelecimento civil/comercial ou economia própria).
+
+ ## Referências do Tema   
+--- Art. 1º, CC/02  
+--- Art. 5º, parágrafo único, V, CC/02  
+--- Art. 9º, II, CC/02  
+--- Art. 27, CP  
+--- Art. 1.517, CC/02  
+--- Art. 1.520, CC/02  
+--- Art. 1.631, parágrafo único, CC/02  
+--- ADI 4277 do STF  
+--- RE 898.060 do STF  
+--- Enunciado 630 da VI Jornada de Direito Civil  
+--- Provimento 37 do CNJ
+
+## Pergunte pra I.A.
+
+  - Explique o que é a capacidade de fato e como a emancipação atua para antecipá-la, diferenciando-a da capacidade de direito.
+  - Discorra sobre as três modalidades de emancipação (voluntária, judicial e legal), detalhando os requisitos e o procedimento para cada uma.
+  - Analise as hipóteses de emancipação legal, como casamento, emprego público efetivo, colação de grau em curso superior e economia própria, fornecendo exemplos de cada.
+  - Avalie como a emancipação afeta (ou não) a responsabilidade civil dos pais por atos ilícitos dos filhos menores e a inimputabilidade penal, citando a legislação pertinente.
+  - Discuta a relação entre a emancipação e o Estatuto da Criança e do Adolescente, explicando por que a emancipação civil não afasta a incidência do ECA.
+  - Aborde a controvérsia sobre a emancipação por união estável e os argumentos utilizados pela doutrina e jurisprudência para cada posicionamento.
+  - Explique o conceito de "economia própria" no contexto da emancipação pelo estabelecimento civil ou comercial ou pela relação de emprego.
+  - De que forma a emancipação, embora promova a autonomia do menor, mantém limites para sua atuação em certas áreas da vida civil, como atos que envolvam responsabilidade criminal?
+  - Apresente um caso prático que demonstre as consequências jurídicas da emancipação em uma situação familiar ou patrimonial.
+  - Compare a visão histórica da emancipação com a sua compreensão atual, influenciada pelo neoconstitucionalismo e pela proteção da dignidade da pessoa humana.
+
+-----
+
+# Pessoa Jurídica  
+-- A pessoa jurídica é um sujeito de direitos e obrigações, distinto de seus membros, e sua existência inicia com o registro de seu ato constitutivo (Art. 45, CC/02). Sua análise, além da estrutura formal, exige a compreensão de sua finalidade social, alinhada aos valores constitucionais, como a dignidade da pessoa humana (Art. 170, CF/88).  
+-- Caracteriza-se por seu caráter instrumental, visando à geração de empregos, tributos e inovação (Art. 49-A, parágrafo único, CC/02). A legislação recente, como a Lei 14.195/2021, buscou simplificar as formas societárias, extinguindo a EIRELI e consolidando a sociedade limitada unipessoal, reafirmando a autonomia patrimonial da pessoa jurídica.
+
+ ## Referências do Tema   
+--- Art. 45, CC/02  
+--- Art. 49-A, CC/02  
+--- Art. 50, CC/02  
+--- Art. 52, CC/02  
+--- Art. 170, CF/88  
+--- Súmula 227 do STJ  
+--- Lei 14.195/2021  
+--- Lei 13.874/2019
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de pessoa jurídica no ordenamento jurídico brasileiro, diferenciando-a das pessoas físicas e dos entes despersonificados.
+  - Discorra sobre as teorias afirmativas da pessoa jurídica (formalista, realista e da realidade técnica), explicando qual é a adotada pelo Código Civil e suas implicações.
+  - Analise como o "caráter instrumental" e a "função social" da pessoa jurídica se manifestam no Direito Civil e na Constituição Federal, citando o Art. 170 da CF/88.
+  - Aborde as principais alterações legislativas recentes, como a extinção da EIRELI e a consolidação da sociedade limitada unipessoal, e seus impactos na autonomia da pessoa jurídica.
+  - Explique a Súmula 227 do STJ, que reconhece a possibilidade de dano moral à pessoa jurídica, e como isso se relaciona com os direitos da personalidade e a honra objetiva.
+  - Discuta a "autonomia patrimonial" da pessoa jurídica e como a Lei da Liberdade Econômica (Lei 13.874/2019) buscou reforçá-la, especialmente no que tange à segregação de riscos.
+  - Analise a "responsabilidade da pessoa jurídica" por atos de seus administradores, abordando a Teoria *Ultra Vires Societatis* e a Teoria da Aparência.
+  - De que forma os "direitos da personalidade da pessoa jurídica" se diferenciam daqueles da pessoa física, considerando a impossibilidade de atributos como vida e autoestima?
+  - Apresente um caso prático que ilustre a aplicação do conceito de pessoa jurídica em um litígio societário ou em uma questão de responsabilidade civil.
+  - Quais são os desafios enfrentados pela pessoa jurídica contemporânea para conciliar seus interesses privados com os valores sociais e constitucionais?
+  - Explique a distinção entre pessoa jurídica de direito público e de direito privado, fornecendo exemplos de cada e suas principais características.
+  - Discorra sobre a importância do registro dos atos constitutivos para o início da personalidade jurídica das pessoas jurídicas de direito privado.
+  - Aborde como a pessoa jurídica pode ser responsabilizada nas esferas civil, administrativa e penal, com foco nas particularidades de cada tipo de responsabilidade.
+  - Analise o conceito de "desconsideração da personalidade jurídica" e suas teorias (maior e menor), explicando quando e como esse instituto pode ser aplicado.
+
+-----
+
+# Autonomia da Pessoa Jurídica  
+-- A autonomia da pessoa jurídica é o princípio que garante a separação entre o patrimônio da empresa e o de seus sócios, administradores ou instituidores (Art. 49-A, CC/02). Essa separação é fundamental para estimular empreendimentos, gerar empregos, tributos, renda e inovação, conforme previsto pela Lei da Liberdade Econômica (Lei 13.874/2019).  
+-- No entanto, essa autonomia não é absoluta. Em casos de abuso da personalidade jurídica, caracterizado por desvio de finalidade ou confusão patrimonial, o juiz pode desconsiderá-la para estender os efeitos das obrigações aos bens particulares dos responsáveis (Art. 50, CC/02).
+
+ ## Referências do Tema   
+--- Art. 49-A, CC/02  
+--- Art. 50, CC/02  
+--- Lei 13.874/2019  
+--- Lei 14.195/2021
+
+## Pergunte pra I.A.
+
+  - Explique o conceito de autonomia patrimonial da pessoa jurídica e sua importância para o desenvolvimento econômico, com base no Art. 49-A do Código Civil.
+  - Discorra sobre as hipóteses de abuso da personalidade jurídica que autorizam sua desconsideração, detalhando o que se ent
+
+-----
+
+# Quem pode promover a interdição?  
+-- A interdição, para afastar a presunção de capacidade de fato, pode ser promovida por cônjuge ou companheiro, parentes, tutores, ou representantes de entidades que abriguem o interditando (Art. 747 do CPC). O Ministério Público (MP) também possui legitimidade, porém de forma subsidiária.  
+-- O MP atua quando não há pessoas legitimadas, se elas não promoverem a interdição, ou se forem incapazes (Art. 747, § único, do CPC). A alteração do CPC pela Lei 13.146/15 visa proteger a autodeterminação e dignidade da pessoa com deficiência, limitando a interdição a questões patrimoniais.
+
+ ## Referências do Tema    
+--- Art. 747 do CPC  
+--- Art. 747, § único, do CPC  
+--- Lei 13.146/15
+
+## Pergunte pra I.A.
+
+  - Explique as hipóteses em que o Ministério Público pode promover a interdição, destacando o caráter subsidiário de sua atuação.
+  - Analise como a Lei 13.146/15 (Estatuto da Pessoa com Deficiência) impactou a legitimidade para propor a interdição, especialmente no que tange à proteção da autonomia da pessoa com deficiência.
+  - Discorra sobre a importância da "dignidade da pessoa humana" e da "autodeterminação" na interpretação atual das regras de interdição.
+  - Compare a legitimidade para promover a interdição no Código de Processo Civil (antes e depois da Lei 13.146/15), apontando as principais mudanças.
+  - Proponha um caso prático que ilustre a atuação do representante de entidade de acolhimento como legitimado para propor a interdição.
+
+-----
+
+## Como será o processo de interdição?  
+-- O processo de interdição exige que o demandante especifique os fatos que demonstram a incapacidade na petição inicial, acompanhada de laudo médico ou justificativa (Art. 749 e 750 do CPC). O interditando é citado, ouvido, e pode impugnar o pedido em 15 dias, com assistência de especialista e uso de recursos tecnológicos para exprimir sua vontade (Art. 751 do CPC).  
+-- O juiz pode nomear curador provisório em caso de urgência (Art. 749, parágrafo único, CPC). A interdição é medida excepcional e limitada a atos patrimoniais, e a sentença tem natureza constitutiva *ex nunc* (Art. 9º, III, CC/02). O MP atua como fiscal da ordem jurídica, embora o STJ tenha flexibilizado a necessidade de curador especial em jurisdição voluntária.
+
+ ## Referências do Tema    
+--- Art. 9º, III, CC/02  
+--- Art. 1.767, I, CC/02  
+--- Art. 1.775-A do CC/02  
+--- Art. 749 do CPC  
+--- Art. 749, parágrafo único, CPC  
+--- Art. 750 do CPC  
+--- Art. 751 do CPC  
+--- Art. 752, § 2º e 3º, CPC  
+--- Art. 753, § 2º, CPC  
+--- STJ – AgInt no REsp: 1707902 SP 2017/0287364-0  
+--- STJ – REsp: 1694984 MS 2017/0012081-0  
+--- Lei 13.146/15
+
+## Pergunte pra I.A.
+
+  - Descreva as etapas do processo de interdição, desde a petição inicial até o registro da sentença, destacando a função do laudo médico.
+  - Analise a posição do Ministério Público no processo de interdição, considerando sua atuação como legitimado e como fiscal da ordem jurídica.
+  - Discorra sobre a controvérsia da dispensa do curador especial pelo STJ, mesmo havendo previsão legal, e os argumentos a favor e contra essa interpretação.
+  - Explique a possibilidade da curatela compartilhada (Art. 1.775-A do CC/02) e como essa medida se alinha aos princípios de inclusão da pessoa com deficiência.
+  - De que forma os recursos tecnológicos podem facilitar a manifestação de vontade do interditando durante a oitiva judicial?
+
+-----
+
+# O menor púbere (maior de 16 anos) pode ser interditado?  
+-- Após a Lei 13.146/15, a interdição do menor púbere (16 ou 17 anos) é controversa, pois a lei presume a capacidade da pessoa com deficiência. Contudo, a jurisprudência, em busca de proteção, admite a interdição para garantir o exercício de direitos (e.g., previdenciários), considerando a necessidade e utilidade do processo, apesar da assistência dos pais.  
+-- A curatela, hoje, é medida excepcional e restrita a atos patrimoniais de maiores de 18 anos que não possam exprimir sua vontade. Embora a lei não impeça expressamente a interdição do menor púbere, a aplicação da curatela a essa faixa etária, à luz da dignidade da pessoa humana, exige ponderação para evitar a desproteção.
+
+ ## Referências do Tema    
+--- Art. 3º do CC/02  
+--- Art. 4º, III, CC/02  
+--- Art. 85 da Lei 13.146/15  
+--- Lei 13.146/15
+
+## Pergunte pra I.A.
+
+  - Analise a controvérsia sobre a interdição do menor púbere após o Estatuto da Pessoa com Deficiência, e como a lei busca equilibrar a capacidade e a proteção.
+  - Discorra sobre a importância da "necessidade e utilidade do processo" como justificativa para a interdição do menor púbere, mesmo diante da assistência dos pais.
+  - Explique como a interdição se limita ao âmbito patrimonial e negocial após a Lei 13.146/15, e suas implicações para o menor púbere.
+  - Compare a situação de proteção do menor púbere antes e depois das alterações na legislação, especialmente em relação àqueles que não podem exprimir sua vontade.
+  - Proponha um caso prático que demonstre a necessidade da interdição de um menor púbere para garantir seus direitos, e como a jurisprudência poderia decidir.
+
+Estou pronto para continuar com os próximos temas quando você desejar!
+
+-----
+
+# Capacidade   
+-- A capacidade, no Direito Civil, é a aptidão para exercer atos da vida civil. Não se confunde com a personalidade jurídica, que é a aptidão genérica para ser titular de direitos e obrigações (Art. 1º e 2º, CC/02). A capacidade se divide em de direito (todas as pessoas a possuem) e de fato (aptidão para praticar atos por si só, presumida aos 18 anos).  
+-- A lei 13.146/15 (Estatuto da Pessoa com Deficiência), com status de emenda constitucional, alterou significativamente o rol de incapazes, visando a dignidade e a autodeterminação. Atualmente, apenas o menor de 16 anos é considerado absolutamente incapaz, e a curatela é medida excepcional, limitada a aspectos patrimoniais.
+
+ ## Referências do Tema    
+--- Art. 1º, CC/02  
+--- Art. 2º, CC/02  
+--- Art. 3º, CC/02  
+--- Art. 4º, CC/02  
+--- Art. 166, I, CC/02  
+--- Art. 171, I, CC/02  
+--- Art. 198, I, CC/02  
+--- Art. 208, CC/02  
+--- Art. 666, CC/02  
+--- Art. 974, § 2º, CC/02  
+--- Art. 1.860, parágrafo único, CC/02  
+--- Art. 447, §1°, IV, CPC  
+--- Lei 6.001/73  
+--- Lei 9.605/90  
+--- Lei 13.146/15  
+--- Decreto 6.949/2009  
+--- Enunciado 138 da III Jornada de Direito Civil do CJF
+
+## Pergunte pra I.A.
+
+  - Explique a distinção entre personalidade jurídica e capacidade no Direito Civil, detalhando as duas espécies de capacidade (de direito e de fato).
+  - Analise as alterações promovidas pela Lei 13.146/15 (Estatuto da Pessoa com Deficiência) no rol dos absolutamente e relativamente incapazes.
+  - Discorra sobre a capacidade do surdo-mudo e do indígena no ordenamento jurídico brasileiro, considerando as especificidades de cada um.
+  - Apresente as proteções e institutos legais (prescrição, decadência, nulidades, tutela e curatela) direcionados aos incapazes no Código Civil.
+  - Explique o papel da interdição como instrumento para afastar a presunção de capacidade e a quem compete promovê-la.
+  - Detalhe como o processo de interdição se desenvolve e quais são os limites e o escopo da curatela.
+  - Analise se o menor púbere (maior de 16 anos) pode ser interditado e quais as discussões doutrinárias e jurisprudenciais sobre o tema.
+  - Discorra sobre a emancipação (voluntária, judicial e legal) como forma de antecipar a capacidade de fato e suas implicações.
+  - Explique as hipóteses de emancipação legal e como a "economia própria" do menor com 16 anos completos se relaciona com esse instituto.
+  - Compare a responsabilidade dos pais por atos ilícitos dos filhos emancipados e a inimputabilidade penal do menor de 18 anos.
+
+-----
+
+# Incapacidade Absoluta  
+-- Anteriormente, o rol de absolutamente incapazes era mais amplo, incluindo pessoas com deficiência mental que não possuíam o discernimento necessário. No entanto, a Lei 13.146/15 (Estatuto da Pessoa com Deficiência), com força de emenda constitucional, visou proteger a dignidade da pessoa com deficiência.  
+-- Atualmente, apenas os menores de 16 anos são considerados absolutamente incapazes (Art. 3º, CC/02). Essa mudança implica que, para as pessoas com deficiência, a plena capacidade civil é presumida a partir dos 18 anos, afastando estigmas e promovendo a autodeterminação, embora possa gerar debates sobre a desproteção em certos casos.
+
+ ## Referências do Tema    
+--- Art. 3º, CC/02  
+--- Art. 4º, CC/02  
+--- Art. 6º, Lei 13.146/15  
+--- Art. 166, I, CC/02  
+--- Enunciado 138 da III Jornada de Direito Civil do CJF  
+--- Lei 13.146/15  
+--- Decreto 6.949/2009
+
+## Pergunte pra I.A.
+
+  - Explique a mudança legislativa no rol dos absolutamente incapazes, destacando o impacto do Estatuto da Pessoa com Deficiência (Lei 13.146/15).
+  - Quais são as características dos atos jurídicos praticados por absolutamente incapazes e as consequências legais (nulidade)?
+  - Discorra sobre a relevância da vontade dos absolutamente incapazes em questões existenciais, conforme o Enunciado 138 da III Jornada de Direito Civil.
+  - Compare a situação de pessoas com deficiência antes e depois da Lei 13.146/15 em relação à sua capacidade civil.
+  - Analise a crítica doutrinária sobre a possível "desproteção jurídica" gerada pela redução do rol dos absolutamente incapazes.
+
+-----
+
+# Incapacidade Relativa  
+-- A Lei 13.146/15 (Estatuto da Pessoa com Deficiência) também redefiniu o rol dos relativamente incapazes, excluindo aqueles com discernimento reduzido por deficiência mental ou excepcionais sem desenvolvimento mental completo. Hoje, são relativamente incapazes os maiores de dezesseis e menores de dezoito anos, os ébrios habituais e os viciados em tóxico, aqueles que não puderem exprimir sua vontade (por causa transitória ou permanente), e os pródigos (Art. 4º, CC/02).  
+-- Essa alteração, embora visando à inclusão, gera discussões sobre a proteção de indivíduos em situações de vulnerabilidade, como pessoas em coma que, antes consideradas absolutamente incapazes, agora são relativamente incapazes. A capacidade de alguns relativamente incapazes de praticar atos jurídicos sem assistência, como aceitar mandato ou fazer testamento, demonstra a complexidade da interpretação atual.
+
+ ## Referências do Tema    
+--- Art. 4º, CC/02  
+--- Art. 974, § 2º, CC/02  
+--- Art. 666, CC/02  
+--- Art. 1.860, parágrafo único, CC/02  
+--- Lei 13.146/15
+
+## Pergunte pra I.A.
+
+  - Apresente o rol atual dos relativamente incapazes, conforme o Código Civil e o Estatuto da Pessoa com Deficiência.
+  - Explique a capacidade do relativamente incapaz de aceitar mandato e fazer testamento sem assistência, citando os artigos do Código Civil.
+  - Discorra sobre a situação jurídica da pessoa que, por causa transitória ou permanente, não puder exprimir sua vontade após a Lei 13.146/15 (e.g., pessoa em coma).
+  - Analise a proteção de cunho patrimonial direcionada aos incapazes que continuam atividades empresariais, como a previsão de não sujeição de bens ao resultado da empresa.
+  - Compare as críticas doutrinárias sobre a possível "desproteção" gerada pelas alterações na capacidade relativa com o objetivo da Lei 13.146/15 de promover a igualdade.
+
 -----
 
 # O morto pode sofrer dano moral?  
 -- No âmbito técnico-jurídico, a atribuição de dano moral a um falecido é inviável, visto que a morte põe fim à personalidade jurídica (Art. 6º, CC/02), cessando a titularidade de direitos. Contudo, a jurisprudência, ao reconhecer a transmissão da pretensão indenizatória aos herdeiros, dissocia a ideia de que dor e sofrimento são elementos indispensáveis do dano moral (Súmula 227 do STJ).  
 -- Os herdeiros podem, sim, buscar a reparação de dano moral sofrido pelo *de cujus* em vida, ou postular por "dano moral reflexo" (ou "em ricochete") por ofensa direta à sua própria honra em decorrência da violação da memória ou imagem do falecido. Ambas as hipóteses configuram indenizações autônomas, e não a atribuição de dano moral ao próprio morto.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 6º, CC/02
 --- Súmula 227 do STJ
 
@@ -23,7 +651,7 @@
 -- O Código Civil (CC/02) aborda os direitos da personalidade de forma não exaustiva (Art. 52, CC), definindo-os como essenciais à dignidade da pessoa humana (Art. 1º, III, CF). Eles são vitalícios, ilimitados e, embora em regra intransmissíveis e irrenunciáveis, podem sofrer limitações voluntárias parciais e temporárias (Art. 11, CC), conforme Enunciado 4 da I Jornada de Direito Civil.  
 -- Quem se sentir ameaçado ou sofrer prejuízo pode exigir que a ameaça cesse e pleitear perdas e danos (Art. 12, CC/02), incluindo herdeiros em caso de falecimento (Art. 12, parágrafo único, CC/02). A disposição do próprio corpo é admitida apenas para exigência médica ou transplante (Art. 13, CC/02 e Lei 9.434/97), e a imagem publicada sem autorização e com fins comerciais enseja reparação, dispensando prova de prejuízo (Súmula 403 do STJ).
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 1º, III, CF  
 --- Art. 5º, XXII, CF/88  
 --- Art. 11, CC/02  
@@ -64,7 +692,7 @@
 -- A morte, no Direito Civil, extingue a personalidade jurídica (Art. 6º, CC/02), implicando a transmissão de herança e o término de relações. A definição do momento da morte adota a morte encefálica (Art. 3º da Lei 9.434/97). Quando não há corpo, a morte é presumida, dividindo-se em sem decretação de ausência (alta probabilidade, como em catástrofes) e com decretação de ausência (baixa probabilidade).  
 -- A morte sem decretação de ausência é mais célere (Art. 7º, parágrafo único, CC/02), enquanto a com decretação de ausência é um processo judicial dividido em três fases: curadoria dos bens (Art. 22 e ss. CC/02), sucessão provisória (Art. 26 e ss. CC/02) e sucessão definitiva (Art. 37 e ss. CC/02). A comoriência (Art. 8º, CC/02) define mortes simultâneas para fins sucessórios.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 6º, CC/02  
 --- Art. 7º, CC/02  
 --- Art. 8º, CC/02  
@@ -95,7 +723,7 @@
 -- A imprescritibilidade dos direitos da personalidade significa que eles não se perdem pelo decurso do tempo (Art. 189 do CC/02). Essa característica decorre de sua natureza inata e vitalícia, ligada à própria existência e dignidade da pessoa humana (Art. 1º, III, CF).  
 -- No entanto, a imprescritibilidade aplica-se à essência do direito, e não à pretensão de reparação por sua violação, que possui prazo prescricional (Art. 206, §3°, V, CC/02). O STJ, contudo, reconhece a imprescritibilidade da pretensão de reconhecimento de ofensa a direitos da personalidade.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 1º, III, CF
 --- Art. 189, CC/02
 --- Art. 206, §3°, V, CC/02
@@ -116,7 +744,7 @@
 -- Os direitos da personalidade são, em regra, intransmissíveis e irrenunciáveis, não podendo seu exercício sofrer limitação voluntária (Art. 11 do CC/02). Isso se justifica pela sua ligação intrínseca à pessoa e à sua dignidade, protegendo a essência do indivíduo.  
 -- Contudo, essa intransmissibilidade e irrenunciabilidade são relativas, admitindo-se limitações voluntárias parciais e temporárias, conforme o Enunciado 4 da I Jornada de Direito Civil, e a possibilidade de disposição *post mortem* para fins altruísticos ou científicos (Art. 14 do CC/02).
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 11, CC/02
 --- Art. 14, CC/02
 --- Enunciado 4 da I Jornada de Direito Civil do CJF
@@ -135,7 +763,7 @@
 -- Os direitos da personalidade são considerados relativamente indisponíveis, pois sua disposição é limitada pela lei e por valores inerentes à dignidade da pessoa humana. Embora, em regra, não possam ser alienados ou renunciados de forma plena, admitem-se restrições pontuais e temporárias.  
 -- Essa relativização permite, por exemplo, a disposição do próprio corpo para fins de transplante ou pesquisa (Art. 13 da Lei 9434/97) e a limitação voluntária do exercício de direitos em situações como contratos de imagem ou participação em *reality shows*, desde que não sejam permanentes ou gerais, conforme o Enunciado 278 da IV Jornada de Direito Civil.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 13, CC/02
 --- Lei 9.434/97
 --- Enunciado 278 da IV Jornada de Direito Civil do CJF
@@ -154,7 +782,7 @@
 -- A característica de "ilimitado" dos direitos da personalidade não significa que não possuam limites, mas sim que seu rol é exemplificativo, não exaustivo. Isso permite que novos direitos, essenciais à dignidade da pessoa humana, sejam reconhecidos, como o estado de filiação (STJ – AREsp: 1179890 SC 2017/0252143-5).  
 -- Dessa forma, o Direito Civil, sob a influência do neoconstitucionalismo, adapta-se às evoluções sociais, tutelando valores que nascem e se desenvolvem com o ser humano, garantindo a proteção de sua honra, identidade, imagem e outros aspectos existenciais, que formam a essência da pessoa.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 52, CC/02  
 --- STJ – AREsp: 1179890 SC 2017/0252143-5
 
@@ -172,7 +800,7 @@
 -- Os direitos da personalidade são inatos, o que significa que pertencem ao ser humano desde o seu nascimento, independentemente de reconhecimento legal (Art. 1º, III, CF). Essa característica ressalta sua ligação intrínseca à própria existência da pessoa e sua relevância essencial, como vida, honra e identidade.  
 -- São, assim, tutelados desde os primeiros estágios da vida (como o nascituro, que tem seus direitos salvaguardados desde a concepção) e acompanham o indivíduo até a morte. Contudo, excepcionalmente, alguns direitos da personalidade podem ser adquiridos, como o direito autoral, demonstrando a adaptabilidade do conceito a diversas realidades.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 1º, III, CF  
 --- Art. 2º, CC/02  
 --- Enunciado 4 da I Jornada de Direito Civil do CJF
@@ -191,7 +819,7 @@
 -- Os direitos da personalidade são extrapatrimoniais, o que significa que não comportam avaliação econômica direta (não possuem valor pecuniário imediato). Contudo, sua violação pode ensejar pretensão de reparação por dano moral (Art. 5º, V, CF/88), que, embora de natureza patrimonial, visa compensar a lesão a um bem imaterial e tem caráter educativo e preventivo.  
 -- Essa distinção é crucial, pois, como demonstrado pela Súmula 227 do STJ, a pessoa jurídica pode sofrer dano moral, mesmo não experimentando dor ou sofrimento. Isso reforça a ideia de que o dano moral não se restringe a aspectos subjetivos de dor, mas abrange a lesão à honra objetiva e à reputação, que são bens extrapatrimoniais.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 5º, V, CF/88  
 --- Súmula 227 do STJ
 
@@ -209,7 +837,7 @@
 -- As características dos Direitos da Personalidade, embora amplas e não exaustivas (Art. 52, CC), são vitais à proteção da dignidade da pessoa humana (Art. 1º, III, CF). São vitalícios, acompanhando a pessoa durante toda a vida, e absolutos, sendo oponíveis a todos (erga omnes) e exigindo uma postura de respeito e promoção por parte do Estado e da coletividade.
 -- São, também, ilimitados em seu rol, pois o Código Civil não os enumera de forma taxativa, permitindo o reconhecimento de novos direitos, como o estado de filiação. Adicionalmente, são inatos, extrapatrimoniais (não possuem valor econômico direto, mas sua violação pode gerar indenização), imprescritíveis na sua essão, e relativamente intransmissíveis e irrenunciáveis, admitindo limitações parciais e temporárias (Art. 11, CC), desde que não sejam permanentes ou gerais, conforme o Enunciado 4 da I Jornada de Direito Civil.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 1º, III, CF
 --- Art. 6º, CC/02
 --- Art. 11, CC/02
@@ -231,7 +859,7 @@
 -- Os direitos da personalidade são vitalícios, ou seja, acompanham a pessoa durante toda a sua existência, desde o nascimento com vida (Art. 2º do CC/02). Essa característica diferencia-os da perpetuidade, pois cessam com a morte do indivíduo (Art. 6º do CC/02), que põe fim à personalidade jurídica e, consequentemente, à titularidade de direitos.
 -- São, assim, um reflexo da dignidade da pessoa humana e são inatos, consubstanciando valores intrínsecos ao ser. Embora não se estendam *post mortem*, sua violação em vida pode gerar pretensão indenizatória transmissível aos herdeiros, que buscam a reparação do dano moral sofrido pelo falecido, e não do dano moral próprio dos sucessores.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 2º, CC/02
 --- Art. 6º, CC/02
 
@@ -247,7 +875,7 @@
 -- Os direitos da personalidade são absolutos, o que significa que são oponíveis a todos (eficácia *erga omnes*). Essa característica impõe à coletividade e ao Estado um dever geral de abstenção, ou seja, de não violar tais direitos.
 -- Além do dever de abstenção, o caráter absoluto dos direitos da personalidade também implica um dever de promoção por parte do Estado. Assim, a Administração Pública deve atuar para garantir a efetivação desses direitos, como a educação, saúde e igualdade, que são pilares da dignidade da pessoa humana (Art. 1º, III, CF), e que irradiam sua eficácia para as relações entre particulares.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 1º, III, CF
 
 ## Pergunte pra I.A.
@@ -263,7 +891,7 @@
 
 -- Esses direitos, influenciados pelo neoconstitucionalismo, possuem eficácia irradiante, aplicando-se também nas relações entre particulares. São vitalícios, absolutos e, embora ilimitados em seu rol (Art. 52, CC), sua intransmissibilidade e irrenunciabilidade são relativas (Art. 11, CC), admitindo limitação voluntária parcial e temporária, como na proteção da voz humana (Art. 5º, XXII, CF/88 e Lei 9.610).
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 1º, III, CF  
 --- Art. 5º, XXII, CF/88  
 --- Art. 6º, CC/02  
@@ -312,7 +940,7 @@
 
 -- Já para as pessoas jurídicas de direito público, a personalidade jurídica inicia com a vigência da lei que as institui. A Súmula 227 do STJ, ao reconhecer a possibilidade de dano moral à pessoa jurídica, reforça a autonomia da sua personalidade e a proteção de sua honra objetiva, mesmo não possuindo atributos como dor e sofrimento.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 45 do CC/02  
 --- Art. 985 do CC/02  
 --- Súmula 227 do STJ
@@ -336,7 +964,7 @@
 
 -- Contudo, não é um direito absoluto e encontra limites na proteção de outros direitos, como a honra e a imagem (art. 5º, X, da CF/88). A Súmula 403 do STJ, por exemplo, baliza seu uso, especialmente contra a apropriação indevida de imagem para fins comerciais, e a voz humana é protegida pela Lei 9.610.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 5º, caput e X, da CF/88
 --- ADI 4815 do STF
 --- Súmula 403 do STJ
@@ -367,7 +995,7 @@
 -- O Direito Civil Constitucional surge do neoconstitucionalismo, valorizando a dignidade da pessoa humana (Art. 1º, III, CF/88) e os direitos fundamentais. Supera a visão patrimonialista do Código Civil de 1916, adotando uma perspectiva existencialista que permeia institutos como família, contratos e propriedade, garantindo sua eficácia horizontal nas relações privadas.
 -- Essa nova leitura do direito civil constitucionaliza as relações privadas, mitigando a dicotomia entre Constituição e Direito Privado. Promove a solidariedade social e a igualdade substancial, redefinindo conceitos como patrimônio mínimo e família, e impulsionando o intervencionismo estatal para proteger o hipossuficiente.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 1º, III, CF/88
 --- Art. 5º, XXXVI, CF/88
 --- Art. 170, CF/88
@@ -400,7 +1028,7 @@
 
 -- Este princípio reflete a transição para uma concepção existencialista da Constituição, onde a dignidade da pessoa humana (Art. 1º, III, CF/88) e a solidariedade social (Art. 3º, I, CF/88) guiam o ordenamento jurídico, transformando a leitura dos direitos e deveres nas relações privadas.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 1º, III, CF/88
 --- Art. 3º, I, CF/88
 --- Art. 421 do Código Civil
@@ -426,7 +1054,7 @@
 -- O Princípio da Eticidade impõe a probidade e a boa-fé nas relações privadas, influenciando a interpretação, controle e integração dos contratos. Ele se manifesta principalmente através da boa-fé objetiva, que estabelece deveres anexos de conduta, como lealdade e transparência, moldando o comportamento esperado das partes.
 -- Este princípio, alinhado ao pós-positivismo, busca uma reaproximação do Direito com a Ética, Justiça e Moral, superando a legalidade estrita. Sua aplicação evita o abuso de direito (Art. 187, CC/02) e promove a colaboração contínua entre as partes na relação obrigacional, contribuindo para a segurança jurídica e a justiça social.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 113 do Código Civil
 --- Art. 187 do Código Civil
 --- Art. 422 do Código Civil
@@ -451,7 +1079,7 @@
 
 -- Com a Lei 13.655/18, a LINDB passou a disciplinar regras de segurança jurídica e eficiência para o Direito Público, impondo a análise das consequências práticas das decisões (Art. 20 da LINDB). Essa evolução, aproximando-se do *common law*, valoriza os precedentes e a responsabilidade decisória do Estado em suas interpretações.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 3º da LINDB
 --- Art. 20 da LINDB
 --- Lei 13.655/18
@@ -469,7 +1097,7 @@
 
 -- A lei, salvo disposição temporária, mantém-se em vigor até que outra a modifique ou revogue (Art. 2º da LINDB), podendo ocorrer a ultratividade (lei revogada que ainda produz efeitos). A promulgação (ato do Executivo que autentica e publica a lei) e a publicação no Diário Oficial são essenciais para a vigência, podendo haver *vacatio legis* (intervalo entre publicação e vigência) para adaptação da sociedade.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 1º da LINDB
 --- Art. 2º da LINDB
 --- Art. 3º da LINDB
@@ -489,7 +1117,7 @@
 
 -- As lacunas de conflito, ou antinomias, surgem do confronto de normas válidas e aplicáveis. Se as soluções convergem, ambas são aplicadas (Teoria do Diálogo das Fontes). Se divergem, a antinomia aparente é resolvida por critérios hierárquico, de especialidade ou cronológico.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 4º da LINDB
 
 ## Pergunte pra I.A.
@@ -507,7 +1135,7 @@
 
 -- Não se confunde com a interpretação extensiva, pois nesta ocorre a subsunção do caso à norma, ampliando seu sentido. Na analogia, o caso não está abrangido pela norma, exigindo a busca por outra norma para preencher a lacuna, sempre respeitando os limites da lei.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 4º da LINDB
 
 ## Pergunte pra I.A.
@@ -525,7 +1153,7 @@
 
 -- Existem três tipos: *secundum legem* (conforme a lei), *praeter legem* (além da lei, integrativo) e *contra legem* (contrário à lei, não permitido). A Súmula 370 do STJ, que considera dano moral a apresentação antecipada de cheque pré-datado, é um exemplo de costume *praeter legem* que gerou proteção jurídica.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 4º da LINDB  
 --- Art. 187 do Código Civil  
 --- Súmula 370 do STJ
@@ -545,7 +1173,7 @@
 
 -- No Código Civil, exemplos incluem os princípios da Sociabilidade, Eticidade e Operabilidade. Eles promovem uma reaproximação do Direito com a Ética, Justiça e Moral, especialmente no contexto do Direito Civil Constitucional, onde a dignidade da pessoa humana permeia todas as relações privadas.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 4º da LINDB  
 --- Art. 1º, III, da CF/88 (implícito)  
 --- Art. 187 do Código Civil (implícito na eticidade)
@@ -568,7 +1196,7 @@
 
 -- Sua aplicação mais comum é para mitigar rigor excessivo, como na redução equitativa de cláusulas penais manifestamente excessivas (Art. 413 do CC/02). A equidade legal, portanto, encontra respaldo em previsões normativas que permitem ao juiz ajustar a aplicação da lei a situações particulares para evitar injustiças.
 
-# Referências do Tema
+ ## Referências do Tema 
 --- Art. 4º da LINDB
 --- Art. 140, parágrafo único, do CPC
 --- Art. 413 do CC/02
@@ -589,7 +1217,7 @@
 
 -- Contudo, essa proteção não é absoluta, sendo mitigada em situações excepcionais, especialmente diante de valores constitucionais superiores, como na busca pela identidade genética, onde a coisa julgada pode ser relativizada para evitar a perpetuação de injustiças (Enunciado 109 da I Jornada de Direito Civil). A lei nova terá aplicação **prospectiva**, salvo disposições transitórias ou situações em que a retroatividade beneficie as partes sem violar princípios basilares.
 
-# Referências do Tema
+ ## Referências do Tema 
 --- Art. 5º, XXXVI, da CF
 --- Art. 6º da LINDB
 --- Enunciado 109 da I Jornada de Direito Civil
@@ -610,7 +1238,7 @@
 
 -- Quanto aos resultados, a interpretação pode ser declarativa, extensiva (quando o legislador disse menos do que queria, expandindo o alcance da norma) ou restritiva (quando o legislador disse mais do que queria, limitando-o). Contratos benéficos e renúncias, por exemplo, são interpretados restritivamente (Art. 114 do CC/02).
 
-# Referências do Tema
+ ## Referências do Tema 
 --- Súmula 364 do STJ
 --- Art. 1º, III, da CF
 --- Art. 114 do CC/02
@@ -631,7 +1259,7 @@
 
 -- A antinomia pode ser aparente (solução no ordenamento) ou real (sem critério de solução), com a prevalência do critério hierárquico sobre o cronológico e o de especialidade sobre o cronológico, enquanto entre hierarquia e especialidade, a hierarquia prevalece.
 
-# Referências do Tema
+ ## Referências do Tema 
 --- Art. 2º da LINDB
 --- Art. 4º da LINDB
 
@@ -651,7 +1279,7 @@
 
 -- A lei do país de domicílio da pessoa determina regras sobre personalidade, nome, capacidade e família (Art. 7º da LINDB). Decisões estrangeiras, após homologação, geram título executivo judicial, mas a homologação se restringe à verificação das formalidades, sem reexame do mérito.
 
-# Referências do Tema
+ ## Referências do Tema 
 --- Art. 7º da LINDB
 --- Art. 105 da CF/88
 
@@ -671,7 +1299,7 @@
 
 -- A lei impõe a responsabilidade decisória do Estado, exigindo motivação e indicação de consequências jurídicas e administrativas em caso de invalidação de atos. Além disso, determina um regime de transição para novas interpretações de normas indeterminadas, a fim de garantir proporcionalidade e eficiência (Arts. 21 e 23 da LINDB).
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 20 da LINDB
 --- Art. 21 da LINDB
 --- Art. 22 da LINDB
@@ -706,7 +1334,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 -- Contudo, em matéria processual, a lei tem aplicação imediata. Excepcionalmente, leis tributárias podem retroagir para beneficiar o contribuinte, como em leis interpretativas que excluem penalidades ou em leis mais benéficas não definitivamente julgadas (art. 106 do CTN). O Brasil se aproxima do *common law*, valorizando precedentes e a segurança jurídica.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 5º, XXXVI, da CF  
 --- Art. 6º da LINDB  
 --- Art. 3º da LINDB  
@@ -734,7 +1362,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 -- A lei do domicílio da pessoa, por exemplo, rege o começo e fim da personalidade, nome, capacidade e direitos de família (Art. 7º da LINDB). A pluralidade de nacionalidades e domicílios pode gerar conflitos, exigindo a aplicação de critérios específicos para determinar a lei aplicável, sempre em busca da maior efetividade dos direitos e da segurança jurídica.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 7º da LINDB  
 --- Art. 17 da LINDB  
 --- Art. 105 da CF/88
@@ -759,7 +1387,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 -- A segurança jurídica também se manifesta na proteção do direito adquirido, do ato jurídico perfeito e da coisa julgada (Art. 5º, XXXVI, CF), limitando a retroatividade das leis. A exigência de motivação explícita e clara para atos administrativos e a eliminação de incertezas jurídicas mediante compromissos processuais são outros exemplos de sua concretização, visando a proporcionalidade e a eficiência na aplicação do Direito Público.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 5º, XXXVI, da CF  
 --- Art. 20 da LINDB  
 --- Art. 21 da LINDB  
@@ -788,7 +1416,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 -- Para a pessoa jurídica de direito privado, a personalidade inicia com o registro do ato constitutivo (Art. 45 e Art. 985, CC/02), enquanto para a de direito público, com a vigência da lei instituidora. A Súmula 227 do STJ, ao permitir dano moral à pessoa jurídica, reforça a autonomia da personalidade e a natureza não exclusiva de dor e sofrimento como consequências do dano moral.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 2º do CC/02
 --- Art. 45 do CC/02
 --- Art. 985 do CC/02
@@ -811,7 +1439,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 -- A pessoa jurídica contemporânea, contudo, tem um caráter instrumental e sua função transcende a mera estrutura, alinhando-se a valores constitucionais, como a dignidade da pessoa humana (Art. 170 da CF/88). Essa abordagem funcionalista e existencialista exige que os objetivos da pessoa jurídica estejam em harmonia com os interesses coletivos, o que pode levar à desconsideração da personalidade jurídica em casos de desvio de finalidade.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 40 a 69 do Código Civil
 --- Art. 45 do CC/02
 --- Art. 170 da CF/88
@@ -832,7 +1460,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 -- A proteção do nascituro, que não possui personalidade jurídica plena segundo a teoria natalista, é um exemplo da flexibilização do Direito para garantir a tutela de interesses relevantes. Assim, mesmo sem ser sujeito de direitos formalmente, o nascituro é objeto de tutela jurídica, o que demonstra a adaptabilidade do ordenamento jurídico frente a valores constitucionais.
 
-## Referências do Tema
+ ## Referências do Tema  
 --- Art. 2º do CC/02
 --- ADI 497 do STF
 
@@ -853,7 +1481,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 -- Assim, enquanto a condição de nascer com vida não se concretiza, o nascituro tem apenas expectativa de direitos, que se transformam em direitos adquiridos com o nascimento. Essa teoria é frequentemente utilizada para justificar a tutela de interesses do nascituro, como o direito à vida e à integridade, sem conceder-lhe plena personalidade jurídica antes do nascimento.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 2º do CC/02  
 --- Enunciado 4 da I Jornada de Direito Civil do CJF (implícito)
 
@@ -872,7 +1500,7 @@ Estou pronto para continuar com os próximos temas quando você desejar!
 
 -- Assim, a concepção daria início à personalidade jurídica formal, protegendo direitos existenciais do nascituro, enquanto o nascimento com vida inauguraria a personalidade material, para direitos patrimoniais. Essa abordagem busca garantir uma proteção mais abrangente ao nascituro, especialmente à luz da dignidade da pessoa humana e dos direitos fundamentais.
 
-## Referências do Tema  
+ ## Referências do Tema    
 --- Art. 2º do CC/02  
 --- Enunciado 4 da I Jornada de Direito Civil do CJF  
 --- STF (ADI 497) - implícito na proteção da estabilidade gestacional
