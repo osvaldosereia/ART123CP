@@ -106,33 +106,32 @@
     // introdução: linhas que começam com "-- "
     const intro = Array.from(fixed.matchAll(/^\s*--\s+(.+)$/mg)).map(m=>m[1].trim());
 
-   // dividir por headings: >=2 "#", e também aceitar "# Referências do Tema"
-const secs = [];
-const rx = /^\s*#{1,}\s+(.+?)\s*$/mg;
-let m;
+    // dividir por headings: >=2 "#", e também aceitar "# Referências do Tema"
+    const secs = [];
+    const rx = /^\s*#{1,}\s+(.+?)\s*$/mg;
+    let m;
 
-// posição do título (primeiro "# ...") — reaproveita mTitle já definido acima
-const titlePos = (mTitle && typeof mTitle.index === 'number') ? mTitle.index : -1;
+    // posição do título (primeiro "# ...")
+    const titlePos = (mTitle && typeof mTitle.index === 'number') ? mTitle.index : -1;
 
-while ((m = rx.exec(fixed))) {
-  const name = m[1].trim();
-  const isTitle = m.index === titlePos;
-  const hashes = (fixed.slice(m.index).match(/^\s*(#+)\s+/)?.[1].length) || 1;
-  const nm = normalizeHeading(name);
+    while ((m = rx.exec(fixed))) {
+      const name = m[1].trim();
+      const isTitle = m.index === titlePos;
+      const hashes = (fixed.slice(m.index).match(/^\s*(#+)\s+/)?.[1].length) || 1;
+      const nm = normalizeHeading(name);
 
-  // aceita: "##+" qualquer; ou "# ..." somente se for "referencias do tema"
-  const accept = hashes >= 2 || (!isTitle && hashes === 1 && /^referencias? do tema$/.test(nm));
-  if (!accept) continue;
+      // aceita: "##+" qualquer; ou "# ..." somente se for "referencias do tema"
+      const accept = hashes >= 2 || (!isTitle && hashes === 1 && /^referencias? do tema$/.test(nm));
+      if (!accept) continue;
 
-  const start = rx.lastIndex;
-  const prev = secs.at(-1);
-  if (prev) prev.end = m.index;
-  secs.push({ name, start, end: fixed.length });
-}
+      const start = rx.lastIndex;
+      const prev = secs.at(-1);
+      if (prev) prev.end = m.index;
+      secs.push({ name, start, end: fixed.length });
+    }
 
-
-    // perguntas e referências (se existirem no TXT)
-    let ask=[]; let refs=[];
+    // perguntas, referências e fontes
+    let ask=[], refs=[], fontes=[];
     for(const s of secs){
       const nm=normalizeHeading(s.name);
       const body=fixed.slice(s.start,s.end);
@@ -140,10 +139,13 @@ while ((m = rx.exec(fixed))) {
         ask=ask.concat(Array.from(body.matchAll(/^\s*-\s+(.+?)\s*$/mg)).map(x=>x[1].trim()));
       }else if(/^(referencias?|refer\u00eancias?)\s+do\s+tema\b/.test(nm)){
         refs=refs.concat(Array.from(body.matchAll(/^\s*---\s+(.+?)\s*$/mg)).map(x=>x[1].trim()));
+      }else if(/^fontes$/.test(nm)){
+        fontes=fontes.concat(Array.from(body.matchAll(/^\s*-\s+(.+?)\s*$/mg)).map(x=>x[1].trim()));
       }
     }
-    return { slug, title, intro, ask, refs };
+    return { slug, title, intro, ask, refs, fontes };
   }
+
   const normalizeHeading=(h)=> (h||'').toLowerCase().replace(/[.#:]/g,' ').replace(/\s+/g,' ')
                       .normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
   const isQA=(nm)=> /\bpergunte\s+pra\s+i\s*\.?\s*a\b/.test(nm) || (/estude\s+com\s+o\s+google/.test(nm) && /\bi\s*\.?\s*a\b/.test(nm));
@@ -181,10 +183,9 @@ while ((m = rx.exec(fixed))) {
   }
 
   // *texto* -> <strong>texto</strong> (aplica em HTML já escapado)
-function fmtInlineBold(escapedHtml){
-  return String(escapedHtml).replace(/\*([^*]+)\*/g, '<strong>$1</strong>');
-}
-
+  function fmtInlineBold(escapedHtml){
+    return String(escapedHtml).replace(/\*([^*]+)\*/g, '<strong>$1</strong>');
+  }
 
   /* ===== Chips pós-busca: helpers ===== */
   function getLastAc(){
@@ -394,6 +395,7 @@ function fmtInlineBold(escapedHtml){
           temas.push({
             slug, title: t.title, path, tags: [], group, frag: t.slug,
             refs: t.refs||[],
+            fontes: t.fontes||[],
             titleL: (t.title||'').toLowerCase(),
             introL: intro.toLowerCase(),
             askL:   ask.toLowerCase(),
@@ -660,20 +662,19 @@ function fmtInlineBold(escapedHtml){
         toast(added?'Tema salvo':'Removido dos salvos', added?'success':'info', 1400);
       });
       const studyBtn = mkBtn('Explicação Rápida','', ()=>window.open(
-  'https://www.google.com/search?udm=50&q=' + encodeURIComponent(
-    'Explique o tema de forma rápida e objetiva para estudantes de direito, seja organizado e didático, ' +
-    'utilizando apenas informações vindas de sites jurídicos. Ao final apresente as fontes. Tema: ' + pageTitle
-  ),
-  '_blank','noopener'
-));
-
-const trainBtn = mkBtn('10 Questões','', ()=>window.open(
-  'https://www.google.com/search?udm=50&q=' + encodeURIComponent(
-    'Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), ' +
-    'inspiradas em bancas como Cebraspe, Cespe e UFG. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + pageTitle
-  ),
-  '_blank','noopener'
-));
+        'https://www.google.com/search?udm=50&q=' + encodeURIComponent(
+          'Explique o tema de forma rápida e objetiva para estudantes de direito, seja organizado e didático, ' +
+          'utilizando apenas informações vindas de sites jurídicos. Ao final apresente as fontes. Tema: ' + pageTitle
+        ),
+        '_blank','noopener'
+      ));
+      const trainBtn = mkBtn('10 Questões','', ()=>window.open(
+        'https://www.google.com/search?udm=50&q=' + encodeURIComponent(
+          'Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), ' +
+          'inspiradas em bancas como Cebraspe, Cespe e UFG. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + pageTitle
+        ),
+        '_blank','noopener'
+      ));
 
       actionsEl.append(saveBtn, studyBtn, trainBtn);
 
@@ -684,37 +685,31 @@ const trainBtn = mkBtn('10 Questões','', ()=>window.open(
       const introParas = (pick.intro || []).slice(0,2).map(txt => escapeHTML(txt));
       const introHTMLParas = shouldHighlight && lastSearch?.q
           ? introParas.map(p => fmtInlineBold(highlightHTML(p, lastSearch.q)))
-  : introParas.map(p => fmtInlineBold(p));
+          : introParas.map(p => fmtInlineBold(p));
       const introHTML = introHTMLParas.map(p => `<p class="ubox-intro" style="margin:0 0 .75rem 0">${p}</p>`).join('');
 
-      // ===== Referências do Tema (lidas do TXT: linhas que começam com '--- ')
+      // ===== Referências do Tema (TXT: linhas '--- ...')
       const refs = (pick.refs || []).filter(Boolean);
       const refListHTML = refs.map(ref => {
         const prompt = `Pesquise em sites oficiais e me traga o texto original do: ${ref}`;
         const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
-    return `<li><a href="${url}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(ref))}</a></li>`;
+        return `<li><a href="${url}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(ref))}</a></li>`;
       }).join('');
 
-      // ===== Perguntas (mantidas, com destaque quando houver) =====
+      // ===== Perguntas (mantidas, com destaque quando houver)
       const qList=(pick.ask||[]).map(q=>{
         const qEsc = escapeHTML(q);
         const qHi  = shouldHighlight && lastSearch?.q ? highlightHTML(qEsc, lastSearch.q) : qEsc;
-    return `<li><a href="https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}" target="_blank" rel="noopener">${fmtInlineBold(qHi)}</a></li>`;
+        return `<li><a href="https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}" target="_blank" rel="noopener">${fmtInlineBold(qHi)}</a></li>`;
       }).join('');
-      
- // ===== Referências adicionais após "Estude com o Google I.A."
-      const extraRefs = [
-        'Migalhas. A Função Social do Contrato e sua Aplicação.',
-        'Jusbrasil. Os Princípios Norteadores do Código Civil de 2002.',
-        'Conselho da Justiça Federal. Enunciados Aprovados na I Jornada de Direito Civil.',
-        'Planalto. Código Civil (Lei nº 10.406, de 10 de janeiro de 2002).'
-      ];
-      const extraRefListHTML = extraRefs.map(ref => {
-        const prompt = `Pesquise em sites oficiais e traga o texto original ou resumo fiel: ${ref}`;
-        const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
-        return `<li><a href="${url}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(ref))}</a></li>`;
+
+      // ===== Fontes (nova seção após Estude com IA) =====
+      const fontes = (pick.fontes || []).filter(Boolean);
+      const fontesHTML = fontes.map(f => {
+        const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(f)}`;
+        return `<li><a href="${url}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(f))}</a></li>`;
       }).join('');
-      
+
       // ===== Render com separadores discretos =====
       const sep = `<hr style="border:none;border-top:1px solid #e9ecef;margin:16px 0">`;
 
@@ -735,6 +730,17 @@ const trainBtn = mkBtn('10 Questões','', ()=>window.open(
             <h3 class="ubox-sub">Estude com o Google I.A.</h3>
             ${qList ? `<ol class="q-list">${qList}</ol>` : `<p class="muted">Sem perguntas cadastradas.</p>`}
           </section>
+          ${
+            fontes.length
+              ? `${sep}
+                 <section class="ubox-section">
+                   <h3 class="ubox-sub">Fontes</h3>
+                   <ul class="ref-list">
+                     ${fontesHTML}
+                   </ul>
+                 </section>`
+              : ''
+          }
         </article>`;
 
       try{ sessionStorage.removeItem(LAST_SEARCH_KEY); }catch(_){}
