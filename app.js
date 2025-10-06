@@ -106,9 +106,30 @@
     // introdução: linhas que começam com "-- "
     const intro = Array.from(fixed.matchAll(/^\s*--\s+(.+)$/mg)).map(m=>m[1].trim());
 
-    // dividir por headings de 2+ "##"
-    const secs = []; const rx=/^\s*#{2,}\s+(.+?)\s*$/mg; let m;
-    while((m=rx.exec(fixed))){const name=m[1].trim();const start=rx.lastIndex;const prev=secs.at(-1);if(prev)prev.end=m.index;secs.push({name,start,end:fixed.length});}
+    // dividir por headings: >=2 "#", e também aceitar "# Referências do Tema"
+const secs = [];
+const rx = /^\s*#{1,}\s+(.+?)\s*$/mg;
+let m;
+
+// posição do título (primeiro "# ...")
+const mTitle = fixed.match(/^\s*#\s+(.+)$/m);
+const titlePos = mTitle ? mTitle.index : -1;
+
+while ((m = rx.exec(fixed))) {
+  const name = m[1].trim();
+  const isTitle = m.index === titlePos;
+  const hashes = (fixed.slice(m.index).match(/^\s*(#+)\s+/)?.[1].length) || 1;
+  const nm = normalizeHeading(name);
+
+  // aceita: "##+" qualquer; ou "# ..." somente se for "referencias do tema"
+  const accept = hashes >= 2 || (!isTitle && hashes === 1 && /^referencias? do tema$/.test(nm));
+  if (!accept) continue;
+
+  const start = rx.lastIndex;
+  const prev = secs.at(-1);
+  if (prev) prev.end = m.index;
+  secs.push({ name, start, end: fixed.length });
+}
 
     // perguntas e referências (se existirem no TXT)
     let ask=[]; let refs=[];
