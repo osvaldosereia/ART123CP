@@ -242,3 +242,47 @@ mark{
   }
 }
 
+/* Painel de sugestões com contraste melhor */
+.suggestions{
+  background:#fff;
+  border:1px solid #e5e7eb;           /* slate-200 */
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,.10);
+  overflow:hidden;
+  z-index:60;                          /* acima do overlay */
+}
+.suggestions .ac-chips{
+  background:#f8fafc;                  /* slate-50 */
+  padding:8px;
+  position:sticky; top:0; z-index:1;
+  border-bottom:1px solid #e5e7eb;
+}
+.suggestions li a{
+  display:block;
+  padding:12px 14px;
+}
+.suggestions li + li a{
+  border-top:1px solid #f1f5f9;        /* slate-100 */
+}
+
+/* Escurece o conteúdo por trás quando a busca está aberta */
+body.search-open::before{
+  content:"";
+  position:fixed; inset:0;
+  background:rgba(15,23,42,.35);       /* slate-900 @35% */
+  backdrop-filter:blur(1px);
+  z-index:50;
+}
+
+/* Mobile: centralizado e largo (mantém o contraste) */
+@media (max-width: 768px){
+  .suggestions,
+  .suggestions.pop{
+    position:fixed !important;
+    left:50vw !important;
+    transform:translateX(-50%) !important;
+    width:90vw !important;
+    max-width:90vw !important;
+    right:auto !important;
+  }
+}
