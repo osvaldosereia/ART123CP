@@ -690,7 +690,7 @@ const trainBtn = mkBtn('10 Questões','', ()=>window.open(
       // ===== Referências do Tema (lidas do TXT: linhas que começam com '--- ')
       const refs = (pick.refs || []).filter(Boolean);
       const refListHTML = refs.map(ref => {
-        const prompt = `Localize o texto ORIGINAL em sites oficiais do governo (Planalto, STF, STJ, DOU, CNJ). Traga o link oficial primeiro. Referência: ${ref}`;
+        const prompt = `Pesquise em sites oficiais e me traga o texto original do: ${ref}`;
         const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
     return `<li><a href="${url}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(ref))}</a></li>`;
       }).join('');
