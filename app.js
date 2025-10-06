@@ -568,7 +568,7 @@
 
                 <a class="mini"
                    href="https://www.google.com/search?udm=50&q=${encodeURIComponent('Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), apenas com base em fontes jurídicas confiáveis. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + t.title)}"
-                   target="_blank" rel="noopener">10 Questões Objetivas</a>
+                   target="_blank" rel="noopener">10 Questões</a>
               </span>
             </div>`).join('')}
         </div>
