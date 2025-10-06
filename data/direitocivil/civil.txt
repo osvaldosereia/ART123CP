@@ -4,7 +4,53 @@
 
 
 -----
-# Direitos da Personalidade (Direito Civil)
+# Disposição do Próprio Corpo
+
+-- A disposição do próprio corpo, no Direito Civil, é um direito da personalidade, irrenunciável e indisponível, que visa proteger a integridade física. Contudo, admite-se a disposição para exigência médica ou para fins de transplante (Lei 9.434/97), desde que não importe diminuição permanente da integridade física ou contrarie os bons costumes, e não envolva comercialização (Art. 13 e 14 do CC/02). O consentimento informado é crucial, alinhado à dignidade da pessoa humana.
+
+## Pergunte pra I.A.
+
+  - Quais são as condições e limites legais para a disposição do próprio corpo em vida, e como o consentimento informado se relaciona com a autonomia da vontade do indivíduo nesse contexto? (Art. 13, CC/02)
+  - De que forma a Lei de Transplantes (Lei 9.434/97) estabelece os critérios para a disposição de órgãos post mortem, e qual a relevância do diagnóstico de morte encefálica para esse processo?
+  - Como o Código Civil trata a recusa a tratamento médico ou intervenção cirúrgica com risco de vida, e quais são as implicações jurídicas para os profissionais da saúde que desrespeitam essa recusa? (Art. 15, CC/02)
+  - Analise a validade da disposição gratuita do próprio corpo, no todo ou em parte, para depois da morte com objetivo científico ou altruístico, e se tal disposição pode ser revogada a qualquer tempo. (Art. 14, CC/02)
+  - Discorra sobre a importância do princípio da dignidade da pessoa humana e da autodeterminação na evolução do Direito Médico, especialmente na transição do modelo paternalista para o consentimento informado.
+  - Em que medida a comercialização de partes do corpo humano é vedada pelo ordenamento jurídico brasileiro, e quais são as sanções aplicáveis a quem pratica tal conduta?
+  - Compare a proteção legal conferida à imagem com a proteção à voz humana, e como a jurisprudência aborda a utilização não autorizada desses atributos da personalidade para fins comerciais. (Súmula 403 do STJ; Art. 5º, XXII, CF/88; Art. 17 e 29 da Lei 9.610)
+  - Quais são os limites para a limitação voluntária do exercício dos direitos da personalidade, conforme o Enunciado 4 da I Jornada de Direito Civil do CJF, e como isso se aplica a programas de televisão como "Big Brother"? (Art. 11, CC/02)
+  - Como a jurisprudência tem se posicionado sobre a responsabilidade civil em casos de tratamento médico não autorizado, ainda que o tratamento seja bem-sucedido?
+  - A inviolabilidade do próprio corpo pode ser mitigada em situações de emergência ou saúde pública? Quais princípios constitucionais entrariam em conflito, e como seriam ponderados?
+  - Explique as distinções entre disposição do próprio corpo em vida e post mortem, e as diferentes regulamentações e princípios aplicáveis a cada uma.
+  - Quais são as implicações éticas e legais da doação de gametas e embriões, e como o Direito Civil se adapta às novas tecnologias reprodutivas?
+  - Analise se a recusa de uma pessoa em doar órgãos após a morte, expressa em vida, pode ser desconsiderada em nome de um interesse público superior, como a vida de um receptor.
+  - De que forma a vontade do indivíduo sobre a disposição de seu corpo, expressa em testamento vital ou diretivas antecipadas de vontade, é juridicamente tutelada no Brasil?
+  - Quais os desafios na aplicação dos direitos da personalidade em um cenário de avanços biotecnológicos, como a edição genética ou a criação de "híbridos" humano-animais?
+  - A disposição do próprio corpo para fins de pesquisa científica, que envolve riscos e incertezas, seria compatível com os princípios da dignidade humana e da autonomia?
+  - Em que medida as questões culturais e religiosas podem influenciar a interpretação e aplicação das normas sobre a disposição do próprio corpo, e como o ordenamento jurídico busca conciliar esses valores?
+  - Quais são os mecanismos legais para proteger a intimidade e a privacidade de um indivíduo em relação à divulgação de informações sobre seu corpo ou saúde sem consentimento? (Art. 12, CC/02)
+  - Como a atuação do Ministério Público se insere nas discussões sobre a disposição do próprio corpo, especialmente na defesa de incapazes ou de interesses difusos relacionados à saúde pública?
+  - A doação de sangue e órgãos em vida, por envolver a disposição de parte do corpo, estaria sujeita às mesmas restrições e requisitos da disposição post mortem? Quais seriam as diferenças?
+
+-----
+# Tutela Inibitória 
+
+-- A tutela inibitória é um instrumento judicial que visa prevenir a prática, a repetição ou a continuação de um ato ilícito, ou a remoção de um ilícito já produzido, independentemente da existência de dano ou culpa. Ela se distingue da tutela ressarcitória, que busca compensar um prejuízo já ocorrido. No Direito Civil, é possível postular que cesse a ameaça ou a lesão a um direito da personalidade, conforme o art. 12 do CC/02.
+
+## Pergunte pra I.A.
+
+  - Qual a principal diferença entre a tutela inibitória e a tutela ressarcitória no Direito Civil, e em que contexto cada uma é mais adequada?
+  - De que forma a inexistência de dano atual ou a ausência de culpa por parte do agente impactam a aplicação da tutela inibitória, conforme a jurisprudência?
+  - Analise a relação entre a tutela inibitória e os direitos da personalidade, especialmente no que tange à sua proteção preventiva. (Art. 12, CC/02)
+  - Em que medida o princípio da dignidade da pessoa humana fundamenta a ampliação da tutela inibitória para além dos casos expressamente previstos em lei?
+  - Compare a tutela inibitória no Direito Civil com sua aplicação em outros ramos do direito, como o Direito Ambiental ou o Direito do Consumidor, identificando semelhanças e particularidades.
+  - Quais são os requisitos para a concessão da tutela inibitória, e como eles se diferenciam dos requisitos para a tutela ressarcitória?
+  - A tutela inibitória pode ser utilizada para impedir a publicação não autorizada de uma biografia? Como o julgamento da ADI 4815 pelo STF se relaciona com esse tema?
+  - De que maneira a tutela inibitória contribui para a efetividade da ordem jurídica e para a pacificação social, ao focar na prevenção de ilícitos?
+  - Explique como a tutela inibitória pode ser utilizada para proteger a imagem e a voz de uma pessoa, mesmo sem a comprovação de um prejuízo econômico direto.
+  - Quais os desafios práticos na aplicação da tutela inibitória, especialmente no que se refere à comprovação da probabilidade do ilícito e à efetividade da medida?
+
+-----
+# Direitos da Personalidade 
 -- Os Direitos da Personalidade são essenciais à proteção da dignidade da pessoa humana (Art. 1º, III, CF), sendo expressões da cláusula geral de tutela da pessoa humana. São vitalícios, absolutos, ilimitados (não exaustivos), inatos e extrapatrimoniais. São também, em regra, intransmissíveis e irrenunciáveis, embora possam ser limitados voluntariamente de forma parcial e temporária, desde que previsto em lei (Art. 11, CC). Permitem a reparação por dano moral (Súmula 227 STJ).
 
 ## Pergunte pra I.A.
