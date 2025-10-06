@@ -1,3 +1,27 @@
+# Início da personalidade jurídica da Pessoa Jurídica  
+-- Para a pessoa jurídica de direito privado, a personalidade jurídica tem início com o registro do seu ato constitutivo no órgão competente (Art. 45 do CC/02), como o Registro Civil de Pessoas Jurídicas ou a Junta Comercial. Antes do registro, a pessoa jurídica existe como um "ente despersonificado", com capacidade limitada para certos atos.
+
+Já para as pessoas jurídicas de direito público, a personalidade jurídica inicia com a vigência da lei que as institui. A Súmula 227 do STJ, ao reconhecer a possibilidade de dano moral à pessoa jurídica, reforça a autonomia da sua personalidade e a proteção de sua honra objetiva, mesmo não possuindo atributos como dor e sofrimento.
+
+# Referências do Tema  
+--- Art. 45 do CC/02  
+--- Art. 985 do CC/02  
+--- Súmula 227 do STJ
+
+## Pergunte pra I.A.
+
+  - Explique o que é a personalidade jurídica da pessoa jurídica e por que ela é um atributo essencial para sua atuação no mundo jurídico.
+  - Detalhe o marco inicial da personalidade jurídica para as pessoas jurídicas de direito privado, conforme o Art. 45 do Código Civil, e quais são os órgãos competentes para o registro dos atos constitutivos.
+  - Compare o início da personalidade jurídica da pessoa jurídica de direito privado com o da pessoa jurídica de direito público, destacando as diferenças e os fundamentos legais.
+  - Discorra sobre a situação de um ente despersonificado (como uma sociedade de fato ou irregular) antes do registro de seu ato constitutivo, e quais são suas limitações e responsabilidades.
+  - Analise a Súmula 227 do STJ, que permite o dano moral à pessoa jurídica, e discuta como essa decisão jurisprudencial amplia a proteção da honra objetiva das entidades.
+  - Explique a diferença entre "honra objetiva" e "honra subjetiva" no contexto da pessoa jurídica, e por que apenas a primeira é passível de proteção por dano moral.
+  - Apresente um caso prático (real ou hipotético) que demonstre a importância do registro do ato constitutivo para a validade e a eficácia dos negócios jurídicos de uma pessoa jurídica.
+  - Discuta a relação entre a autonomia patrimonial da pessoa jurídica e o início de sua personalidade jurídica, explicando como um decorre do outro.
+  - Aborde como o princípio da publicidade, inerente ao registro dos atos constitutivos, contribui para a segurança jurídica nas relações que envolvem pessoas jurídicas.
+  - Quais são as consequências da ausência de registro para uma pessoa jurídica de direito privado, tanto para a entidade quanto para seus sócios ou administradores?
+
+-----
 # Liberdade de Expressão
 -- A liberdade de expressão é um direito fundamental garantido pela Constituição Federal (art. 5º, caput e incisos), abrangendo manifestações intelectuais, artísticas, científicas e de comunicação, sem censura ou licença. O STF, na ADI 4815, reforçou a inexigibilidade de autorização prévia para biografias.
 
