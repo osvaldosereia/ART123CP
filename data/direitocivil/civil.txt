@@ -1,8 +1,434 @@
 
 
 
+# O Direito à Integridade Física e as Cirurgias Estéticas
 
+-- A cirurgia estética é um exercício da autonomia privada sobre o próprio corpo, encontrando limites no direito à integridade física (art. 13 do CC/02) e na vedação a procedimentos de risco desnecessário à vida ou à saúde (art. 15 do CC/02). É lícita quando busca o aprimoramento estético sem violar a dignidade ou a saúde do paciente.
 
+-- A jurisprudência do Superior Tribunal de Justiça (STJ) consolidou o entendimento de que a obrigação do cirurgião plástico em procedimentos puramente estéticos é de resultado (REsp 1.979.813). Isso significa que o profissional se compromete a atingir o embelezamento prometido, e a falha em alcançá-lo pode gerar o dever de indenizar.
+
+## Referências do Tema
+
+--- Art. 13 do CC/02
+--- Art. 15 do CC/02
+--- REsp 1.979.813/RJ do STJ
+--- Código de Ética Médica
+
+## Pergunte pra I.A.
+
+  - Como o direito à integridade física se aplica às cirurgias estéticas?
+  - Qual a diferença entre obrigação de meio e obrigação de resultado na responsabilidade civil médica?
+  - Por que o STJ firmou o entendimento de que a cirurgia plástica puramente estética é uma obrigação de resultado?
+  - Uma cirurgia plástica reparadora, decorrente de um acidente, também é considerada uma obrigação de resultado?
+  - Discuta os limites da autonomia do paciente ao solicitar procedimentos estéticos que acarretem grave risco à sua saúde.
+
+### Fontes
+
+  - Cirurgia plástica estética é obrigação de resultado, reafirma Terceira Turma - Superior Tribunal de Justiça (STJ)
+  - Responsabilidade Civil do Cirurgião Plástico: Obrigação de Meio ou Resultado? - Jusbrasil
+  - Cirurgia plástica e a responsabilidade civil do médico - Migalhas
+  - A natureza jurídica da obrigação nos procedimentos estéticos - Âmbito Jurídico
+  - O consentimento informado na cirurgia estética - Consultor Jurídico (Conjur)
+
+-----
+
+# A Esterilização Voluntária e o Planejamento Familiar
+
+-- A esterilização voluntária (laqueadura e vasectomia) é um direito relacionado ao planejamento familiar, garantido pela Constituição (art. 226, § 7º, da CF/88). Configura uma exceção legal à regra que proíbe a diminuição permanente da integridade física (art. 13 do CC/02), sendo um exercício da autonomia sobre a função reprodutiva.
+
+-- Os critérios para sua realização são definidos pela Lei nº 9.263/1996, recentemente alterada pela Lei nº 14.443/2022. Exige-se capacidade civil e idade mínima de 21 anos ou, no mínimo, dois filhos vivos. Uma mudança fundamental da nova lei foi a exclusão da necessidade de consentimento do cônjuge, reforçando a autonomia individual.
+
+## Referências do Tema
+
+--- Art. 226, § 7º, da CF/88
+--- Art. 13 do CC/02
+--- Lei nº 9.263/1996 (Lei do Planejamento Familiar)
+--- Lei nº 14.443/2022
+
+## Pergunte pra I.A.
+
+  - A esterilização voluntária é permitida pelo ordenamento jurídico brasileiro?
+  - Quais são os requisitos atuais de idade e número de filhos para a realização de laqueadura ou vasectomia?
+  - Qual foi a principal alteração promovida pela Lei nº 14.443/2022 na Lei do Planejamento Familiar?
+  - Por que a exigência de consentimento do cônjuge foi retirada da legislação?
+  - Discuta a relação entre o direito à esterilização voluntária e o princípio da dignidade da pessoa humana.
+
+### Fontes
+
+  - Lei nº 14.443, de 1º de setembro de 2022 - Presidência da República (planalto.gov.br)
+  - Nova lei da laqueadura e vasectomia já está em vigor: veja o que mudou - Agência Senado
+  - Planejamento Familiar e os Direitos Reprodutivos - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - A autonomia corporal e a nova lei de esterilização voluntária - Consultor Jurídico (Conjur)
+  - A evolução da legislação sobre planejamento familiar no Brasil - https://www.google.com/search?q=Jus.com.br
+
+-----
+
+# Limites à Integridade Física: Wannabes e Pesquisa Científica
+
+-- O desejo de amputar membros sadios, condição conhecida como "wannabe" ou Transtorno de Identidade da Integridade Corporal, encontra uma barreira legal intransponível. O art. 13 do CC/02 proíbe a diminuição permanente da integridade física, e a realização de tal procedimento pelo médico configuraria crime de lesão corporal gravíssima e grave infração ética.
+
+-- Já a participação em pesquisas científicas, que pode envolver riscos, é permitida, mas estritamente regulada. A Resolução CNS nº 466/2012 exige a submissão do projeto a um Comitê de Ética, a assinatura do Termo de Consentimento Livre e Esclarecido (TCLE) pelo voluntário e a garantia de que os benefícios superem os riscos para os participantes.
+
+## Referências do Tema
+
+--- Art. 13 do CC/02
+--- Art. 15 do CC/02
+--- Resolução nº 466/2012 do Conselho Nacional de Saúde (CNS)
+--- Art. 129, § 2º, do Código Penal
+
+## Pergunte pra I.A.
+
+  - Um médico pode, legalmente, amputar um membro saudável a pedido de um paciente? Justifique com base na lei.
+  - Quais são as principais regras que regulamentam a pesquisa científica com seres humanos no Brasil?
+  - O que é o Termo de Consentimento Livre e Esclarecido (TCLE) e qual a sua finalidade?
+  - Qual é o papel dos Comitês de Ética em Pesquisa (CEP) na proteção dos voluntários?
+  - Discuta o conflito entre a autonomia da vontade do paciente e a proteção da integridade física imposta pelo Estado.
+
+### Fontes
+
+  - Resolução Nº 466, de 12 de dezembro de 2012 - Conselho Nacional de Saúde (CNS)
+  - Ética em Pesquisa com Seres Humanos no Brasil - Fundação Oswaldo Cruz (Fiocruz)
+  - O Transtorno de Identidade da Integridade Corporal (Wannarexia) e o Direito Penal - Jusbrasil
+  - Limites da autonomia do paciente frente ao direito à vida e à integridade física - Âmbito Jurídico
+  - A Responsabilidade Penal do Médico na Amputação de Membros Sadios - https://www.google.com/search?q=Jus.com.br
+-----
+# Direito à Vida e à Integridade Física
+
+-- O direito à vida (art. 5º, caput, CF/88) é o mais fundamental dos direitos, sendo a base para todos os demais. No plano civil, ele se desdobra na proteção à integridade física e psíquica. O art. 13 do CC/02 veda atos de disposição do próprio corpo que importem em diminuição permanente da integridade física ou contrariem os bons costumes, salvo por exigência médica.
+
+-- Essa proteção, contudo, é relativizada. A lei permite a disposição gratuita do corpo, no todo ou em parte, para depois da morte com objetivos científicos ou altruísticos (art. 14 do CC/02). A doação de órgãos para transplante em vida é permitida para órgãos duplos, desde que não prejudique as funções vitais do doador (Lei nº 9.434/97).
+
+## Referências do Tema
+
+--- Art. 5º, caput, da CF/88
+--- Art. 13 do CC/02
+--- Art. 14 do CC/02
+--- Art. 15 do CC/02
+--- Lei nº 9.434/1997 (Lei de Transplantes)
+
+## Pergunte pra I.A.
+
+  - Qual a relação entre o direito fundamental à vida e o direito à integridade física no Código Civil?
+  - Quais são os limites impostos pelo art. 13 do Código Civil à disposição do próprio corpo?
+  - A doação de órgãos em vida é permitida em quais circunstâncias, segundo a Lei de Transplantes?
+  - É possível revogar a autorização para doação de órgãos após a morte?
+  - Analise a legalidade dos contratos que envolvem práticas perigosas, como em esportes radicais, à luz do direito à integridade física.
+
+### Fontes
+
+  - O direito à vida e à integridade corporal no Código Civil - https://www.google.com/search?q=Jus.com.br
+  - Lei nº 9.434, de 4 de fevereiro de 1997 (Lei de Transplantes) - Presidência da República (planalto.gov.br)
+  - A Disposição do Próprio Corpo no Direito Civil Brasileiro - Âmbito Jurídico
+  - Doação de órgãos e tecidos no Brasil: aspectos legais e éticos - Scielo
+  - O direito à integridade física e os contratos perigosos - Migalhas
+
+-----
+
+# A Questão do Transexual e os Direitos da Personalidade
+
+-- O direito à identidade de gênero, como expressão da dignidade da pessoa humana (art. 1º, III, da CF/88), é um direito da personalidade. O Supremo Tribunal Federal (STF), no julgamento da ADI 4275 e do RE 670.422, consolidou o entendimento de que pessoas transexuais têm o direito de alterar seu prenome e gênero diretamente no registro civil.
+
+-- Essa alteração não exige a realização prévia da cirurgia de transgenitalização (redesignação sexual). Garante-se, assim, o direito à autoidentificação, adequando o registro público à realidade social e psíquica do indivíduo, protegendo seu direito ao nome, à identidade e à vida privada (art. 16 do CC/02), em respeito à sua integridade.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 16 do CC/02
+--- ADI 4275 do STF
+--- RE 670.422 do STF
+--- Provimento nº 73/2018 do CNJ
+
+## Pergunte pra I.A.
+
+  - Como o direito à identidade de gênero se enquadra nos direitos da personalidade?
+  - Qual foi a principal decisão do STF sobre a alteração do nome e gênero de pessoas transexuais?
+  - É necessário realizar a cirurgia de redesignação sexual para solicitar a alteração dos documentos?
+  - Como o Provimento nº 73/2018 do CNJ facilitou o processo de alteração do registro civil?
+  - Discuta a relação entre o direito à autoidentificação e o princípio da verdade registral.
+
+### Fontes
+
+  - Transexuais têm direito à alteração do nome e do gênero no registro civil sem cirurgia de redesignação - Supremo Tribunal Federal (STF)
+  - Provimento Nº 73 de 28/06/2018 - Conselho Nacional de Justiça (CNJ)
+  - A retificação do registro civil da pessoa transexual - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - O STF e o direito à identidade de gênero: uma análise da ADI 4275 - Consultor Jurídico (Conjur)
+  - A Questão do Transexual no Direito Brasileiro - Jusbrasil
+-----
+# Direitos da Personalidade e Eficácia Horizontal
+
+-- Os direitos da personalidade, embora positivados no Código Civil, possuem status de direitos fundamentais, o que atrai a teoria da eficácia horizontal. Isso significa que sua aplicação não se restringe à relação entre o cidadão e o Estado (eficácia vertical), mas irradia para as relações entre particulares (art. 5º, § 1º, da CF/88), como em contratos e relações de trabalho.
+
+-- Assim, liberdades públicas como a de expressão ou informação encontram limites nos direitos da personalidade de terceiros (honra, imagem, privacidade). A colisão entre esses direitos é resolvida no caso concreto por meio da ponderação, buscando a harmonização dos valores constitucionais sem aniquilar nenhum deles.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 5º, § 1º, da CF/88
+--- Art. 5º, X, da CF/88
+--- Art. 11 do CC/02
+--- Art. 12 do CC/02
+
+## Pergunte pra I.A.
+
+  - O que significa a "eficácia horizontal" dos direitos da personalidade?
+  - De que forma a Constituição Federal garante a aplicação de direitos fundamentais nas relações privadas?
+  - Apresente um exemplo prático de colisão entre a liberdade de imprensa e o direito à privacidade de um indivíduo.
+  - Como a técnica da ponderação é utilizada pelo Judiciário para resolver conflitos entre direitos fundamentais?
+  - A autonomia da vontade em um contrato pode ser limitada por um direito da personalidade?
+
+### Fontes
+
+  - A Eficácia Horizontal dos Direitos Fundamentais - Consultor Jurídico (Conjur)
+  - A eficácia dos direitos fundamentais nas relações privadas - https://www.google.com/search?q=Jus.com.br
+  - Direitos da personalidade e a teoria da eficácia horizontal - Âmbito Jurídico
+  - A Colisão entre Liberdade de Expressão e Direitos da Personalidade - Migalhas
+  - A aplicação dos direitos fundamentais às relações privadas - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+
+-----
+
+# Direitos da Personalidade, Fundamentais e Humanos
+
+-- Embora protejam o mesmo núcleo de valores — a dignidade humana —, esses conceitos se distinguem pelo plano em que atuam. Os Direitos da Personalidade são a positivação desses valores no âmbito do Direito Civil (relações privadas), previstos no Código Civil (arts. 11 a 21) e voltados para a tutela do indivíduo.
+
+-- Os Direitos Fundamentais são a sua consagração no plano do direito interno de um Estado, protegendo o cidadão contra o poder estatal (eficácia vertical) e nas relações privadas (eficácia horizontal), como no art. 5º da CF/88. Já os Direitos Humanos são sua afirmação no plano internacional, em tratados e convenções.
+
+## Referências do Tema
+
+--- Art. 1º, III, da CF/88
+--- Art. 4º, II, da CF/88
+--- Art. 5º, § 2º, da CF/88
+--- Arts. 11 a 21 do CC/02
+--- Declaração Universal dos Direitos Humanos (1948)
+
+## Pergunte pra I.A.
+
+  - Qual a diferença de âmbito de aplicação entre Direitos da Personalidade, Direitos Fundamentais e Direitos Humanos?
+  - Como os Direitos Humanos, previstos em tratados internacionais, influenciam o Direito Civil brasileiro?
+  - Um direito da personalidade previsto no Código Civil pode ser considerado também um direito fundamental?
+  - Explique como a dignidade da pessoa humana serve de fundamento comum para as três categorias de direitos.
+  - Dê um exemplo de um direito que seja, ao mesmo tempo, da personalidade, fundamental e humano.
+
+### Fontes
+
+  - A distinção entre Direitos Humanos e Direitos Fundamentais - Jusbrasil
+  - Direitos Humanos, Direitos Fundamentais e Direitos da Personalidade: entenda a relação - Aurum
+  - A Tripla Dimensão dos Direitos da Pessoa Humana - Âmbito Jurídico
+  - Direitos da personalidade como direitos fundamentais - Jus Navigandi
+  - A internalização dos tratados de Direitos Humanos no Brasil - Presidência da República (planalto.gov.br)
+-----
+
+# Direitos da Personalidade: Imprescritíveis
+
+-- A imprescritibilidade significa que os direitos da personalidade não se extinguem pelo não uso. O direito à honra, ao nome ou à imagem de uma pessoa não acaba com o decurso do tempo, pois é um atributo inerente e permanente do indivíduo, não estando sujeito à prescrição ou decadência.
+
+-- É crucial, contudo, diferenciar o direito em si da pretensão de reparação por sua violação. A ação para pleitear indenização por danos morais e materiais decorrentes de uma ofensa é sujeita à prescrição, que, em regra, é de três anos, conforme o art. 206, § 3º, V, do Código Civil.
+
+## Referências do Tema
+
+--- Art. 11 do CC/02
+--- Art. 189 do CC/02
+--- Art. 206, § 3º, V, do CC/02
+--- Súmula 278 do STJ
+
+## Pergunte pra I.A.
+
+  - O que significa dizer que os direitos da personalidade são imprescritíveis?
+  - Diferencie a imprescritibilidade do direito e a prescritibilidade da pretensão reparatória.
+  - Qual é o prazo prescricional para ajuizar uma ação de indenização por dano moral?
+  - O direito de impedir que uma ofensa continue (tutela inibitória) também prescreve?
+  - A partir de que momento se inicia a contagem do prazo prescricional para a reparação de um dano moral?
+
+### Fontes
+
+  - Prescrição e direitos da personalidade - Consultor Jurídico (Conjur)
+  - A prescritibilidade da pretensão de reparação de danos e a imprescritibilidade dos direitos da personalidade - Migalhas
+  - A Imprescritibilidade dos Direitos da Personalidade - https://www.google.com/search?q=Jus.com.br
+  - Prazo prescricional da ação de indenização por danos morais - Jusbrasil
+  - Súmula 278 do Superior Tribunal de Justiça (STJ) - Portal do STJ
+
+-----
+
+# Direitos da Personalidade: Inatos
+
+-- A característica de serem inatos significa que os direitos da personalidade nascem com o próprio indivíduo. Eles são adquiridos com o nascimento com vida (art. 2º do CC/02) e não dependem de qualquer concessão do Estado ou de negócio jurídico. A pessoa já nasce titular desses direitos essenciais.
+
+-- Essa característica reforça que a proteção à pessoa é um dado pré-jurídico, que o Direito apenas reconhece e tutela. Embora a personalidade plena se inicie com o nascimento, a lei já protege o nascituro, garantindo-lhe direitos fundamentais como a vida e a integridade, o que demonstra a força do caráter inato desses direitos.
+
+## Referências do Tema
+
+--- Art. 1º do CC/02
+--- Art. 2º do CC/02
+--- Art. 5º, caput, da CF/88
+
+## Pergunte pra I.A.
+
+  - O que significa a característica "inatos" dos direitos da personalidade?
+  - Qual a relação entre o caráter inato desses direitos e o início da personalidade jurídica no Brasil?
+  - Se os direitos são inatos, como se explica a proteção jurídica conferida ao nascituro?
+  - Compare os direitos inatos com os direitos adquiridos, como o direito de propriedade.
+  - Discuta se os embriões criopreservados podem ser considerados titulares de direitos inatos.
+
+### Fontes
+
+  - O Caráter Inato dos Direitos da Personalidade - Âmbito Jurídico
+  - Início da personalidade jurídica e os direitos inatos - Jusbrasil
+  - A proteção jurídica do nascituro - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - Direitos da Personalidade - Enciclopédia Jurídica da PUCSP
+  - Código Civil (Lei nº 10.406/02) - Presidência da República (planalto.gov.br)
+
+-----
+
+# Direitos da Personalidade: Vitalícios e Impenhoráveis
+
+-- Os direitos da personalidade são vitalícios, ou seja, acompanham a pessoa durante toda a sua vida, extinguindo-se, em regra, com a morte. Contudo, a lei estende a proteção para depois da morte, conferindo ao cônjuge, ascendentes ou descendentes a legitimidade para defender a memória do falecido (art. 12, parágrafo único, do CC/02).
+
+-- A impenhorabilidade é uma consequência da extrapatrimonialidade. Como esses direitos não possuem valor econômico direto, eles não podem ser penhorados ou dados em garantia para o pagamento de dívidas, pois não compõem o patrimônio executável do devedor.
+
+## Referências do Tema
+
+--- Art. 12, parágrafo único, do CC/02
+--- Art. 20, parágrafo único, do CC/02
+--- Art. 833 do CPC/15
+
+## Pergunte pra I.A.
+
+  - O que significa dizer que os direitos da personalidade são "vitalícios"?
+  - Explique como funciona a tutela dos direitos da personalidade de uma pessoa já falecida.
+  - Por que os direitos da personalidade são considerados impenhoráveis?
+  - A exploração econômica de um direito da personalidade (ex: cachê por uso de imagem) pode ser penhorada?
+  - A proteção à memória do morto é um direito do falecido ou dos seus familiares?
+
+### Fontes
+
+  - Tutela post mortem dos direitos da personalidade - https://www.google.com/search?q=Jus.com.br
+  - A proteção da imagem e da honra da pessoa morta - Migalhas
+  - A impenhorabilidade como característica dos direitos da personalidade - Âmbito Jurídico
+  - A legitimidade para a tutela da honra do morto - Consultor Jurídico (Conjur)
+  - O que é a tutela post mortem dos direitos da personalidade? - Dizer o Direito
+
+-----
+
+# Direitos da Personalidade: Ampla Tutela
+
+-- A proteção aos direitos da personalidade é ampla, abrangendo tanto a tutela preventiva quanto a repressiva. A tutela preventiva visa impedir a ocorrência ou a continuação da lesão, utilizando-se de medidas inibitórias para que o ilícito não se concretize (art. 12 do CC/02 e art. 497 do CPC/15).
+
+-- A tutela repressiva, por sua vez, atua após a ocorrência do dano, buscando a sua reparação. A principal forma é a compensação pecuniária por danos morais e materiais (art. 5º, V e X, da CF/88), mas também pode incluir outras medidas, como o direito de resposta e a retratação pública.
+
+## Referências do Tema
+
+--- Art. 12 do CC/02
+--- Art. 5º, V e X, da CF/88
+--- Art. 497 do CPC/15
+--- Art. 500 do CPC/15
+--- Súmula 403 do STJ
+
+## Pergunte pra I.A.
+
+  - Diferencie a tutela preventiva da tutela repressiva dos direitos da personalidade.
+  - Dê um exemplo prático de aplicação de uma medida de tutela inibitória.
+  - A indenização por dano moral é uma forma de tutela preventiva ou repressiva?
+  - O que são "astreintes" e como elas podem ser utilizadas na proteção dos direitos da personalidade?
+  - É possível cumular um pedido de indenização por dano moral com um pedido para impedir a continuação da ofensa?
+
+### Fontes
+
+  - Tutela inibitória e de remoção do ilícito - Enciclopédia Jurídica da PUCSP
+  - A tutela preventiva e repressiva dos direitos da personalidade - Migalhas
+  - Dano moral: da reparação à prevenção - Consultor Jurídico (Conjur)
+  - As tutelas específica, inibitória e de remoção do ilícito no NCPC - Jusbrasil
+  - Súmula 403 do Superior Tribunal de Justiça (STJ) - Portal do STJ
+-----
+# Direitos da Personalidade: Indisponíveis e Irrenunciáveis
+
+-- Os direitos da personalidade são, em regra, intransmissíveis e irrenunciáveis, não podendo seu titular se desfazer deles de forma permanente (art. 11 do CC/02). Essa indisponibilidade protege a dignidade da pessoa, impedindo que ela negocie os atributos que a definem como ser humano, como a vida, a honra ou a integridade.
+
+-- Contudo, essa característica não é absoluta. A lei permite a disposição voluntária e limitada do exercício de alguns desses direitos, como no uso consentido da imagem ou na doação de órgãos (art. 14 do CC/02), desde que não haja ofensa aos bons costumes. Trata-se de limitação ao exercício, e não de renúncia ao direito em si.
+
+## Referências do Tema
+
+--- Art. 11 do CC/02
+--- Art. 13 do CC/02
+--- Art. 14 do CC/02
+--- Enunciado 4 da I Jornada de Direito Civil (CJF)
+
+## Pergunte pra I.A.
+
+  - O que significa dizer que os direitos da personalidade são indisponíveis e irrenunciáveis?
+  - Explique por que a indisponibilidade desses direitos é considerada relativa e não absoluta.
+  - Dê um exemplo prático de um ato de disposição válido sobre um direito da personalidade.
+  - Analise a legalidade de um contrato de participação em "reality show" à luz do art. 11 do Código Civil.
+  - Discuta os limites da autonomia privada na disposição sobre o próprio corpo.
+
+### Fontes
+
+  - Art. 11 do Código Civil e a renúncia aos direitos da personalidade - Jusbrasil
+  - A relatividade da irrenunciabilidade dos direitos da personalidade - Migalhas
+  - A disposição do próprio corpo no Código Civil - Consultor Jurídico (Conjur)
+  - Direitos da Personalidade - Tribunal de Justiça do Distrito Federal e dos Territórios (TJDFT)
+  - Enunciados Aprovados da I Jornada de Direito Civil - Portal do Conselho da Justiça Federal (CJF)
+
+-----
+
+# Direitos da Personalidade: Absolutos
+
+-- O caráter absoluto dos direitos da personalidade significa que eles são oponíveis contra todos (*erga omnes*). Diferentemente de um direito de crédito, que só pode ser exigido do devedor, a honra, a imagem ou a privacidade de uma pessoa devem ser respeitadas por toda a coletividade, que possui um dever geral de abstenção.
+
+-- Essa eficácia *erga omnes* fundamenta a ampla tutela jurídica conferida a esses direitos. Qualquer pessoa que os viole pode ser obrigada a cessar a lesão e a reparar os danos causados (art. 12 do CC/02), independentemente da existência de um vínculo jurídico prévio com a vítima, bastando a prova do ato ilícito.
+
+## Referências do Tema
+
+--- Art. 12 do CC/02
+--- Art. 927 do CC/02
+--- Art. 5º, V e X, da CF/88
+
+## Pergunte pra I.A.
+
+  - O que significa dizer que os direitos da personalidade têm caráter "absoluto" ou eficácia "erga omnes"?
+  - Qual a principal consequência prática do caráter absoluto desses direitos?
+  - Compare um direito absoluto, como o direito à imagem, com um direito relativo, como o direito de um credor.
+  - Como o artigo 12 do Código Civil materializa a proteção decorrente do caráter absoluto desses direitos?
+  - Discuta como o caráter absoluto dos direitos da personalidade pode colidir com outros direitos absolutos, como a liberdade de expressão.
+
+### Fontes
+
+  - O caráter absoluto dos direitos da personalidade - Âmbito Jurídico
+  - Eficácia Erga Omnes dos Direitos da Personalidade - https://www.google.com/search?q=Jus.com.br
+  - Direitos da personalidade: o que são, quais são e características - Aurum
+  - A Tutela dos Direitos da Personalidade no Código Civil de 2002 - Jus Navigandi
+  - A colisão entre direitos fundamentais - Supremo Tribunal Federal (STF)
+
+-----
+
+# Direitos da Personalidade: Extrapatrimoniais
+
+-- A extrapatrimonialidade é a característica que define os direitos da personalidade como insuscetíveis de valoração econômica direta. Eles não integram o patrimônio de uma pessoa e não podem ser comprados ou vendidos, pois seu valor reside na própria dignidade humana, e não em uma equivalência monetária.
+
+-- Embora não tenham preço, a violação a um direito da personalidade gera uma consequência patrimonial: o dever de indenizar o dano moral (art. 5º, V e X, da CF/88). Essa indenização não é o pagamento pelo direito, mas uma forma de compensar a vítima pelo sofrimento e punir o ofensor, conforme a Súmula 37 do STJ.
+
+## Referências do Tema
+
+--- Art. 12 do CC/02
+--- Art. 5º, V e X, da CF/88
+--- Súmula 37 do STJ
+--- Súmula 227 do STJ
+
+## Pergunte pra I.A.
+
+  - O que significa dizer que os direitos da personalidade são extrapatrimoniais?
+  - Como é possível que a violação de um direito sem valor econômico gere o dever de pagar uma indenização em dinheiro?
+  - Qual é a função da indenização por danos morais?
+  - A Súmula 227 do STJ afirma que a pessoa jurídica pode sofrer dano moral. Isso não contradiz a ideia de extrapatrimonialidade?
+  - Discuta os critérios utilizados pelos juízes para fixar o valor de uma indenização por dano moral.
+
+### Fontes
+
+  - Extrapatrimonialidade e o Dano Moral - Migalhas
+  - A natureza extrapatrimonial dos direitos da personalidade - Jusbrasil
+  - Súmula 37 do STJ - Dano moral e material são cumuláveis - Superior Tribunal de Justiça (STJ)
+  - A pessoa jurídica e o dano moral: uma análise da Súmula 227 do STJ - Consultor Jurídico (Conjur)
+  - A quantificação do dano moral no Brasil - Âmbito Jurídico
+
+-----
 # Origem e Evolução dos Direitos da Personalidade
 
 -- Embora o Direito Romano protegesse a integridade física e a honra através da *actio iniuriarum*, a noção de uma categoria autônoma de direitos da personalidade é moderna. Ela floresceu com o Iluminismo, mas foi a doutrina alemã do século XIX que a sistematizou, trazendo-a do campo do direito público para o cerne das relações privadas.
