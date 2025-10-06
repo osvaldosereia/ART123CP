@@ -529,7 +529,8 @@
             </div>`).join('')}
         </div>
       </section>
-    ";
+      </section>
+    `;
 
     contentEl.querySelectorAll('[data-go]').forEach(a=>{
       a.addEventListener('click', (e)=>{ e.preventDefault(); location.hash = a.getAttribute('data-go')||'#/'; });
