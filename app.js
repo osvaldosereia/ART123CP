@@ -206,6 +206,10 @@
     __popEl.style.left = left + 'px';
     __popEl.style.top  = (r.bottom + window.scrollY + 6) + 'px';
     __popEl.style.width = Math.min(640, vw - padX*2) + 'px';
+    __popEl.style.maxHeight = '70vh';
+    __popEl.style.overflowY = 'auto';
+    __popEl.style.overscrollBehavior = 'contain';
+
 
     setTimeout(()=>{
       document.addEventListener('click', onDocClickClose, true);
