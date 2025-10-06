@@ -174,3 +174,21 @@ body.noscroll{overflow:hidden}
   width:min(720px, 92vw);
 }
 .hidden{display:none!important;}
+
+/* Cor do destaque de pesquisa */
+:root{
+  --mark-bg: #dbeafe; /* azul claro */
+  --mark-txt: inherit;
+}
+mark{
+  background: var(--mark-bg);
+  color: var(--mark-txt);
+  padding: 0 .15em;
+  border-radius: .2em;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.04) inset;
+}
+
+/* garante nas listas e no conteúdo */
+.suggestions mark,
+.ubox mark,
+.card mark{ background: var(--mark-bg); color: var(--mark-txt); }
