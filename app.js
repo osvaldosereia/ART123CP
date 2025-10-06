@@ -637,12 +637,12 @@
         renderMenu();
         toast(added?'Tema salvo':'Removido dos salvos', added?'success':'info', 1400);
       });
-      const studyBtn=mkBtn('Estudar','', ()=>window.open(
-        `https://www.google.com/search?udm=50&q=${encodeURIComponent('Explique o tema de forma rápida e objetiva utilizando apenas informações vindas de sites jurídicos. Ao final apresente as fontes. Tema: ' + pageTitle)}`,
+      const studyBtn=mkBtn('Explicação Rápida','', ()=>window.open(
+        `https://www.google.com/search?udm=50&q=${encodeURIComponent('Explique o tema de forma rápida e objetiva para estudantes de direito, seja oranizado e didático, utilizando apenas informações vindas de sites jurídicos. Ao final apresente as fontes. Tema: ' + pageTitle)}`,
         '_blank','noopener'
       ));
-      const trainBtn=mkBtn('Treinar','', ()=>window.open(
-        `https://www.google.com/search?udm=50&q=${encodeURIComponent('Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), apenas com base em fontes jurídicas confiáveis. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + pageTitle)}`,
+      const trainBtn=mkBtn('10 Questões Objetivas','', ()=>window.open(
+        `https://www.google.com/search?udm=50&q=${encodeURIComponent('Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), inspiradas em questões da UFG, cespe e cebraspe. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + pageTitle)}`,
         '_blank','noopener'
       ));
       actionsEl.append(saveBtn, studyBtn, trainBtn);
