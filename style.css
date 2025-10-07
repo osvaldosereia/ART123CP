@@ -1,6 +1,6 @@
 /* =========================
    Meujus – style.css
-   Paleta: Soft Slate Light
+   Paleta: Soft Slate Light + respiros ajustados
    ========================= */
 
 /* ===== Tokens (nova paleta) ===== */
@@ -50,7 +50,7 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
   background:var(--surface);outline:0;color:var(--ink);
 }
 .search::placeholder{color:var(--muted)}
-/* Live suggestions */
+/* Live suggestions: sempre abaixo, com largura coerente e rolagem quando preciso */
 .suggestions{
   position:absolute;left:0;top:calc(100% + 6px);
   width:min(100%, 90vw);
@@ -110,8 +110,12 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 .h1{font-size:22px;line-height:1.2;margin:0 0 6px 0}
 .h2{font-size:18px;margin:0 0 6px 0}
 .ubox{padding:14px 16px}
-.ubox-section + .ubox-section{margin-top:18px}
-.ubox-sub{font-size:14px;font-weight:800;margin:0 0 10px 0;color:var(--ink)}
+
+/* ===== Respiros das seções ===== */
+/* Mais respiro ENTRE seções */
+.ubox-section + .ubox-section{margin-top:32px}
+/* Título de seção */
+.ubox-sub{font-size:14px;font-weight:800;margin:0 0 8px 0;color:var(--ink)}
 
 /* ===== Ações abaixo do título ===== */
 .actions{margin-top:8px}
@@ -121,7 +125,6 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
   border-radius:999px;padding:8px 12px;cursor:pointer;font-weight:600;font-size:13px
 }
 .btn-ios.is-small{padding:6px 10px;font-size:12px}
-/* Salvar destacado somente quando salvo */
 .btn-ios[data-variant="primary"]{border-color:transparent;background:var(--primary);color:#fff}
 .btn-ios[data-variant="secondary"]{border-color:var(--primary);color:var(--primary);background:var(--card)}
 
@@ -145,13 +148,9 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 }
 .link-arrow:hover::after{ transform:translate(2px,-1px); opacity:.9; }
 
-/* ===== Lists ===== */
-.list-plain > .card{padding:14px 16px;margin-bottom:12px}
-.ref-list li + li{margin-top:10px}
-.q-list{counter-reset:item}
-.q-list li{margin:6px 0;padding-left:2px}
-.q-list li::marker{font-weight:600}
-.muted{color:var(--muted);font-size:12px}
+/* ===== Lists (respiros internos menores) ===== */
+.ref-list li + li{margin-top:4px}              /* menos espaço entre itens */
+.ref-list .muted{margin-top:2px}                /* comentário mais próximo do item */
 
 /* ===== Toasts ===== */
 #toasts{position:fixed;right:12px;bottom:12px;display:grid;gap:8px;z-index:98}
