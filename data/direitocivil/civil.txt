@@ -2,6 +2,69 @@
 
 
 
+
+# Culpa Concorrente da Vítima  
+# Dispositivos Legais  
+- Art. 945. Se a vítima tiver concorrido culposamente para o evento danoso, a sua indenização será fixada tendo-se em conta a gravidade de sua culpa em confronto com a do autor do dano.  
+# Remissões Normativas  
+- Vide Súmula 28 do STF.  
+-- estabelece que, havendo culpa concorrente, a indenização deve ser fixada proporcionalmente à gravidade das culpas envolvidas  
+
+-----
+# Extensão da Indenização  
+# Dispositivos Legais  
+- Art. 944. A indenização mede-se pela extensão do dano.  
+Parágrafo único. Se houver excessiva desproporção entre a gravidade da culpa e o dano, poderá o juiz reduzir, equitativamente, a indenização.  
+# Remissões Normativas  
+- Vide arts. 186, 884, 927, 944 e 948 a 954 do CC.  
+-- tratam do ato ilícito, do enriquecimento sem causa, da responsabilidade civil e dos critérios de indenização  
+- Vide Súmula 37 do STJ.  
+-- admite a cumulação de indenização por dano material e moral decorrentes do mesmo fato  
+- Vide art. 5.º da LINDB.  
+-- trata da aplicação proporcional e equitativa da norma jurídica  
+- Vide Súmulas 491 e 562 do STF.  
+-- tratam, respectivamente, da responsabilidade civil do Estado por ato de concessionária e da reparação proporcional à culpa  
+
+-----
+# Transmissibilidade da Reparação Civil  
+# Dispositivos Legais  
+- Art. 943. O direito de exigir reparação e a obrigação de prestá-la transmitem-se com a herança.  
+# Remissões Normativas  
+- Vide Súmula 642 do STJ.  
+-- estabelece que o direito à indenização por dano moral transmite-se aos herdeiros da vítima  
+- Vide arts. 1.792, 1.821 e 1.997 do CC.  
+-- tratam da responsabilidade do herdeiro pelos encargos do falecido, da aceitação da herança e da responsabilidade do herdeiro pelas dívidas hereditárias  
+- Vide Súmula 35 do STF.  
+-- estabelece que a responsabilidade civil por ato ilícito transmite-se aos herdeiros  
+
+-----
+# Responsabilidade Civil Solidária  
+# Dispositivos Legais  
+- Art. 942. Os bens do responsável pela ofensa ou violação do direito de outrem ficam sujeitos à reparação do dano causado; e, se a ofensa tiver mais de um autor, todos responderão solidariamente pela reparação.  
+Parágrafo único. São solidariamente responsáveis com os autores os coautores e as pessoas designadas no art. 932.  
+# Remissões Normativas  
+- Vide arts. 186 e 927 do CC.  
+-- tratam, respectivamente, do ato ilícito e da obrigação de reparar o dano  
+- Vide arts. 5.º, V e X, e 37, § 6.º (indenização), da CF.  
+-- tratam da inviolabilidade da honra e da imagem, do direito à indenização por dano moral e material, e da responsabilidade objetiva do Estado  
+- Vide art. 3.º da Lei n. 8.429, de 2-6-1992.  
+-- trata dos atos de improbidade administrativa que importam lesão ao erário  
+- Vide Súmulas 221 e 246 do STJ.  
+-- tratam da responsabilidade solidária entre médicos e hospitais e da obrigação solidária entre empresa franqueadora e franqueada  
+- Vide arts. 264 a 285 e 934 do CC.  
+-- tratam das obrigações solidárias e do direito de regresso na responsabilidade civil  
+
+-----
+# Responsabilidade por má-fé
+# Dispositivos Legais
+- Art. 941. As penas previstas nos arts. 939 e 940 não se aplicarão quando o autor desistir da ação antes de contestada a lide, salvo ao réu o direito de haver indenização por algum prejuízo que prove ter sofrido.
+# Remissões Normativas
+- Vide arts. 79 a 81 do CPC.  
+  -- tratam da litigância de má-fé e das penalidades aplicáveis  
+- Vide art. 485, § 4.º, do CPC.  
+  -- dispõe sobre a possibilidade de o réu ser indenizado quando o autor desiste da ação antes da contestação, caso comprove prejuízo  
+-----
+
 # Independência entre as Responsabilidades Civil e Criminal
 # Dispositivos Legais
 - Art. 935. A responsabilidade civil é independente da criminal, não se podendo questionar mais sobre a existência do fato, ou sobre quem seja o seu autor, quando estas questões se acharem decididas no juízo criminal.
