@@ -3,45 +3,126 @@
 
 
 
------
-# Título Nominativo  
-# Dispositivos Legais  
-- Art. 921. É título nominativo o emitido em favor de pessoa cujo nome conste no registro do emitente.  
-# Remissões Normativas  
-*(nenhuma remissão)*  
------
-# Título Nominativo  
-# Dispositivos Legais  
-- Art. 922. Transfere-se o título nominativo mediante termo, em registro do emitente, assinado pelo proprietário e pelo adquirente.  
-# Remissões Normativas  
-*(nenhuma remissão)*  
------
-# Título Nominativo  
-# Dispositivos Legais  
-- Art. 923. O título nominativo também pode ser transferido por endosso que contenha o nome do endossatário.  
-- § 1.º A transferência mediante endosso só tem eficácia perante o emitente, uma vez feita a competente averbação em seu registro, podendo o emitente exigir do endossatário que comprove a autenticidade da assinatura do endossante.  
-- § 2.º O endossatário, legitimado por série regular e ininterrupta de endossos, tem o direito de obter a averbação no registro do emitente, comprovada a autenticidade das assinaturas de todos os endossantes.  
-- § 3.º Caso o título original contenha o nome do primitivo proprietário, tem direito o adquirente a obter do emitente novo título, em seu nome, devendo a emissão do novo título constar no registro do emitente.  
-# Remissões Normativas  
-*(nenhuma remissão)*  
------
-# Título Nominativo  
-# Dispositivos Legais  
-- Art. 924. Ressalvada proibição legal, pode o título nominativo ser transformado em à ordem ou ao portador, a pedido do proprietário e à sua custa.  
-# Remissões Normativas  
-- Vide arts. 904 a 920 do CC.  
--- tratam das disposições gerais sobre títulos de crédito, incluindo regras sobre título ao portador e à ordem.  
------
-# Título Nominativo  
-# Dispositivos Legais  
-- Art. 925. Fica desonerado de responsabilidade o emitente que de boa-fé fizer a transferência pelos modos indicados nos artigos antecedentes.  
-# Remissões Normativas  
-*(nenhuma remissão)*  
------
-# Título Nominativo  
-# Dispositivos Legais  
-- Art. 926. Qualquer negócio ou medida judicial, que tenha por objeto o título, só produz efeito perante o emitente ou terceiros, uma vez feita a competente averbação no registro do emitente.  
-# Remissões Normativas  
-*(nenhuma remissão)*  
------
 
+
+# Título à Ordem - Exceções Oponíveis ao Portador
+# Dispositivos Legais
+- Art. 915. O devedor, além das exceções fundadas nas relações pessoais que tiver com o portador, só poderá opor a este as exceções relativas à forma do título e ao seu conteúdo literal, à falsidade da própria assinatura, a defeito de capacidade ou de representação no momento da subscrição, e à falta de requisito necessário ao exercício da ação.
+-----
+# Título à Ordem - Exceções Pessoais e Má-fé
+# Dispositivos Legais
+- Art. 916. As exceções, fundadas em relação do devedor com os portadores precedentes, somente poderão ser por ele opostas ao portador, se este, ao adquirir o título, tiver agido de má-fé.
+-----
+# Título à Ordem - Endosso-Mandato
+# Dispositivos Legais
+- Art. 917. A cláusula constitutiva de mandato, lançada no endosso, confere ao endossatário o exercício dos direitos inerentes ao título, salvo restrição expressamente estatuída.
+- § 1.º O endossatário de endosso-mandato só pode endossar novamente o título na qualidade de procurador, com os mesmos poderes que recebeu.
+- § 2.º Com a morte ou a superveniente incapacidade do endossante, não perde eficácia o endosso-mandato.
+- § 3.º Pode o devedor opor ao endossatário de endosso-mandato somente as exceções que tiver contra o endossante.
+-----
+# Título à Ordem - Endosso-Penhor
+# Dispositivos Legais
+- Art. 918. A cláusula constitutiva de penhor, lançada no endosso, confere ao endossatário o exercício dos direitos inerentes ao título.
+- § 1.º O endossatário de endosso-penhor só pode endossar novamente o título na qualidade de procurador.
+- § 2.º Não pode o devedor opor ao endossatário de endosso-penhor as exceções que tinha contra o endossante, salvo se aquele tiver agido de má-fé.
+# Remissões Normativas
+- Vide arts. 1.458 a 1.460 do CC.
+-- tratam especificamente do penhor de títulos de crédito, estabelecendo como se constitui e os direitos do credor pignoratício.
+-----
+# Título à Ordem - Aquisição por Cessão Civil
+# Dispositivos Legais
+- Art. 919. A aquisição de título à ordem, por meio diverso do endosso, tem efeito de cessão civil.
+# Remissões Normativas
+- Vide arts. 286 a 298 do CC.
+-- tratam do instituto da cessão de crédito, que rege a transferência de direitos creditórios com regras distintas das do direito cambial, notadamente quanto à oponibilidade de exceções.
+-----
+# Título à Ordem - Endosso Póstumo
+# Dispositivos Legais
+- Art. 920. O endosso posterior ao vencimento produz os mesmos efeitos do anterior.
+# Remissões Normativas
+- Vide art. 8.º, § 2.º, do Decreto n. 2.044, de 31-12-1908.
+-- estabelece, para as letras de câmbio, que o endosso posterior ao protesto por falta de pagamento produz apenas os efeitos de uma cessão ordinária de crédito.
+- Vide art. 24 do Decreto n. 57.595, de 7-1-1966.
+-- estabelece, para as notas promissórias, que o endosso posterior ao protesto por falta de pagamento produz apenas os efeitos de uma cessão ordinária.
+- Vide art. 20 do Anexo I do Decreto n. 57.663, de 24-1-1966.
+-- estabelece, na Lei Uniforme de Genebra, que o endosso posterior ao vencimento produz os mesmos efeitos do anterior, mas se for posterior ao protesto, produz apenas efeitos de cessão ordinária.
+-----
+# Título à Ordem - Forma e Efeitos do Endosso
+# Dispositivos Legais
+- Art. 910. O endosso deve ser lançado pelo endossante no verso ou anverso do próprio título.
+- § 1.º Pode o endossante designar o endossatário, e para validade do endosso, dado no verso do título, é suficiente a simples assinatura do endossante.
+- § 2.º A transferência por endosso completa-se com a tradição do título.
+- § 3.º Considera-se não escrito o endosso cancelado, total ou parcialmente.
+# Remissões Normativas
+- Vide art. 324 do CC.
+-- trata da presunção de pagamento quando o título é entregue ao devedor, relacionando-se à tradição do título.
+-----
+# Título à Ordem - Legitimidade do Possuidor
+# Dispositivos Legais
+- Art. 911. Considera-se legítimo possuidor o portador do título à ordem com série regular e ininterrupta de endossos, ainda que o último seja em branco.
+- Parágrafo único. Aquele que paga o título está obrigado a verificar a regularidade da série de endossos, mas não a autenticidade das assinaturas.
+# Remissões Normativas
+- Vide art. 19 do Decreto n. 57.595, de 7-1-1966, art. 16 do Decreto n. 57.663, de 24-1-1966, e art. 22, caput, da Lei n. 7.357, de 2-9-1985.
+-- o art. 19 do Decreto 57.595/66 (Convenção sobre Notas Promissórias) trata dos efeitos do endosso póstumo (após o vencimento).
+-- o art. 16 do Decreto 57.663/66 (Lei Uniforme de Genebra) estabelece a regra da legitimidade do portador pela série ininterrupta de endossos para letras de câmbio.
+-- o art. 22 da Lei 7.357/85 (Lei do Cheque) repete a mesma regra de legitimação para o portador de cheque.
+-----
+# Título à Ordem - Condição e Nulidade do Endosso
+# Dispositivos Legais
+- Art. 912. Considera-se não escrita no endosso qualquer condição a que o subordine o endossante.
+- Parágrafo único. É nulo o endosso parcial.
+-----
+# Título à Ordem - Endosso em Branco
+# Dispositivos Legais
+- Art. 913. O endossatário de endosso em branco pode mudá-lo para endosso em preto, completando-o com o seu nome ou de terceiro; pode endossar novamente o título, em branco ou em preto; ou pode transferi-lo sem novo endosso.
+-----
+# Título à Ordem - Responsabilidade do Endossante
+# Dispositivos Legais
+- Art. 914. Ressalvada cláusula expressa em contrário, constante do endosso, não responde o endossante pelo cumprimento da prestação constante do título.
+- § 1.º Assumindo responsabilidade pelo pagamento, o endossante se torna devedor solidário.
+- § 2.º Pagando o título, tem o endossante ação de regresso contra os coobrigados anteriores.
+# Remissões Normativas
+- Vide arts. 275 a 285 do CC.
+-- tratam do regime jurídico da solidariedade passiva, no qual o credor pode exigir a dívida integral de qualquer um dos devedores solidários.
+-----
+# Título ao Portador - Transferência
+# Dispositivos Legais
+- Art. 904. A transferência de título ao portador se faz por simples tradição.
+-----
+# Título ao Portador - Direito à Prestação
+# Dispositivos Legais
+- Art. 905. O possuidor de título ao portador tem direito à prestação nele indicada, mediante a sua simples apresentação ao devedor.
+- Parágrafo único. A prestação é devida ainda que o título tenha entrado em circulação contra a vontade do emitente.
+# Remissões Normativas
+- Vide art. 311 do CC.
+-- trata da presunção de que o portador da quitação está autorizado a receber o pagamento.
+-----
+# Título ao Portador - Oposição de Exceções
+# Dispositivos Legais
+- Art. 906. O devedor só poderá opor ao portador exceção fundada em direito pessoal, ou em nulidade de sua obrigação.
+# Remissões Normativas
+- Vide art. 371 do CC.
+-- trata da compensação de dívidas, que é uma forma de exceção pessoal.
+- Vide art. 51 do Decreto n. 2.044, de 31-12-1908 (letras de câmbio).
+-- trata da responsabilidade do sacado que paga a letra de câmbio antes do vencimento.
+-----
+# Título ao Portador - Nulidade por Falta de Autorização Legal
+# Dispositivos Legais
+- Art. 907. É nulo o título ao portador emitido sem autorização de lei especial.
+# Remissões Normativas
+- O art. 292 do CP dispõe sobre a emissão de título ao portador sem permissão legal.
+-- tipifica como crime a emissão de título ao portador (nota, bilhete, ficha, etc.) sem a devida permissão legal.
+-----
+# Título ao Portador - Substituição por Dilaceração
+# Dispositivos Legais
+- Art. 908. O possuidor de título dilacerado, porém identificável, tem direito a obter do emitente a substituição do anterior, mediante a restituição do primeiro e o pagamento das despesas.
+-----
+# Título ao Portador - Perda ou Extravio
+# Dispositivos Legais
+- Art. 909. O proprietário, que perder ou extraviar título, ou for injustamente desapossado dele, poderá obter novo título em juízo, bem como impedir sejam pagos a outrem capital e rendimentos.
+- Parágrafo único. O pagamento, feito antes de ter ciência da ação referida neste artigo, exonera o devedor, salvo se se provar que ele tinha conhecimento do fato.
+# Remissões Normativas
+- Vide arts. 321 e 1.268 do CC.
+-- o art. 321 trata do direito do devedor de exigir uma declaração que inutilize o título perdido para efetuar o pagamento.
+-- o art. 1.268 trata da transferência de propriedade de bem móvel por quem não é o dono (tradição a non domino), que se aplica à circulação do título ao portador.
+-----
