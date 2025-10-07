@@ -3,802 +3,371 @@
 
 
 
-# Aquisição da Personalidade Jurídica
+
+
+# Averbação em Registro Público
 # Dispositivos Legais
-- Art. 985. A sociedade adquire personalidade jurídica com a inscrição, no registro próprio e na forma da lei, dos seus atos constitutivos (arts. 45 e 1.150).
+- Art. 10. Far-se-á averbação em registro público:
+-- I – das sentenças que decretarem a nulidade ou anulação do casamento, o divórcio, a separação judicial e o restabelecimento da sociedade conjugal;
+-- II – dos atos judiciais ou extrajudiciais que declararem ou reconhecerem a filiação;
+-- III – (Revogado pela Lei n. 12.010, de 3-8-2009.)
 # Remissões Normativas
-- LRP: vide Lei n. 6.015, de 31-12-1973.
--- a Lei de Registros Públicos regula, entre outros, o Registro Civil das Pessoas Jurídicas, onde são inscritas as sociedades simples.
-- Sobre registro público de empresas mercantis e atividades afins: vide Lei n. 8.934, de 18-11-1994, regulamentada pelo Decreto n. 1.800, de 30-1-1996.
--- dispõe sobre o Registro Público de Empresas Mercantis, a cargo das Juntas Comerciais, onde são inscritas as sociedades empresárias.
+- Vide Emenda Constitucional n. 66, de 13-7-2010, que instituiu o divórcio direto.
+- Vide art. 226, § 6.º, da CF.
+-- estabelece que o casamento civil pode ser dissolvido pelo divórcio.
+- Da dissolução da sociedade e do vínculo conjugal no CC: arts. 1.571 a 1.582.
+-- O art. 1.571 trata das causas de término da sociedade conjugal.
+-- O art. 1.572 trata da caracterização da impossibilidade da comunhão de vida para o divórcio.
+-- O art. 1.573 trata dos atos que podem caracterizar a impossibilidade da comunhão de vida.
+-- O art. 1.574 trata da separação consensual.
+-- O art. 1.575 trata dos efeitos da separação judicial quanto aos bens.
+-- O art. 1.576 trata da manutenção dos direitos e deveres dos pais em relação aos filhos.
+-- O art. 1.577 trata da possibilidade de o cônjuge manter o nome de casado após a separação.
+-- O art. 1.578 trata dos efeitos da separação judicial sobre os bens.
+-- O art. 1.579 trata dos efeitos do divórcio.
+-- O art. 1.580 trata do prazo para a conversão da separação em divórcio (parcialmente superado pela EC 66/2010).
+-- O art. 1.581 trata da possibilidade de o divórcio ser requerido por um só dos cônjuges.
+-- O art. 1.582 trata do pedido de restabelecimento da sociedade conjugal.
+- Vide art. 29, § 1.º, a, da LRP.
+-- estabelece que serão averbadas as sentenças de nulidade ou anulação de casamento, divórcio, separação judicial e restabelecimento da sociedade conjugal.
+- Vide Lei n. 6.515, de 26-12-1977 (Lei do Divórcio).
+- Do reconhecimento dos filhos no CC: arts. 1.607 a 1.617.
+-- O art. 1.607 trata da impossibilidade de o reconhecimento ser sujeito a condição ou termo.
+-- O art. 1.608 trata da possibilidade de o filho já falecido ser reconhecido.
+-- O art. 1.609 trata das formas de reconhecimento dos filhos.
+-- O art. 1.610 trata da irrevogabilidade do reconhecimento.
+-- O art. 1.611 trata do reconhecimento de filho por menor.
+-- O art. 1.612 trata da proibição de se revelar a origem da filiação no registro.
+-- O art. 1.613 trata da proibição de se contestar a maternidade.
+-- O art. 1.614 trata dos efeitos do reconhecimento.
+-- O art. 1.615 trata do reconhecimento de filho decorrente de relação extraconjugal.
+-- O art. 1.616 trata da equiparação dos efeitos da sentença de investigação de paternidade ao reconhecimento.
+-- O art. 1.617 trata do direito do filho reconhecido à herança.
+- Vide arts. 26 e 27 do ECA.
+-- O art. 26 trata das formas de reconhecimento do estado de filiação.
+-- O art. 27 trata da irrevogabilidade do reconhecimento de filiação.
+- Vide Lei n. 8.560, de 29-12-1992, que regula a investigação de paternidade.
 -----
-# Contrato de Sociedade
+# Atos Sujeitos a Registro Público
 # Dispositivos Legais
-- Art. 981. Celebram contrato de sociedade as pessoas que reciprocamente se obrigam a contribuir, com bens ou serviços, para o exercício de atividade econômica e a partilha, entre si, dos resultados.
--- A Lei n. 14.195, de 26-8-2021, propôs alteração neste artigo, porém teve seu texto vetado.
-- Parágrafo único. A atividade pode restringir-se à realização de um ou mais negócios determinados.
+- Art. 9.º Serão registrados em registro público:
+-- I – os nascimentos, casamentos e óbitos;
+-- II – a emancipação por outorga dos pais ou por sentença do juiz;
+-- III – a interdição por incapacidade absoluta ou relativa;
+-- IV – a sentença declaratória de ausência e de morte presumida.
 # Remissões Normativas
-- Vide Súmula 329 do STF.
--- trata da não incidência do imposto de transmissão "causa mortis" sobre a transferência de bens de sociedades civis com fins lucrativos.
+- Registros Públicos: Lei n. 6.015, de 31-12-1973.
+-- dispõe sobre os registros públicos e dá outras providências.
+- Registro civil dos índios: Lei n. 6.001, de 19-12-1973 (Estatuto do Índio), e art. 50, § 2.º, da LRP.
+-- A Lei n. 6.001 dispõe sobre o Estatuto do Índio.
+-- O art. 50, § 2º, da LRP, trata da faculdade do registro de nascimento do indígena no Registro Civil de Pessoas Naturais.
+- Sobre o estado que resulta do registro de nascimento, vide art. 1.604 do CC.
+-- estabelece que ninguém pode vindicar estado contrário ao que resulta do registro de nascimento, salvo provando-se erro ou falsidade do registro.
+- Sobre registro de casamento, vide arts. 1.512, parágrafo único, 1.516, 1.545, 1.546 e 1.604 do CC.
+-- O art. 1.512, parágrafo único, trata da gratuidade da habilitação de casamento.
+-- O art. 1.516 trata do registro do casamento religioso para efeitos civis.
+-- O art. 1.545 trata da nulidade do casamento por vício de idade.
+-- O art. 1.546 trata do registro da sentença de nulidade ou anulação do casamento.
+-- O art. 1.604 trata da presunção de veracidade do registro de nascimento.
+- Vide art. 725, I, do CPC.
+-- trata do processamento da emancipação como procedimento de jurisdição voluntária.
+- Sobre registro de nascimento inexistente, parto alheio como próprio, ocultação ou substituição de recém-nascido e sonegação do estado de filiação, dispõe o CP, arts. 241, 242 e 243.
+-- O art. 241 trata do crime de registrar nascimento inexistente.
+-- O art. 242 trata do crime de dar parto alheio como próprio, registrar filho de outrem como seu, ou ocultar recém-nascido.
+-- O art. 243 trata do crime de deixar em asilo de expostos ou outra instituição de assistência filho próprio ou alheio, para ocultar a desonra própria.
+- Vide art. 18 da LINDB.
+-- trata da aplicação de tratados, convenções e regras de direito internacional.
+- Sobre o registro de nascimento de menores abandonados, vide arts. 29 a 32, 50 a 66, 70 e 77 a 88 da LRP.
+-- Os arts. 29 a 32 tratam das disposições gerais sobre o registro civil.
+-- Os arts. 50 a 66 tratam do registro de nascimento.
+-- O art. 70 trata das tabelas de nascimentos, casamentos e óbitos.
+-- Os arts. 77 a 88 tratam do registro de óbito.
+- Vide Lei n. 12.662, de 5-6-2012 – Declaração de Nascido Vivo – DNV.
+-- assegura a validade nacional da Declaração de Nascido Vivo (DNV) e regula sua emissão.
+- Vide art. 5.º, parágrafo único, I, do CC.
+-- trata da emancipação pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público.
+- Vide art. 226, § 5.º, da CF.
+-- estabelece que os direitos e deveres referentes à sociedade conjugal são exercidos igualmente pelo homem e pela mulher.
+- Vide arts. 13, § 2.º, 29, IV, e 89 e s. da LRP.
+-- O art. 13, § 2º, trata da obrigatoriedade do registro de atos para produção de efeitos perante terceiros.
+-- O art. 29, IV, trata dos livros do registro civil.
+-- Os arts. 89 e seguintes tratam do registro da emancipação, interdição, ausência e morte presumida.
 -----
-# Sociedade Empresária e Sociedade Simples
+# Comoriência
 # Dispositivos Legais
-- Art. 982. Salvo as exceções expressas, considera-se empresária a sociedade que tem por objeto o exercício de atividade própria de empresário sujeito a registro (art. 967); e, simples, as demais.
--- A Lei n. 14.195, de 26-8-2021, propôs a revogação deste artigo, todavia teve seu texto vetado.
-- Parágrafo único. Independentemente de seu objeto, considera-se empresária a sociedade por ações; e, simples, a cooperativa.
+- Art. 8.º Se dois ou mais indivíduos falecerem na mesma ocasião, não se podendo averiguar se algum dos comorientes precedeu aos outros, presumir-se-ão simultaneamente mortos.
+-----
+# Morte Presumida sem Decretação de Ausência
+# Dispositivos Legais
+- Art. 7.º Pode ser declarada a morte presumida, sem decretação de ausência:
+-- I – se for extremamente provável a morte de quem estava em perigo de vida;
+-- II – se alguém, desaparecido em campanha ou feito prisioneiro, não for encontrado até dois anos após o término da guerra.
+-- Parágrafo único. A declaração da morte presumida, nesses casos, somente poderá ser requerida depois de esgotadas as buscas e averiguações, devendo a sentença fixar a data provável do falecimento.
 # Remissões Normativas
-- Sobre registro público de empresas mercantis e atividades afins: vide Lei n. 8.934, de 18-11-1994, regulamentada pelo Decreto n. 1.800, de 30-1-1996.
--- dispõe sobre o órgão competente para o registro das sociedades empresárias (Juntas Comerciais).
-- Vide arts. 1.088 e 1.089 (sociedade anônima), e 1.093 a 1.096 (sociedade cooperativa) do CC.
--- remetem a regulação das sociedades por ações e das cooperativas às suas leis especiais.
-- Sobre sociedades cooperativas: vide Lei n. 5.764, de 16-12-1971.
--- define a Política Nacional de Cooperativismo e institui o regime jurídico das sociedades cooperativas.
-- Sociedades por ações: vide Lei n. 6.404, de 15-12-1976.
--- é a lei especial que rege as sociedades anônimas.
+- Da ausência no CC: arts. 22 a 39.
+-- O art. 22 trata da declaração de ausência e nomeação de curador.
+-- O art. 23 trata da declaração de ausência a requerimento do Ministério Público.
+-- O art. 24 trata dos poderes do cônjuge como curador do ausente.
+-- O art. 25 trata dos poderes e obrigações do curador nomeado pelo juiz.
+-- O art. 26 trata do início da sucessão provisória.
+-- O art. 27 trata dos legitimados a requerer a sucessão provisória.
+-- O art. 28 trata da sentença da sucessão provisória.
+-- O art. 29 trata da representação passiva do ausente.
+-- O art. 30 trata da posse dos bens pelos herdeiros e da necessidade de caução.
+-- O art. 31 trata da posse de ascendentes, descendentes e cônjuge.
+-- O art. 32 trata dos frutos e rendimentos dos bens do ausente.
+-- O art. 33 trata do comparecimento do ausente ou de seus sucessores.
+-- O art. 34 trata da exclusão de herdeiros provisórios.
+-- O art. 35 trata da alienação dos imóveis do ausente.
+-- O art. 36 trata dos efeitos do retorno do ausente na sucessão provisória.
+-- O art. 37 trata da conversão da sucessão provisória em definitiva.
+-- O art. 38 trata da sucessão definitiva por motivo de idade do ausente.
+-- O art. 39 trata dos efeitos do regresso do ausente na sucessão definitiva.
+- Vide art. 88 da LRP.
+-- trata do registro da sentença declaratória de morte presumida.
+- A Lei n. 9.140, de 4-12-1995, reconhece como mortas pessoas desaparecidas em razão de participação, ou acusação de participação, em atividades políticas, no período de 2-9-1961 a 5-10-1988.
 -----
-# Formas da Sociedade Empresária e da Sociedade Simples
+# Fim da Pessoa Natural
 # Dispositivos Legais
-- Art. 983. A sociedade empresária deve constituir-se segundo um dos tipos regulados nos arts. 1.039 a 1.092; a sociedade simples pode constituir-se de conformidade com um desses tipos, e, não o fazendo, subordina-se às normas que lhe são próprias.
--- A Lei n. 14.195, de 26-8-2021, propôs alteração neste artigo, porém teve seu texto vetado.
-- Parágrafo único. Ressalvam-se as disposições concernentes à sociedade em conta de participação e à cooperativa, bem como as constantes de leis especiais que, para o exercício de certas atividades, imponham a constituição da sociedade segundo determinado tipo.
+- Art. 6.º A existência da pessoa natural termina com a morte; presume-se esta, quanto aos ausentes, nos casos em que a lei autoriza a abertura de sucessão definitiva.
 # Remissões Normativas
-- Vide arts. 966, 997 a 1.038 (sociedade simples) e 2.037 do CC.
--- o art. 966 conceitua empresário.
--- os arts. 997 a 1.038 estabelecem as normas da sociedade simples, aplicáveis subsidiariamente.
--- o art. 2.037 ressalva a vigência das leis especiais sobre tipos societários.
-- Vide arts. 991 a 996 (sociedade em conta de participação) e 1.093 a 1.096 (sociedade cooperativa) do CC.
--- tratam dos tipos societários com regramento especial ressalvados no parágrafo único.
+- Vide arts. 22 a 39 do CC.
+-- O art. 22 trata da declaração de ausência e nomeação de curador.
+-- O art. 23 trata da declaração de ausência a requerimento do Ministério Público.
+-- O art. 24 trata dos poderes do cônjuge como curador do ausente.
+-- O art. 25 trata dos poderes e obrigações do curador nomeado pelo juiz.
+-- O art. 26 trata do início da sucessão provisória após um ano da arrecadação dos bens do ausente.
+-- O art. 27 trata dos legitimados a requerer a sucessão provisória.
+-- O art. 28 trata da sentença da sucessão provisória e do início do inventário.
+-- O art. 29 trata da representação passiva do ausente após a abertura da sucessão provisória.
+-- O art. 30 trata da posse dos bens pelos herdeiros e da necessidade de caução.
+-- O art. 31 trata da posse de ascendentes, descendentes e cônjuge, dispensando-os da caução.
+-- O art. 32 trata dos frutos e rendimentos dos bens do ausente.
+-- O art. 33 trata do comparecimento do ausente ou de seus sucessores.
+-- O art. 34 trata da exclusão de herdeiros provisórios por herdeiros necessários ou de grau mais próximo.
+-- O art. 35 trata dos imóveis do ausente e sua alienação.
+-- O art. 36 trata dos efeitos do retorno do ausente nos dez anos seguintes à abertura da sucessão provisória.
+-- O art. 37 trata da conversão da sucessão provisória em definitiva após dez anos.
+-- O art. 38 trata da sucessão definitiva a requerimento dos interessados se o ausente contar oitenta anos e as últimas notícias datarem de cinco anos.
+-- O art. 39 trata dos efeitos do regresso do ausente após a sucessão definitiva.
+- Vide arts. 744 e 745 (declaração de ausência) do CPC.
+-- O art. 744 trata do procedimento para a declaração de ausência.
+-- O art. 745 trata do procedimento para a sucessão provisória.
+- Efeitos da morte no direito penal – arts. 107, I, do CP e 62 do CPP.
+-- O art. 107, I, do CP, extingue a punibilidade do agente pela morte.
+-- O art. 62 do CPP, determina que, no caso de morte do réu, o juiz declarará extinta a punibilidade.
+- O Decreto-lei n. 5.782, de 30-8-1943, dispõe sobre morte presumida de servidor público.
+- Vide arts. 77 a 88 da LRP.
+-- O art. 77 trata da obrigatoriedade do assento de óbito.
+-- O art. 78 trata do local do registro.
+-- O art. 79 elenca as pessoas obrigadas a fazer a declaração de óbito.
+-- O art. 80 especifica o conteúdo do assento de óbito.
+-- O art. 81 trata do assento de óbito de pessoa desconhecida.
+-- O art. 82 trata do registro de óbito ocorrido a bordo de navio ou aeronave.
+-- O art. 83 trata da cremação de cadáver.
+-- O art. 84 trata do prazo para o registro.
+-- O art. 85 trata do registro de óbito de brasileiro ocorrido no estrangeiro.
+-- O art. 86 trata da anotação do óbito nos registros de casamento e nascimento.
+-- O art. 87 trata da gratuidade do registro de óbito.
+-- O art. 88 trata do registro da morte presumida.
+- Vide art. 3.º da Lei n. 9.434, de 4-2-1997.
+-- trata dos critérios para a retirada de tecidos, órgãos e partes do corpo de pessoas falecidas para transplantes ou outra finalidade terapêutica, exigindo a constatação da morte encefálica.
+- Vide Súmula 331 do STF.
+-- afirma que a exigência de caução para o recebimento dos bens do ausente é legítima.
 -----
-# Inscrição da Sociedade Rural
+# Fim da Menoridade e Emancipação
 # Dispositivos Legais
-- Art. 984. A sociedade que tenha por objeto o exercício de atividade própria de empresário rural e seja constituída, ou transformada, de acordo com um dos tipos de sociedade empresária, pode, com as formalidades do art. 968, requerer inscrição no Registro Público de Empresas Mercantis da sua sede, caso em que, depois de inscrita, ficará equiparada, para todos os efeitos, à sociedade empresária.
-- Parágrafo único. Embora já constituída a sociedade segundo um daqueles tipos, o pedido de inscrição se subordinará, no que for aplicável, às normas que regem a transformação.
+- Art. 5.º A menoridade cessa aos dezoito anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil.
+-- Parágrafo único. Cessará, para os menores, a incapacidade:
+-- I – pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, independentemente de homologação judicial, ou por sentença do juiz, ouvido o tutor, se o menor tiver dezesseis anos completos;
+-- II – pelo casamento;
+-- III – pelo exercício de emprego público efetivo;
+-- IV – pela colação de grau em curso de ensino superior;
+-- V – pelo estabelecimento civil ou comercial, ou pela existência de relação de emprego, desde que, em função deles, o menor com dezesseis anos completos tenha economia própria.
 # Remissões Normativas
-- Vide arts. 970, 971 e 1.113 a 1.115 do CC.
--- os arts. 970 e 971 tratam do tratamento favorecido e da inscrição facultativa do empresário rural individual.
--- os arts. 1.113 a 1.115 regulam a operação de transformação de sociedades.
-- Sobre registro público de empresas mercantis e atividades afins: vide Lei n. 8.934, de 18-11-1994, regulamentada pelo Decreto n. 1.800, de 30-1-1996.
--- dispõe sobre o órgão onde a sociedade rural pode, facultativamente, se inscrever para equiparar-se à sociedade empresária.
+- Vide art. 666 do CC.
+-- trata da validade dos atos praticados por mandatário menor, entre 16 e 18 anos, sem assistência.
+- Vide arts. 27, 65 e 115 do CP.
+-- O art. 27 trata da inimputabilidade penal dos menores de 18 anos.
+-- O art. 65, I, trata da menoridade relativa como circunstância que sempre atenua a pena.
+-- O art. 115 trata da redução pela metade dos prazos de prescrição quando o criminoso era, ao tempo do crime, menor de 21 anos.
+- Vide arts. 15, 34, 50, 52, 262 e 564, III, c, do CPP.
+-- O art. 15 trata do inquérito policial para apuração da imputabilidade do indiciado.
+-- O art. 34 trata do direito de representação do ofendido ou de seu representante legal.
+-- O art. 50 trata da renúncia ao direito de queixa, que só pode ser exercida pelo representante legal do menor.
+-- O art. 52 trata da queixa em crime contra a honra de menor de 18 anos.
+-- O art. 262 trata da nomeação de curador ao réu menor de 21 anos.
+-- O art. 564, III, c, prevê a nulidade processual por falta de nomeação de curador ao réu menor.
+- Vide art. 148, parágrafo único, e, do ECA.
+-- trata da competência da Justiça da Infância e da Juventude para suprir o consentimento dos pais ou responsáveis para o casamento de quem ainda não alcançou a idade núbil.
+- A capacidade civil dos índios é de 21 anos, de acordo com o art. 9.º, I, da Lei n. 6.001, de 19-12-1973.
+- O art. 73 da Lei n. 4.375, de 17-8-1964, estabelece que a incapacidade civil do menor, para efeito do Serviço Militar, cessará na data em que completar 17 anos.
+- Vide art. 226, § 5.º, da CF.
+-- estabelece que os direitos e deveres referentes à sociedade conjugal são exercidos igualmente pelo homem e pela mulher.
+- Vide arts. 1.635, II, e 1.763, I, do CC.
+-- O art. 1.635, II, trata da extinção do poder familiar pela emancipação.
+-- O art. 1.763, I, trata da cessação da tutela pela maioridade ou emancipação do menor.
+- Sobre o registro da emancipação, vide arts. 9.º, II, do CC e 89 e s. da LRP.
+-- O art. 9º, II, do CC, trata do registro público da emancipação concedida pelos pais.
+-- Os arts. 89 e seguintes da Lei de Registros Públicos dispõem sobre o procedimento de registro da emancipação.
+- Sobre emancipação do menor sob tutela, vide art. 725, I, do CPC.
+-- submete o pedido de emancipação ao procedimento de jurisdição voluntária.
+- Vide CF, art. 226.
+-- trata da especial proteção do Estado à família.
+- Vide art. 5.º, V, da Lei n. 8.112, de 11-12-1990.
+-- estabelece a idade mínima de 18 anos como requisito para a investidura em cargo público.
+- Vide art. 7.º, XXXIII, da CF.
+-- proíbe o trabalho noturno, perigoso ou insalubre a menores de 18 e qualquer trabalho a menores de 16, salvo na condição de aprendiz a partir dos 14 anos.
+- Vide arts. 966 e 972 do CC.
+-- O art. 966 define a figura do empresário.
+-- O art. 972 estabelece que podem exercer a atividade de empresário os que estiverem em pleno gozo da capacidade civil e não forem legalmente impedidos.
 -----
-# Capacidade para o Exercício da Atividade Empresarial
+# Incapacidade Relativa
 # Dispositivos Legais
-- Art. 972. Podem exercer a atividade de empresário os que estiverem em pleno gozo da capacidade civil e não forem legalmente impedidos.
+- Art. 4.º São incapazes, relativamente a certos atos ou à maneira de os exercer:
+-- I – os maiores de dezesseis e menores de dezoito anos;
+-- II – os ébrios habituais e os viciados em tóxico;
+-- III – aqueles que, por causa transitória ou permanente, não puderem exprimir sua vontade;
+-- IV – os pródigos.
+-- Parágrafo único. A capacidade dos indígenas será regulada por legislação especial.
 # Remissões Normativas
-- Vide art. 5.º do CC.
--- define a maioridade civil aos dezoito anos, quando a pessoa se torna plenamente capaz.
-- Legalmente impedidos: art. 54, II, a, da CF; arts. 147, § 1.º, e 159, § 2.º, da LSA; art. 1.011, § 1.º, do CC; e art. 181 da Lei n. 11.101, de 9-2-2005 (Lei de Falências), art. 117, X, da Lei n. 8.112, de 11-12-1990, art. 36, I e II, da LOMAN – Lei Orgânica da Magistratura Nacional e art. 44, III, da Lei n. 8.625, de 12-2-1993.
--- o art. 54, II, a, da CF, impede Deputados e Senadores de firmar contratos com a Administração Pública.
--- o art. 147, § 1º, da Lei das S.A., veda a eleição de certas pessoas para o conselho de administração.
--- o art. 1.011, § 1º, do CC, impede pessoas condenadas por certos crimes de serem administradoras de sociedades.
--- o art. 181 da Lei de Falências inabilita o condenado por crime falimentar para o exercício de atividade empresarial.
--- o art. 117, X, da Lei 8.112/90, proíbe o servidor público de participar de gerência ou administração de sociedade privada.
--- o art. 36 da LOMAN proíbe os magistrados de exercerem o comércio ou cargos de direção em empresas.
--- o art. 44, III, da Lei 8.625/93, proíbe os membros do Ministério Público de exercerem o comércio.
+- Os arts. 34, 50 e 52 do CPP dispõem sobre a representação do menor na ação penal.
+-- O art. 34 trata do direito de representação do ofendido ou de seu representante legal.
+-- O art. 50 trata da renúncia ao direito de queixa.
+-- O art. 52 trata da representação contra crimes à honra quando o ofendido é menor.
+- Vide arts. 71, 72 e 447, § 1.º, do CPC.
+-- O art. 71 trata da necessidade de assistência ao incapaz em juízo.
+-- O art. 72 trata da nomeação de curador especial.
+-- O art. 447, § 1º, trata da incapacidade da testemunha.
+- Vide art. 142 do ECA.
+-- trata da competência da Justiça da Infância e da Juventude para conhecer de pedidos de autorização para trabalho de crianças e adolescentes.
+- Vide arts. 180, 666, 1.634, V, 1.747, I, e 1.860, parágrafo único, do CC.
+-- O art. 180 trata da validade dos atos do menor entre 16 e 18 anos se não houver pedido de anulação.
+-- O art. 666 estende as regras do mandato aos atos que o menor de 18 e maior de 16 anos pratica sem assistência.
+-- O art. 1.634, V, trata do poder familiar de conceder ou negar consentimento para casar.
+-- O art. 1.747, I, trata da competência do tutor de representar o menor até os 16 anos e assisti-lo após essa idade.
+-- O art. 1.860, parágrafo único, permite que os maiores de 16 anos façam testamento.
+- A Lei n. 4.375, de 17-8-1964, estabelece em seu art. 73 que, para efeito do serviço militar, cessará a incapacidade civil do menor, na data em que completar 17 anos.
+- Vide art. 1.767, III, do CC.
+-- trata da sujeição à curatela dos ébrios habituais e dos viciados em tóxicos.
+- Sobre incapacidade relativa dos toxicômanos, dispõe a Lei n. 11.343, de 23-8-2006.
+- A Lei n. 10.216, de 6-4-2001, dispõe sobre a proteção e os direitos das pessoas portadoras de transtornos mentais.
+- Vide art. 1.767 do CC.
+-- trata das pessoas que estão sujeitas à curatela.
+- Vide arts. 1.767, V, e 1.782 do CC.
+-- O art. 1.767, V, sujeita os pródigos à curatela.
+-- O art. 1.782 limita a curatela do pródigo aos atos de disposição e oneração de bens.
+- Sobre assistência, em juízo, aos relativamente incapazes, vide arts. 72 e 76 do CPC.
+-- O art. 72 trata da nomeação de curador especial.
+-- O art. 76 trata da regularização da capacidade processual.
+- Renúncia do direito de queixa criminal pelo representante legal do menor – dispõe o CPP, art. 50, parágrafo único.
+- Sobre proteção do trabalho do menor, vide arts. 402 a 441 da CLT e 60 a 69 do ECA.
+-- Os arts. 402 a 441 da CLT tratam da proteção ao trabalho do menor, incluindo disposições sobre idade mínima, jornada, aprendizagem e atividades proibidas.
+-- Os arts. 60 a 69 do ECA tratam do direito à profissionalização e à proteção no trabalho.
+- Vide art. 50, § 2.º, da LRP.
+-- trata do registro de nascimento do indígena no Registro Civil de Pessoas Naturais.
+- O Decreto n. 7.747, de 5-6-2012, institui a Política Nacional de Gestão Territorial e Ambiental de Terras Indígenas – PNGATI, e dá outras providências.
 -----
-# Responsabilidade do Empresário Legalmente Impedido
+# Incapacidade Absoluta
 # Dispositivos Legais
-- Art. 973. A pessoa legalmente impedida de exercer atividade própria de empresário, se a exercer, responderá pelas obrigações contraídas.
+- Art. 3.º São absolutamente incapazes de exercer pessoalmente os atos da vida civil os menores de 16 (dezesseis) anos.
 # Remissões Normativas
-- Vide art. 158 da LSA (responsabilidade dos administradores).
--- trata da responsabilidade civil dos administradores de sociedades anônimas por prejuízos que causarem.
+- Vide arts. 5.º, 76, 105, 115 a 120, 166, I, 198, 471, 543, 1.634, 1.690, 1.728 e s. do CC.
+-- O art. 5º trata da cessação da incapacidade.
+-- O art. 76 estabelece o domicílio do incapaz como sendo o de seu representante ou assistente.
+-- O art. 105 trata da incapacidade relativa de uma das partes.
+-- O art. 115 trata da condição suspensiva e resolutiva.
+-- O art. 116 trata das condições defesas.
+-- O art. 117 trata da invalidade dos negócios jurídicos com condições suspensivas ilícitas.
+-- O art. 118 trata da subordinação do negócio jurídico a termo.
+-- O art. 119 trata dos efeitos do termo inicial.
+-- O art. 120 trata do prazo em favor do devedor.
+-- O art. 166, I, trata da nulidade do negócio jurídico celebrado por pessoa absolutamente incapaz.
+-- O art. 198, I, impede o curso da prescrição contra os absolutamente incapazes.
+-- O art. 471 trata da responsabilidade pré-contratual.
+-- O art. 543 permite, mas dispensa aceitação, de doação pura a absolutamente incapaz.
+-- O art. 1.634 trata dos deveres do poder familiar.
+-- O art. 1.690 trata da administração dos bens dos filhos.
+-- Os arts. 1.728 e seguintes tratam da curatela dos interditos.
+- Vide arts. 71, 72 e 447, § 1.º, do CPC.
+-- O art. 71 trata da representação do incapaz em juízo.
+-- O art. 72 trata da nomeação do curador especial para o incapaz.
+-- O art. 447, § 1º, estabelece que os menores de 16 anos são incapazes de depor como testemunhas.
 -----
-# Continuação da Empresa por Incapaz
+# Início da Personalidade Civil
 # Dispositivos Legais
-- Art. 974. Poderá o incapaz, por meio de representante ou devidamente assistido, continuar a empresa antes exercida por ele enquanto capaz, por seus pais ou pelo autor de herança.
-- § 1.º Nos casos deste artigo, precederá autorização judicial, após exame das circunstâncias e dos riscos da empresa, bem como da conveniência em continuá-la, podendo a autorização ser revogada pelo juiz, ouvidos os pais, tutores ou representantes legais do menor ou do interdito, sem prejuízo dos direitos adquiridos por terceiros.
-- § 2.º Não ficam sujeitos ao resultado da empresa os bens que o incapaz já possuía, ao tempo da sucessão ou da interdição, desde que estranhos ao acervo daquela, devendo tais fatos constar do alvará que conceder a autorização.
-- § 3.º O Registro Público de Empresas Mercantis a cargo das Juntas Comerciais deverá registrar contratos ou alterações contratuais de sociedade que envolva sócio incapaz, desde que atendidos, de forma conjunta, os seguintes pressupostos:
--- § 3.º, caput, acrescentado pela Lei n. 12.399, de 1.º-4-2011.
-- I – o sócio incapaz não pode exercer a administração da sociedade;
--- Inciso I acrescentado pela Lei n. 12.399, de 1.º-4-2011.
-- II – o capital social deve ser totalmente integralizado;
--- Inciso II acrescentado pela Lei n. 12.399, de 1.º-4-2011.
-- III – o sócio relativamente incapaz deve ser assistido e o absolutamente incapaz deve ser representado por seus representantes legais.
--- Inciso III acrescentado pela Lei n. 12.399, de 1.º-4-2011.
+- Art. 2.º A personalidade civil da pessoa começa do nascimento com vida; mas a lei põe a salvo, desde a concepção, os direitos do nascituro.
 # Remissões Normativas
-- Vide arts. 3.º a 5.º e 976 do CC.
--- os arts. 3º a 5º definem a incapacidade absoluta e relativa.
--- o art. 976 estende as regras sobre a continuação da empresa pelo incapaz aos casos em que ele se torna sócio.
+- Vide arts. 5.º, 115 a 120, 166, I, 542, 1.609, parágrafo único, 1.690, 1.779, caput, 1.798, 1.799, I, 1.800 e 1.952 do CC.
+-- O art. 5º trata da maioridade civil.
+-- O art. 115 trata da condição suspensiva e resolutiva.
+-- O art. 116 trata das condições defesas.
+-- O art. 117 trata da invalidade dos negócios jurídicos com condições suspensivas ilícitas.
+-- O art. 118 trata da subordinação do negócio jurídico a termo inicial ou final.
+-- O art. 119 trata dos efeitos do termo inicial.
+-- O art. 120 trata do prazo em favor do devedor.
+-- O art. 166, I, trata da nulidade do negócio jurídico celebrado por pessoa absolutamente incapaz.
+-- O art. 542 trata da validade da doação feita ao nascituro.
+-- O art. 1.609, parágrafo único, trata do reconhecimento de filho que pode preceder o nascimento.
+-- O art. 1.690 trata do usufruto e administração dos bens dos filhos menores pelos pais.
+-- O art. 1.779, caput, estende as disposições sobre a tutela à curatela.
+-- O art. 1.798 legitima para suceder as pessoas nascidas ou já concebidas no momento da abertura da sucessão.
+-- O art. 1.799, I, permite nomear como herdeiros os filhos, ainda não concebidos, de pessoas indicadas pelo testador.
+-- O art. 1.800 trata da curatela dos bens do herdeiro nascituro.
+-- O art. 1.952 trata da substituição fideicomissária em favor de prole eventual.
+- Os arts. 124 a 128 do CP dispõem sobre o crime de aborto.
+-- O art. 124 tipifica o aborto provocado pela gestante ou com seu consentimento.
+-- O art. 125 tipifica o aborto provocado por terceiro, sem o consentimento da gestante.
+-- O art. 126 tipifica o aborto provocado por terceiro, com o consentimento da gestante.
+-- O art. 127 trata das formas qualificadas do crime de aborto.
+-- O art. 128 estabelece as causas de exclusão de ilicitude do aborto.
+- Vide arts. 50 a 66 da LRP.
+-- O art. 50 trata da obrigatoriedade do registro de nascimento.
+-- O art. 51 define os prazos para a declaração.
+-- O art. 52 elenca os obrigados a declarar o nascimento.
+-- O art. 53 regula o assento do natimorto.
+-- O art. 54 especifica o conteúdo do assento de nascimento.
+-- O art. 55 dispõe sobre o prenome e o sobrenome.
+-- O art. 56 permite a inversão da ordem dos sobrenomes.
+-- O art. 57 trata da alteração posterior do nome.
+-- O art. 58 trata da retificação do registro.
+-- O art. 59 trata da declaração de nascimento fora do prazo.
+-- O art. 60 regula o assento de nascimento de filho de brasileiro ocorrido no estrangeiro.
+-- O art. 61 trata da averbação de casamento dos pais.
+-- O art. 62 trata do assento de nascimento de filho extramatrimonial.
+-- O art. 63 trata da anotação de alteração de nome dos pais.
+-- O art. 64 trata da gratuidade do registro.
+-- O art. 65 determina a comunicação aos órgãos de estatística.
+-- O art. 66 trata do suprimento judicial do registro.
+- Vide arts. 7.º a 14 e 228 e 229 do ECA.
+-- O art. 7º trata do direito à proteção à vida e à saúde.
+-- O art. 8º assegura atendimento pré e perinatal à gestante.
+-- O art. 9º trata do acesso a programas de saúde.
+-- O art. 10 assegura o sistema de alojamento conjunto.
+-- O art. 11 assegura acesso integral às linhas de cuidado em saúde.
+-- O art. 12 trata da obrigatoriedade de identificação do recém-nascido.
+-- O art. 13 trata do atendimento a gestantes ou mães com interesse em entregar filho para adoção.
+-- O art. 14 trata do Sistema Único de Saúde.
+-- O art. 228 trata da inimputabilidade penal dos menores de dezoito anos.
+-- O art. 229 trata do dever dos pais de assistir, criar e educar os filhos menores.
+- Vide LINDB, art. 7.º.
+-- estabelece que a lei do país de domicílio da pessoa determina as regras sobre o começo e o fim da personalidade, o nome, a capacidade e os direitos de família.
+- Vide arts. 71, 178, II, 50 e 896 do CPC.
+-- O art. 71 trata da representação do incapaz em juízo.
+-- O art. 178, II, determina a intervenção do Ministério Público nos processos que envolvam interesse de incapaz.
+-- O art. 50 trata da sucessão da parte falecida pelo seu espólio ou sucessores.
+-- O art. 896 estabelece o procedimento para o depósito em consignação quando o credor for incapaz de receber.
+- Vide art. 4.º, item 1, do Decreto n. 678, de 6-11-1992 (Pacto de São José da Costa Rica).
+-- estabelece que toda pessoa tem o direito de que se respeite sua vida e que esse direito deve ser protegido pela lei, em geral, desde o momento da concepção.
 -----
-# Inscrição de Filial, Sucursal ou Agência
+# Capacidade Civil
 # Dispositivos Legais
-- Art. 969. O empresário que instituir sucursal, filial ou agência, em lugar sujeito à jurisdição de outro Registro Público de Empresas Mercantis, neste deverá também inscrevê-la, com a prova da inscrição originária.
-- Parágrafo único. Em qualquer caso, a constituição do estabelecimento secundário deverá ser averbada no Registro Público de Empresas Mercantis da respectiva sede.
+- Art. 1.º Toda pessoa é capaz de direitos e deveres na ordem civil.
 # Remissões Normativas
-- Vide art. 24, III, da CF.
--- estabelece a competência concorrente da União, dos Estados e do Distrito Federal para legislar sobre Juntas Comerciais.
-- Vide arts. 37 e 38 da Lei n. 8.934, de 18-11-1994 (Registro Público de Empresas Mercantis), regulamentada pelo Decreto n. 1.800, de 30-1-1996.
--- detalham os requisitos e os documentos necessários para os atos de registro, incluindo a abertura de filiais.
------
-# Tratamento Favorecido ao Empresário Rural e Pequeno Empresário
-# Dispositivos Legais
-- Art. 970. A lei assegurará tratamento favorecido, diferenciado e simplificado ao empresário rural e ao pequeno empresário, quanto à inscrição e aos efeitos daí decorrentes.
-# Remissões Normativas
-- Vide art. 1.179, § 2.º, do CC.
--- dispensa o pequeno empresário e o produtor rural da obrigação de seguir um sistema de contabilidade e levantar balanço patrimonial.
-- Vide art. 170, IX, da CF.
--- estabelece, como princípio da ordem econômica, o tratamento favorecido para as empresas de pequeno porte.
-- Vide arts. 1.º e 68 da Lei Complementar n. 123, de 14-12-2006, que institui o Estatuto Nacional da Microempresa e da Empresa de Pequeno Porte.
--- estabelecem as normas gerais do regime simplificado e o tratamento favorecido aplicável ao produtor rural.
------
-# Inscrição Facultativa do Empresário Rural
-# Dispositivos Legais
-- Art. 971. O empresário, cuja atividade rural constitua sua principal profissão, pode, observadas as formalidades de que tratam o art. 968 e seus parágrafos, requerer inscrição no Registro Público de Empresas Mercantis da respectiva sede, caso em que, depois de inscrito, ficará equiparado, para todos os efeitos, ao empresário sujeito a registro.
-- Parágrafo único. Aplica-se o disposto no caput deste artigo à associação que desenvolva atividade futebolística em caráter habitual e profissional, caso em que, com a inscrição, será considerada empresária, para todos os efeitos.
--- Parágrafo único acrescentado pela Lei n. 14.193, de 6-8-2021.
-# Remissões Normativas
-- Vide arts. 984 e 1.150 do CC.
--- o art. 984 trata da inscrição facultativa da sociedade rural.
--- o art. 1.150 trata da obrigatoriedade do registro para o empresário, regra excepcionada pelo art. 971.
-- Estatuto da Terra: Lei n. 4.504, de 30-11-1964.
--- define os princípios e normas da política agrária brasileira.
-- Direito Agrário: Lei n. 4.947, de 6-4-1966.
--- dispõe sobre normas de Direito Agrário, complementando o Estatuto da Terra.
-- Trabalho Rural: Lei n. 5.889, de 8-6-1973.
--- regula as relações de trabalho na atividade rural.
-- Registro Público de Empresas Mercantis: Lei n. 8.934, de 18-11-1994, regulamentada pelo Decreto n. 1.800, de 30-1-1996.
--- dispõe sobre o órgão onde o empresário rural pode, facultativamente, se inscrever.
------
-# Conceito de Empresário
-# Dispositivos Legais
-- Art. 966. Considera-se empresário quem exerce profissionalmente atividade econômica organizada para a produção ou a circulação de bens ou de serviços.
-- Parágrafo único. Não se considera empresário quem exerce profissão intelectual, de natureza científica, literária ou artística, ainda com o concurso de auxiliares ou colaboradores, salvo se o exercício da profissão constituir elemento de empresa.
-# Remissões Normativas
-- Vide arts. 972, 974, 975, 983, 2.031 e 2.037 do CC.
--- tratam da capacidade para ser empresário, da continuação da empresa por incapaz ou herdeiros e de regras de transição e aplicação da lei.
-- Vide art. 3.º da Lei Complementar n. 123, de 14-12-2006.
--- define os critérios de receita bruta para o enquadramento como microempresa (ME) ou empresa de pequeno porte (EPP).
-- Vide arts. 1.155 e 1.156 do CC.
--- tratam do nome empresarial e da firma do empresário individual (relacionado ao parágrafo único).
-- Vide Lei n. 9.610, de 19-2-1998 (direitos autorais).
--- regula as atividades dos profissionais de natureza literária e artística (relacionado ao parágrafo único).
------
-# Obrigatoriedade da Inscrição do Empresário
-# Dispositivos Legais
-- Art. 967. É obrigatória a inscrição do empresário no Registro Público de Empresas Mercantis da respectiva sede, antes do início de sua atividade.
-# Remissões Normativas
-- Vide arts. 982, 985 e 1.150 a 1.154 do CC.
--- tratam da distinção entre sociedade simples e empresária e das regras gerais do registro de pessoas jurídicas.
-- Vide arts. 32, II, 36, 37 e 38 da Lei n. 8.934, de 18-11-1994 (Registro Público de Empresas Mercantis), regulamentada pelo Decreto n. 1.800, de 30-1-1996.
--- dispõem sobre os atos obrigatórios de registro, seus prazos, efeitos e requisitos formais perante as Juntas Comerciais.
------
-# Requisitos para a Inscrição do Empresário
-# Dispositivos Legais
-- Art. 968. A inscrição do empresário far-se-á mediante requerimento que contenha:
-- I – o seu nome, nacionalidade, domicílio, estado civil e, se casado, o regime de bens;
-- II – a firma, com a respectiva assinatura autógrafa que poderá ser substituída pela assinatura autenticada com certificação digital ou meio equivalente que comprove a sua autenticidade, ressalvado o disposto no inciso I do § 1.º do art. 4.º da Lei Complementar n. 123, de 14 de dezembro de 2006;
--- Inciso II com redação determinada pela Lei Complementar n. 147, de 7-8-2014.
-- III – o capital;
-- IV – o objeto e a sede da empresa.
-- § 1.º Com as indicações estabelecidas neste artigo, a inscrição será tomada por termo no livro próprio do Registro Público de Empresas Mercantis, e obedecerá a número de ordem contínuo para todos os empresários inscritos.
-- § 2.º À margem da inscrição, e com as mesmas formalidades, serão averbadas quaisquer modificações nela ocorrentes.
-- § 3.º Caso venha a admitir sócios, o empresário individual poderá solicitar ao Registro Público de Empresas Mercantis a transformação de seu registro de empresário para registro de sociedade empresária, observado, no que couber, o disposto nos arts. 1.113 a 1.115 deste Código.
--- § 3.º acrescentado pela Lei Complementar n. 128, de 19-12-2008.
-- § 4.º O processo de abertura, registro, alteração e baixa do microempreendedor individual de que trata o art. 18-A da Lei Complementar n. 123, de 14 de dezembro de 2006, bem como qualquer exigência para o início de seu funcionamento deverão ter trâmite especial e simplificado, preferentemente eletrônico, opcional para o empreendedor, na forma a ser disciplinada pelo Comitê para Gestão da Rede Nacional para a Simplificação do Registro e da Legalização de Empresas e Negócios – CGSIM, de que trata o inciso III do art. 2.º da mesma Lei.
--- § 4.º acrescentado pela Lei n. 12.470, de 31-8-2011.
-- § 5.º Para fins do disposto no § 4.º, poderão ser dispensados o uso da firma, com a respectiva assinatura autógrafa, o capital, requerimentos, demais assinaturas, informações relativas à nacionalidade, estado civil e regime de bens, bem como remessa de documentos, na forma estabelecida pelo CGSIM.
--- § 5.º acrescentado pela Lei n. 12.470, de 31-8-2011.
-# Remissões Normativas
-- Vide arts. 971 e 984 do CC.
--- tratam do registro facultativo do produtor e da sociedade rural.
-- Vide art. 12 (nacionalidade) da CF.
--- define os critérios de nacionalidade brasileira (relacionado ao inciso I).
-- Vide arts. 70 a 72, 75, IV, §§ 1.º e 2.º, 977 a 980, 1.639 e s. do CC.
--- tratam do domicílio, da capacidade do empresário casado, das restrições para contratar sociedade e do regime de bens entre os cônjuges (relacionado ao inciso I).
-- Vide art. 1.142 do CC.
--- conceitua o estabelecimento empresarial (relacionado ao inciso IV).
-- Vide art. 971 do CC.
--- trata do registro facultativo do produtor rural, cujas modificações também devem ser averbadas (relacionado aos §§ 1º e 2º).
-- A Instrução Normativa n. 81, de 10-6-2020, do DREI, dispõe sobre as normas e diretrizes gerais do Registro Público de Empresas.
--- consolida as normas e procedimentos para registro, alteração e extinção de empresários e sociedades empresárias nas Juntas Comerciais.
------
-# Créditos com Privilégio Geral
-# Dispositivos Legais
-- Art. 965. Goza de privilégio geral, na ordem seguinte, sobre os bens do devedor:
-- I – o crédito por despesa de seu funeral, feito segundo a condição do morto e o costume do lugar;
-- II – o crédito por custas judiciais, ou por despesas com a arrecadação e liquidação da massa;
-- III – o crédito por despesas com o luto do cônjuge sobrevivo e dos filhos do devedor falecido, se foram moderadas;
-- IV – o crédito por despesas com a doença de que faleceu o devedor, no semestre anterior à sua morte;
-- V – o crédito pelos gastos necessários à mantença do devedor falecido e sua família, no trimestre anterior ao falecimento;
-- VI – o crédito pelos impostos devidos à Fazenda Pública, no ano corrente e no anterior;
-- VII – o crédito pelos salários dos empregados do serviço doméstico do devedor, nos seus derradeiros seis meses de vida;
-- VIII – os demais créditos de privilégio geral.
-# Remissões Normativas
-- A Fazenda, na cobrança da sua dívida ativa, não está sujeita a concurso de credores, nem habilitação em falência, recuperação judicial, inventário ou arrolamento (art. 187 do CTN, e art. 29 da Lei n. 6.830, de 22-9-1980).
--- o art. 187 do Código Tributário Nacional e o art. 29 da Lei de Execução Fiscal estabelecem que o crédito tributário é cobrado por meio de execução fiscal própria, não se submetendo ao concurso de credores.
-- Em matéria falimentar – vide arts. 83 e s. da Lei n. 11.101, de 9-2-2005 (Lei de Falências).
--- os arts. 83 e 84 da Lei de Falências estabelecem uma ordem de classificação dos créditos específica para o processo de falência, que prevalece sobre a ordem do Código Civil.
------
-# Exoneração do Devedor de Seguro ou Indenização
-# Dispositivos Legais
-- Art. 960. Nos casos a que se refere o artigo antecedente, o devedor do seguro, ou da indenização, exonera-se pagando sem oposição dos credores hipotecários ou privilegiados.
------
-# Ordem de Preferência dos Créditos
-# Dispositivos Legais
-- Art. 961. O crédito real prefere ao pessoal de qualquer espécie; o crédito pessoal privilegiado, ao simples; e o privilégio especial, ao geral.
-# Remissões Normativas
-- Vide arts. 963, 964, in fine, 965, 1.419, 1.422, parágrafo único, 1.506 e 1.509, § 1.º, do CC.
--- estabelecem as definições e a ordem de preferência entre os créditos com privilégio especial e geral e os créditos com garantia real, como a hipoteca e o penhor.
------
-# Rateio entre Credores Privilegiados
-# Dispositivos Legais
-- Art. 962. Quando concorrerem aos mesmos bens, e por título igual, dois ou mais credores da mesma classe especialmente privilegiados, haverá entre eles rateio proporcional ao valor dos respectivos créditos, se o produto não bastar para o pagamento integral de todos.
-# Remissões Normativas
-- Vide art. 908, §§ 1.º e 2.º (concorrência, credores), do CPC.
--- trata do procedimento do concurso de credores no processo de execução, quando o produto da expropriação é insuficiente para pagar a todos.
------
-# Definição dos Privilégios Especial e Geral
-# Dispositivos Legais
-- Art. 963. O privilégio especial só compreende os bens sujeitos, por expressa disposição de lei, ao pagamento do crédito que ele favorece; e o geral, todos os bens não sujeitos a crédito real nem a privilégio especial.
------
-# Créditos com Privilégio Especial
-# Dispositivos Legais
-- Art. 964. Têm privilégio especial:
-- I – sobre a coisa arrecadada e liquidada, o credor de custas e despesas judiciais feitas com a arrecadação e liquidação;
-- II – sobre a coisa salvada, o credor por despesas de salvamento;
-- III – sobre a coisa beneficiada, o credor por benfeitorias necessárias ou úteis;
-- IV – sobre os prédios rústicos ou urbanos, fábricas, oficinas, ou quaisquer outras construções, o credor de materiais, dinheiro, ou serviços para a sua edificação, reconstrução, ou melhoramento;
-- V – sobre os frutos agrícolas, o credor por sementes, instrumentos e serviços à cultura, ou à colheita;
-- VI – sobre as alfaias e utensílios de uso doméstico, nos prédios rústicos ou urbanos, o credor de aluguéis, quanto às prestações do ano corrente e do anterior;
-- VII – sobre os exemplares da obra existente na massa do editor, o autor dela, ou seus legítimos representantes, pelo crédito fundado contra aquele no contrato da edição;
-- VIII – sobre o produto da colheita, para a qual houver concorrido com o seu trabalho, e precipuamente a quaisquer outros créditos, ainda que reais, o trabalhador agrícola, quanto à dívida dos seus salários;
-- IX – sobre os produtos do abate, o credor por animais.
--- Inciso IX acrescentado pela Lei n. 13.176, de 21-10-2015
-# Remissões Normativas
-- Vide art. 96 do CC.
--- define os tipos de benfeitorias (necessárias, úteis e voluptuárias), relevante para o inciso III.
-- O art. 13 da Lei n. 7.203, de 3-7-1984, dispõe sobre as dívidas decorrentes das operações de assistência e salvamento.
--- estabelece a natureza privilegiada dos créditos relativos à remuneração por assistência e salvamento de embarcações, relacionado aos incisos II e III.
-- Vide Lei n. 9.610, de 19-2-1998.
--- é a Lei de Direitos Autorais, que regula o contrato de edição e os direitos do autor, fundamentando o crédito do inciso VII.
-- Vide art. 1.422, caput, do CC.
--- trata da preferência do credor com garantia real, que é superada pelo crédito do trabalhador agrícola previsto no inciso VIII.
------
-# Declaração de Insolvência
-# Dispositivos Legais
-- Art. 955. Procede-se à declaração de insolvência toda vez que as dívidas excedam à importância dos bens do devedor.
-# Remissões Normativas
-- LEF: Lei n. 6.830, de 22-9-1980.
--- trata da cobrança judicial da Dívida Ativa da Fazenda Pública, cujos créditos possuem preferência no concurso de credores.
------
-# Disputa entre Credores
-# Dispositivos Legais
-- Art. 956. A discussão entre os credores pode versar quer sobre a preferência entre eles disputada, quer sobre a nulidade, simulação, fraude, ou falsidade das dívidas e contratos.
-# Remissões Normativas
-- Vide arts. 158 a 165 (fraude), 166, 167 (simulação) e 171 do CC.
--- tratam dos defeitos do negócio jurídico, como a fraude contra credores e a simulação, que podem ser arguidos para invalidar dívidas e contratos.
------
-# Concurso de Credores Quirografários
-# Dispositivos Legais
-- Art. 957. Não havendo título legal à preferência, terão os credores igual direito sobre os bens do devedor comum.
------
-# Títulos Legais de Preferência
-# Dispositivos Legais
-- Art. 958. Os títulos legais de preferência são os privilégios e os direitos reais.
-# Remissões Normativas
-- Vide arts. 964 (privilégio especial) e 1.225 (direitos reais) do CC.
--- o art. 964 elenca os créditos com privilégio especial sobre determinados bens.
--- o art. 1.225 elenca o rol dos direitos reais, como a hipoteca e o penhor, que conferem preferência.
-- Sobre o privilégio fiscal, vide arts. 186 e s. do CTN.
--- o art. 186 do Código Tributário Nacional estabelece a preferência do crédito tributário sobre os demais, com exceção dos créditos trabalhistas.
-- Sobre a preferência de créditos trabalhistas, dispõe a CLT, arts. 144 e 449, § 1.º.
--- ambos os dispositivos da Consolidação das Leis do Trabalho estabelecem o privilégio dos créditos trabalhistas em caso de falência ou liquidação.
-- Decretos-leis n. 167, de 14-2-1967 (crédito rural), e 413, de 9-1-1969 (crédito industrial).
--- estabelecem regimes de crédito fomentado cujos títulos são frequentemente garantidos por direitos reais, conferindo-lhes preferência.
------
-# Sub-rogação dos Direitos Preferenciais
-# Dispositivos Legais
-- Art. 959. Conservam seus respectivos direitos os credores, hipotecários ou privilegiados:
-- I – sobre o preço do seguro da coisa gravada com hipoteca ou privilégio, ou sobre a indenização devida, havendo responsável pela perda ou danificação da coisa;
-- II – sobre o valor da indenização, se a coisa obrigada a hipoteca ou privilégio for desapropriada.
-# Remissões Normativas
-- Vide arts. 785 e 1.425, IV, do CC.
--- o art. 785 trata da sub-rogação do credor hipotecário no valor do seguro.
--- o art. 1.425, IV, prevê o vencimento antecipado da dívida em caso de perecimento da garantia (relacionado ao inciso I).
-- Vide art. 1.425, V, do CC.
--- prevê o vencimento antecipado da dívida em caso de desapropriação da garantia (relacionado ao inciso II).
-- Vide art. 30 do Decreto-lei n. 3.365, de 21-6-1941, que dispõe sobre desapropriações.
--- trata do levantamento do preço da desapropriação, enquanto o art. 31 do mesmo decreto estabelece que os direitos reais que recaem sobre o bem ficam sub-rogados no preço.
-- O Decreto-lei n. 167, de 14-2-1967, dispõe sobre títulos de crédito rural.
--- regula títulos que comumente possuem garantias reais, cujos direitos são protegidos por esta regra de sub-rogação.
------
-# Indenização por Ofensa à Liberdade Pessoal
-# Dispositivos Legais
-- Art. 954. A indenização por ofensa à liberdade pessoal consistirá no pagamento das perdas e danos que sobrevierem ao ofendido, e se este não puder provar prejuízo, tem aplicação o disposto no parágrafo único do artigo antecedente.
-- Parágrafo único. Consideram-se ofensivos da liberdade pessoal:
-- I – o cárcere privado;
-- II – a prisão por queixa ou denúncia falsa e de má-fé;
-- III – a prisão ilegal.
-# Remissões Normativas
-- Vide arts. 402 a 405 (perdas e danos) do Código Civil de 2002.
--- estabelecem o regime jurídico das perdas e danos, abrangendo danos emergentes, lucros cessantes, juros e correção monetária.
-- Vide Súmula Vinculante 11.
--- trata da excepcionalidade do uso de algemas, cuja utilização indevida acarreta responsabilidade civil do agente e do Estado.
-- O art. 148 do CP dispõe sobre o crime de sequestro e cárcere privado.
--- tipifica criminalmente o ato de privar alguém de sua liberdade (relacionado ao inciso I).
-- Vide art. 5.º, LXV, da Constituição Federal de 1988.
--- garante que a prisão ilegal seja imediatamente relaxada pela autoridade judiciária, fundamentando a ilicitude do ato (relacionado ao inciso III).
------
-# Indenização por Lesão à Saúde
-# Dispositivos Legais
-- Art. 949. No caso de lesão ou outra ofensa à saúde, o ofensor indenizará o ofendido das despesas do tratamento e dos lucros cessantes até ao fim da convalescença, além de algum outro prejuízo que o ofendido prove haver sofrido.
-# Remissões Normativas
-- Vide arts. 402 e 403 do Código Civil de 2002.
--- definem o que são as perdas e danos, abrangendo os danos emergentes e os lucros cessantes como consequência direta e imediata do ato.
------
-# Indenização por Incapacidade Laborativa
-# Dispositivos Legais
-- Art. 950. Se da ofensa resultar defeito pelo qual o ofendido não possa exercer o seu ofício ou profissão, ou se lhe diminua a capacidade de trabalho, a indenização, além das despesas do tratamento e lucros cessantes até ao fim da convalescença, incluirá pensão correspondente à importância do trabalho para que se inabilitou, ou da depreciação que ele sofreu.
-- Parágrafo único. O prejudicado, se preferir, poderá exigir que a indenização seja arbitrada e paga de uma só vez.
-# Remissões Normativas
-- Vide Súmula 490 do STF.
--- trata do cálculo da pensão com base no salário-mínimo vigente à época da sentença e seus reajustes posteriores.
------
-# Indenização por Erro Profissional
-# Dispositivos Legais
-- Art. 951. O disposto nos arts. 948, 949 e 950 aplica-se ainda no caso de indenização devida por aquele que, no exercício de atividade profissional, por negligência, imprudência ou imperícia, causar a morte do paciente, agravar-lhe o mal, causar-lhe lesão, ou inabilitá-lo para o trabalho.
-# Remissões Normativas
-- Vide arts. 14, § 4.º, e 17 do CDC.
--- o art. 14, § 4º, estabelece a responsabilidade subjetiva (mediante apuração de culpa) para os profissionais liberais.
--- o art. 17 equipara a consumidor todas as vítimas do evento danoso.
-- Vide Súmula 341 do STF.
--- estabelece a presunção de culpa do empregador por ato culposo do empregado.
-- Vide Súmula 37 do STJ.
--- trata da cumulação das indenizações por dano material e moral.
-- Vide Súmula Vinculante 22.
--- define a competência da Justiça do Trabalho para julgar ações de indenização por danos decorrentes de acidente de trabalho.
------
-# Indenização por Usurpação ou Esbulho
-# Dispositivos Legais
-- Art. 952. Havendo usurpação ou esbulho do alheio, além da restituição da coisa, a indenização consistirá em pagar o valor das suas deteriorações e o devido a título de lucros cessantes; faltando a coisa, dever-se-á reembolsar o seu equivalente ao prejudicado.
-- Parágrafo único. Para se restituir o equivalente, quando não exista a própria coisa, estimar-se-á ela pelo seu preço ordinário e pelo de afeição, contanto que este não se avantaje àquele.
-# Remissões Normativas
-- Vide arts. 402, 403, 1.210 e 1.228 do Código Civil de 2002.
--- os arts. 402 e 403 definem os lucros cessantes.
--- os arts. 1.210 e 1.228 tratam da proteção possessória e do direito de reaver a coisa (reivindicação).
-- Vide arts. 555, I, 556 e 560 do CPC.
--- tratam da cumulação do pedido de perdas e danos nas ações possessórias.
-- Os arts. 161 e 162 do CP dispõem sobre usucapião.
--- o art. 161 do CP tipifica os crimes de alteração de limites e usurpação de águas.
--- o art. 162 do CP tipifica o crime de supressão ou alteração de marca em animais.
-- Vide Súmula 562 do STF.
--- trata da aplicação de correção monetária na indenização por danos materiais.
------
-# Indenização por Calúnia, Difamação ou Injúria
-# Dispositivos Legais
-- Art. 953. A indenização por injúria, difamação ou calúnia consistirá na reparação do dano que delas resulte ao ofendido.
-- Parágrafo único. Se o ofendido não puder provar prejuízo material, caberá ao juiz fixar, equitativamente, o valor da indenização, na conformidade das circunstâncias do caso.
-# Remissões Normativas
-- Os arts. 138, 139 e 140 do CP dispõem respectivamente sobre calúnia, difamação e injúria.
--- tipificam criminalmente os crimes contra a honra.
-- Os arts. 49 a 52 do CP dispõem sobre pena de multa.
--- estabelecem os critérios para fixação da pena de multa no âmbito penal, que podem ser usados por analogia na fixação da indenização.
------
-# Medida da Indenização
-# Dispositivos Legais
-- Art. 944. A indenização mede-se pela extensão do dano.
-- Parágrafo único. Se houver excessiva desproporção entre a gravidade da culpa e o dano, poderá o juiz reduzir, equitativamente, a indenização.
-# Remissões Normativas
-- Vide arts. 186, 884, 927, 944 e 948 a 954 do Código Civil de 2002.
--- os arts. 186 e 927 tratam do ato ilícito e do dever de indenizar.
--- o art. 884 veda o enriquecimento sem causa, princípio correlato à extensão do dano.
--- o art. 944 é autorreferente.
--- os arts. 948 a 954 estabelecem critérios específicos de indenização para diferentes tipos de dano.
-- Vide Súmula 37 do STJ.
--- trata da cumulatividade das indenizações por dano material e dano moral.
-- Vide art. 5.º da LINDB.
--- fundamenta a atuação do juiz com base nos fins sociais da lei e nas exigências do bem comum, permitindo a redução equitativa.
-- Vide Súmulas 491 e 562 do STF.
--- a Súmula 491 trata da indenização pela morte de filho menor.
--- a Súmula 562 trata da aplicação de correção monetária na indenização por danos materiais.
------
-# Culpa Concorrente da Vítima
-# Dispositivos Legais
-- Art. 945. Se a vítima tiver concorrido culposamente para o evento danoso, a sua indenização será fixada tendo-se em conta a gravidade de sua culpa em confronto com a do autor do dano.
-# Remissões Normativas
-- Vide Súmula 28 do STF.
--- trata da isenção de custas para a União em ações de desapropriação.
------
-# Obrigação Indeterminada
-# Dispositivos Legais
-- Art. 946. Se a obrigação for indeterminada, e não houver na lei ou no contrato disposição fixando a indenização devida pelo inadimplente, apurar-se-á o valor das perdas e danos na forma que a lei processual determinar.
------
-# Impossibilidade da Prestação
-# Dispositivos Legais
-- Art. 947. Se o devedor não puder cumprir a prestação na espécie ajustada, substituir-se-á pelo seu valor, em moeda corrente.
-# Remissões Normativas
-- Vide art. 809, § 2.º, do CPC.
--- trata da conversão da execução de entrega de coisa certa em execução por quantia certa quando o bem não for encontrado.
------
-# Indenização no Caso de Homicídio
-# Dispositivos Legais
-- Art. 948. No caso de homicídio, a indenização consiste, sem excluir outras reparações:
-- I – no pagamento das despesas com o tratamento da vítima, seu funeral e o luto da família;
-- II – na prestação de alimentos às pessoas a quem o morto os devia, levando-se em conta a duração provável da vida da vítima.
-# Remissões Normativas
-- Vide Súmula 642 do STJ.
--- afirma que o direito à indenização por danos morais é transmissível aos herdeiros.
-- Vide arts. 1.694 a 1.710 do Código Civil de 2002.
--- tratam do regime jurídico da obrigação de prestar alimentos.
-- Sobre os honorários de advogado que completam a indenização, vide arts. 22 a 26 do EAOAB.
--- dispõem sobre os honorários advocatícios contratuais, de sucumbência e por arbitramento judicial.
-- Vide Súmulas 490 e 491 do STF.
--- a Súmula 490 trata do cálculo da pensão com base no salário-mínimo e seus reajustes.
--- a Súmula 491 trata da indenização pela morte de filho menor, mesmo que não exercesse trabalho remunerado.
------
-# Inaplicabilidade de Sanções por Cobrança Indevida
-# Dispositivos Legais
-- Art. 941. As penas previstas nos arts. 939 e 940 não se aplicarão quando o autor desistir da ação antes de contestada a lide, salvo ao réu o direito de haver indenização por algum prejuízo que prove ter sofrido.
-# Remissões Normativas
-- Vide arts. 79 a 81 e 485, § 4.º, do CPC.
--- os arts. 79 a 81 tratam da litigância de má-fé.
--- o art. 485, § 4.º trata da necessidade de consentimento do réu para a desistência da ação após a contestação.
------
-# Responsabilidade Solidária pela Reparação
-# Dispositivos Legais
-- Art. 942. Os bens do responsável pela ofensa ou violação do direito de outrem ficam sujeitos à reparação do dano causado; e, se a ofensa tiver mais de um autor, todos responderão solidariamente pela reparação.
-- Parágrafo único. São solidariamente responsáveis com os autores os coautores e as pessoas designadas no art. 932.
-# Remissões Normativas
-- Vide arts. 186 e 927 do Código Civil de 2002.
--- os arts. 186 e 927 definem o ato ilícito e o dever geral de reparar o dano.
-- Vide arts. 5.º, V e X, e 37, § 6.º (indenização), da Constituição Federal de 1988.
--- os incisos V e X do art. 5º asseguram o direito à indenização por danos materiais, morais e à imagem.
--- o art. 37, § 6.º trata da responsabilidade objetiva do Estado.
-- Vide art. 3.º da Lei n. 8.429, de 2-6-1992.
--- estende as disposições da Lei de Improbidade Administrativa a terceiros que concorram para o ato ou dele se beneficiem.
-- Vide Súmulas 221 e 246 do STJ.
--- a Súmula 221 trata da responsabilidade solidária entre o autor do escrito e o veículo de imprensa.
--- a Súmula 246 trata da dedução do valor do seguro obrigatório (DPVAT) da indenização judicial.
-- Vide arts. 264 a 285 e 934 do Código Civil de 2002.
--- os arts. 264 a 285 regulam o regime jurídico das obrigações solidárias.
--- o art. 934 trata do direito de regresso daquele que repara dano causado por outrem.
------
-# Transmissibilidade da Obrigação de Reparar
-# Dispositivos Legais
-- Art. 943. O direito de exigir reparação e a obrigação de prestá-la transmitem-se com a herança.
-# Remissões Normativas
-- Vide Súmula 642 do STJ.
--- afirma que o direito à indenização por danos morais é transmissível aos herdeiros da vítima.
-- Vide arts. 1.792, 1.821 e 1.997 do Código Civil de 2002.
--- o art. 1.792 estabelece que o herdeiro não responde por encargos superiores às forças da herança.
--- o art. 1.821 não existe no Código Civil de 2002.
--- o art. 1.997 estabelece a responsabilidade da herança pelas dívidas do falecido.
-- Vide Súmula 35 do STF.
--- trata do direito da companheira a ser indenizada pela morte do companheiro em acidente.
------
-# Responsabilidade Objetiva por Ato de Terceiro
-# Dispositivos Legais
-- Art. 933. As pessoas indicadas nos incisos I a V do artigo antecedente, ainda que não haja culpa de sua parte, responderão pelos atos praticados pelos terceiros ali referidos.
------
-# Direito de Regresso
-# Dispositivos Legais
-- Art. 934. Aquele que ressarcir o dano causado por outrem pode reaver o que houver pago daquele por quem pagou, salvo se o causador do dano for descendente seu, absoluta ou relativamente incapaz.
-# Remissões Normativas
-- Vide Súmulas 187 e 188 do STF.
--- a Súmula 187 trata da ação regressiva do transportador contra terceiro culpado por acidente com passageiro.
--- a Súmula 188 trata da ação regressiva da seguradora contra o causador do dano.
------
-# Independência das Responsabilidades Civil e Criminal
-# Dispositivos Legais
-- Art. 935. A responsabilidade civil é independente da criminal, não se podendo questionar mais sobre a existência do fato, ou sobre quem seja o seu autor, quando estas questões se acharem decididas no juízo criminal.
-# Remissões Normativas
-- Vide art. 65 do CPP.
--- trata da sentença penal absolutória fundada em excludente de ilicitude, que impede a ação civil de reparação.
-- Vide Súmula 18 do STJ.
--- estabelece que a sentença que concede o perdão judicial não gera efeitos condenatórios, inclusive na esfera cível.
-- Vide arts. 313, V, a, e §§ 4.º e 5.º, 315 do CPC.
--- tratam da possibilidade de suspensão do processo cível quando a decisão depender da apuração de fato delituoso no juízo criminal.
------
-# Responsabilidade por Dano Causado por Animal
-# Dispositivos Legais
-- Art. 936. O dono, ou detentor, do animal ressarcirá o dano por este causado, se não provar culpa da vítima ou força maior.
-# Remissões Normativas
-- Vide arts. 393, 945 e 1.297, § 3.º, do Código Civil de 2002.
--- o art. 393 define caso fortuito e força maior como excludentes de responsabilidade.
--- o art. 945 trata da culpa concorrente da vítima como causa de redução da indenização.
--- o art. 1.297, § 3.º trata da obrigação de construção de tapumes para impedir a passagem de animais de pequeno porte.
-- Vide Lei de Contravenções Penais, art. 31.
--- tipifica como contravenção a omissão de cautela na guarda ou condução de animal perigoso.
------
-# Responsabilidade pela Ruína de Edifício
-# Dispositivos Legais
-- Art. 937. O dono de edifício ou construção responde pelos danos que resultarem de sua ruína, se esta provier de falta de reparos, cuja necessidade fosse manifesta.
--- A Lei n. 13.425, de 30-3-2017, propôs o acréscimo dos §§ 1.º e 2.º a este artigo, porém teve seu texto vetado.
-# Remissões Normativas
-- Vide arts. 618, 927, parágrafo único, 929, 930 e 1.280 do Código Civil de 2002.
--- o art. 618 trata da responsabilidade do empreiteiro pela solidez da obra.
--- o art. 927, parágrafo único, trata da responsabilidade objetiva por atividade de risco.
--- os arts. 929 e 930 tratam da indenização e regresso no estado de necessidade.
--- o art. 1.280 trata do direito de exigir a demolição ou reparação de prédio vizinho que ameace ruína.
------
-# Responsabilidade por Coisas Caídas de Prédio
-# Dispositivos Legais
-- Art. 938. Aquele que habitar prédio, ou parte dele, responde pelo dano proveniente das coisas que dele caírem ou forem lançadas em lugar indevido.
-# Remissões Normativas
-- Vide arts. 1.331 a 1.358 (condomínio edilício) do Código Civil de 2002.
--- tratam do regime jurídico do condomínio edilício, definindo as responsabilidades dos condôminos.
-- Vide Lei n. 4.591, de 16-12-1964.
--- dispõe sobre o condomínio em edificações e as incorporações imobiliárias, complementando as regras sobre responsabilidade.
------
-# Sanção por Cobrança de Dívida Vincenda
-# Dispositivos Legais
-- Art. 939. O credor que demandar o devedor antes de vencida a dívida, fora dos casos em que a lei o permita, ficará obrigado a esperar o tempo que faltava para o vencimento, a descontar os juros correspondentes, embora estipulados, e a pagar as custas em dobro.
------
-# Sanção por Cobrança de Dívida Paga
-# Dispositivos Legais
-- Art. 940. Aquele que demandar por dívida já paga, no todo ou em parte, sem ressalvar as quantias recebidas ou pedir mais do que for devido, ficará obrigado a pagar ao devedor, no primeiro caso, o dobro do que houver cobrado e, no segundo, o equivalente do que dele exigir, salvo se houver prescrição.
-# Remissões Normativas
-- Vide arts. 79 a 81 do CPC.
--- tratam da litigância de má-fé e das sanções processuais aplicáveis.
-- Vide art. 42, parágrafo único, do CDC.
--- trata do direito do consumidor à repetição do indébito em dobro por cobrança indevida.
-- Vide Súmula 159 do STF.
--- estabelece que a cobrança excessiva, mas de boa-fé, não enseja a aplicação da sanção do art. 940 (antigo art. 1.531 do Código Civil de 2002/16).
------
-# Reparação de Dano em Estado de Necessidade
-# Dispositivos Legais
-- Art. 929. Se a pessoa lesada, ou o dono da coisa, no caso do inciso II do art. 188, não forem culpados do perigo, assistir-lhes-á direito à indenização do prejuízo que sofreram.
------
-# Ação Regressiva por Dano em Estado de Necessidade
-# Dispositivos Legais
-- Art. 930. No caso do inciso II do art. 188, se o perigo ocorrer por culpa de terceiro, contra este terá o autor do dano ação regressiva para haver a importância que tiver ressarcido ao lesado.
-- Parágrafo único. A mesma ação competirá contra aquele em defesa de quem se causou o dano (art. 188, inciso I).
-# Remissões Normativas
-- Vide art. 125, II, do CPC.
--- trata da possibilidade de o réu chamar ao processo os demais devedores solidários, o que se aplica à ação de regresso.
------
-# Responsabilidade pelo Fato do Produto
-# Dispositivos Legais
-- Art. 931. Ressalvados outros casos previstos em lei especial, os empresários individuais e as empresas respondem independentemente de culpa pelos danos causados pelos produtos postos em circulação.
-# Remissões Normativas
-- Vide arts. 12, 18, 19 e 23 a 25 do CDC.
--- o art. 12 trata da responsabilidade objetiva do fabricante, produtor, etc., pelo fato do produto.
--- os arts. 18 e 19 tratam da responsabilidade por vício do produto.
--- os arts. 23 a 25 tratam da vedação de cláusula de não indenizar, da responsabilidade do prestador de serviços e do direito de regresso.
------
-# Responsabilidade por Ato de Terceiro
-# Dispositivos Legais
-- Art. 932. São também responsáveis pela reparação civil:
-- I – os pais, pelos filhos menores que estiverem sob sua autoridade e em sua companhia;
-- II – o tutor e o curador, pelos pupilos e curatelados, que se acharem nas mesmas condições;
-- III – o empregador ou comitente, por seus empregados, serviçais e prepostos, no exercício do trabalho que lhes competir, ou em razão dele;
-- IV – os donos de hotéis, hospedarias, casas ou estabelecimentos onde se albergue por dinheiro, mesmo para fins de educação, pelos seus hóspedes, moradores e educandos;
-- V – os que gratuitamente houverem participado nos produtos do crime, até a concorrente quantia.
-# Remissões Normativas
-- Vide arts. 934 e 942, parágrafo único, do Código Civil de 2002.
--- o art. 934 trata do direito de regresso daquele que repara dano causado por outrem.
--- o art. 942, parágrafo único, estabelece a responsabilidade solidária das pessoas designadas no art. 932.
-- Vide art. 116 do ECA.
--- trata da obrigação do adolescente autor de ato infracional de reparar o dano (relacionado ao inciso I).
-- Vide art. 149 do Código Civil de 2002.
--- trata do dolo de terceiro como vício do negócio jurídico (relacionado ao inciso III).
-- A Lei n. 7.195, de 12-6-1984, dispõe sobre a responsabilidade civil das agências de empregados domésticos.
--- estabelece a responsabilidade solidária das agências por atos ilícitos dos empregados que indicarem (relacionado ao inciso III).
-- Vide Súmulas 341 do STF e 130 do STJ.
--- a Súmula 341 do STF presume a culpa do empregador pelo ato culposo do empregado (relacionado ao inciso III).
--- a Súmula 130 do STJ responsabiliza a empresa por dano ou furto de veículo em seu estacionamento (relacionado ao inciso III).
-- Vide arts. 649 e 650 do Código Civil de 2002.
--- tratam da responsabilidade dos hospedeiros na qualidade de depositários necessários (relacionado ao inciso IV).
-- O Decreto n. 2.681, de 7-12-1912, regula a responsabilidade civil das estradas de ferro.
--- estabelece um regime de responsabilidade objetiva para as ferrovias, um caso clássico de responsabilidade empresarial.
-- O art. 91 do CP trata sobre os efeitos genéricos e específicos da condenação.
--- estabelece como efeito da condenação criminal a obrigação de reparar o dano causado pelo crime.
-- O art. 64 do CPP trata sobre a ação para ressarcimento de dano.
--- permite que a vítima promova a ação cível para reparação do dano mesmo após a condenação criminal definitiva.
-- Vide Súmula 492 do STF.
--- trata da responsabilidade solidária da empresa locadora de veículos por danos causados pelo locatário.
------
-# Responsabilidade Civil por Ato Ilícito
-# Dispositivos Legais
-- Art. 927. Aquele que, por ato ilícito (arts. 186 e 187), causar dano a outrem, fica obrigado a repará-lo.
--- O STF, nas ADIs n. 6.792 e 7.055, no plenário de 22-5-2024 (DOU de 27-5-2024), por maioria, conheceu da ação direta e julgou parcialmente procedente o pedido formulado para “dar interpretação conforme à Constituição ao caput deste art. 927 do Código Civil, para estabelecer que a responsabilidade civil do jornalista, no caso de divulgação de notícias que envolvam pessoa pública ou assunto de interesse social, dependem de o jornalista ter agido com dolo ou com culpa grave, afastando-se a possibilidade de responsabilização na hipótese de meros juízos de valor, opiniões ou críticas ou da divulgação de informações verdadeiras sobre assuntos de interesse público.” Em seguida, por maioria, foi fixada a seguinte tese de julgamento: “1. Constitui assédio judicial comprometedor da liberdade de expressão o ajuizamento de inúmeras ações a respeito dos mesmos fatos, em comarcas diversas, com o intuito ou o efeito de constranger jornalista ou órgão de imprensa, dificultar sua defesa ou torná-la excessivamente onerosa; 2. Caracterizado o assédio judicial, a parte demandada poderá requerer a reunião de todas as ações no foro de seu domicílio; 3. A responsabilidade civil de jornalistas ou de órgãos de imprensa somente estará configurada em caso inequívoco de dolo ou de culpa grave (evidente negligência profissional na apuração dos fatos)”.
-- Parágrafo único. Haverá obrigação de reparar o dano, independentemente de culpa, nos casos especificados em lei, ou quando a atividade normalmente desenvolvida pelo autor do dano implicar, por sua natureza, risco para os direitos de outrem.
-# Remissões Normativas
-- Vide arts. 934 e 942 a 954 do Código Civil de 2002.
--- o art. 934 trata do direito de regresso daquele que repara dano causado por outrem.
--- os arts. 942 a 954 tratam das regras de liquidação do dano e fixação da indenização, incluindo a solidariedade entre os ofensores e os critérios para cálculo em casos de homicídio, lesão corporal, entre outros.
-- Reparação de dano moral decorrente de calúnia, difamação ou injúria, vide art. 243 da Lei n. 4.737, de 15-7-1965 (CE).
--- o art. 243 do Código Eleitoral trata da nulidade da votação em seções eleitorais sob certas circunstâncias.
-- Vide Súmulas 37, 43, 130, 137, 145, 186, 221, 227, 246, 403, 479 e 595 do STJ.
--- a Súmula 37 trata da cumulatividade das indenizações por dano material e dano moral.
--- a Súmula 43 trata do termo inicial da correção monetária na dívida por ato ilícito (data do efetivo prejuízo).
--- a Súmula 130 trata da responsabilidade de empresas por furto ou dano de veículo em seus estacionamentos.
--- a Súmula 137 trata da competência da justiça comum estadual para julgar ações de servidores públicos municipais estatutários.
--- a Súmula 145 trata da responsabilidade do transportador no transporte de cortesia, restrita a dolo ou culpa grave.
--- a Súmula 186 veda a cobrança de juros compostos em indenizações por ato ilícito.
--- a Súmula 221 trata da responsabilidade solidária entre o autor do escrito e o proprietário do veículo de imprensa.
--- a Súmula 227 estabelece que a pessoa jurídica pode sofrer dano moral.
--- a Súmula 246 trata da dedução do valor do seguro obrigatório (DPVAT) da indenização judicial.
--- a Súmula 403 presume o prejuízo na publicação não autorizada de imagem de pessoa para fins comerciais.
--- a Súmula 479 trata da responsabilidade objetiva dos bancos por fraudes praticadas por terceiros.
--- a Súmula 595 trata da responsabilidade objetiva de instituições de ensino por diplomas imprestáveis.
-- Vide Súmulas 28, 161, 229, 491, 492 e 562 do STF.
--- a Súmula 28 trata da isenção de custas para a União em ações de desapropriação.
--- a Súmula 161 considera inoperante a cláusula de não indenizar em contrato de transporte.
--- a Súmula 229 estabelece que a indenização por acidente de trabalho não exclui a de direito comum.
--- a Súmula 491 considera indenizável a morte de filho menor, mesmo sem exercício de trabalho remunerado.
--- a Súmula 492 trata da responsabilidade solidária da locadora de veículos por danos causados pelo locatário.
--- a Súmula 562 trata da aplicação de correção monetária na indenização por danos materiais.
-- Vide arts. 5.º, V e X, e 37, § 6.º, da Constituição Federal de 1988.
--- os incisos V e X do art. 5º asseguram o direito à indenização por dano material, moral ou à imagem.
--- o art. 37, § 6.º estabelece a responsabilidade civil objetiva do Estado.
------
-# Responsabilidade Civil do Incapaz
-# Dispositivos Legais
-- Art. 928. O incapaz responde pelos prejuízos que causar, se as pessoas por ele responsáveis não tiverem obrigação de fazê-lo ou não dispuserem de meios suficientes.
-- Parágrafo único. A indenização prevista neste artigo, que deverá ser equitativa, não terá lugar se privar do necessário o incapaz ou as pessoas que dele dependem.
-# Remissões Normativas
-- Vide arts. 3.º, 4.º, 932 a 934 e 942, parágrafo único, do Código Civil de 2002.
--- os arts. 3º e 4º definem os absolutamente e relativamente incapazes.
--- os arts. 932 a 934 tratam da responsabilidade por ato de terceiro e do direito de regresso.
--- o art. 942, parágrafo único, trata da responsabilidade solidária dos bens daquele que concorreu para o dano.
-- Vide art. 116 do ECA.
--- trata da obrigação do adolescente autor de ato infracional de reparar o dano causado à vítima.
------
-# Título Nominativo - Definição
-# Dispositivos Legais
-- Art. 921. É título nominativo o emitido em favor de pessoa cujo nome conste no registro do emitente.
------
-# Título Nominativo - Transferência por Termo
-# Dispositivos Legais
-- Art. 922. Transfere-se o título nominativo mediante termo, em registro do emitente, assinado pelo proprietário e pelo adquirente.
------
-# Título Nominativo - Transferência por Endosso
-# Dispositivos Legais
-- Art. 923. O título nominativo também pode ser transferido por endosso que contenha o nome do endossatário.
-- § 1.º A transferência mediante endosso só tem eficácia perante o emitente, uma vez feita a competente averbação em seu registro, podendo o emitente exigir do endossatário que comprove a autenticidade da assinatura do endossante.
-- § 2.º O endossatário, legitimado por série regular e ininterrupta de endossos, tem o direito de obter a averbação no registro do emitente, comprovada a autenticidade das assinaturas de todos os endossantes.
-- § 3.º Caso o título original contenha o nome do primitivo proprietário, tem direito o adquirente a obter do emitente novo título, em seu nome, devendo a emissão do novo título constar no registro do emitente.
------
-# Título Nominativo - Transformação
-# Dispositivos Legais
-- Art. 924. Ressalvada proibição legal, pode o título nominativo ser transformado em à ordem ou ao portador, a pedido do proprietário e à sua custa.
-# Remissões Normativas
-- Vide arts. 904 a 920 do Código Civil de 2002.
--- Art. 904 trata da transferência do título ao portador por simples tradição.
--- Art. 905 trata do direito do possuidor do título ao portador à prestação nele indicada.
--- Art. 906 trata das exceções que o devedor pode opor ao portador do título.
--- Art. 907 trata da nulidade do título ao portador emitido sem autorização legal.
--- Art. 908 trata do direito à substituição do título ao portador que foi dilacerado.
--- Art. 909 trata do procedimento judicial para obter novo título em caso de perda ou extravio.
--- Art. 910 trata da forma e do local para o lançamento do endosso no título.
--- Art. 911 trata da legitimação do possuidor do título à ordem pela série regular de endossos.
--- Art. 912 trata da nulidade da condição e do endosso parcial.
--- Art. 913 trata das faculdades do portador de um título com endosso em branco.
--- Art. 914 trata da regra geral de não responsabilidade do endossante pelo pagamento do título.
--- Art. 915 trata das exceções que o devedor pode opor ao portador do título à ordem.
--- Art. 916 trata da oponibilidade de exceções pessoais de devedores anteriores em caso de má-fé do portador.
--- Art. 917 trata das regras do endosso-mandato.
--- Art. 918 trata das regras do endosso-penhor.
--- Art. 919 trata dos efeitos de cessão civil quando a aquisição do título ocorre por meio diverso do endosso.
--- Art. 920 trata dos efeitos do endosso realizado após o vencimento do título.
------
-# Título Nominativo - Desoneração do Emitente
-# Dispositivos Legais
-- Art. 925. Fica desonerado de responsabilidade o emitente que de boa-fé fizer a transferência pelos modos indicados nos artigos antecedentes.
------
-# Título Nominativo - Eficácia de Negócios e Medidas Judiciais
-# Dispositivos Legais
-- Art. 926. Qualquer negócio ou medida judicial, que tenha por objeto o título, só produz efeito perante o emitente ou terceiros, uma vez feita a competente averbação no registro do emitente.
------
-# Título à Ordem - Exceções Oponíveis ao Portador
-# Dispositivos Legais
-- Art. 915. O devedor, além das exceções fundadas nas relações pessoais que tiver com o portador, só poderá opor a este as exceções relativas à forma do título e ao seu conteúdo literal, à falsidade da própria assinatura, a defeito de capacidade ou de representação no momento da subscrição, e à falta de requisito necessário ao exercício da ação.
------
-# Título à Ordem - Exceções Pessoais e Má-fé
-# Dispositivos Legais
-- Art. 916. As exceções, fundadas em relação do devedor com os portadores precedentes, somente poderão ser por ele opostas ao portador, se este, ao adquirir o título, tiver agido de má-fé.
------
-# Título à Ordem - Endosso-Mandato
-# Dispositivos Legais
-- Art. 917. A cláusula constitutiva de mandato, lançada no endosso, confere ao endossatário o exercício dos direitos inerentes ao título, salvo restrição expressamente estatuída.
-- § 1.º O endossatário de endosso-mandato só pode endossar novamente o título na qualidade de procurador, com os mesmos poderes que recebeu.
-- § 2.º Com a morte ou a superveniente incapacidade do endossante, não perde eficácia o endosso-mandato.
-- § 3.º Pode o devedor opor ao endossatário de endosso-mandato somente as exceções que tiver contra o endossante.
------
-# Título à Ordem - Endosso-Penhor
-# Dispositivos Legais
-- Art. 918. A cláusula constitutiva de penhor, lançada no endosso, confere ao endossatário o exercício dos direitos inerentes ao título.
-- § 1.º O endossatário de endosso-penhor só pode endossar novamente o título na qualidade de procurador.
-- § 2.º Não pode o devedor opor ao endossatário de endosso-penhor as exceções que tinha contra o endossante, salvo se aquele tiver agido de má-fé.
-# Remissões Normativas
-- Vide arts. 1.458 a 1.460 do Código Civil de 2002.
--- tratam especificamente do penhor de títulos de crédito, estabelecendo como se constitui e os direitos do credor pignoratício.
------
-# Título à Ordem - Aquisição por Cessão Civil
-# Dispositivos Legais
-- Art. 919. A aquisição de título à ordem, por meio diverso do endosso, tem efeito de cessão civil.
-# Remissões Normativas
-- Vide arts. 286 a 298 do Código Civil de 2002.
--- tratam do instituto da cessão de crédito, que rege a transferência de direitos creditórios com regras distintas das do direito cambial, notadamente quanto à oponibilidade de exceções.
------
-# Título à Ordem - Endosso Póstumo
-# Dispositivos Legais
-- Art. 920. O endosso posterior ao vencimento produz os mesmos efeitos do anterior.
-# Remissões Normativas
-- Vide art. 8.º, § 2.º, do Decreto n. 2.044, de 31-12-1908.
--- estabelece, para as letras de câmbio, que o endosso posterior ao protesto por falta de pagamento produz apenas os efeitos de uma cessão ordinária de crédito.
-- Vide art. 24 do Decreto n. 57.595, de 7-1-1966.
--- estabelece, para as notas promissórias, que o endosso posterior ao protesto por falta de pagamento produz apenas os efeitos de uma cessão ordinária.
-- Vide art. 20 do Anexo I do Decreto n. 57.663, de 24-1-1966.
--- estabelece, na Lei Uniforme de Genebra, que o endosso posterior ao vencimento produz os mesmos efeitos do anterior, mas se for posterior ao protesto, produz apenas efeitos de cessão ordinária.
------
-# Título à Ordem - Forma e Efeitos do Endosso
-# Dispositivos Legais
-- Art. 910. O endosso deve ser lançado pelo endossante no verso ou anverso do próprio título.
-- § 1.º Pode o endossante designar o endossatário, e para validade do endosso, dado no verso do título, é suficiente a simples assinatura do endossante.
-- § 2.º A transferência por endosso completa-se com a tradição do título.
-- § 3.º Considera-se não escrito o endosso cancelado, total ou parcialmente.
-# Remissões Normativas
-- Vide art. 324 do Código Civil de 2002.
--- trata da presunção de pagamento quando o título é entregue ao devedor, relacionando-se à tradição do título.
------
-# Título à Ordem - Legitimidade do Possuidor
-# Dispositivos Legais
-- Art. 911. Considera-se legítimo possuidor o portador do título à ordem com série regular e ininterrupta de endossos, ainda que o último seja em branco.
-- Parágrafo único. Aquele que paga o título está obrigado a verificar a regularidade da série de endossos, mas não a autenticidade das assinaturas.
-# Remissões Normativas
-- Vide art. 19 do Decreto n. 57.595, de 7-1-1966, art. 16 do Decreto n. 57.663, de 24-1-1966, e art. 22, caput, da Lei n. 7.357, de 2-9-1985.
--- o art. 19 do Decreto 57.595/66 (Convenção sobre Notas Promissórias) trata dos efeitos do endosso póstumo (após o vencimento).
--- o art. 16 do Decreto 57.663/66 (Lei Uniforme de Genebra) estabelece a regra da legitimidade do portador pela série ininterrupta de endossos para letras de câmbio.
--- o art. 22 da Lei 7.357/85 (Lei do Cheque) repete a mesma regra de legitimação para o portador de cheque.
------
-# Título à Ordem - Condição e Nulidade do Endosso
-# Dispositivos Legais
-- Art. 912. Considera-se não escrita no endosso qualquer condição a que o subordine o endossante.
-- Parágrafo único. É nulo o endosso parcial.
------
-# Título à Ordem - Endosso em Branco
-# Dispositivos Legais
-- Art. 913. O endossatário de endosso em branco pode mudá-lo para endosso em preto, completando-o com o seu nome ou de terceiro; pode endossar novamente o título, em branco ou em preto; ou pode transferi-lo sem novo endosso.
------
-# Título à Ordem - Responsabilidade do Endossante
-# Dispositivos Legais
-- Art. 914. Ressalvada cláusula expressa em contrário, constante do endosso, não responde o endossante pelo cumprimento da prestação constante do título.
-- § 1.º Assumindo responsabilidade pelo pagamento, o endossante se torna devedor solidário.
-- § 2.º Pagando o título, tem o endossante ação de regresso contra os coobrigados anteriores.
-# Remissões Normativas
-- Vide arts. 275 a 285 do Código Civil de 2002.
--- tratam do regime jurídico da solidariedade passiva, no qual o credor pode exigir a dívida integral de qualquer um dos devedores solidários.
------
-# Título ao Portador - Transferência
-# Dispositivos Legais
-- Art. 904. A transferência de título ao portador se faz por simples tradição.
------
-# Título ao Portador - Direito à Prestação
-# Dispositivos Legais
-- Art. 905. O possuidor de título ao portador tem direito à prestação nele indicada, mediante a sua simples apresentação ao devedor.
-- Parágrafo único. A prestação é devida ainda que o título tenha entrado em circulação contra a vontade do emitente.
-# Remissões Normativas
-- Vide art. 311 do Código Civil de 2002.
--- trata da presunção de que o portador da quitação está autorizado a receber o pagamento.
------
-# Título ao Portador - Oposição de Exceções
-# Dispositivos Legais
-- Art. 906. O devedor só poderá opor ao portador exceção fundada em direito pessoal, ou em nulidade de sua obrigação.
-# Remissões Normativas
-- Vide art. 371 do Código Civil de 2002.
--- trata da compensação de dívidas, que é uma forma de exceção pessoal.
-- Vide art. 51 do Decreto n. 2.044, de 31-12-1908 (letras de câmbio).
--- trata da responsabilidade do sacado que paga a letra de câmbio antes do vencimento.
------
-# Título ao Portador - Nulidade por Falta de Autorização Legal
-# Dispositivos Legais
-- Art. 907. É nulo o título ao portador emitido sem autorização de lei especial.
-# Remissões Normativas
-- O art. 292 do CP dispõe sobre a emissão de título ao portador sem permissão legal.
--- tipifica como crime a emissão de título ao portador (nota, bilhete, ficha, etc.) sem a devida permissão legal.
------
-# Título ao Portador - Substituição por Dilaceração
-# Dispositivos Legais
-- Art. 908. O possuidor de título dilacerado, porém identificável, tem direito a obter do emitente a substituição do anterior, mediante a restituição do primeiro e o pagamento das despesas.
------
-# Título ao Portador - Perda ou Extravio
-# Dispositivos Legais
-- Art. 909. O proprietário, que perder ou extraviar título, ou for injustamente desapossado dele, poderá obter novo título em juízo, bem como impedir sejam pagos a outrem capital e rendimentos.
-- Parágrafo único. O pagamento, feito antes de ter ciência da ação referida neste artigo, exonera o devedor, salvo se se provar que ele tinha conhecimento do fato.
-# Remissões Normativas
-- Vide arts. 321 e 1.268 do Código Civil de 2002.
--- o art. 321 trata do direito do devedor de exigir uma declaração que inutilize o título perdido para efetuar o pagamento.
--- o art. 1.268 trata da transferência de propriedade de bem móvel por quem não é o dono (tradição a non domino), que se aplica à circulação do título ao portador.
------
+- Vide arts. 4.º e 5.º do CC.
+-- O art. 4º trata da incapacidade relativa dos maiores de dezesseis e menores de dezoito anos, ébrios habituais, viciados em tóxicos, pródigos e aqueles que, por causa transitória ou permanente, não puderem exprimir sua vontade.
+-- O art. 5º estabelece que a menoridade cessa aos dezoito anos completos, ou pela emancipação.
+- Vide art. 7.º, caput, da LINDB.
+-- estabelece que a lei do país de domicílio da pessoa determina as regras sobre o começo e o fim da personalidade, o nome, a capacidade e os direitos de família.
+- Vide art. 70 do CPC.
+-- estabelece que, como regra geral, a ação fundada em direito pessoal ou em direito real sobre bens móveis será proposta no foro de domicílio do réu.
