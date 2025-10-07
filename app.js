@@ -1,6 +1,6 @@
 // meujus – app.js (2025-10-07)
-// Navegação por sequência (art/súmula/enunciado/tese) + swipe no mobile + setas no desktop
-// Home minimalista mantida (logo + busca), topbar oculta na home.
+// Card ÚNICO por tema: chips → título → conteúdo
+// Home minimalista mantida (logo + busca); topbar oculta na home.
 
 (function(){
   const $  = (q, el=document) => el.querySelector(q);
@@ -8,12 +8,6 @@
 
   let TEMAS = [];
   let activeCat = 'Todos';
-
-  // Índices para navegação sequencial
-  // key = `${group}::${type}`  →  [{ idCanon, slug, title }]
-  let SEQ_IDX = new Map();
-  // slug → { key, pos }
-  let SEQ_POS = new Map();
 
   const SAVED_KEY        = 'meujus:saved';
   const LAST_KEY         = 'meujus:last';
@@ -28,18 +22,12 @@
   const escapeHTML = (s)=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
   const slugify = (s)=>(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
 
-  // ===== Normalização e busca =====
-  const normPT = s => String(s||'')
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
-    .replace(/ç/g,'c');
-
+  // ===== Normalização & busca =====
+  const normPT = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ç/g,'c');
   const escRx = x => x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-
   function pluralRegexToken(w){
     if(w.length<=2) return escRx(w);
-    const stem2 = w.slice(0,-2);
-    const stem1 = w.slice(0,-1);
+    const stem2=w.slice(0,-2), stem1=w.slice(0,-1);
     if(/ao$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'oes')}|${escRx(stem2+'aes')}|${escRx(stem2+'aos')})`;
     if(/m$/.test(w))  return `(?:${escRx(w)}|${escRx(stem1+'ns')})`;
     if(/[rz]$/.test(w)) return `(?:${escRx(w)}|${escRx(w+'es')})`;
@@ -50,127 +38,106 @@
     if(/ul$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'uis')})`;
     return `(?:${escRx(w)}s?)`;
   }
-
   function _hitPT(hayRaw, qRaw){
-    const hay = normPT(hayRaw);
-    const qn  = normPT(qRaw);
-    if(!hay || !qn) return 0;
-    let s = 0;
-    if(hay===qn) s += 100;
-    if(hay.includes(qn)) s += 60;
-    const toks = qn.split(/\s+/).filter(Boolean);
-    for(const t of toks){
-      const rx = new RegExp(`(?<![a-z0-9])${pluralRegexToken(t)}(?![a-z0-9])`, 'g');
-      if(rx.test(hay)) s += 10;
+    const hay=normPT(hayRaw), qn=normPT(qRaw);
+    if(!hay||!qn) return 0;
+    let s=0; if(hay===qn) s+=100; if(hay.includes(qn)) s+=60;
+    for(const t of qn.split(/\s+/).filter(Boolean)){
+      const rx=new RegExp(`(?<![a-z0-9])${pluralRegexToken(t)}(?![a-z0-9])`,'g');
+      if(rx.test(hay)) s+=10;
     }
     return s;
   }
 
   function currentPage(){
-    const h = location.hash || '#/';
-    const mTema  = h.match(/^#\/tema\/([^?#]+)/);
-    const mSobre = h.match(/^#\/sobre\b/);
-    const mHome  = /^#\/?$/.test(h) || /^#\/home\b/.test(h);
-    if(mTema)  return { kind:'tema', slug: decodeURIComponent(mTema[1]) };
-    if(mSobre) return { kind:'sobre' };
-    if(mHome)  return { kind:'home' };
-    return { kind:'home' };
+    const h=location.hash||'#/';
+    const mTema=h.match(/^#\/tema\/([^?#]+)/);
+    if(mTema) return {kind:'tema', slug:decodeURIComponent(mTema[1])};
+    if(/^#\/sobre\b/.test(h)) return {kind:'sobre'};
+    if(/^#\/?$/.test(h)||/^#\/home\b/.test(h)) return {kind:'home'};
+    return {kind:'home'};
   }
 
   const toastsEl = $('#toasts');
-  function toast(msg, type='info', ttl=2200){
+  function toast(msg,type='info',ttl=2200){
     if(!toastsEl) return;
-    const el = document.createElement('div');
-    el.className = `toast ${type}`;
-    el.innerHTML = `<span>${escapeHTML(msg)}</span>`;
+    const el=document.createElement('div');
+    el.className=`toast ${type}`;
+    el.innerHTML=`<span>${escapeHTML(msg)}</span>`;
     toastsEl.appendChild(el);
-    setTimeout(()=>el.classList.add('show'), 20);
-    setTimeout(()=>{ el.classList.remove('show'); setTimeout(()=>el.remove(), 350); }, ttl);
+    setTimeout(()=>el.classList.add('show'),20);
+    setTimeout(()=>{el.classList.remove('show');setTimeout(()=>el.remove(),350);},ttl);
   }
 
   async function fetchText(path){
-    const url = (path||'').replace(/^\.?\//,'');
-    const res = await fetch(url, {cache:'no-store'});
-    if(!res.ok){ console.error('Fetch falhou:', url, res.status); toast(`Erro ao carregar ${url}`, 'error', 3000); throw new Error(`HTTP ${res.status}`); }
+    const url=(path||'').replace(/^\.?\//,'');
+    const res=await fetch(url,{cache:'no-store'});
+    if(!res.ok){ console.error('Fetch falhou:',url,res.status); toast(`Erro ao carregar ${url}`,'error',3000); throw new Error(`HTTP ${res.status}`); }
     return res.text();
   }
 
   // ==== Split dos cards: aceita '-----' e também 3+ hífens ====
   function splitThemesByDelim(raw){
-    const txt = raw.replace(/^\uFEFF/, '').replace(/\r\n?/g,'\n').trim();
+    const txt=raw.replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n').trim();
     return txt.split(/^\s*-{3,}\s*$/m).map(s=>s.trim()).filter(Boolean);
   }
 
-  const normalizeHeading=(h)=> (h||'')
-    .toLowerCase()
-    .replace(/\(.*?\)/g,'')
-    .replace(/[.#:]/g,' ')
-    .replace(/\s+/g,' ')
-    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
-    .trim();
+  const normalizeHeading=(h)=> (h||'').toLowerCase().replace(/\(.*?\)/g,'').replace(/[.#:]/g,' ').replace(/\s+/g,' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
 
   // ===== IA Prompts =====
-  const IA_PROMPTS = {
-    resumo:    (t,full) => `Resuma de forma didática e objetiva o tema a seguir, explicando seus principais conceitos jurídicos e fundamentos legais.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-    detalhada: (t,full) => `Explique detalhadamente e transcreva o texto original dos dispositivos e remissões abaixo, analisando conteúdo, finalidade e aplicação prática.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-    perguntas: (t,full) => `Crie 10 perguntas abertas de aprofundamento teórico sobre o tema a seguir, com base em fontes jurídicas confiáveis.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-    questoes:  (t,full) => `Crie 10 questões objetivas com 4 alternativas (A–D), no estilo OAB/Cebraspe, com gabarito e justificativas.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-    casos:     (t,full) => `Crie 3 casos concretos práticos com solução fundamentada.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-    videos:    (t,full) => `Liste e descreva brevemente 5 vídeos do YouTube relevantes e recentes sobre o tema.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-    artigos:   (t,full) => `Liste e descreva brevemente 5 artigos jurídicos recentes sobre o tema em Migalhas, ConJur ou Jusbrasil.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+  const IA_PROMPTS={
+    resumo:(t,full)=>`Resuma de forma didática e objetiva o tema a seguir, explicando seus principais conceitos jurídicos e fundamentos legais.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    detalhada:(t,full)=>`Explique detalhadamente e transcreva o texto original dos dispositivos e remissões abaixo, analisando conteúdo, finalidade e aplicação prática.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    perguntas:(t,full)=>`Crie 10 perguntas abertas de aprofundamento teórico sobre o tema a seguir, com base em fontes jurídicas confiáveis.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    questoes:(t,full)=>`Crie 10 questões objetivas com 4 alternativas (A–D), no estilo OAB/Cebraspe, com gabarito e justificativas.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    casos:(t,full)=>`Crie 3 casos concretos práticos com solução fundamentada.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    videos:(t,full)=>`Liste e descreva brevemente 5 vídeos do YouTube relevantes e recentes sobre o tema.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    artigos:(t,full)=>`Liste e descreva brevemente 5 artigos jurídicos recentes sobre o tema em Migalhas, ConJur ou Jusbrasil.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
   };
-  const googleIA = (prompt) => `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
+  const googleIA = (prompt)=>`https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
 
-  // ===== Parser para o TXT =====
+  // ===== Parser (TXT) =====
   function parseTemaFromChunk(chunk){
-    const fixed = chunk.replace(/^\s*##\s+##\s+/mg, '## ');
-    const mTitle = fixed.match(/^\s*#\s+(.+?)\s*$/m);
+    const fixed=chunk.replace(/^\s*##\s+##\s+/mg,'## ');
+    const mTitle=fixed.match(/^\s*#\s+(.+?)\s*$/m);
     if(!mTitle) return null;
+    const title=mTitle[1].trim();
+    const slug =slugify(title);
 
-    const title = mTitle[1].trim();
-    const slug  = slugify(title);
-
-    const rxHead = /^\s*#\s+(.+?)\s*$/mg;
-    const sections = [];
-    let m;
-    while ((m = rxHead.exec(fixed))) {
-      const name = m[1].trim();
-      const nm = normalizeHeading(name);
-      const start = rxHead.lastIndex;
-      const prev = sections.at(-1);
-      if (prev) prev.end = m.index;
-      sections.push({ raw:name, nm, start, end: fixed.length });
+    const rxHead=/^\s*#\s+(.+?)\s*$/mg;
+    const sections=[]; let m;
+    while((m=rxHead.exec(fixed))){
+      const name=m[1].trim();
+      const nm=normalizeHeading(name);
+      const start=rxHead.lastIndex;
+      const prev=sections.at(-1);
+      if(prev) prev.end=m.index;
+      sections.push({raw:name, nm, start, end:fixed.length});
     }
 
-    const secD = sections.find(s => /^dispositivos\s+legais\b/.test(s.nm));
-    const secR = sections.find(s => /^remissoes\s+normativas\b/.test(s.nm));
+    const secD=sections.find(s=>/^dispositivos\s+legais\b/.test(s.nm));
+    const secR=sections.find(s=>/^remissoes\s+normativas\b/.test(s.nm));
 
     function parseList(sec){
       if(!sec) return [];
-      const body = fixed.slice(sec.start, sec.end);
-      const lines = body.split('\n');
-      const out = [];
-      let last = null;
+      const body=fixed.slice(sec.start,sec.end);
+      const lines=body.split('\n');
+      const out=[]; let last=null;
       for(const rawLine of lines){
-        const L = rawLine.replace(/\r/g,'').trimEnd();
+        const L=rawLine.replace(/\r/g,'').trimEnd();
         if(!L.trim()) continue;
+        if(/^\s*#\s+/.test(L)) break;
+        if(/^\s*-{5}\s*$/.test(L)) break;
+        if(/^\s*-{4}\s*$/.test(L)) continue;
 
-        if (/^\s*#\s+/.test(L)) break;
-        if (/^\s*-{5}\s*$/.test(L)) break;
-        if (/^\s*-{4}\s*$/.test(L)) continue;
-
-        if (/^\s*--\s+/.test(L)){
-          const c = L.replace(/^\s*--+\s*/, '').trim();
-          if (last) {
-            if (!last.comentarios) last.comentarios = [];
-            last.comentarios.push(c);
-          }
+        if(/^\s*--\s+/.test(L)){
+          const c=L.replace(/^\s*--+\s*/,'').trim();
+          if(last){ (last.comentarios||(last.comentarios=[])).push(c); }
           continue;
         }
-
-        if (/^\s*-\s+/.test(L)){
-          const texto = L.replace(/^\s*-+\s*/, '').trim();
-          last = { texto, comentario:null };
+        if(/^\s*-\s+/.test(L)){
+          const texto=L.replace(/^\s*-+\s*/,'').trim();
+          last={texto, comentario:null};
           out.push(last);
           continue;
         }
@@ -178,344 +145,141 @@
       return out;
     }
 
-    const dispositivos = parseList(secD);
-    const remissoes    = parseList(secR);
+    const dispositivos=parseList(secD);
+    const remissoes   =parseList(secR);
 
-    const mkLink = (txt) => googleIA(IA_PROMPTS.detalhada(title, `${txt}`));
-    for(const it of dispositivos){ it.link = mkLink(`${title} — ${it.texto}`); }
-    for(const it of remissoes){    it.link = mkLink(`${title} — ${it.texto}`); }
+    const mkLink=(txt)=>googleIA(IA_PROMPTS.detalhada(title,`${txt}`));
+    for(const it of dispositivos){ it.link=mkLink(`${title} — ${it.texto}`); }
+    for(const it of remissoes){    it.link=mkLink(`${title} — ${it.texto}`); }
 
-    const dispText = dispositivos.map(x=>x.texto + (x.comentarios?` ${x.comentarios.join(' ')}`:'' )).join(' ');
-    const remText  = remissoes.map(x=>x.texto + (x.comentarios?` ${x.comentarios.join(' ')}`:'' )).join(' ');
+    const dispText=dispositivos.map(x=>x.texto+(x.comentarios?` ${x.comentarios.join(' ')}`:'')).join(' ');
+    const remText =remissoes.map(x=>x.texto+(x.comentarios?` ${x.comentarios.join(' ')}`:'')).join(' ');
 
     return {
-      slug, title, group: '', path: '', frag: slug,
+      slug, title, group:'', path:'', frag:slug,
       dispositivos, remissoes,
-      titleL: title.toLowerCase(),
-      bodyL: (dispText + ' ' + remText).toLowerCase(),
-      titleN: normPT(title),
-      dispN:  normPT(dispText),
-      remN:   normPT(remText),
-      bodyN:  normPT(dispText + ' ' + remText)
+      titleL:title.toLowerCase(),
+      bodyL:(dispText+' '+remText).toLowerCase(),
+      titleN:normPT(title),
+      dispN:normPT(dispText),
+      remN:normPT(remText),
+      bodyN:normPT(dispText+' '+remText)
     };
-  }
-
-  // ===== Extração do identificador (Art., Súmula, Enunciado, Tese) =====
-  function extractIdFromText(txt){
-    if(!txt) return null;
-    const s = txt.replace(/\s+/g,' ').trim();
-
-    // Artigo: "Art. 1", "Art. 1º", "Art. 1.º", "Artigo 121-A"
-    let m = s.match(/\b(art(?:\.|igo)?)\s*(\d+)(?:\s*[-–]?\s*([A-Za-z]))?\b/i);
-    if(m){
-      const num = m[2];
-      const suf = (m[3]||'').toLowerCase();
-      const idCanon = `art:${num.padStart(4,'0')}${suf?'-'+suf:''}`;
-      return { type:'art', num, suf, idCanon };
-    }
-
-    // Súmula
-    m = s.match(/\b(s[úu]mula)\s*(\d+)\b/i);
-    if(m){
-      const num = m[2];
-      return { type:'sumula', num, suf:'', idCanon:`sumula:${num.padStart(4,'0')}` };
-    }
-
-    // Enunciado
-    m = s.match(/\b(enunciado)\s*(\d+)\b/i);
-    if(m){
-      const num = m[2];
-      return { type:'enunciado', num, suf:'', idCanon:`enunciado:${num.padStart(4,'0')}` };
-    }
-
-    // Tese
-    m = s.match(/\b(tese)\s*(\d+)\b/i);
-    if(m){
-      const num = m[2];
-      return { type:'tese', num, suf:'', idCanon:`tese:${num.padStart(4,'0')}` };
-    }
-
-    return null;
-  }
-
-  // Comparador do idCanon (numérico + sufixo opcional)
-  function compareCanon(a, b){
-    const [ta, na] = a.split(':');
-    const [tb, nb] = b.split(':');
-    if(ta !== tb) return ta.localeCompare(tb);
-    const [n1, sa=''] = nb.split('-');
-    const [n2, sb=''] = a===b ? [n1, sa] : b.split(':')[1].split('-'); // fallback
-    const ai = parseInt(n1, 10);
-    const bi = parseInt(n2, 10);
-    if(ai !== bi) return ai - bi;
-    if(sa && !sb) return 1;
-    if(!sa && sb) return -1;
-    return sa.localeCompare(sb);
   }
 
   // ===== Highlight =====
   function _buildHighlightRegex(q){
-    const parts = String(q||'')
-      .toLowerCase()
-      .split(/\s+/)
-      .filter(w => w.length >= 4 && /[\p{L}]/u.test(w) && !/^\d+$/.test(w))
-      .map(w => w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+    const parts=String(q||'').toLowerCase().split(/\s+/)
+      .filter(w=>w.length>=4 && /[\p{L}]/u.test(w) && !/^\d+$/.test(w))
+      .map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
     if(!parts.length) return null;
-    try{
-      return new RegExp(`(?<!\\p{L})(` + parts.join('|') + `)(?!\\p{L})`, 'uig');
-    }catch(_){
-      return new RegExp(`(^|[^\\p{L}])(` + parts.join('|') + `)(?!\\p{L})`, 'uig');
-    }
+    try{ return new RegExp(`(?<!\\p{L})(${parts.join('|')})(?!\\p{L})`,'uig'); }
+    catch(_){ return new RegExp(`(^|[^\\p{L}])(${parts.join('|')})(?!\\p{L})`,'uig'); }
   }
-  function highlightTitle(title, q){
-    const esc = String(title).replace(/</g,'&lt;');
-    const rx = _buildHighlightRegex(q);
-    if(!rx) return esc;
-    if(rx.source.startsWith('(^|')){
-      return esc.replace(rx, (m,prefix,word)=> (prefix||'') + '<mark>'+word+'</mark>');
-    }
-    return esc.replace(rx, '<mark>$1</mark>');
+  function highlightTitle(title,q){
+    const esc=String(title).replace(/</g,'&lt;');
+    const rx=_buildHighlightRegex(q); if(!rx) return esc;
+    if(rx.source.startsWith('(^|')) return esc.replace(rx,(m,prefix,word)=>(prefix||'')+'<mark>'+word+'</mark>');
+    return esc.replace(rx,'<mark>$1</mark>');
   }
-  function fmtInlineBold(escapedHtml){
-    return String(escapedHtml).replace(/\*([^*]+)\*/g, '<strong>$1</strong>');
-  }
+  function fmtInlineBold(escapedHtml){ return String(escapedHtml).replace(/\*([^*]+)\*/g,'<strong>$1</strong>'); }
 
   /* ===== Etiquetas ===== */
   function labelFromFlags(flags){
-    const tags = [];
-    if(flags.T) tags.push('(T)');
-    if(flags.D) tags.push('(D)');
-    if(flags.R) tags.push('(R)');
-    return tags.length ? tags.join(' ') : '';
+    const tags=[]; if(flags.T) tags.push('(T)'); if(flags.D) tags.push('(D)'); if(flags.R) tags.push('(R)');
+    return tags.length?tags.join(' '):'';
   }
 
   /* ===== Dropdown pós-busca ===== */
-  function getLastAc(){
-    try{ return JSON.parse(sessionStorage.getItem(LAST_AC_KEY)||'null'); }catch(_){ return null; }
-  }
-  let __popEl = null;
-  function closeAcDropdown(){
-    if(__popEl){ __popEl.remove(); __popEl=null; }
-    document.removeEventListener('click', onDocClickClose, true);
-    window.removeEventListener('hashchange', closeAcDropdown, {once:true});
-  }
-  function onDocClickClose(e){
-    if(__popEl && !__popEl.contains(e.target)) closeAcDropdown();
-  }
-  function openAcDropdown(anchorBtn, cat, data){
+  let __popEl=null;
+  function closeAcDropdown(){ if(__popEl){ __popEl.remove(); __popEl=null; } document.removeEventListener('click',onDocClickClose,true); window.removeEventListener('hashchange',closeAcDropdown,{once:true}); }
+  function onDocClickClose(e){ if(__popEl && !__popEl.contains(e.target)) closeAcDropdown(); }
+  function openAcDropdown(anchorBtn,cat,data){
     closeAcDropdown();
-    const list = (cat && cat!=='Todos')
-      ? data.items.filter(it => (it.group||'Geral')===cat)
-      : data.items.slice();
-
+    const list=(cat&&cat!=='Todos')? data.items.filter(it=>(it.group||'Geral')===cat) : data.items.slice();
     if(!list.length) return;
-
-    __popEl = document.createElement('ul');
-    __popEl.className = 'suggestions pop';
-    __popEl.setAttribute('role','listbox');
-    __popEl.innerHTML = list.slice(0,12).map(it=>`
+    __popEl=document.createElement('ul');
+    __popEl.className='suggestions pop'; __popEl.setAttribute('role','listbox');
+    __popEl.innerHTML=list.slice(0,12).map(it=>`
       <li role="option">
         <a href="#/tema/${it.slug}">
           <div class="s1">${escapeHTML(it.title)}</div>
           <div class="s2">${escapeHTML((it.group||'Geral') + (it.labels?` | ${it.labels}`:''))}</div>
         </a>
       </li>`).join('');
-
     document.body.appendChild(__popEl);
-
-    const r = anchorBtn.getBoundingClientRect();
-    const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    const padX = 8;
-    const left = Math.min(Math.max(r.left, padX), vw - padX - 320);
-    __popEl.style.left = left + 'px';
-    __popEl.style.top  = (r.bottom + window.scrollY + 6) + 'px';
-    __popEl.style.width = Math.min(640, vw - padX*2) + 'px';
-    __popEl.style.maxHeight = '70vh';
-    __popEl.style.overflowY = 'auto';
-    __popEl.style.overscrollBehavior = 'contain';
-
-    setTimeout(()=>{
-      document.addEventListener('click', onDocClickClose, true);
-      window.addEventListener('hashchange', closeAcDropdown, {once:true});
-    }, 0);
+    const r=anchorBtn.getBoundingClientRect(); const vw=Math.max(document.documentElement.clientWidth, window.innerWidth||0); const padX=8;
+    const left=Math.min(Math.max(r.left,padX), vw-padX-320);
+    __popEl.style.left=left+'px'; __popEl.style.top=(r.bottom+window.scrollY+6)+'px';
+    __popEl.style.width=Math.min(640, vw-padX*2)+'px'; __popEl.style.maxHeight='70vh'; __popEl.style.overflowY='auto'; __popEl.style.overscrollBehavior='contain';
+    setTimeout(()=>{ document.addEventListener('click',onDocClickClose,true); window.addEventListener('hashchange',closeAcDropdown,{once:true}); },0);
   }
 
   /* ===== Autocomplete ===== */
-  let input  = document.querySelector('#search');
-  let acList = document.querySelector('#suggestions');
-  if (acList) acList.hidden = true;
-
-  function scoreFields(q, t){
-    const sT = _hitPT(t.titleN, q);
-    const sD = _hitPT(t.dispN || '', q);
-    const sR = _hitPT(t.remN  || '', q);
-    const score = 1.2*sT + 1.0*sD + 1.0*sR;
-    return { score, flags: { T: sT>0, D: sD>0, R: sR>0 } };
-  }
-
-  function bindAutocomplete(){
-    input  = document.querySelector('#search');
-    acList = document.querySelector('#suggestions');
-    if (acList) acList.hidden = true;
-
-    input?.addEventListener('input', onInputAC);
-    input?.addEventListener('keydown', onKeydownAC);
-    acList?.addEventListener('click', onClickAC);
-  }
-
+  let input=document.querySelector('#search'); let acList=document.querySelector('#suggestions'); if(acList) acList.hidden=true;
+  function scoreFields(q,t){ const sT=_hitPT(t.titleN,q); const sD=_hitPT(t.dispN||'',q); const sR=_hitPT(t.remN||'',q); const score=1.2*sT+1.0*sD+1.0*sR; return {score, flags:{T:sT>0,D:sD>0,R:sR>0}}; }
+  function bindAutocomplete(){ input=$('#search'); acList=$('#suggestions'); if(acList) acList.hidden=true; input?.addEventListener('input',onInputAC); input?.addEventListener('keydown',onKeydownAC); acList?.addEventListener('click',onClickAC); }
   function onInputAC(e){
     const q=(e.target.value||'').trim();
     if(q.length<2 || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; closeAcDropdown(); return; }
-
-    let arr = TEMAS.map(t=>({ t, ...scoreFields(q,t) }))
-      .filter(x=>x.score>0)
-      .sort((a,b)=> b.score-a.score || a.t.title.localeCompare(b.t.title,'pt-BR'))
-      .slice(0,40);
-
+    let arr=TEMAS.map(t=>({t, ...scoreFields(q,t)})).filter(x=>x.score>0).sort((a,b)=> b.score-a.score || a.t.title.localeCompare(b.t.title,'pt-BR')).slice(0,40);
     if(!arr.length){ acList.innerHTML=''; acList.hidden=true; closeAcDropdown(); return; }
+    const counts=new Map(); for(const x of arr){ const g=x.t.group||'Geral'; counts.set(g,(counts.get(g)||0)+1); }
+    const catList=[...counts.keys()].sort((a,b)=> a.localeCompare(b,'pt-BR'));
+    if(activeCat && activeCat!=='Todos'){ const filtered=arr.filter(x=>(x.t.group||'Geral')===activeCat); arr = filtered.length?filtered:arr; }
 
-    const counts = new Map();
-    for(const x of arr){ const g=x.t.group||'Geral'; counts.set(g,(counts.get(g)||0)+1); }
-    const catList = [...counts.keys()].sort((a,b)=> a.localeCompare(b,'pt-BR'));
-
-    if(activeCat && activeCat!=='Todos'){
-      const filtered = arr.filter(x => (x.t.group||'Geral')===activeCat);
-      arr = filtered.length ? filtered : arr;
-    }
-
-    const lastAc = {
-      q,
-      categories: ['Todos', ...catList],
-      items: arr.slice(0, 20).map(x => ({
-        slug: x.t.slug,
-        title: x.t.title,
-        group: x.t.group || 'Geral',
-        labels: labelFromFlags(x.flags)
-      }))
-    };
+    const lastAc={ q, categories:['Todos', ...catList], items: arr.slice(0,20).map(x=>({ slug:x.t.slug, title:x.t.title, group:x.t.group||'Geral', labels:labelFromFlags(x.flags) })) };
     try{ sessionStorage.setItem(LAST_AC_KEY, JSON.stringify(lastAc)); }catch(_){}
 
-    const chipsHTML = `
+    const chipsHTML=`
       <div class="ac-chips" role="group" aria-label="Filtrar sugestões por categoria">
         <button type="button" class="ac-chip" data-cat="Todos" aria-pressed="${activeCat==='Todos'}">Todos</button>
-        ${catList.map(cat=>`
-          <button type="button" class="ac-chip" data-cat="${(cat||'').replace(/"/g,'&quot;')}"
-            aria-pressed="${activeCat===cat}">${escapeHTML(cat)}</button>`).join('')}
+        ${catList.map(cat=>`<button type="button" class="ac-chip" data-cat="${(cat||'').replace(/"/g,'&quot;')}" aria-pressed="${activeCat===cat}">${escapeHTML(cat)}</button>`).join('')}
       </div>`;
-
-    const listHTML = arr.slice(0,8).map(x=>{
-      const {t, flags} = x;
-      const titleHTML = highlightTitle(t.title, q);
-      const labels = labelFromFlags(flags);
-      return `
-        <li role="option">
-          <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['T','D','R'].filter(k=>flags[k]).join('')}">
-            <div class="s1">${titleHTML}</div>
-            <div class="s2">${escapeHTML((t.group||'Geral') + (labels?` | ${labels}`:''))}</div>
-          </a>
-        </li>`;
+    const listHTML=arr.slice(0,8).map(x=>{
+      const {t,flags}=x; const titleHTML=highlightTitle(t.title,q); const labels=labelFromFlags(flags);
+      return `<li role="option"><a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['T','D','R'].filter(k=>flags[k]).join('')}"><div class="s1">${titleHTML}</div><div class="s2">${escapeHTML((t.group||'Geral') + (labels?` | ${labels}`:''))}</div></a></li>`;
     }).join('');
-
-    acList.innerHTML = chipsHTML + listHTML;
-    acList.hidden=false;
-
-    acList.querySelectorAll('.ac-chip').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        activeCat = btn.getAttribute('data-cat')||'Todos';
-        input.dispatchEvent(new Event('input', {bubbles:false}));
-      });
-    });
+    acList.innerHTML = chipsHTML + listHTML; acList.hidden=false;
+    acList.querySelectorAll('.ac-chip').forEach(btn=>{ btn.addEventListener('click',()=>{ activeCat=btn.getAttribute('data-cat')||'Todos'; input.dispatchEvent(new Event('input',{bubbles:false})); }); });
   }
+  function onKeydownAC(ev){ if(ev.key==='Enter'){ const a=acList?.querySelector('a'); if(a){ const q=a.getAttribute('data-q')||''; const flags=a.getAttribute('data-flags')||''; try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q,flags})); }catch(_){ } location.hash=a.getAttribute('href'); acList.hidden=true; }}}
+  function onClickAC(ev){ const a=ev.target.closest('a'); if(!a) return; const q=a.getAttribute('data-q')||''; const flags=a.getAttribute('data-flags')||''; try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q,flags})); }catch(_){ } acList.hidden=true; }
+  window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden=true; closeAcDropdown(); });
 
-  function onKeydownAC(ev){
-    if(ev.key==='Enter'){
-      const a = acList?.querySelector('a');
-      if(a){
-        const q = a.getAttribute('data-q')||'';
-        const flags = a.getAttribute('data-flags')||'';
-        try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q, flags})); }catch(_){}
-        location.hash = a.getAttribute('href');
-        acList.hidden = true;
-      }
-    }
-  }
-
-  function onClickAC(ev){
-    const a = ev.target.closest('a'); if(!a) return;
-    const q = a.getAttribute('data-q')||'';
-    const flags = a.getAttribute('data-flags')||'';
-    try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q, flags})); }catch(_){}
-    acList.hidden = true;
-  }
-
-  window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; closeAcDropdown(); });
-
-  /* ===== Montagem dos temas + índice sequencial ===== */
+  /* ===== Seeds ===== */
   async function readAllSeeds(){
-    const seeds = $$('#menuList a.title[data-auto="1"][data-path]');
-    const temas = [];
-    for (const a of seeds){
-      const group = (a.dataset.group||'').trim() || 'Geral';
-      const path  = (a.dataset.path||'').trim();
+    const seeds=$$('#menuList a.title[data-auto="1"][data-path]');
+    const temas=[];
+    for(const a of seeds){
+      const group=(a.dataset.group||'').trim()||'Geral';
+      const path =(a.dataset.path||'').trim();
       if(!path) continue;
       try{
-        const raw    = await fetchText(path);
-        const chunks = splitThemesByDelim(raw);
-        const parsed = chunks.map(parseTemaFromChunk).filter(Boolean);
-
-        for (const t of parsed){
-          // Extrai ID do primeiro item de Dispositivos; se não tiver, tenta do título
-          const firstDisp = t.dispositivos?.[0]?.texto || '';
-          const idInfo = extractIdFromText(firstDisp) || extractIdFromText(t.title);
-          const seq = idInfo ? { type:idInfo.type, idCanon:idInfo.idCanon } : null;
-
-          const slug  = `${slugify(group)}-${t.slug}`;
-          const dispN = t.dispN || '';
-          const remN  = t.remN  || '';
-          const body  = (dispN + ' ' + remN).toLowerCase();
-
+        const raw=await fetchText(path);
+        const chunks=splitThemesByDelim(raw);
+        const parsed=chunks.map(parseTemaFromChunk).filter(Boolean);
+        for(const t of parsed){
+          const slug = `${slugify(group)}-${t.slug}`;
+          const dispN=t.dispN||''; const remN=t.remN||''; const body=(dispN+' '+remN).toLowerCase();
           temas.push({
-            slug, title: t.title, path, tags: [], group, frag: t.slug,
-            dispositivos: t.dispositivos||[],
-            remissoes:    t.remissoes||[],
-            titleL: t.title.toLowerCase(), bodyL: body,
-            titleN: t.titleN, bodyN: t.bodyN, dispN, remN,
-            seq
+            slug, title:t.title, path, tags:[], group, frag:t.slug,
+            dispositivos:t.dispositivos||[], remissoes:t.remissoes||[],
+            titleL:t.title.toLowerCase(), bodyL:body,
+            titleN:t.titleN, bodyN:t.bodyN, dispN, remN
           });
         }
-      }catch(e){
-        console.error('Seed falhou', path, e);
-        toast(`Erro ao ler ${path}`, 'error', 2800);
-      }
+      }catch(e){ console.error('Seed falhou',path,e); toast(`Erro ao ler ${path}`,'error',2800); }
     }
     return temas;
   }
 
-  function buildSequenceIndex(temas){
-    SEQ_IDX.clear();
-    SEQ_POS.clear();
-    for(const t of temas){
-      if(!t.seq) continue;
-      const key = `${t.group||'Geral'}::${t.seq.type}`;
-      if(!SEQ_IDX.has(key)) SEQ_IDX.set(key, []);
-      SEQ_IDX.get(key).push({ idCanon: t.seq.idCanon, slug: t.slug, title: t.title });
-    }
-    for(const [key, arr] of SEQ_IDX){
-      arr.sort((a,b)=> compareCanon(a.idCanon, b.idCanon));
-      arr.forEach((row, i)=> SEQ_POS.set(row.slug, { key, pos:i }));
-    }
-  }
-
   /* ===== Drawer helpers ===== */
   function closeDrawer(){
-    const drawer   = document.getElementById('drawer');
-    const openBtn  = document.getElementById('btnMenu');
+    const drawer=$('#drawer'); const openBtn=$('#btnMenu');
     if(!drawer) return;
-    drawer.classList.remove('open');
-    drawer.setAttribute('aria-hidden','true');
-    openBtn?.setAttribute('aria-expanded','false');
-    document.body.classList.remove('noscroll');
-    openBtn?.focus?.();
+    drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true');
+    openBtn?.setAttribute('aria-expanded','false'); document.body.classList.remove('noscroll'); openBtn?.focus?.();
   }
 
   /* ===== Menu ===== */
@@ -542,14 +306,10 @@
 
     if(saved.length){
       const map=new Map(TEMAS.map(t=>[t.slug,t]));
-      ulSaved.innerHTML = saved
-        .map(slug=>{
-          const t=map.get(slug); if(!t) return '';
-          return `<li>
-            <a class="title" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
-            <button class="mini" data-remove="${t.slug}">Remover</button>
-          </li>`;
-        }).join('');
+      ulSaved.innerHTML = saved.map(slug=>{
+        const t=map.get(slug); if(!t) return '';
+        return `<li><a class="title" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a> <button class="mini" data-remove="${t.slug}">Remover</button></li>`;
+      }).join('');
     }else{
       ulSaved.innerHTML = `<li><a class="title" href="#/sobre">Nenhum tema salvo</a></li>`;
     }
@@ -576,11 +336,7 @@
     const title=document.createElement('div'); title.className='menu-title'; title.textContent='Categorias'; menu.appendChild(title);
 
     const byCat=new Map();
-    for(const t of TEMAS){
-      const key=t.group||'Geral';
-      if(!byCat.has(key)) byCat.set(key, []);
-      byCat.get(key).push(t);
-    }
+    for(const t of TEMAS){ const key=t.group||'Geral'; if(!byCat.has(key)) byCat.set(key,[]); byCat.get(key).push(t); }
     const cats=[...byCat.keys()].sort((a,b)=>a.localeCompare(b,'pt-BR'));
     for(const cat of cats){
       const temas=byCat.get(cat).slice().sort((a,b)=>a.title.localeCompare(b.title,'pt-BR'));
@@ -590,40 +346,26 @@
       btn.innerHTML=`<span>${escapeHTML(cat)}</span><span class="caret">▸</span>`;
       const ul=document.createElement('ul'); ul.className='sublist'; ul.hidden=true;
       ul.innerHTML=temas.map(t=>`<li><a class="title" href="#/tema/${t.slug}" data-path="${t.path}" data-frag="${t.frag}" data-title="${escapeHTML(t.title)}">${escapeHTML(t.title)}</a></li>`).join('');
-      btn.addEventListener('click',()=>{
-        const open=btn.getAttribute('aria-expanded')==='true';
-        btn.setAttribute('aria-expanded', String(!open));
-        ul.hidden = open;
-      });
+      btn.addEventListener('click',()=>{ const open=btn.getAttribute('aria-expanded')==='true'; btn.setAttribute('aria-expanded', String(!open)); ul.hidden=open; });
       li.appendChild(btn); li.appendChild(ul); menu.appendChild(li);
     }
 
     // Fechar drawer ao clicar em qualquer link .title
-    menu.addEventListener('click', (e)=>{
-      const a = e.target.closest('a.title');
-      if(a){ closeDrawer(); }
-    });
+    menu.addEventListener('click',(e)=>{ const a=e.target.closest('a.title'); if(a){ closeDrawer(); }});
   }
 
-  /* ===== Home minimalista: esconde topbar e mostra logo+busca lado a lado ===== */
+  /* ===== Home minimalista ===== */
 
-  // Guardar posição original da search-wrap para mover/voltar
-  const searchWrap = document.querySelector('.search-wrap');
-  const searchWrapParent = searchWrap?.parentElement || null;
-  const searchWrapNext   = searchWrap?.nextSibling || null;
+  // Guardar posição original da busca para mover/voltar
+  const searchWrap=document.querySelector('.search-wrap');
+  const searchWrapParent=searchWrap?.parentElement||null;
+  const searchWrapNext  =searchWrap?.nextSibling||null;
 
-  function moveSearchTo(container){
-    if(!searchWrap || !container) return;
-    container.appendChild(searchWrap);
-    bindAutocomplete();
-  }
+  function moveSearchTo(container){ if(!searchWrap||!container) return; container.appendChild(searchWrap); bindAutocomplete(); }
   function restoreSearchToTopbar(){
     if(!searchWrap || !searchWrapParent) return;
-    if(searchWrapNext && searchWrapNext.parentNode===searchWrapParent){
-      searchWrapParent.insertBefore(searchWrap, searchWrapNext);
-    }else{
-      searchWrapParent.appendChild(searchWrap);
-    }
+    if(searchWrapNext && searchWrapNext.parentNode===searchWrapParent){ searchWrapParent.insertBefore(searchWrap, searchWrapNext); }
+    else{ searchWrapParent.appendChild(searchWrap); }
     bindAutocomplete();
   }
 
@@ -631,257 +373,96 @@
   function leaveHomeMode(){ document.body.classList.remove('is-home'); }
 
   function renderHome(){
-    const actionsEl=$('#actions'); const titleEl=$('#themeTitle'); const contentEl=$('#content');
+    const contentEl=$('#content');
     enterHomeMode();
-    actionsEl.innerHTML=''; titleEl.textContent='';
-    contentEl.innerHTML = `
+    contentEl.innerHTML=`
       <section class="home-center" aria-label="Busca principal">
         <div class="home-inline">
           <div class="home-logo"><span class="b1">Meu</span><span class="b2">Jus</span></div>
           <div class="home-search-host"></div>
         </div>
-      </section>
-    `;
+      </section>`;
     moveSearchTo(contentEl.querySelector('.home-search-host'));
   }
 
   /* ===== IA Popover ===== */
-  let __iaPop = null;
-  function closeIAPopover(){
-    __iaPop?.remove(); __iaPop = null;
-    document.removeEventListener('click', onDocClickCloseIA, true);
-    window.removeEventListener('scroll', closeIAPopover, true);
-    window.removeEventListener('hashchange', closeIAPopover, {once:true});
-  }
-  function onDocClickCloseIA(e){
-    if(__iaPop && !__iaPop.contains(e.target)) closeIAPopover();
-  }
-  function openIAPopover(anchorBtn, title, fullText){
+  let __iaPop=null;
+  function closeIAPopover(){ __iaPop?.remove(); __iaPop=null; document.removeEventListener('click',onDocClickCloseIA,true); window.removeEventListener('scroll',closeIAPopover,true); window.removeEventListener('hashchange',closeIAPopover,{once:true}); }
+  function onDocClickCloseIA(e){ if(__iaPop && !__iaPop.contains(e.target)) closeIAPopover(); }
+  function openIAPopover(anchorBtn,title,fullText){
     closeIAPopover();
-    const host = $('#iaPopoverHost') || document.body;
-
-    const opts = [
-      {key:'resumo',    label:'Resumo'},
-      {key:'detalhada', label:'Detalhada'},
-      {key:'perguntas', label:'10 Perguntas'},
-      {key:'questoes',  label:'10 Questões'},
-      {key:'casos',     label:'Casos Concretos'},
-      {key:'videos',    label:'Vídeos'},
-      {key:'artigos',   label:'Artigos'},
-    ];
-
-    __iaPop = document.createElement('div');
-    __iaPop.className = 'ia-popover';
-    __iaPop.setAttribute('role','menu');
-    __iaPop.innerHTML = opts.map(o=>`<button class="ia-opt" data-k="${o.key}" role="menuitem">${o.label}</button>`).join('');
+    const host=$('#iaPopoverHost')||document.body;
+    const opts=[{key:'resumo',label:'Resumo'},{key:'detalhada',label:'Detalhada'},{key:'perguntas',label:'10 Perguntas'},{key:'questoes',label:'10 Questões'},{key:'casos',label:'Casos Concretos'},{key:'videos',label:'Vídeos'},{key:'artigos',label:'Artigos'}];
+    __iaPop=document.createElement('div'); __iaPop.className='ia-popover'; __iaPop.setAttribute('role','menu');
+    __iaPop.innerHTML=opts.map(o=>`<button class="ia-opt" data-k="${o.key}" role="menuitem">${o.label}</button>`).join('');
     host.appendChild(__iaPop);
-
-    const r = anchorBtn.getBoundingClientRect();
-    const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    const padX = 8;
-    const popW = Math.min(320, vw - padX*2);
-    const left = Math.min(Math.max(r.left + window.scrollX, padX), vw - padX - popW);
-    __iaPop.style.left = left + 'px';
-    __iaPop.style.top  = (r.bottom + window.scrollY + 6) + 'px';
-    __iaPop.style.maxWidth = popW + 'px';
-
-    __iaPop.querySelectorAll('.ia-opt').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const k = btn.getAttribute('data-k');
-        const fn = IA_PROMPTS[k]; if(!fn) return;
-        const url = googleIA(fn(title, fullText));
-        window.open(url, '_blank', 'noopener');
-        closeIAPopover();
-      });
-    });
-
-    setTimeout(()=>{
-      document.addEventListener('click', onDocClickCloseIA, true);
-      window.addEventListener('scroll', closeIAPopover, true);
-      window.addEventListener('hashchange', closeIAPopover, {once:true});
-    },0);
+    const r=anchorBtn.getBoundingClientRect(); const vw=Math.max(document.documentElement.clientWidth, window.innerWidth||0); const padX=8; const popW=Math.min(320, vw-padX*2);
+    const left=Math.min(Math.max(r.left+window.scrollX,padX), vw-padX-popW);
+    __iaPop.style.left=left+'px'; __iaPop.style.top=(r.bottom+window.scrollY+6)+'px'; __iaPop.style.maxWidth=popW+'px';
+    __iaPop.querySelectorAll('.ia-opt').forEach(btn=>{ btn.addEventListener('click',()=>{ const k=btn.getAttribute('data-k'); const fn=IA_PROMPTS[k]; if(!fn) return; const url=googleIA(fn(title,fullText)); window.open(url,'_blank','noopener'); closeIAPopover(); }); });
+    setTimeout(()=>{ document.addEventListener('click',onDocClickCloseIA,true); window.addEventListener('scroll',closeIAPopover,true); window.addEventListener('hashchange',closeIAPopover,{once:true}); },0);
   }
 
-  /* ===== Navegação sequencial: setas + swipe ===== */
-  let cleanupNavHandlers = null;
+  /* ===== Dados & Render ===== */
+  async function loadTemas(){ TEMAS = await readAllSeeds(); renderMenu(); }
 
-  function setupNavControlsFor(slug){
-    // Limpa handlers anteriores
-    if(typeof cleanupNavHandlers === 'function'){ cleanupNavHandlers(); cleanupNavHandlers = null; }
-
-    const posInfo = SEQ_POS.get(slug);
-    if(!posInfo){ // tema sem ID sequencial → não mostra setas nem swipe
-      const old = document.querySelector('.nav-arrows');
-      old?.remove();
-      return;
-    }
-
-    const { key, pos } = posInfo;
-    const list = SEQ_IDX.get(key) || [];
-    if(!list.length) return;
-
-    const prevIdx = (pos - 1 + list.length) % list.length;
-    const nextIdx = (pos + 1) % list.length;
-    const prevSlug = list[prevIdx].slug;
-    const nextSlug = list[nextIdx].slug;
-
-    // Injeção dos botões (estilo vem do style.css)
-    let arrows = document.querySelector('.nav-arrows');
-    if(!arrows){
-      arrows = document.createElement('div');
-      arrows.className = 'nav-arrows';
-      arrows.innerHTML = `
-        <button class="nav-btn nav-prev" aria-label="Anterior">◀</button>
-        <button class="nav-btn nav-next" aria-label="Próximo">▶</button>
-      `;
-      document.body.appendChild(arrows);
-    }
-
-    const go = (targetSlug)=>{ location.hash = '#/tema/' + targetSlug; };
-
-    const btnPrev = arrows.querySelector('.nav-prev');
-    const btnNext = arrows.querySelector('.nav-next');
-    const onPrev  = ()=> go(prevSlug);
-    const onNext  = ()=> go(nextSlug);
-    btnPrev.onclick = onPrev;
-    btnNext.onclick = onNext;
-
-    // Teclado (ignora quando um input/textarea está focado)
-    const onKey = (e)=>{
-      const tag = (e.target.tagName||'').toLowerCase();
-      if(tag==='input' || tag==='textarea' || e.altKey || e.ctrlKey || e.metaKey) return;
-      if(e.key==='ArrowLeft'){ e.preventDefault(); onPrev(); }
-      if(e.key==='ArrowRight'){ e.preventDefault(); onNext(); }
-    };
-    document.addEventListener('keydown', onKey);
-
-    // Swipe no mobile (threshold 60px, pouca inclinação vertical)
-    const host = $('#content') || document;
-    let startX=0, startY=0, moved=false;
-    const onTouchStart = (e)=>{
-      if(!e.touches?.length) return;
-      startX = e.touches[0].clientX;
-      startY = e.touches[0].clientY;
-      moved = false;
-    };
-    const onTouchMove = (e)=>{
-      moved = true;
-    };
-    const onTouchEnd = (e)=>{
-      if(!moved) return;
-      const t = e.changedTouches?.[0]; if(!t) return;
-      const dx = t.clientX - startX;
-      const dy = t.clientY - startY;
-      if(Math.abs(dx) < 60) return;      // pouco deslocamento
-      if(Math.abs(dy) > 80) return;      // muito vertical → evita conflito com scroll
-      if(dx < 0) onNext(); else onPrev();
-    };
-    host.addEventListener('touchstart', onTouchStart, {passive:true});
-    host.addEventListener('touchmove',  onTouchMove,  {passive:true});
-    host.addEventListener('touchend',   onTouchEnd,   {passive:true});
-
-    cleanupNavHandlers = ()=>{
-      document.removeEventListener('keydown', onKey);
-      host.removeEventListener('touchstart', onTouchStart);
-      host.removeEventListener('touchmove',  onTouchMove);
-      host.removeEventListener('touchend',   onTouchEnd);
-    };
-  }
-
-  /* ===== Páginas ===== */
-  async function loadTemas(){
-    TEMAS = await readAllSeeds();
-    buildSequenceIndex(TEMAS);     // <<< monta o índice de sequência
-    renderMenu();
-  }
-
-  function buildBundle(title, dispositivos, remissoes){
-    const d = (dispositivos||[]).map(it=>{
-      const c = (it.comentarios && it.comentarios.length) ? `\n    Comentário: ${it.comentarios.join(' | ')}` : '';
-      return `- ${it.texto}${c}`;
-    }).join('\n');
-    const r = (remissoes||[]).map(it=>{
-      const c = (it.comentarios && it.comentarios.length) ? `\n    Comentário: ${it.comentarios.join(' | ')}` : '';
-      return `- ${it.texto}${c}`;
-    }).join('\n');
+  function buildBundle(title,dispositivos,remissoes){
+    const d=(dispositivos||[]).map(it=>`- ${it.texto}${(it.comentarios&&it.comentarios.length)?`\n    Comentário: ${it.comentarios.join(' | ')}`:''}`).join('\n');
+    const r=(remissoes||[]).map(it=>`- ${it.texto}${(it.comentarios&&it.comentarios.length)?`\n    Comentário: ${it.comentarios.join(' | ')}`:''}`).join('\n');
     return `Título: ${title}\n\nDispositivos Legais:\n${d}\n\nRemissões Normativas:\n${r}`;
   }
 
   async function loadTema(slug){
-    const titleEl=$('#themeTitle'); const contentEl=$('#content'); const actionsEl=$('#actions');
+    const contentEl=$('#content');
     contentEl.textContent='Carregando…';
     const meta=TEMAS.find(t=>t.slug===slug); const path=meta?.path; const frag=meta?.frag;
     if(!path){ contentEl.textContent='Tema não encontrado.'; toast('Tema não encontrado','error'); return; }
 
-    // Ao entrar em tema, volta topbar e restaura busca
-    leaveHomeMode();
-    restoreSearchToTopbar();
+    leaveHomeMode(); restoreSearchToTopbar();
 
     try{
       const raw=await fetchText(path);
       const chunks=splitThemesByDelim(raw);
       const parsed=chunks.map(parseTemaFromChunk).filter(Boolean);
-      const pick = frag ? parsed.find(t=>t.slug===frag)
-                        : (parsed.find(t=>`${slugify(meta.group)}-${t.slug}`===slug) || parsed[0]);
+      const pick = frag ? parsed.find(t=>t.slug===frag) : (parsed.find(t=>`${slugify(meta.group)}-${t.slug}`===slug) || parsed[0]);
       if(!pick){ contentEl.innerHTML=`<div class="card"><div class="item muted">Tema não encontrado no TXT.</div></div>`; return; }
 
       const pageTitle=meta.title || pick.title;
-      titleEl.textContent=pageTitle;
-
       try{ localStorage.setItem(LAST_KEY, slug); }catch(_){}
 
-      actionsEl.innerHTML='';
-      const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
-      const saved=isSaved(slug);
-      const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{
-        const added=toggleSaved(slug);
-        saveBtn.textContent=added?'Remover':'Salvar';
-        if(added){ saveBtn.setAttribute('data-variant','primary'); }
-        else{ saveBtn.removeAttribute('data-variant'); }
-        renderMenu();
-        toast(added?'Tema salvo':'Removido dos salvos', added?'success':'info', 1400);
-      });
-
       const fullText = buildBundle(pageTitle, pick.dispositivos, pick.remissoes);
-      const iaBtn = mkBtn('Estude com I.A.','', ()=>openIAPopover(iaBtn, pageTitle, fullText));
 
-      const bar = document.createElement('div');
-      bar.className='chip-bar';
-      bar.append(saveBtn, iaBtn);
-      actionsEl.append(bar);
-
-      const sep = `<hr style="border:none;border-top:1px solid #e9ecef;margin:8px 0">`;
-
-      function renderList(items){
-        if(!items?.length) return '<p class="muted">Sem itens.</p>';
-        return `<ul class="ref-list">` + items.map((it,i,arr)=>{
-          const li = `
-            <li>
-              <a class="link-arrow" href="${it.link}" target="_blank" rel="noopener">
-                ${fmtInlineBold(escapeHTML(it.texto))}
-                <span class="arrow-icon" aria-hidden="true">↗</span>
-              </a>
-              ${(it.comentarios || []).map(c => `<div class="muted">${escapeHTML(c)}</div>`).join('')}
-            </li>`;
-          const needSep = i < arr.length-1;
-          return needSep ? li + sep : li;
-        }).join('') + `</ul>`;
-      }
-
-      $('#content').innerHTML=`
+      // Card único: chips → título → conteúdo
+      contentEl.innerHTML = `
         <article class="card ubox" role="article">
+          <header class="ficha-head">
+            <div id="actions" class="actions chip-bar"></div>
+            <h1 class="h1" id="themeTitle">${escapeHTML(pageTitle)}</h1>
+          </header>
+
           <section class="ubox-section">
             <h3 class="ubox-sub">Dispositivos Legais (D)</h3>
             ${renderList(pick.dispositivos)}
           </section>
+
           <section class="ubox-section">
             <h3 class="ubox-sub">Remissões Normativas (R)</h3>
             ${renderList(pick.remissoes)}
           </section>
         </article>`;
 
-      // Configura setas e swipe para este slug
-      setupNavControlsFor(slug);
+      // Ações (chips)
+      const actionsEl = $('#actions');
+      const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
+      const saved=isSaved(slug);
+      const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{
+        const added=toggleSaved(slug);
+        saveBtn.textContent=added?'Remover':'Salvar';
+        if(added){ saveBtn.setAttribute('data-variant','primary'); } else { saveBtn.removeAttribute('data-variant'); }
+        renderMenu(); toast(added?'Tema salvo':'Removido dos salvos', added?'success':'info', 1400);
+      });
+      const iaBtn=mkBtn('Estude com I.A.','', ()=>openIAPopover(iaBtn, pageTitle, fullText));
+      actionsEl.append(saveBtn, iaBtn);
 
       try{ sessionStorage.removeItem(LAST_SEARCH_KEY); }catch(_){}
 
@@ -889,18 +470,27 @@
       console.error(e);
       contentEl.innerHTML=`<div class="card"><div class="item error">Erro ao carregar o tema.</div></div>`;
     }
+
+    function renderList(items){
+      if(!items?.length) return '<p class="muted">Sem itens.</p>';
+      const sep = `<hr style="border:none;border-top:1px solid #e9ecef;margin:8px 0">`;
+      return `<ul class="ref-list">` + items.map((it,i,arr)=>{
+        const li = `
+          <li>
+            <a class="link-arrow" href="${it.link}" target="_blank" rel="noopener">
+              ${fmtInlineBold(escapeHTML(it.texto))}
+              <span class="arrow-icon" aria-hidden="true">↗</span>
+            </a>
+            ${(it.comentarios||[]).map(c=>`<div class="muted">${escapeHTML(c)}</div>`).join('')}
+          </li>`;
+        return i < arr.length-1 ? li + sep : li;
+      }).join('') + `</ul>`;
+    }
   }
 
   function loadSobre(){
-    leaveHomeMode();
-    restoreSearchToTopbar();
-    $('#actions').innerHTML='';
-    $('#themeTitle').textContent='Sobre';
+    leaveHomeMode(); restoreSearchToTopbar();
     $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários.</p></div>`;
-
-    // Remove setas/swipe nesta página
-    if(typeof cleanupNavHandlers === 'function'){ cleanupNavHandlers(); cleanupNavHandlers = null; }
-    document.querySelector('.nav-arrows')?.remove();
   }
 
   async function renderByRoute(){
@@ -908,12 +498,7 @@
     if(!TEMAS.length) await loadTemas();
     if(page.kind==='tema') await loadTema(page.slug);
     else if(page.kind==='sobre') loadSobre();
-    else {
-      // Home
-      if(typeof cleanupNavHandlers === 'function'){ cleanupNavHandlers(); cleanupNavHandlers = null; }
-      document.querySelector('.nav-arrows')?.remove();
-      renderHome();
-    }
+    else { renderHome(); }
   }
 
   document.querySelector('#search')?.addEventListener('focus', closeAcDropdown);
