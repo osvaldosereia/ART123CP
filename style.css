@@ -1,6 +1,6 @@
 /* =========================
    Meujus – style.css
-   Estrutura T/D/R + chips popover
+   Ajustes: sugestões e popover IA
    ========================= */
 
 /* ===== Tokens ===== */
@@ -11,9 +11,9 @@
   --card:#ffffff;
   --line:#e5e7eb;
 
-  --primary:#1e3a8a;   /* azul escuro */
-  --accent:#f59e0b;    /* amarelo */
-  --soft:#f3f4f6;      /* cinza claro */
+  --primary:#1e3a8a;
+  --accent:#f59e0b;
+  --soft:#f3f4f6;
   --soft-2:#e5e7eb;
 
   --radius:12px;
@@ -45,14 +45,26 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 .hamburger span+span{margin-top:4px}
 
 /* Search */
-.search-wrap{flex:1;display:flex;align-items:center}
+.search-wrap{flex:1;display:flex;align-items:center;position:relative} /* âncora do dropdown */
 .search{
   width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;
   background:#fff;outline:0;
 }
+/* Live suggestions: sempre abaixo do input */
 .suggestions{
-  position:absolute;margin-top:6px;max-width:640px;width:100%;background:#fff;border:1px solid var(--line);border-radius:10px;
+  position:absolute;
+  left:0;
+  top:calc(100% + 6px);
+  width:min(100%, 90vw);             /* desktop = largura do campo; mobile = 90vw */
+  background:#fff;border:1px solid var(--line);border-radius:10px;
   box-shadow:var(--shadow);padding:8px;z-index:75;
+  max-height:min(70vh, 560px);       /* rolagem se necessário */
+  overflow-y:auto;
+}
+.suggestions.pop{                    /* dropdown dos chips pós-busca: posição controlada via JS */
+  position:fixed;
+  max-height:min(70vh, 560px);
+  z-index:80;
 }
 .suggestions .ac-chips{display:flex;flex-wrap:wrap;gap:6px;margin:4px 4px 8px}
 .suggestions .ac-chip{
@@ -61,7 +73,7 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 .suggestions li{padding:8px 6px;border-radius:8px}
 .suggestions li:hover{background:var(--soft)}
 .suggestions .s1{font-weight:600}
-.suggestions .s2{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis} /* categoria e etiquetas na MESMA linha */
+.suggestions .s2{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .badge{display:inline-block;border:1px solid var(--soft-2);border-radius:6px;padding:1px 5px;margin-left:6px;font-size:10px;color:var(--muted)}
 
 /* Chips pós-busca fixos */
@@ -113,15 +125,18 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
   font-weight:600;font-size:13px
 }
 .btn-ios.is-small{padding:6px 10px;font-size:12px}
-/* Salvar NEUTRO por padrão; fica destaque apenas quando salvo */
 .btn-ios[data-variant="primary"]{border-color:transparent;background:var(--primary);color:#fff}
 .btn-ios[data-variant="secondary"]{border-color:var(--primary);color:var(--primary);background:#fff}
 
 /* ===== IA Popover ===== */
-#iaPopoverHost{position:relative;z-index:90}
+#iaPopoverHost{position:static;z-index:90}
+/* Posição fixa baseada no viewport para evitar "perder" no mobile */
 .ia-popover{
-  position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);
-  padding:8px;display:flex;flex-wrap:wrap;gap:6px;max-width:320px;z-index:95
+  position:fixed;
+  background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);
+  padding:8px;display:flex;flex-wrap:wrap;gap:6px;
+  max-width:min(320px, 90vw);
+  z-index:95;
 }
 .ia-popover .ia-opt{
   border:1px solid var(--soft-2);background:var(--soft);border-radius:999px;padding:6px 10px;font-size:12px;cursor:pointer
@@ -138,10 +153,7 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
   transform:translateY(-1px);
   transition:transform .15s ease, opacity .15s ease;
 }
-.link-arrow:hover::after{
-  transform:translate(2px,-1px);
-  opacity:.9;
-}
+.link-arrow:hover::after{ transform:translate(2px,-1px); opacity:.9; }
 
 /* ===== Lists específicas ===== */
 .list-plain > .card{padding:14px 16px;margin-bottom:12px}
@@ -175,5 +187,7 @@ mark{background:rgba(245,158,11,.25);padding:0 .1em;border-radius:2px}
   .search{padding:9px 10px}
   .h1{font-size:20px}
   .chip-bar{gap:6px}
-  .ia-popover{max-width:92vw}
+  /* Força largura 90% no mobile */
+  .suggestions{width:90vw;left:0}
+  .ia-popover{max-width:90vw}
 }
