@@ -299,3 +299,23 @@ button.mini:hover{ filter:brightness(.98); }
     gap:8px;
   }
 }
+/* IA dropdown */
+.ia-pop{
+  position:absolute; min-width:240px; background:#fff; border:1px solid var(--line);
+  border-radius:10px; box-shadow:var(--shadow); padding:6px; z-index:95;
+}
+.ia-item{
+  width:100%; display:block; text-align:left; border:0; background:transparent;
+  padding:8px 10px; border-radius:8px; cursor:pointer; font-weight:600; color:var(--primary);
+}
+.ia-item:hover{ background:var(--surface); }
+
+/* Chips das sugestões – rolagem horizontal contínua */
+.suggestions .ac-chips{
+  display:flex; gap:6px; margin:4px 4px 8px;
+  overflow-x:auto; overscroll-behavior-x:contain; -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+}
+.suggestions .ac-chips::-webkit-scrollbar{ height:6px; }
+.suggestions .ac-chips::-webkit-scrollbar-thumb{ background:var(--line); border-radius:999px; }
+.suggestions .ac-chip{ flex:0 0 auto; } /* não quebrar linha */
