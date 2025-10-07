@@ -1,1 +1,50 @@
-
+# Prisão simples
+# Dispositivos Legais
+- Art. 6.º A pena de prisão simples deve ser cumprida, sem rigor penitenciário, em estabelecimento especial ou seção especial de prisão comum, em regime semiaberto ou aberto.
+-- Caput com redação determinada pela Lei n. 6.416, de 24-5-1977.
+- § 1.º O condenado à pena de prisão simples fica sempre separado dos condenados à pena de reclusão ou de detenção.
+- § 2.º O trabalho é facultativo, se a pena aplicada não excede a 15 (quinze) dias.
+-----
+# Reincidência
+# Dispositivos Legais
+- Art. 7.º Verifica-se a reincidência quando o agente pratica uma contravenção depois de passar em julgado a sentença que o tenha condenado, no Brasil ou no estrangeiro, por qualquer crime, ou, no Brasil, por motivo de contravenção.
+-----
+# Erro de direito
+# Dispositivos Legais
+- Art. 8.º No caso de ignorância ou de errada compreensão da lei, quando escusáveis, a pena pode deixar de ser aplicada.
+-----
+# Conversão da multa em prisão simples
+# Dispositivos Legais
+- Art. 9.º A multa converte-se em prisão simples, de acordo com o que dispõe o Código Penal sobre a conversão de multa em detenção.
+- Parágrafo único. Se a multa é a única pena cominada, a conversão em prisão simples se faz entre os limites de 15 (quinze) dias e 3 (três) meses.
+# Remissões Normativas
+- Vide art. 51 do CP.
+-- estabelece que a pena de multa, após o trânsito em julgado, é considerada dívida de valor e executada perante o juiz da execução penal, não sendo mais convertida em pena privativa de liberdade.
+-----
+# Aplicação das regras gerais do Código Penal
+# Dispositivos Legais
+- Art. 1.º Aplicam-se às contravenções as regras gerais do Código Penal, sempre que a presente Lei não disponha de modo diverso.
+-----
+# Territorialidade
+# Dispositivos Legais
+- Art. 2.º A lei brasileira só é aplicável à contravenção praticada no território nacional.
+# Remissões Normativas
+- Vide art. 12 do CP.
+-- trata da aplicação da lei penal a crimes cometidos em embarcações e aeronaves brasileiras, que são consideradas extensão do território nacional.
+- Vide art. 61 da Lei n. 9.099, de 26-9-1995.
+-- define como infrações de menor potencial ofensivo as contravenções penais e os crimes a que a lei comine pena máxima não superior a 2 (dois) anos.
+-----
+# Voluntariedade. Dolo e culpa
+# Dispositivos Legais
+- Art. 3.º Para a existência da contravenção, basta a ação ou omissão voluntária. Deve-se, todavia, ter em conta o dolo ou a culpa, se a lei faz depender, de um ou de outra, qualquer efeito jurídico.
+-----
+# Tentativa
+# Dispositivos Legais
+- Art. 4.º Não é punível a tentativa de contravenção.
+-----
+# Penas principais
+# Dispositivos Legais
+- Art. 5.º As penas principais são:
+- I – prisão simples;
+- II – multa.
+-----
