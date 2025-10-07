@@ -52,7 +52,7 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 }
 .suggestions{
   position:absolute;margin-top:6px;max-width:640px;width:100%;background:#fff;border:1px solid var(--line);border-radius:10px;
-  box-shadow:var(--shadow);padding:8px;z-index:40;
+  box-shadow:var(--shadow);padding:8px;z-index:75;
 }
 .suggestions .ac-chips{display:flex;flex-wrap:wrap;gap:6px;margin:4px 4px 8px}
 .suggestions .ac-chip{
@@ -61,7 +61,7 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 .suggestions li{padding:8px 6px;border-radius:8px}
 .suggestions li:hover{background:var(--soft)}
 .suggestions .s1{font-weight:600}
-.suggestions .s2{font-size:12px;color:var(--muted)}
+.suggestions .s2{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis} /* categoria e etiquetas na MESMA linha */
 .badge{display:inline-block;border:1px solid var(--soft-2);border-radius:6px;padding:1px 5px;margin-left:6px;font-size:10px;color:var(--muted)}
 
 /* Chips pós-busca fixos */
@@ -113,19 +113,35 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
   font-weight:600;font-size:13px
 }
 .btn-ios.is-small{padding:6px 10px;font-size:12px}
+/* Salvar NEUTRO por padrão; fica destaque apenas quando salvo */
 .btn-ios[data-variant="primary"]{border-color:transparent;background:var(--primary);color:#fff}
 .btn-ios[data-variant="secondary"]{border-color:var(--primary);color:var(--primary);background:#fff}
 
 /* ===== IA Popover ===== */
-#iaPopoverHost{position:relative;z-index:70}
+#iaPopoverHost{position:relative;z-index:90}
 .ia-popover{
   position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);
-  padding:8px;display:flex;flex-wrap:wrap;gap:6px;max-width:320px
+  padding:8px;display:flex;flex-wrap:wrap;gap:6px;max-width:320px;z-index:95
 }
 .ia-popover .ia-opt{
   border:1px solid var(--soft-2);background:var(--soft);border-radius:999px;padding:6px 10px;font-size:12px;cursor:pointer
 }
 .ia-popover .ia-opt:hover{background:#e9eef6}
+
+/* ===== Links com setinha discreta ===== */
+.link-arrow{position:relative}
+.link-arrow::after{
+  content:'↗';
+  margin-left:6px;
+  font-size:12px;
+  opacity:.6;
+  transform:translateY(-1px);
+  transition:transform .15s ease, opacity .15s ease;
+}
+.link-arrow:hover::after{
+  transform:translate(2px,-1px);
+  opacity:.9;
+}
 
 /* ===== Lists específicas ===== */
 .list-plain > .card{padding:14px 16px;margin-bottom:12px}
@@ -136,14 +152,14 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 .muted{color:var(--muted);font-size:12px}
 
 /* ===== Toasts ===== */
-#toasts{position:fixed;right:12px;bottom:12px;display:grid;gap:8px;z-index:80}
+#toasts{position:fixed;right:12px;bottom:12px;display:grid;gap:8px;z-index:98}
 .toast{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:8px 10px;opacity:0;transform:translateY(8px);transition:.18s}
 .toast.show{opacity:1;transform:none}
 .toast.success{border-color:#10b981}
 .toast.error{border-color:#ef4444}
 
 /* ===== Modal ===== */
-.modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;visibility:hidden}
+.modal{position:fixed;inset:0;z-index:99;display:grid;place-items:center;visibility:hidden}
 .modal.open{visibility:visible}
 .modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.32)}
 .modal-panel{position:relative;width:min(720px,92vw);background:#fff;border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
