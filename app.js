@@ -137,17 +137,18 @@
     const slug  = slugify(title);
 
     // headings do corpo
-    const rxHead = /^\s*#\s+(.+?)\s*$/mg;
-    const sections = [];
-    let m;
-    while ((m = rxHead.exec(fixed))) {
-      const name = m[1].trim();
-      const nm = normalizeHeading(name);
-      const start = rxHead.lastIndex;
-      const prev = sections.at(-1);
-      if (prev) prev.end = m.index;
-      sections.push({ raw:name, nm, start, end: fixed.length });
-    }
+const rxHead = /^\s*#\s+(.+?)\s*$/mg;
+const sections = [];
+let m;
+while ((m = rxHead.exec(fixed))) {
+  const name = m[1].trim();
+  const nm = normalizeHeading(name);
+  const start = rxHead.lastIndex;          // início após o cabeçalho atual
+  const prev = sections.length ? sections[sections.length - 1] : null; // <= sem .at()
+  if (prev) prev.end = m.index;            // fim da seção anterior começa onde este cabeçalho inicia
+  sections.push({ raw:name, nm, start, end: fixed.length });
+}
+
 
     // localiza D e R
     const secD = sections.find(s => /^dispositivos\s+legais\b/.test(s.nm));
