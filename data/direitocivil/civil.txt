@@ -1,7 +1,75 @@
 
 
 
-
+# Responsabilidade Objetiva por Ato de Terceiro
+# Dispositivos Legais
+- Art. 933. As pessoas indicadas nos incisos I a V do artigo antecedente, ainda que não haja culpa de sua parte, responderão pelos atos praticados pelos terceiros ali referidos.
+-----
+# Direito de Regresso
+# Dispositivos Legais
+- Art. 934. Aquele que ressarcir o dano causado por outrem pode reaver o que houver pago daquele por quem pagou, salvo se o causador do dano for descendente seu, absoluta ou relativamente incapaz.
+# Remissões Normativas
+- Vide Súmulas 187 e 188 do STF.
+-- a Súmula 187 trata da ação regressiva do transportador contra terceiro culpado por acidente com passageiro.
+-- a Súmula 188 trata da ação regressiva da seguradora contra o causador do dano.
+-----
+# Independência das Responsabilidades Civil e Criminal
+# Dispositivos Legais
+- Art. 935. A responsabilidade civil é independente da criminal, não se podendo questionar mais sobre a existência do fato, ou sobre quem seja o seu autor, quando estas questões se acharem decididas no juízo criminal.
+# Remissões Normativas
+- Vide art. 65 do CPP.
+-- trata da sentença penal absolutória fundada em excludente de ilicitude, que impede a ação civil de reparação.
+- Vide Súmula 18 do STJ.
+-- estabelece que a sentença que concede o perdão judicial não gera efeitos condenatórios, inclusive na esfera cível.
+- Vide arts. 313, V, a, e §§ 4.º e 5.º, 315 do CPC.
+-- tratam da possibilidade de suspensão do processo cível quando a decisão depender da apuração de fato delituoso no juízo criminal.
+-----
+# Responsabilidade por Dano Causado por Animal
+# Dispositivos Legais
+- Art. 936. O dono, ou detentor, do animal ressarcirá o dano por este causado, se não provar culpa da vítima ou força maior.
+# Remissões Normativas
+- Vide arts. 393, 945 e 1.297, § 3.º, do CC.
+-- o art. 393 define caso fortuito e força maior como excludentes de responsabilidade.
+-- o art. 945 trata da culpa concorrente da vítima como causa de redução da indenização.
+-- o art. 1.297, § 3.º trata da obrigação de construção de tapumes para impedir a passagem de animais de pequeno porte.
+- Vide Lei de Contravenções Penais, art. 31.
+-- tipifica como contravenção a omissão de cautela na guarda ou condução de animal perigoso.
+-----
+# Responsabilidade pela Ruína de Edifício
+# Dispositivos Legais
+- Art. 937. O dono de edifício ou construção responde pelos danos que resultarem de sua ruína, se esta provier de falta de reparos, cuja necessidade fosse manifesta.
+-- A Lei n. 13.425, de 30-3-2017, propôs o acréscimo dos §§ 1.º e 2.º a este artigo, porém teve seu texto vetado.
+# Remissões Normativas
+- Vide arts. 618, 927, parágrafo único, 929, 930 e 1.280 do CC.
+-- o art. 618 trata da responsabilidade do empreiteiro pela solidez da obra.
+-- o art. 927, parágrafo único, trata da responsabilidade objetiva por atividade de risco.
+-- os arts. 929 e 930 tratam da indenização e regresso no estado de necessidade.
+-- o art. 1.280 trata do direito de exigir a demolição ou reparação de prédio vizinho que ameace ruína.
+-----
+# Responsabilidade por Coisas Caídas de Prédio
+# Dispositivos Legais
+- Art. 938. Aquele que habitar prédio, ou parte dele, responde pelo dano proveniente das coisas que dele caírem ou forem lançadas em lugar indevido.
+# Remissões Normativas
+- Vide arts. 1.331 a 1.358 (condomínio edilício) do CC.
+-- tratam do regime jurídico do condomínio edilício, definindo as responsabilidades dos condôminos.
+- Vide Lei n. 4.591, de 16-12-1964.
+-- dispõe sobre o condomínio em edificações e as incorporações imobiliárias, complementando as regras sobre responsabilidade.
+-----
+# Sanção por Cobrança de Dívida Vincenda
+# Dispositivos Legais
+- Art. 939. O credor que demandar o devedor antes de vencida a dívida, fora dos casos em que a lei o permita, ficará obrigado a esperar o tempo que faltava para o vencimento, a descontar os juros correspondentes, embora estipulados, e a pagar as custas em dobro.
+-----
+# Sanção por Cobrança de Dívida Paga
+# Dispositivos Legais
+- Art. 940. Aquele que demandar por dívida já paga, no todo ou em parte, sem ressalvar as quantias recebidas ou pedir mais do que for devido, ficará obrigado a pagar ao devedor, no primeiro caso, o dobro do que houver cobrado e, no segundo, o equivalente do que dele exigir, salvo se houver prescrição.
+# Remissões Normativas
+- Vide arts. 79 a 81 do CPC.
+-- tratam da litigância de má-fé e das sanções processuais aplicáveis.
+- Vide art. 42, parágrafo único, do CDC.
+-- trata do direito do consumidor à repetição do indébito em dobro por cobrança indevida.
+- Vide Súmula 159 do STF.
+-- estabelece que a cobrança excessiva, mas de boa-fé, não enseja a aplicação da sanção do art. 940 (antigo art. 1.531 do CC/16).
+-----
 # Reparação de Dano em Estado de Necessidade
 # Dispositivos Legais
 - Art. 929. Se a pessoa lesada, ou o dono da coisa, no caso do inciso II do art. 188, não forem culpados do perigo, assistir-lhes-á direito à indenização do prejuízo que sofreram.
