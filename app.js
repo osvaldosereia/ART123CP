@@ -1,26 +1,29 @@
 // SPA com página inicial minimalista abaixo da topbar.
 // Rotas: #/ (home) • #/tema/:slug • #/sobre
-// Estrutura TXT esperada por tema:
-// # Título (T)
-// # Dispositivos Legais (D)
-// - linha linkável
-// -- comentário opcional
-// ---- (divisor interno entre itens)
-// ----- (fim da seção)
-// # Remissões Normativas (R)
-// (mesma lógica de itens/comentários/divisores)
+// Estrutura TXT esperada por tema (novo formato):
+// # Título
+// ----                 (troca de seção)
+// # Dispositivos Legais
+// - item
+// -- comentário
+// ... (sem "----" entre itens)
+// ----                 (troca de seção)
+// # Remissões Normativas
+// - item
+// -- comentário
+// -----                (fim do card)
 
 (function(){
   const $  = (q, el=document) => el.querySelector(q);
   const $$ = (q, el=document) => Array.from(el.querySelectorAll(q));
 
   let TEMAS = [];
-  let activeCat = 'Todos'; // filtro de categoria nas sugestões
+  let activeCat = 'Todos';
 
   const SAVED_KEY        = 'meujus:saved';
   const LAST_KEY         = 'meujus:last';
   const LAST_SEARCH_KEY  = 'meujus:lastSearch';
-  const LAST_AC_KEY      = 'meujus:lastAc'; // snapshot das sugestões para chips pós-busca
+  const LAST_AC_KEY      = 'meujus:lastAc';
 
   const readSaved  = () => { try{ return JSON.parse(localStorage.getItem(SAVED_KEY)||'[]'); }catch(_){ return []; } };
   const writeSaved = (list) => localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(new Set(list))));
@@ -30,15 +33,14 @@
   const escapeHTML = (s)=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
   const slugify = (s)=>(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
 
-  // ===== Normalização PT-BR e plural =====
+  // ===== Normalização e busca =====
   const normPT = s => String(s||'')
     .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g,'') // remove acentos
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
     .replace(/ç/g,'c');
 
   const escRx = x => x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
-  // Gera padrão que casa singular/plural comum em PT
   function pluralRegexToken(w){
     if(w.length<=2) return escRx(w);
     const stem2 = w.slice(0,-2);
@@ -51,18 +53,16 @@
     if(/il$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'is')})`;
     if(/ol$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'ois')})`;
     if(/ul$/.test(w)) return `(?:${escRx(w)}|${escRx(stem2+'uis')})`;
-    return `(?:${escRx(w)}s?)`; // fallback simples
+    return `(?:${escRx(w)}s?)`;
   }
 
   function _hitPT(hayRaw, qRaw){
     const hay = normPT(hayRaw);
     const qn  = normPT(qRaw);
     if(!hay || !qn) return 0;
-
     let s = 0;
     if(hay===qn) s += 100;
     if(hay.includes(qn)) s += 60;
-
     const toks = qn.split(/\s+/).filter(Boolean);
     for(const t of toks){
       const rx = new RegExp(`(?<![a-z0-9])${pluralRegexToken(t)}(?![a-z0-9])`, 'g');
@@ -105,38 +105,36 @@
     return txt.split(/^\s*-{3,}\s*$/m).map(s=>s.trim()).filter(Boolean);
   }
 
-  // ===== Normalizador de headings (remove tags e pontuação)
   const normalizeHeading=(h)=> (h||'')
     .toLowerCase()
-    .replace(/\(.*?\)/g,'') // remove "(T) (D) (R)" do fim
+    .replace(/\(.*?\)/g,'')
     .replace(/[.#:]/g,' ')
     .replace(/\s+/g,' ')
     .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
     .trim();
 
-  // ===== Prompts IA
+  // ===== IA Prompts: agora recebem (title, fullText) =====
   const IA_PROMPTS = {
-    resumo:    t => `Resuma de forma didática e objetiva o tema a seguir, explicando seus principais conceitos jurídicos e fundamentos legais. Tema: ${t}`,
-    detalhada: t => `Explique detalhadamente e transcreva o texto original do dispositivo ou norma indicada, analisando seu conteúdo, finalidade e aplicação prática. Tema: ${t}`,
-    perguntas: t => `Crie 10 perguntas abertas de aprofundamento teórico sobre o tema a seguir, com base em fontes jurídicas confiáveis. Tema: ${t}`,
-    questoes:  t => `Crie 10 questões objetivas com 4 alternativas (A–D), no estilo OAB/Cebraspe, com gabarito e justificativas. Tema: ${t}`,
-    casos:     t => `Crie 3 casos concretos práticos com solução fundamentada sobre o tema a seguir. Tema: ${t}`,
-    videos:    t => `Liste e descreva brevemente 5 vídeos do YouTube relevantes e recentes sobre o tema a seguir, voltados a estudantes de Direito. Tema: ${t}`,
-    artigos:   t => `Liste e descreva brevemente 5 artigos jurídicos recentes sobre o tema a seguir, publicados em sites confiáveis como Migalhas, ConJur ou Jusbrasil. Tema: ${t}`,
+    resumo:    (t,full) => `Resuma de forma didática e objetiva o tema a seguir, explicando seus principais conceitos jurídicos e fundamentos legais.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    detalhada: (t,full) => `Explique detalhadamente e transcreva o texto original dos dispositivos e remissões abaixo, analisando conteúdo, finalidade e aplicação prática.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    perguntas: (t,full) => `Crie 10 perguntas abertas de aprofundamento teórico sobre o tema a seguir, com base em fontes jurídicas confiáveis.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    questoes:  (t,full) => `Crie 10 questões objetivas com 4 alternativas (A–D), no estilo OAB/Cebraspe, com gabarito e justificativas.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    casos:     (t,full) => `Crie 3 casos concretos práticos com solução fundamentada.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    videos:    (t,full) => `Liste e descreva brevemente 5 vídeos do YouTube relevantes e recentes sobre o tema.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    artigos:   (t,full) => `Liste e descreva brevemente 5 artigos jurídicos recentes sobre o tema em Migalhas, ConJur ou Jusbrasil.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
   };
   const googleIA = (prompt) => `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
 
-  // ===== Parser Título / Dispositivos (D) / Remissões (R)
+  // ===== Parser para o novo TXT (headings + '----' entre seções) =====
   function parseTemaFromChunk(chunk){
     const fixed = chunk.replace(/^\s*##\s+##\s+/mg, '## ');
     const mTitle = fixed.match(/^\s*#\s+(.+?)\s*$/m);
     if(!mTitle) return null;
 
-    const titleRaw = mTitle[1].trim();
-    const title    = titleRaw.replace(/\s*\(\s*T\s*\)\s*$/i, '').trim();
-    const slug     = slugify(title);
+    const title = mTitle[1].trim();
+    const slug  = slugify(title);
 
-    // encontrar delimitações das seções com # heading
+    // headings do corpo
     const rxHead = /^\s*#\s+(.+?)\s*$/mg;
     const sections = [];
     let m;
@@ -148,7 +146,8 @@
       if (prev) prev.end = m.index;
       sections.push({ raw:name, nm, start, end: fixed.length });
     }
-    // mapear o conteúdo das seções que importam
+
+    // localiza D e R
     const secD = sections.find(s => /^dispositivos\s+legais\b/.test(s.nm));
     const secR = sections.find(s => /^remissoes\s+normativas\b/.test(s.nm));
 
@@ -161,8 +160,8 @@
       for(const line of lines){
         const L = line.trim();
         if(!L) continue;
-        if(L === '-----') break;           // fim da seção
-        if(L === '----') { last = null; continue; } // divisor interno: apenas respiro
+        if(L === '-----') break;           // fim do card, no caso da última seção
+        if(L === '----') { continue; }     // agora é marcador de troca de seção, ignorar dentro do slice
         if(/^-\s+/.test(L)){               // item linkado
           const texto = L.replace(/^-+\s*/, '').trim();
           last = { texto, comentario:null };
@@ -174,7 +173,6 @@
           if(last) last.comentario = c;
           continue;
         }
-        // linhas avulsas: ignora
       }
       return out;
     }
@@ -182,15 +180,15 @@
     const dispositivos = parseList(secD);
     const remissoes    = parseList(secR);
 
-    // gerar links IA por item
-    const mkLink = (txt) => googleIA(IA_PROMPTS.detalhada(txt));
-    for(const it of dispositivos){ it.link = mkLink(title + ' — ' + it.texto); }
-    for(const it of remissoes){    it.link = mkLink(title + ' — ' + it.texto); }
+    // links por item (mantém link unitário)
+    const mkLink = (txt) => googleIA(IA_PROMPTS.detalhada(title, `${txt}`));
+    for(const it of dispositivos){ it.link = mkLink(`${title} — ${it.texto}`); }
+    for(const it of remissoes){    it.link = mkLink(`${title} — ${it.texto}`); }
 
-    // campos para busca
+    // indexação
     const bodyText = [
-      dispositivos.map(x=>x.texto).join(' '),
-      remissoes.map(x=>x.texto).join(' ')
+      dispositivos.map(x=>x.texto + (x.comentario?` ${x.comentario}`:'' )).join(' '),
+      remissoes.map(x=>x.texto + (x.comentario?` ${x.comentario}`:'' )).join(' ')
     ].join(' ');
     return {
       slug,
@@ -204,7 +202,7 @@
     };
   }
 
-  // ===== Destaque de palavras (>=4 letras)
+  // ===== Highlight =====
   function _buildHighlightRegex(q){
     const parts = String(q||'')
       .toLowerCase()
@@ -218,14 +216,6 @@
       return new RegExp(`(^|[^\\p{L}])(` + parts.join('|') + `)(?!\\p{L})`, 'uig');
     }
   }
-  function highlightHTML(escapedHtml, q){
-    const rx = _buildHighlightRegex(q);
-    if(!rx) return escapedHtml;
-    if(rx.source.startsWith('(^|')){
-      return escapedHtml.replace(rx, (m,prefix,word)=> (prefix||'') + '<mark>'+word+'</mark>');
-    }
-    return escapedHtml.replace(rx, '<mark>$1</mark>');
-  }
   function highlightTitle(title, q){
     const esc = String(title).replace(/</g,'&lt;');
     const rx = _buildHighlightRegex(q);
@@ -235,13 +225,11 @@
     }
     return esc.replace(rx, '<mark>$1</mark>');
   }
-
-  // *texto* -> <strong>texto</strong> (aplica em HTML já escapado)
   function fmtInlineBold(escapedHtml){
     return String(escapedHtml).replace(/\*([^*]+)\*/g, '<strong>$1</strong>');
   }
 
-  /* ===== Chips pós-busca: helpers ===== */
+  /* ===== Chips pós-busca ===== */
   function getLastAc(){
     try{ return JSON.parse(sessionStorage.getItem(LAST_AC_KEY)||'null'); }catch(_){ return null; }
   }
@@ -269,7 +257,7 @@
       <li role="option">
         <a href="#/tema/${it.slug}">
           <div class="s1">${escapeHTML(it.title)}</div>
-          <div class="s2">${escapeHTML(it.group||'')}</div>
+          <div class="s2">${escapeHTML((it.group||'Geral') + ' | (T) (D) (R)')}</div>
         </a>
       </li>`).join('');
 
@@ -321,7 +309,7 @@
     host.setAttribute('aria-hidden','false');
   }
 
-  /* ===== Busca (autocomplete) ===== */
+  /* ===== Autocomplete ===== */
   const input  = document.querySelector('#search');
   const acList = document.querySelector('#suggestions');
   if (acList) acList.hidden = true;
@@ -336,7 +324,6 @@
     const q=(e.target.value||'').trim();
     if(q.length<2 || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; closeAcDropdown(); return; }
 
-    // ranqueia amplo; depois filtramos por categoria
     let arr = TEMAS.map(t=>({ t, ...scoreFields(q,t) }))
       .filter(x=>x.score>0)
       .sort((a,b)=> b.score-a.score || a.t.title.localeCompare(b.t.title,'pt-BR'))
@@ -344,18 +331,15 @@
 
     if(!arr.length){ acList.innerHTML=''; acList.hidden=true; closeAcDropdown(); return; }
 
-    // contagem por categoria das sugestões atuais
     const counts = new Map();
     for(const x of arr){ const g=x.t.group||'Geral'; counts.set(g,(counts.get(g)||0)+1); }
     const catList = [...counts.keys()].sort((a,b)=> a.localeCompare(b,'pt-BR'));
 
-    // aplica filtro ativo
     if(activeCat && activeCat!=='Todos'){
       const filtered = arr.filter(x => (x.t.group||'Geral')===activeCat);
       arr = filtered.length ? filtered : arr;
     }
 
-    // snapshot para chips pós-busca
     const lastAc = {
       q,
       categories: ['Todos', ...catList],
@@ -367,7 +351,6 @@
     };
     try{ sessionStorage.setItem(LAST_AC_KEY, JSON.stringify(lastAc)); }catch(_){}
 
-    // chips
     const chipsHTML = `
       <div class="ac-chips" role="group" aria-label="Filtrar sugestões por categoria">
         <button type="button" class="ac-chip" data-cat="Todos" aria-pressed="${activeCat==='Todos'}">Todos</button>
@@ -376,19 +359,14 @@
             aria-pressed="${activeCat===cat}">${cat}</button>`).join('')}
       </div>`;
 
-    // lista final
     const listHTML = arr.slice(0,8).map(x=>{
       const {t, flags} = x;
       const titleHTML = highlightTitle(t.title, q);
-      const badges = [
-        flags.t?'<span class="badge t">T</span>':'',
-        flags.b?'<span class="badge i">E</span>':'', // reaproveitando badge para indicar corpo
-      ].join('');
       return `
         <li role="option">
           <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['t','b'].filter(k=>flags[k]).join('')}">
-            <div class="s1">${titleHTML}<span class="badges">${badges}</span></div>
-            <div class="s2">${(t.group||'').replace(/</g,'&lt;')}</div>
+            <div class="s1">${titleHTML}</div>
+            <div class="s2">${escapeHTML((t.group||'Geral') + ' | (T) (D) (R)')}</div>
           </a>
         </li>`;
     }).join('');
@@ -396,7 +374,6 @@
     acList.innerHTML = chipsHTML + listHTML;
     acList.hidden=false;
 
-    // listeners dos chips
     acList.querySelectorAll('.ac-chip').forEach(btn=>{
       btn.addEventListener('click', ()=>{
         activeCat = btn.getAttribute('data-cat')||'Todos';
@@ -459,7 +436,7 @@
     return temas;
   }
 
-  /* ===== Helpers: drawer e categorias ===== */
+  /* ===== Menu ===== */
   function openDrawer(){
     const d = document.getElementById('drawer');
     if(d && !d.classList.contains('open')){
@@ -479,12 +456,11 @@
   function expandSaved(){ expandSectionByLabel('Salvos'); }
   function expandCategory(name){ expandSectionByLabel(name); }
 
-  /* ===== Menu lateral ===== */
   function renderMenu(){
     const menu=$('#menuList'); if(!menu) return;
     menu.innerHTML='';
 
-    // 1) Sobre
+    // Sobre
     const liSobre=document.createElement('li');
     const btnSobre=document.createElement('button');
     btnSobre.className='cat-btn'; btnSobre.type='button';
@@ -493,7 +469,7 @@
     liSobre.appendChild(btnSobre);
     menu.appendChild(liSobre);
 
-    // 2) Salvos
+    // Salvos
     const saved=readSaved();
     const liSaved=document.createElement('li'); liSaved.className='item';
     const btnSaved=document.createElement('button');
@@ -522,7 +498,6 @@
     });
     liSaved.appendChild(btnSaved); liSaved.appendChild(ulSaved); menu.appendChild(liSaved);
 
-    // remover salvo inline
     ulSaved.querySelectorAll('button[data-remove]')?.forEach(b=>{
       b.addEventListener('click',(ev)=>{
         ev.preventDefault();
@@ -533,13 +508,10 @@
       });
     });
 
-    // 3) divisor
     const div=document.createElement('div'); div.className='divider'; menu.appendChild(div);
 
-    // 4) título
     const title=document.createElement('div'); title.className='menu-title'; title.textContent='Categorias'; menu.appendChild(title);
 
-    // 5) categorias
     const byCat=new Map();
     for(const t of TEMAS){
       const key=t.group||'Geral';
@@ -670,7 +642,7 @@
   function onDocClickCloseIA(e){
     if(__iaPop && !__iaPop.contains(e.target)) closeIAPopover();
   }
-  function openIAPopover(anchorBtn, title){
+  function openIAPopover(anchorBtn, title, fullText){
     closeIAPopover();
     const host = $('#iaPopoverHost') || document.body;
 
@@ -705,7 +677,7 @@
       btn.addEventListener('click', ()=>{
         const k = btn.getAttribute('data-k');
         const fn = IA_PROMPTS[k]; if(!fn) return;
-        const url = googleIA(fn(title));
+        const url = googleIA(fn(title, fullText));
         window.open(url, '_blank', 'noopener');
         closeIAPopover();
       });
@@ -722,6 +694,18 @@
   async function loadTemas(){
     TEMAS = await readAllSeeds();
     renderMenu();
+  }
+
+  function buildBundle(title, dispositivos, remissoes){
+    const d = (dispositivos||[]).map(it=>{
+      const c = it.comentario ? `\n    Comentário: ${it.comentario}` : '';
+      return `- ${it.texto}${c}`;
+    }).join('\n');
+    const r = (remissoes||[]).map(it=>{
+      const c = it.comentario ? `\n    Comentário: ${it.comentario}` : '';
+      return `- ${it.texto}${c}`;
+    }).join('\n');
+    return `Título: ${title}\n\nDispositivos Legais:\n${d}\n\nRemissões Normativas:\n${r}`;
   }
 
   async function loadTema(slug){
@@ -747,23 +731,26 @@
       // ==== Barra de chips abaixo do título ====
       const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
       const saved=isSaved(slug);
-      const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'secondary':'primary', ()=>{
+      // neutro quando não salvo; "clicado" (primary) quando salvo
+      const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{
         const added=toggleSaved(slug);
         saveBtn.textContent=added?'Remover':'Salvar';
-        saveBtn.setAttribute('data-variant', added?'secondary':'primary');
+        if(added){ saveBtn.setAttribute('data-variant','primary'); }
+        else{ saveBtn.removeAttribute('data-variant'); }
         renderMenu();
         toast(added?'Tema salvo':'Removido dos salvos', added?'success':'info', 1400);
       });
-      const iaBtn = mkBtn('Estude com I.A.','', ()=>openIAPopover(iaBtn, pageTitle));
+
+      const fullText = buildBundle(pageTitle, pick.dispositivos, pick.remissoes);
+      const iaBtn = mkBtn('Estude com I.A.','', ()=>openIAPopover(iaBtn, pageTitle, fullText));
+
       const bar = document.createElement('div');
       bar.className='chip-bar';
       bar.append(saveBtn, iaBtn);
       actionsEl.append(bar);
 
-      // montar chips pós-busca abaixo da topbar (requer #postAc no HTML)
       renderPostSearchChips();
 
-      // ===== Render T/D/R =====
       const sep = `<hr style="border:none;border-top:1px solid #e9ecef;margin:16px 0">`;
 
       function renderList(items){
@@ -771,7 +758,7 @@
         return `<ul class="ref-list">` + items.map((it,i,arr)=>{
           const li = `
             <li>
-              <a href="${it.link}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(it.texto))}</a>
+              <a class="link-arrow" href="${it.link}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(it.texto))}</a>
               ${it.comentario ? `<div class="muted">${escapeHTML(it.comentario)}</div>` : ``}
             </li>`;
           const needSep = i < arr.length-1;
@@ -782,11 +769,11 @@
       $('#content').innerHTML=`
         <article class="card ubox" role="article">
           <section class="ubox-section">
-            <h3 class="ubox-sub">Dispositivos Legais</h3>
+            <h3 class="ubox-sub">Dispositivos Legais (D)</h3>
             ${renderList(pick.dispositivos)}
           </section>
           <section class="ubox-section">
-            <h3 class="ubox-sub">Remissões Normativas</h3>
+            <h3 class="ubox-sub">Remissões Normativas (R)</h3>
             ${renderList(pick.remissoes)}
           </section>
         </article>`;
@@ -802,7 +789,7 @@
   function loadSobre(){
     $('#actions').innerHTML='';
     $('#themeTitle').textContent='Sobre';
-    $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT único por categoria. Estrutura por tema: <code># Título (T)</code>, <code># Dispositivos Legais (D)</code>, <code># Remissões Normativas (R)</code>. Seções separadas por <code>-----</code> e itens internos por <code>----</code>. Linhas iniciadas com <code>- </code> são linkadas; <code>-- </code> são comentários.</p></div>`;
+    $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code>----</code> → <code># Dispositivos Legais</code> → <code>----</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários. As etiquetas (T) (D) (R) são incluídas automaticamente na UI.</p></div>`;
   }
 
   async function renderByRoute(){
@@ -813,7 +800,6 @@
     else renderHome();
   }
 
-  // Fechar dropdown pop ao focar o campo de busca
   document.querySelector('#search')?.addEventListener('focus', closeAcDropdown);
 
   window.addEventListener('hashchange', renderByRoute);
