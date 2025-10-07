@@ -83,10 +83,6 @@
   const normalizeHeading = (h)=> (h||'').toLowerCase().replace(/\(.*?\)/g,'').replace(/[.#:]/g,' ').replace(/\s+/g,' ')
     .normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
 
-  /* ===== IA (link externo) ===== */
-  const IA_PROMPTS={detalhada:(t,full)=>`Explique detalhadamente e transcreva o texto original dos dispositivos e remissões abaixo, analisando conteúdo, finalidade e aplicação prática.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`};
-  const googleIA = (prompt)=>`https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
-
   /* ===== Parser de chunk TXT ===== */
   function parseTemaFromChunk(chunk){
     const fixed=chunk.replace(/^\s*##\s+##\s+/mg,'## ');
@@ -464,7 +460,7 @@ function openIAModal(title, fullText){
     const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
     const saved=isSaved(item.slug);
     const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{ const added=toggleSaved(item.slug); saveBtn.textContent=added?'Remover':'Salvar'; if(added) saveBtn.setAttribute('data-variant','primary'); else saveBtn.removeAttribute('data-variant'); toast(added?'Tema salvo':'Removido','info',1400); });
-    const iaBtn=mkBtn('Estude com I.A.','', ()=>openIAPopover(iaBtn,item.title,fullText));
+const iaBtn = mkBtn('Estude com I.A.', '', () => openIAModal(item.title, fullText));
     actionsEl.append(saveBtn, iaBtn);
     container.appendChild(card);
   }
