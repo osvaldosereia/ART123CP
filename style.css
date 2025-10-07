@@ -12,13 +12,13 @@
   --surface:#E8EEF7;
   --line:#D6DFEA;
 
-  --primary:#1F3B82;   /* azul escuro (Meu) */
+  --primary:#1F3B82;
   --accent:#00A3FF;
 
   --radius:12px;
   --shadow:0 6px 20px rgba(0,0,0,.08);
 
-  --topbar-h:64px;     /* usado no scroll-margin dos cards */
+  --topbar-h:64px;
 }
 
 /* Reset básico */
@@ -97,12 +97,11 @@ ul{margin:0;padding:0;list-style:none}
 /* ===== Cards ===== */
 .card{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  box-shadow:var(--shadow);margin:28px 0;              /* respiro entre cards */
-  scroll-margin-top:calc(var(--topbar-h) + 16px);       /* alinhar abaixo da topbar */
+  box-shadow:var(--shadow);margin:28px 0;
+  scroll-margin-top:calc(var(--topbar-h) + 16px);
 }
 .ubox{padding:14px 16px}
-.ficha-head{padding:14px 16px 8px 16px;margin:0}
-.h1{font-size:22px;line-height:1.25;margin:14px 0 0 0;color:var(--primary)} /* título azul escuro */
+.h1{font-size:22px;line-height:1.25;margin:14px 0 0 0;color:var(--primary)}
 .h2{font-size:18px;margin:0 0 6px 0}
 
 /* Seções – linha + respiro ENTRE seções */
@@ -113,7 +112,7 @@ ul{margin:0;padding:0;list-style:none}
 }
 .ubox-sub{font-size:14px;font-weight:700;margin:0 0 8px 0;color:var(--ink)}
 
-/* Ações (chips) à esquerda com bom respiro do título */
+/* Ações (chips) */
 .actions{display:flex;justify-content:flex-start;align-items:center}
 .chip-bar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px 0}
 .btn-ios{
@@ -124,17 +123,13 @@ ul{margin:0;padding:0;list-style:none}
 .btn-ios.is-small{padding:6px 10px;font-size:12px}
 .btn-ios[data-variant="primary"]{border-color:transparent;background:var(--primary);color:#fff}
 
-/* Texto dos cards normal (apenas títulos/subtítulos em destaque) */
+/* Texto e links */
 .link-arrow{position:relative;display:inline;font-weight:500;white-space:normal}
-
-/* Mini-botão com seta, discreto e na altura do texto */
 .arrow-icon{
   display:inline-block;padding:0 6px;margin-left:6px;border-radius:6px;
   background:#EEF2F7;color:var(--primary);font-size:.85em;line-height:1.2;
   vertical-align:baseline;box-shadow:none;border:none
 }
-
-/* Lista de referências – só respiro entre itens (sem linhas) */
 .ref-list li + li{margin-top:10px}
 .ref-list .muted{margin-top:4px;font-size:.92em;color:var(--muted)}
 
@@ -154,188 +149,98 @@ ul{margin:0;padding:0;list-style:none}
 /* Mark highlight */
 mark{background:rgba(0,163,255,.25);padding:0 .1em;border-radius:2px}
 
-/* Limpesa: removido componente de setas do pós-busca */
-#postAc,
-.post-ac,
-.post-ac-inner,
-.post-ac-track,
-.post-ac-nav { display: none !important; }
+/* Remoção de setas pós-busca */
+#postAc,.post-ac,.post-ac-inner,.post-ac-track,.post-ac-nav{display:none!important}
+
 /* ===== Drawer (off-canvas) ===== */
-.drawer{
-  position: fixed;
-  inset: 0;
-  pointer-events: none;        /* bloqueia cliques quando fechado */
-  z-index: 1000;
-}
-.drawer-backdrop{
-  position: absolute;
-  inset: 0;
-  background: rgba(15,23,42,.32);
-  display: none;               /* só aparece aberto */
-}
+.drawer{position:fixed;inset:0;pointer-events:none;z-index:1000}
+.drawer-backdrop{position:absolute;inset:0;background:rgba(15,23,42,.32);display:none}
 .drawer-panel{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: clamp(260px, 78vw, 320px);
-  height: 100%;
-  overflow: auto;
-  background: #fff;
-  box-shadow: 0 10px 30px rgba(2,6,23,.18);
-  transform: translateX(-104%); /* escondido */
-  transition: transform .28s ease;
+  position:absolute;top:0;left:0;width:clamp(260px,78vw,320px);height:100%;
+  overflow:auto;background:#fff;box-shadow:0 10px 30px rgba(2,6,23,.18);
+  transform:translateX(-104%);transition:transform .28s ease; padding:8px 0 16px;
 }
-
-/* aberto */
-.drawer.open{ pointer-events: auto; }
-.drawer.open .drawer-backdrop{ display: block; }
-.drawer.open .drawer-panel{ transform: translateX(0); }
-
-/* conteúdo interno do menu */
-.drawer .menu{ margin: 0; padding: 12px 14px 24px; list-style: none; }
-.drawer .cat-btn{ display:flex; justify-content:space-between; width:100%; }
-.drawer .sublist{ margin:6px 0 12px 0; padding-left:10px; }
-
-/* garante que nada “vaze” para a área principal */
-#theme, #content{ position: relative; z-index: 0; }
-
-/* limpa qualquer resquício das setas do pós-busca */
-#postAc, .post-ac, .post-ac-inner, .post-ac-track, .post-ac-nav{ display:none!important; }
-
-/* =========================
-   Drawer – estilos visuais do menu
-   ========================= */
-
-/* Cabeçalho do drawer */
-.drawer-panel{ padding: 8px 0 16px; }
+.drawer.open{pointer-events:auto}
+.drawer.open .drawer-backdrop{display:block;backdrop-filter:blur(2px)}
+.drawer.open .drawer-panel{transform:translateX(0)}
 .drawer-header{
-  position: sticky; top: 0; z-index: 2;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:12px 14px; background:#fff; border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;
+  padding:12px 14px;background:#fff;border-bottom:1px solid var(--line)
 }
-.drawer-brand{ font-weight:700; letter-spacing:-.3px; display:flex; gap:4px; }
-.drawer-brand .b1{ color:var(--primary); } .drawer-brand .b2{ color:var(--accent); }
+.drawer-brand{font-weight:700;letter-spacing:-.3px;display:flex;gap:4px}
+.drawer-brand .b1{color:var(--primary)} .drawer-brand .b2{color:var(--accent)}
 .drawer-close{
-  appearance:none; border:1px solid var(--line); background:var(--surface);
-  color:var(--primary); border-radius:999px; padding:6px 10px; cursor:pointer;
-  font-weight:600; font-size:12px;
+  appearance:none;border:1px solid var(--line);background:var(--surface);
+  color:var(--primary);border-radius:999px;padding:6px 10px;cursor:pointer;font-weight:600;font-size:12px
 }
-.drawer-close:hover{ filter:brightness(.98); }
-
-/* Lista principal */
-.drawer .menu{ margin:0; padding:12px 14px 24px; list-style:none; }
-.drawer .menu li{ margin:0; }
-
-/* Título de seção e divisória */
+.drawer .menu{margin:0;padding:12px 14px 24px;list-style:none}
 .menu-title{
-  margin:10px 0 6px; font-weight:700; color:var(--muted); font-size:12px;
-  text-transform:uppercase; letter-spacing:.08em;
+  margin:10px 0 6px;font-weight:700;color:var(--muted);font-size:12px;
+  text-transform:uppercase;letter-spacing:.08em
 }
-.divider{ height:1px; background:var(--line); margin:10px 0; }
-
-/* Botão “categoria” (abre sublista) */
+.divider{height:1px;background:var(--line);margin:10px 0}
 .cat-btn{
-  appearance:none; background:transparent; border:0; width:100%;
-  display:flex; align-items:center; justify-content:space-between; gap:8px;
-  padding:8px 10px; border-radius:10px; cursor:pointer; color:var(--ink);
+  appearance:none;background:transparent;border:0;width:100%;
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:8px 10px;border-radius:10px;cursor:pointer;color:var(--ink)
 }
-.cat-btn:hover{ background:var(--surface); }
-.cat-btn .caret{ display:inline-block; transition:transform .18s ease; }
-.cat-btn[aria-expanded="true"] .caret{ transform:rotate(90deg); }
-
-/* Sublista (itens) */
-.sublist{ margin:6px 0 12px 0; padding-left:0; }
-.sublist li + li{ margin-top:4px; }
-.sublist a.title{
-  display:block; padding:6px 10px; border-radius:8px; color:var(--ink);
-}
-.sublist a.title:hover{ background:var(--surface); }
-
-/* “Sobre” como primeiro item simples */
-.drawer .menu > li > a.title{
-  display:block; padding:8px 10px; border-radius:10px;
-}
-.drawer .menu > li > a.title:hover{ background:var(--surface); }
-
-/* Botão “Remover” nos salvos */
+.cat-btn:hover{background:var(--surface)}
+.cat-btn .caret{display:inline-block;transition:transform .18s ease}
+.cat-btn[aria-expanded="true"] .caret{transform:rotate(90deg)}
+.sublist{margin:6px 0 12px 0;padding-left:0}
+.sublist li + li{margin-top:4px}
+.sublist a.title{display:block;padding:6px 10px;border-radius:8px;color:var(--ink)}
+.sublist a.title:hover{background:var(--surface)}
+.drawer .menu > li > a.title{display:block;padding:8px 10px;border-radius:10px}
+.drawer .menu > li > a.title:hover{background:var(--surface)}
 button.mini{
-  appearance:none; border:1px solid var(--line); background:var(--surface);
-  color:var(--primary); border-radius:999px; padding:4px 8px; cursor:pointer;
-  font-size:11px; margin-left:8px;
+  appearance:none;border:1px solid var(--line);background:var(--surface);
+  color:var(--primary);border-radius:999px;padding:4px 8px;cursor:pointer;font-size:11px;margin-left:8px
 }
-button.mini:hover{ filter:brightness(.98); }
-
-/* Backdrop com leve desfoque */
-.drawer.open .drawer-backdrop{
-  backdrop-filter: blur(2px);
-}
-
-/* (Garantia) z-index do conteúdo geral atrás do drawer */
-#theme, #content{ position:relative; z-index:0; }
 
 /* Logo maior apenas no desktop */
-@media (min-width: 721px){
-  /* logo da topbar */
-  .brand{ font-size:22px; line-height:1; }
+@media (min-width:721px){
+  .brand{font-size:22px;line-height:1}
+  .home-logo{font-size:72px;line-height:1}
+}
 
-  /* logo da home */
-  .home-logo{ font-size:72px; line-height:1; }
-}
-/* Chips + título na mesma linha e alinhados à esquerda */
-.ficha-head{
-  display:grid;
-  grid-template-columns: auto 1fr; /* chips | título */
-  align-items:center;
-  gap:12px;
-  padding:14px 16px 8px 16px; /* mantém o mesmo recuo dos textos */
-}
-.ficha-head .chip-bar{ margin:0; }
-.ficha-head .h1{ margin:0; }
-
-/* Mobile: volta a empilhar */
-@media (max-width: 640px){
-  .ficha-head{
-    grid-template-columns: 1fr;
-    gap:8px;
-  }
-}
-/* IA dropdown */
+/* ========= IA dropdown ========== */
 .ia-pop{
-  position:absolute; min-width:240px; background:#fff; border:1px solid var(--line);
-  border-radius:10px; box-shadow:var(--shadow); padding:6px; z-index:95;
+  position:absolute;min-width:240px;background:#fff;border:1px solid var(--line);
+  border-radius:10px;box-shadow:var(--shadow);padding:6px;z-index:95
 }
 .ia-item{
-  width:100%; display:block; text-align:left; border:0; background:transparent;
-  padding:8px 10px; border-radius:8px; cursor:pointer; font-weight:600; color:var(--primary);
+  width:100%;display:block;text-align:left;border:0;background:transparent;
+  padding:8px 10px;border-radius:8px;cursor:pointer;font-weight:600;color:var(--primary)
 }
-.ia-item:hover{ background:var(--surface); }
+.ia-item:hover{background:var(--surface)}
 
 /* Chips das sugestões – rolagem horizontal contínua */
 .suggestions .ac-chips{
-  display:flex; gap:6px; margin:4px 4px 8px;
-  overflow-x:auto; overscroll-behavior-x:contain; -webkit-overflow-scrolling:touch;
-  scrollbar-width:thin;
+  display:flex;gap:6px;margin:4px 4px 8px;
+  overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;
+  scrollbar-width:thin
 }
-.suggestions .ac-chips::-webkit-scrollbar{ height:6px; }
-.suggestions .ac-chips::-webkit-scrollbar-thumb{ background:var(--line); border-radius:999px; }
-.suggestions .ac-chip{ flex:0 0 auto; } /* não quebrar linha */
+.suggestions .ac-chips::-webkit-scrollbar{height:6px}
+.suggestions .ac-chips::-webkit-scrollbar-thumb{background:var(--line);border-radius:999px}
+.suggestions .ac-chip{flex:0 0 auto}
 
-/* Chips na linha anterior ao título (override) */
+/* ===== Ficha: chips na linha ANTERIOR ao título (alinhados ao texto) ===== */
 .ficha-head{
-  display: grid;
+  display:grid;
   grid-template-areas:
     "chips"
     "title";
-  grid-template-columns: 1fr;
-  align-items: start;
-  gap: 0;
-  padding: 14px 16px 8px 16px;
+  grid-template-columns:1fr;
+  align-items:start;
+  gap:0;
+  padding:14px 16px 8px 16px; /* mesmo recuo do conteúdo do card */
 }
 .ficha-head .chip-bar{
-  grid-area: chips;
-  margin: 0 0 12px 0;     /* respiro entre chips e título */
+  grid-area:chips;
+  margin:0 0 12px 0;          /* respiro entre chips e título */
 }
 .ficha-head .h1{
-  grid-area: title;
-  margin: 0;
+  grid-area:title;
+  margin:0;                   /* alinha início do título ao texto */
 }
