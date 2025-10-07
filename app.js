@@ -1,13 +1,10 @@
 // SPA com página inicial minimalista abaixo da topbar.
 // Rotas: #/ (home) • #/tema/:slug • #/sobre
-// Estrutura TXT esperada por tema (novo formato):
+// TXT por card (formato antigo que você usa):
 // # Título
-// ----                 (troca de seção)
 // # Dispositivos Legais
 // - item
 // -- comentário
-// ... (sem "----" entre itens)
-// ----                 (troca de seção)
 // # Remissões Normativas
 // - item
 // -- comentário
@@ -100,12 +97,11 @@
     return res.text();
   }
 
- function splitThemesByDelim(raw){
-  const txt = raw.replace(/^\uFEFF/, '').replace(/\r\n?/g,'\n').trim();
-  return txt.split(/^\s*-{3,}\s*$/m).map(s=>s.trim()).filter(Boolean);
-}
-
-
+  // ==== Split dos cards: aceita '-----' e também 3+ hífens ====
+  function splitThemesByDelim(raw){
+    const txt = raw.replace(/^\uFEFF/, '').replace(/\r\n?/g,'\n').trim();
+    return txt.split(/^\s*-{3,}\s*$/m).map(s=>s.trim()).filter(Boolean);
+  }
 
   const normalizeHeading=(h)=> (h||'')
     .toLowerCase()
@@ -115,7 +111,7 @@
     .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
     .trim();
 
-  // ===== IA Prompts: agora recebem (title, fullText) =====
+  // ===== IA Prompts: recebem (title, fullText) =====
   const IA_PROMPTS = {
     resumo:    (t,full) => `Resuma de forma didática e objetiva o tema a seguir, explicando seus principais conceitos jurídicos e fundamentos legais.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
     detalhada: (t,full) => `Explique detalhadamente e transcreva o texto original dos dispositivos e remissões abaixo, analisando conteúdo, finalidade e aplicação prática.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
@@ -127,7 +123,7 @@
   };
   const googleIA = (prompt) => `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
 
-  // ===== Parser para o novo TXT (headings + '----' entre seções) =====
+  // ===== Parser para o TXT antigo (sem '----' dentro das seções) =====
   function parseTemaFromChunk(chunk){
     const fixed = chunk.replace(/^\s*##\s+##\s+/mg, '## ');
     const mTitle = fixed.match(/^\s*#\s+(.+?)\s*$/m);
@@ -136,55 +132,57 @@
     const title = mTitle[1].trim();
     const slug  = slugify(title);
 
-   const rxHead = /^\s*#\s+(.+?)\s*$/mg;
-const sections = [];
-let m;
-while ((m = rxHead.exec(fixed))) {
-  const name = m[1].trim();
-  const nm = normalizeHeading(name);
-  const start = rxHead.lastIndex;
-  const prev = sections.at(-1);
-  if (prev) prev.end = m.index;
-  sections.push({ raw:name, nm, start, end: fixed.length });
-}
+    // Localiza headings e limites das seções
+    const rxHead = /^\s*#\s+(.+?)\s*$/mg;
+    const sections = [];
+    let m;
+    while ((m = rxHead.exec(fixed))) {
+      const name = m[1].trim();
+      const nm = normalizeHeading(name);
+      const start = rxHead.lastIndex; // após a linha do heading
+      const prev = sections.at(-1);
+      if (prev) prev.end = m.index;   // termina na posição do próximo heading
+      sections.push({ raw:name, nm, start, end: fixed.length });
+    }
 
-
-
-    // localiza D e R
     const secD = sections.find(s => /^dispositivos\s+legais\b/.test(s.nm));
     const secR = sections.find(s => /^remissoes\s+normativas\b/.test(s.nm));
 
+    // Lista: aceita indentação, ignora linhas vazias, para em novo heading ou '-----'
     function parseList(sec){
-  if(!sec) return [];
-  const body = fixed.slice(sec.start, sec.end);
-  const lines = body.split('\n');
-  const out = [];
-  let last = null;
-  for(const line of lines){
-    const L = line.trim();
-    if(!L) continue;
-    if(L === '-----') break;      // fim do card
-    if(L === '----') { continue; } // divisor de seção
-    if(/^-\s+/.test(L)){
-      const texto = L.replace(/^-+\s*/, '').trim();
-      last = { texto, comentario:null };
-      out.push(last);
-      continue;
-    }
-    if(/^--\s+/.test(L)){
-      const c = L.replace(/^--+\s*/, '').trim();
-      if(last) last.comentario = c;
-      continue;
-    }
-  }
-  return out;
-}
+      if(!sec) return [];
+      const body = fixed.slice(sec.start, sec.end);
+      const lines = body.split('\n');
+      const out = [];
+      let last = null;
+      for(const rawLine of lines){
+        const L = rawLine.replace(/\r/g,'').trimEnd(); // preserva possíveis espaços iniciais
+        if(!L.trim()) continue;
 
+        if (/^\s*#\s+/.test(L)) break;     // novo heading encontrado
+        if (/^\s*-{5}\s*$/.test(L)) break; // fim do card
+        if (/^\s*-{4}\s*$/.test(L)) continue; // divisor antigo entre seções, se aparecer
+
+        if (/^\s*--\s+/.test(L)){          // comentário com indent opcional
+          const c = L.replace(/^\s*--+\s*/, '').trim();
+          if(last) last.comentario = c;
+          continue;
+        }
+        if (/^\s*-\s+/.test(L)){           // item com indent opcional
+          const texto = L.replace(/^\s*-+\s*/, '').trim();
+          last = { texto, comentario:null };
+          out.push(last);
+          continue;
+        }
+        // Linha solta: ignore para manter compatibilidade estrita do formato antigo
+      }
+      return out;
+    }
 
     const dispositivos = parseList(secD);
     const remissoes    = parseList(secR);
 
-    // links por item (mantém link unitário)
+    // Links por item
     const mkLink = (txt) => googleIA(IA_PROMPTS.detalhada(title, `${txt}`));
     for(const it of dispositivos){ it.link = mkLink(`${title} — ${it.texto}`); }
     for(const it of remissoes){    it.link = mkLink(`${title} — ${it.texto}`); }
@@ -198,10 +196,8 @@ while ((m = rxHead.exec(fixed))) {
       title,
       group: '', path: '', frag: slug,
       dispositivos, remissoes,
-      // para compatibilidade antiga
       titleL: title.toLowerCase(),
       bodyL: (dispText + ' ' + remText).toLowerCase(),
-      // normalizados por seção
       titleN: normPT(title),
       dispN:  normPT(dispText),
       remN:   normPT(remText),
@@ -301,7 +297,6 @@ while ((m = rxHead.exec(fixed))) {
   const acList = document.querySelector('#suggestions');
   if (acList) acList.hidden = true;
 
-  // Novo: pontuação e flags por seção
   function scoreFields(q, t){
     const sT = _hitPT(t.titleN, q);
     const sD = _hitPT(t.dispN || '', q);
@@ -656,7 +651,6 @@ while ((m = rxHead.exec(fixed))) {
     __iaPop.innerHTML = opts.map(o=>`<button class="ia-opt" data-k="${o.key}" role="menuitem">${o.label}</button>`).join('');
     host.appendChild(__iaPop);
 
-    // posição
     const r = anchorBtn.getBoundingClientRect();
     const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     const padX = 8;
@@ -666,7 +660,6 @@ while ((m = rxHead.exec(fixed))) {
     __iaPop.style.top  = (r.bottom + window.scrollY + 6) + 'px';
     __iaPop.style.maxWidth = popW + 'px';
 
-    // handlers
     __iaPop.querySelectorAll('.ia-opt').forEach(btn=>{
       btn.addEventListener('click', ()=>{
         const k = btn.getAttribute('data-k');
@@ -722,10 +715,8 @@ while ((m = rxHead.exec(fixed))) {
       try{ localStorage.setItem(LAST_KEY, slug); }catch(_){}
 
       actionsEl.innerHTML='';
-      // ==== Barra de chips abaixo do título ====
       const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
       const saved=isSaved(slug);
-      // neutro quando não salvo; "clicado" (primary) quando salvo
       const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{
         const added=toggleSaved(slug);
         saveBtn.textContent=added?'Remover':'Salvar';
@@ -743,9 +734,11 @@ while ((m = rxHead.exec(fixed))) {
       bar.append(saveBtn, iaBtn);
       actionsEl.append(bar);
 
-      renderPostSearchChips();
+      // Só chama se existir para não quebrar o fluxo de render
+      if (typeof window.renderPostSearchChips === 'function') {
+        try { window.renderPostSearchChips(); } catch(_) {}
+      }
 
-      // Respiro interno menor entre itens
       const sep = `<hr style="border:none;border-top:1px solid #e9ecef;margin:8px 0">`;
 
       function renderList(items){
@@ -784,7 +777,7 @@ while ((m = rxHead.exec(fixed))) {
   function loadSobre(){
     $('#actions').innerHTML='';
     $('#themeTitle').textContent='Sobre';
-    $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code>----</code> → <code># Dispositivos Legais</code> → <code>----</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários. As etiquetas (T) (D) (R) são incluídas automaticamente na UI.</p></div>`;
+    $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários. As etiquetas (T) (D) (R) são incluídas automaticamente na UI.</p></div>`;
   }
 
   async function renderByRoute(){
