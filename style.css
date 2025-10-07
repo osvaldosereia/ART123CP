@@ -153,3 +153,10 @@ ul{margin:0;padding:0;list-style:none}
 
 /* Mark highlight */
 mark{background:rgba(0,163,255,.25);padding:0 .1em;border-radius:2px}
+
+/* Limpesa: removido componente de setas do pós-busca */
+#postAc,
+.post-ac,
+.post-ac-inner,
+.post-ac-track,
+.post-ac-nav { display: none !important; }
