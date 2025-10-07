@@ -1,6 +1,171 @@
 
 
 
+
+# Indenização por Ofensa à Liberdade Pessoal
+# Dispositivos Legais
+- Art. 954. A indenização por ofensa à liberdade pessoal consistirá no pagamento das perdas e danos que sobrevierem ao ofendido, e se este não puder provar prejuízo, tem aplicação o disposto no parágrafo único do artigo antecedente.
+- Parágrafo único. Consideram-se ofensivos da liberdade pessoal:
+- I – o cárcere privado;
+- II – a prisão por queixa ou denúncia falsa e de má-fé;
+- III – a prisão ilegal.
+# Remissões Normativas
+- Vide arts. 402 a 405 (perdas e danos) do CC.
+-- estabelecem o regime jurídico das perdas e danos, abrangendo danos emergentes, lucros cessantes, juros e correção monetária.
+- Vide Súmula Vinculante 11.
+-- trata da excepcionalidade do uso de algemas, cuja utilização indevida acarreta responsabilidade civil do agente e do Estado.
+- O art. 148 do CP dispõe sobre o crime de sequestro e cárcere privado.
+-- tipifica criminalmente o ato de privar alguém de sua liberdade (relacionado ao inciso I).
+- Vide art. 5.º, LXV, da CF.
+-- garante que a prisão ilegal seja imediatamente relaxada pela autoridade judiciária, fundamentando a ilicitude do ato (relacionado ao inciso III).
+-----
+# Indenização por Lesão à Saúde
+# Dispositivos Legais
+- Art. 949. No caso de lesão ou outra ofensa à saúde, o ofensor indenizará o ofendido das despesas do tratamento e dos lucros cessantes até ao fim da convalescença, além de algum outro prejuízo que o ofendido prove haver sofrido.
+# Remissões Normativas
+- Vide arts. 402 e 403 do CC.
+-- definem o que são as perdas e danos, abrangendo os danos emergentes e os lucros cessantes como consequência direta e imediata do ato.
+-----
+# Indenização por Incapacidade Laborativa
+# Dispositivos Legais
+- Art. 950. Se da ofensa resultar defeito pelo qual o ofendido não possa exercer o seu ofício ou profissão, ou se lhe diminua a capacidade de trabalho, a indenização, além das despesas do tratamento e lucros cessantes até ao fim da convalescença, incluirá pensão correspondente à importância do trabalho para que se inabilitou, ou da depreciação que ele sofreu.
+- Parágrafo único. O prejudicado, se preferir, poderá exigir que a indenização seja arbitrada e paga de uma só vez.
+# Remissões Normativas
+- Vide Súmula 490 do STF.
+-- trata do cálculo da pensão com base no salário-mínimo vigente à época da sentença e seus reajustes posteriores.
+-----
+# Indenização por Erro Profissional
+# Dispositivos Legais
+- Art. 951. O disposto nos arts. 948, 949 e 950 aplica-se ainda no caso de indenização devida por aquele que, no exercício de atividade profissional, por negligência, imprudência ou imperícia, causar a morte do paciente, agravar-lhe o mal, causar-lhe lesão, ou inabilitá-lo para o trabalho.
+# Remissões Normativas
+- Vide arts. 14, § 4.º, e 17 do CDC.
+-- o art. 14, § 4º, estabelece a responsabilidade subjetiva (mediante apuração de culpa) para os profissionais liberais.
+-- o art. 17 equipara a consumidor todas as vítimas do evento danoso.
+- Vide Súmula 341 do STF.
+-- estabelece a presunção de culpa do empregador por ato culposo do empregado.
+- Vide Súmula 37 do STJ.
+-- trata da cumulação das indenizações por dano material e moral.
+- Vide Súmula Vinculante 22.
+-- define a competência da Justiça do Trabalho para julgar ações de indenização por danos decorrentes de acidente de trabalho.
+-----
+# Indenização por Usurpação ou Esbulho
+# Dispositivos Legais
+- Art. 952. Havendo usurpação ou esbulho do alheio, além da restituição da coisa, a indenização consistirá em pagar o valor das suas deteriorações e o devido a título de lucros cessantes; faltando a coisa, dever-se-á reembolsar o seu equivalente ao prejudicado.
+- Parágrafo único. Para se restituir o equivalente, quando não exista a própria coisa, estimar-se-á ela pelo seu preço ordinário e pelo de afeição, contanto que este não se avantaje àquele.
+# Remissões Normativas
+- Vide arts. 402, 403, 1.210 e 1.228 do CC.
+-- os arts. 402 e 403 definem os lucros cessantes.
+-- os arts. 1.210 e 1.228 tratam da proteção possessória e do direito de reaver a coisa (reivindicação).
+- Vide arts. 555, I, 556 e 560 do CPC.
+-- tratam da cumulação do pedido de perdas e danos nas ações possessórias.
+- Os arts. 161 e 162 do CP dispõem sobre usucapião.
+-- o art. 161 do CP tipifica os crimes de alteração de limites e usurpação de águas.
+-- o art. 162 do CP tipifica o crime de supressão ou alteração de marca em animais.
+- Vide Súmula 562 do STF.
+-- trata da aplicação de correção monetária na indenização por danos materiais.
+-----
+# Indenização por Calúnia, Difamação ou Injúria
+# Dispositivos Legais
+- Art. 953. A indenização por injúria, difamação ou calúnia consistirá na reparação do dano que delas resulte ao ofendido.
+- Parágrafo único. Se o ofendido não puder provar prejuízo material, caberá ao juiz fixar, equitativamente, o valor da indenização, na conformidade das circunstâncias do caso.
+# Remissões Normativas
+- Os arts. 138, 139 e 140 do CP dispõem respectivamente sobre calúnia, difamação e injúria.
+-- tipificam criminalmente os crimes contra a honra.
+- Os arts. 49 a 52 do CP dispõem sobre pena de multa.
+-- estabelecem os critérios para fixação da pena de multa no âmbito penal, que podem ser usados por analogia na fixação da indenização.
+-----
+# Medida da Indenização
+# Dispositivos Legais
+- Art. 944. A indenização mede-se pela extensão do dano.
+- Parágrafo único. Se houver excessiva desproporção entre a gravidade da culpa e o dano, poderá o juiz reduzir, equitativamente, a indenização.
+# Remissões Normativas
+- Vide arts. 186, 884, 927, 944 e 948 a 954 do CC.
+-- os arts. 186 e 927 tratam do ato ilícito e do dever de indenizar.
+-- o art. 884 veda o enriquecimento sem causa, princípio correlato à extensão do dano.
+-- o art. 944 é autorreferente.
+-- os arts. 948 a 954 estabelecem critérios específicos de indenização para diferentes tipos de dano.
+- Vide Súmula 37 do STJ.
+-- trata da cumulatividade das indenizações por dano material e dano moral.
+- Vide art. 5.º da LINDB.
+-- fundamenta a atuação do juiz com base nos fins sociais da lei e nas exigências do bem comum, permitindo a redução equitativa.
+- Vide Súmulas 491 e 562 do STF.
+-- a Súmula 491 trata da indenização pela morte de filho menor.
+-- a Súmula 562 trata da aplicação de correção monetária na indenização por danos materiais.
+-----
+# Culpa Concorrente da Vítima
+# Dispositivos Legais
+- Art. 945. Se a vítima tiver concorrido culposamente para o evento danoso, a sua indenização será fixada tendo-se em conta a gravidade de sua culpa em confronto com a do autor do dano.
+# Remissões Normativas
+- Vide Súmula 28 do STF.
+-- trata da isenção de custas para a União em ações de desapropriação.
+-----
+# Obrigação Indeterminada
+# Dispositivos Legais
+- Art. 946. Se a obrigação for indeterminada, e não houver na lei ou no contrato disposição fixando a indenização devida pelo inadimplente, apurar-se-á o valor das perdas e danos na forma que a lei processual determinar.
+-----
+# Impossibilidade da Prestação
+# Dispositivos Legais
+- Art. 947. Se o devedor não puder cumprir a prestação na espécie ajustada, substituir-se-á pelo seu valor, em moeda corrente.
+# Remissões Normativas
+- Vide art. 809, § 2.º, do CPC.
+-- trata da conversão da execução de entrega de coisa certa em execução por quantia certa quando o bem não for encontrado.
+-----
+# Indenização no Caso de Homicídio
+# Dispositivos Legais
+- Art. 948. No caso de homicídio, a indenização consiste, sem excluir outras reparações:
+- I – no pagamento das despesas com o tratamento da vítima, seu funeral e o luto da família;
+- II – na prestação de alimentos às pessoas a quem o morto os devia, levando-se em conta a duração provável da vida da vítima.
+# Remissões Normativas
+- Vide Súmula 642 do STJ.
+-- afirma que o direito à indenização por danos morais é transmissível aos herdeiros.
+- Vide arts. 1.694 a 1.710 do CC.
+-- tratam do regime jurídico da obrigação de prestar alimentos.
+- Sobre os honorários de advogado que completam a indenização, vide arts. 22 a 26 do EAOAB.
+-- dispõem sobre os honorários advocatícios contratuais, de sucumbência e por arbitramento judicial.
+- Vide Súmulas 490 e 491 do STF.
+-- a Súmula 490 trata do cálculo da pensão com base no salário-mínimo e seus reajustes.
+-- a Súmula 491 trata da indenização pela morte de filho menor, mesmo que não exercesse trabalho remunerado.
+-----
+# Inaplicabilidade de Sanções por Cobrança Indevida
+# Dispositivos Legais
+- Art. 941. As penas previstas nos arts. 939 e 940 não se aplicarão quando o autor desistir da ação antes de contestada a lide, salvo ao réu o direito de haver indenização por algum prejuízo que prove ter sofrido.
+# Remissões Normativas
+- Vide arts. 79 a 81 e 485, § 4.º, do CPC.
+-- os arts. 79 a 81 tratam da litigância de má-fé.
+-- o art. 485, § 4.º trata da necessidade de consentimento do réu para a desistência da ação após a contestação.
+-----
+# Responsabilidade Solidária pela Reparação
+# Dispositivos Legais
+- Art. 942. Os bens do responsável pela ofensa ou violação do direito de outrem ficam sujeitos à reparação do dano causado; e, se a ofensa tiver mais de um autor, todos responderão solidariamente pela reparação.
+- Parágrafo único. São solidariamente responsáveis com os autores os coautores e as pessoas designadas no art. 932.
+# Remissões Normativas
+- Vide arts. 186 e 927 do CC.
+-- os arts. 186 e 927 definem o ato ilícito e o dever geral de reparar o dano.
+- Vide arts. 5.º, V e X, e 37, § 6.º (indenização), da CF.
+-- os incisos V e X do art. 5º asseguram o direito à indenização por danos materiais, morais e à imagem.
+-- o art. 37, § 6.º trata da responsabilidade objetiva do Estado.
+- Vide art. 3.º da Lei n. 8.429, de 2-6-1992.
+-- estende as disposições da Lei de Improbidade Administrativa a terceiros que concorram para o ato ou dele se beneficiem.
+- Vide Súmulas 221 e 246 do STJ.
+-- a Súmula 221 trata da responsabilidade solidária entre o autor do escrito e o veículo de imprensa.
+-- a Súmula 246 trata da dedução do valor do seguro obrigatório (DPVAT) da indenização judicial.
+- Vide arts. 264 a 285 e 934 do CC.
+-- os arts. 264 a 285 regulam o regime jurídico das obrigações solidárias.
+-- o art. 934 trata do direito de regresso daquele que repara dano causado por outrem.
+-----
+# Transmissibilidade da Obrigação de Reparar
+# Dispositivos Legais
+- Art. 943. O direito de exigir reparação e a obrigação de prestá-la transmitem-se com a herança.
+# Remissões Normativas
+- Vide Súmula 642 do STJ.
+-- afirma que o direito à indenização por danos morais é transmissível aos herdeiros da vítima.
+- Vide arts. 1.792, 1.821 e 1.997 do CC.
+-- o art. 1.792 estabelece que o herdeiro não responde por encargos superiores às forças da herança.
+-- o art. 1.821 não existe no Código Civil de 2002.
+-- o art. 1.997 estabelece a responsabilidade da herança pelas dívidas do falecido.
+- Vide Súmula 35 do STF.
+-- trata do direito da companheira a ser indenizada pela morte do companheiro em acidente.
+-----
 # Responsabilidade Objetiva por Ato de Terceiro
 # Dispositivos Legais
 - Art. 933. As pessoas indicadas nos incisos I a V do artigo antecedente, ainda que não haja culpa de sua parte, responderão pelos atos praticados pelos terceiros ali referidos.
