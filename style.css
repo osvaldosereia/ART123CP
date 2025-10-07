@@ -1,9 +1,8 @@
 /* =========================
-   Meujus – style.css
-   Paleta: Soft Slate Light + respiros ajustados
+   Meujus – style.css (2025-10-07)
    ========================= */
 
-/* ===== Tokens (nova paleta) ===== */
+/* ===== Tokens ===== */
 :root{
   --ink:#0B1220;      /* texto principal */
   --muted:#6B7A90;    /* texto auxiliar */
@@ -33,7 +32,7 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 /* ===== Layout ===== */
 .container{max-width:960px;margin:0 auto;padding:12px 16px}
 
-/* Topbar */
+/* Topbar (esconde na home) */
 .topbar{position:sticky;top:0;z-index:30;background:var(--card);border-bottom:1px solid var(--line)}
 .topbar-inner{display:flex;align-items:center;gap:12px;min-height:64px}
 .brand{font-weight:800;letter-spacing:-.3px;display:flex;gap:4px}
@@ -43,7 +42,37 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 .hamburger span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px}
 .hamburger span+span{margin-top:4px}
 
-/* Search (topbar ou home) */
+/* ===== Home minimalista ===== */
+.is-home .topbar{display:none}                 /* remove topbar na home */
+.is-home #postAc,
+.is-home .ficha-head{display:none}             /* remove chips e header na home */
+
+.home-center{
+  min-height:100vh;                            /* ocupar a tela inteira */
+  display:flex;align-items:center;justify-content:center;
+  transform:translateY(-6vh);                  /* um pouco acima do centro */
+}
+.home-inline{
+  display:flex;align-items:center;gap:18px;    /* logo + busca lado a lado */
+}
+.home-logo{
+  font-weight:800;font-size:40px;line-height:1;letter-spacing:-.3px;
+  display:flex;gap:6px;white-space:nowrap;
+}
+.home-logo .b1{color:var(--primary)}
+.home-logo .b2{color:var(--accent)}
+.home-search-host{width:min(560px,60vw)}
+.home-search-host .search-wrap,
+.home-search-host .search{width:100%}
+
+/* Stack no mobile */
+@media (max-width:720px){
+  .home-inline{flex-direction:column;gap:16px}
+  .home-logo{font-size:34px}
+  .home-search-host{width:90vw}
+}
+
+/* ===== Search / Autocomplete ===== */
 .search-wrap{flex:1;display:flex;align-items:center;position:relative}
 .search{
   width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;
@@ -51,14 +80,16 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 }
 .search::placeholder{color:var(--muted)}
 
-/* Live suggestions */
+/* Painel de sugestões – alinhamento à esquerda */
 .suggestions{
   position:absolute;left:0;top:calc(100% + 6px);
   width:min(100%, 90vw);
   background:var(--card);border:1px solid var(--line);border-radius:10px;
   box-shadow:var(--shadow);padding:8px;z-index:75;
   max-height:min(70vh, 560px);overflow-y:auto;
+  text-align:left;                                  /* alinhado à esquerda */
 }
+.suggestions *{text-align:left}                    /* garante esquerda em filhos */
 .suggestions.pop{position:fixed;max-height:min(70vh,560px);z-index:80}
 .suggestions .ac-chips{display:flex;flex-wrap:wrap;gap:6px;margin:4px 4px 8px}
 .suggestions .ac-chip{
@@ -71,7 +102,13 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 .suggestions .s2{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .badge{display:inline-block;border:1px solid var(--line);border-radius:6px;padding:1px 5px;margin-left:6px;font-size:10px;color:var(--muted)}
 
-/* Chips pós-busca fixos */
+/* Centraliza o painel no mobile sem cortar laterais */
+@media (max-width:720px){
+  .suggestions{width:90vw;left:50%;transform:translateX(-50%)}
+  .suggestions.pop{left:50%;transform:translateX(-50%);width:90vw}
+}
+
+/* Chips pós-busca (mantidos para outras rotas) */
 .post-ac{position:sticky;top:64px;z-index:20;background:var(--card);border-bottom:1px solid var(--line)}
 .post-ac.hidden{display:none}
 .post-ac-inner{display:flex;align-items:center;gap:8px}
@@ -112,11 +149,11 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 .h2{font-size:18px;margin:0 0 6px 0}
 .ubox{padding:14px 16px}
 
-/* ===== Respiros das seções ===== */
+/* Seções */
 .ubox-section + .ubox-section{margin-top:32px}
 .ubox-sub{font-size:14px;font-weight:800;margin:0 0 8px 0;color:var(--ink)}
 
-/* ===== Ações abaixo do título ===== */
+/* Ações */
 .actions{margin-top:8px}
 .chip-bar{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 6px}
 .btn-ios{
@@ -125,9 +162,8 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 }
 .btn-ios.is-small{padding:6px 10px;font-size:12px}
 .btn-ios[data-variant="primary"]{border-color:transparent;background:var(--primary);color:#fff}
-.btn-ios[data-variant="secondary"]{border-color:var(--primary);color:var(--primary);background:var(--card)}
 
-/* ===== IA Popover ===== */
+/* IA Popover */
 #iaPopoverHost{position:static;z-index:90}
 .ia-popover{
   position:fixed;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);
@@ -137,44 +173,28 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
   border:1px solid var(--line);background:var(--surface);color:var(--primary);
   border-radius:999px;padding:6px 10px;font-size:12px;cursor:pointer
 }
-.ia-popover .ia-opt:hover{background:#dde6f5}
 
-/* ===== Links com setinha ===== */
-/* Removemos a seta automática para usar o mini-botão .arrow-icon no HTML */
+/* Links com setinha: mini botão */
 .link-arrow{position:relative;display:inline-flex;align-items:center;gap:8px;font-weight:600}
 .link-arrow::after{content:none}
-
-/* Mini botão da seta (↗) para reforçar que a frase inteira é link */
 .arrow-icon{
-  display:inline-block;
-  padding:2px 8px;
-  border-radius:999px;
-  background:var(--accent);
-  color:#fff;
-  font-size:11px;
-  line-height:1;
-  transform:translateY(-1px);
+  display:inline-block;padding:2px 8px;border-radius:999px;background:var(--accent);color:#fff;
+  font-size:11px;line-height:1;transform:translateY(-1px);
   transition:transform .15s ease, background-color .15s ease, box-shadow .15s ease;
   box-shadow:0 2px 6px rgba(0,163,255,.25);
 }
 .link-arrow:hover .arrow-icon{transform:translateY(-1px) translateX(1px);background:var(--primary);box-shadow:0 3px 10px rgba(31,59,130,.28)}
 
-/* ===== Lists (respiros internos menores) ===== */
+/* Lists */
 .ref-list li + li{margin-top:4px}
-.ref-list .muted{
-  margin-top:2px;
-  font-size: 0.85em;
-  color: var(--muted);
-}
+.ref-list .muted{margin-top:2px;font-size:.85em;color:var(--muted)}
 
-/* ===== Toasts ===== */
+/* Toasts */
 #toasts{position:fixed;right:12px;bottom:12px;display:grid;gap:8px;z-index:98}
 .toast{background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:8px 10px;opacity:0;transform:translateY(8px);transition:.18s}
 .toast.show{opacity:1;transform:none}
-.toast.success{border-color:#10b981}
-.toast.error{border-color:#ef4444}
 
-/* ===== Modal ===== */
+/* Modal */
 .modal{position:fixed;inset:0;z-index:99;display:grid;place-items:center;visibility:hidden}
 .modal.open{visibility:visible}
 .modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.32)}
@@ -182,44 +202,5 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 .modal-header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
 .modal-body{padding:14px 16px}
 
-/* ===== Marks ===== */
+/* Marks */
 mark{background:rgba(0,163,255,.25);padding:0 .1em;border-radius:2px}
-
-/* ===== Home minimalista (logo + busca ao centro) ===== */
-.home-center{
-  min-height:calc(100vh - 64px);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:24px;
-  text-align:center;
-}
-.home-logo{
-  font-weight:800;
-  font-size:40px;
-  line-height:1;
-  letter-spacing:-.3px;
-  display:flex;gap:6px;
-}
-.home-logo .b1{color:var(--primary)}
-.home-logo .b2{color:var(--accent)}
-.home-search-host{width:min(560px,92vw)}
-.home-search-host .search-wrap,
-.home-search-host .search{width:100%}
-
-/* ===== Responsive ===== */
-@media (max-width:720px){
-  .topbar-inner{gap:8px}
-  .search{padding:9px 10px}
-  .h1{font-size:20px}
-  .chip-bar{gap:6px}
-
-  /* Centralizar o dropdown de sugestões no mobile para não cortar nas laterais */
-  .suggestions{width:90vw;left:50%;transform:translateX(-50%)}
-  .suggestions.pop{left:50%;transform:translateX(-50%);width:90vw}
-
-  .ia-popover{max-width:90vw}
-  .home-logo{font-size:34px}
-  .home-search-host{width:90vw}
-}
