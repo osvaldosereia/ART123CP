@@ -7,20 +7,33 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Topbar fixa (a busca é movida para o centro da home via app.js e restaurada nas outras rotas) -->
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="brand"><span class="b1">Meu</span><span class="b2">Jus</span></div>
+
+      <!-- A busca começa aqui; na home ela é movida para o centro (home-search-host) -->
       <div class="search-wrap" role="search">
-        <input id="search" class="search" type="search" placeholder="Buscar tema" autocomplete="off" aria-autocomplete="list" aria-controls="suggestions" aria-haspopup="listbox" />
+        <input
+          id="search"
+          class="search"
+          type="search"
+          placeholder="Buscar tema"
+          autocomplete="off"
+          aria-autocomplete="list"
+          aria-controls="suggestions"
+          aria-haspopup="listbox"
+        />
         <ul id="suggestions" class="suggestions" role="listbox" aria-label="Sugestões" hidden></ul>
       </div>
+
       <button id="btnMenu" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer-panel">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 
-  <!-- Barra de chips pós-busca -->
+  <!-- Barra de chips pós-busca (mantida; oculta quando não usada) -->
   <div id="postAc" class="post-ac hidden" aria-hidden="true">
     <div class="container post-ac-inner">
       <button type="button" class="post-ac-nav" id="postAcPrev" aria-label="Anterior">◂</button>
@@ -29,7 +42,7 @@
     </div>
   </div>
 
-  <!-- Drawer -->
+  <!-- Drawer / menu lateral -->
   <div class="drawer" id="drawer" aria-hidden="true">
     <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1"></div>
     <nav class="drawer-panel" id="drawer-panel" aria-label="Menu lateral" tabindex="-1">
@@ -40,34 +53,34 @@
       <div class="drawer-content">
         <h3 class="h2">Categorias</h3>
         <ul class="list menu" id="menuList">
-          <!-- Seeds para indexação -->
+          <!-- Seeds para indexação dinâmica (app.js lê e monta TEMAS) -->
           <li>
             <a class="title"
                data-auto="1"
                data-group="Direito Civil"
                data-path="data/direitocivil/civil.txt">Direito Civil</a>
           </li>
-         <li>
-  <a class="title"
-     data-auto="1"
-     data-group="Contravenções Penais"
-     data-path="data/leis/contravencoes_penais.txt">Contravenções Penais</a>
-</li>
-
+          <li>
+            <a class="title"
+               data-auto="1"
+               data-group="Contravenções Penais"
+               data-path="data/leis/contravencoes_penais.txt">Contravenções Penais</a>
+          </li>
         </ul>
       </div>
     </nav>
   </div>
 
+  <!-- Área principal (o app.js injeta a home minimalista aqui e move a search-wrap) -->
   <main class="container" id="theme" aria-live="polite">
     <div class="card ficha-head">
       <h1 class="h1" id="themeTitle"></h1>
-      <!-- Ações abaixo do título; layout final via CSS -->
       <div id="actions" class="actions" aria-label="Ações do tema"></div>
     </div>
     <div id="content" class="list-plain"></div>
   </main>
 
+  <!-- Toasts -->
   <div id="toasts" aria-live="polite" aria-atomic="true"></div>
 
   <!-- Host para popovers flutuantes (IA) -->
@@ -85,14 +98,14 @@
         <p>
           O MeuJus organiza temas em TXT com <code># Título (T)</code> seguido de
           <code># Dispositivos Legais (D)</code> e <code># Remissões Normativas (R)</code>.
-          As seções são separadas por <code>-----</code> e os itens internos por <code>----</code>.
-          Linhas que iniciam com <code>- </code> são linkadas com prompt personalizado; linhas com
-          <code>-- </code> são comentários. “Respiros” são tratados via CSS.
+          As seções são separadas por <code>-----</code> e os itens por <code>- </code> (links) e
+          <code>-- </code> (comentários). Os prompts para I.A. são abertos em nova aba.
         </p>
       </div>
     </div>
   </div>
 
+  <!-- Script do Drawer (abrir/fechar) -->
   <script>
     (function(){
       const drawer   = document.getElementById('drawer');
@@ -100,14 +113,28 @@
       const openBtn  = document.getElementById('btnMenu');
       const closeBtn = document.getElementById('btnCloseMenu');
       const backdrop = document.getElementById('drawerBackdrop');
-      function open(){ drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); openBtn.setAttribute('aria-expanded','true'); document.body.classList.add('noscroll'); panel.focus?.(); }
-      function close(){ drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); openBtn.setAttribute('aria-expanded','false'); document.body.classList.remove('noscroll'); openBtn.focus?.(); }
+
+      function open(){
+        drawer.classList.add('open');
+        drawer.setAttribute('aria-hidden','false');
+        openBtn.setAttribute('aria-expanded','true');
+        document.body.classList.add('noscroll');
+        panel.focus?.();
+      }
+      function close(){
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden','true');
+        openBtn.setAttribute('aria-expanded','false');
+        document.body.classList.remove('noscroll');
+        openBtn.focus?.();
+      }
+
       openBtn?.addEventListener('click', open);
       closeBtn?.addEventListener('click', close);
       backdrop?.addEventListener('click', close);
       document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
 
-      // modal Sobre
+      // Modal Sobre
       const modal = document.getElementById('sobreModal');
       function openModal(){ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.classList.add('noscroll'); }
       function closeModal(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.classList.remove('noscroll'); }
@@ -117,6 +144,7 @@
     })();
   </script>
 
+  <!-- App -->
   <script src="app.js"></script>
 </body>
 </html>
