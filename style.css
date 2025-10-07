@@ -244,3 +244,24 @@ button.mini{
   grid-area:title;
   margin:0;                   /* alinha início do título ao texto */
 }
+/* Alinhar chips + título com a coluna do texto do card */
+.card.ubox { padding:14px 16px; }              /* (já existe, só garantindo) */
+.ficha-head{
+  /* o card já tem padding lateral; aqui NÃO somamos outro */
+  padding:0 0 8px 0 !important;
+  display:grid;
+  grid-template-areas:
+    "chips"
+    "title";
+  grid-template-columns:1fr;
+  align-items:start;
+  gap:0;
+}
+.ficha-head .chip-bar{
+  grid-area:chips;
+  margin:0 0 12px 0;
+}
+.ficha-head .h1{
+  grid-area:title;
+  margin:0;
+}
