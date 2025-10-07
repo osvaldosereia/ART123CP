@@ -150,7 +150,12 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 
 /* ===== Lists (respiros internos menores) ===== */
 .ref-list li + li{margin-top:4px}              /* menos espaço entre itens */
-.ref-list .muted{margin-top:2px}                /* comentário mais próximo do item */
+.ref-list .muted{
+  margin-top:2px;
+  font-size: 0.85em;       /* tamanho menor */
+  color: var(--muted);     /* cor suave da paleta */
+}
+
 
 /* ===== Toasts ===== */
 #toasts{position:fixed;right:12px;bottom:12px;display:grid;gap:8px;z-index:98}
