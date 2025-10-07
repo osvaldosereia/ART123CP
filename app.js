@@ -1,14 +1,4 @@
-// SPA com página inicial minimalista abaixo da topbar.
-// Rotas: #/ (home) • #/tema/:slug • #/sobre
-// TXT por card (formato antigo que você usa):
-// # Título
-// # Dispositivos Legais
-// - item
-// -- comentário
-// # Remissões Normativas
-// - item
-// -- comentário
-// -----                (fim do card)
+// meujus – app.js (2025-10-07) – Home minimalista + fechamento do drawer + seta ↗ em mini-botão
 
 (function(){
   const $  = (q, el=document) => el.querySelector(q);
@@ -123,7 +113,7 @@
   };
   const googleIA = (prompt) => `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
 
-  // ===== Parser para o TXT antigo (sem '----' dentro das seções) =====
+  // ===== Parser para o TXT antigo =====
   function parseTemaFromChunk(chunk){
     const fixed = chunk.replace(/^\s*##\s+##\s+/mg, '## ');
     const mTitle = fixed.match(/^\s*#\s+(.+?)\s*$/m);
@@ -139,9 +129,9 @@
     while ((m = rxHead.exec(fixed))) {
       const name = m[1].trim();
       const nm = normalizeHeading(name);
-      const start = rxHead.lastIndex; // após a linha do heading
+      const start = rxHead.lastIndex;
       const prev = sections.at(-1);
-      if (prev) prev.end = m.index;   // termina na posição do próximo heading
+      if (prev) prev.end = m.index;
       sections.push({ raw:name, nm, start, end: fixed.length });
     }
 
@@ -156,30 +146,28 @@
       const out = [];
       let last = null;
       for(const rawLine of lines){
-        const L = rawLine.replace(/\r/g,'').trimEnd(); // preserva possíveis espaços iniciais
+        const L = rawLine.replace(/\r/g,'').trimEnd();
         if(!L.trim()) continue;
 
-        if (/^\s*#\s+/.test(L)) break;     // novo heading encontrado
+        if (/^\s*#\s+/.test(L)) break;     // novo heading
         if (/^\s*-{5}\s*$/.test(L)) break; // fim do card
-        if (/^\s*-{4}\s*$/.test(L)) continue; // divisor antigo entre seções, se aparecer
+        if (/^\s*-{4}\s*$/.test(L)) continue; // divisor antigo
 
-        if (/^\s*--\s+/.test(L)){          // comentário com indent opcional
-  const c = L.replace(/^\s*--+\s*/, '').trim();
-  if (last) {
-    if (!last.comentarios) last.comentarios = [];
-    last.comentarios.push(c);
-  }
-  continue;
-}
+        if (/^\s*--\s+/.test(L)){          // comentário
+          const c = L.replace(/^\s*--+\s*/, '').trim();
+          if (last) {
+            if (!last.comentarios) last.comentarios = [];
+            last.comentarios.push(c);
+          }
+          continue;
+        }
 
-
-        if (/^\s*-\s+/.test(L)){           // item com indent opcional
+        if (/^\s*-\s+/.test(L)){           // item
           const texto = L.replace(/^\s*-+\s*/, '').trim();
           last = { texto, comentario:null };
           out.push(last);
           continue;
         }
-        // Linha solta: ignore para manter compatibilidade estrita do formato antigo
       }
       return out;
     }
@@ -298,8 +286,8 @@
   }
 
   /* ===== Autocomplete ===== */
-  const input  = document.querySelector('#search');
-  const acList = document.querySelector('#suggestions');
+  let input  = document.querySelector('#search');
+  let acList = document.querySelector('#suggestions');
   if (acList) acList.hidden = true;
 
   function scoreFields(q, t){
@@ -310,7 +298,18 @@
     return { score, flags: { T: sT>0, D: sD>0, R: sR>0 } };
   }
 
-  input?.addEventListener('input', e=>{
+  function bindAutocomplete(){
+    // Recoleta referências (caso #search tenha sido movido)
+    input  = document.querySelector('#search');
+    acList = document.querySelector('#suggestions');
+    if (acList) acList.hidden = true;
+
+    input?.addEventListener('input', onInputAC);
+    input?.addEventListener('keydown', onKeydownAC);
+    acList?.addEventListener('click', onClickAC);
+  }
+
+  function onInputAC(e){
     const q=(e.target.value||'').trim();
     if(q.length<2 || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; closeAcDropdown(); return; }
 
@@ -346,8 +345,8 @@
       <div class="ac-chips" role="group" aria-label="Filtrar sugestões por categoria">
         <button type="button" class="ac-chip" data-cat="Todos" aria-pressed="${activeCat==='Todos'}">Todos</button>
         ${catList.map(cat=>`
-          <button type="button" class="ac-chip" data-cat="${cat.replace(/"/g,'&quot;')}"
-            aria-pressed="${activeCat===cat}">${cat}</button>`).join('')}
+          <button type="button" class="ac-chip" data-cat="${(cat||'').replace(/"/g,'&quot;')}"
+            aria-pressed="${activeCat===cat}">${escapeHTML(cat)}</button>`).join('')}
       </div>`;
 
     const listHTML = arr.slice(0,8).map(x=>{
@@ -372,9 +371,9 @@
         input.dispatchEvent(new Event('input', {bubbles:false}));
       });
     });
-  });
+  }
 
-  input?.addEventListener('keydown', ev=>{
+  function onKeydownAC(ev){
     if(ev.key==='Enter'){
       const a = acList?.querySelector('a');
       if(a){
@@ -385,15 +384,15 @@
         acList.hidden = true;
       }
     }
-  });
+  }
 
-  acList?.addEventListener('click', ev=>{
+  function onClickAC(ev){
     const a = ev.target.closest('a'); if(!a) return;
     const q = a.getAttribute('data-q')||'';
     const flags = a.getAttribute('data-flags')||'';
     try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q, flags})); }catch(_){}
     acList.hidden = true;
-  });
+  }
 
   window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; closeAcDropdown(); });
 
@@ -430,26 +429,19 @@
     return temas;
   }
 
-  /* ===== Menu ===== */
-  function openDrawer(){
-    const d = document.getElementById('drawer');
-    if(d && !d.classList.contains('open')){
-      const btn = document.getElementById('btnMenu');
-      btn?.click();
-    }
+  /* ===== Drawer helpers (fechar ao clicar em um item) ===== */
+  function closeDrawer(){
+    const drawer   = document.getElementById('drawer');
+    const openBtn  = document.getElementById('btnMenu');
+    if(!drawer) return;
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden','true');
+    openBtn?.setAttribute('aria-expanded','false');
+    document.body.classList.remove('noscroll');
+    openBtn?.focus?.();
   }
-  function expandSectionByLabel(label){
-    const btns = $$('.drawer .cat-btn');
-    const btn = btns.find(b => (b.textContent||'').trim().startsWith(label));
-    if(!btn) return;
-    const li = btn.parentElement;
-    const ul = li?.querySelector('.sublist');
-    btn.setAttribute('aria-expanded','true');
-    if(ul) ul.hidden=false;
-  }
-  function expandSaved(){ expandSectionByLabel('Salvos'); }
-  function expandCategory(name){ expandSectionByLabel(name); }
 
+  /* ===== Menu ===== */
   function renderMenu(){
     const menu=$('#menuList'); if(!menu) return;
     menu.innerHTML='';
@@ -528,101 +520,46 @@
       });
       li.appendChild(btn); li.appendChild(ul); menu.appendChild(li);
     }
+
+    // >>> Fechar drawer ao clicar em qualquer link .title
+    menu.addEventListener('click', (e)=>{
+      const a = e.target.closest('a.title');
+      if(a){ closeDrawer(); }
+    });
   }
 
-  /* ===== Home ===== */
+  /* ===== Home minimalista (logo + busca ao centro) ===== */
+
+  // Guardar posição original da search-wrap para mover/voltar
+  const searchWrap = document.querySelector('.search-wrap');
+  const searchWrapParent = searchWrap?.parentElement || null;
+  const searchWrapNext   = searchWrap?.nextSibling || null;
+
+  function moveSearchTo(container){
+    if(!searchWrap || !container) return;
+    container.appendChild(searchWrap);
+    bindAutocomplete(); // reata os listeners ao novo #search
+  }
+  function restoreSearchToTopbar(){
+    if(!searchWrap || !searchWrapParent) return;
+    if(searchWrapNext && searchWrapNext.parentNode===searchWrapParent){
+      searchWrapParent.insertBefore(searchWrap, searchWrapNext);
+    }else{
+      searchWrapParent.appendChild(searchWrap);
+    }
+    bindAutocomplete(); // garante listeners
+  }
+
   function renderHome(){
     const actionsEl=$('#actions'); const titleEl=$('#themeTitle'); const contentEl=$('#content');
-    actionsEl.innerHTML='';
-    titleEl.textContent='Estudo jurídico direto ao ponto';
-    const lastSlug = localStorage.getItem(LAST_KEY)||'';
-    const saved = readSaved();
-    const bySlug = new Map(TEMAS.map(t=>[t.slug,t]));
-    const last = bySlug.get(lastSlug);
-
-    const discover = TEMAS.slice().sort((a,b)=>a.title.localeCompare(b.title,'pt-BR')).slice(0,6);
-
+    actionsEl.innerHTML=''; titleEl.textContent='';
     contentEl.innerHTML = `
-      <section class="home-hero">
-        <p class="home-sub">Busque temas, salve e treine.</p>
-      </section>
-
-      ${ last ? `
-      <section class="card home-card" id="home-continue">
-        <div>
-          <div class="t">${escapeHTML(last.title)}</div>
-          <div class="s">${escapeHTML(last.group||'')}</div>
-        </div>
-        <div class="home-actions">
-          <a class="btn-ios is-small" data-go="#/tema/${last.slug}" data-variant="primary">Retomar</a>
-        </div>
-      </section>` : '' }
-
-      <section class="card">
-        <h3 class="ubox-sub">Meus salvos</h3>
-        <ul class="home-list" id="home-saved">
-          ${
-            saved.length
-            ? saved.slice(0,4).map(sl=>{
-                const t=bySlug.get(sl); if(!t) return '';
-                return `<li class="home-item">
-                  <a class="tt" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
-                  <span class="gg">${escapeHTML(t.group||'')}</span>
-                  <span class="act"><button class="mini" data-remove="${t.slug}">Remover</button></span>
-                </li>`;
-              }).join('')
-            : `<li class="home-item"><span class="gg">Você ainda não salvou temas.</span></li>`
-          }
-        </ul>
-        <div class="home-actions">
-          <button class="btn-ios is-small" id="btnSavedAll">Ver todos</button>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3 class="ubox-sub">Categorias essenciais</h3>
-        <div class="chips">
-          <button class="chip" data-cat="Direito Civil">Civil</button>
-          <button class="chip" data-cat="Direito Penal">Penal</button>
-          <button class="chip" data-cat="Processo Civil">Proc. Civil</button>
-          <button class="chip" data-cat="Direito Constitucional">Constitucional</button>
-        </div>
-        <div class="home-actions">
-          <button class="btn-ios is-small" id="btnMoreCats">Mais categorias</button>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3 class="ubox-sub">Descobrir temas</h3>
-        <div class="grid-mini">
-          ${discover.map(t=>`
-            <div class="home-item">
-              <a class="tt" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
-              <span class="gg">${escapeHTML(t.group||'')}</span>
-            </div>`).join('')}
-        </div>
+      <section class="home-center" aria-label="Busca principal">
+        <div class="home-logo"><span class="b1">Meu</span><span class="b2">Jus</span></div>
+        <div class="home-search-host"></div>
       </section>
     `;
-
-    contentEl.querySelectorAll('[data-go]').forEach(a=>{
-      a.addEventListener('click', (e)=>{ e.preventDefault(); location.hash = a.getAttribute('data-go')||'#/'; });
-    });
-    contentEl.querySelectorAll('#home-saved .mini[data-remove]').forEach(b=>{
-      b.addEventListener('click', (e)=>{
-        e.preventDefault();
-        const slug=b.getAttribute('data-remove');
-        const now=toggleSaved(slug);
-        toast(now?'Salvo adicionado':'Removido dos salvos', now?'success':'info', 1400);
-        renderHome(); renderMenu();
-      });
-    });
-    $('#btnSavedAll')?.addEventListener('click', ()=>{ openDrawer(); expandSaved(); });
-    $('#btnMoreCats')?.addEventListener('click', ()=>{ openDrawer(); });
-    contentEl.querySelectorAll('.chip[data-cat]')?.forEach(c=>{
-      c.addEventListener('click', ()=>{
-        const name=c.getAttribute('data-cat'); openDrawer(); expandCategory(name);
-      });
-    });
+    moveSearchTo(contentEl.querySelector('.home-search-host'));
   }
 
   /* ===== IA Popover ===== */
@@ -690,11 +627,11 @@
 
   function buildBundle(title, dispositivos, remissoes){
     const d = (dispositivos||[]).map(it=>{
-      const c = it.comentario ? `\n    Comentário: ${it.comentario}` : '';
+      const c = (it.comentarios && it.comentarios.length) ? `\n    Comentário: ${it.comentarios.join(' | ')}` : '';
       return `- ${it.texto}${c}`;
     }).join('\n');
     const r = (remissoes||[]).map(it=>{
-      const c = it.comentario ? `\n    Comentário: ${it.comentario}` : '';
+      const c = (it.comentarios && it.comentarios.length) ? `\n    Comentário: ${it.comentarios.join(' | ')}` : '';
       return `- ${it.texto}${c}`;
     }).join('\n');
     return `Título: ${title}\n\nDispositivos Legais:\n${d}\n\nRemissões Normativas:\n${r}`;
@@ -705,6 +642,9 @@
     contentEl.textContent='Carregando…';
     const meta=TEMAS.find(t=>t.slug===slug); const path=meta?.path; const frag=meta?.frag;
     if(!path){ contentEl.textContent='Tema não encontrado.'; toast('Tema não encontrado','error'); return; }
+
+    // Ao entrar numa página de tema, restaurar a search para a topbar
+    restoreSearchToTopbar();
 
     try{
       const raw=await fetchText(path);
@@ -739,7 +679,6 @@
       bar.append(saveBtn, iaBtn);
       actionsEl.append(bar);
 
-      // Só chama se existir para não quebrar o fluxo de render
       if (typeof window.renderPostSearchChips === 'function') {
         try { window.renderPostSearchChips(); } catch(_) {}
       }
@@ -751,8 +690,11 @@
         return `<ul class="ref-list">` + items.map((it,i,arr)=>{
           const li = `
             <li>
-              <a class="link-arrow" href="${it.link}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(it.texto))}</a>
-${(it.comentarios || []).map(c => `<div class="muted">${escapeHTML(c)}</div>`).join('')}
+              <a class="link-arrow" href="${it.link}" target="_blank" rel="noopener">
+                ${fmtInlineBold(escapeHTML(it.texto))}
+                <span class="arrow-icon" aria-hidden="true">↗</span>
+              </a>
+              ${(it.comentarios || []).map(c => `<div class="muted">${escapeHTML(c)}</div>`).join('')}
             </li>`;
           const needSep = i < arr.length-1;
           return needSep ? li + sep : li;
@@ -780,6 +722,7 @@ ${(it.comentarios || []).map(c => `<div class="muted">${escapeHTML(c)}</div>`).j
   }
 
   function loadSobre(){
+    restoreSearchToTopbar();
     $('#actions').innerHTML='';
     $('#themeTitle').textContent='Sobre';
     $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários. As etiquetas (T) (D) (R) são incluídas automaticamente na UI.</p></div>`;
@@ -790,11 +733,12 @@ ${(it.comentarios || []).map(c => `<div class="muted">${escapeHTML(c)}</div>`).j
     if(!TEMAS.length) await loadTemas();
     if(page.kind==='tema') await loadTema(page.slug);
     else if(page.kind==='sobre') loadSobre();
-    else renderHome();
+    else { renderHome(); }
   }
 
+  // Fechar dropdown de sugestões quando focar no search (evita sobreposições)
   document.querySelector('#search')?.addEventListener('focus', closeAcDropdown);
 
   window.addEventListener('hashchange', renderByRoute);
-  (async function init(){ await renderByRoute(); })();
+  (async function init(){ await renderByRoute(); bindAutocomplete(); })();
 })();
