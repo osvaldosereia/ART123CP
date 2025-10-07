@@ -1,4 +1,6 @@
-// meujus – app.js (2025-10-07) – Home sem topbar + logo e busca lado a lado + melhorias
+// meujus – app.js (2025-10-07)
+// Navegação por sequência (art/súmula/enunciado/tese) + swipe no mobile + setas no desktop
+// Home minimalista mantida (logo + busca), topbar oculta na home.
 
 (function(){
   const $  = (q, el=document) => el.querySelector(q);
@@ -6,6 +8,12 @@
 
   let TEMAS = [];
   let activeCat = 'Todos';
+
+  // Índices para navegação sequencial
+  // key = `${group}::${type}`  →  [{ idCanon, slug, title }]
+  let SEQ_IDX = new Map();
+  // slug → { key, pos }
+  let SEQ_POS = new Map();
 
   const SAVED_KEY        = 'meujus:saved';
   const LAST_KEY         = 'meujus:last';
@@ -113,7 +121,7 @@
   };
   const googleIA = (prompt) => `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
 
-  // ===== Parser (TXT antigo) =====
+  // ===== Parser para o TXT =====
   function parseTemaFromChunk(chunk){
     const fixed = chunk.replace(/^\s*##\s+##\s+/mg, '## ');
     const mTitle = fixed.match(/^\s*#\s+(.+?)\s*$/m);
@@ -190,6 +198,59 @@
       remN:   normPT(remText),
       bodyN:  normPT(dispText + ' ' + remText)
     };
+  }
+
+  // ===== Extração do identificador (Art., Súmula, Enunciado, Tese) =====
+  function extractIdFromText(txt){
+    if(!txt) return null;
+    const s = txt.replace(/\s+/g,' ').trim();
+
+    // Artigo: "Art. 1", "Art. 1º", "Art. 1.º", "Artigo 121-A"
+    let m = s.match(/\b(art(?:\.|igo)?)\s*(\d+)(?:\s*[-–]?\s*([A-Za-z]))?\b/i);
+    if(m){
+      const num = m[2];
+      const suf = (m[3]||'').toLowerCase();
+      const idCanon = `art:${num.padStart(4,'0')}${suf?'-'+suf:''}`;
+      return { type:'art', num, suf, idCanon };
+    }
+
+    // Súmula
+    m = s.match(/\b(s[úu]mula)\s*(\d+)\b/i);
+    if(m){
+      const num = m[2];
+      return { type:'sumula', num, suf:'', idCanon:`sumula:${num.padStart(4,'0')}` };
+    }
+
+    // Enunciado
+    m = s.match(/\b(enunciado)\s*(\d+)\b/i);
+    if(m){
+      const num = m[2];
+      return { type:'enunciado', num, suf:'', idCanon:`enunciado:${num.padStart(4,'0')}` };
+    }
+
+    // Tese
+    m = s.match(/\b(tese)\s*(\d+)\b/i);
+    if(m){
+      const num = m[2];
+      return { type:'tese', num, suf:'', idCanon:`tese:${num.padStart(4,'0')}` };
+    }
+
+    return null;
+  }
+
+  // Comparador do idCanon (numérico + sufixo opcional)
+  function compareCanon(a, b){
+    const [ta, na] = a.split(':');
+    const [tb, nb] = b.split(':');
+    if(ta !== tb) return ta.localeCompare(tb);
+    const [n1, sa=''] = nb.split('-');
+    const [n2, sb=''] = a===b ? [n1, sa] : b.split(':')[1].split('-'); // fallback
+    const ai = parseInt(n1, 10);
+    const bi = parseInt(n2, 10);
+    if(ai !== bi) return ai - bi;
+    if(sa && !sb) return 1;
+    if(!sa && sb) return -1;
+    return sa.localeCompare(sb);
   }
 
   // ===== Highlight =====
@@ -389,7 +450,7 @@
 
   window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden = true; closeAcDropdown(); });
 
-  /* ===== Seeds ===== */
+  /* ===== Montagem dos temas + índice sequencial ===== */
   async function readAllSeeds(){
     const seeds = $$('#menuList a.title[data-auto="1"][data-path]');
     const temas = [];
@@ -401,17 +462,25 @@
         const raw    = await fetchText(path);
         const chunks = splitThemesByDelim(raw);
         const parsed = chunks.map(parseTemaFromChunk).filter(Boolean);
+
         for (const t of parsed){
+          // Extrai ID do primeiro item de Dispositivos; se não tiver, tenta do título
+          const firstDisp = t.dispositivos?.[0]?.texto || '';
+          const idInfo = extractIdFromText(firstDisp) || extractIdFromText(t.title);
+          const seq = idInfo ? { type:idInfo.type, idCanon:idInfo.idCanon } : null;
+
           const slug  = `${slugify(group)}-${t.slug}`;
           const dispN = t.dispN || '';
           const remN  = t.remN  || '';
           const body  = (dispN + ' ' + remN).toLowerCase();
+
           temas.push({
             slug, title: t.title, path, tags: [], group, frag: t.slug,
             dispositivos: t.dispositivos||[],
             remissoes:    t.remissoes||[],
             titleL: t.title.toLowerCase(), bodyL: body,
-            titleN: t.titleN, bodyN: t.bodyN, dispN, remN
+            titleN: t.titleN, bodyN: t.bodyN, dispN, remN,
+            seq
           });
         }
       }catch(e){
@@ -420,6 +489,21 @@
       }
     }
     return temas;
+  }
+
+  function buildSequenceIndex(temas){
+    SEQ_IDX.clear();
+    SEQ_POS.clear();
+    for(const t of temas){
+      if(!t.seq) continue;
+      const key = `${t.group||'Geral'}::${t.seq.type}`;
+      if(!SEQ_IDX.has(key)) SEQ_IDX.set(key, []);
+      SEQ_IDX.get(key).push({ idCanon: t.seq.idCanon, slug: t.slug, title: t.title });
+    }
+    for(const [key, arr] of SEQ_IDX){
+      arr.sort((a,b)=> compareCanon(a.idCanon, b.idCanon));
+      arr.forEach((row, i)=> SEQ_POS.set(row.slug, { key, pos:i }));
+    }
   }
 
   /* ===== Drawer helpers ===== */
@@ -618,9 +702,96 @@
     },0);
   }
 
+  /* ===== Navegação sequencial: setas + swipe ===== */
+  let cleanupNavHandlers = null;
+
+  function setupNavControlsFor(slug){
+    // Limpa handlers anteriores
+    if(typeof cleanupNavHandlers === 'function'){ cleanupNavHandlers(); cleanupNavHandlers = null; }
+
+    const posInfo = SEQ_POS.get(slug);
+    if(!posInfo){ // tema sem ID sequencial → não mostra setas nem swipe
+      const old = document.querySelector('.nav-arrows');
+      old?.remove();
+      return;
+    }
+
+    const { key, pos } = posInfo;
+    const list = SEQ_IDX.get(key) || [];
+    if(!list.length) return;
+
+    const prevIdx = (pos - 1 + list.length) % list.length;
+    const nextIdx = (pos + 1) % list.length;
+    const prevSlug = list[prevIdx].slug;
+    const nextSlug = list[nextIdx].slug;
+
+    // Injeção dos botões (estilo vem do style.css)
+    let arrows = document.querySelector('.nav-arrows');
+    if(!arrows){
+      arrows = document.createElement('div');
+      arrows.className = 'nav-arrows';
+      arrows.innerHTML = `
+        <button class="nav-btn nav-prev" aria-label="Anterior">◀</button>
+        <button class="nav-btn nav-next" aria-label="Próximo">▶</button>
+      `;
+      document.body.appendChild(arrows);
+    }
+
+    const go = (targetSlug)=>{ location.hash = '#/tema/' + targetSlug; };
+
+    const btnPrev = arrows.querySelector('.nav-prev');
+    const btnNext = arrows.querySelector('.nav-next');
+    const onPrev  = ()=> go(prevSlug);
+    const onNext  = ()=> go(nextSlug);
+    btnPrev.onclick = onPrev;
+    btnNext.onclick = onNext;
+
+    // Teclado (ignora quando um input/textarea está focado)
+    const onKey = (e)=>{
+      const tag = (e.target.tagName||'').toLowerCase();
+      if(tag==='input' || tag==='textarea' || e.altKey || e.ctrlKey || e.metaKey) return;
+      if(e.key==='ArrowLeft'){ e.preventDefault(); onPrev(); }
+      if(e.key==='ArrowRight'){ e.preventDefault(); onNext(); }
+    };
+    document.addEventListener('keydown', onKey);
+
+    // Swipe no mobile (threshold 60px, pouca inclinação vertical)
+    const host = $('#content') || document;
+    let startX=0, startY=0, moved=false;
+    const onTouchStart = (e)=>{
+      if(!e.touches?.length) return;
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      moved = false;
+    };
+    const onTouchMove = (e)=>{
+      moved = true;
+    };
+    const onTouchEnd = (e)=>{
+      if(!moved) return;
+      const t = e.changedTouches?.[0]; if(!t) return;
+      const dx = t.clientX - startX;
+      const dy = t.clientY - startY;
+      if(Math.abs(dx) < 60) return;      // pouco deslocamento
+      if(Math.abs(dy) > 80) return;      // muito vertical → evita conflito com scroll
+      if(dx < 0) onNext(); else onPrev();
+    };
+    host.addEventListener('touchstart', onTouchStart, {passive:true});
+    host.addEventListener('touchmove',  onTouchMove,  {passive:true});
+    host.addEventListener('touchend',   onTouchEnd,   {passive:true});
+
+    cleanupNavHandlers = ()=>{
+      document.removeEventListener('keydown', onKey);
+      host.removeEventListener('touchstart', onTouchStart);
+      host.removeEventListener('touchmove',  onTouchMove);
+      host.removeEventListener('touchend',   onTouchEnd);
+    };
+  }
+
   /* ===== Páginas ===== */
   async function loadTemas(){
     TEMAS = await readAllSeeds();
+    buildSequenceIndex(TEMAS);     // <<< monta o índice de sequência
     renderMenu();
   }
 
@@ -709,6 +880,9 @@
           </section>
         </article>`;
 
+      // Configura setas e swipe para este slug
+      setupNavControlsFor(slug);
+
       try{ sessionStorage.removeItem(LAST_SEARCH_KEY); }catch(_){}
 
     }catch(e){
@@ -723,6 +897,10 @@
     $('#actions').innerHTML='';
     $('#themeTitle').textContent='Sobre';
     $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários.</p></div>`;
+
+    // Remove setas/swipe nesta página
+    if(typeof cleanupNavHandlers === 'function'){ cleanupNavHandlers(); cleanupNavHandlers = null; }
+    document.querySelector('.nav-arrows')?.remove();
   }
 
   async function renderByRoute(){
@@ -730,7 +908,12 @@
     if(!TEMAS.length) await loadTemas();
     if(page.kind==='tema') await loadTema(page.slug);
     else if(page.kind==='sobre') loadSobre();
-    else { renderHome(); }
+    else {
+      // Home
+      if(typeof cleanupNavHandlers === 'function'){ cleanupNavHandlers(); cleanupNavHandlers = null; }
+      document.querySelector('.nav-arrows')?.remove();
+      renderHome();
+    }
   }
 
   document.querySelector('#search')?.addEventListener('focus', closeAcDropdown);
