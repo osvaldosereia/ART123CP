@@ -279,5 +279,23 @@ button.mini:hover{ filter:brightness(.98); }
   .brand{ font-size:22px; line-height:1; }
 
   /* logo da home */
-  .home-logo{ font-size:52px; line-height:1; }
+  .home-logo{ font-size:72px; line-height:1; }
+}
+/* Chips + título na mesma linha e alinhados à esquerda */
+.ficha-head{
+  display:grid;
+  grid-template-columns: auto 1fr; /* chips | título */
+  align-items:center;
+  gap:12px;
+  padding:14px 16px 8px 16px; /* mantém o mesmo recuo dos textos */
+}
+.ficha-head .chip-bar{ margin:0; }
+.ficha-head .h1{ margin:0; }
+
+/* Mobile: volta a empilhar */
+@media (max-width: 640px){
+  .ficha-head{
+    grid-template-columns: 1fr;
+    gap:8px;
+  }
 }
