@@ -360,61 +360,51 @@
     moveSearchTo(contentEl.querySelector('.home-search-host'));
   }
 
-  /* ===== IA — modal ===== */
+  /* ===== IA — dropdown (chips verticais) ===== */
 function googleIA(prompt){ return `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`; }
 
 const IA_PROMPTS = {
-  detalhada: (t, full) =>
-    `Explique detalhadamente e transcreva o texto original dos dispositivos e remissões abaixo, analisando conteúdo, finalidade e aplicação prática.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`
+  resumo:        (t, full) => `Faça um RESUMO em tópicos, com fundamentos e aplicações práticas.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+  detalhada:     (t, full) => `Explique DETALHADAMENTE o tema, com transcrições essenciais, finalidade, requisitos e exemplos.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+  dissertativas: (t, full) => `Crie 5 QUESTÕES DISSERTATIVAS com gabarito comentado e base legal.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+  objetivas:     (t, full) => `Crie 10 QUESTÕES OBJETIVAS (A–E) com gabarito e breve justificativa.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+  videos:        (t)       => `site:youtube.com aula ${t} explicação prática legislação`,
+  artigos:       (t)       => `artigos doutrina ${t} pdf site:.jus.br OR site:.gov.br OR site:.edu.br`
 };
 
-let __iaModalEl = null;
-function closeIAModal(){
-  if(!__iaModalEl) return;
-  __iaModalEl.remove();
-  __iaModalEl = null;
-  document.body.classList.remove('noscroll');
-  document.removeEventListener('keydown', onEscIA, true);
-}
-function onEscIA(e){ if(e.key === 'Escape') closeIAModal(); }
+let __iaDrop=null;
+function closeIADrop(){ if(__iaDrop){ __iaDrop.remove(); __iaDrop=null; document.removeEventListener('click', onDocCloseIADrop, true); } }
+function onDocCloseIADrop(e){ if(__iaDrop && !__iaDrop.contains(e.target)) closeIADrop(); }
 
-function openIAModal(title, fullText){
-  closeIAModal();
+function openIADropdown(anchorBtn, title, fullText){
+  closeIADrop();
+  const actions = [
+    {key:'resumo', label:'Resumo'},
+    {key:'detalhada', label:'Detalhado'},
+    {key:'dissertativas', label:'Questões Dissertativas'},
+    {key:'objetivas', label:'Questões Objetivas'},
+    {key:'videos', label:'Encontre Vídeos'},
+    {key:'artigos', label:'Encontre Artigos'},
+  ];
+  __iaDrop = document.createElement('div');
+  __iaDrop.className='ia-pop';
+  __iaDrop.innerHTML = actions.map(a=>`<button class="ia-item" data-k="${a.key}">${a.label}</button>`).join('');
+  document.body.appendChild(__iaDrop);
 
-  const prompt = IA_PROMPTS.detalhada(title, fullText);
-  const html = `
-    <div class="modal open" id="iaModal" aria-hidden="false">
-      <div class="modal-backdrop" data-close="1"></div>
-      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="iaTitle">
-        <div class="modal-header">
-          <strong id="iaTitle">Estude com I.A.</strong>
-          <button class="modal-close" data-close="1" aria-label="Fechar">✕</button>
-        </div>
-        <div class="modal-body">
-          <p><strong>Tema:</strong> ${escapeHTML(title)}</p>
-          <label style="display:block;margin:8px 0 6px;">Prompt que será enviado:</label>
-          <textarea readonly style="width:100%;min-height:220px;border:1px solid var(--line);border-radius:8px;padding:10px;">${prompt}</textarea>
-          <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end;">
-            <button class="btn-ios" data-close="1">Fechar</button>
-            <button class="btn-ios" data-open="g">Abrir no Google</button>
-          </div>
-        </div>
-      </div>
-    </div>`;
+  const r = anchorBtn.getBoundingClientRect();
+  __iaDrop.style.left = (r.left + window.scrollX) + 'px';
+  __iaDrop.style.top  = (r.bottom + window.scrollY + 6) + 'px';
 
-  __iaModalEl = document.createElement('div');
-  __iaModalEl.innerHTML = html;
-  document.body.appendChild(__iaModalEl);
-  document.body.classList.add('noscroll');
-
-  __iaModalEl.addEventListener('click', (e)=>{
-    if(e.target.dataset.close) closeIAModal();
-    if(e.target.dataset.open === 'g'){
-      window.open(googleIA(prompt), '_blank', 'noopener');
-    }
+  __iaDrop.addEventListener('click', (e)=>{
+    const k = e.target.dataset.k; if(!k) return;
+    const p = (k==='videos'||k==='artigos') ? IA_PROMPTS[k](title) : IA_PROMPTS[k](title, fullText);
+    window.open(googleIA(p), '_blank', 'noopener');
+    closeIADrop();
   });
-  document.addEventListener('keydown', onEscIA, true);
+
+  setTimeout(()=>document.addEventListener('click', onDocCloseIADrop, true),0);
 }
+
 
 
   /* ===== ROLAGEM INFINITA ===== */
@@ -460,7 +450,8 @@ function openIAModal(title, fullText){
     const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
     const saved=isSaved(item.slug);
     const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{ const added=toggleSaved(item.slug); saveBtn.textContent=added?'Remover':'Salvar'; if(added) saveBtn.setAttribute('data-variant','primary'); else saveBtn.removeAttribute('data-variant'); toast(added?'Tema salvo':'Removido','info',1400); });
-const iaBtn = mkBtn('Estude com I.A.', '', () => openIAModal(item.title, fullText));
+const iaBtn = mkBtn('Estude com I.A.','');
+iaBtn.onclick = () => openIADropdown(iaBtn, item.title, fullText);
     actionsEl.append(saveBtn, iaBtn);
     container.appendChild(card);
   }
