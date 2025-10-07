@@ -364,21 +364,62 @@
     moveSearchTo(contentEl.querySelector('.home-search-host'));
   }
 
-  /* ===== IA pop (mínimo) ===== */
-  let __iaPop=null;
-  function closeIAPopover(){ __iaPop?.remove(); __iaPop=null; document.removeEventListener('click',onDocClickCloseIA,true); }
-  function onDocClickCloseIA(e){ if(__iaPop && !__iaPop.contains(e.target)) closeIAPopover(); }
-  function openIAPopover(anchorBtn,title,fullText){
-    closeIAPopover();
-    __iaPop=document.createElement('div'); __iaPop.className='ia-popover';
-    __iaPop.innerHTML=`<button class="ia-opt">Detalhada</button>`;
-    document.body.appendChild(__iaPop);
-    const r=anchorBtn.getBoundingClientRect();
-    __iaPop.style.left=(r.left+window.scrollX)+'px';
-    __iaPop.style.top =(r.bottom+window.scrollY+6)+'px';
-    __iaPop.querySelector('.ia-opt').addEventListener('click',()=>{ const url=googleIA(IA_PROMPTS.detalhada(title, fullText)); window.open(url,'_blank','noopener'); closeIAPopover(); });
-    setTimeout(()=>document.addEventListener('click',onDocClickCloseIA,true),0);
-  }
+  /* ===== IA — modal ===== */
+function googleIA(prompt){ return `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`; }
+
+const IA_PROMPTS = {
+  detalhada: (t, full) =>
+    `Explique detalhadamente e transcreva o texto original dos dispositivos e remissões abaixo, analisando conteúdo, finalidade e aplicação prática.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`
+};
+
+let __iaModalEl = null;
+function closeIAModal(){
+  if(!__iaModalEl) return;
+  __iaModalEl.remove();
+  __iaModalEl = null;
+  document.body.classList.remove('noscroll');
+  document.removeEventListener('keydown', onEscIA, true);
+}
+function onEscIA(e){ if(e.key === 'Escape') closeIAModal(); }
+
+function openIAModal(title, fullText){
+  closeIAModal();
+
+  const prompt = IA_PROMPTS.detalhada(title, fullText);
+  const html = `
+    <div class="modal open" id="iaModal" aria-hidden="false">
+      <div class="modal-backdrop" data-close="1"></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="iaTitle">
+        <div class="modal-header">
+          <strong id="iaTitle">Estude com I.A.</strong>
+          <button class="modal-close" data-close="1" aria-label="Fechar">✕</button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Tema:</strong> ${escapeHTML(title)}</p>
+          <label style="display:block;margin:8px 0 6px;">Prompt que será enviado:</label>
+          <textarea readonly style="width:100%;min-height:220px;border:1px solid var(--line);border-radius:8px;padding:10px;">${prompt}</textarea>
+          <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end;">
+            <button class="btn-ios" data-close="1">Fechar</button>
+            <button class="btn-ios" data-open="g">Abrir no Google</button>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+  __iaModalEl = document.createElement('div');
+  __iaModalEl.innerHTML = html;
+  document.body.appendChild(__iaModalEl);
+  document.body.classList.add('noscroll');
+
+  __iaModalEl.addEventListener('click', (e)=>{
+    if(e.target.dataset.close) closeIAModal();
+    if(e.target.dataset.open === 'g'){
+      window.open(googleIA(prompt), '_blank', 'noopener');
+    }
+  });
+  document.addEventListener('keydown', onEscIA, true);
+}
+
 
   /* ===== ROLAGEM INFINITA ===== */
   function buildBundle(title,dispositivos,remissoes){
