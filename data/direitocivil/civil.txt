@@ -1,53 +1,104 @@
 
 
+
+
+# Cessação da Menoridade e Emancipação
+# Dispositivos Legais
+- Art. 5.º A menoridade cessa aos dezoito anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil.
+    - Parágrafo único. Cessará, para os menores, a incapacidade:
+        - I – pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, independentemente de homologação judicial, ou por sentença do juiz, ouvido o tutor, se o menor tiver dezesseis anos completos;
+        - II – pelo casamento;
+        - III – pelo exercício de emprego público efetivo;
+        - IV – pela colação de grau em curso de ensino superior;
+        - V – pelo estabelecimento civil ou comercial, ou pela existência de relação de emprego, desde que, em função deles, o menor com dezesseis anos completos tenha economia própria.
+# Remissões Normativas
+- Vide art. 666 do CC.
+-- Trata da capacidade do menor, entre 16 e 18 anos não assistido, para aceitar mandato, ressalvado o direito do mandante de ação contra ele.
+- Vide arts. 27, 65 e 115 do CP.
+-- Tratam, respectivamente, da inimputabilidade penal dos menores de 18 anos, da menoridade como circunstância atenuante e da redução pela metade dos prazos de prescrição.
+- Vide arts. 15, 34, 50, 52, 262 e 564, III, c, do CPP.
+-- Disposições do Código de Processo Penal sobre a nomeação de curador ao menor e sua representação em juízo (dispositivos parcialmente não recepcionados pela maioridade civil aos 18 anos).
+- Vide art. 148, parágrafo único, e, do ECA.
+-- Define a competência da Justiça da Infância e da Juventude para suprir o consentimento dos pais ou responsáveis para o casamento de menor.
+- Vide art. 9.º, I, da Lei n. 6.001, de 19-12-1973.
+-- Refere-se ao Estatuto do Índio, que estabelecia a maioridade indígena aos 21 anos (dispositivo em debate doutrinário quanto à sua vigência após o CC/2002).
+- Vide art. 73 da Lei n. 4.375, de 17-8-1964.
+-- Estabelece que a incapacidade civil do menor, para efeito do Serviço Militar, cessa na data em que completar 17 anos.
+- Vide art. 226, § 5.º, da CF.
+-- Dispõe que os direitos e deveres referentes à sociedade conjugal são exercidos igualmente pelo homem e pela mulher.
+- Vide arts. 1.635, II, e 1.763, I, do CC.
+-- Tratam, respectivamente, da extinção do poder familiar e da tutela pela emancipação.
+- Vide arts. 9.º, II, do CC e 89 e s. da LRP.
+-- Tratam do registro público da emancipação por outorga dos pais, por sentença judicial ou por qualquer das outras causas legais.
+- Vide art. 725, I, do CPC.
+-- Dispõe sobre o processamento, em procedimento de jurisdição voluntária, do pedido de emancipação.
+- Vide art. 226 da CF.
+-- Trata da proteção especial do Estado à família.
+- Vide art. 5.º, V, da Lei n. 8.112, de 11-12-1990.
+-- Estabelece a idade mínima de dezoito anos como requisito básico para a investidura em cargo público.
+- Vide art. 7.º, XXXIII, da CF.
+-- Proíbe o trabalho noturno, perigoso ou insalubre a menores de dezoito anos e qualquer trabalho a menores de dezesseis, salvo na condição de aprendiz a partir dos quatorze.
+- Vide arts. 966 e 972 do CC.
+-- Tratam da capacidade para o exercício da atividade de empresário, permitindo ao emancipado o seu exercício.
+-----
 # Incapacidade Relativa
 # Dispositivos Legais
 - Art. 4.º São incapazes, relativamente a certos atos ou à maneira de os exercer:
--- Caput com redação determinada pela Lei n. 13.146, de 6-7-2015.
-- I – os maiores de dezesseis e menores de dezoito anos;
-- II – os ébrios habituais e os viciados em tóxico;
--- Inciso II com redação determinada pela Lei n. 13.146, de 6-7-2015.
-- III – aqueles que, por causa transitória ou permanente, não puderem exprimir sua vontade;
--- Inciso III com redação determinada pela Lei n. 13.146, de 6-7-2015.
-- IV – os pródigos.
-- Parágrafo único. A capacidade dos indígenas será regulada por legislação especial.
--- Parágrafo único com redação determinada pela Lei n. 13.146, de 6-7-2015.
+    - I – os maiores de dezesseis e menores de dezoito anos;
+    - II – os ébrios habituais e os viciados em tóxico;
+    - III – aqueles que, por causa transitória ou permanente, não puderem exprimir sua vontade;
+    - IV – os pródigos.
+    - Parágrafo único. A capacidade dos indígenas será regulada por legislação especial.
 # Remissões Normativas
-- Os arts. 34, 50 e 52 do CPP dispõem sobre a representação do menor na ação penal.
--- Tratam da intervenção do representante legal na ação penal privada.
+- Caput com redação determinada pela Lei n. 13.146, de 6-7-2015.
+-- Refere-se ao Estatuto da Pessoa com Deficiência, que alterou o rol de incapazes.
+- Vide arts. 34, 50 e 52 do CPP.
+-- Tratam da representação do menor de 18 anos na ação penal, especificamente na queixa-crime.
 - Vide arts. 71, 72 e 447, § 1.º, do CPC.
--- Tratam da assistência dos incapazes em juízo e da incapacidade para ser testemunha.
+-- Tratam da nomeação de curador especial, da assistência ao incapaz em juízo e da incapacidade relativa da testemunha.
 - Vide art. 142 do ECA.
--- Trata da garantia de assistência judiciária, através de defensor, aos pais, curadores e responsáveis de crianças e adolescentes.
-- Sobre assistência, em juízo, aos relativamente incapazes, vide arts. 72 e 76 do CPC.
--- Tratam da nomeação de curador especial para o incapaz que não tiver representante legal ou se os interesses deste colidirem com os daquele.
-- Renúncia do direito de queixa criminal pelo representante legal do menor – dispõe o CPP, art. 50, parágrafo único.
--- Trata da eficácia da renúncia ao direito de queixa feita pelo representante legal do menor.
-- Sobre proteção do trabalho do menor, vide arts. 402 a 441 da CLT e 60 a 69 do ECA.
--- Tratam das regras e proibições relativas ao trabalho do menor de 18 anos.
-- **Remissões ao Inciso I:**
--- Vide arts. 180, 666, 1.634, V, 1.747, I, e 1.860, parágrafo único, do CC.
---- Tratam da anulabilidade dos atos do menor, da capacidade do menor para ser mandatário, do poder familiar, da representação pelo tutor e da capacidade para testar.
--- A Lei n. 4.375, de 17-8-1964, estabelece em seu art. 73 que, para efeito do serviço militar, cessará a incapacidade civil do menor, na data em que completar 17 anos.
---- Trata da capacidade específica para fins de serviço militar.
-- **Remissões ao Inciso II:**
--- Vide art. 1.767, III, do CC.
---- Trata da sujeição dos ébrios habituais e viciados em tóxicos à curatela.
--- Sobre incapacidade relativa dos toxicômanos, dispõe a Lei n. 11.343, de 23-8-2006.
---- Trata do Sistema Nacional de Políticas Públicas sobre Drogas (SISNAD).
--- A Lei n. 10.216, de 6-4-2001, dispõe sobre a proteção e os direitos das pessoas portadoras de transtornos mentais.
---- Trata da reforma psiquiátrica e da proteção dos direitos de pessoas com transtornos mentais.
-- **Remissões ao Inciso III:**
--- Vide art. 1.767 do CC.
---- Trata das hipóteses gerais de interdição e curatela.
-- **Remissões ao Inciso IV:**
--- Vide arts. 1.767, V, e 1.782 do CC.
---- Tratam da sujeição dos pródigos à curatela e dos limites de sua atuação.
-- **Remissões ao Parágrafo único:**
--- Vide art. 50, § 2.º, da LRP.
---- Trata de disposições sobre o registro de nascimento do indígena.
--- O Decreto n. 7.747, de 5-6-2012, institui a Política Nacional de Gestão Territorial e Ambiental de Terras Indígenas – PNGATI, e dá outras providências.
---- Trata da política de gestão de terras indígenas.
+-- Dispõe sobre a representação do menor em ações de alimentos e outras de competência da Justiça da Infância e da Juventude.
+- Vide arts. 180, 666, 1.634, V, 1.747, I, e 1.860, parágrafo único, do CC.
+-- Tratam, respectivamente, da validade do ato praticado por menor, da capacidade para ser mandatário, do poder familiar, da curatela e da capacidade para testar.
+- Vide art. 73 da Lei n. 4.375, de 17-8-1964.
+-- Estabelece que, para fins do serviço militar, a incapacidade civil cessa aos 17 anos.
+- Inciso II com redação determinada pela Lei n. 13.146, de 6-7-2015.
+-- Altera a redação referente aos ébrios e viciados em tóxicos, em conformidade com o Estatuto da Pessoa com Deficiência.
+- Vide art. 1.767, III, do CC.
+-- Dispõe sobre a sujeição à curatela dos ébrios habituais e dos viciados em tóxico.
+- Vide Lei n. 11.343, de 23-8-2006.
+-- Trata da Lei de Drogas, que dispõe sobre a prevenção, tratamento e reinserção social de usuários e dependentes.
+- Vide Lei n. 10.216, de 6-4-2001.
+-- Dispõe sobre a proteção e os direitos das pessoas portadoras de transtornos mentais.
+- Inciso III com redação determinada pela Lei n. 13.146, de 6-7-2015.
+-- Altera a redação referente àqueles que não podem exprimir sua vontade, em conformidade com o Estatuto da Pessoa com Deficiência.
+- Vide art. 1.767 do CC.
+-- Elenca as pessoas que estão sujeitas à curatela.
+- Vide arts. 1.767, V, e 1.782 do CC.
+-- Tratam da sujeição dos pródigos à curatela e dos limites da interdição, que os privará apenas de atos que possam diminuir seu patrimônio.
+- Vide arts. 72 e 76 do CPC.
+-- Tratam da assistência e da necessidade de regularização da representação processual do incapaz em juízo.
+- Vide art. 50, parágrafo único do CPP.
+-- Dispõe sobre o perdão do ofendido no caso de ação penal privada, quando o querelante for menor de 18 anos.
+- Vide arts. 402 a 441 da CLT e 60 a 69 do ECA.
+-- Tratam das normas de proteção ao trabalho do menor.
+- Parágrafo único com redação determinada pela Lei n. 13.146, de 6-7-2015.
+-- Altera a redação do parágrafo único referente à capacidade dos indígenas.
+- Vide art. 50, § 2.º, da LRP.
+-- Dispõe sobre o registro de nascimento de indígena no Registro Civil de Pessoas Naturais.
+- Vide Decreto n. 7.747, de 5-6-2012.
+-- Institui a Política Nacional de Gestão Territorial e Ambiental de Terras Indígenas (PNGATI).
+-----
+# Capacidade Civil
+# Dispositivos Legais
+- Art. 1.º Toda pessoa é capaz de direitos e deveres na ordem civil.
+# Remissões Normativas
+- Vide arts. 4.º e 5.º do CC.
+-- Tratam das hipóteses de incapacidade relativa e da cessação da incapacidade civil.
+- Vide art. 7.º, caput, da LINDB.
+-- Trata da aplicação da lei do país de domicílio da pessoa para reger o começo e o fim da personalidade, o nome e a capacidade.
+- Vide art. 70 do CPC.
+-- Trata da capacidade processual, afirmando que toda pessoa no exercício de seus direitos tem capacidade para estar em juízo.
 -----
 # Incapacidade Absoluta
 # Dispositivos Legais
