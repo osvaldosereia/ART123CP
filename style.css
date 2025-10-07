@@ -54,7 +54,7 @@ ul{margin:0;padding:0;list-style:none}
 
 .home-center{min-height:100vh;display:flex;align-items:center;justify-content:center;transform:translateY(-6vh)}
 .home-inline{display:flex;align-items:center;gap:18px}
-.home-logo{font-weight:700;font-size:40px;line-height:1;letter-spacing:-.3px;display:flex;gap:6px;white-space:nowrap}
+.home-logo{font-weight:700;font-size:50px;line-height:1;letter-spacing:-.3px;display:flex;gap:6px;white-space:nowrap}
 .home-logo .b1{color:var(--primary)} .home-logo .b2{color:var(--accent)}
 .home-search-host{width:min(560px,60vw)}
 .home-search-host .search-wrap,.home-search-host .search{width:100%}
@@ -111,7 +111,7 @@ ul{margin:0;padding:0;list-style:none}
   border-top:1px solid var(--line);
   margin-top:18px;padding-top:18px;
 }
-.ubox-sub{font-size:14px;font-weight:600;margin:0 0 8px 0;color:var(--ink)}
+.ubox-sub{font-size:14px;font-weight:700;margin:0 0 8px 0;color:var(--ink)}
 
 /* Ações (chips) à esquerda com bom respiro do título */
 .actions{display:flex;justify-content:flex-start;align-items:center}
