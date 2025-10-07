@@ -1,6 +1,7 @@
 // meujus – app.js (2025-10-07)
 // Home minimalista (logo + busca)
 // TEMA: lista com ROLAGEM INFINITA: carrega o selecionado ±5 e expande em blocos de 5
+// Drawer (aba lateral) restaurado e funcional
 
 (function () {
   const $ = (q, el = document) => el.querySelector(q);
@@ -368,58 +369,103 @@
   window.addEventListener('hashchange', () => { if (acList) acList.hidden = true; closeAcDropdown(); });
 
   /* =======================
-     Seeds & menu
+     Drawer helpers + Menu
   ======================= */
-  async function readAllSeeds() {
-    const seeds = $$('#menuList a.title[data-auto="1"][data-path]');
-    const temas = [];
-    for (const a of seeds) {
-      const group = (a.dataset.group || '').trim() || 'Geral';
-      const path = (a.dataset.path || '').trim();
-      if (!path) continue;
-      try {
-        // cache do arquivo também será montado quando a rota for aberta
-        const raw = await fetchText(path);
-        const chunks = splitThemesByDelim(raw);
-        const parsed = chunks.map(parseTemaFromChunk).filter(Boolean);
-
-        for (const t of parsed) {
-          const slug = `${slugify(group)}-${t.slug}`;
-          const dispN = t.dispN || '';
-          const remN = t.remN || '';
-          const body = (dispN + ' ' + remN).toLowerCase();
-          temas.push({
-            slug, title: t.title, path, group, frag: t.slug,
-            titleN: t.titleN, dispN, remN, bodyN: t.bodyN, bodyL: body
-          });
-        }
-
-        // guarda cache ordenado pela ordem do TXT (apenas campos necessários)
-        CACHED_FILES.set(path, parsed.map(t => ({
-          slug: `${slugify(group)}-${t.slug}`,
-          title: t.title,
-          dispositivos: t.dispositivos || [],
-          remissoes: t.remissoes || []
-        })));
-      } catch (e) { console.error('Seed falhou', path, e); toast(`Erro ao ler ${path}`, 'error', 2800); }
-    }
-    return temas;
+  function closeDrawer(){
+    const drawer   = $('#drawer');
+    const openBtn  = $('#btnMenu');
+    if(!drawer) return;
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden','true');
+    openBtn?.setAttribute('aria-expanded','false');
+    document.body.classList.remove('noscroll');
+    openBtn?.focus?.();
   }
 
-  function renderMenu() {
-    const menu = $('#menuList'); if (!menu) return;
-    // (mantido igual ao anterior; apenas fecha o drawer ao clicar)
-    menu.addEventListener('click', (e) => {
+  function renderMenu(){
+    const menu=$('#menuList'); if(!menu) return;
+    menu.innerHTML='';
+
+    // Sobre
+    const liSobre=document.createElement('li');
+    const btnSobre=document.createElement('button');
+    btnSobre.className='cat-btn'; btnSobre.type='button';
+    btnSobre.innerHTML=`<span>Sobre</span><span class="caret">▸</span>`;
+    btnSobre.addEventListener('click', ()=> window.__openSobre?.());
+    liSobre.appendChild(btnSobre);
+    menu.appendChild(liSobre);
+
+    // Salvos
+    const saved=readSaved();
+    const liSaved=document.createElement('li'); liSaved.className='item';
+    const btnSaved=document.createElement('button');
+    btnSaved.className='cat-btn'; btnSaved.setAttribute('aria-expanded','false');
+    btnSaved.innerHTML=`<span>Salvos</span><span class="caret">▸</span>`;
+    const ulSaved=document.createElement('ul'); ulSaved.className='sublist'; ulSaved.hidden=true;
+
+    if(saved.length){
+      const map=new Map(TEMAS.map(t=>[t.slug,t]));
+      ulSaved.innerHTML = saved
+        .map(slug=>{
+          const t=map.get(slug); if(!t) return '';
+          return `<li>
+            <a class="title" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
+            <button class="mini" data-remove="${t.slug}">Remover</button>
+          </li>`;
+        }).join('');
+    }else{
+      ulSaved.innerHTML = `<li><a class="title" href="#/sobre">Nenhum tema salvo</a></li>`;
+    }
+
+    btnSaved.addEventListener('click',()=>{
+      const open=btnSaved.getAttribute('aria-expanded')==='true';
+      btnSaved.setAttribute('aria-expanded', String(!open));
+      ulSaved.hidden = open;
+    });
+    liSaved.appendChild(btnSaved); liSaved.appendChild(ulSaved); menu.appendChild(liSaved);
+
+    ulSaved.querySelectorAll('button[data-remove]')?.forEach(b=>{
+      b.addEventListener('click',(ev)=>{
+        ev.preventDefault();
+        const slug=b.getAttribute('data-remove');
+        const now=toggleSaved(slug);
+        toast(now?'Salvo adicionado':'Removido dos salvos', now?'success':'info', 1400);
+        renderMenu();
+      });
+    });
+
+    const div=document.createElement('div'); div.className='divider'; menu.appendChild(div);
+
+    const title=document.createElement('div'); title.className='menu-title'; title.textContent='Categorias'; menu.appendChild(title);
+
+    const byCat=new Map();
+    for(const t of TEMAS){
+      const key=t.group||'Geral';
+      if(!byCat.has(key)) byCat.set(key, []);
+      byCat.get(key).push(t);
+    }
+    const cats=[...byCat.keys()].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+    for(const cat of cats){
+      const temas=byCat.get(cat).slice().sort((a,b)=>a.title.localeCompare(b.title,'pt-BR'));
+      const li=document.createElement('li'); li.className='item';
+      const btn=document.createElement('button');
+      btn.className='cat-btn'; btn.setAttribute('aria-expanded','false');
+      btn.innerHTML=`<span>${escapeHTML(cat)}</span><span class="caret">▸</span>`;
+      const ul=document.createElement('ul'); ul.className='sublist'; ul.hidden=true;
+      ul.innerHTML=temas.map(t=>`<li><a class="title" href="#/tema/${t.slug}" data-path="${t.path}" data-frag="${t.frag}" data-title="${escapeHTML(t.title)}">${escapeHTML(t.title)}</a></li>`).join('');
+      btn.addEventListener('click',()=>{
+        const open=btn.getAttribute('aria-expanded')==='true';
+        btn.setAttribute('aria-expanded', String(!open));
+        ul.hidden = open;
+      });
+      li.appendChild(btn); li.appendChild(ul); menu.appendChild(li);
+    }
+
+    // Fechar drawer ao clicar em qualquer link .title
+    menu.addEventListener('click', (e)=>{
       const a = e.target.closest('a.title');
-      if (a) {
-        const drawer = $('#drawer');
-        const openBtn = $('#btnMenu');
-        drawer.classList.remove('open');
-        drawer.setAttribute('aria-hidden', 'true');
-        openBtn?.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('noscroll');
-      }
-    }, { once: true });
+      if(a){ closeDrawer(); }
+    });
   }
 
   /* =======================
@@ -477,9 +523,6 @@
 
   /* =======================
      ROLAGEM INFINITA
-     - mantém uma janela [start,end] no array do arquivo
-     - inicial: alvo ±5
-     - ao tocar sentinelas: ±5
   ======================= */
   function buildBundle(title, dispositivos, remissoes) {
     const d = (dispositivos || []).map(it => `- ${it.texto}${(it.comentarios && it.comentarios.length) ? `\n    Comentário: ${it.comentarios.join(' | ')}` : ''}`).join('\n');
@@ -652,8 +695,43 @@
   }
 
   /* =======================
-     Rotas
+     Seeds & rotas
   ======================= */
+  async function readAllSeeds() {
+    const seeds = $$('#menuList a.title[data-auto="1"][data-path]');
+    const temas = [];
+    for (const a of seeds) {
+      const group = (a.dataset.group || '').trim() || 'Geral';
+      const path = (a.dataset.path || '').trim();
+      if (!path) continue;
+      try {
+        const raw = await fetchText(path);
+        const chunks = splitThemesByDelim(raw);
+        const parsed = chunks.map(parseTemaFromChunk).filter(Boolean);
+
+        for (const t of parsed) {
+          const slug = `${slugify(group)}-${t.slug}`;
+          const dispN = t.dispN || '';
+          const remN = t.remN || '';
+          const body = (dispN + ' ' + remN).toLowerCase();
+          temas.push({
+            slug, title: t.title, path, group, frag: t.slug,
+            titleN: t.titleN, dispN, remN, bodyN: t.bodyN, bodyL: body
+          });
+        }
+
+        // guarda cache ordenado pela ordem do TXT
+        CACHED_FILES.set(path, parsed.map(t => ({
+          slug: `${slugify(group)}-${t.slug}`,
+          title: t.title,
+          dispositivos: t.dispositivos || [],
+          remissoes: t.remissoes || []
+        })));
+      } catch (e) { console.error('Seed falhou', path, e); toast(`Erro ao ler ${path}`, 'error', 2800); }
+    }
+    return temas;
+  }
+
   async function loadTemas() { TEMAS = await readAllSeeds(); renderMenu(); }
 
   async function renderByRoute() {
