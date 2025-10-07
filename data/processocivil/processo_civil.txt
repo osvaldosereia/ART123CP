@@ -1,1 +1,114 @@
 
+# Aplicação da Lei Processual no Tempo
+# Dispositivos Legais
+- Art. 1.º O Código de Processo Penal aplicar-se-á aos processos em curso a 1.º de janeiro de 1942, observado o disposto nos artigos seguintes, sem prejuízo da validade dos atos realizados sob a vigência da legislação anterior.
+-----
+# Prisão Preventiva e Fiança
+# Dispositivos Legais
+- Art. 2.º À prisão preventiva e à fiança aplicar-se-ão os dispositivos que forem mais favoráveis.
+# Remissões Normativas
+- Vide arts. 282 a 350 do CPP.
+-- o art. 282 trata dos requisitos e adequação para a aplicação de medidas cautelares.
+-- o art. 283 trata das modalidades de prisão e da necessidade de ordem escrita da autoridade judiciária.
+-- o art. 284 trata da comunicação da prisão à autoridade judiciária e à família do preso ou pessoa por ele indicada.
+-- o art. 285 trata do processamento do mandado de prisão.
+-- o art. 286 trata da possibilidade de nova decretação de prisão em caso de descumprimento de obrigação.
+-- o art. 287 trata da captura de réu em qualquer território nacional.
+-- o art. 288 trata da audição do preso por qualquer autoridade judiciária em caso de urgência.
+-- o art. 289 trata do cumprimento do mandado de prisão por qualquer autoridade policial.
+-- o art. 289-A trata da criação do banco nacional de mandados de prisão.
+-- o art. 290 trata da condução do preso à presença da autoridade.
+-- o art. 291 trata do contato pessoal do juiz com a pessoa que tiver sido presa.
+-- o art. 292 trata da requisição de força quando houver resistência à prisão.
+-- o art. 293 trata do uso de força para a defesa ou para vencer a resistência.
+-- o art. 294 trata da prisão em domicílio, que é revogado.
+-- o art. 295 trata das pessoas sujeitas à prisão especial.
+-- o art. 296 trata do comparecimento espontâneo do acusado.
+-- o art. 297 trata da expedição de mandado de captura.
+-- o art. 298 trata da prisão de militar.
+-- o art. 299 trata da exibição do mandado ao preso.
+-- o art. 300 trata das medidas cautelares de urgência.
+-- o art. 301 trata do flagrante delito.
+-- o art. 302 trata das situações que caracterizam o flagrante delito.
+-- o art. 303 trata do flagrante em crimes permanentes.
+-- o art. 304 trata do procedimento de lavratura do auto de prisão em flagrante.
+-- o art. 305 trata da nota de culpa.
+-- o art. 306 trata da comunicação da prisão em flagrante.
+-- o art. 307 trata da prisão de autoridade.
+-- o art. 308 trata da apresentação do preso à autoridade.
+-- o art. 309 trata do encaminhamento do preso.
+-- o art. 310 trata da audiência de custódia.
+-- o art. 311 trata da decretação da prisão preventiva.
+-- o art. 312 trata dos requisitos da prisão preventiva.
+-- o art. 313 trata das hipóteses de admissibilidade da prisão preventiva.
+-- o art. 314 trata da impossibilidade de decretar a preventiva se houver excludente de ilicitude.
+-- o art. 315 trata da fundamentação da decisão de prisão preventiva.
+-- o art. 316 trata da revogação da prisão preventiva e da revisão periódica de sua necessidade.
+-- o art. 317 trata da prisão domiciliar.
+-- o art. 318 trata das hipóteses de substituição da prisão preventiva pela domiciliar.
+-- o art. 318-A trata da substituição da prisão preventiva pela domiciliar para gestante, mãe ou responsável por criança ou pessoa com deficiência.
+-- o art. 318-B trata da elaboração de relatório pela equipe multidisciplinar sobre a situação da mãe ou responsável.
+-- o art. 319 trata do rol de medidas cautelares diversas da prisão.
+-- o art. 320 trata da proibição de ausentar-se do País como medida cautelar.
+-- o art. 321 trata da liberdade provisória.
+-- o art. 322 trata da autoridade competente para conceder fiança.
+-- o art. 323 trata dos crimes inafiançáveis.
+-- o art. 324 trata das hipóteses em que a fiança não será concedida.
+-- o art. 325 trata do valor da fiança.
+-- o art. 326 trata da fixação do valor da fiança.
+-- o art. 327 trata da obrigação do afiançado de comparecer perante a autoridade.
+-- o art. 328 trata da ausência do afiançado.
+-- o art. 329 trata da concessão de fiança sem a presença do réu.
+-- o art. 330 trata da entrega do valor da fiança.
+-- o art. 331 trata do auto de fiança.
+-- o art. 332 trata da assinatura do termo de fiança.
+-- o art. 333 trata da certidão de fiança.
+-- o art. 334 trata da fiança em caso de recurso.
+-- o art. 335 trata do reforço da fiança.
+-- o art. 336 trata do quebramento da fiança.
+-- o art. 337 trata da cassação da fiança.
+-- o art. 338 trata do agravamento da situação do réu.
+-- o art. 339 trata da revogação da fiança.
+-- o art. 340 trata do reforço da fiança quando o valor se tornar insuficiente.
+-- o art. 341 trata das hipóteses de quebramento da fiança.
+-- o art. 342 trata da decisão sobre o quebramento da fiança.
+-- o art. 343 trata do comparecimento do réu após o quebramento.
+-- o art. 344 trata da cassação da fiança.
+-- o art. 345 trata da perda da metade do valor da fiança.
+-- o art. 346 trata do perdimento total da fiança.
+-- o art. 347 trata da restituição do valor da fiança.
+-- o art. 348 trata da hipoteca legal e penhor como caução.
+-- o art. 349 trata da avaliação e registro da hipoteca ou penhor.
+-- o art. 350 trata da concessão de liberdade provisória sem fiança.
+-----
+# Regulação de Prazos Recursais
+# Dispositivos Legais
+- Art. 3.º O prazo já iniciado, inclusive o estabelecido para a interposição de recurso, será regulado pela lei anterior, se esta não prescrever prazo menor do que o fixado no Código de Processo Penal.
+-----
+# Nulidades e Direito Intertemporal
+# Dispositivos Legais
+- Art. 4.º A falta de arguição em prazo já decorrido, ou dentro no prazo iniciado antes da vigência do Código Penal e terminado depois de sua entrada em vigor, sanará a nulidade, se a legislação anterior lhe atribui este efeito.
+# Remissões Normativas
+- O CP aprovado pelo Decreto-lei n. 2.848, de 7-12-1940, entrou em vigor no dia 1.º-1-1942.
+-- institui o Código Penal brasileiro.
+-----
+# Conversão da Ação Penal
+# Dispositivos Legais
+- Art. 5.º Se tiver sido intentada ação pública por crime que, segundo o Código Penal, só admite ação privada, esta, salvo decadência intercorrente, poderá prosseguir nos autos daquela, desde que a parte legítima para intentá-la ratifique os atos realizados e promova o andamento do processo.
+-----
+# Aplicação do Rito Processual
+# Dispositivos Legais
+- Art. 6.º As ações penais, em que já se tenha iniciado a produção de prova testemunhal, prosseguirão, até a sentença de primeira instância, com o rito estabelecido na lei anterior.
+- § 1.º Nos processos cujo julgamento, segundo a lei anterior, competia ao júri e, pelo Código de Processo Penal, cabe a juiz singular:
+- a) concluída a inquirição das testemunhas de acusação, proceder-se-á a interrogatório do réu, observado o disposto nos arts. 395 e 396, parágrafo único, do mesmo Código, prosseguindo-se depois de produzida a prova de defesa, de acordo com o que dispõem os arts. 499 e segs.;
+- b) se, embora concluída a inquirição das testemunhas de acusação, ainda não houver sentença de pronúncia ou impronúncia, prosseguir-se-á na forma da letra anterior;
+- c) se a sentença de pronúncia houver passado em julgado, ou dela não tiver ainda sido interposto recurso, prosseguir-se-á na forma da letra a;
+- d) se, havendo sentença de impronúncia, esta passar em julgado, só poderá ser instaurado o processo no caso do art. 409, parágrafo único, do Código de Processo Penal;
+- e) se tiver sido interposto recurso da sentença de pronúncia, aguardar-se-á o julgamento do mesmo, observando-se, afinal, o disposto na letra b ou na letra d.
+- § 2.º Aplicar-se-á o disposto no § 1.º aos processos da competência do juiz singular nos quais exista a pronúncia, segundo a lei anterior.
+- § 3.º Subsistem os efeitos da pronúncia, inclusive a prisão.
+- § 4.º O julgamento caberá ao júri se, na sentença de pronúncia, houver sido ou for o crime classificado no § 1.º ou § 2.º do art. 295 da Consolidação das Leis Penais.
+# Remissões Normativas
+- A Consolidação das Leis Penais (Decreto n. 22.213, de 14-12-1932) foi substituída pelo CP de 1940.
+-- trata-se da codificação penal que vigorou no Brasil antes do Código Penal de 1940.
+-----
