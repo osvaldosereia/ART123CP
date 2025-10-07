@@ -1,73 +1,81 @@
 
 
-
 # Incapacidade Relativa
 # Dispositivos Legais
 - Art. 4.º São incapazes, relativamente a certos atos ou à maneira de os exercer:
+-- Caput com redação determinada pela Lei n. 13.146, de 6-7-2015.
 - I – os maiores de dezesseis e menores de dezoito anos;
 - II – os ébrios habituais e os viciados em tóxico;
+-- Inciso II com redação determinada pela Lei n. 13.146, de 6-7-2015.
 - III – aqueles que, por causa transitória ou permanente, não puderem exprimir sua vontade;
+-- Inciso III com redação determinada pela Lei n. 13.146, de 6-7-2015.
 - IV – os pródigos.
 - Parágrafo único. A capacidade dos indígenas será regulada por legislação especial.
-
+-- Parágrafo único com redação determinada pela Lei n. 13.146, de 6-7-2015.
 # Remissões Normativas
-- Vide art. 180 do CC.
--- Trata da validade do negócio jurídico praticado por relativamente incapaz, caso a outra parte não pudesse perceber o erro, e da impossibilidade de o menor de 18 anos invocar a idade se agiu com malícia para ocultá-la.
-- Vide arts. 71 e 76 do CPC.
--- Determinam que o relativamente incapaz deve ser assistido em juízo, sob pena de nulidade dos atos processuais.
-- Vide art. 1.767 do CC.
--- Elenca as hipóteses de interdição, sujeitando à curatela os ébrios habituais, os viciados em tóxicos, aqueles que não podem exprimir sua vontade e os pródigos.
-- Vide art. 1.782 do CC.
--- Limita a curatela do pródigo, que o impede de praticar, sem curador, atos de administração e disposição de seu patrimônio.
-- Vide arts. 402 a 441 da CLT e 60 a 69 do ECA.
--- Estabelecem regras de proteção ao trabalho do menor de 18 anos.
-- Vide Lei n. 6.001, de 1973 (Estatuto do Índio).
--- Apesar da redação do parágrafo único, este estatuto continua a regular a capacidade dos indígenas, que transitam da tutela para a plena capacidade por meio de ato da FUNAI.
+- Os arts. 34, 50 e 52 do CPP dispõem sobre a representação do menor na ação penal.
+-- Tratam da intervenção do representante legal na ação penal privada.
+- Vide arts. 71, 72 e 447, § 1.º, do CPC.
+-- Tratam da assistência dos incapazes em juízo e da incapacidade para ser testemunha.
+- Vide art. 142 do ECA.
+-- Trata da garantia de assistência judiciária, através de defensor, aos pais, curadores e responsáveis de crianças e adolescentes.
+- Sobre assistência, em juízo, aos relativamente incapazes, vide arts. 72 e 76 do CPC.
+-- Tratam da nomeação de curador especial para o incapaz que não tiver representante legal ou se os interesses deste colidirem com os daquele.
+- Renúncia do direito de queixa criminal pelo representante legal do menor – dispõe o CPP, art. 50, parágrafo único.
+-- Trata da eficácia da renúncia ao direito de queixa feita pelo representante legal do menor.
+- Sobre proteção do trabalho do menor, vide arts. 402 a 441 da CLT e 60 a 69 do ECA.
+-- Tratam das regras e proibições relativas ao trabalho do menor de 18 anos.
+- **Remissões ao Inciso I:**
+-- Vide arts. 180, 666, 1.634, V, 1.747, I, e 1.860, parágrafo único, do CC.
+--- Tratam da anulabilidade dos atos do menor, da capacidade do menor para ser mandatário, do poder familiar, da representação pelo tutor e da capacidade para testar.
+-- A Lei n. 4.375, de 17-8-1964, estabelece em seu art. 73 que, para efeito do serviço militar, cessará a incapacidade civil do menor, na data em que completar 17 anos.
+--- Trata da capacidade específica para fins de serviço militar.
+- **Remissões ao Inciso II:**
+-- Vide art. 1.767, III, do CC.
+--- Trata da sujeição dos ébrios habituais e viciados em tóxicos à curatela.
+-- Sobre incapacidade relativa dos toxicômanos, dispõe a Lei n. 11.343, de 23-8-2006.
+--- Trata do Sistema Nacional de Políticas Públicas sobre Drogas (SISNAD).
+-- A Lei n. 10.216, de 6-4-2001, dispõe sobre a proteção e os direitos das pessoas portadoras de transtornos mentais.
+--- Trata da reforma psiquiátrica e da proteção dos direitos de pessoas com transtornos mentais.
+- **Remissões ao Inciso III:**
+-- Vide art. 1.767 do CC.
+--- Trata das hipóteses gerais de interdição e curatela.
+- **Remissões ao Inciso IV:**
+-- Vide arts. 1.767, V, e 1.782 do CC.
+--- Tratam da sujeição dos pródigos à curatela e dos limites de sua atuação.
+- **Remissões ao Parágrafo único:**
+-- Vide art. 50, § 2.º, da LRP.
+--- Trata de disposições sobre o registro de nascimento do indígena.
+-- O Decreto n. 7.747, de 5-6-2012, institui a Política Nacional de Gestão Territorial e Ambiental de Terras Indígenas – PNGATI, e dá outras providências.
+--- Trata da política de gestão de terras indígenas.
 -----
 # Incapacidade Absoluta
 # Dispositivos Legais
 - Art. 3.º São absolutamente incapazes de exercer pessoalmente os atos da vida civil os menores de 16 (dezesseis) anos.
-- I a III – (Revogados pela Lei n. 13.146, de 2015).
+-- Caput com redação determinada pela Lei n. 13.146, de 6-7-2015.
+- I a III – (Revogados pela Lei n. 13.146, de 6-7-2015.)
 # Remissões Normativas
-- Vide art. 166, I, do CC.
--- Estabelece a nulidade do negócio jurídico quando celebrado por pessoa absolutamente incapaz.
-- Vide art. 198, I, do CC.
--- Impede o curso do prazo prescricional contra os absolutamente incapazes.
-- Vide arts. 1.634, V, e 1.690 do CC.
--- Tratam do poder familiar, que inclui o dever dos pais de representar os filhos menores de 16 anos.
-- Vide arts. 71 e 72 do CPC.
--- Dispõem sobre a representação processual do incapaz e a nomeação de curador especial para defender seus interesses em juízo.
-- Vide art. 447, § 1.º, do CPC.
--- Determina que os menores de 16 anos são incapazes de depor como testemunhas.
+- Vide arts. 5.º, 76, 105, 115 a 120, 166, I, 198, 471, 543, 1.634, 1.690, 1.728 e s. do CC.
+-- Tratam da cessação da incapacidade, da representação processual, da validade da declaração de vontade, das condições, da nulidade absoluta dos atos praticados por absolutamente incapaz, da prescrição, da compra e venda entre cônjuges e descendentes, da doação, do poder familiar, e da tutela.
+- Vide arts. 71, 72 e 447, § 1.º, do CPC.
+-- Tratam da representação e assistência dos incapazes em juízo e da incapacidade para ser testemunha.
 -----
 # Personalidade Civil
 # Dispositivos Legais
 - Art. 2.º A personalidade civil da pessoa começa do nascimento com vida; mas a lei põe a salvo, desde a concepção, os direitos do nascituro.
 # Remissões Normativas
-- Vide arts. 5.º, 166, I, 542, 1.609, parágrafo único, 1.779, caput, e 1.798 do CC.
--- Tratam de diversos institutos que concretizam a proteção dos direitos do nascituro, como a doação, o reconhecimento de filiação, a nomeação de curador e a capacidade para suceder.
-- Vide arts. 124 a 128 do CP.
--- Tipificam o crime de aborto, oferecendo proteção penal à vida intrauterina.
+- Vide arts. 5.º, 115 a 120, 166, I, 542, 1.609, parágrafo único, 1.690, 1.779, caput, 1.798, 1.799, I, 1.800 e 1.952 do CC.
+-- Tratam, respectivamente, da menoridade, da condição, da nulidade do negócio jurídico, da doação ao nascituro, do reconhecimento de filhos, do poder familiar, da curatela do nascituro, da sucessão legítima e testamentária.
+- Os arts. 124 a 128 do CP dispõem sobre o crime de aborto.
+-- Tratam da tipificação penal do aborto.
 - Vide arts. 50 a 66 da LRP.
--- Regulam o registro civil de nascimento, ato que formaliza a aquisição da personalidade jurídica.
-- Vide arts. 7.º a 14 e 228 do ECA.
--- Asseguram o direito à vida e à saúde da gestante e do nascituro e criminalizam a ausência do registro de nascimento.
-- Vide art. 7.º da LINDB.
--- Define que a lei do domicílio da pessoa rege as regras sobre o início e o fim da personalidade.
-- Vide arts. 71 e 178, II, do CPC.
--- Dispõem sobre a representação processual do incapaz e a necessária intervenção do Ministério Público em causas que envolvam seus interesses.
-- Vide art. 4.º, item 1, do Decreto n. 678, de 1992 (Pacto de São José da Costa Rica).
--- Assegura o direito à vida, estabelecendo que tal direito deve ser protegido por lei, em geral, desde o momento da concepção.
-
------
-# Capacidade Civil
-# Dispositivos Legais
-- Art. 1.º Toda pessoa é capaz de direitos e deveres na ordem civil.
-# Remissões Normativas
-- Vide arts. 4.º e 5.º do CC.
--- Tratam, respectivamente, da incapacidade relativa e das hipóteses em que cessa a incapacidade para os menores.
-- Vide art. 7.º, caput, da LINDB.
--- Estabelece que a lei do país de domicílio da pessoa determina as regras sobre o começo e o fim da personalidade, o nome, a capacidade e os direitos de família.
-- Vide art. 70 do CPC.
--- Dispõe sobre a capacidade processual, afirmando que toda pessoa que se encontre no exercício de seus direitos tem capacidade para estar em juízo.
+-- Tratam das disposições sobre o registro de nascimento.
+- Vide arts. 7.º a 14 e 228 e 229 do ECA.
+-- Tratam do direito à vida e à saúde da criança e do adolescente, e da proteção à gestante.
+- Vide LINDB, art. 7.º.
+-- Trata da aplicação da lei do país de domicílio da pessoa para qualificar e reger as relações de família.
+- Vide arts. 71, 178, II, 50 e 896 do CPC.
+-- Tratam da atuação do Ministério Público, da sua intervenção obrigatória em processos que envolvam interesse de incapaz, da renúncia à queixa-crime, e de disposições sobre recursos.
+- Vide art. 4.º, item 1, do Decreto n. 678, de 6-11-1992 (Pacto de São José da Costa Rica).
+-- Trata do direito ao reconhecimento da personalidade jurídica e do direito à vida desde a concepção.
 -----
