@@ -29,7 +29,6 @@
     </div>
   </div>
 
-  
   <!-- Drawer -->
   <div class="drawer" id="drawer" aria-hidden="true">
     <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1"></div>
@@ -56,12 +55,16 @@
   <main class="container" id="theme" aria-live="polite">
     <div class="card ficha-head">
       <h1 class="h1" id="themeTitle"></h1>
+      <!-- Ações abaixo do título; layout final via CSS -->
       <div id="actions" class="actions" aria-label="Ações do tema"></div>
     </div>
     <div id="content" class="list-plain"></div>
   </main>
 
   <div id="toasts" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Host para popovers flutuantes (IA) -->
+  <div id="iaPopoverHost" aria-hidden="true"></div>
 
   <!-- Modal "Sobre" -->
   <div class="modal" id="sobreModal" aria-hidden="true">
@@ -72,7 +75,13 @@
         <button class="modal-close" data-close="1" aria-label="Fechar">✕</button>
       </div>
       <div class="modal-body">
-        <p>MeuJus organiza temas de estudo em TXT por categoria. Cada tema usa <code># Título</code>, introdução com <code>--</code>, perguntas em seção “Pergunte pra I.A.” e separador <code>-----</code>.</p>
+        <p>
+          O MeuJus organiza temas em TXT com <code># Título (T)</code> seguido de
+          <code># Dispositivos Legais (D)</code> e <code># Remissões Normativas (R)</code>.
+          As seções são separadas por <code>-----</code> e os itens internos por <code>----</code>.
+          Linhas que iniciam com <code>- </code> são linkadas com prompt personalizado; linhas com
+          <code>-- </code> são comentários. “Respiros” são tratados via CSS.
+        </p>
       </div>
     </div>
   </div>
