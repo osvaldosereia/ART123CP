@@ -164,10 +164,17 @@
         if (/^\s*-{4}\s*$/.test(L)) continue; // divisor antigo entre seções, se aparecer
 
         if (/^\s*--\s+/.test(L)){          // comentário com indent opcional
-          const c = L.replace(/^\s*--+\s*/, '').trim();
-          if(last) last.comentario = c;
-          continue;
-        }
+  const c = L.replace(/^\s*--+\s*/, '').trim();
+  if(last){
+    if (last.comentario) {
+      last.comentario += ' ' + c;
+    } else {
+      last.comentario = c;
+    }
+  }
+  continue;
+}
+
         if (/^\s*-\s+/.test(L)){           // item com indent opcional
           const texto = L.replace(/^\s*-+\s*/, '').trim();
           last = { texto, comentario:null };
