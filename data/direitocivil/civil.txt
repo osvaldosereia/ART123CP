@@ -1,6 +1,118 @@
 
 
 
+
+# Independência entre as Responsabilidades Civil e Criminal
+# Dispositivos Legais
+- Art. 935. A responsabilidade civil é independente da criminal, não se podendo questionar mais sobre a existência do fato, ou sobre quem seja o seu autor, quando estas questões se acharem decididas no juízo criminal.
+# Remissões Normativas
+- Vide art. 65 do CPP.
+-- Dispõe que a sentença penal absolutória que reconhece a inexistência do fato impede a propositura da ação civil.
+- Vide Súmula 18 do STJ.
+-- Esclarece que a sentença criminal somente faz coisa julgada no cível quando decide categoricamente sobre a inexistência do fato ou da autoria.
+- Vide arts. 313, V, a, e §§ 4.º e 5.º, e 315 do CPC.
+-- Tratam da possibilidade de suspensão do processo civil quando o conhecimento do mérito depender da verificação de fato delituoso a ser apurado no juízo criminal, bem como dos prazos e condições para tal suspensão.
+-------
+# Ação Regressiva
+# Dispositivos Legais
+- Art. 934. Aquele que ressarcir o dano causado por outrem pode reaver o que houver pago daquele por quem pagou, salvo se o causador do dano for descendente seu, absoluta ou relativamente incapaz.
+# Remissões Normativas
+- Vide arts. 932 e 933 do CC.
+-- O direito de regresso previsto neste artigo é a contrapartida da responsabilidade objetiva por ato de terceiro, estabelecida nos artigos 932 e 933.
+- Vide Súmulas 187 e 188 do STF.
+-- Tratam de hipóteses específicas de ação regressiva, respectivamente, do transportador contra o terceiro culpado pelo acidente, e da seguradora contra o causador do dano.
+-------
+# Responsabilidade Objetiva por Ato de Terceiro
+# Dispositivos Legais
+- Art. 933. As pessoas indicadas nos incisos I a V do artigo antecedente, ainda que não haja culpa de sua parte, responderão pelos atos praticados pelos terceiros ali referidos.
+# Remissões Normativas
+- Vide art. 932 do CC.
+-- Este artigo estabelece a natureza objetiva da responsabilidade das pessoas elencadas no art. 932 (pais, tutores, empregadores etc.), afastando a necessidade de comprovação de culpa (culpa *in vigilando* ou *in eligendo*).
+- Vide Súmula 341 do STF.
+-- A referida Súmula, que presume a culpa do patrão, é considerada superada por este artigo, que consagrou a responsabilidade objetiva (independente de culpa) do empregador.
+-------
+# Responsabilidade por Ato de Terceiro
+# Dispositivos Legais
+- Art. 932. São também responsáveis pela reparação civil:
+    - I – os pais, pelos filhos menores que estiverem sob sua autoridade e em sua companhia;
+    - II – o tutor e o curador, pelos pupilos e curatelados, que se acharem nas mesmas condições;
+    - III – o empregador ou comitente, por seus empregados, serviçais e prepostos, no exercício do trabalho que lhes competir, ou em razão dele;
+    - IV – os donos de hotéis, hospedarias, casas ou estabelecimentos onde se albergue por dinheiro, mesmo para fins de educação, pelos seus hóspedes, moradores e educandos;
+    - V – os que gratuitamente houverem participado nos produtos do crime, até a concorrente quantia.
+# Remissões Normativas
+- Vide arts. 934 e 942, parágrafo único, do CC.
+-- Tratam, respectivamente, do direito de regresso daquele que paga a indenização contra o causador do dano e da solidariedade entre os responsáveis.
+- Vide art. 116 do ECA.
+-- Dispõe sobre a obrigação do adolescente autor de ato infracional de reparar o dano causado.
+- Vide art. 149 do CC.
+-- Trata do dolo do representante legal ou convencional, que só obriga o representado a responder civilmente na medida do proveito que teve.
+- Vide Lei n. 7.195, de 12-6-1984.
+-- Dispõe sobre a responsabilidade civil das agências de empregados domésticos pelos atos de seus agenciados.
+- Vide Súmulas 341 do STF e 130 do STJ.
+-- A Súmula 341 do STF estabelece a presunção de culpa do patrão (considerada superada pela responsabilidade objetiva do art. 933 do CC). A Súmula 130 do STJ trata da responsabilidade de empresas por danos em seus estacionamentos.
+- Vide arts. 649 e 650 do CC.
+-- Tratam da responsabilidade dos hospedeiros na qualidade de depositários necessários dos bens dos hóspedes.
+- Vide Decreto n. 2.681, de 7-12-1912.
+-- Regula a responsabilidade civil das estradas de ferro por danos a passageiros e cargas.
+- Vide art. 91 do CP.
+-- Elenca como um dos efeitos da condenação criminal a obrigação de reparar o dano causado pelo crime.
+- Vide art. 64 do CPP.
+-- Estabelece que a sentença penal condenatória transitada em julgado é título executivo no cível para a reparação do dano.
+- Vide Súmula 492 do STF.
+-- Trata da responsabilidade solidária da empresa locadora de veículos pelos danos causados pelo locatário.
+-------
+# Responsabilidade pelo Fato do Produto
+# Dispositivos Legais
+- Art. 931. Ressalvados outros casos previstos em lei especial, os empresários individuais e as empresas respondem independentemente de culpa pelos danos causados pelos produtos postos em circulação.
+# Remissões Normativas
+- Vide arts. 12, 18, 19 e 23 a 25 do CDC.
+-- Tratam da responsabilidade objetiva do fornecedor no Código de Defesa do Consumidor, especificamente sobre o fato do produto (acidente de consumo) e o vício do produto (inadequação ao uso), sendo a principal legislação especial sobre o tema.
+-------
+# Ação Regressiva por Dano em Estado de Necessidade ou Legítima Defesa
+# Dispositivos Legais
+- Art. 930. No caso do inciso II do art. 188, se o perigo ocorrer por culpa de terceiro, contra este terá o autor do dano ação regressiva para haver a importância que tiver ressarcido ao lesado.
+    - Parágrafo único. A mesma ação competirá contra aquele em defesa de quem se causou o dano (art. 188, inciso I).
+# Remissões Normativas
+- Vide art. 188, I e II, do CC.
+-- Define a legítima defesa e o estado de necessidade como excludentes de ilicitude, sendo os pressupostos para a aplicação da ação regressiva prevista neste artigo.
+- Vide art. 125, II, do CPC.
+-- Trata do chamamento ao processo, instrumento processual que permite ao réu (autor do dano) chamar ao processo o terceiro culpado pelo perigo, a fim de exercer o direito de regresso na mesma ação.
+-------
+# Indenização por Dano em Estado de Necessidade
+# Dispositivos Legais
+- Art. 929. Se a pessoa lesada, ou o dono da coisa, no caso do inciso II do art. 188, não forem culpados do perigo, assistir-lhes-á direito à indenização do prejuízo que sofreram.
+# Remissões Normativas
+- Vide art. 188, II, do CC.
+-- Define o estado de necessidade (a deterioração ou destruição de coisa alheia para remover perigo iminente) como um ato lícito, ressalvando a obrigação de indenizar o prejuízo se a vítima não for a culpada pelo perigo, conforme estabelecido no presente artigo.
+-------
+# Responsabilidade Civil do Incapaz
+# Dispositivos Legais
+- Art. 928. O incapaz responde pelos prejuízos que causar, se as pessoas por ele responsáveis não tiverem obrigação de fazê-lo ou não dispuserem de meios suficientes.
+    - Parágrafo único. A indenização prevista neste artigo, que deverá ser equitativa, não terá lugar se privar do necessário o incapaz ou as pessoas que dele dependem.
+# Remissões Normativas
+- Vide arts. 3.º, 4.º, 932 a 934 e 942, parágrafo único, do CC.
+-- Tratam, respectivamente, do rol de pessoas absoluta e relativamente incapazes; da responsabilidade civil por ato de terceiro (pais, tutores, curadores); do direito de regresso; e da solidariedade entre os responsáveis pelo dano.
+- Vide art. 116 do ECA.
+-- Dispõe sobre a obrigação do adolescente autor de ato infracional de reparar o dano, observada a sua capacidade econômica.
+-------
+# Responsabilidade Civil
+# Dispositivos Legais
+- Art. 927. Aquele que, por ato ilícito (arts. 186 e 187), causar dano a outrem, fica obrigado a repará-lo.
+    - Parágrafo único. Haverá obrigação de reparar o dano, independentemente de culpa, nos casos especificados em lei, ou quando a atividade normalmente desenvolvida pelo autor do dano implicar, por sua natureza, risco para os direitos de outrem.
+# Remissões Normativas
+- Vide ADIs n. 6.792 e 7.055 do STF.
+-- Em decisão de 22/05/2024, o STF deu interpretação conforme à Constituição para definir que a responsabilidade civil de jornalistas por divulgação de notícias sobre pessoa pública ou de interesse social exige a comprovação de dolo ou culpa grave. Fixou-se a tese de que o ajuizamento de múltiplas ações sobre os mesmos fatos para constranger a imprensa caracteriza assédio judicial, permitindo a reunião das ações no foro do domicílio do réu.
+- Vide arts. 934 e 942 a 954 do CC.
+-- Tratam do direito de regresso, da solidariedade na obrigação de indenizar, da fixação do valor da indenização e das regras para casos específicos como homicídio, lesão corporal, injúria, entre outros.
+- Vide art. 243 da Lei n. 4.737, de 15-7-1965 (Código Eleitoral).
+-- Dispõe sobre a reparação por dano moral decorrente de crimes de calúnia, difamação ou injúria cometidos na propaganda eleitoral.
+- Vide Súmulas 37, 43, 130, 137, 145, 186, 221, 227, 246, 403, 479 e 595 do STJ.
+-- Tratam, respectivamente, da cumulação de danos materiais e morais; da data de início da correção monetária; da responsabilidade de empresas por veículos em seus estacionamentos; da competência para julgar ações de servidores municipais (remissão incomum); da responsabilidade em transporte de cortesia; da responsabilidade do fiador em aditamento de locação (remissão incomum); da responsabilidade do autor e do veículo de imprensa; da possibilidade de dano moral a pessoa jurídica; da dedução do seguro obrigatório (DPVAT); da desnecessidade de prova de prejuízo no uso indevido de imagem; da responsabilidade objetiva dos bancos por fraudes; e da responsabilidade objetiva de instituições de ensino por diplomas inválidos.
+- Vide Súmulas 28, 161, 229, 491, 492 e 562 do STF.
+-- Tratam, respectivamente, da responsabilidade de bancos por cheques falsos; da ineficácia da cláusula de não indenizar em contrato de transporte; da cumulatividade da indenização acidentária com a de direito comum; da indenização pela morte de filho menor; da responsabilidade solidária de locadoras de veículos; e da aplicação de correção monetária na indenização por ato ilícito.
+- Vide arts. 5.º, V e X, e 37, § 6.º, da CF.
+-- Tratam dos direitos fundamentais à indenização por dano material e moral, da inviolabilidade da honra e da imagem, e da responsabilidade objetiva do Estado pelos atos de seus agentes.
+-------
 # Morte Real e Morte Presumida (Ausência)
 # Dispositivos Legais
 - Art. 6.º A existência da pessoa natural termina com a morte; presume-se esta, quanto aos ausentes, nos casos em que a lei autoriza a abertura de sucessão definitiva.
@@ -19,7 +131,7 @@
 -- Trata da Lei de Transplantes, que estabelece os critérios para a constatação da morte encefálica.
 - Vide Súmula 331 do STF.
 -- “É legítima a incidência do Imposto de Serviços sobre as operações de arrendamento mercantil”. (Nota: A Súmula 331 do TST, frequentemente confundida, trata da terceirização de serviços). A remissão a esta súmula neste contexto é incomum.
------
+-------
 # Cessação da Menoridade e Emancipação
 # Dispositivos Legais
 - Art. 5.º A menoridade cessa aos dezoito anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil.
@@ -58,7 +170,7 @@
 -- Proíbe o trabalho noturno, perigoso ou insalubre a menores de dezoito anos e qualquer trabalho a menores de dezesseis, salvo na condição de aprendiz a partir dos quatorze.
 - Vide arts. 966 e 972 do CC.
 -- Tratam da capacidade para o exercício da atividade de empresário, permitindo ao emancipado o seu exercício.
------
+-------
 # Incapacidade Relativa
 # Dispositivos Legais
 - Art. 4.º São incapazes, relativamente a certos atos ou à maneira de os exercer:
@@ -106,7 +218,7 @@
 -- Dispõe sobre o registro de nascimento de indígena no Registro Civil de Pessoas Naturais.
 - Vide Decreto n. 7.747, de 5-6-2012.
 -- Institui a Política Nacional de Gestão Territorial e Ambiental de Terras Indígenas (PNGATI).
------
+-------
 # Capacidade Civil
 # Dispositivos Legais
 - Art. 1.º Toda pessoa é capaz de direitos e deveres na ordem civil.
@@ -117,7 +229,7 @@
 -- Trata da aplicação da lei do país de domicílio da pessoa para reger o começo e o fim da personalidade, o nome e a capacidade.
 - Vide art. 70 do CPC.
 -- Trata da capacidade processual, afirmando que toda pessoa no exercício de seus direitos tem capacidade para estar em juízo.
------
+-------
 # Incapacidade Absoluta
 # Dispositivos Legais
 - Art. 3.º São absolutamente incapazes de exercer pessoalmente os atos da vida civil os menores de 16 (dezesseis) anos.
@@ -128,7 +240,7 @@
 -- Tratam da cessação da incapacidade, da representação processual, da validade da declaração de vontade, das condições, da nulidade absoluta dos atos praticados por absolutamente incapaz, da prescrição, da compra e venda entre cônjuges e descendentes, da doação, do poder familiar, e da tutela.
 - Vide arts. 71, 72 e 447, § 1.º, do CPC.
 -- Tratam da representação e assistência dos incapazes em juízo e da incapacidade para ser testemunha.
------
+-------
 # Personalidade Civil
 # Dispositivos Legais
 - Art. 2.º A personalidade civil da pessoa começa do nascimento com vida; mas a lei põe a salvo, desde a concepção, os direitos do nascituro.
@@ -147,4 +259,4 @@
 -- Tratam da atuação do Ministério Público, da sua intervenção obrigatória em processos que envolvam interesse de incapaz, da renúncia à queixa-crime, e de disposições sobre recursos.
 - Vide art. 4.º, item 1, do Decreto n. 678, de 6-11-1992 (Pacto de São José da Costa Rica).
 -- Trata do direito ao reconhecimento da personalidade jurídica e do direito à vida desde a concepção.
------
+-------
