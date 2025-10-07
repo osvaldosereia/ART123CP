@@ -43,14 +43,15 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 .hamburger span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px}
 .hamburger span+span{margin-top:4px}
 
-/* Search */
+/* Search (topbar ou home) */
 .search-wrap{flex:1;display:flex;align-items:center;position:relative}
 .search{
   width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;
   background:var(--surface);outline:0;color:var(--ink);
 }
 .search::placeholder{color:var(--muted)}
-/* Live suggestions: sempre abaixo, com largura coerente e rolagem quando preciso */
+
+/* Live suggestions */
 .suggestions{
   position:absolute;left:0;top:calc(100% + 6px);
   width:min(100%, 90vw);
@@ -112,9 +113,7 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 .ubox{padding:14px 16px}
 
 /* ===== Respiros das seções ===== */
-/* Mais respiro ENTRE seções */
 .ubox-section + .ubox-section{margin-top:32px}
-/* Título de seção */
 .ubox-sub{font-size:14px;font-weight:800;margin:0 0 8px 0;color:var(--ink)}
 
 /* ===== Ações abaixo do título ===== */
@@ -141,21 +140,32 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 .ia-popover .ia-opt:hover{background:#dde6f5}
 
 /* ===== Links com setinha ===== */
-.link-arrow{position:relative}
-.link-arrow::after{
-  content:'↗';margin-left:6px;font-size:12px;opacity:.6;transform:translateY(-1px);
-  transition:transform .15s ease, opacity .15s ease;
+/* Removemos a seta automática para usar o mini-botão .arrow-icon no HTML */
+.link-arrow{position:relative;display:inline-flex;align-items:center;gap:8px;font-weight:600}
+.link-arrow::after{content:none}
+
+/* Mini botão da seta (↗) para reforçar que a frase inteira é link */
+.arrow-icon{
+  display:inline-block;
+  padding:2px 8px;
+  border-radius:999px;
+  background:var(--accent);
+  color:#fff;
+  font-size:11px;
+  line-height:1;
+  transform:translateY(-1px);
+  transition:transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+  box-shadow:0 2px 6px rgba(0,163,255,.25);
 }
-.link-arrow:hover::after{ transform:translate(2px,-1px); opacity:.9; }
+.link-arrow:hover .arrow-icon{transform:translateY(-1px) translateX(1px);background:var(--primary);box-shadow:0 3px 10px rgba(31,59,130,.28)}
 
 /* ===== Lists (respiros internos menores) ===== */
-.ref-list li + li{margin-top:4px}              /* menos espaço entre itens */
+.ref-list li + li{margin-top:4px}
 .ref-list .muted{
   margin-top:2px;
-  font-size: 0.85em;       /* tamanho menor */
-  color: var(--muted);     /* cor suave da paleta */
+  font-size: 0.85em;
+  color: var(--muted);
 }
-
 
 /* ===== Toasts ===== */
 #toasts{position:fixed;right:12px;bottom:12px;display:grid;gap:8px;z-index:98}
@@ -175,12 +185,41 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 /* ===== Marks ===== */
 mark{background:rgba(0,163,255,.25);padding:0 .1em;border-radius:2px}
 
+/* ===== Home minimalista (logo + busca ao centro) ===== */
+.home-center{
+  min-height:calc(100vh - 64px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+  text-align:center;
+}
+.home-logo{
+  font-weight:800;
+  font-size:40px;
+  line-height:1;
+  letter-spacing:-.3px;
+  display:flex;gap:6px;
+}
+.home-logo .b1{color:var(--primary)}
+.home-logo .b2{color:var(--accent)}
+.home-search-host{width:min(560px,92vw)}
+.home-search-host .search-wrap,
+.home-search-host .search{width:100%}
+
 /* ===== Responsive ===== */
 @media (max-width:720px){
   .topbar-inner{gap:8px}
   .search{padding:9px 10px}
   .h1{font-size:20px}
   .chip-bar{gap:6px}
-  .suggestions{width:90vw;left:0}
+
+  /* Centralizar o dropdown de sugestões no mobile para não cortar nas laterais */
+  .suggestions{width:90vw;left:50%;transform:translateX(-50%)}
+  .suggestions.pop{left:50%;transform:translateX(-50%);width:90vw}
+
   .ia-popover{max-width:90vw}
+  .home-logo{font-size:34px}
+  .home-search-host{width:90vw}
 }
