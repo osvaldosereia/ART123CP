@@ -165,15 +165,13 @@
 
         if (/^\s*--\s+/.test(L)){          // comentário com indent opcional
   const c = L.replace(/^\s*--+\s*/, '').trim();
-  if(last){
-    if (last.comentario) {
-      last.comentario += ' ' + c;
-    } else {
-      last.comentario = c;
-    }
+  if (last) {
+    if (!last.comentarios) last.comentarios = [];
+    last.comentarios.push(c);
   }
   continue;
 }
+
 
         if (/^\s*-\s+/.test(L)){           // item com indent opcional
           const texto = L.replace(/^\s*-+\s*/, '').trim();
@@ -754,7 +752,7 @@
           const li = `
             <li>
               <a class="link-arrow" href="${it.link}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(it.texto))}</a>
-              ${it.comentario ? `<div class="muted">${escapeHTML(it.comentario)}</div>` : ``}
+${(it.comentarios || []).map(c => `<div class="muted">${escapeHTML(c)}</div>`).join('')}
             </li>`;
           const needSep = i < arr.length-1;
           return needSep ? li + sep : li;
