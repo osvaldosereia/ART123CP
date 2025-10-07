@@ -1,148 +1,559 @@
-<!doctype html>
-<html lang="pt-br">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meujus</title>
-  <link rel="stylesheet" href="style.css?v=2025-10-07">
-</head>
-<body>
-  <!-- Topbar fixa -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand"><span class="b1">Meu</span><span class="b2">Jus</span></div>
+// meujus – app.js (2025-10-07)
+// Home minimalista (logo + busca)
+// Tema com ROLAGEM INFINITA (selecionado ±5; carrega +5 por sentinela)
+// Drawer funcional e dropdown centralizado no mobile
 
-      <!-- Busca (movida para o centro na Home) -->
-      <div class="search-wrap" role="search">
-        <input
-          id="search"
-          class="search"
-          type="search"
-          placeholder="Buscar tema"
-          autocomplete="off"
-          aria-autocomplete="list"
-          aria-controls="suggestions"
-          aria-haspopup="listbox"
-        />
-        <ul id="suggestions" class="suggestions" role="listbox" aria-label="Sugestões" hidden></ul>
-      </div>
+(function () {
+  const $ = (q, el = document) => el.querySelector(q);
+  const $$ = (q, el = document) => Array.from(el.querySelectorAll(q));
 
-      <button id="btnMenu" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer-panel">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
+  /* ===== Estado ===== */
+  let TEMAS = [];
+  let CACHED_FILES = new Map();
+  let activeCat = 'Todos';
 
-  <!-- Drawer / menu lateral -->
-  <div class="drawer" id="drawer" aria-hidden="true">
-    <div class="drawer-backdrop" id="drawerBackdrop" tabindex="-1"></div>
-    <nav class="drawer-panel" id="drawer-panel" aria-label="Menu lateral" tabindex="-1">
-      <div class="drawer-header">
-        <div class="drawer-brand brand"><span class="b1">Meu</span><span class="b2">Jus</span></div>
-        <button class="drawer-close" id="btnCloseMenu" aria-label="Fechar menu">Fechar</button>
-      </div>
-      <div class="drawer-content">
-        <h3 class="h2">Categorias</h3>
-        <ul class="list menu" id="menuList">
-          <!-- Seeds para indexação dinâmica (app.js lê e monta TEMAS) -->
-          <li>
-            <a class="title"
-               data-auto="1"
-               data-group="Direito Civil"
-               data-path="data/direitocivil/civil.txt">Direito Civil</a>
-          </li>
-          <li>
-            <a class="title"
-               data-auto="1"
-               data-group="Processo Civil"
-               data-path="data/processocivil/processo_civil.txt">Processo Civil</a>
-          </li>
-          <li>
-            <a class="title"
-               data-auto="1"
-               data-group="Contravenções Penais"
-               data-path="data/leis/contravencoes_penais.txt">Contravenções Penais</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+  const SAVED_KEY = 'meujus:saved';
+  const LAST_AC_KEY = 'meujus:lastAc';
+  const LAST_SEARCH_KEY = 'meujus:lastSearch';
 
-  <!-- Área principal -->
-  <main class="container" id="theme" aria-live="polite">
-    <div id="content" class="list-plain"></div>
-  </main>
+  const readSaved = () => { try { return JSON.parse(localStorage.getItem(SAVED_KEY) || '[]'); } catch { return []; } };
+  const writeSaved = (list) => localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(new Set(list))));
+  const isSaved = (slug) => readSaved().includes(slug);
+  const toggleSaved = (slug) => { const s = new Set(readSaved()); s.has(slug) ? s.delete(slug) : s.add(slug); writeSaved([...s]); return s.has(slug); };
 
-  <!-- Toasts -->
-  <div id="toasts" aria-live="polite" aria-atomic="true"></div>
+  const escapeHTML = (s) => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+  const slugify = (s)=> (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
 
-  <!-- Modal "Sobre" -->
-  <div class="modal" id="sobreModal" aria-hidden="true">
-    <div class="modal-backdrop" data-close="1"></div>
-    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="sobreTitle">
-      <div class="modal-header">
-        <strong id="sobreTitle">Sobre</strong>
-        <button class="modal-close" data-close="1" aria-label="Fechar">✕</button>
-      </div>
-      <div class="modal-body">
-        <p>
-          O MeuJus organiza temas em TXT com <code># Título (T)</code> seguido de
-          <code># Dispositivos Legais (D)</code> e <code># Remissões Normativas (R)</code>.
-          As seções são separadas por <code>-----</code> e os itens por <code>- </code> (links) e
-          <code>-- </code> (comentários). Os prompts para I.A. são abertos em nova aba.
-        </p>
-      </div>
-    </div>
-  </div>
+  /* ===== Busca helpers ===== */
+  const normPT = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ç/g,'c');
+  const escRx = x => x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  function pluralRegexToken(w){
+    if(w.length<=2) return escRx(w);
+    const s2=w.slice(0,-2), s1=w.slice(0,-1);
+    if(/ao$/.test(w)) return `(?:${escRx(w)}|${escRx(s2+'oes')}|${escRx(s2+'aes')}|${escRx(s2+'aos')})`;
+    if(/m$/.test(w))  return `(?:${escRx(w)}|${escRx(s1+'ns')})`;
+    if(/[rz]$/.test(w)) return `(?:${escRx(w)}|${escRx(w+'es')})`;
+    if(/al$/.test(w)) return `(?:${escRx(w)}|${escRx(s2+'ais')})`;
+    if(/el$/.test(w)) return `(?:${escRx(w)}|${escRx(s2+'eis')})`;
+    if(/il$/.test(w)) return `(?:${escRx(w)}|${escRx(s2+'is')})`;
+    if(/ol$/.test(w)) return `(?:${escRx(w)}|${escRx(s2+'ois')})`;
+    if(/ul$/.test(w)) return `(?:${escRx(w)}|${escRx(s2+'uis')})`;
+    return `(?:${escRx(w)}s?)`;
+  }
+  function _hitPT(hayRaw,qRaw){
+    const hay=normPT(hayRaw), qn=normPT(qRaw); if(!hay||!qn) return 0;
+    let s=0; if(hay===qn) s+=100; if(hay.includes(qn)) s+=60;
+    for(const t of qn.split(/\s+/).filter(Boolean)){
+      const rx=new RegExp(`(?<![a-z0-9])${pluralRegexToken(t)}(?![a-z0-9])`,'g');
+      if(rx.test(hay)) s+=10;
+    }
+    return s;
+  }
 
-  <!-- Script do Drawer (toggle + close global) -->
-  <script>
-    (function(){
-      const drawer   = document.getElementById('drawer');
-      const panel    = document.getElementById('drawer-panel');
-      const openBtn  = document.getElementById('btnMenu');
-      const closeBtn = document.getElementById('btnCloseMenu');
-      const backdrop = document.getElementById('drawerBackdrop');
+  function currentPage(){
+    const h=location.hash||'#/';
+    const mTema=h.match(/^#\/tema\/([^?#]+)/);
+    if(mTema) return { kind:'tema', slug:decodeURIComponent(mTema[1]) };
+    if(/^#\/sobre\b/.test(h)) return { kind:'sobre' };
+    if(/^#\/?$/.test(h) || /^#\/home\b/.test(h)) return { kind:'home' };
+    return { kind:'home' };
+  }
 
-      function open(){
-        drawer.classList.add('open');
-        drawer.setAttribute('aria-hidden','false');
-        openBtn.setAttribute('aria-expanded','true');
-        document.body.classList.add('noscroll');
-        panel.focus?.();
+  const toastsEl = $('#toasts');
+  function toast(msg,type='info',ttl=2200){
+    if(!toastsEl) return;
+    const el=document.createElement('div');
+    el.className=`toast ${type}`;
+    el.innerHTML=`<span>${escapeHTML(msg)}</span>`;
+    toastsEl.appendChild(el);
+    setTimeout(()=>el.classList.add('show'),20);
+    setTimeout(()=>{ el.classList.remove('show'); setTimeout(()=>el.remove(),350); }, ttl);
+  }
+
+  async function fetchText(path){
+    const url=(path||'').replace(/^\.?\//,'');
+    const res=await fetch(url,{cache:'no-store'});
+    if(!res.ok){ console.error('Fetch falhou:',url,res.status); toast(`Erro ao carregar ${url}`,'error',3000); throw new Error(`HTTP ${res.status}`); }
+    return res.text();
+  }
+  function splitThemesByDelim(raw){
+    const txt=raw.replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n').trim();
+    return txt.split(/^\s*-{3,}\s*$/m).map(s=>s.trim()).filter(Boolean);
+  }
+  const normalizeHeading = (h)=> (h||'').toLowerCase().replace(/\(.*?\)/g,'').replace(/[.#:]/g,' ').replace(/\s+/g,' ')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
+
+  /* ===== IA (link externo) ===== */
+  const IA_PROMPTS={detalhada:(t,full)=>`Explique detalhadamente e transcreva o texto original dos dispositivos e remissões abaixo, analisando conteúdo, finalidade e aplicação prática.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`};
+  const googleIA = (prompt)=>`https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
+
+  /* ===== Parser de chunk TXT ===== */
+  function parseTemaFromChunk(chunk){
+    const fixed=chunk.replace(/^\s*##\s+##\s+/mg,'## ');
+    const mTitle=fixed.match(/^\s*#\s+(.+?)\s*$/m);
+    if(!mTitle) return null;
+
+    const title=mTitle[1].trim(); const slug=slugify(title);
+
+    const rxHead=/^\s*#\s+(.+?)\s*$/mg;
+    const sections=[]; let m;
+    while((m=rxHead.exec(fixed))){
+      const name=m[1].trim(); const nm=normalizeHeading(name);
+      const start=rxHead.lastIndex;
+      const prev=sections.at(-1); if(prev) prev.end=m.index;
+      sections.push({raw:name, nm, start, end:fixed.length});
+    }
+
+    const secD=sections.find(s=>/^dispositivos\s+legais\b/.test(s.nm));
+    const secR=sections.find(s=>/^remissoes\s+normativas\b/.test(s.nm));
+
+    function parseList(sec){
+      if(!sec) return [];
+      const body=fixed.slice(sec.start,sec.end);
+      const lines=body.split('\n');
+      const out=[]; let last=null;
+      for(const rawLine of lines){
+        const L=rawLine.replace(/\r/g,'').trimEnd();
+        if(!L.trim()) continue;
+        if(/^\s*#\s+/.test(L)) break;
+        if(/^\s*-{5}\s*$/.test(L)) break;
+        if(/^\s*-{4}\s*$/.test(L)) continue;
+
+        if(/^\s*--\s+/.test(L)){
+          const c=L.replace(/^\s*--+\s*/,'').trim();
+          if(last){ (last.comentarios||(last.comentarios=[])).push(c); }
+          continue;
+        }
+        if(/^\s*-\s+/.test(L)){
+          const texto=L.replace(/^\s*-+\s*/,'').trim();
+          last={texto, comentario:null}; out.push(last);
+          continue;
+        }
       }
-      function close(){
-        drawer.classList.remove('open');
-        drawer.setAttribute('aria-hidden','true');
-        openBtn.setAttribute('aria-expanded','false');
-        document.body.classList.remove('noscroll');
-        openBtn.focus?.();
-      }
+      return out;
+    }
 
-      // Toggle no mesmo botão
-      openBtn?.addEventListener('click', (e)=>{
-        e.preventDefault();
-        drawer.classList.contains('open') ? close() : open();
+    const dispositivos=parseList(secD);
+    const remissoes   =parseList(secR);
+
+    const mkLink=(txt)=>googleIA(IA_PROMPTS.detalhada(title,`${txt}`));
+    for(const it of dispositivos) it.link=mkLink(`${title} — ${it.texto}`);
+    for(const it of remissoes)    it.link=mkLink(`${title} — ${it.texto}`);
+
+    const dispText=dispositivos.map(x=>x.texto+(x.comentarios?` ${x.comentarios.join(' ')}`:'')).join(' ');
+    const remText =remissoes.map(x=>x.texto+(x.comentarios?` ${x.comentarios.join(' ')}`:'')).join(' ');
+
+    return { slug,title,dispositivos,remissoes,
+      titleN:normPT(title),
+      dispN:normPT(dispText),
+      remN:normPT(remText),
+      bodyN:normPT(dispText+' '+remText)
+    };
+  }
+
+  /* ===== Highlight ===== */
+  function _buildHighlightRegex(q){
+    const parts=String(q||'').toLowerCase().split(/\s+/)
+      .filter(w=>w.length>=4 && /[\p{L}]/u.test(w) && !/^\d+$/.test(w))
+      .map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+    if(!parts.length) return null;
+    try{ return new RegExp(`(?<!\\p{L})(${parts.join('|')})(?!\\p{L})`,'uig'); }
+    catch{ return new RegExp(`(^|[^\\p{L}])(${parts.join('|')})(?!\\p{L})`,'uig'); }
+  }
+  function highlightTitle(title,q){
+    const esc=String(title).replace(/</g,'&lt;');
+    const rx=_buildHighlightRegex(q); if(!rx) return esc;
+    if(rx.source.startsWith('(^|')){ return esc.replace(rx,(m,prefix,word)=>(prefix||'')+'<mark>'+word+'</mark>'); }
+    return esc.replace(rx,'<mark>$1</mark>');
+  }
+  const fmtInlineBold=(html)=>String(html).replace(/\*([^*]+)\*/g,'<strong>$1</strong>');
+  const labelFromFlags=(f)=>['T','D','R'].filter(k=>f[k]).map(k=>`(${k})`).join(' ');
+
+  /* ===== Dropdown pós-busca ===== */
+  let __popEl=null;
+  function closeAcDropdown(){ if(__popEl){ __popEl.remove(); __popEl=null; } document.removeEventListener('click',onDocClickClose,true); window.removeEventListener('hashchange', closeAcDropdown, { once:true }); }
+  function onDocClickClose(e){ if(__popEl && !__popEl.contains(e.target)) closeAcDropdown(); }
+
+  /* ===== Autocomplete ===== */
+  let input=$('#search'); let acList=$('#suggestions'); if(acList) acList.hidden=true;
+  function scoreFields(q,t){ const sT=_hitPT(t.titleN,q); const sD=_hitPT(t.dispN||'',q); const sR=_hitPT(t.remN||'',q); return {score:1.2*sT + sD + sR, flags:{T:sT>0,D:sD>0,R:sR>0}}; }
+  function bindAutocomplete(){ input=$('#search'); acList=$('#suggestions'); if(acList) acList.hidden=true; input?.addEventListener('input',onInputAC); input?.addEventListener('keydown',onKeydownAC); acList?.addEventListener('click',onClickAC); }
+  function onInputAC(e){
+    const q=(e.target.value||'').trim();
+    if(q.length<2 || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; closeAcDropdown(); return; }
+    let arr=TEMAS.map(t=>({t, ...scoreFields(q,t)})).filter(x=>x.score>0)
+      .sort((a,b)=> b.score-a.score || a.t.title.localeCompare(b.t.title,'pt-BR')).slice(0,40);
+    if(!arr.length){ acList.innerHTML=''; acList.hidden=true; closeAcDropdown(); return; }
+
+    const counts=new Map(); for(const x of arr){ const g=x.t.group||'Geral'; counts.set(g,(counts.get(g)||0)+1); }
+    const catList=[...counts.keys()].sort((a,b)=> a.localeCompare(b,'pt-BR'));
+    if(activeCat && activeCat!=='Todos'){ const filtered=arr.filter(x=>(x.t.group||'Geral')===activeCat); arr = filtered.length?filtered:arr; }
+
+    const lastAc={ q, categories:['Todos', ...catList], items: arr.slice(0,20).map(x=>({ slug:x.t.slug, title:x.t.title, group:x.t.group||'Geral', labels:labelFromFlags(x.flags) })) };
+    try{ sessionStorage.setItem(LAST_AC_KEY, JSON.stringify(lastAc)); }catch{}
+
+    const chipsHTML=`
+      <div class="ac-chips" role="group" aria-label="Filtrar sugestões por categoria">
+        <button type="button" class="ac-chip" data-cat="Todos" aria-pressed="${activeCat==='Todos'}">Todos</button>
+        ${catList.map(cat=>`<button type="button" class="ac-chip" data-cat="${(cat||'').replace(/"/g,'&quot;')}" aria-pressed="${activeCat===cat}">${escapeHTML(cat)}</button>`).join('')}
+      </div>`;
+    const listHTML=arr.slice(0,8).map(x=>{
+      const {t,flags}=x; const titleHTML=highlightTitle(t.title,q); const labels=labelFromFlags(flags);
+      return `<li role="option"><a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['T','D','R'].filter(k=>flags[k]).join('')}"><div class="s1">${titleHTML}</div><div class="s2">${escapeHTML((t.group||'Geral') + (labels?` | ${labels}`:''))}</div></a></li>`;
+    }).join('');
+    acList.innerHTML=chipsHTML + listHTML; acList.hidden=false;
+
+    acList.querySelectorAll('.ac-chip').forEach(btn=>{
+      btn.addEventListener('click',()=>{ activeCat=btn.getAttribute('data-cat')||'Todos'; input.dispatchEvent(new Event('input',{bubbles:false})); });
+    });
+  }
+  function onKeydownAC(ev){ if(ev.key==='Enter'){ const a=acList?.querySelector('a'); if(a){ const q=a.getAttribute('data-q')||''; const flags=a.getAttribute('data-flags')||''; try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q,flags})); }catch{} location.hash=a.getAttribute('href'); acList.hidden=true; } } }
+  function onClickAC(ev){ const a=ev.target.closest('a'); if(!a) return; const q=a.getAttribute('data-q')||''; const flags=a.getAttribute('data-flags')||''; try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q,flags})); }catch{} acList.hidden=true; }
+  window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden=true; closeAcDropdown(); });
+
+  /* ===== Drawer ===== */
+  function closeDrawer() {
+    const drawer  = $('#drawer');
+    const btnMenu = $('#btnMenu');
+    if (!drawer) return;
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('noscroll');
+    if (btnMenu) { btnMenu.setAttribute('aria-expanded', 'false'); try{ btnMenu.focus(); }catch{} }
+    $$('#menuList .cat-btn[aria-expanded="true"]').forEach(b => {
+      b.setAttribute('aria-expanded','false');
+      const ul=b.parentElement?.querySelector('.sublist'); if(ul) ul.hidden=true;
+    });
+  }
+
+  function renderMenu(){
+    const menu = $('#menuList');
+    if (!menu) return;
+
+    // Evita múltiplos handlers acumulados
+    if (!menu.dataset.bound) {
+      menu.addEventListener('click', (e) => {
+        const a = e.target.closest('a.title');
+        if (a) {
+          e.stopPropagation();
+          if (window.__closeDrawer) window.__closeDrawer();
+          else closeDrawer();
+        }
+      });
+      menu.dataset.bound = '1';
+    }
+
+    menu.innerHTML = '';
+
+    // Sobre
+    const liSobre = document.createElement('li');
+    const linkSobre = document.createElement('a');
+    linkSobre.className = 'title';
+    linkSobre.href = '#/sobre';
+    linkSobre.textContent = 'Sobre';
+    liSobre.appendChild(linkSobre);
+    menu.appendChild(liSobre);
+
+    // Salvos
+    let saved = [];
+    try { saved = readSaved(); } catch {}
+    const liSaved = document.createElement('li'); liSaved.className = 'item';
+    const btnSaved = document.createElement('button');
+    btnSaved.className = 'cat-btn'; btnSaved.type = 'button';
+    btnSaved.setAttribute('aria-expanded', 'false');
+    btnSaved.innerHTML = `<span>Salvos</span><span class="caret">▸</span>`;
+    const ulSaved = document.createElement('ul'); ulSaved.className = 'sublist'; ulSaved.hidden = true;
+
+    if (saved.length) {
+      const map = new Map(TEMAS.map(t => [t.slug, t]));
+      ulSaved.innerHTML = saved.map(slug => {
+        const t = map.get(slug); if (!t) return '';
+        return `<li>
+          <a class="title" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
+          <button class="mini" data-remove="${t.slug}" type="button">Remover</button>
+        </li>`;
+      }).join('');
+    } else {
+      ulSaved.innerHTML = `<li><a class="title" href="#/sobre">Nenhum tema salvo</a></li>`;
+    }
+
+    btnSaved.addEventListener('click', () => {
+      const open = btnSaved.getAttribute('aria-expanded') === 'true';
+      btnSaved.setAttribute('aria-expanded', String(!open));
+      ulSaved.hidden = open;
+    });
+
+    liSaved.appendChild(btnSaved);
+    liSaved.appendChild(ulSaved);
+    menu.appendChild(liSaved);
+
+    ulSaved.querySelectorAll('button[data-remove]').forEach(b => {
+      b.addEventListener('click', (ev) => {
+        ev.preventDefault(); ev.stopPropagation();
+        const slug = b.getAttribute('data-remove');
+        const now = toggleSaved(slug);
+        toast(now ? 'Tema salvo' : 'Removido', 'info', 1400);
+        renderMenu();
+      });
+    });
+
+    // Separador e título
+    const div = document.createElement('div'); div.className = 'divider'; menu.appendChild(div);
+    const title = document.createElement('div'); title.className = 'menu-title'; title.textContent = 'Categorias'; menu.appendChild(title);
+
+    // Categorias dinâmicas
+    const byCat = new Map();
+    for (const t of TEMAS) {
+      const key = t.group || 'Geral';
+      if (!byCat.has(key)) byCat.set(key, []);
+      byCat.get(key).push(t);
+    }
+    const cats = [...byCat.keys()].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+    for (const cat of cats) {
+      const temas = byCat.get(cat).slice().sort((a, b) => a.title.localeCompare(b.title, 'pt-BR'));
+
+      const li = document.createElement('li'); li.className = 'item';
+      const btn = document.createElement('button');
+      btn.className = 'cat-btn'; btn.type = 'button';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.innerHTML = `<span>${escapeHTML(cat)}</span><span class="caret">▸</span>`;
+
+      const ul = document.createElement('ul'); ul.className = 'sublist'; ul.hidden = true;
+      ul.innerHTML = temas.map(t =>
+        `<li><a class="title" href="#/tema/${t.slug}" data-path="${t.path}" data-frag="${t.frag}" data-title="${escapeHTML(t.title)}">${escapeHTML(t.title)}</a></li>`
+      ).join('');
+
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        ul.hidden = open;
       });
 
-      closeBtn?.addEventListener('click', close);
-      backdrop?.addEventListener('click', close);
-      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
+      li.appendChild(btn);
+      li.appendChild(ul);
+      menu.appendChild(li);
+    }
+  }
 
-      // Modal Sobre
-      const modal = document.getElementById('sobreModal');
-      function openModal(){ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.classList.add('noscroll'); }
-      function closeModal(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.classList.remove('noscroll'); }
-      modal?.addEventListener('click', (e)=>{ if(e.target.dataset.close) closeModal(); });
-      window.__openSobre = openModal;
-      window.__closeSobre = closeModal;
+  /* ===== Home ===== */
+  const searchWrap=document.querySelector('.search-wrap');
+  const searchWrapParent=searchWrap?.parentElement||null;
+  const searchWrapNext  =searchWrap?.nextSibling||null;
 
-      // expõe close do drawer para o app.js
-      window.__closeDrawer = close;
-    })();
-  </script>
+  function moveSearchTo(container){ if(!searchWrap||!container) return; container.appendChild(searchWrap); bindAutocomplete(); }
+  function restoreSearchToTopbar(){
+    if(!searchWrap || !searchWrapParent) return;
+    if(searchWrapNext && searchWrapNext.parentNode===searchWrapParent) searchWrapParent.insertBefore(searchWrap, searchWrapNext);
+    else searchWrapParent.appendChild(searchWrap);
+    bindAutocomplete();
+  }
+  function enterHomeMode(){ document.body.classList.add('is-home'); }
+  function leaveHomeMode(){ document.body.classList.remove('is-home'); }
 
-  <!-- App -->
-  <script src="app.js"></script>
-</body>
-</html>
+  function renderHome(){
+    const contentEl=$('#content');
+    enterHomeMode();
+    contentEl.innerHTML=`
+      <section class="home-center" aria-label="Busca principal">
+        <div class="home-inline">
+          <div class="home-logo"><span class="b1">Meu</span><span class="b2">Jus</span></div>
+          <div class="home-search-host"></div>
+        </div>
+      </section>`;
+    moveSearchTo(contentEl.querySelector('.home-search-host'));
+  }
+
+  /* ===== IA pop (mínimo) ===== */
+  let __iaPop=null;
+  function closeIAPopover(){ __iaPop?.remove(); __iaPop=null; document.removeEventListener('click',onDocClickCloseIA,true); }
+  function onDocClickCloseIA(e){ if(__iaPop && !__iaPop.contains(e.target)) closeIAPopover(); }
+  function openIAPopover(anchorBtn,title,fullText){
+    closeIAPopover();
+    __iaPop=document.createElement('div'); __iaPop.className='ia-popover';
+    __iaPop.innerHTML=`<button class="ia-opt">Detalhada</button>`;
+    document.body.appendChild(__iaPop);
+    const r=anchorBtn.getBoundingClientRect();
+    __iaPop.style.left=(r.left+window.scrollX)+'px';
+    __iaPop.style.top =(r.bottom+window.scrollY+6)+'px';
+    __iaPop.querySelector('.ia-opt').addEventListener('click',()=>{ const url=googleIA(IA_PROMPTS.detalhada(title, fullText)); window.open(url,'_blank','noopener'); closeIAPopover(); });
+    setTimeout(()=>document.addEventListener('click',onDocClickCloseIA,true),0);
+  }
+
+  /* ===== ROLAGEM INFINITA ===== */
+  function buildBundle(title,dispositivos,remissoes){
+    const d=(dispositivos||[]).map(it=>`- ${it.texto}${(it.comentarios&&it.comentarios.length)?`\n    Comentário: ${it.comentarios.join(' | ')}`:''}`).join('\n');
+    const r=(remissoes||[]).map(it=>`- ${it.texto}${(it.comentarios&&it.comentarios.length)?`\n    Comentário: ${it.comentarios.join(' | ')}`:''}`).join('\n');
+    return `Título: ${title}\n\nDispositivos Legais:\n${d}\n\nRemissões Normativas:\n${r}`;
+  }
+
+  function renderList(items){
+    if(!items?.length) return '<p class="muted">Sem itens.</p>';
+    return `<ul class="ref-list">` + items.map(it=>`
+      <li>
+        <a class="link-arrow" href="${it.link}" target="_blank" rel="noopener">
+          ${fmtInlineBold(escapeHTML(it.texto))}
+          <span class="arrow-icon" aria-hidden="true">↗</span>
+        </a>
+        ${(it.comentarios||[]).map(c=>`<div class="muted">${escapeHTML(c)}</div>`).join('')}
+      </li>
+    `).join('') + `</ul>`;
+  }
+
+  function renderTemaCard(container,item){
+    const fullText=buildBundle(item.title,item.dispositivos,item.remissoes);
+    const card=document.createElement('article');
+    card.className='card ubox';
+    card.dataset.slug=item.slug;
+    card.innerHTML=`
+      <header class="ficha-head">
+        <div class="actions chip-bar"></div>
+        <h1 class="h1">${escapeHTML(item.title)}</h1>
+      </header>
+      <section class="ubox-section">
+        <h3 class="ubox-sub">Dispositivos Legais (D)</h3>
+        ${renderList(item.dispositivos)}
+      </section>
+      <section class="ubox-section">
+        <h3 class="ubox-sub">Remissões Normativas (R)</h3>
+        ${renderList(item.remissoes)}
+      </section>
+    `;
+    const actionsEl=card.querySelector('.actions');
+    const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
+    const saved=isSaved(item.slug);
+    const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{ const added=toggleSaved(item.slug); saveBtn.textContent=added?'Remover':'Salvar'; if(added) saveBtn.setAttribute('data-variant','primary'); else saveBtn.removeAttribute('data-variant'); toast(added?'Tema salvo':'Removido','info',1400); });
+    const iaBtn=mkBtn('Estude com I.A.','', ()=>openIAPopover(iaBtn,item.title,fullText));
+    actionsEl.append(saveBtn, iaBtn);
+    container.appendChild(card);
+  }
+
+  async function ensureFileParsed(path,group){
+    if(CACHED_FILES.has(path)) return CACHED_FILES.get(path);
+    const raw=await fetchText(path);
+    const chunks=splitThemesByDelim(raw);
+    const parsed=chunks.map(parseTemaFromChunk).filter(Boolean);
+    const arr=parsed.map(t=>({ slug:`${slugify(group)}-${t.slug}`, title:t.title, dispositivos:t.dispositivos||[], remissoes:t.remissoes||[] }));
+    CACHED_FILES.set(path,arr);
+    return arr;
+  }
+
+  function scrollCardIntoViewTop(el){
+    if(!el) return;
+    el.scrollIntoView({ block:'start', behavior:'instant' in window ? 'instant' : 'auto' });
+    const topbar=$('.topbar');
+    const off=(topbar?.getBoundingClientRect().height || 64) + 16;
+    const targetTop=el.getBoundingClientRect().top + window.scrollY - off;
+    window.scrollTo({ top: Math.max(0, targetTop), left:0, behavior:'auto' });
+  }
+
+  async function loadTemaInfinite(slug){
+    leaveHomeMode(); restoreSearchToTopbar();
+
+    const meta=TEMAS.find(t=>t.slug===slug);
+    if(!meta){ $('#content').innerHTML=`<div class="card ubox"><p class="muted">Tema não encontrado.</p></div>`; return; }
+
+    const list=await ensureFileParsed(meta.path, meta.group);
+    const idx=list.findIndex(x=>x.slug===slug);
+    if(idx===-1){ $('#content').innerHTML=`<div class="card ubox"><p class="muted">Tema não encontrado no arquivo.</p></div>`; return; }
+
+    const host=$('#content');
+    host.innerHTML=`<div id="infiniteHost"></div>`;
+    const feed=$('#infiniteHost');
+
+    // janela inicial: selecionado ±5
+    let start=Math.max(0, idx-5);
+    let end  =Math.min(list.length-1, idx+5);
+
+    function mountRange(a,b,where='append'){
+      if(a>b) return;
+      const frag=document.createDocumentFragment();
+      for(let i=a;i<=b;i++) renderTemaCard(frag, list[i]);
+      if(where==='append') feed.appendChild(frag); else feed.prepend(frag);
+    }
+    mountRange(start,end,'append');
+
+    // Sentinelas para carregar mais 5
+    const topSentinel=document.createElement('div');
+    const bottomSentinel=document.createElement('div');
+    feed.prepend(topSentinel); feed.append(bottomSentinel);
+
+    const STEP=5;
+    const io=new IntersectionObserver((entries)=>{
+      for(const ent of entries){
+        if(!ent.isIntersecting) continue;
+        if(ent.target===bottomSentinel){
+          const nextEnd=Math.min(list.length-1, end+STEP);
+          if(nextEnd> end){ mountRange(end+1, nextEnd, 'append'); end=nextEnd; }
+        }
+        if(ent.target===topSentinel){
+          const nextStart=Math.max(0, start-STEP);
+          if(nextStart< start){ mountRange(nextStart, start-1, 'prepend'); start=nextStart; }
+        }
+      }
+    },{root:null, rootMargin:'600px 0px', threshold:0.01});
+    io.observe(bottomSentinel); io.observe(topSentinel);
+
+    // Atualiza hash pelo card dominante
+    let rafId=0;
+    const onScroll=()=>{
+      if(rafId) return;
+      rafId=requestAnimationFrame(()=>{
+        rafId=0;
+        const cards=$$('.card.ubox', feed);
+        const mid=window.scrollY + window.innerHeight*0.35;
+        for(const c of cards){
+          const r=c.getBoundingClientRect(); const top=r.top+window.scrollY; const bottom=top+r.height;
+          if(mid>=top && mid<=bottom){ const s=c.dataset.slug; if(s && !location.hash.endsWith(s)) history.replaceState(null,'', '#/tema/'+s); break; }
+        }
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive:true });
+
+    // Focar o card alvo logo abaixo da topbar
+    const targetEl=feed.querySelector(`.card.ubox[data-slug="${slug}"]`);
+    scrollCardIntoViewTop(targetEl);
+
+    // Cleanup on route change
+    const onHash=()=>{ io.disconnect(); window.removeEventListener('scroll', onScroll); };
+    window.addEventListener('hashchange', onHash, { once:true });
+  }
+
+  /* ===== Seeds & rotas ===== */
+  async function readAllSeeds(){
+    const seeds=$$('#menuList a.title[data-auto="1"][data-path]');
+    const temas=[];
+    for(const a of seeds){
+      const group=(a.dataset.group||'').trim()||'Geral';
+      const path =(a.dataset.path||'').trim();
+      if(!path) continue;
+      try{
+        const raw=await fetchText(path);
+        const chunks=splitThemesByDelim(raw);
+        const parsed=chunks.map(parseTemaFromChunk).filter(Boolean);
+        for(const t of parsed){
+          const slug = `${slugify(group)}-${t.slug}`;
+          const dispN=t.dispN||''; const remN=t.remN||''; const body=(dispN+' '+remN).toLowerCase();
+          temas.push({ slug, title:t.title, path, group, frag:t.slug, titleN:t.titleN, dispN, remN, bodyN:t.bodyN, bodyL:body });
+        }
+        CACHED_FILES.set(path, parsed.map(t=>({ slug:`${slugify(group)}-${t.slug}`, title:t.title, dispositivos:t.dispositivos||[], remissoes:t.remissoes||[] })));
+      }catch(e){ console.error('Seed falhou',path,e); toast(`Erro ao ler ${path}`,'error',2800); }
+    }
+    return temas;
+  }
+  async function loadTemas(){ TEMAS = await readAllSeeds(); renderMenu(); }
+
+  async function renderByRoute(){
+    const page=currentPage();
+    if(!TEMAS.length) await loadTemas();
+    if(page.kind==='tema') await loadTemaInfinite(page.slug);
+    else if(page.kind==='sobre'){
+      $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários.</p></div>`;
+      leaveHomeMode(); restoreSearchToTopbar();
+    } else { renderHome(); }
+  }
+
+  document.querySelector('#search')?.addEventListener('focus', closeAcDropdown);
+  window.addEventListener('hashchange', renderByRoute);
+  (async function init(){ await renderByRoute(); bindAutocomplete(); })();
+})();
