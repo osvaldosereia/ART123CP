@@ -1,19 +1,11 @@
------
-# Título do Tema (T)
-# Dispositivos Legais (D)
+# Capacidade Civil
+# Dispositivos Legais
 - Art. 1.º Toda pessoa é capaz de direitos e deveres na ordem civil.
--- Comentário opcional sobre o dispositivo.
-----
-- Súmula 284 do STF: É inadmissível o recurso extraordinário...
-----
-- Enunciado 9 CJF: A capacidade civil deve ser interpretada de forma ampla.
-
-# Remissões Normativas (R)
+# Remissões Normativas
 - Vide arts. 4.º e 5.º do CC.
--- Comentário: hipóteses de incapacidade.
-----
-- Ver também art. 7.º, caput, da LINDB.
--- Comentário: aplicação da lei no espaço.
-----
-- Consultar art. 70 do CPC.
--- Comentário: domicílio da pessoa jurídica.
+-- Tratam, respectivamente, da incapacidade relativa e das hipóteses em que cessa a incapacidade para os menores.
+- Vide art. 7.º, caput, da LINDB.
+-- Estabelece que a lei do país de domicílio da pessoa determina as regras sobre o começo e o fim da personalidade, o nome, a capacidade e os direitos de família.
+- Vide art. 70 do CPC.
+-- Dispõe sobre a capacidade processual, afirmando que toda pessoa que se encontre no exercício de seus direitos tem capacidade para estar em juízo.
+-----
