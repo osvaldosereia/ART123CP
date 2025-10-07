@@ -555,5 +555,5 @@
 
   document.querySelector('#search')?.addEventListener('focus', closeAcDropdown);
   window.addEventListener('hashchange', renderByRoute);
-  (async function init(){ await renderByRoute(); bindAutocomplete(); })();
+  (async function init(){ closeDrawer(); await renderByRoute(); bindAutocomplete(); })();
 })();
