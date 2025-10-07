@@ -1,4 +1,4 @@
-// meujus – app.js (2025-10-07) – Home minimalista + fechamento do drawer + seta ↗ em mini-botão
+// meujus – app.js (2025-10-07) – Home sem topbar + logo e busca lado a lado + melhorias
 
 (function(){
   const $  = (q, el=document) => el.querySelector(q);
@@ -101,7 +101,7 @@
     .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
     .trim();
 
-  // ===== IA Prompts: recebem (title, fullText) =====
+  // ===== IA Prompts =====
   const IA_PROMPTS = {
     resumo:    (t,full) => `Resuma de forma didática e objetiva o tema a seguir, explicando seus principais conceitos jurídicos e fundamentos legais.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
     detalhada: (t,full) => `Explique detalhadamente e transcreva o texto original dos dispositivos e remissões abaixo, analisando conteúdo, finalidade e aplicação prática.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
@@ -113,7 +113,7 @@
   };
   const googleIA = (prompt) => `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
 
-  // ===== Parser para o TXT antigo =====
+  // ===== Parser (TXT antigo) =====
   function parseTemaFromChunk(chunk){
     const fixed = chunk.replace(/^\s*##\s+##\s+/mg, '## ');
     const mTitle = fixed.match(/^\s*#\s+(.+?)\s*$/m);
@@ -122,7 +122,6 @@
     const title = mTitle[1].trim();
     const slug  = slugify(title);
 
-    // Localiza headings e limites das seções
     const rxHead = /^\s*#\s+(.+?)\s*$/mg;
     const sections = [];
     let m;
@@ -138,7 +137,6 @@
     const secD = sections.find(s => /^dispositivos\s+legais\b/.test(s.nm));
     const secR = sections.find(s => /^remissoes\s+normativas\b/.test(s.nm));
 
-    // Lista: aceita indentação, ignora linhas vazias, para em novo heading ou '-----'
     function parseList(sec){
       if(!sec) return [];
       const body = fixed.slice(sec.start, sec.end);
@@ -149,11 +147,11 @@
         const L = rawLine.replace(/\r/g,'').trimEnd();
         if(!L.trim()) continue;
 
-        if (/^\s*#\s+/.test(L)) break;     // novo heading
-        if (/^\s*-{5}\s*$/.test(L)) break; // fim do card
-        if (/^\s*-{4}\s*$/.test(L)) continue; // divisor antigo
+        if (/^\s*#\s+/.test(L)) break;
+        if (/^\s*-{5}\s*$/.test(L)) break;
+        if (/^\s*-{4}\s*$/.test(L)) continue;
 
-        if (/^\s*--\s+/.test(L)){          // comentário
+        if (/^\s*--\s+/.test(L)){
           const c = L.replace(/^\s*--+\s*/, '').trim();
           if (last) {
             if (!last.comentarios) last.comentarios = [];
@@ -162,7 +160,7 @@
           continue;
         }
 
-        if (/^\s*-\s+/.test(L)){           // item
+        if (/^\s*-\s+/.test(L)){
           const texto = L.replace(/^\s*-+\s*/, '').trim();
           last = { texto, comentario:null };
           out.push(last);
@@ -175,19 +173,15 @@
     const dispositivos = parseList(secD);
     const remissoes    = parseList(secR);
 
-    // Links por item
     const mkLink = (txt) => googleIA(IA_PROMPTS.detalhada(title, `${txt}`));
     for(const it of dispositivos){ it.link = mkLink(`${title} — ${it.texto}`); }
     for(const it of remissoes){    it.link = mkLink(`${title} — ${it.texto}`); }
 
-    // textos por seção para busca
-    const dispText = dispositivos.map(x=>x.texto + (x.comentario?` ${x.comentario}`:'' )).join(' ');
-    const remText  = remissoes.map(x=>x.texto + (x.comentario?` ${x.comentario}`:'' )).join(' ');
+    const dispText = dispositivos.map(x=>x.texto + (x.comentarios?` ${x.comentarios.join(' ')}`:'' )).join(' ');
+    const remText  = remissoes.map(x=>x.texto + (x.comentarios?` ${x.comentarios.join(' ')}`:'' )).join(' ');
 
     return {
-      slug,
-      title,
-      group: '', path: '', frag: slug,
+      slug, title, group: '', path: '', frag: slug,
       dispositivos, remissoes,
       titleL: title.toLowerCase(),
       bodyL: (dispText + ' ' + remText).toLowerCase(),
@@ -225,7 +219,7 @@
     return String(escapedHtml).replace(/\*([^*]+)\*/g, '<strong>$1</strong>');
   }
 
-  /* ===== Etiquetas util ===== */
+  /* ===== Etiquetas ===== */
   function labelFromFlags(flags){
     const tags = [];
     if(flags.T) tags.push('(T)');
@@ -234,7 +228,7 @@
     return tags.length ? tags.join(' ') : '';
   }
 
-  /* ===== Chips pós-busca ===== */
+  /* ===== Dropdown pós-busca ===== */
   function getLastAc(){
     try{ return JSON.parse(sessionStorage.getItem(LAST_AC_KEY)||'null'); }catch(_){ return null; }
   }
@@ -299,7 +293,6 @@
   }
 
   function bindAutocomplete(){
-    // Recoleta referências (caso #search tenha sido movido)
     input  = document.querySelector('#search');
     acList = document.querySelector('#suggestions');
     if (acList) acList.hidden = true;
@@ -429,7 +422,7 @@
     return temas;
   }
 
-  /* ===== Drawer helpers (fechar ao clicar em um item) ===== */
+  /* ===== Drawer helpers ===== */
   function closeDrawer(){
     const drawer   = document.getElementById('drawer');
     const openBtn  = document.getElementById('btnMenu');
@@ -521,14 +514,14 @@
       li.appendChild(btn); li.appendChild(ul); menu.appendChild(li);
     }
 
-    // >>> Fechar drawer ao clicar em qualquer link .title
+    // Fechar drawer ao clicar em qualquer link .title
     menu.addEventListener('click', (e)=>{
       const a = e.target.closest('a.title');
       if(a){ closeDrawer(); }
     });
   }
 
-  /* ===== Home minimalista (logo + busca ao centro) ===== */
+  /* ===== Home minimalista: esconde topbar e mostra logo+busca lado a lado ===== */
 
   // Guardar posição original da search-wrap para mover/voltar
   const searchWrap = document.querySelector('.search-wrap');
@@ -538,7 +531,7 @@
   function moveSearchTo(container){
     if(!searchWrap || !container) return;
     container.appendChild(searchWrap);
-    bindAutocomplete(); // reata os listeners ao novo #search
+    bindAutocomplete();
   }
   function restoreSearchToTopbar(){
     if(!searchWrap || !searchWrapParent) return;
@@ -547,16 +540,22 @@
     }else{
       searchWrapParent.appendChild(searchWrap);
     }
-    bindAutocomplete(); // garante listeners
+    bindAutocomplete();
   }
+
+  function enterHomeMode(){ document.body.classList.add('is-home'); }
+  function leaveHomeMode(){ document.body.classList.remove('is-home'); }
 
   function renderHome(){
     const actionsEl=$('#actions'); const titleEl=$('#themeTitle'); const contentEl=$('#content');
+    enterHomeMode();
     actionsEl.innerHTML=''; titleEl.textContent='';
     contentEl.innerHTML = `
       <section class="home-center" aria-label="Busca principal">
-        <div class="home-logo"><span class="b1">Meu</span><span class="b2">Jus</span></div>
-        <div class="home-search-host"></div>
+        <div class="home-inline">
+          <div class="home-logo"><span class="b1">Meu</span><span class="b2">Jus</span></div>
+          <div class="home-search-host"></div>
+        </div>
       </section>
     `;
     moveSearchTo(contentEl.querySelector('.home-search-host'));
@@ -643,7 +642,8 @@
     const meta=TEMAS.find(t=>t.slug===slug); const path=meta?.path; const frag=meta?.frag;
     if(!path){ contentEl.textContent='Tema não encontrado.'; toast('Tema não encontrado','error'); return; }
 
-    // Ao entrar numa página de tema, restaurar a search para a topbar
+    // Ao entrar em tema, volta topbar e restaura busca
+    leaveHomeMode();
     restoreSearchToTopbar();
 
     try{
@@ -678,10 +678,6 @@
       bar.className='chip-bar';
       bar.append(saveBtn, iaBtn);
       actionsEl.append(bar);
-
-      if (typeof window.renderPostSearchChips === 'function') {
-        try { window.renderPostSearchChips(); } catch(_) {}
-      }
 
       const sep = `<hr style="border:none;border-top:1px solid #e9ecef;margin:8px 0">`;
 
@@ -722,10 +718,11 @@
   }
 
   function loadSobre(){
+    leaveHomeMode();
     restoreSearchToTopbar();
     $('#actions').innerHTML='';
     $('#themeTitle').textContent='Sobre';
-    $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários. As etiquetas (T) (D) (R) são incluídas automaticamente na UI.</p></div>`;
+    $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários.</p></div>`;
   }
 
   async function renderByRoute(){
@@ -736,7 +733,6 @@
     else { renderHome(); }
   }
 
-  // Fechar dropdown de sugestões quando focar no search (evita sobreposições)
   document.querySelector('#search')?.addEventListener('focus', closeAcDropdown);
 
   window.addEventListener('hashchange', renderByRoute);
