@@ -218,59 +218,186 @@
     drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true');
     openBtn?.setAttribute('aria-expanded','false'); document.body.classList.remove('noscroll'); openBtn?.focus?.();
   }
-  function renderMenu(){
-    const menu=$('#menuList'); if(!menu) return;
-    menu.innerHTML='';
-    // Sobre
-    const liSobre=document.createElement('li');
-    const btnSobre=document.createElement('button');
-    btnSobre.className='cat-btn'; btnSobre.type='button';
-    btnSobre.innerHTML=`<span>Sobre</span><span class="caret">▸</span>`;
-    btnSobre.addEventListener('click', ()=> window.__openSobre?.());
-    liSobre.appendChild(btnSobre); menu.appendChild(liSobre);
+  Beleza — vamos trocar **só o bloco 1 (`renderMenu`)**.
 
-    // Salvos
-    const saved=readSaved();
-    const liSaved=document.createElement('li'); liSaved.className='item';
-    const btnSaved=document.createElement('button');
-    btnSaved.className='cat-btn'; btnSaved.setAttribute('aria-expanded','false');
-    btnSaved.innerHTML=`<span>Salvos</span><span class="caret">▸</span>`;
-    const ulSaved=document.createElement('ul'); ulSaved.className='sublist'; ulSaved.hidden=true;
+# O que SAI (remova o bloco inteiro atual)
 
-    if(saved.length){
-      const map=new Map(TEMAS.map(t=>[t.slug,t]));
-      ulSaved.innerHTML = saved.map(slug=>{
-        const t=map.get(slug); if(!t) return '';
-        return `<li><a class="title" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a> <button class="mini" data-remove="${t.slug}">Remover</button></li>`;
-      }).join('');
-    }else{
-      ulSaved.innerHTML = `<li><a class="title" href="#/sobre">Nenhum tema salvo</a></li>`;
-    }
-    btnSaved.addEventListener('click',()=>{ const open=btnSaved.getAttribute('aria-expanded')==='true'; btnSaved.setAttribute('aria-expanded', String(!open)); ulSaved.hidden=open; });
-    liSaved.appendChild(btnSaved); liSaved.appendChild(ulSaved); menu.appendChild(liSaved);
-    ulSaved.querySelectorAll('button[data-remove]')?.forEach(b=>{
-      b.addEventListener('click',(ev)=>{ ev.preventDefault(); const slug=b.getAttribute('data-remove'); const now=toggleSaved(slug); toast(now?'Tema salvo':'Removido','info',1400); renderMenu(); });
+```javascript
+function renderMenu(){
+  const menu=$('#menuList'); if(!menu) return;
+  menu.innerHTML='';
+  // Sobre
+  const liSobre=document.createElement('li');
+  const btnSobre=document.createElement('button');
+  btnSobre.className='cat-btn'; btnSobre.type='button';
+  btnSobre.innerHTML=`<span>Sobre</span><span class="caret">▸</span>`;
+  btnSobre.addEventListener('click', ()=> window.__openSobre?.());
+  liSobre.appendChild(btnSobre); menu.appendChild(liSobre);
+
+  // Salvos
+  const saved=readSaved();
+  const liSaved=document.createElement('li'); liSaved.className='item';
+  const btnSaved=document.createElement('button');
+  btnSaved.className='cat-btn'; btnSaved.setAttribute('aria-expanded','false');
+  btnSaved.innerHTML=`<span>Salvos</span><span class="caret">▸</span>`;
+  const ulSaved=document.createElement('ul'); ulSaved.className='sublist'; ulSaved.hidden=true;
+
+  if(saved.length){
+    const map=new Map(TEMAS.map(t=>[t.slug,t]));
+    ulSaved.innerHTML = saved.map(slug=>{
+      const t=map.get(slug); if(!t) return '';
+      return `<li><a class="title" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a> <button class="mini" data-remove="${t.slug}">Remover</button></li>`;
+    }).join('');
+  }else{
+    ulSaved.innerHTML = `<li><a class="title" href="#/sobre">Nenhum tema salvo</a></li>`;
+  }
+  btnSaved.addEventListener('click',()=>{ const open=btnSaved.getAttribute('aria-expanded')==='true'; btnSaved.setAttribute('aria-expanded', String(!open)); ulSaved.hidden=open; });
+  liSaved.appendChild(btnSaved); liSaved.appendChild(ulSaved); menu.appendChild(liSaved);
+  ulSaved.querySelectorAll('button[data-remove]')?.forEach(b=>{
+    b.addEventListener('click',(ev)=>{ ev.preventDefault(); const slug=b.getAttribute('data-remove'); const now=toggleSaved(slug); toast(now?'Tema salvo':'Removido','info',1400); renderMenu(); });
+  });
+
+  const div=document.createElement('div'); div.className='divider'; menu.appendChild(div);
+  const title=document.createElement('div'); title.className='menu-title'; title.textContent='Categorias'; menu.appendChild(title);
+
+  const byCat=new Map();
+  for(const t of TEMAS){ const key=t.group||'Geral'; if(!byCat.has(key)) byCat.set(key,[]); byCat.get(key).push(t); }
+  const cats=[...byCat.keys()].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+  for(const cat of cats){
+    const temas=byCat.get(cat).slice().sort((a,b)=>a.title.localeCompare(b.title,'pt-BR'));
+    const li=document.createElement('li'); li.className='item';
+    const btn=document.createElement('button'); btn.className='cat-btn'; btn.setAttribute('aria-expanded','false');
+    btn.innerHTML=`<span>${escapeHTML(cat)}</span><span class="caret">▸</span>`;
+    const ul=document.createElement('ul'); ul.className='sublist'; ul.hidden=true;
+    ul.innerHTML=temas.map(t=>`<li><a class="title" href="#/tema/${t.slug}" data-path="${t.path}" data-frag="${t.frag}" data-title="${escapeHTML(t.title)}">${escapeHTML(t.title)}</a></li>`).join('');
+    btn.addEventListener('click',()=>{ const open=btn.getAttribute('aria-expanded')==='true'; btn.setAttribute('aria-expanded', String(!open)); ul.hidden=open; });
+    li.appendChild(btn); li.appendChild(ul); menu.appendChild(li);
+  }
+
+  menu.addEventListener('click',(e)=>{ const a=e.target.closest('a.title'); if(a){ closeDrawer(); }});
+}
+```
+
+# O que ENTRA (cole no lugar)
+
+```javascript
+function renderMenu(){
+  const menu = $('#menuList');
+  if (!menu) return;
+
+  // Evita múltiplos handlers acumulados
+  if (!menu.dataset.bound) {
+    menu.addEventListener('click', (e) => {
+      const a = e.target.closest('a.title');
+      if (a) {
+        e.stopPropagation();
+        closeDrawer();
+      }
+    });
+    menu.dataset.bound = '1';
+  }
+
+  menu.innerHTML = '';
+
+  // === Sobre ===
+  const liSobre = document.createElement('li');
+  const linkSobre = document.createElement('a');
+  linkSobre.className = 'title';
+  linkSobre.href = '#/sobre';
+  linkSobre.textContent = 'Sobre';
+  liSobre.appendChild(linkSobre);
+  menu.appendChild(liSobre);
+
+  // === Salvos ===
+  let saved = [];
+  try { saved = readSaved(); } catch {}
+  const liSaved = document.createElement('li'); liSaved.className = 'item';
+  const btnSaved = document.createElement('button');
+  btnSaved.className = 'cat-btn'; btnSaved.type = 'button';
+  btnSaved.setAttribute('aria-expanded', 'false');
+  btnSaved.innerHTML = `<span>Salvos</span><span class="caret">▸</span>`;
+  const ulSaved = document.createElement('ul'); ulSaved.className = 'sublist'; ulSaved.hidden = true;
+
+  if (saved.length) {
+    const map = new Map(TEMAS.map(t => [t.slug, t]));
+    ulSaved.innerHTML = saved.map(slug => {
+      const t = map.get(slug); if (!t) return '';
+      return `<li>
+        <a class="title" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
+        <button class="mini" data-remove="${t.slug}" type="button">Remover</button>
+      </li>`;
+    }).join('');
+  } else {
+    ulSaved.innerHTML = `<li><a class="title" href="#/sobre">Nenhum tema salvo</a></li>`;
+  }
+
+  btnSaved.addEventListener('click', () => {
+    const open = btnSaved.getAttribute('aria-expanded') === 'true';
+    btnSaved.setAttribute('aria-expanded', String(!open));
+    ulSaved.hidden = open;
+  });
+
+  liSaved.appendChild(btnSaved);
+  liSaved.appendChild(ulSaved);
+  menu.appendChild(liSaved);
+
+  // Remoção de itens salvos (delegado no próprio UL após preencher)
+  ulSaved.querySelectorAll('button[data-remove]').forEach(b => {
+    b.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      const slug = b.getAttribute('data-remove');
+      const now = toggleSaved(slug);
+      toast(now ? 'Tema salvo' : 'Removido', 'info', 1400);
+      renderMenu(); // re-renderiza lista de salvos
+    });
+  });
+
+  // Separador
+  const div = document.createElement('div');
+  div.className = 'divider';
+  menu.appendChild(div);
+
+  // Título "Categorias"
+  const title = document.createElement('div');
+  title.className = 'menu-title';
+  title.textContent = 'Categorias';
+  menu.appendChild(title);
+
+  // === Categorias dinâmicas ===
+  const byCat = new Map();
+  for (const t of TEMAS) {
+    const key = t.group || 'Geral';
+    if (!byCat.has(key)) byCat.set(key, []);
+    byCat.get(key).push(t);
+  }
+  const cats = [...byCat.keys()].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+  for (const cat of cats) {
+    const temas = byCat.get(cat).slice().sort((a, b) => a.title.localeCompare(b.title, 'pt-BR'));
+
+    const li = document.createElement('li'); li.className = 'item';
+    const btn = document.createElement('button');
+    btn.className = 'cat-btn'; btn.type = 'button';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = `<span>${escapeHTML(cat)}</span><span class="caret">▸</span>`;
+
+    const ul = document.createElement('ul'); ul.className = 'sublist'; ul.hidden = true;
+    ul.innerHTML = temas.map(t =>
+      `<li><a class="title" href="#/tema/${t.slug}" data-path="${t.path}" data-frag="${t.frag}" data-title="${escapeHTML(t.title)}">${escapeHTML(t.title)}</a></li>`
+    ).join('');
+
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      ul.hidden = open;
     });
 
-    const div=document.createElement('div'); div.className='divider'; menu.appendChild(div);
-    const title=document.createElement('div'); title.className='menu-title'; title.textContent='Categorias'; menu.appendChild(title);
-
-    const byCat=new Map();
-    for(const t of TEMAS){ const key=t.group||'Geral'; if(!byCat.has(key)) byCat.set(key,[]); byCat.get(key).push(t); }
-    const cats=[...byCat.keys()].sort((a,b)=>a.localeCompare(b,'pt-BR'));
-    for(const cat of cats){
-      const temas=byCat.get(cat).slice().sort((a,b)=>a.title.localeCompare(b.title,'pt-BR'));
-      const li=document.createElement('li'); li.className='item';
-      const btn=document.createElement('button'); btn.className='cat-btn'; btn.setAttribute('aria-expanded','false');
-      btn.innerHTML=`<span>${escapeHTML(cat)}</span><span class="caret">▸</span>`;
-      const ul=document.createElement('ul'); ul.className='sublist'; ul.hidden=true;
-      ul.innerHTML=temas.map(t=>`<li><a class="title" href="#/tema/${t.slug}" data-path="${t.path}" data-frag="${t.frag}" data-title="${escapeHTML(t.title)}">${escapeHTML(t.title)}</a></li>`).join('');
-      btn.addEventListener('click',()=>{ const open=btn.getAttribute('aria-expanded')==='true'; btn.setAttribute('aria-expanded', String(!open)); ul.hidden=open; });
-      li.appendChild(btn); li.appendChild(ul); menu.appendChild(li);
-    }
-
-    menu.addEventListener('click',(e)=>{ const a=e.target.closest('a.title'); if(a){ closeDrawer(); }});
+    li.appendChild(btn);
+    li.appendChild(ul);
+    menu.appendChild(li);
   }
+}
 
   /* ===== Home ===== */
   const searchWrap=document.querySelector('.search-wrap');
