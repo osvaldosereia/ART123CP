@@ -1,5 +1,14 @@
 // SPA com página inicial minimalista abaixo da topbar.
 // Rotas: #/ (home) • #/tema/:slug • #/sobre
+// Estrutura TXT esperada por tema:
+// # Título (T)
+// # Dispositivos Legais (D)
+// - linha linkável
+// -- comentário opcional
+// ---- (divisor interno entre itens)
+// ----- (fim da seção)
+// # Remissões Normativas (R)
+// (mesma lógica de itens/comentários/divisores)
 
 (function(){
   const $  = (q, el=document) => el.querySelector(q);
@@ -96,59 +105,104 @@
     return txt.split(/^\s*-{3,}\s*$/m).map(s=>s.trim()).filter(Boolean);
   }
 
+  // ===== Normalizador de headings (remove tags e pontuação)
+  const normalizeHeading=(h)=> (h||'')
+    .toLowerCase()
+    .replace(/\(.*?\)/g,'') // remove "(T) (D) (R)" do fim
+    .replace(/[.#:]/g,' ')
+    .replace(/\s+/g,' ')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .trim();
+
+  // ===== Prompts IA
+  const IA_PROMPTS = {
+    resumo:    t => `Resuma de forma didática e objetiva o tema a seguir, explicando seus principais conceitos jurídicos e fundamentos legais. Tema: ${t}`,
+    detalhada: t => `Explique detalhadamente e transcreva o texto original do dispositivo ou norma indicada, analisando seu conteúdo, finalidade e aplicação prática. Tema: ${t}`,
+    perguntas: t => `Crie 10 perguntas abertas de aprofundamento teórico sobre o tema a seguir, com base em fontes jurídicas confiáveis. Tema: ${t}`,
+    questoes:  t => `Crie 10 questões objetivas com 4 alternativas (A–D), no estilo OAB/Cebraspe, com gabarito e justificativas. Tema: ${t}`,
+    casos:     t => `Crie 3 casos concretos práticos com solução fundamentada sobre o tema a seguir. Tema: ${t}`,
+    videos:    t => `Liste e descreva brevemente 5 vídeos do YouTube relevantes e recentes sobre o tema a seguir, voltados a estudantes de Direito. Tema: ${t}`,
+    artigos:   t => `Liste e descreva brevemente 5 artigos jurídicos recentes sobre o tema a seguir, publicados em sites confiáveis como Migalhas, ConJur ou Jusbrasil. Tema: ${t}`,
+  };
+  const googleIA = (prompt) => `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
+
+  // ===== Parser Título / Dispositivos (D) / Remissões (R)
   function parseTemaFromChunk(chunk){
     const fixed = chunk.replace(/^\s*##\s+##\s+/mg, '## ');
-    const mTitle = fixed.match(/^\s*#\s+(.+)$/m);
+    const mTitle = fixed.match(/^\s*#\s+(.+?)\s*$/m);
     if(!mTitle) return null;
-    const title = mTitle[1].trim();
-    const slug  = slugify(title);
 
-    // introdução: linhas que começam com "-- "
-    const intro = Array.from(fixed.matchAll(/^\s*--\s+(.+)$/mg)).map(m=>m[1].trim());
+    const titleRaw = mTitle[1].trim();
+    const title    = titleRaw.replace(/\s*\(\s*T\s*\)\s*$/i, '').trim();
+    const slug     = slugify(title);
 
-    // dividir por headings: >=2 "#", e também aceitar "# Referências do Tema"
-    const secs = [];
-    const rx = /^\s*#{1,}\s+(.+?)\s*$/mg;
+    // encontrar delimitações das seções com # heading
+    const rxHead = /^\s*#\s+(.+?)\s*$/mg;
+    const sections = [];
     let m;
-
-    // posição do título (primeiro "# ...")
-    const titlePos = (mTitle && typeof mTitle.index === 'number') ? mTitle.index : -1;
-
-    while ((m = rx.exec(fixed))) {
+    while ((m = rxHead.exec(fixed))) {
       const name = m[1].trim();
-      const isTitle = m.index === titlePos;
-      const hashes = (fixed.slice(m.index).match(/^\s*(#+)\s+/)?.[1].length) || 1;
       const nm = normalizeHeading(name);
-
-      // aceita: "##+" qualquer; ou "# ..." somente se for "referencias do tema"
-      const accept = hashes >= 2 || (!isTitle && hashes === 1 && /^referencias? do tema$/.test(nm));
-      if (!accept) continue;
-
-      const start = rx.lastIndex;
-      const prev = secs.at(-1);
+      const start = rxHead.lastIndex;
+      const prev = sections.at(-1);
       if (prev) prev.end = m.index;
-      secs.push({ name, start, end: fixed.length });
+      sections.push({ raw:name, nm, start, end: fixed.length });
     }
+    // mapear o conteúdo das seções que importam
+    const secD = sections.find(s => /^dispositivos\s+legais\b/.test(s.nm));
+    const secR = sections.find(s => /^remissoes\s+normativas\b/.test(s.nm));
 
-    // perguntas, referências e fontes
-    let ask=[], refs=[], fontes=[];
-    for(const s of secs){
-      const nm=normalizeHeading(s.name);
-      const body=fixed.slice(s.start,s.end);
-      if(isQA(nm)){
-        ask=ask.concat(Array.from(body.matchAll(/^\s*-\s+(.+?)\s*$/mg)).map(x=>x[1].trim()));
-      }else if(/^(referencias?|refer\u00eancias?)\s+do\s+tema\b/.test(nm)){
-        refs=refs.concat(Array.from(body.matchAll(/^\s*---\s+(.+?)\s*$/mg)).map(x=>x[1].trim()));
-      }else if(/^fontes$/.test(nm)){
-        fontes=fontes.concat(Array.from(body.matchAll(/^\s*-\s+(.+?)\s*$/mg)).map(x=>x[1].trim()));
+    function parseList(sec){
+      if(!sec) return [];
+      const body = fixed.slice(sec.start, sec.end);
+      const lines = body.split('\n');
+      const out = [];
+      let last = null;
+      for(const line of lines){
+        const L = line.trim();
+        if(!L) continue;
+        if(L === '-----') break;           // fim da seção
+        if(L === '----') { last = null; continue; } // divisor interno: apenas respiro
+        if(/^-\s+/.test(L)){               // item linkado
+          const texto = L.replace(/^-+\s*/, '').trim();
+          last = { texto, comentario:null };
+          out.push(last);
+          continue;
+        }
+        if(/^--\s+/.test(L)){              // comentário
+          const c = L.replace(/^--+\s*/, '').trim();
+          if(last) last.comentario = c;
+          continue;
+        }
+        // linhas avulsas: ignora
       }
+      return out;
     }
-    return { slug, title, intro, ask, refs, fontes };
-  }
 
-  const normalizeHeading=(h)=> (h||'').toLowerCase().replace(/[.#:]/g,' ').replace(/\s+/g,' ')
-                      .normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
-  const isQA=(nm)=> /\bpergunte\s+pra\s+i\s*\.?\s*a\b/.test(nm) || (/estude\s+com\s+o\s+google/.test(nm) && /\bi\s*\.?\s*a\b/.test(nm));
+    const dispositivos = parseList(secD);
+    const remissoes    = parseList(secR);
+
+    // gerar links IA por item
+    const mkLink = (txt) => googleIA(IA_PROMPTS.detalhada(txt));
+    for(const it of dispositivos){ it.link = mkLink(title + ' — ' + it.texto); }
+    for(const it of remissoes){    it.link = mkLink(title + ' — ' + it.texto); }
+
+    // campos para busca
+    const bodyText = [
+      dispositivos.map(x=>x.texto).join(' '),
+      remissoes.map(x=>x.texto).join(' ')
+    ].join(' ');
+    return {
+      slug,
+      title,
+      group: '', path: '', frag: slug,
+      dispositivos, remissoes,
+      titleL: title.toLowerCase(),
+      bodyL: bodyText.toLowerCase(),
+      titleN: normPT(title),
+      bodyN: normPT(bodyText)
+    };
+  }
 
   // ===== Destaque de palavras (>=4 letras)
   function _buildHighlightRegex(q){
@@ -274,9 +328,8 @@
 
   function scoreFields(q, t){
     const sT = _hitPT(t.titleN, q);
-    const sI = _hitPT(t.introN, q);
-    const sP = _hitPT(t.askN,   q);
-    return { score: 1.0*sT + 0.5*sI + 0.8*sP, flags: { t: sT>0, i: sI>0, p: sP>0 } };
+    const sB = _hitPT(t.bodyN,  q);
+    return { score: 1.0*sT + 0.8*sB, flags: { t: sT>0, b: sB>0 } };
   }
 
   input?.addEventListener('input', e=>{
@@ -329,12 +382,11 @@
       const titleHTML = highlightTitle(t.title, q);
       const badges = [
         flags.t?'<span class="badge t">T</span>':'',
-        flags.i?'<span class="badge i">I</span>':'',
-        flags.p?'<span class="badge p">P</span>':'',
+        flags.b?'<span class="badge i">E</span>':'', // reaproveitando badge para indicar corpo
       ].join('');
       return `
         <li role="option">
-          <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['t','i','p'].filter(k=>flags[k]).join('')}">
+          <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['t','b'].filter(k=>flags[k]).join('')}">
             <div class="s1">${titleHTML}<span class="badges">${badges}</span></div>
             <div class="s2">${(t.group||'').replace(/</g,'&lt;')}</div>
           </a>
@@ -390,20 +442,13 @@
         const parsed = chunks.map(parseTemaFromChunk).filter(Boolean);
         for (const t of parsed){
           const slug  = `${slugify(group)}-${t.slug}`;
-          const intro = (t.intro||[]).join(' ');
-          const ask   = (t.ask||[]).join(' ');
+          const body  = t.bodyL || '';
           temas.push({
             slug, title: t.title, path, tags: [], group, frag: t.slug,
-            refs: t.refs||[],
-            fontes: t.fontes||[],
-            titleL: (t.title||'').toLowerCase(),
-            introL: intro.toLowerCase(),
-            askL:   ask.toLowerCase(),
-            blob:   (t.title + ' ' + intro + ' ' + ask).toLowerCase(),
-            // normalizados para busca PT
-            titleN: normPT(t.title),
-            introN: normPT(intro),
-            askN:   normPT(ask)
+            dispositivos: t.dispositivos||[],
+            remissoes:    t.remissoes||[],
+            titleL: t.titleL, bodyL: body,
+            titleN: t.titleN, bodyN: t.bodyN
           });
         }
       }catch(e){
@@ -588,14 +633,6 @@
             <div class="home-item">
               <a class="tt" href="#/tema/${t.slug}">${escapeHTML(t.title)}</a>
               <span class="gg">${escapeHTML(t.group||'')}</span>
-              <span class="act">
-                <a class="mini"
-                   href="https://www.google.com/search?udm=50&q=${encodeURIComponent('Explique o tema de forma rápida e objetiva utilizando apenas informações vindas de sites jurídicos. Ao final apresente as fontes. Tema: ' + t.title)}"
-                   target="_blank" rel="noopener">Explicação Rápida</a>
-                <a class="mini"
-                   href="https://www.google.com/search?udm=50&q=${encodeURIComponent('Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), apenas com base em fontes jurídicas confiáveis. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + t.title)}"
-                   target="_blank" rel="noopener">10 Questões</a>
-              </span>
             </div>`).join('')}
         </div>
       </section>
@@ -620,6 +657,65 @@
         const name=c.getAttribute('data-cat'); openDrawer(); expandCategory(name);
       });
     });
+  }
+
+  /* ===== IA Popover ===== */
+  let __iaPop = null;
+  function closeIAPopover(){
+    __iaPop?.remove(); __iaPop = null;
+    document.removeEventListener('click', onDocClickCloseIA, true);
+    window.removeEventListener('scroll', closeIAPopover, true);
+    window.removeEventListener('hashchange', closeIAPopover, {once:true});
+  }
+  function onDocClickCloseIA(e){
+    if(__iaPop && !__iaPop.contains(e.target)) closeIAPopover();
+  }
+  function openIAPopover(anchorBtn, title){
+    closeIAPopover();
+    const host = $('#iaPopoverHost') || document.body;
+
+    const opts = [
+      {key:'resumo',    label:'Resumo'},
+      {key:'detalhada', label:'Detalhada'},
+      {key:'perguntas', label:'10 Perguntas'},
+      {key:'questoes',  label:'10 Questões'},
+      {key:'casos',     label:'Casos Concretos'},
+      {key:'videos',    label:'Vídeos'},
+      {key:'artigos',   label:'Artigos'},
+    ];
+
+    __iaPop = document.createElement('div');
+    __iaPop.className = 'ia-popover';
+    __iaPop.setAttribute('role','menu');
+    __iaPop.innerHTML = opts.map(o=>`<button class="ia-opt" data-k="${o.key}" role="menuitem">${o.label}</button>`).join('');
+    host.appendChild(__iaPop);
+
+    // posição
+    const r = anchorBtn.getBoundingClientRect();
+    const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    const padX = 8;
+    const popW = Math.min(320, vw - padX*2);
+    const left = Math.min(Math.max(r.left + window.scrollX, padX), vw - padX - popW);
+    __iaPop.style.left = left + 'px';
+    __iaPop.style.top  = (r.bottom + window.scrollY + 6) + 'px';
+    __iaPop.style.maxWidth = popW + 'px';
+
+    // handlers
+    __iaPop.querySelectorAll('.ia-opt').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const k = btn.getAttribute('data-k');
+        const fn = IA_PROMPTS[k]; if(!fn) return;
+        const url = googleIA(fn(title));
+        window.open(url, '_blank', 'noopener');
+        closeIAPopover();
+      });
+    });
+
+    setTimeout(()=>{
+      document.addEventListener('click', onDocClickCloseIA, true);
+      window.addEventListener('scroll', closeIAPopover, true);
+      window.addEventListener('hashchange', closeIAPopover, {once:true});
+    },0);
   }
 
   /* ===== Páginas ===== */
@@ -647,11 +743,8 @@
 
       try{ localStorage.setItem(LAST_KEY, slug); }catch(_){}
 
-      let lastSearch = null;
-      try{ lastSearch = JSON.parse(sessionStorage.getItem(LAST_SEARCH_KEY)||'null'); }catch(_){}
-      const shouldHighlight = !!(lastSearch && /[ip]/.test(lastSearch.flags||''));
-
       actionsEl.innerHTML='';
+      // ==== Barra de chips abaixo do título ====
       const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
       const saved=isSaved(slug);
       const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'secondary':'primary', ()=>{
@@ -661,86 +754,41 @@
         renderMenu();
         toast(added?'Tema salvo':'Removido dos salvos', added?'success':'info', 1400);
       });
-      const studyBtn = mkBtn('Explicação Rápida','', ()=>window.open(
-        'https://www.google.com/search?udm=50&q=' + encodeURIComponent(
-          'Explique o tema de forma rápida e objetiva para estudantes de direito, seja organizado e didático, ' +
-          'utilizando apenas informações vindas de sites jurídicos. Ao final apresente as fontes. Tema: ' + pageTitle
-        ),
-        '_blank','noopener'
-      ));
-      const trainBtn = mkBtn('10 Questões','', ()=>window.open(
-        'https://www.google.com/search?udm=50&q=' + encodeURIComponent(
-          'Crie 10 questões objetivas de múltipla escolha sobre o tema, com 4 alternativas cada (A–D), ' +
-          'inspiradas em bancas como Cebraspe, Cespe e UFG. No final, forneça o gabarito com justificativas curtas e cite as fontes. Tema: ' + pageTitle
-        ),
-        '_blank','noopener'
-      ));
-
-      actionsEl.append(saveBtn, studyBtn, trainBtn);
+      const iaBtn = mkBtn('Estude com I.A.','', ()=>openIAPopover(iaBtn, pageTitle));
+      const bar = document.createElement('div');
+      bar.className='chip-bar';
+      bar.append(saveBtn, iaBtn);
+      actionsEl.append(bar);
 
       // montar chips pós-busca abaixo da topbar (requer #postAc no HTML)
       renderPostSearchChips();
 
-      // ===== Introdução em até 2 parágrafos =====
-      const introParas = (pick.intro || []).slice(0,2).map(txt => escapeHTML(txt));
-      const introHTMLParas = shouldHighlight && lastSearch?.q
-          ? introParas.map(p => fmtInlineBold(highlightHTML(p, lastSearch.q)))
-          : introParas.map(p => fmtInlineBold(p));
-      const introHTML = introHTMLParas.map(p => `<p class="ubox-intro" style="margin:0 0 .75rem 0">${p}</p>`).join('');
-
-      // ===== Referências do Tema (TXT: linhas '--- ...')
-      const refs = (pick.refs || []).filter(Boolean);
-      const refListHTML = refs.map(ref => {
-        const prompt = `Explique detalhadamente e transcreva o texto original do tema indicado a seguir, mantendo a redação literal e acrescentando uma análise jurídica completa sobre seu conteúdo, finalidade e aplicação prática. Tema: ${ref}`;
-        const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`;
-        return `<li><a href="${url}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(ref))}</a></li>`;
-      }).join('');
-
-      // ===== Perguntas (mantidas, com destaque quando houver)
-      const qList=(pick.ask||[]).map(q=>{
-        const qEsc = escapeHTML(q);
-        const qHi  = shouldHighlight && lastSearch?.q ? highlightHTML(qEsc, lastSearch.q) : qEsc;
-        return `<li><a href="https://www.google.com/search?udm=50&q=${encodeURIComponent(q)}" target="_blank" rel="noopener">${fmtInlineBold(qHi)}</a></li>`;
-      }).join('');
-
-      // ===== Fontes (nova seção após Estude com IA) =====
-      const fontes = (pick.fontes || []).filter(Boolean);
-      const fontesHTML = fontes.map(f => {
-        const url = `https://www.google.com/search?udm=50&q=${encodeURIComponent(f)}`;
-        return `<li><a href="${url}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(f))}</a></li>`;
-      }).join('');
-
-      // ===== Render com separadores discretos =====
+      // ===== Render T/D/R =====
       const sep = `<hr style="border:none;border-top:1px solid #e9ecef;margin:16px 0">`;
+
+      function renderList(items){
+        if(!items?.length) return '<p class="muted">Sem itens.</p>';
+        return `<ul class="ref-list">` + items.map((it,i,arr)=>{
+          const li = `
+            <li>
+              <a href="${it.link}" target="_blank" rel="noopener">${fmtInlineBold(escapeHTML(it.texto))}</a>
+              ${it.comentario ? `<div class="muted">${escapeHTML(it.comentario)}</div>` : ``}
+            </li>`;
+          const needSep = i < arr.length-1;
+          return needSep ? li + sep : li;
+        }).join('') + `</ul>`;
+      }
 
       $('#content').innerHTML=`
         <article class="card ubox" role="article">
-          ${introHTML}
-          ${introHTML && refs.length ? sep : ''}
-          ${refs.length ? `
-            <section class="ubox-section">
-              <h3 class="ubox-sub">Referências do Tema</h3>
-              <ul class="ref-list">
-                ${refListHTML}
-              </ul>
-            </section>` : ''
-          }
-          ${sep}
           <section class="ubox-section">
-            <h3 class="ubox-sub">Estude com o Google I.A.</h3>
-            ${qList ? `<ol class="q-list">${qList}</ol>` : `<p class="muted">Sem perguntas cadastradas.</p>`}
+            <h3 class="ubox-sub">Dispositivos Legais</h3>
+            ${renderList(pick.dispositivos)}
           </section>
-          ${
-            fontes.length
-              ? `${sep}
-                 <section class="ubox-section">
-                   <h3 class="ubox-sub">Fontes</h3>
-                   <ul class="ref-list">
-                     ${fontesHTML}
-                   </ul>
-                 </section>`
-              : ''
-          }
+          <section class="ubox-section">
+            <h3 class="ubox-sub">Remissões Normativas</h3>
+            ${renderList(pick.remissoes)}
+          </section>
         </article>`;
 
       try{ sessionStorage.removeItem(LAST_SEARCH_KEY); }catch(_){}
@@ -754,7 +802,7 @@
   function loadSobre(){
     $('#actions').innerHTML='';
     $('#themeTitle').textContent='Sobre';
-    $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT único por categoria, temas separados por <code>-----</code>, busca local e links no Google I.A.</p></div>`;
+    $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT único por categoria. Estrutura por tema: <code># Título (T)</code>, <code># Dispositivos Legais (D)</code>, <code># Remissões Normativas (R)</code>. Seções separadas por <code>-----</code> e itens internos por <code>----</code>. Linhas iniciadas com <code>- </code> são linkadas; <code>-- </code> são comentários.</p></div>`;
   }
 
   async function renderByRoute(){
