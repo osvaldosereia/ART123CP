@@ -161,7 +161,7 @@
         const L = line.trim();
         if(!L) continue;
         if(L === '-----') break;           // fim do card, no caso da última seção
-        if(L === '----') { continue; }     // agora é marcador de troca de seção, ignorar dentro do slice
+        if(L === '----') { continue; }     // marcador de troca de seção, ignorar dentro do slice
         if(/^-\s+/.test(L)){               // item linkado
           const texto = L.replace(/^-+\s*/, '').trim();
           last = { texto, comentario:null };
@@ -185,20 +185,23 @@
     for(const it of dispositivos){ it.link = mkLink(`${title} — ${it.texto}`); }
     for(const it of remissoes){    it.link = mkLink(`${title} — ${it.texto}`); }
 
-    // indexação
-    const bodyText = [
-      dispositivos.map(x=>x.texto + (x.comentario?` ${x.comentario}`:'' )).join(' '),
-      remissoes.map(x=>x.texto + (x.comentario?` ${x.comentario}`:'' )).join(' ')
-    ].join(' ');
+    // textos por seção para busca
+    const dispText = dispositivos.map(x=>x.texto + (x.comentario?` ${x.comentario}`:'' )).join(' ');
+    const remText  = remissoes.map(x=>x.texto + (x.comentario?` ${x.comentario}`:'' )).join(' ');
+
     return {
       slug,
       title,
       group: '', path: '', frag: slug,
       dispositivos, remissoes,
+      // para compatibilidade antiga
       titleL: title.toLowerCase(),
-      bodyL: bodyText.toLowerCase(),
+      bodyL: (dispText + ' ' + remText).toLowerCase(),
+      // normalizados por seção
       titleN: normPT(title),
-      bodyN: normPT(bodyText)
+      dispN:  normPT(dispText),
+      remN:   normPT(remText),
+      bodyN:  normPT(dispText + ' ' + remText)
     };
   }
 
@@ -229,6 +232,15 @@
     return String(escapedHtml).replace(/\*([^*]+)\*/g, '<strong>$1</strong>');
   }
 
+  /* ===== Etiquetas util ===== */
+  function labelFromFlags(flags){
+    const tags = [];
+    if(flags.T) tags.push('(T)');
+    if(flags.D) tags.push('(D)');
+    if(flags.R) tags.push('(R)');
+    return tags.length ? tags.join(' ') : '';
+  }
+
   /* ===== Chips pós-busca ===== */
   function getLastAc(){
     try{ return JSON.parse(sessionStorage.getItem(LAST_AC_KEY)||'null'); }catch(_){ return null; }
@@ -257,7 +269,7 @@
       <li role="option">
         <a href="#/tema/${it.slug}">
           <div class="s1">${escapeHTML(it.title)}</div>
-          <div class="s2">${escapeHTML((it.group||'Geral') + ' | (T) (D) (R)')}</div>
+          <div class="s2">${escapeHTML((it.group||'Geral') + (it.labels?` | ${it.labels}`:''))}</div>
         </a>
       </li>`).join('');
 
@@ -279,45 +291,19 @@
       window.addEventListener('hashchange', closeAcDropdown, {once:true});
     }, 0);
   }
-  function renderPostSearchChips(){
-    const host  = document.getElementById('postAc');
-    const track = document.getElementById('postAcTrack');
-    if(!host || !track) return;
-
-    const data = getLastAc();
-    if(!data || !data.items?.length){
-      host?.classList?.add('hidden');
-      host?.setAttribute?.('aria-hidden','true');
-      return;
-    }
-
-    track.innerHTML = '';
-    for(const cat of data.categories||[]){
-      const btn = document.createElement('button');
-      btn.type='button';
-      btn.className='ac-chip';
-      btn.textContent=cat;
-      btn.dataset.cat = cat;
-      btn.addEventListener('click', (ev)=> openAcDropdown(ev.currentTarget, cat, data));
-      track.appendChild(btn);
-    }
-
-    document.getElementById('postAcPrev')?.addEventListener('click', ()=> track.scrollBy({left:-track.clientWidth*0.8, behavior:'smooth'}));
-    document.getElementById('postAcNext')?.addEventListener('click', ()=> track.scrollBy({left:+track.clientWidth*0.8, behavior:'smooth'}));
-
-    host.classList.remove('hidden');
-    host.setAttribute('aria-hidden','false');
-  }
 
   /* ===== Autocomplete ===== */
   const input  = document.querySelector('#search');
   const acList = document.querySelector('#suggestions');
   if (acList) acList.hidden = true;
 
+  // Novo: pontuação e flags por seção
   function scoreFields(q, t){
     const sT = _hitPT(t.titleN, q);
-    const sB = _hitPT(t.bodyN,  q);
-    return { score: 1.0*sT + 0.8*sB, flags: { t: sT>0, b: sB>0 } };
+    const sD = _hitPT(t.dispN || '', q);
+    const sR = _hitPT(t.remN  || '', q);
+    const score = 1.2*sT + 1.0*sD + 1.0*sR;
+    return { score, flags: { T: sT>0, D: sD>0, R: sR>0 } };
   }
 
   input?.addEventListener('input', e=>{
@@ -346,7 +332,8 @@
       items: arr.slice(0, 20).map(x => ({
         slug: x.t.slug,
         title: x.t.title,
-        group: x.t.group || 'Geral'
+        group: x.t.group || 'Geral',
+        labels: labelFromFlags(x.flags)
       }))
     };
     try{ sessionStorage.setItem(LAST_AC_KEY, JSON.stringify(lastAc)); }catch(_){}
@@ -362,11 +349,12 @@
     const listHTML = arr.slice(0,8).map(x=>{
       const {t, flags} = x;
       const titleHTML = highlightTitle(t.title, q);
+      const labels = labelFromFlags(flags);
       return `
         <li role="option">
-          <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['t','b'].filter(k=>flags[k]).join('')}">
+          <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['T','D','R'].filter(k=>flags[k]).join('')}">
             <div class="s1">${titleHTML}</div>
-            <div class="s2">${escapeHTML((t.group||'Geral') + ' | (T) (D) (R)')}</div>
+            <div class="s2">${escapeHTML((t.group||'Geral') + (labels?` | ${labels}`:''))}</div>
           </a>
         </li>`;
     }).join('');
@@ -419,13 +407,15 @@
         const parsed = chunks.map(parseTemaFromChunk).filter(Boolean);
         for (const t of parsed){
           const slug  = `${slugify(group)}-${t.slug}`;
-          const body  = t.bodyL || '';
+          const dispN = t.dispN || '';
+          const remN  = t.remN  || '';
+          const body  = (dispN + ' ' + remN).toLowerCase();
           temas.push({
             slug, title: t.title, path, tags: [], group, frag: t.slug,
             dispositivos: t.dispositivos||[],
             remissoes:    t.remissoes||[],
-            titleL: t.titleL, bodyL: body,
-            titleN: t.titleN, bodyN: t.bodyN
+            titleL: t.title.toLowerCase(), bodyL: body,
+            titleN: t.titleN, bodyN: t.bodyN, dispN, remN
           });
         }
       }catch(e){
@@ -751,7 +741,8 @@
 
       renderPostSearchChips();
 
-      const sep = `<hr style="border:none;border-top:1px solid #e9ecef;margin:16px 0">`;
+      // Respiro interno menor entre itens
+      const sep = `<hr style="border:none;border-top:1px solid #e9ecef;margin:8px 0">`;
 
       function renderList(items){
         if(!items?.length) return '<p class="muted">Sem itens.</p>';
