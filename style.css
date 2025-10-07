@@ -87,7 +87,7 @@ ul{margin:0;padding:0;list-style:none}
 }
 .suggestions li{padding:8px 6px;border-radius:8px}
 .suggestions li:hover{background:var(--surface)}
-.suggestions .s1{font-weight:500}
+.suggestions .s1{font-weight:600}
 .suggestions .s2{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:720px){
   .suggestions{width:90vw;left:50%;transform:translateX(-50%)}
