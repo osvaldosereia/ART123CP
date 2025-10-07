@@ -102,9 +102,9 @@
 
  function splitThemesByDelim(raw){
   const txt = raw.replace(/^\uFEFF/, '').replace(/\r\n?/g,'\n').trim();
-  // Cada card termina em linha com exatamente 5 hífens
-  return txt.split(/^\s*-{5}\s*$/m).map(s=>s.trim()).filter(Boolean);
+  return txt.split(/^\s*-{3,}\s*$/m).map(s=>s.trim()).filter(Boolean);
 }
+
 
 
   const normalizeHeading=(h)=> (h||'')
@@ -136,18 +136,18 @@
     const title = mTitle[1].trim();
     const slug  = slugify(title);
 
-    // headings do corpo
-const rxHead = /^\s*#\s+(.+?)\s*$/mg;
+   const rxHead = /^\s*#\s+(.+?)\s*$/mg;
 const sections = [];
 let m;
 while ((m = rxHead.exec(fixed))) {
   const name = m[1].trim();
   const nm = normalizeHeading(name);
-  const start = rxHead.lastIndex;          // início após o cabeçalho atual
-  const prev = sections.length ? sections[sections.length - 1] : null; // <= sem .at()
-  if (prev) prev.end = m.index;            // fim da seção anterior começa onde este cabeçalho inicia
+  const start = rxHead.lastIndex;
+  const prev = sections.at(-1);
+  if (prev) prev.end = m.index;
   sections.push({ raw:name, nm, start, end: fixed.length });
 }
+
 
 
     // localiza D e R
@@ -155,30 +155,31 @@ while ((m = rxHead.exec(fixed))) {
     const secR = sections.find(s => /^remissoes\s+normativas\b/.test(s.nm));
 
     function parseList(sec){
-      if(!sec) return [];
-      const body = fixed.slice(sec.start, sec.end);
-      const lines = body.split('\n');
-      const out = [];
-      let last = null;
-      for(const line of lines){
-        const L = line.trim();
-        if(!L) continue;
-        if(L === '-----') break;           // fim do card, no caso da última seção
-        if(L === '----') { continue; }     // marcador de troca de seção, ignorar dentro do slice
-        if(/^-\s+/.test(L)){               // item linkado
-          const texto = L.replace(/^-+\s*/, '').trim();
-          last = { texto, comentario:null };
-          out.push(last);
-          continue;
-        }
-        if(/^--\s+/.test(L)){              // comentário
-          const c = L.replace(/^--+\s*/, '').trim();
-          if(last) last.comentario = c;
-          continue;
-        }
-      }
-      return out;
+  if(!sec) return [];
+  const body = fixed.slice(sec.start, sec.end);
+  const lines = body.split('\n');
+  const out = [];
+  let last = null;
+  for(const line of lines){
+    const L = line.trim();
+    if(!L) continue;
+    if(L === '-----') break;      // fim do card
+    if(L === '----') { continue; } // divisor de seção
+    if(/^-\s+/.test(L)){
+      const texto = L.replace(/^-+\s*/, '').trim();
+      last = { texto, comentario:null };
+      out.push(last);
+      continue;
     }
+    if(/^--\s+/.test(L)){
+      const c = L.replace(/^--+\s*/, '').trim();
+      if(last) last.comentario = c;
+      continue;
+    }
+  }
+  return out;
+}
+
 
     const dispositivos = parseList(secD);
     const remissoes    = parseList(secR);
