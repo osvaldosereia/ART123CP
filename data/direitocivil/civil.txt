@@ -1,7 +1,25 @@
 
 
 
-
+# Morte Real e Morte Presumida (Ausência)
+# Dispositivos Legais
+- Art. 6.º A existência da pessoa natural termina com a morte; presume-se esta, quanto aos ausentes, nos casos em que a lei autoriza a abertura de sucessão definitiva.
+# Remissões Normativas
+- Vide arts. 22 a 39 do CC.
+-- Tratam do instituto da ausência, da curadoria dos bens do ausente e da sucessão provisória e definitiva.
+- Vide arts. 744 e 745 do CPC.
+-- Dispõem sobre o procedimento de jurisdição voluntária para a declaração de ausência.
+- Vide arts. 107, I, do CP e 62 do CPP.
+-- Tratam da extinção da punibilidade pela morte do agente no âmbito do direito penal.
+- Vide Decreto-lei n. 5.782, de 30-8-1943.
+-- Dispõe sobre a morte presumida de servidor público civil ou militar desaparecido no desempenho de suas funções.
+- Vide arts. 77 a 88 da LRP.
+-- Tratam das regras para o registro do óbito no Registro Civil de Pessoas Naturais.
+- Vide art. 3.º da Lei n. 9.434, de 4-2-1997.
+-- Trata da Lei de Transplantes, que estabelece os critérios para a constatação da morte encefálica.
+- Vide Súmula 331 do STF.
+-- “É legítima a incidência do Imposto de Serviços sobre as operações de arrendamento mercantil”. (Nota: A Súmula 331 do TST, frequentemente confundida, trata da terceirização de serviços). A remissão a esta súmula neste contexto é incomum.
+-----
 # Cessação da Menoridade e Emancipação
 # Dispositivos Legais
 - Art. 5.º A menoridade cessa aos dezoito anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil.
