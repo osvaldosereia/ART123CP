@@ -3,8 +3,99 @@
 
 
 
-
-
+# Responsabilidade Civil por Ato Ilícito
+# Dispositivos Legais
+- Art. 927. Aquele que, por ato ilícito (arts. 186 e 187), causar dano a outrem, fica obrigado a repará-lo.
+-- O STF, nas ADIs n. 6.792 e 7.055, no plenário de 22-5-2024 (DOU de 27-5-2024), por maioria, conheceu da ação direta e julgou parcialmente procedente o pedido formulado para “dar interpretação conforme à Constituição ao caput deste art. 927 do Código Civil, para estabelecer que a responsabilidade civil do jornalista, no caso de divulgação de notícias que envolvam pessoa pública ou assunto de interesse social, dependem de o jornalista ter agido com dolo ou com culpa grave, afastando-se a possibilidade de responsabilização na hipótese de meros juízos de valor, opiniões ou críticas ou da divulgação de informações verdadeiras sobre assuntos de interesse público.” Em seguida, por maioria, foi fixada a seguinte tese de julgamento: “1. Constitui assédio judicial comprometedor da liberdade de expressão o ajuizamento de inúmeras ações a respeito dos mesmos fatos, em comarcas diversas, com o intuito ou o efeito de constranger jornalista ou órgão de imprensa, dificultar sua defesa ou torná-la excessivamente onerosa; 2. Caracterizado o assédio judicial, a parte demandada poderá requerer a reunião de todas as ações no foro de seu domicílio; 3. A responsabilidade civil de jornalistas ou de órgãos de imprensa somente estará configurada em caso inequívoco de dolo ou de culpa grave (evidente negligência profissional na apuração dos fatos)”.
+- Parágrafo único. Haverá obrigação de reparar o dano, independentemente de culpa, nos casos especificados em lei, ou quando a atividade normalmente desenvolvida pelo autor do dano implicar, por sua natureza, risco para os direitos de outrem.
+# Remissões Normativas
+- Vide arts. 934 e 942 a 954 do CC.
+-- o art. 934 trata do direito de regresso daquele que repara dano causado por outrem.
+-- os arts. 942 a 954 tratam das regras de liquidação do dano e fixação da indenização, incluindo a solidariedade entre os ofensores e os critérios para cálculo em casos de homicídio, lesão corporal, entre outros.
+- Reparação de dano moral decorrente de calúnia, difamação ou injúria, vide art. 243 da Lei n. 4.737, de 15-7-1965 (CE).
+-- o art. 243 do Código Eleitoral trata da nulidade da votação em seções eleitorais sob certas circunstâncias.
+- Vide Súmulas 37, 43, 130, 137, 145, 186, 221, 227, 246, 403, 479 e 595 do STJ.
+-- a Súmula 37 trata da cumulatividade das indenizações por dano material e dano moral.
+-- a Súmula 43 trata do termo inicial da correção monetária na dívida por ato ilícito (data do efetivo prejuízo).
+-- a Súmula 130 trata da responsabilidade de empresas por furto ou dano de veículo em seus estacionamentos.
+-- a Súmula 137 trata da competência da justiça comum estadual para julgar ações de servidores públicos municipais estatutários.
+-- a Súmula 145 trata da responsabilidade do transportador no transporte de cortesia, restrita a dolo ou culpa grave.
+-- a Súmula 186 veda a cobrança de juros compostos em indenizações por ato ilícito.
+-- a Súmula 221 trata da responsabilidade solidária entre o autor do escrito e o proprietário do veículo de imprensa.
+-- a Súmula 227 estabelece que a pessoa jurídica pode sofrer dano moral.
+-- a Súmula 246 trata da dedução do valor do seguro obrigatório (DPVAT) da indenização judicial.
+-- a Súmula 403 presume o prejuízo na publicação não autorizada de imagem de pessoa para fins comerciais.
+-- a Súmula 479 trata da responsabilidade objetiva dos bancos por fraudes praticadas por terceiros.
+-- a Súmula 595 trata da responsabilidade objetiva de instituições de ensino por diplomas imprestáveis.
+- Vide Súmulas 28, 161, 229, 491, 492 e 562 do STF.
+-- a Súmula 28 trata da isenção de custas para a União em ações de desapropriação.
+-- a Súmula 161 considera inoperante a cláusula de não indenizar em contrato de transporte.
+-- a Súmula 229 estabelece que a indenização por acidente de trabalho não exclui a de direito comum.
+-- a Súmula 491 considera indenizável a morte de filho menor, mesmo sem exercício de trabalho remunerado.
+-- a Súmula 492 trata da responsabilidade solidária da locadora de veículos por danos causados pelo locatário.
+-- a Súmula 562 trata da aplicação de correção monetária na indenização por danos materiais.
+- Vide arts. 5.º, V e X, e 37, § 6.º, da CF.
+-- os incisos V e X do art. 5º asseguram o direito à indenização por dano material, moral ou à imagem.
+-- o art. 37, § 6.º estabelece a responsabilidade civil objetiva do Estado.
+-----
+# Responsabilidade Civil do Incapaz
+# Dispositivos Legais
+- Art. 928. O incapaz responde pelos prejuízos que causar, se as pessoas por ele responsáveis não tiverem obrigação de fazê-lo ou não dispuserem de meios suficientes.
+- Parágrafo único. A indenização prevista neste artigo, que deverá ser equitativa, não terá lugar se privar do necessário o incapaz ou as pessoas que dele dependem.
+# Remissões Normativas
+- Vide arts. 3.º, 4.º, 932 a 934 e 942, parágrafo único, do CC.
+-- os arts. 3º e 4º definem os absolutamente e relativamente incapazes.
+-- os arts. 932 a 934 tratam da responsabilidade por ato de terceiro e do direito de regresso.
+-- o art. 942, parágrafo único, trata da responsabilidade solidária dos bens daquele que concorreu para o dano.
+- Vide art. 116 do ECA.
+-- trata da obrigação do adolescente autor de ato infracional de reparar o dano causado à vítima.
+-----
+# Título Nominativo - Definição
+# Dispositivos Legais
+- Art. 921. É título nominativo o emitido em favor de pessoa cujo nome conste no registro do emitente.
+-----
+# Título Nominativo - Transferência por Termo
+# Dispositivos Legais
+- Art. 922. Transfere-se o título nominativo mediante termo, em registro do emitente, assinado pelo proprietário e pelo adquirente.
+-----
+# Título Nominativo - Transferência por Endosso
+# Dispositivos Legais
+- Art. 923. O título nominativo também pode ser transferido por endosso que contenha o nome do endossatário.
+- § 1.º A transferência mediante endosso só tem eficácia perante o emitente, uma vez feita a competente averbação em seu registro, podendo o emitente exigir do endossatário que comprove a autenticidade da assinatura do endossante.
+- § 2.º O endossatário, legitimado por série regular e ininterrupta de endossos, tem o direito de obter a averbação no registro do emitente, comprovada a autenticidade das assinaturas de todos os endossantes.
+- § 3.º Caso o título original contenha o nome do primitivo proprietário, tem direito o adquirente a obter do emitente novo título, em seu nome, devendo a emissão do novo título constar no registro do emitente.
+-----
+# Título Nominativo - Transformação
+# Dispositivos Legais
+- Art. 924. Ressalvada proibição legal, pode o título nominativo ser transformado em à ordem ou ao portador, a pedido do proprietário e à sua custa.
+# Remissões Normativas
+- Vide arts. 904 a 920 do CC.
+-- Art. 904 trata da transferência do título ao portador por simples tradição.
+-- Art. 905 trata do direito do possuidor do título ao portador à prestação nele indicada.
+-- Art. 906 trata das exceções que o devedor pode opor ao portador do título.
+-- Art. 907 trata da nulidade do título ao portador emitido sem autorização legal.
+-- Art. 908 trata do direito à substituição do título ao portador que foi dilacerado.
+-- Art. 909 trata do procedimento judicial para obter novo título em caso de perda ou extravio.
+-- Art. 910 trata da forma e do local para o lançamento do endosso no título.
+-- Art. 911 trata da legitimação do possuidor do título à ordem pela série regular de endossos.
+-- Art. 912 trata da nulidade da condição e do endosso parcial.
+-- Art. 913 trata das faculdades do portador de um título com endosso em branco.
+-- Art. 914 trata da regra geral de não responsabilidade do endossante pelo pagamento do título.
+-- Art. 915 trata das exceções que o devedor pode opor ao portador do título à ordem.
+-- Art. 916 trata da oponibilidade de exceções pessoais de devedores anteriores em caso de má-fé do portador.
+-- Art. 917 trata das regras do endosso-mandato.
+-- Art. 918 trata das regras do endosso-penhor.
+-- Art. 919 trata dos efeitos de cessão civil quando a aquisição do título ocorre por meio diverso do endosso.
+-- Art. 920 trata dos efeitos do endosso realizado após o vencimento do título.
+-----
+# Título Nominativo - Desoneração do Emitente
+# Dispositivos Legais
+- Art. 925. Fica desonerado de responsabilidade o emitente que de boa-fé fizer a transferência pelos modos indicados nos artigos antecedentes.
+-----
+# Título Nominativo - Eficácia de Negócios e Medidas Judiciais
+# Dispositivos Legais
+- Art. 926. Qualquer negócio ou medida judicial, que tenha por objeto o título, só produz efeito perante o emitente ou terceiros, uma vez feita a competente averbação no registro do emitente.
+-----
 # Título à Ordem - Exceções Oponíveis ao Portador
 # Dispositivos Legais
 - Art. 915. O devedor, além das exceções fundadas nas relações pessoais que tiver com o portador, só poderá opor a este as exceções relativas à forma do título e ao seu conteúdo literal, à falsidade da própria assinatura, a defeito de capacidade ou de representação no momento da subscrição, e à falta de requisito necessário ao exercício da ação.
