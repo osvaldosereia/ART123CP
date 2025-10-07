@@ -1,5 +1,7 @@
 /* =========================
    Meujus – style.css (2025-10-07)
+   Home minimalista + Autocomplete mobile centralizado
+   Navegação: setas desktop + swipe mobile
    ========================= */
 
 /* ===== Tokens ===== */
@@ -204,3 +206,26 @@ hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 
 /* Marks */
 mark{background:rgba(0,163,255,.25);padding:0 .1em;border-radius:2px}
+
+/* ===== Navegação – Setas (Desktop) ===== */
+.nav-arrows{
+  position:fixed;inset:0;pointer-events:none;z-index:85;
+}
+.nav-arrows .nav-btn{
+  pointer-events:auto;
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:40px;height:40px;border-radius:999px;border:1px solid var(--line);
+  background:var(--card);box-shadow:var(--shadow);
+  display:grid;place-items:center;font-size:16px;font-weight:700;cursor:pointer;
+  color:var(--primary);
+  transition:transform .15s ease, background-color .15s ease, box-shadow .15s ease, opacity .15s ease;
+  opacity:.9;
+}
+.nav-arrows .nav-btn:hover{background:var(--surface);box-shadow:0 8px 22px rgba(0,0,0,.12)}
+.nav-arrows .nav-prev{left:16px}
+.nav-arrows .nav-next{right:16px}
+
+/* Esconde setas no mobile (swipe cuida da navegação) */
+@media (max-width:720px){
+  .nav-arrows{display:none}
+}
