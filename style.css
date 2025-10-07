@@ -272,3 +272,12 @@ button.mini:hover{ filter:brightness(.98); }
 
 /* (Garantia) z-index do conteúdo geral atrás do drawer */
 #theme, #content{ position:relative; z-index:0; }
+
+/* Logo maior apenas no desktop */
+@media (min-width: 721px){
+  /* logo da topbar */
+  .brand{ font-size:22px; line-height:1; }
+
+  /* logo da home */
+  .home-logo{ font-size:52px; line-height:1; }
+}
