@@ -212,13 +212,33 @@
   window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden=true; closeAcDropdown(); });
 
   /* ===== Drawer ===== */
-  function closeDrawer(){
-    const drawer=$('#drawer'); const openBtn=$('#btnMenu');
-    if(!drawer) return;
-    drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true');
-    openBtn?.setAttribute('aria-expanded','false'); document.body.classList.remove('noscroll'); openBtn?.focus?.();
+function closeDrawer() {
+  const drawer  = $('#drawer');
+  const btnMenu = $('#btnMenu');
+
+  if (!drawer) return;
+
+  // Fecha visualmente
+  drawer.classList.remove('open');
+  drawer.setAttribute('aria-hidden', 'true');
+
+  // Libera rolagem do body
+  document.body.classList.remove('noscroll');
+
+  // Estado do botão de menu
+  if (btnMenu) {
+    btnMenu.setAttribute('aria-expanded', 'false');
+    try { btnMenu.focus(); } catch {}
   }
-  
+
+  // Recolhe quaisquer sublistas abertas
+  $$('#menuList .cat-btn[aria-expanded="true"]').forEach(b => {
+    b.setAttribute('aria-expanded', 'false');
+    const ul = b.parentElement?.querySelector('.sublist');
+    if (ul) ul.hidden = true;
+  });
+}
+
 function renderMenu(){
   const menu = $('#menuList');
   if (!menu) return;
@@ -236,6 +256,7 @@ function renderMenu(){
   }
 
   menu.innerHTML = '';
+
 
   // === Sobre ===
   const liSobre = document.createElement('li');
