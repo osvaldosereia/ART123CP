@@ -319,3 +319,23 @@ button.mini:hover{ filter:brightness(.98); }
 .suggestions .ac-chips::-webkit-scrollbar{ height:6px; }
 .suggestions .ac-chips::-webkit-scrollbar-thumb{ background:var(--line); border-radius:999px; }
 .suggestions .ac-chip{ flex:0 0 auto; } /* não quebrar linha */
+
+/* Chips na linha anterior ao título (override) */
+.ficha-head{
+  display: grid;
+  grid-template-areas:
+    "chips"
+    "title";
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 0;
+  padding: 14px 16px 8px 16px;
+}
+.ficha-head .chip-bar{
+  grid-area: chips;
+  margin: 0 0 12px 0;     /* respiro entre chips e título */
+}
+.ficha-head .h1{
+  grid-area: title;
+  margin: 0;
+}
