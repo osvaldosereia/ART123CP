@@ -100,10 +100,14 @@
     return res.text();
   }
 
-  function splitThemesByDelim(raw){
-    const txt = raw.replace(/^\uFEFF/, '').replace(/\r\n?/g,'\n').trim();
-    return txt.split(/^\s*-{3,}\s*$/m).map(s=>s.trim()).filter(Boolean);
-  }
+ function splitThemesByDelim(raw){
+  const txt = raw.replace(/^\uFEFF/, '').replace(/\r\n?/g,'\n').trim();
+  // Delimitador "duro" para separar posts distintos: 7 ou mais hífens numa linha.
+  const hasHard = /^\s*-{7,}\s*$/m.test(txt);
+  if (!hasHard) return [txt]; // um único card por arquivo
+  return txt.split(/^\s*-{7,}\s*$/m).map(s=>s.trim()).filter(Boolean);
+}
+
 
   const normalizeHeading=(h)=> (h||'')
     .toLowerCase()
