@@ -460,11 +460,18 @@ function openIADropdown(anchorBtn, title, fullText){
   const hasD = (item.dispositivos && item.dispositivos.length>0);
   const hasR = (item.remissoes    && item.remissoes.length>0);
 
-  card.innerHTML=`
+  // monta "Categoria | (T)(D)(R)" igual à busca, sem mostrar "Geral"
+const lastSearch = (()=>{ try{ return JSON.parse(sessionStorage.getItem(LAST_SEARCH_KEY)||'{}'); }catch{ return {}; }})();
+const fstr = String(lastSearch.flags||'');
+const fobj = { T: fstr.includes('T'), D: fstr.includes('D'), R: fstr.includes('R') };
+const labels = labelFromFlags(fobj); // ex: "(T) (D)"
+const cat    = (item.group && item.group !== 'Geral') ? item.group : '';
+const catLine = [cat, labels].filter(Boolean).join(' | ');
+
+card.innerHTML = `
   <header class="ficha-head">
     <div class="actions chip-bar"></div>
-    <div class="card-sep"></div>
-    <div class="card-cat">${escapeHTML(item.group || 'Geral')}</div>
+    ${catLine ? `<div class="card-sep"></div><div class="card-cat">${escapeHTML(catLine)}</div>` : ``}
     <div class="card-sep"></div>
     <h1 class="h1">${escapeHTML(item.title)}</h1>
   </header>
@@ -481,6 +488,7 @@ function openIADropdown(anchorBtn, title, fullText){
       ${renderList(item.remissoes)}
     </section>` : ''}
 `;
+
 
 
   const actionsEl=card.querySelector('.actions');
