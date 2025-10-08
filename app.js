@@ -634,7 +634,58 @@ for (const it of remissoes)    it.link = googleIA(IA_PROMPTS.detalhada(it.texto,
     const idx=list.findIndex(x=>x.slug===slug);
     if(idx===-1){ $('#content').innerHTML=`<div class="card ubox"><p class="muted">Tema não encontrado no arquivo.</p></div>`; return; }
 
-    iv id="infiniteHost
+const host = $('#content');
+host.innerHTML = `<div id="infiniteHost"></div>`;
+const feed = $('#infiniteHost');
+
+// janela inicial: selecionado ±5
+let start = Math.max(0, idx - 5);
+let end   = Math.min(list.length - 1, idx + 5);
+
+// Sentinelas nas extremidades
+const topSentinel    = document.createElement('div');
+const bottomSentinel = document.createElement('div');
+topSentinel.className = 'sentinel sentinel--top';
+bottomSentinel.className = 'sentinel sentinel--bottom';
+topSentinel.style.cssText = 'height:1px;';
+bottomSentinel.style.cssText = 'height:1px;';
+feed.prepend(topSentinel);
+feed.append(bottomSentinel);
+
+// Inserção de cards mantendo sentinelas nas pontas
+function mountRange(a, b, where = 'append') {
+  if (a > b) return;
+  const frag = document.createDocumentFragment();
+  for (let i = a; i <= b; i++) renderTemaCard(frag, list[i]);
+  if (where === 'append') {
+    feed.insertBefore(frag, bottomSentinel);
+  } else {
+    const afterTop = topSentinel.nextSibling;
+    if (afterTop) feed.insertBefore(frag, afterTop);
+    else feed.appendChild(frag);
+  }
+}
+
+// Render inicial
+mountRange(start, end, 'append');
+
+const STEP = 5;
+const io = new IntersectionObserver((entries) => {
+  for (const ent of entries) {
+    if (!ent.isIntersecting) continue;
+    if (ent.target === bottomSentinel) {
+      const nextEnd = Math.min(list.length - 1, end + STEP);
+      if (nextEnd > end) { mountRange(end + 1, nextEnd, 'append'); end = nextEnd; }
+    }
+    if (ent.target === topSentinel) {
+      const nextStart = Math.max(0, start - STEP);
+      if (nextStart < start) { mountRange(nextStart, start - 1, 'prepend'); start = nextStart; }
+    }
+  }
+}, { root: null, rootMargin: '600px 0px', threshold: 0.01 });
+
+io.observe(bottomSentinel);
+io.observe(topSentinel);
 
     // Atualiza hash pelo card dominante
     let rafId=0;
