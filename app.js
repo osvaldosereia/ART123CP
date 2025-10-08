@@ -461,12 +461,8 @@ function openIADropdown(anchorBtn, title, fullText){
   const hasR = (item.remissoes    && item.remissoes.length>0);
 
   // monta "Categoria | (T)(D)(R)" igual à busca, sem mostrar "Geral"
-const lastSearch = (()=>{ try{ return JSON.parse(sessionStorage.getItem(LAST_SEARCH_KEY)||'{}'); }catch{ return {}; }})();
-const fstr = String(lastSearch.flags||'');
-const fobj = { T: fstr.includes('T'), D: fstr.includes('D'), R: fstr.includes('R') };
-const labels = labelFromFlags(fobj); // ex: "(T) (D)"
-const cat    = (item.group && item.group !== 'Geral') ? item.group : '';
-const catLine = [cat, labels].filter(Boolean).join(' | ');
+const catLine = (item.group && item.group !== 'Geral') ? String(item.group) : '';
+
 
 card.innerHTML = `
   <header class="ficha-head">
@@ -488,6 +484,7 @@ card.innerHTML = `
       ${renderList(item.remissoes)}
     </section>` : ''}
 `;
+
 
 
 
