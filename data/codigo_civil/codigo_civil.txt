@@ -3,6 +3,127 @@
 
 
 
+
+# Administração da Herança
+- Código Civil
+# Dispositivos Legais
+- Art. 1.991. Desde a assinatura do compromisso até a homologação da partilha, a administração da herança será exercida pelo inventariante.
+# Remissões Normativas
+- Vide arts. 1.796, 1.977, 1.978, 1.981 e 1.990 do CC.
+-- tratam, entre outros assuntos, do prazo para instauração do inventário e das atribuições e remuneração do testamenteiro.
+- Vide arts. 617 e s. do CPC.
+-- dispõem sobre a figura do inventariante, sua ordem de nomeação, suas incumbências e seus deveres no processo de inventário.
+-----
+# Pena de Sonegação
+- Código Civil
+# Dispositivos Legais
+- Art. 1.992. O herdeiro que sonegar bens da herança, não os descrevendo no inventário quando estejam em seu poder, ou, com o seu conhecimento, no de outrem, ou que os omitir na colação, a que os deva levar, ou que deixar de restituí-los, perderá o direito que sobre eles lhe cabia.
+-----
+# Sonegação pelo Inventariante
+- Código Civil
+# Dispositivos Legais
+- Art. 1.993. Além da pena cominada no artigo antecedente, se o sonegador for o próprio inventariante, remover-se-á, em se provando a sonegação, ou negando ele a existência dos bens, quando indicados.
+# Remissões Normativas
+- Vide arts. 621 e 622, VI, do CPC.
+-- tratam da perda do direito do herdeiro sobre os bens sonegados e da remoção do inventariante que sonegar bens do espólio.
+-----
+# Ação de Sonegados
+- Código Civil
+# Dispositivos Legais
+- Art. 1.994. A pena de sonegados só se pode requerer e impor em ação movida pelos herdeiros ou pelos credores da herança.
+- Parágrafo único. A sentença que se proferir na ação de sonegados, movida por qualquer dos herdeiros ou credores, aproveita aos demais interessados.
+# Remissões Normativas
+- Vide art. 621 do CPC.
+-- dispõe que o herdeiro que sonegar bens da herança perderá o direito que sobre eles lhe cabia, além da remoção, se for o inventariante.
+-----
+# Restituição do Valor dos Bens Sonegados
+- Código Civil
+# Dispositivos Legais
+- Art. 1.995. Se não se restituírem os bens sonegados, por já não os ter o sonegador em seu poder, pagará ele a importância dos valores que ocultou, mais as perdas e danos.
+# Remissões Normativas
+- Vide arts. 402 a 405 (perdas e danos) do CC.
+-- definem o que abrangem as perdas e danos, incluindo os danos emergentes e os lucros cessantes.
+-----
+# Momento da Arguição de Sonegação
+- Código Civil
+# Dispositivos Legais
+- Art. 1.996. Só se pode arguir de sonegação o inventariante depois de encerrada a descrição dos bens, com a declaração, por ele feita, de não existirem outros por inventariar e partir, assim como arguir o herdeiro, depois de declarar-se no inventário que não os possui.
+# Remissões Normativas
+- Vide art. 621 do CPC.
+-- dispõe que a arguição de sonegação só poderá ser feita ao herdeiro após este declarar no inventário que não possui os bens, e ao inventariante após declarar que não há outros bens a inventariar.
+-----
+# Pagamento das Dívidas
+- Código Civil
+# Dispositivos Legais
+- Art. 1.997. A herança responde pelo pagamento das dívidas do falecido; mas, feita a partilha, só respondem os herdeiros, cada qual em proporção da parte que na herança lhe coube.
+- § 1.º Quando, antes da partilha, for requerido no inventário o pagamento de dívidas constantes de documentos, revestidos de formalidades legais, constituindo prova bastante da obrigação, e houver impugnação, que não se funde na alegação de pagamento, acompanhada de prova valiosa, o juiz mandará reservar, em poder do inventariante, bens suficientes para solução do débito, sobre os quais venha a recair oportunamente a execução.
+- § 2.º No caso previsto no parágrafo antecedente, o credor será obrigado a iniciar a ação de cobrança no prazo de trinta dias, sob pena de se tornar de nenhum efeito a providência indicada.
+# Remissões Normativas
+- Vide arts. 276, 836, 1.700 e 1.792 do CC.
+-- tratam, respectivamente, da responsabilidade dos herdeiros de devedor solidário, da responsabilidade dos herdeiros do fiador, da transmissão da obrigação alimentar e da limitação da responsabilidade dos herdeiros às forças da herança.
+- Vide art. 23 da Lei n. 6.515, de 26-12-1977, e art. 1.700 deste Código.
+-- dispõem sobre a transmissão da obrigação de prestar alimentos aos herdeiros do devedor.
+- Vide art. 29 da Lei n. 6.830, de 22-9-1980.
+-- estabelece que a cobrança da Dívida Ativa da Fazenda Pública não se sujeita a concurso de credores ou habilitação em inventário ou falência.
+- Vide arts. 642 a 646 do CPC.
+-- regulam o procedimento de pagamento das dívidas do espólio no processo de inventário.
+-----
+# Despesas Funerárias
+- Código Civil
+# Dispositivos Legais
+- Art. 1.998. As despesas funerárias, haja ou não herdeiros legítimos, sairão do monte da herança; mas as de sufrágios por alma do falecido só obrigarão a herança quando ordenadas em testamento ou codicilo.
+# Remissões Normativas
+- Vide arts. 965, I, e 1.847 do CC.
+-- tratam, respectivamente, do crédito privilegiado das despesas de funeral e do cálculo da legítima após a dedução das dívidas e despesas de funeral.
+-----
+# Ação Regressiva e Insolvência de Coerdeiro
+- Código Civil
+# Dispositivos Legais
+- Art. 1.999. Sempre que houver ação regressiva de uns contra outros herdeiros, a parte do coerdeiro insolvente dividir-se-á em proporção entre os demais.
+# Remissões Normativas
+- Vide art. 125, II, do CPC.
+-- trata do chamamento ao processo dos demais fiadores ou devedores solidários quando o credor exigir de um ou de alguns deles a dívida comum.
+-----
+# Separação de Patrimônios
+- Código Civil
+# Dispositivos Legais
+- Art. 2.000. Os legatários e credores da herança podem exigir que do patrimônio do falecido se discrimine o do herdeiro, e, em concurso com os credores deste, ser-lhes-ão preferidos no pagamento.
+-----
+# Dívida de Herdeiro ao Espólio
+- Código Civil
+# Dispositivos Legais
+- Art. 2.001. Se o herdeiro for devedor ao espólio, sua dívida será partilhada igualmente entre todos, salvo se a maioria consentir que o débito seja imputado inteiramente no quinhão do devedor.
+-----
+# Obrigação de Colacionar
+- Código Civil
+# Dispositivos Legais
+- Art. 2.002. Os descendentes que concorrerem à sucessão do ascendente comum são obrigados, para igualar as legítimas, a conferir o valor das doações que dele em vida receberam, sob pena de sonegação.
+- Parágrafo único. Para cálculo da legítima, o valor dos bens conferidos será computado na parte indisponível, sem aumentar a disponível.
+# Remissões Normativas
+- Vide arts. 544, 549, 2.010 e 2.011 do CC.
+-- tratam, respectivamente, da doação a descendente como adiantamento da legítima, da nulidade da doação inoficiosa, dos gastos não sujeitos à colação e da dispensa de colação para doações remuneratórias.
+-----
+# Finalidade da Colação
+- Código Civil
+# Dispositivos Legais
+- Art. 2.003. A colação tem por fim equalizar, na proporção estabelecida neste Código, as legítimas dos descendentes e do cônjuge sobrevivente, obrigando também os donatários que, ao tempo do falecimento do doador, já não possuírem os bens doados.
+- Parágrafo único. Se, computados os valores das doações feitas em adiantamento de legítima, não houver no acervo bens suficientes para igualar as legítimas dos descendentes e do cônjuge, os bens assim doados serão conferidos em espécie, ou, quando deles já não disponha o donatário, pelo seu valor ao tempo da liberalidade.
+# Remissões Normativas
+- Vide art. 2.009 do CC.
+-- dispõe sobre a obrigação de os netos, ao sucederem por representação, trazerem à colação o que seus pais teriam de conferir.
+-----
+# Valor de Colação dos Bens
+- Código Civil
+# Dispositivos Legais
+- Art. 2.004. O valor de colação dos bens doados será aquele, certo ou estimativo, que lhes atribuir o ato de liberalidade.
+- § 1.º Se do ato de doação não constar valor certo, nem houver estimação feita naquela época, os bens serão conferidos na partilha pelo que então se calcular valessem ao tempo da liberalidade.
+- § 2.º Só o valor dos bens doados entrará em colação; não assim o das benfeitorias acrescidas, as quais pertencerão ao herdeiro donatário, correndo também à conta deste os rendimentos ou lucros, assim como os danos e perdas que eles sofrerem.
+# Remissões Normativas
+- Vide art. 639, parágrafo único, do CPC.
+-- estabelece que o valor dos bens para colação será o atribuído no ato de liberalidade ou, na sua falta, por estimativa da época.
+- Vide arts. 96 (benfeitorias) e 402 a 405 (perdas e danos) do CC.
+-- o primeiro define as espécies de benfeitorias, e os demais dispõem sobre o cálculo das perdas e danos.
+-----
 # Dispensa da Colação
 - Código Civil
 # Dispositivos Legais
