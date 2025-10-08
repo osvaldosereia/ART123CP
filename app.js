@@ -165,6 +165,19 @@
   const fmtInlineBold=(html)=>String(html).replace(/\*([^*]+)\*/g,'<strong>$1</strong>');
   const labelFromFlags=(f)=>['T','D','R'].filter(k=>f[k]).map(k=>`(${k})`).join(' ');
 
+  /* Snippet do 1º dispositivo legal (até 60 chars; 1ª linha) */
+function getDispSnippet(slug, max = 60){
+  for (const arr of CACHED_FILES.values()){
+    const hit = arr.find(x => x.slug === slug);
+    if (hit && hit.dispositivos?.length){
+      const txt = String(hit.dispositivos[0].texto || '');
+      return txt.length > max ? txt.slice(0, max - 1) + '…' : txt;
+    }
+  }
+  return '';
+}
+
+  
   /* ===== Dropdown pós-busca ===== */
   let __popEl=null;
   function closeAcDropdown(){ if(__popEl){ __popEl.remove(); __popEl=null; } document.removeEventListener('click',onDocClickClose,true); window.removeEventListener('hashchange', closeAcDropdown, { once:true }); }
@@ -193,10 +206,21 @@
         <button type="button" class="ac-chip" data-cat="Todos" aria-pressed="${activeCat==='Todos'}">Todos</button>
         ${catList.map(cat=>`<button type="button" class="ac-chip" data-cat="${(cat||'').replace(/"/g,'&quot;')}" aria-pressed="${activeCat===cat}">${escapeHTML(cat)}</button>`).join('')}
       </div>`;
-    const listHTML=arr.slice(0,8).map(x=>{
-      const {t,flags}=x; const titleHTML=highlightTitle(t.title,q); const labels=labelFromFlags(flags);
-      return `<li role="option"><a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['T','D','R'].filter(k=>flags[k]).join('')}"><div class="s1">${titleHTML}</div><div class="s2">${escapeHTML((t.group||'Geral') + (labels?` | ${labels}`:''))}</div></a></li>`;
-    }).join('');
+    const listHTML = arr.slice(0,8).map(x=>{
+  const { t, flags } = x;
+  const titleHTML = highlightTitle(t.title, q);
+  const labels    = labelFromFlags(flags);
+  const snippet   = getDispSnippet(t.slug, 60); // até 60 caracteres
+
+  return `<li role="option">
+    <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['T','D','R'].filter(k=>flags[k]).join('')}">
+      <div class="s1">${titleHTML}</div>
+      ${snippet ? `<div class="s3">${escapeHTML(snippet)}</div>` : ''}
+      <div class="s2">${escapeHTML((t.group||'Geral') + (labels?` | ${labels}`:''))}</div>
+    </a>
+  </li>`;
+}).join('');
+
     acList.innerHTML=chipsHTML + listHTML; acList.hidden=false;
 
     acList.querySelectorAll('.ac-chip').forEach(btn=>{
