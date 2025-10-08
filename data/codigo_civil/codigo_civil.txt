@@ -6,6 +6,386 @@
 
 
 
+
+# Conceito de Herança Jacente
+- Código Civil
+# Dispositivos Legais
+- Art. 1.819. Falecendo alguém sem deixar testamento nem herdeiro legítimo notoriamente conhecido, os bens da herança, depois de arrecadados, ficarão sob a guarda e administração de um curador, até a sua entrega ao sucessor devidamente habilitado ou à declaração de sua vacância.
+# Remissões Normativas
+- Vide art. 75, VI, do CPC.
+-- estabelece que a herança jacente ou vacante será representada em juízo por seu curador.
+-----
+# Declaração de Vacância
+- Código Civil
+# Dispositivos Legais
+- Art. 1.820. Praticadas as diligências de arrecadação e ultimado o inventário, serão expedidos editais na forma da lei processual, e, decorrido um ano de sua primeira publicação, sem que haja herdeiro habilitado, ou penda habilitação, será a herança declarada vacante.
+# Remissões Normativas
+- Vide art. 743, caput e § 1.º, do CPC.
+-- dispõe sobre o procedimento de publicação de editais e o prazo para a declaração de vacância.
+-----
+# Direito dos Credores
+- Código Civil
+# Dispositivos Legais
+- Art. 1.821. É assegurado aos credores o direito de pedir o pagamento das dívidas reconhecidas, nos limites das forças da herança.
+# Remissões Normativas
+- Vide art. 741, § 4.º, do CPC.
+-- trata do procedimento para que os credores da herança jacente requeiram o pagamento de suas dívidas.
+-----
+# Efeitos da Vacância e Destino dos Bens
+- Código Civil
+# Dispositivos Legais
+- Art. 1.822. A declaração de vacância da herança não prejudicará os herdeiros que legalmente se habilitarem; mas, decorridos cinco anos da abertura da sucessão, os bens arrecadados passarão ao domínio do Município ou do Distrito Federal, se localizados nas respectivas circunscrições, incorporando-se ao domínio da União quando situados em território federal.
+- Parágrafo único. Não se habilitando até a declaração de vacância, os colaterais ficarão excluídos da sucessão.
+# Remissões Normativas
+- Vide art. 1.884 do CC.
+-- trata da revogação de codicilos, não possuindo relação direta com o tema do artigo.
+-----
+# Vacância por Renúncia de Todos os Herdeiros
+- Código Civil
+# Dispositivos Legais
+- Art. 1.823. Quando todos os chamados a suceder renunciarem à herança, será esta desde logo declarada vacante.
+# Remissões Normativas
+- Vide arts. 1.804, parágrafo único, e 1.806 do CC.
+-- tratam dos efeitos da renúncia, que torna a transmissão da herança como não ocorrida, e da forma solene como a renúncia deve ser feita.
+-----
+# Conceito de Petição de Herança
+- Código Civil
+# Dispositivos Legais
+- Art. 1.824. O herdeiro pode, em ação de petição de herança, demandar o reconhecimento de seu direito sucessório, para obter a restituição da herança, ou de parte dela, contra quem, na qualidade de herdeiro, ou mesmo sem título, a possua.
+# Remissões Normativas
+- Vide Súmula 149 do STF.
+-- estabelece que a ação de petição de herança é prescritível, ao contrário da ação de investigação de paternidade.
+- Vide art. 205 do CC.
+-- fixa em dez anos o prazo prescricional geral, aplicável à ação de petição de herança.
+-----
+# Abrangência da Petição de Herança
+- Código Civil
+# Dispositivos Legais
+- Art. 1.825. A ação de petição de herança, ainda que exercida por um só dos herdeiros, poderá compreender todos os bens hereditários.
+# Remissões Normativas
+- Vide art. 1.791 do CC.
+-- trata do princípio da indivisibilidade da herança até a partilha, que é considerada um todo unitário.
+-----
+# Responsabilidade do Possuidor da Herança
+- Código Civil
+# Dispositivos Legais
+- Art. 1.826. O possuidor da herança está obrigado à restituição dos bens do acervo, fixando-se-lhe a responsabilidade segundo a sua posse, observado o disposto nos arts. 1.214 a 1.222.
+- Parágrafo único. A partir da citação, a responsabilidade do possuidor se há de aferir pelas regras concernentes à posse de má-fé e à mora.
+# Remissões Normativas
+- Vide art. 395 do CC.
+-- define a mora do devedor e sua responsabilidade pelos prejuízos, juros e atualização monetária.
+-----
+# Reivindicação dos Bens em Poder de Terceiros
+- Código Civil
+# Dispositivos Legais
+- Art. 1.827. O herdeiro pode demandar os bens da herança, mesmo em poder de terceiros, sem prejuízo da responsabilidade do possuidor originário pelo valor dos bens alienados.
+- Parágrafo único. São eficazes as alienações feitas, a título oneroso, pelo herdeiro aparente a terceiro de boa-fé.
+-----
+# Pagamento de Legado por Herdeiro Aparente
+- Código Civil
+# Dispositivos Legais
+- Art. 1.828. O herdeiro aparente, que de boa-fé houver pago um legado, não está obrigado a prestar o equivalente ao verdadeiro sucessor, ressalvado a este o direito de proceder contra quem o recebeu.
+# Remissões Normativas
+- Vide art. 1.934 do CC.
+-- estabelece a responsabilidade dos herdeiros pelo cumprimento dos legados.
+- Vide art. 2.041 do CC.
+-- regra de transição que estende as disposições sobre o herdeiro aparente a partilhas feitas sob a vigência do Código anterior.
+-----
+# Ordem da Vocação Hereditária
+- Código Civil
+# Dispositivos Legais
+- Art. 1.829. A sucessão legítima defere-se na ordem seguinte:
+- I – aos descendentes, em concorrência com o cônjuge sobrevivente, salvo se casado este com o falecido no regime da comunhão universal, ou no da separação obrigatória de bens (art. 1.640, parágrafo único); ou se, no regime da comunhão parcial, o autor da herança não houver deixado bens particulares;
+- II – aos ascendentes, em concorrência com o cônjuge;
+- III – ao cônjuge sobrevivente;
+- IV – aos colaterais.
+- A vocação para suceder em bens de estrangeiro existentes no Brasil será regulada pela lei brasileira e em benefício do cônjuge ou de filhos brasileiros, sempre que lhes não seja mais favorável a lei nacional do de cujus. LINDB (Decreto-lei n. 4.657, de 4-9-1942), art. 10, § 1.º; CF, art. 5.º, XXXI.
+- O art. 18 do Decreto-lei n. 3.200, de 19-4-1941, que dispunha sobre herança de filhos brasileiros de casal sob regime que excluísse a comunhão de bens, foi revogado pela Lei n. 2.514, de 27-6-1955.
+# Remissões Normativas
+- Vide Súmula 642 do STJ.
+-- dispõe que "o direito à meação não se comunica aos herdeiros", distinguindo o direito de propriedade do cônjuge do seu direito sucessório.
+- Vide art. 1.790 (sucessão dos companheiros) do CC.
+-- este artigo, que previa regras sucessórias para o companheiro, foi declarado inconstitucional pelo STF (RE 878.694).
+- Vide arts. 1.845 a 1.850 (herdeiros necessários) e 1.961 a 1.965 (deserdação) do CC.
+-- definem os herdeiros que têm direito à parte legítima da herança e as hipóteses em que podem ser dela privados.
+- Vide CF, art. 227, § 6.º.
+-- garante a igualdade de direitos sucessórios entre todos os filhos, havidos ou não da relação do casamento, ou por adoção.
+- Vide arts. 1.641 (separação obrigatória), 1.658 a 1.666 (comunhão parcial), 1.667 a 1.671 (comunhão universal) e 1.835 do CC.
+-- regulam os regimes de bens do casamento, essenciais para definir a concorrência do cônjuge com os descendentes.
+- Vide art. 1.685 do CC.
+-- trata da divisão de bens no regime da participação final nos aquestos.
+- Vide art. 1.836 do CC.
+-- dispõe sobre a sucessão dos ascendentes.
+- Vide art. 2.º, III, da Lei n. 8.971, de 29-12-1994.
+-- antiga lei sobre união estável, que previa direito sucessório ao companheiro na totalidade da herança.
+- Vide art. 1.838 do CC.
+-- regula a sucessão do cônjuge sobrevivente na totalidade da herança.
+- Vide arts. 1.592 e 1.839 a 1.843 do CC.
+-- definem o parentesco colateral e as regras para a sua sucessão.
+-----
+# Condições para o Cônjuge Herdar
+- Código Civil
+# Dispositivos Legais
+- Art. 1.830. Somente é reconhecido direito sucessório ao cônjuge sobrevivente se, ao tempo da morte do outro, não estavam separados judicialmente, nem separados de fato há mais de dois anos, salvo prova, neste caso, de que essa convivência se tornara impossível sem culpa do sobrevivente.
+# Remissões Normativas
+- Vide Emenda Constitucional n. 66, de 13-7-2010.
+-- alterou a redação do art. 226, § 6º, da CF, facilitando o divórcio e impactando a noção de separação judicial.
+-----
+# Direito Real de Habitação do Cônjuge
+- Código Civil
+# Dispositivos Legais
+- Art. 1.831. Ao cônjuge sobrevivente, qualquer que seja o regime de bens, será assegurado, sem prejuízo da participação que lhe caiba na herança, o direito real de habitação relativamente ao imóvel destinado à residência da família, desde que seja o único daquela natureza a inventariar.
+# Remissões Normativas
+- Vide art. 7.º, parágrafo único, da Lei n. 9.278, de 10-5-1996.
+-- assegurava o direito real de habitação ao companheiro sobrevivente em união estável.
+- Vide arts. 1.414 a 1.416 (habitação) do CC.
+-- definem as regras e os limites do direito real de habitação.
+- Vide Lei n. 8.971, de 29-12-1994.
+-- antiga lei sobre união estável que também previa o direito real de habitação.
+-----
+# Concorrência do Cônjuge com Descendentes
+- Código Civil
+# Dispositivos Legais
+- Art. 1.832. Em concorrência com os descendentes (art. 1.829, I) caberá ao cônjuge quinhão igual ao dos que sucederem por cabeça, não podendo a sua quota ser inferior à quarta parte da herança, se for ascendente dos herdeiros com que concorrer.
+-----
+# Sucessão por Grau entre Descendentes
+- Código Civil
+# Dispositivos Legais
+- Art. 1.833. Entre os descendentes, os em grau mais próximo excluem os mais remotos, salvo o direito de representação.
+# Remissões Normativas
+- Vide arts. 1.851 a 1.856 do CC.
+-- regulam o direito de representação, que é a exceção à regra de que os mais próximos excluem os mais remotos.
+-----
+# Igualdade de Direitos entre Descendentes
+- Código Civil
+# Dispositivos Legais
+- Art. 1.834. Os descendentes da mesma classe têm os mesmos direitos à sucessão de seus ascendentes.
+# Remissões Normativas
+- Vide art. 41 do ECA.
+-- estabelece que a adoção atribui a condição de filho ao adotado, com os mesmos direitos e deveres, inclusive sucessórios.
+-----
+# Sucessão por Cabeça ou por Estirpe
+- Código Civil
+# Dispositivos Legais
+- Art. 1.835. Na linha descendente, os filhos sucedem por cabeça, e os outros descendentes, por cabeça ou por estirpe, conforme se achem ou não no mesmo grau.
+# Remissões Normativas
+- Vide arts. 1.810, 1.811 e 1.816, caput, do CC.
+-- tratam da renúncia e da exclusão por indignidade, situações que, juntamente com a pré-morte, dão causa à sucessão por estirpe (representação).
+-----
+# Sucessão dos Ascendentes
+- Código Civil
+# Dispositivos Legais
+- Art. 1.836. Na falta de descendentes, são chamados à sucessão os ascendentes, em concorrência com o cônjuge sobrevivente.
+- § 1.º Na classe dos ascendentes, o grau mais próximo exclui o mais remoto, sem distinção de linhas.
+- § 2.º Havendo igualdade em grau e diversidade em linha, os ascendentes da linha paterna herdam a metade, cabendo a outra aos da linha materna.
+# Remissões Normativas
+- Vide art. 1.829, II, do CC.
+-- estabelece os ascendentes, em concorrência com o cônjuge, como a segunda classe na ordem de vocação hereditária.
+- Vide art. 1.594 do CC.
+-- dispõe sobre a contagem dos graus de parentesco em linha reta.
+-----
+# Concorrência do Cônjuge com Ascendentes
+- Código Civil
+# Dispositivos Legais
+- Art. 1.837. Concorrendo com ascendente em primeiro grau, ao cônjuge tocará um terço da herança; caber-lhe-á a metade desta se houver um só ascendente, ou se maior for aquele grau.
+-----
+# Sucessão do Cônjuge
+- Código Civil
+# Dispositivos Legais
+- Art. 1.838. Em falta de descendentes e ascendentes, será deferida a sucessão por inteiro ao cônjuge sobrevivente.
+# Remissões Normativas
+- Vide art. 2.º, III, da Lei n. 8.971, de 29-12-1994.
+-- antiga lei sobre união estável, que previa direito sucessório ao companheiro na falta de descendentes e ascendentes.
+- Vide art. 1.830 do CC.
+-- estabelece as condições para que o cônjuge sobrevivente possa herdar.
+-----
+# Sucessão dos Colaterais
+- Código Civil
+# Dispositivos Legais
+- Art. 1.839. Se não houver cônjuge sobrevivente, nas condições estabelecidas no art. 1.830, serão chamados a suceder os colaterais até o quarto grau.
+# Remissões Normativas
+- Vide Súmula 642 do STJ.
+-- dispõe que "o direito à meação não se comunica aos herdeiros".
+-----
+# Sucessão por Grau entre Colaterais
+- Código Civil
+# Dispositivos Legais
+- Art. 1.840. Na classe dos colaterais, os mais próximos excluem os mais remotos, salvo o direito de representação concedido aos filhos de irmãos.
+# Remissões Normativas
+- Vide arts. 1.810, 1.811, 1.816, caput, 1.843, 1.851 e 1.853 do CC.
+-- tratam da renúncia, da exclusão por indignidade e das regras do direito de representação na linha colateral.
+-----
+# Concorrência entre Irmãos Bilaterais e Unilaterais
+- Código Civil
+# Dispositivos Legais
+- Art. 1.841. Concorrendo à herança do falecido irmãos bilaterais com irmãos unilaterais, cada um destes herdará metade do que cada um daqueles herdar.
+-----
+# Sucessão de Irmãos Unilaterais
+- Código Civil
+# Dispositivos Legais
+- Art. 1.842. Não concorrendo à herança irmão bilateral, herdarão, em partes iguais, os unilaterais.
+-----
+# Sucessão de Sobrinhos e Tios
+- Código Civil
+# Dispositivos Legais
+- Art. 1.843. Na falta de irmãos, herdarão os filhos destes e, não os havendo, os tios.
+- § 1.º Se concorrerem à herança somente filhos de irmãos falecidos, herdarão por cabeça.
+- § 2.º Se concorrem filhos de irmãos bilaterais com filhos de irmãos unilaterais, cada um destes herdará a metade do que herdar cada um daqueles.
+- § 3.º Se todos forem filhos de irmãos bilaterais, ou todos de irmãos unilaterais, herdarão por igual.
+# Remissões Normativas
+- Vide art. 1.853 do CC.
+-- restringe o direito de representação na linha transversal aos filhos de irmãos do falecido.
+-----
+# Sucessão do Município, DF ou União
+- Código Civil
+# Dispositivos Legais
+- Art. 1.844. Não sobrevivendo cônjuge, ou companheiro, nem parente algum sucessível, ou tendo eles renunciado a herança, esta se devolve ao Município ou ao Distrito Federal, se localizada nas respectivas circunscrições, ou à União, quando situada em território federal.
+# Remissões Normativas
+- Vide art. 1.822, caput, do CC.
+-- trata da declaração de vacância da herança e sua devolução ao Poder Público.
+-----
+# Quem São os Herdeiros Necessários
+- Código Civil
+# Dispositivos Legais
+- Art. 1.845. São herdeiros necessários os descendentes, os ascendentes e o cônjuge.
+# Remissões Normativas
+- Vide arts. 549, 1.961 a 1.965, 1.814, 1.829, 1.830, 1.847, 1.961 e 2.018 do CC.
+-- tratam da proteção da herança dos herdeiros necessários, das formas de sua exclusão (deserdação e indignidade) e da ordem em que são chamados a suceder.
+-----
+# A Legítima
+- Código Civil
+# Dispositivos Legais
+- Art. 1.846. Pertence aos herdeiros necessários, de pleno direito, a metade dos bens da herança, constituindo a legítima.
+# Remissões Normativas
+- Vide arts. 544, 549, 1.789, 1.814, 1.857 §1.º e 1.961 do CC.
+-- dispõem sobre a proteção da legítima contra doações e disposições testamentárias que a excedam e sobre as formas de exclusão do herdeiro necessário.
+-----
+# Cálculo da Legítima
+- Código Civil
+# Dispositivos Legais
+- Art. 1.847. Calcula-se a legítima sobre o valor dos bens existentes na abertura da sucessão, abatidas as dívidas e as despesas do funeral, adicionando-se, em seguida, o valor dos bens sujeitos a colação.
+# Remissões Normativas
+- Vide arts. 544, 1.998 e 2.002 a 2.012 (colação) do CC.
+-- tratam da colação, que é o ato de conferir as doações recebidas em vida para igualar a legítima dos herdeiros necessários.
+-----
+# Cláusulas Restritivas sobre a Legítima
+- Código Civil
+# Dispositivos Legais
+- Art. 1.848. Salvo se houver justa causa, declarada no testamento, não pode o testador estabelecer cláusula de inalienabilidade, impenhorabilidade, e de incomunicabilidade, sobre os bens da legítima.
+- § 1.º Não é permitido ao testador estabelecer a conversão dos bens da legítima em outros de espécie diversa.
+- § 2.º Mediante autorização judicial e havendo justa causa, podem ser alienados os bens gravados, convertendo-se o produto em outros bens, que ficarão sub-rogados nos ônus dos primeiros.
+# Remissões Normativas
+- Vide art. 2.042 do CC.
+-- trata de regra de transição do Código Civil anterior sobre a dispensa de justa causa para cláusulas restritivas.
+- Vide arts. 1.668, I, e 1.911 do CC.
+-- tratam da incomunicabilidade dos bens doados ou herdados com cláusula e da regra geral sobre as cláusulas restritivas.
+- Vide art. 833 do CPC.
+-- elenca os bens que são legalmente impenhoráveis.
+- Vide arts. 167, II, n. 11, e 247 da LRP.
+-- determinam a necessidade de registro da cláusula restritiva no Cartório de Registro de Imóveis.
+- Vide Súmula 49 do STF.
+-- entende que a cláusula de inalienabilidade não impede a penhora por dívidas de condomínio (propter rem).
+-----
+# Herdeiro Necessário Contemplado com a Parte Disponível
+- Código Civil
+# Dispositivos Legais
+- Art. 1.849. O herdeiro necessário, a quem o testador deixar a sua parte disponível, ou algum legado, não perderá o direito à legítima.
+# Remissões Normativas
+- Vide art. 1.789 do CC.
+-- define a parte disponível como a metade da herança da qual o testador pode dispor livremente quando há herdeiros necessários.
+-----
+# Exclusão dos Herdeiros Colaterais
+- Código Civil
+# Dispositivos Legais
+- Art. 1.850. Para excluir da sucessão os herdeiros colaterais, basta que o testador disponha de seu patrimônio sem os contemplar.
+# Remissões Normativas
+- Vide art. 1.908 do CC.
+-- trata da hipótese de o testador afastar um herdeiro de certo objeto, que tocará aos herdeiros legítimos.
+-----
+# Conceito de Direito de Representação
+- Código Civil
+# Dispositivos Legais
+- Art. 1.851. Dá-se o direito de representação, quando a lei chama certos parentes do falecido a suceder em todos os direitos, em que ele sucederia, se vivo fosse.
+# Remissões Normativas
+- Vide arts. 1.810, 1.811, 1.816, caput, 1.854 e 1.855 do CC.
+-- tratam das situações que dão causa (indignidade) ou que impedem (renúncia) o direito de representação, bem como das regras de partilha do quinhão herdado.
+-----
+# Representação na Linha Reta
+- Código Civil
+# Dispositivos Legais
+- Art. 1.852. O direito de representação dá-se na linha reta descendente, mas nunca na ascendente.
+# Remissões Normativas
+- Vide art. 1.835 do CC.
+-- estabelece que os descendentes de grau mais próximo excluem os mais remotos, salvo o direito de representação.
+-----
+# Representação na Linha Transversal
+- Código Civil
+# Dispositivos Legais
+- Art. 1.853. Na linha transversal, somente se dá o direito de representação em favor dos filhos de irmãos do falecido, quando com irmãos deste concorrerem.
+# Remissões Normativas
+- Vide arts. 1.840 e 1.843, caput, do CC.
+-- regulam a sucessão dos irmãos (colaterais de segundo grau), onde se aplica a representação, e a dos demais colaterais, onde não se aplica.
+-----
+# Quinhão dos Representantes
+- Código Civil
+# Dispositivos Legais
+- Art. 1.854. Os representantes só podem herdar, como tais, o que herdaria o representado, se vivo fosse.
+-----
+# Partilha entre os Representantes
+- Código Civil
+# Dispositivos Legais
+- Art. 1.855. O quinhão do representado partir-se-á por igual entre os representantes.
+-----
+# Representação por Renunciante
+- Código Civil
+# Dispositivos Legais
+- Art. 1.856. O renunciante à herança de uma pessoa poderá representá-la na sucessão de outra.
+# Remissões Normativas
+- Vide arts. 1.810 e 1.811 do CC.
+-- dispõem que ninguém pode suceder representando herdeiro renunciante, regra que este artigo excepciona para a sucessão de terceiros.
+-----
+# Conceito de Testamento
+- Código Civil
+# Dispositivos Legais
+- Art. 1.857. Toda pessoa capaz pode dispor, por testamento, da totalidade dos seus bens, ou de parte deles, para depois de sua morte.
+- § 1.º A legítima dos herdeiros necessários não poderá ser incluída no testamento.
+- § 2.º São válidas as disposições testamentárias de caráter não patrimonial, ainda que o testador somente a elas se tenha limitado.
+# Remissões Normativas
+- Vide arts. 184 e 1.881 do CC.
+-- tratam da validade parcial do negócio jurídico e do codicilo, que é outra forma de disposição de última vontade.
+- Vide, como exemplo, os arts. 14, 791, 792, 1.609, III, 1.634, IV, 1.729, parágrafo único, 1.796 e 1.881 do CC.
+-- exemplificam o conteúdo de natureza não patrimonial que pode constar em um testamento, como o reconhecimento de filhos e a nomeação de tutor.
+-----
+# Natureza Jurídica do Testamento
+- Código Civil
+# Dispositivos Legais
+- Art. 1.858. O testamento é ato personalíssimo, podendo ser mudado a qualquer tempo.
+# Remissões Normativas
+- Vide art. 1.969 do CC.
+-- estabelece a forma pela qual o testamento pode ser revogado, reforçando sua característica de ato revogável.
+-----
+# Prazo para Impugnação
+- Código Civil
+# Dispositivos Legais
+- Art. 1.859. Extingue-se em cinco anos o direito de impugnar a validade do testamento, contado o prazo da data do seu registro.
+# Remissões Normativas
+- Vide art. 1.909, parágrafo único, do CC.
+-- trata do prazo específico de quatro anos para anular uma disposição testamentária por vício de consentimento.
+-----
+# Incapacidade para Testar
+- Código Civil
+# Dispositivos Legais
+- Art. 1.860. Além dos incapazes, não podem testar os que, no ato de fazê-lo, não tiverem pleno discernimento.
+- Parágrafo único. Podem testar os maiores de dezesseis anos.
+# Remissões Normativas
+- Vide arts. 3.º e 1.767 do CC.
+-- definem os absolutamente incapazes para os atos da vida civil e as pessoas sujeitas à curatela por não poderem exprimir sua vontade.
+-----
+# Capacidade Superveniente
+- Código Civil
+# Dispositivos Legais
+- Art. 1.861. A incapacidade superveniente do testador não invalida o testamento, nem o testamento do incapaz se valida com a superveniência da capacidade.
+-----
 # Espécies de Testamentos Ordinários
 - Código Civil
 # Dispositivos Legais
