@@ -461,23 +461,27 @@ function openIADropdown(anchorBtn, title, fullText){
   const hasR = (item.remissoes    && item.remissoes.length>0);
 
   card.innerHTML=`
-    <header class="ficha-head">
-      <div class="actions chip-bar"></div>
-      <h1 class="h1">${escapeHTML(item.title)}</h1>
-    </header>
+  <header class="ficha-head">
+    <div class="actions chip-bar"></div>
+    <div class="card-sep"></div>
+    <div class="card-cat">${escapeHTML(item.group || 'Geral')}</div>
+    <div class="card-sep"></div>
+    <h1 class="h1">${escapeHTML(item.title)}</h1>
+  </header>
 
-    ${hasD ? `
-      <section class="ubox-section">
-        <h3 class="ubox-sub">Dispositivos Legais (D)</h3>
-        ${renderList(item.dispositivos)}
-      </section>` : ''}
+  ${hasD ? `
+    <section class="ubox-section">
+      <h3 class="ubox-sub">Dispositivos Legais (D)</h3>
+      ${renderList(item.dispositivos)}
+    </section>` : ''}
 
-    ${hasR ? `
-      <section class="ubox-section">
-        <h3 class="ubox-sub">Remissões Normativas (R)</h3>
-        ${renderList(item.remissoes)}
-      </section>` : ''}
-  `;
+  ${hasR ? `
+    <section class="ubox-section">
+      <h3 class="ubox-sub">Remissões Normativas (R)</h3>
+      ${renderList(item.remissoes)}
+    </section>` : ''}
+`;
+
 
   const actionsEl=card.querySelector('.actions');
   const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
@@ -496,7 +500,13 @@ function openIADropdown(anchorBtn, title, fullText){
     const raw=await fetchText(path);
     const chunks=splitThemesByDelim(raw);
     const parsed=chunks.map(parseTemaFromChunk).filter(Boolean);
-    const arr=parsed.map(t=>({ slug:`${slugify(group)}-${t.slug}`, title:t.title, dispositivos:t.dispositivos||[], remissoes:t.remissoes||[] }));
+const arr=parsed.map(t=>({
+  slug:`${slugify(group)}-${t.slug}`,
+  title:t.title,
+  group, // <- mantém a categoria no item
+  dispositivos:t.dispositivos||[],
+  remissoes:t.remissoes||[]
+}));
     CACHED_FILES.set(path,arr);
     return arr;
   }
