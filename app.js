@@ -2,7 +2,6 @@
 // Home minimalista (logo + busca)
 // Tema com ROLAGEM INFINITA (selecionado ±5; carrega +5 por sentinela)
 // Drawer funcional e dropdown centralizado no mobile
-
 (function () {
   const $ = (q, el = document) => el.querySelector(q);
   const $$ = (q, el = document) => Array.from(el.querySelectorAll(q));
@@ -100,6 +99,15 @@
       sections.push({raw:name, nm, start, end:fixed.length});
     }
 
+    // Linha meta logo após o título (ex.: "- Código Civil")
+    let metaLine = '';
+    const titleBlock = sections[0];
+    if (titleBlock) {
+      const preBody = fixed.slice(titleBlock.start, titleBlock.end);
+      const mMeta = preBody.match(/^\s*-\s+(.+?)\s*$/m);
+      if (mMeta) metaLine = mMeta[1].trim();
+    }
+
     const secD=sections.find(s=>/^dispositivos\s+legais\b/.test(s.nm));
     const secR=sections.find(s=>/^remissoes\s+normativas\b/.test(s.nm));
 
@@ -143,7 +151,8 @@
       titleN:normPT(title),
       dispN:normPT(dispText),
       remN:normPT(remText),
-      bodyN:normPT(dispText+' '+remText)
+      bodyN:normPT(dispText+' '+remText),
+      metaLine
     };
   }
 
@@ -166,18 +175,17 @@
   const labelFromFlags=(f)=>['T','D','R'].filter(k=>f[k]).map(k=>`(${k})`).join(' ');
 
   /* Snippet do 1º dispositivo legal (até 60 chars; 1ª linha) */
-function getDispSnippet(slug, max = 60){
-  for (const arr of CACHED_FILES.values()){
-    const hit = arr.find(x => x.slug === slug);
-    if (hit && hit.dispositivos?.length){
-      const txt = String(hit.dispositivos[0].texto || '');
-      return txt.length > max ? txt.slice(0, max - 1) + '…' : txt;
+  function getDispSnippet(slug, max = 60){
+    for (const arr of CACHED_FILES.values()){
+      const hit = arr.find(x => x.slug === slug);
+      if (hit && hit.dispositivos?.length){
+        const txt = String(hit.dispositivos[0].texto || '');
+        return txt.length > max ? txt.slice(0, max - 1) + '…' : txt;
+      }
     }
+    return '';
   }
-  return '';
-}
 
-  
   /* ===== Dropdown pós-busca ===== */
   let __popEl=null;
   function closeAcDropdown(){ if(__popEl){ __popEl.remove(); __popEl=null; } document.removeEventListener('click',onDocClickClose,true); window.removeEventListener('hashchange', closeAcDropdown, { once:true }); }
@@ -207,19 +215,18 @@ function getDispSnippet(slug, max = 60){
         ${catList.map(cat=>`<button type="button" class="ac-chip" data-cat="${(cat||'').replace(/"/g,'&quot;')}" aria-pressed="${activeCat===cat}">${escapeHTML(cat)}</button>`).join('')}
       </div>`;
     const listHTML = arr.slice(0,8).map(x=>{
-  const { t, flags } = x;
-  const titleHTML = highlightTitle(t.title, q);
-  const labels    = labelFromFlags(flags);
-  const snippet   = getDispSnippet(t.slug, 60); // até 60 caracteres
-
-  return `<li role="option">
-    <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['T','D','R'].filter(k=>flags[k]).join('')}">
-      <div class="s1">${titleHTML}</div>
-      ${snippet ? `<div class="s3">${escapeHTML(snippet)}</div>` : ''}
-      <div class="s2">${escapeHTML((t.group||'Geral') + (labels?` | ${labels}`:''))}</div>
-    </a>
-  </li>`;
-}).join('');
+      const { t, flags } = x;
+      const titleHTML = highlightTitle(t.title, q);
+      const labels    = labelFromFlags(flags);
+      const snippet   = getDispSnippet(t.slug, 60);
+      return `<li role="option">
+        <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['T','D','R'].filter(k=>flags[k]).join('')}">
+          <div class="s1">${titleHTML}</div>
+          ${snippet ? `<div class="s3">${escapeHTML(snippet)}</div>` : ''}
+          <div class="s2">${escapeHTML((t.group||'Geral') + (labels?` | ${labels}`:''))}</div>
+        </a>
+      </li>`;
+    }).join('');
 
     acList.innerHTML=chipsHTML + listHTML; acList.hidden=false;
 
@@ -250,7 +257,6 @@ function getDispSnippet(slug, max = 60){
     const menu = $('#menuList');
     if (!menu) return;
 
-    // Evita múltiplos handlers acumulados
     if (!menu.dataset.bound) {
       menu.addEventListener('click', (e) => {
         const a = e.target.closest('a.title');
@@ -385,51 +391,49 @@ function getDispSnippet(slug, max = 60){
   }
 
   /* ===== IA — dropdown (chips verticais) ===== */
-function googleIA(prompt){ return `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`; }
+  function googleIA(prompt){ return `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`; }
 
-const IA_PROMPTS = {
-  resumo:        (t, full) => `Faça um RESUMO em tópicos, com fundamentos e aplicações práticas.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-  detalhada:     (t, full) => `Explique DETALHADAMENTE o tema, com transcrições essenciais, finalidade, requisitos e exemplos.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-  dissertativas: (t, full) => `Crie 5 QUESTÕES DISSERTATIVAS com gabarito comentado e base legal.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-  objetivas:     (t, full) => `Crie 10 QUESTÕES OBJETIVAS (A–E) com gabarito e breve justificativa.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-  videos:        (t)       => `site:youtube.com aula ${t} explicação prática legislação`,
-  artigos:       (t)       => `artigos doutrina ${t} pdf site:.jus.br OR site:.gov.br OR site:.edu.br`
-};
+  const IA_PROMPTS = {
+    resumo:        (t, full) => `Faça um RESUMO em tópicos, com fundamentos e aplicações práticas.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    detalhada:     (t, full) => `Explique DETALHADAMENTE o tema, com transcrições essenciais, finalidade, requisitos e exemplos.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    dissertativas: (t, full) => `Crie 5 QUESTÕES DISSERTATIVAS com gabarito comentado e base legal.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    objetivas:     (t, full) => `Crie 10 QUESTÕES OBJETIVAS (A–E) com gabarito e breve justificativa.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    videos:        (t)       => `site:youtube.com aula ${t} explicação prática legislação`,
+    artigos:       (t)       => `artigos doutrina ${t} pdf site:.jus.br OR site:.gov.br OR site:.edu.br`
+  };
 
-let __iaDrop=null;
-function closeIADrop(){ if(__iaDrop){ __iaDrop.remove(); __iaDrop=null; document.removeEventListener('click', onDocCloseIADrop, true); } }
-function onDocCloseIADrop(e){ if(__iaDrop && !__iaDrop.contains(e.target)) closeIADrop(); }
+  let __iaDrop=null;
+  function closeIADrop(){ if(__iaDrop){ __iaDrop.remove(); __iaDrop=null; document.removeEventListener('click', onDocCloseIADrop, true); } }
+  function onDocCloseIADrop(e){ if(__iaDrop && !__iaDrop.contains(e.target)) closeIADrop(); }
 
-function openIADropdown(anchorBtn, title, fullText){
-  closeIADrop();
-  const actions = [
-    {key:'resumo', label:'Resumo'},
-    {key:'detalhada', label:'Detalhado'},
-    {key:'dissertativas', label:'Questões Dissertativas'},
-    {key:'objetivas', label:'Questões Objetivas'},
-    {key:'videos', label:'Encontre Vídeos'},
-    {key:'artigos', label:'Encontre Artigos'},
-  ];
-  __iaDrop = document.createElement('div');
-  __iaDrop.className='ia-pop';
-  __iaDrop.innerHTML = actions.map(a=>`<button class="ia-item" data-k="${a.key}">${a.label}</button>`).join('');
-  document.body.appendChild(__iaDrop);
-
-  const r = anchorBtn.getBoundingClientRect();
-  __iaDrop.style.left = (r.left + window.scrollX) + 'px';
-  __iaDrop.style.top  = (r.bottom + window.scrollY + 6) + 'px';
-
-  __iaDrop.addEventListener('click', (e)=>{
-    const k = e.target.dataset.k; if(!k) return;
-    const p = (k==='videos'||k==='artigos') ? IA_PROMPTS[k](title) : IA_PROMPTS[k](title, fullText);
-    window.open(googleIA(p), '_blank', 'noopener');
+  function openIADropdown(anchorBtn, title, fullText){
     closeIADrop();
-  });
+    const actions = [
+      {key:'resumo', label:'Resumo'},
+      {key:'detalhada', label:'Detalhado'},
+      {key:'dissertativas', label:'Questões Dissertativas'},
+      {key:'objetivas', label:'Questões Objetivas'},
+      {key:'videos', label:'Encontre Vídeos'},
+      {key:'artigos', label:'Encontre Artigos'},
+    ];
+    __iaDrop = document.createElement('div');
+    __iaDrop.className='ia-pop';
+    __iaDrop.innerHTML = actions.map(a=>`<button class="ia-item" data-k="${a.key}">${a.label}</button>`).join('');
+    document.body.appendChild(__iaDrop);
 
-  setTimeout(()=>document.addEventListener('click', onDocCloseIADrop, true),0);
-}
+    const r = anchorBtn.getBoundingClientRect();
+    __iaDrop.style.left = (r.left + window.scrollX) + 'px';
+    __iaDrop.style.top  = (r.bottom + window.scrollY + 6) + 'px';
 
+    __iaDrop.addEventListener('click', (e)=>{
+      const k = e.target.dataset.k; if(!k) return;
+      const p = (k==='videos'||k==='artigos') ? IA_PROMPTS[k](title) : IA_PROMPTS[k](title, fullText);
+      window.open(googleIA(p), '_blank', 'noopener');
+      closeIADrop();
+    });
 
+    setTimeout(()=>document.addEventListener('click', onDocCloseIADrop, true),0);
+  }
 
   /* ===== ROLAGEM INFINITA ===== */
   function buildBundle(title,dispositivos,remissoes){
@@ -452,66 +456,59 @@ function openIADropdown(anchorBtn, title, fullText){
   }
 
   function renderTemaCard(container,item){
-  const fullText=buildBundle(item.title,item.dispositivos,item.remissoes);
-  const card=document.createElement('article');
-  card.className='card ubox';
-  card.dataset.slug=item.slug;
+    const fullText=buildBundle(item.title,item.dispositivos,item.remissoes);
+    const card=document.createElement('article');
+    card.className='card ubox';
+    card.dataset.slug=item.slug;
 
-  const hasD = (item.dispositivos && item.dispositivos.length>0);
-  const hasR = (item.remissoes    && item.remissoes.length>0);
+    const hasD = (item.dispositivos && item.dispositivos.length>0);
+    const hasR = (item.remissoes    && item.remissoes.length>0);
 
-  // monta "Categoria | (T)(D)(R)" igual à busca, sem mostrar "Geral"
-const catLine = (item.group && item.group !== 'Geral') ? String(item.group) : '';
+    card.innerHTML=`
+      <header class="ficha-head">
+        <div class="actions chip-bar"></div>
+        ${item.metaLine ? `<div class="card-sep"></div><div class="card-cat">${escapeHTML(item.metaLine)}</div>` : ``}
+        <div class="card-sep"></div>
+        <h1 class="h1">${escapeHTML(item.title)}</h1>
+      </header>
 
+      ${hasD ? `
+        <section class="ubox-section">
+          <h3 class="ubox-sub">Dispositivos Legais (D)</h3>
+          ${renderList(item.dispositivos)}
+        </section>` : ''}
 
-card.innerHTML = `
-  <header class="ficha-head">
-    <div class="actions chip-bar"></div>
-    ${catLine ? `<div class="card-sep"></div><div class="card-cat">${escapeHTML(catLine)}</div>` : ``}
-    <div class="card-sep"></div>
-    <h1 class="h1">${escapeHTML(item.title)}</h1>
-  </header>
+      ${hasR ? `
+        <section class="ubox-section">
+          <h3 class="ubox-sub">Remissões Normativas (R)</h3>
+          ${renderList(item.remissoes)}
+        </section>` : ''}
+    `;
 
-  ${hasD ? `
-    <section class="ubox-section">
-      <h3 class="ubox-sub">Dispositivos Legais (D)</h3>
-      ${renderList(item.dispositivos)}
-    </section>` : ''}
+    const actionsEl=card.querySelector('.actions');
+    const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
+    const saved=isSaved(item.slug);
+    const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{ const added=toggleSaved(item.slug); saveBtn.textContent=added?'Remover':'Salvar'; if(added) saveBtn.setAttribute('data-variant','primary'); else saveBtn.removeAttribute('data-variant'); toast(added?'Tema salvo':'Removido','info',1400); });
+    const iaBtn = mkBtn('Estude com I.A.','');
+    iaBtn.onclick = () => openIADropdown(iaBtn, item.title, fullText);
+    actionsEl.append(saveBtn, iaBtn);
 
-  ${hasR ? `
-    <section class="ubox-section">
-      <h3 class="ubox-sub">Remissões Normativas (R)</h3>
-      ${renderList(item.remissoes)}
-    </section>` : ''}
-`;
-
-
-
-
-  const actionsEl=card.querySelector('.actions');
-  const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
-  const saved=isSaved(item.slug);
-  const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{ const added=toggleSaved(item.slug); saveBtn.textContent=added?'Remover':'Salvar'; if(added) saveBtn.setAttribute('data-variant','primary'); else saveBtn.removeAttribute('data-variant'); toast(added?'Tema salvo':'Removido','info',1400); });
-  const iaBtn = mkBtn('Estude com I.A.','');
-  iaBtn.onclick = () => openIADropdown(iaBtn, item.title, fullText);
-  actionsEl.append(saveBtn, iaBtn);
-
-  container.appendChild(card);
-}
-
+    container.appendChild(card);
+  }
 
   async function ensureFileParsed(path,group){
     if(CACHED_FILES.has(path)) return CACHED_FILES.get(path);
     const raw=await fetchText(path);
     const chunks=splitThemesByDelim(raw);
     const parsed=chunks.map(parseTemaFromChunk).filter(Boolean);
-const arr=parsed.map(t=>({
-  slug:`${slugify(group)}-${t.slug}`,
-  title:t.title,
-  group, // <- mantém a categoria no item
-  dispositivos:t.dispositivos||[],
-  remissoes:t.remissoes||[]
-}));
+    const arr=parsed.map(t=>({
+      slug:`${slugify(group)}-${t.slug}`,
+      title:t.title,
+      group,
+      metaLine: t.metaLine || '',
+      dispositivos:t.dispositivos||[],
+      remissoes:t.remissoes||[]
+    }));
     CACHED_FILES.set(path,arr);
     return arr;
   }
@@ -614,7 +611,15 @@ const arr=parsed.map(t=>({
           const dispN=t.dispN||''; const remN=t.remN||''; const body=(dispN+' '+remN).toLowerCase();
           temas.push({ slug, title:t.title, path, group, frag:t.slug, titleN:t.titleN, dispN, remN, bodyN:t.bodyN, bodyL:body });
         }
-        CACHED_FILES.set(path, parsed.map(t=>({ slug:`${slugify(group)}-${t.slug}`, title:t.title, dispositivos:t.dispositivos||[], remissoes:t.remissoes||[] })));
+        // mantém cache com metaLine também
+        CACHED_FILES.set(path, parsed.map(t=>({
+          slug:`${slugify(group)}-${t.slug}`,
+          title:t.title,
+          group,
+          metaLine: t.metaLine || '',
+          dispositivos:t.dispositivos||[],
+          remissoes:t.remissoes||[]
+        })));
       }catch(e){ console.error('Seed falhou',path,e); toast(`Erro ao ler ${path}`,'error',2800); }
     }
     return temas;
@@ -626,7 +631,7 @@ const arr=parsed.map(t=>({
     if(!TEMAS.length) await loadTemas();
     if(page.kind==='tema') await loadTemaInfinite(page.slug);
     else if(page.kind==='sobre'){
-      $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários.</p></div>`;
+      $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code>- Linha meta (ex.: Código Civil)</code> → <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários. A “linha meta” é mostrada no cabeçalho do card.</p></div>`;
       leaveHomeMode(); restoreSearchToTopbar();
     } else { renderHome(); }
   }
