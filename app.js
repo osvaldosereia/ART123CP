@@ -512,7 +512,7 @@ for (const it of remissoes)    it.link = googleIA(IA_PROMPTS.detalhada(it.texto,
       {key:'objetivas',     label:'Questões Objetivas'},
       {key:'videos',        label:'Encontre Vídeos'},
       {key:'artigos',       label:'Encontre Artigos'},
-      {key:'comparar',      label:'Comparar Texto'}
+      {key:'comparar',      label:'Consultar Atualização'}
     ];
 
     __iaDrop = document.createElement('div');
