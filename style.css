@@ -305,3 +305,18 @@ button.mini{
 /* Se quiser reduzir o respiro onde tinha o subtítulo: */
 .ubox-section { padding-top: 0 !important; }
 .ubox-section + .ubox-section { margin-top: 14px !important; padding-top: 14px !important; }
+
+/* Tirar a linha LOGO ABAIXO da categoria ("Código Civil") */
+.card-cat + .card-sep { display: none !important; }
+
+/* Diminuir o respiro entre a categoria e o início do texto */
+.card-cat { margin-bottom: 4px !important; }
+
+/* (opcional) apertar um pouco o topo do card */
+.ficha-head { padding-bottom: 4px !important; }
+
+/* (opcional) menos respiro antes da 1ª seção de conteúdo */
+.card .ubox-section:first-of-type {
+  margin-top: 6px !important;
+  padding-top: 6px !important;
+}
