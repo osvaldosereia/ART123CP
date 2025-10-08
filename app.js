@@ -120,7 +120,7 @@
 
   const IA_PROMPTS = {
     resumo:        (t, full) => `Faça um RESUMO em tópicos, com fundamentos e aplicações práticas.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-    detalhada:     (t, full) => `Explique DETALHADAMENTE o tema, com transcrições essenciais, finalidade, requisitos e exemplos.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    detalhada:     (t, full) => `Explique EXCLUSIVAMENTE o tema do texto a seguir, com transcrições essenciais, finalidade, requisitos e exemplos.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
     dissertativas: (t, full) => `Crie 5 QUESTÕES DISSERTATIVAS com gabarito comentado e base legal.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
     objetivas:     (t, full) => `Crie 10 QUESTÕES OBJETIVAS (A–E) com gabarito e breve justificativa.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
     videos:        (t)       => `site:youtube.com aula ${t} explicação prática legislação`,
