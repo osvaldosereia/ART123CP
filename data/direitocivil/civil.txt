@@ -5,6 +5,84 @@
 
 
 
+# Substituição Vulgar
+# Dispositivos Legais
+- Art. 1.947. O testador pode substituir outra pessoa ao herdeiro ou ao legatário nomeado, para o caso de um ou outro não querer ou não poder aceitar a herança ou o legado, presumindo-se que a substituição foi determinada para as duas alternativas, ainda que o testador só a uma se refira.
+# Remissões Normativas
+- Vide art. 1.799 do CC.
+-- trata das pessoas que podem ser chamadas a suceder por testamento.
+-----
+# Pluralidade de Substitutos ou Substituídos
+# Dispositivos Legais
+- Art. 1.948. Também é lícito ao testador substituir muitas pessoas por uma só, ou vice-versa, e ainda substituir com reciprocidade ou sem ela.
+-----
+# Condição ou Encargo do Substituto
+# Dispositivos Legais
+- Art. 1.949. O substituto fica sujeito à condição ou encargo imposto ao substituído, quando não for diversa a intenção manifestada pelo testador, ou não resultar outra coisa da natureza da condição ou do encargo.
+# Remissões Normativas
+- Vide arts. 121 e 136 do CC.
+-- O art. 121 trata da condição como cláusula que, derivando exclusivamente da vontade das partes, subordina o efeito do negócio jurídico a evento futuro e incerto.
+-- O art. 136 trata do encargo, que não suspende a aquisição nem o exercício do direito, salvo quando expressamente imposto no negócio jurídico, pelo disponente, como condição suspensiva.
+-----
+# Substituição Recíproca
+# Dispositivos Legais
+- Art. 1.950. Se, entre muitos coerdeiros ou legatários de partes desiguais, for estabelecida substituição recíproca, a proporção dos quinhões fixada na primeira disposição entender-se-á mantida na segunda; se, com as outras anteriormente nomeadas, for incluída mais alguma pessoa na substituição, o quinhão vago pertencerá em partes iguais aos substitutos.
+-----
+# Conceito de Substituição Fideicomissária
+# Dispositivos Legais
+- Art. 1.951. Pode o testador instituir herdeiros ou legatários, estabelecendo que, por ocasião de sua morte, a herança ou o legado se transmita ao fiduciário, resolvendo-se o direito deste, por sua morte, a certo tempo ou sob certa condição, em favor de outrem, que se qualifica de fideicomissário.
+# Remissões Normativas
+- Vide arts. 1.668, II, e 1.898 do CC.
+-- O art. 1.668, II, trata da incomunicabilidade dos bens gravados de fideicomisso e do direito dos herdeiros fideicomissários.
+-- O art. 1.898 estabelece que a designação do tempo do falecimento do herdeiro ou legatário, ou o termo inicial de seu direito, não invalida a instituição, entendendo-se que o testador queria nomear sucessor.
+- Vide art. 167, II, n. 11, da LRP.
+-- trata da averbação, no Registro de Imóveis, da alteração do nome por casamento ou por desquite, ou, ainda, de outras circunstâncias que, de qualquer modo, tenham influência no registro ou nas pessoas nele interessadas.
+-----
+# Substituição Fideicomissária
+# Dispositivos Legais
+- Art. 1.952. A substituição fideicomissária somente se permite em favor dos não concebidos ao tempo da morte do testador.
+-- Parágrafo único. Se, ao tempo da morte do testador, já houver nascido o fideicomissário, adquirirá este a propriedade dos bens fideicometidos, convertendo-se em usufruto o direito do fiduciário.
+# Remissões Normativas
+- Vide arts. 1.390 a 1.411, 1.784 e 1.799, I, do CC.
+-- Os arts. 1.390 a 1.411 tratam do instituto do usufruto, seus direitos, deveres e extinção.
+-- O art. 1.784 estabelece o princípio da saisine, segundo o qual a herança se transmite desde logo aos herdeiros.
+-- O art. 1.799, I, permite que sejam chamados a suceder os filhos, ainda não concebidos, de pessoas indicadas pelo testador.
+-----
+# Propriedade do Fiduciário
+# Dispositivos Legais
+- Art. 1.953. O fiduciário tem a propriedade da herança ou legado, mas restrita e resolúvel.
+-- Parágrafo único. O fiduciário é obrigado a proceder ao inventário dos bens gravados, e a prestar caução de restituí-los se o exigir o fideicomissário.
+# Remissões Normativas
+- Vide art. 1.359 do CC.
+-- trata da propriedade resolúvel, que se extingue com o implemento de uma condição ou o advento de um termo.
+-----
+# Renúncia do Fiduciário
+# Dispositivos Legais
+- Art. 1.954. Salvo disposição em contrário do testador, se o fiduciário renunciar a herança ou o legado, defere-se ao fideicomissário o poder de aceitar.
+-----
+# Renúncia do Fideicomissário
+# Dispositivos Legais
+- Art. 1.955. O fideicomissário pode renunciar a herança ou o legado, e, neste caso, o fideicomisso caduca, deixando de ser resolúvel a propriedade do fiduciário, se não houver disposição contrária do testador.
+-----
+# Direito de Acrescer
+# Dispositivos Legais
+- Art. 1.956. Se o fideicomissário aceitar a herança ou o legado, terá direito à parte que, ao fiduciário, em qualquer tempo acrescer.
+-----
+# Responsabilidade do Fideicomissário
+# Dispositivos Legais
+- Art. 1.957. Ao sobrevir a sucessão, o fideicomissário responde pelos encargos da herança que ainda restarem.
+-----
+# Caducidade do Fideicomisso
+# Dispositivos Legais
+- Art. 1.958. Caduca o fideicomisso se o fideicomissário morrer antes do fiduciário, ou antes de realizar-se a condição resolutória do direito deste último; nesse caso, a propriedade consolida-se no fiduciário, nos termos do art. 1.955.
+-----
+# Nulidade do Fideicomisso além do Segundo Grau
+# Dispositivos Legais
+- Art. 1.959. São nulos os fideicomissos além do segundo grau.
+-----
+# Nulidade da Substituição Ilegal
+# Dispositivos Legais
+- Art. 1.960. A nulidade da substituição ilegal não prejudica a instituição, que valerá sem o encargo resolutório.
 -----
 # Deserdação dos Herdeiros Necessários
 # Dispositivos Legais
