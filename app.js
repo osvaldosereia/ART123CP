@@ -634,42 +634,7 @@ for (const it of remissoes)    it.link = googleIA(IA_PROMPTS.detalhada(it.texto,
     const idx=list.findIndex(x=>x.slug===slug);
     if(idx===-1){ $('#content').innerHTML=`<div class="card ubox"><p class="muted">Tema não encontrado no arquivo.</p></div>`; return; }
 
-    const host=$('#content');
-    host.innerHTML=`<div id="infiniteHost"></div>`;
-    const feed=$('#infiniteHost');
-
-    // janela inicial: selecionado ±5
-    let start=Math.max(0, idx-5);
-    let end  =Math.min(list.length-1, idx+5);
-
-    function mountRange(a,b,where='append'){
-      if(a>b) return;
-      const frag=document.createDocumentFragment();
-      for(let i=a;i<=b;i++) renderTemaCard(frag, list[i]);
-      if(where==='append') feed.appendChild(frag); else feed.prepend(frag);
-    }
-    mountRange(start,end,'append');
-
-    // Sentinelas para carregar mais 5
-    const topSentinel=document.createElement('div');
-    const bottomSentinel=document.createElement('div');
-    feed.prepend(topSentinel); feed.append(bottomSentinel);
-
-    const STEP=5;
-    const io=new IntersectionObserver((entries)=>{
-      for(const ent of entries){
-        if(!ent.isIntersecting) continue;
-        if(ent.target===bottomSentinel){
-          const nextEnd=Math.min(list.length-1, end+STEP);
-          if(nextEnd> end){ mountRange(end+1, nextEnd, 'append'); end=nextEnd; }
-        }
-        if(ent.target===topSentinel){
-          const nextStart=Math.max(0, start-STEP);
-          if(nextStart< start){ mountRange(nextStart, start-1, 'prepend'); start=nextStart; }
-        }
-      }
-    },{root:null, rootMargin:'600px 0px', threshold:0.01});
-    io.observe(bottomSentinel); io.observe(topSentinel);
+    iv id="infiniteHost
 
     // Atualiza hash pelo card dominante
     let rafId=0;
