@@ -5,369 +5,407 @@
 
 
 
-# Averbação em Registro Público
-# Dispositivos Legais
-- Art. 10. Far-se-á averbação em registro público:
--- I – das sentenças que decretarem a nulidade ou anulação do casamento, o divórcio, a separação judicial e o restabelecimento da sociedade conjugal;
--- II – dos atos judiciais ou extrajudiciais que declararem ou reconhecerem a filiação;
--- III – (Revogado pela Lei n. 12.010, de 3-8-2009.)
-# Remissões Normativas
-- Vide Emenda Constitucional n. 66, de 13-7-2010, que instituiu o divórcio direto.
-- Vide art. 226, § 6.º, da CF.
--- estabelece que o casamento civil pode ser dissolvido pelo divórcio.
-- Da dissolução da sociedade e do vínculo conjugal no CC: arts. 1.571 a 1.582.
--- O art. 1.571 trata das causas de término da sociedade conjugal.
--- O art. 1.572 trata da caracterização da impossibilidade da comunhão de vida para o divórcio.
--- O art. 1.573 trata dos atos que podem caracterizar a impossibilidade da comunhão de vida.
--- O art. 1.574 trata da separação consensual.
--- O art. 1.575 trata dos efeitos da separação judicial quanto aos bens.
--- O art. 1.576 trata da manutenção dos direitos e deveres dos pais em relação aos filhos.
--- O art. 1.577 trata da possibilidade de o cônjuge manter o nome de casado após a separação.
--- O art. 1.578 trata dos efeitos da separação judicial sobre os bens.
--- O art. 1.579 trata dos efeitos do divórcio.
--- O art. 1.580 trata do prazo para a conversão da separação em divórcio (parcialmente superado pela EC 66/2010).
--- O art. 1.581 trata da possibilidade de o divórcio ser requerido por um só dos cônjuges.
--- O art. 1.582 trata do pedido de restabelecimento da sociedade conjugal.
-- Vide art. 29, § 1.º, a, da LRP.
--- estabelece que serão averbadas as sentenças de nulidade ou anulação de casamento, divórcio, separação judicial e restabelecimento da sociedade conjugal.
-- Vide Lei n. 6.515, de 26-12-1977 (Lei do Divórcio).
-- Do reconhecimento dos filhos no CC: arts. 1.607 a 1.617.
--- O art. 1.607 trata da impossibilidade de o reconhecimento ser sujeito a condição ou termo.
--- O art. 1.608 trata da possibilidade de o filho já falecido ser reconhecido.
--- O art. 1.609 trata das formas de reconhecimento dos filhos.
--- O art. 1.610 trata da irrevogabilidade do reconhecimento.
--- O art. 1.611 trata do reconhecimento de filho por menor.
--- O art. 1.612 trata da proibição de se revelar a origem da filiação no registro.
--- O art. 1.613 trata da proibição de se contestar a maternidade.
--- O art. 1.614 trata dos efeitos do reconhecimento.
--- O art. 1.615 trata do reconhecimento de filho decorrente de relação extraconjugal.
--- O art. 1.616 trata da equiparação dos efeitos da sentença de investigação de paternidade ao reconhecimento.
--- O art. 1.617 trata do direito do filho reconhecido à herança.
-- Vide arts. 26 e 27 do ECA.
--- O art. 26 trata das formas de reconhecimento do estado de filiação.
--- O art. 27 trata da irrevogabilidade do reconhecimento de filiação.
-- Vide Lei n. 8.560, de 29-12-1992, que regula a investigação de paternidade.
 -----
-# Atos Sujeitos a Registro Público
+# Responsabilidade pelas Dívidas da Herança
 # Dispositivos Legais
-- Art. 9.º Serão registrados em registro público:
--- I – os nascimentos, casamentos e óbitos;
--- II – a emancipação por outorga dos pais ou por sentença do juiz;
--- III – a interdição por incapacidade absoluta ou relativa;
--- IV – a sentença declaratória de ausência e de morte presumida.
+- Art. 1.997. A herança responde pelo pagamento das dívidas do falecido; mas, feita a partilha, só respondem os herdeiros, cada qual em proporção da parte que na herança lhe coube.
+-- § 1.º Quando, antes da partilha, for requerido no inventário o pagamento de dívidas constantes de documentos, revestidos de formalidades legais, constituindo prova bastante da obrigação, e houver impugnação, que não se funde na alegação de pagamento, acompanhada de prova valiosa, o juiz mandará reservar, em poder do inventariante, bens suficientes para solução do débito, sobre os quais venha a recair oportunamente a execução.
+-- § 2.º No caso previsto no parágrafo antecedente, o credor será obrigado a iniciar a ação de cobrança no prazo de trinta dias, sob pena de se tornar de nenhum efeito a providência indicada.
 # Remissões Normativas
-- Registros Públicos: Lei n. 6.015, de 31-12-1973.
--- dispõe sobre os registros públicos e dá outras providências.
-- Registro civil dos índios: Lei n. 6.001, de 19-12-1973 (Estatuto do Índio), e art. 50, § 2.º, da LRP.
--- A Lei n. 6.001 dispõe sobre o Estatuto do Índio.
--- O art. 50, § 2º, da LRP, trata da faculdade do registro de nascimento do indígena no Registro Civil de Pessoas Naturais.
-- Sobre o estado que resulta do registro de nascimento, vide art. 1.604 do CC.
--- estabelece que ninguém pode vindicar estado contrário ao que resulta do registro de nascimento, salvo provando-se erro ou falsidade do registro.
-- Sobre registro de casamento, vide arts. 1.512, parágrafo único, 1.516, 1.545, 1.546 e 1.604 do CC.
--- O art. 1.512, parágrafo único, trata da gratuidade da habilitação de casamento.
--- O art. 1.516 trata do registro do casamento religioso para efeitos civis.
--- O art. 1.545 trata da nulidade do casamento por vício de idade.
--- O art. 1.546 trata do registro da sentença de nulidade ou anulação do casamento.
--- O art. 1.604 trata da presunção de veracidade do registro de nascimento.
-- Vide art. 725, I, do CPC.
--- trata do processamento da emancipação como procedimento de jurisdição voluntária.
-- Sobre registro de nascimento inexistente, parto alheio como próprio, ocultação ou substituição de recém-nascido e sonegação do estado de filiação, dispõe o CP, arts. 241, 242 e 243.
--- O art. 241 trata do crime de registrar nascimento inexistente.
--- O art. 242 trata do crime de dar parto alheio como próprio, registrar filho de outrem como seu, ou ocultar recém-nascido.
--- O art. 243 trata do crime de deixar em asilo de expostos ou outra instituição de assistência filho próprio ou alheio, para ocultar a desonra própria.
-- Vide art. 18 da LINDB.
--- trata da aplicação de tratados, convenções e regras de direito internacional.
-- Sobre o registro de nascimento de menores abandonados, vide arts. 29 a 32, 50 a 66, 70 e 77 a 88 da LRP.
--- Os arts. 29 a 32 tratam das disposições gerais sobre o registro civil.
--- Os arts. 50 a 66 tratam do registro de nascimento.
--- O art. 70 trata das tabelas de nascimentos, casamentos e óbitos.
--- Os arts. 77 a 88 tratam do registro de óbito.
-- Vide Lei n. 12.662, de 5-6-2012 – Declaração de Nascido Vivo – DNV.
--- assegura a validade nacional da Declaração de Nascido Vivo (DNV) e regula sua emissão.
-- Vide art. 5.º, parágrafo único, I, do CC.
--- trata da emancipação pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público.
-- Vide art. 226, § 5.º, da CF.
--- estabelece que os direitos e deveres referentes à sociedade conjugal são exercidos igualmente pelo homem e pela mulher.
-- Vide arts. 13, § 2.º, 29, IV, e 89 e s. da LRP.
--- O art. 13, § 2º, trata da obrigatoriedade do registro de atos para produção de efeitos perante terceiros.
--- O art. 29, IV, trata dos livros do registro civil.
--- Os arts. 89 e seguintes tratam do registro da emancipação, interdição, ausência e morte presumida.
+- Vide arts. 276, 836, 1.700 e 1.792 do CC.
+-- O art. 276 trata da responsabilidade dos herdeiros pela dívida do falecido.
+-- O art. 836 trata da responsabilidade dos herdeiros do fiador.
+-- O art. 1.700 trata da transmissão da obrigação alimentar.
+-- O art. 1.792 estabelece que o herdeiro não responde por encargos superiores às forças da herança.
+- Transmissão de obrigação alimentar: vide art. 23 da Lei n. 6.515, de 26-12-1977, e art. 1.700 deste Código.
+-- O art. 23 da Lei do Divórcio trata da transmissibilidade da obrigação de prestar alimentos.
+-- O art. 1.700 do CC trata da transmissão da obrigação alimentar aos herdeiros do devedor.
+- A cobrança judicial da dívida ativa da Fazenda Pública não é sujeita a concurso de credores ou habilitação em inventário (art. 29 da Lei n. 6.830, de 22-9-1980).
+- Vide arts. 642 a 646 do CPC.
+-- O art. 642 trata do requerimento para pagamento de dívidas vencidas e exigíveis antes da partilha.
+-- O art. 643 trata da remessa das partes para os meios ordinários quando a impugnação se fundar em alegação de pagamento.
+-- O art. 644 trata da reserva de bens para o pagamento de dívidas não vencidas.
+-- O art. 645 trata da concordância dos herdeiros para o pagamento de dívidas vencidas.
+-- O art. 646 trata da habilitação de credor em execução contra o espólio.
 -----
-# Comoriência
+# Despesas Funerárias
 # Dispositivos Legais
-- Art. 8.º Se dois ou mais indivíduos falecerem na mesma ocasião, não se podendo averiguar se algum dos comorientes precedeu aos outros, presumir-se-ão simultaneamente mortos.
------
-# Morte Presumida sem Decretação de Ausência
-# Dispositivos Legais
-- Art. 7.º Pode ser declarada a morte presumida, sem decretação de ausência:
--- I – se for extremamente provável a morte de quem estava em perigo de vida;
--- II – se alguém, desaparecido em campanha ou feito prisioneiro, não for encontrado até dois anos após o término da guerra.
--- Parágrafo único. A declaração da morte presumida, nesses casos, somente poderá ser requerida depois de esgotadas as buscas e averiguações, devendo a sentença fixar a data provável do falecimento.
+- Art. 1.998. As despesas funerárias, haja ou não herdeiros legítimos, sairão do monte da herança; mas as de sufrágios por alma do falecido só obrigarão a herança quando ordenadas em testamento ou codicilo.
 # Remissões Normativas
-- Da ausência no CC: arts. 22 a 39.
--- O art. 22 trata da declaração de ausência e nomeação de curador.
--- O art. 23 trata da declaração de ausência a requerimento do Ministério Público.
--- O art. 24 trata dos poderes do cônjuge como curador do ausente.
--- O art. 25 trata dos poderes e obrigações do curador nomeado pelo juiz.
--- O art. 26 trata do início da sucessão provisória.
--- O art. 27 trata dos legitimados a requerer a sucessão provisória.
--- O art. 28 trata da sentença da sucessão provisória.
--- O art. 29 trata da representação passiva do ausente.
--- O art. 30 trata da posse dos bens pelos herdeiros e da necessidade de caução.
--- O art. 31 trata da posse de ascendentes, descendentes e cônjuge.
--- O art. 32 trata dos frutos e rendimentos dos bens do ausente.
--- O art. 33 trata do comparecimento do ausente ou de seus sucessores.
--- O art. 34 trata da exclusão de herdeiros provisórios.
--- O art. 35 trata da alienação dos imóveis do ausente.
--- O art. 36 trata dos efeitos do retorno do ausente na sucessão provisória.
--- O art. 37 trata da conversão da sucessão provisória em definitiva.
--- O art. 38 trata da sucessão definitiva por motivo de idade do ausente.
--- O art. 39 trata dos efeitos do regresso do ausente na sucessão definitiva.
-- Vide art. 88 da LRP.
--- trata do registro da sentença declaratória de morte presumida.
-- A Lei n. 9.140, de 4-12-1995, reconhece como mortas pessoas desaparecidas em razão de participação, ou acusação de participação, em atividades políticas, no período de 2-9-1961 a 5-10-1988.
+- Vide arts. 965, I, e 1.847 do CC.
+-- O art. 965, I, estabelece que as despesas do funeral têm crédito privilegiado sobre os bens do devedor.
+-- O art. 1.847 estabelece que a legítima dos herdeiros necessários é calculada sobre o valor dos bens existentes na abertura da sucessão, abatidas as dívidas e as despesas de funeral.
 -----
-# Fim da Pessoa Natural
+# Ação Regressiva entre Herdeiros
 # Dispositivos Legais
-- Art. 6.º A existência da pessoa natural termina com a morte; presume-se esta, quanto aos ausentes, nos casos em que a lei autoriza a abertura de sucessão definitiva.
+- Art. 1.999. Sempre que houver ação regressiva de uns contra outros herdeiros, a parte do coerdeiro insolvente dividir-se-á em proporção entre os demais.
 # Remissões Normativas
-- Vide arts. 22 a 39 do CC.
--- O art. 22 trata da declaração de ausência e nomeação de curador.
--- O art. 23 trata da declaração de ausência a requerimento do Ministério Público.
--- O art. 24 trata dos poderes do cônjuge como curador do ausente.
--- O art. 25 trata dos poderes e obrigações do curador nomeado pelo juiz.
--- O art. 26 trata do início da sucessão provisória após um ano da arrecadação dos bens do ausente.
--- O art. 27 trata dos legitimados a requerer a sucessão provisória.
--- O art. 28 trata da sentença da sucessão provisória e do início do inventário.
--- O art. 29 trata da representação passiva do ausente após a abertura da sucessão provisória.
--- O art. 30 trata da posse dos bens pelos herdeiros e da necessidade de caução.
--- O art. 31 trata da posse de ascendentes, descendentes e cônjuge, dispensando-os da caução.
--- O art. 32 trata dos frutos e rendimentos dos bens do ausente.
--- O art. 33 trata do comparecimento do ausente ou de seus sucessores.
--- O art. 34 trata da exclusão de herdeiros provisórios por herdeiros necessários ou de grau mais próximo.
--- O art. 35 trata dos imóveis do ausente e sua alienação.
--- O art. 36 trata dos efeitos do retorno do ausente nos dez anos seguintes à abertura da sucessão provisória.
--- O art. 37 trata da conversão da sucessão provisória em definitiva após dez anos.
--- O art. 38 trata da sucessão definitiva a requerimento dos interessados se o ausente contar oitenta anos e as últimas notícias datarem de cinco anos.
--- O art. 39 trata dos efeitos do regresso do ausente após a sucessão definitiva.
-- Vide arts. 744 e 745 (declaração de ausência) do CPC.
--- O art. 744 trata do procedimento para a declaração de ausência.
--- O art. 745 trata do procedimento para a sucessão provisória.
-- Efeitos da morte no direito penal – arts. 107, I, do CP e 62 do CPP.
--- O art. 107, I, do CP, extingue a punibilidade do agente pela morte.
--- O art. 62 do CPP, determina que, no caso de morte do réu, o juiz declarará extinta a punibilidade.
-- O Decreto-lei n. 5.782, de 30-8-1943, dispõe sobre morte presumida de servidor público.
-- Vide arts. 77 a 88 da LRP.
--- O art. 77 trata da obrigatoriedade do assento de óbito.
--- O art. 78 trata do local do registro.
--- O art. 79 elenca as pessoas obrigadas a fazer a declaração de óbito.
--- O art. 80 especifica o conteúdo do assento de óbito.
--- O art. 81 trata do assento de óbito de pessoa desconhecida.
--- O art. 82 trata do registro de óbito ocorrido a bordo de navio ou aeronave.
--- O art. 83 trata da cremação de cadáver.
--- O art. 84 trata do prazo para o registro.
--- O art. 85 trata do registro de óbito de brasileiro ocorrido no estrangeiro.
--- O art. 86 trata da anotação do óbito nos registros de casamento e nascimento.
--- O art. 87 trata da gratuidade do registro de óbito.
--- O art. 88 trata do registro da morte presumida.
-- Vide art. 3.º da Lei n. 9.434, de 4-2-1997.
--- trata dos critérios para a retirada de tecidos, órgãos e partes do corpo de pessoas falecidas para transplantes ou outra finalidade terapêutica, exigindo a constatação da morte encefálica.
-- Vide Súmula 331 do STF.
--- afirma que a exigência de caução para o recebimento dos bens do ausente é legítima.
+- Vide art. 125, II, do CPC.
+-- trata da admissibilidade da denunciação da lide àquele que estiver obrigado, por lei ou contrato, a indenizar, em ação regressiva, o prejuízo de quem for vencido no processo.
 -----
-# Fim da Menoridade e Emancipação
+# Separação de Patrimônios
 # Dispositivos Legais
-- Art. 5.º A menoridade cessa aos dezoito anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil.
--- Parágrafo único. Cessará, para os menores, a incapacidade:
--- I – pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, independentemente de homologação judicial, ou por sentença do juiz, ouvido o tutor, se o menor tiver dezesseis anos completos;
--- II – pelo casamento;
--- III – pelo exercício de emprego público efetivo;
--- IV – pela colação de grau em curso de ensino superior;
--- V – pelo estabelecimento civil ou comercial, ou pela existência de relação de emprego, desde que, em função deles, o menor com dezesseis anos completos tenha economia própria.
-# Remissões Normativas
-- Vide art. 666 do CC.
--- trata da validade dos atos praticados por mandatário menor, entre 16 e 18 anos, sem assistência.
-- Vide arts. 27, 65 e 115 do CP.
--- O art. 27 trata da inimputabilidade penal dos menores de 18 anos.
--- O art. 65, I, trata da menoridade relativa como circunstância que sempre atenua a pena.
--- O art. 115 trata da redução pela metade dos prazos de prescrição quando o criminoso era, ao tempo do crime, menor de 21 anos.
-- Vide arts. 15, 34, 50, 52, 262 e 564, III, c, do CPP.
--- O art. 15 trata do inquérito policial para apuração da imputabilidade do indiciado.
--- O art. 34 trata do direito de representação do ofendido ou de seu representante legal.
--- O art. 50 trata da renúncia ao direito de queixa, que só pode ser exercida pelo representante legal do menor.
--- O art. 52 trata da queixa em crime contra a honra de menor de 18 anos.
--- O art. 262 trata da nomeação de curador ao réu menor de 21 anos.
--- O art. 564, III, c, prevê a nulidade processual por falta de nomeação de curador ao réu menor.
-- Vide art. 148, parágrafo único, e, do ECA.
--- trata da competência da Justiça da Infância e da Juventude para suprir o consentimento dos pais ou responsáveis para o casamento de quem ainda não alcançou a idade núbil.
-- A capacidade civil dos índios é de 21 anos, de acordo com o art. 9.º, I, da Lei n. 6.001, de 19-12-1973.
-- O art. 73 da Lei n. 4.375, de 17-8-1964, estabelece que a incapacidade civil do menor, para efeito do Serviço Militar, cessará na data em que completar 17 anos.
-- Vide art. 226, § 5.º, da CF.
--- estabelece que os direitos e deveres referentes à sociedade conjugal são exercidos igualmente pelo homem e pela mulher.
-- Vide arts. 1.635, II, e 1.763, I, do CC.
--- O art. 1.635, II, trata da extinção do poder familiar pela emancipação.
--- O art. 1.763, I, trata da cessação da tutela pela maioridade ou emancipação do menor.
-- Sobre o registro da emancipação, vide arts. 9.º, II, do CC e 89 e s. da LRP.
--- O art. 9º, II, do CC, trata do registro público da emancipação concedida pelos pais.
--- Os arts. 89 e seguintes da Lei de Registros Públicos dispõem sobre o procedimento de registro da emancipação.
-- Sobre emancipação do menor sob tutela, vide art. 725, I, do CPC.
--- submete o pedido de emancipação ao procedimento de jurisdição voluntária.
-- Vide CF, art. 226.
--- trata da especial proteção do Estado à família.
-- Vide art. 5.º, V, da Lei n. 8.112, de 11-12-1990.
--- estabelece a idade mínima de 18 anos como requisito para a investidura em cargo público.
-- Vide art. 7.º, XXXIII, da CF.
--- proíbe o trabalho noturno, perigoso ou insalubre a menores de 18 e qualquer trabalho a menores de 16, salvo na condição de aprendiz a partir dos 14 anos.
-- Vide arts. 966 e 972 do CC.
--- O art. 966 define a figura do empresário.
--- O art. 972 estabelece que podem exercer a atividade de empresário os que estiverem em pleno gozo da capacidade civil e não forem legalmente impedidos.
+- Art. 2.000. Os legatários e credores da herança podem exigir que do patrimônio do falecido se discrimine o do herdeiro, e, em concurso com os credores deste, ser-lhes-ão preferidos no pagamento.
 -----
-# Incapacidade Relativa
+# Dívida de Herdeiro ao Espólio
 # Dispositivos Legais
-- Art. 4.º São incapazes, relativamente a certos atos ou à maneira de os exercer:
--- I – os maiores de dezesseis e menores de dezoito anos;
--- II – os ébrios habituais e os viciados em tóxico;
--- III – aqueles que, por causa transitória ou permanente, não puderem exprimir sua vontade;
--- IV – os pródigos.
--- Parágrafo único. A capacidade dos indígenas será regulada por legislação especial.
-# Remissões Normativas
-- Os arts. 34, 50 e 52 do CPP dispõem sobre a representação do menor na ação penal.
--- O art. 34 trata do direito de representação do ofendido ou de seu representante legal.
--- O art. 50 trata da renúncia ao direito de queixa.
--- O art. 52 trata da representação contra crimes à honra quando o ofendido é menor.
-- Vide arts. 71, 72 e 447, § 1.º, do CPC.
--- O art. 71 trata da necessidade de assistência ao incapaz em juízo.
--- O art. 72 trata da nomeação de curador especial.
--- O art. 447, § 1º, trata da incapacidade da testemunha.
-- Vide art. 142 do ECA.
--- trata da competência da Justiça da Infância e da Juventude para conhecer de pedidos de autorização para trabalho de crianças e adolescentes.
-- Vide arts. 180, 666, 1.634, V, 1.747, I, e 1.860, parágrafo único, do CC.
--- O art. 180 trata da validade dos atos do menor entre 16 e 18 anos se não houver pedido de anulação.
--- O art. 666 estende as regras do mandato aos atos que o menor de 18 e maior de 16 anos pratica sem assistência.
--- O art. 1.634, V, trata do poder familiar de conceder ou negar consentimento para casar.
--- O art. 1.747, I, trata da competência do tutor de representar o menor até os 16 anos e assisti-lo após essa idade.
--- O art. 1.860, parágrafo único, permite que os maiores de 16 anos façam testamento.
-- A Lei n. 4.375, de 17-8-1964, estabelece em seu art. 73 que, para efeito do serviço militar, cessará a incapacidade civil do menor, na data em que completar 17 anos.
-- Vide art. 1.767, III, do CC.
--- trata da sujeição à curatela dos ébrios habituais e dos viciados em tóxicos.
-- Sobre incapacidade relativa dos toxicômanos, dispõe a Lei n. 11.343, de 23-8-2006.
-- A Lei n. 10.216, de 6-4-2001, dispõe sobre a proteção e os direitos das pessoas portadoras de transtornos mentais.
-- Vide art. 1.767 do CC.
--- trata das pessoas que estão sujeitas à curatela.
-- Vide arts. 1.767, V, e 1.782 do CC.
--- O art. 1.767, V, sujeita os pródigos à curatela.
--- O art. 1.782 limita a curatela do pródigo aos atos de disposição e oneração de bens.
-- Sobre assistência, em juízo, aos relativamente incapazes, vide arts. 72 e 76 do CPC.
--- O art. 72 trata da nomeação de curador especial.
--- O art. 76 trata da regularização da capacidade processual.
-- Renúncia do direito de queixa criminal pelo representante legal do menor – dispõe o CPP, art. 50, parágrafo único.
-- Sobre proteção do trabalho do menor, vide arts. 402 a 441 da CLT e 60 a 69 do ECA.
--- Os arts. 402 a 441 da CLT tratam da proteção ao trabalho do menor, incluindo disposições sobre idade mínima, jornada, aprendizagem e atividades proibidas.
--- Os arts. 60 a 69 do ECA tratam do direito à profissionalização e à proteção no trabalho.
-- Vide art. 50, § 2.º, da LRP.
--- trata do registro de nascimento do indígena no Registro Civil de Pessoas Naturais.
-- O Decreto n. 7.747, de 5-6-2012, institui a Política Nacional de Gestão Territorial e Ambiental de Terras Indígenas – PNGATI, e dá outras providências.
+- Art. 2.001. Se o herdeiro for devedor ao espólio, sua dívida será partilhada igualmente entre todos, salvo se a maioria consentir que o débito seja imputado inteiramente no quinhão do devedor.
 -----
-# Incapacidade Absoluta
+# Dever de Colação pelos Descendentes
 # Dispositivos Legais
-- Art. 3.º São absolutamente incapazes de exercer pessoalmente os atos da vida civil os menores de 16 (dezesseis) anos.
+- Art. 2.002. Os descendentes que concorrerem à sucessão do ascendente comum são obrigados, para igualar as legítimas, a conferir o valor das doações que dele em vida receberam, sob pena de sonegação.
+-- Parágrafo único. Para cálculo da legítima, o valor dos bens conferidos será computado na parte indisponível, sem aumentar a disponível.
 # Remissões Normativas
-- Vide arts. 5.º, 76, 105, 115 a 120, 166, I, 198, 471, 543, 1.634, 1.690, 1.728 e s. do CC.
--- O art. 5º trata da cessação da incapacidade.
--- O art. 76 estabelece o domicílio do incapaz como sendo o de seu representante ou assistente.
--- O art. 105 trata da incapacidade relativa de uma das partes.
--- O art. 115 trata da condição suspensiva e resolutiva.
--- O art. 116 trata das condições defesas.
--- O art. 117 trata da invalidade dos negócios jurídicos com condições suspensivas ilícitas.
--- O art. 118 trata da subordinação do negócio jurídico a termo.
--- O art. 119 trata dos efeitos do termo inicial.
--- O art. 120 trata do prazo em favor do devedor.
--- O art. 166, I, trata da nulidade do negócio jurídico celebrado por pessoa absolutamente incapaz.
--- O art. 198, I, impede o curso da prescrição contra os absolutamente incapazes.
--- O art. 471 trata da responsabilidade pré-contratual.
--- O art. 543 permite, mas dispensa aceitação, de doação pura a absolutamente incapaz.
--- O art. 1.634 trata dos deveres do poder familiar.
--- O art. 1.690 trata da administração dos bens dos filhos.
--- Os arts. 1.728 e seguintes tratam da curatela dos interditos.
-- Vide arts. 71, 72 e 447, § 1.º, do CPC.
--- O art. 71 trata da representação do incapaz em juízo.
--- O art. 72 trata da nomeação do curador especial para o incapaz.
--- O art. 447, § 1º, estabelece que os menores de 16 anos são incapazes de depor como testemunhas.
+- Vide arts. 544, 549, 2.010 e 2.011 do CC.
+-- O art. 544 trata da doação de ascendentes a descendentes, ou de um cônjuge a outro, como adiantamento da herança.
+-- O art. 549 trata da nulidade da doação inoficiosa, que excede a parte disponível do doador.
+-- O art. 2.010 trata dos gastos ordinários que não estão sujeitos à colação.
+-- O art. 2.011 trata das doações remuneratórias, que também não estão sujeitas à colação.
 -----
-# Início da Personalidade Civil
+# Finalidade da Colação
 # Dispositivos Legais
-- Art. 2.º A personalidade civil da pessoa começa do nascimento com vida; mas a lei põe a salvo, desde a concepção, os direitos do nascituro.
+- Art. 2.003. A colação tem por fim igualar, na proporção estabelecida neste Código, as legítimas dos descendentes e do cônjuge sobrevivente, obrigando também os donatários que, ao tempo do falecimento do doador, já não possuírem os bens doados.
+-- Parágrafo único. Se, computados os valores das doações feitas em adiantamento de legítima, não houver no acervo bens suficientes para igualar as legítimas dos descendentes e do cônjuge, os bens assim doados serão conferidos em espécie, ou, quando deles já não disponha o donatário, pelo seu valor ao tempo da liberalidade.
 # Remissões Normativas
-- Vide arts. 5.º, 115 a 120, 166, I, 542, 1.609, parágrafo único, 1.690, 1.779, caput, 1.798, 1.799, I, 1.800 e 1.952 do CC.
--- O art. 5º trata da maioridade civil.
--- O art. 115 trata da condição suspensiva e resolutiva.
--- O art. 116 trata das condições defesas.
--- O art. 117 trata da invalidade dos negócios jurídicos com condições suspensivas ilícitas.
--- O art. 118 trata da subordinação do negócio jurídico a termo inicial ou final.
--- O art. 119 trata dos efeitos do termo inicial.
--- O art. 120 trata do prazo em favor do devedor.
--- O art. 166, I, trata da nulidade do negócio jurídico celebrado por pessoa absolutamente incapaz.
--- O art. 542 trata da validade da doação feita ao nascituro.
--- O art. 1.609, parágrafo único, trata do reconhecimento de filho que pode preceder o nascimento.
--- O art. 1.690 trata do usufruto e administração dos bens dos filhos menores pelos pais.
--- O art. 1.779, caput, estende as disposições sobre a tutela à curatela.
--- O art. 1.798 legitima para suceder as pessoas nascidas ou já concebidas no momento da abertura da sucessão.
--- O art. 1.799, I, permite nomear como herdeiros os filhos, ainda não concebidos, de pessoas indicadas pelo testador.
--- O art. 1.800 trata da curatela dos bens do herdeiro nascituro.
--- O art. 1.952 trata da substituição fideicomissária em favor de prole eventual.
-- Os arts. 124 a 128 do CP dispõem sobre o crime de aborto.
--- O art. 124 tipifica o aborto provocado pela gestante ou com seu consentimento.
--- O art. 125 tipifica o aborto provocado por terceiro, sem o consentimento da gestante.
--- O art. 126 tipifica o aborto provocado por terceiro, com o consentimento da gestante.
--- O art. 127 trata das formas qualificadas do crime de aborto.
--- O art. 128 estabelece as causas de exclusão de ilicitude do aborto.
-- Vide arts. 50 a 66 da LRP.
--- O art. 50 trata da obrigatoriedade do registro de nascimento.
--- O art. 51 define os prazos para a declaração.
--- O art. 52 elenca os obrigados a declarar o nascimento.
--- O art. 53 regula o assento do natimorto.
--- O art. 54 especifica o conteúdo do assento de nascimento.
--- O art. 55 dispõe sobre o prenome e o sobrenome.
--- O art. 56 permite a inversão da ordem dos sobrenomes.
--- O art. 57 trata da alteração posterior do nome.
--- O art. 58 trata da retificação do registro.
--- O art. 59 trata da declaração de nascimento fora do prazo.
--- O art. 60 regula o assento de nascimento de filho de brasileiro ocorrido no estrangeiro.
--- O art. 61 trata da averbação de casamento dos pais.
--- O art. 62 trata do assento de nascimento de filho extramatrimonial.
--- O art. 63 trata da anotação de alteração de nome dos pais.
--- O art. 64 trata da gratuidade do registro.
--- O art. 65 determina a comunicação aos órgãos de estatística.
--- O art. 66 trata do suprimento judicial do registro.
-- Vide arts. 7.º a 14 e 228 e 229 do ECA.
--- O art. 7º trata do direito à proteção à vida e à saúde.
--- O art. 8º assegura atendimento pré e perinatal à gestante.
--- O art. 9º trata do acesso a programas de saúde.
--- O art. 10 assegura o sistema de alojamento conjunto.
--- O art. 11 assegura acesso integral às linhas de cuidado em saúde.
--- O art. 12 trata da obrigatoriedade de identificação do recém-nascido.
--- O art. 13 trata do atendimento a gestantes ou mães com interesse em entregar filho para adoção.
--- O art. 14 trata do Sistema Único de Saúde.
--- O art. 228 trata da inimputabilidade penal dos menores de dezoito anos.
--- O art. 229 trata do dever dos pais de assistir, criar e educar os filhos menores.
-- Vide LINDB, art. 7.º.
--- estabelece que a lei do país de domicílio da pessoa determina as regras sobre o começo e o fim da personalidade, o nome, a capacidade e os direitos de família.
-- Vide arts. 71, 178, II, 50 e 896 do CPC.
--- O art. 71 trata da representação do incapaz em juízo.
--- O art. 178, II, determina a intervenção do Ministério Público nos processos que envolvam interesse de incapaz.
--- O art. 50 trata da sucessão da parte falecida pelo seu espólio ou sucessores.
--- O art. 896 estabelece o procedimento para o depósito em consignação quando o credor for incapaz de receber.
-- Vide art. 4.º, item 1, do Decreto n. 678, de 6-11-1992 (Pacto de São José da Costa Rica).
--- estabelece que toda pessoa tem o direito de que se respeite sua vida e que esse direito deve ser protegido pela lei, em geral, desde o momento da concepção.
+- Vide art. 2.009 do CC.
+-- trata da obrigação de os netos, ao sucederem por representação, trazerem à colação o que seus pais teriam de conferir.
 -----
-# Capacidade Civil
+# Valor de Colação dos Bens Doados
 # Dispositivos Legais
-- Art. 1.º Toda pessoa é capaz de direitos e deveres na ordem civil.
+- Art. 2.004. O valor de colação dos bens doados será aquele, certo ou estimativo, que lhes atribuir o ato de liberalidade.
+-- § 1.º Se do ato de doação não constar valor certo, nem houver estimação feita naquela época, os bens serão conferidos na partilha pelo que então se calcular valessem ao tempo da liberalidade.
+-- § 2.º Só o valor dos bens doados entrará em colação; não assim o das benfeitorias acrescidas, as quais pertencerão ao herdeiro donatário, correndo também à conta deste os rendimentos ou lucros, assim como os danos e perdas que eles sofrerem.
 # Remissões Normativas
-- Vide arts. 4.º e 5.º do CC.
--- O art. 4º trata da incapacidade relativa dos maiores de dezesseis e menores de dezoito anos, ébrios habituais, viciados em tóxicos, pródigos e aqueles que, por causa transitória ou permanente, não puderem exprimir sua vontade.
--- O art. 5º estabelece que a menoridade cessa aos dezoito anos completos, ou pela emancipação.
-- Vide art. 7.º, caput, da LINDB.
--- estabelece que a lei do país de domicílio da pessoa determina as regras sobre o começo e o fim da personalidade, o nome, a capacidade e os direitos de família.
-- Vide art. 70 do CPC.
--- estabelece que, como regra geral, a ação fundada em direito pessoal ou em direito real sobre bens móveis será proposta no foro de domicílio do réu.
+- Vide art. 639, parágrafo único, do CPC.
+-- estabelece que o valor de colação dos bens deverá ser atribuído nas primeiras declarações do inventário.
+- Vide arts. 96 (benfeitorias) e 402 a 405 (perdas e danos) do CC.
+-- O art. 96 define as benfeitorias como necessárias, úteis ou voluptuárias.
+-- O art. 402 trata do que as perdas e danos abrangem, incluindo o que a parte lesada perdeu e o que razoavelmente deixou de lucrar.
+-- O art. 403 trata do nexo de causalidade entre a inexecução da obrigação e o prejuízo.
+-- O art. 404 trata da contagem de juros e atualização monetária em obrigações de pagamento em dinheiro.
+-- O art. 405 estabelece que os juros de mora contam-se desde a citação inicial.
+-----
+# Doações Dispensadas da Colação
+# Dispositivos Legais
+- Art. 2.005. São dispensadas da colação as doações que o doador determinar saiam da parte disponível, contanto que não a excedam, computado o seu valor ao tempo da doação.
+-- Parágrafo único. Presume-se imputada na parte disponível a liberalidade feita a descendente que, ao tempo do ato, não seria chamado à sucessão na qualidade de herdeiro necessário.
+-----
+# Forma da Dispensa da Colação
+# Dispositivos Legais
+- Art. 2.006. A dispensa da colação pode ser outorgada pelo doador em testamento, ou no próprio título de liberalidade.
+-----
+# Redução das Doações Inoficiosas
+# Dispositivos Legais
+- Art. 2.007. São sujeitas à redução as doações em que se apurar excesso quanto ao que o doador poderia dispor, no momento da liberalidade.
+-- § 1.º O excesso será apurado com base no valor que os bens doados tinham, no momento da liberalidade.
+-- § 2.º A redução da liberalidade far-se-á pela restituição ao monte do excesso assim apurado; a restituição será em espécie, ou, se não mais existir o bem em poder do donatário, em dinheiro, segundo o seu valor ao tempo da abertura da sucessão, observadas, no que forem aplicáveis, as regras deste Código sobre a redução das disposições testamentárias.
+-- § 3.º Sujeita-se a redução, nos termos do parágrafo antecedente, a parte da doação feita a herdeiros necessários que exceder a legítima e mais a quota disponível.
+-- § 4.º Sendo várias as doações a herdeiros necessários, feitas em diferentes datas, serão elas reduzidas a partir da última, até a eliminação do excesso.
+# Remissões Normativas
+- Vide arts. 549 e 1.967 do CC.
+-- O art. 549 trata da nulidade da doação quanto à parte que exceder a de que o doador, no momento da liberalidade, poderia dispor em testamento (doação inoficiosa).
+-- O art. 1.967 trata da redução das disposições testamentárias que excederem a parte disponível.
+-----
+# Conferência de Doações por Renunciante ou Excluído
+# Dispositivos Legais
+- Art. 2.008. Aquele que renunciou a herança ou dela foi excluído, deve, não obstante, conferir as doações recebidas, para o fim de repor o que exceder o disponível.
+# Remissões Normativas
+- Vide arts. 1.804 a 1.813 do CC.
+-- O art. 1.804 trata da transmissão da herança com a aceitação.
+-- O art. 1.805 trata das formas de aceitação da herança (expressa, tácita ou presumida).
+-- O art. 1.806 trata da renúncia da herança.
+-- O art. 1.807 trata da aceitação da herança pelo credor do herdeiro.
+-- O art. 1.808 estabelece que a aceitação e a renúncia são irrevogáveis.
+-- O art. 1.809 trata da sucessão de herdeiro falecido antes de aceitar a herança.
+-- O art. 1.810 trata dos efeitos da renúncia à herança.
+-- O art. 1.811 trata do direito de representação dos descendentes do renunciante.
+-- O art. 1.812 trata da anulação da aceitação e da renúncia.
+-- O art. 1.813 trata do direito dos credores prejudicados pela renúncia.
+- Vide art. 640 do CPC.
+-- trata do cálculo da legítima e das liberalidades no inventário.
+-----
+# Colação por Netos em Representação
+# Dispositivos Legais
+- Art. 2.009. Quando os netos, representando os seus pais, sucederem aos avós, serão obrigados a trazer à colação, ainda que não o hajam herdado, o que os pais teriam de conferir.
+# Remissões Normativas
+- Vide arts. 1.851 e 1.852 do CC.
+-- O art. 1.851 define o direito de representação, que ocorre quando a lei chama certos parentes do falecido a suceder em todos os direitos em que ele sucederia se vivo fosse.
+-- O art. 1.852 estabelece que o direito de representação se dá na linha reta descendente, mas nunca na ascendente.
+-----
+# Gastos não Sujeitos à Colação
+# Dispositivos Legais
+- Art. 2.010. Não virão à colação os gastos ordinários do ascendente com o descendente, enquanto menor, na sua educação, estudos, sustento, vestuário, tratamento nas enfermidades, enxoval, assim como as despesas de casamento, ou as feitas no interesse de sua defesa em processo-crime.
+-----
+# Doações Remuneratórias e a Colação
+# Dispositivos Legais
+- Art. 2.011. As doações remuneratórias de serviços feitos ao ascendente também não estão sujeitas a colação.
+-----
+# Direito de Requerer a Partilha
+# Dispositivos Legais
+- Art. 2.013. O herdeiro pode sempre requerer a partilha, ainda que o testador o proíba, cabendo igual faculdade aos seus cessionários e credores.
+-----
+# Partilha feita pelo Testador
+# Dispositivos Legais
+- Art. 2.014. Pode o testador indicar os bens e valores que devem compor os quinhões hereditários, deliberando ele próprio a partilha, que prevalecerá, salvo se o valor dos bens não corresponder às quotas estabelecidas.
+-----
+# Partilha Amigável
+# Dispositivos Legais
+- Art. 2.015. Se os herdeiros forem capazes, poderão fazer partilha amigável, por escritura pública, termo nos autos do inventário, ou escrito particular, homologado pelo juiz.
+-----
+# Partilha Judicial
+# Dispositivos Legais
+- Art. 2.016. Será sempre judicial a partilha, se os herdeiros divergirem, assim como se algum deles for incapaz.
+# Remissões Normativas
+- Vide Súmula 265 do STF.
+-- trata de que no juízo de inventário, a competência para decidir sobre questões de fato que demandem alta indagação ou dependam de outras provas é do juízo cível.
+-----
+# Igualdade na Partilha
+# Dispositivos Legais
+- Art. 2.017. No partilhar os bens, observar-se-á, quanto ao seu valor, natureza e qualidade, a maior igualdade possível.
+-----
+# Partilha por Ascendente
+# Dispositivos Legais
+- Art. 2.018. É válida a partilha feita por ascendente, por ato entre vivos ou de última vontade, contanto que não prejudique a legítima dos herdeiros necessários.
+-----
+# Partilha de Bens Indivisíveis
+# Dispositivos Legais
+- Art. 2.019. Os bens insuscetíveis de divisão cômoda, que não couberem na meação do cônjuge sobrevivente ou no quinhão de um só herdeiro, serão vendidos judicialmente, partilhando-se o valor apurado, a não ser que haja acordo para serem adjudicados a todos.
+-- § 1.º Não se fará a venda judicial se o cônjuge sobrevivente ou um ou mais herdeiros requererem lhes seja adjudicado o bem, repondo aos outros, em dinheiro, a diferença, após avaliação atualizada.
+-- § 2.º Se a adjudicação for requerida por mais de um herdeiro, observar-se-á o processo da licitação.
+# Remissões Normativas
+- Vide arts. 1.322 e 1.489, IV, do CC.
+-- O art. 1.322 trata da extinção de condomínio sobre coisa indivisível, que será adjudicada a um só, indenizando os outros, ou vendida e repartido o valor.
+-- O art. 1.489, IV, trata do direito de preferência do condômino na arrematação do imóvel hipotecado.
+-----
+# Frutos e Despesas dos Bens da Herança
+# Dispositivos Legais
+- Art. 2.020. Os herdeiros em posse dos bens da herança, o cônjuge sobrevivente e o inventariante são obrigados a trazer ao acervo os frutos que perceberam, desde a abertura da sucessão; têm direito ao reembolso das despesas necessárias e úteis que fizeram, e respondem pelo dano a que, por dolo ou culpa, deram causa.
+# Remissões Normativas
+- Vide art. 614 do CPC.
+-- estabelece que o inventariante tem a obrigação de prestar contas de sua gestão ao deixar o cargo ou sempre que o juiz lhe determinar.
+-----
+# Sobrepartilha de Bens Remotos ou Litigiosos
+# Dispositivos Legais
+- Art. 2.021. Quando parte da herança consistir em bens remotos do lugar do inventário, litigiosos, ou de liquidação morosa ou difícil, poderá proceder-se, no prazo legal, à partilha dos outros, reservando-se aqueles para uma ou mais sobrepartilhas, sob a guarda e a administração do mesmo ou diverso inventariante, e consentimento da maioria dos herdeiros.
+# Remissões Normativas
+- Vide art. 669 do CPC.
+-- trata das hipóteses em que se procederá à sobrepartilha.
+-----
+# Sobrepartilha de Bens Sonegados
+# Dispositivos Legais
+- Art. 2.022. Ficam sujeitos a sobrepartilha os bens sonegados e quaisquer outros bens da herança de que se tiver ciência após a partilha.
+# Remissões Normativas
+- Vide art. 669 do CPC.
+-- trata das hipóteses em que se procederá à sobrepartilha, incluindo os bens sonegados e os de que se tiver ciência após a partilha.
+-----
+# Efeitos da Partilha
+# Dispositivos Legais
+- Art. 2.023. Julgada a partilha, fica o direito de cada um dos herdeiros circunscrito aos bens do seu quinhão.
+-----
+# Garantia contra a Evicção
+# Dispositivos Legais
+- Art. 2.024. Os coerdeiros são reciprocamente obrigados a indenizar-se no caso de evicção dos bens aquinhoados.
+# Remissões Normativas
+- Vide arts. 447 a 457 (evicção) do CC.
+-- O art. 447 define a evicção como a perda da coisa em virtude de decisão judicial que a atribui a outrem.
+-- O art. 448 permite que as partes reforcem, diminuam ou excluam a responsabilidade pela evicção.
+-- O art. 449 estabelece que, mesmo com a cláusula de exclusão da garantia, o evicto tem direito a receber o preço que pagou pela coisa, se não sabia do risco.
+-- O art. 450 trata dos direitos do evicto, incluindo a restituição do preço, indenização de frutos, despesas de contratos e custas judiciais.
+-- O art. 451 determina que a obrigação do alienante subsiste ainda que a coisa esteja deteriorada, exceto em caso de dolo do adquirente.
+-- O art. 452 trata do abatimento do valor das vantagens que o adquirente teve com a deterioração da coisa.
+-- O art. 453 trata do direito do evicto em caso de benfeitorias.
+-- O art. 454 trata da evicção parcial.
+-- O art. 455 trata da evicção parcial, mas considerável, que permite a rescisão do contrato.
+-- O art. 456 trata da intervenção do alienante no processo em que o adquirente é demandado.
+-- O art. 457 trata da não responsabilidade do alienante pela evicção se o adquirente sabia que a coisa era alheia ou litigiosa.
+-----
+# Cessação da Garantia contra Evicção
+# Dispositivos Legais
+- Art. 2.025. Cessa a obrigação mútua estabelecida no artigo antecedente, havendo convenção em contrário, e bem assim dando-se a evicção por culpa do evicto, ou por fato posterior à partilha.
+# Remissões Normativas
+- Vide arts. 447 a 457 do CC.
+-- O art. 447 define a evicção como a perda da coisa em virtude de decisão judicial que a atribui a outrem.
+-- O art. 448 permite que as partes reforcem, diminuam ou excluam a responsabilidade pela evicção.
+-- O art. 449 estabelece que, mesmo com a cláusula de exclusão da garantia, o evicto tem direito a receber o preço que pagou pela coisa, se não sabia do risco.
+-- O art. 450 trata dos direitos do evicto, incluindo a restituição do preço, indenização de frutos, despesas de contratos e custas judiciais.
+-- O art. 451 determina que a obrigação do alienante subsiste ainda que a coisa esteja deteriorada, exceto em caso de dolo do adquirente.
+-- O art. 452 trata do abatimento do valor das vantagens que o adquirente teve com a deterioração da coisa.
+-- O art. 453 trata do direito do evicto em caso de benfeitorias.
+-- O art. 454 trata da evicção parcial.
+-- O art. 455 trata da evicção parcial, mas considerável, que permite a rescisão do contrato.
+-- O art. 456 trata da intervenção do alienante no processo em que o adquirente é demandado.
+-- O art. 457 trata da não responsabilidade do alienante pela evicção se o adquirente sabia que a coisa era alheia ou litigiosa.
+-----
+# Indenização pela Evicção entre Coerdeiros
+# Dispositivos Legais
+- Art. 2.026. O evicto será indenizado pelos coerdeiros na proporção de suas quotas hereditárias, mas, se algum deles se achar insolvente, responderão os demais na mesma proporção, pela parte desse, menos a quota que corresponderia ao indenizado.
+# Remissões Normativas
+- Vide arts. 447 a 457 do CC.
+-- O art. 447 define a evicção como a perda da coisa em virtude de decisão judicial que a atribui a outrem.
+-- O art. 448 permite que as partes reforcem, diminuam ou excluam a responsabilidade pela evicção.
+-- O art. 449 estabelece que, mesmo com a cláusula de exclusão da garantia, o evicto tem direito a receber o preço que pagou pela coisa, se não sabia do risco.
+-- O art. 450 trata dos direitos do evicto, incluindo a restituição do preço, indenização de frutos, despesas de contratos e custas judiciais.
+-- O art. 451 determina que a obrigação do alienante subsiste ainda que a coisa esteja deteriorada, exceto em caso de dolo do adquirente.
+-- O art. 452 trata do abatimento do valor das vantagens que o adquirente teve com a deterioração da coisa.
+-- O art. 453 trata do direito do evicto em caso de benfeitorias.
+-- O art. 454 trata da evicção parcial.
+-- O art. 455 trata da evicção parcial, mas considerável, que permite a rescisão do contrato.
+-- O art. 456 trata da intervenção do alienante no processo em que o adquirente é demandado.
+-- O art. 457 trata da não responsabilidade do alienante pela evicção se o adquirente sabia que a coisa era alheia ou litigiosa.
+-----
+# Anulação da Partilha
+# Dispositivos Legais
+- Art. 2.027. A partilha é anulável pelos vícios e defeitos que invalidam, em geral, os negócios jurídicos.
+-- Parágrafo único. Extingue-se em um ano o direito de anular a partilha.
+# Remissões Normativas
+- Vide arts. 171 e s. do CC.
+-- O art. 171 trata das hipóteses de anulação do negócio jurídico, como a incapacidade relativa do agente e os vícios de consentimento (erro, dolo, coação, estado de perigo, lesão ou fraude contra credores). Os artigos seguintes tratam da confirmação, dos prazos decadenciais e dos efeitos da anulação.
+- Vícios redibitórios: arts. 441 a 446 do CC.
+-- O art. 441 define o vício redibitório como o defeito oculto que torna a coisa imprópria ao uso ou lhe diminua o valor.
+-- O art. 442 trata das ações disponíveis ao adquirente (redibitória ou estimatória).
+-- O art. 443 trata da responsabilidade do alienante que conhecia o vício.
+-- O art. 444 trata da responsabilidade por vícios em contratos comutativos.
+-- O art. 445 estabelece os prazos decadenciais para obter a redibição ou abatimento no preço.
+-- O art. 446 trata da não contagem dos prazos de garantia contratual na contagem dos prazos legais.
+- Negócio jurídico: arts. 104 a 184 do CC.
+-- tratam da teoria geral do negócio jurídico, incluindo seus elementos de validade (agente capaz, objeto lícito, forma prescrita), os defeitos que podem invalidá-lo (erro, dolo, coação, etc.), e as modalidades (condição, termo e encargo).
+- Vide arts. 966, § 4.º, e 657, parágrafo único, do CPC.
+-- O art. 966, § 4º, do CPC, trata da ação rescisória para anular partilha.
+-- O art. 657, parágrafo único, do CPC, estabelece que a partilha amigável pode ser anulada pelos vícios de consentimento.
+-----
+# Prazos Prescricionais (Direito Intertemporal)
+# Dispositivos Legais
+- Art. 2.028. Serão os da lei anterior os prazos, quando reduzidos por este Código, e se, na data de sua entrada em vigor, já houver transcorrido mais da metade do tempo estabelecido na lei revogada.
+-----
+# Prazos de Usucapião (Direito Intertemporal)
+# Dispositivos Legais
+- Art. 2.029. Até dois anos após a entrada em vigor deste Código, os prazos estabelecidos no parágrafo único do art. 1.238 e no parágrafo único do art. 1.242 serão acrescidos de dois anos, qualquer que seja o tempo transcorrido na vigência do anterior, Lei n. 3.071, de 1.º de janeiro de 1916.
+-----
+# Acréscimo de Prazo na Desapropriação Judicial
+# Dispositivos Legais
+- Art. 2.030. O acréscimo de que trata o artigo antecedente, será feito nos casos a que se refere o § 4.º do art. 1.228.
+-----
+# Adaptação de Pessoas Jurídicas e Empresários
+# Dispositivos Legais
+- Art. 2.031. As associações, sociedades e fundações, constituídas na forma das leis anteriores, bem como os empresários, deverão se adaptar às disposições deste Código até 11 de janeiro de 2007.
+-- Parágrafo único. O disposto neste artigo não se aplica às organizações religiosas nem aos partidos políticos.
+# Remissões Normativas
+- A Lei n. 12.879, de 5-11-2013, dispõe sobre a gratuidade dos atos de registro, pelas associações de moradores, necessários à adaptação estatutária a este artigo, para fins de enquadramento dessas entidades como organizações da sociedade civil de interesse público.
+-----
+# Funcionamento de Fundações Anteriores
+# Dispositivos Legais
+- Art. 2.032. As fundações, instituídas segundo a legislação anterior, inclusive as de fins diversos dos previstos no parágrafo único do art. 62, subordinam-se, quanto ao seu funcionamento, ao disposto neste Código.
+-----
+# Modificações de Atos Constitutivos de Pessoas Jurídicas
+# Dispositivos Legais
+- Art. 2.033. Salvo o disposto em lei especial, as modificações dos atos constitutivos das pessoas jurídicas referidas no art. 44, bem como a sua transformação, incorporação, cisão ou fusão, regem-se desde logo por este Código.
+# Remissões Normativas
+- Vide arts. 1.033 a 1.038 e 1.102 a 1.112 do CC.
+-- O art. 1.033 trata das hipóteses de dissolução da sociedade.
+-- O art. 1.034 trata da dissolução judicial da sociedade.
+-- O art. 1.035 trata do contrato social dispor sobre a dissolução.
+-- O art. 1.036 trata da dissolução em caso de falência de sócio.
+-- O art. 1.037 trata da dissolução em caso de morte de sócio.
+-- O art. 1.038 trata da dissolução por iniciativa de um dos sócios.
+-- O art. 1.102 trata dos deveres do liquidante.
+-- O art. 1.103 trata das obrigações e responsabilidades do liquidante.
+-- O art. 1.104 trata da convocação de assembleia dos sócios pelo liquidante.
+-- O art. 1.105 trata do pagamento das dívidas sociais.
+-- O art. 1.106 trata da confissão de falência e pedido de recuperação judicial.
+-- O art. 1.107 trata da exigência de crédito não vencido.
+-- O art. 1.108 trata da partilha do ativo remanescente entre os sócios.
+-- O art. 1.109 trata da extinção da sociedade após a liquidação.
+-- O art. 1.110 trata do destino dos bens em caso de sócio ilocalizável.
+-- O art. 1.111 trata da responsabilidade dos sócios após a extinção da sociedade.
+-- O art. 1.112 trata do cancelamento da inscrição da sociedade.
+-----
+# Dissolução e Liquidação de Pessoas Jurídicas (Direito Intertemporal)
+# Dispositivos Legais
+- Art. 2.034. A dissolução e a liquidação das pessoas jurídicas referidas no artigo antecedente, quando iniciadas antes da vigência deste Código, obedecerão ao disposto nas leis anteriores.
+-----
+# Validade e Efeitos dos Atos Jurídicos (Direito Intertemporal)
+# Dispositivos Legais
+- Art. 2.035. A validade dos negócios e demais atos jurídicos, constituídos antes da entrada em vigor deste Código, obedece ao disposto nas leis anteriores, referidas no art. 2.045, mas os seus efeitos, produzidos após a vigência deste Código, aos preceitos dele se subordinam, salvo se houver sido prevista pelas partes determinada forma de execução.
+-- Parágrafo único. Nenhuma convenção prevalecerá se contrariar preceitos de ordem pública, tais como os estabelecidos por este Código para assegurar a função social da propriedade e dos contratos.
+# Remissões Normativas
+- Vide arts. 5.º, XXXVI, da CF e 6.º da LINDB.
+-- O art. 5º, XXXVI, da CF, protege o direito adquirido, o ato jurídico perfeito e a coisa julgada.
+-- O art. 6º da LINDB, trata da irretroatividade da lei e da proteção ao ato jurídico perfeito, ao direito adquirido e à coisa julgada.
+-----
+# Locação de Prédio Urbano
+# Dispositivos Legais
+- Art. 2.036. A locação de prédio urbano, que esteja sujeita à lei especial, por esta continua a ser regida.
+# Remissões Normativas
+- Vide Lei n. 8.245, de 18-10-1991.
+-- trata das locações dos imóveis urbanos e os procedimentos a elas pertinentes (Lei do Inquilinato).
+- Vide art. 835 do CC.
+-- trata da exoneração do fiador que tenha assinado contrato sem limitação de tempo.
+-----
+# Aplicação de Leis a Empresários e Sociedades Empresárias
+# Dispositivos Legais
+- Art. 2.037. Salvo disposição em contrário, aplicam-se aos empresários e sociedades empresárias as disposições de lei não revogadas por este Código, referentes a comerciantes, ou a sociedades comerciais, bem como a atividades mercantis.
+# Remissões Normativas
+- Vide arts. 966 a 1.195 do CC.
+-- tratam do Direito de Empresa, estabelecendo as normas sobre o empresário, a sociedade empresária, o estabelecimento e os institutos complementares.
+-----
+# Enfiteuse e Subenfiteuse
+# Dispositivos Legais
+- Art. 2.038. Fica proibida a constituição de enfiteuses e subenfiteuses, subordinando-se as existentes, até sua extinção, às disposições do Código Civil anterior, Lei n. 3.071, de 1.º de janeiro de 1916, e leis posteriores.
+-- § 1.º Nos aforamentos a que se refere este artigo é defeso:
+-- I – cobrar laudêmio ou prestação análoga nas transmissões de bem aforado, sobre o valor das construções ou plantações;
+-- II – constituir subenfiteuse.
+-- § 2.º A enfiteuse dos terrenos de marinha e acrescidos regula-se por lei especial.
+-----
+# Regime de Bens no Casamento (Direito Intertemporal)
+# Dispositivos Legais
+- Art. 2.039. O regime de bens nos casamentos celebrados na vigência do Código Civil anterior, Lei n. 3.071, de 1.º de janeiro de 1916, é o por ele estabelecido.
+# Remissões Normativas
+- Vide arts. 5.º, XXXVI, da CF e 6.º da LINDB.
+-- O art. 5º, XXXVI, da CF, protege o direito adquirido, o ato jurídico perfeito e a coisa julgada.
+-- O art. 6º da LINDB, trata da irretroatividade da lei e da proteção ao ato jurídico perfeito, ao direito adquirido e à coisa julgada.
+-----
+# Hipoteca Legal do Tutor ou Curador (Direito Intertemporal)
+# Dispositivos Legais
+- Art. 2.040. A hipoteca legal dos bens do tutor ou curador, inscrita em conformidade com o inciso IV do art. 827 do Código Civil anterior, Lei n. 3.071, de 1.º de janeiro de 1916, poderá ser cancelada, obedecido o disposto no parágrafo único do art. 1.745 deste Código.
+# Remissões Normativas
+- Vide arts. 759 a 763 do CPC.
+-- O art. 759 trata da petição inicial da interdição.
+-- O art. 760 trata da não necessidade de se seguir o procedimento se a interdição for pedida pelo Ministério Público.
+-- O art. 761 trata do levantamento da curatela.
+-- O art. 762 trata do levantamento da interdição.
+-- O art. 763 trata da prestação de contas pelo tutor ou curador.
+- Vide art. 37 do ECA.
+-- trata da nomeação de tutor ou guardião para criança ou adolescente, nos termos da lei civil.
+-----
+# Ordem da Vocação Hereditária (Direito Intertemporal)
+# Dispositivos Legais
+- Art. 2.041. As disposições deste Código relativas à ordem da vocação hereditária (arts. 1.829 a 1.844) não se aplicam à sucessão aberta antes de sua vigência, prevalecendo o disposto na lei anterior (Lei n. 3.071, de 1.º-1-1916).
+# Remissões Normativas
+- Vide arts. 1.784, 1.787, 1.829 e 1.844 do CC.
+-- O art. 1.784 estabelece o princípio da saisine, segundo o qual a herança se transmite desde logo aos herdeiros.
+-- O art. 1.787 regula a sucessão pela lei vigente ao tempo da sua abertura.
+-- O art. 1.829 estabelece a ordem da vocação hereditária.
+-- O art. 1.844 trata da sucessão de colaterais.
+-----
+# Cláusula Restritiva à Legítima (Direito Intertemporal)
+# Dispositivos Legais
+- Art. 2.042. Aplica-se o disposto no caput do art. 1.848, quando aberta a sucessão no prazo de um ano após a entrada em vigor deste Código, ainda que o testamento tenha sido feito na vigência do anterior, Lei n. 3.071, de 1.º de janeiro de 1916; se, no prazo, o testador não aditar o testamento para declarar a justa causa de cláusula aposta à legítima, não subsistirá a restrição.
+-----
+# Vigência de Normas Processuais, Administrativas ou Penais
+# Dispositivos Legais
+- Art. 2.043. Até que por outra forma se disciplinem, continuam em vigor as disposições de natureza processual, administrativa ou penal, constantes de leis cujos preceitos de natureza civil hajam sido incorporados a este Código.
+-----
+# Entrada em Vigor do Código
+# Dispositivos Legais
+- Art. 2.044. Este Código entrará em vigor um ano após a sua publicação.
+-----
+# Revogação de Leis Anteriores
+# Dispositivos Legais
+- Art. 2.045. Revogam-se a Lei n. 3.071, de 1.º de janeiro de 1916 – Código Civil e a Parte Primeira do Código Comercial, Lei n. 556, de 25 de junho de 1850.
+# Remissões Normativas
+- Vide art. 2.035 do CC.
+-- trata da validade dos negócios jurídicos constituídos sob a lei anterior.
+-----
+# Remissões em Outros Diplomas
+# Dispositivos Legais
+- Art. 2.046. Todas as remissões, em diplomas legislativos, aos Códigos referidos no artigo antecedente, consideram-se feitas às disposições correspondentes deste Código.
