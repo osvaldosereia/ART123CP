@@ -299,3 +299,9 @@ button.mini{
 
 /* Garante alinhamento à esquerda igual ao corpo do card */
 .ficha-head{ padding:0 0 8px 0 !important; }
+/* 1) Esconder subtítulos das seções no card */
+.ubox-sub { display: none !important; }
+
+/* Se quiser reduzir o respiro onde tinha o subtítulo: */
+.ubox-section { padding-top: 0 !important; }
+.ubox-section + .ubox-section { margin-top: 14px !important; padding-top: 14px !important; }
