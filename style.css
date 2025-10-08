@@ -283,3 +283,19 @@ button.mini{
   text-overflow:ellipsis;     /* garante 1 linha no mobile */
   margin:2px 0 6px;
 }
+/* ===== Header do card: separadores + categoria ===== */
+.card-sep{
+  height:1px;
+  background:var(--line);
+  margin:8px 0;                 /* mesmo “respiro” dos demais divisores */
+}
+
+.card-cat{
+  font-size:12px;
+  color:var(--muted);
+  margin:0 0 8px 0;             /* espaço padrão antes do próximo bloco */
+  padding:0;                     /* alinha com o texto do card */
+}
+
+/* Garante alinhamento à esquerda igual ao corpo do card */
+.ficha-head{ padding:0 0 8px 0 !important; }
