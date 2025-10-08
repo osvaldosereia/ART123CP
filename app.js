@@ -185,9 +185,11 @@
     const dispositivos=parseList(secD);
     const remissoes   =parseList(secR);
 
-    const mkLinkItem = (line) => googleIA(IA_PROMPTS.detalhada(line, line));
-for (const it of dispositivos) it.link = mkLinkItem(it.texto);
-for (const it of remissoes)    it.link = mkLinkItem(it.texto);
+    const mkLink = (txt) => googleIA(IA_PROMPTS.detalhada(title, `${txt}`));
+for (const it of dispositivos) it.link = mkLink(`${title} — ${it.texto}`);
+// Remissões: usa só o texto do item (sem o título do card)
+for (const it of remissoes)    it.link = googleIA(IA_PROMPTS.detalhada(it.texto, it.texto));
+
 
     const dispText=dispositivos.map(x=>x.texto+(x.comentarios?` ${x.comentarios.join(' ')}`:'')).join(' ');
     const remText =remissoes.map(x=>x.texto+(x.comentarios?` ${x.comentarios.join(' ')}`:'')).join(' ');
