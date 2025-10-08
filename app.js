@@ -452,33 +452,44 @@ function openIADropdown(anchorBtn, title, fullText){
   }
 
   function renderTemaCard(container,item){
-    const fullText=buildBundle(item.title,item.dispositivos,item.remissoes);
-    const card=document.createElement('article');
-    card.className='card ubox';
-    card.dataset.slug=item.slug;
-    card.innerHTML=`
-      <header class="ficha-head">
-        <div class="actions chip-bar"></div>
-        <h1 class="h1">${escapeHTML(item.title)}</h1>
-      </header>
+  const fullText=buildBundle(item.title,item.dispositivos,item.remissoes);
+  const card=document.createElement('article');
+  card.className='card ubox';
+  card.dataset.slug=item.slug;
+
+  const hasD = (item.dispositivos && item.dispositivos.length>0);
+  const hasR = (item.remissoes    && item.remissoes.length>0);
+
+  card.innerHTML=`
+    <header class="ficha-head">
+      <div class="actions chip-bar"></div>
+      <h1 class="h1">${escapeHTML(item.title)}</h1>
+    </header>
+
+    ${hasD ? `
       <section class="ubox-section">
         <h3 class="ubox-sub">Dispositivos Legais (D)</h3>
         ${renderList(item.dispositivos)}
-      </section>
+      </section>` : ''}
+
+    ${hasR ? `
       <section class="ubox-section">
         <h3 class="ubox-sub">Remissões Normativas (R)</h3>
         ${renderList(item.remissoes)}
-      </section>
-    `;
-    const actionsEl=card.querySelector('.actions');
-    const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
-    const saved=isSaved(item.slug);
-    const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{ const added=toggleSaved(item.slug); saveBtn.textContent=added?'Remover':'Salvar'; if(added) saveBtn.setAttribute('data-variant','primary'); else saveBtn.removeAttribute('data-variant'); toast(added?'Tema salvo':'Removido','info',1400); });
-const iaBtn = mkBtn('Estude com I.A.','');
-iaBtn.onclick = () => openIADropdown(iaBtn, item.title, fullText);
-    actionsEl.append(saveBtn, iaBtn);
-    container.appendChild(card);
-  }
+      </section>` : ''}
+  `;
+
+  const actionsEl=card.querySelector('.actions');
+  const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
+  const saved=isSaved(item.slug);
+  const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{ const added=toggleSaved(item.slug); saveBtn.textContent=added?'Remover':'Salvar'; if(added) saveBtn.setAttribute('data-variant','primary'); else saveBtn.removeAttribute('data-variant'); toast(added?'Tema salvo':'Removido','info',1400); });
+  const iaBtn = mkBtn('Estude com I.A.','');
+  iaBtn.onclick = () => openIADropdown(iaBtn, item.title, fullText);
+  actionsEl.append(saveBtn, iaBtn);
+
+  container.appendChild(card);
+}
+
 
   async function ensureFileParsed(path,group){
     if(CACHED_FILES.has(path)) return CACHED_FILES.get(path);
