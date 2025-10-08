@@ -3,11 +3,218 @@
 
 
 
-
-
-
-
-
+# Dispensa da Colação
+- Código Civil
+# Dispositivos Legais
+- Art. 2.005. São dispensadas da colação as doações que o doador determinar saiam da parte disponível, contanto que não a excedam, computado o seu valor ao tempo da doação.
+- Parágrafo único. Presume-se imputada na parte disponível a liberalidade feita a descendente que, ao tempo do ato, não seria chamado à sucessão na qualidade de herdeiro necessário.
+-----
+# Forma da Dispensa da Colação
+- Código Civil
+# Dispositivos Legais
+- Art. 2.006. A dispensa da colação pode ser outorgada pelo doador em testamento, ou no próprio título de liberalidade.
+-----
+# Redução das Doações Inoficiosas
+- Código Civil
+# Dispositivos Legais
+- Art. 2.007. São sujeitas à redução as doações em que se apurar excesso quanto ao que o doador poderia dispor, no momento da liberalidade.
+- § 1.º O excesso será apurado com base no valor que os bens doados tinham, no momento da liberalidade.
+- § 2.º A redução da liberalidade far-se-á pela restituição ao monte do excesso assim apurado; a restituição será em espécie, ou, se não mais existir o bem em poder do donatário, em dinheiro, segundo o seu valor ao tempo da abertura da sucessão, observadas, no que forem aplicáveis, as regras deste Código sobre a redução das disposições testamentárias.
+- § 3.º Sujeita-se a redução, nos termos do parágrafo antecedente, a parte da doação feita a herdeiros necessários que exceder a legítima e mais a quota disponível.
+- § 4.º Sendo várias as doações a herdeiros necessários, feitas em diferentes datas, serão elas reduzidas a partir da última, até a eliminação do excesso.
+# Remissões Normativas
+- Vide arts. 549 e 1.967 do CC.
+-- tratam da nulidade da doação na parte que excede a que o doador poderia dispor em testamento (doação inoficiosa) e da redução das disposições testamentárias que excederem a parte disponível.
+-----
+# Colação por Renunciante ou Excluído
+- Código Civil
+# Dispositivos Legais
+- Art. 2.008. Aquele que renunciou a herança ou dela foi excluído, deve, não obstante, conferir as doações recebidas, para o fim de repor o que exceder o disponível.
+# Remissões Normativas
+- Vide arts. 1.804 a 1.813 do CC.
+-- dispõem sobre a aceitação e a renúncia da herança.
+- Vide art. 640 do CPC.
+-- estabelece que o herdeiro que renunciou à herança ou foi dela excluído não se exime de trazer à colação as liberalidades recebidas.
+-----
+# Colação por Representação
+- Código Civil
+# Dispositivos Legais
+- Art. 2.009. Quando os netos, representando os seus pais, sucederem aos avós, serão obrigados a trazer à colação, ainda que não o hajam herdado, o que os pais teriam de conferir.
+# Remissões Normativas
+- Vide arts. 1.851 e 1.852 do CC.
+-- tratam do direito de representação na linha reta descendente.
+-----
+# Gastos não Sujeitos à Colação
+- Código Civil
+# Dispositivos Legais
+- Art. 2.010. Não virão à colação os gastos ordinários do ascendente com o descendente, enquanto menor, na sua educação, estudos, sustento, vestuário, tratamento nas enfermidades, enxoval, assim como as despesas de casamento, ou as feitas no interesse de sua defesa em processo-crime.
+-----
+# Doações Remuneratórias
+- Código Civil
+# Dispositivos Legais
+- Art. 2.011. As doações remuneratórias de serviços feitos ao ascendente também não estão sujeitas a colação.
+-----
+# Doação por Ambos os Cônjuges
+- Código Civil
+# Dispositivos Legais
+- Art. 2.012. Sendo feita a doação por ambos os cônjuges, no inventário de cada um se conferirá por metade.
+-----
+# Direito de Requerer a Partilha
+- Código Civil
+# Dispositivos Legais
+- Art. 2.013. O herdeiro pode sempre requerer a partilha, ainda que o testador o proíba, cabendo igual faculdade aos seus cessionários e credores.
+-----
+# Partilha feita pelo Testador
+- Código Civil
+# Dispositivos Legais
+- Art. 2.014. Pode o testador indicar os bens e valores que devem compor os quinhões hereditários, deliberando ele próprio a partilha, que prevalecerá, salvo se o valor dos bens não corresponder às quotas estabelecidas.
+-----
+# Partilha Amigável
+- Código Civil
+# Dispositivos Legais
+- Art. 2.015. Se os herdeiros forem capazes, poderão fazer partilha amigável, por escritura pública, termo nos autos do inventário, ou escrito particular, homologado pelo juiz.
+-----
+# Partilha Judicial
+- Código Civil
+# Dispositivos Legais
+- Art. 2.016. Será sempre judicial a partilha, se os herdeiros divergirem, assim como se algum deles for incapaz.
+# Remissões Normativas
+- Vide Súmula 265 do STF.
+-- estabelece que no inventário e na partilha, é legítima a nomeação de advogado dativo, a quem caberá a defesa dos interesses do testador.
+-----
+# Igualdade na Partilha
+- Código Civil
+# Dispositivos Legais
+- Art. 2.017. No partilhar os bens, observar-se-á, quanto ao seu valor, natureza e qualidade, a maior igualdade possível.
+-----
+# Partilha por Ascendente
+- Código Civil
+# Dispositivos Legais
+- Art. 2.018. É válida a partilha feita por ascendente, por ato entre vivos ou de última vontade, contanto que não prejudique a legítima dos herdeiros necessários.
+-----
+# Bens Indivisíveis
+- Código Civil
+# Dispositivos Legais
+- Art. 2.019. Os bens insuscetíveis de divisão cômoda, que não couberem na meação do cônjuge sobrevivente ou no quinhão de um só herdeiro, serão vendidos judicialmente, partilhando-se o valor apurado, a não ser que haja acordo para serem adjudicados a todos.
+- § 1.º Não se fará a venda judicial se o cônjuge sobrevivente ou um ou mais herdeiros requererem lhes seja adjudicado o bem, repondo aos outros, em dinheiro, a diferença, após avaliação atualizada.
+- § 2.º Se a adjudicação for requerida por mais de um herdeiro, observar-se-á o processo da licitação.
+# Remissões Normativas
+- Vide arts. 1.322 e 1.489, IV, do CC.
+-- o primeiro trata da extinção de condomínio sobre coisa indivisível, mediante adjudicação a um só, com indenização, ou venda e repartição do valor; o segundo trata da extinção da hipoteca.
+-----
+# Frutos e Despesas dos Bens da Herança
+- Código Civil
+# Dispositivos Legais
+- Art. 2.020. Os herdeiros em posse dos bens da herança, o cônjuge sobrevivente e o inventariante são obrigados a trazer ao acervo os frutos que perceberam, desde a abertura da sucessão; têm direito ao reembolso das despesas necessárias e úteis que fizeram, e respondem pelo dano a que, por dolo ou culpa, deram causa.
+# Remissões Normativas
+- Vide art. 614 do CPC.
+-- dispõe que o herdeiro na posse de bens da herança, conforme o art. 2.020 do Código Civil, é obrigado a trazê-los ao acervo, sob pena de sonegação.
+-----
+# Sobrepartilha
+- Código Civil
+# Dispositivos Legais
+- Art. 2.021. Quando parte da herança consistir em bens remotos do lugar do inventário, litigiosos, ou de liquidação morosa ou difícil, poderá proceder-se, no prazo legal, à partilha dos outros, reservando-se aqueles para uma ou mais sobrepartilhas, sob a guarda e a administração do mesmo ou diverso inventariante, e consentimento da maioria dos herdeiros.
+# Remissões Normativas
+- Vide art. 669 do CPC.
+-- define os bens que estão sujeitos à sobrepartilha.
+-----
+# Bens Sujeitos à Sobrepartilha
+- Código Civil
+# Dispositivos Legais
+- Art. 2.022. Ficam sujeitos a sobrepartilha os bens sonegados e quaisquer outros bens da herança de que se tiver ciência após a partilha.
+# Remissões Normativas
+- Vide art. 669 do CPC.
+-- define os bens que estão sujeitos à sobrepartilha, como os sonegados ou os descobertos após a partilha.
+-----
+# Efeitos da Partilha
+- Código Civil
+# Dispositivos Legais
+- Art. 2.023. Julgada a partilha, fica o direito de cada um dos herdeiros circunscrito aos bens do seu quinhão.
+-----
+# Garantia da Evicção
+- Código Civil
+# Dispositivos Legais
+- Art. 2.024. Os coerdeiros são reciprocamente obrigados a indenizar-se no caso de evicção dos bens aquinhoados.
+# Remissões Normativas
+- Vide arts. 447 a 457 (evicção) do CC.
+-- dispõem sobre a evicção, que é a perda da posse ou da propriedade de um bem por força de decisão judicial que reconhece direito anterior de terceiro.
+-----
+# Cessação da Obrigação de Indenizar
+- Código Civil
+# Dispositivos Legais
+- Art. 2.025. Cessa a obrigação mútua estabelecida no artigo antecedente, havendo convenção em contrário, e bem assim dando-se a evicção por culpa do evicto, ou por fato posterior à partilha.
+# Remissões Normativas
+- Vide arts. 447 a 457 do CC.
+-- dispõem sobre a evicção, que é a perda da posse ou da propriedade de um bem por força de decisão judicial que reconhece direito anterior de terceiro.
+-----
+# Indenização do Evicto
+- Código Civil
+# Dispositivos Legais
+- Art. 2.026. O evicto será indenizado pelos coerdeiros na proporção de suas quotas hereditárias, mas, se algum deles se achar insolvente, responderão os demais na mesma proporção, pela parte desse, menos a quota que corresponderia ao indenizado.
+# Remissões Normativas
+- Vide arts. 447 a 457 do CC.
+-- dispõem sobre a evicção, que é a perda da posse ou da propriedade de um bem por força de decisão judicial que reconhece direito anterior de terceiro.
+-----
+# Anulação da Partilha
+- Código Civil
+# Dispositivos Legais
+- Art. 2.027. A partilha é anulável pelos vícios e defeitos que invalidam, em geral, os negócios jurídicos.
+- Caput com redação determinada pela Lei n. 13.105, de 16-3-2015.
+- Parágrafo único. Extingue-se em um ano o direito de anular a partilha.
+# Remissões Normativas
+- Vide arts. 171 e s. do CC.
+-- tratam das hipóteses de anulação dos negócios jurídicos, como incapacidade relativa do agente e vícios de consentimento (erro, dolo, coação).
+- Vide Vícios redibitórios: arts. 441 a 446 do CC.
+-- dispõem sobre os defeitos ocultos da coisa recebida em virtude de contrato comutativo, que a tornem imprópria ao uso ou lhe diminuam o valor.
+- Vide Negócio jurídico: arts. 104 a 184 do CC.
+-- estabelecem os requisitos de validade do negócio jurídico e regulam seus defeitos e invalidades.
+- Vide arts. 966, § 4.º, e 657, parágrafo único, do CPC.
+-- tratam da anulação de atos processuais homologatórios e da partilha judicial por vícios como dolo, coação ou erro essencial.
+-----
+# Regra de Transição dos Prazos
+- Código Civil
+# Dispositivos Legais
+- Art. 2.028. Serão os da lei anterior os prazos, quando reduzidos por este Código, e se, na data de sua entrada em vigor, já houver transcorrido mais da metade do tempo estabelecido na lei revogada.
+-----
+# Prazos de Usucapião
+- Código Civil
+# Dispositivos Legais
+- Art. 2.029. Até dois anos após a entrada em vigor deste Código, os prazos estabelecidos no parágrafo único do art. 1.238 e no parágrafo único do art. 1.242 serão acrescidos de dois anos, qualquer que seja o tempo transcorrido na vigência do anterior, Lei n. 3.071, de 1.º de janeiro de 1916.
+-----
+# Acréscimo de Prazo para Reivindicação
+- Código Civil
+# Dispositivos Legais
+- Art. 2.030. O acréscimo de que trata o artigo antecedente, será feito nos casos a que se refere o § 4.º do art. 1.228.
+-----
+# Adaptação de Pessoas Jurídicas
+- Código Civil
+# Dispositivos Legais
+- Art. 2.031. As associações, sociedades e fundações, constituídas na forma das leis anteriores, bem como os empresários, deverão se adaptar às disposições deste Código até 11 de janeiro de 2007.
+- Caput com redação determinada pela Lei n. 11.127, de 28-6-2005.
+- A Lei n. 12.879, de 5-11-2013, dispõe sobre a gratuidade dos atos de registro, pelas associações de moradores, necessários à adaptação estatutária a este artigo, para fins de enquadramento dessas entidades como organizações da sociedade civil de interesse público.
+- Parágrafo único. O disposto neste artigo não se aplica às organizações religiosas nem aos partidos políticos.
+- Parágrafo único acrescentado pela Lei n. 10.825, de 22-12-2003.
+# Remissões Normativas
+- Vide Lei n. 11.127, de 28-6-2005.
+-- alterou o prazo final para a adaptação das pessoas jurídicas ao novo Código Civil.
+- Vide Lei n. 12.879, de 5-11-2013.
+-- concedeu gratuidade para os atos de registro necessários à adaptação estatutária das associações de moradores.
+- Vide Lei n. 10.825, de 22-12-2003.
+-- excluiu as organizações religiosas e os partidos políticos da obrigatoriedade de adaptação ao Código Civil.
+-----
+# Funcionamento de Fundações
+- Código Civil
+# Dispositivos Legais
+- Art. 2.032. As fundações, instituídas segundo a legislação anterior, inclusive as de fins diversos dos previstos no parágrafo único do art. 62, subordinam-se, quanto ao seu funcionamento, ao disposto neste Código.
+-----
+# Modificações dos Atos Constitutivos
+- Código Civil
+# Dispositivos Legais
+- Art. 2.033. Salvo o disposto em lei especial, as modificações dos atos constitutivos das pessoas jurídicas referidas no art. 44, bem como a sua transformação, incorporação, cisão ou fusão, regem-se desde logo por este Código.
+# Remissões Normativas
+- Vide arts. 1.033 a 1.038 e 1.102 a 1.112 do CC
+-- tratam, respectivamente, da dissolução e da liquidação das sociedades.
+-----
 # Dissolução e Liquidação de Pessoas Jurídicas
 - Código Civil
 # Dispositivos Legais
