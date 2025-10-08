@@ -1,39 +1,50 @@
-// meujus – app.js (2025-10-07)
-// Home minimalista (logo + busca)
-// Tema com ROLAGEM INFINITA (selecionado ±5; carrega +5 por sentinela)
-// Drawer funcional e dropdown centralizado no mobile
-(function () {
-  const $ = (q, el = document) => el.querySelector(q);
+/* meujus – app.js (2025-10-07)
+   Home minimalista (logo + busca)
+   Tema com ROLAGEM INFINITA (selecionado ±5; carrega +5 por sentinela)
+   Drawer funcional e dropdown centralizado no mobile
+*/
+;(() => {
+  'use strict';
+
+  const $  = (q, el = document) => el.querySelector(q);
   const $$ = (q, el = document) => Array.from(el.querySelectorAll(q));
 
   /* ===== Estado ===== */
   let TEMAS = [];
-  let CACHED_FILES = new Map();
+  const CACHED_FILES = new Map();
   let activeCat = 'Todos';
 
-  const SAVED_KEY = 'meujus:saved';
-  const LAST_AC_KEY = 'meujus:lastAc';
+  const SAVED_KEY       = 'meujus:saved';
+  const LAST_AC_KEY     = 'meujus:lastAc';
   const LAST_SEARCH_KEY = 'meujus:lastSearch';
 
-  const readSaved = () => { try { return JSON.parse(localStorage.getItem(SAVED_KEY) || '[]'); } catch { return []; } };
+  const readSaved  = () => { try { return JSON.parse(localStorage.getItem(SAVED_KEY) || '[]'); } catch { return []; } };
   const writeSaved = (list) => localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(new Set(list))));
-  const isSaved = (slug) => readSaved().includes(slug);
-const toggleSaved = (slug) => {
-  const s = new Set(readSaved());
-  const added = !s.has(slug);
-  added ? s.add(slug) : s.delete(slug);
-  writeSaved([...s]);
-  try {
-    window.dispatchEvent(new CustomEvent('meujus:saved-changed', { detail:{ slug, added } }));
-  } catch {}
-  return added;
-};
-  const escapeHTML = (s) => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
-  const slugify = (s)=> (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
+  const isSaved    = (slug) => readSaved().includes(slug);
+
+  const toggleSaved = (slug) => {
+    const s = new Set(readSaved());
+    const added = !s.has(slug);
+    added ? s.add(slug) : s.delete(slug);
+    writeSaved([...s]);
+    try { window.dispatchEvent(new CustomEvent('meujus:saved-changed', { detail:{ slug, added } })); } catch {}
+    return added;
+  };
+
+  const escapeHTML = (s) => String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+
+  const slugify = (s) => (s||'').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
 
   /* ===== Busca helpers ===== */
-  const normPT = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ç/g,'c');
-  const escRx = x => x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  const normPT = (s) => String(s||'').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ç/g,'c');
+
+  const escRx = (x) => x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+
   function pluralRegexToken(w){
     if(w.length<=2) return escRx(w);
     const s2=w.slice(0,-2), s1=w.slice(0,-1);
@@ -47,9 +58,13 @@ const toggleSaved = (slug) => {
     if(/ul$/.test(w)) return `(?:${escRx(w)}|${escRx(s2+'uis')})`;
     return `(?:${escRx(w)}s?)`;
   }
+
   function _hitPT(hayRaw,qRaw){
-    const hay=normPT(hayRaw), qn=normPT(qRaw); if(!hay||!qn) return 0;
-    let s=0; if(hay===qn) s+=100; if(hay.includes(qn)) s+=60;
+    const hay=normPT(hayRaw), qn=normPT(qRaw);
+    if(!hay||!qn) return 0;
+    let s=0;
+    if(hay===qn) s+=100;
+    if(hay.includes(qn)) s+=60;
     for(const t of qn.split(/\s+/).filter(Boolean)){
       const rx=new RegExp(`(?<![a-z0-9])${pluralRegexToken(t)}(?![a-z0-9])`,'g');
       if(rx.test(hay)) s+=10;
@@ -66,6 +81,7 @@ const toggleSaved = (slug) => {
     return { kind:'home' };
   }
 
+  /* ===== Toast ===== */
   const toastsEl = $('#toasts');
   function toast(msg,type='info',ttl=2200){
     if(!toastsEl) return;
@@ -77,18 +93,39 @@ const toggleSaved = (slug) => {
     setTimeout(()=>{ el.classList.remove('show'); setTimeout(()=>el.remove(),350); }, ttl);
   }
 
+  /* ===== IO ===== */
   async function fetchText(path){
     const url=(path||'').replace(/^\.?\//,'');
     const res=await fetch(url,{cache:'no-store'});
-    if(!res.ok){ console.error('Fetch falhou:',url,res.status); toast(`Erro ao carregar ${url}`,'error',3000); throw new Error(`HTTP ${res.status}`); }
+    if(!res.ok){
+      console.error('Fetch falhou:',url,res.status);
+      toast(`Erro ao carregar ${url}`,'error',3000);
+      throw new Error(`HTTP ${res.status}`);
+    }
     return res.text();
   }
+
   function splitThemesByDelim(raw){
     const txt=raw.replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n').trim();
     return txt.split(/^\s*-{3,}\s*$/m).map(s=>s.trim()).filter(Boolean);
   }
-  const normalizeHeading = (h)=> (h||'').toLowerCase().replace(/\(.*?\)/g,'').replace(/[.#:]/g,' ').replace(/\s+/g,' ')
-    .normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
+
+  const normalizeHeading = (h)=> (h||'').toLowerCase()
+    .replace(/\(.*?\)/g,'').replace(/[.#:]/g,' ')
+    .replace(/\s+/g,' ').normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'').trim();
+
+  /* ===== IA helpers ===== */
+  function googleIA(prompt){ return `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`; }
+
+  const IA_PROMPTS = {
+    resumo:        (t, full) => `Faça um RESUMO em tópicos, com fundamentos e aplicações práticas.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    detalhada:     (t, full) => `Explique DETALHADAMENTE o tema, com transcrições essenciais, finalidade, requisitos e exemplos.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    dissertativas: (t, full) => `Crie 5 QUESTÕES DISSERTATIVAS com gabarito comentado e base legal.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    objetivas:     (t, full) => `Crie 10 QUESTÕES OBJETIVAS (A–E) com gabarito e breve justificativa.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
+    videos:        (t)       => `site:youtube.com aula ${t} explicação prática legislação`,
+    artigos:       (t)       => `artigos doutrina ${t} pdf site:.jus.br OR site:.gov.br OR site:.edu.br`
+  };
 
   /* ===== Parser de chunk TXT ===== */
   function parseTemaFromChunk(chunk){
@@ -155,7 +192,8 @@ const toggleSaved = (slug) => {
     const dispText=dispositivos.map(x=>x.texto+(x.comentarios?` ${x.comentarios.join(' ')}`:'')).join(' ');
     const remText =remissoes.map(x=>x.texto+(x.comentarios?` ${x.comentarios.join(' ')}`:'')).join(' ');
 
-    return { slug,title,dispositivos,remissoes,
+    return {
+      slug, title, dispositivos, remissoes,
       titleN:normPT(title),
       dispN:normPT(dispText),
       remN:normPT(remText),
@@ -173,14 +211,17 @@ const toggleSaved = (slug) => {
     try{ return new RegExp(`(?<!\\p{L})(${parts.join('|')})(?!\\p{L})`,'uig'); }
     catch{ return new RegExp(`(^|[^\\p{L}])(${parts.join('|')})(?!\\p{L})`,'uig'); }
   }
+
   function highlightTitle(title,q){
     const esc=String(title).replace(/</g,'&lt;');
     const rx=_buildHighlightRegex(q); if(!rx) return esc;
-    if(rx.source.startsWith('(^|')){ return esc.replace(rx,(m,prefix,word)=>(prefix||'')+'<mark>'+word+'</mark>'); }
+    if(rx.source.startsWith('(^|')){
+      return esc.replace(rx,(m,prefix,word)=>(prefix||'')+'<mark>'+word+'</mark>');
+    }
     return esc.replace(rx,'<mark>$1</mark>');
   }
+
   const fmtInlineBold=(html)=>String(html).replace(/\*([^*]+)\*/g,'<strong>$1</strong>');
-  const labelFromFlags=(f)=>['T','D','R'].filter(k=>f[k]).map(k=>`(${k})`).join(' ');
 
   /* Snippet do 1º dispositivo legal (até 60 chars; 1ª linha) */
   function getDispSnippet(slug, max = 60){
@@ -196,54 +237,110 @@ const toggleSaved = (slug) => {
 
   /* ===== Dropdown pós-busca ===== */
   let __popEl=null;
-  function closeAcDropdown(){ if(__popEl){ __popEl.remove(); __popEl=null; } document.removeEventListener('click',onDocClickClose,true); window.removeEventListener('hashchange', closeAcDropdown, { once:true }); }
+  function closeAcDropdown(){
+    if(__popEl){ __popEl.remove(); __popEl=null; }
+    document.removeEventListener('click',onDocClickClose,true);
+    window.removeEventListener('hashchange', closeAcDropdown, { once:true });
+  }
   function onDocClickClose(e){ if(__popEl && !__popEl.contains(e.target)) closeAcDropdown(); }
 
   /* ===== Autocomplete ===== */
-  let input=$('#search'); let acList=$('#suggestions'); if(acList) acList.hidden=true;
-  function scoreFields(q,t){ const sT=_hitPT(t.titleN,q); const sD=_hitPT(t.dispN||'',q); const sR=_hitPT(t.remN||'',q); return {score:1.2*sT + sD + sR, flags:{T:sT>0,D:sD>0,R:sR>0}}; }
-  function bindAutocomplete(){ input=$('#search'); acList=$('#suggestions'); if(acList) acList.hidden=true; input?.addEventListener('input',onInputAC); input?.addEventListener('keydown',onKeydownAC); acList?.addEventListener('click',onClickAC); }
+  let input=$('#search');
+  let acList=$('#suggestions');
+  if(acList) acList.hidden=true;
+
+  function scoreFields(q,t){
+    const sT=_hitPT(t.titleN,q);
+    const sD=_hitPT(t.dispN||'',q);
+    const sR=_hitPT(t.remN||'',q);
+    return {score:1.2*sT + sD + sR};
+  }
+
+  function bindAutocomplete(){
+    input=$('#search');
+    acList=$('#suggestions');
+    if(acList) acList.hidden=true;
+    input?.addEventListener('input',onInputAC);
+    input?.addEventListener('keydown',onKeydownAC);
+    acList?.addEventListener('click',onClickAC);
+  }
+
   function onInputAC(e){
     const q=(e.target.value||'').trim();
     if(q.length<2 || !TEMAS.length){ acList.innerHTML=''; acList.hidden=true; closeAcDropdown(); return; }
-    let arr=TEMAS.map(t=>({t, ...scoreFields(q,t)})).filter(x=>x.score>0)
-      .sort((a,b)=> b.score-a.score || a.t.title.localeCompare(b.t.title,'pt-BR')).slice(0,40);
+
+    let arr=TEMAS.map(t=>({t, ...scoreFields(q,t)}))
+      .filter(x=>x.score>0)
+      .sort((a,b)=> b.score-a.score || a.t.title.localeCompare(b.t.title,'pt-BR'))
+      .slice(0,40);
+
     if(!arr.length){ acList.innerHTML=''; acList.hidden=true; closeAcDropdown(); return; }
 
-    const counts=new Map(); for(const x of arr){ const g=x.t.group||'Geral'; counts.set(g,(counts.get(g)||0)+1); }
+    const counts=new Map();
+    for(const x of arr){ const g=x.t.group||'Geral'; counts.set(g,(counts.get(g)||0)+1); }
     const catList=[...counts.keys()].sort((a,b)=> a.localeCompare(b,'pt-BR'));
-    if(activeCat && activeCat!=='Todos'){ const filtered=arr.filter(x=>(x.t.group||'Geral')===activeCat); arr = filtered.length?filtered:arr; }
 
-    const lastAc={ q, categories:['Todos', ...catList], items: arr.slice(0,20).map(x=>({ slug:x.t.slug, title:x.t.title, group:x.t.group||'Geral', labels:labelFromFlags(x.flags) })) };
+    if(activeCat && activeCat!=='Todos'){
+      const filtered=arr.filter(x=>(x.t.group||'Geral')===activeCat);
+      arr = filtered.length?filtered:arr;
+    }
+
+    const lastAc={
+      q,
+      categories:['Todos', ...catList],
+      items: arr.slice(0,20).map(x=>({ slug:x.t.slug, title:x.t.title, group:x.t.group||'Geral' }))
+    };
     try{ sessionStorage.setItem(LAST_AC_KEY, JSON.stringify(lastAc)); }catch{}
 
-    const chipsHTML=`
+    const chipsHTML = `
       <div class="ac-chips" role="group" aria-label="Filtrar sugestões por categoria">
         <button type="button" class="ac-chip" data-cat="Todos" aria-pressed="${activeCat==='Todos'}">Todos</button>
         ${catList.map(cat=>`<button type="button" class="ac-chip" data-cat="${(cat||'').replace(/"/g,'&quot;')}" aria-pressed="${activeCat===cat}">${escapeHTML(cat)}</button>`).join('')}
       </div>`;
+
     const listHTML = arr.slice(0,8).map(x=>{
-      const { t, flags } = x;
+      const { t } = x;
       const titleHTML = highlightTitle(t.title, q);
-      const labels    = labelFromFlags(flags);
       const snippet   = getDispSnippet(t.slug, 60);
       return `<li role="option">
-        <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['T','D','R'].filter(k=>flags[k]).join('')}">
+        <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}">
           <div class="s1">${titleHTML}</div>
           ${snippet ? `<div class="s3">${escapeHTML(snippet)}</div>` : ''}
-<div class="s2">${escapeHTML(t.group || 'Geral')}</div>
+          <div class="s2">${escapeHTML(t.group || 'Geral')}</div>
         </a>
       </li>`;
     }).join('');
 
-    acList.innerHTML=chipsHTML + listHTML; acList.hidden=false;
+    acList.innerHTML = chipsHTML + listHTML;
+    acList.hidden = false;
 
     acList.querySelectorAll('.ac-chip').forEach(btn=>{
-      btn.addEventListener('click',()=>{ activeCat=btn.getAttribute('data-cat')||'Todos'; input.dispatchEvent(new Event('input',{bubbles:false})); });
+      btn.addEventListener('click',()=>{
+        activeCat=btn.getAttribute('data-cat')||'Todos';
+        input.dispatchEvent(new Event('input',{bubbles:false}));
+      });
     });
   }
-  function onKeydownAC(ev){ if(ev.key==='Enter'){ const a=acList?.querySelector('a'); if(a){ const q=a.getAttribute('data-q')||''; const flags=a.getAttribute('data-flags')||''; try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q,flags})); }catch{} location.hash=a.getAttribute('href'); acList.hidden=true; } } }
-  function onClickAC(ev){ const a=ev.target.closest('a'); if(!a) return; const q=a.getAttribute('data-q')||''; const flags=a.getAttribute('data-flags')||''; try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q,flags})); }catch{} acList.hidden=true; }
+
+  function onKeydownAC(ev){
+    if(ev.key==='Enter'){
+      const a=acList?.querySelector('a');
+      if(a){
+        const q=a.getAttribute('data-q')||'';
+        try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q})); }catch{}
+        location.hash=a.getAttribute('href');
+        acList.hidden=true;
+      }
+    }
+  }
+
+  function onClickAC(ev){
+    const a=ev.target.closest('a'); if(!a) return;
+    const q=a.getAttribute('data-q')||'';
+    try{ sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify({q})); }catch{}
+    acList.hidden=true;
+  }
+
   window.addEventListener('hashchange', ()=>{ if(acList) acList.hidden=true; closeAcDropdown(); });
 
   /* ===== Drawer ===== */
@@ -371,9 +468,9 @@ const toggleSaved = (slug) => {
   }
 
   /* ===== Home ===== */
-  const searchWrap=document.querySelector('.search-wrap');
-  const searchWrapParent=searchWrap?.parentElement||null;
-  const searchWrapNext  =searchWrap?.nextSibling||null;
+  const searchWrap       = document.querySelector('.search-wrap');
+  const searchWrapParent = searchWrap?.parentElement || null;
+  const searchWrapNext   = searchWrap?.nextSibling || null;
 
   function moveSearchTo(container){ if(!searchWrap||!container) return; container.appendChild(searchWrap); bindAutocomplete(); }
   function restoreSearchToTopbar(){
@@ -399,17 +496,6 @@ const toggleSaved = (slug) => {
   }
 
   /* ===== IA — dropdown (chips verticais) ===== */
-  function googleIA(prompt){ return `https://www.google.com/search?udm=50&q=${encodeURIComponent(prompt)}`; }
-
-  const IA_PROMPTS = {
-    resumo:        (t, full) => `Faça um RESUMO em tópicos, com fundamentos e aplicações práticas.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-    detalhada:     (t, full) => `Explique DETALHADAMENTE o tema, com transcrições essenciais, finalidade, requisitos e exemplos.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-    dissertativas: (t, full) => `Crie 5 QUESTÕES DISSERTATIVAS com gabarito comentado e base legal.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-    objetivas:     (t, full) => `Crie 10 QUESTÕES OBJETIVAS (A–E) com gabarito e breve justificativa.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
-    videos:        (t)       => `site:youtube.com aula ${t} explicação prática legislação`,
-    artigos:       (t)       => `artigos doutrina ${t} pdf site:.jus.br OR site:.gov.br OR site:.edu.br`
-  };
-
   let __iaDrop=null;
   function closeIADrop(){ if(__iaDrop){ __iaDrop.remove(); __iaDrop=null; document.removeEventListener('click', onDocCloseIADrop, true); } }
   function onDocCloseIADrop(e){ if(__iaDrop && !__iaDrop.contains(e.target)) closeIADrop(); }
@@ -496,7 +582,13 @@ const toggleSaved = (slug) => {
     const actionsEl=card.querySelector('.actions');
     const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
     const saved=isSaved(item.slug);
-    const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{ const added=toggleSaved(item.slug); saveBtn.textContent=added?'Remover':'Salvar'; if(added) saveBtn.setAttribute('data-variant','primary'); else saveBtn.removeAttribute('data-variant'); toast(added?'Tema salvo':'Removido','info',1400); try { renderMenu(); } catch {} });
+    const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{
+      const added=toggleSaved(item.slug);
+      saveBtn.textContent=added?'Remover':'Salvar';
+      if(added) saveBtn.setAttribute('data-variant','primary'); else saveBtn.removeAttribute('data-variant');
+      toast(added?'Tema salvo':'Removido','info',1400);
+      try { renderMenu(); } catch {}
+    });
     const iaBtn = mkBtn('Estude com I.A.','');
     iaBtn.onclick = () => openIADropdown(iaBtn, item.title, fullText);
     actionsEl.append(saveBtn, iaBtn);
@@ -587,7 +679,11 @@ const toggleSaved = (slug) => {
         const mid=window.scrollY + window.innerHeight*0.35;
         for(const c of cards){
           const r=c.getBoundingClientRect(); const top=r.top+window.scrollY; const bottom=top+r.height;
-          if(mid>=top && mid<=bottom){ const s=c.dataset.slug; if(s && !location.hash.endsWith(s)) history.replaceState(null,'', '#/tema/'+s); break; }
+          if(mid>=top && mid<=bottom){
+            const s=c.dataset.slug;
+            if(s && !location.hash.endsWith(s)) history.replaceState(null,'', '#/tema/'+s);
+            break;
+          }
         }
       });
     };
@@ -619,7 +715,7 @@ const toggleSaved = (slug) => {
           const dispN=t.dispN||''; const remN=t.remN||''; const body=(dispN+' '+remN).toLowerCase();
           temas.push({ slug, title:t.title, path, group, frag:t.slug, titleN:t.titleN, dispN, remN, bodyN:t.bodyN, bodyL:body });
         }
-        // mantém cache com metaLine também
+        // cache com metaLine para snippets e cards
         CACHED_FILES.set(path, parsed.map(t=>({
           slug:`${slugify(group)}-${t.slug}`,
           title:t.title,
@@ -628,46 +724,63 @@ const toggleSaved = (slug) => {
           dispositivos:t.dispositivos||[],
           remissoes:t.remissoes||[]
         })));
-      }catch(e){ console.error('Seed falhou',path,e); toast(`Erro ao ler ${path}`,'error',2800); }
+      }catch(e){
+        console.error('Seed falhou',path,e);
+        toast(`Erro ao ler ${path}`,'error',2800);
+      }
     }
     return temas;
   }
-  async function loadTemas(){ TEMAS = await readAllSeeds(); renderMenu(); }
 
-// === ROTEAMENTO / BOOT ===
-async function renderByRoute(){
-  const page = currentPage();
-  if (!TEMAS.length) await loadTemas();
-  if (page.kind === 'tema') {
-    await loadTemaInfinite(page.slug);
-  } else if (page.kind === 'sobre') {
-    $('#content').innerHTML = `<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code>- Linha meta (ex.: Código Civil)</code> → <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários. A “linha meta” é mostrada no cabeçalho do card.</p></div>`;
-    leaveHomeMode(); restoreSearchToTopbar();
-  } else {
-    renderHome();
+  async function loadTemas(){
+    TEMAS = await readAllSeeds();
+    renderMenu();
   }
-}
 
-// Etapa 3 — atualizar menu quando os “Salvos” mudarem (mesma aba)
-window.addEventListener('meujus:saved-changed', () => {
-  try { renderMenu(); } catch {}
-});
+  /* ===== ROTEAMENTO / BOOT ===== */
+  async function renderByRoute(){
+    const page = currentPage();
+    if(!TEMAS.length) await loadTemas();
+    if(page.kind === 'tema'){
+      await loadTemaInfinite(page.slug);
+    } else if(page.kind === 'sobre'){
+      $('#content').innerHTML =
+        `<div class="card ubox">
+           <h2 class="ubox-title">Sobre o projeto</h2>
+           <p class="ubox-intro">
+             TXT por tema: <code># Título</code> → <code>- Linha meta (ex.: Código Civil)</code> →
+             <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>.
+             Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários.
+             A “linha meta” é mostrada no cabeçalho do card.
+           </p>
+         </div>`;
+      leaveHomeMode(); restoreSearchToTopbar();
+    } else {
+      renderHome();
+    }
+  }
 
-// Sincronizar Salvos entre abas/janelas
-window.addEventListener('storage', (e) => {
-  if (e.key === 'meujus:saved') {
+  // Atualizar menu quando “Salvos” mudar (mesma aba)
+  window.addEventListener('meujus:saved-changed', () => {
     try { renderMenu(); } catch {}
-  }
-});
+  });
 
-// Listeners padrão
-document.querySelector('#search')?.addEventListener('focus', closeAcDropdown);
-window.addEventListener('hashchange', renderByRoute);
+  // Sincronizar Salvos entre abas/janelas
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'meujus:saved') {
+      try { renderMenu(); } catch {}
+    }
+  });
 
-// Init
-(async function init(){
-  closeDrawer();
-  await renderByRoute();
-  bindAutocomplete();
+  // Listeners padrão
+  document.querySelector('#search')?.addEventListener('focus', closeAcDropdown);
+  window.addEventListener('hashchange', renderByRoute);
+
+  // Init
+  (async function init(){
+    closeDrawer();
+    await renderByRoute();
+    bindAutocomplete();
+  })();
+
 })();
-
