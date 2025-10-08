@@ -124,8 +124,8 @@
     dissertativas: (t, full) => `Crie 5 QUESTÕES DISSERTATIVAS com gabarito comentado e base legal.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
     objetivas:     (t, full) => `Crie 10 QUESTÕES OBJETIVAS (A–E) com gabarito e breve justificativa.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
     videos:        (t)       => `site:youtube.com aula ${t} explicação prática legislação`,
-    atualização:   (full)    => `site:planalto.gov.br ${full} \n\ncompare com o texto oficial e identifique possiveis atualizações`,
-    artigos:       (t)       => `artigos doutrina ${t} pdf site:.jus.br OR site:.gov.br OR site:.edu.br`
+    artigos:       (t)       => `artigos doutrina ${t} pdf site:.jus.br OR site:.gov.br OR site:.edu.br`,
+    comparar:      (t, full) => `Compare o TEXTO ABAIXO com o TEXTO OFICIAL do ato normativo (Planalto ou LexML). Liste diferenças relevantes, indique eventuais erros de transcrição, sugira correções e aponte a fonte oficial consultada. Tema: ${t}\n\nTEXTO PARA COMPARAR:\n${full}`
   };
 
   /* ===== Parser de chunk TXT ===== */
@@ -505,15 +505,16 @@ for (const it of remissoes)    it.link = googleIA(IA_PROMPTS.detalhada(it.texto,
 
   function openIADropdown(anchorBtn, title, fullText){
     closeIADrop();
-    const actions = [
-      {key:'resumo', label:'Resumo'},
-      {key:'detalhada', label:'Detalhado'},
+        const actions = [
+      {key:'resumo',        label:'Resumo'},
+      {key:'detalhada',     label:'Detalhado'},
       {key:'dissertativas', label:'Questões Dissertativas'},
-      {key:'objetivas', label:'Questões Objetivas'},
-      {key:'videos', label:'Encontre Vídeos'},
-       {key:'atualizações', label:'Consulte Atualizações'},
-      {key:'artigos', label:'Encontre Artigos'},
+      {key:'objetivas',     label:'Questões Objetivas'},
+      {key:'videos',        label:'Encontre Vídeos'},
+      {key:'artigos',       label:'Encontre Artigos'},
+      {key:'comparar',      label:'Comparar Texto'}
     ];
+
     __iaDrop = document.createElement('div');
     __iaDrop.className='ia-pop';
     __iaDrop.innerHTML = actions.map(a=>`<button class="ia-item" data-k="${a.key}">${a.label}</button>`).join('');
