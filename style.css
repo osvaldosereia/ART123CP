@@ -315,6 +315,32 @@ button.mini{
 /* (opcional) apertar um pouco o topo do card */
 .ficha-head { padding-bottom: 4px !important; }
 
+/* ===== Chips das sugestões – rolagem horizontal contínua (mobile + desktop) ===== */
+.suggestions .ac-chips{
+  display:flex;
+  gap:6px;
+  margin:4px 4px 8px;
+  flex-wrap: nowrap !important;      /* força faixa única */
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  /* opcional: fade nas bordas para um fim visual mais suave */
+  mask-image: linear-gradient(to right, transparent 0, black 12px, black calc(100% - 12px), transparent 100%);
+}
+.suggestions .ac-chip{
+  flex: 0 0 auto;                    /* impede encolher/quebrar */
+}
+
+/* Scrollbar (WebKit) */
+.suggestions .ac-chips::-webkit-scrollbar{ height:6px; }
+.suggestions .ac-chips::-webkit-scrollbar-thumb{
+  background: var(--line);
+  border-radius: 999px;
+}
+
+
 /* (opcional) menos respiro antes da 1ª seção de conteúdo */
 .card .ubox-section:first-of-type {
   margin-top: 6px !important;
