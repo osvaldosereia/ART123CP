@@ -265,3 +265,21 @@ button.mini{
   grid-area:title;
   margin:0;
 }
+
+/* Autocomplete: snippet do dispositivo + divisória */
+.suggestions li{
+  padding:10px 8px;
+  border-top:1px solid var(--line);
+}
+.suggestions li:first-child{ border-top:0; }
+
+.suggestions .s1{ font-weight:600; }
+.suggestions .s3{
+  font-size:13px;
+  color:var(--ink);
+  opacity:.9;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;     /* garante 1 linha no mobile */
+  margin:2px 0 6px;
+}
