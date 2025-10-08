@@ -3,7 +3,51 @@
 
 
 
-
+# Execução Testamentária na Ausência de Testamenteiro
+- Código Civil
+# Dispositivos Legais
+- Art. 1.984. Na falta de testamenteiro nomeado pelo testador, a execução testamentária compete a um dos cônjuges, e, em falta destes, ao herdeiro nomeado pelo juiz.
+# Remissões Normativas
+- Vide art. 226, § 5.º, da CF.
+-- estabelece que os direitos e deveres referentes à sociedade conjugal são exercidos igualmente pelo homem e pela mulher.
+-----
+# Intransmissibilidade do Encargo
+- Código Civil
+# Dispositivos Legais
+- Art. 1.985. O encargo da testamentaria não se transmite aos herdeiros do testamenteiro, nem é delegável; mas o testamenteiro pode fazer-se representar em juízo e fora dele, mediante mandatário com poderes especiais.
+-----
+# Pluralidade de Testamenteiros
+- Código Civil
+# Dispositivos Legais
+- Art. 1.986. Havendo simultaneamente mais de um testamenteiro, que tenha aceitado o cargo, poderá cada qual exercê-lo, em falta dos outros; mas todos ficam solidariamente obrigados a dar conta dos bens que lhes forem confiados, salvo se cada um tiver, pelo testamento, funções distintas, e a elas se limitar.
+# Remissões Normativas
+- Vide arts. 264 a 285 do CC.
+-- dispõem sobre as obrigações solidárias, nas quais há multiplicidade de credores ou devedores, cada um com direito ou obrigado à dívida toda.
+-----
+# Prêmio do Testamenteiro (Vintena)
+- Código Civil
+# Dispositivos Legais
+- Art. 1.987. Salvo disposição testamentária em contrário, o testamenteiro, que não seja herdeiro ou legatário, terá direito a um prêmio, que, se o testador não o houver fixado, será de um a cinco por cento, arbitrado pelo juiz, sobre a herança líquida, conforme a importância dela e maior ou menor dificuldade na execução do testamento.
+- Parágrafo único. O prêmio arbitrado será pago à conta da parte disponível, quando houver herdeiro necessário.
+-----
+# Opção pelo Prêmio
+- Código Civil
+# Dispositivos Legais
+- Art. 1.988. O herdeiro ou o legatário nomeado testamenteiro poderá preferir o prêmio à herança ou ao legado.
+-----
+# Perda do Prêmio
+- Código Civil
+# Dispositivos Legais
+- Art. 1.989. Reverterá à herança o prêmio que o testamenteiro perder, por ser removido ou por não ter cumprido o testamento.
+-----
+# Testamenteiro como Inventariante
+- Código Civil
+# Dispositivos Legais
+- Art. 1.990. Se o testador tiver distribuído toda a herança em legados, exercerá o testamenteiro as funções de inventariante.
+# Remissões Normativas
+- Vide art. 616, IV, do CPC.
+-- confere legitimidade concorrente ao testamenteiro para requerer a abertura do inventário.
+-----
 # Administração da Herança
 - Código Civil
 # Dispositivos Legais
