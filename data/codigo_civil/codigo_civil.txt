@@ -3,10 +3,291 @@
 
 
 
-
-
-
-
+# Indivisibilidade da Herança
+- Código Civil
+# Dispositivos Legais
+- Art. 1.791. A herança defere-se como um todo unitário, ainda que vários sejam os herdeiros.
+- Parágrafo único. Até a partilha, o direito dos coerdeiros, quanto à propriedade e posse da herança, será indivisível, e regular-se-á pelas normas relativas ao condomínio.
+# Remissões Normativas
+- Vide arts. 88, 91, 1.199, 1.314 e 2.013 a 2.022 do CC.
+-- tratam dos bens indivisíveis, da universalidade de direito, da composse e das regras de condomínio e partilha, aplicáveis à herança.
+-----
+# Responsabilidade do Herdeiro (Intra Vires Hereditatis)
+- Código Civil
+# Dispositivos Legais
+- Art. 1.792. O herdeiro não responde por encargos superiores às forças da herança; incumbe-lhe, porém, a prova do excesso, salvo se houver inventário que a escuse, demonstrando o valor dos bens herdados.
+# Remissões Normativas
+- Vide arts. 836 e 1.997 do CC.
+-- dispõem sobre a responsabilidade do devedor e da própria herança pelo pagamento das dívidas do falecido.
+- Vide art. 796 do CPC.
+-- estabelece que o espólio responde pelas dívidas do falecido, mas, feita a partilha, cada herdeiro responde na proporção da parte que lhe coube.
+-----
+# Cessão de Direitos Hereditários
+- Código Civil
+# Dispositivos Legais
+- Art. 1.793. O direito à sucessão aberta, bem como o quinhão de que disponha o coerdeiro, pode ser objeto de cessão por escritura pública.
+- § 1.º Os direitos, conferidos ao herdeiro em consequência de substituição ou de direito de acrescer, presumem-se não abrangidos pela cessão feita anteriormente.
+- § 2.º É ineficaz a cessão, pelo coerdeiro, de seu direito hereditário sobre qualquer bem da herança considerado singularmente.
+- § 3.º Ineficaz é a disposição, sem prévia autorização do juiz da sucessão, por qualquer herdeiro, de bem componente do acervo hereditário, pendente a indivisibilidade.
+# Remissões Normativas
+- Vide arts. 1.941 a 1.946 (direito de acrescer) e 1.947 a 1.960 (substituições) do CC.
+-- regulam o direito de acrescer e as substituições, cujos direitos não se presumem incluídos na cessão de herança.
+-----
+# Direito de Preferência do Coerdeiro
+- Código Civil
+# Dispositivos Legais
+- Art. 1.794. O coerdeiro não poderá ceder a sua quota hereditária a pessoa estranha à sucessão, se outro coerdeiro a quiser, tanto por tanto.
+# Remissões Normativas
+- Vide art. 504 do CC.
+-- trata do direito de preferência geral do condômino na venda de coisa indivisível, regra que se aplica ao coerdeiro.
+-----
+# Exercício da Preferência (Ação de Adjudicação)
+- Código Civil
+# Dispositivos Legais
+- Art. 1.795. O coerdeiro, a quem não se der conhecimento da cessão, poderá, depositado o preço, haver para si a quota cedida a estranho, se o requerer até cento e oitenta dias após a transmissão.
+- Parágrafo único. Sendo vários os coerdeiros a exercer a preferência, entre eles se distribuirá o quinhão cedido, na proporção das respectivas quotas hereditárias.
+# Remissões Normativas
+- Vide art. 504, caput, 2.ª parte, do CC.
+-- estabelece o prazo decadencial de 180 dias para o condômino exercer seu direito de preferência.
+-----
+# Abertura do Inventário
+- Código Civil
+# Dispositivos Legais
+- Art. 1.796. No prazo de trinta dias, a contar da abertura da sucessão, instaurar-se-á inventário do patrimônio hereditário, perante o juízo competente no lugar da sucessão, para fins de liquidação e, quando for o caso, de partilha da herança.
+-- Prazo para requerer inventário: 2 meses, conforme o art. 611 do CPC.
+# Remissões Normativas
+- Vide arts. 70 a 73 do CC.
+-- definem as regras sobre o domicílio da pessoa natural.
+- Vide art. 48 do CPC.
+-- fixa o foro de domicílio do autor da herança para a ação de inventário.
+- Sobre o procedimento, vide arts. 610 e s. do CPC.
+-- detalham todo o procedimento de inventário e partilha.
+- Vide arts. 7.º e 10 da LINDB.
+-- tratam da aplicação da lei no tempo e no espaço.
+- Vide Súmula 542 do STF.
+-- trata da constitucionalidade da cobrança de ICMS sobre mercadoria importada, não possuindo relação com o tema.
+-----
+# Administração Provisória da Herança
+- Código Civil
+# Dispositivos Legais
+- Art. 1.797. Até o compromisso do inventariante, a administração da herança caberá, sucessivamente:
+- I – ao cônjuge ou companheiro, se com o outro convivia ao tempo da abertura da sucessão;
+- II – ao herdeiro que estiver na posse e administração dos bens, e, se houver mais de um nessas condições, ao mais velho;
+- III – ao testamenteiro;
+- IV – a pessoa de confiança do juiz, na falta ou escusa das indicadas nos incisos antecedentes, ou quando tiverem de ser afastadas por motivo grave levado ao conhecimento do juiz.
+# Remissões Normativas
+- Vide arts. 613, 614 e 617 do CPC.
+-- tratam da figura do administrador provisório e da ordem de nomeação do inventariante.
+- Vide art. 1.977 do CC.
+-- dispõe sobre a posse e administração da herança pelo testamenteiro.
+-----
+# Legitimidade para Suceder
+- Código Civil
+# Dispositivos Legais
+- Art. 1.798. Legitimam-se a suceder as pessoas nascidas ou já concebidas no momento da abertura da sucessão.
+-----
+# Legitimidade na Sucessão Testamentária
+- Código Civil
+# Dispositivos Legais
+- Art. 1.799. Na sucessão testamentária podem ainda ser chamados a suceder:
+- I – os filhos, ainda não concebidos, de pessoas indicadas pelo testador, desde que vivas estas ao abrir-se a sucessão;
+- II – as pessoas jurídicas;
+- III – as pessoas jurídicas, cuja organização for determinada pelo testador sob a forma de fundação.
+# Remissões Normativas
+- Vide arts. 1.857 e s. do CC.
+-- tratam do testamento em geral, o instrumento pelo qual se pode chamar a suceder as pessoas listadas neste artigo.
+- Vide art. 2.º do CC.
+-- põe a salvo, desde a concepção, os direitos do nascituro.
+- Vide arts. 40 a 69 do CC.
+-- dispõem sobre a existência e a capacidade das pessoas jurídicas.
+- Vide arts. 62 a 69 do CC.
+-- regulam a criação e o funcionamento das fundações.
+-----
+# Curatela da Herança da Prole Eventual
+- Código Civil
+# Dispositivos Legais
+- Art. 1.800. No caso do inciso I do artigo antecedente, os bens da herança serão confiados, após a liquidação ou partilha, a curador nomeado pelo juiz.
+- § 1.º Salvo disposição testamentária em contrário, a curatela caberá à pessoa cujo filho o testador esperava ter por herdeiro, e, sucessivamente, às pessoas indicadas no art. 1.775.
+-- Entendemos que a remissão correta deveria ser feita ao art. 1.797 do CC.
+- § 2.º Os poderes, deveres e responsabilidades do curador, assim nomeado, regem-se pelas disposições concernentes à curatela dos incapazes, no que couber.
+- § 3.º Nascendo com vida o herdeiro esperado, ser-lhe-á deferida a sucessão, com os frutos e rendimentos relativos à deixa, a partir da morte do testador.
+- § 4.º Se, decorridos dois anos após a abertura da sucessão, não for concebido o herdeiro esperado, os bens reservados, salvo disposição em contrário do testador, caberão aos herdeiros legítimos.
+# Remissões Normativas
+- Vide arts. 1.740 a 1.781 do CC.
+-- dispõem sobre o exercício da tutela e da curatela, aplicáveis à administração dos bens pelo curador.
+- Vide art. 1.829 do CC.
+-- estabelece a ordem da vocação hereditária, definindo quem são os herdeiros legítimos.
+-----
+# Pessoas Não Legitimadas a Suceder por Testamento
+- Código Civil
+# Dispositivos Legais
+- Art. 1.801. Não podem ser nomeados herdeiros nem legatários:
+- I – a pessoa que, a rogo, escreveu o testamento, nem o seu cônjuge ou companheiro, ou os seus ascendentes e irmãos;
+- II – as testemunhas do testamento;
+- III – o concubino do testador casado, salvo se este, sem culpa sua, estiver separado de fato do cônjuge há mais de cinco anos;
+- IV – o tabelião, civil ou militar, ou o comandante ou escrivão, perante quem se fizer, assim como o que fizer ou aprovar o testamento.
+# Remissões Normativas
+- Vide art. 1.868 do CC.
+-- regula o testamento cerrado, que pode ser escrito a rogo.
+- Vide Súmula 447 do STF.
+-- considera válida a disposição em favor de filho adulterino do testador com a concubina.
+- Vide arts. 1.864, I, e 1.868 do CC.
+-- tratam do testamento público e do cerrado, mencionando as figuras do tabelião e de quem aprova o testamento.
+-----
+# Nulidade das Disposições em Favor dos Não Legitimados
+- Código Civil
+# Dispositivos Legais
+- Art. 1.802. São nulas as disposições testamentárias em favor de pessoas não legitimadas a suceder, ainda quando simuladas sob a forma de contrato oneroso, ou feitas mediante interposta pessoa.
+- Parágrafo único. Presumem-se pessoas interpostas os ascendentes, os descendentes, os irmãos e o cônjuge ou companheiro do não legitimado a suceder.
+-----
+# Exceção para o Filho do Concubino
+- Código Civil
+# Dispositivos Legais
+- Art. 1.803. É lícita a deixa ao filho do concubino, quando também o for do testador.
+# Remissões Normativas
+- Vide art. 227, § 6.º, da CF.
+-- veda qualquer tipo de discriminação entre os filhos, garantindo-lhes isonomia de direitos.
+- Vide Súmula 447 do STF.
+-- considera válida a disposição testamentária em favor de filho adulterino do testador com a concubina.
+-----
+# Efeitos da Aceitação da Herança
+- Código Civil
+# Dispositivos Legais
+- Art. 1.804. Aceita a herança, torna-se definitiva a sua transmissão ao herdeiro, desde a abertura da sucessão.
+- Parágrafo único. A transmissão tem-se por não verificada quando o herdeiro renunciar à herança.
+# Remissões Normativas
+- Vide art. 1.784 do CC.
+-- trata do princípio da saisine, pelo qual a herança se transmite aos herdeiros no momento da morte, sendo a aceitação um ato de confirmação.
+-----
+# Formas de Aceitação da Herança
+- Código Civil
+# Dispositivos Legais
+- Art. 1.805. A aceitação da herança, quando expressa, faz-se por declaração escrita; quando tácita, há de resultar tão somente de atos próprios da qualidade de herdeiro.
+- § 1.º Não exprimem aceitação de herança os atos oficiosos, como o funeral do finado, os meramente conservatórios, ou os de administração e guarda provisória.
+- § 2.º Não importa igualmente aceitação a cessão gratuita, pura e simples, da herança, aos demais coerdeiros.
+# Remissões Normativas
+- Vide art. 1.810 do CC.
+-- dispõe que a parte do renunciante acresce à dos outros herdeiros, o que ocorre na cessão gratuita aos coerdeiros (renúncia abdicativa).
+-----
+# Forma da Renúncia da Herança
+- Código Civil
+# Dispositivos Legais
+- Art. 1.806. A renúncia da herança deve constar expressamente de instrumento público ou termo judicial.
+# Remissões Normativas
+- Vide arts. 80, II, 108, 166, IV, e 215 do CC.
+-- estabelecem a natureza de bem imóvel do direito à sucessão e a necessidade de escritura pública para atos translativos, sob pena de nulidade.
+-----
+# Interpelação para Aceitação
+- Código Civil
+# Dispositivos Legais
+- Art. 1.807. O interessado em que o herdeiro declare se aceita, ou não, a herança, poderá, vinte dias após aberta a sucessão, requerer ao juiz prazo razoável, não maior de trinta dias, para, nele, se pronunciar o herdeiro, sob pena de se haver a herança por aceita.
+-----
+# Indivisibilidade da Aceitação e Renúncia
+- Código Civil
+# Dispositivos Legais
+- Art. 1.808. Não se pode aceitar ou renunciar a herança em parte, sob condição ou a termo.
+- § 1.º O herdeiro, a quem se testarem legados, pode aceitá-los, renunciando a herança; ou, aceitando-a, repudiá-los.
+- § 2.º O herdeiro, chamado, na mesma sucessão, a mais de um quinhão hereditário, sob títulos sucessórios diversos, pode livremente deliberar quanto aos quinhões que aceita e aos que renuncia.
+# Remissões Normativas
+- Vide arts. 121, 131, 133 e 135 do CC.
+-- tratam das regras gerais sobre condição e termo nos negócios jurídicos, que são vedados na aceitação e renúncia.
+- Vide arts. 1.912 a 1.940 do CC.
+-- regulam os legados, que podem ser objeto de deliberação autônoma pelo herdeiro.
+-----
+# Transmissão do Direito de Aceitar
+- Código Civil
+# Dispositivos Legais
+- Art. 1.809. Falecendo o herdeiro antes de declarar se aceita a herança, o poder de aceitar passa-lhe aos herdeiros, a menos que se trate de vocação adstrita a uma condição suspensiva, ainda não verificada.
+- Parágrafo único. Os chamados à sucessão do herdeiro falecido antes da aceitação, desde que concordem em receber a segunda herança, poderão aceitar ou renunciar a primeira.
+# Remissões Normativas
+- Vide arts. 125 e 1.933 do CC.
+-- tratam da condição suspensiva e da transmissão do poder de escolha no legado, aplicável analogicamente ao direito de aceitar.
+-----
+# Efeitos da Renúncia na Sucessão Legítima
+- Código Civil
+# Dispositivos Legais
+- Art. 1.810. Na sucessão legítima, a parte do renunciante acresce à dos outros herdeiros da mesma classe e, sendo ele o único desta, devolve-se aos da subsequente.
+# Remissões Normativas
+- Vide arts. 1.829 a 1.856 do CC.
+-- estabelecem a ordem de vocação hereditária, que define a classe dos herdeiros e a ordem dos subsequentes.
+-----
+# Representação de Herdeiro Renunciante
+- Código Civil
+# Dispositivos Legais
+- Art. 1.811. Ninguém pode suceder, representando herdeiro renunciante. Se, porém, ele for o único legítimo da sua classe, ou se todos os outros da mesma classe renunciarem a herança, poderão os filhos vir à sucessão, por direito próprio, e por cabeça.
+# Remissões Normativas
+- Vide arts. 1.835 e 1.856 do CC.
+-- tratam da sucessão por cabeça (direito próprio) e da possibilidade de o renunciante representar outrem em outra sucessão.
+-----
+# Irrevogabilidade da Aceitação e Renúncia
+- Código Civil
+# Dispositivos Legais
+- Art. 1.812. São irrevogáveis os atos de aceitação ou de renúncia da herança.
+-----
+# Aceitação da Herança pelos Credores
+- Código Civil
+# Dispositivos Legais
+- Art. 1.813. Quando o herdeiro prejudicar os seus credores, renunciando à herança, poderão eles, com autorização do juiz, aceitá-la em nome do renunciante.
+- § 1.º A habilitação dos credores se fará no prazo de trinta dias seguintes ao conhecimento do fato.
+- § 2.º Pagas as dívidas do renunciante, prevalece a renúncia quanto ao remanescente, que será devolvido aos demais herdeiros.
+# Remissões Normativas
+- Vide arts. 158 a 165 (fraude contra credores) do CC.
+-- regulam o instituto da fraude contra credores, que permite a anulação de atos gratuitos de transmissão de bens ou remissão de dívida.
+- Vide art. 129, V, da Lei n. 11.101, de 9-2-2005 (Lei de Falências).
+-- considera ineficaz, em relação à massa falida, a renúncia à herança ou a legado, até dois anos antes da decretação da falência.
+-----
+# Causas de Exclusão por Indignidade
+- Código Civil
+# Dispositivos Legais
+- Art. 1.814. São excluídos da sucessão os herdeiros ou legatários:
+- I – que houverem sido autores, coautores ou partícipes de homicídio doloso, ou tentativa deste, contra a pessoa de cuja sucessão se tratar, seu cônjuge, companheiro, ascendente ou descendente;
+- II – que houverem acusado caluniosamente em juízo o autor da herança ou incorrerem em crime contra a sua honra, ou de seu cônjuge ou companheiro;
+- III – que, por violência ou meios fraudulentos, inibirem ou obstarem o autor da herança de dispor livremente de seus bens por ato de última vontade.
+# Remissões Normativas
+- Vide arts. 557, 935, 1.939, IV, e 1.961 a 1.965 do CC.
+-- tratam de institutos correlatos, como a revogação da doação por ingratidão, a independência da responsabilidade civil e criminal, a caducidade do legado e a deserdação.
+-----
+# Declaração Judicial da Indignidade
+- Código Civil
+# Dispositivos Legais
+- Art. 1.815. A exclusão do herdeiro ou legatário, em qualquer desses casos de indignidade, será declarada por sentença.
+- § 1.º O direito de demandar a exclusão do herdeiro ou legatário extingue-se em quatro anos, contados da abertura da sucessão.
+-- Parágrafo único renumerado pela Lei n. 13.532, de 7-12-2017.
+- § 2.º Na hipótese do inciso I do art. 1.814, o Ministério Público tem legitimidade para demandar a exclusão do herdeiro ou legatário.
+-- § 2.º acrescentado pela Lei n. 13.532, de 7-12-2017.
+-----
+# Exclusão Imediata por Sentença Penal
+- Código Civil
+# Dispositivos Legais
+- Art. 1.815-A. Em qualquer dos casos de indignidade previstos no art. 1.814, o trânsito em julgado da sentença penal condenatória acarretará a imediata exclusão do herdeiro ou legatário indigno, independentemente da sentença prevista no caput do art. 1.815 deste Código.
+-- Artigo acrescentado pela Lei n. 14.661, de 23-8-2023.
+-----
+# Efeitos Pessoais da Exclusão
+- Código Civil
+# Dispositivos Legais
+- Art. 1.816. São pessoais os efeitos da exclusão; os descendentes do herdeiro excluído sucedem, como se ele morto fosse antes da abertura da sucessão.
+- Parágrafo único. O excluído da sucessão não terá direito ao usufruto ou à administração dos bens que a seus sucessores couberem na herança, nem à sucessão eventual desses bens.
+# Remissões Normativas
+- Vide arts. 1.689 e 1.693, IV, do CC.
+-- dispõem sobre o poder familiar de administrar os bens dos filhos e a exceção a essa regra para os bens herdados em razão da exclusão dos pais por indignidade.
+-----
+# Validade dos Atos do Herdeiro Indigno
+- Código Civil
+# Dispositivos Legais
+- Art. 1.817. São válidas as alienações onerosas de bens hereditários a terceiros de boa-fé, e os atos de administração legalmente praticados pelo herdeiro, antes da sentença de exclusão; mas aos herdeiros subsiste, quando prejudicados, o direito de demandar-lhe perdas e danos.
+- Parágrafo único. O excluído da sucessão é obrigado a restituir os frutos e rendimentos que dos bens da herança houver percebido, mas tem direito a ser indenizado das despesas com a conservação deles.
+# Remissões Normativas
+- Vide arts. 402 a 405 do CC.
+-- definem o que são perdas e danos e como são apurados.
+- Vide art. 884 do CC.
+-- estabelece a vedação ao enriquecimento sem causa e o dever de restituir o indevidamente auferido.
+-----
+# Reabilitação do Indigno
+- Código Civil
+# Dispositivos Legais
+- Art. 1.818. Aquele que incorreu em atos que determinem a exclusão da herança será admitido a suceder, se o ofendido o tiver expressamente reabilitado em testamento, ou em outro ato autêntico.
+- Parágrafo único. Não havendo reabilitação expressa, o indigno, contemplado em testamento do ofendido, quando o testador, ao testar, já conhecia a causa da indignidade, pode suceder no limite da disposição testamentária.
+-----
 # Conceito de Herança Jacente
 - Código Civil
 # Dispositivos Legais
