@@ -310,7 +310,7 @@ button.mini{
 .card-cat + .card-sep { display: none !important; }
 
 /* Diminuir o respiro entre a categoria e o início do texto */
-.card-cat { margin-bottom: 4px !important; }
+.card-cat { margin-bottom: 1px !important; }
 
 /* (opcional) apertar um pouco o topo do card */
 .ficha-head { padding-bottom: 4px !important; }
