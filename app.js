@@ -594,7 +594,7 @@ for (const it of remissoes)    it.link = googleIA(IA_PROMPTS.detalhada(it.texto,
       toast(added?'Tema salvo':'Removido','info',1400);
       try { renderMenu(); } catch {}
     });
-    const iaBtn = mkBtn('Estude com I.A.','');
+    const iaBtn = mkBtn('Google modo I.A.','');
     iaBtn.onclick = () => openIADropdown(iaBtn, item.title, fullText);
     actionsEl.append(saveBtn, iaBtn);
 
