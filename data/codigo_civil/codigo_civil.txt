@@ -3,6 +3,117 @@
 
 
 
+
+
+# Forma da Revogação
+- Código Civil
+# Dispositivos Legais
+- Art. 1.969. O testamento pode ser revogado pelo mesmo modo e forma como pode ser feito.
+# Remissões Normativas
+- Vide art. 1.º, III, da Lei n. 8.560, de 29-12-1992.
+-- regula a investigação de paternidade e estabelece que o reconhecimento de filho por testamento é irrevogável.
+- Vide art. 1.858 do CC.
+-- estabelece que o testamento é um ato personalíssimo e pode ser modificado a qualquer tempo.
+-----
+# Revogação Total ou Parcial
+- Código Civil
+# Dispositivos Legais
+- Art. 1.970. A revogação do testamento pode ser total ou parcial.
+- Parágrafo único. Se parcial, ou se o testamento posterior não contiver cláusula revogatória expressa, o anterior subsiste em tudo que não for contrário ao posterior.
+-----
+# Efeitos da Revogação
+- Código Civil
+# Dispositivos Legais
+- Art. 1.971. A revogação produzirá seus efeitos, ainda quando o testamento, que a encerra, vier a caducar por exclusão, incapacidade ou renúncia do herdeiro nele nomeado; não valerá, se o testamento revogatório for anulado por omissão ou infração de solenidades essenciais ou por vícios intrínsecos.
+-----
+# Revogação do Testamento Cerrado
+- Código Civil
+# Dispositivos Legais
+- Art. 1.972. O testamento cerrado que o testador abrir ou dilacerar, ou for aberto ou dilacerado com seu consentimento, haver-se-á como revogado.
+# Remissões Normativas
+- Vide arts. 1.868 a 1.875 do CC.
+-- dispõem sobre os requisitos e formalidades para a validade do testamento cerrado.
+-----
+# Rompimento por Superveniência de Descendente
+- Código Civil
+# Dispositivos Legais
+- Art. 1.973. Sobrevindo descendente sucessível ao testador, que não o tinha ou não o conhecia quando testou, rompe-se o testamento em todas as suas disposições, se esse descendente sobreviver ao testador.
+# Remissões Normativas
+- Vide arts. 1.939 e 1.940 do CC.
+-- tratam das hipóteses em que o legado perde seu efeito (caducidade).
+-----
+# Rompimento por Ignorância de Herdeiros Necessários
+- Código Civil
+# Dispositivos Legais
+- Art. 1.974. Rompe-se também o testamento feito na ignorância de existirem outros herdeiros necessários.
+-----
+# Exceção à Regra do Rompimento
+- Código Civil
+# Dispositivos Legais
+- Art. 1.975. Não se rompe o testamento, se o testador dispuser da sua metade, não contemplando os herdeiros necessários de cuja existência saiba, ou quando os exclua dessa parte.
+# Remissões Normativas
+- Vide arts. 1.789, 1.845 e 1.961 a 1.965 do CC.
+-- definem a porção disponível da herança, quem são os herdeiros necessários e as hipóteses de deserdação.
+-----
+# Nomeação do Testamenteiro
+- Código Civil
+# Dispositivos Legais
+- Art. 1.976. O testador pode nomear um ou mais testamenteiros, conjuntos ou separados, para lhe darem cumprimento às disposições de última vontade.
+# Remissões Normativas
+- Vide arts. 1.883 a 1.986 do CC.
+-- o intervalo mencionado parece conter um erro, mas as seções válidas próximas tratam das disposições testamentárias, codicilos e da figura do testamenteiro.
+- Vide art. 890 do CPC.
+-- trata da homologação de decisão estrangeira e da concessão do exequatur à carta rogatória.
+-----
+# Posse e Administração da Herança
+- Código Civil
+# Dispositivos Legais
+- Art. 1.977. O testador pode conceder ao testamenteiro a posse e a administração da herança, ou de parte dela, não havendo cônjuge ou herdeiros necessários.
+- Parágrafo único. Qualquer herdeiro pode requerer partilha imediata, ou devolução da herança, habilitando o testamenteiro com os meios necessários para o cumprimento dos legados, ou dando caução de prestá-los.
+# Remissões Normativas
+- Vide art. 617 do CPC.
+-- estabelece a ordem de preferência para a nomeação do inventariante pelo juiz.
+-----
+# Dever de Requerer o Inventário
+- Código Civil
+# Dispositivos Legais
+- Art. 1.978. Tendo o testamenteiro a posse e a administração dos bens, incumbe-lhe requerer inventário e cumprir o testamento.
+# Remissões Normativas
+- Vide arts. 615 e 616, IV, do CPC.
+-- definem a legitimidade de quem está na posse da herança e do testamenteiro para requerer o inventário.
+-----
+# Registro do Testamento
+- Código Civil
+# Dispositivos Legais
+- Art. 1.979. O testamenteiro nomeado, ou qualquer parte interessada, pode requerer, assim como o juiz pode ordenar, de ofício, ao detentor do testamento, que o leve a registro.
+# Remissões Normativas
+- Vide arts. 1.127 e 1.129 e parágrafo único do CC.
+-- a remissão parece se referir aos artigos do CPC/73, que tratavam do procedimento de publicação e confirmação do testamento particular.
+-----
+# Prazo e Prestação de Contas
+- Código Civil
+# Dispositivos Legais
+- Art. 1.980. O testamenteiro é obrigado a cumprir as disposições testamentárias, no prazo marcado pelo testador, e a dar contas do que recebeu e despendeu, subsistindo sua responsabilidade enquanto durar a execução do testamento.
+# Remissões Normativas
+- Vide art. 1.983 do CC.
+-- fixa o prazo de 180 dias para o cumprimento do testamento e prestação de contas, caso o testador não tenha definido outro.
+-----
+# Defesa da Validade do Testamento
+- Código Civil
+# Dispositivos Legais
+- Art. 1.981. Compete ao testamenteiro, com ou sem o concurso do inventariante e dos herdeiros instituídos, defender a validade do testamento.
+-----
+# Atribuições Conferidas pelo Testador
+- Código Civil
+# Dispositivos Legais
+- Art. 1.982. Além das atribuições exaradas nos artigos antecedentes, terá o testamenteiro as que lhe conferir o testador, nos limites da lei.
+-----
+# Prazo Legal para Execução
+- Código Civil
+# Dispositivos Legais
+- Art. 1.983. Não concedendo o testador prazo maior, cumprirá o testamenteiro o testamento e prestará contas em cento e oitenta dias, contados da aceitação da testamentaria.
+- Parágrafo único. Pode esse prazo ser prorrogado se houver motivo suficiente.
+-----
 # Execução Testamentária na Ausência de Testamenteiro
 - Código Civil
 # Dispositivos Legais
