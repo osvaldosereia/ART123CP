@@ -124,6 +124,7 @@
     dissertativas: (t, full) => `Crie 5 QUESTÕES DISSERTATIVAS com gabarito comentado e base legal.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
     objetivas:     (t, full) => `Crie 10 QUESTÕES OBJETIVAS (A–E) com gabarito e breve justificativa.\n\nTEMA: ${t}\n\nCONTEÚDO:\n${full}`,
     videos:        (t)       => `site:youtube.com aula ${t} explicação prática legislação`,
+    atualização:   (full)    => `site:planalto.gov.br ${full} \n\ncompare com o texto oficial e identifique possiveis atualizações`,
     artigos:       (t)       => `artigos doutrina ${t} pdf site:.jus.br OR site:.gov.br OR site:.edu.br`
   };
 
@@ -510,6 +511,7 @@ for (const it of remissoes)    it.link = googleIA(IA_PROMPTS.detalhada(it.texto,
       {key:'dissertativas', label:'Questões Dissertativas'},
       {key:'objetivas', label:'Questões Objetivas'},
       {key:'videos', label:'Encontre Vídeos'},
+       {key:'atualizações', label:'Consulte Atualizações'},
       {key:'artigos', label:'Encontre Artigos'},
     ];
     __iaDrop = document.createElement('div');
