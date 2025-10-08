@@ -54,7 +54,7 @@ ul{margin:0;padding:0;list-style:none}
 
 .home-center{min-height:100vh;display:flex;align-items:center;justify-content:center;transform:translateY(-6vh)}
 .home-inline{display:flex;align-items:center;gap:18px}
-.home-logo{font-weight:700;font-size:50px;line-height:1;letter-spacing:-.3px;display:flex;gap:6px;white-space:nowrap}
+.home-logo{font-weight:600;font-size:50px;line-height:1;letter-spacing:-.3px;display:flex;gap:6px;white-space:nowrap}
 .home-logo .b1{color:var(--primary)} .home-logo .b2{color:var(--accent)}
 .home-search-host{width:min(560px,60vw)}
 .home-search-host .search-wrap,.home-search-host .search{width:100%}
@@ -200,7 +200,7 @@ button.mini{
 
 /* Logo maior apenas no desktop */
 @media (min-width:721px){
-  .brand{font-size:22px;line-height:1}
+  .brand{font-size:28px;line-height:1}
   .home-logo{font-size:72px;line-height:1}
 }
 
