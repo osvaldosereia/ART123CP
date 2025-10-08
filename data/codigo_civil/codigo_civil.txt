@@ -2,41 +2,104 @@
 
 
 
------
-# Ordem da Vocação Hereditária - Art 2.021 CC/02
-- Código Civil
 
+
+
+
+
+
+# Dissolução e Liquidação de Pessoas Jurídicas
+- Código Civil
+# Dispositivos Legais
+- Art. 2.034. A dissolução e a liquidação das pessoas jurídicas referidas no artigo antecedente, quando iniciadas antes da vigência deste Código, obedecerão ao disposto nas leis anteriores.
+-----
+# Validade dos Atos Jurídicos
+- Código Civil
+# Dispositivos Legais
+- Art. 2.035. A validade dos negócios e demais atos jurídicos, constituídos antes da entrada em vigor deste Código, obedece ao disposto nas leis anteriores, referidas no art. 2.045, mas os seus efeitos, produzidos após a vigência deste Código, aos preceitos dele se subordinam, salvo se houver sido prevista pelas partes determinada forma de execução.
+- Parágrafo único. Nenhuma convenção prevalecerá se contrariar preceitos de ordem pública, tais como os estabelecidos por este Código para assegurar a função social da propriedade e dos contratos.
+# Remissões Normativas
+- Vide arts. 5.º, XXXVI, da CF e 6.º da LINDB.
+-- tratam do princípio da irretroatividade da lei, protegendo o direito adquirido, o ato jurídico perfeito e a coisa julgada.
+-----
+# Locação de Prédio Urbano
+- Código Civil
+# Dispositivos Legais
+- Art. 2.036. A locação de prédio urbano, que esteja sujeita à lei especial, por esta continua a ser regida.
+# Remissões Normativas
+- Vide Lei n. 8.245, de 18-10-1991.
+-- dispõe sobre as locações dos imóveis urbanos e os procedimentos a elas pertinentes.
+- Vide art. 835 do CC.
+-- trata da exoneração da fiança, permitindo ao fiador desobrigar-se da fiança que tiver assinado sem limitação de tempo.
+-----
+# Direito Intertemporal Empresarial
+- Código Civil
+# Dispositivos Legais
+- Art. 2.037. Salvo disposição em contrário, aplicam-se aos empresários e sociedades empresárias as disposições de lei não revogadas por este Código, referentes a comerciantes, ou a sociedades comerciais, bem como a atividades mercantis.
+# Remissões Normativas
+- Vide arts. 966 a 1.195 do CC.
+-- tratam do Direito de Empresa, definindo empresário e regulando a sociedade, o estabelecimento e os institutos complementares.
+-----
+# Proibição da Enfiteuse
+- Código Civil
+# Dispositivos Legais
+- Art. 2.038. Fica proibida a constituição de enfiteuses e subenfiteuses, subordinando-se as existentes, até sua extinção, às disposições do Código Civil anterior, Lei n. 3.071, de 1.º de janeiro de 1916, e leis posteriores.
+- § 1.º Nos aforamentos a que se refere este artigo é defeso:
+- I – cobrar laudêmio ou prestação análoga nas transmissões de bem aforado, sobre o valor das construções ou plantações;
+- II – constituir subenfiteuse.
+- § 2.º A enfiteuse dos terrenos de marinha e acrescidos regula-se por lei especial.
+-----
+# Regime de Bens no Casamento
+- Código Civil
+# Dispositivos Legais
+- Art. 2.039. O regime de bens nos casamentos celebrados na vigência do Código Civil anterior, Lei n. 3.071, de 1.º de janeiro de 1916, é o por ele estabelecido.
+# Remissões Normativas
+- Vide arts. 5.º, XXXVI, da CF e 6.º da LINDB.
+-- tratam do princípio da irretroatividade da lei, protegendo o direito adquirido, o ato jurídico perfeito e a coisa julgada.
+-----
+# Hipoteca Legal do Tutor ou Curador
+- Código Civil
+# Dispositivos Legais
+- Art. 2.040. A hipoteca legal dos bens do tutor ou curador, inscrita em conformidade com o inciso IV do art. 827 do Código Civil anterior, Lei n. 3.071, de 1.º de janeiro de 1916, poderá ser cancelada, obedecido o disposto no parágrafo único do art. 1.745 deste Código.
+# Remissões Normativas
+- Vide arts. 759 a 763 do CPC.
+-- dispõem sobre o procedimento de especialização da hipoteca legal.
+- Vide art. 37 do ECA.
+-- determina que se aplicam à tutela e à curatela as disposições do Código Civil, no que não for conflitante com o Estatuto da Criança e do Adolescente.
+-----
+# Ordem da Vocação Hereditária
+- Código Civil
 # Dispositivos Legais
 - Art. 2.041. As disposições deste Código relativas à ordem da vocação hereditária (arts. 1.829 a 1.844) não se aplicam à sucessão aberta antes de sua vigência, prevalecendo o disposto na lei anterior (Lei n. 3.071, de 1.º-1-1916).
 # Remissões Normativas
 - Vide arts. 1.784, 1.787, 1.829 e 1.844 do CC.
--- tratam, respectivamente, do princípio da saisine, da lei que rege a sucessão, da ordem da vocação hereditária e da herança jacente.
+-- tratam da abertura da sucessão, da lei que a rege, da ordem da vocação hereditária e do direito de representação.
 -----
-# Cláusula Restritiva à Legítima
+# Cláusula Restritiva na Legítima
+- Código Civil
 # Dispositivos Legais
---Código Civil
 - Art. 2.042. Aplica-se o disposto no caput do art. 1.848, quando aberta a sucessão no prazo de um ano após a entrada em vigor deste Código, ainda que o testamento tenha sido feito na vigência do anterior, Lei n. 3.071, de 1.º de janeiro de 1916; se, no prazo, o testador não aditar o testamento para declarar a justa causa de cláusula aposta à legítima, não subsistirá a restrição.
 -----
-# Vigência de Normas Específicas
+# Vigência de Normas Especiais
+- Código Civil
 # Dispositivos Legais
---Código Civil
 - Art. 2.043. Até que por outra forma se disciplinem, continuam em vigor as disposições de natureza processual, administrativa ou penal, constantes de leis cujos preceitos de natureza civil hajam sido incorporados a este Código.
 -----
 # Entrada em Vigor
+- Código Civil
 # Dispositivos Legais
---Código Civil
 - Art. 2.044. Este Código entrará em vigor um ano após a sua publicação.
 -----
-# Revogação de Leis
+# Revogações
+- Código Civil
 # Dispositivos Legais
---Código Civil
 - Art. 2.045. Revogam-se a Lei n. 3.071, de 1.º de janeiro de 1916 – Código Civil e a Parte Primeira do Código Comercial, Lei n. 556, de 25 de junho de 1850.
 # Remissões Normativas
 - Vide art. 2.035 do CC.
--- trata da validade e dos efeitos dos negócios jurídicos constituídos antes da entrada em vigor do Código Civil de 2002.
+-- trata da validade e dos efeitos dos atos jurídicos constituídos antes da vigência do Código de 2002.
 -----
 # Remissões Legislativas
+- Código Civil
 # Dispositivos Legais
---Código Civil
 - Art. 2.046. Todas as remissões, em diplomas legislativos, aos Códigos referidos no artigo antecedente, consideram-se feitas às disposições correspondentes deste Código.
 -----
