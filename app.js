@@ -18,8 +18,16 @@
   const readSaved = () => { try { return JSON.parse(localStorage.getItem(SAVED_KEY) || '[]'); } catch { return []; } };
   const writeSaved = (list) => localStorage.setItem(SAVED_KEY, JSON.stringify(Array.from(new Set(list))));
   const isSaved = (slug) => readSaved().includes(slug);
-  const toggleSaved = (slug) => { const s = new Set(readSaved()); s.has(slug) ? s.delete(slug) : s.add(slug); writeSaved([...s]); return s.has(slug); };
-
+const toggleSaved = (slug) => {
+  const s = new Set(readSaved());
+  const added = !s.has(slug);
+  added ? s.add(slug) : s.delete(slug);
+  writeSaved([...s]);
+  try {
+    window.dispatchEvent(new CustomEvent('meujus:saved-changed', { detail:{ slug, added } }));
+  } catch {}
+  return added;
+};
   const escapeHTML = (s) => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
   const slugify = (s)=> (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
 
@@ -223,7 +231,7 @@
         <a href="#/tema/${t.slug}" data-q="${escapeHTML(q)}" data-flags="${['T','D','R'].filter(k=>flags[k]).join('')}">
           <div class="s1">${titleHTML}</div>
           ${snippet ? `<div class="s3">${escapeHTML(snippet)}</div>` : ''}
-          <div class="s2">${escapeHTML((t.group||'Geral') + (labels?` | ${labels}`:''))}</div>
+<div class="s2">${escapeHTML(t.group || 'Geral')}</div>
         </a>
       </li>`;
     }).join('');
@@ -488,7 +496,7 @@
     const actionsEl=card.querySelector('.actions');
     const mkBtn=(txt,variant,fn)=>{ const b=document.createElement('button'); b.className='btn-ios is-small'; if(variant) b.setAttribute('data-variant',variant); b.textContent=txt; b.onclick=fn; return b; };
     const saved=isSaved(item.slug);
-    const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{ const added=toggleSaved(item.slug); saveBtn.textContent=added?'Remover':'Salvar'; if(added) saveBtn.setAttribute('data-variant','primary'); else saveBtn.removeAttribute('data-variant'); toast(added?'Tema salvo':'Removido','info',1400); });
+    const saveBtn=mkBtn(saved?'Remover':'Salvar', saved?'primary':'', ()=>{ const added=toggleSaved(item.slug); saveBtn.textContent=added?'Remover':'Salvar'; if(added) saveBtn.setAttribute('data-variant','primary'); else saveBtn.removeAttribute('data-variant'); toast(added?'Tema salvo':'Removido','info',1400); try { renderMenu(); } catch {} });
     const iaBtn = mkBtn('Estude com I.A.','');
     iaBtn.onclick = () => openIADropdown(iaBtn, item.title, fullText);
     actionsEl.append(saveBtn, iaBtn);
@@ -626,17 +634,40 @@
   }
   async function loadTemas(){ TEMAS = await readAllSeeds(); renderMenu(); }
 
-  async function renderByRoute(){
-    const page=currentPage();
-    if(!TEMAS.length) await loadTemas();
-    if(page.kind==='tema') await loadTemaInfinite(page.slug);
-    else if(page.kind==='sobre'){
-      $('#content').innerHTML=`<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code>- Linha meta (ex.: Código Civil)</code> → <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários. A “linha meta” é mostrada no cabeçalho do card.</p></div>`;
-      leaveHomeMode(); restoreSearchToTopbar();
-    } else { renderHome(); }
+// === ROTEAMENTO / BOOT ===
+async function renderByRoute(){
+  const page = currentPage();
+  if (!TEMAS.length) await loadTemas();
+  if (page.kind === 'tema') {
+    await loadTemaInfinite(page.slug);
+  } else if (page.kind === 'sobre') {
+    $('#content').innerHTML = `<div class="card ubox"><h2 class="ubox-title">Sobre o projeto</h2><p class="ubox-intro">TXT por tema: <code># Título</code> → <code>- Linha meta (ex.: Código Civil)</code> → <code># Dispositivos Legais</code> → <code># Remissões Normativas</code> → <code>-----</code>. Linhas com <code>- </code> são linkadas; <code>-- </code> são comentários. A “linha meta” é mostrada no cabeçalho do card.</p></div>`;
+    leaveHomeMode(); restoreSearchToTopbar();
+  } else {
+    renderHome();
   }
+}
 
-  document.querySelector('#search')?.addEventListener('focus', closeAcDropdown);
-  window.addEventListener('hashchange', renderByRoute);
-  (async function init(){ closeDrawer(); await renderByRoute(); bindAutocomplete(); })();
+// Etapa 3 — atualizar menu quando os “Salvos” mudarem (mesma aba)
+window.addEventListener('meujus:saved-changed', () => {
+  try { renderMenu(); } catch {}
+});
+
+// Sincronizar Salvos entre abas/janelas
+window.addEventListener('storage', (e) => {
+  if (e.key === 'meujus:saved') {
+    try { renderMenu(); } catch {}
+  }
+});
+
+// Listeners padrão
+document.querySelector('#search')?.addEventListener('focus', closeAcDropdown);
+window.addEventListener('hashchange', renderByRoute);
+
+// Init
+(async function init(){
+  closeDrawer();
+  await renderByRoute();
+  bindAutocomplete();
 })();
+
