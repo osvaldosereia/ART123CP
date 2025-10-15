@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MeuJus – Quiz Jurídico</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =========================
+       TELA INICIAL
+  ========================== -->
+  <main id="home-screen" class="screen active">
+    <header class="home-header">
+      <h1 class="logo">MeuJus</h1>
+    </header>
+
+    <section class="home-content">
+      <h2>Escolha uma categoria</h2>
+      <div id="category-list" class="list"></div>
+    </section>
+  </main>
+
+  <!-- =========================
+       TELA DE QUIZ
+  ========================== -->
+  <main id="quiz-screen" class="screen hidden">
+    <header class="topbar">
+      <div class="left">
+        <button id="btn-category" class="link">Selecionar categoria</button>
+      </div>
+      <div class="right">
+        <span class="mini-logo">MJ</span>
+      </div>
+    </header>
+
+    <section id="quiz-container" class="quiz-container"></section>
+
+    <!-- Botão flutuante IA -->
+    <button id="btn-ia" class="float-btn" title="Enviar para IA">🤖</button>
+  </main>
+
+  <!-- =========================
+       MODAL DE SELEÇÃO
+  ========================== -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modal-title">Escolha um tema</h3>
+      <div id="modal-options" class="list"></div>
+      <button id="modal-close" class="close">Fechar</button>
+    </div>
+  </div>
+
+  <!-- =========================
+       TEMPLATE DE ANÚNCIO (placeholder)
+  ========================== -->
+  <template id="ad-template">
+    <div class="ad-placeholder">
+      <!-- Google AdSense entra aqui -->
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
