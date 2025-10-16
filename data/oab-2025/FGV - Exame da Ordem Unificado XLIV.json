@@ -73,3 +73,139 @@
     }
   ]
 }
+{
+  "meta": {
+    "title": "44º Exame de Ordem Unificado - Constitucional, Internacional e Tributário",
+    "category": "oab-unificado-xliv",
+    "theme": "constitucional-internacional-tributario",
+    "shuffle": {
+      "questions": false,
+      "options": false
+    },
+    "persist": true,
+    "outroMessage": "Excelente progresso! Vamos para a próxima etapa."
+  },
+  "questions": [
+    {
+      "type": "multiple",
+      "q": "Após diversos indicadores de qualidade da saúde evidenciarem que, entre todos os estados da Federação, o Estado Delta é aquele que oferta o pior serviço de saúde à sua população, o governador desse Estado prometeu elevado investimento público na área. Ele assegurou que iria trabalhar junto à Assembleia Legislativa no sentido de aumentar a dotação orçamentária dos hospitais públicos estaduais, como, também, auxiliar financeiramente os hospitais privados que comprovassem, por vias fidedignas, que sua margem de lucro estaria sendo insuficiente para investir em uma melhor qualidade no atendimento. Sobre o posicionamento do governador, segundo a perspectiva jurídico-constitucional, assinale a afirmativa correta.",
+      "options": [
+        "Ele poderá cumprir sua promessa, contanto que não ultrapasse o percentual máximo de gastos constitucionalmente permitidos para os serviços de saúde.",
+        "Ele poderá promover a política de saúde indicada, porque, como chefe do Poder Executivo de ente federativo autônomo, é ele quem determina as ações de governo.",
+        "Ele não está autorizado a destinar recursos públicos para auxiliar hospitais privados que possuam a característica explicitada no caso narrado.",
+        "Ele não poderá concretizar sua promessa, já que a matéria orçamentária em temas relacionados ao cuidado e à defesa da saúde é de competência exclusiva da União."
+      ],
+      "answer": 2,
+      "explanation": "“É vedada a destinação de recursos públicos para auxílios ou subvenções às instituições privadas com fins lucrativos.” — CRFB/88, art. 199, § 2º. A Constituição Federal proíbe expressamente o repasse de verbas públicas para instituições de saúde privadas que visam ao lucro. Os hospitais mencionados no caso, que possuem 'margem de lucro', enquadram-se nessa categoria, tornando a promessa do governador inconstitucional. As demais alternativas ignoram essa vedação constitucional específica."
+    },
+    {
+      "type": "multiple",
+      "q": "Um consumidor, cliente de instituição financeira constituída sob a forma de sociedade de economia mista federal, teve seu nome negativado indevidamente em um cadastro de devedores. Por essa razão, procurou você, na qualidade de advogado(a), para saber se seria possível ingressar, de acordo com a Constituição da República, com uma ação de responsabilidade civil em face da referida instituição no âmbito da Justiça Federal. Com base na situação descrita e no sistema jurídico-constitucional brasileiro, assinale a opção que apresenta, corretamente, sua resposta.",
+      "options": [
+        "A competência para apreciar a ação de responsabilidade civil a ser proposta é da Justiça Federal, pois a União, indiretamente, figura no polo passivo.",
+        "A ação deve ser proposta perante a Justiça Estadual, não perante a Justiça Federal, isto se o referido foro tiver sido definido pela lei que autorizou a criação da instituição financeira.",
+        "Por se tratar de sociedade de economia mista federal, a competência originária para a apreciação da ação de responsabilidade civil é do Tribunal Regional Federal da região do consumidor.",
+        "A despeito de possuir a União como seu sócio majoritário, a ação de responsabilidade civil em face da instituição financeira deve ser proposta na Justiça Estadual."
+      ],
+      "answer": 3,
+      "explanation": "“Aos juízes federais compete processar e julgar: I - as causas em que a União, entidade autárquica ou empresa pública federal forem interessadas na condição de autoras, rés, assistentes ou oponentes, exceto as de falência, as de acidentes de trabalho e as sujeitas à Justiça Eleitoral e à Justiça do Trabalho” — CRFB/88, art. 109, inc. I. A norma constitucional que define a competência da Justiça Federal não inclui as sociedades de economia mista. A jurisprudência do STF (Súmula 517) confirma que a competência para julgar causas envolvendo sociedades de economia mista é da Justiça Estadual, salvo se a União intervier no feito, o que não é o caso da situação narrada. Portanto, a ação deve ser proposta na Justiça Estadual."
+    },
+    {
+      "type": "multiple",
+      "q": "No Estado Sigma foi promulgada a Lei Estadual nº X/2024, que aborda matéria de Direito Financeiro. Ocorre que os dispositivos desse diploma normativo entram em conflito com as normas do Ato das Disposições Constitucionais Transitórias (ADCT) que ainda produzem seus naturais efeitos. O Presidente do Partido Político Delta, o deputado federal João Silva, sem possuir conhecimentos jurídicos, resolve consultar você, como advogado(a), para saber se poderia questionar a constitucionalidade das normas da Lei Estadual nº X/2024, por afrontarem as normas do ADCT. Assinale a opção que indica a resposta correta à consulta formulada.",
+      "options": [
+        "Embora federais, as normas do ADCT possuem hierarquia legal, razão pela qual não poderia haver controle de constitucionalidade, mas controle de legalidade da Lei Estadual nº X/2024.",
+        "As normas do ADCT, por possuírem status supralegal, poderiam servir de parâmetro para aferir a validade da Lei Estadual nº X/2024, muito embora não pudessem ser consideradas normas paramétricas para o controle de constitucionalidade.",
+        "Na medida em que as normas do ADCT têm estatura constitucional, pode ser proposta Ação Direta de Inconstitucionalidade para que seja reconhecida a inconstitucionalidade das normas da Lei Estadual nº X/2024.",
+        "Como o ADCT possui natureza legal, uma possível antinomia entre suas normas e as da Lei Estadual nº X/2024 faria que as normas anteriores, as do ADCT, fossem tacitamente revogadas."
+      ],
+      "answer": 2,
+      "explanation": "O Ato das Disposições Constitucionais Transitórias (ADCT) é parte integrante da Constituição Federal e suas normas possuem a mesma hierarquia das normas permanentes da Constituição. Não há diferença hierárquica entre elas. Consequentemente, uma lei estadual que contrarie uma disposição do ADCT é inconstitucional e pode ser objeto de controle concentrado de constitucionalidade, como a Ação Direta de Inconstitucionalidade (ADI), perante o STF. As demais alternativas estão incorretas por atribuírem ao ADCT uma hierarquia inferior à constitucional."
+    },
+    {
+      "type": "multiple",
+      "q": "O Presidente da República apresentou projeto de lei para aumentar a remuneração dos cargos X e Y do Poder Executivo. Durante a tramitação na Câmara dos Deputados, foi aprovada uma emenda parlamentar que estendeu esse aumento também aos cargos W e Z. Sobre a emenda parlamentar apresentada, considerando a sistemática estabelecida pela Constituição da República, assinale a afirmativa correta.",
+      "options": [
+        "Deve ser considerada válida, pois o Congresso Nacional tem competência para modificar projetos de lei de iniciativa do Presidente da República.",
+        "É constitucional, desde que seja aprovada pela maioria absoluta dos membros da Câmara dos Deputados e do Senado Federal.",
+        "Deve ser considerada inválida, pois o aumento de remuneração só pode ser feito por medida provisória editada pelo Presidente da República.",
+        "É inconstitucional, pois não se pode aumentar despesa prevista em projetos de lei de iniciativa exclusiva do Presidente da República."
+      ],
+      "answer": 3,
+      "explanation": "“Não será admitido aumento da despesa prevista: I - nos projetos de iniciativa exclusiva do Presidente da República, ressalvado o disposto no art. 166, § 3º e § 4º” — CRFB/88, art. 63, inc. I. Projetos de lei que tratam de remuneração de servidores do Poder Executivo são de iniciativa privativa do Presidente da República (art. 61, § 1º, II, 'a'). Emendas parlamentares a esses projetos não podem gerar aumento de despesa. Ao estender o reajuste a outros cargos, a emenda parlamentar claramente aumentou a despesa prevista, configurando um vício de inconstitucionalidade formal. As demais alternativas estão equivocadas ao admitir a validade da emenda ou ao indicar um procedimento legislativo incorreto."
+    },
+    {
+      "type": "multiple",
+      "q": "A partir da análise do conflito entre normas constitucionais originárias em uma relação processual, ambas válidas e vigentes, João, advogado do autor, sustentou que a norma X, por ser, sob a perspectiva conteudística, materialmente constitucional, deve ter preponderância sobre a norma Y, pois esta última versa sobre matéria que não é própria de uma Constituição, sendo considerada norma constitucional apenas sob o prisma da forma. Pedro, advogado da parte ex adversa, por não concordar com a análise de João, se opõe, afirmando que, sob uma perspectiva normativo-hierárqu'ca, a discussão não possui sentido, já que, prima facie, ambas as normas possuem a mesma hierarquia no âmbito do ordenamento jurídico brasileiro. Sobre a hipótese apresentada, segundo a visão jurídico-constitucional brasileira, assinale a afirmativa correta.",
+      "options": [
+        "João está correto, pois as normas constitucionais, na perspectiva meramente formal, possuem, prima facie, status legal e, portanto, hierarquia inferior àquelas materialmente constitucionais.",
+        "Pedro está correto, porque as normas formalmente constitucionais, sob a perspectiva do conteúdo, obrigatoriamente também o são sob a perspectiva de análise material.",
+        "João, como a norma Y consubstancia norma constitucional somente sob o ponto de vista formal, está correto, pois há de se considerar que a ela deve ser sempre atribuído status supralegal, mas infraconstitucional.",
+        "Pedro está correto, porque as normas X e Y, na perspectiva normativo-hierárquica, não possuem qualquer superioridade uma sobre a outra, sendo reconhecida em ambas a estatura constitucional."
+      ],
+      "answer": 3,
+      "explanation": "O ordenamento jurídico brasileiro adota o princípio da unidade hierárquica da Constituição, segundo o qual não existe hierarquia entre normas constitucionais originárias. Todas as normas inseridas no texto pelo Poder Constituinte Originário possuem o mesmo status de norma suprema. A distinção doutrinária entre normas materialmente e formalmente constitucionais não tem o condão de criar uma relação de superioridade entre elas. Eventuais conflitos são resolvidos por meio de técnicas de hermenêutica, como a ponderação e a concordância prática, e não pela prevalência de uma sobre a outra. A argumentação de Pedro está, portanto, correta. As demais alternativas propõem uma hierarquização inexistente entre as normas da Constituição."
+    },
+    {
+      "type": "multiple",
+      "q": "Durante uma forte tempestade que causou inundações e interrupções no fornecimento de energia na cidade Delta, o Prefeito Municipal, buscando evitar o agravamento da situação de iminente perigo público, requisitou um gerador de energia de propriedade da sociedade empresária Gama para manter em funcionamento o hospital municipal. O equipamento foi utilizado por dois dias, até que o fornecimento de energia fosse restabelecido, o que não causou qualquer dano ao bem requisitado. Diante dessa situação, o sócio-gerente de Gama compareceu à Prefeitura de Delta para exigir indenização pela requisição do bem. A esse respeito, assinale a afirmativa correta.",
+      "options": [
+        "A sociedade empresária Gama tem direito à indenização, independentemente de ter havido dano ao bem.",
+        "Como o bem não sofreu danos durante sua utilização, a sociedade empresária Gama não tem direito à indenização.",
+        "A utilização de bem privado, em prol do interesse público, sendo-lhe causado dano, ou não, não gera direito à indenização.",
+        "A sociedade empresária Gama só teria direito à indenização se a requisição tivesse sido realizada por autoridade federal, mas não pela autoridade citada no caso concreto."
+      ],
+      "answer": 1,
+      "explanation": "“No caso de iminente perigo público, a autoridade competente poderá usar de propriedade particular, assegurada ao proprietário indenização ulterior, se houver dano.” — CRFB/88, art. 5º, inc. XXV. A requisição administrativa é uma medida excepcional que permite ao Poder Público utilizar bens particulares para atender a uma necessidade coletiva urgente. Contudo, o direito à indenização por parte do proprietário é condicionado à existência de dano ao bem. No caso narrado, como o gerador foi devolvido sem qualquer avaria, não há dever de indenizar por parte do Município. A indenização visa a recompor o patrimônio do particular, e não a remunerar o simples uso do bem em uma situação de emergência."
+    },
+    {
+      "type": "multiple",
+      "q": "No que concerne aos standards internacionais atualmente adotados para defesa do Direito Humano à Igualdade, assinale a afirmativa correta.",
+      "options": [
+        "O direito à igualdade abrange atualmente três dimensões, havendo amplo consenso quanto à existência de uma dimensão de ordem formal, também compreendida como igualdade perante a lei; uma segunda dimensão, de ordem material, comumente relacionada ao conceito de justiça retributiva; e uma terceira dimensão, de ordem instrumental, que reconhece no direito à igualdade a condição viabilizadora da concretização de outros direitos fundamentais.",
+        "No âmbito do sistema global de proteção aos direitos humanos, a Convenção das Nações Unidas sobre a Eliminação de Todas as Formas de Discriminação Contra a Mulher pode ser apontada como importante instrumento para superação das desigualdades de gênero. Contudo, o instrumento não admite de forma expressa a utilização de ações afirmativas, ou medidas compensatórias, destinadas a acelerar o processo de superação das desigualdades existentes.",
+        "A Convenção Internacional sobre a Eliminação de Todas as Formas de Discriminação Racial rechaça a possibilidade dos Estados-parte estabelecerem medidas de tratamento desigual, em detrimento de grupos étnicos historicamente mais favorecidos, por considerar que a referida prática pode configurar a conduta expressamente vedada do denominado 'racismo reverso'.",
+        "Ao interpretar a Convenção Americana sobre Direitos Humanos, a Corte IDH reconhece a possibilidade de serem adotados critérios para 'distinção' de tratamento entre determinados grupos de indivíduos. O que não se admite é a prática de condutas 'discriminatórias'. Para a Corte, as 'distinções' constituem diferenças compatíveis com a Convenção Americana por serem razoáveis e objetivas. Já as 'discriminações' constituem diferenças arbitrárias que redundam em prejuízo dos Direitos Humanos."
+      ],
+      "answer": 3,
+      "explanation": "A Corte Interamericana de Direitos Humanos (Corte IDH) desenvolveu uma importante doutrina sobre o princípio da igualdade e não discriminação. Segundo a Corte, nem toda diferença de tratamento constitui uma violação da Convenção Americana. É preciso distinguir entre 'distinções', que são tratamentos diferenciados baseados em critérios objetivos e razoáveis para alcançar um fim legítimo, e 'discriminações', que são diferenças de tratamento arbitrárias, sem justificação razoável, e que resultam em prejuízo a direitos. Esta distinção é fundamental para a análise de casos de suposta violação do direito à igualdade. A alternativa B está incorreta, pois a CEDAW (Convenção sobre a Eliminação de Todas as Formas de Discriminação contra a Mulher) prevê expressamente a adoção de medidas especiais de caráter temporário (ações afirmativas). As alternativas A e C apresentam conceitos imprecisos ou equivocados no campo do Direito Internacional dos Direitos Humanos."
+    },
+    {
+      "type": "multiple",
+      "q": "Em relação aos Direitos Humanos das pessoas presas, assinale a afirmativa correta.",
+      "options": [
+        "Tanto as Regras de Nelson Mandela quanto as Regras de Bangkok possuem natureza de soft law, ou seja, são consideradas normas não vinculantes de Direito Internacional. Nada obstante, configuram-se em importantes diretrizes que servem de orientação para os Estados membros da Organização das Nações Unidas.",
+        "No âmbito do Sistema de Proteção Interamericano de Direitos Humanos foram editadas as denominadas regras de Nelson Mandela, com vistas à fixação de standards mínimos de organização e funcionamento dos estabelecimentos prisionais, em ordem à proteção dos direitos dos indivíduos privados de suas liberdades.",
+        "De acordo com as Regras Mínimas das Nações Unidas para o Tratamento de Presos, todas as penas cruéis, desumanas, degradantes ou que impliquem tortura devem ser proibidas. Entretanto, não há óbice à imposição do confinamento solitário prolongado, desde que aplicado como forma de sanção disciplinar, em razão de falta grave cometida pelo apenado.",
+        "No âmbito do sistema global, há dois tratados, consubstanciando-se em norma de jus cogens, que estabelecem disposições específicas para os presos do sexo masculino e do sexo feminino. Assim, enquanto as Regras de Nelson Mandela disciplinam os cuidados mínimos com os encarcerados do sexo masculino, não se aplicando às mulheres presas, as regras de Bangkok se destinam exclusivamente ao encarceramento feminino."
+      ],
+      "answer": 0,
+      "explanation": "As Regras de Nelson Mandela (Regras Mínimas da ONU para o Tratamento de Presos) e as Regras de Bangkok (Regras da ONU para o Tratamento de Mulheres Presas) são resoluções da Assembleia Geral da ONU. Como tal, não são tratados internacionais e não possuem força jurídica vinculante ('hard law'). Elas se enquadram na categoria de 'soft law', ou seja, são recomendações e diretrizes de grande autoridade moral e política que servem de parâmetro para os Estados aperfeiçoarem seus sistemas penitenciários. A alternativa B erra ao situar as Regras de Mandela no sistema interamericano. A alternativa C está incorreta pois as Regras de Mandela proíbem o confinamento solitário por tempo indefinido ou prolongado. A alternativa D erra ao classificar as regras como tratados e normas de 'jus cogens'."
+    },
+    {
+      "type": "multiple",
+      "q": "Maria e João foram eleitos, respectivamente, prefeita e vice-prefeito do Município Alfa, com poucos votos de vantagem sobre Ana e Antônio, que formavam a outra chapa que disputou a eleição. Dez dias após a diplomação dos eleitos, os integrantes da chapa derrotada obtiveram provas cabais de que os integrantes da chapa vencedora teriam praticado uma fraude, o que comprometera a normalidade e a legitimidade do pleito. Sobre o caso apresentado, como advogado(a) dos integrantes da chapa derrotada, assinale a medida judicial que deve ser ajuizada em face dos integrantes da chapa vencedora.",
+      "options": [
+        "Investigação judicial eleitoral.",
+        "Ação de captação ilícita de votos.",
+        "Recurso contra expedição de diploma.",
+        "Ação de impugnação de mandato eletivo."
+      ],
+      "answer": 3,
+      "explanation": "“A ação de impugnação de mandato eletivo tramitará em segredo de justiça, respondendo o autor, na forma da lei, se temerária ou de manifesta má-fé.” — CRFB/88, art. 14, § 11. A Ação de Impugnação de Mandato Eletivo (AIME) é o instrumento processual adequado para questionar o mandato obtido por meio de abuso de poder econômico, corrupção ou fraude, após a diplomação dos eleitos. O prazo para sua propositura é de 15 dias contados da diplomação (art. 14, § 10, CRFB/88). No caso, como a prova da fraude foi obtida 10 dias após a diplomação, a AIME é a medida cabível e tempestiva. As outras ações (A e B) são instrumentos para serem utilizados durante o processo eleitoral. Já o Recurso Contra Expedição de Diploma (C) tem cabimento em hipóteses distintas, como inelegibilidade superveniente."
+    },
+    {
+      "type": "multiple",
+      "q": "Pedro, que teve deferido o registro de candidatura para concorrer ao cargo eletivo de Prefeito Municipal de uma importante capital brasileira, deseja aumentar a capilaridade de seu projeto de governo junto à população, de modo que um número maior de eleitores tenha conhecimento de suas propostas. Com esse objetivo, consultou você, como advogado(a), a respeito da possibilidade de veicular propaganda eleitoral paga, na imprensa escrita, durante o período de propaganda eleitoral. Quanto à orientação a ser dada, assinale a afirmativa que apresenta, corretamente, sua resposta.",
+      "options": [
+        "A realização da propaganda eleitoral na forma pretendida é vedada, em qualquer hipótese.",
+        "A propaganda eleitoral que ele deseja realizar é a única de natureza não gratuita permitida pela legislação eleitoral, podendo ser realizada até o dia da eleição.",
+        "A veiculação de anúncios de propaganda eleitoral na imprensa escrita é permitida, observados limites quantitativos e de espaço, até a antevéspera das eleições.",
+        "Somente os partidos políticos podem contratar a realização da propaganda eleitoral pretendida por Pedro, sendo os limites quantitativos distribuídos internamente entre os candidatos do respectivo partido."
+      ],
+      "answer": 2,
+      "explanation": "“É permitida, até a antevéspera das eleições, a divulgação paga, na imprensa escrita e a reprodução na internet do jornal impresso, de até 10 (dez) anúncios de propaganda eleitoral, por veículo, em datas diversas, para cada candidato, no espaço máximo, por edição, de 1/8 (um oitavo) de página de jornal padrão e de 1/4 (um quarto) de página de revista ou tabloide.” — Lei nº 9.504/1997, art. 43. A legislação eleitoral permite a propaganda paga na imprensa escrita, mas estabelece regras estritas quanto ao prazo (até a antevéspera da eleição), ao espaço e ao número de publicações por candidato e por veículo de comunicação. A alternativa C é a que melhor descreve essas condições. As demais estão incorretas quanto à permissão, ao prazo final ou à legitimidade para contratar a publicidade."
+    }
+  ],
+  "skipped": []
+}
