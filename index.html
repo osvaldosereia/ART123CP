@@ -376,7 +376,8 @@
         renderOptions(['Verdadeiro','Falso'], (idx)=> select(idx===0), [0,1]);
       } else {
         const opts=q.options.map((t,i)=>({t,i}));
-        const shOpts=(QUIZ.meta?.shuffle?.options ?? MANIFEST?.shuffleDefault?.options) ? shuffleInPlace(opts) : opts;
+        // ===== ALTERAÇÃO: NÃO embaralhar opções =====
+        const shOpts = opts; // fixo, mantém ordem original das alternativas
         renderOptions(shOpts.map(o=>o.t), (idx)=> select(shOpts[idx].i), shOpts.map(o=>o.i));
       }
 
@@ -419,7 +420,18 @@
       show(btnAI, true);
     }
 
-    function markLocked(){ const q=current(); const type=q.type||'multiple'; const val=CHOSEN[ ORDER[I] ]; if(val===null) return; if(type==='vf'){ renderOptions(['Verdadeiro','Falso'],()=>{},[0,1]); } else { const opts=q.options.map((t,i)=>({t,i})); const shOpts=(QUIZ.meta?.shuffle?.options ?? MANIFEST?.shuffleDefault?.options)? shuffleInPlace(opts):opts; renderOptions(shOpts.map(o=>o.t), ()=>{}, shOpts.map(o=>o.i)); } lockAndExplain(val); }
+    function markLocked(){
+      const q=current(); const type=q.type||'multiple'; const val=CHOSEN[ ORDER[I] ]; if(val===null) return;
+      if(type==='vf'){
+        renderOptions(['Verdadeiro','Falso'],()=>{},[0,1]);
+      } else {
+        const opts=q.options.map((t,i)=>({t,i}));
+        // ===== ALTERAÇÃO: NÃO embaralhar opções =====
+        const shOpts = opts; // fixa a ordem original
+        renderOptions(shOpts.map(o=>o.t), ()=>{}, shOpts.map(o=>o.i));
+      }
+      lockAndExplain(val);
+    }
 
     function next(){ if(!isLocked()) return; if(I<QUIZ.questions.length-1){ I++; render(); } else finish(); }
     function prev(){ if(I>0){ I--; render(); } }
