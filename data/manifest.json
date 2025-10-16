@@ -5,14 +5,7 @@
   "persistDefault": true,
   "outro": { "message": "Obrigado por participar." },
   "categories": [
-    {
-      "id": "intro",
-      "name": "Introdução",
-      "themes": [
-        { "id": "basico", "name": "Básico", "path": "data/intro/basico.json" }
-      ]
-    },
-    {
+     {
       "id": "processo-civil",
       "name": "Processo Civil",
       "themes": [
