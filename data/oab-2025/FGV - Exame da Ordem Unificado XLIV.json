@@ -1,211 +1,75 @@
 {
   "meta": {
-    "title": "Ética Profissional - Análise do Exame de Ordem XXXVIII (Questões 1-5)",
-    "category": "etica-profissional",
-    "theme": "eaoab-ced-exame-xxxviii-1a5",
+    "title": "Prova OAB – Tipo 1",
+    "category": "oab",
+    "theme": "prova-oab-tipo-1",
     "shuffle": {
       "questions": true,
       "options": true
     },
     "persist": true,
-    "outroMessage": "Você concluiu a análise do primeiro bloco de questões. Continue focado para os próximos desafios."
+    "outroMessage": "Você concluiu a prova com sucesso! Confira suas respostas e continue se preparando."
   },
   "questions": [
     {
       "type": "multiple",
-      "q": "Uma sociedade de advogados especializada em direito tributário pretende aumentar sua visibilidade. Para isso, planeja patrocinar um estande em uma feira nacional de contabilidade, distribuindo panfletos que descrevem os serviços do escritório e oferecendo uma 'consulta inicial gratuita' aos visitantes que se cadastrarem. Esta forma de publicidade é permitida?",
+      "q": "Antônia, advogada atuante na área previdenciária, foi consultada por Osvaldo sobre a possibilidade de propor ação judicial contra decisão do Instituto Nacional do Seguro Social (INSS), visando à obtenção de benefício previdenciário indeferido na via administrativa.\nAo estudar o caso, Antônia verificou que o indeferimento do benefício havia se dado com base em dispositivo claro e expresso da lei que dispõe sobre o Plano de Benefícios da Previdência Social; e que não havia, até aquele momento, notícia de precedente judicial favorável à pretensão de Osvaldo. Essas informações, bem como os riscos de eventual ação judicial, foram prestadas de modo claro e inequívoco por Antônia ao cliente. No entanto, devido à insistência de Osvaldo, Antônia decidiu propor a demanda judicial.\nCom base nesse cenário, considerando o regime das infrações e sanções disciplinares da Advocacia, assinale a afirmativa correta.",
       "options": [
-        "Sim, pois a participação em feiras e eventos é uma forma de publicidade de caráter meramente informativo.",
-        "Não, pois a publicidade da advocacia não pode ser veiculada em conjunto com outra atividade, como a contabilidade, e a oferta de serviços gratuitos configura captação de clientela.",
-        "Sim, desde que o estande se limite a exibir o nome da sociedade e sua área de atuação, sem distribuir panfletos ou oferecer gratuidades.",
-        "Não, pois a publicidade da advocacia é absolutamente vedada fora de periódicos e sites jurídicos."
-      ],
-      "answer": 1,
-      "explanation": "“A publicidade profissional deve ter caráter meramente informativo e primar pela discrição e sobriedade, não podendo configurar captação de clientela ou mercantilização da profissão.” — Código de Ética e Disciplina da OAB, Art. 39. A alternativa correta (B) reflete a vedação à mercantilização e à captação indevida de clientes. A publicidade em um evento não jurídico, associada a outra atividade e com oferta de gratuidades, excede o caráter meramente informativo e discreto exigido pela norma."
-    },
-    {
-      "type": "multiple",
-      "q": "Durante o cumprimento de um mandado de busca e apreensão no escritório da advogada Clara, um representante da OAB acompanha a diligência. Os policiais decidem levar o HD do computador de Clara para perícia posterior. A advogada exige acompanhar a análise do conteúdo do HD, mas a autoridade policial nega, afirmando que a presença dela poderia atrapalhar a perícia. A negativa da autoridade policial é correta?",
-      "options": [
-        "Sim, pois a presença do representante da OAB durante a busca já supre a garantia de fiscalização do ato.",
-        "Sim, a análise pericial é um ato técnico sigiloso e não admite o acompanhamento pelo investigado ou seu advogado.",
-        "Não, a negativa é ilegal, pois o advogado investigado tem o direito de assistir à análise do material apreendido, para zelar pela inviolabilidade dos documentos de seus outros clientes.",
-        "Não, a advogada não pode acompanhar pessoalmente, mas tem o direito de indicar um assistente técnico para a perícia."
+        "(A) Antônia advogou contra literal disposição de lei, o que, não obstante seja conduta irrelevante no regime das infrações disciplinares, poderá sujeitá-la a eventual sanção por litigância de má-fé aplicada pelo juiz da causa.",
+        "(B) Antônia advogou contra literal disposição de lei, conduta que poderá sujeitá-la, perante o órgão competente da OAB, à pena isolada de multa.",
+        "(C) Antônia advogou contra literal disposição de lei, porém poderá contar com a presunção de boa-fé em seu favor, caso tenha fundamentado seu pedido na inconstitucionalidade ou na injustiça da lei.",
+        "(D) Antônia advogou contra literal disposição de lei, conduta que não possui relevância jurídico-disciplinar, mesmo porque a atuação da advocacia deve ser a mais ampla possível na defesa dos interesses de seus clientes."
       ],
       "answer": 2,
-      "explanation": "“É direito do advogado assistir a seus clientes investigados durante a apuração de infrações, sob pena de nulidade absoluta do respectivo interrogatório ou depoimento e, subsequentemente, de todos os elementos investigatórios e probatórios dele decorrentes ou derivados, direta ou indiretamente, podendo, inclusive, no curso da respectiva apuração: a) apresentar razões e quesitos;” — Estatuto da Advocacia e da OAB (Lei 8.906/94), Art. 7º, XXI. Embora o inciso XXI trate da assistência a clientes, a jurisprudência e a interpretação sistemática das prerrogativas, incluindo a inviolabilidade (art. 7º, II), garantem ao próprio advogado o direito de acompanhar os desdobramentos de atos que possam violar o sigilo de seus clientes não investigados. A alternativa (C) reflete o entendimento de que a negativa viola as prerrogativas profissionais."
+      "explanation": "“Não se inclui [...] a postulação de tese contrária à lei ou a precedente, ou a defesa de interesse que encontre expressa vedação legal, se baseada na inconstitucionalidade, na injustiça da lei ou em pronunciamento judicial anterior” — Estatuto da Advocacia e da OAB (Lei nº 8.906/94), art. 34, parágrafo único. Justificativa objetiva: A conduta de advogar contra a literal disposição de lei, em regra, constitui infração disciplinar (art. 34, VI, do EOAB). Contudo, o parágrafo único do mesmo artigo estabelece uma excludente, presumindo a boa-fé do advogado quando a postulação se fundamenta na inconstitucionalidade ou na injustiça da norma, como no caso. As alternativas A, B e D estão incorretas por desconsiderarem essa importante ressalva legal."
     },
     {
       "type": "multiple",
-      "q": "O advogado recém-formado João decide oferecer seus serviços jurídicos gratuitos para uma startup de tecnologia em rápido crescimento, com o acordo de que a empresa divulgará amplamente em suas redes sociais o trabalho \"pro bono\" realizado por ele, incluindo seu nome e contato profissional. Essa prática pode ser considerada advocacia pro bono?",
+      "q": "Roberto, advogado autônomo com destacada atuação no Direito Criminal, foi investido no cargo de diretor jurídico da Nossa Estatal, empresa pública federal que atua no mercado financeiro em regime de competição com o setor privado.\nAcerca da nova condição profissional de Roberto, assinale a afirmativa correta.",
       "options": [
-        "Sim, pois a advocacia pro bono pode ser prestada a pessoas jurídicas sem fins econômicos ou, eventualmente, a startups.",
-        "Não, pois a advocacia pro bono não pode ser utilizada como instrumento de publicidade para captação de clientela.",
-        "Sim, desde que a startup declare formalmente sua hipossuficiência econômica para arcar com os custos de um advogado.",
-        "Não, pois a advocacia pro bono só é permitida em favor de pessoas naturais hipossuficientes."
+        "(A) A nova atividade exercida por Roberto caracteriza incompatibilidade para o exercício da advocacia, mesmo em causa própria.",
+        "(B) Durante o período da investidura, Roberto estará exclusivamente legitimado para exercício da advocacia vinculada ao cargo de diretor jurídico.",
+        "(C) Roberto, durante o período da investidura, somente não poderá atuar como advogado autônomo contra a Fazenda Pública à qual está vinculada sua entidade empregadora.",
+        "(D) Uma vez que a atuação de Roberto é na área criminal, sem relação direta com o mercado financeiro, Roberto poderá continuar exercendo normalmente a advocacia autônoma."
       ],
       "answer": 1,
-      "explanation": "“considera-se advocacia pro bono a prestação gratuita, eventual e voluntária de serviços jurídicos em favor de: I - instituições sociais sem fins econômicos e aos seus assistidos [...] § 1º A advocacia pro bono não pode ser utilizada para fins político-partidários ou eleitorais, nem beneficiar instituições que visem a tais objetivos, ou como instrumento de publicidade para captação de clientela.” — Código de Ética e Disciplina da OAB, Art. 30. A alternativa correta (B) está correta. A troca de serviços jurídicos gratuitos por publicidade descaracteriza o instituto da advocacia pro bono, transformando-a em uma estratégia de marketing e captação de clientes, o que é vedado."
+      "explanation": "“A incompatibilidade determina a proibição total, e o impedimento, a proibição parcial do exercício da advocacia. § 1º A incompatibilidade permanece mesmo que o ocupante do cargo ou função deixe de exercê-lo temporariamente. § 2º Não se incluem nas hipóteses do inciso III os que não detenham poder de decisão relevante sobre interesses de terceiro, a juízo do conselho competente da OAB, bem como a administração acadêmica diretamente relacionada ao magistério jurídico.” — Estatuto da Advocacia e da OAB (Lei nº 8.906/94), art. 27 e 28, III e § 2º. Justificativa objetiva: Ocupantes de cargos de direção em empresas públicas federais estão incompatibilizados para o exercício da advocacia, conforme o art. 28, III, do EOAB. A alternativa A está correta ao afirmar a incompatibilidade. A alternativa B está incorreta, pois a incompatibilidade é total. A alternativa C descreve uma situação de impedimento (art. 30, I), e não de incompatibilidade. A alternativa D está errada porque a incompatibilidade abrange toda a advocacia, independentemente da área de atuação."
     },
     {
       "type": "multiple",
-      "q": "A advogada Lúcia, única patrona em uma causa cível, deu à luz seu primeiro filho em uma segunda-feira, dia 10. O prazo para a interposição de um recurso de apelação contra uma sentença desfavorável havia começado a contar na sexta-feira, dia 07. Diante dessa situação, qual direito assiste à advogada Lúcia com relação aos prazos processuais?",
+      "q": "Gustavo, conhecido comerciante de Brasília/DF, obteve graduação no curso de Direito. Em sequência, foi aprovado no Exame de Ordem, e, em razão disso, inscreveu-se como advogado na OAB. Desejando conciliar as atividades de comércio com o exercício da advocacia, decidiu reunir, em um mesmo estabelecimento, seu escritório de advocacia e sua loja comercial, adaptando a fachada do prédio para identificar que, naquele local, praticava-se, conjuntamente, o comércio e a advocacia. Para solucionar a parte contábil, decidiu elaborar aditivo ao contrato social da sua sociedade empresária de comércio, tendo incorporado, como finalidade adicional da pessoa jurídica, a atividade de advocacia. Em função da expansão do negócio, admitiu sócios sem formação jurídica na sociedade, para que esses últimos conduzissem a parte comercial, e ele, Gustavo, pudesse se dedicar à prestação de serviços jurídicos.\nSobre a natureza e as características da sociedade de advogados e sobre sua constituição e registro, assinale a afirmativa correta.",
       "options": [
-        "O prazo recursal continua a fluir normalmente, devendo ela substabelecer o mandato a outro colega para cumprir o ato.",
-        "Ela tem direito à restituição do prazo em dobro ao final do período de licença-maternidade.",
-        "O prazo é automaticamente suspenso por 30 dias, contados da data do parto, e retomará seu curso após esse período.",
-        "Ela tem direito à suspensão de todos os prazos processuais por 30 dias, contados a partir da data do parto, desde que notifique o cliente."
-      ],
-      "answer": 3,
-      "explanation": "“Art. 7º-A. Ficam suspensos os prazos processuais em favor da advogada que se tornar mãe, pelo período de 30 (trinta) dias, contado da data do parto ou da concessão da adoção, quando for a única patrona da causa.” — Estatuto da Advocacia e da OAB (Lei 8.906/94), Art. 7º-A, IV. A alternativa correta (D) reflete a garantia legal. A suspensão dos prazos é um direito da advogada que se torna mãe, sendo a única condição ser a única patrona na causa. A notificação ao cliente é um dever ético, mas a suspensão do prazo é um direito processual."
-    },
-    {
-      "type": "multiple",
-      "q": "Pedro, advogado, foi aprovado em concurso público para o cargo de Juiz de Direito em seu estado, tomou posse e entrou em exercício. Ele possui diversas ações em andamento em seu escritório, nas quais atua como patrono. Qual medida a OAB deve tomar em relação à inscrição profissional de Pedro?",
-      "options": [
-        "A OAB deve suspender a inscrição de Pedro pelo período em que ele exercer a magistratura.",
-        "A OAB deve promover o cancelamento de ofício da inscrição de Pedro, pois ele passou a exercer, em caráter definitivo, atividade incompatível com a advocacia.",
-        "Pedro deve solicitar o licenciamento de sua inscrição, que será deferido automaticamente.",
-        "A OAB deve manter a inscrição ativa, porém com uma anotação de 'impedimento' para advogar contra a Fazenda Pública que o remunera."
+        "(A) É possível a admissão de sócio não advogado nas sociedades advocatícias, sendo proibido apenas que a razão social contenha o nome daquele sócio não inscrito na OAB.",
+        "(B) A sociedade criada por Gustavo não pode ser admitida a registro, porque congrega serviços de advocacia com atividades estranhas à prática advocatícia, além de contar com sócios não inscritos como advogado..",
+        "(C) Apesar de ser admitida a realização de atividades estranhas à advocacia por parte da sociedade de advogados, a sociedade fundada por Gustavo não pode ser registrada por incluir como sócio pessoa não inscrita como advogado.",
+        "(D) A conduta adotada por Gustavo de incorporar serviços de comércio e advocatícios em uma mesma pessoa jurídica, a despeito de pouco usual, é válida, porque se admite o registro nas juntas comerciais de sociedade que inclua, entre suas finalidades, a atividade de advocacia."
       ],
       "answer": 1,
-      "explanation": "“O cancelamento da inscrição deve ser promovido, de ofício, pelo conselho competente, no caso de o profissional passar a exercer, em caráter definitivo, atividade incompatível com a advocacia.” — Estatuto da Advocacia e da OAB (Lei 8.906/94), Art. 11, IV. A alternativa correta (B) é a correta. A magistratura é uma atividade incompatível com o exercício da advocacia. Como o cargo é de caráter definitivo, a consequência é o cancelamento da inscrição, e não a mera suspensão ou licenciamento."
-    }
-  ]
-}
-{
-  "meta": {
-    "title": "44º Exame de Ordem Unificado - Constitucional, Internacional e Tributário",
-    "category": "oab-unificado-xliv",
-    "theme": "constitucional-internacional-tributario",
-    "shuffle": {
-      "questions": false,
-      "options": false
-    },
-    "persist": true,
-    "outroMessage": "Excelente progresso! Vamos para a próxima etapa."
-  },
-  "questions": [
-    {
-      "type": "multiple",
-      "q": "Após diversos indicadores de qualidade da saúde evidenciarem que, entre todos os estados da Federação, o Estado Delta é aquele que oferta o pior serviço de saúde à sua população, o governador desse Estado prometeu elevado investimento público na área. Ele assegurou que iria trabalhar junto à Assembleia Legislativa no sentido de aumentar a dotação orçamentária dos hospitais públicos estaduais, como, também, auxiliar financeiramente os hospitais privados que comprovassem, por vias fidedignas, que sua margem de lucro estaria sendo insuficiente para investir em uma melhor qualidade no atendimento. Sobre o posicionamento do governador, segundo a perspectiva jurídico-constitucional, assinale a afirmativa correta.",
-      "options": [
-        "Ele poderá cumprir sua promessa, contanto que não ultrapasse o percentual máximo de gastos constitucionalmente permitidos para os serviços de saúde.",
-        "Ele poderá promover a política de saúde indicada, porque, como chefe do Poder Executivo de ente federativo autônomo, é ele quem determina as ações de governo.",
-        "Ele não está autorizado a destinar recursos públicos para auxiliar hospitais privados que possuam a característica explicitada no caso narrado.",
-        "Ele não poderá concretizar sua promessa, já que a matéria orçamentária em temas relacionados ao cuidado e à defesa da saúde é de competência exclusiva da União."
-      ],
-      "answer": 2,
-      "explanation": "“É vedada a destinação de recursos públicos para auxílios ou subvenções às instituições privadas com fins lucrativos.” — CRFB/88, art. 199, § 2º. A Constituição Federal proíbe expressamente o repasse de verbas públicas para instituições de saúde privadas que visam ao lucro. Os hospitais mencionados no caso, que possuem 'margem de lucro', enquadram-se nessa categoria, tornando a promessa do governador inconstitucional. As demais alternativas ignoram essa vedação constitucional específica."
+      "explanation": "“Não são admitidas a registro nem podem funcionar as sociedades de advogados que apresentem forma ou características de sociedade empresária, que adotem denominação de fantasia, que realizem atividades estranhas à advocacia, que incluam como sócio ou associado pessoa não inscrita como advogado ou totalmente proibida de advogar.” — Regulamento Geral do Estatuto da Advocacia e da OAB, art. 16. Justificativa objetiva: A sociedade de advogados não pode ter objeto social distinto da advocacia nem pode incluir sócios não inscritos na OAB. A sociedade de Gustavo viola ambas as regras, tornando seu registro inviável. A alternativa B descreve corretamente as irregularidades. As demais alternativas apresentam premissas incorretas, como a permissão de sócios não advogados (A e C) ou a possibilidade de registro de sociedade com objeto misto (D)."
     },
     {
       "type": "multiple",
-      "q": "Um consumidor, cliente de instituição financeira constituída sob a forma de sociedade de economia mista federal, teve seu nome negativado indevidamente em um cadastro de devedores. Por essa razão, procurou você, na qualidade de advogado(a), para saber se seria possível ingressar, de acordo com a Constituição da República, com uma ação de responsabilidade civil em face da referida instituição no âmbito da Justiça Federal. Com base na situação descrita e no sistema jurídico-constitucional brasileiro, assinale a opção que apresenta, corretamente, sua resposta.",
+      "q": "O Presidente do Conselho Seccional da Ordem dos Advogados do Brasil do Estado Alfa recebeu representação devidamente identificada, contendo narrativa fática indicativa da prática de infração disciplinar pelo advogado Paulo. O autor da representação apresentou documentos, rol de testemunhas e indicou a produção de provas. Ato contínuo, o Presidente imediatamente designou relator para a competente instrução do processo disciplinar.\nConsiderando a legislação que rege o processo disciplinar do advogado, assinale a afirmativa correta.",
       "options": [
-        "A competência para apreciar a ação de responsabilidade civil a ser proposta é da Justiça Federal, pois a União, indiretamente, figura no polo passivo.",
-        "A ação deve ser proposta perante a Justiça Estadual, não perante a Justiça Federal, isto se o referido foro tiver sido definido pela lei que autorizou a criação da instituição financeira.",
-        "Por se tratar de sociedade de economia mista federal, a competência originária para a apreciação da ação de responsabilidade civil é do Tribunal Regional Federal da região do consumidor.",
-        "A despeito de possuir a União como seu sócio majoritário, a ação de responsabilidade civil em face da instituição financeira deve ser proposta na Justiça Estadual."
-      ],
-      "answer": 3,
-      "explanation": "“Aos juízes federais compete processar e julgar: I - as causas em que a União, entidade autárquica ou empresa pública federal forem interessadas na condição de autoras, rés, assistentes ou oponentes, exceto as de falência, as de acidentes de trabalho e as sujeitas à Justiça Eleitoral e à Justiça do Trabalho” — CRFB/88, art. 109, inc. I. A norma constitucional que define a competência da Justiça Federal não inclui as sociedades de economia mista. A jurisprudência do STF (Súmula 517) confirma que a competência para julgar causas envolvendo sociedades de economia mista é da Justiça Estadual, salvo se a União intervier no feito, o que não é o caso da situação narrada. Portanto, a ação deve ser proposta na Justiça Estadual."
-    },
-    {
-      "type": "multiple",
-      "q": "No Estado Sigma foi promulgada a Lei Estadual nº X/2024, que aborda matéria de Direito Financeiro. Ocorre que os dispositivos desse diploma normativo entram em conflito com as normas do Ato das Disposições Constitucionais Transitórias (ADCT) que ainda produzem seus naturais efeitos. O Presidente do Partido Político Delta, o deputado federal João Silva, sem possuir conhecimentos jurídicos, resolve consultar você, como advogado(a), para saber se poderia questionar a constitucionalidade das normas da Lei Estadual nº X/2024, por afrontarem as normas do ADCT. Assinale a opção que indica a resposta correta à consulta formulada.",
-      "options": [
-        "Embora federais, as normas do ADCT possuem hierarquia legal, razão pela qual não poderia haver controle de constitucionalidade, mas controle de legalidade da Lei Estadual nº X/2024.",
-        "As normas do ADCT, por possuírem status supralegal, poderiam servir de parâmetro para aferir a validade da Lei Estadual nº X/2024, muito embora não pudessem ser consideradas normas paramétricas para o controle de constitucionalidade.",
-        "Na medida em que as normas do ADCT têm estatura constitucional, pode ser proposta Ação Direta de Inconstitucionalidade para que seja reconhecida a inconstitucionalidade das normas da Lei Estadual nº X/2024.",
-        "Como o ADCT possui natureza legal, uma possível antinomia entre suas normas e as da Lei Estadual nº X/2024 faria que as normas anteriores, as do ADCT, fossem tacitamente revogadas."
-      ],
-      "answer": 2,
-      "explanation": "O Ato das Disposições Constitucionais Transitórias (ADCT) é parte integrante da Constituição Federal e suas normas possuem a mesma hierarquia das normas permanentes da Constituição. Não há diferença hierárquica entre elas. Consequentemente, uma lei estadual que contrarie uma disposição do ADCT é inconstitucional e pode ser objeto de controle concentrado de constitucionalidade, como a Ação Direta de Inconstitucionalidade (ADI), perante o STF. As demais alternativas estão incorretas por atribuírem ao ADCT uma hierarquia inferior à constitucional."
-    },
-    {
-      "type": "multiple",
-      "q": "O Presidente da República apresentou projeto de lei para aumentar a remuneração dos cargos X e Y do Poder Executivo. Durante a tramitação na Câmara dos Deputados, foi aprovada uma emenda parlamentar que estendeu esse aumento também aos cargos W e Z. Sobre a emenda parlamentar apresentada, considerando a sistemática estabelecida pela Constituição da República, assinale a afirmativa correta.",
-      "options": [
-        "Deve ser considerada válida, pois o Congresso Nacional tem competência para modificar projetos de lei de iniciativa do Presidente da República.",
-        "É constitucional, desde que seja aprovada pela maioria absoluta dos membros da Câmara dos Deputados e do Senado Federal.",
-        "Deve ser considerada inválida, pois o aumento de remuneração só pode ser feito por medida provisória editada pelo Presidente da República.",
-        "É inconstitucional, pois não se pode aumentar despesa prevista em projetos de lei de iniciativa exclusiva do Presidente da República."
-      ],
-      "answer": 3,
-      "explanation": "“Não será admitido aumento da despesa prevista: I - nos projetos de iniciativa exclusiva do Presidente da República, ressalvado o disposto no art. 166, § 3º e § 4º” — CRFB/88, art. 63, inc. I. Projetos de lei que tratam de remuneração de servidores do Poder Executivo são de iniciativa privativa do Presidente da República (art. 61, § 1º, II, 'a'). Emendas parlamentares a esses projetos não podem gerar aumento de despesa. Ao estender o reajuste a outros cargos, a emenda parlamentar claramente aumentou a despesa prevista, configurando um vício de inconstitucionalidade formal. As demais alternativas estão equivocadas ao admitir a validade da emenda ou ao indicar um procedimento legislativo incorreto."
-    },
-    {
-      "type": "multiple",
-      "q": "A partir da análise do conflito entre normas constitucionais originárias em uma relação processual, ambas válidas e vigentes, João, advogado do autor, sustentou que a norma X, por ser, sob a perspectiva conteudística, materialmente constitucional, deve ter preponderância sobre a norma Y, pois esta última versa sobre matéria que não é própria de uma Constituição, sendo considerada norma constitucional apenas sob o prisma da forma. Pedro, advogado da parte ex adversa, por não concordar com a análise de João, se opõe, afirmando que, sob uma perspectiva normativo-hierárqu'ca, a discussão não possui sentido, já que, prima facie, ambas as normas possuem a mesma hierarquia no âmbito do ordenamento jurídico brasileiro. Sobre a hipótese apresentada, segundo a visão jurídico-constitucional brasileira, assinale a afirmativa correta.",
-      "options": [
-        "João está correto, pois as normas constitucionais, na perspectiva meramente formal, possuem, prima facie, status legal e, portanto, hierarquia inferior àquelas materialmente constitucionais.",
-        "Pedro está correto, porque as normas formalmente constitucionais, sob a perspectiva do conteúdo, obrigatoriamente também o são sob a perspectiva de análise material.",
-        "João, como a norma Y consubstancia norma constitucional somente sob o ponto de vista formal, está correto, pois há de se considerar que a ela deve ser sempre atribuído status supralegal, mas infraconstitucional.",
-        "Pedro está correto, porque as normas X e Y, na perspectiva normativo-hierárquica, não possuem qualquer superioridade uma sobre a outra, sendo reconhecida em ambas a estatura constitucional."
-      ],
-      "answer": 3,
-      "explanation": "O ordenamento jurídico brasileiro adota o princípio da unidade hierárquica da Constituição, segundo o qual não existe hierarquia entre normas constitucionais originárias. Todas as normas inseridas no texto pelo Poder Constituinte Originário possuem o mesmo status de norma suprema. A distinção doutrinária entre normas materialmente e formalmente constitucionais não tem o condão de criar uma relação de superioridade entre elas. Eventuais conflitos são resolvidos por meio de técnicas de hermenêutica, como a ponderação e a concordância prática, e não pela prevalência de uma sobre a outra. A argumentação de Pedro está, portanto, correta. As demais alternativas propõem uma hierarquização inexistente entre as normas da Constituição."
-    },
-    {
-      "type": "multiple",
-      "q": "Durante uma forte tempestade que causou inundações e interrupções no fornecimento de energia na cidade Delta, o Prefeito Municipal, buscando evitar o agravamento da situação de iminente perigo público, requisitou um gerador de energia de propriedade da sociedade empresária Gama para manter em funcionamento o hospital municipal. O equipamento foi utilizado por dois dias, até que o fornecimento de energia fosse restabelecido, o que não causou qualquer dano ao bem requisitado. Diante dessa situação, o sócio-gerente de Gama compareceu à Prefeitura de Delta para exigir indenização pela requisição do bem. A esse respeito, assinale a afirmativa correta.",
-      "options": [
-        "A sociedade empresária Gama tem direito à indenização, independentemente de ter havido dano ao bem.",
-        "Como o bem não sofreu danos durante sua utilização, a sociedade empresária Gama não tem direito à indenização.",
-        "A utilização de bem privado, em prol do interesse público, sendo-lhe causado dano, ou não, não gera direito à indenização.",
-        "A sociedade empresária Gama só teria direito à indenização se a requisição tivesse sido realizada por autoridade federal, mas não pela autoridade citada no caso concreto."
-      ],
-      "answer": 1,
-      "explanation": "“No caso de iminente perigo público, a autoridade competente poderá usar de propriedade particular, assegurada ao proprietário indenização ulterior, se houver dano.” — CRFB/88, art. 5º, inc. XXV. A requisição administrativa é uma medida excepcional que permite ao Poder Público utilizar bens particulares para atender a uma necessidade coletiva urgente. Contudo, o direito à indenização por parte do proprietário é condicionado à existência de dano ao bem. No caso narrado, como o gerador foi devolvido sem qualquer avaria, não há dever de indenizar por parte do Município. A indenização visa a recompor o patrimônio do particular, e não a remunerar o simples uso do bem em uma situação de emergência."
-    },
-    {
-      "type": "multiple",
-      "q": "No que concerne aos standards internacionais atualmente adotados para defesa do Direito Humano à Igualdade, assinale a afirmativa correta.",
-      "options": [
-        "O direito à igualdade abrange atualmente três dimensões, havendo amplo consenso quanto à existência de uma dimensão de ordem formal, também compreendida como igualdade perante a lei; uma segunda dimensão, de ordem material, comumente relacionada ao conceito de justiça retributiva; e uma terceira dimensão, de ordem instrumental, que reconhece no direito à igualdade a condição viabilizadora da concretização de outros direitos fundamentais.",
-        "No âmbito do sistema global de proteção aos direitos humanos, a Convenção das Nações Unidas sobre a Eliminação de Todas as Formas de Discriminação Contra a Mulher pode ser apontada como importante instrumento para superação das desigualdades de gênero. Contudo, o instrumento não admite de forma expressa a utilização de ações afirmativas, ou medidas compensatórias, destinadas a acelerar o processo de superação das desigualdades existentes.",
-        "A Convenção Internacional sobre a Eliminação de Todas as Formas de Discriminação Racial rechaça a possibilidade dos Estados-parte estabelecerem medidas de tratamento desigual, em detrimento de grupos étnicos historicamente mais favorecidos, por considerar que a referida prática pode configurar a conduta expressamente vedada do denominado 'racismo reverso'.",
-        "Ao interpretar a Convenção Americana sobre Direitos Humanos, a Corte IDH reconhece a possibilidade de serem adotados critérios para 'distinção' de tratamento entre determinados grupos de indivíduos. O que não se admite é a prática de condutas 'discriminatórias'. Para a Corte, as 'distinções' constituem diferenças compatíveis com a Convenção Americana por serem razoáveis e objetivas. Já as 'discriminações' constituem diferenças arbitrárias que redundam em prejuízo dos Direitos Humanos."
-      ],
-      "answer": 3,
-      "explanation": "A Corte Interamericana de Direitos Humanos (Corte IDH) desenvolveu uma importante doutrina sobre o princípio da igualdade e não discriminação. Segundo a Corte, nem toda diferença de tratamento constitui uma violação da Convenção Americana. É preciso distinguir entre 'distinções', que são tratamentos diferenciados baseados em critérios objetivos e razoáveis para alcançar um fim legítimo, e 'discriminações', que são diferenças de tratamento arbitrárias, sem justificação razoável, e que resultam em prejuízo a direitos. Esta distinção é fundamental para a análise de casos de suposta violação do direito à igualdade. A alternativa B está incorreta, pois a CEDAW (Convenção sobre a Eliminação de Todas as Formas de Discriminação contra a Mulher) prevê expressamente a adoção de medidas especiais de caráter temporário (ações afirmativas). As alternativas A e C apresentam conceitos imprecisos ou equivocados no campo do Direito Internacional dos Direitos Humanos."
-    },
-    {
-      "type": "multiple",
-      "q": "Em relação aos Direitos Humanos das pessoas presas, assinale a afirmativa correta.",
-      "options": [
-        "Tanto as Regras de Nelson Mandela quanto as Regras de Bangkok possuem natureza de soft law, ou seja, são consideradas normas não vinculantes de Direito Internacional. Nada obstante, configuram-se em importantes diretrizes que servem de orientação para os Estados membros da Organização das Nações Unidas.",
-        "No âmbito do Sistema de Proteção Interamericano de Direitos Humanos foram editadas as denominadas regras de Nelson Mandela, com vistas à fixação de standards mínimos de organização e funcionamento dos estabelecimentos prisionais, em ordem à proteção dos direitos dos indivíduos privados de suas liberdades.",
-        "De acordo com as Regras Mínimas das Nações Unidas para o Tratamento de Presos, todas as penas cruéis, desumanas, degradantes ou que impliquem tortura devem ser proibidas. Entretanto, não há óbice à imposição do confinamento solitário prolongado, desde que aplicado como forma de sanção disciplinar, em razão de falta grave cometida pelo apenado.",
-        "No âmbito do sistema global, há dois tratados, consubstanciando-se em norma de jus cogens, que estabelecem disposições específicas para os presos do sexo masculino e do sexo feminino. Assim, enquanto as Regras de Nelson Mandela disciplinam os cuidados mínimos com os encarcerados do sexo masculino, não se aplicando às mulheres presas, as regras de Bangkok se destinam exclusivamente ao encarceramento feminino."
+        "(A) Se a infração ético-disciplinar apontada na representação for punível com a sanção de censura, será admissivel a celebração de termo de ajustamento de conduta, desde que o fato apurado não tenha gerado repercussão negativa à advocacia.",
+        "(B) A autoridade competente que proferir o despacho declaratório da instauração do processo disciplinar deverá, no mesmo ato, promover a suspensão preventiva de Paulo pelo prazo de até 90 (noventa) dias.",
+        "(C) Na hipótese de arquivamento liminar da representação pelo Presidente do Conselho Seccional, caberá recurso ao Conselho Federal da OАВ.",
+        "(D) A designação imediata de relator pelo Presidente do Conselho Seccional, sem a prévia oitiva de Paulo, viola o princípio da ampla defesa."
       ],
       "answer": 0,
-      "explanation": "As Regras de Nelson Mandela (Regras Mínimas da ONU para o Tratamento de Presos) e as Regras de Bangkok (Regras da ONU para o Tratamento de Mulheres Presas) são resoluções da Assembleia Geral da ONU. Como tal, não são tratados internacionais e não possuem força jurídica vinculante ('hard law'). Elas se enquadram na categoria de 'soft law', ou seja, são recomendações e diretrizes de grande autoridade moral e política que servem de parâmetro para os Estados aperfeiçoarem seus sistemas penitenciários. A alternativa B erra ao situar as Regras de Mandela no sistema interamericano. A alternativa C está incorreta pois as Regras de Mandela proíbem o confinamento solitário por tempo indefinido ou prolongado. A alternativa D erra ao classificar as regras como tratados e normas de 'jus cogens'."
+      "explanation": "“O Conselho Seccional competente poderá celebrar termo de ajustamento de conduta com o representado, em caso de infração disciplinar punível com censura, desde que o fato apurado não tenha gerado repercussão negativa à advocacia.” — Estatuto da Advocacia e da OAB (Lei nº 8.906/94), art. 58-A. Justificativa objetiva: A alternativa A está correta por prever a possibilidade de celebração de Termo de Ajustamento de Conduta (TAC) para infrações puníveis com censura e sem repercussão negativa, conforme inovação trazida pela Lei nº 14.365/2022. A suspensão preventiva (B) é medida excepcional e não automática. O recurso contra arquivamento liminar (C) é direcionado ao Conselho Seccional, e não ao Federal. A designação de relator (D) é ato de impulso processual, não havendo exigência de oitiva prévia do representado nesse momento inicial."
     },
     {
       "type": "multiple",
-      "q": "Maria e João foram eleitos, respectivamente, prefeita e vice-prefeito do Município Alfa, com poucos votos de vantagem sobre Ana e Antônio, que formavam a outra chapa que disputou a eleição. Dez dias após a diplomação dos eleitos, os integrantes da chapa derrotada obtiveram provas cabais de que os integrantes da chapa vencedora teriam praticado uma fraude, o que comprometera a normalidade e a legitimidade do pleito. Sobre o caso apresentado, como advogado(a) dos integrantes da chapa derrotada, assinale a medida judicial que deve ser ajuizada em face dos integrantes da chapa vencedora.",
+      "q": "O advogado Gomes representou Dênis em uma ação de responsabilidade civil contra o Banco $A/fa$ tendo firmado contrato escrito com Dênis, no qual foi estipulado que Gomes receberia honorários convencionais de 20% sobre o proveito econômico obtido, além dos honorários sucumbenciais que fossem concedidos. No entanto, Dênis entrou em contato diretamente com o advogado do Banco Alfa e firmou um acordo extrajudicial para receber R$ 5.000,00 de indenização por danos morais, sem a participação de Gomes e renunciando aos direitos aos honorários advocatícios. Gomes foi informado do acordo posteriormente.\nSobre o caso relatado, com base no Art. 24 do Estatuto da Advocacia e da OAB, assinale a afirmativa correta.",
       "options": [
-        "Investigação judicial eleitoral.",
-        "Ação de captação ilícita de votos.",
-        "Recurso contra expedição de diploma.",
-        "Ação de impugnação de mandato eletivo."
-      ],
-      "answer": 3,
-      "explanation": "“A ação de impugnação de mandato eletivo tramitará em segredo de justiça, respondendo o autor, na forma da lei, se temerária ou de manifesta má-fé.” — CRFB/88, art. 14, § 11. A Ação de Impugnação de Mandato Eletivo (AIME) é o instrumento processual adequado para questionar o mandato obtido por meio de abuso de poder econômico, corrupção ou fraude, após a diplomação dos eleitos. O prazo para sua propositura é de 15 dias contados da diplomação (art. 14, § 10, CRFB/88). No caso, como a prova da fraude foi obtida 10 dias após a diplomação, a AIME é a medida cabível e tempestiva. As outras ações (A e B) são instrumentos para serem utilizados durante o processo eleitoral. Já o Recurso Contra Expedição de Diploma (C) tem cabimento em hipóteses distintas, como inelegibilidade superveniente."
-    },
-    {
-      "type": "multiple",
-      "q": "Pedro, que teve deferido o registro de candidatura para concorrer ao cargo eletivo de Prefeito Municipal de uma importante capital brasileira, deseja aumentar a capilaridade de seu projeto de governo junto à população, de modo que um número maior de eleitores tenha conhecimento de suas propostas. Com esse objetivo, consultou você, como advogado(a), a respeito da possibilidade de veicular propaganda eleitoral paga, na imprensa escrita, durante o período de propaganda eleitoral. Quanto à orientação a ser dada, assinale a afirmativa que apresenta, corretamente, sua resposta.",
-      "options": [
-        "A realização da propaganda eleitoral na forma pretendida é vedada, em qualquer hipótese.",
-        "A propaganda eleitoral que ele deseja realizar é a única de natureza não gratuita permitida pela legislação eleitoral, podendo ser realizada até o dia da eleição.",
-        "A veiculação de anúncios de propaganda eleitoral na imprensa escrita é permitida, observados limites quantitativos e de espaço, até a antevéspera das eleições.",
-        "Somente os partidos políticos podem contratar a realização da propaganda eleitoral pretendida por Pedro, sendo os limites quantitativos distribuídos internamente entre os candidatos do respectivo partido."
+        "(A) Dênis tem o direito de renunciar aos honorários advocatícios convencionados e sucumbenciais, desde que tenha feito isso expressamente no acordo com o Banco $A/fa$ e isso prejudica o direito de Gomes de receber qualquer valor.",
+        "(B) O acordo firmado por Dênis com o Banco Alfa retira o direito de Gomes aos honorários convencionados, mas Gomes ainda pode pleitear apenas os honorários sucumbenciais, desde que haja condenação judicial.",
+        "(C) Gomes mantém o direito aos honorários convencionados e sucumbenciais, independentemente do acordo realizado por Dênis com o Banco $A/fa$ uma vez que o acordo não prejudica o advogado sem sua aquiescência.",
+        "(D) Gomes somente poderá cobrar os honorários convencionados se houver uma decisão judicial declarando nulo o acordo firmado entre Dênis e o Banco Alfa."
       ],
       "answer": 2,
-      "explanation": "“É permitida, até a antevéspera das eleições, a divulgação paga, na imprensa escrita e a reprodução na internet do jornal impresso, de até 10 (dez) anúncios de propaganda eleitoral, por veículo, em datas diversas, para cada candidato, no espaço máximo, por edição, de 1/8 (um oitavo) de página de jornal padrão e de 1/4 (um quarto) de página de revista ou tabloide.” — Lei nº 9.504/1997, art. 43. A legislação eleitoral permite a propaganda paga na imprensa escrita, mas estabelece regras estritas quanto ao prazo (até a antevéspera da eleição), ao espaço e ao número de publicações por candidato e por veículo de comunicação. A alternativa C é a que melhor descreve essas condições. As demais estão incorretas quanto à permissão, ao prazo final ou à legitimidade para contratar a publicidade."
+      "explanation": "“O acordo feito pelo cliente do advogado e a parte contrária, salvo aquiescência do profissional, não lhe prejudica os honorários, quer os convencionados, quer os concedidos por sentença.” — Estatuto da Advocacia e da OAB (Lei nº 8.906/94), art. 24, § 4º. Justificativa objetiva: O acordo celebrado diretamente pelo cliente com a parte contrária, sem a concordância do advogado, não afeta o direito deste aos honorários, tanto os contratuais quanto os sucumbenciais. Portanto, a alternativa C está correta. As demais alternativas estão erradas porque o direito aos honorários é autônomo e não pode ser prejudicado por ato unilateral do cliente."
     }
-  ],
-  "skipped": []
+  ]
 }
