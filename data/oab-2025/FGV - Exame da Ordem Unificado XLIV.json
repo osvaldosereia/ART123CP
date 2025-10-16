@@ -192,6 +192,67 @@
       ],
       "answer": 3,
       "explanation": "“Princípio da Unidade da Constituição: A interpretação constitucional deve ser realizada de maneira a evitar contradições entre suas normas. [...] Não há hierarquia entre normas constitucionais.” — Doutrina majoritária de Direito Constitucional. Justificativa objetiva: No ordenamento jurídico brasileiro, não existe hierarquia entre normas constitucionais originárias. A distinção entre normas materialmente e formalmente constitucionais é puramente acadêmica e não implica diferença de status normativo. Todas as normas inseridas no texto da Constituição pelo poder constituinte originário são supremas e possuem a mesma força. Portanto, a argumentação de Pedro está correta. As alternativas A, B e C estão erradas por sugerirem, de diferentes formas, uma hierarquia inexistente entre as normas constitucionais."
+    },
+    ,
+    {
+      "type": "multiple",
+      "q": "Durante uma forte tempestade que causou inundações e interrupções no fornecimento de energia na cidade Delta, o Prefeito Municipal, buscando evitar o agravamento da situação de iminente perigo público, requisitou um gerador de energia de propriedade da sociedade empresária Gama para manter em funcionamento o hospital municipal. O equipamento foi utilizado por dois dias, até que o fornecimento de energia fosse restabelecido, o que não causou qualquer dano ao bem requisitado. Diante dessa situação, o sócio-gerente de Gama compareceu à Prefeitura de Delta para exigir indenização pela requisição do bem.\nA esse respeito, assinale a afirmativa correta.",
+      "options": [
+        "(A) A sociedade empresária Gama tem direito à indenização, independentemente de ter havido dano ao bem.",
+        "(B) Como o bem não sofreu danos durante sua utilização, a sociedade empresária Gama não tem direito à indenização.",
+        "(C) A utilização de bem privado, em prol do interesse público, sendo-lhe causado dano, ou não, não gera direito à indenização.",
+        "(D) A sociedade empresária Gama só teria direito à indenização se a requisição tivesse sido realizada por autoridade federal, mas não pela autoridade citada no caso concreto."
+      ],
+      "answer": 1,
+      "explanation": "“No caso de iminente perigo público, a autoridade competente poderá usar de propriedade particular, assegurada ao proprietário indenização ulterior, se houver dano” — Constituição da República Federativa do Brasil de 1988 (CRFB/88), art. 5º, XXV. Justificativa objetiva: A requisição administrativa é uma forma de intervenção do Estado na propriedade privada que só gera dever de indenizar se houver dano ao bem requisitado. Como o gerador foi devolvido sem avarias, não há que se falar em indenização. A alternativa B está correta. As demais alternativas estão incorretas, pois a indenização é condicionada ao dano (A e C) e a requisição pode ser feita por qualquer autoridade competente, não apenas federal (D)."
+    },
+    {
+      "type": "multiple",
+      "q": "No que concerne aos standards internacionais atualmente adotados para defesa do Direito Humano à Igualdade, assinale a afirmativa correta.",
+      "options": [
+        "(A) O direito à igualdade abrange atualmente três dimensões, havendo amplo consenso quanto à existência de uma dimensão de ordem formal, também compreendida como igualdade perante a lei; uma segunda dimensão, de ordem material, comumente relacionada ao conceito de justiça retributiva; e uma terceira dimensão, de ordem instrumental, que reconhece no direito à igualdade a condição viabilizadora da concretização de outros direitos fundamentais.",
+        "(B) No âmbito do sistema global de proteção aos direitos humanos, a Convenção das Nações Unidas sobre a Eliminação de Todas as Formas de Discriminação Contra a Mulher pode ser apontada como importante instrumento para superação das desigualdades de gênero. Contudo, o instrumento não admite de forma expressa a utilização de ações afirmativas, ou medidas compensatórias, destinadas a acelerar o processo de superação das desigualdades existentes.",
+        "(C) A Convenção Internacional sobre a Eliminação de Todas as Formas de Discriminação Racial rechaça a possibilidade dos Estados-parte estabelecerem medidas de tratamento desigual, em detrimento de grupos étnicos historicamente mais favorecidos, por considerar que a referida prática pode configurar a conduta expressamente vedada do denominado \"racismo reverso\".",
+        "(D) Ao interpretar a Convenção Americana sobre Direitos Humanos, a Corte IDH reconhece a possibilidade de serem adotados critérios para \"distinção\" de tratamento entre determinados grupos de indivíduos. O que não se admite é a prática de condutas \"discriminatórias\". Para a Corte, as \"distinções\" constituem diferenças compatíveis com a Convenção Americana por serem razoáveis e objetivas. Já as \"discriminações\" constituem diferenças arbitrárias que redundam em prejuízo dos Direitos Humanos."
+      ],
+      "answer": 3,
+      "explanation": "“A noção de igualdade se desprende diretamente da unidade da natureza do gênero humano e é inseparável da dignidade essencial da pessoa, frente à qual é incompatível toda situação que, por considerar um grupo superior a outro, conduza a tratá-lo com privilégio ou a discriminá-lo. [...] O que não se admite são as diferenças de tratamento que careçam de uma justificação objetiva e razoável.” — Opinião Consultiva OC-4/84 da Corte Interamericana de Direitos Humanos. Justificativa objetiva: A alternativa D descreve com precisão a jurisprudência consolidada da Corte Interamericana de Direitos Humanos, que diferencia 'distinções' legítimas (baseadas em critérios objetivos e razoáveis) de 'discriminações' arbitrárias. A alternativa A erra ao associar justiça material a justiça retributiva. A B está incorreta, pois a CEDAW (art. 4º) prevê expressamente medidas especiais de caráter temporário (ações afirmativas). A C está errada, pois a ICERD também admite ações afirmativas e não proíbe medidas em detrimento de grupos favorecidos sob a alcunha de 'racismo reverso'."
+    },
+    {
+      "type": "multiple",
+      "q": "Em relação aos Direitos Humanos das pessoas presas, assinale a afirmativa correta.",
+      "options": [
+        "(A) Tanto as Regras de Nelson Mandela quanto as Regras de Bangkok possuem natureza de soft law, ou seja, são consideradas normas não vinculantes de Direito Internacional. Nada obstante, configuram-se em importantes diretrizes que servem de orientação para os Estados membros da Organização das Nações Unidas.",
+        "(B) No âmbito do Sistema de Proteção Interamericano de Direitos Humanos foram editadas as denominadas regras de Nelson Mandela, com vistas à fixação de standards mínimos de organização e funcionamento dos estabelecimentos prisionais, em ordem à proteção dos direitos dos indivíduos privados de suas liberdades.",
+        "(C) De acordo com as Regras Mínimas das Nações Unidas para o Tratamento de Presos, todas as penas cruéis, desumanas, degradantes ou que impliquem tortura devem ser proibidas. Entretanto, não há óbice à imposição do confinamento solitário prolongado, desde que aplicado como forma de sanção disciplinar, em razão de falta grave cometida pelo apenado.",
+        "(D) No âmbito do sistema global, há dois tratados, consubstanciando-se em norma de jus cogens, que estabelecem disposições específicas para os presos do sexo masculino e do sexo feminino. Assim, enquanto as Regras de Nelson Mandela disciplinam os cuidados mínimos com os encarcerados do sexo masculino, não se aplicando às mulheres presas, as regras de Bangkok se destinam exclusivamente ao encarceramento feminino."
+      ],
+      "answer": 0,
+      "explanation": "“As Regras Mínimas das Nações Unidas para o Tratamento de Presos (Regras de Nelson Mandela) e as Regras das Nações Unidas para o Tratamento de Mulheres Presas e Medidas Não Privativas de Liberdade para Mulheres Infratoras (Regras de Bangkok) são resoluções da Assembleia Geral da ONU.” — Documentos Internacionais de Direitos Humanos. Justificativa objetiva: As Regras de Mandela e de Bangkok são resoluções da ONU, que não possuem força de tratado, sendo classificadas como 'soft law'. Elas servem como importantes diretrizes e padrões para os Estados. A alternativa A está correta. A B está errada porque as Regras de Mandela são do sistema global (ONU), não do interamericano. A C está incorreta porque as Regras de Mandela proíbem o confinamento solitário indefinido ou prolongado. A D está errada pois não são tratados nem normas de jus cogens, e as Regras de Mandela se aplicam a todos os presos."
+    },
+    {
+      "type": "multiple",
+      "q": "Maria e João foram eleitos, respectivamente, prefeita e vice-prefeito do Município Alfa, com poucos votos de vantagem sobre Ana e Antônio, que formavam a outra chapa que disputou a eleição. Dez dias após a diplomação dos eleitos, os integrantes da chapa derrotada obtiveram provas cabais de que os integrantes da chapa vencedora teriam praticado uma fraude, o que comprometera a normalidade e a legitimidade do pleito.\nSobre o caso apresentado, como advogado(a) dos integrantes da chapa derrotada, assinale a medida judicial que deve ser ajuizada em face dos integrantes da chapa vencedora.",
+      "options": [
+        "(A) Investigação judicial eleitoral.",
+        "(B) Ação de captação ilícita de votos.",
+        "(C) Recurso contra expedição de diploma.",
+        "(D) Ação de impugnação de mandato eletivo."
+      ],
+      "answer": 3,
+      "explanation": "“O mandato eletivo poderá ser impugnado ante a Justiça Eleitoral no prazo de quinze dias contados da diplomação, instruída a ação com provas de abuso do poder econômico, corrupção ou fraude.” — CRFB/88, art. 14, § 10. Justificativa objetiva: A Ação de Impugnação de Mandato Eletivo (AIME) é o instrumento processual adequado para questionar o mandato eletivo após a diplomação, com base em fraude, corrupção ou abuso de poder econômico, devendo ser proposta no prazo de 15 dias. Os fatos narrados (descoberta de fraude 10 dias após a diplomação) se encaixam perfeitamente na hipótese da AIME. As demais ações (A, B, C) têm cabimento em momentos ou para finalidades distintas."
+    },
+    {
+      "type": "multiple",
+      "q": "Pedro, que teve deferido o registro de candidatura para concorrer ao cargo eletivo de Prefeito Municipal de uma importante capital brasileira, deseja aumentar a capilaridade de seu projeto de governo junto à população, de modo que um número maior de eleitores tenha conhecimento de suas propostas. Com esse objetivo, consultou você, como advogado(a), a respeito da possibilidade de veicular propaganda eleitoral paga, na imprensa escrita, durante o período de propaganda eleitoral.\nQuanto à orientação a ser dada, assinale a afirmativa que apresenta, corretamente, sua resposta.",
+      "options": [
+        "(A) A realização da propaganda eleitoral na forma pretendida é vedada, em qualquer hipótese.",
+        "(B) A propaganda eleitoral que ele deseja realizar é a única de natureza não gratuita permitida pela legislação eleitoral, podendo ser realizada até o dia da eleição.",
+        "(C) A veiculação de anúncios de propaganda eleitoral na imprensa escrita é permitida, observados limites quantitativos e de espaço, até a antevéspera das eleições.",
+        "(D) Somente os partidos políticos podem contratar a realização da propaganda eleitoral pretendida por Pedro, sendo os limites quantitativos distribuídos internamente entre os candidatos do respectivo partido."
+      ],
+      "answer": 2,
+      "explanation": "“É permitida, até a antevéspera das eleições, a divulgação paga, na imprensa escrita, e a reprodução na internet do jornal impresso, de até 10 (dez) anúncios de propaganda eleitoral, por veículo, em datas diversas, para cada candidato, no espaço máximo, por edição, de 1/8 (um oitavo) de página de jornal padrão e de 1/4 (um quarto) de página de revista ou tablóide.” — Lei nº 9.504/97 (Lei das Eleições), art. 43. Justificativa objetiva: A lei eleitoral permite a propaganda eleitoral paga na imprensa escrita, sujeita a limites de quantidade, espaço e prazo. O prazo final é a antevéspera das eleições. A alternativa C resume corretamente essas regras. As demais alternativas contêm informações incorretas sobre a permissão (A), o prazo (B) ou a legitimidade para contratar (D)."
     }
   ]
 }
