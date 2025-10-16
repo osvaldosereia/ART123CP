@@ -1,1 +1,142 @@
 
+{
+  "meta": {
+    "title": "Direito Processual Civil - Do Auxílio Direto (Arts. 28-34)",
+    "category": "processo-civil",
+    "theme": "auxilio-direto-cpc",
+    "shuffle": {
+      "questions": true,
+      "options": true
+    },
+    "persist": true,
+    "outroMessage": "Parabéns! Você demonstrou conhecimento sobre o Auxílio Direto, um importante e ágil mecanismo de cooperação jurídica internacional. Continue assim!"
+  },
+  "questions": [
+    {
+      "type": "multiple",
+      "q": "Uma autoridade administrativa da Noruega precisa obter, para uma investigação interna, uma certidão de um registro de imóveis em Cuiabá-MT. Em paralelo, um tribunal da Noruega profere uma sentença condenatória final contra uma empresa sediada em Cuiabá. Qual das duas solicitações de cooperação poderá tramitar como auxílio direto?",
+      "options": [
+        "Apenas o cumprimento da sentença condenatória, por ter maior peso jurídico.",
+        "Ambas as solicitações, pois se originam do mesmo país.",
+        "Apenas o pedido da autoridade administrativa para obter a certidão, pois não se trata de uma decisão judicial estrangeira sujeita a juízo de delibação (homologação).",
+        "Nenhuma das duas, pois a cooperação com a Noruega depende de tratado específico que o Brasil não possui."
+      ],
+      "answer": 2,
+      "explanation": "“Cabe auxílio direto quando a medida não decorrer diretamente de decisão de autoridade jurisdicional estrangeira a ser submetida a juízo de delibação no Brasil.” — CPC/2015, art. 28. A alternativa correta (C) diferencia as formas de cooperação. O cumprimento de uma sentença final estrangeira exige o procedimento de homologação (juízo de delibação) via carta rogatória ou ação de homologação. Já o auxílio direto é o mecanismo para medidas que não possuem essa natureza de execução de decisão judicial estrangeira, como a obtenção de documentos."
+    },
+    {
+      "type": "multiple",
+      "q": "A autoridade tributária da Argentina envia um pedido de auxílio direto à autoridade central brasileira. O documento, no entanto, está redigido de forma ambígua e a assinatura digital do responsável não pôde ser validada. Qual a consequência jurídica mais provável?",
+      "options": [
+        "A autoridade central brasileira deve presumir a boa-fé e dar cumprimento imediato ao pedido.",
+        "A autoridade central brasileira pode solicitar esclarecimentos ou até mesmo negar seguimento ao pedido, pois cabe ao Estado requerente assegurar a clareza e a autenticidade da solicitação.",
+        "O pedido deve ser remetido à embaixada da Argentina para que um diplomata valide o documento.",
+        "O juiz federal competente deve intimar a autoridade argentina para que emende o pedido no prazo de 15 dias, sob pena de indeferimento."
+      ],
+      "answer": 1,
+      "explanation": "“A solicitação de auxílio direto será encaminhada pelo órgão estrangeiro interessado à autoridade central, cabendo ao Estado requerente assegurar a autenticidade e a clareza do pedido.” — CPC/2015, art. 29. A alternativa correta (B) destaca a responsabilidade do Estado que faz o pedido. A autoridade central brasileira atua como um portal de controle, e a falta de clareza ou de autenticidade comprovada são motivos válidos para obstar o prosseguimento da cooperação até que as falhas sejam sanadas."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma comissão parlamentar de inquérito na França está apurando um caso de corrupção e, para instruir seus trabalhos, precisa obter informações sobre o andamento de um processo judicial correlato já encerrado no Brasil. Qual mecanismo de cooperação é o mais adequado para essa finalidade?",
+      "options": [
+        "Carta Rogatória, pois se trata de um ato a ser cumprido pelo Poder Judiciário.",
+        "Auxílio direto, que tem como um de seus objetos a obtenção e prestação de informações sobre processos judiciais, findos ou em curso.",
+        "Ação de homologação de decisão estrangeira, para que a investigação francesa tenha validade no Brasil.",
+        "Não há mecanismo de cooperação para esse fim, devendo a comissão francesa contratar um advogado no Brasil."
+      ],
+      "answer": 1,
+      "explanation": "“[...] o auxílio direto terá os seguintes objetos: I – obtenção e prestação de informações sobre o ordenamento jurídico e sobre processos administrativos ou jurisdicionais findos ou em curso;” — CPC/2015, art. 30, I. A alternativa correta (B) indica o auxílio direto como a via correta. Este mecanismo foi desenhado para ser mais ágil justamente para medidas que não envolvem a execução de uma decisão estrangeira, como a simples troca de informações sobre o andamento de processos."
+    },
+    {
+      "type": "multiple",
+      "q": "Um tribunal em Portugal está processando uma ação indenizatória contra uma empresa brasileira. Em paralelo, um tribunal argentino julga uma ação de inventário de um falecido que deixou um imóvel em território brasileiro. Ambos os tribunais solicitam, via auxílio direto, a oitiva de testemunhas no Brasil. Qual pedido pode ser cumprido?",
+      "options": [
+        "Ambos os pedidos, pois a colheita de provas é objeto do auxílio direto.",
+        "Apenas o pedido do tribunal argentino, pois inventários têm prioridade.",
+        "Apenas o pedido do tribunal português, pois a ação de inventário de bem imóvel no Brasil é de competência exclusiva da autoridade judiciária brasileira, o que impede a cooperação por auxílio direto para colheita de provas nesse caso.",
+        "Nenhum dos pedidos, pois a oitiva de testemunhas para processos estrangeiros deve ocorrer por videoconferência, sem necessidade de cooperação."
+      ],
+      "answer": 2,
+      "explanation": "“[...] o auxílio direto terá os seguintes objetos: II – colheita de provas, salvo se a medida for adotada em processo, em curso no estrangeiro, de competência exclusiva de autoridade judiciária brasileira;” — CPC/2015, art. 30, II. A alternativa correta (C) aplica a exceção prevista na norma. A ação indenizatória (Portugal) é de competência concorrente, logo a cooperação é permitida. Já a ação de inventário de imóvel situado no Brasil (Argentina) é de competência exclusiva da justiça brasileira (art. 23, II), portanto, a lei veda a colheita de provas por auxílio direto para este fim."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma agência reguladora de medicamentos dos EUA necessita realizar uma inspeção administrativa nas instalações de um laboratório farmacêutico em Anápolis-GO. Tal medida não está prevista em nenhum tratado específico. É possível utilizar o auxílio direto para este fim?",
+      "options": [
+        "Não, pois as hipóteses de auxílio direto são taxativas e não incluem inspeções administrativas.",
+        "Sim, pois o rol de objetos do auxílio direto inclui qualquer outra medida judicial ou extrajudicial não proibida pela lei brasileira.",
+        "Não, pois uma medida de um órgão administrativo estrangeiro no Brasil fere a soberania nacional.",
+        "Sim, mas a inspeção deverá ser convertida em uma perícia judicial e conduzida por um perito nomeado por um juiz federal."
+      ],
+      "answer": 1,
+      "explanation": "“[...] o auxílio direto terá os seguintes objetos: III – qualquer outra medida judicial ou extrajudicial não proibida pela lei brasileira.” — CPC/2015, art. 30, III. A alternativa correta (B) baseia-se na cláusula aberta do dispositivo. O rol de objetos do auxílio direto não é exaustivo. Desde que a medida solicitada (como uma inspeção administrativa) não seja ilegal sob a ótica da legislação brasileira, ela pode ser objeto do auxílio direto."
+    },
+    {
+      "type": "multiple",
+      "q": "A autoridade central brasileira, ao processar um pedido de auxílio direto vindo da Espanha, percebe que para cumprir a diligência necessita de uma informação técnica que está com um órgão específico do governo espanhol que não é a autoridade central daquele país. Como a autoridade brasileira deve proceder?",
+      "options": [
+        "Deve se comunicar apenas com sua congênere espanhola, solicitando que ela obtenha a informação e a retransmita.",
+        "Pode se comunicar diretamente com o outro órgão estrangeiro responsável pela informação, para agilizar o cumprimento do pedido.",
+        "Deve paralisar o pedido até que a autoridade central espanhola envie a informação espontaneamente.",
+        "Deve solicitar a informação por via diplomática, através do Itamaraty, por se tratar de órgão diverso."
+      ],
+      "answer": 1,
+      "explanation": "“A autoridade central brasileira comunicar-se-á diretamente com suas congêneres e, se necessário, com outros órgãos estrangeiros responsáveis pela tramitação e pela execução de pedidos de cooperação [...].” — CPC/2015, art. 31. A alternativa correta (B) reflete a flexibilidade e a agilidade pretendidas pelo mecanismo. A comunicação não é restrita ao espelhamento das autoridades centrais, permitindo o contato direto com outros órgãos envolvidos na execução do pedido para garantir sua efetividade."
+    },
+    {
+      "type": "multiple",
+      "q": "A autoridade central do Canadá solicita ao Brasil, via auxílio direto, a obtenção de uma cópia autenticada de um registro de casamento em um cartório de Cuiabá. A obtenção de tal documento, no Brasil, é um ato puramente administrativo que não exige ordem judicial. Como a autoridade central brasileira deve agir?",
+      "options": [
+        "Deve encaminhar o pedido à Advocacia-Geral da União para que esta requeira a certidão em juízo.",
+        "Deve adotar ela mesma as providências necessárias para o cumprimento, como oficiar diretamente o cartório, sem necessidade de acionar o Poder Judiciário.",
+        "Deve informar à autoridade canadense que o pedido não pode ser cumprido por auxílio direto, por não ser um ato jurisdicional.",
+        "Deve encaminhar o pedido ao juiz federal de Cuiabá para que ele determine o cumprimento pelo cartório."
+      ],
+      "answer": 1,
+      "explanation": "“No caso de auxílio direto para a prática de atos que, segundo a lei brasileira, não necessitem de prestação jurisdicional, a autoridade central adotará as providências necessárias para seu cumprimento.” — CPC/2015, art. 32. A alternativa correta (B) descreve o procedimento para atos de natureza administrativa. A autoridade central atua como executora direta da medida, desjudicializando a cooperação e tornando-a mais rápida, como no caso da obtenção de uma simples certidão."
+    },
+    {
+      "type": "multiple",
+      "q": "A autoridade central brasileira (Ministério da Justiça) recebe um pedido de auxílio direto passivo da Alemanha para a quebra de sigilo bancário de uma empresa em investigação, ato que no Brasil exige autorização judicial. Qual é o próximo passo a ser dado pela autoridade central?",
+      "options": [
+        "Ela mesma profere a decisão de quebra do sigilo, por delegação da autoridade estrangeira.",
+        "Encaminha o pedido diretamente ao juiz federal competente para a decisão.",
+        "Encaminha o pedido à Advocacia-Geral da União (AGU), que será o órgão responsável por requerer a medida em juízo.",
+        "Encaminha o pedido à Polícia Federal para que esta represente em juízo pela medida."
+      ],
+      "answer": 2,
+      "explanation": "“Recebido o pedido de auxílio direto passivo, a autoridade central o encaminhará à Advocacia-Geral da União, que requererá em juízo a medida solicitada.” — CPC/2015, art. 33, caput. A alternativa correta (C) descreve o fluxo de um pedido que necessita de intervenção judicial. A autoridade central não atua diretamente em juízo; ela aciona o órgão de representação judicial da União, a AGU, para que esta postule a medida perante o juiz competente."
+    },
+    {
+      "type": "multiple",
+      "q": "Em um tratado específico sobre combate à corrupção transnacional, o Ministério Público Federal (MPF) é designado como a autoridade central para fins de cooperação. O MPF recebe um pedido de um procurador estrangeiro para uma busca e apreensão, medida que exige ordem judicial. Quem deve requerer a medida ao juiz brasileiro?",
+      "options": [
+        "O Ministério da Justiça, como autoridade central padrão.",
+        "A Advocacia-Geral da União (AGU), como representante judicial da União.",
+        "O próprio Ministério Público, pois, no caso, ele atua como autoridade central e possui legitimidade para postular em juízo.",
+        "O procurador estrangeiro, que deverá contratar um advogado brasileiro para fazer o pedido."
+      ],
+      "answer": 2,
+      "explanation": "“O Ministério Público requererá em juízo a medida solicitada quando for autoridade central.” — CPC/2015, art. 33, parágrafo único. A alternativa correta (C) aplica a regra especial para quando o MP exerce a função de autoridade central. Nesses casos, ele acumula a função administrativa de receber o pedido com sua função institucional de postular em juízo, não havendo necessidade de acionar a AGU."
+    },
+    {
+      "type": "multiple",
+      "q": "A AGU, a pedido da autoridade central, precisa obter uma ordem judicial para a realização de uma inspeção em uma empresa localizada na cidade de Sinop-MT, no âmbito de um pedido de auxílio direto. A qual órgão do Poder Judiciário a AGU deverá endereçar seu requerimento?",
+      "options": [
+        "Ao Superior Tribunal de Justiça (STJ), por se tratar de matéria de cooperação internacional.",
+        "Ao Tribunal Regional Federal da 1ª Região (TRF-1), órgão de segunda instância.",
+        "Ao juízo federal da Subseção Judiciária de Sinop-MT, pois é o local onde a medida deve ser executada.",
+        "Ao juízo estadual da Comarca de Sinop-MT, por se tratar de matéria cível."
+      ],
+      "answer": 2,
+      "explanation": "“Compete ao juízo federal do lugar em que deva ser executada a medida apreciar pedido de auxílio direto passivo que demande prestação de atividade jurisdicional.” — CPC/2015, art. 34. A alternativa correta (C) define a competência territorial e material. Os pedidos de auxílio direto que exigem providência judicial são de competência da Justiça Federal, especificamente do juiz federal com jurisdição sobre o local onde o ato será efetivamente praticado."
+    }
+  ],
+  "skipped": [
+    {
+      "dispositive": "CPC/2015, Art. 30, caput",
+      "reason": "texto ausente ou insuficiente"
+    }
+  ]
+}
