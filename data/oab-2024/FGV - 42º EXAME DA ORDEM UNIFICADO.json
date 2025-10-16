@@ -247,6 +247,246 @@
 ],
 "answer": 3,
 "explanation": "“Será cancelada a inscrição do eleitor que se abstiver de votar em 3 (três) eleições consecutivas (...) não pagar a multa ou não se justificar no prazo de 6 (seis) meses, a contar da data da última eleição a que deveria ter comparecido.” — Código Eleitoral (Lei nº 4.737/1965), Art. 71, V, e Resolução TSE nº 23.659/2021, Art. 68. O não comparecimento a três eleições consecutivas sem justificativa ou pagamento de multa acarreta o cancelamento do título eleitoral. A ausência de quitação eleitoral, por sua vez, impede a obtenção de passaporte (Código Eleitoral, Art. 7º, § 1º, V). Portanto, o procedimento informado a Pedro foi correto."
+},
+  {
+"type": "multiple",
+"q": "Você atua, como advogado(a), em um caso em que seu cliente, Luka, croata, de 65 anos de idade e 6 anos de residência fixa no Brasil, sem família no país, foi condenado, com sentença transitada em julgado, pela prática do crime de estupro no Brasil. Com base no que dispõe a Lei de Migração (Lei nº 13.445/2017), a condenação ensejará a expulsão de Luka do Brasil,",
+"options": [
+"sem a possibilidade de impedimento de reingresso.",
+"conjugada com o impedimento de reingresso por prazo determinado.",
+"conjugada com o impedimento de reingresso por prazo indeterminado.",
+"com a possibilidade de reingresso, por ser pessoa com mais de 60 anos de idade e residente no país."
+],
+"answer": 1,
+"explanation": "“A medida de expulsão (...) implicará impedimento de reingresso no território nacional por prazo determinado.” — Lei nº 13.445/2017 (Lei de Migração), Art. 56. A condenação transitada em julgado por crime de estupro autoriza a expulsão, conforme o art. 54, § 1º, V, da mesma lei. O ato de expulsão é obrigatoriamente conjugado com um impedimento de reingresso por prazo determinado, tornando a alternativa B correta. As exceções do art. 55 que impedem a expulsão não se aplicam, pois Luka não possui família no país."
+},
+{
+"type": "multiple",
+"q": "No Brasil, quanto às formas de ingresso no país, é aplicada a política de visto por reciprocidade, de acordo com a nacionalidade do estrangeiro. O tipo de visto, previsto na Lei de Migração, depende do objetivo da viagem do solicitante ao Brasil. A Lei de Migração (Lei nº 13.445/2017) ajustou o tratamento do estrangeiro no Brasil aos preceitos constitucionais. Sobre as formas de ingresso no país, segundo a legislação pertinente, assinale a afirmativa correta.",
+"options": [
+"O visto é o documento que dá a seu titular o direito adquirido de ingresso em território nacional.",
+"Ao solicitante que pretenda ingressar ou permanecer em território nacional poderá ser concedido visto de visita, temporário, diplomático e oficial. A Lei de Migração não prevê o visto de cortesia.",
+"É causa de recusa absoluta de visto, sem possibilidade de entrevista individual e necessidade de ato fundamentado, quando a razão da viagem não seja condizente com o visto ou com o motivo alegado para a isenção de visto.",
+"O visto temporário para pesquisa, ensino ou extensão acadêmica poderá ser concedido ao imigrante com ou sem vínculo empregatício com a instituição de pesquisa ou de ensino brasileira, sendo exigida, na hipótese de vínculo, a comprovação de formação compatível."
+],
+"answer": 3,
+"explanation": "“O visto temporário para pesquisa, ensino ou extensão acadêmica poderá ser concedido ao imigrante, com ou sem vínculo empregatício com instituição de pesquisa ou de ensino brasileira...” — Lei nº 13.445/2017 (Lei de Migração), Art. 14, § 4º. A lei prevê expressamente esta modalidade de visto temporário. A alternativa A está incorreta, pois o visto é mera expectativa de direito de ingresso (Art. 6º). A B está incorreta, pois o visto de cortesia está previsto no Art. 12, V. A C está incorreta, pois a recusa de visto deve ser fundamentada (Art. 11, § 2º)."
+},
+{
+"type": "multiple",
+"q": "O Prefeito e a Câmara de Vereadores de Alfa, município com cem mil habitantes, situado no interior do Estado Beta, pretendem modernizar a administração pública municipal. Assim, iniciaram um programa de ampliação da transparência da gestão fiscal, que prevê a implantação de mecanismos previstos na Constituição Federal de 1988 e na Lei de Responsabilidade Fiscal, objetivando dar maior efetividade ao princípio da transparência fiscal. Sobre a hipótese formulada, assinale a afirmativa correta.",
+"options": [
+"As contas apresentadas pelo Prefeito devem ficar disponíveis, durante todo o exercício, apenas no órgão técnico responsável pela sua elaboração, para consulta e apreciação pelos cidadãos e instituições da sociedade.",
+"A realização de audiências públicas durante os processos de elaboração e discussão dos planos, da lei de diretrizes orçamentárias e dos orçamentos não pode ser aplicada ao Município Alfa, mas tão somente às esferas estadual ou federal.",
+"O Município Alfa está obrigado a disponibilizar em meio eletrônico de amplo acesso público suas informações e seus dados contábeis, orçamentários e fiscais de acordo com uma periodicidade, um formato e um sistema estabelecidos pelo órgão central de contabilidade da União.",
+"A prestação de contas do Prefeito deve ter ampla divulgação, mas o respectivo parecer prévio do Tribunal de Contas do Estado Beta sobre tais contas é apenas enviado à Câmara de Vereadores para que estas possam ser julgadas, não podendo ser veiculado em meios eletrônicos de acesso público."
+],
+"answer": 2,
+"explanation": "“Os entes da Federação disponibilizarão a qualquer pessoa física ou jurídica o acesso a informações (...) por meio eletrônico de acesso público...” — LC nº 101/2000 (Lei de Responsabilidade Fiscal), Art. 48. O Art. 48-A da mesma lei complementa que essa disponibilização deve seguir padrões mínimos de qualidade definidos pelo órgão central de contabilidade da União. A obrigação se aplica a todos os entes federativos, incluindo municípios como Alfa."
+},
+{
+"type": "multiple",
+"q": "Em certo período de apuração, a despesa total de pessoal da União alcançou o patamar de 60% da receita corrente líquida (RCL), de acordo com os critérios de cálculo estabelecidos na Lei Complementar n 101/2000 (Lei de Responsabilidade Fiscal - LRF). Sobre o patamar alcançado, assinale a afirmativa correta.",
+"options": [
+"Viola o limite válido para a esfera federal estabelecido na LRF, que é expressamente previsto em 45% da RCL.",
+"Viola o limite válido para a esfera federal estabelecido na LRF, que é expressamente previsto em 50% da RCL.",
+"Situa-se abaixo do limite válido para a esfera federal estabelecido na LRF, que está expressamente previsto em 70% da RCL.",
+"Mantém-se dentro do limite válido para a esfera federal estabelecido na LRF, uma vez que configura o limite previsto naquela norma jurídica."
+],
+"answer": 1,
+"explanation": "“A despesa total com pessoal, em cada período de apuração e em cada ente da Federação, não poderá exceder os percentuais da receita corrente líquida, a seguir discriminados: I - União: 50% (cinqüenta por cento);” — LC nº 101/2000 (Lei de Responsabilidade Fiscal), Art. 19, I. O patamar de 60% da RCL para despesa de pessoal da União excede o limite máximo de 50% estabelecido pela LRF, configurando violação à norma."
+},
+{
+"type": "multiple",
+"q": "José foi citado, em janeiro de 2022, em uma ação de execução fiscal movida pela Fazenda Nacional para cobrança de Imposto sobre a Renda de Pessoa Física (IRPF), cujo débito tributário foi por ele próprio apurado na sua Declaração de Ajuste Anual entregue à Secretaria da Receita Federal do Brasil, em março de 2017 (referente ao ano base de 2016). Sem nada fazer, em março daquele ano, foi intimado da penhora de sua conta bancária. Três meses após a intimação da penhora, José finalmente encontrou a guia DARF do IRPF integralmente paga dentro do prazo, no exato valor apurado como devido naquela declaração de ajuste anual. José, então, o(a) procura para, como advogado(a), adotar a medida processual cabível nos autos daquela ação de cobrança considerada indevida. Diante desse cenário, assinale a afirmativa correta.",
+"options": [
+"José deverá oferecer embargos à execução, oportunidade em que poderá alegar a quitação da dívida tributária.",
+"Por ser matéria de ordem pública, será possível alegar apenas a prescrição daquela ação de execução fiscal, que teria ocorrido em dezembro de 2021.",
+"José poderá apresentar uma exceção de pré-executividade, demonstrando documentalmente, por meio da guia DARF, que o imposto havia sido pago tempestivamente.",
+"Caberá a José recorrer da decisão que determinou a penhora de sua conta bancária por meio de agravo de instrumento, sob fundamento de quitação da dívida tributária."
+],
+"answer": 2,
+"explanation": "“A exceção de pré-executividade é admissível na execução fiscal relativamente às matérias conhecíveis de ofício que não demandem dilação probatória.” — Súmula nº 393 do STJ. A quitação integral e tempestiva do débito é matéria que extingue o crédito tributário e pode ser comprovada de plano com a guia DARF, sem necessidade de outras provas. Assim, a exceção de pré-executividade é o instrumento processual adequado para arguir a matéria e extinguir a execução indevida, sem necessidade de garantir o juízo."
+},
+{
+"type": "multiple",
+"q": "João, pessoa com deficiência física, com base na Lei nº XXX do Estado Alfa que isenta as pessoas com tal deficiência do pagamento do Imposto sobre Propriedade de Veículo Automotor (IPVA), requereu à Secretaria da Fazenda do Estado Alfa a extensão da aplicação da norma isentiva para a Taxa Anual de Licenciamento Veicular do seu automóvel. Ele usou como argumento o fato de que aquela isenção visa resguardar o mínimo existencial e a capacidade contributiva das pessoas com deficiência. Entretanto, o pedido foi indeferido administrativamente. Irresignado, consultou você, como advogado(a), sobre a conduta a ser adotada. Diante desse cenário, assinale a afirmativa correta.",
+"options": [
+"João, somente após realizar o depósito prévio em dinheiro, terá seu recurso admitido e poderá recorrer para a segunda instância administrativa.",
+"Tal taxa, como espécie de tributo contraprestacional, não pode ser objeto de isenção, sob pena de prejudicar a realização dos serviços específicos e divisíveis que ela financia.",
+"A legislação tributária que outorga isenção deve ser interpretada literalmente, não sendo extensível a isenção prevista em lei para o IPVA à Taxa Anual de Licenciamento Veicular não prevista na referida lei.",
+"João poderá ajuizar ação declaratória de inexistência de relação jurídico-tributária, uma vez que as isenções podem ser interpretadas extensivamente e sua condição de pessoa com deficiência é comprovável por laudo médico e perícia judicial."
+],
+"answer": 2,
+"explanation": "“Interpreta-se literalmente a legislação tributária que disponha sobre: (...) II - outorga de isenção;” — Código Tributário Nacional, Art. 111, II. As normas que concedem isenção fiscal devem ser interpretadas de forma restritiva, não cabendo analogia ou interpretação extensiva. A isenção concedida para o IPVA (imposto) não pode ser estendida para a Taxa de Licenciamento (taxa), pois são espécies tributárias distintas com fatos geradores diferentes. A decisão administrativa foi, portanto, correta."
+},
+{
+"type": "multiple",
+"q": "A sociedade empresária ABC Ltda. teve um auto de infração lavrado contra si pelo Fisco federal, em junho de 2021, lançando de ofício valores de tributo federal não declarados, nem pagos, referentes a fatos geradores ocorridos em junho de 2017. A sociedade empresária impugnou o auto dentro do prazo, apontando a existência de vício formal, o que foi reconhecido pelo Fisco federal, que anulou tal lançamento em junho de 2022. Diante desse cenário e à luz do texto expresso do Código Tributário Nacional, assinale a afirmativa correta.",
+"options": [
+"O Fisco poderá efetuar novo lançamento, contando-se o prazo decadencial de 5 anos da data em que se tornou definitiva a decisão que anulou, por vício formal, o lançamento anteriormente efetuado.",
+"O Fisco poderá efetuar novo lançamento, contando-se o prazo decadencial de 5 anos a partir de $1^{9}/1/2023$, primeiro dia do exercício seguinte àquele em que o novo lançamento poderia ter sido efetuado.",
+"O Fisco não poderá efetuar novo lançamento, pois o prazo decadencial de 5 anos se consumou em 1º/1/2023, 5 anos após o primeiro dia do exercício seguinte àquele em que o lançamento original poderia ter sido efetuado.",
+"O Fisco não poderá efetuar novo lançamento, pois o prazo decadencial de 5 anos se consumou em junho de 2022, 5 anos após a ocorrência dos fatos geradores objetos do lançamento original que foi anulado."
+],
+"answer": 0,
+"explanation": "“O direito de a Fazenda Pública constituir o crédito tributário extingue-se após 5 (cinco) anos, contados: (...) II - da data em que se tornar definitiva a decisão que houver anulado, por vício formal, o lançamento anteriormente efetuado.” — Código Tributário Nacional, Art. 173, II. A anulação de um lançamento por vício formal tem o efeito de devolver ao Fisco o prazo decadencial de cinco anos para que possa realizar um novo lançamento válido, contado a partir da data da decisão anulatória. Portanto, o Fisco ainda poderá efetuar o lançamento."
+},
+{
+"type": "multiple",
+"q": "Certa carga foi abandonada no Porto de Santos (SP) pela sociedade empresária Importação 100% Ltda. Em razão disso, passado o prazo previsto e obedecidas as formalidades da legislação tributária, foi aplicada pela Secretaria Especial da Receita Federal do Brasil (SERFB) a pena de perdimento de mercadoria importada por abandono. José, participando de leilão da SERFB, logra êxito em arrematar a carga abandonada. Sobre a arrematação de mercadorias abandonadas em leilão promovido pela SERFB, à luz do Código Tributário Nacional, assinale a afirmativa correta.",
+"options": [
+"José é considerado contribuinte do Imposto de Importação em relação às mercadorias abandonadas que arrematou.",
+"José será considerado responsável tributário pelo Imposto de Importação devido, juntamente com a Importação 100% Ltda.",
+"A base de cálculo do Imposto de Importação em leilão promovido pela SERFB será o valor de mercado que tais bens alcançariam.",
+"José, por ser pessoa física, não poderia arrematar bens oriundos da aplicação de pena de perdimento de mercadoria importada por abandono."
+],
+"answer": 0,
+"explanation": "“Contribuinte do imposto é: (...) II - o arrematante de produtos apreendidos ou abandonados.” — Código Tributário Nacional, Art. 22, II. O CTN define expressamente o arrematante de mercadorias abandonadas como contribuinte do Imposto de Importação. Ao arrematar a carga, José assume a posição de sujeito passivo da obrigação tributária principal, sendo o devedor do imposto."
+},
+{
+"type": "multiple",
+"q": "Uma lei municipal do Município Alfa concedia isenção do IPTU a determinado segmento econômico. Contudo, em razão de dificuldades financeiras municipais, tal isenção foi revogada por nova lei, publicada em 20/2/2024, que estabelecia a produção de seus efeitos a partir de 1º/6/2024. A sociedade empresária ABC Ltda., que deixaria de ser beneficiada, questionou você, como advogado(a), para saber se tal lei revogadora não feriria as garantias tributárias constitucionais desse segmento. Diante desse cenário, assinale a opção que apresenta, corretamente, sua orientação.",
+"options": [
+"Seria necessária a alteração na Lei Orgânica do Município para revogar a isenção que favorecia a sociedade ABC Ltda.",
+"Por configurar cláusula pétrea, a isenção que favorecia a sociedade ABC Ltda. não poderia ser revogada, nem mesmo por emenda constitucional.",
+"A isenção que favorecia a sociedade ABC Ltda. poderia ser revogada, mas os efeitos da lei revogadora somente poderiam ser produzidos a partir de 1º/1/2025.",
+"A isenção que favorecia a sociedade ABC Ltda. não poderia ser revogada por mera lei municipal, mas apenas por Emenda Constitucional, por ser prevista como garantia tributária constitucional."
+],
+"answer": 2,
+"explanation": "“É vedado (...) cobrar tributos: (...) b) no mesmo exercício financeiro em que haja sido publicada a lei que os instituiu ou aumentou; c) antes de decorridos noventa dias da data em que haja sido publicada a lei que os instituiu ou aumentou...” — Constituição Federal, Art. 150, III, 'b' e 'c'. A revogação de uma isenção é equiparada a um aumento de tributo para fins de aplicação das anterioridades. Portanto, a lei que revogou a isenção do IPTU, publicada em 20/02/2024, deve respeitar tanto a anterioridade de exercício (só pode valer a partir de 1º/01/2025) quanto a anterioridade nonagesimal. Logo, seus efeitos só podem se iniciar em 2025."
+},
+{
+"type": "multiple",
+"q": "O Município Alfa editou lei, aplicável após sua entrada em vigor, sem caráter retroativo, devidamente regulamentada por decreto, dispondo sobre o número máximo de pavimentos em edificações situadas em determinadas ruas à beira-mar, em bairros da cidade especificados. Cuida-se, pois, de restrição geral, que atinge um número indeterminado de particulares proprietários de imóveis, nos termos indicados pelas normas municipais. Gustavo, em decorrência da aludida determinação ter afetado sua propriedade, procurou você, como advogado(a), para ser informado sobre a modalidade de intervenção praticada pelo Estado. Assinale a opção que indica, corretamente, sua resposta.",
+"options": [
+"Trata-se de servidão administrativa, embasada no regular emprego do poder hierárquico, diante da supremacia do interesse público sobre o privado.",
+"Trata-se de limitação administrativa, embasada no regular emprego do poder de polícia, haja vista que visa condicionar o exercício do direito de propriedade ao cumprimento de sua função social.",
+"Trata-se de requisição administrativa, embasada no regular emprego do poder disciplinar, haja vista que visa disciplinar e compatibilizar o direito de propriedade ao cumprimento de sua função social.",
+"Trata-se de desapropriação indireta, embasada no emprego do poder regulamentar, haja vista que reduziu parcialmente o direito de propriedade, diante da supremacia do interesse público sobre o privado."
+],
+"answer": 1,
+"explanation": "A limitação administrativa é uma intervenção estatal na propriedade privada, de caráter geral e abstrato, que impõe obrigações a proprietários indeterminados, com fundamento no poder de polícia e na função social da propriedade, sem gerar, em regra, direito a indenização. A restrição ao número de pavimentos (gabarito) é um exemplo clássico de limitação administrativa urbanística, o que torna a alternativa B a correta."
+},
+{
+"type": "multiple",
+"q": "João Silva, servidor público federal estável, ao assumir cargo efetivo com atribuições atinentes ao controle interno da Administração, constatou que, nos últimos dez anos, foram proferidos numerosos atos administrativos que ensejaram efeitos favoráveis a destinatários de boa-fé. Esses atos continham vícios de legalidade, sendo certo que, em muitos deles, o vício era de forma. Você foi contratado(a) como advogado(a) de Pedro, particular que figura como interessado em um determinado processo administrativo analisado por João Silva. À luz do disposto na Lei nº 9.784/99 assinale a opção que, corretamente, materializa a essência da consultoria jurídica que você, como advogado(a), apresentou a seu cliente Pedro.",
+"options": [
+"A eventual anulação dos atos administrativos viciados não precisa de motivação diante dos vícios verificados.",
+"Os atos administrativos viciados podem ser revogados, desde que respeitados os direitos adquiridos dos respectivos beneficiários.",
+"Os vícios de forma, caso se evidencie que não irão acarretar lesão ao interesse público nem prejuízo a terceiros, são passíveis de convalidação.",
+"Nos processos analisados por João Silva, os atos administrativos viciados poderão ser invalidados a qualquer tempo, pois não há prazo para o exercício do direito da Administração de anulá-los."
+],
+"answer": 2,
+"explanation": "“Em decisão na qual se evidencie não acarretarem lesão ao interesse público nem prejuízo a terceiros, os atos que apresentarem defeitos sanáveis poderão ser convalidados pela própria Administração.” — Lei nº 9.784/1999, Art. 55. Vícios de forma são, em regra, sanáveis. A lei permite que a Administração corrija (convalide) esses atos, desde que tal medida não prejudique o interesse público ou terceiros. A alternativa C descreve corretamente essa possibilidade. A alternativa D está errada pois há prazo decadencial de 5 anos para anulação (Art. 54)."
+},
+{
+"type": "multiple",
+"q": "Em decorrência de uma denúncia anônima, as autoridades competentes da União promoveram investigação e verificaram que Wagner, servidor público federal estável, cometeu infração disciplinar que também é capitulada como crime contra a Administração Pública. Em razão disso, de forma motivada, foi instaurado o respectivo processo administrativo disciplinar que, após exceder o prazo para a sua conclusão, sem prejuízo para a defesa, resultou na sua demissão. Wagner não se conforma com a mencionada penalidade, pois acredita na existência de vícios que fulminam o aludido processo administrativo disciplinar. Ainda, os fatos ocorreram seis anos antes da sua instauração, razão pela qual Wagner procurou você, como advogado(a). Você apurou que a Administração tomou conhecimento dos fatos três anos antes da instauração do processo administrativo disciplinar e que o respectivo crime estaria sujeito ao prazo prescricional de oito anos na esfera penal. Sobre a penalidade aplicada, assinale a opção que apresenta a orientação correta.",
+"options": [
+"Os prazos de prescrição da lei penal devem ser aplicados às infrações disciplinares capituladas como crime.",
+"O excesso de prazo para a conclusão do processo administrativo disciplinar, por si só, enseja a nulidade da penalidade, mesmo que não tenha havido prejuízo para a defesa.",
+"A penalidade aplicada é nula, na medida em que o processo administrativo disciplinar não poderia ser instaurado após a investigação levada a efeito em razão de denúncia anônima.",
+"O exercício da pretensão disciplinar está fulminado pela prescrição, pois transcorreram mais de cinco anos entre a ocorrência do fato e a instauração do respectivo processo administrativo disciplinar."
+],
+"answer": 0,
+"explanation": "“Os prazos de prescrição previstos na lei penal aplicam-se às infrações disciplinares capituladas também como crime.” — Lei nº 8.112/1990, Art. 142, § 2º. Uma vez que a infração disciplinar cometida por Wagner também é tipificada como crime, o prazo prescricional para a punição administrativa passa a ser o mesmo previsto na legislação penal (no caso, 8 anos), e não o prazo geral de 5 anos para demissão. Como a instauração do PAD ocorreu antes do término do prazo penal, não há prescrição."
+},
+{
+"type": "multiple",
+"q": "Diante da divulgação de uma notícia veiculando a intenção do Município Beta em formalizar uma concessão administrativa para a realização de certo serviço indivisível, que envolve a realização de obras de infraestrutura para sua materialização, os representantes da sociedade empresária Astuciosa ficaram entusiasmados em participar da respectiva licitação. Em razão disso, procuraram você, como advogada(o), para esclarecer as peculiaridades da respectiva avença. Sobre o contrato, assinale a opção que apresenta, corretamente, a orientação jurídica prestada.",
+"options": [
+"Não pode ter prazo de vigência inferior a cinco anos, nem superior a trinta e cinco anos, incluindo eventual prorrogação.",
+"Envolve a contraprestação pecuniária do parceiro público ao parceiro privado, adicionalmente à tarifa cobrada dos usuários.",
+"Independe da criação de sociedade de propósito específico antes de sua celebração, para fins de implantação e gestão do objeto da parceria.",
+"Não pode prever a repartição de riscos entre as partes, especialmente em relação a caso fortuito, força maior, fato do príncipe e álea econômica extraordinária."
+],
+"answer": 0,
+"explanation": "“...o prazo de vigência do contrato, compatível com a amortização dos investimentos realizados, não inferior a 5 (cinco), nem superior a 35 (trinta e cinco) anos, incluindo eventual prorrogação;” — Lei nº 11.079/2004 (Lei das PPPs), Art. 5º, I. A lei que rege as Parcerias Público-Privadas, modalidade que inclui a concessão administrativa, estabelece um intervalo de tempo específico para a vigência dos contratos, que deve ser de no mínimo 5 e no máximo 35 anos, já considerando eventuais prorrogações."
+},
+{
+"type": "multiple",
+"q": "Após o devido procedimento licitatório, foi formalizado com a sociedade empresária Esperta determinado contrato de prestação de serviços contínuos com dedicação exclusiva de mão de obra, sendo certo que, no curso do contrato, a contratada, ou seja, a sociedade Esperta, inadimpliu com diversos encargos previdenciários e trabalhistas, decorrentes da aludida avença. Em razão disso, a Administração contratante consultou a respectiva assessoria jurídica para dirimir as dúvidas atinentes à responsabilização do Poder Público e/ou as condutas que poderiam ser adotadas na situação descrita, à luz do disposto na Lei nº 14.133/2021. Assinale a opção que apresenta a informação correta a ser prestada pela assessoria jurídica.",
+"options": [
+"Somente a Administração Pública será objetivamente responsável pelos encargos trabalhistas e previdenciários resultantes da mencionada inexecução do contrato.",
+"Com relação aos encargos previdenciários, a responsabilização da Administração é subsidiária, desde que comprovada a falha na fiscalização do cumprimento das obrigações do contratado.",
+"A fiscalização por parte da Administração contratante exime o contratado de responsabilidade, tanto com relação aos encargos trabalhistas quanto no que concerne aos previdenciários.",
+"A Administração contratante, mediante disposição em edital ou em contrato, poderá, em caso de inadimplemento, efetuar diretamente o pagamento das verbas trabalhistas, que serão deduzidas do pagamento devido ao contratado."
+],
+"answer": 3,
+"explanation": "“Mediante disposição em edital ou em contrato, poderá ser permitida à Administração, em caso de inadimplemento do contratado no que se refere às verbas trabalhistas, o pagamento direto aos trabalhadores, que serão deduzidos da fatura devida à contratada.” — Lei nº 14.133/2021 (Nova Lei de Licitações), Art. 121, § 4º. A nova lei de licitações prevê expressamente a possibilidade de a Administração, se previsto em edital ou contrato, pagar diretamente os trabalhadores em caso de inadimplência da empresa contratada, descontando o valor do pagamento que seria feito a esta. É um mecanismo de proteção aos trabalhadores."
+},
+{
+"type": "multiple",
+"q": "Bruno pretende realizar supressão de vegetação nativa em Área de Preservação Permanente no interior de sua propriedade, a fim de viabilizar a implantação de trilhas para o desenvolvimento do ecoturismo. Com objetivo de verificar a legalidade de seu projeto, Bruno consultou você, como advogado(a). Você informou a seu cliente que, de acordo com o Código Florestal, a intervenção ou a supressão de vegetação nativa em Área de Preservação Permanente ocorrerá nas hipóteses previstas naquela Lei. Assim, sobre a implantação de trilhas para o desenvolvimento do ecoturismo, assinale a afirmativa correta.",
+"options": [
+"Encaixa-se na hipótese de interesse social, razão pela qual é viável a supressão vegetal.",
+"Não se amolda a qualquer das hipóteses, razão pela qual é inviável a supressão vegetal.",
+"Enquadra-se na hipótese de baixo impacto ambiental, razão pela qual é viável a supressão vegetal.",
+"Não se compatilibiliza com qualquer das hipóteses, mas é viável a supressão vegetal, mediante pagamento de prévia compensação ambiental."
+],
+"answer": 2,
+"explanation": "“Para os fins desta Lei, entende-se por: (...) X - atividades eventuais ou de baixo impacto ambiental: (...) d) implantação de trilhas para o desenvolvimento do ecoturismo;” — Lei nº 12.651/2012 (Código Florestal), Art. 3º, X, 'd'. O Art. 8º da mesma lei autoriza a intervenção em APP para atividades de baixo impacto ambiental. Como a implantação de trilhas de ecoturismo é legalmente definida como tal, a supressão da vegetação, mediante autorização do órgão competente, é viável."
+},
+{
+"type": "multiple",
+"q": "A palavra piracema vem do tupi e significa saída de peixes. Trata-se de um fenômeno que ocorre com diversas espécies de peixes e constitui importante estratégia reprodutiva para garantir que o peixe complete seu ciclo de vida, dando continuidade à sua espécie. Apesar de estar ciente da importância de respeitar o período em que a legislação veda a pesca, Carlos, de forma livre e consciente, estava pescando, no período em que a pesca ainda estava proibida. Por isso, foi abordado por fiscais do meio ambiente, que encontraram em seu barco várias caixas de peixes já mortos. Após o aludido fato, Carlos procurou você, como advogado(a), para tirar dúvidas acerca das penalidades que poderiam a ele ser aplicadas e os eventuais reflexos delas decorrentes. Sobre a conduta praticada por Carlos, à luz da Lei nº 9.605/1998, assinale a opção que apresenta, corretamente, a orientação dada.",
+"options": [
+"Caracteriza crime ambiental punível com pena de detenção, sendo incabível, contudo, a transação penal, em decorrência da penalidade prevista para o delito.",
+"Caracteriza tanto crime ambiental quanto infração administrativa, mas não pode ensejar a apreensão dos produtos e instrumentos utilizados na prática do ilícito.",
+"Caracteriza apenas infração administrativa, viabilizando a imediata apreensão dos peixes, sendo a ele aplicáveis sanções restritivas de direitos na esfera extrapenal.",
+"Caracteriza somente infração administrativa, passível da aplicação de multa e da apreensão dos peixes e dos instrumentos, petrechos e equipamentos de qualquer natureza utilizados na infração."
+],
+"answer": 0,
+"explanation": "“Pescar em período no qual a pesca seja proibida ou em lugares interditados por órgão competente: Pena - detenção de um ano a três anos ou multa, ou ambas as penas cumulativamente.” — Lei nº 9.605/1998 (Lei de Crimes Ambientais), Art. 34. A conduta de Carlos tipifica crime ambiental. A pena máxima cominada ao delito é de 3 anos, o que ultrapassa o limite de 2 anos estabelecido no Art. 76 da Lei nº 9.099/95 para o cabimento da transação penal. Embora a conduta também seja uma infração administrativa, a alternativa A é a mais completa ao analisar a esfera penal e seus desdobramentos processuais."
+},
+{
+"type": "multiple",
+"q": "Miguel Tavares vendeu um imóvel para Margarida Pinto localizado na comarca de Caxias do Sul, RS. Ficou avençado que a imissão da posse ocorreria na celebração da escritura pública, e o pagamento seria feito em 48 prestações. Após o pagamento de 38 prestações, a compradora, em virtude de desemprego, passou a não ter condições financeiras para a quitação das prestações, fato que foi imediatamente comunicado ao vendedor. Diante da inadimplência, Miguel contratou uma sociedade empresária, conferindo expressamente amplos poderes para a cobrança. A sociedade empresária entrou em contato com a compradora dezenas de vezes por dia cobrando a dívida. O teor do contato era a cobrança, tendo sido emitidas centenas de recados e mensagens por cerca de 45 dias, em horários diferentes, inclusive, pela madrugada. Além disso, a sociedade empresária publicou dezenas de comunicados em redes sociais com alcance na região de Caxias do Sul, informando a todos a inadimplência da compradora, que era marcada em todas as publicações. Diante da situação hipotética narrada, com base no ordenamento jurídico brasileiro, assinale a afirmativa correta.",
+"options": [
+"A atitude da sociedade empresária é válida, visto que age em nome da vendedora, no exercício regular de seu direito.",
+"Por ser terceira interposta, a conduta da sociedade empresária é considerada ato lícito, não conduzindo à responsabilidade civil.",
+"O eventual ato ilícito cometido pela sociedade empresária só atinge a vendedora se for demonstrado o dolo omissivo de sua conduta.",
+"A conduta da sociedade empresária, que age em nome da vendedora, excede manifestamente os limites impostos pelo seu fim econômico ou social, pela boa-fé ou pelos bons costumes, caracterizando ato ilícito."
+],
+"answer": 3,
+"explanation": "“Também comete ato ilícito o titular de um direito que, ao exercê-lo, excede manifestamente os limites impostos pelo seu fim econômico ou social, pela boa-fé ou pelos bons costumes.” — Código Civil, Art. 187. O direito de cobrança existe, mas seu exercício deve ser pautado pela razoabilidade. A conduta da empresa (contatos excessivos, em horários impróprios e exposição vexatória em redes sociais) configura abuso de direito, um ato ilícito que gera o dever de indenizar. O mandante (Miguel) responde pelos atos do mandatário (empresa) praticados nos limites dos poderes conferidos."
+},
+{
+"type": "multiple",
+"q": "Mariana e Manuela celebraram contrato escrito de locação de imóvel urbano para fim residencial, pelo prazo de 30 meses. Decorrido o prazo previsto no contrato, Manuela, locatária, permaneceu no imóvel, e Mariana, locadora, periodicamente recebe e dá quitação dos aluguéis recebidos. Sobre a situação de Mariana, passados três meses do prazo fixado no contrato, assinale a afirmativa correta.",
+"options": [
+"Está sujeita ao direito potestativo de renovação de Manuela, que poderá renovar por mais 30 meses o contrato.",
+"Tem a possibilidade de exercer denúncia vazia, garantindo à Manuela, pelo menos, o prazo de 30 dias para a desocupação do imóvel.",
+"Não tem a faculdade de exercer denúncia vazia pois, em razão do prazo contratado inicialmente, somente caberá denúncia cheia.",
+"Deverá renegociar as cláusulas contratuais com Manuela, e estabelecer um novo prazo, por não haver presunção de prorrogação contratual para o caso."
+],
+"answer": 1,
+"explanation": "“Findo o prazo ajustado, se o locatário permanecer no imóvel por mais de trinta dias sem oposição do locador, presumir-se-á prorrogada a locação por prazo indeterminado (...). § 2º Ocorrendo a prorrogação, o locador poderá denunciar o contrato a qualquer tempo, concedido o prazo de trinta dias para desocupação.” — Lei nº 8.245/1991 (Lei do Inquilinato), Art. 46 e § 2º. Como Manuela permaneceu no imóvel por mais de 30 dias após o fim do contrato sem oposição de Mariana, a locação foi prorrogada por prazo indeterminado. Nessa situação, a locadora pode pedir o imóvel de volta a qualquer tempo (denúncia vazia), bastando notificar a locatária para desocupar em 30 dias."
+},
+{
+"type": "multiple",
+"q": "Priscila e Lucas tiveram filhos muito cedo. Com 20 anos, Priscila teve Hugo, com Pedro. Com 19 anos, Lucas teve Vitória, com Larissa. Priscila e Lucas começaram a namorar quando seus filhos ainda eram bebês e se casaram tempos depois. Após vinte anos de casamento, sempre morando com os filhos, decidiram se divorciar. Durante todo esse tempo, Priscila cuidou de Vitória como se fosse mãe dela, contribuindo, inclusive, com as despesas da menina. Lucas, por sua vez, nunca teve paciência com as crianças e não desenvolveu com Hugo um relacionamento próximo, apesar de viverem na mesma casa. Os gastos específicos do menino sempre foram custeados por Priscila e por Pedro. Sobre os fatos narrados, segundo o ordenamento jurídico brasileiro, assinale a afirmativa correta.",
+"options": [
+"Por terem Priscila e Lucas criado as crianças, como um casal, sob o mesmo teto, fica automaticamente configurada a multiparentalidade.",
+"Por ter sempre morado com Lucas, Hugo pode buscar o reconhecimento do vínculo de parentalidade socioafetiva com ele, o que extinguiria o vínculo jurídico entre Hugo e Pedro.",
+"Por ter Priscila criado Vitória como se fossem mãe e filha, é possível o reconhecimento do vínculo de parentalidade socioafetiva, com o consentimento de Vitória e sem prejuízo, necessariamente, do vínculo de Vitória com Larissa.",
+"Por ser conhecida a mãe biológica de Vitória, não é possível a configuração de parentalidade socioafetiva com Priscila, assim como, por ser conhecido o pai biológico de Hugo, não é possível a configuração de parentalidade socioafetiva com Lucas."
+],
+"answer": 2,
+"explanation": "“A paternidade socioafetiva, declarada ou não em registro público, não impede o reconhecimento do vínculo de filiação concomitante baseado na origem biológica, com os efeitos jurídicos próprios.” — Tese de Repercussão Geral fixada no RE 898.060 (Tema 622), STF. O Supremo Tribunal Federal consolidou o entendimento de que é possível a coexistência de vínculos de filiação biológico e socioafetivo (multiparentalidade). A parentalidade socioafetiva se funda na posse do estado de filho (afeto, tratamento, fama). No caso, a relação de cuidado e afeto de Priscila para com Vitória pode configurar a maternidade socioafetiva, sem que isso apague a maternidade biológica de Larissa."
+},
+{
+"type": "multiple",
+"q": "Ivan, André e Caio celebraram negócio jurídico pelo qual se obrigaram a entregar um veículo da marca Ma Bruna. Na data avençada para o cumprimento da obrigação, Ivan deu à Bruna um carro da marca M de sua propriedade. Sobre a situação hipotética apresentada, assinale a afirmativa correta.",
+"options": [
+"Bruna pode exigir de André e de Caio as suas respectivas cotas-partes na dívida.",
+"Ivan pode cobrar de André e de Caio, em dinheiro, as respectivas cotas-partes no débito.",
+"André e Caio permanecem coobrigados perante Bruna pela parte que lhes cabe na dívida.",
+"Tanto André como Caio permanecem responsáveis pela entrega de um carro, agora perante Ivan."
+],
+"answer": 1,
+"explanation": "“Se, havendo dois ou mais devedores, a prestação não for divisível, cada um será obrigado pela dívida toda. Parágrafo único. O devedor, que paga a dívida, sub-roga-se no direito do credor em relação aos outros coobrigados.” — Código Civil, Art. 259. A entrega de um veículo é uma obrigação indivisível. Sendo cumprida integralmente por um dos devedores (Ivan), ele se sub-roga nos direitos do credor e pode exigir dos demais codevedores (André e Caio) suas respectivas quotas-partes. Como a prestação em si (o carro) já foi entregue, a cobrança das quotas-partes se resolve em dinheiro."
 }
 ],
 "skipped": []
