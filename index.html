@@ -490,7 +490,7 @@
     // Google modo IA (udm=50)
     function openGoogleAI(){
       const q=current(); if(!q) return;
-      const prompt = `Analise o enunciado da questão e fundamente juridicamente a alternativa correta. Tema: ${q.q}, alternativa: ${correctText}`;
+      const prompt = 'VProfessor, por favor fundamente a alternativa correta e as incorretas. Enunciado: ' + String((q && q.q) || '') + ' | Opções: ' + (q && q.type === 'vf' ? 'Verdadeiro | Falso' : (Array.isArray(q && q.options) ? q.options.map(function(t,i){ return (i+1)+') '+t; }).join(' | ') : '')) + ' | Alternativa correta: ' + (q && q.type === 'vf' ? (q && q.answer ? 'Verdadeiro' : 'Falso') : (Array.isArray(q && q.options) && typeof q.answer === 'number' ? q.options[q.answer] : ''));
       const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt);
       window.open(url, '_blank', 'noopener');
     }
