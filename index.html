@@ -23,7 +23,7 @@
     section{ padding:26px 0 }
 
     label{ display:block; font-size:12px; color:var(--muted); margin-bottom:6px }
-    select,button{ appearance:none; border:1px solid #e5e7eb; background:#fff; color:var(--ink); border-radius:8px; padding:10px 12px; font-size:14px; font-weight:300 }
+    select,button,input{ appearance:none; border:1px solid #e5e7eb; background:#fff; color:var(--ink); border-radius:8px; padding:10px 12px; font-size:14px; font-weight:300 }
     select{ width:100% }
     .controls{ display:grid; gap:12px; grid-template-columns:1fr }
     @media (min-width:620px){ .controls{ grid-template-columns:1fr 1fr } }
@@ -56,6 +56,10 @@
     .quiz{ padding-top:6px }
     .results h2{ font-size:18px; font-weight:400; margin:0 0 4px }
     .score{ font-size:28px; font-weight:400 }
+
+    /* Busca */
+    .searchbar{ display:grid; grid-template-columns:1fr auto auto; gap:8px; align-items:center; margin:6px 0 4px }
+    .searchbar input{ width:100% }
 
     .hide{ display:none }
 
@@ -102,6 +106,11 @@
     </section>
 
     <section class="quiz hide" id="screenQuiz">
+      <div class="searchbar">
+        <input id="txtSearch" type="search" placeholder="Buscar termo exato em enunciados e opções" aria-label="Buscar" />
+        <button id="btnSearch" class="btn ghost" type="button" title="Buscar">Buscar</button>
+        <button id="btnClearSearch" class="btn ghost hide" type="button" title="Limpar busca">Limpar</button>
+      </div>
       <div class="progress" aria-label="Progresso"><span id="bar"></span></div>
       <p id="question" class="statement"></p>
       <div id="options" class="options" role="listbox"></div>
@@ -131,13 +140,7 @@
 
   <script>
     // ===== Config =====
-    const CONFIG = {
-      useGitHubIndexer: true,
-      owner: null,
-      repo: null,
-      branch: 'main',
-      dataDir: 'data'
-    };
+    const CONFIG = { useGitHubIndexer:true, owner:null, repo:null, branch:'main', dataDir:'data' };
     const AUTO_RESUME = true;
 
     // ===== Toast =====
@@ -170,6 +173,10 @@
     const appTitle = document.getElementById('appTitle');
     const state = document.getElementById('state');
 
+    const txtSearch = document.getElementById('txtSearch');
+    const btnSearch = document.getElementById('btnSearch');
+    const btnClearSearch = document.getElementById('btnClearSearch');
+
     const questionEl = document.getElementById('question');
     const optionsEl = document.getElementById('options');
     const bar = document.getElementById('bar');
@@ -194,6 +201,7 @@
 
     // ===== Estado =====
     let MANIFEST = null, QUIZ = null, ORDER = [], CHOSEN = [], I = 0, KEY = null;
+    let SEARCH = { active:false, term:'', matches:[], baseOrder:null };
 
     // ===== Utils =====
     const show = (node, flag) => node.classList.toggle('hide', !flag);
@@ -322,6 +330,11 @@
       btnNext.addEventListener('click', next);
       btnAI.addEventListener('click', openGoogleAI);
 
+      // Busca
+      btnSearch.addEventListener('click', ()=> applySearch(txtSearch.value));
+      txtSearch.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ applySearch(txtSearch.value); }});
+      btnClearSearch.addEventListener('click', clearSearch);
+
       const goHome = ()=>{ resetState(); show(screenIntro,true); show(screenQuiz,false); show(screenResult,false); state.textContent='pronto'; };
       btnGoHome.addEventListener('click', goHome);
       btnHome.addEventListener('click', goHome);
@@ -378,7 +391,7 @@
 
     async function startQuizFromSelection(){ const path=selectedPath(); if(!path) return; await loadQuiz(path, true); }
 
-    function resetState(){ QUIZ=null; ORDER=[]; CHOSEN=[]; I=0; KEY=null; explainEl.classList.add('hide'); }
+    function resetState(){ QUIZ=null; ORDER=[]; CHOSEN=[]; I=0; KEY=null; explainEl.classList.add('hide'); SEARCH={active:false, term:'', matches:[], baseOrder:null}; txtSearch.value=''; show(btnClearSearch,false); }
 
     // ===== Carregar quiz, nunca embaralhar perguntas =====
     async function loadQuiz(path, fresh=false, tryRestore=false){
@@ -397,14 +410,21 @@
       const total=(qz.questions||[]).length;
       let saved = tryRestore ? lsGet(KEY.key) : null;
 
-      ORDER=[...Array(total).keys()]; // 0..n-1
+      ORDER=[...Array(total).keys()]; // ordem natural
       CHOSEN=new Array(total).fill(null);
       I=0;
 
       if(!fresh && saved && saved.quizLen===total){
-        if(Array.isArray(saved.order) && saved.order.length===total) ORDER = saved.order;
+        if(Array.isArray(saved.order) && saved.order.length>0) ORDER = saved.order;
         if(Array.isArray(saved.chosen)) CHOSEN = saved.chosen;
         I = clamp(saved.i,0,total-1);
+        // restaura busca se existir
+        if(saved.search && saved.search.active && Array.isArray(saved.search.matches)){
+          SEARCH = { ...saved.search };
+          ORDER = saved.search.matches.slice();
+          show(btnClearSearch, true);
+          txtSearch.value = saved.search.term || '';
+        }
       }
 
       state.textContent='respondendo';
@@ -426,7 +446,8 @@
         order:ORDER,
         quizLen: QUIZ.questions.length,
         path: KEY.path,
-        ts: Date.now()
+        ts: Date.now(),
+        search: SEARCH
       });
       lsSet('quiz:last', KEY);
     }
@@ -434,9 +455,12 @@
     function render(){
       const total=QUIZ.questions.length;
       const answered=CHOSEN.filter(v=>v!==null).length;
-      bar.style.width = Math.round((I)/Math.max(1,total-1)*100) + '%';
-      footLeft.textContent = `Pergunta ${I+1}/${total}`;
-      footRight.textContent = `${answered} respondidas`;
+      bar.style.width = Math.round((I)/Math.max(1,Math.max(0,ORDER.length-1)||1)*100) + '%';
+      const scopeTotal = ORDER.length || total;
+      footLeft.textContent = `Pergunta ${I+1}/${scopeTotal}`;
+      footRight.textContent = SEARCH.active
+        ? `${answered} respondidas • filtro: "${SEARCH.term}" (${SEARCH.matches.length})`
+        : `${answered} respondidas`;
 
       const q=current();
       questionEl.textContent = q.q;
@@ -454,7 +478,7 @@
       }
 
       btnPrev.disabled = I===0;
-      btnNext.textContent = I < total-1 ? (LABELS.next||'Próximo') : 'Finalizar';
+      btnNext.textContent = I < scopeTotal-1 ? (LABELS.next||'Próximo') : 'Finalizar';
 
       if (CHOSEN[ ORDER[I] ] !== null) markLocked();
 
@@ -516,7 +540,7 @@
 
     function next(){
       if(!isLocked()){ toast('Selecione uma opção para avançar','warn',1600); return; }
-      if(I<QUIZ.questions.length-1){ I++; render(); } else finish();
+      if(I<ORDER.length-1){ I++; render(); } else finish();
     }
     function prev(){ if(I>0){ I--; render(); } }
 
@@ -547,12 +571,62 @@
       window.open(url, '_blank', 'noopener');
     }
 
+    // ===== Busca: termo exato em enunciado e opções =====
+    function norm(s){ return String(s??'').toLocaleLowerCase('pt-BR').replace(/\s+/g,' ').trim(); }
+    function findMatches(term){
+      const t = norm(term);
+      if(!t) return [];
+      const out=[];
+      for(let i=0;i<QUIZ.questions.length;i++){
+        const q = QUIZ.questions[i];
+        let hit = false;
+        if(norm(q.q).includes(t)) hit=true;
+        else if((q.type||'multiple')==='vf'){
+          const vf = ['verdadeiro','falso'];
+          if(vf.some(x=> x.includes(t))) hit=true;
+        }else if(Array.isArray(q.options)){
+          for(const opt of q.options){ if(norm(opt).includes(t)){ hit=true; break; } }
+        }
+        if(hit) out.push(i);
+      }
+      return out;
+    }
+    function applySearch(term){
+      if(!QUIZ) return;
+      const matches = findMatches(term);
+      if(matches.length===0){
+        toast('Nenhuma questão encontrada','warn',1800);
+        return;
+      }
+      if(!SEARCH.active){
+        SEARCH.baseOrder = ORDER.slice(); // guarda ordem atual
+      }
+      SEARCH.active = true;
+      SEARCH.term = term;
+      SEARCH.matches = matches.slice();
+      ORDER = matches.slice();
+      I = 0;
+      show(btnClearSearch, true);
+      toast(`Filtro ativo: ${matches.length} questão(ões)`,'info',2000);
+      render();
+    }
+    function clearSearch(){
+      if(!SEARCH.active) return;
+      ORDER = Array.isArray(SEARCH.baseOrder) && SEARCH.baseOrder.length ? SEARCH.baseOrder.slice() : [...Array(QUIZ.questions.length).keys()];
+      SEARCH = { active:false, term:'', matches:[], baseOrder:null };
+      txtSearch.value='';
+      show(btnClearSearch, false);
+      I = 0;
+      toast('Filtro removido','info',1200);
+      render();
+    }
+
     window.addEventListener('keydown',(e)=>{
       if(screenQuiz.classList.contains('hide')) return;
       if(e.key>='1'&&e.key<='9'){
         const idx=parseInt(e.key,10)-1; const btn=optionsEl.querySelectorAll('.opt')[idx]; if(btn) btn.click();
       } else if(e.key==='Enter'||e.key==='ArrowRight'){
-        if(I===QUIZ.questions.length-1) finish(); else next();
+        if(I===ORDER.length-1) finish(); else next();
       } else if(e.key==='ArrowLeft'){ prev(); }
     });
 
