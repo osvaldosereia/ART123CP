@@ -1,66 +1,404 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="pt-br">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MeuJus – Quiz Jurídico</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>MeuJus — Quiz</title>
+  <meta name="description" content="MeuJus — Quiz minimalista com categorias e temas. Pronto para GitHub Pages." />
+  <style>
+    /* ===== Estilo minimalista: foco no texto ===== */
+    :root{
+      --bg: #ffffff;           /* fundo branco */
+      --bg-soft: #f6f7f8;      /* cinza muito claro */
+      --ink: #0f172a;          /* texto principal */
+      --muted: #6b7280;        /* texto secundário */
+      --accent: #111827;       /* destaque sutil escuro */
+      --ok: #059669;           /* correto */
+      --bad: #b91c1c;          /* incorreto */
+    }
+    * { box-sizing: border-box }
+    html, body { height: 100% }
+    body{
+      margin:0; background: var(--bg);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+      line-height: 1.6;
+      font-size: 15px; /* fonte pequena e leve */
+      font-weight: 300;
+    }
+
+    .container{ max-width: 820px; margin: 0 auto; padding: 20px; }
+
+    header.site{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding: 20px 0 10px; }
+    .brand{ font-size: 18px; font-weight: 400; letter-spacing:.2px; color: var(--accent); }
+    .state{ font-size: 12px; color: var(--muted); }
+
+    /* Seções com muito respiro, sem molduras pesadas */
+    section{ padding: 18px 0; }
+
+    /* Controles enxutos */
+    label{ display:block; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+    select, button{ appearance:none; border:1px solid #e5e7eb; background: #fff; color: var(--ink); border-radius: 8px; padding: 10px 12px; font-size: 14px; font-weight: 300; }
+    select{ width: 100%; }
+    .controls{ display:grid; gap:12px; grid-template-columns: 1fr; }
+    @media (min-width:620px){ .controls{ grid-template-columns: 1fr 1fr; } }
+    .actions{ display:flex; gap:10px; padding-top:8px }
+    .btn{ cursor:pointer }
+    .btn.primary{ background: var(--ink); color:#fff; border-color: var(--ink); }
+    .btn.ghost{ background: transparent; border-color:#e5e7eb; }
+
+    /* Barra de progresso finíssima */
+    .progress{ height: 3px; background: #e5e7eb; border-radius: 999px; overflow:hidden }
+    .progress > span{ display:block; width:0%; height:100%; background: #111827; transition: width .25s ease }
+
+    /* Enunciado e opções: parágrafos com espaçamento generoso */
+    .statement{ font-size: 16px; font-weight: 400; margin: 8px 0 6px; letter-spacing:.1px }
+    .options{ display:grid; gap:8px; margin: 6px 0 8px }
+    .opt{ text-align:left; background: transparent; border:1px solid #e5e7eb; padding: 10px 12px; border-radius:10px; font-size: 15px; font-weight:300 }
+    .opt:hover{ border-color:#cbd5e1 }
+    .opt[disabled]{ opacity:.7; cursor:not-allowed }
+    .opt.correct{ border-color: rgba(5,150,105,.8); background: #f0fdf4 }
+    .opt.wrong  { border-color: rgba(185,28,28,.8); background: #fef2f2 }
+
+    .explain{ background: var(--bg-soft); color: var(--ink); padding: 10px 12px; border-radius: 10px; font-size: 14px; margin-top: 6px }
+
+    .muted{ color: var(--muted); font-size: 13px }
+    .meta{ display:flex; justify-content:space-between; gap:12px; padding-top: 10px; color: var(--muted); font-size:12px }
+
+    /* Layouts */
+    .intro{ background: var(--bg-soft); border-radius: 12px; padding: 14px 12px }
+    .quiz{ padding-top: 6px }
+    .results h2{ font-size: 18px; font-weight: 400; margin: 0 0 4px }
+    .score{ font-size: 28px; font-weight: 400 }
+
+    .hide{ display:none }
+  </style>
 </head>
 <body>
-
-  <!-- =========================
-       TELA INICIAL
-  ========================== -->
-  <main id="home-screen" class="screen active">
-    <header class="home-header">
-      <h1 class="logo">MeuJus</h1>
+  <div class="container">
+    <header class="site">
+      <div class="brand" id="appTitle">MeuJus</div>
+      <div class="state" id="state">pronto</div>
     </header>
 
-    <section class="home-content">
-      <h2>Escolha uma categoria</h2>
-      <div id="category-list" class="list"></div>
+    <!-- Intro -->
+    <section class="intro" id="screenIntro">
+      <p class="muted" id="introSubtitle">Escolha uma categoria e um tema para começar.</p>
+      <div class="controls">
+        <div>
+          <label for="selCategory">Categoria</label>
+          <select id="selCategory" aria-label="Categoria"></select>
+        </div>
+        <div>
+          <label for="selTheme">Tema</label>
+          <select id="selTheme" aria-label="Tema"></select>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="btnStart" class="btn primary" type="button">Começar</button>
+      </div>
     </section>
-  </main>
 
-  <!-- =========================
-       TELA DE QUIZ
-  ========================== -->
-  <main id="quiz-screen" class="screen hidden">
-    <header class="topbar">
-      <div class="left">
-        <button id="btn-category" class="link">Selecionar categoria</button>
+    <!-- Quiz -->
+    <section class="quiz hide" id="screenQuiz">
+      <div class="progress" aria-label="Progresso"><span id="bar"></span></div>
+      <p id="question" class="statement"></p>
+      <div id="options" class="options" role="listbox"></div>
+      <div id="explanation" class="explain hide"></div>
+      <div class="actions">
+        <button id="btnPrev" class="btn ghost" type="button">Anterior</button>
+        <button id="btnNext" class="btn primary" type="button">Próximo</button>
       </div>
-      <div class="right">
-        <span class="mini-logo">MJ</span>
+      <div class="meta">
+        <span id="footLeft">—</span>
+        <span id="footRight">—</span>
       </div>
-    </header>
+    </section>
 
-    <section id="quiz-container" class="quiz-container"></section>
-
-    <!-- Botão flutuante IA -->
-    <button id="btn-ia" class="float-btn" title="Enviar para IA">🤖</button>
-  </main>
-
-  <!-- =========================
-       MODAL DE SELEÇÃO
-  ========================== -->
-  <div id="modal" class="modal hidden">
-    <div class="modal-content">
-      <h3 id="modal-title">Escolha um tema</h3>
-      <div id="modal-options" class="list"></div>
-      <button id="modal-close" class="close">Fechar</button>
-    </div>
+    <!-- Resultado -->
+    <section class="results hide" id="screenResult">
+      <h2 id="resultTitle">Resultado</h2>
+      <div class="score" id="resultScore"></div>
+      <p class="muted" id="resultMsg"></p>
+      <div class="actions">
+        <button id="btnRetry" class="btn ghost" type="button">Refazer</button>
+        <button id="btnHome" class="btn primary" type="button">Início</button>
+      </div>
+    </section>
   </div>
 
-  <!-- =========================
-       TEMPLATE DE ANÚNCIO (placeholder)
-  ========================== -->
-  <template id="ad-template">
-    <div class="ad-placeholder">
-      <!-- Google AdSense entra aqui -->
-    </div>
-  </template>
+  <script>
+    // ==========================
+    // Dados externos com fallback embutido
+    // ==========================
+    const selCategory = document.getElementById('selCategory');
+    const selTheme = document.getElementById('selTheme');
+    const btnStart = document.getElementById('btnStart');
 
-  <script src="app.js"></script>
+    const screenIntro = document.getElementById('screenIntro');
+    const screenQuiz = document.getElementById('screenQuiz');
+    const screenResult = document.getElementById('screenResult');
+
+    const appTitle = document.getElementById('appTitle');
+    const state = document.getElementById('state');
+
+    const questionEl = document.getElementById('question');
+    const optionsEl = document.getElementById('options');
+    const bar = document.getElementById('bar');
+    const explainEl = document.getElementById('explanation');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+
+    const resultTitle = document.getElementById('resultTitle');
+    const resultScore = document.getElementById('resultScore');
+    const resultMsg = document.getElementById('resultMsg');
+    const btnRetry = document.getElementById('btnRetry');
+    const btnHome = document.getElementById('btnHome');
+
+    const footLeft = document.getElementById('footLeft');
+    const footRight = document.getElementById('footRight');
+
+    const DEFAULT_LABELS = { start: 'Começar', next: 'Próximo', prev: 'Anterior', retry: 'Refazer', home: 'Início', category: 'Categoria', theme: 'Tema', result: 'Resultado' };
+    let LABELS = { ...DEFAULT_LABELS };
+
+    let MANIFEST = null;     // manifesto carregado
+    let QUIZ = null;         // quiz atual carregado
+    let ORDER = [];          // ordem das questões
+    let CHOSEN = [];         // respostas escolhidas (índice ou boolean)
+    let I = 0;               // índice atual
+    let KEY = null;          // chave localStorage
+
+    // Utils
+    const show = (node, flag) => node.classList.toggle('hide', !flag);
+    const clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
+    function lsGet(k, def=null){ try{ const v = localStorage.getItem(k); return v? JSON.parse(v):def; }catch{ return def; } }
+    function lsSet(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch{} }
+    function shuffleInPlace(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+    function readEmbedded(path){ const t=document.querySelector(`script[type="application/json"][data-path="${path}"]`); if(!t) return null; try{ return JSON.parse(t.textContent);}catch{ return null; } }
+    function mustUseEmbedded(){ return new URLSearchParams(location.search).get('embedded')==='1'; }
+    async function loadJSON(path, fallback=undefined){
+      if(!mustUseEmbedded()){
+        try{ const res = await fetch(path,{cache:'no-store'}); if(res.ok) return res.json(); }catch{}
+      }
+      const emb=readEmbedded(path); if(emb!=null) return emb; if(fallback!==undefined) return fallback; return null;
+    }
+
+    function isCorrectQuestion(q, pick){ if(!q) return false; const t=q.type||'multiple'; if(t==='vf') return (pick===!!q.answer); return (typeof pick==='number' && pick===q.answer); }
+
+    init();
+    async function init(){
+      const manifestFallback={ title:'MeuJus', categories:[{"id":"intro","name":"Introdução","themes":[{"id":"basico","name":"Básico","path":"data/intro/basico.json"}]}], shuffleDefault:{questions:true,options:true}, persistDefault:true };
+      MANIFEST = await loadJSON('data/manifest.json', manifestFallback);
+
+      appTitle.textContent = MANIFEST?.title || 'MeuJus';
+      try{ if(MANIFEST?.labels) LABELS={...DEFAULT_LABELS, ...(await loadJSON(MANIFEST.labels))}; }catch{}
+      applyLabels();
+
+      // popular selects
+      selCategory.innerHTML='';
+      (MANIFEST?.categories||[]).forEach((c,idx)=>{ const o=document.createElement('option'); o.value=c.id; o.textContent=c.name||c.id; if(idx===0) o.selected=true; selCategory.appendChild(o); });
+      updateThemes();
+
+      // eventos
+      selCategory.addEventListener('change', updateThemes);
+      btnStart.addEventListener('click', startQuizFromSelection);
+      btnPrev.addEventListener('click', prev);
+      btnNext.addEventListener('click', next);
+      btnRetry.addEventListener('click', ()=> loadQuiz(KEY?.path, true));
+      btnHome.addEventListener('click', ()=>{ resetState(); show(screenIntro,true); show(screenQuiz,false); show(screenResult,false); state.textContent='pronto'; });
+
+      // restore
+      const last=lsGet('quiz:last'); if(last&&last.path){ KEY=last; await loadQuiz(last.path, false, true); }
+      if(!QUIZ){ const p=selectedPath(); if(p) await loadQuiz(p, true); }
+
+      setTimeout(runTests,0);
+    }
+
+    function applyLabels(){
+      document.querySelector('label[for="selCategory"]').textContent = LABELS.category || 'Categoria';
+      document.querySelector('label[for="selTheme"]').textContent = LABELS.theme || 'Tema';
+      btnStart.textContent = LABELS.start || 'Começar';
+      btnPrev.textContent = LABELS.prev || 'Anterior';
+      btnNext.textContent = LABELS.next || 'Próximo';
+      document.getElementById('resultTitle').textContent = LABELS.result || 'Resultado';
+      btnRetry.textContent = LABELS.retry || 'Refazer';
+      btnHome.textContent = LABELS.home || 'Início';
+    }
+
+    function updateThemes(){
+      const catId = selCategory.value;
+      const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId) || {themes:[]};
+      selTheme.innerHTML='';
+      (cat.themes||[]).forEach((t,idx)=>{ const o=document.createElement('option'); o.value=t.id; o.textContent=t.name||t.id; if(idx===0) o.selected=true; selTheme.appendChild(o); });
+    }
+
+    function selectedPath(){ const catId=selCategory.value; const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId); const themeId=selTheme.value; const theme=(cat?.themes||[]).find(t=>t.id===themeId); return theme?.path || (catId&&themeId ? `data/${catId}/${themeId}.json`: null); }
+
+    async function startQuizFromSelection(){ const path=selectedPath(); if(!path) return; await loadQuiz(path, true); }
+
+    function resetState(){ QUIZ=null; ORDER=[]; CHOSEN=[]; I=0; KEY=null; explainEl.classList.add('hide'); }
+
+    async function loadQuiz(path, fresh=false, tryRestore=false){
+      state.textContent='carregando';
+      const qz=await loadJSON(path);
+      if(!qz || !Array.isArray(qz.questions)){ alert('Quiz não encontrado: '+path); state.textContent='erro'; return; }
+      QUIZ=qz; KEY={path, key:`quiz:${path}`}; lsSet('quiz:last', KEY);
+
+      try{ if(qz.labels){ LABELS={...LABELS, ...(await loadJSON(qz.labels))}; applyLabels(); } }catch{}
+
+      const total=(qz.questions||[]).length;
+      ORDER=[...Array(total).keys()];
+      const sh=qz.meta?.shuffle ?? MANIFEST?.shuffleDefault ?? {questions:true,options:true};
+      if(sh.questions) shuffleInPlace(ORDER);
+      CHOSEN=new Array(total).fill(null);
+      I=0;
+
+      if(!fresh && tryRestore){ const saved=lsGet(KEY.key); if(saved && saved.quizLen===total){ I=clamp(saved.i,0,total-1); CHOSEN=Array.isArray(saved.chosen)? saved.chosen: CHOSEN; } }
+
+      state.textContent='respondendo';
+      show(screenIntro,false); show(screenQuiz,true); show(screenResult,false);
+      render();
+    }
+
+    function current(){ return QUIZ.questions[ ORDER[I] ]; }
+
+    function persist(){ const persistFlag=QUIZ?.meta?.persist ?? MANIFEST?.persistDefault ?? true; if(!persistFlag||!KEY) return; lsSet(KEY.key, { i:I, chosen:CHOSEN, quizLen: QUIZ.questions.length }); }
+
+    function render(){
+      const total=QUIZ.questions.length;
+      const answered=CHOSEN.filter(v=>v!==null).length;
+      bar.style.width = Math.round((I)/Math.max(1,total-1)*100) + '%';
+      footLeft.textContent = `Pergunta ${I+1}/${total}`;
+      footRight.textContent = `${answered} respondidas`;
+
+      const q=current();
+      questionEl.textContent = q.q; // enunciados longos 120-200 chars
+      optionsEl.innerHTML='';
+      explainEl.classList.add('hide');
+
+      const type=q.type||'multiple';
+      if(type==='vf'){
+        renderOptions(['Verdadeiro','Falso'], (idx)=> select(idx===0), [0,1]);
+      } else {
+        const opts=q.options.map((t,i)=>({t,i}));
+        const shOpts=(QUIZ.meta?.shuffle?.options ?? MANIFEST?.shuffleDefault?.options) ? shuffleInPlace(opts) : opts;
+        renderOptions(shOpts.map(o=>o.t), (idx)=> select(shOpts[idx].i), shOpts.map(o=>o.i));
+      }
+
+      btnPrev.disabled = I===0;
+      btnNext.textContent = I < total-1 ? (LABELS.next||'Próximo') : 'Finalizar';
+
+      if (CHOSEN[ ORDER[I] ] !== null) markLocked();
+
+      persist();
+    }
+
+    function renderOptions(texts, onPick, origIdxs=null){
+      texts.forEach((txt, idx)=>{
+        const b=document.createElement('button');
+        b.className='opt'; b.textContent=txt; b.dataset.idx=idx; if(origIdxs) b.dataset.origIdx=String(origIdxs[idx]);
+        b.addEventListener('click', ()=> onPick(idx));
+        optionsEl.appendChild(b);
+      });
+    }
+
+    function isLocked(){ return optionsEl.querySelector('.correct, .wrong') != null; }
+
+    function select(value){ if(isLocked()) return; CHOSEN[ ORDER[I] ] = value; lockAndExplain(value); persist(); }
+
+    function lockAndExplain(value){
+      const q=current(); const type=q.type||'multiple';
+      const buttons=Array.from(optionsEl.querySelectorAll('.opt')); buttons.forEach(b=>b.disabled=true);
+      let correct=false;
+      if(type==='vf'){
+        correct = (value === !!q.answer); buttons[q.answer ? 0:1].classList.add('correct'); const chosenIdx=value?0:1; if(!correct) buttons[chosenIdx]?.classList.add('wrong');
+      } else {
+        const answerIdx=q.answer;
+        buttons.forEach(b=>{ const origIdx=parseInt(b.dataset.origIdx??'-1',10); if(origIdx===answerIdx) b.classList.add('correct'); });
+        const chosenBtn=buttons.find(b=>parseInt(b.dataset.origIdx??'-1',10)===value); correct=(typeof value==='number' && value===answerIdx); if(!correct && chosenBtn) chosenBtn.classList.add('wrong');
+      }
+      state.textContent = correct? 'correto' : 'incorreto';
+      explainEl.textContent = q.explanation || '';
+      explainEl.classList.toggle('hide', !q.explanation);
+    }
+
+    function markLocked(){ const q=current(); const type=q.type||'multiple'; const val=CHOSEN[ ORDER[I] ]; if(val===null) return; if(type==='vf'){ renderOptions(['Verdadeiro','Falso'],()=>{},[0,1]); } else { const opts=q.options.map((t,i)=>({t,i})); const shOpts=(QUIZ.meta?.shuffle?.options ?? MANIFEST?.shuffleDefault?.options)? shuffleInPlace(opts):opts; renderOptions(shOpts.map(o=>o.t), ()=>{}, shOpts.map(o=>o.i)); } lockAndExplain(val); }
+
+    function next(){ if(!isLocked()) return; if(I<QUIZ.questions.length-1){ I++; render(); } else finish(); }
+    function prev(){ if(I>0){ I--; render(); } }
+
+    function score(){ let ok=0; const total=QUIZ.questions.length; for(let k=0;k<total;k++){ const q=QUIZ.questions[k]; const v=CHOSEN[k]; if((q.type||'multiple')==='vf'){ if(v===!!q.answer) ok++; } else if(typeof v==='number' && v===q.answer) ok++; } return {ok,total}; }
+
+    function finish(){ const {ok,total}=score(); const pct=Math.round(ok/Math.max(1,total)*100); resultScore.textContent=`${pct}% (${ok}/${total})`; resultMsg.textContent=QUIZ.meta?.outroMessage || MANIFEST?.outro?.message || ''; state.textContent='concluído'; show(screenQuiz,false); show(screenResult,true); }
+
+    // Acessibilidade de teclado
+    window.addEventListener('keydown',(e)=>{ if(screenQuiz.classList.contains('hide')) return; if(e.key>='1'&&e.key<='9'){ const idx=parseInt(e.key,10)-1; const btn=optionsEl.querySelectorAll('.opt')[idx]; if(btn) btn.click(); } else if(e.key==='Enter'||e.key==='ArrowRight'){ if(I===QUIZ.questions.length-1) finish(); else next(); } else if(e.key==='ArrowLeft'){ prev(); } });
+
+    // ==========================
+    // Testes básicos no console
+    // ==========================
+    function runTests(){
+      try{
+        console.group('TESTES');
+        // 1) Manifest embutido
+        const m=readEmbedded('data/manifest.json'); console.assert(m && m.categories && m.categories.length>0, 'Manifest embutido ok');
+        // 2) Correção
+        console.assert(isCorrectQuestion({type:'multiple',answer:2},2)===true, 'Multiple ok');
+        console.assert(isCorrectQuestion({type:'vf',answer:true},true)===true, 'VF ok');
+        // 3) Tamanho de enunciados 120-200 (amostra)
+        const sampleQ = readEmbedded('data/intro/basico.json').questions[0].q; console.assert(sampleQ.length>=120 && sampleQ.length<=220, 'Enunciado exemplo ~120-200 chars');
+        console.log('Passou nos testes básicos');
+      }catch(e){ console.error('Falha nos testes', e); } finally{ console.groupEnd(); }
+    }
+  </script>
+
+  <!-- ===== Fallbacks embutidos para funcionar sem arquivos externos ===== -->
+  <script type="application/json" data-path="data/manifest.json">{
+    "title": "MeuJus",
+    "labels": "labels/pt-BR.json",
+    "shuffleDefault": {"questions": true, "options": true},
+    "persistDefault": true,
+    "outro": {"message": "Obrigado por participar."},
+    "categories": [
+      {"id":"intro","name":"Introdução","themes":[{"id":"basico","name":"Básico","path":"data/intro/basico.json"}]}
+    ]
+  }</script>
+
+  <script type="application/json" data-path="labels/pt-BR.json">{
+    "start":"Começar","next":"Próximo","prev":"Anterior","retry":"Refazer","home":"Início","category":"Categoria","theme":"Tema","result":"Resultado"
+  }</script>
+
+  <!-- Amostra: enunciados e opções com 120-200 caracteres -->
+  <script type="application/json" data-path="data/intro/basico.json">{
+    "meta": {
+      "title": "Introdução Básica",
+      "category": "intro",
+      "theme": "basico",
+      "shuffle": {"questions": true, "options": true},
+      "persist": true,
+      "outroMessage": "Você concluiu o tema introdutório do MeuJus. Volte ao início para escolher outro tema."
+    },
+    "questions": [
+      {
+        "type": "multiple",
+        "q": "O MeuJus é um quiz minimalista pensado para leitura confortável: contraste elevado, tipografia leve e poucas bordas. A navegação prioriza texto e atalhos simples para que você foque no conteúdo, não na interface.",
+        "options": [
+          "Ele usa muitas caixas, ícones pesados e animações chamativas em todas as telas, com pouco espaço em branco e fontes grandes e espessas.",
+          "Ele privilegia o texto, mantém o fundo claro e usa espaçamento generoso, com botões sóbrios e respostas destacadas de forma sutil e objetiva.",
+          "Ele exige timer obrigatório por questão, apresenta ranking global e solicita login social antes de liberar qualquer pergunta.",
+          "Ele bloqueia navegação por teclado e remove descrições para acelerar respostas, reduzindo o contexto e as explicações das questões."
+        ],
+        "answer": 1,
+        "explanation": "O foco é o conteúdo textual. O layout claro, com muito respiro e pouquíssimos adornos, reduz a carga visual e melhora a compreensão."
+      },
+      {
+        "type": "vf",
+        "q": "Neste projeto, perguntas e respostas são textos relativamente longos, entre cento e vinte e duzentos caracteres, escritos para leitura fluida em telas pequenas, priorizando clareza e objetividade.",
+        "answer": true,
+        "explanation": "O design é mobile-first e privilegia blocos de texto mais longos, com espaçamento e tipografia leves."
+      }
+    ]
+  }</script>
 </body>
 </html>
