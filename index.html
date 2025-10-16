@@ -15,7 +15,6 @@
       line-height:1.6; font-size:15px; font-weight:300;
     }
 
-    /* --- Respiro global --- */
     .container{ max-width:900px; margin:0 auto; padding:12px 24px }
     header.site{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:12px 0 12px }
     .brand{ font-size:18px; font-weight:700; letter-spacing:.2px; color:var(--accent); cursor:pointer; user-select:none }
@@ -37,7 +36,6 @@
     .progress{ height:3px; background:#e5e7eb; border-radius:999px; overflow:hidden; margin:10px 0 16px }
     .progress>span{ display:block; width:0%; height:100%; background:#111827; transition:width .25s ease }
 
-    /* --- Enunciado e opções --- */
     .statement{ font-size:16px; font-weight:600; line-height:1.2; margin:22px 0 22px; letter-spacing:.1px; background:var(--bg-soft); padding:14px 16px; border-radius:12px; }
     .options{ display:grid; gap:14px; margin:6px 0 8px }
     .opt{
@@ -122,7 +120,7 @@
   </div>
 
   <script>
-    // ===== Config: indexação automática de /data via GitHub API (sem editar manifest) =====
+    // ===== Config =====
     const CONFIG = {
       useGitHubIndexer: true,
       owner: null,
@@ -130,11 +128,9 @@
       branch: 'main',
       dataDir: 'data'
     };
-
-    // === Retomada automática do último quiz salvo ===
     const AUTO_RESUME = true;
 
-    // ===== Seletores da UI =====
+    // ===== Seletores =====
     const selCategory = document.getElementById('selCategory');
     const selTheme = document.getElementById('selTheme');
     const btnStart = document.getElementById('btnStart');
@@ -177,7 +173,6 @@
     const clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
     function lsGet(k, def=null){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):def; }catch{ return def; } }
     function lsSet(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch{} }
-    function shuffleInPlace(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 
     function readEmbedded(path){ const t=document.querySelector(`script[type="application/json"][data-path="${path}"]`); if(!t) return null; try{ return JSON.parse(t.textContent);}catch{ return null; } }
     function mustUseEmbedded(){ return new URLSearchParams(location.search).get('embedded')==='1'; }
@@ -188,7 +183,12 @@
       const emb=readEmbedded(path); if(emb!=null) return emb; if(fallback!==undefined) return fallback; return null;
     }
 
-    function isCorrectQuestion(q, pick){ if(!q) return false; const t=q.type||'multiple'; if(t==='vf') return (pick===!!q.answer); return (typeof pick==='number' && pick===q.answer); }
+    function isCorrectQuestion(q, pick){
+      if(!q) return false;
+      const t=q.type||'multiple';
+      if(t==='vf') return (pick===!!q.answer);
+      return (typeof pick==='number' && pick===q.answer);
+    }
 
     // ===== GitHub indexer =====
     function guessOwnerRepo(){
@@ -204,12 +204,8 @@
       return {owner: CONFIG.owner, repo: CONFIG.repo};
     }
 
-    // ===== Nome legível =====
     function slugToName(slug){
-      const base = slug
-        .replace(/\.(json)$/i,'')
-        .replace(/[-_]+/g,' ')
-        .trim();
+      const base = slug.replace(/\.(json)$/i,'').replace(/[-_]+/g,' ').trim();
       const lower = base.toLocaleLowerCase('pt-BR');
       if(!lower) return '';
       return lower.charAt(0).toLocaleUpperCase('pt-BR') + lower.slice(1);
@@ -249,7 +245,7 @@
         return {
           title: 'MeuJus',
           labels: 'labels/pt-BR.json',
-          shuffleDefault: {questions:false, options:true},
+          shuffleDefault: {questions:false, options:true}, // nunca embaralhar perguntas
           persistDefault: true,
           outro: { message: 'Obrigado por participar.' },
           categories
@@ -268,7 +264,13 @@
       }
 
       if(!MANIFEST){
-        const manifestFallback={ title:'MeuJus', categories:[{id:'intro',name:'Introdução',themes:[{id:'basico',name:'Básico',path:'data/intro/basico.json'}]}], shuffleDefault:{questions:true,options:true}, persistDefault:true, outro:{message:'Obrigado por participar.'} };
+        const manifestFallback={
+          title:'MeuJus',
+          categories:[{id:'intro',name:'Introdução',themes:[{id:'basico',name:'Básico',path:'data/intro/basico.json'}]}],
+          shuffleDefault:{questions:false,options:true}, // nunca embaralhar perguntas
+          persistDefault:true,
+          outro:{message:'Obrigado por participar.'}
+        };
         MANIFEST = await loadJSON('data/manifest.json', manifestFallback);
       }
 
@@ -301,7 +303,6 @@
 
       btnRetry.addEventListener('click', ()=> loadQuiz(KEY?.path, true));
 
-      // restore
       const last = lsGet('quiz:last');
       if (last && last.path) {
         btnResume.classList.remove('hide');
@@ -349,7 +350,7 @@
 
     function resetState(){ QUIZ=null; ORDER=[]; CHOSEN=[]; I=0; KEY=null; explainEl.classList.add('hide'); }
 
-    // === loadQuiz com restauração completa ===
+    // ===== Carregar quiz, nunca embaralhar perguntas =====
     async function loadQuiz(path, fresh=false, tryRestore=false){
       state.textContent='carregando';
       const qz=await loadJSON(path);
@@ -361,18 +362,15 @@
       const total=(qz.questions||[]).length;
       let saved = tryRestore ? lsGet(KEY.key) : null;
 
-      ORDER=[...Array(total).keys()];
+      ORDER=[...Array(total).keys()];           // ordem natural 0..n-1
       CHOSEN=new Array(total).fill(null);
       I=0;
 
       if(!fresh && saved && saved.quizLen===total){
-        if(Array.isArray(saved.order) && saved.order.length===total) ORDER = saved.order;
+        if(Array.isArray(saved.order) && saved.order.length===total) ORDER = saved.order; // preserva ordem anterior se existir
         if(Array.isArray(saved.chosen)) CHOSEN = saved.chosen;
         I = clamp(saved.i,0,total-1);
-      } else {
-        const sh=qz.meta?.shuffle ?? MANIFEST?.shuffleDefault ?? {questions:true,options:true};
-        if(sh.questions) shuffleInPlace(ORDER);
-      }
+      } // sem else: nunca embaralhar perguntas
 
       state.textContent='respondendo';
       show(screenIntro,false); show(screenQuiz,true); show(screenResult,false);
@@ -381,7 +379,7 @@
 
     function current(){ return QUIZ.questions[ ORDER[I] ]; }
 
-    // === persist com ordem e timestamp ===
+    // ===== Persistência =====
     function persist(){
       const persistFlag=QUIZ?.meta?.persist ?? MANIFEST?.persistDefault ?? true;
       if(!persistFlag||!KEY) return;
@@ -495,7 +493,6 @@
       show(screenQuiz,false); show(screenResult,true);
     }
 
-    // Google modo IA (udm=50)
     function openGoogleAI(){
       const q=current(); if(!q) return;
       const prompt = 'VProfessor, por favor fundamente a alternativa correta e as incorretas. Enunciado: ' + String((q && q.q) || '') + ' | Opções: ' + (q && q.type === 'vf' ? 'Verdadeiro | Falso' : (Array.isArray(q && q.options) ? q.options.map(function(t,i){ return (i+1)+') '+t; }).join(' | ') : '')) + ' | Alternativa correta: ' + (q && q.type === 'vf' ? (q && q.answer ? 'Verdadeiro' : 'Falso') : (Array.isArray(q && q.options) && typeof q.answer === 'number' ? q.options[q.answer] : ''));
@@ -503,7 +500,6 @@
       window.open(url, '_blank', 'noopener');
     }
 
-    // Acessibilidade
     window.addEventListener('keydown',(e)=>{
       if(screenQuiz.classList.contains('hide')) return;
       if(e.key>='1'&&e.key<='9'){
@@ -513,11 +509,9 @@
       } else if(e.key==='ArrowLeft'){ prev(); }
     });
 
-    // Persistir ao sair/ocultar
     window.addEventListener('beforeunload', persist);
     document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='hidden') persist(); });
 
-    // Testes básicos
     function runTests(){
       try{
         console.group('TESTES');
@@ -531,16 +525,17 @@
     }
   </script>
 
-  <!-- Fallbacks embutidos (usados se a indexação do GitHub falhar) -->
- <script type="application/json" data-path="data/manifest.json">{
-  "title":"MeuJus",
-  "labels":"labels/pt-BR.json",
-  "shuffleDefault": { "questions": false, "options": true },
-  "persistDefault": true,
-  "outro": { "message":"Obrigado por participar." },
-  "categories":[ { "id":"intro","name":"Introdução","themes":[{"id":"basico","name":"Básico","path":"data/intro/basico.json"}] } ]
-}</script>
-
+  <!-- Fallbacks embutidos -->
+  <script type="application/json" data-path="data/manifest.json">{
+    "title":"MeuJus",
+    "labels":"labels/pt-BR.json",
+    "shuffleDefault": { "questions": false, "options": true },
+    "persistDefault": true,
+    "outro": { "message":"Obrigado por participar." },
+    "categories":[
+      { "id":"intro","name":"Introdução","themes":[{ "id":"basico","name":"Básico","path":"data/intro/basico.json" }]}
+    ]
+  }</script>
 
   <script type="application/json" data-path="labels/pt-BR.json">{
     "start":"Começar","next":"Próximo","prev":"Anterior","retry":"Refazer","home":"Início","category":"Categoria","theme":"Tema","result":"Resultado"
