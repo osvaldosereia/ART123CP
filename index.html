@@ -438,11 +438,7 @@
       const correctText = type==='vf' ? (q.answer ? 'Verdadeiro' : 'Falso') : (q.options?.[q.answer] || '');
 
       const prompt =
-`Você é professor de Direito. Explique didaticamente o tema: ${metaTitle} (${metaCat}/${metaTheme})
-com foco em doutrina e jurisprudência brasileiras.
-Enunciado: ${q.q}
-Alternativa correta: ${correctText}
-Diretrizes: clareza; 300–600 palavras; cite STF/STJ quando aplicável; não revele gabaritos de outras questões.`;
+`Explique de forma didatica e exemplificativa. Tema: ${q.q}`;
 
       const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt);
       window.open(url, '_blank', 'noopener');
