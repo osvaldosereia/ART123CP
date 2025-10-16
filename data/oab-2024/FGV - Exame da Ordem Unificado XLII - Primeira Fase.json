@@ -485,4 +485,507 @@
 ],
 "answer": 2,
 "explanation": "“A paternidade socioafetiva, declarada ou não em registro público, não impede o reconhecimento do vínculo de filiação concomitante baseado na origem biológica, com os efeitos jurídicos próprios.” — Supremo Tribunal Federal, Tese de Repercussão Geral no RE 898.060 (Tema 622). A jurisprudência brasileira, especialmente do STF e STJ, admite a multiparentalidade, permitindo o reconhecimento de um vínculo socioafetivo sem que isso implique a exclusão do vínculo biológico. O reconhecimento depende da demonstração da posse do estado de filho (tratamento, nome, fama), o que parece ter ocorrido entre Priscila e Vitória."
+},
+  {
+"meta": {
+"title": "Prova OAB – Tipo 1",
+"category": "oab",
+"theme": "prova-oab-tipo-1",
+"shuffle": { "questions": true, "options": true },
+"persist": true,
+"outroMessage": "Você concluiu a prova com sucesso! Confira suas respostas e continue se preparando."
+},
+"questions": [
+{
+"type": "multiple",
+"q": "Ivan, André e Caio celebraram negócio jurídico pelo qual se obrigaram a entregar um veículo da marca M a Bruna. Na data avençada para o cumprimento da obrigação, Ivan deu à Bruna um carro da marca M de sua propriedade. Sobre a situação hipotética apresentada, assinale a afirmativa correta.",
+"options": [
+"Bruna pode exigir de André e de Caio as suas respectivas cotas-partes na dívida.",
+"Ivan pode cobrar de André e de Caio, em dinheiro, as respectivas cotas-partes no débito.",
+"André e Caio permanecem coobrigados perante Bruna pela parte que lhes cabe na dívida.",
+"Tanto André como Caio permanecem responsáveis pela entrega de um carro, agora perante Ivan."
+],
+"answer": 1,
+"explanation": "“Se um dos devedores solidários satisfizer a dívida por inteiro, terá direito a exigir de cada um dos co-devedores a sua quota...” — Código Civil, Art. 283. Em uma obrigação solidária passiva, o cumprimento da prestação por um dos devedores extingue a dívida perante o credor. O devedor que pagou (Ivan) sub-roga-se nos direitos do credor e pode cobrar dos demais devedores (André e Caio) as suas respectivas quotas-partes, que se presumem iguais (Art. 283)."
+},
+{
+"type": "multiple",
+"q": "Maria, idosa de 75 anos, mãe de três filhos, decidiu contratar você, como advogado(a), para estruturar seu planejamento sucessório. A intenção de Maria era a de realizar a transferência antecipada da propriedade de um de seus imóveis (cujo valor representa 40% de seu patrimônio) para seu filho mais velho. No entanto, ela pretendia reservar para si o direito de permanecer no bem para usá-lo e explorá-lo economicamente, até a sua morte. Em razão disso, você propôs que ela fizesse uma doação com reserva de usufruto, por escritura pública, com cláusula que colocava o bem na parte disponível de seu patrimônio, seguida de um registro no Cartório de Registro de Imóveis, o que foi feito por Maria. Poucos anos depois, Maria faleceu. Diante da situação jurídica posta, assinale a afirmativa correta.",
+"options": [
+"A doação deve ser declarada nula, porque caracteriza-se como inoficiosa.",
+"O herdeiro donatário é obrigado, em colação, a conferir o valor da doação para igualar as legítimas.",
+"Os três filhos de Maria herdam, via sucessão legítima, o seu direito de usufruto sobre o bem imóvel.",
+"O usufruto é extinto, consolidando-se a propriedade plena ao donatário com o cancelamento do registro."
+],
+"answer": 3,
+"explanation": "“O usufruto extingue-se, cancelando-se o registro no Cartório de Registro de Imóveis: I - pela renúncia ou morte do usufrutuário” — Código Civil, Art. 1.410, I. O usufruto é um direito personalíssimo e extingue-se com a morte da usufrutuária (Maria). Com sua morte, o nu-proprietário (filho donatário) passa a ter a propriedade plena do imóvel. A doação não é inoficiosa, pois não excedeu 50% do patrimônio (a parte disponível). A colação foi dispensada pela cláusula de que o bem saía da parte disponível. O usufruto não se transmite aos herdeiros."
+},
+{
+"type": "multiple",
+"q": "Brás Cubas procurou você, como advogado(a), relatando ser possuidor e proprietário do imóvel situado à Rua Machado de Assis, nº XX, Centro, no Município Alpha, há mais de 50 anos, preservando, desde as suas origens até o presente, as mesmas características, sem que houvesse por parte da vizinhança qualquer reclamação ou denúncia, sobretudo no que tange à disposição das janelas, já que se encontram dentro dos limites legais. Segundo relato de Brás, sua vizinha, Virgília, no último mês, iniciou obra de expansão de sua casa, com abertura de uma janela no limite divisório com seu terreno e uma chaminé no telhado. Em consonância com o Código Civil brasileiro, assinale a opção que apresenta, corretamente, sua orientação sobre o caso apresentado.",
+"options": [
+"As janelas cuja visão não incida sobre a linha divisória, bem como as perpendiculares, não poderão ser abertas a menos de um metro e meio.",
+"A conduta de Virgília é válida e eficaz, porque não existe norma legal que impeça a abertura de janelas ou a construção de muro na linha divisória de imóveis.",
+"O proprietário pode, no lapso de ano e dia após a conclusão da obra, exigir que se desfaça janela que fora construída em desacordo com a legislação vigente.",
+"A construção da chaminé deve ser impedida devido à função social da propriedade, positivada no Código Civil brasileiro e tutelada pelo direito dos confinantes."
+],
+"answer": 2,
+"explanation": "“O proprietário pode, no lapso de ano e dia após a conclusão da obra, exigir que se desfaça janela, sacada, terraço ou goteira sobre o seu prédio...” — Código Civil, Art. 1.302. A lei estabelece um prazo decadencial de ano e dia para o vizinho prejudicado exigir o desfazimento de obra irregular (como uma janela aberta a menos de metro e meio da divisa). A ação cabível é a nunciação de obra nova (se em andamento) ou a demolitória (se concluída dentro do prazo legal)."
+},
+{
+"type": "multiple",
+"q": "João, 14 anos, criou um perfil online para realizar apostas em sites de jogos de futebol, realizando-as sozinho e sem qualquer restrição. Sobre a possibilidade de responsabilização do site, assinale a afirmativa correta.",
+"options": [
+"Não há ilícito por parte do site, pois a maioridade não é exigida para sua atividade.",
+"O site deve ser responsabilizado, pois cometeu infração administrativa prevista no Estatuto da Criança e Adolescente.",
+"O site não deve ser responsabilizado, pois não é exigível o controle além da autodeclaração de maioridade, demandada em seu acesso.",
+"A atividade de aposta desenvolvida no site não se identifica, para fins de reprovação normativa, com a restrição de acesso imposta a crianças e adolescentes às casas de apostas, de modo que não há infração por parte do site."
+],
+"answer": 1,
+"explanation": "“É proibida a venda à criança ou ao adolescente de: [...] II - bilhetes lotéricos e equivalentes.” — Lei nº 8.069/1990 (ECA), Art. 81, II. A questão foi anulada pela banca examinadora, conforme gabarito oficial. A justificativa provável é a complexidade do tema e a superveniência da Lei nº 14.790/2023, que regula as apostas e veda a participação de menores. A alternativa B, contudo, seria a mais próxima do correto, por analogia à proibição de venda de bilhetes lotéricos e à infração administrativa do Art. 258 do ECA, que pune estabelecimentos que descumprem as proibições do Estatuto."
+},
+{
+"type": "multiple",
+"q": "Roberta, 35 anos, descobriu que estava grávida e ficou muito preocupada, já que possui parcos recursos financeiros e acredita que não será uma boa mãe. Essa angústia desencadeou graves problemas que precisam ser tratados por meio de sessões com psicólogo(a). Diante da falta de recursos financeiros para custear o profissional, Roberta lhe procura para obter orientação jurídica. De acordo com o Estatuto da Criança e do Adolescente (ECA), assinale a orientação correta para o caso.",
+"options": [
+"Roberta não possui direito a assistência psicológica, por inexistir previsão legal.",
+"O ECA garante o direito de assistência psicológica apenas no período pós-natal, caso se verifique que o estado puerperal pode prejudicar o desenvolvimento da criança.",
+"Roberta tem direito a assistência psicológica durante a gestação, no período pré e pós-natal, inclusive como forma de prevenir ou minorar as consequências do estado puerperal, sendo essa incumbência do poder público.",
+"De acordo com o ECA, o poder público deve proporcionar assistência psicológica a Roberta enquanto estiver gestante. No período pós-natal, como a criança estará fora de qualquer risco, o poder público não terá a obrigação de prestar assistência psicológica."
+],
+"answer": 2,
+"explanation": "“Incumbe ao poder público proporcionar assistência psicológica à gestante e à mãe, no período pré e pós-natal, inclusive como forma de prevenir ou minorar as consequências do estado puerperal.” — Lei nº 8.069/1990 (ECA), Art. 8º, § 4º. A lei é clara ao estabelecer o dever do Estado de fornecer apoio psicológico à gestante e mãe tanto antes quanto depois do parto, visando proteger a saúde mental da mulher e, consequentemente, o bem-estar da criança."
+},
+{
+"type": "multiple",
+"q": "A sociedade empresária Óleo Essencial de Barreto Ltda. fabrica, há cinquenta anos, o produto que originou o nome empresarial, criado pelo fundador da indústria e amplamente utilizado pelo público como item pessoal para várias utilidades, sobretudo como pós-banho. Recentemente, ao concluir uma pesquisa científica, um químico da fábrica levou ao conhecimento da diretoria o fato de que o uso do produto Óleo Essencial de Barreto pode causar queimaduras graves em um certo grupo de pessoas, caso seja associado a um novo tipo de protetor solar, cujo uso vem crescendo no país. Sobre o caso narrado, assinale a afirmativa correta.",
+"options": [
+"Cabe à Óleo Essencial de Barreto Ltda. cessar, imediatamente, a fabricação do produto.",
+"Deve a autoridade administrativa, de ofício, proibir, imediatamente, a fabricação do produto.",
+"Cabe à Óleo Essencial de Barreto Ltda. comunicar, imediatamente, o risco descoberto às autoridades competentes e aos consumidores.",
+"Por se tratar de um produto disponibilizado no mercado há mais de cinquenta anos, a Óleo Essencial de Barreto Ltda. não precisa tomar qualquer providência quanto ao risco descoberto."
+],
+"answer": 2,
+"explanation": "“O fornecedor de produtos e serviços que, posteriormente à sua introdução no mercado de consumo, tiver conhecimento da periculosidade que apresentem, deverá comunicar o fato imediatamente às autoridades competentes e aos consumidores, mediante anúncios publicitários.” — Código de Defesa do Consumidor (Lei nº 8.078/1990), Art. 10, § 1º. Este dispositivo impõe ao fornecedor o dever de recall ou de comunicação do risco superveniente, não importando há quanto tempo o produto está no mercado."
+},
+{
+"type": "multiple",
+"q": "A sociedade empresária XYZ Fábrica e Comercialização Digital S.A., por meio do site de um representante empresarial autônomo, vende os bens informáticos que fabrica. Gláucia, estudante universitária, em 23 de junho de 2024, realizou a compra na internet de um desktop e dois monitores. Os produtos seriam destinados aos seus estudos e ao estágio na modalidade home office, que começaria em 1º de julho. Até a presente data os produtos não chegaram. A sociedade empresária informou que não os possui em estoque, e a fábrica encontra-se com carência de matéria-prima. Sobre a hipótese apresentada, com base no Código de Defesa do Consumidor, assinale a afirmativa correta.",
+"options": [
+"Gláucia deve esperar 30 dias além do prazo inicial para, então, exigir a substituição ou a devolução do valor pago.",
+"Gláucia pode desistir da compra e solicitar a devolução integral do valor pago, uma vez que o produto não foi entregue dentro do prazo.",
+"Gláucia deve esperar até que a fábrica normalize o fornecimento de matéria-prima, uma vez que a falta de insumos é uma causa legítima para o atraso.",
+"Diante da situação e da ausência de matéria-prima, a sociedade empresária XYZ Fábrica e Comercialização Digital S.A. não responde solidariamente pelos atos do representante autônomo."
+],
+"answer": 1,
+"explanation": "“Se o fornecedor de produtos ou serviços recusar cumprimento à oferta, apresentação ou publicidade, o consumidor poderá, alternativamente e à sua livre escolha: ... III - rescindir o contrato, com direito à restituição de quantia eventualmente antecipada, monetariamente atualizada, e a perdas e danos.” — Código de Defesa do Consumidor (Lei nº 8.078/1990), Art. 35, III. O descumprimento do prazo de entrega configura recusa ao cumprimento da oferta, dando ao consumidor o direito de escolher entre as opções do Art. 35, incluindo a rescisão com devolução do valor."
+},
+{
+"type": "multiple",
+"q": "O Código Civil, ao tratar da caracterização do empresário, afasta desse instituto as pessoas naturais que exercem profissão intelectual, de natureza científica, literária ou artística. Todavia, o Código Civil admitiu a possibilidade de essas pessoas virem a ser reputadas empresárias e, como tal, sujeitarem-se à inscrição na Junta Comercial. Assinale a opção que apresenta a condição para que isso ocorra.",
+"options": [
+"O exercício da profissão intelectual deve congregar emprego habitual de mão de obra e insumos.",
+"A pessoa natural deve exercer atividade econômica com o concurso de auxiliares ou colaboradores.",
+"O exercício da profissão, de natureza científica, literária ou artística, deve constituir elemento de empresa.",
+"A pessoa natural deve optar pelo Simples Nacional e ser enquadrada como Microempreendedor Individual."
+],
+"answer": 2,
+"explanation": "“Não se considera empresário quem exerce profissão intelectual, de natureza científica, literária ou artística, ainda com o concurso de auxiliares ou colaboradores, salvo se o exercício da profissão constituir elemento de empresa.” — Código Civil, Art. 966, parágrafo único. A exceção à regra geral ocorre quando a atividade intelectual deixa de ser o foco principal e passa a ser apenas um componente (elemento) de uma estrutura empresarial organizada, que envolve capital, insumos e trabalho de forma a preponderar sobre a atividade pessoal do profissional."
+},
+{
+"type": "multiple",
+"q": "F. Beltrão, G. Carneiro e S. Moreira decidiram constituir uma sociedade do tipo simples de prazo indeterminado, que entrou em atividade na data da assinatura do contrato, levado a registro na semana seguinte, no Registro Civil de Pessoas Jurídicas. Assinale a opção que indica a hipótese de dissolução de pleno direito dessa sociedade.",
+"options": [
+"A deliberação dos sócios, por maioria absoluta do capital.",
+"O esgotamento da exploração do objeto social ou verificada a sua inexequibilidade.",
+"O falecimento de qualquer dos sócios, independentemente de optarem pela dissolução.",
+"A existência de apenas um sócio, não reconstituída a pluralidade em até 180 (cento e oitenta) dias."
+],
+"answer": 0,
+"explanation": "“Dissolve-se a sociedade quando ocorrer: [...] II - o consenso unânime dos sócios;” — Código Civil, Art. 1.033, II. Embora o gabarito oficial aponte a alternativa A, a questão é tecnicamente controversa. O termo 'de pleno direito' usualmente se refere a situações automáticas, como a da alternativa D. No entanto, entre as opções, a deliberação dos sócios (prevista no inciso II do Art. 1.033, que pode ser por maioria se o contrato social permitir, conforme Art. 997, VIII) é uma causa de dissolução extrajudicial que opera pela simples vontade das partes, podendo ser interpretada como a resposta esperada pela banca."
+},
+{
+"type": "multiple",
+"q": "Maura Chalé, sócia administradora da sociedade Produtora de Laticínios Santana do Manhuaçu Ltda., procura você, como advogado(a), informando que a sociedade é titular da marca de produto Chalé e deseja saber quais os direitos assegurados por lei ao titular de marca de produto. Sobre a hipótese narrada, com base na legislação, assinale a afirmativa correta.",
+"options": [
+"A sociedade pode licenciar o uso da marca de produto Chalé e zelar pela sua integridade material ou reputação.",
+"A sociedade pode impedir que empresários utilizem sinais distintivos que lhes são próprios, juntamente com a marca, na sua promoção e comercialização.",
+"A sociedade pode proibir que fabricantes de acessórios utilizem a marca para indicar a destinação do produto, ainda que obedecidas as práticas leais de concorrência.",
+"A sociedade pode vetar a citação da marca em discurso, obra científica ou literária, com ou sem conotação comercial, independentemente de prejuízo ao caráter distintivo."
+],
+"answer": 0,
+"explanation": "“Ao titular da marca ... é ainda assegurado o direito de: ... III - zelar pela sua integridade material ou reputação.” e “O titular de registro ... poderá celebrar contrato de licença para uso da marca...” — Lei nº 9.279/1996 (Lei da Propriedade Industrial), Art. 130, III e Art. 139. A lei confere ao titular da marca o direito de licenciá-la a terceiros e de zelar por sua reputação, garantindo que o uso não a deprecie. As outras opções representam limitações ao direito do titular da marca (Art. 132 da LPI)."
+},
+{
+"type": "multiple",
+"q": "A sociedade empresária Drogaria Ponto dos Volantes Ltda. requereu recuperação judicial e teve deferido o processamento, sendo que ambos os eventos ocorreram no ano de 2021. Nos exercícios sociais de 2021, 2022 e 2023, a sociedade não distribuiu lucros aos sócios, embora eles tivessem sido auferidos em 2022 e 2023. O sócio minoritário Lucas Sobrado consulta você, como advogado(a), para saber sobre a legalidade da ausência de distribuição de lucros nos referidos exercícios sociais, informando que o plano de recuperação judicial foi aprovado em dezembro de 2022 e a concessão ocorreu em janeiro de 2023, mas o processo ainda não foi encerrado. Assinale a opção que apresenta, corretamente, seu parecer.",
+"options": [
+"É vedada a distribuição de lucros pela sociedade aos sócios enquanto não for encerrada a recuperação judicial, de modo que não há ilegalidade por parte dela.",
+"A sociedade não poderia ter deixado de distribuir lucros nos exercícios sociais de 2022 e 2023, pois os lucros devem ser pagos aos sócios por ser direito essencial deles.",
+"É vedada a distribuição de lucros pela sociedade aos sócios enquanto não for realizado o pagamento aos credores sujeitos à recuperação judicial, de modo que não há ilegalidade por parte dela.",
+"A sociedade empresarial, até a aprovação do plano de recuperação judicial, estava impedida de distribuir lucros aos sócios, mas não há justificativa para o não pagamento no exercício de 2023."
+],
+"answer": 3,
+"explanation": "“É vedado ao devedor, até a aprovação do plano de recuperação judicial, distribuir lucros ou dividendos a sócios e acionistas...” — Lei nº 11.101/2005, Art. 6º-A. A lei proíbe a distribuição de lucros apenas até a aprovação do plano. Como o plano foi aprovado em dezembro de 2022, a partir de então, a distribuição de lucros referentes ao exercício de 2023 seria permitida, salvo se o próprio plano de recuperação judicial aprovado contivesse alguma restrição nesse sentido, o que não é informado no enunciado."
+},
+{
+"type": "multiple",
+"q": "Ana Carolina procurou você, como advogado(a), para elaborar sua defesa em demanda pelo procedimento comum movida por Eduardo perante Vara Cível com o objetivo de obter indenização em virtude de suposto inadimplemento de Ana Carolina, qual seja, ter entregado uma quantidade de soja menor do que a que fora acordada contratualmente. Nessa reunião, Ana Carolina relatou que a indenização não era devida, porque ela havia entregado a quantidade de soja prevista no contrato. Ana Carolina relatou ainda que, na realidade, Eduardo não tinha realizado o pagamento integral previsto em contrato. Sobre a demanda movida por Eduardo visando ao pagamento da quantia que lhe é devida, assinale a opção que apresenta a medida cabível que você, na condição de advogado(a) de Ana Carolina, indicou.",
+"options": [
+"Ana Carolina terá que ajuizar uma nova demanda autônoma visando ao pagamento da quantia devida por Eduardo.",
+"Ana Carolina poderá apresentar reconvenção para cobrar a quantia que lhe é devida por Eduardo, sendo que essa medida deverá ser formulada na contestação.",
+"Ana Carolina poderá apresentar reconvenção para cobrar a quantia que lhe é devida por Eduardo, sendo que essa medida deverá ser formulada em petição apartada da contestação.",
+"Ana Carolina poderá formular pedido contraposto para cobrar a quantia que lhe é devida por Eduardo, sendo que essa medida deverá ser formulada em petição apartada da contestação."
+],
+"answer": 1,
+"explanation": "“Na contestação, é lícito ao réu propor reconvenção para manifestar pretensão própria, conexa com a ação principal ou com o fundamento da defesa.” — Código de Processo Civil de 2015, Art. 343, caput. A reconvenção é o instrumento processual adequado para que o réu, no mesmo processo, formule um pedido contra o autor. Ela deve ser apresentada dentro da própria peça de contestação."
+},
+{
+"type": "multiple",
+"q": "Neusa ajuizou ação condenatória em face de Marcelo. Em sua causa de pedir, a autora sustentou que o réu, conduzindo seu veículo de forma imprudente, avançou um sinal vermelho e colidiu contra o carro de Neusa, causando-lhe danos morais e materiais. Diante da necessidade de produção de prova oral, consistente em depoimento pessoal e prova testemunhal, o Juiz designou audiência de instrução e julgamento. As partes tempestivamente apresentaram suas testemunhas, que estavam nos respectivos veículos no momento da colisão. Neusa indicou Gabriel, seu filho de 17 anos. Por sua vez, Marcelo indicou João, seu amigo íntimo, e Regina, sua prima. Sobre o caso acima, segundo o ordenamento jurídico brasileiro, assinale a afirmativa correta.",
+"options": [
+"Gabriel é incapaz de depor, por ser menor de 18 anos.",
+"João e Regina são testemunhas suspeitas, diante da amizade intima e da relação de parentesco com Marcelo, respectivamente.",
+"Regina poderá depor como testemunha, não havendo impedimento referente à relação de parentesco que possui com Marcelo.",
+"O juiz poderá admitir o depoimento de João, ainda que amigo íntimo de Marcelo, caso em que será indispensável a prestação do compromisso de dizer a verdade."
+],
+"answer": 2,
+"explanation": "“São impedidos: ... os que são partes na causa; ... o cônjuge, o companheiro, os ascendentes, os descendentes e os colaterais, até o terceiro grau, de alguma das partes...” — Código de Processo Civil de 2015, Art. 447, § 2º, I. Regina, por ser prima de Marcelo, é sua parente colateral de quarto grau. O impedimento legal para testemunhar se estende apenas até o terceiro grau de parentesco colateral (irmãos, tios e sobrinhos). Portanto, não há impedimento para que Regina deponha como testemunha."
+},
+{
+"type": "multiple",
+"q": "Gabriela adquiriu um pacote de viagens com a sociedade empresária VoaMais, mas não conseguiu embarcar pois, na última hora, houve o cancelamento de seu bilhete aéreo. Em consequência, Gabriela ajuizou ação indenizatória por danos morais e materiais em face de VoaMais. Foi proferida sentença de procedência do pedido, com a concessão da tutela provisória na sentença, condenando a ré ao pagamento de R$ 30.000,00 (trinta mil reais). Inconformada, a ré interpôs recurso de apelação. Gabriela, então, procurou você, na qualidade de advogado(a), com o objetivo de receber imediatamente o valor previsto na condenação, independentemente do julgamento da apelação interposta pela ré. Assinale a opção que apresenta, corretamente, sua orientação sobre o tema.",
+"options": [
+"Ela não poderá iniciar o cumprimento da sentença antes do julgamento da apelação interposta, uma vez que o crédito não é de natureza alimentar, tampouco restou demonstrada situação de necessidade.",
+"Ela poderá iniciar o cumprimento da sentença, na modalidade definitiva, tendo em vista que a tutela provisória foi concedida na sentença.",
+"Ela poderá iniciar o cumprimento da sentença, na modalidade provisória, que correrá por sua iniciativa e responsabilidade, sendo certo que, no caso de reforma da sentença, o cumprimento fica sem efeito, liquidando-se eventuais prejuízos exclusivamente em ação autônoma.",
+"Ela poderá iniciar o cumprimento da sentença, na modalidade provisória, mas o levantamento de depósito em dinheiro dependerá, em regra, de caução idônea prestada nos próprios autos."
+],
+"answer": 3,
+"explanation": "“O levantamento de depósito em dinheiro e a prática de atos que importem transferência de posse ou alienação de propriedade... dependem de caução suficiente e idônea, arbitrada de plano pelo juiz e prestada nos próprios autos.” — Código de Processo Civil de 2015, Art. 520, IV. A sentença que confirma, concede ou revoga tutela provisória tem seus efeitos imediatos. A apelação contra ela, na parte da tutela, não tem efeito suspensivo (Art. 1.012, § 1º, V). Assim, Gabriela pode iniciar o cumprimento provisório da sentença. No entanto, para levantar o valor em dinheiro, a regra geral é a necessidade de prestar caução para garantir a reparação de eventuais danos ao executado caso a sentença seja reformada."
+},
+{
+"type": "multiple",
+"q": "João propôs ação indenizatória em face da sociedade empresária Campo Bom, em causa própria. Foi proferida sentença condenando a ré quanto ao principal e, considerando sua sucumbência mínima, ao pagamento integral de honorários advocatícios de sucumbência. Sobre os honorários advocatícios arbitrados no caso, assinale a afirmativa correta.",
+"options": [
+"Os honorários não são devidos nos casos em que o advogado atue em causa própria.",
+"Se um litigante sucumbir em parte mínima do pedido, o outro responderá, por inteiro, pelos honorários.",
+"Como arbitrados os honorários na sentença, não serão devidos novos honorários advocaticios no cumprimento de sentença.",
+"Os honorários podem ser arbitrados por equidade, apesar de o valor da condenação ser líquido, por se tratar de ação indenizatória."
+],
+"answer": 1,
+"explanation": "“Se um litigante sucumbir em parte mínima do pedido, o outro responderá, por inteiro, pelas despesas e pelos honorários.” — Código de Processo Civil de 2015, Art. 86, parágrafo único. A regra da sucumbência mínima estabelece que, se uma das partes decaiu de parte insignificante de sua pretensão, a parte contrária arcará com a totalidade das verbas de sucumbência, como se tivesse perdido integralmente. Honorários são devidos mesmo em causa própria (EOAB, Art. 23). São devidos novos honorários na fase de cumprimento de sentença (CPC, Art. 85, § 1º)."
+},
+{
+"type": "multiple",
+"q": "Joana formulou requerimento de cumprimento de sentença em face de Regina. No curso de tal fase do processo, Joana obteve a penhora de um automóvel de propriedade de Regina, cujo valor de mercado é R$ 10.000,00 (dez mil reais) superior ao do montante exequendo, sendo nomeada depositária do bem. No atual momento processual, Joana deseja se tornar proprietária do automóvel de Regina. Por essa razão, requereu a adjudicação do bem ao juízo. Nesse caso, segundo o ordenamento jurídico brasileiro, assinale a afirmativa correta.",
+"options": [
+"Assinado o auto de adjudicação pelo juiz, deverá ser expedida a carta de adjudicação e o mandado de imissão na posse.",
+"O pedido não poderá ser acolhido, diante da natureza residual da adjudicação em relação à alienação do bem, que é medida expropriatória preferencial.",
+"Desde que depositada a eventual diferença entre o valor do débito e o da avaliação do automóvel, que ficará à disposição de Regina, Joana poderá se tornar proprietária do automóvel.",
+"Como a alienação é a única forma de expropriação de bens admitida pelo Código de Processo Civil, caberá a Joana tentar a arrematação do bem em leilão eletrônico, tendo direito de preferência."
+],
+"answer": 2,
+"explanation": "“Se o valor do crédito for inferior ao dos bens, o requerente da adjudicação depositará de imediato a diferença, que ficará à disposição do executado.” — Código de Processo Civil de 2015, Art. 876, § 4º, I. A adjudicação é uma forma de expropriação em que o credor recebe o bem penhorado para satisfazer seu crédito. Se o valor do bem for superior ao da dívida, o credor (adjudicante) deve depositar em juízo a diferença, que será entregue ao devedor."
+},
+{
+"type": "multiple",
+"q": "Em uma tarde de domingo, voltando do shopping com seu namorado, Marisa se distraiu e colidiu contra a traseira do automóvel de Leandro. Assustada com a reação de Leandro, que saiu do carro aos gritos, Marisa foge. Leandro anotou a placa do carro e ajuizou uma ação indenizatória por danos materiais em face de Marisa, em razão dos prejuízos causados a seu automóvel. Considerando que Marisa contratou o seguro do veículo, denunciou a seguradora à lide. Acerca de tais fatos, assinale a afirmativa correta.",
+"options": [
+"Marisa deve pedir a citação da seguradora até a decisão saneadora.",
+"Se a empresa seguradora contestar o pedido de Leandro, o processo prosseguirá tendo, na ação principal, em litisconsórcio, Marisa e a seguradora.",
+"Sendo julgado procedente o pedido de indenização por danos materiais, Leandro deve pedir o cumprimento de sentença somente contra Marisa.",
+"Sendo julgado procedente o pedido de indenização por danos materiais, mesmo apresentando contestação quanto ao mérito, a seguradora não será condenada em honorários de sucumbência."
+],
+"answer": 1,
+"explanation": "“Se o denunciado contestar o pedido formulado pelo autor, o processo prosseguirá tendo, na ação principal, em litisconsórcio, denunciante e denunciado.” — Código de Processo Civil de 2015, Art. 128, parágrafo único. Quando a seguradora (denunciada) apresenta contestação ao pedido do autor da ação principal, ela assume a posição de litisconsorte passiva ao lado do segurado (denunciante), e a sentença final produzirá efeitos diretos sobre ambos."
+},
+{
+"type": "multiple",
+"q": "Maria, brasileira e residente no Brasil, resolveu viajar para o exterior e lá praticar o delito de embriaguez ao volante, que, embora típico no Brasil, no país onde seria praticado não é tipificado. Ao retornar ao Brasil, os fatos foram noticiados às autoridades competentes. Com base na hipótese apresentada, assinale a afirmativa correta.",
+"options": [
+"Maria está sujeita à extraterritorialidade da lei penal brasileira em razão da sua nacionalidade, podendo responder pelo ilícito praticado.",
+"Maria não poderá responder pelo fato, tendo em vista a inaplicabilidade da lei brasileira a fatos ocorridos fora dos limites territoriais do país.",
+"Maria não poderá responder pelo fato, tendo em vista que é necessário que a incriminação da conduta se verifique no local do fato e no Brasil, simultaneamente.",
+"Maria está sujeita à extraterritorialidade da lei penal brasileira, em razão de a lei em vigor no Estado de sua residência determinar o regime jurídico que lhe é aplicável."
+],
+"answer": 2,
+"explanation": "“Ficam sujeitos à lei brasileira, embora cometidos no estrangeiro: [...] II - os crimes: ... c) praticados por brasileiro; ... § 2º - Nos casos do inciso II, a aplicação da lei brasileira depende do concurso das seguintes condições: ... b) ser o fato punível também no país em que foi praticado” — Código Penal, Art. 7º, II, 'c' e § 2º, 'b'. A aplicação da lei penal brasileira a crimes comuns cometidos por brasileiros no exterior (extraterritorialidade condicionada) exige o requisito da dupla tipicidade. Como o ato não é crime no país onde foi praticado, falta essa condição, e Maria não poderá ser punida no Brasil."
+},
+{
+"type": "multiple",
+"q": "Ana Paula é repórter esportiva de uma emissora de televisão. Ao participar de uma reportagem ao vivo na mídia televisiva, um torcedor presente ao estádio, com intenção de satisfazer sua própria lascívia, a abraça à força, beijando-a no rosto. Ana Paula sente-se afrontada em sua liberdade sexual. Em razão do fato, ela procura você, como advogado(a), para saber como proceder. Assinale a afirmativa que apresenta corretamente sua orientação.",
+"options": [
+"O fato constitui importunação sexual e se processa mediante ação penal pública incondicionada.",
+"O ato deve ser identificado como delito de injúria real e se processa mediante ação penal privada.",
+"O episódio equivale a estupro e se processa mediante ação penal pública condicionada à representação da ofendida.",
+"O caso tipifica posse sexual mediante fraude ou outro meio que dificulte ou impossibilite a livre manifestação de vontade da vítima e se processa mediante queixa."
+],
+"answer": 0,
+"explanation": "“Praticar contra alguém e sem a sua anuência ato libidinoso com o objetivo de satisfazer a própria lascívia ou a de terceiro: Pena - reclusão, de 1 (um) a 5 (cinco) anos, se o ato não constitui crime mais grave.” — Código Penal, Art. 215-A. A conduta de beijar à força, sem anuência, para satisfazer a lascívia, se amolda perfeitamente ao tipo penal de importunação sexual. A ação penal para os crimes contra a dignidade sexual, incluindo este, é pública incondicionada, conforme o Art. 225 do Código Penal."
+},
+{
+"type": "multiple",
+"q": "Caio, muito atuante nas redes sociais, compartilhou vídeos e fotos pornográficos em um grupo de amigos. O material compartilhado continha imagens que teriam sido extraídas, ilegalmente, de computadores pessoais por terceiros, já tendo sido inclusive objeto de registros policiais por parte das vítimas. Uma das pessoas para as quais as imagens foram compartilhadas procura a polícia e relata a atitude de Caio. O Delegado indiciou Caio pela prática do crime descrito no Art. 218-C do CP, o qual prevê a figura penal do compartilhamento não autorizado de cena de sexo ou pornografia. Caio, surpreendido com a acusação, afirmou não ter conhecimento de que o fato por ele praticado seria criminoso. A tese defensiva correta, a partir da afirmação de Caio, é a ocorrência do erro",
+"options": [
+"sobre a pessoa.",
+"de tipo permissivo.",
+"de proibição direto.",
+"de proibição indireto."
+],
+"answer": 2,
+"explanation": "“O desconhecimento da lei é inescusável. O erro sobre a ilicitude do fato, se inevitável, isenta de pena; se evitável, poderá diminuí-la de um sexto a um terço.” — Código Penal, Art. 21. A alegação de não saber que a conduta era criminosa caracteriza o erro de proibição, que é o erro sobre a ilicitude do fato. Trata-se do erro de proibição direto, pois incide diretamente sobre o conhecimento da norma que proíbe a conduta."
+},
+  {
+"meta": {
+"title": "Prova OAB – Tipo 1",
+"category": "oab",
+"theme": "prova-oab-tipo-1",
+"shuffle": { "questions": true, "options": true },
+"persist": true,
+"outroMessage": "Você concluiu a prova com sucesso! Confira suas respostas e continue se preparando."
+},
+"questions": [
+{
+"type": "multiple",
+"q": "Filisteu, empresário, contratou Mateus para matar seu concorrente, Lucas, mediante pagamento antecipado de R$ 50.000,00 (cinquenta mil reais). Portando arma de fogo municiada, Mateus se pôs em campana, levando consigo seu amigo, Antônio, que nada sabia sobre os fatos. Quando Lucas saiu de casa com seu filho no colo, Mateus não teve coragem de cumprir o acordado e abandonou o local sem que Lucas o avistasse. Diante dessa situação hipotética, assinale a afirmativa correta.",
+"options": [
+"Filisteu não praticou fato penalmente típico.",
+"Filisteu e Mateus praticaram o crime de associação criminosa.",
+"Filisteu deve responder por tentativa de homicídio em coautoria.",
+"Filisteu deve responder por tentativa de homicídio, tendo a pena atenuada em razão do arrependimento posterior de Mateus."
+],
+"answer": 0,
+"explanation": "“O agente que, voluntariamente, desiste de prosseguir na execução ou impede que o resultado se produza, só responde pelos atos já praticados.” — Código Penal, Art. 15. Mateus, o executor, desistiu voluntariamente antes de iniciar os atos executórios do homicídio. Assim, ele não responde por tentativa de homicídio. A participação de Filisteu, como mandante, é acessória à conduta principal. Se o ato principal não é punível como tentativa, o partícipe também não responde por ela. Portanto, a conduta de Filisteu é atípica em relação ao crime de homicídio tentado."
+},
+{
+"type": "multiple",
+"q": "Joelerson, foragido, com longa lista de antecedentes criminais, foi condenado ao cumprimento de uma pena privativa de liberdade de 24 anos de reclusão, mínima prevista para o delito que cometeu (extorsão mediante sequestro seguida de morte Art. 159, § 3º, do Código Penal). No dia seguinte ao trânsito em julgado da condenação, entrou em vigor a Lei A, que reduziu a pena mínima para o delito referido, fixando-a em 20 (vinte) anos de reclusão. Após intensa reação midiática, a Lei B revogou a Lei A, restabelecendo o patamar sancionatório minimo anteriormente previsto. No dia seguinte à entrada em vigor da Lei B, Joelerson foi capturado e iniciou o cumprimento da pena. Diante dessa situação hipotética, assinale a afirmativa correta.",
+"options": [
+"Joelerson somente faria jus à redução da pena se a execução da condenação fosse iniciada antes da entrada em vigor da Lei A.",
+"Joelerson somente faria jus à redução da pena se a execução da condenação fosse iniciada antes da entrada em vigor da Lei B.",
+"Joelerson faz jus à redução da pena, independentemente do trânsito em julgado da sentença condenatória e da entrada em vigor da Lei B.",
+"Joelerson não faz jus à redução da pena, pois ambas as leis citadas entraram em vigor após o trânsito em julgado da sentença condenatória."
+],
+"answer": 2,
+"explanation": "“A lei posterior, que de qualquer modo favorecer o agente, aplica-se aos fatos anteriores, ainda que decididos por sentença condenatória transitada em julgado.” — Código Penal, Art. 2º, parágrafo único. A Lei A, por ser mais benéfica, retroage para alcançar a situação de Joelerson, mesmo com a condenação transitada em julgado. A Lei B, posterior e mais gravosa, não pode retroagir para prejudicá-lo. Portanto, a lei mais benéfica (Lei A) deve ser aplicada, mesmo que já tenha sido revogada (ultratividade da lei penal benéfica)."
+},
+{
+"type": "multiple",
+"q": "Antônio e Rogério praticaram, em comunhão de ações e desígnios, um ilícito penal, e ambos foram condenados. Antônio e o Ministério Público interpuseram tempestivos recursos, ao passo que Rogério perdeu o prazo de recurso, porém constatou que havia prescrição da pretensão punitiva na modalidade retroativa, o que foi sustentado por sua defesa em contrarrazões recursais. Nesse caso, considerando os efeitos dos recursos, assinale a afirmativa correta.",
+"options": [
+"O efeito devolutivo do recurso permite que o Juiz reconsidere a decisão recorrida.",
+"O efeito translativo do recurso permite a Rogério arguir a prescrição em suas contrarrazões.",
+"O efeito substitutivo do recurso permite que o Tribunal conheça toda a matéria impugnada.",
+"O efeito extensivo do recurso permite que Rogério aproveite qualquer decisão favorável a Antônio."
+],
+"answer": 1,
+"explanation": "“No caso de concurso de agentes (Código Penal, art. 25), a decisão do recurso interposto por um dos réus, se fundado em motivos que não sejam de caráter exclusivamente pessoal, aproveitará aos outros.” — Código de Processo Penal, Art. 580. O gabarito oficial indica a alternativa B. No entanto, a prescrição, sendo matéria de ordem pública, pode ser conhecida de ofício pelo tribunal em razão do efeito translativo do recurso. A argumentação em contrarrazões é um meio válido de levar a questão ao conhecimento da corte. A alternativa D também descreve corretamente o efeito extensivo, que se aplicaria caso o reconhecimento da prescrição no recurso de Antônio não fosse de caráter pessoal."
+},
+{
+"type": "multiple",
+"q": "Em um inquérito policial, o Juiz decretou, de ofício, a prisão preventiva de Débora, sem que esta possuísse qualquer antecedente criminal, apontando como fundamento para a prisão a gravidade em abstrato do crime de homicídio culposo. Certo de que não houve a decretação anterior de medida cautelar diversa da prisão, assinale a opção que apresenta, corretamente, a alegação que você, como advogado(a) de Débora, deve apresentar.",
+"options": [
+"O magistrado não pode decretar prisão preventiva de ofício, bem como não é cabível a decretação de prisão preventiva em delitos culposos.",
+"O magistrado pode, de ofício, decretrar prisão preventiva, e a gravidade em abstrato do crime é fundamento legítimo para a decretação de preventiva.",
+"O magistrado pode decretar prisão preventiva de ofício no inquérito e no processo, mas a gravidade em abstrato de um crime não é motivo legítimo para a decretação de preventiva.",
+"O magistrado não pode decretar prisão preventiva de oficio, mas a gravidade em abstrato de um crime é um motivo legítimo para a decretação da prisão preventiva mesmo quando o suspeito for primário."
+],
+"answer": 0,
+"explanation": "“O juiz, a requerimento das partes... poderá decretar a prisão preventiva...” e “Será admitida a decretação da prisão preventiva: I - nos crimes dolosos punidos com pena privativa de liberdade máxima superior a 4 (quatro) anos” — Código de Processo Penal, Art. 311 e Art. 313, I. Existem múltiplas ilegalidades na decisão: 1) o juiz não pode decretar a prisão preventiva de ofício (vedação expressa pela Lei nº 13.964/2019); 2) a prisão preventiva não é cabível para crimes culposos, pois a lei exige crime doloso; 3) a gravidade em abstrato do delito não é fundamento idôneo para a custódia cautelar."
+},
+{
+"type": "multiple",
+"q": "Amanda impetra habeas corpus em favor de Telma, que foi presa preventivamente por decisão do Juiz de Primeiro Grau, sendo acusada da prática de crime hediondo. O habeas corpus foi impetrado com o argumento de excesso de prazo. O Tribunal concedeu a ordem de habeas corpus de oficio, fundamentado na incompetência do juiz que decretou a prisão. Sobre a hipótese narrada, assinale a afirmativa correta.",
+"options": [
+"O Tribunal equivocou-se, uma vez que a incompetência do julgador não é fundamento para a concessão de habeas corpus.",
+"O Tribunal agiu de modo correto, uma vez que é possível a concessão de habeas corpus de ofício sempre que houver constrangimento ilegal.",
+"O Tribunal agiu de modo correto, pois a incompetência do Juízo é o único fundamento que admite a concessão da ordem de habeas corpus de ofício.",
+"O Tribunal equivocou-se, pois fica vinculado aos argumentos apontados pelo impetrante do habeas corpus, sendo inadmissível a concessão de habeas corpus de ofício."
+],
+"answer": 1,
+"explanation": "“Os juízes e os tribunais têm competência para expedir de ofício ordem de habeas corpus, quando no curso de processo verificarem que alguém sofre ou está na iminência de sofrer coação ilegal.” — Código de Processo Penal, Art. 654, § 2º. O tribunal, ao julgar o habeas corpus, não está restrito aos fundamentos apresentados pelo impetrante. Se verificar a existência de qualquer outra coação ilegal (como a incompetência do juízo que decretou a prisão), pode e deve conceder a ordem de ofício."
+},
+{
+"type": "multiple",
+"q": "Daniel foi denunciado pela prática do crime de instigação ao suicídio. Após a fase de instrução, o Juiz pronunciou o réu, afirmando ser Daniel totalmente culpado da prática do crime e que qualquer jurado teria a obrigação moral de reconhecer provada a materialidade e a autoria. Nessa hipótese, de acordo com nosso ordenamento jurídico, você, como advogado(a) de Daniel, afirma que a decisão de pronúncia é",
+"options": [
+"ilegal, uma vez que houve excesso de linguagem.",
+"legal, porque observa o livre convencimento motivado do julgador.",
+"ilegal, uma vez que a pronúncia deveria ter sido decidida pelo Tribunal do Júri.",
+"legal, porque a restrição legal de excesso de linguagem aplica-se apenas para o crime de homicídio."
+],
+"answer": 0,
+"explanation": "“A fundamentação da pronúncia limitar-se-á à indicação da materialidade do fato e da existência de indícios suficientes de autoria ou de participação, devendo o juiz declarar o dispositivo legal em que julgar incurso o acusado e especificar as circunstâncias qualificadoras e as causas de aumento de pena.” — Código de Processo Penal, Art. 413, § 1º. A decisão de pronúncia deve ter linguagem sóbria e comedida para não influenciar os jurados. Ao afirmar a culpa do réu e a "obrigação moral" de condená-lo, o juiz excede sua competência e vicia a decisão por excesso de linguagem (eloquência acusatória), o que gera nulidade."
+},
+{
+"type": "multiple",
+"q": "Policiais ingressaram no imóvel pertencente a Paulo, às 4 horas da manhã, em regular perseguição iniciada logo após a prática de um homicídio, a fim de prender Júnior (filho de Paulo) em flagrante delito. Ao ingressar no imóvel, os policiais capturaram Júnior e, em busca pessoal, localizaram o telefone celular do custodiado no bolso da calça. Além de prender Júnior em flagrante, a autoridade policial determinou o encaminhamento do telefone apreendido à perícia técnica, a fim de descobrir seu conteúdo. O laudo pericial indicou que nele havia conversas que confirmavam a pertinência de Júnior em associação criminosa. Assim, foi instaurado inquérito policial contra Júnior, para apurar o delito de associação criminosa. Nesse caso, assinale a opção que indica corretamente, a alegação que você, como advogado(a) de Júnior, deve apresentar.",
+"options": [
+"A prisão em flagrante foi válida, porém esta não autoriza a apreensão do aparelho telefônico do flagranteado, o qual somente poderia ser apreendido por ordem judicial prévia e expressa.",
+"O ingresso em domicílio para prisão em flagrante não pode ocorrer no período noturno, havendo nulidade de todos os atos subsequentes ao ingresso dos policiais no domicílio de Paulo, invalidando, inclusive, a prisão em flagrante.",
+"O ingresso no interior da residência de terceiros depende de expedição de mandado de busca, havendo nulidade de todos os atos subsequentes ao ingresso dos policiais no domicílio de Paulo, invalidando, inclusive, a prisão em flagrante.",
+"A prisão em flagrante foi válida, entretanto, a autoridade policial não poderia determinar a quebra de sigilo de dados dos telefones apreendidos, havendo nulidade da prova colhida a partir da perícia do aparelho e de todos os atos subsequentes."
+],
+"answer": 3,
+"explanation": "“é inviolável o sigilo da correspondência e das comunicações telegráficas, de dados e das comunicações telefônicas, salvo, no último caso, por ordem judicial...” — Constituição Federal de 1988, Art. 5º, XII. O ingresso no domicílio foi válido por se tratar de flagrante delito (Art. 5º, XI, CF). Contudo, o acesso aos dados contidos no celular (conversas) configura quebra de sigilo e depende de autorização judicial prévia. A prova obtida sem essa autorização é ilícita, contaminando todas as provas dela derivadas (teoria dos frutos da árvore envenenada)."
+},
+{
+"type": "multiple",
+"q": "Anderson, motorista da sociedade empresária X, dirigindo o veículo da sociedade empresária fora do horário comercial e acima da velocidade permitida, atropelou Lucas. Lucas ficou internado pelo período de dois meses. Anderson foi condenado com trânsito em julgado, no âmbito criminal. Lucas propõe ação civil ex delicto de execução contra a sociedade empresária X. Sobre essa ação civil ex delicto, você, na qualidade de advogado(a) da sociedade empresária X, afirmou, corretamente, que ela é parte",
+"options": [
+"legítima uma vez que é responsável civil.",
+"legítima para figurar como ré, ainda que Anderson fosse absolvido criminalmente.",
+"ilegítima para ação civil ex delicto de execução, uma vez que não teve oportunidade de participar da ação penal originária.",
+"ilegítima para ação civil ex delicto, seja de conhecimento ou de execução, que somente pode ser proposta contra o autor do crime."
+],
+"answer": 2,
+"explanation": "“Transitada em julgado a sentença condenatória, poderão promover-lhe a execução, no juízo cível... o ofendido...” — Código de Processo Penal, Art. 63. A sentença penal condenatória transitada em julgado é um título executivo judicial, mas apenas contra o réu que participou do processo criminal. Para que a empresa (responsável civil) pudesse ser executada diretamente, ela deveria ter participado da ação penal, o que não ocorreu. Portanto, ela é parte ilegítima para figurar no polo passivo da execução, devendo ser demandada em ação de conhecimento própria."
+},
+{
+"type": "multiple",
+"q": "Jorge, segurado obrigatório do Regime Geral de Previdência Social (RGPS), reside com sua mãe, Francisca, e sua filha, Helena, que é estudante e tem 19 anos. O emprego de Jorge é a principal fonte de renda da família e o único sustento da casa. Acontece que Jorge foi acometido de uma doença e veio a falecer. Por isso, as duas dependentes de Jorge ingressam com um pedido de pensão por morte no INSS. Sobre a hipótese apresentada, assinale a afirmativa correta.",
+"options": [
+"Somente Helena faz jus à pensão por morte.",
+"Helena faz jus à pensão por morte, sendo necessária a comprovação de dependência econômica.",
+"Helena e Francisca fazem jus à pensão por morte, independentemente da comprovação de dependência econômica.",
+"Somente Francisca faz jus à pensão por morte, sendo necessária a comprovação de dependência econômica."
+],
+"answer": 0,
+"explanation": "“A existência de dependente de qualquer das classes deste artigo exclui do direito às prestações os das classes seguintes.” — Lei nº 8.213/1991, Art. 16, § 1º. A lei previdenciária estabelece classes de dependentes. Os filhos menores de 21 anos (Classe I) precedem os pais (Classe II). Como Helena tem 19 anos, ela é dependente da Classe I e sua existência exclui o direito de sua avó, Francisca (mãe do segurado), que pertence à Classe II. A dependência econômica da filha é presumida."
+},
+{
+"type": "multiple",
+"q": "Antônio recebe aposentadoria por incapacidade permanente e, por necessitar da assistência permanente de outra pessoa, seu benefício foi acrescido de 25%. Em relação a esse acréscimo, assinale a afirmativa correta.",
+"options": [
+"Será incorporado ao valor da pensão, com a morte do aposentado.",
+"Deverá ser recalculado, quando o benefício que lhe deu origem for reajustado.",
+"Não será devido, quando o valor da aposentadoria atingir o limite máximo legal.",
+"É devido ao segurado que recebe auxílio por incapacidade temporária e necessita da assistência permanente de outra pessoa."
+],
+"answer": 1,
+"explanation": "“O valor da aposentadoria por incapacidade permanente do segurado que necessitar da assistência permanente de outra pessoa será acrescido de 25% (vinte e cinco por cento). [...] Parágrafo único. O acréscimo de que trata este artigo: [...] c) será recalculado quando o benefício que lhe deu origem for reajustado” — Lei nº 8.213/1991, Art. 45. A lei determina que o adicional de 25% (conhecido como auxílio-acompanhante) deve ser recalculado sempre que o valor da aposentadoria principal for reajustado, mantendo a proporção. Ele não se incorpora à pensão e é devido mesmo que o total supere o teto do RGPS."
+},
+{
+"type": "multiple",
+"q": "Geraldo trabalha desde 2022 para uma sociedade empresária, atua na região metropolitana do Estado e recebe um salário fixo de R$ 4.000,00, sem qualquer desconto, exceto o imposto sobre a renda e o INSS. Além disso, desfruta de um pacote de benefícios que inclui auxílio-alimentação em forma de ticket, habitação num luxuoso apartamento, plano de saúde e auxílio-educação (compreendendo os valores relativos à matrícula, à mensalidade, à anuidade, aos livros e ao material didático). Geraldo consultou você, como advogado(a), para saber quais benefícios devem ter seu valor integrado à sua remuneração. Sobre a questão levantada por Geraldo, de acordo com os dados do enunciado e com o texto da CLT, assinale a afirmativa correta.",
+"options": [
+"Apenas a educação integrará a remuneração.",
+"Apenas o valor do plano de saúde não integrará a remuneração.",
+"Apenas habitação, fornecida pelo trabalho, integrará a remuneração.",
+"Alimentação, habitação, plano de saúde e auxílio-educação integrarão a remuneração."
+],
+"answer": 2,
+"explanation": "“Além do pagamento em dinheiro, compreende-se no salário, para todos os efeitos legais, a alimentação, habitação, vestuário ou outras prestações 'in natura' que a empresa, por força do contrato ou do costume, fornecer habitualmente ao empregado.” — CLT, Art. 458, caput. O § 2º do mesmo artigo exclui da natureza salarial o auxílio-alimentação (se não pago em dinheiro), a educação e a assistência médica. A habitação fornecida "pelo" trabalho (e não "para" o trabalho indispensável) mantém sua natureza de salário-utilidade e, portanto, integra a remuneração de Geraldo."
+},
+{
+"type": "multiple",
+"q": "Os irmãos Décio e Beatriz são empresários. Décio explora a atividade pesqueira, enquanto Beatriz tem duas lojas de calçados. Em 2023, a sociedade empresária de Décio teve uma reclamação trabalhista ajuizada por um operador de produção que inseriu, na petição inicial, a sociedade empresária de Beatriz, advogando existir grupo econômico, apenas em razão do parentesco entre Décio e Beatriz. Considerando esses fatos e o que dispõe a CLT, assinale a afirmativa correta.",
+"options": [
+"O autor está correto, pois existe vinculo familiar entre Décio e Beatriz.",
+"Para se caracterizar grupo econômico somente é necessário haver identidade de sócios.",
+"Não há grupo econômico because não há direção, controle ou administração de uma empresa sobre outra.",
+"O grupo econômico pode ser reconhecido pelo parentesco, mas apenas na fase executória da reclamação."
+],
+"answer": 2,
+"explanation": "“Não caracteriza grupo econômico a mera identidade de sócios, sendo necessárias, para a configuração do grupo, a demonstração do interesse integrado, a efetiva comunhão de interesses e a atuação conjunta das empresas dele integrantes.” — CLT, Art. 2º, § 3º. A legislação trabalhista, após a Reforma de 2017, tornou explícito que o simples fato de haver sócios em comum ou parentesco entre eles não é suficiente para configurar o grupo econômico. É preciso provar a atuação coordenada e a integração entre as empresas, como direção ou controle, o que não foi demonstrado no caso."
+},
+{
+"type": "multiple",
+"q": "Em 2023, Denilson ajuizou reclamação trabalhista contra um supermercado alegando que lá trabalhou de 2004 a 2008 sem ter a CTPS assinada. Na reclamação, ele requereu a declaração do vínculo empregatício naquele período para fins de anotação na carteira profissional, pois precisaria desse interregno para conseguir sua aposentadoria no INSS. Em defesa, a sociedade empresária alegou prescrição, pois a ação foi ajuizada após o biênio constitucional. Considerando esses fatos e o que dispõe a CLT, assinale a afirmativa correta.",
+"options": [
+"A sociedade empresária está equivocada, pois o prazo é de 30 anos, tal qual sucede com o FGTS.",
+"A prescrição se consolidou e poderia ser conhecida de ofício pelo Juiz, mesmo não havendo defesa.",
+"A sociedade empresária está correta, havendo prescrição porque a ação foi ajuizada mais de 2 anos após a ruptura.",
+"A sociedade empresária está incorreta, pois as ações que têm por objeto anotações para fins de prova junto à Previdência Social são imprescritiveis."
+],
+"answer": 3,
+"explanation": "“Aplica-se a prescrição bienal sobre ações que tenham por objeto apenas a anotação da CTPS, para fins de prova junto à Previdência Social.” — CLT, Art. 11, § 1º. A CLT estabelece expressamente que as pretensões de natureza meramente declaratória para fins de prova junto à Previdência Social, como o reconhecimento de vínculo para anotação na CTPS, são imprescritíveis. A prescrição bienal e quinquenal atinge apenas as pretensões de natureza condenatória (pagamento de verbas)."
+},
+{
+"type": "multiple",
+"q": "Leopoldo foi contratado, em 2020, por uma sociedade empresária de terceirização, como auxiliar de limpeza. Ele cumpre jornada em regime de tempo parcial de 22 horas semanais, conforme previsto e autorizado na norma coletiva da sua categoria. Após um ano de trabalho sem faltas injustificadas, é chegado o momento de Leopoldo fruir férias. Sobre a solicitação de Leopoldo, considerando o que dispõe a CLT, assinale a afirmativa correta.",
+"options": [
+"Por ser empregado em regime de tempo parcial, ele não terá direito a férias remuneradas.",
+"Tal qual os demais empregados, ele terá direito a 30 dias de férias com adicional de 1/3.",
+"Ele somente terá direito a férias se isso estiver expressamente previsto na convenção coletiva de sua categoria.",
+"Por cumprir apenas a metade da jornada dos demais empregados, ele terá direito a 15 dias de férias com adicional de 1/3."
+],
+"answer": 1,
+"explanation": "“As férias dos empregados submetidos ao regime de tempo parcial são regidas pelo disposto no art. 130 desta Consolidação.” — CLT, Art. 58-A, § 6º. A Reforma Trabalhista (Lei nº 13.467/2017) unificou as regras de férias. Antes, os empregados em regime de tempo parcial tinham direito a férias proporcionais (de 8 a 18 dias). Após a reforma, eles passaram a ter direito a 30 dias de férias, assim como os empregados com jornada integral, desde que não tenham mais de 5 faltas injustificadas no período aquisitivo."
+},
+{
+"type": "multiple",
+"q": "Em sede de acordo coletivo, firmado em janeiro de 2024 e com vigência de dois anos, entre uma sociedade empresária e o sindicato da categoria profissional, constou cláusula determinando que o tempo de deslocamento dos empregados do portão até o interior da sociedade empresária, onde se situa o relógio de ponto, seria computado na jornada de trabalho. Isso porque o deslocamento é feito em transporte fornecido pela sociedade empresária e dura cerca de 20 minutos. Sobre a jornada, não consta mais nada na norma coletiva. A sociedade empresária, por liberalidade, mantém salas de recreação, biblioteca e uma capela. A utilização desses espaços antes e após o trabalho e durante os intervalos é facultada aos empregados. Em razão do ajuizamento de uma ação trabalhista por um ex-empregado, a sociedade empresária indagou a você, como advogado(a), se todos esses períodos, seja o de deslocamento, seja o tempo despendido nos espaços mencionados, deveriam integrar a jornada de trabalho. Acerca do tema, com base na CLT, assinale a afirmativa correta.",
+"options": [
+"Todos os períodos não se computam na jornada de trabalho dos empregados.",
+"Apenas o tempo de utilização da capela deve ser computado na jornada, pois o Estado é laico.",
+"Apenas o período de deslocamento deve integrar a jornada por força da norma coletiva. Os demais períodos não são considerados tempo à disposição.",
+"O período de deslocamento assim como o período de utilização da biblioteca, voltado para o estudo, devem ser computados na jornada. Os demais períodos não são computados na jornada."
+],
+"answer": 2,
+"explanation": "“A convenção coletiva e o acordo coletivo de trabalho têm prevalência sobre a lei quando, entre outros, dispuserem sobre: I - pacto quanto à jornada de trabalho...” — CLT, Art. 611-A. “Não se considera tempo à disposição do empregador... as seguintes atividades: ...III - prática religiosa;... VI - estudo...” — CLT, Art. 4º, § 2º. A norma coletiva pode validamente estipular que o tempo de deslocamento interno seja computado na jornada. Por outro lado, a lei exclui expressamente da jornada o tempo gasto em atividades como práticas religiosas ou estudo, quando por escolha do empregado. Assim, apenas o tempo de deslocamento previsto no acordo integra a jornada."
+},
+{
+"type": "multiple",
+"q": "Em sede de reclamação trabalhista você advoga para a parte autora. Dos três pedidos formulados, você sagrou-se vitorioso em dois, horas extras e equiparação salarial, sucumbindo apenas no pedido de integração da habitação. Atendendo a um desejo de seu cliente, optou-se por não recorrer, tendo o prazo recursal transcorrido integralmente. A ré, por sua vez e no seu prazo, apresentou recurso pertinente e, agora, o processo encontra-se com prazo para você contrarrazoar o recurso da ré. Ocorre que seu cliente mudou de opinião, já que o processo irá se alongar por conta do recurso da ré. Diante disso, indagou-lhe se caberia alguma medida processual para que fosse reexaminada a questão relativa à integração da habitação. Com base no enunciado e no entendimento consolidado do TST, assinale a afirmativa correta.",
+"options": [
+"Caberá recurso adesivo.",
+"Caberá recurso ordinário.",
+"Caberá agravo de instrumento.",
+"Não há medida a ser adotada, transitando em julgado a decisão do pedido de integração da habitação."
+],
+"answer": 0,
+"explanation": "“Sendo vencidos autor e réu, ao recurso interposto por qualquer deles poderá aderir o outro.” — CPC, Art. 997, § 1º. “Cabe recurso adesivo no processo do trabalho...” — Súmula nº 283 do TST. Havendo sucumbência recíproca (ambas as partes perderam em algum ponto) e tendo a parte ré interposto recurso ordinário, a parte autora, que não recorreu no prazo normal, pode apresentar recurso adesivo no prazo que tem para apresentar as contrarrazões ao recurso da ré, para discutir a matéria em que foi vencida (integração da habitação)."
+},
+{
+"type": "multiple",
+"q": "Em uma reclamação trabalhista requerendo a responsabilidade civil do empregador em razão de uma alegada doença profissional, o Juiz deferiu a realização de perícia, sendo que ambas as partes quesitaram e indicaram assistentes técnicos. No laudo, foi detectado que realmente houve a doença ocupacional. Com base nele, o Juiz julgou procedente o pedido. Sobre os honorários do perito e dos assistentes, considerando o entendimento consolidado do TST, assinale a afirmativa correta.",
+"options": [
+"A empresa deverá arcar com os honorários do perito e do assistente técnico do autor.",
+"A Justiça arcará com os honorários do perito, e cada parte será responsável pelos honorários do seu assistente técnico.",
+"Cada parte arcará com metade do valor dos honorários do perito e integralmente com os honorários de seu assistente técnico.",
+"O réu será condenado a pagar os honorários do perito, porque sucumbiu no objeto da prova, e arcará com os honorários do assistente técnico por ele indicado."
+],
+"answer": 3,
+"explanation": "“A responsabilidade pelo pagamento dos honorários periciais é da parte sucumbente na pretensão objeto da perícia, ainda que beneficiária da justiça gratuita.” — CLT, Art. 790-B. “Cada parte pagará a remuneração do assistente técnico que houver indicado...” — CPC, Art. 95 (aplicável subsidiariamente). Como a empresa ré foi sucumbente no objeto da perícia (a existência da doença profissional foi confirmada), ela é responsável pelo pagamento dos honorários do perito judicial. Quanto ao assistente técnico, cada parte é responsável por remunerar aquele que indicou."
+},
+{
+"type": "multiple",
+"q": "Foi protocolizada petição de homologação de acordo extrajudicial à 200ª Vara do Trabalho de Florianópolis. As partes envolvidas são Luísa, empregada doméstica, e José Pedro, seu ex-empregador. O valor apresentado para o acordo é de R$ 27.000,00 (vinte e sete mil reais), pagos em duas parcelas iguais e sucessivas, sendo mantidas as anotações na CTPS de Luísa. Empregada e empregador estão representados pelo mesmo advogado. Sobre esses fatos, segundo os termos da CLT, assinale a afirmativa correta.",
+"options": [
+"Não é possível a homologação, porque as partes não podem ser representadas pelo mesmo advogado.",
+"Na homologação de acordo extrajudicial, os empregados precisam ser assistidos pelo advogado do seu sindicato de classe.",
+"Contanto que ambas as partes ratifiquem perante o Juiz o desejo de realizar a transação, o acordo deve ser homologado pelo Magistrado.",
+"Tratando-se de um procedimento especial de jurisdição voluntária, o Juiz não pode negar a homologação de acordo alegando vicio formal."
+],
+"answer": 0,
+"explanation": "“As partes não poderão ser representadas por advogado comum.” — CLT, Art. 855-B, § 1º. A CLT, ao instituir o procedimento de homologação de acordo extrajudicial, estabeleceu como requisito obrigatório que empregado e empregador estejam representados por advogados distintos. A representação por advogado comum constitui vício que impede a homologação judicial do acordo."
+},
+{
+"type": "multiple",
+"q": "Em 2024, o Juiz proferiu sentença ilíquida em reclamação trabalhista, na qual você advoga para o autor, que foi julgada procedente. O feito havia sido ajuizado no final do ano de 2022. O Juízo elaborou e tornou líquida a conta, tendo aberto um prazo para as partes se manifestarem. A parte ré silenciou-se e você apresentou sua impugnação, que não foi acolhida pelo Juiz. Ato contínuo, houve decisão homologatória da sentença de liquidação. As partes foram intimadas. A ré garantiu o juízo e apresentou embargos à execução. Você apresentou impugnação de credor e contraminuta aos embargos à execução apresentados pela ré. Diante desta circunstância, assinale a afirmativa correta.",
+"options": [
+"Você deverá sustentar em contraminuta aos embargos à execução que a ré apenas poderia questionar a sentença de liquidação por meio dos embargos à penhora.",
+"Tendo em vista que sua impugnação à conta do juízo foi rejeitada, a matéria atinente à sua impugnação de credor deve ser diversa, não podendo ser renovada a discussão da impugnação à conta de liquidação.",
+"Na sua contraminuta, assim como na impugnação de credor, caberá apenas discutir a matéria relativa às razões pelas quais os valores apurados estariam incorretos, não havendo o que se arguir acerca da não impugnação da ré à conta de liquidação, por ser facultativa.",
+"Está preclusa a arguição de matérias que impugnam os cálculos homologados em sede de embargos à execução da ré, uma vez que a parte não apresentou impugnação aos cálculos no momento oportuno, cabendo ao advogado do autor formular essa alegação na contraminuta aos embargos da ré."
+],
+"answer": 3,
+"explanation": "“Elaborada a conta e tornada líquida, o juízo poderá abrir às partes prazo comum de oito dias para impugnação fundamentada com a indicação dos itens e valores objeto da discordância, sob pena de preclusão.” — CLT, Art. 879, § 2º. A CLT estabelece que a parte que, intimada para se manifestar sobre os cálculos de liquidação, permanece inerte, perde o direito de discuti-los posteriormente. Como a ré não apresentou impugnação no prazo concedido, a matéria está preclusa para ela, o que deve ser alegado pelo autor na contraminuta aos embargos à execução."
+},
+{
+"type": "multiple",
+"q": "As irmãs Alessandra, Antônia, Alba e Aline foram dispensadas de seus empregos em 2024, e cada qual contratou uma advogada de sua confiança para ajuizar reclamação trabalhista visando postular horas extras. Alessandra tem 58 anos de idade; Antônia, 65 anos de idade; Alba, 50 anos de idade; e Aline, 61 anos de idade. Considerando a norma de regência, assinale a opção que indica o(s) processo(s) que terá(ão) prioridade na tramitação.",
+"options": [
+"O de Antônia, somente.",
+"Os de Antônia e Aline, somente.",
+"Os de Alessandra e Aline, somente.",
+"Os das quatro irmãs, em condições iguais."
+],
+"answer": 1,
+"explanation": "“É assegurada prioridade na tramitação dos processos e procedimentos e na execução dos atos e diligências judiciais em que figure como parte ou interveniente pessoa com idade igual ou superior a 60 (sessenta) anos, em qualquer instância.” — Lei nº 10.741/2003 (Estatuto da Pessoa Idosa), Art. 71; e CPC, Art. 1.048, I. A prioridade de tramitação é garantida por lei às pessoas com 60 anos ou mais. No caso, Antônia (65 anos) e Aline (61 anos) se enquadram nesse critério e, portanto, seus processos devem tramitar com prioridade. Os processos de Alessandra (58) e Alba (50) não têm esse direito."
+}
+],
+"skipped": []
 }
