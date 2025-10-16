@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title": "Direito Processual Civil - Aplicação das Normas Processuais (Arts. 13-15)",
+    "category": "processo-civil",
+    "theme": "aplicacao-normas-processuais-cpc",
+    "shuffle": {
+      "questions": true,
+      "options": true
+    },
+    "persist": true,
+    "outroMessage": "Excelente! Você concluiu o quiz sobre a aplicação das normas processuais. Continue aprofundando seus conhecimentos!"
+  },
+  "questions": [
+    {
+      "type": "multiple",
+      "q": "Uma empresa portuguesa ajuíza uma ação de cobrança no Brasil contra uma empresa brasileira. Existe um tratado internacional entre Brasil e Portugal que regula de forma específica o procedimento de citação para casos como este, com regras que diferem das previstas no CPC. O juiz brasileiro, ao determinar a citação da empresa ré, deve aplicar qual norma?",
+      "options": [
+        "As normas do Código de Processo Civil brasileiro, pois o princípio da territorialidade impõe a aplicação exclusiva da lei do foro.",
+        "As normas processuais de Portugal, pois é a nacionalidade da empresa autora que define a regra aplicável.",
+        "As disposições específicas do tratado internacional, pois estas são ressalvadas pela própria lei processual brasileira.",
+        "O juiz pode optar entre a norma do CPC e a do tratado, aplicando a que for mais célere para o caso concreto."
+      ],
+      "answer": 2,
+      "explanation": "“A jurisdição civil será regida pelas normas processuais brasileiras, ressalvadas as disposições específicas previstas em tratados, convenções ou acordos internacionais de que o Brasil seja parte.” — CPC/2015, art. 13. A alternativa correta (C) reflete a exceção prevista no artigo. Embora a regra seja a aplicação da lei brasileira (princípio da territorialidade), os tratados internacionais dos quais o Brasil é parte prevalecem em suas disposições específicas. As demais alternativas ignoram essa ressalva legal."
+    },
+    {
+      "type": "multiple",
+      "q": "Durante o curso de um processo, entra em vigor uma nova lei que altera o prazo para a interposição do recurso de apelação de 15 para 20 dias. Uma sentença foi publicada sob a vigência da lei antiga (prazo de 15 dias). Quando a nova lei entra em vigor, a parte ainda estava no 10º dia do seu prazo. Qual prazo recursal a parte deverá observar?",
+      "options": [
+        "O novo prazo de 20 dias, pois a norma processual tem aplicação imediata aos processos em curso.",
+        "O prazo de 15 dias previsto na lei antiga, pois o ato de recorrer rege-se pela lei vigente na data da publicação da decisão, uma situação jurídica já consolidada.",
+        "A parte terá direito à soma dos prazos, totalizando 35 dias, para garantir a segurança jurídica.",
+        "O prazo será de 10 dias a contar da nova lei, pois os 10 dias já corridos são desconsiderados."
+      ],
+      "answer": 1,
+      "explanation": "“A norma processual não retroagirá e será aplicável imediatamente aos processos em curso, respeitados os atos processuais praticados e as situações jurídicas consolidadas sob a vigência da norma revogada.” — CPC/2015, art. 14. A alternativa correta (B) aplica a teoria do isolamento dos atos processuais. O direito de recorrer com o prazo de 15 dias nasceu com a publicação da sentença, sob a vigência da lei antiga, tratando-se de uma situação jurídica consolidada que deve ser respeitada. A nova lei se aplicará apenas às decisões publicadas a partir de sua vigência."
+    },
+    {
+      "type": "multiple",
+      "q": "Um servidor público responde a um Processo Administrativo Disciplinar (PAD). A lei específica que rege o PAD é omissa quanto ao procedimento para a produção de prova testemunhal por videoconferência. O advogado do servidor requer a aplicação das regras do CPC para regular o ato. A autoridade processante deve:",
+      "options": [
+        "Indeferir o pedido, pois o CPC se aplica exclusivamente a processos judiciais cíveis.",
+        "Acolher o pedido, pois, na ausência de normas específicas, as disposições do CPC são aplicadas de forma supletiva e subsidiária aos processos administrativos.",
+        "Aplicar por analogia as regras do Código de Processo Penal, por se tratar de um processo de natureza sancionatória.",
+        "Suspender o processo até que seja editada uma norma administrativa específica para o caso, dada a lacuna legal."
+      ],
+      "answer": 1,
+      "explanation": "“Na ausência de normas que regulem processos eleitorais, trabalhistas ou administrativos, as disposições deste Código lhes serão aplicadas supletiva e subsidiariamente.” — CPC/2015, art. 15. A alternativa correta (B) está em perfeita consonância com o dispositivo, que prevê a aplicação do CPC para suprir omissões de outros microsistemas processuais, incluindo o administrativo. As demais alternativas apresentam soluções que contrariam a expressa previsão legal de aplicação subsidiária e supletiva do Código de Processo Civil."
+    }
+  ],
+  "skipped": []
+}
