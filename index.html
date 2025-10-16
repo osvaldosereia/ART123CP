@@ -250,6 +250,16 @@
       if(t==='vf') return (pick===!!q.answer);
       return (typeof pick==='number' && pick===q.answer);
     }
+    
+    // ===== NEW: Helper para normalizar texto para busca =====
+    function normalizeText(str) {
+      if (!str) return '';
+      return str
+        .toLowerCase()
+        .normalize('NFD') // Decompõe caracteres acentuados
+        .replace(/[\u0300-\u036f]/g, '') // Remove os acentos
+        .replace(/ç/g, 'c');
+    }
 
     // ===== GitHub indexer =====
     function guessOwnerRepo(){
@@ -520,7 +530,6 @@
 
       const q=current();
       
-      // MODIFICATION START
       const categoryText = QUIZ?.meta?.category ? slugToName(QUIZ.meta.category) : 'Geral';
       const themeText = QUIZ?.meta?.title || (QUIZ?.meta?.theme ? slugToName(QUIZ.meta.theme) : 'Quiz');
       questionEl.innerHTML = `
@@ -530,7 +539,6 @@
         <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 10px 0;">
         ${q.q}
       `;
-      // MODIFICATION END
 
       optionsEl.innerHTML='';
       explainEl.classList.add('hide');
@@ -553,10 +561,18 @@
       persist();
     }
 
+    // ===== MODIFIED: Adiciona etiquetas A, B, C... =====
     function renderOptions(texts, onPick, origIdxs=null){
+      const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
       texts.forEach((txt, idx)=>{
         const b=document.createElement('button');
-        b.className='opt'; b.textContent=txt; b.dataset.idx=idx; if(origIdxs) b.dataset.origIdx=String(origIdxs[idx]);
+        b.className='opt'; 
+        b.dataset.idx=idx; 
+        if(origIdxs) b.dataset.origIdx=String(origIdxs[idx]);
+        
+        const label = labels[idx] ? `<strong>${labels[idx]})</strong> ` : '';
+        b.innerHTML = `${label}${txt}`;
+
         b.addEventListener('click', ()=> onPick(idx));
         optionsEl.appendChild(b);
       });
@@ -607,20 +623,20 @@
     }
 
     function next(){
-  if(I < ORDER.length - 1){
-    I++;
-    render();
-  } else {
-    finish();
-  }
-}
+      if(I < ORDER.length - 1){
+        I++;
+        render();
+      } else {
+        finish();
+      }
+    }
 
-function prev(){
-  if(I > 0){
-    I--;
-    render();
-  }
-}
+    function prev(){
+      if(I > 0){
+        I--;
+        render();
+      }
+    }
 
 
     function score(){
@@ -650,21 +666,32 @@ function prev(){
       window.open(url, '_blank', 'noopener');
     }
 
-    // ===== Busca intra-quiz (filtro local) =====
+    // ===== MODIFIED: Busca intra-quiz com palavras exatas =====
     function applyFilter(termRaw){
       if(!QUIZ){ toast('Carregue um tema antes','warn'); return; }
       const term = String(termRaw||'').trim();
       if(!term){ toast('Informe um termo','warn'); return; }
-      const needle = term.toLocaleLowerCase('pt-BR');
+
+      const searchTerms = normalizeText(term).split(/\s+/).filter(Boolean);
+      if (searchTerms.length === 0) return;
+
       const hits=[];
       QUIZ.questions.forEach((q,idx)=>{
-        const inQ = (q.q||'').toLocaleLowerCase('pt-BR').includes(needle);
-        let inOpt=false;
-        if(q.type!=='vf' && Array.isArray(q.options)){
-          inOpt = q.options.some(o=> String(o||'').toLocaleLowerCase('pt-BR').includes(needle));
+        const normalizedQ = normalizeText(q.q || '');
+        const normalizedOpts = (q.options || []).map(o => normalizeText(String(o || '')));
+
+        const allTermsFound = searchTerms.every(st => {
+          const regex = new RegExp('\\b' + st + '\\b');
+          const inQ = regex.test(normalizedQ);
+          const inOpt = normalizedOpts.some(optText => regex.test(optText));
+          return inQ || inOpt;
+        });
+
+        if (allTermsFound) {
+          hits.push(idx);
         }
-        if(inQ||inOpt) hits.push(idx);
       });
+
       if(hits.length===0){ toast('Nada encontrado','warn'); return; }
       ORDER = hits.slice();
       I=0;
@@ -684,11 +711,13 @@ function prev(){
       render();
     }
 
-    // ===== Busca global na página inicial =====
+    // ===== MODIFIED: Busca global com palavras exatas =====
     async function globalSearchAndOpen(termRaw){
       const term = String(termRaw||'').trim();
       if(!term){ toast('Informe um termo para busca global','warn'); return; }
-      const needle = term.toLocaleLowerCase('pt-BR');
+
+      const searchTerms = normalizeText(term).split(/\s+/).filter(Boolean);
+      if (searchTerms.length === 0) return;
 
       const allPaths=[];
       (MANIFEST?.categories||[]).forEach(c=>{
@@ -703,12 +732,17 @@ function prev(){
           const data = await loadJSON(p);
           if(!data || !Array.isArray(data.questions)) continue;
           data.questions.forEach((q,idx)=>{
-            const inQ = (q.q||'').toLocaleLowerCase('pt-BR').includes(needle);
-            let inOpt=false;
-            if(q.type!=='vf' && Array.isArray(q.options)){
-              inOpt = q.options.some(o=> String(o||'').toLocaleLowerCase('pt-BR').includes(needle));
-            }
-            if(inQ||inOpt){
+            const normalizedQ = normalizeText(q.q || '');
+            const normalizedOpts = (q.options || []).map(o => normalizeText(String(o || '')));
+            
+            const allTermsFound = searchTerms.every(st => {
+              const regex = new RegExp('\\b' + st + '\\b');
+              const inQ = regex.test(normalizedQ);
+              const inOpt = normalizedOpts.some(optText => regex.test(optText));
+              return inQ || inOpt;
+            });
+
+            if(allTermsFound){
               const clone = JSON.parse(JSON.stringify(q));
               clone.__origin = { path:p, index:idx };
               results.push(clone);
