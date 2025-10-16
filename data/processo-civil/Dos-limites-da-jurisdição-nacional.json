@@ -1,1 +1,245 @@
 
+{
+  "meta": {
+    "title": "Direito Processual Civil - Limites da Jurisdição Nacional (Arts. 21-25)",
+    "category": "processo-civil",
+    "theme": "limites-jurisdicao-nacional-cpc",
+    "shuffle": {
+      "questions": true,
+      "options": true
+    },
+    "persist": true,
+    "outroMessage": "Parabéns! Você concluiu o teste sobre os limites da jurisdição nacional, um tema crucial em um mundo globalizado."
+  },
+  "questions": [
+    {
+      "type": "multiple",
+      "q": "Uma empresa da Suécia e uma da Noruega celebram um contrato de consultoria a ser executado integralmente no Uruguai. Surge um litígio e, sem qualquer outro ponto de conexão, a empresa sueca decide ajuizar a ação no Brasil, sob o argumento de que a jurisdição brasileira é universal para litígios comerciais. A tese da empresa sueca está correta?",
+      "options": [
+        "Sim, pois a jurisdição brasileira se estende a qualquer causa que lhe seja submetida.",
+        "Não, pois a jurisdição civil brasileira não é universal, sendo exercida apenas nas hipóteses de competência estabelecidas pelo Código de Processo Civil.",
+        "Sim, desde que a empresa norueguesa concorde em ser processada no Brasil, a jurisdição pode ser fixada.",
+        "Não, pois a competência seria obrigatoriamente do Tribunal Penal Internacional, por envolver diferentes nações."
+      ],
+      "answer": 1,
+      "explanation": "“Art. 21. Compete à autoridade judiciária brasileira processar e julgar as ações em que:” — CPC/2015, art. 21, caput. A alternativa correta (B) reflete a essência do caput: a jurisdição brasileira não é ilimitada ou incondicionada. Ela é exercida conforme as regras de competência que o próprio Código estabelece nos incisos seguintes. A ausência de enquadramento em uma das hipóteses legais afasta a competência nacional."
+    },
+    {
+      "type": "multiple",
+      "q": "Um cidadão argentino, com domicílio fixo na cidade de São Paulo, é processado por uma empresa espanhola em razão de uma dívida contraída em Madrid. O réu argumenta que a justiça brasileira não tem competência para o caso, pois ele não é brasileiro, o autor é espanhol e a dívida se originou na Espanha. A justiça brasileira é competente?",
+      "options": [
+        "Não, pois o caso não tem qualquer outro vínculo com o Brasil além da residência do réu.",
+        "Sim, a competência da autoridade judiciária brasileira se estabelece pelo fato de o réu, de qualquer nacionalidade, ser domiciliado no Brasil.",
+        "Não, a ação deveria ser proposta na Argentina, país de nacionalidade do réu.",
+        "Sim, mas apenas se a empresa espanhola tiver uma filial no Brasil."
+      ],
+      "answer": 1,
+      "explanation": "“Compete à autoridade judiciária brasileira processar e julgar as ações em que: I – o réu, qualquer que seja a sua nacionalidade, estiver domiciliado no Brasil;” — CPC/2015, art. 21, I. A alternativa correta (B) reflete diretamente a norma. O domicílio do réu no Brasil é um critério autônomo e suficiente para fixar a competência concorrente da jurisdição nacional, independentemente da nacionalidade das partes ou do local de origem da obrigação."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma empresa de engenharia sediada na Alemanha foi contratada por uma empresa japonesa para construir uma ponte em Corumbá, Mato Grosso do Sul. A construtora alemã não cumpre o cronograma. A empresa japonesa pretende ajuizar uma ação para exigir o cumprimento do contrato. Onde a ação pode ser proposta?",
+      "options": [
+        "Apenas na Alemanha, sede da ré, ou no Japão, sede da autora.",
+        "No Brasil, pois o local onde a obrigação principal (a construção da ponte) deveria ser cumprida atrai a competência da jurisdição nacional.",
+        "Em qualquer um dos três países, à livre escolha da empresa autora.",
+        "Apenas no Tribunal Internacional de Haia, por se tratar de litígio entre empresas de diferentes nacionalidades."
+      ],
+      "answer": 1,
+      "explanation": "“Compete à autoridade judiciária brasileira processar e julgar as ações em que: II – no Brasil tiver de ser cumprida a obrigação;” — CPC/2015, art. 21, II. A alternativa correta (B) está correta porque o local de cumprimento da obrigação é um dos elementos que estabelecem a competência da jurisdição brasileira. Como a ponte seria construída no Brasil, a ação pode ser processada e julgada aqui. As demais opções ignoram essa regra de competência."
+    },
+    {
+      "type": "multiple",
+      "q": "Dois turistas, um canadense e um sul-africano, sofrem um acidente de trânsito em Foz do Iguaçu, Paraná. Meses depois, já em seus países, o turista canadense decide processar o sul-africano pelos danos materiais. O réu alega que o Brasil não pode julgar a causa, pois ambos são estrangeiros e não residem no país. A jurisdição brasileira pode ser acionada?",
+      "options": [
+        "Não, pois sem domicílio das partes no Brasil, a jurisdição nacional é afastada.",
+        "Sim, a autoridade judiciária brasileira é competente, pois o fundamento da ação é um fato ocorrido no Brasil (o acidente).",
+        "Não, a competência será do país do réu, a África do Sul, por ser a regra geral de foro.",
+        "Sim, desde que a petição inicial seja redigida em português e os valores pedidos em Reais."
+      ],
+      "answer": 1,
+      "explanation": "“Compete à autoridade judiciária brasileira processar e julgar as ações em que: III – o fundamento seja fato ocorrido ou ato praticado no Brasil.” — CPC/2015, art. 21, III. A alternativa correta (B) aplica a regra do *locus delicti commissi*. O fato gerador da pretensão (o acidente) ter ocorrido em território nacional é suficiente para determinar a competência da justiça brasileira para julgar a ação indenizatória correspondente."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma multinacional do ramo de alimentos, com sede na Suíça, possui uma grande fábrica (filial) em Jundiaí-SP. Um fornecedor brasileiro de matéria-prima, que contratou com a matriz na Suíça, pretende processar a empresa por falta de pagamento. A empresa alega que não pode ser processada no Brasil, pois o contrato foi assinado com a matriz suíça. Onde a ação pode ser ajuizada?",
+      "options": [
+        "Apenas na Suíça, pois foi a matriz quem assinou o contrato.",
+        "No Brasil, pois para fins de fixação de competência, a pessoa jurídica estrangeira com filial no país é considerada domiciliada no Brasil.",
+        "Em qualquer dos dois países, mas se ajuizada no Brasil, a citação deve ser feita por carta rogatória para a matriz na Suíça.",
+        "Apenas na Suíça, a não ser que o contrato tenha sido assinado em território brasileiro."
+      ],
+      "answer": 1,
+      "explanation": "“Para o fim do disposto no inciso I, considera-se domiciliada no Brasil a pessoa jurídica estrangeira que nele tiver agência, filial ou sucursal.” — CPC/2015, art. 21, parágrafo único. A alternativa correta (B) é a correta. A existência de uma filial no Brasil equipara a pessoa jurídica estrangeira a uma domiciliada no país para o fim específico de ser aqui demandada, conforme o art. 21, I. Isso facilita o acesso à justiça para quem contrata com a empresa no Brasil."
+    },
+    {
+      "type": "multiple",
+      "q": "Um advogado, ao analisar um litígio internacional, conclui que o caso não se enquadra em nenhuma das hipóteses do Art. 21 do CPC (réu não domiciliado no Brasil, obrigação cumprida no exterior, fato ocorrido no exterior). Ele deve informar a seu cliente que é impossível processar o réu na justiça brasileira?",
+      "options": [
+        "Sim, pois o Art. 21 do CPC esgota todas as possibilidades de competência internacional concorrente.",
+        "Não, pois a competência da justiça brasileira se presume em todos os casos, salvo exceção expressa.",
+        "Não, pois é preciso verificar, ainda, se a causa se enquadra nas hipóteses adicionais de competência previstas em outros dispositivos, como o Art. 22.",
+        "Sim, a menos que o réu concorde expressamente em ser processado no Brasil."
+      ],
+      "answer": 2,
+      "explanation": "“Art. 22. Compete, ainda, à autoridade judiciária brasileira processar e julgar as ações:” — CPC/2015, art. 22, caput. A alternativa correta (C) capta o sentido da palavra \"ainda\" no texto legal. O artigo 22 funciona como uma adição ao rol do artigo 21, demonstrando que a análise da competência internacional não se esgota no primeiro dispositivo e que existem outras hipóteses a serem consideradas."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma criança brasileira, residindo com sua mãe em Manaus, necessita de alimentos (pensão alimentícia) de seu pai, um cidadão venezuelano que reside em Caracas. A mãe, representante da criança, pode ajuizar a ação de alimentos na comarca de Manaus?",
+      "options": [
+        "Não, a ação de alimentos deve ser proposta, obrigatoriamente, no domicílio do pai (o devedor), em Caracas.",
+        "Sim, a autoridade judiciária brasileira é competente pois a credora de alimentos tem domicílio no Brasil.",
+        "Não, por se tratar de um caso internacional, a cobrança deve ser feita pela via diplomática, através dos consulados.",
+        "Sim, mas apenas se o pai tiver bens ou rendimentos no Brasil."
+      ],
+      "answer": 1,
+      "explanation": "“Compete, ainda, à autoridade judiciária brasileira processar e julgar as ações: I – de alimentos, quando: a) o credor tiver domicílio ou residência no Brasil;” — CPC/2015, art. 22, I, 'a'. A alternativa correta (B) reflete a regra que visa facilitar o acesso à justiça para a parte vulnerável (o credor de alimentos), permitindo que a ação seja proposta no foro de seu próprio domicílio, no Brasil."
+    },
+    {
+      "type": "multiple",
+      "q": "Um credor de alimentos, de nacionalidade paraguaia e residente em Assunção, pretende processar o devedor, de nacionalidade uruguaia e residente em Montevidéu. O devedor, contudo, é proprietário de um apartamento alugado no Rio de Janeiro, de onde recebe rendimentos mensais. É possível ajuizar a ação de alimentos no Brasil?",
+      "options": [
+        "Não, pois nem o credor nem o devedor residem no Brasil, faltando conexão com o território.",
+        "Sim, a justiça brasileira é competente, pois o réu mantém vínculos econômicos no Brasil ao possuir bens e receber renda no país.",
+        "Não, a existência de bens apenas permite que uma futura sentença estrangeira seja executada aqui, mas não que o processo de conhecimento tramite no Brasil.",
+        "Sim, mas a competência seria do juízo de Brasília, por ser a capital federal em casos internacionais."
+      ],
+      "answer": 1,
+      "explanation": "“Compete, ainda, à autoridade judiciária brasileira processar e julgar as ações: I – de alimentos, quando: b) o réu mantiver vínculos no Brasil, tais como posse ou propriedade de bens, recebimento de renda ou obtenção de benefícios econômicos;” — CPC/2015, art. 22, I, 'b'. A alternativa correta (B) está correta. Mesmo que as partes residam no exterior, a existência de vínculos patrimoniais ou econômicos do devedor no Brasil é suficiente para estabelecer a competência da jurisdição nacional para a ação de alimentos."
+    },
+    {
+      "type": "multiple",
+      "q": "Um consumidor residente em Porto Alegre adquire um produto defeituoso através do site de uma empresa sediada exclusivamente na Coreia do Sul, sem filial ou representante no Brasil. Inconformado, o consumidor pretende pedir a troca do produto ou a devolução do dinheiro. Ele pode processar a empresa coreana na justiça brasileira?",
+      "options": [
+        "Não, pois a empresa não tem estabelecimento no Brasil, devendo a ação ser proposta na Coreia do Sul.",
+        "Sim, a justiça brasileira é competente para julgar ações de consumo quando o consumidor tiver seu domicílio ou residência no Brasil.",
+        "Não, leis de consumo brasileiras não se aplicam a compras feitas em sites estrangeiros.",
+        "Sim, mas a citação da empresa dependerá da cooperação do governo sul-coreano, o que torna a ação inviável."
+      ],
+      "answer": 1,
+      "explanation": "“Compete, ainda, à autoridade judiciária brasileira processar e julgar as ações: II – decorrentes de relações de consumo, quando o consumidor tiver domicílio ou residência no Brasil;” — CPC/2015, art. 22, II. A alternativa correta (B) consagra o foro privilegiado do consumidor em demandas internacionais, bastando que ele resida no Brasil para atrair a competência da jurisdição nacional, como forma de facilitar a defesa de seus direitos."
+    },
+    {
+      "type": "multiple",
+      "q": "Duas empresas, uma norueguesa e outra finlandesa, celebram contrato na Europa sem cláusula de eleição de foro. Surge um litígio e a empresa norueguesa decide, por estratégia, ajuizar a ação em uma vara cível do Rio de Janeiro. A empresa finlandesa é citada e, em vez de alegar a incompetência, apresenta contestação rebatendo todo o mérito da causa. O que ocorre com a competência?",
+      "options": [
+        "O juiz deve, de ofício, reconhecer sua incompetência, pois a causa não tem ligação com o Brasil.",
+        "A competência da justiça brasileira torna-se definitiva, pois houve submissão tácita da parte ré à jurisdição nacional.",
+        "O processo é nulo, pois a submissão à jurisdição brasileira deve ser sempre expressa e prévia.",
+        "O juiz deve suspender o processo e consultar as partes sobre a possibilidade de firmarem um acordo de eleição de foro."
+      ],
+      "answer": 1,
+      "explanation": "“Compete, ainda, à autoridade judiciária brasileira processar e julgar as ações: III – em que as partes, expressa ou tacitamente, se submeterem à jurisdição nacional.” — CPC/2015, art. 22, III. A alternativa correta (B) descreve a prorrogação da competência pela submissão tácita. Ao contestar o mérito sem arguir a incompetência em momento oportuno, o réu aceita que a causa seja julgada por aquela jurisdição, que passa a ser competente."
+    },
+    {
+      "type": "multiple",
+      "q": "Um juiz brasileiro recebe uma ação de usucapião de um imóvel localizado em Portugal, proposta por um brasileiro que lá reside. O réu, também brasileiro, é citado no Brasil e concorda com o processamento do feito em território nacional. Qual deve ser a atitude do magistrado brasileiro?",
+      "options": [
+        "Processar e julgar o feito, pois ambas as partes são brasileiras e concordam com a jurisdição nacional.",
+        "Homologar um eventual acordo entre as partes, mas sem julgar o mérito da usucapião.",
+        "Extinguir o processo sem resolução de mérito, pois a competência para ações sobre imóveis é do país onde estão situados, sendo esta uma regra de competência absoluta e exclusiva.",
+        "Suscitar um conflito de competência com o judiciário português."
+      ],
+      "answer": 2,
+      "explanation": "“Art. 23. Compete à autoridade judiciária brasileira, com exclusão de qualquer outra:” — CPC/2015, art. 23, caput. A alternativa correta (C) aborda a consequência principal do caput: a existência de matérias de competência exclusiva (absoluta). Nessas hipóteses, listadas nos incisos, a jurisdição brasileira é inderrogável, e, por simetria, a do país estrangeiro também o é para os bens situados em seu território. O juiz brasileiro não pode julgar direitos reais sobre imóvel situado no exterior."
+    },
+    {
+      "type": "multiple",
+      "q": "Dois cidadãos italianos, residentes na Itália, disputam em um tribunal de Roma a propriedade de uma casa de praia localizada em Búzios-RJ. O tribunal italiano profere uma sentença declarando um deles como o legítimo proprietário. Essa sentença pode ser executada no Brasil para transferir o registro do imóvel?",
+      "options": [
+        "Sim, desde que a sentença seja homologada pelo Superior Tribunal de Justiça (STJ).",
+        "Sim, se o cartório de imóveis de Búzios concordar em efetuar o registro com base na decisão estrangeira.",
+        "Não, pois a competência da autoridade judiciária brasileira para julgar ações relativas a imóveis situados no Brasil é exclusiva.",
+        "Não, a não ser que a Constituição da Itália também preveja a exclusividade de sua jurisdição."
+      ],
+      "answer": 2,
+      "explanation": "“Compete à autoridade judiciária brasileira, com exclusão de qualquer outra: I – conhecer de ações relativas a imóveis situados no Brasil;” — CPC/2015, art. 23, I. A alternativa correta (C) está correta. Trata-se de competência internacional exclusiva (ou absoluta). Nenhuma decisão de tribunal estrangeiro sobre direito real de imóvel brasileiro pode produzir efeitos no Brasil, não sendo passível sequer de homologação pelo STJ nesse mérito."
+    },
+    {
+      "type": "multiple",
+      "q": "Um cidadão britânico, que residia em Londres, falece e deixa bens na Inglaterra e um apartamento em Salvador-BA. Seus herdeiros iniciam o processo de inventário e partilha em um tribunal de Londres. Este tribunal pode decidir sobre a partilha do apartamento em Salvador?",
+      "options": [
+        "Sim, o tribunal do último domicílio do falecido é competente para partilhar todos os seus bens, onde quer que estejam.",
+        "Não, a competência para o inventário e a partilha de bens situados no Brasil é exclusiva da autoridade judiciária brasileira, mesmo que o falecido seja estrangeiro.",
+        "Sim, mas a decisão sobre o imóvel brasileiro dependerá de homologação pelo STJ.",
+        "Não, o inventário de todos os bens, inclusive os da Inglaterra, deve ser processado no Brasil por haver imóvel aqui."
+      ],
+      "answer": 1,
+      "explanation": "“Compete à autoridade judiciária brasileira, com exclusão de qualquer outra: II – em matéria de sucessão hereditária, proceder [...] ao inventário e à partilha de bens situados no Brasil, ainda que o autor da herança seja de nacionalidade estrangeira ou tenha domicílio fora do território nacional;” — CPC/2015, art. 23, II. A alternativa correta (B) reflete a regra de competência exclusiva. O poder judiciário estrangeiro pode partilhar os bens localizados em seu território, mas a partilha do imóvel em Salvador deve, obrigatoriamente, ser processada pela justiça brasileira."
+    },
+    {
+      "type": "multiple",
+      "q": "Um casal de alemães, que vive na Alemanha, decide se divorciar. Durante o casamento, adquiriram um sítio em Petrópolis-RJ. O processo de divórcio tramita em um tribunal alemão, que, além de decretar o divórcio, determina que o sítio no Brasil seja vendido e o valor dividido igualmente. Essa parte da decisão sobre a partilha do bem pode ser cumprida no Brasil?",
+      "options": [
+        "Sim, após a homologação da sentença de divórcio completa pelo STJ.",
+        "Não, pois a competência para proceder à partilha de bens situados no Brasil, decorrente de divórcio, é exclusiva da autoridade judiciária brasileira.",
+        "Sim, se o casal concordar expressamente com a partilha definida na Alemanha.",
+        "Não, o divórcio em si também teria que ser decretado no Brasil por haver bens no país."
+      ],
+      "answer": 1,
+      "explanation": "“Compete à autoridade judiciária brasileira, com exclusão de qualquer outra: III – em divórcio [...] proceder à partilha de bens situados no Brasil, ainda que o titular seja de nacionalidade estrangeira ou tenha domicílio fora do território nacional.” — CPC/2015, art. 23, III. A alternativa correta (B) está correta. A decretação do divórcio por juiz estrangeiro pode ser homologada, mas a divisão do patrimônio imobiliário localizado no Brasil é matéria de competência exclusiva da nossa jurisdição, exigindo uma ação própria de sobrepartilha aqui."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma empresa brasileira processa uma empresa uruguaia em Montevidéu. Insatisfeita com o andamento do processo, a empresa brasileira ajuíza uma ação idêntica, com mesmas partes, pedido e causa de pedir, em um juízo no Brasil. A empresa uruguaia, em sua defesa no Brasil, alega a existência de litispendência. O juiz brasileiro deve acolher essa alegação?",
+      "options": [
+        "Sim, pois a litispendência impede o ajuizamento de ações idênticas em qualquer país.",
+        "Não, pois a ação proposta perante tribunal estrangeiro não induz litispendência para a justiça brasileira.",
+        "Sim, mas o juiz deve apenas suspender o processo no Brasil, e não extingui-lo.",
+        "Não, a menos que exista um tratado específico sobre litispendência entre Brasil e Uruguai."
+      ],
+      "answer": 1,
+      "explanation": "“A ação proposta perante tribunal estrangeiro não induz litispendência e não obsta a que a autoridade judiciária brasileira conheça da mesma causa e das que lhe são conexas, ressalvadas as disposições em contrário de tratados internacionais e acordos bilaterais em vigor no Brasil.” — CPC/2015, art. 24, caput. A alternativa correta (B) é a aplicação direta da regra. O conceito de litispendência, como regra geral, restringe-se ao território nacional. Uma ação no exterior não impede que a justiça brasileira, se competente, julgue a mesma causa."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma ação de cobrança tramita no Brasil entre duas empresas. Paralelamente, uma corte arbitral em Londres profere uma sentença condenando uma das partes a pagar à outra. A parte vencedora precisa que essa sentença produza efeitos no Brasil. O fato de existir um processo judicial sobre o mesmo tema em andamento no Brasil impede a homologação da sentença arbitral estrangeira pelo STJ?",
+      "options": [
+        "Sim, a existência de um processo no Brasil impede a homologação de qualquer decisão estrangeira sobre o tema.",
+        "Não, a pendência de causa na jurisdição brasileira não impede a homologação de sentença estrangeira necessária para produzir efeitos no Brasil.",
+        "Sim, a parte interessada deve primeiro pedir a extinção do processo brasileiro para depois requerer a homologação.",
+        "Não, mas a homologação ficará suspensa até o trânsito em julgado da decisão proferida pela justiça brasileira."
+      ],
+      "answer": 1,
+      "explanation": "“A pendência de causa perante a jurisdição brasileira não impede a homologação de sentença judicial estrangeira quando exigida para produzir efeitos no Brasil.” — CPC/2015, art. 24, parágrafo único. A alternativa correta (B) está correta. Os processos correm de forma independente, e o andamento de uma ação no Brasil não serve como obstáculo para o procedimento de homologação de uma sentença estrangeira (judicial ou arbitral) perante o STJ."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma empresa do Brasil e uma da França celebram um contrato de fornecimento de peças, inserindo uma cláusula que estabelece o foro de Paris como o único competente para dirimir conflitos. Ocorrendo um problema, a empresa brasileira ajuíza a ação em seu próprio domicílio, no Brasil. Se a empresa francesa, na contestação, arguir a existência da cláusula de eleição de foro exclusivo estrangeiro, o que o juiz brasileiro deve fazer?",
+      "options": [
+        "Ignorar a cláusula, pois o acesso à justiça brasileira é garantido constitucionalmente.",
+        "Acolher a alegação da ré e não conhecer da ação, extinguindo o processo por incompetência da jurisdição brasileira.",
+        "Manter o processo no Brasil, pois a cláusula de eleição de foro estrangeiro não é válida em território nacional.",
+        "Suspender o processo e determinar que as partes tentem uma mediação."
+      ],
+      "answer": 1,
+      "explanation": "“Não compete à autoridade judiciária brasileira o processamento e o julgamento da ação quando houver cláusula de eleição de foro exclusivo estrangeiro em contrato internacional, arguida pelo réu na contestação.” — CPC/2015, art. 25, caput. A alternativa correta (B) descreve a consequência da arguição da cláusula pela parte ré. O CPC confere validade à eleição de foro exclusivo estrangeiro, afastando a jurisdição brasileira se a parte a quem aproveita a invocar em sua defesa."
+    },
+    {
+      "type": "multiple",
+      "q": "Um contrato de compra e venda de um lote de terras em Bonito-MS é celebrado entre um vendedor brasileiro e um comprador argentino. No contrato, as partes elegem os tribunais de Buenos Aires como foro exclusivo para resolver qualquer disputa. O comprador deixa de pagar as parcelas e o vendedor ajuíza uma ação de rescisão contratual no Brasil. O argentino alega a cláusula de eleição de foro. Deve o juiz brasileiro acatá-la?",
+      "options": [
+        "Sim, pois a vontade das partes no contrato deve prevalecer.",
+        "Não, pois a cláusula de eleição de foro exclusivo estrangeiro não se aplica às hipóteses de competência exclusiva da jurisdição brasileira, como as ações relativas a imóveis situados no Brasil.",
+        "Sim, mas a decisão do tribunal argentino terá que ser homologada no Brasil para ter validade.",
+        "Não, pois o vendedor é brasileiro e tem o direito de litigar em seu país."
+      ],
+      "answer": 1,
+      "explanation": "“Não se aplica o disposto no caput às hipóteses de competência internacional exclusiva previstas neste Capítulo.” — CPC/2015, art. 25, § 1.º. A alternativa correta (B) está correta. A autonomia da vontade das partes para eleger um foro estrangeiro encontra limite nas hipóteses de competência exclusiva da jurisdição brasileira, previstas no art. 23. Como a ação é relativa a um imóvel situado no Brasil, a competência é exclusivamente brasileira, e a cláusula de eleição de foro é ineficaz."
+    },
+    {
+      "type": "multiple",
+      "q": "Num contrato de adesão internacional, uma gigante da tecnologia impõe a um pequeno desenvolvedor brasileiro uma cláusula de eleição de foro exclusivo nas Ilhas Cayman. O desenvolvedor, sentindo-se lesado, ajuíza ação no Brasil. A empresa estrangeira argui a cláusula. O desenvolvedor alega que a cláusula é abusiva e torna inviável seu acesso à justiça. Para analisar a validade desta cláusula, o juiz brasileiro deve:",
+      "options": [
+        "Reconhecer que não pode analisar o mérito da abusividade de uma cláusula de contrato internacional.",
+        "Aplicar as disposições do art. 63, §§ 1.º a 4.º, do CPC, que tratam da nulidade da cláusula de eleição de foro nacional quando abusiva.",
+        "Extinguir o processo de plano, pois a cláusula de eleição de foro estrangeiro é sempre válida.",
+        "Aplicar o Código de Defesa do Consumidor, independentemente da natureza da relação jurídica."
+      ],
+      "answer": 1,
+      "explanation": "“Aplica-se à hipótese do caput o art. 63, §§ 1.º a 4.º.” — CPC/2015, art. 25, § 2.º. A alternativa correta (B) aponta para a norma de remissão. O legislador estendeu a análise de abusividade, prevista para as cláusulas de eleição de foro nacionais (art. 63), para as cláusulas de foro internacional. Portanto, o juiz pode e deve analisar se a cláusula é nula por ser abusiva ou dificultar excessivamente a defesa da parte vulnerável."
+    }
+  ],
+  "skipped": []
+}
