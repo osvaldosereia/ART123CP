@@ -1,156 +1,105 @@
 {
   "meta": {
-    "title": "Da Jurisdição e da Ação",
-    "category": "cpc",
-    "theme": "lei-seca",
-    "shuffle": { "questions": true, "options": true },
+    "title": "Direito Processual Civil - Da Jurisdição e da Ação (Arts. 16-20)",
+    "category": "processo-civil",
+    "theme": "jurisdicao-e-acao-cpc",
+    "shuffle": {
+      "questions": true,
+      "options": true
+    },
     "persist": true,
-    "outroMessage": "Você concluiu o tema. Volte ao início para escolher outro tema."
+    "outroMessage": "Muito bem! Você finalizou o quiz sobre Jurisdição e Ação. Estes são conceitos basilares para a prática jurídica."
   },
   "questions": [
     {
       "type": "multiple",
-      "q": "De acordo com o Código de Processo Civil, a jurisdição civil é exercida em todo o território nacional, sendo correto afirmar que:",
+      "q": "Uma empresa de tecnologia com sede em Cuiabá-MT celebra um contrato de desenvolvimento de software com uma empresa Argentina. O contrato prevê que qualquer litígio será resolvido no Brasil. Em caso de descumprimento contratual, por quem e sob quais regras a jurisdição civil será exercida em território brasileiro?",
       "options": [
-        "É uma atividade exclusiva do Poder Judiciário, exercida monocraticamente por juízes ou de forma colegiada por tribunais, conforme as disposições constitucionais.",
-        "É exercida pelos juízes e pelos tribunais em todo o território nacional, conforme as disposições estritas deste Código.",
-        "Pode ser delegada a outros poderes, em situações excepcionais, desde que haja previsão em lei complementar.",
-        "Limita-se ao território do respectivo Estado da Federação onde o juiz ou tribunal está localizado, salvo em caso de competência federal."
+        "Pelo consulado argentino no Brasil, aplicando as leis processuais argentinas, conforme a nacionalidade da parte.",
+        "Pelos juízes e tribunais brasileiros, conforme as disposições do Código de Processo Civil, que regem o exercício da jurisdição em todo o território nacional.",
+        "Por uma câmara de arbitragem internacional sediada no Brasil, aplicando-se exclusivamente as regras da câmara, afastando o CPC.",
+        "Pelos juízes federais, exclusivamente, por envolver parte estrangeira, aplicando-se as normas processuais do país de origem da ré."
       ],
       "answer": 1,
-      "explanation": "Conforme o Art. 16 do CPC: 'A jurisdição civil é exercida pelos juízes e pelos tribunais em todo o território nacional, conforme as disposições deste Código.'"
+      "explanation": "“A jurisdição civil é exercida pelos juízes e pelos tribunais em todo o território nacional, conforme as disposições deste Código.” — CPC/2015, art. 16. A alternativa correta (B) reflete o princípio da territorialidade da jurisdição. Uma vez estabelecida a competência do Brasil, a função jurisdicional será desempenhada por seus órgãos (juízes e tribunais) e de acordo com suas leis processuais. As demais alternativas sugerem a aplicação de leis ou autoridades estrangeiras em solo nacional, o que contraria a norma."
     },
     {
       "type": "multiple",
-      "q": "Considerando o disposto no Art. 16 do CPC e suas normas correlatas, a aplicação da lei processual no tempo e no espaço, ao entrar em vigor o novo Código, determina que suas disposições serão aplicadas desde logo aos processos pendentes, exceto:",
+      "q": "Carlos, preocupado com a preservação de uma praça em seu bairro, percebe que a prefeitura não realiza a manutenção adequada. Inconformado, ele decide ajuizar uma ação exigindo que o município cumpra seu dever de cuidado. O juiz, ao analisar a petição inicial, extingue o processo sem resolução do mérito. Qual o fundamento mais provável para essa decisão, considerando as condições da ação?",
       "options": [
-        "Aos atos processuais já praticados e às situações jurídicas consolidadas sob a vigência da norma revogada.",
-        "Aos recursos interpostos contra decisões proferidas sob a égide da lei antiga, que seguirão o novo regime.",
-        "Aos processos em fase de execução, que deverão ser integralmente adaptados às novas regras, independentemente dos atos já realizados.",
-        "Às competências absolutas, que podem ser modificadas retroativamente para alcançar processos já ajuizados."
-      ],
-      "answer": 0,
-      "explanation": "A resposta está em conformidade com o Art. 1.046 do CPC, referenciado pelo Art. 16, que estabelece a aplicação imediata do Código aos processos em curso, mas resguarda os atos processuais praticados e as situações jurídicas consolidadas ('tempus regit actum')."
-    },
-    {
-      "type": "multiple",
-      "q": "Para postular em juízo, o Código de Processo Civil estabelece como requisitos essenciais a presença de interesse e legitimidade. A ausência de qualquer uma dessas condições da ação implica:",
-      "options": [
-        "A nulidade absoluta de todos os atos processuais praticados, devendo o processo ser extinto com resolução de mérito.",
-        "A extinção do processo sem resolução de mérito, sendo vedado ao juiz conhecer da matéria de ofício.",
-        "A inépcia da petição inicial, que só poderá ser reconhecida se arguida pelo réu em preliminar de contestação.",
-        "A extinção do processo sem resolução de mérito, podendo o juiz conhecer da questão a qualquer tempo e grau de jurisdição."
-      ],
-      "answer": 3,
-      "explanation": "A junção do Art. 17 com o Art. 485, VI, do CPC, indica que a ausência de legitimidade ou de interesse processual (condições da ação) leva à extinção do processo sem resolução de mérito, matéria de ordem pública que pode ser conhecida de ofício pelo juiz."
-    },
-    {
-      "type": "multiple",
-      "q": "O interesse de agir, previsto no Art. 17 do CPC como condição para postular em juízo, é corretamente caracterizado pelo binômio:",
-      "options": [
-        "Necessidade e utilidade da tutela jurisdicional, aferido em abstrato no momento da propositura da ação.",
-        "Possibilidade jurídica do pedido e adequação do procedimento, verificado apenas após a instrução probatória.",
-        "Capacidade postulatória e legitimidade passiva, elementos que se confundem com o próprio mérito da causa.",
-        "Viabilidade econômica da pretensão e urgência do provimento, requisitos para concessão de tutelas provisórias."
-      ],
-      "answer": 0,
-      "explanation": "O interesse de agir (Art. 17) é tradicionalmente desdobrado pela doutrina e jurisprudência no binômio necessidade-utilidade. A necessidade refere-se à impossibilidade de obter o bem da vida por outro meio, e a utilidade significa que a decisão judicial será útil para o autor."
-    },
-    {
-      "type": "multiple",
-      "q": "A regra geral disposta no Art. 18 do CPC estabelece que 'ninguém poderá pleitear direito alheio em nome próprio'. Todavia, o próprio artigo ressalva as hipóteses autorizadas pelo ordenamento jurídico, fenômeno conhecido como:",
-      "options": [
-        "Representação processual.",
-        "Substituição processual.",
-        "Sucessão processual.",
-        "Assistência litisconsorcial."
+        "Falta de interesse de agir, pois o cuidado com praças é uma questão política, e não jurídica.",
+        "Falta de legitimidade ativa, pois Carlos, como indivíduo, não é o titular do direito difuso ao meio ambiente equilibrado para fins de representação judicial isolada nesse caso.",
+        "Incompetência do juízo, pois a ação deveria ter sido proposta no Tribunal de Contas.",
+        "Ausência de capacidade postulatória, pois Carlos não é advogado."
       ],
       "answer": 1,
-      "explanation": "O Art. 18 do CPC trata da legitimação extraordinária, também chamada de substituição processual, que é a autorização excepcional para que alguém, em nome próprio, defenda em juízo um direito de titularidade de outrem."
+      "explanation": "“Para postular em juízo é necessário ter interesse e legitimidade.” — CPC/2015, art. 17. A alternativa correta (B) aponta a falta de uma das condições da ação. A legitimidade para a defesa de direitos difusos, como o meio ambiente de uma praça, é atribuída por lei a entes específicos (como o Ministério Público, associações, etc.), e não a um cidadão individualmente, salvo em ações específicas como a popular. Portanto, falta-lhe legitimidade. A alternativa A está incorreta, pois existe interesse, mas a titularidade do direito para fins de ação (legitimidade) é o problema central."
     },
     {
       "type": "multiple",
-      "q": "No âmbito da defesa do consumidor em juízo, o Código de Defesa do Consumidor (CDC) apresenta uma exceção à regra do Art. 18 do CPC, ao prever uma ampla legitimidade para a tutela de direitos coletivos. Assinale a alternativa correta sobre essa legitimação.",
+      "q": "Marta descobre que sua irmã, Lúcia, foi vítima de uma fraude bancária, mas Lúcia, por receio, se recusa a processar o banco. Indignada, Marta contrata um advogado e ajuíza uma ação de indenização em nome próprio, pedindo a reparação dos danos sofridos por Lúcia. O que deve ocorrer com essa ação?",
       "options": [
-        "Apenas o Ministério Público possui legitimidade para a defesa de todos os interesses ou direitos difusos, coletivos e individuais homogêneos.",
-        "As associações podem defender os interesses de seus filiados, mas dependem de autorização expressa e individual de cada um para a propositura da ação coletiva.",
-        "A Defensoria Pública tem legitimidade para ajuizar ação civil pública na defesa de interesses difusos, coletivos ou individuais homogêneos de seus assistidos.",
-        "Os entes da administração pública direta e indireta, como a União e os Municípios, estão entre os legitimados para a defesa coletiva dos consumidores."
-      ],
-      "answer": 3,
-      "explanation": "A resposta se baseia no Art. 82 do CDC (Lei nº 8.078/90), que elenca os legitimados para a defesa dos consumidores em juízo, incluindo, no inciso III, 'os entes e órgãos da Administração Pública, direta ou indireta, ainda que sem personalidade jurídica, especificamente destinados à defesa dos interesses e direitos protegidos por este código'."
-    },
-    {
-      "type": "multiple",
-      "q": "Na hipótese de substituição processual, o parágrafo único do Art. 18 do CPC faculta ao substituído uma forma específica de intervenção de terceiros no processo. Qual é essa modalidade?",
-      "options": [
-        "Denunciação da lide, para garantir eventual direito de regresso contra o substituto.",
-        "Chamamento ao processo, para incluir no polo passivo outros eventuais titulares do direito.",
-        "Assistência simples, para auxiliar o substituto na busca por uma sentença favorável.",
-        "Assistência litisconsorcial, na qual atuará como verdadeiro litisconsorte do substituto."
-      ],
-      "answer": 3,
-      "explanation": "Conforme o parágrafo único do Art. 18: 'Havendo substituição processual, o substituído poderá intervir como assistente litisconsorcial'. Nesta modalidade, o assistente tem interesse jurídico em que a sentença seja favorável a uma das partes, pois a decisão influirá na relação jurídica entre ele e o adversário do assistido (Art. 124 do CPC)."
-    },
-    {
-      "type": "multiple",
-      "q": "A intervenção do substituído como assistente litisconsorcial, conforme o Art. 18, parágrafo único, do CPC, implica que o interveniente:",
-      "options": [
-        "Poderá praticar todos os atos processuais que o substituído poderia, mas fica subordinado à atividade processual deste.",
-        "Receberá o processo no estado em que se encontrar, não podendo rediscutir questões já decididas, e será considerado litigante distinto do assistido.",
-        "Atuará como mero auxiliar da parte principal, não podendo recorrer da sentença, salvo se o assistido não o fizer.",
-        "Terá sua atuação limitada à produção de provas, sendo-lhe vedado apresentar contestações ou recursos de forma autônoma."
+        "A ação deve prosseguir normalmente, pois o vínculo familiar autoriza Marta a defender os direitos de sua irmã.",
+        "A ação deve ser extinta, pois, como regra, ninguém pode pleitear em nome próprio um direito que pertence a outra pessoa, salvo autorização legal.",
+        "O juiz deve intimar Lúcia para que ela assuma o polo ativo da ação, e caso ela se recuse, o processo continua com Marta.",
+        "A ação é válida, pois Marta demonstra ter interesse moral na reparação do dano."
       ],
       "answer": 1,
-      "explanation": "A resposta combina o Art. 18, p. único, com a disciplina da assistência litisconsorcial do Art. 124 do CPC, que estabelece: 'Considera-se litisconsorte da parte principal o assistente sempre que a sentença influir na relação jurídica entre ele e o adversário do assistido'. Como litisconsorte, ele tem ampla autonomia e não está subordinado ao assistido, mas recebe o processo no estado em que se encontra (Art. 119, parágrafo único, aplicável por analogia)."
+      "explanation": "“Ninguém poderá pleitear direito alheio em nome próprio, salvo quando autorizado pelo ordenamento jurídico.” — CPC/2015, art. 18, caput. A alternativa correta (B) aplica a regra geral da legitimação ordinária. O direito de ser indenizada pertence a Lúcia, e Marta não possui autorização legal (substituição processual) para pleiteá-lo em seu próprio nome. O vínculo familiar ou o interesse moral não constituem a autorização exigida pelo ordenamento jurídico."
     },
     {
       "type": "multiple",
-      "q": "O Art. 19 do CPC prevê que o interesse do autor pode limitar-se à declaração de uma relação jurídica ou da autenticidade/falsidade de um documento. Sobre a ação declaratória, é correto afirmar que:",
+      "q": "O Sindicato dos Metalúrgicos, atuando como substituto processual, ajuíza uma ação coletiva contra uma grande indústria pleiteando o pagamento de adicional de periculosidade para toda a categoria. João, um dos metalúrgicos empregados na empresa e beneficiário da eventual decisão, deseja acompanhar o processo de perto e garantir que seus interesses individuais sejam bem defendidos. Como João pode ingressar na ação?",
       "options": [
-        "Sua finalidade é exclusivamente preventiva, sendo incabível após a efetiva violação do direito material.",
-        "Seu objeto restringe-se à declaração da existência de uma relação jurídica, não abrangendo a declaração de sua inexistência ou de seu modo de ser.",
-        "É admissível para declarar a autenticidade ou a falsidade de um documento, sendo este um pedido autônomo e principal.",
-        "A sentença proferida em ação declaratória é desprovida de força executiva, necessitando de posterior ação condenatória."
+        "Ele não pode intervir, devendo apenas aguardar o resultado da ação movida pelo sindicato.",
+        "Ele pode ingressar no processo como assistente litisconsorcial do sindicato.",
+        "Ele deve solicitar a exclusão do sindicato para que possa assumir como autor principal da ação.",
+        "Ele pode intervir como amicus curiae para fornecer subsídios técnicos ao juízo."
+      ],
+      "answer": 1,
+      "explanation": "“Havendo substituição processual, o substituído poderá intervir como assistente litisconsorcial.” — CPC/2015, art. 18, parágrafo único. A alternativa correta (B) prevê exatamente o mecanismo de intervenção do titular do direito (o substituído, João) na ação em que outro ente (o substituto, Sindicato) defende esse direito. Como assistente litisconsorcial, ele poderá atuar no processo de forma mais ativa, auxiliando o substituto."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma construtora e um investidor firmam um contrato de parceria. Após alguns meses, surge uma dúvida sobre a interpretação de uma cláusula que define a divisão de lucros, gerando um impasse que impede o avanço do projeto, embora ainda não tenha havido prejuízo financeiro concreto. O investidor pode ajuizar uma ação?",
+      "options": [
+        "Não, pois sem prejuízo financeiro comprovado, não há interesse processual.",
+        "Sim, ele pode ajuizar uma ação de cobrança para receber o valor que entende devido.",
+        "Sim, ele pode propor uma ação meramente declaratória para que o juiz defina o modo de ser da relação jurídica, ou seja, a correta interpretação da cláusula contratual.",
+        "Não, ele deve primeiro notificar extrajudicialmente a construtora, sendo esta uma condição obrigatória para qualquer ação judicial."
       ],
       "answer": 2,
-      "explanation": "A resposta está na literalidade do Art. 19, I e II. O inciso I expressamente admite a declaração 'da existência, da inexistência ou do modo de ser de uma relação jurídica', e o inciso II permite a declaração 'da autenticidade ou da falsidade de documento' como pedido principal."
+      "explanation": "“O interesse do autor pode limitar-se à declaração: I – da existência, da inexistência ou do modo de ser de uma relação jurídica;” — CPC/2015, art. 19, I. A alternativa correta (C) se encaixa perfeitamente na hipótese legal. A ação declaratória serve para eliminar a incerteza sobre uma relação jurídica, como a interpretação de um contrato, independentemente da ocorrência de um dano efetivo. As outras opções são inadequadas ou incorretas."
     },
     {
       "type": "multiple",
-      "q": "A respeito da ação meramente declaratória, o Código de Processo Civil e a jurisprudência sumulada do Supremo Tribunal Federal estabelecem que:",
+      "q": "Um colecionador adquire um documento histórico, mas um perito informal levanta suspeitas sobre sua autenticidade, o que afeta seu valor de mercado. Para sanar a controvérsia e obter um pronunciamento judicial definitivo sobre a questão, o colecionador decide ir a juízo. Qual tipo de ação ele pode propor com esse objetivo específico?",
       "options": [
-        "A ocorrência de violação do direito impede o ajuizamento da ação declaratória, devendo a parte ingressar necessariamente com ação condenatória ou constitutiva.",
-        "É inadmissível a ação meramente declaratória quando já houve a violação do direito, salvo se o autor renunciar expressamente à pretensão condenatória.",
-        "É admissível a ação meramente declaratória, mesmo que tenha ocorrido a violação do direito, podendo ser cumulada com pedido condenatório.",
-        "A Súmula 258 do STF veda a ação declaratória para simples interpretação de cláusula contratual sem que haja lesão ou ameaça de lesão a direito."
+        "Uma ação de obrigação de fazer contra o perito, para que ele se retrate publicamente.",
+        "Uma ação indenizatória por danos morais contra o vendedor do documento.",
+        "Uma ação meramente declaratória, limitando seu interesse à declaração judicial de autenticidade do documento.",
+        "Uma ação cautelar de produção antecipada de provas, que por si só não resolve a questão de fundo."
       ],
       "answer": 2,
-      "explanation": "Conforme o Art. 20 do CPC: 'É admissível a ação meramente declaratória, ainda que tenha ocorrido a violação do direito'. Isso significa que a lesão ao direito não retira do autor o interesse na simples declaração, que pode ser útil para fins de segurança jurídica ou para prevenir futuros litígios."
+      "explanation": "“O interesse do autor pode limitar-se à declaração: II – da autenticidade ou da falsidade de documento.” — CPC/2015, art. 19, II. A alternativa correta (C) corresponde à previsão legal que permite a propositura de uma ação com o único objetivo de obter uma declaração sobre a autenticidade de um documento, eliminando a crise de certeza que paira sobre ele. As demais ações não atingem o objetivo específico de declarar a autenticidade."
     },
     {
       "type": "multiple",
-      "q": "Com base no Art. 20 do CPC e na Súmula 258 do STF, que dispõe ser 'admissível ação declaratória, visando a obter certeza quanto à exata interpretação de cláusula contratual', conclui-se que:",
+      "q": "Uma empresa de telefonia começa a cobrar de um consumidor uma taxa que ele considera indevida. O consumidor, nesse momento, não deseja pedir a devolução dos valores já pagos nem uma indenização, mas apenas obter uma decisão judicial que declare a inexigibilidade daquela cobrança para o futuro. É possível ajuizar uma ação com esse pedido limitado, mesmo que a violação do direito (a cobrança indevida) já esteja ocorrendo?",
       "options": [
-        "A ação declaratória é o único meio processual idôneo para resolver controvérsias sobre a interpretação de contratos.",
-        "O interesse de agir na ação declaratória de interpretação de cláusula contratual exige a demonstração de um prejuízo concreto e atual.",
-        "A simples dúvida ou controvérsia sobre o sentido de uma cláusula contratual já configura interesse de agir para a propositura da ação declaratória.",
-        "A referida súmula foi tacitamente revogada pelo CPC de 2015, que exige a efetiva violação do direito para qualquer tipo de ação."
+        "Não, uma vez que a violação ocorreu, a ação deve ser necessariamente condenatória, pedindo a devolução dos valores e indenização.",
+        "Sim, é admissível a propositura de uma ação meramente declaratória, mesmo que a violação do direito já tenha ocorrido.",
+        "Não, a ação declaratória só é cabível para prevenir uma violação iminente, e não para uma que já está em curso.",
+        "Sim, mas o juiz é obrigado a converter a ação em condenatória de ofício, determinando a devolução dos valores pagos."
       ],
-      "answer": 2,
-      "explanation": "A Súmula 258 do STF, em harmonia com os arts. 19 e 20 do CPC, confirma que a incerteza jurídica, como a dúvida fundada sobre a interpretação de uma cláusula contratual, é suficiente para caracterizar o interesse de agir na modalidade declaratória, não se exigindo a efetiva lesão."
-    },
+      "answer": 1,
+      "explanation": "“É admissível a ação meramente declaratória, ainda que tenha ocorrido a violação do direito.” — CPC/2015, art. 20. A alternativa correta (B) reflete a literalidade do dispositivo. O autor tem a faculdade de escolher qual tutela jurisdicional pretende. Mesmo que a violação do direito já permita um pedido condenatório (devolução), ele pode optar por limitar seu interesse a uma declaração (inexigibilidade da dívida), seja por estratégia ou qualquer outro motivo."
+    }
+  ],
+  "skipped": [
     {
-      "type": "multiple",
-      "q": "O incidente de arguição de falsidade documental, tratado nos Arts. 430 e seguintes do CPC, é uma forma de se obter a declaração judicial de que trata o Art. 19, II. Sobre esse incidente, é correto afirmar que:",
-      "options": [
-        "A falsidade deve ser suscitada na contestação, na réplica ou no prazo de 15 dias, contado da intimação da juntada do documento aos autos.",
-        "Uma vez arguida a falsidade, o juiz suspenderá imediatamente o processo principal até a decisão final do incidente, que fará coisa julgada material.",
-        "A arguição de falsidade não pode ser decidida como questão principal na própria ação declaratória autônoma, limitando-se a um incidente processual.",
-        "Se a falsidade for de assinatura, a parte que produziu o documento terá o ônus de provar sua autenticidade, independentemente de quem arguiu."
-      ],
-      "answer": 0,
-      "explanation": "A resposta corresponde ao disposto no caput do Art. 430 do CPC: 'A falsidade deve ser suscitada na contestação, na réplica ou no prazo de 15 (quinze) dias, contado da intimação da juntada do documento aos autos'. O Art. 19, II, trata da ação declaratória autônoma, enquanto os arts. 430 e seguintes tratam do incidente processual."
+      "dispositive": "CPC/2015, Art. 19, caput",
+      "reason": "texto ausente ou insuficiente"
     }
   ]
 }
