@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Ética Profissional - Análise do Exame de Ordem XXXVIII (Questões 1-5)",
+    "category": "etica-profissional",
+    "theme": "eaoab-ced-exame-xxxviii-1a5",
+    "shuffle": {
+      "questions": true,
+      "options": true
+    },
+    "persist": true,
+    "outroMessage": "Você concluiu a análise do primeiro bloco de questões. Continue focado para os próximos desafios."
+  },
+  "questions": [
+    {
+      "type": "multiple",
+      "q": "Uma sociedade de advogados especializada em direito tributário pretende aumentar sua visibilidade. Para isso, planeja patrocinar um estande em uma feira nacional de contabilidade, distribuindo panfletos que descrevem os serviços do escritório e oferecendo uma 'consulta inicial gratuita' aos visitantes que se cadastrarem. Esta forma de publicidade é permitida?",
+      "options": [
+        "Sim, pois a participação em feiras e eventos é uma forma de publicidade de caráter meramente informativo.",
+        "Não, pois a publicidade da advocacia não pode ser veiculada em conjunto com outra atividade, como a contabilidade, e a oferta de serviços gratuitos configura captação de clientela.",
+        "Sim, desde que o estande se limite a exibir o nome da sociedade e sua área de atuação, sem distribuir panfletos ou oferecer gratuidades.",
+        "Não, pois a publicidade da advocacia é absolutamente vedada fora de periódicos e sites jurídicos."
+      ],
+      "answer": 1,
+      "explanation": "“A publicidade profissional deve ter caráter meramente informativo e primar pela discrição e sobriedade, não podendo configurar captação de clientela ou mercantilização da profissão.” — Código de Ética e Disciplina da OAB, Art. 39. A alternativa correta (B) reflete a vedação à mercantilização e à captação indevida de clientes. A publicidade em um evento não jurídico, associada a outra atividade e com oferta de gratuidades, excede o caráter meramente informativo e discreto exigido pela norma."
+    },
+    {
+      "type": "multiple",
+      "q": "Durante o cumprimento de um mandado de busca e apreensão no escritório da advogada Clara, um representante da OAB acompanha a diligência. Os policiais decidem levar o HD do computador de Clara para perícia posterior. A advogada exige acompanhar a análise do conteúdo do HD, mas a autoridade policial nega, afirmando que a presença dela poderia atrapalhar a perícia. A negativa da autoridade policial é correta?",
+      "options": [
+        "Sim, pois a presença do representante da OAB durante a busca já supre a garantia de fiscalização do ato.",
+        "Sim, a análise pericial é um ato técnico sigiloso e não admite o acompanhamento pelo investigado ou seu advogado.",
+        "Não, a negativa é ilegal, pois o advogado investigado tem o direito de assistir à análise do material apreendido, para zelar pela inviolabilidade dos documentos de seus outros clientes.",
+        "Não, a advogada não pode acompanhar pessoalmente, mas tem o direito de indicar um assistente técnico para a perícia."
+      ],
+      "answer": 2,
+      "explanation": "“É direito do advogado assistir a seus clientes investigados durante a apuração de infrações, sob pena de nulidade absoluta do respectivo interrogatório ou depoimento e, subsequentemente, de todos os elementos investigatórios e probatórios dele decorrentes ou derivados, direta ou indiretamente, podendo, inclusive, no curso da respectiva apuração: a) apresentar razões e quesitos;” — Estatuto da Advocacia e da OAB (Lei 8.906/94), Art. 7º, XXI. Embora o inciso XXI trate da assistência a clientes, a jurisprudência e a interpretação sistemática das prerrogativas, incluindo a inviolabilidade (art. 7º, II), garantem ao próprio advogado o direito de acompanhar os desdobramentos de atos que possam violar o sigilo de seus clientes não investigados. A alternativa (C) reflete o entendimento de que a negativa viola as prerrogativas profissionais."
+    },
+    {
+      "type": "multiple",
+      "q": "O advogado recém-formado João decide oferecer seus serviços jurídicos gratuitos para uma startup de tecnologia em rápido crescimento, com o acordo de que a empresa divulgará amplamente em suas redes sociais o trabalho "pro bono" realizado por ele, incluindo seu nome e contato profissional. Essa prática pode ser considerada advocacia pro bono?",
+      "options": [
+        "Sim, pois a advocacia pro bono pode ser prestada a pessoas jurídicas sem fins econômicos ou, eventualmente, a startups.",
+        "Não, pois a advocacia pro bono não pode ser utilizada como instrumento de publicidade para captação de clientela.",
+        "Sim, desde que a startup declare formalmente sua hipossuficiência econômica para arcar com os custos de um advogado.",
+        "Não, pois a advocacia pro bono só é permitida em favor de pessoas naturais hipossuficientes."
+      ],
+      "answer": 1,
+      "explanation": "“considera-se advocacia pro bono a prestação gratuita, eventual e voluntária de serviços jurídicos em favor de: I - instituições sociais sem fins econômicos e aos seus assistidos [...] § 1º A advocacia pro bono não pode ser utilizada para fins político-partidários ou eleitorais, nem beneficiar instituições que visem a tais objetivos, ou como instrumento de publicidade para captação de clientela.” — Código de Ética e Disciplina da OAB, Art. 30. A alternativa correta (B) está correta. A troca de serviços jurídicos gratuitos por publicidade descaracteriza o instituto da advocacia pro bono, transformando-a em uma estratégia de marketing e captação de clientes, o que é vedado."
+    },
+    {
+      "type": "multiple",
+      "q": "A advogada Lúcia, única patrona em uma causa cível, deu à luz seu primeiro filho em uma segunda-feira, dia 10. O prazo para a interposição de um recurso de apelação contra uma sentença desfavorável havia começado a contar na sexta-feira, dia 07. Diante dessa situação, qual direito assiste à advogada Lúcia com relação aos prazos processuais?",
+      "options": [
+        "O prazo recursal continua a fluir normalmente, devendo ela substabelecer o mandato a outro colega para cumprir o ato.",
+        "Ela tem direito à restituição do prazo em dobro ao final do período de licença-maternidade.",
+        "O prazo é automaticamente suspenso por 30 dias, contados da data do parto, e retomará seu curso após esse período.",
+        "Ela tem direito à suspensão de todos os prazos processuais por 30 dias, contados a partir da data do parto, desde que notifique o cliente."
+      ],
+      "answer": 3,
+      "explanation": "“Art. 7º-A. Ficam suspensos os prazos processuais em favor da advogada que se tornar mãe, pelo período de 30 (trinta) dias, contado da data do parto ou da concessão da adoção, quando for a única patrona da causa.” — Estatuto da Advocacia e da OAB (Lei 8.906/94), Art. 7º-A, IV. A alternativa correta (D) reflete a garantia legal. A suspensão dos prazos é um direito da advogada que se torna mãe, sendo a única condição ser a única patrona na causa. A notificação ao cliente é um dever ético, mas a suspensão do prazo é um direito processual."
+    },
+    {
+      "type": "multiple",
+      "q": "Pedro, advogado, foi aprovado em concurso público para o cargo de Juiz de Direito em seu estado, tomou posse e entrou em exercício. Ele possui diversas ações em andamento em seu escritório, nas quais atua como patrono. Qual medida a OAB deve tomar em relação à inscrição profissional de Pedro?",
+      "options": [
+        "A OAB deve suspender a inscrição de Pedro pelo período em que ele exercer a magistratura.",
+        "A OAB deve promover o cancelamento de ofício da inscrição de Pedro, pois ele passou a exercer, em caráter definitivo, atividade incompatível com a advocacia.",
+        "Pedro deve solicitar o licenciamento de sua inscrição, que será deferido automaticamente.",
+        "A OAB deve manter a inscrição ativa, porém com uma anotação de 'impedimento' para advogar contra a Fazenda Pública que o remunera."
+      ],
+      "answer": 1,
+      "explanation": "“O cancelamento da inscrição deve ser promovido, de ofício, pelo conselho competente, no caso de o profissional passar a exercer, em caráter definitivo, atividade incompatível com a advocacia.” — Estatuto da Advocacia e da OAB (Lei 8.906/94), Art. 11, IV. A alternativa correta (B) é a correta. A magistratura é uma atividade incompatível com o exercício da advocacia. Como o cargo é de caráter definitivo, a consequência é o cancelamento da inscrição, e não a mera suspensão ou licenciamento."
+    }
+  ]
+}
