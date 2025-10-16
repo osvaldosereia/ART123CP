@@ -202,11 +202,15 @@
       return {owner: CONFIG.owner, repo: CONFIG.repo};
     }
 
+    // ===== Nome legível: mantém acentos/ç e aplica frase com só a primeira letra maiúscula =====
     function slugToName(slug){
-      return slug
+      const base = slug
         .replace(/\.(json)$/i,'')
         .replace(/[-_]+/g,' ')
-        .replace(/\b([a-zà-ú])(\w*)/gi,(m,a,b)=> a.toUpperCase()+b.toLowerCase());
+        .trim();
+      const lower = base.toLocaleLowerCase('pt-BR');
+      if(!lower) return '';
+      return lower.charAt(0).toLocaleUpperCase('pt-BR') + lower.slice(1);
     }
 
     async function buildManifestFromGitHub(){
@@ -279,7 +283,13 @@
 
       // popular selects
       selCategory.innerHTML='';
-      (MANIFEST?.categories||[]).forEach((c,idx)=>{ const o=document.createElement('option'); o.value=c.id; o.textContent=c.name||c.id; if(idx===0) o.selected=true; selCategory.appendChild(o); });
+      (MANIFEST?.categories||[]).forEach((c,idx)=>{
+        const o=document.createElement('option');
+        o.value=c.id;
+        o.textContent=c.name||c.id;
+        if(idx===0) o.selected=true;
+        selCategory.appendChild(o);
+      });
       updateThemes();
 
       // eventos
@@ -323,10 +333,22 @@
       const catId = selCategory.value;
       const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId) || {themes:[]};
       selTheme.innerHTML='';
-      (cat.themes||[]).forEach((t,idx)=>{ const o=document.createElement('option'); o.value=t.id; o.textContent=t.name||t.id; if(idx===0) o.selected=true; selTheme.appendChild(o); });
+      (cat.themes||[]).forEach((t,idx)=>{
+        const o=document.createElement('option');
+        o.value=t.id;
+        o.textContent=t.name||t.id; // já vem em frase com acentos/ç se o arquivo tiver
+        if(idx===0) o.selected=true;
+        selTheme.appendChild(o);
+      });
     }
 
-    function selectedPath(){ const catId=selCategory.value; const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId); const themeId=selTheme.value; const theme=(cat?.themes||[]).find(t=>t.id===themeId); return theme?.path || (catId&&themeId ? `data/${catId}/${themeId}.json`: null); }
+    function selectedPath(){
+      const catId=selCategory.value;
+      const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId);
+      const themeId=selTheme.value;
+      const theme=(cat?.themes||[]).find(t=>t.id===themeId);
+      return theme?.path || (catId&&themeId ? `data/${catId}/${themeId}.json`: null);
+    }
 
     async function startQuizFromSelection(){ const path=selectedPath(); if(!path) return; await loadQuiz(path, true); }
 
@@ -347,7 +369,10 @@
       CHOSEN=new Array(total).fill(null);
       I=0;
 
-      if(!fresh && tryRestore){ const saved=lsGet(KEY.key); if(saved && saved.quizLen===total){ I=clamp(saved.i,0,total-1); CHOSEN=Array.isArray(saved.chosen)? saved.chosen: CHOSEN; } }
+      if(!fresh && tryRestore){
+        const saved=lsGet(KEY.key);
+        if(saved && saved.quizLen===total){ I=clamp(saved.i,0,total-1); CHOSEN=Array.isArray(saved.chosen)? saved.chosen: CHOSEN; }
+      }
 
       state.textContent='respondendo';
       show(screenIntro,false); show(screenQuiz,true); show(screenResult,false);
@@ -356,7 +381,11 @@
 
     function current(){ return QUIZ.questions[ ORDER[I] ]; }
 
-    function persist(){ const persistFlag=QUIZ?.meta?.persist ?? MANIFEST?.persistDefault ?? true; if(!persistFlag||!KEY) return; lsSet(KEY.key, { i:I, chosen:CHOSEN, quizLen: QUIZ.questions.length }); }
+    function persist(){
+      const persistFlag=QUIZ?.meta?.persist ?? MANIFEST?.persistDefault ?? true;
+      if(!persistFlag||!KEY) return;
+      lsSet(KEY.key, { i:I, chosen:CHOSEN, quizLen: QUIZ.questions.length });
+    }
 
     function render(){
       const total=QUIZ.questions.length;
@@ -376,8 +405,8 @@
         renderOptions(['Verdadeiro','Falso'], (idx)=> select(idx===0), [0,1]);
       } else {
         const opts=q.options.map((t,i)=>({t,i}));
-        // ===== ALTERAÇÃO: NÃO embaralhar opções =====
-        const shOpts = opts; // fixo, mantém ordem original das alternativas
+        // opções fixas: não embaralhar
+        const shOpts = opts;
         renderOptions(shOpts.map(o=>o.t), (idx)=> select(shOpts[idx].i), shOpts.map(o=>o.i));
       }
 
@@ -407,11 +436,15 @@
       const buttons=Array.from(optionsEl.querySelectorAll('.opt')); buttons.forEach(b=>b.disabled=true);
       let correct=false;
       if(type==='vf'){
-        correct = (value === !!q.answer); buttons[q.answer ? 0:1].classList.add('correct'); const chosenIdx=value?0:1; if(!correct) buttons[chosenIdx]?.classList.add('wrong');
+        correct = (value === !!q.answer);
+        buttons[q.answer ? 0:1].classList.add('correct');
+        const chosenIdx=value?0:1; if(!correct) buttons[chosenIdx]?.classList.add('wrong');
       } else {
         const answerIdx=q.answer;
         buttons.forEach(b=>{ const origIdx=parseInt(b.dataset.origIdx??'-1',10); if(origIdx===answerIdx) b.classList.add('correct'); });
-        const chosenBtn=buttons.find(b=>parseInt(b.dataset.origIdx??'-1',10)===value); correct=(typeof value==='number' && value===answerIdx); if(!correct && chosenBtn) chosenBtn.classList.add('wrong');
+        const chosenBtn=buttons.find(b=>parseInt(b.dataset.origIdx??'-1',10)===value);
+        correct=(typeof value==='number' && value===answerIdx);
+        if(!correct && chosenBtn) chosenBtn.classList.add('wrong');
       }
       state.textContent = correct? 'correto' : 'incorreto';
       explainEl.textContent = q.explanation || '';
@@ -426,8 +459,7 @@
         renderOptions(['Verdadeiro','Falso'],()=>{},[0,1]);
       } else {
         const opts=q.options.map((t,i)=>({t,i}));
-        // ===== ALTERAÇÃO: NÃO embaralhar opções =====
-        const shOpts = opts; // fixa a ordem original
+        const shOpts = opts; // opções fixas
         renderOptions(shOpts.map(o=>o.t), ()=>{}, shOpts.map(o=>o.i));
       }
       lockAndExplain(val);
@@ -436,28 +468,42 @@
     function next(){ if(!isLocked()) return; if(I<QUIZ.questions.length-1){ I++; render(); } else finish(); }
     function prev(){ if(I>0){ I--; render(); } }
 
-    function score(){ let ok=0; const total=QUIZ.questions.length; for(let k=0;k<total;k++){ const q=QUIZ.questions[k]; const v=CHOSEN[k]; if((q.type||'multiple')==='vf'){ if(v===!!q.answer) ok++; } else if(typeof v==='number' && v===q.answer) ok++; } return {ok,total}; }
+    function score(){
+      let ok=0; const total=QUIZ.questions.length;
+      for(let k=0;k<total;k++){
+        const q=QUIZ.questions[k]; const v=CHOSEN[k];
+        if((q.type||'multiple')==='vf'){ if(v===!!q.answer) ok++; }
+        else if(typeof v==='number' && v===q.answer) ok++;
+      }
+      return {ok,total};
+    }
 
-    function finish(){ const {ok,total}=score(); const pct=Math.round(ok/Math.max(1,total)*100); resultScore.textContent=`${pct}% (${ok}/${total})`; resultMsg.textContent=QUIZ.meta?.outroMessage || MANIFEST?.outro?.message || ''; state.textContent='concluído'; show(screenQuiz,false); show(screenResult,true); }
+    function finish(){
+      const {ok,total}=score();
+      const pct=Math.round(ok/Math.max(1,total)*100);
+      resultScore.textContent=`${pct}% (${ok}/${total})`;
+      resultMsg.textContent=QUIZ.meta?.outroMessage || MANIFEST?.outro?.message || '';
+      state.textContent='concluído';
+      show(screenQuiz,false); show(screenResult,true);
+    }
 
     // Google modo IA (udm=50)
     function openGoogleAI(){
       const q=current(); if(!q) return;
-      const metaTitle = QUIZ?.meta?.title || 'Tema';
-      const metaCat = QUIZ?.meta?.category || '';
-      const metaTheme = QUIZ?.meta?.theme || '';
-      const type=q.type||'multiple';
-      const correctText = type==='vf' ? (q.answer ? 'Verdadeiro' : 'Falso') : (q.options?.[q.answer] || '');
-
-      const prompt =
-`Explique de forma didatica e exemplificativa. Tema: ${q.q}`;
-
+      const prompt = `Explique de forma didatica e exemplificativa. Tema: ${q.q}`;
       const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt);
       window.open(url, '_blank', 'noopener');
     }
 
     // Acessibilidade
-    window.addEventListener('keydown',(e)=>{ if(screenQuiz.classList.contains('hide')) return; if(e.key>='1'&&e.key<='9'){ const idx=parseInt(e.key,10)-1; const btn=optionsEl.querySelectorAll('.opt')[idx]; if(btn) btn.click(); } else if(e.key==='Enter'||e.key==='ArrowRight'){ if(I===QUIZ.questions.length-1) finish(); else next(); } else if(e.key==='ArrowLeft'){ prev(); } });
+    window.addEventListener('keydown',(e)=>{
+      if(screenQuiz.classList.contains('hide')) return;
+      if(e.key>='1'&&e.key<='9'){
+        const idx=parseInt(e.key,10)-1; const btn=optionsEl.querySelectorAll('.opt')[idx]; if(btn) btn.click();
+      } else if(e.key==='Enter'||e.key==='ArrowRight'){
+        if(I===QUIZ.questions.length-1) finish(); else next();
+      } else if(e.key==='ArrowLeft'){ prev(); }
+    });
 
     // Testes básicos
     function runTests(){
@@ -491,7 +537,7 @@
 
   <script type="application/json" data-path="data/intro/basico.json">{
     "meta": {
-      "title": "Introdução Básica",
+      "title": "Introdução básica",
       "category": "intro",
       "theme": "basico",
       "shuffle": { "questions": true, "options": true },
