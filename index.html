@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MeuJus — Quiz</title>
-  <meta name="description" content="MeuJus — Quiz minimalista com categorias e temas. Pronto para GitHub Pages." />
+  <meta name="description" content="MeuJus — Quiz minimalista com categorias e temas. Agora com parser de TXT e títulos vindos de pasta/arquivo." />
   <style>
     :root{ --bg:#ffffff; --bg-soft:#f6f7f8; --ink:#0f172a; --muted:#6b7280; --accent:#111827; --ok:#059669; --bad:#b91c1c; }
     *{ box-sizing:border-box }
@@ -36,7 +36,8 @@
     .progress{ height:3px; background:#e5e7eb; border-radius:999px; overflow:hidden; margin:10px 0 16px }
     .progress>span{ display:block; width:0%; height:100%; background:#111827; transition:width .25s ease }
 
-    .statement{ font-size:16px; font-weight:500; line-height:1.3; margin:22px 0 22px; letter-spacing:.1px; background:var(--bg-soft); padding:14px 16px; border-radius:12px; }
+    .statement{ font-size:16px; font-weight:500; line-height:1.4; margin:22px 0 22px; letter-spacing:.1px; background:var(--bg-soft); padding:14px 16px; border-radius:12px; }
+    .statement p{ margin:0 0 10px }
     .options{ display:grid; gap:14px; margin:6px 0 8px }
     .opt{
       text-align:left; background:transparent; border:1px solid #e5e7eb;
@@ -102,7 +103,7 @@
     <button id="btnResume" class="btn ghost hide" type="button">Continuar anterior</button>
   </div>
 
-  <!-- Busca global (agora por último) -->
+  <!-- Busca global (por último) -->
   <div class="controls" style="margin-top:8px">
     <div>
       <label for="txtGlobal">Buscar em todos os temas</label>
@@ -130,7 +131,7 @@
         </div>
       </div>
 
-      <p id="question" class="statement"></p>
+      <div id="question" class="statement"></div>
       <div id="options" class="options" role="listbox"></div>
       <div id="explanation" class="explain hide"></div>
       <div class="actions">
@@ -237,6 +238,14 @@
 
     function readEmbedded(path){ const t=document.querySelector(`script[type="application/json"][data-path="${path}"]`); if(!t) return null; try{ return JSON.parse(t.textContent);}catch{ return null; } }
     function mustUseEmbedded(){ return new URLSearchParams(location.search).get('embedded')==='1'; }
+
+    async function fetchText(path){
+      if(!mustUseEmbedded()){
+        try{ const res = await fetch(path, {cache:'no-store'}); if(res.ok) return await res.text(); }catch{}
+      }
+      // fallback inexistente para TXT
+      return '';
+    }
     async function loadJSON(path, fallback=undefined){
       if(!mustUseEmbedded()){
         try{ const res=await fetch(path,{cache:'no-store'}); if(res.ok) return res.json(); }catch{}
@@ -250,18 +259,18 @@
       if(t==='vf') return (pick===!!q.answer);
       return (typeof pick==='number' && pick===q.answer);
     }
-    
-    // ===== NEW: Helper para normalizar texto para busca =====
+
+    // ===== Normalização para busca =====
     function normalizeText(str) {
       if (!str) return '';
-      return str
+      return String(str)
         .toLowerCase()
-        .normalize('NFD') // Decompõe caracteres acentuados
-        .replace(/[\u0300-\u036f]/g, '') // Remove os acentos
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
         .replace(/ç/g, 'c');
     }
 
-    // ===== GitHub indexer =====
+    // ===== GitHub indexer (agora .txt) =====
     function guessOwnerRepo(){
       if(CONFIG.owner && CONFIG.repo) return {owner:CONFIG.owner, repo:CONFIG.repo};
       const host = location.hostname;
@@ -275,11 +284,9 @@
       return {owner: CONFIG.owner, repo: CONFIG.repo};
     }
 
-    function slugToName(slug){
-      const base = slug.replace(/\.(json)$/i,'').replace(/[-_]+/g,' ').trim();
-      const lower = base.toLocaleLowerCase('pt-BR');
-      if(!lower) return '';
-      return lower.charAt(0).toLocaleUpperCase('pt-BR') + lower.slice(1);
+    function toTitleCaseKeep(str){
+      // Mantém caixa como vier, só limpa extensão e underscores
+      return String(str||'').replace(/\.txt$/i,'').replace(/_/g,'_').trim();
     }
 
     async function buildManifestFromGitHub(){
@@ -293,30 +300,27 @@
         const data = await r.json();
         if(!data || !Array.isArray(data.tree)) return null;
 
-        const nodes = data.tree.filter(n => n.type==='blob' && n.path.startsWith(CONFIG.dataDir+'/') && n.path.endsWith('.json'));
+        const nodes = data.tree.filter(n => n.type==='blob' && n.path.startsWith(CONFIG.dataDir+'/') && n.path.endsWith('.txt'));
 
         const catMap = new Map();
         for(const node of nodes){
           const parts = node.path.split('/');
           if(parts.length < 3) continue;
-          const catId = parts[1];
+          const catId = parts[1]; // nome exato da pasta
           const file = parts[parts.length-1];
-          const themeId = file.replace(/\.json$/i,'');
-          const cat = catMap.get(catId) || { id: catId, name: slugToName(catId), themes: [] };
-          cat.themes.push({ id: themeId, name: slugToName(themeId), path: node.path });
+          const themeId = file.replace(/\.txt$/i,'');
+          const cat = catMap.get(catId) || { id: catId, name: catId, themes: [] };
+          cat.themes.push({ id: themeId, name: themeId, path: node.path });
           catMap.set(catId, cat);
         }
 
-        const categories = Array.from(catMap.values())
-          .map(c => ({...c, themes: c.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'))}))
-          .sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
-
+        const categories = Array.from(catMap.values()).map(c => ({...c, themes: c.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'))})).sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
         if(categories.length===0) return null;
 
         return {
           title: 'MeuJus',
           labels: 'labels/pt-BR.json',
-          shuffleDefault: {questions:false, options:true}, // nunca embaralhar perguntas
+          shuffleDefault: {questions:false, options:true},
           persistDefault: true,
           outro: { message: 'Obrigado por participar.' },
           categories
@@ -324,6 +328,94 @@
       }catch{
         return null;
       }
+    }
+
+    // ===== TXT → QUIZ Parser =====
+    function htmlEscape(s){
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+    function formatParagraphs(s){
+      const clean = String(s||'')
+        .replace(/\r\n?/g,'\n')
+        .replace(/[\u00A0\t]+/g,' ')
+        .replace(/\s+$/gm,'')
+        .trim();
+      const parts = clean.split(/\n{2,}/).map(t=>t.trim()).filter(Boolean);
+      return parts.map(p=>`<p>${htmlEscape(p)}</p>`).join('');
+    }
+
+    function parseTxtQuestions(raw){
+      const text = String(raw||'')
+        .replace(/\uFEFF/g,'') // BOM
+        .replace(/\r\n?/g,'\n');
+
+      // corta blocos por linhas de ----- ou fim de arquivo
+      const blocks = text.split(/\n-{3,}\n/g).map(b=>b.trim()).filter(Boolean);
+      const qs = [];
+      for(const block of blocks){
+        // pega gabarito
+        const gabMatch = block.match(/--\s*Gabarito\s*:\s*([A-E])/i);
+        const gab = gabMatch ? gabMatch[1].toUpperCase() : null;
+
+        // pega enunciado após "# " e antes de "- A)"
+        const aIdx = block.search(/^\s*-\s*A\)/m);
+        const hIdx = block.indexOf('#');
+        let head = '';
+        if(hIdx >= 0 && aIdx > hIdx){
+          head = block.slice(hIdx).replace(/^#\s*/,'').slice(0, aIdx - hIdx).trim();
+        }
+
+        // captura opções A-D com limites até a próxima opção ou gabarito
+        function grabOpt(letter){
+          const reStart = new RegExp(`^\s*-\s*${letter}\\)\s*`, 'm');
+          const m = reStart.exec(block);
+          if(!m) return '';
+          const start = m.index + m[0].length;
+          // próxima âncora
+          const next = ['A','B','C','D','E'].filter(l=>l!==letter).map(l=>{
+            const r = new RegExp(`^\s*-\s*${l}\\)\s*`, 'm');
+            const x = r.exec(block); return x?x.index:null;
+          }).filter(x=>x!=null).sort((a,b)=>a-b);
+          const g = block.search(/\n\s*--\s*Gabarito\b/m);
+          if(g>=0) next.push(g);
+          const end = next.find(n=>n>start) ?? block.length;
+          let slice = block.slice(start, end);
+          // remove marcador de citação inline se existir
+          slice = slice.replace(/\[cite:[^\]]*\]/gi,'');
+          return slice.trim();
+        }
+        const A = grabOpt('A');
+        const B = grabOpt('B');
+        const C = grabOpt('C');
+        const D = grabOpt('D');
+        const options = [A,B,C,D].map(t=>t.replace(/\n{2,}/g,'\n\n'));
+        if(!head || options.every(o=>!o)) continue;
+
+        const answerMap = {A:0,B:1,C:2,D:3};
+        const answer = gab && answerMap[gab] != null ? answerMap[gab] : 0;
+        qs.push({ type:'multiple', q: formatParagraphs(head), options, answer, explanation:'' });
+      }
+      return qs;
+    }
+
+    async function loadTxtAsQuiz(path){
+      const raw = await fetchText(path);
+      const questions = parseTxtQuestions(raw);
+      // meta a partir do caminho: data/<categoria>/<arquivo>.txt
+      const parts = path.split('/');
+      const category = parts[1] || 'Geral';
+      const file = (parts[parts.length-1]||'Quiz.txt').replace(/\.txt$/i,'');
+      return {
+        meta: {
+          title: file,            // nome EXATO do arquivo
+          category: category,     // nome EXATO da pasta
+          theme: file,
+          shuffle: {questions:false, options:true},
+          persist: true,
+          outroMessage: ''
+        },
+        questions
+      };
     }
 
     // ===== App =====
@@ -337,7 +429,7 @@
       if(!MANIFEST){
         const manifestFallback={
           title:'MeuJus',
-          categories:[{id:'intro',name:'Introdução',themes:[{id:'basico',name:'Básico',path:'data/intro/basico.json'}]}],
+          categories:[{id:'intro',name:'Introdução',themes:[{id:'basico',name:'Básico',path:'data/intro/basico.txt'}]}],
           shuffleDefault:{questions:false,options:true},
           persistDefault:true,
           outro:{message:'Obrigado por participar.'}
@@ -393,8 +485,6 @@
 
       window.addEventListener('offline', ()=>toast('Sem conexão. Usando cache local','warn',3000));
       window.addEventListener('online',  ()=>toast('Conexão restabelecida','success',1800));
-
-      setTimeout(runTests,0);
     }
 
     function applyLabels(){
@@ -427,17 +517,20 @@
       const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId);
       const themeId=selTheme.value;
       const theme=(cat?.themes||[]).find(t=>t.id===themeId);
-      return theme?.path || (catId&&themeId ? `data/${catId}/${themeId}.json`: null);
+      return theme?.path || (catId&&themeId ? `data/${catId}/${themeId}.txt`: null);
     }
 
     async function startQuizFromSelection(){ const path=selectedPath(); if(!path) return; await loadQuiz(path, true); }
 
     function resetState(){ QUIZ=null; ORDER=[]; CHOSEN=[]; I=0; KEY=null; FILTER=null; explainEl.classList.add('hide'); btnClearSearch.classList.add('hide'); txtSearch.value=''; }
 
-    // ===== Carregar quiz normal (nunca embaralhar perguntas) =====
+    // ===== Carregar quiz (TXT) =====
     async function loadQuiz(path, fresh=false, tryRestore=false){
       state.textContent='carregando';
-      const qz=await loadJSON(path);
+      let qz=null;
+      if(/\.txt$/i.test(path)) qz = await loadTxtAsQuiz(path);
+      else if(/\.json$/i.test(path)) qz = await loadJSON(path);
+
       if(!qz || !Array.isArray(qz.questions)){
         alert('Quiz não encontrado: '+path);
         state.textContent='erro';
@@ -451,7 +544,7 @@
       const total=(qz.questions||[]).length;
       let saved = tryRestore ? lsGet(KEY.key) : null;
 
-      ORDER=[...Array(total).keys()]; // 0..n-1
+      ORDER=[...Array(total).keys()];
       CHOSEN=new Array(total).fill(null);
       I=0;
       FILTER=null; btnClearSearch.classList.add('hide');
@@ -529,12 +622,13 @@
         : `${answered}/${denom} respondidas`;
 
       const q=current();
-      
-      const categoryText = QUIZ?.meta?.category ? slugToName(QUIZ.meta.category) : 'Geral';
-      const themeText = QUIZ?.meta?.title || (QUIZ?.meta?.theme ? slugToName(QUIZ.meta.theme) : 'Quiz');
+
+      // Título EXATO "<pasta> | <arquivo>"
+      const categoryText = QUIZ?.meta?.category || 'Geral';
+      const themeText = QUIZ?.meta?.title || 'Quiz';
       questionEl.innerHTML = `
-        <div style="font-size: 12px; font-weight: 400; color: var(--muted); text-transform: uppercase; letter-spacing: .4px;">
-          ${categoryText} | ${themeText}
+        <div style="font-size: 12px; font-weight: 400; color: var(--muted); text-transform: none; letter-spacing: .2px;">
+          ${htmlEscape(categoryText)} | ${htmlEscape(themeText)}
         </div>
         <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 10px 0;">
         ${q.q}
@@ -548,8 +642,8 @@
       if(type==='vf'){
         renderOptions(['Verdadeiro','Falso'], (idx)=> select(idx===0), [0,1]);
       } else {
-        const opts=q.options.map((t,i)=>({t,i}));
-        const shOpts = opts; // opções fixas
+        const opts=q.options.map((t,i)=>({t:i!=null?String(t):'',i}));
+        const shOpts = opts; // sem embaralhar perguntas
         renderOptions(shOpts.map(o=>o.t), (idx)=> select(shOpts[idx].i), shOpts.map(o=>o.i));
       }
 
@@ -561,7 +655,7 @@
       persist();
     }
 
-    // ===== MODIFIED: Adiciona etiquetas A, B, C... =====
+    // ===== Opções com etiquetas A, B, C, D =====
     function renderOptions(texts, onPick, origIdxs=null){
       const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
       texts.forEach((txt, idx)=>{
@@ -569,10 +663,12 @@
         b.className='opt'; 
         b.dataset.idx=idx; 
         if(origIdxs) b.dataset.origIdx=String(origIdxs[idx]);
-        
         const label = labels[idx] ? `<strong>${labels[idx]})</strong> ` : '';
-        b.innerHTML = `${label}${txt}`;
-
+        // opções são texto simples; encapsula quebras
+        const safe = htmlEscape(String(txt||''))
+          .replace(/\n{2,}/g,'\n\n')
+          .split(/\n{2,}/).map(p=>`<p style="margin:0">${p.replace(/\n/g,'<br>')}</p>`).join('');
+        b.innerHTML = `${label}${safe}`;
         b.addEventListener('click', ()=> onPick(idx));
         optionsEl.appendChild(b);
       });
@@ -631,13 +727,7 @@
       }
     }
 
-    function prev(){
-      if(I > 0){
-        I--;
-        render();
-      }
-    }
-
+    function prev(){ if(I > 0){ I--; render(); } }
 
     function score(){
       let ok=0; const total=QUIZ.questions.length;
@@ -662,11 +752,11 @@
     function openGoogleAI(){
       const q=current(); if(!q) return;
       const prompt = 'VProfessor, por favor fundamente a alternativa correta e as incorretas. Enunciado: ' + String((q && q.q) || '') + ' | Opções: ' + (q && q.type === 'vf' ? 'Verdadeiro | Falso' : (Array.isArray(q && q.options) ? q.options.map(function(t,i){ return (i+1)+') '+t; }).join(' | ') : '')) + ' | Alternativa correta: ' + (q && q.type === 'vf' ? (q && q.answer ? 'Verdadeiro' : 'Falso') : (Array.isArray(q && q.options) && typeof q.answer === 'number' ? q.options[q.answer] : ''));
-      const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt);
+      const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt.replace(/<[^>]+>/g,''));
       window.open(url, '_blank', 'noopener');
     }
 
-    // ===== MODIFIED: Busca intra-quiz com palavras exatas =====
+    // ===== Filtro intra-quiz =====
     function applyFilter(termRaw){
       if(!QUIZ){ toast('Carregue um tema antes','warn'); return; }
       const term = String(termRaw||'').trim();
@@ -677,7 +767,7 @@
 
       const hits=[];
       QUIZ.questions.forEach((q,idx)=>{
-        const normalizedQ = normalizeText(q.q || '');
+        const normalizedQ = normalizeText(q.q.replace(/<[^>]+>/g,'') || '');
         const normalizedOpts = (q.options || []).map(o => normalizeText(String(o || '')));
 
         const allTermsFound = searchTerms.every(st => {
@@ -687,9 +777,7 @@
           return inQ || inOpt;
         });
 
-        if (allTermsFound) {
-          hits.push(idx);
-        }
+        if (allTermsFound) hits.push(idx);
       });
 
       if(hits.length===0){ toast('Nada encontrado','warn'); return; }
@@ -711,7 +799,7 @@
       render();
     }
 
-    // ===== MODIFIED: Busca global com palavras exatas =====
+    // ===== Busca global em TODOS os .txt =====
     async function globalSearchAndOpen(termRaw){
       const term = String(termRaw||'').trim();
       if(!term){ toast('Informe um termo para busca global','warn'); return; }
@@ -720,42 +808,36 @@
       if (searchTerms.length === 0) return;
 
       const allPaths=[];
-      (MANIFEST?.categories||[]).forEach(c=>{
-        (c.themes||[]).forEach(t=> allPaths.push(t.path));
-      });
+      (MANIFEST?.categories||[]).forEach(c=>{ (c.themes||[]).forEach(t=> allPaths.push(t.path)); });
       if(allPaths.length===0){ toast('Nenhum tema disponível para busca','error'); return; }
 
       state.textContent='buscando';
       let results=[];
       for(const p of allPaths){
         try{
-          const data = await loadJSON(p);
-          if(!data || !Array.isArray(data.questions)) continue;
-          data.questions.forEach((q,idx)=>{
-            const normalizedQ = normalizeText(q.q || '');
+          let quizObj = null;
+          if(/\.txt$/i.test(p)) quizObj = await loadTxtAsQuiz(p);
+          else if(/\.json$/i.test(p)) quizObj = await loadJSON(p);
+          if(!quizObj || !Array.isArray(quizObj.questions)) continue;
+          quizObj.questions.forEach((q)=>{
+            const normalizedQ = normalizeText(String(q.q||'').replace(/<[^>]+>/g,''));
             const normalizedOpts = (q.options || []).map(o => normalizeText(String(o || '')));
-            
             const allTermsFound = searchTerms.every(st => {
               const regex = new RegExp('\\b' + st + '\\b');
               const inQ = regex.test(normalizedQ);
               const inOpt = normalizedOpts.some(optText => regex.test(optText));
               return inQ || inOpt;
             });
-
             if(allTermsFound){
               const clone = JSON.parse(JSON.stringify(q));
-              clone.__origin = { path:p, index:idx };
+              clone.__origin = { path:p };
               results.push(clone);
             }
           });
         }catch{}
       }
 
-      if(results.length===0){
-        state.textContent='pronto';
-        toast('Nada encontrado na busca global','warn',2400);
-        return;
-      }
+      if(results.length===0){ state.textContent='pronto'; toast('Nada encontrado na busca global','warn',2400); return; }
 
       const virtual = {
         meta: {
@@ -785,65 +867,11 @@
 
     window.addEventListener('beforeunload', persist);
     document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='hidden') persist(); });
-
-    function runTests(){
-      try{
-        console.group('TESTES');
-        const m=readEmbedded('data/manifest.json'); if(m) console.assert(m.categories && m.categories.length>0, 'Manifest embutido ok');
-        console.assert(isCorrectQuestion({type:'multiple',answer:2},2)===true, 'Multiple ok');
-        console.assert(isCorrectQuestion({type:'vf',answer:true},true)===true, 'VF ok');
-        const embIntro = readEmbedded('data/intro/basico.json');
-        if(embIntro){ const sampleQ = embIntro.questions?.[0]?.q||''; console.assert(sampleQ.length>=0, 'Embutido OK'); }
-        console.log('Passou nos testes básicos');
-      }catch(e){ console.error('Falha nos testes', e); } finally{ console.groupEnd(); }
-    }
   </script>
 
-  <!-- Fallbacks embutidos -->
-  <script type="application/json" data-path="data/manifest.json">{
-    "title":"MeuJus",
-    "labels":"labels/pt-BR.json",
-    "shuffleDefault": { "questions": false, "options": true },
-    "persistDefault": true,
-    "outro": { "message":"Obrigado por participar." },
-    "categories":[
-      { "id":"intro","name":"Introdução","themes":[{ "id":"basico","name":"Básico","path":"data/intro/basico.json" }]}
-    ]
-  }</script>
-
+  <!-- Labels padrão -->
   <script type="application/json" data-path="labels/pt-BR.json">{
     "start":"Começar","next":"Próximo","prev":"Anterior","retry":"Refazer","home":"Início","category":"Categoria","theme":"Tema","result":"Resultado"
-  }</script>
-
-  <script type="application/json" data-path="data/intro/basico.json">{
-    "meta": {
-      "title": "Introdução básica",
-      "category": "intro",
-      "theme": "basico",
-      "shuffle": { "questions": false, "options": true },
-      "persist": true,
-      "outroMessage": "Você concluiu o tema introdutório do MeuJus. Volte ao início para escolher outro tema."
-    },
-    "questions": [
-      {
-        "type": "multiple",
-        "q": "O MeuJus é um quiz minimalista pensado para leitura confortável: contraste elevado, tipografia leve e poucas bordas. A navegação prioriza texto e atalhos simples para que você foque no conteúdo, não na interface.",
-        "options": [
-          "Ele usa muitas caixas, ícones pesados e animações chamativas em todas as telas, com pouco espaço em branco e fontes grandes e espessas.",
-          "Ele privilegia o texto, mantém o fundo claro e usa espaçamento generoso, com botões sóbrios e respostas destacadas de forma sutil e objetiva.",
-          "Ele exige timer obrigatório por questão, apresenta ranking global e solicita login social antes de liberar qualquer pergunta.",
-          "Ele bloqueia navegação por teclado e remove descrições para acelerar respostas, reduzindo o contexto e as explicações das questões."
-        ],
-        "answer": 1,
-        "explanation": "O foco é o conteúdo textual. O layout claro, com muito respiro e pouquíssimos adornos, reduz a carga visual e melhora a compreensão."
-      },
-      {
-        "type": "vf",
-        "q": "Neste projeto, perguntas e respostas são textos relativamente longos, entre cento e vinte e duzentos caracteres, escritos para leitura fluida em telas pequenas, priorizando clareza e objetividade.",
-        "answer": true,
-        "explanation": "O design é mobile-first e privilegia blocos de texto mais longos, com espaçamento e tipografia leves."
-      }
-    ]
   }</script>
 </body>
 </html>
