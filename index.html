@@ -37,7 +37,7 @@
     .progress{ height:3px; background:#e5e7eb; border-radius:999px; overflow:hidden; margin:10px 0 16px }
     .progress>span{ display:block; width:0%; height:100%; background:#111827; transition:width .25s ease }
 
-    /* --- Enunciado e opções com mais respiro --- */
+    /* --- Enunciado e opções --- */
     .statement{ font-size:18px; font-weight:600; line-height:1.2; margin:12px 0 12px; letter-spacing:.1px }
     .options{ display:grid; gap:14px; margin:6px 0 8px }
     .opt{
@@ -122,6 +122,16 @@
   </div>
 
   <script>
+    // ===== Config: indexação automática de /data via GitHub API (sem editar manifest) =====
+    const CONFIG = {
+      useGitHubIndexer: true,     // tenta listar arquivos do repositório para montar categorias/temas automaticamente
+      owner: null,                // defina manualmente se necessário, ex: "seu-usuario"
+      repo: null,                 // ex: "meujus"
+      branch: 'main',             // "main" ou "gh-pages" conforme seu repo
+      dataDir: 'data'             // pasta onde ficam os quizzes
+    };
+
+    // ===== Seletores da UI =====
     const selCategory = document.getElementById('selCategory');
     const selTheme = document.getElementById('selTheme');
     const btnStart = document.getElementById('btnStart');
@@ -152,11 +162,14 @@
     const footLeft = document.getElementById('footLeft');
     const footRight = document.getElementById('footRight');
 
+    // ===== Labels =====
     const DEFAULT_LABELS = { start:'Começar', next:'Próximo', prev:'Anterior', retry:'Refazer', home:'Início', category:'Categoria', theme:'Tema', result:'Resultado' };
     let LABELS = { ...DEFAULT_LABELS };
 
+    // ===== Estado =====
     let MANIFEST = null, QUIZ = null, ORDER = [], CHOSEN = [], I = 0, KEY = null;
 
+    // ===== Utils =====
     const show = (node, flag) => node.classList.toggle('hide', !flag);
     const clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
     function lsGet(k, def=null){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):def; }catch{ return def; } }
@@ -174,25 +187,109 @@
 
     function isCorrectQuestion(q, pick){ if(!q) return false; const t=q.type||'multiple'; if(t==='vf') return (pick===!!q.answer); return (typeof pick==='number' && pick===q.answer); }
 
+    // ===== GitHub indexer =====
+    function guessOwnerRepo(){
+      if(CONFIG.owner && CONFIG.repo) return {owner:CONFIG.owner, repo:CONFIG.repo};
+      const host = location.hostname; // ex: user.github.io
+      const path = location.pathname; // ex: /repo/...
+      if(host.endsWith('.github.io')){
+        const owner = host.split('.github.io')[0];
+        const parts = path.split('/').filter(Boolean);
+        const repo = parts.length ? parts[0] : owner; // para páginas de projeto: /repo/
+        return {owner, repo};
+      }
+      // domínio próprio: exigir definir em CONFIG
+      return {owner: CONFIG.owner, repo: CONFIG.repo};
+    }
+
+    function slugToName(slug){
+      return slug
+        .replace(/\.(json)$/i,'')
+        .replace(/[-_]+/g,' ')
+        .replace(/\b([a-zà-ú])(\w*)/gi,(m,a,b)=> a.toUpperCase()+b.toLowerCase());
+    }
+
+    async function buildManifestFromGitHub(){
+      const {owner, repo} = guessOwnerRepo();
+      if(!owner || !repo) return null;
+
+      // Trees API: lista recursiva de paths
+      const url = `https://api.github.com/repos/${owner}/${repo}/git/trees/${encodeURIComponent(CONFIG.branch)}?recursive=1`;
+      try{
+        const r = await fetch(url, {headers:{'Accept':'application/vnd.github+json'}});
+        if(!r.ok) return null;
+        const data = await r.json();
+        if(!data || !Array.isArray(data.tree)) return null;
+
+        // Filtra JSONs em dataDir: data/categoria/tema.json
+        const nodes = data.tree.filter(n => n.type==='blob' && n.path.startsWith(CONFIG.dataDir+'/') && n.path.endsWith('.json'));
+
+        // Monta categorias e temas
+        const catMap = new Map(); // id -> {id,name,themes:[]}
+        for(const node of nodes){
+          const parts = node.path.split('/'); // [data, categoria, arquivo.json] ou [data, categoria, subdir, arquivo...]
+          if(parts.length < 3) continue;
+          const catId = parts[1];
+          const file = parts[parts.length-1];
+          const themeId = file.replace(/\.json$/i,'');
+          const cat = catMap.get(catId) || { id: catId, name: slugToName(catId), themes: [] };
+          cat.themes.push({ id: themeId, name: slugToName(themeId), path: node.path });
+          catMap.set(catId, cat);
+        }
+
+        // Ordena alfabeticamente
+        const categories = Array.from(catMap.values())
+          .map(c => ({...c, themes: c.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'))}))
+          .sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
+
+        if(categories.length===0) return null;
+
+        return {
+          title: 'MeuJus',
+          labels: 'labels/pt-BR.json',
+          shuffleDefault: {questions:true, options:true},
+          persistDefault: true,
+          outro: { message: 'Obrigado por participar.' },
+          categories
+        };
+      }catch{
+        return null;
+      }
+    }
+
+    // ===== App =====
     init();
     async function init(){
-      const manifestFallback={ title:'MeuJus', categories:[{id:'intro',name:'Introdução',themes:[{id:'basico',name:'Básico',path:'data/intro/basico.json'}]}], shuffleDefault:{questions:true,options:true}, persistDefault:true };
-      MANIFEST = await loadJSON('data/manifest.json', manifestFallback);
+      // 1) tenta indexar automaticamente via GitHub API
+      if(CONFIG.useGitHubIndexer){
+        const dyn = await buildManifestFromGitHub();
+        if(dyn) MANIFEST = dyn;
+      }
 
+      // 2) se falhar, usa manifest externo/embutido
+      if(!MANIFEST){
+        const manifestFallback={ title:'MeuJus', categories:[{id:'intro',name:'Introdução',themes:[{id:'basico',name:'Básico',path:'data/intro/basico.json'}]}], shuffleDefault:{questions:true,options:true}, persistDefault:true, outro:{message:'Obrigado por participar.'} };
+        MANIFEST = await loadJSON('data/manifest.json', manifestFallback);
+      }
+
+      state.textContent='pronto';
       appTitle.textContent = MANIFEST?.title || 'MeuJus';
       try{ if(MANIFEST?.labels) LABELS={...DEFAULT_LABELS, ...(await loadJSON(MANIFEST.labels))}; }catch{}
       applyLabels();
 
+      // popular selects
       selCategory.innerHTML='';
       (MANIFEST?.categories||[]).forEach((c,idx)=>{ const o=document.createElement('option'); o.value=c.id; o.textContent=c.name||c.id; if(idx===0) o.selected=true; selCategory.appendChild(o); });
       updateThemes();
 
+      // eventos
       selCategory.addEventListener('change', updateThemes);
       btnStart.addEventListener('click', startQuizFromSelection);
       btnPrev.addEventListener('click', prev);
       btnNext.addEventListener('click', next);
       btnAI.addEventListener('click', openGoogleAI);
 
+      const goHome = ()=>{ resetState(); show(screenIntro,true); show(screenQuiz,false); show(screenResult,false); state.textContent='pronto'; };
       btnGoHome.addEventListener('click', goHome);
       btnHome.addEventListener('click', goHome);
       appTitle.addEventListener('click', goHome);
@@ -200,21 +297,14 @@
 
       btnRetry.addEventListener('click', ()=> loadQuiz(KEY?.path, true));
 
-      const last=lsGet('quiz:last');
-      if(last && last.path){
+      // restore
+      const last = lsGet('quiz:last');
+      if (last && last.path) {
         btnResume.classList.remove('hide');
-        btnResume.addEventListener('click', async ()=>{ KEY=last; await loadQuiz(last.path, false, true); });
+        btnResume.addEventListener('click', async ()=>{ KEY = last; await loadQuiz(last.path, false, true); });
       }
 
       setTimeout(runTests,0);
-    }
-
-    function goHome(){
-      resetState();
-      show(screenIntro,true);
-      show(screenQuiz,false);
-      show(screenResult,false);
-      state.textContent='pronto';
     }
 
     function applyLabels(){
@@ -226,21 +316,17 @@
       document.getElementById('resultTitle').textContent = LABELS.result||'Resultado';
       btnRetry.textContent = LABELS.retry||'Refazer';
       btnHome.textContent = LABELS.home||'Início';
-      btnGoHome.textContent = LABELS.home||'Início';
+      const h = document.getElementById('btnGoHome'); if(h) h.textContent = LABELS.home||'Início';
     }
 
     function updateThemes(){
-      const catId=selCategory.value;
-      const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId) || {themes:[]};
+      const catId = selCategory.value;
+      const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId) || {themes:[]};
       selTheme.innerHTML='';
       (cat.themes||[]).forEach((t,idx)=>{ const o=document.createElement('option'); o.value=t.id; o.textContent=t.name||t.id; if(idx===0) o.selected=true; selTheme.appendChild(o); });
     }
 
-    function selectedPath(){
-      const catId=selCategory.value; const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId);
-      const themeId=selTheme.value; const theme=(cat?.themes||[]).find(t=>t.id===themeId);
-      return theme?.path || (catId&&themeId ? `data/${catId}/${themeId}.json` : null);
-    }
+    function selectedPath(){ const catId=selCategory.value; const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId); const themeId=selTheme.value; const theme=(cat?.themes||[]).find(t=>t.id===themeId); return theme?.path || (catId&&themeId ? `data/${catId}/${themeId}.json`: null); }
 
     async function startQuizFromSelection(){ const path=selectedPath(); if(!path) return; await loadQuiz(path, true); }
 
@@ -270,11 +356,7 @@
 
     function current(){ return QUIZ.questions[ ORDER[I] ]; }
 
-    function persist(){
-      const persistFlag=QUIZ?.meta?.persist ?? MANIFEST?.persistDefault ?? true;
-      if(!persistFlag||!KEY) return;
-      lsSet(KEY.key, { i:I, chosen:CHOSEN, quizLen: QUIZ.questions.length });
-    }
+    function persist(){ const persistFlag=QUIZ?.meta?.persist ?? MANIFEST?.persistDefault ?? true; if(!persistFlag||!KEY) return; lsSet(KEY.key, { i:I, chosen:CHOSEN, quizLen: QUIZ.questions.length }); }
 
     function render(){
       const total=QUIZ.questions.length;
@@ -309,8 +391,7 @@
     function renderOptions(texts, onPick, origIdxs=null){
       texts.forEach((txt, idx)=>{
         const b=document.createElement('button');
-        b.className='opt'; b.textContent=txt; b.dataset.idx=idx;
-        if(origIdxs) b.dataset.origIdx=String(origIdxs[idx]);
+        b.className='opt'; b.textContent=txt; b.dataset.idx=idx; if(origIdxs) b.dataset.origIdx=String(origIdxs[idx]);
         b.addEventListener('click', ()=> onPick(idx));
         optionsEl.appendChild(b);
       });
@@ -318,69 +399,34 @@
 
     function isLocked(){ return optionsEl.querySelector('.correct, .wrong') != null; }
 
-    function select(value){
-      if(isLocked()) return;
-      CHOSEN[ ORDER[I] ] = value;
-      lockAndExplain(value);
-      persist();
-    }
+    function select(value){ if(isLocked()) return; CHOSEN[ ORDER[I] ] = value; lockAndExplain(value); persist(); }
 
     function lockAndExplain(value){
       const q=current(); const type=q.type||'multiple';
       const buttons=Array.from(optionsEl.querySelectorAll('.opt')); buttons.forEach(b=>b.disabled=true);
       let correct=false;
       if(type==='vf'){
-        correct = (value === !!q.answer);
-        buttons[q.answer ? 0:1].classList.add('correct');
-        const chosenIdx=value?0:1; if(!correct) buttons[chosenIdx]?.classList.add('wrong');
+        correct = (value === !!q.answer); buttons[q.answer ? 0:1].classList.add('correct'); const chosenIdx=value?0:1; if(!correct) buttons[chosenIdx]?.classList.add('wrong');
       } else {
         const answerIdx=q.answer;
         buttons.forEach(b=>{ const origIdx=parseInt(b.dataset.origIdx??'-1',10); if(origIdx===answerIdx) b.classList.add('correct'); });
-        const chosenBtn=buttons.find(b=>parseInt(b.dataset.origIdx??'-1',10)===value);
-        correct=(typeof value==='number' && value===answerIdx);
-        if(!correct && chosenBtn) chosenBtn.classList.add('wrong');
+        const chosenBtn=buttons.find(b=>parseInt(b.dataset.origIdx??'-1',10)===value); correct=(typeof value==='number' && value===answerIdx); if(!correct && chosenBtn) chosenBtn.classList.add('wrong');
       }
       state.textContent = correct? 'correto' : 'incorreto';
       explainEl.textContent = q.explanation || '';
       explainEl.classList.toggle('hide', !q.explanation);
 
-      show(btnAI, true); // libera IA após resposta
+      show(btnAI, true);
     }
 
-    function markLocked(){
-      const q=current(); const type=q.type||'multiple'; const val=CHOSEN[ ORDER[I] ];
-      if(val===null) return;
-      if(type==='vf'){
-        renderOptions(['Verdadeiro','Falso'],()=>{},[0,1]);
-      } else {
-        const opts=q.options.map((t,i)=>({t,i}));
-        const shOpts=(QUIZ.meta?.shuffle?.options ?? MANIFEST?.shuffleDefault?.options)? shuffleInPlace(opts):opts;
-        renderOptions(shOpts.map(o=>o.t), ()=>{}, shOpts.map(o=>o.i));
-      }
-      lockAndExplain(val);
-    }
+    function markLocked(){ const q=current(); const type=q.type||'multiple'; const val=CHOSEN[ ORDER[I] ]; if(val===null) return; if(type==='vf'){ renderOptions(['Verdadeiro','Falso'],()=>{},[0,1]); } else { const opts=q.options.map((t,i)=>({t,i})); const shOpts=(QUIZ.meta?.shuffle?.options ?? MANIFEST?.shuffleDefault?.options)? shuffleInPlace(opts):opts; renderOptions(shOpts.map(o=>o.t), ()=>{}, shOpts.map(o=>o.i)); } lockAndExplain(val); }
 
     function next(){ if(!isLocked()) return; if(I<QUIZ.questions.length-1){ I++; render(); } else finish(); }
     function prev(){ if(I>0){ I--; render(); } }
 
-    function score(){
-      let ok=0; const total=QUIZ.questions.length;
-      for(let k=0;k<total;k++){
-        const q=QUIZ.questions[k]; const v=CHOSEN[k];
-        if((q.type||'multiple')==='vf'){ if(v===!!q.answer) ok++; }
-        else if(typeof v==='number' && v===q.answer) ok++;
-      }
-      return {ok,total};
-    }
+    function score(){ let ok=0; const total=QUIZ.questions.length; for(let k=0;k<total;k++){ const q=QUIZ.questions[k]; const v=CHOSEN[k]; if((q.type||'multiple')==='vf'){ if(v===!!q.answer) ok++; } else if(typeof v==='number' && v===q.answer) ok++; } return {ok,total}; }
 
-    function finish(){
-      const {ok,total}=score();
-      const pct=Math.round(ok/Math.max(1,total)*100);
-      resultScore.textContent=`${pct}% (${ok}/${total})`;
-      resultMsg.textContent=QUIZ.meta?.outroMessage || MANIFEST?.outro?.message || '';
-      state.textContent='concluído';
-      show(screenQuiz,false); show(screenResult,true);
-    }
+    function finish(){ const {ok,total}=score(); const pct=Math.round(ok/Math.max(1,total)*100); resultScore.textContent=`${pct}% (${ok}/${total})`; resultMsg.textContent=QUIZ.meta?.outroMessage || MANIFEST?.outro?.message || ''; state.textContent='concluído'; show(screenQuiz,false); show(screenResult,true); }
 
     // Google modo IA (udm=50)
     function openGoogleAI(){
@@ -392,40 +438,42 @@
       const correctText = type==='vf' ? (q.answer ? 'Verdadeiro' : 'Falso') : (q.options?.[q.answer] || '');
 
       const prompt =
-`Escreva um artigo didático sobre o tema. Tema: ${q.q}`;
+`Você é professor de Direito. Explique didaticamente o tema: ${metaTitle} (${metaCat}/${metaTheme})
+com foco em doutrina e jurisprudência brasileiras.
+Enunciado: ${q.q}
+Alternativa correta: ${correctText}
+Diretrizes: clareza; 300–600 palavras; cite STF/STJ quando aplicável; não revele gabaritos de outras questões.`;
 
       const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt);
       window.open(url, '_blank', 'noopener');
     }
 
-    window.addEventListener('keydown',(e)=>{
-      if(screenQuiz.classList.contains('hide')) return;
-      if(e.key>='1'&&e.key<='9'){ const idx=parseInt(e.key,10)-1; const btn=optionsEl.querySelectorAll('.opt')[idx]; if(btn) btn.click(); }
-      else if(e.key==='Enter'||e.key==='ArrowRight'){ if(I===QUIZ.questions.length-1) finish(); else next(); }
-      else if(e.key==='ArrowLeft'){ prev(); }
-    });
+    // Acessibilidade
+    window.addEventListener('keydown',(e)=>{ if(screenQuiz.classList.contains('hide')) return; if(e.key>='1'&&e.key<='9'){ const idx=parseInt(e.key,10)-1; const btn=optionsEl.querySelectorAll('.opt')[idx]; if(btn) btn.click(); } else if(e.key==='Enter'||e.key==='ArrowRight'){ if(I===QUIZ.questions.length-1) finish(); else next(); } else if(e.key==='ArrowLeft'){ prev(); } });
 
+    // Testes básicos
     function runTests(){
       try{
         console.group('TESTES');
-        const m=readEmbedded('data/manifest.json'); console.assert(m && m.categories && m.categories.length>0, 'Manifest embutido ok');
+        const m=readEmbedded('data/manifest.json'); if(m) console.assert(m.categories && m.categories.length>0, 'Manifest embutido ok');
         console.assert(isCorrectQuestion({type:'multiple',answer:2},2)===true, 'Multiple ok');
         console.assert(isCorrectQuestion({type:'vf',answer:true},true)===true, 'VF ok');
-        const sampleQ = readEmbedded('data/intro/basico.json').questions[0].q; console.assert(sampleQ.length>=120 && sampleQ.length<=220, 'Enunciado exemplo ~120-200 chars');
+        const embIntro = readEmbedded('data/intro/basico.json');
+        if(embIntro){ const sampleQ = embIntro.questions[0].q; console.assert(sampleQ.length>=120 && sampleQ.length<=220, 'Enunciado exemplo ~120-200 chars'); }
         console.log('Passou nos testes básicos');
       }catch(e){ console.error('Falha nos testes', e); } finally{ console.groupEnd(); }
     }
   </script>
 
-  <!-- Fallbacks embutidos -->
+  <!-- Fallbacks embutidos (usados se a indexação do GitHub falhar) -->
   <script type="application/json" data-path="data/manifest.json">{
     "title": "MeuJus",
     "labels": "labels/pt-BR.json",
-    "shuffleDefault": {"questions": true, "options": true},
+    "shuffleDefault": { "questions": true, "options": true },
     "persistDefault": true,
-    "outro": {"message": "Obrigado por participar."},
+    "outro": { "message": "Obrigado por participar." },
     "categories": [
-      {"id":"intro","name":"Introdução","themes":[{"id":"basico","name":"Básico","path":"data/intro/basico.json"}]}
+      { "id":"intro","name":"Introdução","themes":[{ "id":"basico","name":"Básico","path":"data/intro/basico.json" }]}
     ]
   }</script>
 
@@ -438,7 +486,7 @@
       "title": "Introdução Básica",
       "category": "intro",
       "theme": "basico",
-      "shuffle": {"questions": true, "options": true},
+      "shuffle": { "questions": true, "options": true },
       "persist": true,
       "outroMessage": "Você concluiu o tema introdutório do MeuJus. Volte ao início para escolher outro tema."
     },
