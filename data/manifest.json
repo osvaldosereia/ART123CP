@@ -11,6 +11,17 @@
       "themes": [
         { "id": "basico", "name": "Básico", "path": "data/intro/basico.json" }
       ]
+    },
+    {
+      "id": "processo-civil",
+      "name": "Processo Civil",
+      "themes": [
+        {
+          "id": "das-normas-fundamentas-do-processo-civil",
+          "name": "Das normas fundamentais do CPC",
+          "path": "data/processo-civil/das-normas-fundamentas-do-processo-civil.json"
+        }
+      ]
     }
   ]
 }
