@@ -10,15 +10,14 @@
   const $  = (q, el = document) => el.querySelector(q);
   const $$ = (q, el = document) => Array.from(el.querySelectorAll(q));
 
-  const homeScreen = $('#home-screen');
-  const quizScreen = $('#quiz-screen');
-  const modal      = $('#modal');
-  const modalTitle = $('#modal-title');
-  const modalOpts  = $('#modal-options');
+  const homeScreen   = $('#home-screen');
+  const quizScreen   = $('#quiz-screen');
+  const modal        = $('#modal');
+  const modalTitle   = $('#modal-title');
+  const modalOpts    = $('#modal-options');
   const quizContainer = $('#quiz-container');
-
-  const btnCategory = $('#btn-category');
-  const btnIA = $('#btn-ia');
+  const btnCategory  = $('#btn-category');
+  const btnIA        = $('#btn-ia');
   const btnModalClose = $('#modal-close');
 
   /* ===== Estado ===== */
@@ -28,7 +27,7 @@
   let questionIndex = 0;
   let observer = null;
 
-  /* ===== Dados simulados ===== */
+  /* ===== Dados simulados (estrutura base) ===== */
   const DATA = {
     'Direito Constitucional': ['Direitos Fundamentais', 'Organização do Estado'],
     'Direito Civil': ['Contratos', 'Família'],
@@ -86,30 +85,28 @@
   /* ===== Carregamento de Questões ===== */
   async function loadQuestions(category, theme) {
     showScreen(quizScreen);
-    quizContainer.innerHTML = '';
+    quizContainer.innerHTML = '<p style="text-align:center;color:#777;margin-top:2rem;">Carregando questões...</p>';
 
-    // Simulação de carregamento
-    const file = `data/${category.toLowerCase().replace(/\s+/g,'-')}/${theme.toLowerCase().replace(/\s+/g,'-')}.json`;
+    // Corrige o caminho base automaticamente (funciona no GitHub Pages e local)
+    const base = `${window.location.origin}${window.location.pathname.split('/').slice(0, -1).join('/')}`;
+    const file = `${base}/data/${category.toLowerCase().replace(/\s+/g,'-')}/${theme.toLowerCase().replace(/\s+/g,'-')}.json`;
 
     try {
       const res = await fetch(file);
-      questions = await res.json();
-    } catch {
-      // fallback temporário (sem backend)
-      questions = Array.from({length: 20}, (_, i) => ({
-        enunciado: `(${theme}) Questão ${i+1}: Este é um exemplo de pergunta longa que testa o entendimento jurídico do aluno.`,
-        opcoes: [
-          "A) Opção incorreta",
-          "B) Outra incorreta",
-          "C) Alternativa certa",
-          "D) Errada",
-          "E) Irrelevante"
-        ],
-        correta: "C",
-        comentario: "Fundamento: Art. 5º, CF/88. Explicação resumida."
-      }));
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      questions = data.questoes || data; // aceita formato com chave ou direto
+    } catch (err) {
+      console.warn('⚠️ Erro ao carregar JSON:', err);
+      quizContainer.innerHTML = `
+        <div style="text-align:center;margin-top:2rem;color:#a00;">
+          <p><strong>⚠️ Não foi possível carregar as questões.</strong></p>
+          <p style="font-size:.9rem;word-break:break-all;">Arquivo tentado:<br><code>${file}</code></p>
+        </div>`;
+      return;
     }
 
+    quizContainer.innerHTML = '';
     questionIndex = 0;
     renderQuestionsBatch();
     setupInfiniteScroll();
@@ -124,9 +121,7 @@
       const el = createQuestionElement(q);
       frag.appendChild(el);
 
-      if (questionIndex % 3 === 0) {
-        frag.appendChild(createAdPlaceholder());
-      }
+      if (questionIndex % 3 === 0) frag.appendChild(createAdPlaceholder());
     }
 
     quizContainer.appendChild(frag);
@@ -169,12 +164,12 @@
 
     if (selected.startsWith(q.correta)) {
       btn.classList.add('correct');
-      addComment(btn, "Correto!");
+      addComment(btn, "✅ Correto!");
     } else {
       btn.classList.add('wrong');
       const correct = Array.from(options).find(o => o.textContent.startsWith(q.correta));
       if (correct) correct.classList.add('correct');
-      addComment(btn, q.comentario);
+      addComment(btn, `❌ ${q.comentario}`);
     }
   }
 
@@ -193,9 +188,7 @@
     quizContainer.appendChild(sentinel);
 
     observer = new IntersectionObserver(entries => {
-      if (entries.some(e => e.isIntersecting)) {
-        renderQuestionsBatch();
-      }
+      if (entries.some(e => e.isIntersecting)) renderQuestionsBatch();
     });
     observer.observe(sentinel);
   }
