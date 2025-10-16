@@ -66,3 +66,9 @@
     .toast.info{background:#f9fafb}
     .toast.warn{border-color:#f59e0b;background:#fffbeb}
     .toast.error{border-color:rgba(185,28,28,.6);background:#fef2f2}
+
+/* TAGS */
+.tagsbar{ display:flex; flex-wrap:wrap; gap:8px; padding:8px 0 0 }
+.tag{ display:inline-block; font-size:12px; line-height:1; padding:6px 10px; border-radius:999px; background:var(--bg-soft); color:var(--accent); text-decoration:none; cursor:pointer; border:1px solid #e5e7eb }
+.tag:hover{ text-decoration:underline }
+.tag.active{ outline:2px solid #9ca3af }
