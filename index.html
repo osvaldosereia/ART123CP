@@ -6,9 +6,7 @@
   <title>MeuJus — Quiz</title>
   <meta name="description" content="MeuJus — Quiz minimalista com categorias e temas. Pronto para GitHub Pages." />
   <style>
-    :root{
-      --bg:#ffffff; --bg-soft:#f6f7f8; --ink:#0f172a; --muted:#6b7280; --accent:#111827; --ok:#059669; --bad:#b91c1c;
-    }
+    :root{ --bg:#ffffff; --bg-soft:#f6f7f8; --ink:#0f172a; --muted:#6b7280; --accent:#111827; --ok:#059669; --bad:#b91c1c; }
     *{ box-sizing:border-box }
     html,body{ height:100% }
     body{
@@ -20,7 +18,8 @@
     /* --- Respiro global --- */
     .container{ max-width:900px; margin:0 auto; padding:28px 24px }
     header.site{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:28px 0 14px }
-    .brand{ font-size:18px; font-weight:700; letter-spacing:.2px; color:var(--accent) }
+    .brand{ font-size:18px; font-weight:700; letter-spacing:.2px; color:var(--accent); cursor:pointer; user-select:none }
+    .brand:hover{ text-decoration:underline }
     .state{ font-size:12px; color:var(--muted) }
     section{ padding:26px 0 }
 
@@ -72,8 +71,8 @@
 <body>
   <div class="container">
     <header class="site">
-      <div class="brand" id="appTitle">MeuJus</div>
-      <div class="state" id="state">respondendo</div>
+      <div class="brand" id="appTitle" role="button" tabindex="0" aria-label="Voltar ao início">MeuJus</div>
+      <div class="state" id="state">pronto</div>
     </header>
 
     <section class="intro" id="screenIntro">
@@ -100,6 +99,7 @@
       <div id="options" class="options" role="listbox"></div>
       <div id="explanation" class="explain hide"></div>
       <div class="actions">
+        <button id="btnGoHome" class="btn ghost" type="button">Início</button>
         <button id="btnPrev" class="btn ghost" type="button">Anterior</button>
         <button id="btnNext" class="btn primary" type="button">Próximo</button>
         <button id="btnAI" class="btn ghost hide" type="button" aria-label="Gerar explicação do tema com IA">IA</button>
@@ -138,6 +138,7 @@
     const optionsEl = document.getElementById('options');
     const bar = document.getElementById('bar');
     const explainEl = document.getElementById('explanation');
+    const btnGoHome = document.getElementById('btnGoHome');
     const btnPrev = document.getElementById('btnPrev');
     const btnNext = document.getElementById('btnNext');
     const btnAI = document.getElementById('btnAI');
@@ -191,8 +192,13 @@
       btnPrev.addEventListener('click', prev);
       btnNext.addEventListener('click', next);
       btnAI.addEventListener('click', openGoogleAI);
+
+      btnGoHome.addEventListener('click', goHome);
+      btnHome.addEventListener('click', goHome);
+      appTitle.addEventListener('click', goHome);
+      appTitle.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' ') goHome(); });
+
       btnRetry.addEventListener('click', ()=> loadQuiz(KEY?.path, true));
-      btnHome.addEventListener('click', ()=>{ resetState(); show(screenIntro,true); show(screenQuiz,false); show(screenResult,false); state.textContent='pronto'; });
 
       const last=lsGet('quiz:last');
       if(last && last.path){
@@ -201,6 +207,14 @@
       }
 
       setTimeout(runTests,0);
+    }
+
+    function goHome(){
+      resetState();
+      show(screenIntro,true);
+      show(screenQuiz,false);
+      show(screenResult,false);
+      state.textContent='pronto';
     }
 
     function applyLabels(){
@@ -212,6 +226,7 @@
       document.getElementById('resultTitle').textContent = LABELS.result||'Resultado';
       btnRetry.textContent = LABELS.retry||'Refazer';
       btnHome.textContent = LABELS.home||'Início';
+      btnGoHome.textContent = LABELS.home||'Início';
     }
 
     function updateThemes(){
