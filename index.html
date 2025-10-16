@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MeuJus — Quiz</title>
-  <meta name="description" content="MeuJus — Quiz minimalista com categorias e temas. Agora com parser de TXT e títulos vindos de pasta/arquivo." />
+  <meta name="description" content="MeuJus — Quiz minimalista com categorias e temas. Parser TXT e títulos vindos de pasta/arquivo." />
   <style>
     :root{ --bg:#ffffff; --bg-soft:#f6f7f8; --ink:#0f172a; --muted:#6b7280; --accent:#111827; --ok:#059669; --bad:#b91c1c; }
     *{ box-sizing:border-box }
@@ -66,7 +66,6 @@
       .opt{ padding:18px 18px }
     }
 
-    /* Toast */
     .toast-wrap{position:fixed;inset:auto 0 16px 0;display:flex;justify-content:center;pointer-events:none;z-index:9999}
     .toast{min-width:200px;max-width:420px;margin:0 12px;padding:10px 12px;border-radius:10px;
       font-size:14px;line-height:1.4;border:1px solid #e5e7eb;background:#fff;color:#0f172a;
@@ -103,7 +102,6 @@
     <button id="btnResume" class="btn ghost hide" type="button">Continuar anterior</button>
   </div>
 
-  <!-- Busca global (por último) -->
   <div class="controls" style="margin-top:8px">
     <div>
       <label for="txtGlobal">Buscar em todos os temas</label>
@@ -119,7 +117,6 @@
     <section class="quiz hide" id="screenQuiz">
       <div class="progress" aria-label="Progresso"><span id="bar"></span></div>
 
-      <!-- Busca intra-quiz -->
       <div class="controls">
         <div>
           <label for="txtSearch">Buscar neste tema</label>
@@ -158,7 +155,6 @@
   </div>
 
   <script>
-    // ===== Config =====
     const CONFIG = {
       useGitHubIndexer: true,
       owner: null,
@@ -168,7 +164,6 @@
     };
     const AUTO_RESUME = true;
 
-    // ===== Toast =====
     const getToastWrap = ()=> {
       let w = document.querySelector('.toast-wrap');
       if(!w){ w=document.createElement('div'); w.className='toast-wrap'; document.body.appendChild(w); }
@@ -185,7 +180,6 @@
       setTimeout(close, ms);
     }
 
-    // ===== Seletores =====
     const selCategory = document.getElementById('selCategory');
     const selTheme = document.getElementById('selTheme');
     const btnStart = document.getElementById('btnStart');
@@ -218,19 +212,15 @@
     const footLeft = document.getElementById('footLeft');
     const footRight = document.getElementById('footRight');
 
-    // Busca intra-quiz
     const txtSearch = document.getElementById('txtSearch');
     const btnSearch = document.getElementById('btnSearch');
     const btnClearSearch = document.getElementById('btnClearSearch');
 
-    // ===== Labels =====
     const DEFAULT_LABELS = { start:'Começar', next:'Próximo', prev:'Anterior', retry:'Refazer', home:'Início', category:'Categoria', theme:'Tema', result:'Resultado' };
     let LABELS = { ...DEFAULT_LABELS };
 
-    // ===== Estado =====
     let MANIFEST = null, QUIZ = null, ORDER = [], CHOSEN = [], I = 0, KEY = null, FILTER = null;
 
-    // ===== Utils =====
     const show = (node, flag) => node.classList.toggle('hide', !flag);
     const clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
     function lsGet(k, def=null){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):def; }catch{ return def; } }
@@ -243,7 +233,6 @@
       if(!mustUseEmbedded()){
         try{ const res = await fetch(path, {cache:'no-store'}); if(res.ok) return await res.text(); }catch{}
       }
-      // fallback inexistente para TXT
       return '';
     }
     async function loadJSON(path, fallback=undefined){
@@ -260,7 +249,6 @@
       return (typeof pick==='number' && pick===q.answer);
     }
 
-    // ===== Normalização para busca =====
     function normalizeText(str) {
       if (!str) return '';
       return String(str)
@@ -270,7 +258,6 @@
         .replace(/ç/g, 'c');
     }
 
-    // ===== GitHub indexer (agora .txt) =====
     function guessOwnerRepo(){
       if(CONFIG.owner && CONFIG.repo) return {owner:CONFIG.owner, repo:CONFIG.repo};
       const host = location.hostname;
@@ -285,7 +272,6 @@
     }
 
     function toTitleCaseKeep(str){
-      // Mantém caixa como vier, só limpa extensão e underscores
       return String(str||'').replace(/\.txt$/i,'').replace(/_/g,'_').trim();
     }
 
@@ -306,7 +292,7 @@
         for(const node of nodes){
           const parts = node.path.split('/');
           if(parts.length < 3) continue;
-          const catId = parts[1]; // nome exato da pasta
+          const catId = parts[1];
           const file = parts[parts.length-1];
           const themeId = file.replace(/\.txt$/i,'');
           const cat = catMap.get(catId) || { id: catId, name: catId, themes: [] };
@@ -330,7 +316,6 @@
       }
     }
 
-    // ===== TXT → QUIZ Parser =====
     function htmlEscape(s){
       return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
     }
@@ -344,56 +329,63 @@
       return parts.map(p=>`<p>${htmlEscape(p)}</p>`).join('');
     }
 
+    // PARSER TXT atualizado: aceita "-(A)" e anuladas
     function parseTxtQuestions(raw){
       const text = String(raw||'')
-        .replace(/\uFEFF/g,'') // BOM
+        .replace(/\uFEFF/g,'')
         .replace(/\r\n?/g,'\n');
 
-      // corta blocos por linhas de ----- ou fim de arquivo
       const blocks = text.split(/\n-{3,}\n/g).map(b=>b.trim()).filter(Boolean);
       const qs = [];
-      for(const block of blocks){
-        // pega gabarito
-        const gabMatch = block.match(/--\s*Gabarito\s*:\s*([A-E])/i);
-        const gab = gabMatch ? gabMatch[1].toUpperCase() : null;
+      for(const blockRaw of blocks){
+        const block = blockRaw.replace(/\[cite_start\]/gi,'').replace(/\[cite:[^\]]*\]/gi,'');
 
-        // pega enunciado após "# " e antes de "- A)"
-        const aIdx = block.search(/^\s*-\s*A\)/m);
+        const gabLine = block.match(/--\s*Gabarito\s*:\s*([^\n]+)/i);
+        let gabTxt = gabLine ? gabLine[1].trim() : '';
+        let annulled = /\*/.test(gabTxt) || /anulad[oa]/i.test(gabTxt);
+        const gabLetter = (gabTxt.match(/[A-E]/i)||[])[0]?.toUpperCase() || null;
+
+        const optARegex = /^\s*-\s*\(?A\)\s*/m;
+        const aIdx = block.search(optARegex);
         const hIdx = block.indexOf('#');
         let head = '';
-        if(hIdx >= 0 && aIdx > hIdx){
-          head = block.slice(hIdx).replace(/^#\s*/,'').slice(0, aIdx - hIdx).trim();
+        if(hIdx >= 0 && (aIdx === -1 || aIdx > hIdx)){
+          head = block.slice(hIdx).replace(/^#\s*/,'').slice(0, aIdx > -1 ? (aIdx - hIdx) : undefined).trim();
         }
 
-        // captura opções A-D com limites até a próxima opção ou gabarito
         function grabOpt(letter){
-          const reStart = new RegExp(`^\s*-\s*${letter}\\)\s*`, 'm');
+          const reStart = new RegExp(`^\\s*-\\s*\\(?${letter}\\)\\s*`, 'm');
           const m = reStart.exec(block);
           if(!m) return '';
           const start = m.index + m[0].length;
-          // próxima âncora
-          const next = ['A','B','C','D','E'].filter(l=>l!==letter).map(l=>{
-            const r = new RegExp(`^\s*-\s*${l}\\)\s*`, 'm');
+          const nextAnchors = ['A','B','C','D','E'].filter(l=>l!==letter).map(l=>{
+            const r = new RegExp(`^\\s*-\\s*\\(?${l}\\)\\s*`, 'm');
             const x = r.exec(block); return x?x.index:null;
           }).filter(x=>x!=null).sort((a,b)=>a-b);
           const g = block.search(/\n\s*--\s*Gabarito\b/m);
-          if(g>=0) next.push(g);
-          const end = next.find(n=>n>start) ?? block.length;
-          let slice = block.slice(start, end);
-          // remove marcador de citação inline se existir
-          slice = slice.replace(/\[cite:[^\]]*\]/gi,'');
-          return slice.trim();
+          if(g>=0) nextAnchors.push(g);
+          const end = nextAnchors.find(n=>n>start) ?? block.length;
+          return block.slice(start, end).trim();
         }
         const A = grabOpt('A');
         const B = grabOpt('B');
         const C = grabOpt('C');
         const D = grabOpt('D');
-        const options = [A,B,C,D].map(t=>t.replace(/\n{2,}/g,'\n\n'));
-        if(!head || options.every(o=>!o)) continue;
+        const E = grabOpt('E');
+        const options = [A,B,C,D,E].filter(x=>x!=='').map(t=>t.replace(/\n{2,}/g,'\n\n'));
+        if(!head || options.length===0) continue;
 
-        const answerMap = {A:0,B:1,C:2,D:3};
-        const answer = gab && answerMap[gab] != null ? answerMap[gab] : 0;
-        qs.push({ type:'multiple', q: formatParagraphs(head), options, answer, explanation:'' });
+        const answerMap = {A:0,B:1,C:2,D:3,E:4};
+        const hasAnswer = !annulled && gabLetter && answerMap[gabLetter] != null;
+        const qObj = {
+          type:'multiple',
+          q: formatParagraphs(head),
+          options,
+          answer: hasAnswer ? answerMap[gabLetter] : null,
+          explanation: annulled ? 'Questão anulada.' : ''
+        };
+        if(annulled) qObj.annulled = true;
+        qs.push(qObj);
       }
       return qs;
     }
@@ -401,14 +393,13 @@
     async function loadTxtAsQuiz(path){
       const raw = await fetchText(path);
       const questions = parseTxtQuestions(raw);
-      // meta a partir do caminho: data/<categoria>/<arquivo>.txt
       const parts = path.split('/');
       const category = parts[1] || 'Geral';
       const file = (parts[parts.length-1]||'Quiz.txt').replace(/\.txt$/i,'');
       return {
         meta: {
-          title: file,            // nome EXATO do arquivo
-          category: category,     // nome EXATO da pasta
+          title: file,
+          category: category,
           theme: file,
           shuffle: {questions:false, options:true},
           persist: true,
@@ -418,7 +409,6 @@
       };
     }
 
-    // ===== App =====
     init();
     async function init(){
       if(CONFIG.useGitHubIndexer){
@@ -452,18 +442,15 @@
       });
       updateThemes();
 
-      // eventos básicos
       selCategory.addEventListener('change', updateThemes);
       btnStart.addEventListener('click', startQuizFromSelection);
       btnPrev.addEventListener('click', prev);
       btnNext.addEventListener('click', next);
       btnAI.addEventListener('click', openGoogleAI);
 
-      // busca global
       btnGlobal.addEventListener('click', ()=> globalSearchAndOpen(txtGlobal.value||''));
       txtGlobal.addEventListener('keydown', (e)=>{ if(e.key==='Enter') btnGlobal.click(); });
 
-      // busca intra-quiz
       btnSearch.addEventListener('click', ()=> applyFilter(txtSearch.value||''));
       btnClearSearch.addEventListener('click', clearFilter);
       txtSearch.addEventListener('keydown', (e)=>{ if(e.key==='Enter') btnSearch.click(); });
@@ -524,7 +511,6 @@
 
     function resetState(){ QUIZ=null; ORDER=[]; CHOSEN=[]; I=0; KEY=null; FILTER=null; explainEl.classList.add('hide'); btnClearSearch.classList.add('hide'); txtSearch.value=''; }
 
-    // ===== Carregar quiz (TXT) =====
     async function loadQuiz(path, fresh=false, tryRestore=false){
       state.textContent='carregando';
       let qz=null;
@@ -564,7 +550,6 @@
       render();
     }
 
-    // ===== Carregar quiz virtual (resultado da busca global) =====
     async function loadVirtualQuiz(quizObj, syntheticPath, fresh=true){
       state.textContent='carregando';
       QUIZ = quizObj;
@@ -593,7 +578,6 @@
 
     function current(){ return QUIZ.questions[ ORDER[I] ]; }
 
-    // ===== Persistência =====
     function persist(){
       const persistFlag=QUIZ?.meta?.persist ?? MANIFEST?.persistDefault ?? true;
       if(!persistFlag||!KEY) return;
@@ -609,7 +593,6 @@
       lsSet('quiz:last', KEY);
     }
 
-    // ===== Render =====
     function render(){
       const total=QUIZ.questions.length;
       const answered=ORDER.filter(idx => CHOSEN[idx]!==null).length;
@@ -623,7 +606,6 @@
 
       const q=current();
 
-      // Título EXATO "<pasta> | <arquivo>"
       const categoryText = QUIZ?.meta?.category || 'Geral';
       const themeText = QUIZ?.meta?.title || 'Quiz';
       questionEl.innerHTML = `
@@ -643,7 +625,7 @@
         renderOptions(['Verdadeiro','Falso'], (idx)=> select(idx===0), [0,1]);
       } else {
         const opts=q.options.map((t,i)=>({t:i!=null?String(t):'',i}));
-        const shOpts = opts; // sem embaralhar perguntas
+        const shOpts = opts;
         renderOptions(shOpts.map(o=>o.t), (idx)=> select(shOpts[idx].i), shOpts.map(o=>o.i));
       }
 
@@ -655,16 +637,14 @@
       persist();
     }
 
-    // ===== Opções com etiquetas A, B, C, D =====
     function renderOptions(texts, onPick, origIdxs=null){
       const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
       texts.forEach((txt, idx)=>{
         const b=document.createElement('button');
-        b.className='opt'; 
-        b.dataset.idx=idx; 
+        b.className='opt';
+        b.dataset.idx=idx;
         if(origIdxs) b.dataset.origIdx=String(origIdxs[idx]);
         const label = labels[idx] ? `<strong>${labels[idx]})</strong> ` : '';
-        // opções são texto simples; encapsula quebras
         const safe = htmlEscape(String(txt||''))
           .replace(/\n{2,}/g,'\n\n')
           .split(/\n{2,}/).map(p=>`<p style="margin:0">${p.replace(/\n/g,'<br>')}</p>`).join('');
@@ -684,9 +664,18 @@
       persist();
     }
 
+    // Trava opções e trata anuladas
     function lockAndExplain(value){
       const q=current(); const type=q.type||'multiple';
       const buttons=Array.from(optionsEl.querySelectorAll('.opt')); buttons.forEach(b=>b.disabled=true);
+
+      if(q.annulled || q.answer==null){
+        state.textContent = 'anulada';
+        explainEl.textContent = q.explanation || 'Questão anulada.';
+        explainEl.classList.remove('hide');
+        return;
+      }
+
       let correct=false;
       if(type==='vf'){
         correct = (value === !!q.answer);
@@ -704,6 +693,29 @@
       explainEl.textContent = q.explanation || '';
       explainEl.classList.toggle('hide', !q.explanation);
       show(btnAI, true);
+    }
+
+    // Placar ignora anuladas
+    function score(){
+      let ok=0; let total=0;
+      for(let k=0;k<QUIZ.questions.length;k++){
+        const q=QUIZ.questions[k]; const v=CHOSEN[k];
+        if(q.annulled || q.answer==null) continue;
+        total++;
+        if((q.type||'multiple')==='vf'){ if(v===!!q.answer) ok++; }
+        else if(typeof v==='number' && v===q.answer) ok++;
+      }
+      return {ok,total};
+    }
+
+    function finish(){
+      const {ok,total}=score();
+      const pct = total>0 ? Math.round(ok/total*100) : 0;
+      resultScore.textContent=`${pct}% (${ok}/${total})`;
+      resultMsg.textContent=QUIZ.meta?.outroMessage || MANIFEST?.outro?.message || '';
+      state.textContent='concluído';
+      show(screenQuiz,false); show(screenResult,true);
+      toast('Você concluiu o quiz','success',2500);
     }
 
     function markLocked(){
@@ -729,26 +741,6 @@
 
     function prev(){ if(I > 0){ I--; render(); } }
 
-    function score(){
-      let ok=0; const total=QUIZ.questions.length;
-      for(let k=0;k<total;k++){
-        const q=QUIZ.questions[k]; const v=CHOSEN[k];
-        if((q.type||'multiple')==='vf'){ if(v===!!q.answer) ok++; }
-        else if(typeof v==='number' && v===q.answer) ok++;
-      }
-      return {ok,total};
-    }
-
-    function finish(){
-      const {ok,total}=score();
-      const pct=Math.round(ok/Math.max(1,total)*100);
-      resultScore.textContent=`${pct}% (${ok}/${total})`;
-      resultMsg.textContent=QUIZ.meta?.outroMessage || MANIFEST?.outro?.message || '';
-      state.textContent='concluído';
-      show(screenQuiz,false); show(screenResult,true);
-      toast('Você concluiu o quiz','success',2500);
-    }
-
     function openGoogleAI(){
       const q=current(); if(!q) return;
       const prompt = 'VProfessor, por favor fundamente a alternativa correta e as incorretas. Enunciado: ' + String((q && q.q) || '') + ' | Opções: ' + (q && q.type === 'vf' ? 'Verdadeiro | Falso' : (Array.isArray(q && q.options) ? q.options.map(function(t,i){ return (i+1)+') '+t; }).join(' | ') : '')) + ' | Alternativa correta: ' + (q && q.type === 'vf' ? (q && q.answer ? 'Verdadeiro' : 'Falso') : (Array.isArray(q && q.options) && typeof q.answer === 'number' ? q.options[q.answer] : ''));
@@ -756,7 +748,6 @@
       window.open(url, '_blank', 'noopener');
     }
 
-    // ===== Filtro intra-quiz =====
     function applyFilter(termRaw){
       if(!QUIZ){ toast('Carregue um tema antes','warn'); return; }
       const term = String(termRaw||'').trim();
@@ -799,7 +790,6 @@
       render();
     }
 
-    // ===== Busca global em TODOS os .txt =====
     async function globalSearchAndOpen(termRaw){
       const term = String(termRaw||'').trim();
       if(!term){ toast('Informe um termo para busca global','warn'); return; }
@@ -855,7 +845,6 @@
       toast(`Busca global: ${results.length} questões`, 'info', 2200);
     }
 
-    // ===== Acessibilidade =====
     window.addEventListener('keydown',(e)=>{
       if(screenQuiz.classList.contains('hide')) return;
       if(e.key>='1'&&e.key<='9'){
@@ -869,7 +858,6 @@
     document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='hidden') persist(); });
   </script>
 
-  <!-- Labels padrão -->
   <script type="application/json" data-path="labels/pt-BR.json">{
     "start":"Começar","next":"Próximo","prev":"Anterior","retry":"Refazer","home":"Início","category":"Categoria","theme":"Tema","result":"Resultado"
   }</script>
