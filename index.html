@@ -38,7 +38,7 @@
     .progress>span{ display:block; width:0%; height:100%; background:#111827; transition:width .25s ease }
 
     /* --- Enunciado e opções --- */
-   .statement{ font-size:16px; font-weight:600; line-height:1.2; margin:22px 0 22px; letter-spacing:.1px; background:var(--bg-soft); padding:14px 16px; border-radius:12px; }
+    .statement{ font-size:16px; font-weight:600; line-height:1.2; margin:22px 0 22px; letter-spacing:.1px; background:var(--bg-soft); padding:14px 16px; border-radius:12px; }
     .options{ display:grid; gap:14px; margin:6px 0 8px }
     .opt{
       text-align:left; background:transparent; border:1px solid #e5e7eb;
@@ -124,12 +124,15 @@
   <script>
     // ===== Config: indexação automática de /data via GitHub API (sem editar manifest) =====
     const CONFIG = {
-      useGitHubIndexer: true,     // tenta listar arquivos do repositório para montar categorias/temas automaticamente
-      owner: null,                // defina manualmente se necessário, ex: "seu-usuario"
-      repo: null,                 // ex: "meujus"
-      branch: 'main',             // "main" ou "gh-pages" conforme seu repo
-      dataDir: 'data'             // pasta onde ficam os quizzes
+      useGitHubIndexer: true,
+      owner: null,
+      repo: null,
+      branch: 'main',
+      dataDir: 'data'
     };
+
+    // === Retomada automática do último quiz salvo ===
+    const AUTO_RESUME = true;
 
     // ===== Seletores da UI =====
     const selCategory = document.getElementById('selCategory');
@@ -190,19 +193,18 @@
     // ===== GitHub indexer =====
     function guessOwnerRepo(){
       if(CONFIG.owner && CONFIG.repo) return {owner:CONFIG.owner, repo:CONFIG.repo};
-      const host = location.hostname; // ex: user.github.io
-      const path = location.pathname; // ex: /repo/...
+      const host = location.hostname;
+      const path = location.pathname;
       if(host.endsWith('.github.io')){
         const owner = host.split('.github.io')[0];
         const parts = path.split('/').filter(Boolean);
-        const repo = parts.length ? parts[0] : owner; // para páginas de projeto: /repo/
+        const repo = parts.length ? parts[0] : owner;
         return {owner, repo};
       }
-      // domínio próprio: exigir definir em CONFIG
       return {owner: CONFIG.owner, repo: CONFIG.repo};
     }
 
-    // ===== Nome legível: mantém acentos/ç e aplica frase com só a primeira letra maiúscula =====
+    // ===== Nome legível =====
     function slugToName(slug){
       const base = slug
         .replace(/\.(json)$/i,'')
@@ -217,7 +219,6 @@
       const {owner, repo} = guessOwnerRepo();
       if(!owner || !repo) return null;
 
-      // Trees API: lista recursiva de paths
       const url = `https://api.github.com/repos/${owner}/${repo}/git/trees/${encodeURIComponent(CONFIG.branch)}?recursive=1`;
       try{
         const r = await fetch(url, {headers:{'Accept':'application/vnd.github+json'}});
@@ -225,13 +226,11 @@
         const data = await r.json();
         if(!data || !Array.isArray(data.tree)) return null;
 
-        // Filtra JSONs em dataDir: data/categoria/tema.json
         const nodes = data.tree.filter(n => n.type==='blob' && n.path.startsWith(CONFIG.dataDir+'/') && n.path.endsWith('.json'));
 
-        // Monta categorias e temas
-        const catMap = new Map(); // id -> {id,name,themes:[]}
+        const catMap = new Map();
         for(const node of nodes){
-          const parts = node.path.split('/'); // [data, categoria, arquivo.json] ou [data, categoria, subdir, arquivo...]
+          const parts = node.path.split('/');
           if(parts.length < 3) continue;
           const catId = parts[1];
           const file = parts[parts.length-1];
@@ -241,7 +240,6 @@
           catMap.set(catId, cat);
         }
 
-        // Ordena alfabeticamente
         const categories = Array.from(catMap.values())
           .map(c => ({...c, themes: c.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'))}))
           .sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
@@ -251,7 +249,7 @@
         return {
           title: 'MeuJus',
           labels: 'labels/pt-BR.json',
-          shuffleDefault: {questions:true, options:true},
+          shuffleDefault: {questions:false, options:true},
           persistDefault: true,
           outro: { message: 'Obrigado por participar.' },
           categories
@@ -264,13 +262,11 @@
     // ===== App =====
     init();
     async function init(){
-      // 1) tenta indexar automaticamente via GitHub API
       if(CONFIG.useGitHubIndexer){
         const dyn = await buildManifestFromGitHub();
         if(dyn) MANIFEST = dyn;
       }
 
-      // 2) se falhar, usa manifest externo/embutido
       if(!MANIFEST){
         const manifestFallback={ title:'MeuJus', categories:[{id:'intro',name:'Introdução',themes:[{id:'basico',name:'Básico',path:'data/intro/basico.json'}]}], shuffleDefault:{questions:true,options:true}, persistDefault:true, outro:{message:'Obrigado por participar.'} };
         MANIFEST = await loadJSON('data/manifest.json', manifestFallback);
@@ -281,7 +277,6 @@
       try{ if(MANIFEST?.labels) LABELS={...DEFAULT_LABELS, ...(await loadJSON(MANIFEST.labels))}; }catch{}
       applyLabels();
 
-      // popular selects
       selCategory.innerHTML='';
       (MANIFEST?.categories||[]).forEach((c,idx)=>{
         const o=document.createElement('option');
@@ -292,7 +287,6 @@
       });
       updateThemes();
 
-      // eventos
       selCategory.addEventListener('change', updateThemes);
       btnStart.addEventListener('click', startQuizFromSelection);
       btnPrev.addEventListener('click', prev);
@@ -312,6 +306,7 @@
       if (last && last.path) {
         btnResume.classList.remove('hide');
         btnResume.addEventListener('click', async ()=>{ KEY = last; await loadQuiz(last.path, false, true); });
+        if (AUTO_RESUME) { KEY = last; await loadQuiz(last.path, false, true); return; }
       }
 
       setTimeout(runTests,0);
@@ -336,7 +331,7 @@
       (cat.themes||[]).forEach((t,idx)=>{
         const o=document.createElement('option');
         o.value=t.id;
-        o.textContent=(t.name||t.id).toLocaleUpperCase('pt-BR'); // TEMAS EM MAIÚSCULAS
+        o.textContent=(t.name||t.id).toLocaleUpperCase('pt-BR');
         if(idx===0) o.selected=true;
         selTheme.appendChild(o);
       });
@@ -354,24 +349,29 @@
 
     function resetState(){ QUIZ=null; ORDER=[]; CHOSEN=[]; I=0; KEY=null; explainEl.classList.add('hide'); }
 
+    // === loadQuiz com restauração completa ===
     async function loadQuiz(path, fresh=false, tryRestore=false){
       state.textContent='carregando';
       const qz=await loadJSON(path);
       if(!qz || !Array.isArray(qz.questions)){ alert('Quiz não encontrado: '+path); state.textContent='erro'; return; }
-      QUIZ=qz; KEY={path, key:`quiz:${path}`}; lsSet('quiz:last', KEY);
+      QUIZ=qz; KEY={path, key:`quiz:${path}`};
 
       try{ if(qz.labels){ LABELS={...LABELS, ...(await loadJSON(qz.labels))}; applyLabels(); } }catch{}
 
       const total=(qz.questions||[]).length;
+      let saved = tryRestore ? lsGet(KEY.key) : null;
+
       ORDER=[...Array(total).keys()];
-      const sh=qz.meta?.shuffle ?? MANIFEST?.shuffleDefault ?? {questions:true,options:true};
-      if(sh.questions) shuffleInPlace(ORDER);
       CHOSEN=new Array(total).fill(null);
       I=0;
 
-      if(!fresh && tryRestore){
-        const saved=lsGet(KEY.key);
-        if(saved && saved.quizLen===total){ I=clamp(saved.i,0,total-1); CHOSEN=Array.isArray(saved.chosen)? saved.chosen: CHOSEN; }
+      if(!fresh && saved && saved.quizLen===total){
+        if(Array.isArray(saved.order) && saved.order.length===total) ORDER = saved.order;
+        if(Array.isArray(saved.chosen)) CHOSEN = saved.chosen;
+        I = clamp(saved.i,0,total-1);
+      } else {
+        const sh=qz.meta?.shuffle ?? MANIFEST?.shuffleDefault ?? {questions:true,options:true};
+        if(sh.questions) shuffleInPlace(ORDER);
       }
 
       state.textContent='respondendo';
@@ -381,10 +381,19 @@
 
     function current(){ return QUIZ.questions[ ORDER[I] ]; }
 
+    // === persist com ordem e timestamp ===
     function persist(){
       const persistFlag=QUIZ?.meta?.persist ?? MANIFEST?.persistDefault ?? true;
       if(!persistFlag||!KEY) return;
-      lsSet(KEY.key, { i:I, chosen:CHOSEN, quizLen: QUIZ.questions.length });
+      lsSet(KEY.key, {
+        i:I,
+        chosen:CHOSEN,
+        order:ORDER,
+        quizLen: QUIZ.questions.length,
+        path: KEY.path,
+        ts: Date.now()
+      });
+      lsSet('quiz:last', KEY);
     }
 
     function render(){
@@ -405,8 +414,7 @@
         renderOptions(['Verdadeiro','Falso'], (idx)=> select(idx===0), [0,1]);
       } else {
         const opts=q.options.map((t,i)=>({t,i}));
-        // opções fixas: não embaralhar
-        const shOpts = opts;
+        const shOpts = opts; // opções fixas aqui
         renderOptions(shOpts.map(o=>o.t), (idx)=> select(shOpts[idx].i), shOpts.map(o=>o.i));
       }
 
@@ -459,7 +467,7 @@
         renderOptions(['Verdadeiro','Falso'],()=>{},[0,1]);
       } else {
         const opts=q.options.map((t,i)=>({t,i}));
-        const shOpts = opts; // opções fixas
+        const shOpts = opts;
         renderOptions(shOpts.map(o=>o.t), ()=>{}, shOpts.map(o=>o.i));
       }
       lockAndExplain(val);
@@ -505,6 +513,10 @@
       } else if(e.key==='ArrowLeft'){ prev(); }
     });
 
+    // Persistir ao sair/ocultar
+    window.addEventListener('beforeunload', persist);
+    document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='hidden') persist(); });
+
     // Testes básicos
     function runTests(){
       try{
@@ -520,16 +532,15 @@
   </script>
 
   <!-- Fallbacks embutidos (usados se a indexação do GitHub falhar) -->
-  <script type="application/json" data-path="data/manifest.json">{
-    "title": "MeuJus",
-    "labels": "labels/pt-BR.json",
-    "shuffleDefault": { "questions": true, "options": true },
-    "persistDefault": true,
-    "outro": { "message": "Obrigado por participar." },
-    "categories": [
-      { "id":"intro","name":"Introdução","themes":[{ "id":"basico","name":"Básico","path":"data/intro/basico.json" }]}
-    ]
-  }</script>
+ <script type="application/json" data-path="data/manifest.json">{
+  "title":"MeuJus",
+  "labels":"labels/pt-BR.json",
+  "shuffleDefault": { "questions": false, "options": true },
+  "persistDefault": true,
+  "outro": { "message":"Obrigado por participar." },
+  "categories":[ { "id":"intro","name":"Introdução","themes":[{"id":"basico","name":"Básico","path":"data/intro/basico.json"}] } ]
+}</script>
+
 
   <script type="application/json" data-path="labels/pt-BR.json">{
     "start":"Começar","next":"Próximo","prev":"Anterior","retry":"Refazer","home":"Início","category":"Categoria","theme":"Tema","result":"Resultado"
@@ -540,7 +551,7 @@
       "title": "Introdução básica",
       "category": "intro",
       "theme": "basico",
-      "shuffle": { "questions": true, "options": true },
+      "shuffle": { "questions": false, "options": true },
       "persist": true,
       "outroMessage": "Você concluiu o tema introdutório do MeuJus. Volte ao início para escolher outro tema."
     },
