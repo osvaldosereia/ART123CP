@@ -490,6 +490,186 @@
       ],
       "answer": 0,
       "explanation": "“O testador pode substituir outra pessoa ao herdeiro ou ao legatário nomeado, para o caso de um ou outro não querer ou não poder aceitar a herança ou o legado, presumindo-se que a substituição foi determinada para as duas alternativas, ainda que o testador só a uma se refira.” — Código Civil (Lei nº 10.406/2002), art. 1.947. Justificativa objetiva: A cláusula testamentária estabeleceu uma substituição vulgar. Havendo disposição expressa do testador nomeando um substituto, afasta-se a aplicação do direito de acrescer. Como Henrique renunciou ao legado ('não quis' aceitar), sua parte é transmitida ao substituto por ele designado, Carlos. Carolina mantém sua parte. Portanto, o apartamento caberá em condomínio a Carolina e Carlos. A alternativa A está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Beatriz nasceu duzentos e cinquenta dias após a morte do pai, Bernardo, com quem sua mãe, Gabriela, era casada há 2 anos. Quando Gabriela foi registrar Beatriz, Leonardo, irmão de Bernardo, afirmou que não aceitaria que ela a registrasse como filha de Bernardo, a não ser que Gabriela provasse a paternidade, por meio de exame de DNA.\nSobre a situação apresentada, assinale a afirmativa correta.",
+      "options": [
+        "(A) Gabriela precisa realizar o exame de DNA para que possa registrar Beatriz, uma vez que é direito da família do falecido questionar a paternidade a este atribuída após a sua morte.",
+        "(B) Gabriela precisa realizar o exame de DNA para que possa registrar Beatriz, uma vez que, nos termos do Código Civil, a paternidade não é presumida após a dissolução do vínculo conjugal.",
+        "(C) Gabriela não precisa realizar o exame de DNA para que possa registrar Beatriz, uma vez que a criança nasceu após a morte de Bernardo e o direito para contestação da paternidade é personalissimo.",
+        "(D) Gabriela não precisa realizar o exame de DNA para que possa registrar Beatriz, uma vez que, nos termos do Código Civil, presumem-se concebidos na constância do casamento os filhos nascidos nos trezentos dias subsequentes à dissolução da sociedade conjugal por morte."
+      ],
+      "answer": 3,
+      "explanation": "“Presumem-se concebidos na constância do casamento os filhos: [...] II - nascidos nos trezentos dias subseqüentes à dissolução da sociedade conjugal, por morte, separação judicial, nulidade e anulação do casamento.” — Código Civil (Lei nº 10.406/2002), art. 1.597, II. Justificativa objetiva: A lei estabelece a presunção legal de paternidade (presunção 'pater is est') para os filhos nascidos até 300 dias após o falecimento do marido. Como Beatriz nasceu 250 dias após a morte de Bernardo, ela goza dessa presunção, não sendo necessário exame de DNA para o registro. A alternativa D descreve corretamente a regra."
+    },
+    {
+      "type": "multiple",
+      "q": "Carlos é titular de direito real de uma laje, referente à parte superior de uma edificação localizada em uma área urbana. Recentemente, ele tomou conhecimento de que uma empresa de internet está negociando diretamente com o proprietário da construção-base para instalar cabeamentos de fibra ótica e outros equipamentos de infraestrutura no subsolo dessa construção. A instalação não interfere no direito real de Carlos, bem como não afeta o uso do bem. Mesmo assim, Carlos tem dúvidas sobre a legalidade dessa instalação sem a sua expressa autorização, bem como sobre seu direito a eventual compensação. Diante disso, ele consultou você, como advogado(a), para orientá-lo sobre a questão.\nAssinale a opção que apresenta, corretamente, sua orientação.",
+      "options": [
+        " (A) Carlos tem o direito de impedir a instalação dos cabos de fibra ótica, pois a utilização do subsolo da construção-base requer sua autorização expressa como titular do direito real de laje.",
+        "(B) A empresa de internet pode instalar os cabos de fibra ótica no subsolo da construção-base sem a autorização de Carlos, pois a instalação não interfere em seu direito real de laje.",
+        "(C) Carlos deve ser compensado financeiramente pela empresa de internet antes da instalação dos cabos no subsolo da construção-base, devido à titularidade de seu direito real de laje.",
+        "(D) A instalação dos cabos de fibra ótica pela empresa de internet é ilegal e pode ser contestada por Carlos judicialmente, já que ele possui um direito real sobre a construção e não autorizou o uso do subsolo."
+      ],
+      "answer": 1,
+      "explanation": "“O titular da laje, unidade imobiliária autônoma constituída em matrícula própria, poderá usar, gozar e dispor da sua unidade, desde que não prejudique a segurança e a estabilidade da construção-base e que não impossibilite o acesso regular e o uso das áreas comuns da construção-base e das demais lajes no caso de edificações com multiplicidade de lajes.” — Código Civil (Lei nº 10.406/2002), art. 1.510-A, § 2º. Justificativa objetiva: O direito de laje é um direito real sobre unidade autônoma (superior ou inferior), mas não se estende ao subsolo da construção-base, que permanece como propriedade do titular da construção original. Como a instalação não interfere no direito ou no uso da laje de Carlos, sua autorização não é necessária. A alternativa B está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "João, 17 anos, foi representado pelo Ministério Público pela prática de ato infracional análogo a roubo. Consta nos autos que o representado teria abordado dois transeuntes e, simulando estar armado, anunciou o roubo, tendo subtraído os celulares e as carteiras das vítimas. Ao final do procedimento, o Juízo da Infância considerou comprovadas a autoria e a materialidade, tendo julgado procedente o pedido e fixado a medida socioeducativa de internação. O(A) advogado(a) do adolescente deseja apresentar recurso de apelação.\nSobre o recurso a ser interposto, com base no Estatuto da Criança e do Adolescente, assinale a afirmativa correta.",
+      "options": [
+        "(A) O sistema recursal adotado é o do Código de Processo Civil, sendo certo que o prazo será de 10 (dez) dias.",
+        "(B) O sistema recursal adotado é o do Código de Processo Penal, sendo certo que o prazo será de 10 (dez) dias.",
+        "(C) O sistema recursal adotado é o do Código de Processo Civil, sendo certo que o prazo será de 15 (quinze) dias.",
+        "(D) O sistema recursal adotado é o do Código de Processo Penal, sendo certo que o prazo será de 5 (cinco) dias e, após isso, haverá o prazo de 8 (oito) dias para oferecimento das razões."
+      ],
+      "answer": 0,
+      "explanation": "“Aos procedimentos regulados nesta Lei aplicam-se subsidiariamente as normas gerais previstas na legislação processual pertinente. [...] § 2º Em todos os recursos, salvo nos embargos de declaração, o prazo para o Ministério Público e para a defesa será sempre de 10 (dez) dias.” — Estatuto da Criança e do Adolescente (ECA - Lei nº 8.069/90), art. 198, caput e II. Justificativa objetiva: O ECA estabelece um sistema recursal próprio, com aplicação subsidiária das normas do Código de Processo Civil. O art. 198, II, fixa o prazo de 10 dias para a interposição de recursos, como a apelação. A alternativa A é a única que combina o sistema recursal correto (CPC, conforme o caput) com o prazo correto (10 dias, conforme inciso II)."
+    },
+    {
+      "type": "multiple",
+      "q": "Ricardo, 13 anos, filho de Vanda, não foi registrado pelo pai biológico. Desde tenra idade, o adolescente foi criado por João, de 50 anos, marido de Vanda. João e Ricardo se viam como pai e filho e assim eram reconhecidos na vizinhança. João procura você, como advogado(a), e diz que tem inequívoca vontade de adotar Ricardo. Após a juntada de toda a documentação necessária, e com anuência de Vanda e Ricardo, é ajuizada a ação de adoção, sendo certo que, no curso da ação, João reitera a inequívoca vontade de adotar Ricardo. Ocorre que, dois meses após a distribuição, João sofre um ataque cardíaco e vem a falecer.\nVanda e Ricardo, desesperados, o(a) procuram, como advogado(a), para que você indique o caminho jurídico viável para o caso.\nDe acordo com o ECA, assinale a afirmativa que apresenta, corretamente, sua orientação.",
+      "options": [
+        "(A) O processo de adoção deve prosseguir, mesmo com a morte de João. Nesse caso, se a sentença julgar procedente o pedido, seus efeitos retroagirão à data do óbito.",
+        "(B) A adoção é direito personalíssimo. Logo, falecendo o autor do pedido, o único caminho jurídico é a extinção do processo.",
+        "(C) A adoção só pode seguir se os herdeiros biológicos de João anuírem, já que possuem interesse direto na herança do finado.",
+        "(D) O processo de adoção pode seguir, mesmo com a morte de João. Nessa hipótese, caso julgado procedente o pedido, os efeitos se produzem a partir do trânsito em julgado da sentença constitutiva."
+      ],
+      "answer": 0,
+      "explanation": "“A adoção poderá ser deferida ao adotante que, após inequívoca manifestação de vontade, vier a falecer no curso do procedimento, antes de prolatada a sentença. § 6º A adoção póstuma de que trata o § 5º deste artigo será conferida a quem demonstrar efetivo vínculo de afinidade e afetividade com a criança ou o adolescente, e desde que não seja constatada má-fé [...]. Os efeitos da sentença retroagirão à data do óbito.” — Estatuto da Criança e do Adolescente (ECA - Lei nº 8.069/90), art. 42, § 6º. Justificativa objetiva: O ECA prevê a possibilidade de adoção póstuma quando o adotante falece no curso do processo, desde que tenha manifestado de forma inequívoca sua vontade de adotar. A sentença de procedência terá efeitos retroativos à data do óbito. A alternativa A descreve com exatidão essa regra."
+    },
+    {
+      "type": "multiple",
+      "q": "Joana, aposentada, contratou diversos empréstimos ao longo dos anos para fazer frente a necessidades inesperadas, em razão de um grave problema de saúde que enfrentou, além de assumir dívidas com cartões de crédito, lojas e empréstimos consignados. Com o tempo, Joana não conseguiu mais pagar todas as parcelas, que agora superam o valor de sua aposentadoria, comprometendo suas despesas básicas, como alimentação e saúde. Buscando uma solução, Joana o(a) procurou, como advogado(a), para que você a assessorasse no caso.\nCom base no Código de Defesa do Consumidor, assinale a opção que apresenta seu parecer.",
+      "options": [
+        "(A) Joana pode requerer judicialmente a renegociação das dívidas contraídas para consumo pessoal, mas não dos empréstimos financeiros.",
+        "(B) Joana pode requerer judicialmente a renegociação de suas dívidas, preservando o mínimo existencial, e buscar um plano de pagamento compatível com sua renda.",
+        "(C) O deferimento do pedido judicial de renegociação das dívidas dependerá de Joana provar que as obrigações foram contraídas em razão do seu grave problema de saúde.",
+        "(D) Joana é responsável por suas dívidas, inexistindo possibilidade de renegociação judicial, pois as obrigações contratuais devem ser cumpridas independentemente das dificuldades financeiras."
+      ],
+      "answer": 1,
+      "explanation": "“O juiz poderá, a requerimento do consumidor superendividado pessoa natural, instaurar processo de repactuação de dívidas, com vistas à realização de audiência conciliatória, presidida por ele ou por conciliador credenciado no juízo, com a presença de todos os credores de dívidas [...], na qual o consumidor apresentará proposta de plano de pagamento com prazo máximo de 5 (cinco) anos, preservados o mínimo existencial, nos termos da regulamentação, e as garantias e as formas de pagamento originalmente pactuadas.” — Código de Defesa do Consumidor (CDC - Lei nº 8.078/90), art. 104-A. Justificativa objetiva: A Lei do Superendividamento (Lei nº 14.181/2021) alterou o CDC para criar um mecanismo de repactuação de dívidas para o consumidor de boa-fé. Esse mecanismo inclui empréstimos financeiros e visa à elaboração de um plano de pagamento que garanta a preservação do 'mínimo existencial'. A alternativa B descreve corretamente a solução legal disponível."
+    },
+    {
+      "type": "multiple",
+      "q": "A sociedade empresária VittaBem Alimentos Ltda. lançou no mercado nacional uma nova linha de sucos naturais, supostamente livres de conservantes e aditivos químicos, amplamente divulgada em campanhas publicitárias nas principais redes de televisão e mídias digitais. Após quatro meses de intensa comercialização, o Ministério da Saúde, por meio de fiscalização e laudos laboratoriais, constatou que os produtos continham substâncias artificiais em níveis superiores aos permitidos pela Anvisa, representando risco potencial à saúde dos consumidores. Diante da repercussão nacional do caso, uma associação de defesa do consumidor ajuizou ação civil pública, pleiteando: a retirada imediata dos produtos do mercado; e a condenação da sociedade empresária ao pagamento de indenização por danos morais coletivos. A sociedade empresária contestou, sustentando, entre outros argumentos, a inaplicabilidade do Código de Defesa do Consumidor e a ausência de culpa e de dano individual comprovado.\nSobre o caso apresentado, com base no ordenamento jurídico brasileiro, especialmente no Código de Defesa do Consumidor, assinale a afirmativa correta.",
+      "options": [
+        "(A) A coletividade de pessoas, ainda que indetermináveis, equipara-se a consumidor, podendo ser tutelada judicialmente por meio de Ação Civil Pública.",
+        "(B) A Ação Civil Pública é incabível, pois somente o consumidor individual e identificado possui legitimidade para pleitear indenização por danos oriundos da relação de consumo.",
+        "(C) O conceito de consumidor por equiparação exige que a coletividade seja determinada e tenha comprovadamente adquirido o produto para ser considerada consumidora.",
+        "(D) Apenas os consumidores que efetivamente adquiriram e consumiram o produto possuem legitimidade para buscar reparação por danos, ainda que representados por associação."
+      ],
+      "answer": 0,
+      "explanation": "“Equipara-se a consumidor a coletividade de pessoas, ainda que indetermináveis, que haja intervindo nas relações de consumo.” — Código de Defesa do Consumidor (CDC - Lei nº 8.078/90), art. 2º, parágrafo único. E “Equiparam-se aos consumidores todas as pessoas determináveis ou não, expostas às práticas nele previstas.” — CDC, art. 29. Justificativa objetiva: O CDC protege não apenas o consumidor individual, mas também a coletividade (interesses difusos). A publicidade enganosa e a colocação de produto nocivo no mercado afetam uma coletividade indeterminada de pessoas, que são equiparadas a consumidores para fins de proteção legal, inclusive por meio de Ação Civil Pública. A alternativa A está correta. As demais limitam indevidamente o conceito de consumidor e a proteção coletiva."
+    },
+    {
+      "type": "multiple",
+      "q": "No contrato de sociedade em conta de participação firmado entre o sócio ostensivo e quatro sócios participantes não há cláusula dispondo sobre a admissão de novos sócios.\nDiante da omissão, assinale a afirmativa correta.",
+      "options": [
+        "(A) É defeso ao sócio ostensivo admitir novo sócio sem o consentimento expresso ou tácito dos demais sócios, sendo tácito o consentimento se eles não se opuserem nos trinta dias seguintes ao ingresso do novo sócio.",
+        "(B) O sócio ostensivo pode admitir novo sócio com ou sem o consentimento dos demais sócios em razão de sua responsabilidade ilimitada e pessoal pelo exercício da atividade constitutiva do objeto social.",
+        "(C) É defeso ao sócio ostensivo admitir novo sócio sem o consentimento expresso dos demais sócios.",
+        "(D) O sócio ostensivo pode admitir novo sócio com o consentimento da maioria dos demais sócios; havendo empate, cabe a ele o voto de qualidade."
+      ],
+      "answer": 2,
+      "explanation": "“Salvo estipulação em contrário, o sócio não pode ser substituído no exercício das suas funções, sem o consentimento dos demais sócios, expresso em alteração do contrato social.” — Código Civil (Lei nº 10.406/2002), art. 1.002. E “Na sociedade em nome coletivo, na sociedade em comandita simples e na sociedade limitada, [...] não pode o sócio, sem o consentimento dos demais, fazer-se substituir no exercício de suas funções.” — Código Civil, art. 1.027. Justificativa objetiva: A sociedade em conta de participação rege-se subsidiariamente pelas normas da sociedade simples. Nestas, e nas sociedades de pessoas em geral, prevalece o 'intuitu personae'. Na omissão do contrato social, a admissão de um novo sócio depende do consentimento unânime e expresso dos demais, pois altera a base de confiança da sociedade. A alternativa C é a que melhor reflete essa regra geral. As demais opções apresentam quóruns ou procedimentos não previstos em lei para o caso de omissão contratual."
+    },
+    {
+      "type": "multiple",
+      "q": "Santa Aceguá, administradora e sócia da Mercearia Cerro Branco Ltda., para saber os efeitos que a falência de um dos seus devedores, o empresário Júlio Cidreira, terá em relação a seu crédito, consulta você como advogado(a).\nAssinale a opção que apresenta, corretamente, sua orientação.",
+      "options": [
+        " (A) A falência opera a novação dos créditos quirografários existentes na data da decretação, que serão pagos até o limite de 25% (vinte e cinco por cento) de seu valor, exceto se o ativo apurado for superior para garantir o pagamento integral a outras classes de credores.",
+        "(B) A falência produz o vencimento antecipado das dívidas do falido, com o abatimento proporcional dos juros, e converte todos os créditos em moeda estrangeira para a moeda do País, pelo câmbio do dia da decisão judicial.",
+        "(C) A falência determina a suspensão da prescrição a partir da data da decretação a falência, sendo retomado o curso do prazo a partir da data do trânsito em julgado da sentença de encerramento.",
+        "(D) A falência acarreta a suspensão das execuções pelo prazo de 180 (cento e oitenta) dias, contado da data da decretação, prorrogável uma única vez por igual prazo."
+      ],
+      "answer": 1,
+      "explanation": "“A decretação da falência determina o vencimento antecipado das dívidas do devedor e dos sócios ilimitada e solidariamente responsáveis, com o abatimento proporcional dos juros, e converte todos os créditos em moeda estrangeira para a moeda do País, pelo câmbio do dia da decisão judicial, para todos os efeitos desta Lei.” — Lei de Recuperação de Empresas e Falência (Lei nº 11.101/2005), art. 77. Justificativa objetiva: A alternativa B descreve corretamente dois efeitos imediatos da decretação da falência: o vencimento antecipado das dívidas e a conversão de créditos em moeda estrangeira. A alternativa C está incorreta pois a prescrição é suspensa, mas a regra é mais complexa. A D confunde o prazo de suspensão da recuperação judicial com os efeitos da falência. A A está incorreta, não há novação."
+    },
+    {
+      "type": "multiple",
+      "q": "Francisco Morato tem domicílio em Cidade Ocidental/GO e pretende ser empresário individual em Brasília/DF. Se o negócio der certo, Francisco Morato pretende abrir duas filiais, uma em Unai/MG e, outra, em Natividade/TO.\nConsiderando-se as normas do Código Civil para a inscrição do empresário e da instituição de filiais, é correto afirmar que Francisco Morato deverá realizar sua inscrição como empresário na Junta Comercial do",
+      "options": [
+        "(A) Estado de Goiás, tendo como referência a cidade do seu domicílo, Cidade Ocidental, e, com relação às filiais, nas Juntas Comerciais dos Estados de Minas Gerais e do Tocantins, sem necessidade de averbação da constituição das filiais na Junta Comercial do Estado de Goiás.",
+        "(B) Distrito Federal, tendo como referência a sede da sociedade empresária, Brasília, e, com relação às filiais, nas Juntas Comerciais dos Estados de Minas Gerais e do Tocantins, com averbação da constituição das filiais na Junta Comercial do Distrito Federal.",
+        "(C) Estado de Goiás, tendo como referência a cidade do seu domicílo, Cidade Ocidental, e, com relação às filiais, na mesma Junta Comercial, por ser o lugar do seu domicílio.",
+        "(D) Distrito Federal, tendo como referência a sede da sociedade empresária, Brasília, e, com relação às filiais, na mesma Junta Comercial por ser o lugar da sede."
+      ],
+      "answer": 1,
+      "explanation": "“A inscrição do empresário far-se-á mediante requerimento que contenha [...] a sede da empresa. Parágrafo único. O empresário que instituir sucursal, filial ou agência, em lugar sujeito à jurisdição de outro Registro Público de Empresas Mercantis, neste também deverá inscrevê-la, com a prova da inscrição originária.” — Código Civil (Lei nº 10.406/2002), art. 969. Justificativa objetiva: A inscrição principal do empresário individual deve ser feita na Junta Comercial da unidade federativa onde se localiza a sede do seu negócio (Brasília/DF). Para abrir filiais em outros estados (MG e TO), ele deverá inscrevê-las nas Juntas Comerciais locais correspondentes e, além disso, averbar (anotar) a criação dessas filiais no seu registro principal, no DF. A alternativa B descreve corretamente todo o procedimento."
+    },
+    {
+      "type": "multiple",
+      "q": "Nísia Parnamirim realizou sua inscrição como microempreendedora individual (MEI) e consultou você, como advogado(a), para saber o tratamento que lhe é dispensado pela Lei Complementar nº 123/2006 (Lei do Simples Nacional).\nSobre a hipótese, assinale a opção que apresenta, corretamente, sua resposta.",
+      "options": [
+        "(A) Nísia Parnamirim poderá utilizar sua residência como sede do estabelecimento, quando não for indispensável a existência de local próprio para o exercício da atividade.",
+        "(B) Nísia Parnamirim poderá manter sua condição de microempreendedora individual desde que a receita bruta auferida no ano-calendário anterior seja de até R$ 60.000,00 (sessenta mil reais).",
+        "(C) Caso Nísia Parnamirim queira alienar seu estabelecimento, a eficácia do ato em relação a terceiros depende da averbação do contrato no Registro Público de Empresas Mercantis e de sua publicação na imprensa oficial.",
+        "(D) A comprovação da receita bruta anual por parte de Nísia Parnamirim será feita mediante escrituração do Livro Caixa e apresentação do registro de vendas ou de prestação de serviços."
+      ],
+      "answer": 0,
+      "explanation": "“O MEI poderá utilizar sua residência como sede do estabelecimento, quando não for indispensável a existência de local próprio para o exercício da atividade.” — Lei Complementar nº 123/2006, art. 18-A, § 25, VII. Justificativa objetiva: A legislação do MEI visa à simplificação e desburocratização. Uma dessas simplificações é a permissão para que o MEI utilize seu endereço residencial como sede da empresa, desde que a natureza da atividade permita. A alternativa A está correta. A B está incorreta, pois o limite de faturamento atual é de R$ 81.000,00 anuais. As alternativas C e D descrevem formalidades (publicação oficial, Livro Caixa) que são dispensadas ou simplificadas no regime do MEI."
+    },
+    {
+      "type": "multiple",
+      "q": "Ricardo propôs a execução de um título executivo extrajudicial contra Isabela. Diante da propositura da execução por Ricardo, Isabela apresentou embargos à execução. O Magistrado julgou improcedentes os embargos à execução de Isabela que, irresignada, interpôs recurso de apelação contra a sentença de improcedência dos embargos à execução. Ao receber a apelação interposta por Isabela, o Desembargador relator, integrante de Câmara Cível, julgou o recurso monocraticamente, negando provimento à apelação.\nAssinale a opção que apresenta o recurso cabível a ser interposto por Isabela.",
+      "options": [
+        "(A) Recurso especial, para que seja analisada, pelo Superior Tribunal de Justiça, eventual violação de lei federal por ter sido negado provimento à apelação de forma monocrática pelo desembargador relator.",
+        "(B) Agravo interno, para que seja analisada, pelo Desembargador relator, eventual violação de lei federal decorrente de ter sido negado provimento à apelação de forma monocrática pelo próprio relator.",
+        "(C) Agravo interno, por se tratar de decisão proferida pelo Desembargador relator, a ser analisado pelo órgão colegiado da Câmara Cível.",
+        "(D) Recurso especial, por se tratar de decisão proferida pelo Desembargador relator, a ser analisado pelo órgão colegiado da Câmara Cível."
+      ],
+      "answer": 2,
+      "explanation": "“Contra decisão proferida pelo relator caberá agravo interno para o respectivo órgão colegiado, observadas, quanto ao processamento, as regras do regimento interno do tribunal.” — Código de Processo Civil (CPC/2015), art. 1.021. Justificativa objetiva: O recurso cabível contra decisão monocrática do relator em tribunal é o Agravo Interno. A finalidade desse recurso é submeter a decisão individual do relator à apreciação do órgão colegiado (Turma, Câmara ou Seção) do qual ele faz parte. A alternativa C descreve corretamente o recurso e sua finalidade."
+    },
+    {
+      "type": "multiple",
+      "q": "João é advogado regularmente inscrito nos quadros da Ordem dos Advogados do Brasil. Em uma sexta-feira à noite, seu amigo Thiago o procurou e, bastante nervoso, indagou se João poderia ingressar com um requerimento de tutela antecipada antecedente perante o Plantão Judicial, porque sua irmã necessitava de uma cirurgia de emergência. João reuniu os documentos enviados por Thiago e protocolou o requerimento, porém deixou de fazer a juntada da procuração assinada pela irmã de Thiago, que também é advogada. A medida de urgência foi concedida e, ato contínuo, João foi intimado para efetuar a juntada da procuração, bem como para complementar a petição inicial, nos termos do Art. 303, § 1º, inciso I, do CPC. A irmã de Thiago outorgou procuração geral para o foro por meio de instrumento particular por ela assinado.\nSobre o caso narrado, com base no ordenamento jurídico brasileiro, assinale a afirmativa correta.",
+      "options": [
+        "(A) A procuração deve ser exibida no prazo de 10 (dez) dias, prorrogável por igual período por despacho do Juiz.",
+        "(B) A irmã de Thiago, ainda que advogada, não poderá postular em causa própria, por expressa disposição do Código de Processo Civil.",
+        "(C) Não seria lícito a João, em nenhuma hipótese, postular em juízo sem procuração, motivo pelo qual o processo deverá ser extinto sem resolução do mérito.",
+        "(D) A procuração outorgada pela irmā de Thiago habilita João a praticar todos os atos do processo, exceto, entre outros poderes, receber citação, confessar e reconhecer a procedência do pedido."
+      ],
+      "answer": 3,
+      "explanation": "“A procuração para o foro em geral habilita o advogado a praticar todos os atos do processo, exceto receber citação, confessar, reconhecer a procedência do pedido, transigir, desistir, renunciar ao direito sobre o qual se funda a ação, receber, dar quitação, firmar compromisso e assinar declaração de hipossuficiência econômica, que devem constar de cláusula específica.” — CPC/2015, art. 105. Justificativa objetiva: A procuração geral para o foro confere poderes para a prática dos atos ordinários do processo. Atos de disposição de direito, como confessar, transigir ou renunciar, exigem poderes especiais, que devem estar expressos no instrumento. A alternativa D está correta. A A está errada (o prazo é de 15 dias). A B está errada (advogado pode postular em causa própria). A C está errada (é lícito postular sem procuração em casos urgentes, nos termos do art. 104 do CPC)."
+    },
+    {
+      "type": "multiple",
+      "q": "Em execução fundada em título extrajudicial, movida por Murilo, seu ex-sócio, Marília foi executada. Após regular citação, Marília não ofertou defesa, não nomeou bens à penhora, nem pagou o débito exequendo. Por essa razão, Murilo requereu a realização de penhora em contas correntes de titularidade de Marília, com o intuito de satisfazer seu crédito. A indisponibilidade do valor foi determinada pelo Juízo.\nTomando o caso acima como premissa, assinale a afirmativa correta.",
+      "options": [
+        "(A) A indisponibilidade de ativos financeiros pode ser realizada sem ciência prévia de Marília, pois é hipótese que dispensa o contraditório prévio.",
+        "(B) Eventual impenhorabilidade das quantias tornadas indisponíveis poderá ser comprovada por Marília no prazo de 10 dias, contados da intimação da penhora.",
+        "(C) Marília poderá requerer a substituição da penhora do dinheiro por fiança bancária, em valor não inferior ao do débito constante da petição inicial, acrescido de vinte por cento.",
+        "(D) Caso Marília efetue o pagamento da dívida por outro meio, o Juiz determinará a notificação da instituição financeira para que, em até 48 horas, cancele a indisponibilidade."
+      ],
+      "answer": 0,
+      "explanation": "“Para possibilitar a penhora de dinheiro em depósito ou em aplicação financeira, o juiz, a requerimento do exequente, sem dar ciência prévia do ato ao executado, determinará às instituições financeiras, por meio de sistema eletrônico gerido pela autoridade supervisora do sistema financeiro nacional, que torne indisponíveis ativos financeiros existentes em nome do executado [...].” — CPC/2015, art. 854. Justificativa objetiva: A penhora online de ativos financeiros (via SISBAJUD) é realizada de forma sigilosa e sem a notificação prévia do executado, para garantir a eficácia da medida e evitar que o devedor esvazie suas contas. O contraditório é postergado, ocorrendo após a efetivação do bloqueio. A alternativa A está correta. O prazo para alegar impenhorabilidade (B) é de 5 dias. A substituição da penhora em dinheiro (C) é excepcional. O prazo para o cancelamento (D) é de 24 horas."
+    },
+    {
+      "type": "multiple",
+      "q": "Juliana e André foram casados por anos, tiveram um filho que atualmente está com 6 anos, mas, por adversidades conjugais, resolveram pôr fim ao casamento. Após a separação, o filho ficou residindo com a mãe em cidade distinta do pai. Considerando que não tem mais volta a relação conjugal, Juliana, por meio do seu advogado, deseja propor ação de divórcio e guarda.\nSobre o caso, assinale a afirmativa correta.",
+      "options": [
+        "(A) A ação de divórcio e guarda deve tramitar em segredo de justiça.",
+        "(B) A ação de divórcio e guarda deve ser proposta no domicílio de André.",
+        "(C) Se André, após a citação, não comparecer em audiência nem apresentar contestação, ele não poderá mais intervir no processo.",
+        "(D) Ainda que André apresente resistência à ação de divórcio e guarda, sendo vencido na ação, ele não poderá ser condenado em honorários de sucumbência."
+      ],
+      "answer": 0,
+      "explanation": "“Tramitam em segredo de justiça os processos: [...] II - que versem sobre casamento, separação de corpos, divórcio, separação, união estável, filiação, alimentos e guarda de crianças e adolescentes.” — CPC/2015, art. 189, II. Justificativa objetiva: As ações que envolvem direito de família, como divórcio e guarda de filhos, tramitam sob segredo de justiça para preservar a intimidade das partes. A alternativa A está correta. A competência (B) seria o foro de domicílio do guardião do filho (Juliana). O revel (C) pode intervir no processo a qualquer momento. Há condenação em sucumbência (D) em ações de família contenciosas."
+    },
+    {
+      "type": "multiple",
+      "q": "Débora, servidora pública aposentada do Município de Fortaleza, procurou você, como advogado(a), para ajuizar uma ação pelo procedimento comum em face do Município, pleiteando o pagamento de verbas em atraso a título de auxílio alimentação. Proferida sentença de procedência do pedido, foi interposto recurso de apelação pelo réu, não provido, assim como foi mantida a sentença em remessa necessária na mesma oportunidade. Transitada em julgado a sentença, Débora pretende receber os valores que lhe são devidos.\nSobre o caso, assinale a afirmativa correta.",
+      "options": [
+        "(A) A Fazenda Pública Municipal, caso não pague o valor devido à Débora de forma espontânea, diferentemente do que ocorre com as Fazendas Estadual e Federal, sujeita-se à penhora de seus bens.",
+        "(B) Débora deverá instruir sua petição de cumprimento de sentença com o demonstrativo discriminado e atualizado do crédito, devendo o Município ser intimado para apresentar impugnação nos mesmos autos.",
+        "(C) Não impugnada a execução, os valores devidos deverão ser depositados diretamente na conta corrente da autora, por se tratar de servidora pública.",
+        "(D) Débora deverá indicar o valor atualizado do crédito em sua petição de cumprimento de sentença, devendo o Municipio ser citado para apresentar embargos em autos apartados."
+      ],
+      "answer": 1,
+      "explanation": "“Quando a execução for fundada em título judicial, a Fazenda Pública será citada para opor embargos em 30 (trinta) dias. § 1º Não opostos embargos ou transitada em julgado a decisão que os rejeitar, expedir-se-á precatório ou requisição de pequeno valor em favor do exequente [...]. § 2º A petição inicial conterá, além dos requisitos do art. 319, a demonstração do trânsito em julgado da decisão exequenda e será instruída com o demonstrativo discriminado e atualizado do crédito.” — CPC/2015, art. 534. Justificativa objetiva: O cumprimento de sentença contra a Fazenda Pública (municipal, estadual ou federal) inicia-se com um requerimento do credor, que deve apresentar o cálculo atualizado do débito. A Fazenda Pública é então intimada (e não citada) para apresentar impugnação no prazo de 30 dias, nos próprios autos. A alternativa B descreve corretamente o procedimento. As demais estão incorretas: a Fazenda Municipal também se sujeita ao regime de precatórios (A), o pagamento não é feito diretamente em conta (C), e a defesa é por impugnação nos mesmos autos, não embargos em autos apartados (D)."
     }
   ]
 }
