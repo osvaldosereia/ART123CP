@@ -310,6 +310,66 @@
       ],
       "answer": 2,
       "explanation": "“O imposto [ITCMD], relativamente a bens móveis, títulos e créditos, compete ao Estado onde se processar o inventário ou arrolamento [...].” — CRFB/88, art. 155, § 1º, II. E “A sucessão abre-se no lugar do último domicílio do falecido.” — Código Civil (Lei nº 10.406/2002), art. 1.785. E “O foro de domicílio do autor da herança, no Brasil, é o competente para o inventário [...].” — Código de Processo Civil (Lei nº 13.105/2015), art. 48. Justificativa objetiva: Embora a Constituição estabeleça que o ITCMD sobre bens móveis é devido ao Estado onde se processa o inventário, a legislação processual civil (CPC, art. 48) fixa que o foro competente para o inventário é o do último domicílio do falecido. Assim, mesmo que o inventário extrajudicial tenha sido realizado em MG, o foro legalmente competente é o de SP. A jurisprudência entende que a competência tributária para o ITCMD de bens móveis, nesse caso, é do Estado do domicílio do 'de cujus' (falecido), ou seja, São Paulo. A alternativa C está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "A entidade religiosa ABC requereu o reconhecimento da imunidade de IPTU do imóvel em que realizava seus cultos, bem como do edificio ao lado, que servia de moradia para seus ministros religiosos e suas famílias. O Municipio Alfa negou parcialmente tal reconhecimento, afirmando que, embora ambos os imóveis fossem registrados em nome da entidade religiosa ABC, possuíam matrículas distintas no Registro de Imóveis. Desta forma, reconheceu que apenas o imóvel em que realizava seus cultos seria contemplado com a imunidade tributária reconhecida pela Constituição Federal. Surpreendida, a entidade religiosa ABC procurou você, como advogado(a), para questionar essa decisão.\nAssinale a opção que apresenta, corretamente, sua orientação para o caso.",
+      "options": [
+        "(A) A entidade deve escolher sobre qual imóvel deve recair a imunidade do IPTU, uma vez que os imóveis têm matrículas distintas.",
+        "(B) O imóvel que tem como função precípua a realização dos cultos fará jus à imunidade do IPTU, já que os imóveis apresentam duplicidade de matrículas.",
+        "(C) A imunidade tributária religiosa do IPTU beneficia o imóvel em que se realiza o culto e todos os imóveis afetados à sua finalidade essencial, ainda que os imóveis tenham matrículas distintas.",
+        "(D) Para que os imóveis pudessem gozar da imunidade tributária religiosa do IPTU, seria necessário que suas matrículas fossem unificadas."
+      ],
+      "answer": 2,
+      "explanation": "“A imunidade prevista no art. 150, VI, 'b', da CF/88 abrange não só os prédios destinados ao culto, mas, também, o patrimônio, a renda e os serviços 'relacionados com as finalidades essenciais das entidades nelas mencionadas'. [...] O anexo, mesmo sendo um imóvel com matrícula distinta, estende a imunidade do templo.” — Jurisprudência do Supremo Tribunal Federal (STF). E CRFB/88, art. 150, § 4º. Justificativa objetiva: A jurisprudência do STF é pacífica no sentido de que a imunidade de templos (art. 150, VI, 'b', da CRFB/88) alcança não apenas o local do culto, mas também os imóveis que, embora distintos, estejam vinculados às finalidades essenciais da entidade religiosa, como a residência de seus ministros. A existência de matrículas separadas é irrelevante para a concessão do benefício. A alternativa C está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma sociedade empresária do setor petrolífero adquiriu uma Unidade Flutuante de Produção, Armazenamento e Transferência de Petróleo, a fim de produzir petróleo nas águas territoriais brasileiras. Esta Unidade tem capacidade de se locomover pelas águas por meio de motores próprios, razão pela qual o Estado Alfa, onde fica o domicílio da sociedade empresária, publicou, em 10/02/2024, lei estadual ordinária estabelecendo que a propriedade de tais Unidades configura fato gerador de IPVA.\nDiante desse cenário, assinale a afirmativa correta.",
+      "options": [
+        "(A) Embora se trate de veículo automotor, a Constituição Federal proíbe a incidência de IPVA sobre quaisquer veículos aquáticos.",
+        "(B) O IPVA não pode incidir sobre veículo que é utilizado nas águas territoriais brasileiras, mas apenas se fosse utilizado em terra.",
+        "(C) Somente por lei complementar se poderia delimitar a incidência de IPVA sobre este tipo de Unidade.",
+        "(D) Apesar de poder ser classificada como veículo automotor, o IPVA não incidirá por exceção constitucional."
+      ],
+      "answer": 3,
+      "explanation": "“Não incide Imposto sobre a Propriedade de Veículos Automotores (IPVA) sobre embarcações e aeronaves.” — Tese fixada pelo STF no julgamento do RE 1.016.605, com repercussão geral (Tema 1075). Justificativa objetiva: O Supremo Tribunal Federal firmou o entendimento de que a competência dos estados para instituir o IPVA, prevista no art. 155, III, da Constituição, não abrange embarcações e aeronaves. A Unidade Flutuante, por ser uma embarcação, está fora do campo de incidência do imposto, independentemente de ser automotora. A alternativa D está correta, pois reflete essa exceção definida pela interpretação constitucional do STF."
+    },
+    {
+      "type": "multiple",
+      "q": "José recebeu notificação para pagar ou impugnar o lançamento referente a determinado crédito tributário estadual dentro do prazo de 30 dias corridos. No 20º dia do recebimento da notificação, quando pretendia protocolizar impugnação administrativa contra a cobrança, verificou, por meio da Internet, que seu nome já constava do cadastro da Dívida Ativa Estadual, em razão da dívida que lhe fora notificada.\nDiante desse cenário, assinale a afirmativa correta.",
+      "options": [
+        "(A) Como já ocorrera previamente o lançamento tributário, a inserção do nome de José no cadastro da Dívida Ativa Estadual era devida.",
+        "(B) Foi indevida a inserção do nome de José no cadastro da Dívida Ativa Estadual antes do vencimento do prazo para pagamento ou impugnação.",
+        "(C) É possível a inserção do nome de José no cadastro da Dívida Ativa Estadual, sob condição resolutiva vinculada ao prazo de 30 dias ofertado para que pagasse ou impugnasse o lançamento.",
+        "(D) O lançamento da dívida tributária se faz por meio do Termo de Inscrição em Dívida Ativa, razão pela qual não seria possível fazer o lançamento sem que o nome de José fosse inscrito em Dívida Ativa."
+      ],
+      "answer": 1,
+      "explanation": "“A dívida regularmente inscrita goza da presunção de certeza e liquidez [...].” — Código Tributário Nacional (CTN), art. 204. E “A inscrição, que se constitui no ato de controle administrativo da legalidade, será feita, pelo órgão competente, para apurar a liquidez e certeza do crédito [...].” — Lei de Execução Fiscal (Lei nº 6.830/80), art. 2º, § 3º. Justificativa objetiva: A inscrição na Dívida Ativa somente pode ocorrer após o crédito tributário se tornar definitivo na esfera administrativa, o que acontece quando expira o prazo para pagamento ou impugnação sem que o contribuinte tome uma dessas atitudes. Inscrever a dívida antes do término desse prazo é ilegal, pois o crédito ainda não é exigível e o contribuinte ainda tem o direito de defesa. A alternativa B está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Tendo ocorrido uma situação de calamidade pública no Município Alfa, no final do ano de 2022, a União enviou vultosos recursos federais para enfrentar tal situação. De modo a também diminuir a carga tributária sobre a população municipal nesse período, a União, por lei federal, aprovou uma isenção de Imposto sobre a Propriedade Predial e Territorial Urbana (IPTU) no Município, por todo o ano de 2023. O Prefeito municipal estava de acordo e editou um decreto para regulamentar a forma como se daria o gozo dessa isenção.\nDiante desse cenário, assinale a afirmativa correta.",
+      "options": [
+        "(A) A referida isenção, para ser válida, deveria ter sido veiculada por lei municipal.",
+        "(B) A União, em situação de calamidade pública, excepcionalmente, fica autorizada por lei federal a conceder isenção de qualquer imposto municipal.",
+        "(C) A União, como ente central, pode condicionar a entrega de tais recursos ao Município à aceitação de que lei federal conceda isenção de imposto municipal.",
+        "(D) A edição de decreto por parte do Prefeito configura a concordância do ente municipal com a concessão de tal isenção, tornando-a válida por ratificação expressa do Município."
+      ],
+      "answer": 0,
+      "explanation": "“É vedado à União: [...] III - instituir isenções de tributos da competência dos Estados, do Distrito Federal ou dos Municípios.” — CRFB/88, art. 151, III. Justificativa objetiva: O princípio da autonomia dos entes federativos, consagrado no pacto federativo, impede que um ente conceda isenção de tributo de competência de outro. Isso é conhecido como vedação às isenções heterônomas. O IPTU é um imposto de competência municipal, e somente o próprio Município, por meio de lei específica, pode conceder isenção. A lei federal é inconstitucional, e o decreto do prefeito não pode convalidar o ato. A alternativa A está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Juliana ajuizou duas ações indenizatórias que resultaram na condenação dos réus, obrigando-os a pagar vultosa quantia em dinheiro. A primeira foi ajuizada em face de uma autarquia e, a segunda, em face de uma sociedade de economia mista que realiza atividade econômica em regime concorrencial, cujos bens não estão afetados ao serviço público. Considerando que ambas as condenações transitaram em julgado e estão em fase de cumprimento de sentença, Juliana questionou você, como advogada(o), acerca da viabilidade de penhora dos bens das mencionadas entidades administrativas.\nConsiderando a definição legal de bens públicos, assinale a opção que indica a informação correta que você prestou.",
+      "options": [
+        "(A) A penhora dos bens das referidas entidades administrativas integrantes da Administração Indireta é possível, considerando que os bens de ambas são privados.",
+        "(B) A penhora dos bens das citadas entidades administrativas não é admissível, na medida em que os bens de ambas são públicos.",
+        "(C) A penhora dos bens da autarquia é possível, na medida em que seus bens são privados, mas os da sociedade de economia mista não é viável, considerando que seus bens são públicos.",
+        "(D) A penhora dos bens da sociedade de economia mista é possível, porque seus bens são privados, mas os da autarquia não podem ser penhorados, uma vez que seus bens são públicos."
+      ],
+      "answer": 3,
+      "explanation": "“Os bens das autarquias são bens públicos (art. 99 do CC) e, portanto, impenhoráveis (art. 100 do CC), submetendo-se ao regime de precatórios (art. 100 da CF). As sociedades de economia mista que exploram atividade econômica sujeitam-se ao regime jurídico próprio das empresas privadas (art. 173, § 1º, II, da CF), tendo seus bens natureza privada e, portanto, penhoráveis.” — Código Civil (Lei nº 10.406/2002), arts. 98, 99 e 100; e CRFB/88, art. 100 e art. 173, § 1º, II. Justificativa objetiva: Os bens das autarquias são públicos e impenhoráveis. Já os bens das sociedades de economia mista exploradoras de atividade econômica são privados e penhoráveis. Portanto, Juliana poderá penhorar os bens da sociedade de economia mista, mas não os da autarquia, cujo pagamento deverá seguir o rito dos precatórios. A alternativa D descreve corretamente a situação."
     }
   ]
 }
