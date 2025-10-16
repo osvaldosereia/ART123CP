@@ -83,35 +83,37 @@
       <div class="state" id="state">pronto</div>
     </header>
 
-    <section class="intro" id="screenIntro">
-      <p class="muted" id="introSubtitle">Escolha uma categoria e um tema para começar ou faça uma busca global.</p>
-      <div class="controls">
-        <div>
-          <label for="selCategory">Categoria</label>
-          <select id="selCategory" aria-label="Categoria"></select>
-        </div>
-        <div>
-          <label for="selTheme">Tema</label>
-          <select id="selTheme" aria-label="Tema"></select>
-        </div>
-      </div>
+   <section class="intro" id="screenIntro">
+  <p class="muted" id="introSubtitle">Escolha uma categoria e um tema para começar ou faça uma busca global.</p>
 
-      <!-- Busca global -->
-      <div class="controls" style="margin-top:8px">
-        <div>
-          <label for="txtGlobal">Buscar em todos os temas</label>
-          <input id="txtGlobal" type="search" placeholder="Termo exato em enunciados e opções" />
-        </div>
-        <div class="actions" style="align-items:end;padding-top:0">
-          <button id="btnGlobal" class="btn ghost" type="button">Buscar em todos</button>
-        </div>
-      </div>
+  <div class="controls">
+    <div>
+      <label for="selCategory">Categoria</label>
+      <select id="selCategory" aria-label="Categoria"></select>
+    </div>
+    <div>
+      <label for="selTheme">Tema</label>
+      <select id="selTheme" aria-label="Tema"></select>
+    </div>
+  </div>
 
-      <div class="actions">
-        <button id="btnStart" class="btn primary" type="button">Começar</button>
-        <button id="btnResume" class="btn ghost hide" type="button">Continuar anterior</button>
-      </div>
-    </section>
+  <div class="actions">
+    <button id="btnStart" class="btn primary" type="button">Começar</button>
+    <button id="btnResume" class="btn ghost hide" type="button">Continuar anterior</button>
+  </div>
+
+  <!-- Busca global (agora por último) -->
+  <div class="controls" style="margin-top:8px">
+    <div>
+      <label for="txtGlobal">Buscar em todos os temas</label>
+      <input id="txtGlobal" type="search" placeholder="Termo exato em enunciados e opções" />
+    </div>
+    <div class="actions" style="align-items:end;padding-top:0">
+      <button id="btnGlobal" class="btn ghost" type="button">Buscar em todos</button>
+    </div>
+  </div>
+</section>
+
 
     <section class="quiz hide" id="screenQuiz">
       <div class="progress" aria-label="Progresso"><span id="bar"></span></div>
