@@ -64,6 +64,16 @@
       .options{ gap:16px }
       .opt{ padding:18px 18px }
     }
+
+    /* Toast */
+    .toast-wrap{position:fixed;inset:auto 0 16px 0;display:flex;justify-content:center;pointer-events:none;z-index:9999}
+    .toast{min-width:200px;max-width:420px;margin:0 12px;padding:10px 12px;border-radius:10px;
+      font-size:14px;line-height:1.4;border:1px solid #e5e7eb;background:#fff;color:#0f172a;
+      box-shadow:0 6px 20px rgba(0,0,0,.08);pointer-events:auto;transition:opacity .18s ease,transform .18s ease}
+    .toast.success{border-color:rgba(5,150,105,.5);background:#f0fdf4}
+    .toast.info{background:#f9fafb}
+    .toast.warn{border-color:#f59e0b;background:#fffbeb}
+    .toast.error{border-color:rgba(185,28,28,.6);background:#fef2f2}
   </style>
 </head>
 <body>
@@ -129,6 +139,23 @@
       dataDir: 'data'
     };
     const AUTO_RESUME = true;
+
+    // ===== Toast =====
+    const getToastWrap = ()=> {
+      let w = document.querySelector('.toast-wrap');
+      if(!w){ w=document.createElement('div'); w.className='toast-wrap'; document.body.appendChild(w); }
+      return w;
+    };
+    function toast(msg, type='info', ms=2000){
+      const wrap=getToastWrap();
+      const el=document.createElement('div');
+      el.className=`toast ${type}`;
+      el.textContent=msg;
+      wrap.appendChild(el);
+      const close=()=>{ if(!el.isConnected) return; el.style.opacity='0'; el.style.transform='translateY(6px)'; setTimeout(()=> el.remove(),180); };
+      el.addEventListener('click', close);
+      setTimeout(close, ms);
+    }
 
     // ===== Seletores =====
     const selCategory = document.getElementById('selCategory');
@@ -267,7 +294,7 @@
         const manifestFallback={
           title:'MeuJus',
           categories:[{id:'intro',name:'Introdução',themes:[{id:'basico',name:'Básico',path:'data/intro/basico.json'}]}],
-          shuffleDefault:{questions:false,options:true}, // nunca embaralhar perguntas
+          shuffleDefault:{questions:false,options:true},
           persistDefault:true,
           outro:{message:'Obrigado por participar.'}
         };
@@ -301,7 +328,7 @@
       appTitle.addEventListener('click', goHome);
       appTitle.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' ') goHome(); });
 
-      btnRetry.addEventListener('click', ()=> loadQuiz(KEY?.path, true));
+      btnRetry.addEventListener('click', ()=> { loadQuiz(KEY?.path, true); toast('Quiz reiniciado','info'); });
 
       const last = lsGet('quiz:last');
       if (last && last.path) {
@@ -309,6 +336,9 @@
         btnResume.addEventListener('click', async ()=>{ KEY = last; await loadQuiz(last.path, false, true); });
         if (AUTO_RESUME) { KEY = last; await loadQuiz(last.path, false, true); return; }
       }
+
+      window.addEventListener('offline', ()=>toast('Sem conexão. Usando cache local','warn',3000));
+      window.addEventListener('online',  ()=>toast('Conexão restabelecida','success',1800));
 
       setTimeout(runTests,0);
     }
@@ -354,7 +384,12 @@
     async function loadQuiz(path, fresh=false, tryRestore=false){
       state.textContent='carregando';
       const qz=await loadJSON(path);
-      if(!qz || !Array.isArray(qz.questions)){ alert('Quiz não encontrado: '+path); state.textContent='erro'; return; }
+      if(!qz || !Array.isArray(qz.questions)){
+        alert('Quiz não encontrado: '+path);
+        state.textContent='erro';
+        toast('Falha ao carregar o quiz','error',3000);
+        return;
+      }
       QUIZ=qz; KEY={path, key:`quiz:${path}`};
 
       try{ if(qz.labels){ LABELS={...LABELS, ...(await loadJSON(qz.labels))}; applyLabels(); } }catch{}
@@ -362,18 +397,20 @@
       const total=(qz.questions||[]).length;
       let saved = tryRestore ? lsGet(KEY.key) : null;
 
-      ORDER=[...Array(total).keys()];           // ordem natural 0..n-1
+      ORDER=[...Array(total).keys()]; // 0..n-1
       CHOSEN=new Array(total).fill(null);
       I=0;
 
       if(!fresh && saved && saved.quizLen===total){
-        if(Array.isArray(saved.order) && saved.order.length===total) ORDER = saved.order; // preserva ordem anterior se existir
+        if(Array.isArray(saved.order) && saved.order.length===total) ORDER = saved.order;
         if(Array.isArray(saved.chosen)) CHOSEN = saved.chosen;
         I = clamp(saved.i,0,total-1);
-      } // sem else: nunca embaralhar perguntas
+      }
 
       state.textContent='respondendo';
       show(screenIntro,false); show(screenQuiz,true); show(screenResult,false);
+      toast('Quiz carregado','info');
+      if(!fresh && saved) toast(`Progresso restaurado na questão ${I+1}/${total}`,'success',2200);
       render();
     }
 
@@ -412,7 +449,7 @@
         renderOptions(['Verdadeiro','Falso'], (idx)=> select(idx===0), [0,1]);
       } else {
         const opts=q.options.map((t,i)=>({t,i}));
-        const shOpts = opts; // opções fixas aqui
+        const shOpts = opts; // opções fixas
         renderOptions(shOpts.map(o=>o.t), (idx)=> select(shOpts[idx].i), shOpts.map(o=>o.i));
       }
 
@@ -435,7 +472,13 @@
 
     function isLocked(){ return optionsEl.querySelector('.correct, .wrong') != null; }
 
-    function select(value){ if(isLocked()) return; CHOSEN[ ORDER[I] ] = value; lockAndExplain(value); persist(); }
+    function select(value){
+      if(isLocked()) return;
+      CHOSEN[ ORDER[I] ] = value;
+      toast('Resposta salva','info',1200);
+      lockAndExplain(value);
+      persist();
+    }
 
     function lockAndExplain(value){
       const q=current(); const type=q.type||'multiple';
@@ -453,9 +496,9 @@
         if(!correct && chosenBtn) chosenBtn.classList.add('wrong');
       }
       state.textContent = correct? 'correto' : 'incorreto';
+      toast(correct?'Correto':'Incorreto', correct?'success':'warn',1500);
       explainEl.textContent = q.explanation || '';
       explainEl.classList.toggle('hide', !q.explanation);
-
       show(btnAI, true);
     }
 
@@ -471,7 +514,10 @@
       lockAndExplain(val);
     }
 
-    function next(){ if(!isLocked()) return; if(I<QUIZ.questions.length-1){ I++; render(); } else finish(); }
+    function next(){
+      if(!isLocked()){ toast('Selecione uma opção para avançar','warn',1600); return; }
+      if(I<QUIZ.questions.length-1){ I++; render(); } else finish();
+    }
     function prev(){ if(I>0){ I--; render(); } }
 
     function score(){
@@ -491,6 +537,7 @@
       resultMsg.textContent=QUIZ.meta?.outroMessage || MANIFEST?.outro?.message || '';
       state.textContent='concluído';
       show(screenQuiz,false); show(screenResult,true);
+      toast('Você concluiu o quiz','success',2500);
     }
 
     function openGoogleAI(){
