@@ -1,6 +1,7 @@
+```json
 {
   "meta": {
-    "title": "Normas Fundamentais do Processo Civil",
+    "title": "Normas Fundamentais do Processo Civil (Arts. 1º a 12 do CPC)",
     "category": "processo_civil",
     "theme": "normas_fundamentais",
     "shuffle": {
@@ -13,263 +14,244 @@
   "questions": [
     {
       "type": "multiple",
-      "q": "Em demanda complexa, o juiz, ao proferir a sentença, adota tese jurídica inovadora, não suscitada pelas partes nem objeto de debate prévio nos autos, para julgar o mérito da causa. Considerando as normas fundamentais do processo civil, a decisão é:",
+      "q": "De acordo com as normas fundamentais do processo civil, ao aplicar o ordenamento jurídico, o juiz deve resguardar e promover a dignidade da pessoa humana, observando, entre outros, determinados princípios. Qual das seguintes alternativas NÃO apresenta um dos princípios expressamente mencionados no Art. 8º do Código de Processo Civil?",
       "options": [
-        "Válida, pois o princípio do impulso oficial (art. 2º do CPC) e o brocardo 'iura novit curia' autorizam o juiz a aplicar o direito independentemente da argumentação das partes.",
-        "Nula, por violar o princípio da cooperação (art. 6º do CPC), que exige um diálogo processual constante entre juiz e partes para a formação da decisão.",
-        "Válida, desde que se trate de matéria de ordem pública, sobre a qual o juiz deve decidir de ofício, independentemente de provocação ou manifestação das partes.",
-        "Anulável, caso a parte prejudicada demonstre, em sede de recurso, o efetivo prejuízo decorrente da ausência de manifestação prévia sobre o fundamento inédito.",
-        "Nula, por ofensa direta ao princípio da não surpresa, positivado no art. 10 do CPC, que veda decisão com base em fundamento sobre o qual não se deu às partes oportunidade de se manifestar."
-      ],
-      "answer": 4,
-      "explanation": "A decisão é nula. O art. 10 do CPC é categórico ao proibir que o juiz decida com base em fundamento a respeito do qual não se tenha dado às partes oportunidade de se manifestar, ainda que se trate de matéria sobre a qual deva decidir de ofício. Trata-se da vedação à 'decisão surpresa', um dos pilares do contraditório no novo CPC."
-    },
-    {
-      "type": "multiple",
-      "q": "Tício ajuizou ação de cobrança em face de Mévio. Após a conclusão dos autos para sentença, o juiz verificou a existência de dezenas de outros processos em idêntica situação na lista cronológica. Contudo, o processo de Tício se enquadrava em uma hipótese de julgamento de improcedência liminar do pedido. À luz do art. 12 do CPC, o magistrado:",
-      "options": [
-        "Deverá respeitar a ordem cronológica de conclusão, sob pena de violação ao princípio da isonomia, não podendo proferir a sentença de Tício antes dos demais.",
-        "Poderá julgar o processo de Tício prioritariamente, pois as sentenças de improcedência liminar do pedido constituem uma exceção expressa à regra da ordem cronológica.",
-        "Poderá julgar o processo de Tício prioritariamente, mas apenas se houver concordância da parte contrária, em observância ao princípio da cooperação.",
-        "Deverá consultar a lista de preferências legais e as metas do CNJ antes de decidir, pois estas se sobrepõem a qualquer outra exceção à ordem cronológica.",
-        "Deverá justificar a urgência do julgamento em decisão fundamentada para poder quebrar a ordem cronológica, conforme o art. 12, § 2º, IX, do CPC."
-      ],
-      "answer": 1,
-      "explanation": "O magistrado pode julgar o processo prioritariamente. O art. 12, § 2º, I, do CPC, exclui expressamente da regra da ordem cronológica de conclusão as sentenças homologatórias de acordo ou de improcedência liminar do pedido, permitindo seu julgamento imediato."
-    },
-    {
-      "type": "multiple",
-      "q": "Caio, em situação de urgência contemporânea à propositura da ação, requer a concessão de tutela provisória de urgência em caráter liminar. O magistrado, com base no art. 9º, parágrafo único, I, do CPC, defere a medida 'inaudita altera parte'. Esta decisão, no que tange ao princípio do contraditório, representa uma:",
-      "options": [
-        "Supressão definitiva do contraditório, justificada pela urgência, não sendo mais possível a manifestação do réu sobre a medida.",
-        "Violação ao contraditório, tornando a decisão nula, pois o princípio é absoluto e não admite exceções, mesmo em tutelas de urgência.",
-        "Postergação ou diferimento do contraditório, que será exercido em momento ulterior, após a efetivação da medida, garantindo-se assim a sua eficácia.",
-        "Mitigação do contraditório, que se exercerá de forma limitada, permitindo ao réu apenas a interposição de agravo de instrumento, sem direito a produzir novas provas.",
-        "Confirmação do contraditório prévio, pois a análise dos pressupostos da urgência feita pelo juiz já supre a necessidade de oitiva da parte contrária."
+        "Proporcionalidade e razoabilidade.",
+        "Legalidade e eficiência.",
+        "Celeridade e economia processual.",
+        "Publicidade e bem comum."
       ],
       "answer": 2,
-      "explanation": "A concessão de tutela provisória de urgência 'inaudita altera parte' não suprime nem viola o contraditório; apenas o posterga. O contraditório, neste caso, é diferido ou postecipado, sendo plenamente exercido pelo réu após a sua citação ou intimação, garantindo-se o devido processo legal sem sacrificar a eficácia da medida."
+      "explanation": "Conforme o Art. 8º: 'Ao aplicar o ordenamento jurídico, o juiz atenderá aos fins sociais e às exigências do bem comum, resguardando e promovendo a dignidade da pessoa humana e observando a proporcionalidade, a razoabilidade, a legalidade, a publicidade и a eficiência'. Os princípios da celeridade e da economia processual, embora relevantes, não estão expressamente listados neste artigo."
     },
     {
       "type": "multiple",
-      "q": "Ao interpretar determinada cláusula contratual, o juiz se depara com uma situação que, embora legal em sua literalidade, gera um desequilíbrio flagrante entre as partes, beneficiando excessivamente uma corporação em detrimento de um particular. Conforme o art. 8º do CPC, o juiz deve:",
+      "q": "O Código de Processo Civil estabelece o princípio da cooperação, segundo o qual todos os sujeitos do processo devem agir de forma colaborativa. Conforme o Art. 6º, qual é a finalidade precípua dessa cooperação?",
       "options": [
-        "Aplicar a lei de forma estrita e literal, pois sua função é ser a 'boca da lei', não cabendo-lhe realizar juízos de valor sobre o bem comum ou a justiça do resultado.",
-        "Extinguir o processo sem resolução de mérito por impossibilidade jurídica do pedido, dado o desequilíbrio contratual.",
-        "Ignorar a cláusula e decidir com base na equidade, substituindo a vontade das partes por seu próprio critério de justiça.",
-        "Atender aos fins sociais da lei e às exigências do bem comum, resguardando a dignidade da pessoa humana e observando a proporcionalidade e a razoabilidade na aplicação da norma.",
-        "Declarar de ofício a inconstitucionalidade da norma que permite tal cláusula, exercendo o controle difuso de constitucionalidade."
+        "Acelerar o trâmite processual para atender às metas do Conselho Nacional de Justiça.",
+        "Obter, em tempo razoável, decisão de mérito justa e efetiva.",
+        "Facilitar a produção de provas e a instrução processual, independentemente do resultado.",
+        "Reduzir os custos do processo e promover a conciliação a qualquer custo."
+      ],
+      "answer": 1,
+      "explanation": "O Art. 6º dispõe que: 'Todos os sujeitos do processo devem cooperar entre si para que se obtenha, em tempo razoável, decisão de mérito justa e efetiva'. A finalidade é a obtenção de uma decisão de mérito qualificada pela justiça, efetividade e razoável duração."
+    },
+    {
+      "type": "multiple",
+      "q": "O princípio do contraditório é uma viga mestra do processo civil. O Art. 9º veda a decisão surpresa, mas admite exceções. Assinale a alternativa que indica uma situação em que é permitido ao juiz proferir decisão sem a oitiva prévia da parte contrária, conforme o parágrafo único do referido artigo.",
+      "options": [
+        "Na tutela da evidência fundada em abuso do direito de defesa ou manifesto propósito protelatório da parte.",
+        "Em qualquer hipótese de tutela provisória, seja de urgência ou de evidência.",
+        "Na decisão que indefere a petição inicial por inépcia.",
+        "Na tutela provisória de urgência."
       ],
       "answer": 3,
-      "explanation": "O art. 8º do CPC impõe ao juiz um papel ativo na concretização de valores constitucionais. Ele deve aplicar o ordenamento jurídico de forma a promover os fins sociais, o bem comum, a dignidade da pessoa humana, a proporcionalidade e a razoabilidade, superando uma visão meramente positivista e literal."
+      "explanation": "O Art. 9º, parágrafo único, I, excepciona a regra do contraditório prévio nos casos de 'tutela provisória de urgência'. A tutela da evidência baseada no art. 311, I (abuso do direito de defesa) exige o contraditório prévio, ao contrário das hipóteses dos incisos II e III do mesmo artigo."
     },
     {
       "type": "multiple",
-      "q": "O princípio da cooperação (art. 6º do CPC) impõe deveres a todos os sujeitos processuais. Qual das seguintes condutas melhor exemplifica a aplicação deste princípio pelo magistrado?",
+      "q": "A respeito da ordem cronológica de conclusão para julgamento, prevista no Art. 12 do CPC, assinale a afirmativa correta.",
       "options": [
-        "Ocultar sua linha de raciocínio até a prolação da sentença para manter a imparcialidade e evitar prejulgamento.",
-        "Proferir despachos genéricos e padronizados, visando à celeridade processual em detrimento do esclarecimento às partes.",
-        "Sugerir a conciliação de forma protocolar no início da audiência, sem envidar esforços reais para a composição das partes.",
-        "Indeferir a produção de provas requeridas pela parte, mesmo que pertinentes, por considerá-las desnecessárias segundo seu livre convencimento já formado.",
-        "Proferir despacho de saneamento e organização do processo, delimitando as questões de fato e de direito relevantes e distribuindo o ônus da prova de forma clara."
+        "A regra da ordem cronológica aplica-se indistintamente a todos os processos, sem exceções, para garantir a isonomia.",
+        "O julgamento de embargos de declaração e o de agravo interno são exemplos de processos excluídos da regra do 'caput'.",
+        "Um requerimento formulado pela parte, após a inclusão do processo na lista, sempre alterará a ordem cronológica para a decisão.",
+        "Processos que tenham sua sentença anulada retornam ao final da lista de conclusão para novo julgamento."
       ],
-      "answer": 4,
-      "explanation": "O despacho de saneamento e organização é um dos maiores exemplos do dever de cooperação do juiz. Ao delimitar as questões controvertidas (dever de esclarecimento), consultar as partes (dever de diálogo) e distribuir o ônus probatório (dever de prevenção), o juiz coopera para que se obtenha uma decisão de mérito justa e efetiva."
+      "answer": 1,
+      "explanation": "O Art. 12, § 2º, V e VI, estabelece expressamente que estão excluídos da regra do caput 'o julgamento de embargos de declaração' e 'o julgamento de agravo interno'."
     },
     {
       "type": "multiple",
-      "q": "Em relação à arbitragem, prevista no art. 3º, § 1º, do CPC, é correto afirmar que:",
+      "q": "O Art. 10 do CPC proíbe o juiz de decidir com base em fundamento sobre o qual não se tenha dado às partes oportunidade de se manifestar. Essa vedação aplica-se:",
       "options": [
-        "Sua instituição em um contrato afasta a apreciação do Poder Judiciário sobre qualquer matéria relacionada ao litígio, inclusive a validade da cláusula arbitral e a execução da sentença arbitral.",
-        "A existência de convenção de arbitragem pode ser arguida a qualquer tempo e grau de jurisdição, por se tratar de matéria de ordem pública.",
-        "A opção pela arbitragem viola o princípio constitucional da inafastabilidade da jurisdição (art. 5º, XXXV, da CF), sendo permitida apenas em caráter excepcional.",
-        "Trata-se de método de solução de conflitos que, uma vez pactuado em cláusula compromissória, afasta a jurisdição estatal para a resolução do mérito da controvérsia, que será decidida pelos árbitros.",
-        "O juiz estatal, ao identificar uma cláusula arbitral em contrato, deve extinguir o processo de ofício, com resolução de mérito, reconhecendo a competência do juízo arbitral."
-      ],
-      "answer": 3,
-      "explanation": "A arbitragem é um meio heterocompositivo de solução de conflitos onde as partes elegem um terceiro (árbitro) para decidir a lide. A existência de uma cláusula compromissória válida afasta a jurisdição do Estado para julgar o mérito daquela controvérsia específica, configurando uma exceção ao princípio da inafastabilidade da jurisdição estatal, mas não do acesso à justiça. O judiciário ainda pode ser provocado para questões como a validade da cláusula ou a execução da sentença."
-    },
-    {
-      "type": "multiple",
-      "q": "O direito das partes de obter em prazo razoável a solução integral do mérito, conforme o art. 4º do CPC, abrange:",
-      "options": [
-        "Apenas a fase de conhecimento, até a prolação da sentença, sendo que a fase de cumprimento de sentença rege-se por outros princípios.",
-        "Apenas o direito a uma sentença de mérito, não incluindo a efetivação material do direito reconhecido na decisão.",
-        "Tanto a atividade de cognição quanto a atividade satisfativa, significando que o processo só se encerra com a entrega efetiva do bem da vida pretendido.",
-        "A prioridade absoluta de julgamento em detrimento de qualquer outra norma processual, inclusive as que garantem o contraditório e a ampla defesa.",
-        "Exclusivamente os processos de natureza alimentar ou que envolvam direitos fundamentais, não se aplicando a litígios de natureza puramente patrimonial."
+        "Apenas a fundamentos de fato, não se aplicando a questões de direito que o juiz pode conhecer de ofício.",
+        "Apenas em primeiro grau de jurisdição, pois nos tribunais prevalece o efeito translativo dos recursos.",
+        "Em qualquer grau de jurisdição, ainda que se trate de matéria sobre a qual o juiz deva decidir de ofício.",
+        "Apenas a matérias que foram arguidas pelas partes, não abrangendo aquelas que o juiz pode conhecer ex officio."
       ],
       "answer": 2,
-      "explanation": "O art. 4º é claro ao afirmar que a solução integral do mérito 'incluída a atividade satisfativa'. Isso significa que o direito à duração razoável do processo engloba não apenas a fase de conhecimento (que leva à sentença), mas também a fase de cumprimento de sentença ou execução, até que o direito reconhecido seja efetivamente satisfeito."
+      "explanation": "A literalidade do Art. 10 é clara ao determinar que 'O juiz não pode decidir, em grau algum de jurisdição, com base em fundamento a respeito do qual não se tenha dado às partes oportunidade de se manifestar, ainda que se trate de matéria sobre a qual deva decidir de ofício'."
     },
     {
       "type": "multiple",
-      "q": "A cláusula geral da boa-fé processual, insculpida no art. 5º do CPC, tem como principal função:",
+      "q": "Analisando o Art. 3º do CPC, que consagra o princípio do acesso à justiça, é correto afirmar que:",
       "options": [
-        "Impor às partes um dever de veracidade absoluta sobre todos os fatos alegados, sob pena de nulidade processual.",
-        "Criar um padrão de conduta ético e leal que deve ser observado por todos os participantes do processo, visando a coibir atos de má-fé e a procrastinação.",
-        "Permitir que o juiz julgue por equidade em todos os casos, relativizando as normas processuais em nome de um ideal de justiça.",
-        "Substituir o princípio dispositivo, autorizando o juiz a investigar fatos e produzir provas de ofício, mesmo em se tratando de direitos patrimoniais disponíveis.",
-        "Limitar-se a ser uma norma de caráter meramente programático, sem sanções processuais concretas para o seu descumprimento."
-      ],
-      "answer": 1,
-      "explanation": "O art. 5º estabelece um dever geral de boa-fé objetiva, que impõe um padrão de comportamento leal, probo e cooperativo a todos os sujeitos processuais (partes, juízes, advogados, peritos etc.). Seu descumprimento pode gerar diversas sanções, como a condenação por litigância de má-fé, a vedação a comportamentos contraditórios ('venire contra factum proprium') e a responsabilização por danos processuais."
-    },
-    {
-      "type": "multiple",
-      "q": "O princípio da paridade de tratamento, ou isonomia processual (art. 7º do CPC), implica que:",
-      "options": [
-        "O juiz deve conceder às partes exatamente os mesmos prazos e as mesmas oportunidades, independentemente de suas condições particulares, em nome da isonomia formal.",
-        "O juiz deve tratar os desiguais na medida de sua desigualdade, buscando um equilíbrio real de forças no processo, o que pode justificar, por exemplo, a inversão do ônus da prova.",
-        "O Ministério Público e a Fazenda Pública não podem ter prerrogativas processuais, como prazos em dobro, pois isso violaria a paridade de armas com o particular.",
-        "As partes devem ter exatamente o mesmo número de testemunhas e a mesma quantidade de páginas em suas petições para garantir o equilíbrio.",
-        "O advogado do autor e do réu devem ter o mesmo tempo para sustentação oral, sendo esta a única e principal manifestação do princípio da paridade de tratamento."
-      ],
-      "answer": 1,
-      "explanation": "O princípio da isonomia processual, conforme o art. 7º, deve ser compreendido em sua dimensão material, e não meramente formal. Compete ao juiz zelar pelo efetivo contraditório, o que significa tratar os desiguais na medida de suas desigualdades para restabelecer o equilíbrio processual. A inversão do ônus da prova em relações de consumo é um exemplo clássico dessa 'paridade de armas' substancial."
-    },
-    {
-      "type": "multiple",
-      "q": "O art. 1º do CPC estabelece que o processo civil será interpretado conforme os valores e as normas fundamentais da Constituição. Essa disposição, conhecida como 'constitucionalização do processo', significa que:",
-      "options": [
-        "As normas processuais prevalecem sobre as normas constitucionais em caso de conflito, por serem mais específicas.",
-        "O Código de Processo Civil é hierarquicamente superior às demais leis ordinárias que tratam de procedimento.",
-        "A Constituição passa a ter aplicabilidade meramente mediata no processo, dependendo da intermediação do CPC.",
-        "Toda e qualquer norma processual do CPC deve ser lida e aplicada através de um 'filtro constitucional', à luz dos direitos e garantias fundamentais.",
-        "O Supremo Tribunal Federal passa a ser a única instância competente para julgar qualquer matéria de direito processual civil."
+        "A apreciação jurisdicional de ameaça ou lesão a direito é absoluta, não admitindo formas alternativas de solução de conflitos como a arbitragem.",
+        "A conciliação e a mediação são métodos de solução de conflitos que devem ser estimulados apenas na fase postulatória do processo.",
+        "O Estado tem o dever de promover a solução consensual dos conflitos, mas apenas quando provocado pela parte interessada.",
+        "É permitida a arbitragem, e o estímulo a métodos como conciliação e mediação deve ocorrer inclusive no curso do processo judicial."
       ],
       "answer": 3,
-      "explanation": "A constitucionalização do processo, positivada no art. 1º do CPC, impõe que a Constituição Federal seja o fundamento de validade e o vetor interpretativo de todo o sistema processual. As normas do CPC devem ser interpretadas de modo a concretizar os valores e princípios constitucionais, como o devido processo legal, o contraditório, a ampla defesa e a dignidade da pessoa humana."
+      "explanation": "Conforme o Art. 3º, § 1º, 'É permitida a arbitragem, na forma da lei', e o § 3º complementa que 'A conciliação, a mediação e outros métodos de solução consensual de conflitos deverão ser estimulados por juízes, advogados, defensores públicos e membros do Ministério Público, inclusive no curso do processo judicial'."
     },
     {
       "type": "multiple",
-      "q": "Um recurso de apelação teve seu acórdão anulado pelo Superior Tribunal de Justiça, que determinou o retorno dos autos ao tribunal de origem para novo julgamento, sem necessidade de complementação da instrução. De acordo com o art. 12 do CPC, esse processo:",
+      "q": "O Art. 5º do CPC impõe a todos que participam do processo o dever de se comportar de acordo com a boa-fé. Este dever:",
       "options": [
-        "Retornará ao final da lista cronológica de julgamento do órgão colegiado.",
-        "Terá preferência sobre todos os outros processos, inclusive sobre aqueles com preferência legal, como os de idosos ou habeas corpus.",
-        "Entrará na lista de processos aptos a julgamento, respeitando a ordem de sua nova conclusão, sem qualquer preferência.",
-        "Ocupará o primeiro lugar na lista de julgamento, salvo se houver outro processo na mesma situação, caso em que se respeitará a ordem de chegada.",
-        "Aguardará a elaboração de uma lista própria para processos com decisões anuladas, que será julgada após as preferências legais e metas do CNJ."
-      ],
-      "answer": 3,
-      "explanation": "Conforme o art. 12, § 6º, I, do CPC, o processo que tiver sua sentença ou acórdão anulado ocupará o primeiro lugar na lista de julgamento, desde que não haja necessidade de realização de diligência ou de complementação da instrução. Trata-se de uma regra específica para dar celeridade a processos que retornam das instâncias superiores para rejulgamento."
-    },
-    {
-      "type": "multiple",
-      "q": "Em relação à fundamentação das decisões judiciais, exigida pelo art. 11 do CPC e pelo art. 93, IX, da CF, assinale a alternativa correta.",
-      "options": [
-        "A exigência de fundamentação aplica-se apenas às sentenças de mérito, estando dispensadas as decisões interlocutórias e os despachos.",
-        "Considera-se fundamentada a decisão que apenas invoca, sem explicar sua pertinência ao caso, um precedente ou um enunciado de súmula.",
-        "A ausência de fundamentação gera a anulabilidade da decisão, que pode ser convalidada se a parte não recorrer no momento oportuno.",
-        "A fundamentação é um requisito de validade do ato judicial, e sua ausência acarreta a nulidade absoluta da decisão, que pode ser reconhecida a qualquer tempo.",
-        "O juiz pode fundamentar sua decisão exclusivamente em motivos de ordem pessoal, desde que os declare expressamente nos autos."
-      ],
-      "answer": 3,
-      "explanation": "A fundamentação das decisões é uma garantia constitucional (art. 93, IX, CF) e uma norma fundamental do processo (art. 11, CPC). Sua ausência não é mera irregularidade, mas sim vício que acarreta a nulidade absoluta do ato decisório, por violar o devido processo legal e o direito das partes de saberem as razões do convencimento do julgador."
-    },
-    {
-      "type": "multiple",
-      "q": "O princípio do impulso oficial, previsto na segunda parte do art. 2º do CPC, significa que, uma vez iniciado o processo pela parte, compete:",
-      "options": [
-        "À parte interessada praticar todos os atos necessários para o andamento do feito, sob pena de extinção por abandono.",
-        "Ao juiz, de ofício, dar andamento ao processo, determinando a realização dos atos e diligências necessários para a sua instrução e julgamento.",
-        "Ao escrivão ou chefe de secretaria movimentar o processo independentemente de despacho judicial, seguindo um fluxo automatizado.",
-        "Exclusivamente ao Ministério Público, como fiscal da ordem jurídica, requerer as medidas para o desenvolvimento válido e regular do processo.",
-        "Às partes, em comum acordo, estabelecer um calendário processual, definindo as datas para a prática dos atos subsequentes."
-      ],
-      "answer": 1,
-      "explanation": "O processo no Brasil é regido pelo sistema misto: inicia-se pela provocação da parte (princípio da inércia ou da demanda), mas, uma vez instaurada a relação processual, seu desenvolvimento compete ao juiz (princípio do impulso oficial), que deve determinar a realização dos atos necessários para que o processo atinja seu fim, que é a solução do mérito."
-    },
-    {
-      "type": "multiple",
-      "q": "No curso de um processo, uma das partes formula um requerimento incidental. Após a análise do pedido, o juiz o decide. Segundo o art. 12, § 5º, do CPC, o processo, que estava na lista de julgamento, retornará:",
-      "options": [
-        "Para o final da lista cronológica, pois qualquer petição incidental altera a ordem de conclusão.",
-        "Para a mesma posição em que anteriormente se encontrava na lista, caso o requerimento não tenha implicado reabertura da instrução.",
-        "Para uma posição intermediária na lista, a critério do juiz, conforme a complexidade do requerimento decidido.",
-        "Para o primeiro lugar da lista, como compensação pelo tempo despendido na análise do incidente.",
-        "Para uma lista de espera específica, aguardando que todos os processos concluídos anteriormente sejam julgados."
-      ],
-      "answer": 1,
-      "explanation": "O art. 12, §§ 4º e 5º, do CPC, estabelece uma regra de estabilidade da lista cronológica. Um requerimento formulado pela parte, em regra, não altera a ordem. Após sua decisão, o processo retorna à mesma posição que ocupava antes, a não ser que a decisão sobre o requerimento implique a reabertura da instrução ou a conversão do julgamento em diligência."
-    },
-    {
-      "type": "multiple",
-      "q": "Qual das seguintes hipóteses NÃO se enquadra nas exceções ao contraditório prévio, previstas no parágrafo único do art. 9º do CPC?",
-      "options": [
-        "A concessão de tutela provisória de urgência de natureza antecipada ou cautelar.",
-        "A decretação de improcedência liminar do pedido nas hipóteses do art. 332 do CPC.",
-        "A expedição de mandado de pagamento em ação monitória, conforme o art. 701 do CPC.",
-        "A concessão de tutela da evidência quando as alegações de fato puderem ser comprovadas apenas documentalmente e houver tese firmada em julgamento de casos repetitivos.",
-        "A concessão de tutela da evidência fundada em abuso do direito de defesa ou manifesto propósito protelatório da parte."
-      ],
-      "answer": 1,
-      "explanation": "A improcedência liminar do pedido (art. 332) não está listada como uma exceção ao contraditório prévio no art. 9º. Embora seja uma decisão proferida no início do processo, ela é uma sentença de mérito contra o autor, que já exerceu sua manifestação na petição inicial. As exceções do art. 9º são hipóteses em que uma decisão é proferida contra uma parte (geralmente o réu) antes de sua oitiva."
-    },
-    {
-      "type": "multiple",
-      "q": "A promoção da solução consensual dos conflitos, conforme o art. 3º, §§ 2º e 3º, do CPC, é um dever:",
-      "options": [
-        "Exclusivo do juiz, que pode, inclusive, impor às partes a participação em sessões de mediação como condição para o prosseguimento do feito.",
-        "Restrito à fase postulatória do processo, não podendo ser estimulada após o saneamento do feito.",
-        "De todos os sujeitos do processo, incluindo juízes, advogados, defensores e membros do Ministério Público, que devem estimulá-la a qualquer tempo, inclusive na fase recursal.",
-        "Aplicável apenas a direitos patrimoniais disponíveis, sendo vedada em litígios que envolvam o Estado ou direitos indisponíveis.",
-        "Que transforma o processo judicial em uma fase secundária, devendo a parte comprovar a tentativa prévia de autocomposição para ter acesso ao Judiciário."
+        "Aplica-se somente às partes e seus procuradores, excluindo-se o juiz e os auxiliares da justiça.",
+        "Refere-se exclusivamente à boa-fé subjetiva, relacionada à intenção do agente processual.",
+        "É uma cláusula geral que se impõe a todos os participantes do processo, sem exceção.",
+        "Limita-se a proibir a litigância de má-fé, não abrangendo outros comportamentos processuais."
       ],
       "answer": 2,
-      "explanation": "O art. 3º, § 3º, estabelece um dever amplo e contínuo de estímulo à autocomposição, que recai sobre todos os operadores do direito envolvidos no processo (juízes, advogados, defensores, promotores). Esse estímulo deve ocorrer 'inclusive no curso do processo judicial', o que abrange todas as suas fases, da postulatória à recursal."
+      "explanation": "O Art. 5º estabelece que 'Aquele que de qualquer forma participa do processo deve comportar-se de acordo com a boa-fé'. A expressão 'aquele que de qualquer forma participa' é ampla e abrange todos os sujeitos processuais, incluindo juiz, partes, advogados e auxiliares."
     },
     {
       "type": "multiple",
-      "q": "Um tribunal decide um recurso com base em um dispositivo legal que não foi prequestionado nem debatido pelas partes no processo. À luz dos artigos 9º e 10 do CPC, essa situação caracteriza:",
+      "q": "Consoante o Art. 2º do CPC, que trata do princípio do impulso oficial e da inércia da jurisdição, pode-se afirmar que:",
       "options": [
-        "Uma aplicação legítima do efeito translativo dos recursos, que permite ao tribunal conhecer de ofício de matérias de ordem pública.",
-        "Uma violação ao princípio da adstrição ou congruência, pois o tribunal decidiu fora do que foi pedido.",
-        "Uma ofensa ao contraditório substancial e à proibição da decisão surpresa, sendo o acórdão nulo, mesmo que o fundamento seja de ordem pública.",
-        "Um 'error in procedendo' que só pode ser corrigido via embargos de declaração, não sendo suficiente para anular o julgado.",
-        "Uma conduta lícita, pois, em grau recursal, prevalece o princípio inquisitivo, que mitiga a necessidade de contraditório sobre fundamentos jurídicos."
-      ],
-      "answer": 2,
-      "explanation": "A combinação dos artigos 9º e 10 do CPC veda a 'decisão surpresa'. O juiz ou tribunal não pode decidir com base em um fundamento (fático ou jurídico) que não tenha sido previamente submetido ao debate entre as partes, mesmo que se trate de matéria que possa ser conhecida de ofício. A não observância dessa regra acarreta a nulidade da decisão."
-    },
-    {
-      "type": "multiple",
-      "q": "Qual das seguintes situações processuais está, de acordo com o art. 12 do CPC, expressamente EXCLUÍDA da regra da ordem cronológica de julgamento?",
-      "options": [
-        "O julgamento de processos envolvendo réu preso.",
-        "A sentença em um processo que tramita sob segredo de justiça.",
-        "O julgamento de um agravo de instrumento interposto contra decisão saneadora.",
-        "O julgamento de embargos de declaração.",
-        "A sentença em um processo que aguarda há mais tempo na fila de conclusão."
-      ],
-      "answer": 3,
-      "explanation": "O art. 12, § 2º, lista um rol de exceções à regra da ordem cronológica. O inciso V inclui, expressamente, 'o julgamento de embargos de declaração'. Os processos criminais (inciso VIII) também são exceção, mas a alternativa 'a' é muito específica ('réu preso'). O agravo de instrumento não é exceção expressa, e o segredo de justiça não é critério de quebra da ordem. A antiguidade, por si só, é o que a regra busca proteger, não sendo uma exceção."
-    },
-    {
-      "type": "multiple",
-      "q": "A publicidade dos atos processuais, garantida pelo art. 11 do CPC, pode ser restringida:",
-      "options": [
-        "Por mera conveniência das partes, que podem, por acordo, solicitar o segredo de justiça em qualquer causa cível.",
-        "Apenas nas hipóteses de defesa da intimidade ou quando o interesse social ou público o exigir, como em casos de direito de família.",
-        "A critério exclusivo do juiz, que pode decretar o segredo de justiça sempre que considerar a matéria do processo muito complexa.",
-        "Apenas em processos que tramitam eletronicamente, como forma de proteger os dados das partes.",
-        "Somente após o trânsito em julgado, quando o processo é arquivado definitivamente."
+        "O processo começa e se desenvolve exclusivamente por impulso oficial, não dependendo da iniciativa das partes.",
+        "Uma vez iniciado o processo pela parte, seu desenvolvimento ocorre por impulso oficial, salvo exceções legais.",
+        "O juiz pode iniciar um processo de ofício sempre que tomar conhecimento de uma lesão a direito.",
+        "O impulso oficial cessa após a fase de saneamento, cabendo às partes requerer todos os atos subsequentes."
       ],
       "answer": 1,
-      "explanation": "A publicidade é a regra. A restrição (segredo de justiça) é a exceção e só é admitida nas hipóteses previstas em lei, que se relacionam fundamentalmente com a necessidade de proteger o direito à intimidade ou o interesse social/público. O art. 189 do CPC detalha essas hipóteses, que o art. 11, parágrafo único, recepciona, alinhado ao art. 93, IX, da CF."
+      "explanation": "O Art. 2º é preciso ao dispor que 'O processo começa por iniciativa da parte e se desenvolve por impulso oficial, salvo as exceções previstas em lei'. Isso consagra o princípio da demanda (ou inércia da jurisdição) para o início e o do impulso oficial para o seu desenvolvimento."
     },
     {
       "type": "multiple",
-      "q": "A Súmula 485 do STJ, mencionada nas anotações ao art. 3º do CPC, estabelece que 'A entrega da cópia da petição inicial do mandado de segurança e dos documentos que a instruem ao impetrado não o obriga a responder ao processo'. A relação desta súmula com as normas fundamentais do CPC reside no fato de que:",
+      "q": "O direito à solução integral do mérito em prazo razoável, assegurado pelo Art. 4º do CPC, compreende:",
       "options": [
-        "Viola o princípio da cooperação, pois o impetrado deveria colaborar com o processo desde o início.",
-        "Reforça o princípio do impulso oficial, pois cabe ao juiz determinar a notificação formal para que a autoridade coatora preste informações.",
-        "Contraria o princípio da boa-fé objetiva, ao permitir que a autoridade impetrada se omita.",
-        "Exemplifica uma exceção ao princípio do contraditório prévio, permitindo a decisão liminar sem a oitiva da autoridade.",
-        "Demonstra que o processo só se desenvolve validamente a partir de um ato formal de citação ou notificação, não por ciência informal, respeitando o devido processo legal."
+        "Apenas a prolação da sentença, excluindo-se a fase de cumprimento de sentença.",
+        "A atividade de conhecimento e a recursal, mas não a atividade satisfativa do direito.",
+        "A totalidade do processo, incluindo a atividade satisfativa para a efetiva entrega do bem da vida.",
+        "A obtenção de uma decisão de mérito, ainda que não seja definitiva, dentro do prazo legal."
       ],
-      "answer": 4,
-      "explanation": "A súmula, anterior ao CPC/15, mas compatível com seus princípios, alinha-se à ideia de que o desenvolvimento do processo depende de atos formais que garantam a certeza do início dos prazos e o exercício pleno do contraditório. A mera ciência informal não substitui a notificação/citação determinada pela autoridade judicial, que é o ato que integra formalmente a parte ao processo e dispara o prazo para sua manifestação, em respeito ao devido processo legal."
+      "answer": 2,
+      "explanation": "O Art. 4º garante que 'As partes têm o direito de obter em prazo razoável a solução integral do mérito, incluída a atividade satisfativa'. A expressão 'atividade satisfativa' refere-se à fase de execução ou cumprimento de sentença, essencial para a integralidade da prestação jurisdicional."
+    },
+    {
+      "type": "multiple",
+      "q": "Segundo o Art. 7º do CPC, a paridade de tratamento assegurada às partes compete ao juiz zelar pelo seu efetivo cumprimento. Esta paridade abrange:",
+      "options": [
+        "Apenas os meios de defesa e as faculdades processuais, não se estendendo aos ônus e deveres.",
+        "O exercício de direitos, faculdades processuais, meios de defesa, ônus, deveres e aplicação de sanções.",
+        "A garantia de que ambas as partes terão exatamente o mesmo número de oportunidades para se manifestar.",
+        "Apenas a fase de conhecimento, sendo mitigada na fase de execução, onde o exequente possui mais prerrogativas."
+      ],
+      "answer": 1,
+      "explanation": "O Art. 7º tem redação abrangente: 'É assegurada às partes paridade de tratamento em relação ao exercício de direitos e faculdades processuais, aos meios de defesa, aos ônus, aos deveres e à aplicação de sanções processuais, competindo ao juiz zelar pelo efetivo contraditório'."
+    },
+    {
+      "type": "multiple",
+      "q": "O Art. 11 do CPC determina que todos os julgamentos dos órgãos do Poder Judiciário serão públicos e as decisões fundamentadas, sob pena de nulidade. Sobre o sigilo, o parágrafo único deste artigo estabelece que:",
+      "options": [
+        "Nos casos de segredo de justiça, ninguém, além do juiz e servidores, pode ter acesso aos autos.",
+        "A presença de terceiros interessados pode ser autorizada pelo juiz, mesmo em casos de segredo de justiça.",
+        "Em processos sob sigilo, pode ser autorizada a presença somente das partes, seus advogados, defensores públicos ou do Ministério Público.",
+        "O segredo de justiça é absoluto e veda a presença até mesmo das partes nas audiências, que serão representadas por seus advogados."
+      ],
+      "answer": 2,
+      "explanation": "O parágrafo único do Art. 11 dispõe que 'Nos casos de segredo de justiça, pode ser autorizada a presença somente das partes, de seus advogados, de defensores públicos ou do Ministério Público'."
+    },
+    {
+      "type": "multiple",
+      "q": "A respeito da lista de processos aptos a julgamento, conforme o Art. 12 do CPC, qual das seguintes afirmações é incorreta?",
+      "options": [
+        "A lista deve estar permanentemente disponível para consulta pública em cartório e na internet.",
+        "Processos criminais, em órgãos com competência penal, estão excluídos da regra da ordem cronológica.",
+        "A anulação de uma sentença, em regra, faz com que o processo ocupe o primeiro lugar na lista para novo julgamento.",
+        "A prolação de sentenças homologatórias de acordo deve, obrigatoriamente, seguir a ordem cronológica de conclusão."
+      ],
+      "answer": 3,
+      "explanation": "O Art. 12, § 2º, I, exclui expressamente da regra do caput 'as sentenças proferidas em audiência, homologatórias de acordo ou de improcedência liminar do pedido'. Portanto, a afirmação de que devem seguir a ordem cronológica está incorreta."
+    },
+    {
+      "type": "multiple",
+      "q": "O Art. 1º do CPC estabelece a relação entre o processo civil e a Constituição Federal. A partir de sua leitura, infere-se que:",
+      "options": [
+        "O Código de Processo Civil possui autonomia absoluta em relação à Constituição, sendo a fonte primária de interpretação.",
+        "O processo civil deve ser interpretado conforme os valores e as normas fundamentais da Constituição da República.",
+        "A Constituição Federal serve apenas como um guia de valores, sem aplicação normativa direta no processo civil.",
+        "As disposições do Código prevalecem sobre as normas constitucionais em caso de conflito, por serem mais específicas."
+      ],
+      "answer": 1,
+      "explanation": "O Art. 1º é claro ao afirmar que 'O processo civil será ordenado, disciplinado e interpretado conforme os valores e as normas fundamentais estabelecidos na Constituição da República Federativa do Brasil, observando-se as disposições deste Código', consagrando a constitucionalização do processo civil."
+    },
+    {
+      "type": "multiple",
+      "q": "Considerando as exceções à regra do contraditório prévio (Art. 9º, parágrafo único), qual das decisões abaixo exige a oitiva prévia da parte contrária?",
+      "options": [
+        "A decisão que defere tutela provisória de urgência de natureza antecipada.",
+        "A decisão proferida em ação monitória, baseada em prova escrita sem eficácia de título executivo.",
+        "A decisão que concede a tutela da evidência quando a petição inicial for instruída com prova documental suficiente dos fatos constitutivos do direito do autor, a que o réu não oponha prova capaz de gerar dúvida razoável.",
+        "A decisão que concede a tutela da evidência quando as alegações de fato puderem ser comprovadas apenas documentalmente e houver tese firmada em julgamento de casos repetitivos."
+      ],
+      "answer": 2,
+      "explanation": "O Art. 9º, parágrafo único, II, excepciona o contraditório prévio para as hipóteses de tutela da evidência do Art. 311, incisos II e III. A hipótese descrita na alternativa 'C' corresponde ao inciso IV do Art. 311, que não está no rol de exceções do Art. 9º, parágrafo único, exigindo, portanto, contraditório prévio."
+    },
+    {
+      "type": "multiple",
+      "q": "Sobre a ordem cronológica de julgamento (Art. 12), se um processo, após incluído na lista, tiver seu julgamento convertido em diligência a requerimento da parte, o que ocorrerá?",
+      "options": [
+        "O processo será excluído da lista e, ao retornar, irá para o seu final.",
+        "O processo manterá sua posição original na lista, não sendo afetado pela diligência.",
+        "A conversão do julgamento em diligência implicará a reabertura da instrução, alterando a ordem cronológica.",
+        "O processo retornará à mesma posição que ocupava anteriormente na lista, assim que a diligência for cumprida."
+      ],
+      "answer": 3,
+      "explanation": "Conforme o Art. 12, § 4º e § 5º, o requerimento formulado pela parte não altera a ordem, 'exceto quando implicar a reabertura da instrução ou a conversão do julgamento em diligência'. Nesses casos, a ordem é alterada, e após o cumprimento, 'o processo retornará à mesma posição em que anteriormente se encontrava na lista'."
+    },
+    {
+      "type": "multiple",
+      "q": "O Art. 1º do CPC estabelece que o processo civil será interpretado conforme as normas e valores constitucionais. Este dispositivo materializa o princípio da:",
+      "options": [
+        "Autonomia do Direito Processual.",
+        "Instrumentalidade das formas.",
+        "Supremacia do interesse público.",
+        "Constitucionalização do processo."
+      ],
+      "answer": 3,
+      "explanation": "O Art. 1º é a principal expressão do fenômeno da constitucionalização do processo, que submete a interpretação e aplicação das normas processuais aos ditames da Constituição Federal, superando a visão do processo como um fim em si mesmo."
+    },
+    {
+      "type": "multiple",
+      "q": "Qual das seguintes situações, de acordo com o Art. 12, § 2º, do CPC, justifica a quebra da ordem cronológica de julgamento por meio de uma decisão fundamentada do juiz?",
+      "options": [
+        "A complexidade da matéria discutida na causa.",
+        "O fato de uma das partes ser pessoa idosa.",
+        "A necessidade de julgamento urgente da causa.",
+        "O processo ter sido incluído em pauta para sustentação oral."
+      ],
+      "answer": 2,
+      "explanation": "O Art. 12, § 2º, IX, estabelece como exceção à ordem cronológica 'a causa que exija urgência no julgamento, assim reconhecida por decisão fundamentada'. As preferências legais, como a do idoso, seguem uma lista própria, conforme o § 3º."
+    },
+    {
+      "type": "multiple",
+      "q": "O dever de fundamentação das decisões judiciais, previsto no Art. 11 do CPC, está diretamente associado a qual garantia constitucional?",
+      "options": [
+        "Direito de petição, previsto no art. 5º, XXXIV, 'a', da CF.",
+        "Princípio da publicidade dos atos processuais, previsto no art. 93, IX, da CF.",
+        "Direito à razoável duração do processo, previsto no art. 5º, LXXVIII, da CF.",
+        "Princípio do juiz natural, previsto no art. 5º, LIII, da CF."
+      ],
+      "answer": 1,
+      "explanation": "O Art. 11 do CPC tem correspondência direta com o Art. 93, IX, da Constituição Federal, que determina que 'todos os julgamentos dos órgãos do Poder Judiciário serão públicos, e fundamentadas todas as decisões, sob pena de nulidade'."
+    },
+    {
+      "type": "multiple",
+      "q": "De acordo com o Art. 12, § 6º, do CPC, qual processo ocupará o primeiro lugar na lista de julgamento?",
+      "options": [
+        "Qualquer processo cuja sentença tenha sido anulada em grau de recurso.",
+        "Um processo que retorne do tribunal superior para juízo de retratação nos termos do art. 1.040, II.",
+        "Um processo em que figure como parte o Ministério Público, atuando como fiscal da ordem jurídica.",
+        "O processo mais antigo em tramitação na unidade judiciária, independentemente da data de conclusão."
+      ],
+      "answer": 1,
+      "explanation": "O Art. 12, § 6º, II, estabelece que ocupará o primeiro lugar na lista o processo que 'se enquadrar na hipótese do art. 1.040, inciso II', que trata do juízo de retratação em recursos especiais ou extraordinários repetitivos."
+    },
+    {
+      "type": "multiple",
+      "q": "A promoção da solução consensual dos conflitos, conforme o Art. 3º, §§ 2º e 3º, do CPC, é um dever atribuído a:",
+      "options": [
+        "Exclusivamente aos juízes, como presidentes do processo.",
+        "Apenas às partes, que são as maiores interessadas na resolução da lide.",
+        "A juízes, advogados, defensores públicos e membros do Ministério Público.",
+        "Aos centros de conciliação e mediação, que possuem competência exclusiva para tal."
+      ],
+      "answer": 2,
+      "explanation": "O Art. 3º, § 3º, é explícito ao determinar que 'A conciliação, a mediação e outros métodos de solução consensual de conflitos deverão ser estimulados por juízes, advogados, defensores públicos e membros do Ministério Público, inclusive no curso do processo judicial'."
     }
   ]
 }
+```
