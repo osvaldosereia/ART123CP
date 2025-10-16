@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "title": "Direito Processual Civil - Cooperação Jurídica Internacional (Arts. 26-27)",
+    "category": "processo-civil",
+    "theme": "cooperacao-juridica-internacional-cpc",
+    "shuffle": {
+      "questions": true,
+      "options": true
+    },
+    "persist": true,
+    "outroMessage": "Ótimo trabalho! A cooperação jurídica internacional é um tema cada vez mais relevante na advocacia moderna. Continue estudando!"
+  },
+  "questions": [
+    {
+      "type": "multiple",
+      "q": "Um juiz na Itália precisa ouvir uma testemunha que reside em Cuiabá-MT para um processo cível. Sabendo que Brasil e Itália são signatários da Convenção da Haia sobre a Obtenção de Provas no Estrangeiro, como a autoridade judiciária brasileira deve pautar sua atuação para cumprir a solicitação?",
+      "options": [
+        "Deve aplicar exclusivamente as regras do Código de Processo Civil brasileiro, ignorando o tratado.",
+        "Deve negar o pedido, pois a competência para ouvir a testemunha é da autoridade consular italiana.",
+        "Deve reger-se primordialmente pelo que dispõe o tratado de que o Brasil é parte, observando as normas e garantias do CPC.",
+        "Deve aguardar uma ordem direta do Superior Tribunal de Justiça, única autoridade competente para autorizar a cooperação."
+      ],
+      "answer": 2,
+      "explanation": "“A cooperação jurídica internacional será regida por tratado de que o Brasil faz parte e observará:” — CPC/2015, art. 26, caput. A alternativa correta (C) reflete a norma de que os tratados internacionais são a fonte primária para reger a cooperação. O CPC e seus princípios servem de baliza, mas o procedimento específico será o do acordo internacional. As demais alternativas criam hierarquias ou obstáculos inexistentes."
+    },
+    {
+      "type": "multiple",
+      "q": "O Brasil recebe um pedido de cooperação de um Estado estrangeiro para apreender bens de um indivíduo. Constata-se que, no processo de origem, o réu foi condenado sem ter tido a oportunidade de apresentar defesa ou constituir um advogado. Como o Brasil deve proceder?",
+      "options": [
+        "Deve cumprir o pedido, pois a análise sobre a regularidade do processo de origem compete exclusivamente ao Estado requerente.",
+        "Pode se recusar a cooperar, pois um dos requisitos da cooperação é o respeito às garantias do devido processo legal no Estado de origem.",
+        "Deve cumprir o pedido, mas comunicar a violação a um tribunal internacional de direitos humanos.",
+        "Deve cumprir o pedido apenas se o réu for estrangeiro; se for brasileiro, a cooperação deve ser negada."
+      ],
+      "answer": 1,
+      "explanation": "“A cooperação jurídica internacional [...] observará: I – o respeito às garantias do devido processo legal no Estado requerente;” — CPC/2015, art. 26, I. A alternativa correta (B) está correta, pois o Brasil pode exercer um controle sobre a observância de garantias mínimas no processo estrangeiro. A cooperação não é um ato automático e pode ser negada se houver violação manifesta do devido processo legal na origem, como a ausência de defesa."
+    },
+    {
+      "type": "multiple",
+      "q": "Um cidadão português, residente em Portugal e sem posses, precisa ajuizar uma ação no Brasil e necessita de um ato de cooperação jurídica. Ele alega não ter condições de pagar as custas processuais no Brasil. Qual direito lhe é assegurado pela norma de cooperação?",
+      "options": [
+        "O direito de litigar no Brasil sem custas, mas apenas se ele pagar um valor simbólico ao final.",
+        "Nenhum, pois a assistência judiciária gratuita é um benefício exclusivo para brasileiros ou estrangeiros residentes no país.",
+        "O direito a um tratamento igualitário, o que lhe assegura o acesso à assistência judiciária para necessitados, mesmo sendo estrangeiro não residente.",
+        "O direito de ter suas custas pagas pelo consulado de Portugal no Brasil."
+      ],
+      "answer": 2,
+      "explanation": "“A cooperação jurídica internacional [...] observará: II – a igualdade de tratamento entre nacionais e estrangeiros, residentes ou não no Brasil, em relação ao acesso à justiça [...] assegurando-se assistência judiciária aos necessitados;” — CPC/2015, art. 26, II. A alternativa correta (C) reflete o princípio da isonomia no acesso à justiça, que se estende a estrangeiros não residentes no âmbito da cooperação, garantindo-lhes o benefício da justiça gratuita se comprovada a necessidade."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma corte alemã solicita, via cooperação, a tomada de depoimento de uma pessoa no Brasil para um processo de família que, segundo a lei alemã, tramita em segredo de justiça. Ao realizar a audiência no Brasil, o juiz deve garantir o acesso do público e da imprensa?",
+      "options": [
+        "Sim, pois a regra no Brasil é a da publicidade processual absoluta em todos os atos.",
+        "Não, o juiz deve realizar o ato de forma sigilosa, pois a publicidade é excepcionada quando há previsão de sigilo na legislação do Estado requerente.",
+        "Sim, a menos que a lei brasileira também exigisse sigilo para aquele tipo específico de caso.",
+        "Não, mas o juiz brasileiro deve exigir que a corte alemã fundamente a necessidade do sigilo com base na lei brasileira."
+      ],
+      "answer": 1,
+      "explanation": "“A cooperação jurídica internacional [...] observará: III – a publicidade processual, exceto nas hipóteses de sigilo previstas na legislação brasileira ou na do Estado requerente;” — CPC/2015, art. 26, III. A alternativa correta (B) aplica a exceção à regra da publicidade. O sistema de cooperação respeita as normas de sigilo tanto do país que pede (requerente) quanto do que cumpre a medida (requerido)."
+    },
+    {
+      "type": "multiple",
+      "q": "Um advogado em Madri precisa que uma citação seja cumprida em São Paulo. Ele envia o pedido de cooperação diretamente por e-mail para a vara cível da comarca de São Paulo. Qual o vício de procedimento neste ato?",
+      "options": [
+        "Nenhum, o envio direto é o meio mais célere e eficiente de cooperação.",
+        "O vício é que o pedido deveria ter sido enviado para o Superior Tribunal de Justiça (STJ).",
+        "O vício está no envio direto ao juízo, pois a cooperação jurídica internacional pressupõe a existência de uma autoridade central para receber e transmitir os pedidos.",
+        "O vício é o uso de e-mail, pois a cooperação internacional só pode ser feita por meio físico via malote diplomático."
+      ],
+      "answer": 2,
+      "explanation": "“A cooperação jurídica internacional [...] observará: IV – a existência de autoridade central para recepção e transmissão dos pedidos de cooperação;” — CPC/2015, art. 26, IV. A alternativa correta (C) indica o fluxo correto dos pedidos de cooperação. Eles não são enviados diretamente entre juízos, mas sim por meio de um órgão designado como autoridade central, que organiza e distribui os pedidos."
+    },
+    {
+      "type": "multiple",
+      "q": "Durante uma investigação da Polícia Federal em Cuiabá sobre crimes ambientais na Amazônia, descobre-se um esquema de exportação ilegal de madeira para a Bélgica, envolvendo empresas belgas. Não há nenhum pedido de informação por parte da Bélgica. As autoridades brasileiras podem compartilhar os dados da investigação com as autoridades belgas?",
+      "options": [
+        "Não, pois o compartilhamento de informações só pode ocorrer mediante solicitação formal do Estado estrangeiro.",
+        "Sim, a cooperação jurídica observa a espontaneidade na transmissão de informações a autoridades estrangeiras.",
+        "Não, pois isso configuraria quebra de sigilo da investigação nacional e violação da soberania.",
+        "Sim, mas apenas após o término do processo no Brasil e com autorização expressa do juiz da causa."
+      ],
+      "answer": 1,
+      "explanation": "“A cooperação jurídica internacional [...] observará: V – a espontaneidade na transmissão de informações a autoridades estrangeiras.” — CPC/2015, art. 26, V. A alternativa correta (B) fundamenta-se no princípio da espontaneidade, que permite que uma autoridade nacional, por iniciativa própria, envie informações relevantes a uma autoridade estrangeira, visando a colaboração no combate a ilícitos transnacionais."
+    },
+    {
+      "type": "multiple",
+      "q": "O Poder Judiciário do Chile precisa obter provas para um processo cível, as quais se encontram no Brasil. Não há um tratado de cooperação jurídica específico entre os dois países. Nesse caso, a cooperação é inviável?",
+      "options": [
+        "Sim, na ausência de tratado, a cooperação jurídica internacional não pode ser realizada.",
+        "Não, ela é viável e deve ser cumprida incondicionalmente pelo Brasil como gesto de boa-fé.",
+        "Não, ela poderá ser realizada com base em reciprocidade, a qual deve ser manifestada por via diplomática.",
+        "Sim, a menos que o caso envolva um cidadão brasileiro, situação em que a cooperação se torna obrigatória."
+      ],
+      "answer": 2,
+      "explanation": "“Na ausência de tratado, a cooperação jurídica internacional poderá realizar-se com base em reciprocidade, manifestada por via diplomática.” — CPC/2015, art. 26, § 1.º. A alternativa correta (C) apresenta a solução prevista em lei para a ausência de tratados. A cooperação pode ocorrer, mas condicionada a uma promessa de tratamento recíproco por parte do Estado requerente, formalizada pela via diplomática."
+    },
+    {
+      "type": "multiple",
+      "q": "Um credor obteve uma sentença judicial favorável na Índia e precisa executá-la no Brasil. Não há tratado de cooperação entre os países, e o sistema jurídico indiano não costuma reconhecer decisões brasileiras. O Superior Tribunal de Justiça (STJ) pode negar a homologação da sentença indiana com base na falta de reciprocidade?",
+      "options": [
+        "Sim, a reciprocidade é requisito essencial para qualquer ato de cooperação na ausência de tratado.",
+        "Não, pois a lei dispensa expressamente a exigência de reciprocidade para o ato de homologação de sentença estrangeira.",
+        "Sim, o STJ tem discricionariedade para exigir ou não a reciprocidade nesse caso.",
+        "Não, mas o STJ deve oficiar o Ministério da Justiça para que verifique a questão da reciprocidade antes de decidir."
+      ],
+      "answer": 1,
+      "explanation": "“Não se exigirá a reciprocidade referida no § 1.º para homologação de sentença estrangeira.” — CPC/2015, art. 26, § 2.º. A alternativa correta (B) está correta. A homologação de sentença estrangeira é um ato de cooperação que, por expressa disposição legal, não está condicionado à reciprocidade de tratamento, visando garantir a eficácia das decisões e a segurança jurídica."
+    },
+    {
+      "type": "multiple",
+      "q": "O Judiciário de um país estrangeiro solicita ao Brasil a execução de uma medida que, na prática, resultaria em confisco de bens sem decisão judicial prévia, algo vedado pela Constituição Federal. Como a autoridade brasileira deve proceder?",
+      "options": [
+        "Deve cumprir a medida, pois a análise de compatibilidade com a Constituição cabe apenas ao país solicitante.",
+        "Deve cumprir a medida, mas com ressalvas, aplicando a lei brasileira no que for possível.",
+        "Não deve admitir a prática do ato, pois a cooperação não pode contrariar ou produzir resultados incompatíveis com as normas fundamentais do Estado brasileiro.",
+        "Deve consultar o Supremo Tribunal Federal (STF) antes de decidir se cumpre ou não a medida."
+      ],
+      "answer": 2,
+      "explanation": "“Na cooperação jurídica internacional não será admitida a prática de atos que contrariem ou que produzam resultados incompatíveis com as normas fundamentais que regem o Estado brasileiro.” — CPC/2015, art. 26, § 3.º. A alternativa correta (C) representa o filtro da ordem pública. A cooperação internacional não é irrestrita e encontra limite nas normas e princípios fundamentais do Brasil, como o direito de propriedade e o devido processo legal."
+    },
+    {
+      "type": "multiple",
+      "q": "Um tratado de cooperação assinado pelo Brasil prevê a comunicação de atos por meio de uma autoridade central, mas não especifica qual órgão brasileiro desempenhará essa função. A quem um Estado estrangeiro deve encaminhar um pedido de cooperação baseado nesse tratado?",
+      "options": [
+        "Ao Superior Tribunal de Justiça (STJ), que centraliza todos os atos de cooperação.",
+        "Ao Ministério das Relações Exteriores (Itamaraty), por sua função diplomática.",
+        "Ao Ministério da Justiça, que atua como autoridade central supletiva na ausência de designação específica.",
+        "Diretamente ao juízo brasileiro onde o ato deve ser praticado."
+      ],
+      "answer": 2,
+      "explanation": "“O Ministério da Justiça exercerá as funções de autoridade central na ausência de designação específica.” — CPC/2015, art. 26, § 4.º. A alternativa correta (C) aponta a regra supletiva definida pelo CPC. Quando a autoridade central não é expressamente designada em um tratado ou lei, a função é exercida por padrão pelo Ministério da Justiça."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma empresa em Portugal processa um de seus ex-diretores, que agora reside no Brasil. Para que o processo tenha validade, é crucial que o réu seja formalmente cientificado da existência da ação. Qual o objeto da cooperação jurídica internacional que a corte portuguesa solicitará ao Brasil?",
+      "options": [
+        "Homologação e cumprimento de decisão.",
+        "Concessão de medida judicial de urgência.",
+        "Colheita de provas e obtenção de informações.",
+        "Citação, intimação e notificação judicial e extrajudicial."
+      ],
+      "answer": 3,
+      "explanation": "“A cooperação jurídica internacional terá por objeto: I – citação, intimação e notificação judicial e extrajudicial;” — CPC/2015, art. 27, I. A alternativa correta (D) descreve o objeto adequado. A citação é o ato pelo qual se chama o réu a juízo para se defender, sendo um dos atos mais comuns e essenciais de cooperação."
+    },
+    {
+      "type": "multiple",
+      "q": "Numa ação de indenização em trâmite na Argentina, alega-se que um produto fabricado no Brasil é defeituoso. Para comprovar o alegado, o juiz argentino necessita realizar uma perícia na fábrica brasileira e ouvir o depoimento de seus engenheiros. Tais atos se enquadram em qual objeto da cooperação jurídica?",
+      "options": [
+        "Assistência jurídica internacional.",
+        "Colheita de provas e obtenção de informações.",
+        "Homologação e cumprimento de decisão.",
+        "Qualquer outra medida judicial não proibida pela lei brasileira."
+      ],
+      "answer": 1,
+      "explanation": "“A cooperação jurídica internacional terá por objeto: II – colheita de provas e obtenção de informações;” — CPC/2015, art. 27, II. A alternativa correta (B) é a correta. A realização de perícias e a tomada de depoimentos em território estrangeiro são exemplos clássicos de cooperação para a colheita de provas."
+    },
+    {
+      "type": "multiple",
+      "q": "Após um longo processo na Espanha, um cidadão obtém uma sentença definitiva que lhe reconhece um crédito contra uma empresa com filial no Brasil. Para que ele possa, no Brasil, iniciar atos de execução como a penhora de bens da empresa, qual objeto da cooperação jurídica internacional ele deverá buscar?",
+      "options": [
+        "A concessão de uma medida judicial de urgência para arrestar os bens.",
+        "A citação da empresa no Brasil para um novo processo.",
+        "A homologação e o cumprimento da decisão espanhola.",
+        "A assistência jurídica internacional para obter informações sobre os bens da empresa."
+      ],
+      "answer": 2,
+      "explanation": "“A cooperação jurídica internacional terá por objeto: III – homologação e cumprimento de decisão;” — CPC/2015, art. 27, III. A alternativa correta (C) descreve o procedimento necessário. Uma sentença estrangeira não tem eficácia executiva automática no Brasil. Ela precisa primeiro ser reconhecida (homologada) pelo STJ para, então, ser cumprida (executada) perante a Justiça Federal."
+    },
+    {
+      "type": "multiple",
+      "q": "Um tribunal na Holanda está julgando um caso de disputa de guarda de menor, e recebe a notícia de que a criança, que está no Brasil com um dos genitores, corre risco iminente de ser levada para um terceiro país. Qual medida de cooperação jurídica pode ser solicitada ao Brasil para evitar o dano?",
+      "options": [
+        "A homologação da futura sentença de guarda.",
+        "A colheita de provas sobre a intenção de fuga.",
+        "A concessão de uma medida judicial de urgência, como uma busca e apreensão ou a proibição de que a criança se ausente do país.",
+        "A notificação extrajudicial do genitor para que compareça à Holanda."
+      ],
+      "answer": 2,
+      "explanation": "“A cooperação jurídica internacional terá por objeto: IV – concessão de medida judicial de urgência;” — CPC/2015, art. 27, IV. A alternativa correta (C) é a adequada à situação. A cooperação não se limita a atos finais; ela permite que uma jurisdição estrangeira peça a efetivação de medidas de urgência em território brasileiro para assegurar o resultado útil de seu próprio processo."
+    },
+    {
+      "type": "multiple",
+      "q": "Uma autoridade administrativa do Canadá está investigando uma fraude e, para entender o contexto, precisa de informações sobre a legislação brasileira de licitações. O pedido de cooperação enviado ao Brasil solicitando esses esclarecimentos legais se enquadra em qual objeto?",
+      "options": [
+        "Homologação de decisão.",
+        "Colheita de provas.",
+        "Assistência jurídica internacional.",
+        "Citação e intimação."
+      ],
+      "answer": 2,
+      "explanation": "“A cooperação jurídica internacional terá por objeto: V – assistência jurídica internacional;” — CPC/2015, art. 27, V. A alternativa correta (C) é a correta. A assistência jurídica internacional é um conceito amplo que inclui o auxílio mútuo entre autoridades, abrangendo o fornecimento de informações sobre o ordenamento jurídico de um país para auxiliar em um procedimento em curso no outro."
+    },
+    {
+      "type": "multiple",
+      "q": "Em um processo de inventário na Suíça, descobre-se que o falecido possuía criptoativos em uma carteira digital (wallet) mantida por uma empresa com servidores no Brasil. O juiz suíço precisa de uma medida para bloquear o acesso a essa carteira e evitar a dilapidação do patrimônio. Essa medida, embora não expressamente listada, pode ser objeto de cooperação?",
+      "options": [
+        "Não, os objetos de cooperação são taxativos, não incluindo medidas sobre ativos digitais.",
+        "Sim, pois a cooperação abrange qualquer outra medida judicial ou extrajudicial não proibida pela lei brasileira.",
+        "Não, pois o Brasil não possui legislação específica sobre o bloqueio de criptoativos.",
+        "Sim, mas seria enquadrada como colheita de provas, e não como uma medida autônoma."
+      ],
+      "answer": 1,
+      "explanation": "“A cooperação jurídica internacional terá por objeto: VI – qualquer outra medida judicial ou extrajudicial não proibida pela lei brasileira.” — CPC/2015, art. 27, VI. A alternativa correta (B) reflete o caráter não exaustivo do rol de objetos de cooperação. Essa norma de encerramento confere flexibilidade ao sistema, permitindo a cooperação para medidas inovadoras ou não expressamente previstas, desde que não violem a legislação brasileira."
+    }
+  ],
+  "skipped": [
+    {
+      "dispositive": "CPC/2015, Art. 27, caput",
+      "reason": "texto ausente ou insuficiente"
+    }
+  ]
+}
