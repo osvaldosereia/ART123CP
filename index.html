@@ -392,9 +392,7 @@
       const correctText = type==='vf' ? (q.answer ? 'Verdadeiro' : 'Falso') : (q.options?.[q.answer] || '');
 
       const prompt =
-`Explique o tema com a sabedoria de um professor de direito muito experiente
-com foco em doutrina e jurisprudência brasileiras. Tema: ${q.q}
-Diretrizes: escreva de forma objetiva e clara, seja exemplificativo e de dicas para provas.`;
+`Escreva um artigo didático sobre o tema. Tema: ${q.q}`;
 
       const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt);
       window.open(url, '_blank', 'noopener');
