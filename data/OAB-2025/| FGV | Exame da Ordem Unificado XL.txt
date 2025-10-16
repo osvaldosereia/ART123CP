@@ -1,963 +1,371 @@
+# A respeito dos elementos do ato administrativo, analise as assertivas abaixo
 
-# Determinada sociedade de advogados deseja se associar a advogados que não a integram para prestação de serviços e participação nos resultados. Segundo a legislação aplicável à formalização desse vínculo jurídico, assinale a opção que indica, corretamente, a conclusão dos administradores da sociedade de advogados.
+- I. A competência é elemento essencial do ato administrativo e decorre de norma jurídica. Admite-se a delegação e a avocação, desde que não haja vedação legal expressa.
+- II. O elemento forma consiste na exteriorização da decisão administrativa. E, em regra, vinculado, mas sua inobservância pode acarretar vício sanável quando não se tratar de requisito essencial.
+- III. O fim corresponde ao interesse público, sendo elemento sempre vinculado. Sua violação caracteriza desvio de finalidade, vício insanável do ato administrativo.
+- IV. O motivo traduz-se nas circunstâncias de fato e nos elementos de direito que ensejam a prática do ato administrativo.
+- A) Apenas I e II.
+- B) Apenas I, III e IV.
+- C) Apenas II, III e IV.
+- D) I, II, III e IV.
 
-- A) O contrato de associação não pode ser pactuado em caráter geral, devendo registringir-se a causas ou trabalhos específicos, sob pena de se configurarem os requisitos legais de vínculo empregatício.
+-- Gabarito: D
+Competência administrativa, Elementos do ato, Desvio de finalidade
 
-- B) O contrato de associação deverá ser registrado no Conselho Seccional da OAB em cuja base territorial tiver sede a sociedade de advogados.
+-----
 
-- C) O contrato de associação poderá atribuir a totalidade dos riscos à sociedade de advogados, mas não exclusivamente a um advogado sócio ou associado.
+# Sobre controle e invalidação dos atos administrativos, analise as assertivas a seguir
 
-- D) O advogado não pode, simultaneamente, celebrar contrato de associação com mais de uma sociedade de advogados com sede ou filial na mesma área territorial do respectivo Conselho Seccional.
+- I. Na invalidação de ato, contrato, ajuste, processo ou norma administrativa, a decisão deverá indicar, de modo expresso, suas consequências jurídicas e administrativas.
+- II. A revisão poderá reconhecer a invalidade de situações definitivamente constituídas por ato administrativo já exaurido em seus efeitos, ainda que amparadas em interpretação de norma vigente à época, desde que sobrevenha alteração posterior de entendimento.
+- III. Ao decidir sobre a regularidade de contrato administrativo, a autoridade administrativa deverá considerar as circunstâncias práticas que houverem imposto, limitado ou condicionado a ação do agente responsável por firmá-lo.
+- IV. A decisão administrativa ou judicial que estabelecer nova interpretação sobre norma de conteúdo indeterminado, impondo novo dever ou novo condicionamento de direito, deve prever, quando indispensável, regime de transição proporcional e equânime.
+- A) Apenas I e III.
+- B) Apenas II e IV.
+- C) Apenas I, III e IV.
+- D) I, II, III e IV.
+
+-- Gabarito: C
+Controle administrativo, Revisão de atos, Regime de transição
+
+-----
+
+# Acerca do regime jurídico dos servidores e empregados públicos, assinale a alternativa INCORRETA
+
+- A) As empresas públicas têm o dever jurídico de motivar, em ato formal, a demissão de seus empregados concursados, sendo exigida a demonstração de justa causa prevista na legislação trabalhista.
+- B) É vedada a acumulação remunerada de cargos públicos, salvo, quando houver compatibilidade de horários, nas seguintes hipóteses: dois cargos de professor; um cargo de professor com outro técnico ou científico; e dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas.
+- C) O cargo em comissão é aquele provido em caráter precário, destinado a funções de direção, chefia ou assessoramento, ocupado por pessoa que goza da confiança da autoridade nomeante, tendo natureza transitória.
+- D) A contratação por tempo determinado para atender a necessidade temporária de excepcional interesse público realizada em desconformidade com os requisitos constitucionais não gera efeitos jurídicos válidos em relação aos contratados, ressalvado o direito à percepção dos salários referentes ao período efetivamente trabalhado, ao levantamento dos depósitos efetuados no FGTS.
+
+-- Gabarito: A
+Regime jurídico, Empresas públicas, Demissão de empregados
+
+-----
+
+# Sobre a responsabilidade civil do Estado, assinale a alternativa INCORRETA
+
+- A) O Estado responde objetivamente pelos atos dos tabeliães e registradores oficiais que, no exercício de suas funções, causem dano a terceiros.
+- B) Não se caracteriza a responsabilidade civil objetiva do Estado por danos decorrentes de crime praticado por pessoa foragida do sistema prisional quando não demonstrado o nexo causal direto entre o momento da fuga e a conduta praticada.
+- C) A perícia inconclusiva sobre a origem de disparo fatal em operação policial é suficiente, por si só, para afastar a responsabilidade civil do Estado, ainda que existam indícios de sua participação.
+- D) A responsabilidade objetiva do Estado pode ser aplicada em caso de erro judiciário. Contudo, não se enquadra na hipótese de erro judiciário a ordem de prisão em flagrante, ainda que venha o réu a ser absolvido.
+
+-- Gabarito: C
+Responsabilidade estatal, Erro judiciário, Atos de agentes públicos
+
+-----
+
+# Acerca da Administração Indireta, assinale a alternativa correta
+
+- A) As entidades da Administração Indireta possuem hierarquia em relação à Administração Direta, estando sujeitas a ordens diretas e disciplinares de seus Ministérios supervisores.
+- B) A criação de autarquias, empresas públicas, sociedades de economia mista e fundações públicas exige sempre lei específica, sendo que, no caso das três últimas, a lei autoriza a sua instituição.
+- C) As autarquias, empresas públicas e sociedades de economia mista são pessoas jurídicas de direito público, enquanto as fundações públicas podem assumir natureza pública ou privada.
+- D) As entidades da Administração Indireta, por não integrarem a Administração Direta, não se submetem ao controle parlamentar nem à fiscalização dos Tribunais de Contas.
 
 -- Gabarito: B
-#teste, #testando, #testado
------
-
-# Sebastião, advogado, celebrou contrato de mandato com o cliente Amir, para representá-lo extrajudicialmente, tendo realizado diligências em prol da resolução do imbróglio. Desde a celebração do mandato, passaram-se mais de 20 (vinte) anos, mas as atividades para as quais Amir contratou Sebastião, por sua própria natureza, se protraíram no tempo, sendo ainda necessárias a Amir. Sobre a hipótese apresentada, assinale a afirmativa correta.
-
-- A) O mandato extinguiu-se pelo decurso do tempo, salvo se previsto prazo diverso no respectivo instrumento.
-
-- B) O mandato extinguiu-se pelo decurso do tempo, sendo vedada a previsão de prazo diverso no respectivo instrumento.
-
-- C) O mandato não se extinguiu pelo decurso do tempo, salvo se foi consignado prazo no respectivo instrumento.
-
-- D) O mandato não se extinguiu pelo decurso do tempo, sendo vedada a estipulação de prazo no respectivo instrumento.
-
--- Gabarito: C
+Administração indireta, Criação por lei, Natureza jurídica
 
 -----
 
-# Monique, advogada regularmente inscrita nos quadros da OAB, é investigada em inquérito policial por supostos crimes praticados por motivo ligado ao exercício da advocacia, tendo sido presa em flagrante, por crime da mesma espécie, em seu escritório, enquanto atendia a uma de suas clientes. Considerando as disposições do Estatuto da Advocacia, é correto afirmar que
+# Nos termos da Constituição Federal de 1988, quais são as duas hipóteses específicas nas quais a prisão civil é vedada
 
-- A) Monique tem direito à presença de representante da OAB para lavratura do auto de prisão em flagrante, visto que se trata de suposto crime por motivo ligado ao exercício da advocacia, sob pena de nulidade.
-
-- B) não há qualquer direito ou prerrogativa conferida pela legislação no caso em tela, devendo Monique receber tratamento idêntico ao dado a outros indivíduos não advogados, em razão do princípio da igualdade.
-
-- C) a presença de representante da OAB no momento da lavratura do auto de prisão em flagrante será devida ainda que não se trate de motivo ligado ao exercício da advocacia, visto que se cuida de direito conferido ao advogado em todo e qualquer crime por ele cometido.
-
-- D) o representante da OAB para acompanhar a lavratura do auto de prisão em flagrante, pode ser substituído por representante da Defensoria Pública, visto que ambos podem figurar como defensores.
-
--- Gabarito: A
-
------
-
-# Pedro, contador com vasta experiência e sólida carreira, decide fazer uma segunda graduação, tornando-se bacharel em Direito. Depois da aprovação no Exame de Ordem Unificado e da inscrição nos quadros da Ordem dos Advogados do Brasil, Pedro pretende continuar prestando serviços contábeis, sem prejuízo do exercício concomitante da nova atividade. Acerca da intenção de Pedro, bem como dos limites ético-normativos para a publicidade profissional da sua nova atividade, assinale a afirmativa correta.
-
-- A) Pedro não poderá exercer de modo concomitante as atividades de contador e advogado, pois, de acordo com o Estatuto da Advocacia e da OAB, a prestação de serviços contábeis é incompatível com o exercício simultâneo da advocacia.
-
-- B) Não há óbice ético para o duplo exercício das atividades de contador e advogado, podendo Pedro se valer da divulgação conjunta dos serviços oferecidos, desde que não seja por meio de inscrições em muros, paredes, veículos, elevadores ou em qualquer espaço público.
-
-- C) Embora não haja incompatibilidade para o exercício concomitante das duas atividades, não será permitido a Pedro divulgar sua nova profissão de modo conjunto com a de contador.
-
-- D) Pedro poderá fazer uso de mala direta, distribuição de panfletos ou formas assemelhadas de publicidade, visando a captação de clientela para a sua nova atividade, mas não poderá mencionar, nessa publicidade, os serviços de contabilidade.
-
--- Gabarito: C
-
------
-
-# Formalizou-se, no Tribunal Regional Eleitoral do Estado Alfa, a vacância de um dos cargos de juiz eleitoral, reservado constitucionalmente à classe de advogados. De igual modo, no Tribunal Regional Federal da Enésima Região, sediado na capital do mesmo Estado Alfa, com jurisdição nos Estados Alfa, Beta e Gama, foi também formalizada a vacância de um cargo de juiz federal do Tribunal Regional Federal, destinado à advocacia nos termos da Constituição Federal (quinto constitucional). Nesse hipotético cenário, que demandará a produção de duas listas de membros da advocacia para o futuro preenchimento dos cargos, assinale a afirmativa que descreve corretamente as competências dos órgãos da OAB.
-
-- A) A lista para o preenchimento do cargo no TRE do Estado Alfa ficará sob a incumbência do Conselho Seccional da OAB do respectivo Estado, competindo ao Conselho Federal da OAB elaborar a lista para o preenchimento do cargo no TRF da Enésima Região.
-
-- B) A lista para o preenchimento do cargo no TRE do Estado Alfa ficará sob a incumbência do Conselho Seccional da OAB do respectivo Estado, competindo aos Conselhos Seccionais da OAB dos Estados Alfa, Beta e Gama a elaboração conjunta da lista para o preenchimento do cargo no TRF da Enésima Região.
-
-- C) Uma vez que tanto a Justiça Eleitoral quanto a Justiça Federal pertencem ao Poder Judiciário da União, competirá ao Conselho Federal da OAB a elaboração das duas listas.
-
-- D) Uma vez que tanto o TRE do Estado Alfa quanto a sede do TRF da Enésima Região estão situados no Estado Alfa, competirá ao Conselho Seccional da OAB desse Estado a elaboração das duas listas.
-
--- Gabarito: * (questão anulada)
-
------
-
-# Valmir, bacharel em Direito, aprovado no Exame da Ordem dos Advogados do Brasil, ocupa o cargo público de agente de Polícia Civil do Estado Alfa. Movido por sentimento altruísta, Valmir requer sua inscrição na OAB, pois pretende, nos momentos de folga da atividade policial, exercer a advocacia de forma gratuita, eventual e voluntária, em favor de instituições sociais sem fins econômicos que não disponham de recursos para a contratação de profissional. À luz dessas informações, e considerada a legislação vigente, assinale a afirmativa correta.
-
-- A) Valmir poderá exercer regularmente a advocacia, inclusive pro bono.
-
-- B) Valmir não poderá exercer a advocacia remunerada, pois ocupa cargo incompatível, mas poderá exercer a advocacia pro bono.
-
-- C) Valmir não poderá exercer a advocacia, mesmo pro bono, uma vez que o cargo público que ocupa atrai o regime da incompatibilidade.
-
-- D) A condição de servidor público atrai o regime do impedimento, razão pela qual Valmir não poderá exercer a advocacia contra a Fazenda Pública que o remunera. Observado esse impedimento, não haverá óbice para o exercício da advocacia pro bono.
-
--- Gabarito: C
-
------
-
-# Mariângela, advogada trabalhista, foi intimada pelo juízo da Vara do Trabalho de sua cidade para comparecer à audiência una, designada para 16h15 de determinado dia. Por estar amamentando sua filha Manuela, recém-nascida, Mariângela protocolou petição nos autos do respectivo processo, requerendo preferência na ordem das audiências, mediante comprovação da sua condição. O juiz, contudo, indeferiu o pedido, com o argumento de que a causa é copatrocinada por uma segunda advogada, conforme procuração constante dos autos, a qual poderia participar do ato. A respeito da hipótese narrada, assinale a afirmativa correta.
-
-- A) Diante da constatação de que há duas advogadas constituídas pela parte, e à míngua de previsão legal, a condição de lactante de Mariângela não é suficiente para o deferimento do pedido de preferência.
-
-- B) Conquanto inexista previsão legal para o pedido formulado por Mariângela, o juiz deveria ter deferido o pleito com base na práxis judiciária e no princípio da razoabilidade.
-
-- C) Apenas se Mariângela comprovasse ser a única patrona da causa, haveria previsão legal para que o pedido de preferência fosse atendido.
-
-- D) Mariângela tem o direito de preferência assegurado em lei, independentemente de haver outra advogada constituída nos autos.
-
--- Gabarito: D
-
------
-
-# Antônio Oliveira, advogado, cometeu infração disciplinar no exercício de suas funções, submetendo-se a processo disciplinar perante o Tribunal de Ética e Disciplina do Conselho Seccional competente. Antônio contratou o advogado Pedro para defendê-lo no âmbito do processo disciplinar. No que diz respeito à instauração, instrução e tramitação do processo disciplinar instaurado em face de Antônio, assinale a afirmativa correta que deverá ser observada por Pedro, no exercício da defesa técnica.
-
-- A) O processo disciplinar poderá ser instruído por subseção ou por relatores do próprio Conselho Seccional.
-
-- B) Antônio não poderá ser suspenso preventivamente sem oitiva prévia, mesmo que não atenda às notificações de comparecimento.
-
-- C) O processo disciplinar não poderá ser instaurado de ofício, sob pena de violação do princípio acusatório.
-
-- D) Oferecida a defesa prévia, o relator do processo disciplinar poderá decidir pelo arquivamento liminar da representação.
-
--- Gabarito: A
-
------
-
-# “Portanto, a moralidade, e a humanidade enquanto capaz de moralidade, são as únicas coisas que têm dignidade.” Immanuel Kant
-
-O artigo primeiro da Constituição Federal de 1988 determina que a dignidade da pessoa humana é fundamento da República. Filósofos e juristas há muito debatem o tema da dignidade. Sobre o tema, assinale a opção que apresenta a posição de Immanuel Kant, em seu livro Fundamentação da Metafísica dos Costumes.
-
-- A) Aquele que pode participar dos destinos políticos da cidade é quem possui e exerce sua dignidade.
-
-- B) Quando algo está acima de todo preço e, portanto, não permite equivalente, então ele tem dignidade.
-
-- C) O amor à lei e à pátria conformam as bases da dignidade na vida social e política.
-
-- D) A dignidade ocorre quando alguém possui elevada estima por si mesmo, mantendo seu amor próprio.
+- A) Inadimplemento voluntário e inescusável de obrigação alimentícia.
+- B) Inadimplemento voluntário e inescusável de obrigação alimentícia e a do depositário infiel.
+- C) Inadimplemento de obrigação alimentar e de tributos.
+- D) Inadimplemento de contrato de compra e venda e inadimplemento voluntário de obrigação alimentar.
 
 -- Gabarito: B
+Prisão civil, Obrigação alimentícia, Depositário infiel
 
 -----
 
-# Uma norma jurídica não vale porque tem um determinado conteúdo ... (Hans Kelsen)
+# No controle concentrado de constitucionalidade, a Ação Direta de Inconstitucionalidade por Omissão possui como finalidade
 
-O que faz uma norma jurídica ser válida é tema central para a teoria e a Filosofia do Direito. Segundo o Normativismo Jurídico de Hans Kelsen, conforme apresentado em seu livro Teoria Pura do Direito, a validade da norma jurídica recai logicamente sobre uma categoria que é o ponto de partida do processo de criação do direito positivo. Assinale a opção que apresenta essa categoria.
-
-- A) O legislador democrático.
-
-- B) A soberania popular.
-
-- C) A norma fundamental pressuposta.
-
-- D) O direito das gentes.
-
--- Gabarito: C
-
------
-
-# O Supremo Tribunal Federal (STF), por dois terços de seus membros, aprovou de ofício, no último mês, a Súmula Vinculante xxx, que versa sobre matéria tributária. O deputado federal João da Silva mostrou-se preocupado com a referida Súmula, pois tramita no Congresso Nacional projeto de lei complementar cujo teor conflita fortemente com o da Súmula Vinculante XXX. Por desconhecer as consequências que a referida Súmula acarretará ao processo legislativo em andamento, João busca auxílio de sua assessoria jurídica. Sobre as consequências da Súmula Vinculante aprovada pelo STF, assinale a opção que apresenta, corretamente, a orientação recebida.
-
-- A) Ela vincula unicamente os órgãos do Poder Judiciário, não atingindo os demais poderes, em respeito à separação de poderes.
-
-- B) Ela não alcança o poder legiferante do Congresso Nacional, que segue mantendo intacta sua função originária de criação do Direito.
-
-- C) Ela tem mera função diretiva e de orientação aos demais poderes, sem, no entanto, ter caráter impositivo para qualquer deles, incluindo o Poder Legislativo.
-
-- D) Ela terá efeito vinculante em relação a todos os poderes, em todas as esferas, inclusive no que se refere ao poder de legislar dos entes federativos.
+- A) Declarar a nulidade de ato normativo contrário à Constituição.
+- B) Reconhecer a omissão inconstitucional do Poder Público e determinar que se edite a norma faltante.
+- C) Revogar normas infraconstitucionais incompatíveis com a Constituição.
+- D) Suspender a eficácia de ato administrativo contrário a preceitos constitucionais.
 
 -- Gabarito: B
+Controle concentrado, ADO, Norma faltante
 
 -----
 
-# Em uma cidade situada no município Gama, José Silva sofreu grave acidente ao ser atropelado por um caminhão. Com lesões pelo corpo, ele foi conduzido ao hospital municipal situado na cidade e, ao passar pelo setor de identificação, alegou não possuir consigo qualquer documento. Na dúvida sobre se José poderia ter acesso aos serviços de saúde do SUS (Sistema Único de Saúde), a direção do hospital consultou a Procuradoria do Município. Sobre o caso apresentado, em consonância com o sistema jurídico-constitucional brasileiro, assinale a afirmativa que apresenta a resposta correta.
+# De acordo com o art. 37 da CF/88 e a jurisprudência do STF, assinale a alternativa correta
 
-- A) Para fazer jus aos serviços de saúde ofertados pelo SUS, José deve comprovar a condição de contribuinte do sistema previdenciário brasileiro.
-
-- B) Para fazer jus aos serviços de saúde ofertados pelo SUS, José deve comprovar, formalmente, a condição de trabalhador.
-
-- C) Os serviços de saúde ofertados pelo SUS somente são disponibilizados para os brasileiros natos ou naturalizados.
-
-- D) O atendimento pelo SUS deve ser realizado, independentemente de José possuir nacionalidade brasileira, ser trabalhador ou contribuir com a Previdência Social.
+- A) A moralidade administrativa limita-se ao cumprimento da legalidade, não autorizando controle judicial do mérito do ato administrativo.
+- B) O princípio da eficiência, introduzido pela EC 19/1998, não possui aplicabilidade direta, exigindo regulamentação por lei ordinária.
+- C) A legalidade administrativa permite ao administrador agir como o particular, realizando tudo o que a lei não proíbe.
+- D) A publicidade é regra, admitindo-se restrições quando imprescindíveis à segurança da sociedade e do Estado, ou à proteção da intimidade, conforme ponderação de princípios constitucionais.
 
 -- Gabarito: D
+Princípios administrativos, Publicidade, Ponderação
 
 -----
 
-# Depois da ocorrência de calamidade de grandes proporções, em razão de enchentes causadas por chuvas cuja intensidade foi classificada como "sem precedentes", o Presidente da República vislumbra a possível necessidade de decretação de estado de defesa para combater o quadro caótico no qual se encontram quatro estados de uma determinada região do país. Depois de visitar o local, ele tem dúvidas acerca do prazo de duração da medida e, por isso, submete a proposta à apreciação de sua assessoria jurídica. Assinale a afirmativa que, em consonância com o sistema jurídico-constitucional brasileiro, deve ser adotada.
+# Sobre a inclusão do art. 5º, LXXIX, pela EC 115/2022, assinale a alternativa correta
 
-- A) O Presidente da República tem poder discricionário para definir o prazo de duração, desde que haja aprovação prévia do Congresso Nacional.
-
-- B) O tempo de duração não será superior a 30 (trinta) dias, podendo ser prorrogado uma vez, por igual período, se persistirem as razões que justificaram a sua decretação.
-
-- C) O tempo para a superação da crise que deu origem à decretação pelo Presidente da República não pode ultrapassar uma sessão legislativa.
-
-- D) O tempo de duração será definido discricionariamente, em respeito ao princípio da separação de poderes, pelo Congresso Nacional.
+- A) O direito fundamental à proteção de dados pessoais é cláusula pétrea e, por isso, não pode ser restringido por legislação infraconstitucional.
+- B) A proteção de dados pessoais foi reconhecida como direito fundamental, sendo de competência privativa da União legislar sobre o tema.
+- C) O STF firmou entendimento de que o tratamento de dados pessoais por entes federados distintos da União é plenamente válido, dada a competência concorrente da matéria.
+- D) O direito fundamental à proteção de dados se restringe ao ambiente digital.
 
 -- Gabarito: B
+Proteção de dados, EC 115/2022, Competência legislativa
 
 -----
 
-# O Presidente da República almeja apresentar ao Poder Legislativo um projeto de lei sobre cidadania, além de obter rapidamente a sua aprovação. Com isso, quer cumprir uma promessa realizada durante sua campanha eleitoral. Por essa razão, consulta o Advogado-Geral da União para saber qual é a correta orientação constitucional a ser observada para a concretização do seu objetivo. Com base na situação hipotética narrada e no sistema jurídico-constitucional brasileiro, assinale a opção que indica, corretamente, a resposta apresentada pelo Advogado-Geral da União.
+# Acerca da competência comum (art. 23) e da competência concorrente (art. 24), previstas na CF/88, assinale a alternativa correta
 
-- A) Edição de medida provisória, para que a iniciativa pudesse produzir efeitos rapidamente, devendo-se lembrar ainda que, por essa via, imediatamente ficaria trancada a pauta do Congresso Nacional para deliberar sobre outra matéria.
+- A) A proteção do meio ambiente e o combate à poluição em qualquer de suas formas são matérias de competência legislativa concorrente.
+- B) O registro, acompanhamento e fiscalização das concessões de pesquisa e exploração de recursos hídricos e minerais são de competência privativa da União.
+- C) Cuidar da saúde, assistência pública e garantia das pessoas portadoras de deficiência é competência comum da União, dos Estados, do Distrito Federal e dos Municípios.
+- D) A competência concorrente para legislar sobre responsabilidade por dano ao consumidor pertence exclusivamente à União e aos Estados, excluídos os Municípios.
 
-- B) Apresentação de projeto de lei na Câmara dos Deputados com pedido de urgência, sendo que, por essa via, cada Casa do Congresso Nacional, sucessivamente, tem até 45 (quarenta e cinco) dias para deliberar sobre a proposta, sob o risco de sobrestamento das demais deliberações.
+-- Gabarito: C
+Competências federativas, Saúde pública, Meio ambiente
 
-- C) Solicitação à base de apoio do Executivo no âmbito do Congresso Nacional para que inicie o processo legislativo de uma Emenda Constitucional, pois, só assim, ele poderia solicitar urgência para a deliberação da proposta nas Casas Legislativas.
+-----
 
-- D) Requerimento, ao Congresso Nacional, de delegação para elaboração de lei delegada, pois, assim, ele não teria emendas ao seu projeto e, imediatamente, a lei produziria seus efeitos.
+# Maria ajuizou pedido de cumprimento de sentença para receber valor determinado contra o Estado do Espírito Santo... Diante da intimação do pedido apresentado pela credora, a representação judicial do Estado poderá:
+
+- A) Oferecer impugnação à execução diretamente nos autos do cumprimento de sentença.
+- B) Apresentar bens para constrição judicial e interpor embargos à execução em processo apartado.
+- C) Alegar matérias de defesa por meio de exceção de pré-executividade.
+- D) Comprovar o pagamento de 30% do débito e solicitar o parcelamento do restante em até seis parcelas, com atualização monetária e juros.
+
+-- Gabarito: C
+Execução contra a Fazenda, Exceção de pré-executividade, Defesa processual
+
+-----
+
+# A respeito do mandado de segurança, assinale a alternativa correta
+
+- A) Compete ao Tribunal de Justiça Estadual julgar mandado de segurança contra decisão proferida por Juizado Especial da Fazenda Pública.
+- B) É possível indeferir a petição inicial do mandado de segurança por motivos relacionados ao mérito da demanda.
+- C) Em mandado de segurança coletivo com repercussão patrimonial, caso o beneficiário venha a falecer durante a fase de conhecimento e antes da concessão da ordem, os herdeiros não possuem legitimidade para executar valores referentes ao período anterior ao óbito.
+- D) No mandado de segurança coletivo, sindicatos e associações, atuando como substitutos processuais, podem defender interesses de toda a categoria, e, se a sentença não delimitar expressamente o alcance subjetivo, a coisa julgada abrangerá todos os integrantes da categoria, não apenas os associados.
+
+-- Gabarito: A
+Mandado de segurança, Competência, Coisa julgada coletiva
+
+-----
+
+# Com base no CPC/2015, assinale a alternativa INCORRETA
+
+- A) O CPC prevê, entre os recursos cabíveis, o agravo de instrumento, o agravo interno e os embargos de divergência.
+- B) Considera-se omissa a decisão que não se pronuncia sobre tese firmada em julgamento de casos repetitivos que seja aplicável ao caso concreto.
+- C) Não serão admitidos novos embargos de declaração se os dois anteriores tiverem sido considerados protelatórios.
+- D) O simples uso do princípio da razoabilidade como fundamento da decisão judicial presume, por si só, a existência de motivação concreta para sua aplicação ao caso, em razão de sua importância.
+
+-- Gabarito: D
+Recursos, Embargos de declaração, Motivação judicial
+
+-----
+
+# Sobre a petição inicial e o julgamento liminar de improcedência, analise as assertivas a seguir
+
+- I. O pedido será julgado liminarmente improcedente se contrariar enunciado de súmula de tribunal de justiça sobre matéria infraconstitucional.
+- II. A apelação interposta contra sentença de improcedência liminar possui efeito regressivo.
+- III. Caso o autor não disponha de todos os dados para qualificar o réu, mas seja possível sua citação, a petição inicial deve ser recebida.
+- IV. Apresentada apelação contra sentença de improcedência liminar, o réu será sempre citado para contestar, em nome da economia processual.
+- A) Apenas I e IV.
+- B) Apenas II e III.
+- C) Apenas II e IV.
+- D) Apenas I, II e III.
 
 -- Gabarito: B
+Petição inicial, Improcedência liminar, Efeito regressivo
 
 -----
 
-# Determinada associação nacional, que congrega oficiais do registro e notários, foi surpreendida com a publicação da Lei Federal X, que mudou a destinação dos emolumentos cartorários, de modo que uma parte dos valores arrecadados passaria a ser destinada a políticas públicas do governo federal na área de educação. Considerando a iminente perda de arrecadação, a associação procura você, na qualidade de advogado(a), para saber da constitucionalidade da Lei Federal X. Com base na hipótese narrada e no sistema jurídico-constitucional brasileiro, assinale a opção que apresenta, corretamente, o seu parecer.
+# Em relação ao funcionamento dos juizados especiais, assinale a alternativa correta
 
-- A) Não há inconstitucionalidade na Lei Federal X, pois os emolumentos cartorários, por serem recursos públicos, devem ter a destinação que lhe é atribuída em lei.
-
-- B) A Lei Federal X é inconstitucional, pois vincula a destinação dos emolumentos cartorários a finalidade diversa daquela prevista na ordem constitucional.
-
-- C) A Lei Federal X é coerente com o sistema constitucional, pois mudou a destinação dos emolumentos cartorários apenas no âmbito da União.
-
-- D) Os emolumentos cartorários devem ser direcionados ao custeio da seguridade social, logo, a Lei Federal X afronta a ordem constitucional.
+- A) O recurso interposto nos juizados especiais não possui efeito suspensivo automático, podendo o juiz concedê-lo.
+- B) O acórdão proferido pela turma recursal dos juizados especiais admite impugnação por recurso especial, em caso de violação de lei federal, ou por recurso extraordinário, em caso de afronta à Constituição Federal.
+- C) No âmbito dos juizados especiais, a oposição de embargos de declaração suspende o prazo para a interposição de outros recursos.
+- D) A Procuradoria-Geral do Estado do Espírito Santo possui direito ao prazo em dobro para interpor recurso extraordinário contra decisão da turma recursal dos juizados especiais.
 
 -- Gabarito: B
+Juizados especiais, Recursos excepcionais, Turma recursal
 
 -----
 
-# Uma Proposta de Emenda à Constituição (PEC) é apresentada por um grupo de deputados federais, conforme autoriza a ordem constitucional, cujo objeto é a alteração do Art. 60, § 4º, inciso II, da CRFB/88, que passaria a ter a seguinte redação: o voto direto, aberto, universal e periódico. Depois de apertada aprovação nas comissões competentes, os autores da proposta solicitaram ao Presidente da Câmara dos Deputados que colocasse a referida PEC na pauta do plenário da Casa Legislativa, o que foi atendido. Paralelamente, outro grupo de parlamentares, ao perceber que, pela movimentação política, a PEC possivelmente seria aprovada, procura uma ação jurídica para impedir tal votação pelo plenário da Casa. A respeito da ação jurídica capaz de impedir tal votação pelo plenário da Casa, segundo o sistema brasileiro de controle de constitucionalidade, assinale a afirmativa correta.
+# Sobre a competência da Justiça do Trabalho em demandas envolvendo a Fazenda Pública, assinale a alternativa correta
 
-- A) Em razão da afronta à cláusula pétrea do voto secreto, qualquer legitimado a deflagar o controle concentrado de constitucionalidade pode ajuizar uma Ação Direta de Inconstitucionalidade (ADI) perante o Supremo Tribunal Federal.
-
-- B) Com se está perante matéria interna corporis do Congresso Nacional, que só pode ser apreciada no âmbito do Poder Legislativo, a referida PEC, enquanto não for promulgada e se transformar em ato normativo existente e eficaz, não pode ser objeto de nenhum tipo de controle pelo Poder Judiciário.
-
-- C) Por afronta a preceito fundamental, um legitimado pode ajuizar Arguição de Descumprimento de Preceito Fundamental (ADPF) perante o Supremo Tribunal Federal, nos termos da Constituição da República.
-
-- D) Em razão da inobservância das limitações constitucionais materiais ao poder de emendar a Constituição, qualquer deputado federal tem legitimidade ativa para impetrar mandado de segurança perante o Supremo Tribunal Federal.
-
--- Gabarito: D
-
------
-
-# Os conflitos armados, infelizmente, são uma realidade que afeta diferentes países. As quatro Convenções de Genebra de 1949 conformam a base do Direito Internacional Humanitário. Em comum às quatro Convenções está o Art. 3º que, entre outros dispositivos, determina o tratamento humano para todos os indivíduos em poder do inimigo, sem nenhuma distinção adversa. Proíbe, especialmente, os assassinatos, as mutilações, as torturas e os tratamentos cruéis, humilhantes e degradantes, a tomada de reféns e os julgamentos parciais. Sobre esse artigo, assinale a afirmativa correta.
-
-- A) Abrange também as situações de conflito armado sem caráter internacional e que surjam no território de um Estado-parte da Convenção.
-
-- B) Determina a obrigatoriedade de cessar-fogo, no caso de início de uma rodada de negociações para a busca de solução não armada do conflito.
-
-- C) Atribui ao Conselho de Segurança da ONU a competência para julgar a legitimidade da guerra e as eventuais sanções a serem impostas às partes do conflito.
-
-- D) Prevê a instituição de um tribunal específico para o julgamento de acusados de terem cometido crimes de guerra pela Assembleia-Geral das Nações Unidas.
-
--- Gabarito: A
-
------
-
-# STJ transfere à Justiça Federal apuração da morte de líderes de trabalhadores rurais em Rondônia
-
-A pedido da Procuradoria-Geral da República (PGR), a Terceira Seção do Superior Tribunal de Justiça (STJ) determinou a transferência, para a Justiça Federal, de seis inquéritos relativos a crimes de homicídio praticados contra líderes de trabalhadores rurais e outras pessoas que denunciaram grilagem de terras e exploração ilegal de madeira em Rondônia.
-
-Notícias do STJ - 25/08/2023
-
-A notícia acima, informada no site do STJ, diz respeito a um instituto exclusivo para a proteção dos Direitos Humanos previsto na Constituição Federal/88. Assinale a opção que o indica.
-
-- A) Arguição de Descumprimento de Preceito Fundamental.
-
-- B) Incidente de Deslocamento de Competência.
-
-- C) Tese com Repercussão Geral.
-
-- D) Ação Popular.
+- A) Compete à Justiça Comum processar e julgar ação civil pública relativa ao meio ambiente de trabalho de servidores estatutários do Estado, mesmo que a lide não envolva a incidência do regime jurídico estatutário.
+- B) Compete à Justiça do Trabalho processar e julgar demandas entre a Fazenda Pública e empregados públicos celetistas.
+- C) Servidores temporários têm suas ações contra a Fazenda Pública julgadas pela Justiça do Trabalho, por se tratar de vínculos celetista.
+- D) Compete à Justiça do Trabalho processar e julgar demandas em que se discute o recolhimento e o repasse de contribuição sindical de servidores públicos regidos pelo regime estatutário.
 
 -- Gabarito: B
+Competência trabalhista, Fazenda Pública, Empregados celetistas
 
 -----
 
-# Entre os correligionários do partido político Alfa estavam dois dos pré-candidatos considerados favoritos na eleição para governador do Estado Beta. Como somente um deles poderia ser escolhido por Alfa para concorrer ao referido cargo eletivo, houve grande interesse dos meios de comunicação social na cobertura das prévias partidárias. Em relação às emissoras de rádio e televisão, à luz dos balizamentos legais existentes, assinale a afirmativa correta.
+# Referente à comprovação de feriado local ou forense para fins de prorrogação de prazo recursal no processo do trabalho, assinale a alternativa correta
 
-- A) A lei obsta a cobertura das prévias partidárias.
-
-- B) Elas podem realizar, ao vivo ou não, a plena cobertura das prévias partidárias, não sendo permitida qualquer censura.
-
-- C) Somente é permitida a transmissão de imagens ao vivo, de modo a evitar o risco de trucagem.
-
-- D) As transmissões por emissoras de rádio e televisão das prévias partidárias, ao vivo, são vedadas.
-
--- Gabarito: D
-
------
-
-# João, candidato ao cargo eletivo de prefeito municipal, logrou ser eleito. No entanto, por ser muito desorganizado, não conseguiu localizar os documentos necessários para a prestação de contas à Justiça Eleitoral, o que resultou na não apresentação dessas contas. Sobre as consequências da omissão de João, assinale a afirmativa correta.
-
-- A) A impossibilidade de ser diplomado.
-
-- B) A sua diplomação com reservas.
-
-- C) O pagamento de multa, não havendo óbice à diplomação, ato independente.
-
-- D) A necessidade de firmar compromisso, previamente à diplomação, comprometendo-se a apresentar as contas.
+- A) A parte recorrente deve comprovar, no momento da interposição do recurso, a existência de feriado local, sob pena de não conhecimento imediato do recurso.
+- B) Na hipótese de feriado forense, é ônus da parte comprovar documentalmente a ausência de expediente nos autos, no ato da interposição do recurso.
+- C) No caso de alegação de feriado local não comprovado de imediato, o relator deve conceder prazo de 5 dias para que o vício seja sanado.
+- D) A reconsideração da análise da tempestividade do recurso mediante prova documental superveniente é admitida apenas nos embargos de declaração, sendo vedada em outros meios de impugnação.
 
 -- Gabarito: A
+Feriado local, Tempestividade recursal, Ônus da prova
 
 -----
 
-# Uma sociedade empresária colombiana celebrou, na Inglaterra, com uma sociedade alemã, um contrato para a entrega de 500 (quinhentas) sacas de café tipo arábica no Porto de Santos, Brasil, sem cláusula de eleição de foro exclusivo. Durante o transporte, houve um acidente com a embarcação, que acarretou o perecimento da mercadoria. Você, como advogado(a), é procurado(a) para ajuizar a presente ação. De acordo com o direito internacional privado brasileiro, assinale a opção que indica a autoridade judiciária competente para processar e julgar eventual demanda entre as contratantes.
+# Com base nas prerrogativas da Fazenda Pública na Justiça do Trabalho, assinale a alternativa INCORRETA
 
-- A) A autoridade judiciária inglesa, única e exclusivamente.
+- A) A Fazenda Pública não possui prerrogativa de prazo em dobro para interposição de recursos na Justiça do Trabalho.
+- B) O representante da Fazenda Pública é dispensado de apresentar procuração, bastando declarar a sua atuação nessa qualidade.
+- C) A União, os Estados, o Distrito Federal, os Municípios, as autarquias e as fundações públicas são isentos de custas processuais.
+- D) Não está sujeita ao reexame necessário a decisão contrária à Fazenda Pública Estadual cujo valor seja inferior a 500 salários mínimos.
 
-- B) A autoridade judiciária colombiana, concorrentemente.
-
-- C) A autoridade judiciária alemã, única e exclusivamente.
-
-- D) A autoridade judiciária brasileira, concorrentemente.
-
--- Gabarito: D
+-- Gabarito: A
+Prerrogativas da Fazenda, Prazo em dobro, Custas processuais
 
 -----
 
-# A Fundação de Juristas Moçambique-Brasil, associação privada de fim de interesse coletivo, constituiu-se na década de 1990, na cidade de Maputo, capital de Moçambique, e pretende abrir filial no Brasil. Você, advogado(a) especializado em Direito Internacional, é procurado pela Fundação para avaliar a pretensão do caso em tela. Sobre a hipótese apresentada, assinale a afirmativa correta.
+# De acordo com a jurisprudência do TST, sobre a ação rescisória na Justiça do Trabalho, assinale a alternativa INCORRETA
 
-- A) A Fundação não poderá ter filial no Brasil, salvo se houver prévia decisão da justiça brasileira autorizando o funcionamento.
+- A) É cabível o pedido de tutela provisória, formulado na petição inicial da ação rescisória ou na fase recursal, com o objetivo de suspender a execução da decisão rescindenda.
+- B) O sindicato que atuou como substituto processual na reclamação trabalhista tem legitimidade para ser réu na ação rescisória, não sendo necessária a citação de todos os substituídos.
+- C) A ação rescisória fundada em violação de lei admite o reexame de fatos e provas do processo que originou a decisão rescindenda.
+- D) Para efeito de ação rescisória, considera-se prova nova aquela já existente à época do trânsito em julgado da decisão rescindenda, mas ignorada pelo interessado ou de impossível utilização no processo originário.
 
-- B) A Fundação poderá abrir filial no Brasil, desde que haja autorização do Poder Executivo, por meio de decreto presidencial.
+-- Gabarito: C
+Ação rescisória, Reexame de provas, Tutela provisória
 
-- C) A Fundação poderá abrir filial no Brasil, desde que haja autorização do Congresso Nacional, por meio de resolução.
+-----
 
-- D) A Fundação poderá abrir filial no Brasil, desde que haja autorização do Poder Legislativo, por meio de decreto legislativo.
+# Sobre o recurso cabível em face da decisão interlocutória no incidente de desconsideração da personalidade jurídica na Justiça do Trabalho, assinale a alternativa INCORRETA
+
+- A) Cabe agravo interno se proferida pelo relator em incidente instaurado originariamente no tribunal.
+- B) Na fase de execução, cabe agravo de petição.
+- C) Na fase de execução, o recorrente não precisa oferecer garantia ao juízo como requisito de admissibilidade do recurso.
+- D) Na fase de cognição, cabe recurso de agravo de instrumento, ante a aplicação subsidiária do Código de Processo Civil.
 
 -- Gabarito: B
+Incidente de desconsideração, Recursos trabalhistas, Fases processuais
 
 -----
 
-# Em determinada comarca, o Ministério Público ajuizou ação civil pública em face de uma empresa de transporte coletivo, em razão de sucessivos acidentes com ônibus que colocaram em risco a vida dos passageiros. A ação foi julgada procedente, com condenação da empresa ao pagamento de indenização por danos morais coletivos. A empresa interpôs apelação, que foi recebida apenas no efeito devolutivo. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) A apelação deveria ter sido recebida no duplo efeito, pois não há previsão legal para o recebimento apenas no efeito devolutivo.
-
-- B) A apelação foi corretamente recebida apenas no efeito devolutivo, pois a sentença versa sobre tutela coletiva de direitos.
-
-- C) A apelação deveria ter sido recebida apenas no efeito suspensivo, pois a sentença versa sobre responsabilidade civil.
-
-- D) A apelação foi corretamente recebida no duplo efeito, pois a sentença versa sobre responsabilidade objetiva.
-
--- Gabarito: A
-
------
-
-# Em ação de responsabilidade civil por danos materiais e morais, o réu foi citado e apresentou contestação tempestiva, arguindo preliminar de ilegitimidade passiva. O juiz, sem designar audiência de instrução e julgamento, julgou antecipadamente o mérito, condenando o réu ao pagamento de indenização. O réu interpôs apelação, requerendo a anulação da sentença por cerceamento de defesa. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) A sentença deve ser anulada, pois o juiz não poderia julgar antecipadamente o mérito sem designar audiência de instrução e julgamento.
-
-- B) A sentença não deve ser anulada, pois o juiz pode julgar antecipadamente o mérito quando a questão for unicamente de direito.
-
-- C) A sentença deve ser anulada, pois o réu não foi intimado para especificar provas.
-
-- D) A sentença não deve ser anulada, pois o réu não apresentou rol de testemunhas.
-
--- Gabarito: C
-
------
-
-# Em ação de cobrança, o réu foi citado e apresentou contestação, arguindo preliminar de incompetência absoluta do juízo. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de incompetência absoluta independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a incompetência absoluta é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: A
-
------
-
-# Em ação de indenização por danos morais, o autor requereu a produção de prova testemunhal, indicando três testemunhas. O juiz indeferiu o pedido, sob o fundamento de que a prova testemunhal seria inútil, pois os fatos alegados pelo autor estavam comprovados por documentos. O autor interpôs agravo de instrumento contra a decisão. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O agravo de instrumento é incabível, pois a decisão que indefere prova testemunhal é irrecorrível.
-
-- B) O agravo de instrumento é incabível, pois a decisão que indefere prova testemunhal não causa prejuízo à parte.
-
-- C) O agravo de instrumento é cabível, pois a decisão que versa sobre prova é suscetível de causar prejuízo à parte.
-
-- D) O agravo de instrumento é cabível, mas somente se a prova testemunhal for imprescindível à solução da causa.
-
--- Gabarito: C
-
------
-
-# Em ação de alimentos, o juiz deferiu tutela provisória de urgência para que o réu pagasse alimentos provisórios no valor de R$ 1.000,00 mensais. O réu não cumpriu a decisão, e o autor requereu a prisão civil do réu. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) A prisão civil é incabível, pois a decisão que fixa alimentos provisórios não tem força de sentença.
-
-- B) A prisão civil é incabível, pois somente a sentença pode fixar alimentos.
-
-- C) A prisão civil é cabível, pois a decisão que fixa alimentos provisórios tem força de sentença.
-
-- D) A prisão civil é cabível, mas somente após o trânsito em julgado da sentença.
-
--- Gabarito: A
-
------
-
-# Em ação de cobrança, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: D
-
------
-
-# Em ação de indenização por danos materiais, o autor requereu a produção de prova pericial, indicando assistente técnico e apresentando quesitos. O juiz indeferiu o pedido, sob o fundamento de que a prova pericial seria desnecessária, pois os fatos estavam comprovados por documentos. O autor interpôs agravo de instrumento contra a decisão. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial é irrecorrível.
-
-- B) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial não causa prejuízo à parte.
-
-- C) O agravo de instrumento é cabível, pois a decisão que versa sobre prova é suscetível de causar prejuízo à parte.
-
-- D) O agravo de instrumento é cabível, mas somente se a prova pericial for imprescindível à solução da causa.
-
--- Gabarito: C
-
------
-
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de interesse de agir. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de interesse de agir independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de interesse de agir é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: A
-
------
-
-# Em ação de indenização por danos morais, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de pressuposto processual. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de pressuposto processual independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de pressuposto processual é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: D
-
------
-
-# Em ação de cobrança, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: D
-
------
-
-# Em ação de indenização por danos materiais, o autor requereu a produção de prova pericial, indicando assistente técnico e apresentando quesitos. O juiz indeferiu o pedido, sob o fundamento de que a prova pericial seria desnecessária, pois os fatos estavam comprovados por documentos. O autor interpôs agravo de instrumento contra a decisão. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial é irrecorrível.
-
-- B) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial não causa prejuízo à parte.
-
-- C) O agravo de instrumento é cabível, pois a decisão que versa sobre prova é suscetível de causar prejuízo à parte.
-
-- D) O agravo de instrumento é cabível, mas somente se a prova pericial for imprescindível à solução da causa.
-
--- Gabarito: A
-
------
-
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de interesse de agir. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de interesse de agir independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de interesse de agir é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: D
-
------
-
-# Em ação de indenização por danos morais, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: A
-
------
-
-# Em ação de cobrança, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de interesse de agir. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de interesse de agir independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de interesse de agir é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: C
-
------
-
-# Em ação de indenização por danos morais, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
+# Considerando a responsabilidade civil prevista no Código Civil, assinale a alternativa INCORRETA
+
+- A) Aquele que ressarcir o dano causado por outrem pode reaver o que houver pago daquele por quem pagou, salvo se o causador do dano for descendente seu, absoluta ou relativamente incapaz.
+- B) Aquele que demandar por dívida já paga, no todo ou em parte, sem ressalvar as quantias recebidas ou pedir mais do que for devido, ficará obrigado a pagar ao devedor, no primeiro caso, o dobro do que houver cobrado e, no segundo, o equivalente do que dele exigir, salvo se houver decadência.
+- C) Os bens do responsável pela ofensa ou violação do direito de outrem ficam sujeitos à reparação do dano causado; e, se a ofensa tiver mais de um autor, todos responderão solidariamente pela reparação.
+- D) Se da ofensa resultar defeito pelo qual o ofendido não possa exercer o seu ofício ou profissão, ou se lhe diminua a capacidade de trabalho, a indenização, além das despesas do tratamento e lucros cessantes até ao fim da convalescença, incluirá pensão correspondente à importância do trabalho para que se inabilitou, ou da depreciação que ele sofreu.
 
 -- Gabarito: B
+Responsabilidade civil, Restituição indevida, Indenização
 
 -----
 
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de pressuposto processual. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
+# Com base no Código Civil e no CPC, no que se refere à prescrição e à decadência, assinale a alternativa correta
 
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de pressuposto processual independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de pressuposto processual é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
+- A) O prazo da prescrição intercorrente corresponde ao mesmo prazo da pretensão originária, sem incidência das causas de suspensão, interrupção ou impedimento.
+- B) O magistrado pode reconhecer de ofício a prescrição intercorrente, extinguindo a execução, mesmo sem ouvir previamente as partes envolvidas.
+- C) A prescrição intercorrente se aplica na fase executiva, retomando a contagem do prazo do ponto em que parou, após a interrupção causada pelo despacho de citação no processo de conhecimento.
+- D) Se a decadência for convencional, a parte a quem aproveita pode alegá-la em qualquer grau de jurisdição, mas o juiz não pode suprir a alegação.
 
 -- Gabarito: C
+Prescrição intercorrente, Fase executória, Contagem de prazos
 
 -----
 
-# Em ação de cobrança, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
+# Em relação à Lei de Introdução às normas do Direito Brasileiro, assinale a alternativa INCORRETA
 
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
+- A) A lei posterior revoga a anterior quando expressamente o declare, quando seja com ela incompatível ou quando regule inteiramente a matéria de que tratava a lei anterior.
+- B) Salvo disposição em contrário, a lei revogada não se restaura por ter a lei revogadora perdido a vigência.
+- C) O agente público responderá pessoalmente por suas decisões ou opiniões técnicas em caso de negligência, imprudência ou imperícia.
+- D) As autoridades públicas devem atuar para aumentar a segurança jurídica na aplicação das normas, inclusive por meio de regulamentos, súmulas administrativas e respostas a consultas.
 
 -- Gabarito: C
+Lei de Introdução, Segurança jurídica, Responsabilidade do agente
 
 -----
 
-# Em ação de indenização por danos materiais, o autor requereu a produção de prova pericial, indicando assistente técnico e apresentando quesitos. O juiz indeferiu o pedido, sob o fundamento de que a prova pericial seria desnecessária, pois os fatos estavam comprovados por documentos. O autor interpôs agravo de instrumento contra a decisão. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial é irrecorrível.
-
-- B) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial não causa prejuízo à parte.
-
-- C) O agravo de instrumento é cabível, pois a decisão que versa sobre prova é suscetível de causar prejuízo à parte.
-
-- D) O agravo de instrumento é cabível, mas somente se a prova pericial for imprescindível à solução da causa.
-
--- Gabarito: B
-
------
-
-# Em ação de indenização por danos morais, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de pressuposto processual. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de pressuposto processual independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de pressuposto processual é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: C
-
------
-
-# Em ação de cobrança, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: D
-
------
-
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de interesse de agir. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de interesse de agir independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de interesse de agir é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: D
-
------
-
-# Em ação de indenização por danos morais, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: C
-
------
-
-# Em ação de indenização por danos materiais, o autor requereu a produção de prova pericial, indicando assistente técnico e apresentando quesitos. O juiz indeferiu o pedido, sob o fundamento de que a prova pericial seria desnecessária, pois os fatos estavam comprovados por documentos. O autor interpôs agravo de instrumento contra a decisão. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial é irrecorrível.
-
-- B) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial não causa prejuízo à parte.
-
-- C) O agravo de instrumento é cabível, pois a decisão que versa sobre prova é suscetível de causar prejuízo à parte.
-
-- D) O agravo de instrumento é cabível, mas somente se a prova pericial for imprescindível à solução da causa.
-
--- Gabarito: D
-
------
-
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de interesse de agir. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de interesse de agir independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de interesse de agir é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: C
-
------
-
-# Em ação de indenização por danos morais, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de concilação.
-
--- Gabarito: C
-
------
-
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de pressuposto processual. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de pressuposto processual independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de pressuposto processual é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: C
-
------
-
-# Em ação de cobrança, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: C
-
------
-
-# Em ação de indenização por danos materiais, o autor requereu a produção de prova pericial, indicando assistente técnico e apresentando quesitos. O juiz indeferiu o pedido, sob o fundamento de que a prova pericial seria desnecessária, pois os fatos estavam comprovados por documentos. O autor interpôs agravo de instrumento contra a decisão. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial é irrecorrível.
-
-- B) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial não causa prejuízo à parte.
-
-- C) O agravo de instrumento é cabível, pois a decisão que versa sobre prova é suscetível de causar prejuízo à parte.
-
-- D) O agravo de instrumento é cabível, mas somente se a prova pericial for imprescindível à solução da causa.
-
--- Gabarito: C
-
------
-
-# Em ação de indenização por danos morais, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de pressuposto processual. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de pressuposto processual independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de pressuposto processual é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: B
-
------
-
-# Em ação de cobrança, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: D
-
------
-
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de interesse de agir. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de interesse de agir independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de interesse de agir é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: D
-
------
-
-# Em ação de indenização por danos morais, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
+# Referente ao Código Civil, assinale a alternativa correta
+
+- A) São absolutamente incapazes de exercer pessoalmente os atos da vida civil os menores de dezesseis anos.
+- B) São incapazes relativamente a certos atos ou à maneira de os exercer os maiores de dezoito e menores de vinte e um anos.
+- C) A menoridade cessa aos vinte e um ano completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil.
+- D) Em casos justificados, a pessoa pode ser constrangida a submeter-se, com risco de vida, a tratamento médico ou à intervenção cirúrgica.
 
 -- Gabarito: A
+Capacidade civil, Menores, Incapacidade absoluta
 
 -----
 
-# Em ação de indenização por danos materiais, o autor requereu a produção de prova pericial, indicando assistente técnico e apresentando quesitos. O juiz indeferiu o pedido, sob o fundamento de que a prova pericial seria desnecessária, pois os fatos estavam comprovados por documentos. O autor interpôs agravo de instrumento contra a decisão. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial é irrecorrível.
-
-- B) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial não causa prejuízo à parte.
-
-- C) O agravo de instrumento é cabível, pois a decisão que versa sobre prova é suscetível de causar prejuízo à parte.
-
-- D) O agravo de instrumento é cabível, mas somente se a prova pericial for imprescindível à solução da causa.
-
--- Gabarito: C
-
------
-
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de interesse de agir. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de interesse de agir independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de interesse de agir é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: A
-
------
-
-# Em ação de indenização por danos morais, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: B
-
------
-
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de pressuposto processual. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de pressuposto processual independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de pressuposto processual é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: C
-
------
-
-# Em ação de cobrança, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: C
-
------
-
-# Em ação de indenização por danos morais, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: B
-
------
-
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de interesse de agir. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de interesse de agir independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de interesse de agir é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: A
-
------
-
-# Em ação de indenização por danos morais, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: C
-
------
-
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de pressuposto processual. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de pressuposto processual independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de pressuposto processual é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: C
-
------
-
-# Em ação de cobrança, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
-
--- Gabarito: C
-
------
-
-# Em ação de indenização por danos materiais, o autor requereu a produção de prova pericial, indicando assistente técnico e apresentando quesitos. O juiz indeferiu o pedido, sob o fundamento de que a prova pericial seria desnecessária, pois os fatos estavam comprovados por documentos. O autor interpôs agravo de instrumento contra a decisão. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial é irrecorrível.
-
-- B) O agravo de instrumento é incabível, pois a decisão que indefere prova pericial não causa prejuízo à parte.
-
-- C) O agravo de instrumento é cabível, pois a decisão que versa sobre prova é suscetível de causar prejuízo à parte.
-
-- D) O agravo de instrumento é cabível, mas somente se a prova pericial for imprescindível à solução da causa.
-
--- Gabarito: A
-
------
-
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de interesse de agir. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
-
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de interesse de agir independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de interesse de agir é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
+# A respeito do Negócio Jurídico, assinale a alternativa INCORRETA
+
+- A) A validade da declaração de vontade não dependerá de forma especial, senão quando a lei expressamente a exigir.
+- B) A validade do negócio jurídico requer agente capaz; objeto lícito, possível, determinado ou determinável e forma prescrita ou não defesa em lei.
+- C) O silêncio não importa anuência, principalmente quando as circunstâncias ou os usos o autorizarem, e não for necessária a declaração de vontade expressa.
+- D) As partes poderão livremente pactuar regras de interpretação, de preenchimento de lacunas e de integração dos negócios jurídicos diversas daquelas previstas em lei.
 
 -- Gabarito: D
+Negócio jurídico, Forma, Autonomia privada
 
 -----
 
-# Em ação de indenização por danos morais, o réu foi citado e apresentou contestação, arguindo preliminar de convenção de arbitragem. O juiz, sem ouvir a parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
+# Em uma execução fiscal, a citação por AR restou negativa, não sendo localizada a empresa executada, e o Procurador do Estado requereu a citação por edital sem diligências adicionais. Considerando essa hipótese, assinale a alternativa correta
 
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de convenção de arbitragem independe de manifestação da parte autora.
-
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
-
-- C) O juiz deveria ter acolhido a preliminar, pois a convenção de arbitragem é matéria de ordem pública.
-
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
+- A) A citação por edital é válida pois a tentativa por AR já foi feita na forma da Súmula 414 do STJ.
+- B) Ainda não seria possível a citação por edital, pois não foram esgotadas todas as tentativas de citação pessoal na forma da Súmula 414 do STJ.
+- C) É vedada a citação por edital na Execução Fiscal, pois a citação deve ser sempre pessoal à citação da empresa executada.
+- D) A nulidade da citação por edital somente pode ser arguida nos embargos à execução.
 
 -- Gabarito: B
+Execução fiscal, Citação por edital, Súmula 414
 
 -----
 
-# Em ação de responsabilidade civil, o réu foi citado e apresentou contestação, arguindo preliminar de ausência de pressuposto processual. O juiz, sem abrir vista à parte autora, rejeitou a preliminar e designou audiência de conciliação. Com base na sistemática processual civil brasileira, assinale a afirmativa correta.
+# Determinada empresa não foi encontrada em seu domicilio fiscal e consta como inativa na Junta Comercial e na Receita Federal. Nesse sentido, assinale a alternativa correta
 
-- A) O juiz agiu corretamente, pois a rejeição da preliminar de ausência de pressuposto processual independe de manifestação da parte autora.
+- A) Não há possibilidade de redirecionamento, pois o sócio já não integrava o quadro à época do fato gerador.
+- B) Presume-se dissolvida irregularmente, legitimando o redirecionamento ao sócio-gerente da última composição societária.
+- C) O inadimplemento da obrigação tributária já basta para responsabilizar o sócio.
+- D) O redirecionamento é automático, sem necessidade de decisão judicial a respeito.
 
-- B) O juiz deveria ter aberto vista à parte autora para se manifestar sobre a preliminar antes de decidir.
+-- Gabarito: B
+Redirecionamento tributário, Dissolução irregular, Sócio-gerente
 
-- C) O juiz deveria ter acolhido a preliminar, pois a ausência de pressuposto processual é matéria de ordem pública.
+-----
 
-- D) O juiz deveria ter designado audiência de instrução e julgamento, e não audiência de conciliação.
+# A empresa executada em uma execução fiscal alienou imóvel em 2010, após a inscrição do crédito tributário em dívida ativa, mas antes do registro da penhora. Nesse sentido, é correto afirmar que
+
+- A) Não há fraude, pois o adquirente agiu de boa-fé e não tinha como saber da dívida fiscal da empresa executada.
+- B) A fraude somente se caracteriza após o ajuizamento da execução fiscal.
+- C) A fraude depende sempre do registro da penhora.
+- D) Há fraude à execução, porque basta a inscrição em dívida ativa após a LC 118/2005, que deu nova redação ao artigo 185 do CTN.
+
+-- Gabarito: D
+Fraude à execução, Dívida ativa, Alienação de bens
+
+-----
+
+# Sobre a decadência no direito tributário, é INCORRETO afirmar que nos tributos sujeitos a lançamento por homologação
+
+- A) o prazo para a Fazenda constituir o crédito tributário é de dez anos.
+- B) sem pagamento antecipado, o prazo decadencial conta-se do primeiro dia do exercício seguinte àquele em que o lançamento poderia ter sido efetuado.
+- C) com pagamento antecipado, o prazo decadencial conta-se a partir do fato gerador.
+- D) com pagamento parcial antecipado, o prazo decadencial conta-se do fato gerador para a constituição do crédito remanescente.
 
 -- Gabarito: A
+Decadência tributária, Lançamento por homologação, Prazo decadencial
 
 -----
 
+# A respeito da suspensão da exigibilidade do crédito tributário, assinale a alternativa correta
+
+- A) O parcelamento não suspende a exigibilidade do crédito tributário, pois o contribuinte continua obrigado ao pagamento das parcelas definidas no acordo de parcelamento.
+- B) As reclamações e os recursos administrativos previstos na legislação do processo administrativo fiscal não suspendem a exigibilidade do crédito tributário.
+- C) A garantia total da execução fiscal mediante carta de fiança bancária suspende a exigibilidade do crédito tributário.
+- D) A suspensão da exigibilidade do crédito tributário não dispensa o cumprimento das obrigações assessórias dependentes da obrigação principal cujo crédito seja suspenso.
+
+-- Gabarito: C
+Suspensão da exigibilidade, Garantia da execução, Carta de fiança
+
+-----
