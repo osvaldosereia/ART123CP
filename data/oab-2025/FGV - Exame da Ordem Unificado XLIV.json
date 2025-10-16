@@ -790,6 +790,126 @@
       ],
       "answer": 2,
       "explanation": "“Caberá prisão temporária: [...] III - quando houver fundadas razões, de acordo com qualquer prova admitida na legislação penal, de autoria ou participação do indiciado nos seguintes crimes: [lista taxativa]” — Lei de Prisão Temporária (Lei nº 7.960/89), art. 1º, III. Justificativa objetiva: A prisão temporária somente é cabível para um rol taxativo de crimes graves, listados na Lei nº 7.960/89. O crime de homicídio culposo na direção de veículo automotor não consta nesse rol. Portanto, a prisão decretada é manifestamente ilegal. A medida cabível contra prisão ilegal é o seu relaxamento, que deve ser requerido imediatamente. A alternativa C está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "André foi denunciado por ter subtraído a bolsa de Márcia, mediante rompimento de obstáculo. A subtração foi legitimamente comprovada no processo, porém, não obstante tenha o rompimento de obstáculo deixado vestígios, não foi realizada qualquer perícia, sem justificativa plausível. Finda a instrução, manifestou-se o Ministério Público pela condenação, conforme a denúncia, sem requerer qualquer diligência.\nDada a palavra ao(à) advogado(a) de André, em alegações finais defensivas, este(a) deve requerer",
+      "options": [
+        "(A) a absolvição sumária de André, por não constituir o fato infração penal.",
+        "(B) o afastamento da qualificadora do furto, desclassificando a conduta para furto simples.",
+        "(C) a nulidade do processo desde o recebimento da denúncia, a fim de que seja realizada a prova pericial.",
+        "(D) a conversão do julgamento em diligência, a fim de que se realize prova pericial para comprovar a existência do rompimento de obstáculo."
+      ],
+      "answer": 1,
+      "explanation": "“Quando a infração deixar vestígios, será indispensável o exame de corpo de delito, direto ou indireto, não podendo supri-lo a confissão do acusado.” — Código de Processo Penal (CPP), art. 158. Justificativa objetiva: A qualificadora do rompimento de obstáculo no crime de furto (art. 155, § 4º, I, CP) é uma infração que deixa vestígios. Sua comprovação exige, indispensavelmente, a realização de exame pericial. A ausência injustificada da perícia impede o reconhecimento da qualificadora. Assim, a defesa deve pleitear o seu afastamento e a desclassificação do crime para furto simples. A alternativa B está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Foi oferecida denúncia em face de Samuel, pelo delito de furto, que foi distribuída ao Juízo competente, tendo havido regular instrução processual. Os autos foram conclusos para sentença, porém, o Juiz titular, que presidiu a instrução, afastou-se por dois dias para participar de um curso oficial. Por isso, a Corregedoria do Tribunal designou Juiz substituto para atuar naquele Juízo. O Magistrado substituto prolatou a sentença, condenando Samuel, com base na prova oral colhida, ainda que nenhuma urgência houvesse nesse processo.\nCom base nas informações do enunciado, assinale a opção que indica a alegação que você, como advogado(a) de Samuel, deve apresentar.",
+      "options": [
+        "(A) Violação ao princípio da identidade física do Juiz, causa de nulidade relativa da sentença.",
+        "(B) Suspeição do Magistrado que prolatou a sentença, como preliminar de mérito na apelação.",
+        "(C) Impedimento do Magistrado que prolatou a sentença, causa de nulidade absoluta da decisão.",
+        "(D) Violação ao princípio do Juiz Natural, pois deveria ter havido sorteio entre os Juízes substitutos, e não, a designação por livre escolha da Corregedoria do Tribunal."
+      ],
+      "answer": 0,
+      "explanation": "“O juiz que presidiu a instrução deverá proferir a sentença.” — CPP, art. 399, § 2º. Justificativa objetiva: O princípio da identidade física do juiz determina que o magistrado que colheu a prova durante a instrução é quem deve julgar a causa, por ter tido contato direto com as evidências. A prolação de sentença por juiz diverso, fora das exceções legais (como promoção, remoção, aposentadoria), configura violação a este princípio. A jurisprudência majoritária entende que se trata de uma nulidade relativa, que deve ser arguida oportunamente e depende da demonstração de prejuízo. A alternativa A está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Flávio foi preso em flagrante junto com outros três indivíduos, todos acusados pela prática do crime de roubo, disposto no Art. 157 do CP. Flávio permaneceu preso preventivamente durante o processo. Na audiência de instrução e julgamento, uma das testemunhas arroladas pela defesa afirmou que, no dia dos fatos, Flávio estava trabalhando na loja de material de construção que funcionava na frente do local onde os autores do fato estavam praticando o crime, e acabou sendo preso junto com os outros acusados. A testemunha também mencionou que a loja possui sistema de monitoramento de segurança, e que o dono da loja guardou imagens desse dia, para fornecê-las em sede policial se isso fosse demandado. O interrogatório dos réus foi regularmente realizado.\nDiante do fato narrado, assinale a opção que indica, corretamente, a medida jurídica que você, como advogado(a) de Flávio, deve adotar.",
+      "options": [
+        "(A) Apresentar alegações finais por memoriais, requerendo as imagens da loja.",
+        "(B) Requerer diligências para oficiar à loja de material de construções para que forneça as imagens do dia dos fatos.",
+        "(C) Apresentar alegações finais orais em audiência, com pedido de absolvição sumária, diante do depoimento da testemunha.",
+        "(D) Requerer a nulidade da audiência de instrução e julgamento, pois as imagens da loja não foram apresentadas em sede policial."
+      ],
+      "answer": 1,
+      "explanation": "“Encerrados os interrogatórios, proceder-se-á à fase do art. 402 deste Código.” E “Produzidas as provas, ao final da audiência, o Ministério Público, o querelante e o assistente e, a seguir, o acusado poderão requerer diligências cuja necessidade se origine de circunstâncias ou fatos apurados na instrução.” — CPP, arts. 400, §1º e 402. Justificativa objetiva: O momento processual adequado para requerer a produção de provas cuja necessidade surgiu durante a instrução é a fase de diligências, prevista no art. 402 do CPP, que ocorre após os interrogatórios e antes das alegações finais. A informação sobre as imagens surgiu no depoimento da testemunha, sendo o requerimento para sua juntada a medida correta. A alternativa B está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Manoel, mecânico de manutenção, após acidente durante sua atividade remunerada, recebeu benefício por incapacidade temporária durante dois anos. Antes da alta previdenciária, foi encaminhado para a reabilitação profissional, na qual se identificou a necessidade de utilização de prótese e fisioterapia, sem necessidade de transfusão de sangue ou cirurgia, em local conveniado com o INSS.\nNesse contexto hipotético, assinale a afirmativa correta.",
+      "options": [
+        " (A) No seu processo de reabilitação profissional está incluído o transporte, quando necessário.",
+        "(B) Manoel poderia se recusar a fazer a reabilitação profissional, pois a lei não a indica como etapa obrigatória a ser observada pelos segurados.",
+        "(C) A reabilitação profissional permitirá seu retorno à atividade remunerada, na qual contará com estabilidade provisória de 5 anos.",
+        "(D) A reabilitação profissional não compreende o fornecimento de aparelhos de prótese, de órtese e de instrumentos de auxílio para locomoção."
+      ],
+      "answer": 0,
+      "explanation": "“Concluído o processo de reabilitação profissional, a Previdência Social emitirá certificado individual, indicando as atividades que poderão ser exercidas pelo beneficiário, nada impedindo que este exerça outra atividade para a qual se capacitar. Parágrafo único. A Previdência Social arcará com o transporte do acidentado, quando necessário.” — Lei de Benefícios da Previdência Social (Lei nº 8.213/91), art. 92. Justificativa objetiva: O programa de reabilitação profissional oferecido pelo INSS é um serviço abrangente que inclui não apenas o treinamento, mas também o fornecimento de próteses, órteses e o custeio do transporte do segurado, quando necessário. A alternativa A está correta. A reabilitação é obrigatória para o segurado em gozo de benefício (B), a estabilidade é de 12 meses (C), e o programa compreende o fornecimento de próteses (D)."
+    },
+    {
+      "type": "multiple",
+      "q": "Humberto Alves, profissional liberal, desempenha a atividade de eletricista autônomo, prestando serviço a diversos clientes, todos pessoas físicas, mediante remuneração e sem relação de emprego.\nSobre o enquadramento de Humberto Alves como trabalhador autônomo no RGPS, assinale a afirmativa correta.",
+      "options": [
+        "(A) Ele é segurado obrigatório do Regime Geral de Previdência Social.",
+        "(B) Ele não poderá obter aposentadoria por idade ou por incapacidade permanente.",
+        "(C) Ele, por não possuir relação de emprego, é dispensado de quaisquer recolhimentos previdenciários.",
+        "(D) Ele se qualifica como segurado trabalhador avulso do Regime Geral de Previdência Social."
+      ],
+      "answer": 0,
+      "explanation": "“É segurado obrigatório da Previdência Social, como contribuinte individual: [...] V - a pessoa física que exerce, por conta própria, atividade econômica de natureza urbana, com fins lucrativos ou não.” — Lei de Custeio da Previdência Social (Lei nº 8.212/91), art. 12, V, 'h'. Justificativa objetiva: O trabalhador autônomo que exerce atividade econômica remunerada é enquadrado pela legislação previdenciária como 'contribuinte individual'. Esta é uma das categorias de segurados obrigatórios do Regime Geral de Previdência Social (RGPS), devendo, portanto, contribuir para o sistema. A alternativa A está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Guilherme, engenheiro responsável por obras de infraestrutura, trabalha para uma sociedade empresária há cinco anos. Ao longo dos últimos 4 anos sempre desfrutou de 30 dias de férias corridos. Em janeiro de 2024, ao verificar a incidência de numerosos feriados ao longo do ano, ele pretendeu fracionar suas férias. Assim sendo, procurou você, como advogado(a), para orientá-lo sobre a possibilidade de fracionar os 30 dias de férias a que tem direito.\nAcerca do interesse do seu cliente, assinale a opção que indica, corretamente, a orientação a ser dada.",
+      "options": [
+        "(A) Ele não pode fracionar as férias porque não usufruiu desse direito nos últimos quatro anos, mas tem o direito de converter 1/3 em pecúnia.",
+        "(B) Ele pode fracionar as férias em 3 períodos de 10 dias consecutivos cada, para fazer coincidir com os numerosos feriados observados ao longo do ano.",
+        "(C) Ele pode fracionar as férias em períodos inferiores a cinco dias, contados em dias úteis, de modo a coincidir, ou no início ou no término, com os feriados.",
+        "(D) Ele pode fracionar as férias em até 3 períodos, desde que um deles não seja inferior a 14 dias corridos e, os demais, não sejam inferiores a cinco dias corridos, cada um."
+      ],
+      "answer": 3,
+      "explanation": "“Desde que haja concordância do empregado, as férias poderão ser usufruídas em até três períodos, sendo que um deles não poderá ser inferior a quatorze dias corridos e os demais não poderão ser inferiores a cinco dias corridos, cada um.” — Consolidação das Leis do Trabalho (CLT), art. 134, § 1º. Justificativa objetiva: A legislação trabalhista permite o fracionamento das férias em até três períodos, mediante concordância do empregado. As regras para o fracionamento são claras: um período deve ter no mínimo 14 dias corridos e os outros dois, no mínimo 5 dias corridos cada. A alternativa D descreve corretamente essa regra."
+    },
+    {
+      "type": "multiple",
+      "q": "Pedro é caixa em um banco comercial desde 2022, e sua jornada contratual é de 2ª a 6ª feira, das 10 às 16 horas, com intervalo de 15 minutos para refeição. Ocorre que, na prática, diante do grande volume de trabalho, Pedro trabalha de 2ª a 6ª feira, das 10 às 18 horas, com intervalo de 15 minutos.\nSobre o intervalo, considerando os fatos e a previsão da CLT, assinale a afirmativa correta.",
+      "options": [
+        "(A) A jornada cumprida por Pedro não credencia qualquer intervalo.",
+        "(B) Pedro terá direito a um intervalo de 15 minutos diários, já aproveitado.",
+        "(C) Pedro receberá, a título indenizatório, 45 minutos diários com adicional de 50%.",
+        "(D) O empregado deverá receber 55 minutos de horas extras diárias acrescidas de 50%."
+      ],
+      "answer": 2,
+      "explanation": "“Em qualquer trabalho contínuo, cuja duração exceda de 6 (seis) horas, é obrigatória a concessão de um intervalo para repouso ou alimentação, o qual será, no mínimo, de 1 (uma) hora [...]. § 4º A não concessão ou a concessão parcial do intervalo intrajornada mínimo, para repouso e alimentação, a empregados urbanos e rurais, implica o pagamento, de natureza indenizatória, apenas do período suprimido, com acréscimo de 50% (cinquenta por cento) sobre o valor da remuneração da hora normal de trabalho.” — CLT, art. 71, caput e § 4º. Justificativa objetiva: Como Pedro trabalha habitualmente 8 horas por dia (das 10h às 18h), ele tem direito a um intervalo de, no mínimo, 1 hora. Tendo usufruído de apenas 15 minutos, ele tem direito ao pagamento indenizatório do período suprimido (45 minutos), acrescido do adicional de 50%. A alternativa C está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Eduarda estava radiante porque ficou grávida de seu primeiro filho, um sonho que acalentou durante muitos anos. Ocorre que, em virtude de problemas de saúde, Eduarda sofreu um aborto espontâneo na 6ª semana da gravidez.\nSobre a situação de Eduarda, nos termos da CLT, assinale a afirmativa correta.",
+      "options": [
+        "(A) Ela poderá se afastar do trabalho por um período de 30 dias.",
+        "(B) Ela terá direito a um repouso remunerado de duas semanas.",
+        "(C) Ela terá direito ao mesmo período da licença-paternidade, ou seja, 5 dias.",
+        "(D) Ela não terá direito a qualquer período de repouso, por faltar previsão legal."
+      ],
+      "answer": 1,
+      "explanation": "“Em caso de aborto não criminoso, comprovado por atestado médico oficial, a mulher terá um repouso remunerado de 2 (duas) semanas, ficando-lhe assegurado o direito de retornar à função que ocupava antes de seu afastamento.” — CLT, art. 395. Justificativa objetiva: A CLT prevê uma proteção específica para a trabalhadora que sofre um aborto não criminoso. Ela tem direito a um repouso remunerado de duas semanas para sua recuperação. A alternativa B está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Giovana encontra-se em auxílio temporário por incapacidade (auxílio-doença) há 6 anos, permanecendo, basicamente, em sua residência, realizando afazeres domésticos. Não há impossibilidade de Giovana realizar os atos da vida civil de maneira geral, mas está limitada em sua capacidade laborativa. Em 2024, Giovana lembrou que, no mês anterior ao início do seu benefício previdenciário, realizou várias horas extras, que pretende reivindicar judicialmente, e para tanto o(a) procura, como advogado(a), para obter uma orientação.\nConsiderando esses fatos e o entendimento consolidado do TST, assinale a opção que apresenta, corretamente, sua orientação.",
+      "options": [
+        "(A) Desaconselhável a demanda, porque a prescrição que vier a ser suscitada impedirá a análise do suposto direito.",
+        "(B) Haverá prescrição extintiva bienal porque a ação não foi ajuizada nos 2 anos seguintes à concessão do benefício.",
+        "(C) A prescrição para quem está recebendo benefício previdenciário é trintenária, daí o pedido de horas extras ser viável.",
+        "(D) Não corre prescrição parcial porque o contrato se encontra suspenso e, por isso, a prescrição não flui contra Giovana."
+      ],
+      "answer": 0,
+      "explanation": "“A suspensão do contrato de trabalho, em virtude da percepção do auxílio-doença ou da aposentadoria por invalidez, não impede a fluência da prescrição quinquenal, ressalvada a hipótese de absoluta impossibilidade de acesso ao Judiciário.” — Súmula nº 444 do Tribunal Superior do Trabalho (TST). Justificativa objetiva: O contrato de trabalho de Giovana está suspenso, mas, de acordo com o TST, a prescrição quinquenal continua a fluir normalmente. Como se passaram 6 anos desde o fato gerador (as horas extras), a pretensão para cobrá-las já está prescrita. Portanto, ajuizar a ação seria desaconselhável, pois a prescrição, se arguida pela empresa, levará à extinção do processo com resolução de mérito em favor do réu. A alternativa A está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Você foi consultado, na qualidade de advogado(a), por quatro mulheres trabalhadoras (Ligia, Paula, Geórgia e Sílvia), acerca de situações específicas que ocorreram no mercado de trabalho. Ligia indagou sobre um anúncio de emprego para chefe de cozinha que continha expressa referência à preferência por homens. Paula teria sido preterida em promoção, porque estava grávida de 6 meses e entraria em licença-maternidade em pouco tempo. De Geórgia, na entrevista de emprego, foi exigido, como condicionante da contratação, o atestado de que não estaria grávida. Sílvia perguntou acerca de um anúncio de empregos exclusivos para homens, no qual havia a descrição dos serviços como sendo de transporte, armazenagem e movimentação de cargas de 30 kg, sem o auxílio de meios mecânicos.\nAcerca da sua resposta às quatro consultas, assinale a afirmativa correta.",
+      "options": [
+        "(A) Todas as exigências são legítimas, porque estão contidas no poder empregatício.",
+        "(B) Todas as exigências são ilegítimas, pois violam os direitos da mulher e demonstram discriminação no mercado de trabalho.",
+        "(C) As exigências nos casos de Ligia, Paula e Geórgia são ilegais, por violarem direitos das mulheres; em relação ao caso de Silvia, a exigência é legítima.",
+        "(D) As exigências relacionadas a Paula e a Geórgia são ilícitas, pois ferem o direito à maternidade, sendo as demais justificáveis, com base nas naturais exigências do mercado de trabalho."
+      ],
+      "answer": 2,
+      "explanation": "“É proibido publicar ou fazer publicar anúncio de emprego no qual haja referência ao sexo, à idade, à cor ou situação familiar, salvo quando a natureza da atividade a ser exercida, pública e notoriamente, assim o exigir.” — CLT, art. 373-A, I. “É vedado [...] II - recusar emprego, promoção ou motivar a dispensa em razão de sexo, idade, cor, situação familiar ou estado de gravidez [...]; IV - exigir atestado ou exame, de qualquer natureza, para comprovação de esterilidade ou gravidez, na admissão ou permanência no emprego.” — CLT, art. 373-A, II e IV. Justificativa objetiva: As situações de Lígia (preferência por sexo), Paula (preterição por gravidez) e Geórgia (exigência de teste de gravidez) são condutas discriminatórias expressamente vedadas pela CLT e pela Lei nº 9.029/95. No caso de Sílvia, a natureza da atividade (movimentação manual de cargas de 30 kg) excede os limites de força física recomendados para a proteção do trabalho da mulher (CLT, art. 390), justificando a restrição como requisito profissional legítimo, e não como discriminação. A alternativa C analisa corretamente todas as situações."
     }
   ]
 }
