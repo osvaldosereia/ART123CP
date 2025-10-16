@@ -6,71 +6,46 @@
   <title>MeuJus — Quiz</title>
   <meta name="description" content="MeuJus — Quiz minimalista com categorias e temas. Pronto para GitHub Pages." />
   <style>
-    /* ===== Estilo minimalista: foco no texto ===== */
     :root{
-      --bg: #ffffff;           /* fundo branco */
-      --bg-soft: #f6f7f8;      /* cinza muito claro */
-      --ink: #0f172a;          /* texto principal */
-      --muted: #6b7280;        /* texto secundário */
-      --accent: #111827;       /* destaque sutil escuro */
-      --ok: #059669;           /* correto */
-      --bad: #b91c1c;          /* incorreto */
+      --bg:#ffffff; --bg-soft:#f6f7f8; --ink:#0f172a; --muted:#6b7280; --accent:#111827; --ok:#059669; --bad:#b91c1c;
     }
-    * { box-sizing: border-box }
-    html, body { height: 100% }
+    *{ box-sizing:border-box }
+    html,body{ height:100% }
     body{
-      margin:0; background: var(--bg);
-      color: var(--ink);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
-      line-height: 1.6;
-      font-size: 15px; /* fonte pequena e leve */
-      font-weight: 300;
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial;
+      line-height:1.6; font-size:15px; font-weight:300;
     }
-
-    .container{ max-width: 820px; margin: 0 auto; padding: 20px; }
-
-    header.site{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding: 20px 0 10px; }
-    .brand{ font-size: 18px; font-weight: 700; letter-spacing:.2px; color: var(--accent); }
-    .state{ font-size: 12px; color: var(--muted); }
-
-    /* Seções com muito respiro, sem molduras pesadas */
-    section{ padding: 18px 0; }
-
-    /* Controles enxutos */
-    label{ display:block; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
-    select, button{ appearance:none; border:1px solid #e5e7eb; background: #fff; color: var(--ink); border-radius: 8px; padding: 10px 12px; font-size: 14px; font-weight: 300; }
-    select{ width: 100%; }
-    .controls{ display:grid; gap:12px; grid-template-columns: 1fr; }
-    @media (min-width:620px){ .controls{ grid-template-columns: 1fr 1fr; } }
-    .actions{ display:flex; gap:10px; padding-top:8px }
+    .container{ max-width:820px; margin:0 auto; padding:20px }
+    header.site{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:20px 0 10px }
+    .brand{ font-size:18px; font-weight:700; letter-spacing:.2px; color:var(--accent) }
+    .state{ font-size:12px; color:var(--muted) }
+    section{ padding:18px 0 }
+    label{ display:block; font-size:12px; color:var(--muted); margin-bottom:6px }
+    select,button{ appearance:none; border:1px solid #e5e7eb; background:#fff; color:var(--ink); border-radius:8px; padding:10px 12px; font-size:14px; font-weight:300 }
+    select{ width:100% }
+    .controls{ display:grid; gap:12px; grid-template-columns:1fr }
+    @media (min-width:620px){ .controls{ grid-template-columns:1fr 1fr } }
+    .actions{ display:flex; gap:10px; padding-top:8px; flex-wrap:wrap }
     .btn{ cursor:pointer }
-    .btn.primary{ background: var(--ink); color:#fff; border-color: var(--ink); }
-    .btn.ghost{ background: transparent; border-color:#e5e7eb; }
-
-    /* Barra de progresso finíssima */
-    .progress{ height: 3px; background: #e5e7eb; border-radius: 999px; overflow:hidden }
-    .progress > span{ display:block; width:0%; height:100%; background: #111827; transition: width .25s ease }
-
-    /* Enunciado e opções: parágrafos com espaçamento generoso */
-    .statement{ font-size: 16px; font-weight: 500; line-height: 1.2; margin: 8px 0 6px; letter-spacing:.1px }
-    .options{ display:grid; gap:8px; margin: 6px 0 8px }
-    .opt{ text-align:left; background: transparent; border:1px solid #e5e7eb; padding: 10px 12px; border-radius:10px; font-size: 15px; font-weight:300 }
+    .btn.primary{ background:var(--ink); color:#fff; border-color:var(--ink) }
+    .btn.ghost{ background:transparent; border-color:#e5e7eb }
+    .progress{ height:3px; background:#e5e7eb; border-radius:999px; overflow:hidden }
+    .progress>span{ display:block; width:0%; height:100%; background:#111827; transition:width .25s ease }
+    .statement{ font-size:16px; font-weight:500; line-height:1.2; margin:8px 0 6px; letter-spacing:.1px }
+    .options{ display:grid; gap:8px; margin:6px 0 8px }
+    .opt{ text-align:left; background:transparent; border:1px solid #e5e7eb; padding:10px 12px; border-radius:10px; font-size:15px; font-weight:300 }
     .opt:hover{ border-color:#cbd5e1 }
     .opt[disabled]{ opacity:.7; cursor:not-allowed }
-    .opt.correct{ border-color: rgba(5,150,105,.8); background: #f0fdf4 }
-    .opt.wrong  { border-color: rgba(185,28,28,.8); background: #fef2f2 }
-
-    .explain{ background: var(--bg-soft); color: var(--ink); padding: 10px 12px; border-radius: 10px; font-size: 14px; margin-top: 6px }
-
-    .muted{ color: var(--muted); font-size: 13px }
-    .meta{ display:flex; justify-content:space-between; gap:12px; padding-top: 10px; color: var(--muted); font-size:12px }
-
-    /* Layouts */
-    .intro{ background: var(--bg-soft); border-radius: 12px; padding: 14px 12px }
-    .quiz{ padding-top: 6px }
-    .results h2{ font-size: 18px; font-weight: 400; margin: 0 0 4px }
-    .score{ font-size: 28px; font-weight: 400 }
-
+    .opt.correct{ border-color:rgba(5,150,105,.8); background:#f0fdf4 }
+    .opt.wrong{ border-color:rgba(185,28,28,.8); background:#fef2f2 }
+    .explain{ background:var(--bg-soft); color:var(--ink); padding:10px 12px; border-radius:10px; font-size:14px; margin-top:6px }
+    .muted{ color:var(--muted); font-size:13px }
+    .meta{ display:flex; justify-content:space-between; gap:12px; padding-top:10px; color:var(--muted); font-size:12px }
+    .intro{ background:var(--bg-soft); border-radius:12px; padding:14px 12px }
+    .quiz{ padding-top:6px }
+    .results h2{ font-size:18px; font-weight:400; margin:0 0 4px }
+    .score{ font-size:28px; font-weight:400 }
     .hide{ display:none }
   </style>
 </head>
@@ -81,7 +56,6 @@
       <div class="state" id="state">pronto</div>
     </header>
 
-    <!-- Intro -->
     <section class="intro" id="screenIntro">
       <p class="muted" id="introSubtitle">Escolha uma categoria e um tema para começar.</p>
       <div class="controls">
@@ -100,7 +74,6 @@
       </div>
     </section>
 
-    <!-- Quiz -->
     <section class="quiz hide" id="screenQuiz">
       <div class="progress" aria-label="Progresso"><span id="bar"></span></div>
       <p id="question" class="statement"></p>
@@ -109,6 +82,8 @@
       <div class="actions">
         <button id="btnPrev" class="btn ghost" type="button">Anterior</button>
         <button id="btnNext" class="btn primary" type="button">Próximo</button>
+        <!-- NOVO: botão IA (Google modo IA - udm=50) -->
+        <button id="btnAI" class="btn ghost hide" type="button" aria-label="Gerar explicação do tema com IA">IA</button>
       </div>
       <div class="meta">
         <span id="footLeft">—</span>
@@ -116,7 +91,6 @@
       </div>
     </section>
 
-    <!-- Resultado -->
     <section class="results hide" id="screenResult">
       <h2 id="resultTitle">Resultado</h2>
       <div class="score" id="resultScore"></div>
@@ -129,9 +103,6 @@
   </div>
 
   <script>
-    // ==========================
-    // Dados externos com fallback embutido
-    // ==========================
     const selCategory = document.getElementById('selCategory');
     const selTheme = document.getElementById('selTheme');
     const btnStart = document.getElementById('btnStart');
@@ -150,6 +121,7 @@
     const explainEl = document.getElementById('explanation');
     const btnPrev = document.getElementById('btnPrev');
     const btnNext = document.getElementById('btnNext');
+    const btnAI = document.getElementById('btnAI');
 
     const resultTitle = document.getElementById('resultTitle');
     const resultScore = document.getElementById('resultScore');
@@ -160,20 +132,14 @@
     const footLeft = document.getElementById('footLeft');
     const footRight = document.getElementById('footRight');
 
-    const DEFAULT_LABELS = { start: 'Começar', next: 'Próximo', prev: 'Anterior', retry: 'Refazer', home: 'Início', category: 'Categoria', theme: 'Tema', result: 'Resultado' };
+    const DEFAULT_LABELS = { start:'Começar', next:'Próximo', prev:'Anterior', retry:'Refazer', home:'Início', category:'Categoria', theme:'Tema', result:'Resultado' };
     let LABELS = { ...DEFAULT_LABELS };
 
-    let MANIFEST = null;     // manifesto carregado
-    let QUIZ = null;         // quiz atual carregado
-    let ORDER = [];          // ordem das questões
-    let CHOSEN = [];         // respostas escolhidas (índice ou boolean)
-    let I = 0;               // índice atual
-    let KEY = null;          // chave localStorage
+    let MANIFEST = null, QUIZ = null, ORDER = [], CHOSEN = [], I = 0, KEY = null;
 
-    // Utils
     const show = (node, flag) => node.classList.toggle('hide', !flag);
     const clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
-    function lsGet(k, def=null){ try{ const v = localStorage.getItem(k); return v? JSON.parse(v):def; }catch{ return def; } }
+    function lsGet(k, def=null){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):def; }catch{ return def; } }
     function lsSet(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch{} }
     function shuffleInPlace(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
 
@@ -181,7 +147,7 @@
     function mustUseEmbedded(){ return new URLSearchParams(location.search).get('embedded')==='1'; }
     async function loadJSON(path, fallback=undefined){
       if(!mustUseEmbedded()){
-        try{ const res = await fetch(path,{cache:'no-store'}); if(res.ok) return res.json(); }catch{}
+        try{ const res=await fetch(path,{cache:'no-store'}); if(res.ok) return res.json(); }catch{}
       }
       const emb=readEmbedded(path); if(emb!=null) return emb; if(fallback!==undefined) return fallback; return null;
     }
@@ -190,55 +156,57 @@
 
     init();
     async function init(){
-      const manifestFallback={ title:'MeuJus', categories:[{"id":"intro","name":"Introdução","themes":[{"id":"basico","name":"Básico","path":"data/intro/basico.json"}]}], shuffleDefault:{questions:true,options:true}, persistDefault:true };
+      const manifestFallback={ title:'MeuJus', categories:[{id:'intro',name:'Introdução',themes:[{id:'basico',name:'Básico',path:'data/intro/basico.json'}]}], shuffleDefault:{questions:true,options:true}, persistDefault:true };
       MANIFEST = await loadJSON('data/manifest.json', manifestFallback);
 
       appTitle.textContent = MANIFEST?.title || 'MeuJus';
       try{ if(MANIFEST?.labels) LABELS={...DEFAULT_LABELS, ...(await loadJSON(MANIFEST.labels))}; }catch{}
       applyLabels();
 
-      // popular selects
       selCategory.innerHTML='';
       (MANIFEST?.categories||[]).forEach((c,idx)=>{ const o=document.createElement('option'); o.value=c.id; o.textContent=c.name||c.id; if(idx===0) o.selected=true; selCategory.appendChild(o); });
       updateThemes();
 
-      // eventos
       selCategory.addEventListener('change', updateThemes);
       btnStart.addEventListener('click', startQuizFromSelection);
       btnPrev.addEventListener('click', prev);
       btnNext.addEventListener('click', next);
+      btnAI.addEventListener('click', openGoogleAI);
       btnRetry.addEventListener('click', ()=> loadQuiz(KEY?.path, true));
       btnHome.addEventListener('click', ()=>{ resetState(); show(screenIntro,true); show(screenQuiz,false); show(screenResult,false); state.textContent='pronto'; });
 
-      // restore (sem auto-iniciar)
-      const last = lsGet('quiz:last');
-      if (last && last.path) {
+      const last=lsGet('quiz:last');
+      if(last && last.path){
         btnResume.classList.remove('hide');
-        btnResume.addEventListener('click', async ()=>{ KEY = last; await loadQuiz(last.path, false, true); });
+        btnResume.addEventListener('click', async ()=>{ KEY=last; await loadQuiz(last.path, false, true); });
       }
 
       setTimeout(runTests,0);
     }
 
     function applyLabels(){
-      document.querySelector('label[for="selCategory"]').textContent = LABELS.category || 'Categoria';
-      document.querySelector('label[for="selTheme"]').textContent = LABELS.theme || 'Tema';
-      btnStart.textContent = LABELS.start || 'Começar';
-      btnPrev.textContent = LABELS.prev || 'Anterior';
-      btnNext.textContent = LABELS.next || 'Próximo';
-      document.getElementById('resultTitle').textContent = LABELS.result || 'Resultado';
-      btnRetry.textContent = LABELS.retry || 'Refazer';
-      btnHome.textContent = LABELS.home || 'Início';
+      document.querySelector('label[for="selCategory"]').textContent = LABELS.category||'Categoria';
+      document.querySelector('label[for="selTheme"]').textContent = LABELS.theme||'Tema';
+      btnStart.textContent = LABELS.start||'Começar';
+      btnPrev.textContent = LABELS.prev||'Anterior';
+      btnNext.textContent = LABELS.next||'Próximo';
+      document.getElementById('resultTitle').textContent = LABELS.result||'Resultado';
+      btnRetry.textContent = LABELS.retry||'Refazer';
+      btnHome.textContent = LABELS.home||'Início';
     }
 
     function updateThemes(){
-      const catId = selCategory.value;
-      const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId) || {themes:[]};
+      const catId=selCategory.value;
+      const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId) || {themes:[]};
       selTheme.innerHTML='';
       (cat.themes||[]).forEach((t,idx)=>{ const o=document.createElement('option'); o.value=t.id; o.textContent=t.name||t.id; if(idx===0) o.selected=true; selTheme.appendChild(o); });
     }
 
-    function selectedPath(){ const catId=selCategory.value; const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId); const themeId=selTheme.value; const theme=(cat?.themes||[]).find(t=>t.id===themeId); return theme?.path || (catId&&themeId ? `data/${catId}/${themeId}.json`: null); }
+    function selectedPath(){
+      const catId=selCategory.value; const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId);
+      const themeId=selTheme.value; const theme=(cat?.themes||[]).find(t=>t.id===themeId);
+      return theme?.path || (catId&&themeId ? `data/${catId}/${themeId}.json` : null);
+    }
 
     async function startQuizFromSelection(){ const path=selectedPath(); if(!path) return; await loadQuiz(path, true); }
 
@@ -268,7 +236,11 @@
 
     function current(){ return QUIZ.questions[ ORDER[I] ]; }
 
-    function persist(){ const persistFlag=QUIZ?.meta?.persist ?? MANIFEST?.persistDefault ?? true; if(!persistFlag||!KEY) return; lsSet(KEY.key, { i:I, chosen:CHOSEN, quizLen: QUIZ.questions.length }); }
+    function persist(){
+      const persistFlag=QUIZ?.meta?.persist ?? MANIFEST?.persistDefault ?? true;
+      if(!persistFlag||!KEY) return;
+      lsSet(KEY.key, { i:I, chosen:CHOSEN, quizLen: QUIZ.questions.length });
+    }
 
     function render(){
       const total=QUIZ.questions.length;
@@ -278,9 +250,10 @@
       footRight.textContent = `${answered} respondidas`;
 
       const q=current();
-      questionEl.textContent = q.q; // enunciados longos 120-200 chars
+      questionEl.textContent = q.q;
       optionsEl.innerHTML='';
       explainEl.classList.add('hide');
+      show(btnAI, false); // IA só aparece após responder
 
       const type=q.type||'multiple';
       if(type==='vf'){
@@ -302,7 +275,8 @@
     function renderOptions(texts, onPick, origIdxs=null){
       texts.forEach((txt, idx)=>{
         const b=document.createElement('button');
-        b.className='opt'; b.textContent=txt; b.dataset.idx=idx; if(origIdxs) b.dataset.origIdx=String(origIdxs[idx]);
+        b.className='opt'; b.textContent=txt; b.dataset.idx=idx;
+        if(origIdxs) b.dataset.origIdx=String(origIdxs[idx]);
         b.addEventListener('click', ()=> onPick(idx));
         optionsEl.appendChild(b);
       });
@@ -310,55 +284,111 @@
 
     function isLocked(){ return optionsEl.querySelector('.correct, .wrong') != null; }
 
-    function select(value){ if(isLocked()) return; CHOSEN[ ORDER[I] ] = value; lockAndExplain(value); persist(); }
+    function select(value){
+      if(isLocked()) return;
+      CHOSEN[ ORDER[I] ] = value;
+      lockAndExplain(value);
+      persist();
+    }
 
     function lockAndExplain(value){
       const q=current(); const type=q.type||'multiple';
       const buttons=Array.from(optionsEl.querySelectorAll('.opt')); buttons.forEach(b=>b.disabled=true);
       let correct=false;
       if(type==='vf'){
-        correct = (value === !!q.answer); buttons[q.answer ? 0:1].classList.add('correct'); const chosenIdx=value?0:1; if(!correct) buttons[chosenIdx]?.classList.add('wrong');
+        correct = (value === !!q.answer);
+        buttons[q.answer ? 0:1].classList.add('correct');
+        const chosenIdx=value?0:1; if(!correct) buttons[chosenIdx]?.classList.add('wrong');
       } else {
         const answerIdx=q.answer;
         buttons.forEach(b=>{ const origIdx=parseInt(b.dataset.origIdx??'-1',10); if(origIdx===answerIdx) b.classList.add('correct'); });
-        const chosenBtn=buttons.find(b=>parseInt(b.dataset.origIdx??'-1',10)===value); correct=(typeof value==='number' && value===answerIdx); if(!correct && chosenBtn) chosenBtn.classList.add('wrong');
+        const chosenBtn=buttons.find(b=>parseInt(b.dataset.origIdx??'-1',10)===value);
+        correct=(typeof value==='number' && value===answerIdx);
+        if(!correct && chosenBtn) chosenBtn.classList.add('wrong');
       }
       state.textContent = correct? 'correto' : 'incorreto';
       explainEl.textContent = q.explanation || '';
       explainEl.classList.toggle('hide', !q.explanation);
+
+      // Exibir botão IA somente após travar
+      show(btnAI, true);
     }
 
-    function markLocked(){ const q=current(); const type=q.type||'multiple'; const val=CHOSEN[ ORDER[I] ]; if(val===null) return; if(type==='vf'){ renderOptions(['Verdadeiro','Falso'],()=>{},[0,1]); } else { const opts=q.options.map((t,i)=>({t,i})); const shOpts=(QUIZ.meta?.shuffle?.options ?? MANIFEST?.shuffleDefault?.options)? shuffleInPlace(opts):opts; renderOptions(shOpts.map(o=>o.t), ()=>{}, shOpts.map(o=>o.i)); } lockAndExplain(val); }
+    function markLocked(){
+      const q=current(); const type=q.type||'multiple'; const val=CHOSEN[ ORDER[I] ];
+      if(val===null) return;
+      if(type==='vf'){
+        renderOptions(['Verdadeiro','Falso'],()=>{},[0,1]);
+      } else {
+        const opts=q.options.map((t,i)=>({t,i}));
+        const shOpts=(QUIZ.meta?.shuffle?.options ?? MANIFEST?.shuffleDefault?.options)? shuffleInPlace(opts):opts;
+        renderOptions(shOpts.map(o=>o.t), ()=>{}, shOpts.map(o=>o.i));
+      }
+      lockAndExplain(val);
+    }
 
     function next(){ if(!isLocked()) return; if(I<QUIZ.questions.length-1){ I++; render(); } else finish(); }
     function prev(){ if(I>0){ I--; render(); } }
 
-    function score(){ let ok=0; const total=QUIZ.questions.length; for(let k=0;k<total;k++){ const q=QUIZ.questions[k]; const v=CHOSEN[k]; if((q.type||'multiple')==='vf'){ if(v===!!q.answer) ok++; } else if(typeof v==='number' && v===q.answer) ok++; } return {ok,total}; }
+    function score(){
+      let ok=0; const total=QUIZ.questions.length;
+      for(let k=0;k<total;k++){
+        const q=QUIZ.questions[k]; const v=CHOSEN[k];
+        if((q.type||'multiple')==='vf'){ if(v===!!q.answer) ok++; }
+        else if(typeof v==='number' && v===q.answer) ok++;
+      }
+      return {ok,total};
+    }
 
-    function finish(){ const {ok,total}=score(); const pct=Math.round(ok/Math.max(1,total)*100); resultScore.textContent=`${pct}% (${ok}/${total})`; resultMsg.textContent=QUIZ.meta?.outroMessage || MANIFEST?.outro?.message || ''; state.textContent='concluído'; show(screenQuiz,false); show(screenResult,true); }
+    function finish(){
+      const {ok,total}=score();
+      const pct=Math.round(ok/Math.max(1,total)*100);
+      resultScore.textContent=`${pct}% (${ok}/${total})`;
+      resultMsg.textContent=QUIZ.meta?.outroMessage || MANIFEST?.outro?.message || '';
+      state.textContent='concluído';
+      show(screenQuiz,false); show(screenResult,true);
+    }
 
-    // Acessibilidade de teclado
-    window.addEventListener('keydown',(e)=>{ if(screenQuiz.classList.contains('hide')) return; if(e.key>='1'&&e.key<='9'){ const idx=parseInt(e.key,10)-1; const btn=optionsEl.querySelectorAll('.opt')[idx]; if(btn) btn.click(); } else if(e.key==='Enter'||e.key==='ArrowRight'){ if(I===QUIZ.questions.length-1) finish(); else next(); } else if(e.key==='ArrowLeft'){ prev(); } });
+    // Abre Google modo IA (udm=50) com prompt formado pelo tema, enunciado e alternativa correta
+    function openGoogleAI(){
+      const q=current(); if(!q) return;
+      const metaTitle = QUIZ?.meta?.title || 'Tema';
+      const metaCat = QUIZ?.meta?.category || '';
+      const metaTheme = QUIZ?.meta?.theme || '';
+      const type=q.type||'multiple';
+      const correctText = type==='vf' ? (q.answer ? 'Verdadeiro' : 'Falso') : (q.options?.[q.answer] || '');
 
-    // ==========================
-    // Testes básicos no console
-    // ==========================
+      const prompt =
+`Você é professor de Direito. Explique didaticamente o tema: ${metaTitle} (${metaCat}/${metaTheme})
+com foco em doutrina e jurisprudência brasileiras.
+Enunciado: ${q.q}
+Alternativa correta: ${correctText}
+Diretrizes: clareza; 300–600 palavras; cite STF/STJ quando aplicável; não revele gabaritos de outras questões.`;
+
+      const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt);
+      window.open(url, '_blank', 'noopener');
+    }
+
+    window.addEventListener('keydown',(e)=>{
+      if(screenQuiz.classList.contains('hide')) return;
+      if(e.key>='1'&&e.key<='9'){ const idx=parseInt(e.key,10)-1; const btn=optionsEl.querySelectorAll('.opt')[idx]; if(btn) btn.click(); }
+      else if(e.key==='Enter'||e.key==='ArrowRight'){ if(I===QUIZ.questions.length-1) finish(); else next(); }
+      else if(e.key==='ArrowLeft'){ prev(); }
+    });
+
     function runTests(){
       try{
         console.group('TESTES');
-        // 1) Manifest embutido
         const m=readEmbedded('data/manifest.json'); console.assert(m && m.categories && m.categories.length>0, 'Manifest embutido ok');
-        // 2) Correção
         console.assert(isCorrectQuestion({type:'multiple',answer:2},2)===true, 'Multiple ok');
         console.assert(isCorrectQuestion({type:'vf',answer:true},true)===true, 'VF ok');
-        // 3) Tamanho de enunciados 120-200 (amostra)
         const sampleQ = readEmbedded('data/intro/basico.json').questions[0].q; console.assert(sampleQ.length>=120 && sampleQ.length<=220, 'Enunciado exemplo ~120-200 chars');
         console.log('Passou nos testes básicos');
       }catch(e){ console.error('Falha nos testes', e); } finally{ console.groupEnd(); }
     }
   </script>
 
-  <!-- ===== Fallbacks embutidos para funcionar sem arquivos externos ===== -->
+  <!-- Fallbacks embutidos -->
   <script type="application/json" data-path="data/manifest.json">{
     "title": "MeuJus",
     "labels": "labels/pt-BR.json",
@@ -374,7 +404,6 @@
     "start":"Começar","next":"Próximo","prev":"Anterior","retry":"Refazer","home":"Início","category":"Categoria","theme":"Tema","result":"Resultado"
   }</script>
 
-  <!-- Amostra: enunciados e opções com 120-200 caracteres -->
   <script type="application/json" data-path="data/intro/basico.json">{
     "meta": {
       "title": "Introdução Básica",
