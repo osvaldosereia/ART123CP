@@ -37,7 +37,7 @@
     },
     {
       "type": "multiple",
-      "q": "O advogado recém-formado João decide oferecer seus serviços jurídicos gratuitos para uma startup de tecnologia em rápido crescimento, com o acordo de que a empresa divulgará amplamente em suas redes sociais o trabalho "pro bono" realizado por ele, incluindo seu nome e contato profissional. Essa prática pode ser considerada advocacia pro bono?",
+      "q": "O advogado recém-formado João decide oferecer seus serviços jurídicos gratuitos para uma startup de tecnologia em rápido crescimento, com o acordo de que a empresa divulgará amplamente em suas redes sociais o trabalho \"pro bono\" realizado por ele, incluindo seu nome e contato profissional. Essa prática pode ser considerada advocacia pro bono?",
       "options": [
         "Sim, pois a advocacia pro bono pode ser prestada a pessoas jurídicas sem fins econômicos ou, eventualmente, a startups.",
         "Não, pois a advocacia pro bono não pode ser utilizada como instrumento de publicidade para captação de clientela.",
