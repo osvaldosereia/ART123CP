@@ -336,7 +336,7 @@
       (cat.themes||[]).forEach((t,idx)=>{
         const o=document.createElement('option');
         o.value=t.id;
-        o.textContent=t.name||t.id; // já vem em frase com acentos/ç se o arquivo tiver
+        o.textContent=(t.name||t.id).toLocaleUpperCase('pt-BR'); // TEMAS EM MAIÚSCULAS
         if(idx===0) o.selected=true;
         selTheme.appendChild(o);
       });
