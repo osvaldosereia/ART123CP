@@ -595,10 +595,21 @@
     }
 
     function next(){
-      if(!isLocked()){ toast('Selecione uma opção para avançar','warn',1600); return; }
-      if(I<ORDER.length-1){ I++; render(); } else finish();
-    }
-    function prev(){ if(I>0){ I--; render(); } }
+  if(I < ORDER.length - 1){
+    I++;
+    render();
+  } else {
+    finish();
+  }
+}
+
+function prev(){
+  if(I > 0){
+    I--;
+    render();
+  }
+}
+
 
     function score(){
       let ok=0; const total=QUIZ.questions.length;
