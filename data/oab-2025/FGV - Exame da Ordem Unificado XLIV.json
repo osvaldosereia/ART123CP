@@ -430,6 +430,66 @@
       ],
       "answer": 1,
       "explanation": "“A elaboração do EIV não substitui a elaboração e a aprovação de estudo prévio de impacto ambiental (EIA), requeridas nos termos da legislação ambiental.” — Estatuto da Cidade (Lei nº 10.257/2001), art. 38. Justificativa objetiva: O Estudo de Impacto de Vizinhança (EIV) é um instrumento de política urbana, exigido pelo Estatuto da Cidade para empreendimentos com potencial impacto na vizinhança. O Estudo de Impacto Ambiental (EIA) é um instrumento de política ambiental, exigido para atividades com potencial de degradação ambiental significativa. São instrumentos distintos, com finalidades e âmbitos de análise diferentes, e um não substitui o outro. A alternativa B está correta. A C está incorreta, pois o EIV deve analisar tanto os efeitos positivos quanto os negativos. A D está incorreta porque a exigência de EIV depende de lei municipal que defina os empreendimentos sujeitos a ele."
+    },
+    {
+      "type": "multiple",
+      "q": "Por decisão de seus representantes legais, o exercício de determinada atividade empresarial da sociedade Aurora, em benefício próprio, ensejou a poluição de um determinado rio, de modo que a conduta praticada ocasionou severos danos ao meio ambiente e, ao mesmo tempo, caracteriza ilícito penal, civil e administrativo.\nDiante dessa situação hipotética e considerando as normas de responsabilização da pessoa jurídica em matéria ambiental, assinale a afirmativa correta.",
+      "options": [
+        "(A) A sociedade Aurora deve ser responsabilizada administrativa, civil e penalmente pela aludida conduta, nos termos da legislação de regência.",
+        "(B) Eventual responsabilização penal da sociedade Aurora afasta a possibilidade de que ela seja responsabilizada nas esferas civil e administrativa.",
+        "(C) Para que possa responder na esfera administrativa, é imprescindível a condenação penal da sociedade Aurora, o que não ocorre para fins de responsabilização civil.",
+        "(D) Por se tratar de pessoa jurídica, a sociedade Aurora não pode ser responsabilizada na esfera penal, de modo que a sua responsabilização fica restrita às esferas civil e administrativa."
+      ],
+      "answer": 0,
+      "explanation": "“As condutas e atividades consideradas lesivas ao meio ambiente sujeitarão os infratores, pessoas físicas ou jurídicas, a sanções penais e administrativas, independentemente da obrigação de reparar os danos causados.” — CRFB/88, art. 225, § 3º. E “As pessoas jurídicas serão responsabilizadas administrativa, civil e penalmente conforme o disposto nesta Lei, nos casos em que a infração seja cometida por decisão de seu representante legal ou contratual, ou de seu órgão colegiado, no interesse ou benefício da sua entidade.” — Lei nº 9.605/98 (Lei de Crimes Ambientais), art. 3º. Justificativa objetiva: O ordenamento jurídico brasileiro adota a teoria da tríplice responsabilidade ambiental. Isso significa que as esferas de responsabilização (civil, administrativa e penal) são independentes e cumulativas. A pessoa jurídica pode e deve responder nas três esferas simultaneamente. A alternativa A está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Gabriel e Vitória, pais de Ana e de Clara, faleceram em um acidente aéreo. Os parentes mais próximos de Ana e Clara são os tios, Rafael - irmão de Gabriel-, com 42 anos de idade, e a tia, Júlia irmã de Vitória, com 38 anos de idade. Atualmente, Ana tem 9 anos de idade e, Clara, 7. Verificou-se que, em seus respectivos testamentos, Gabriel e Vitória nomearam, como tutor de Ana e Clara, Lucas, primo de Gabriel..\nSobre o caso narrado, segundo o ordenamento jurídico brasileiro, assinale a afirmativa correta.",
+      "options": [
+        "(A) Júlia deverá exercer a tutela das meninas, por estar no mesmo grau de parentesco que Rafael, e por ser mais nova que ele, além de ser parente mais próxima que Lucas.",
+        "(B) Rafael deverá exercer a tutela das meninas, por estar no mesmo grau de parentesco que Júlia, e por ser mais velho que ela, além de ser parente mais próximo que Lucas.",
+        "(C) Lucas não poderá exercer a tutela, porque somente os colaterais até o terceiro grau podem ser tutores.",
+        "(D) Lucas deverá exercer a tutela, por ter sido nomeado pelos pais das meninas em testamento."
+      ],
+      "answer": 3,
+      "explanation": "“O direito de nomear tutor compete aos pais, em conjunto. Parágrafo único. A nomeação deve constar de testamento ou de qualquer outro documento autêntico.” — Código Civil (Lei nº 10.406/2002), art. 1.729. Justificativa objetiva: O Código Civil estabelece uma ordem de preferência para a nomeação de tutor. A primeira é a nomeação feita pelos pais em testamento ou documento autêntico (tutela testamentária), que prevalece sobre a indicação de parentes (tutela legítima). Como Gabriel e Vitória nomearam Lucas em testamento, ele deverá ser o tutor, independentemente do grau de parentesco. A alternativa D está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "A sociedade empresária Calçados Novos Ltda. consultou você, como advogado(a), na qualidade de controladora dos dados pessoais de seus clientes. Isso porque há quantidade relevante de dados cujo término do tratamento já ocorreu, considerando o fim do período de tratamento. Contudo, a sociedade empresária tem a intenção de manter as informações históricas de seus clientes, para fins exclusivamente estatísticos, sem a necessidade de identificar pessoalmente os titulares de cada informação.\nSobre a hipótese narrada, considerando o interesse do cliente, assinale a afirmativa correta.",
+      "options": [
+        "(A) A controladora é obrigada a eliminar os dados pessoais dos clientes cujo término do tratamento já ocorreu, em qualquer hipótese.",
+        "(B) A controladora pode conservar os dados cujo término do tratamento já ocorreu, desde que ainda seja possível tratar os dados conforme a finalidade específica.",
+        "(C) A controladora pode conservar os dados cujo término do tratamento já ocorreu, para seu uso exclusivo, vedado o acesso por terceiro, e desde que anonimizados os dados.",
+        "(D) A controladora é obrigada a eliminar os dados pessoais dos clientes cujo término do tratamento já ocorreu, desde que desnecessários ao alcance da finalidade específica almejada."
+      ],
+      "answer": 2,
+      "explanation": "“Os dados pessoais serão eliminados após o término de seu tratamento, no âmbito e nos limites técnicos das atividades, autorizada a conservação para as seguintes finalidades: [...] IV - uso exclusivo do controlador, vedado seu acesso por terceiro, e desde que anonimizados os dados.” — Lei Geral de Proteção de Dados Pessoais (LGPD - Lei nº 13.709/2018), art. 16, IV. Justificativa objetiva: A LGPD determina a eliminação dos dados após o término do tratamento, mas prevê exceções. Uma delas é a conservação para uso exclusivo do controlador, como para fins estatísticos, com a condição de que os dados sejam anonimizados, ou seja, que não permitam mais a identificação do titular. A alternativa C descreve corretamente essa hipótese."
+    },
+    {
+      "type": "multiple",
+      "q": "Cláudia é devedora de valores elevados e foi executada em determinada demanda. Para evitar a penhora de seu carro, celebrou contrato de compra e venda do veículo com Eduardo, seu amigo fraterno, indicando data anterior às dívidas. Cláudia e Eduardo combinaram que o contrato não produziria qualquer efeito, de modo que não houve o pagamento do preço e tampouco a transferência da propriedade do carro.\nSobre o contrato celebrado entre Cláudia e Eduardo, assinale a afirmativa correta.",
+      "options": [
+        "(A) É anulável.",
+        "(B) É válido, mas ineficaz.",
+        "(C) É nulo, sem possibilidade de aproveitamento.",
+        "(D) Pode ser convalidado, bastando que se desconsidere a data indicada e se considere a data em que ele efetivamente foi celebrado."
+      ],
+      "answer": 2,
+      "explanation": "“É nulo o negócio jurídico simulado, mas subsistirá o que se dissimulou, se válido for na substância e na forma. § 1º Haverá simulação nos negócios jurídicos quando: I - aparentarem conferir ou transmitir direitos a pessoas diversas daquelas às quais realmente se conferem, ou transmitem; II - contiverem declaração, confissão, condição ou cláusula não verdadeira; III - os instrumentos particulares forem antedatados, ou pós-datados.” — Código Civil (Lei nº 10.406/2002), art. 167. Justificativa objetiva: O caso descreve uma simulação absoluta, na qual as partes declaram celebrar um negócio jurídico que, na realidade, não desejam. O objetivo era apenas criar uma aparência para enganar terceiros (credores). De acordo com o Código Civil, o negócio jurídico simulado é nulo de pleno direito, e a nulidade absoluta não é passível de convalidação. A alternativa C está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Do testamento deixado por Natália constou a seguinte cláusula acerca da parte disponível: \"lego o apartamento X para meus filhos Henrique e Carolina, os quais serão individualmente substituídos, se não puderem aceitar, pelo meu filho Carlos.\" Após o registro, abertura e determinação de seu cumprimento, Henrique renunciou à sucessão testamentária, satisfazendo-se com a legítima.\nVocê, como advogado(a), foi consultado(a) acerca da transmissão causa mortis do apartamento X.\nAssinale a opção que apresenta, corretamente, sua orientação.",
+      "options": [
+        " (A) Caberá à Carolina e a Carlos, por força da substituição prevista.",
+        "(B) Ficará integralmente com Carolina, por conta do direito de acrescer.",
+        "(C) Será dividido entre Henrique e Carolina, pois a renúncia não pode ser parcial.",
+        "(D) Deverá ser integralmente entregue a Carlos, em razão da disposição conjuntiva."
+      ],
+      "answer": 0,
+      "explanation": "“O testador pode substituir outra pessoa ao herdeiro ou ao legatário nomeado, para o caso de um ou outro não querer ou não poder aceitar a herança ou o legado, presumindo-se que a substituição foi determinada para as duas alternativas, ainda que o testador só a uma se refira.” — Código Civil (Lei nº 10.406/2002), art. 1.947. Justificativa objetiva: A cláusula testamentária estabeleceu uma substituição vulgar. Havendo disposição expressa do testador nomeando um substituto, afasta-se a aplicação do direito de acrescer. Como Henrique renunciou ao legado ('não quis' aceitar), sua parte é transmitida ao substituto por ele designado, Carlos. Carolina mantém sua parte. Portanto, o apartamento caberá em condomínio a Carolina e Carlos. A alternativa A está correta."
     }
   ]
 }
