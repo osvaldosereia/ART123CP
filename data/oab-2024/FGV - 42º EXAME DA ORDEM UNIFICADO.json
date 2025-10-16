@@ -727,6 +727,246 @@
 ],
 "answer": 2,
 "explanation": "“Adquirir, receber, transportar, conduzir ou ocultar, em proveito próprio ou alheio, coisa que sabe ser produto de crime...” — Código Penal (Decreto-Lei nº 2.848/1940), Art. 180, caput. O crime de receptação dolosa exige o dolo direto, ou seja, a ciência de que a coisa é produto de crime. Como Alfredo não tinha conhecimento da origem ilícita do veículo, falta o elemento subjetivo do tipo (o dolo). A ausência do dolo leva à atipicidade da conduta dolosa, tornando a alternativa C a tese defensiva correta. A obediência hierárquica (D) não se aplicaria, pois a ordem de dirigir o carro não era manifestamente ilegal."
+},
+  {
+"type": "multiple",
+"q": "Filisteu, empresário, contratou Mateus para matar seu concorrente, Lucas, mediante pagamento antecipado de R$ 50.000,00 (cinquenta mil reais). Portando arma de fogo municiada, Mateus se pôs em campana, levando consigo seu amigo, Antônio, que nada sabia sobre os fatos. Quando Lucas saiu de casa com seu filho no colo, Mateus não teve coragem de cumprir o acordado e abandonou o local sem que Lucas o avistasse. Diante dessa situação hipotética, assinale a afirmativa correta.",
+"options": [
+"Filisteu não praticou fato penalmente típico.",
+"Filisteu e Mateus praticaram o crime de associação criminosa.",
+"Filisteu deve responder por tentativa de homicídio em coautoria.",
+"Filisteu deve responder por tentativa de homicídio, tendo a pena atenuada em razão do arrependimento posterior de Mateus."
+],
+"answer": 0,
+"explanation": "“O agente que, voluntariamente, desiste de prosseguir na execução (...) só responde pelos atos já praticados.” — Código Penal (Decreto-Lei nº 2.848/1940), Art. 15. Mateus iniciou a execução, mas desistiu voluntariamente. Como ele não chegou a praticar um crime autônomo, sua conduta final é atípica. Pela teoria da acessoriedade limitada, a participação de Filisteu (mandante) depende da existência de um fato principal típico e ilícito. Como o fato principal se tornou atípico pela desistência voluntária, a conduta do partícipe (Filisteu) também não é punível a título de tentativa de homicídio."
+},
+{
+"type": "multiple",
+"q": "Joelerson, foragido, com longa lista de antecedentes criminais, foi condenado ao cumprimento de uma pena privativa de liberdade de 24 anos de reclusão, mínima prevista para o delito que cometeu (extorsão mediante sequestro seguida de morte Art. 159, § 3º, do Código Penal). No dia seguinte ao trânsito em julgado da condenação, entrou em vigor a Lei A, que reduziu a pena mínima para o delito referido, fixando-a em 20 (vinte) anos de reclusão. Após intensa reação midiática, a Lei B revogou a Lei A, restabelecendo o patamar sancionatório mínimo anteriormente previsto. No dia seguinte à entrada em vigor da Lei B, Joelerson foi capturado e iniciou o cumprimento da pena. Diante dessa situação hipotética, assinale a afirmativa correta.",
+"options": [
+"Joelerson somente faria jus à redução da pena se a execução da condenação fosse iniciada antes da entrada em vigor da Lei A.",
+"Joelerson somente faria jus à redução da pena se a execução da condenação fosse iniciada antes da entrada em vigor da Lei B.",
+"Joelerson faz jus à redução da pena, independentemente do trânsito em julgado da sentença condenatória e da entrada em vigor da Lei B.",
+"Joelerson não faz jus à redução da pena, pois ambas as leis citadas entraram em vigor após o trânsito em julgado da sentença condenatória."
+],
+"answer": 2,
+"explanation": "“A lei posterior, que de qualquer modo favorecer o agente, aplica-se aos fatos anteriores, ainda que decididos por sentença condenatória transitada em julgado.” — Código Penal (Decreto-Lei nº 2.848/1940), Art. 2º, Parágrafo único. A Lei A, por ser mais benéfica (*lex mitior*), retroage para beneficiar Joelerson, mesmo com a condenação transitada em julgado. A Lei B, que é mais gravosa (*novatio legis in pejus*), não pode retroagir para prejudicar o réu. Portanto, Joelerson tem direito adquirido à aplicação da lei mais branda (Lei A) que esteve em vigor, mesmo que por um curto período."
+},
+{
+"type": "multiple",
+"q": "Antônio e Rogério praticaram, em comunhão de ações e desígnios, um ilícito penal, e ambos foram condenados. Antônio e o Ministério Público interpuseram tempestivos recursos, ao passo que Rogério perdeu o prazo de recurso, porém constatou que havia prescrição da pretensão punitiva na modalidade retroativa, o que foi sustentado por sua defesa em contrarrazões recursais. Nesse caso, considerando os efeitos dos recursos, assinale a afirmativa correta.",
+"options": [
+"O efeito devolutivo do recurso permite que o Juiz reconsidere a decisão recorrida.",
+"O efeito translativo do recurso permite a Rogério arguir a prescrição em suas contrarrazões.",
+"O efeito substitutivo do recurso permite que o Tribunal conheça toda a matéria impugnada.",
+"O efeito extensivo do recurso permite que Rogério aproveite qualquer decisão favorável a Antônio."
+],
+"answer": 1,
+"explanation": "“A prescrição, antes de transitar em julgado a sentença final, salvo o disposto no § 1º do art. 110 deste Código, regula-se pelo máximo da pena privativa de liberdade cominada ao crime.” — Código Penal (Decreto-Lei nº 2.848/1940), Art. 109. A prescrição é matéria de ordem pública e pode ser reconhecida a qualquer tempo e grau de jurisdição, inclusive de ofício. O efeito translativo dos recursos permite que o tribunal aprecie matérias de ordem pública, como a prescrição, mesmo que não tenham sido objeto específico do recurso. Assim, é correto que a defesa de Rogério argua a prescrição em contrarrazões para que o tribunal a analise."
+},
+{
+"type": "multiple",
+"q": "Em um inquérito policial, o Juiz decretou, de ofício, a prisão preventiva de Débora, sem que esta possuísse qualquer antecedente criminal, apontando como fundamento para a prisão a gravidade em abstrato do crime de homicídio culposo. Certo de que não houve a decretação anterior de medida cautelar diversa da prisão, assinale a opção que apresenta, corretamente, a alegação que você, como advogado(a) de Débora, deve apresentar.",
+"options": [
+"O magistrado não pode decretar prisão preventiva de ofício, bem como não é cabível a decretação de prisão preventiva em delitos culposos.",
+"O magistrado pode, de ofício, decretrar prisão preventiva, e a gravidade em abstrato do crime é fundamento legítimo para a decretação de preventiva.",
+"O magistrado pode decretar prisão preventiva de ofício no inquérito e no processo, mas a gravidade em abstrato de um crime não é motivo legitimo para a decretação de preventiva.",
+"O magistrado não pode decretar prisão preventiva de oficio, mas a gravidade em abstrato de um crime é um motivo legítimo para a decretação da prisão preventiva mesmo quando o suspeito for primário."
+],
+"answer": 0,
+"explanation": "“Na fase da investigação policial, o juiz não poderá decretar a prisão preventiva de ofício” e “Não será admitida a decretação da prisão preventiva: I - se se verificar pelas provas constantes dos autos ter o agente praticado o fato nas condições previstas nos incisos I, II e III do caput do art. 23 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal); ou III - se o crime for culposo” — Código de Processo Penal, Art. 282, § 2º e Art. 313, I. A Lei nº 13.964/2019 (Pacote Anticrime) vedou expressamente a decretação da prisão preventiva de ofício pelo juiz na fase de inquérito. Além disso, o Art. 313, I, do CPP, com a redação dada pela mesma lei, veda a prisão preventiva para crimes culposos."
+},
+{
+"type": "multiple",
+"q": "Amanda impetra habeas corpus em favor de Telma, que foi presa preventivamente por decisão do Juiz de Primeiro Grau, sendo acusada da prática de crime hediondo. O habeas corpus foi impetrado com o argumento de excesso de prazo. O Tribunal concedeu a ordem de habeas corpus de ofício, fundamentado na incompetência do juiz que decretou a prisão. Sobre a hipótese narrada, assinale a afirmativa correta.",
+"options": [
+"O Tribunal equivocou-se, uma vez que a incompetência do julgador não é fundamento para a concessão de habeas corpus.",
+"O Tribunal agiu de modo correto, uma vez que é possível concessão de habeas corpus de ofício sempre que houver constrangimento ilegal.",
+"O Tribunal agiu de modo correto, pois a incompetência do Juízo é o único fundamento que admite a concessão da ordem de habeas corpus de oficio.",
+"O Tribunal equivocou-se, pois fica vinculado aos argumentos apontados pelo impetrante do habeas corpus, sendo inadmissível a concessão de habeas corpus de ofício."
+],
+"answer": 1,
+"explanation": "“E os juízes e os tribunais têm competência para expedir de ofício ordem de habeas corpus, quando no curso de processo verificarem que alguém sofre ou está na iminência de sofrer coação ilegal.” — Código de Processo Penal, Art. 654, § 2º. O tribunal, ao julgar um habeas corpus, não está restrito aos argumentos da petição inicial. Se verificar a existência de qualquer coação ilegal, mesmo que diversa da apontada, pode e deve conceder a ordem de ofício. A prisão decretada por juiz incompetente é um claro exemplo de constrangimento ilegal, justificando a concessão do HC."
+},
+{
+"type": "multiple",
+"q": "Daniel foi denunciado pela prática do crime de instigação ao suicídio. Após a fase de instrução, o Juiz pronunciou o réu, afirmando ser Daniel totalmente culpado da prática do crime e que qualquer jurado teria a obrigação moral de reconhecer provada a materialidade e a autoria. Nessa hipótese, de acordo com nosso ordenamento jurídico, você, como advogado(a) de Daniel, afirma que a decisão de pronúncia é",
+"options": [
+"ilegal, uma vez que houve excesso de linguagem.",
+"legal, porque observa o livre convencimento motivado do julgador.",
+"ilegal, uma vez que a pronúncia deveria ter sido decidida pelo Tribunal do Júri.",
+"legal, porque a restrição legal de excesso de linguagem aplica-se apenas para o crime de homicídio."
+],
+"answer": 0,
+"explanation": "“A fundamentação da pronúncia limitar-se-á à indicação da materialidade do fato e da existência de indícios suficientes de autoria ou de participação...” — Código de Processo Penal, Art. 413, § 1º. A decisão de pronúncia deve ser um juízo de admissibilidade, redigido em termos sóbrios e comedidos, para não influenciar os jurados. Ao afirmar a 'total culpabilidade' e a 'obrigação moral' de condenar, o juiz excede sua competência e invade o mérito da causa, que é de competência do Tribunal do Júri. Esse vício é conhecido como excesso de linguagem ou eloquência acusatória e acarreta a nulidade da pronúncia."
+},
+{
+"type": "multiple",
+"q": "Policiais ingressaram no imóvel pertencente a Paulo, às 4 horas da manhã, em regular perseguição iniciada logo após a prática de um homicídio, a fim de prender Júnior (filho de Paulo) em flagrante delito. Ao ingressar no imóvel, os policiais capturaram Júnior e, em busca pessoal, localizaram o telefone celular do custodiado no bolso da calça. Além de prender Júnior em flagrante, a autoridade policial determinou o encaminhamento do telefone apreendido à perícia técnica, a fim de descobrir seu conteúdo. O laudo pericial indicou que nele havia conversas que confirmavam a pertinência de Júnior em associação criminosa. Assim, foi instaurado inquérito policial contra Júnior, para apurar o delito de associação criminosa. Nesse caso, assinale a opção que indica corretamente, a alegação que você, como advogado(a) de Júnior, deve apresentar.",
+"options": [
+"A prisão em flagrante foi válida, porém esta não autoriza a apreensão do aparelho telefônico do flagranteado, o qual somente poderia ser apreendido por ordem judicial prévia e expressa.",
+"O ingresso em domicílio para prisão em flagrante não pode ocorrer no período noturno, havendo nulidade de todos os atos subsequentes ao ingresso dos policiais no domicílio de Paulo, invalidando, inclusive, a prisão em flagrante.",
+"O ingresso no interior da residência de terceiros depende de expedição de mandado de busca, havendo nulidade de todos os atos subsequentes ao ingresso dos policiais no domicílio de Paulo, invalidando, inclusive, a prisão em flagrante.",
+"A prisão em flagrante foi válida, entretanto, a autoridade policial não poderia determinar a quebra de sigilo de dados dos telefones apreendidos, havendo nulidade da prova colhida a partir da perícia do aparelho e de todos os atos subsequentes."
+],
+"answer": 3,
+"explanation": "“São invioláveis o sigilo da correspondência e das comunicações telegráficas, de dados e das comunicações telefônicas, salvo, no último caso, por ordem judicial...” — Constituição Federal, Art. 5º, XII. A jurisprudência do STF e do STJ é pacífica no sentido de que o acesso aos dados armazenados em aparelho celular (mensagens, registros, etc.) depende de prévia autorização judicial. A autoridade policial não pode, por conta própria, determinar a perícia no conteúdo do aparelho. A prova obtida dessa forma é ilícita e contamina todas as provas dela derivadas."
+},
+{
+"type": "multiple",
+"q": "Anderson, motorista da sociedade empresária X, dirigindo o veículo da sociedade empresária fora do horário comercial e acima da velocidade permitida, atropelou Lucas. Lucas ficou internado pelo período de dois meses. Anderson foi condenado com trânsito em julgado, no âmbito criminal. Lucas propõe ação civil ex delicto de execução contra a sociedade empresária X. Sobre essa ação civil ex delicto, você, na qualidade de advogado(a) da sociedade empresária X, afirmou, corretamente, que ela é parte",
+"options": [
+"legítima uma vez que é responsável civil.",
+"legítima para figurar como ré, ainda que Anderson fosse absolvido criminalmente.",
+"ilegítima para ação civil ex delicto de execução, uma vez que não teve oportunidade de participar da ação penal originária.",
+"ilegítima para ação civil ex delicto, seja de conhecimento ou de execução, que somente pode ser proposta contra o autor do crime."
+],
+"answer": 2,
+"explanation": "“A sentença penal condenatória transitada em julgado é título executivo judicial.” — Código de Processo Civil, Art. 515, VI. Este título executivo, contudo, só pode ser executado em face daquele que figurou como réu no processo criminal, ou seja, o condenado (Anderson). O responsável civil (a empresa X), que não foi parte no processo penal, não pode ser diretamente executado com base nesse título. Contra a empresa, a vítima deve ajuizar uma ação de conhecimento para que se apure sua responsabilidade civil. Portanto, a empresa é parte ilegítima para a execução."
+},
+{
+"type": "multiple",
+"q": "Jorge, segurado obrigatório do Regime Geral de Previdência Social (RGPS), reside com sua mãe, Francisca, e sua filha, Helena, que é estudante e tem 19 anos. O emprego de Jorge é a principal fonte de renda da família e o único sustento da casa. Acontece que Jorge foi acometido de uma doença e veio a falecer. Por isso, as duas dependentes de Jorge ingressam com um pedido de pensão por morte no INSS. Sobre a hipótese apresentada, assinale a afirmativa correta.",
+"options": [
+"Somente Helena faz jus à pensão por morte.",
+"Helena faz jus à pensão por morte, sendo necessária a comprovação de dependência econômica.",
+"Helena e Francisca fazem jus à pensão por morte, independentemente da comprovação de dependência econômica.",
+"Somente Francisca faz jus à pensão por morte, sendo necessária a comprovação de dependência econômica."
+],
+"answer": 0,
+"explanation": "“A existência de dependente de qualquer das classes deste artigo exclui do direito às prestações os das classes seguintes.” — Lei nº 8.213/1991, Art. 16, § 1º. Os dependentes são divididos em classes. A classe I inclui cônjuge/companheiro e filhos menores de 21 anos. A classe II inclui os pais. Helena, filha de 19 anos, pertence à classe I, e sua dependência econômica é presumida. Francisca, a mãe, pertence à classe II. A existência de um dependente da classe I (Helena) exclui o direito dos dependentes da classe II (Francisca), ainda que esta comprove a dependência econômica."
+},
+{
+"type": "multiple",
+"q": "Antônio recebe aposentadoria por incapacidade permanente e, por necessitar da assistência permanente de outra pessoa, seu benefício foi acrescido de 25%. Em relação a esse acréscimo, assinale a afirmativa correta.",
+"options": [
+"Será incorporado ao valor da pensão, com a morte do aposentado.",
+"Deverá ser recalculado, quando o benefício que lhe deu origem for reajustado.",
+"Não será devido, quando o valor da aposentadoria atingir o limite máximo legal.",
+"É devido ao segurado que recebe auxílio por incapacidade temporária e necessita da assistência permanente de outra pessoa."
+],
+"answer": 1,
+"explanation": "“O valor da aposentadoria por incapacidade permanente do segurado que necessitar da assistência permanente de outra pessoa será acrescido de 25% (vinte e cinco por cento).” — Lei nº 8.213/1991, Art. 45. O acréscimo é um percentual aplicado sobre o valor do benefício. Logo, sempre que o valor base da aposentadoria for reajustado pelos índices oficiais, o valor do acréscimo também será recalculado para manter a proporção de 25%. A alternativa A está errada (o acréscimo cessa com a morte); a C está errada (é devido mesmo que ultrapasse o teto); e a D está errada (só cabe na aposentadoria por incapacidade permanente)."
+},
+{
+"type": "multiple",
+"q": "Geraldo trabalha desde 2022 para uma sociedade empresária, atua na região metropolitana do Estado e recebe um salário fixo de R$ 4.000,00, sem qualquer desconto, exceto o imposto sobre renda e o INSS. Além disso, desfruta de um pacote de benefícios que inclui auxílio-alimentação em forma de ticket, habitação num luxuoso apartamento, plano de saúde e auxílio-educação (compreendendo os valores relativos à matrícula, à mensalidade, à anuidade, aos livros e ao material didático). Geraldo consultou você, como advogado(a), para saber quais benefícios devem ter seu valor integrado à sua remuneração. Sobre a questão levantada por Geraldo, de acordo com os dados do enunciado e com o texto da CLT, assinale a afirmativa correta.",
+"options": [
+"Apenas a educação integrará a remuneração.",
+"Apenas o valor do plano de saúde não integrará a remuneração.",
+"Apenas habitação, fornecida pelo trabalho, integrará a remuneração.",
+"Alimentação, habitação, plano de saúde e auxílio-educação integrarão a remuneração."
+],
+"answer": 2,
+"explanation": "“Para os efeitos previstos neste artigo, não serão consideradas como salário as seguintes utilidades concedidas pelo empregador: I – (...) educação (...) II – assistência médica, hospitalar e odontológica (...)” — CLT, Art. 458, § 2º. Após a Reforma Trabalhista (Lei nº 13.467/2017), o auxílio-alimentação (pago via ticket), a educação e o plano de saúde foram expressamente excluídos da natureza salarial. A habitação, quando fornecida 'pelo' trabalho (como uma vantagem, e não 'para' o trabalho, como uma necessidade), mantém sua natureza de salário-utilidade, integrando a remuneração para todos os fins."
+},
+{
+"type": "multiple",
+"q": "Os irmãos Décio e Beatriz são empresários. Décio explora a atividade pesqueira, enquanto Beatriz tem duas lojas de calçados. Em 2023, a sociedade empresária de Décio teve uma reclamação trabalhista ajuizada por um operador de produção que inseriu, na petição inicial, a sociedade empresária de Beatriz, advogando existir grupo econômico, apenas em razão do parentesco entre Décio e Beatriz. Considerando esses fatos e o que dispõe a CLT, assinale a afirmativa correta.",
+"options": [
+"O autor está correto, pois existe vínculo familiar entre Décio e Beatriz.",
+"Para se caracterizar grupo econômico somente é necessário haver identidade de sócios.",
+"Não há grupo econômico porque não há direção, controle ou administração de uma empresa sobre outra.",
+"O grupo econômico pode ser reconhecido pelo parentesco, mas apenas na fase executória da reclamação."
+],
+"answer": 2,
+"explanation": "“Não caracteriza grupo econômico a mera identidade de sócios, sendo necessárias, para a configuração do grupo, a demonstração do interesse integrado, a efetiva comunhão de interesses e a atuação conjunta das empresas dele integrantes.” — CLT, Art. 2º, § 3º. A legislação trabalhista, após a Reforma de 2017, passou a exigir mais do que a mera identidade de sócios (ou o parentesco entre eles) para a configuração do grupo econômico. É preciso demonstrar que as empresas atuam de forma coordenada, com comunhão de interesses e direção conjunta. O simples fato de os sócios serem irmãos é insuficiente."
+},
+{
+"type": "multiple",
+"q": "Em 2023, Denilson ajuizou reclamação trabalhista contra um supermercado alegando que lá trabalhou de 2004 a 2008 sem ter a CTPS assinada. Na reclamação, ele requereu a declaração do vínculo empregatício naquele período para fins de anotação na carteira profissional, pois precisaria desse interregno para conseguir sua aposentadoria no INSS. Em defesa, a sociedade empresária alegou prescrição, pois a ação foi ajuizada após o biênio constitucional. Considerando esses fatos e o que dispõe a CLT, assinale a afirmativa correta.",
+"options": [
+"A sociedade empresária está equivocada, pois o prazo é de 30 anos, tal qual sucede com o FGTS.",
+"A prescrição se consolidou e poderia ser conhecida de ofício pelo Juiz, mesmo não havendo defesa.",
+"A sociedade empresária está correta, havendo prescrição porque a ação foi ajuizada mais de 2 anos após a ruptura.",
+"A sociedade empresária está incorreta, pois as ações que têm por objeto anotações para fins de prova junto à Previdência Social são imprescritíveis."
+],
+"answer": 3,
+"explanation": "“A prescrição do direito de reclamar não alcança as ações que tenham por objeto anotações para fins de prova junto à Previdência Social.” — CLT, Art. 11, § 1º. A prescrição trabalhista (bienal e quinquenal) atinge as pretensões condenatórias (créditos pecuniários). No entanto, a pretensão de natureza meramente declaratória, como o reconhecimento do vínculo de emprego para fins de anotação na CTPS e contagem de tempo de contribuição para a Previdência Social, é imprescritível."
+},
+{
+"type": "multiple",
+"q": "Leopoldo foi contratado, em 2020, por uma sociedade empresária de terceirização, como auxiliar de limpeza. Ele cumpre jornada em regime de tempo parcial de 22 horas semanais, conforme previsto e autorizado na norma coletiva da sua categoria. Após um ano de trabalho sem faltas injustificadas, é chegado o momento de Leopoldo fruir férias. Sobre a solicitação de Leopoldo, considerando o que dispõe a CLT, assinale a afirmativa correta.",
+"options": [
+"Por ser empregado em regime de tempo parcial, ele não terá direito a férias remuneradas.",
+"Tal qual os demais empregados, ele terá direito a 30 dias de férias com adicional de 1/3.",
+"Ele somente terá direito a férias se isso estiver expressamente previsto na convenção coletiva de sua categoria.",
+"Por cumprir apenas a metade da jornada dos demais empregados, ele terá direito a 15 dias de férias com adicional de 1/3."
+],
+"answer": 1,
+"explanation": "“As férias dos empregados submetidos ao regime de tempo parcial são regidas pelo disposto no art. 130 desta Consolidação.” — CLT, Art. 58-A, § 6º. A Reforma Trabalhista (Lei nº 13.467/2017) revogou a regra que previa férias proporcionais para os trabalhadores em regime de tempo parcial. Desde então, eles têm direito a 30 dias de férias, assim como os empregados em regime de tempo integral, aplicando-se a redução do período de gozo apenas em caso de faltas injustificadas, conforme a tabela do art. 130 da CLT."
+},
+{
+"type": "multiple",
+"q": "Em sede de acordo coletivo, firmado em janeiro de 2024 e com vigência de dois anos, entre uma sociedade empresária e o sindicato da categoria profissional, constou cláusula determinando que o tempo de deslocamento dos empregados do portão até o interior da sociedade empresária, onde se situa o relógio de ponto, seria computado na jornada de trabalho. Isso porque o deslocamento é feito em transporte fornecido pela sociedade empresária e dura cerca de 20 minutos. Sobre a jornada, não consta mais nada na norma coletiva. A sociedade empresária, por liberalidade, mantém salas de recreação, biblioteca e uma capela. A utilização desses espaços antes e após o trabalho e durante os intervalos é facultada aos empregados. Em razão do ajuizamento de uma ação trabalhista por um ex-empregado, a sociedade empresária indagou a você, como advogado(a), se todos esses períodos, seja o de deslocamento, seja o tempo despendido nos espaços mencionados, deveriam integrar a jornada de trabalho. Acerca do tema, com base na CLT, assinale a afirmativa correta.",
+"options": [
+"Todos os períodos não se computam na jornada de trabalho dos empregados.",
+"Apenas o tempo de utilização da capela deve ser computado na jornada, pois o Estado é laico.",
+"Apenas o período de deslocamento deve integrar a jornada por força da norma coletiva. Os demais períodos não são considerados tempo à disposição.",
+"O período de deslocamento assim como o período de utilização da biblioteca, voltado para o estudo, devem ser computados na jornada. Os demais periodos não são computados na jornada."
+],
+"answer": 2,
+"explanation": "“A convenção coletiva e o acordo coletivo de trabalho têm prevalência sobre a lei quando, entre outros, dispuserem sobre: I - jornada de trabalho...” — CLT, Art. 611-A, I. Embora a lei geral (CLT, Art. 4º, § 2º) exclua da jornada o tempo despendido em atividades como estudo, lazer ou práticas religiosas, o princípio do negociado sobre o legislado permite que a norma coletiva estipule de forma diversa. O acordo coletivo previu expressamente o cômputo do tempo de deslocamento na jornada, tornando essa cláusula válida e eficaz. Já o tempo nos espaços de lazer e prática religiosa não integra a jornada, por falta de previsão e pela regra geral do Art. 4º, § 2º da CLT."
+},
+{
+"type": "multiple",
+"q": "Em sede de reclamação trabalhista você advoga para a parte autora. Dos três pedidos formulados, você sagrou-se vitorioso em dois, horas extras e equiparação salarial, sucumbindo apenas no pedido de integração da habitação. Atendendo a um desejo de seu cliente, optou-se por não recorrer, tendo o prazo recursal transcorrido integralmente. A ré, por sua vez e no seu prazo, apresentou recurso pertinente e, agora, o processo encontra-se com prazo para você contrarrazoar o recurso da ré. Ocorre que seu cliente mudou de opinião, já que o processo irá se alongar por conta do recurso da ré. Diante disso, indagou-lhe se caberia alguma medida processual para que fosse reexaminada a questão relativa à integração da habitação. Com base no enunciado e no entendimento consolidado do TST, assinale a afirmativa correta.",
+"options": [
+"Caberá recurso adesivo.",
+"Caberá recurso ordinário.",
+"Caberá agravo de instrumento.",
+"Não há medida a ser adotada, transitando em julgado a decisão do pedido de integração da habitação."
+],
+"answer": 0,
+"explanation": "“Cabe recurso ordinário para a instância superior: (...) das decisões definitivas ou terminativas das Varas e Juízos, no prazo de 8 (oito) dias” — CLT, Art. 895, I. “Sendo interposto o recurso principal, a parte contrária poderá interpor recurso adesivo (...) no prazo de que dispõe para responder.” — Súmula nº 283 do TST. Como o autor foi sucumbente na parte relativa à integração da habitação e a ré interpôs recurso ordinário, abre-se para o autor a possibilidade de interpor recurso ordinário na forma adesiva, no prazo das contrarrazões, para devolver ao tribunal o conhecimento da matéria em que foi vencido."
+},
+{
+"type": "multiple",
+"q": "Em uma reclamação trabalhista requerendo a responsabilidade civil do empregador em razão de uma alegada doença profissional, o Juiz deferiu a realização de perícia, sendo que ambas as partes quesitaram e indicaram assistentes técnicos. No laudo, foi detectado que realmente houve a doença ocupacional. Com base nele, o Juiz julgou procedente o pedido. Sobre os honorários do perito e dos assistentes, considerando o entendimento consolidado do TST, assinale a afirmativa correta.",
+"options": [
+"A empresa deverá arcar com os honorários do perito e do assistente técnico do autor.",
+"A Justiça arcará com os honorários do perito, e cada parte será responsável pelos honorários do seu assistente técnico.",
+"Cada parte arcará com metade do valor dos honorários do perito e integralmente com os honorários de seu assistente técnico.",
+"O réu será condenado a pagar os honorários do perito, porque sucumbiu no objeto da prova, e arcará com os honorários do assistente técnico por ele indicado."
+],
+"answer": 3,
+"explanation": "“A responsabilidade pelo pagamento dos honorários periciais é da parte sucumbente na pretensão objeto da perícia...” — CLT, Art. 790-B. Como o laudo foi favorável ao autor e o pedido foi julgado procedente, a empresa ré foi a parte sucumbente no objeto da perícia. Portanto, cabe a ela arcar com os honorários do perito judicial. Cada parte, no entanto, é responsável pelos honorários do seu próprio assistente técnico, pois a contratação deste é facultativa e de seu exclusivo interesse."
+},
+{
+"type": "multiple",
+"q": "Foi protocolizada petição de homologação de acordo extrajudicial à 200ª Vara do Trabalho de Florianópolis. As partes envolvidas são Luísa, empregada doméstica, e José Pedro, seu ex-empregador. O valor apresentado para o acordo é de R$ 27.000,00 (vinte e sete mil reais), pagos em duas parcelas iguais e sucessivas, sendo mantidas as anotações na CTPS de Luísa. Empregada e empregador estão representados pelo mesmo advogado. Sobre esses fatos, segundo os termos da CLT, assinale a afirmativa correta.",
+"options": [
+"Não é possível a homologação, porque as partes não podem ser representadas pelo mesmo advogado.",
+"Na homologação de acordo extrajudicial, os empregados precisam ser assistidos pelo advogado do seu sindicato de classe.",
+"Contanto que ambas as partes ratifiquem perante o Juiz o desejo de realizar a transação, o acordo deve ser homologado pelo Magistrado.",
+"Tratando-se de um procedimento especial de jurisdição voluntária, o Juiz não pode negar a homologação de acordo alegando vício formal."
+],
+"answer": 0,
+"explanation": "“§ 1º As partes não poderão ser representadas por advogado comum.” — CLT, Art. 855-B, § 1º. A CLT, ao disciplinar o procedimento de homologação de acordo extrajudicial, estabeleceu como requisito de validade que cada parte seja representada por seu próprio advogado. A representação por advogado comum é vedada, constituindo vício que impede a homologação do acordo, visando garantir que os interesses de ambas as partes foram devidamente resguardados."
+},
+{
+"type": "multiple",
+"q": "Em 2024, o Juiz proferiu sentença ilíquida em reclamação trabalhista, na qual você advoga para o autor, que foi julgada procedente. O feito havia sido ajuizado no final do ano de 2022. O Juízo elaborou e tornou líquida a conta, tendo aberto um prazo para as partes se manifestarem. A parte ré silenciou-se e você apresentou sua impugnação, que não foi acolhida pelo Juiz. Ato contínuo, houve decisão homologatória da sentença de liquidação. As partes foram intimadas. A ré garantiu o juízo e apresentou embargos à execução. Você apresentou impugnação de credor e contraminuta aos embargos à execução apresentados pela ré. Diante desta circunstância, assinale a afirmativa correta.",
+"options": [
+"Você deverá sustentar em contraminuta aos embargos à execução que a ré apenas poderia questionar a sentença de liquidação por meio dos embargos à penhora.",
+"Tendo em vista que sua impugnação à conta do juízo foi rejeitada, a matéria atinente à sua impugnação de credor deve ser diversa, não podendo ser renovada a discussão da impugnação à conta de liquidação.",
+"Na sua contraminuta, assim como na impugnação de credor, caberá apenas discutir a matéria relativa às razões pelas quais os valores apurados estariam incorretos, não havendo o que se arguir acerca da não impugnação da ré à conta de liquidação, por ser facultativa.",
+"Está preclusa a arguição de matérias que impugnam os cálculos homologados em sede de embargos à execução da ré, uma vez que a parte não apresentou impugnação aos cálculos no momento oportuno, cabendo ao advogado do autor formular essa alegação na contraminuta aos embargos da ré."
+],
+"answer": 3,
+"explanation": "“Elaborada a conta e tornada líquida, o juízo deverá abrir às partes prazo comum de oito dias para impugnação fundamentada com a indicação dos itens e valores objeto da discordância, sob pena de preclusão.” — CLT, Art. 879, § 2º. A lei estabelece um momento específico para a impugnação dos cálculos de liquidação. A parte que se mantém inerte nesse prazo perde o direito de discutir a matéria posteriormente, em embargos à execução. Como a ré silenciou quando intimada para se manifestar sobre os cálculos, operou-se a preclusão. Essa deve ser a principal alegação do advogado do autor na contraminuta aos embargos da ré."
+},
+{
+"type": "multiple",
+"q": "As irmãs Alessandra, Antônia, Alba e Aline foram dispensadas de seus empregos em 2024, e cada qual contratou uma advogada de sua confiança para ajuizar reclamação trabalhista visando postular horas extras. Alessandra tem 58 anos de idade; Antônia, 65 anos de idade; Alba, 50 anos de idade; e Aline, 61 anos de idade. Considerando a norma de regência, assinale a opção que indica o(s) processo(s) que terá(ão) prioridade na tramitação.",
+"options": [
+"O de Antônia, somente.",
+"Os de Antônia e Aline, somente.",
+"Os de Alessandra e Aline, somente.",
+"Os das quatro irmãs, em condições iguais."
+],
+"answer": 1,
+"explanation": "“Os procedimentos judiciais em que figure como parte ou interessado pessoa com idade igual ou superior a 60 (sessenta) anos (...) terão prioridade de tramitação em todas as instâncias.” — Lei nº 10.741/2003 (Estatuto do Idoso), Art. 71. O direito à prioridade na tramitação processual é assegurado a pessoas com 60 anos ou mais. Dessa forma, apenas Antônia (65 anos) e Aline (61 anos) têm direito a esse benefício. Os processos de Alessandra (58) e Alba (50) seguirão a tramitação comum."
 }
 ],
 "skipped": []
