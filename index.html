@@ -490,7 +490,7 @@
     // Google modo IA (udm=50)
     function openGoogleAI(){
       const q=current(); if(!q) return;
-      const prompt = `Explique de forma didatica e exemplificativa. Tema: ${q.q}`;
+      const prompt = `Analise o enunciado da questão e fundamente juridicamente a alternativa correta. Tema: ${q.q}, alternativa: ${correctText}`;
       const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt);
       window.open(url, '_blank', 'noopener');
     }
