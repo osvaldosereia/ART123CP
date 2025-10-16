@@ -1,0 +1,16 @@
+{
+  "title": "MeuJus",
+  "labels": "labels/pt-BR.json",
+  "shuffleDefault": { "questions": true, "options": true },
+  "persistDefault": true,
+  "outro": { "message": "Obrigado por participar." },
+  "categories": [
+    {
+      "id": "intro",
+      "name": "Introdução",
+      "themes": [
+        { "id": "basico", "name": "Básico", "path": "data/intro/basico.json" }
+      ]
+    }
+  ]
+}
