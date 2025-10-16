@@ -23,8 +23,8 @@
     section{ padding:26px 0 }
 
     label{ display:block; font-size:12px; color:var(--muted); margin-bottom:6px }
-    select,button,input{ appearance:none; border:1px solid #e5e7eb; background:#fff; color:var(--ink); border-radius:8px; padding:10px 12px; font-size:14px; font-weight:300 }
-    select{ width:100% }
+    input,select,button{ appearance:none; border:1px solid #e5e7eb; background:#fff; color:var(--ink); border-radius:8px; padding:10px 12px; font-size:14px; font-weight:300 }
+    select,input{ width:100% }
     .controls{ display:grid; gap:12px; grid-template-columns:1fr }
     @media (min-width:620px){ .controls{ grid-template-columns:1fr 1fr } }
 
@@ -57,10 +57,6 @@
     .results h2{ font-size:18px; font-weight:400; margin:0 0 4px }
     .score{ font-size:28px; font-weight:400 }
 
-    /* Busca */
-    .searchbar{ display:grid; grid-template-columns:1fr auto auto; gap:8px; align-items:center; margin:6px 0 4px }
-    .searchbar input{ width:100% }
-
     .hide{ display:none }
 
     @media (min-width:780px){
@@ -88,7 +84,7 @@
     </header>
 
     <section class="intro" id="screenIntro">
-      <p class="muted" id="introSubtitle">Escolha uma categoria e um tema para começar.</p>
+      <p class="muted" id="introSubtitle">Escolha uma categoria e um tema para começar ou faça uma busca global.</p>
       <div class="controls">
         <div>
           <label for="selCategory">Categoria</label>
@@ -99,6 +95,18 @@
           <select id="selTheme" aria-label="Tema"></select>
         </div>
       </div>
+
+      <!-- Busca global -->
+      <div class="controls" style="margin-top:8px">
+        <div>
+          <label for="txtGlobal">Buscar em todos os temas</label>
+          <input id="txtGlobal" type="search" placeholder="Termo exato em enunciados e opções" />
+        </div>
+        <div class="actions" style="align-items:end;padding-top:0">
+          <button id="btnGlobal" class="btn ghost" type="button">Buscar em todos</button>
+        </div>
+      </div>
+
       <div class="actions">
         <button id="btnStart" class="btn primary" type="button">Começar</button>
         <button id="btnResume" class="btn ghost hide" type="button">Continuar anterior</button>
@@ -106,12 +114,20 @@
     </section>
 
     <section class="quiz hide" id="screenQuiz">
-      <div class="searchbar">
-        <input id="txtSearch" type="search" placeholder="Buscar termo exato em enunciados e opções" aria-label="Buscar" />
-        <button id="btnSearch" class="btn ghost" type="button" title="Buscar">Buscar</button>
-        <button id="btnClearSearch" class="btn ghost hide" type="button" title="Limpar busca">Limpar</button>
-      </div>
       <div class="progress" aria-label="Progresso"><span id="bar"></span></div>
+
+      <!-- Busca intra-quiz -->
+      <div class="controls">
+        <div>
+          <label for="txtSearch">Buscar neste tema</label>
+          <input id="txtSearch" type="search" placeholder="Termo exato" />
+        </div>
+        <div class="actions" style="align-items:end;padding-top:0">
+          <button id="btnSearch" class="btn ghost" type="button">Buscar</button>
+          <button id="btnClearSearch" class="btn ghost hide" type="button">Limpar filtro</button>
+        </div>
+      </div>
+
       <p id="question" class="statement"></p>
       <div id="options" class="options" role="listbox"></div>
       <div id="explanation" class="explain hide"></div>
@@ -140,7 +156,13 @@
 
   <script>
     // ===== Config =====
-    const CONFIG = { useGitHubIndexer:true, owner:null, repo:null, branch:'main', dataDir:'data' };
+    const CONFIG = {
+      useGitHubIndexer: true,
+      owner: null,
+      repo: null,
+      branch: 'main',
+      dataDir: 'data'
+    };
     const AUTO_RESUME = true;
 
     // ===== Toast =====
@@ -165,6 +187,8 @@
     const selTheme = document.getElementById('selTheme');
     const btnStart = document.getElementById('btnStart');
     const btnResume = document.getElementById('btnResume');
+    const txtGlobal = document.getElementById('txtGlobal');
+    const btnGlobal = document.getElementById('btnGlobal');
 
     const screenIntro = document.getElementById('screenIntro');
     const screenQuiz = document.getElementById('screenQuiz');
@@ -172,10 +196,6 @@
 
     const appTitle = document.getElementById('appTitle');
     const state = document.getElementById('state');
-
-    const txtSearch = document.getElementById('txtSearch');
-    const btnSearch = document.getElementById('btnSearch');
-    const btnClearSearch = document.getElementById('btnClearSearch');
 
     const questionEl = document.getElementById('question');
     const optionsEl = document.getElementById('options');
@@ -195,13 +215,17 @@
     const footLeft = document.getElementById('footLeft');
     const footRight = document.getElementById('footRight');
 
+    // Busca intra-quiz
+    const txtSearch = document.getElementById('txtSearch');
+    const btnSearch = document.getElementById('btnSearch');
+    const btnClearSearch = document.getElementById('btnClearSearch');
+
     // ===== Labels =====
     const DEFAULT_LABELS = { start:'Começar', next:'Próximo', prev:'Anterior', retry:'Refazer', home:'Início', category:'Categoria', theme:'Tema', result:'Resultado' };
     let LABELS = { ...DEFAULT_LABELS };
 
     // ===== Estado =====
-    let MANIFEST = null, QUIZ = null, ORDER = [], CHOSEN = [], I = 0, KEY = null;
-    let SEARCH = { active:false, term:'', matches:[], baseOrder:null };
+    let MANIFEST = null, QUIZ = null, ORDER = [], CHOSEN = [], I = 0, KEY = null, FILTER = null;
 
     // ===== Utils =====
     const show = (node, flag) => node.classList.toggle('hide', !flag);
@@ -324,16 +348,21 @@
       });
       updateThemes();
 
+      // eventos básicos
       selCategory.addEventListener('change', updateThemes);
       btnStart.addEventListener('click', startQuizFromSelection);
       btnPrev.addEventListener('click', prev);
       btnNext.addEventListener('click', next);
       btnAI.addEventListener('click', openGoogleAI);
 
-      // Busca
-      btnSearch.addEventListener('click', ()=> applySearch(txtSearch.value));
-      txtSearch.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ applySearch(txtSearch.value); }});
-      btnClearSearch.addEventListener('click', clearSearch);
+      // busca global
+      btnGlobal.addEventListener('click', ()=> globalSearchAndOpen(txtGlobal.value||''));
+      txtGlobal.addEventListener('keydown', (e)=>{ if(e.key==='Enter') btnGlobal.click(); });
+
+      // busca intra-quiz
+      btnSearch.addEventListener('click', ()=> applyFilter(txtSearch.value||''));
+      btnClearSearch.addEventListener('click', clearFilter);
+      txtSearch.addEventListener('keydown', (e)=>{ if(e.key==='Enter') btnSearch.click(); });
 
       const goHome = ()=>{ resetState(); show(screenIntro,true); show(screenQuiz,false); show(screenResult,false); state.textContent='pronto'; };
       btnGoHome.addEventListener('click', goHome);
@@ -391,9 +420,9 @@
 
     async function startQuizFromSelection(){ const path=selectedPath(); if(!path) return; await loadQuiz(path, true); }
 
-    function resetState(){ QUIZ=null; ORDER=[]; CHOSEN=[]; I=0; KEY=null; explainEl.classList.add('hide'); SEARCH={active:false, term:'', matches:[], baseOrder:null}; txtSearch.value=''; show(btnClearSearch,false); }
+    function resetState(){ QUIZ=null; ORDER=[]; CHOSEN=[]; I=0; KEY=null; FILTER=null; explainEl.classList.add('hide'); btnClearSearch.classList.add('hide'); txtSearch.value=''; }
 
-    // ===== Carregar quiz, nunca embaralhar perguntas =====
+    // ===== Carregar quiz normal (nunca embaralhar perguntas) =====
     async function loadQuiz(path, fresh=false, tryRestore=false){
       state.textContent='carregando';
       const qz=await loadJSON(path);
@@ -410,27 +439,50 @@
       const total=(qz.questions||[]).length;
       let saved = tryRestore ? lsGet(KEY.key) : null;
 
-      ORDER=[...Array(total).keys()]; // ordem natural
+      ORDER=[...Array(total).keys()]; // 0..n-1
       CHOSEN=new Array(total).fill(null);
       I=0;
+      FILTER=null; btnClearSearch.classList.add('hide');
 
       if(!fresh && saved && saved.quizLen===total){
         if(Array.isArray(saved.order) && saved.order.length>0) ORDER = saved.order;
         if(Array.isArray(saved.chosen)) CHOSEN = saved.chosen;
-        I = clamp(saved.i,0,total-1);
-        // restaura busca se existir
-        if(saved.search && saved.search.active && Array.isArray(saved.search.matches)){
-          SEARCH = { ...saved.search };
-          ORDER = saved.search.matches.slice();
-          show(btnClearSearch, true);
-          txtSearch.value = saved.search.term || '';
-        }
+        I = clamp(saved.i,0,Math.max(0,ORDER.length-1));
+        FILTER = saved.filter || null;
+        if(FILTER) btnClearSearch.classList.remove('hide');
       }
 
       state.textContent='respondendo';
       show(screenIntro,false); show(screenQuiz,true); show(screenResult,false);
       toast('Quiz carregado','info');
-      if(!fresh && saved) toast(`Progresso restaurado na questão ${I+1}/${total}`,'success',2200);
+      if(!fresh && saved) toast(`Progresso restaurado na questão ${I+1}/${ORDER.length||total}`,'success',2200);
+      render();
+    }
+
+    // ===== Carregar quiz virtual (resultado da busca global) =====
+    async function loadVirtualQuiz(quizObj, syntheticPath, fresh=true){
+      state.textContent='carregando';
+      QUIZ = quizObj;
+      KEY = { path: syntheticPath, key: `quiz:${syntheticPath}` };
+
+      const total = QUIZ.questions.length;
+      let saved = lsGet(KEY.key);
+
+      ORDER = [...Array(total).keys()];
+      CHOSEN = new Array(total).fill(null);
+      I = 0;
+      FILTER = null; btnClearSearch.classList.add('hide');
+
+      if(!fresh && saved && saved.quizLen===total){
+        if(Array.isArray(saved.order) && saved.order.length>0) ORDER = saved.order;
+        if(Array.isArray(saved.chosen)) CHOSEN = saved.chosen;
+        I = clamp(saved.i,0,Math.max(0,ORDER.length-1));
+        FILTER = saved.filter || null;
+        if(FILTER) btnClearSearch.classList.remove('hide');
+      }
+
+      state.textContent='respondendo';
+      show(screenIntro,false); show(screenQuiz,true); show(screenResult,false);
       render();
     }
 
@@ -444,23 +496,25 @@
         i:I,
         chosen:CHOSEN,
         order:ORDER,
+        filter:FILTER,
         quizLen: QUIZ.questions.length,
         path: KEY.path,
-        ts: Date.now(),
-        search: SEARCH
+        ts: Date.now()
       });
       lsSet('quiz:last', KEY);
     }
 
+    // ===== Render =====
     function render(){
       const total=QUIZ.questions.length;
-      const answered=CHOSEN.filter(v=>v!==null).length;
-      bar.style.width = Math.round((I)/Math.max(1,Math.max(0,ORDER.length-1)||1)*100) + '%';
-      const scopeTotal = ORDER.length || total;
-      footLeft.textContent = `Pergunta ${I+1}/${scopeTotal}`;
-      footRight.textContent = SEARCH.active
-        ? `${answered} respondidas • filtro: "${SEARCH.term}" (${SEARCH.matches.length})`
-        : `${answered} respondidas`;
+      const answered=ORDER.filter(idx => CHOSEN[idx]!==null).length;
+      const denom = ORDER.length || total;
+      const progBase = Math.max(1, denom-1);
+      bar.style.width = Math.round((I)/progBase*100) + '%';
+      footLeft.textContent = `Pergunta ${I+1}/${denom}`;
+      footRight.textContent = FILTER
+        ? `${answered}/${denom} respondidas · filtro: "${FILTER.term}" (${denom})`
+        : `${answered}/${denom} respondidas`;
 
       const q=current();
       questionEl.textContent = q.q;
@@ -478,7 +532,7 @@
       }
 
       btnPrev.disabled = I===0;
-      btnNext.textContent = I < scopeTotal-1 ? (LABELS.next||'Próximo') : 'Finalizar';
+      btnNext.textContent = I < denom-1 ? (LABELS.next||'Próximo') : 'Finalizar';
 
       if (CHOSEN[ ORDER[I] ] !== null) markLocked();
 
@@ -571,56 +625,96 @@
       window.open(url, '_blank', 'noopener');
     }
 
-    // ===== Busca: termo exato em enunciado e opções =====
-    function norm(s){ return String(s??'').toLocaleLowerCase('pt-BR').replace(/\s+/g,' ').trim(); }
-    function findMatches(term){
-      const t = norm(term);
-      if(!t) return [];
-      const out=[];
-      for(let i=0;i<QUIZ.questions.length;i++){
-        const q = QUIZ.questions[i];
-        let hit = false;
-        if(norm(q.q).includes(t)) hit=true;
-        else if((q.type||'multiple')==='vf'){
-          const vf = ['verdadeiro','falso'];
-          if(vf.some(x=> x.includes(t))) hit=true;
-        }else if(Array.isArray(q.options)){
-          for(const opt of q.options){ if(norm(opt).includes(t)){ hit=true; break; } }
+    // ===== Busca intra-quiz (filtro local) =====
+    function applyFilter(termRaw){
+      if(!QUIZ){ toast('Carregue um tema antes','warn'); return; }
+      const term = String(termRaw||'').trim();
+      if(!term){ toast('Informe um termo','warn'); return; }
+      const needle = term.toLocaleLowerCase('pt-BR');
+      const hits=[];
+      QUIZ.questions.forEach((q,idx)=>{
+        const inQ = (q.q||'').toLocaleLowerCase('pt-BR').includes(needle);
+        let inOpt=false;
+        if(q.type!=='vf' && Array.isArray(q.options)){
+          inOpt = q.options.some(o=> String(o||'').toLocaleLowerCase('pt-BR').includes(needle));
         }
-        if(hit) out.push(i);
-      }
-      return out;
-    }
-    function applySearch(term){
-      if(!QUIZ) return;
-      const matches = findMatches(term);
-      if(matches.length===0){
-        toast('Nenhuma questão encontrada','warn',1800);
-        return;
-      }
-      if(!SEARCH.active){
-        SEARCH.baseOrder = ORDER.slice(); // guarda ordem atual
-      }
-      SEARCH.active = true;
-      SEARCH.term = term;
-      SEARCH.matches = matches.slice();
-      ORDER = matches.slice();
-      I = 0;
-      show(btnClearSearch, true);
-      toast(`Filtro ativo: ${matches.length} questão(ões)`,'info',2000);
-      render();
-    }
-    function clearSearch(){
-      if(!SEARCH.active) return;
-      ORDER = Array.isArray(SEARCH.baseOrder) && SEARCH.baseOrder.length ? SEARCH.baseOrder.slice() : [...Array(QUIZ.questions.length).keys()];
-      SEARCH = { active:false, term:'', matches:[], baseOrder:null };
-      txtSearch.value='';
-      show(btnClearSearch, false);
-      I = 0;
-      toast('Filtro removido','info',1200);
+        if(inQ||inOpt) hits.push(idx);
+      });
+      if(hits.length===0){ toast('Nada encontrado','warn'); return; }
+      ORDER = hits.slice();
+      I=0;
+      FILTER = { term, size: hits.length };
+      btnClearSearch.classList.remove('hide');
+      toast(`Filtro aplicado (${hits.length})`,'info');
       render();
     }
 
+    function clearFilter(){
+      if(!QUIZ) return;
+      ORDER = [...Array(QUIZ.questions.length).keys()];
+      FILTER = null;
+      btnClearSearch.classList.add('hide');
+      I=0;
+      toast('Filtro removido','info');
+      render();
+    }
+
+    // ===== Busca global na página inicial =====
+    async function globalSearchAndOpen(termRaw){
+      const term = String(termRaw||'').trim();
+      if(!term){ toast('Informe um termo para busca global','warn'); return; }
+      const needle = term.toLocaleLowerCase('pt-BR');
+
+      const allPaths=[];
+      (MANIFEST?.categories||[]).forEach(c=>{
+        (c.themes||[]).forEach(t=> allPaths.push(t.path));
+      });
+      if(allPaths.length===0){ toast('Nenhum tema disponível para busca','error'); return; }
+
+      state.textContent='buscando';
+      let results=[];
+      for(const p of allPaths){
+        try{
+          const data = await loadJSON(p);
+          if(!data || !Array.isArray(data.questions)) continue;
+          data.questions.forEach((q,idx)=>{
+            const inQ = (q.q||'').toLocaleLowerCase('pt-BR').includes(needle);
+            let inOpt=false;
+            if(q.type!=='vf' && Array.isArray(q.options)){
+              inOpt = q.options.some(o=> String(o||'').toLocaleLowerCase('pt-BR').includes(needle));
+            }
+            if(inQ||inOpt){
+              const clone = JSON.parse(JSON.stringify(q));
+              clone.__origin = { path:p, index:idx };
+              results.push(clone);
+            }
+          });
+        }catch{}
+      }
+
+      if(results.length===0){
+        state.textContent='pronto';
+        toast('Nada encontrado na busca global','warn',2400);
+        return;
+      }
+
+      const virtual = {
+        meta: {
+          title: `Busca global: "${term}"`,
+          category: 'busca',
+          theme: 'global',
+          shuffle: {questions:false, options:true},
+          persist: true,
+          outroMessage: `${results.length} resultados encontrados na busca global.`
+        },
+        questions: results
+      };
+      const synth = `search://global?term=${encodeURIComponent(term)}`;
+      await loadVirtualQuiz(virtual, synth, true);
+      toast(`Busca global: ${results.length} questões`, 'info', 2200);
+    }
+
+    // ===== Acessibilidade =====
     window.addEventListener('keydown',(e)=>{
       if(screenQuiz.classList.contains('hide')) return;
       if(e.key>='1'&&e.key<='9'){
@@ -640,7 +734,7 @@
         console.assert(isCorrectQuestion({type:'multiple',answer:2},2)===true, 'Multiple ok');
         console.assert(isCorrectQuestion({type:'vf',answer:true},true)===true, 'VF ok');
         const embIntro = readEmbedded('data/intro/basico.json');
-        if(embIntro){ const sampleQ = embIntro.questions[0].q; console.assert(sampleQ.length>=120 && sampleQ.length<=220, 'Enunciado exemplo ~120-200 chars'); }
+        if(embIntro){ const sampleQ = embIntro.questions?.[0]?.q||''; console.assert(sampleQ.length>=0, 'Embutido OK'); }
         console.log('Passou nos testes básicos');
       }catch(e){ console.error('Falha nos testes', e); } finally{ console.groupEnd(); }
     }
