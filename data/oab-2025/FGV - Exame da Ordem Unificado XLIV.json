@@ -910,6 +910,69 @@
       ],
       "answer": 2,
       "explanation": "“É proibido publicar ou fazer publicar anúncio de emprego no qual haja referência ao sexo, à idade, à cor ou situação familiar, salvo quando a natureza da atividade a ser exercida, pública e notoriamente, assim o exigir.” — CLT, art. 373-A, I. “É vedado [...] II - recusar emprego, promoção ou motivar a dispensa em razão de sexo, idade, cor, situação familiar ou estado de gravidez [...]; IV - exigir atestado ou exame, de qualquer natureza, para comprovação de esterilidade ou gravidez, na admissão ou permanência no emprego.” — CLT, art. 373-A, II e IV. Justificativa objetiva: As situações de Lígia (preferência por sexo), Paula (preterição por gravidez) e Geórgia (exigência de teste de gravidez) são condutas discriminatórias expressamente vedadas pela CLT e pela Lei nº 9.029/95. No caso de Sílvia, a natureza da atividade (movimentação manual de cargas de 30 kg) excede os limites de força física recomendados para a proteção do trabalho da mulher (CLT, art. 390), justificando a restrição como requisito profissional legítimo, e não como discriminação. A alternativa C analisa corretamente todas as situações."
+    },
+    {
+      "type": "multiple",
+      "q": "Sandra trabalhou na sociedade empresária Sorvete Saboroso Ltda. por 3 anos, como atendente de loja. Após ser dispensada em 2024, Sandra ajuizou reclamação trabalhista contra a ex-empregadora requerendo equiparação salarial com a funcionária Maria, que exercia a mesma função, mas recebia salário superior. Apresentada a defesa, os pontos controvertidos definidos foram: diferença na perfeição técnica entre as empregadas e diferença superior a quatro anos no tempo de serviço para o empregador.\nConsiderando a distribuição estática do ônus da prova e os termos da CLT, assinale a afirmativa correta.",
+      "options": [
+        "(A) À empresa caberá provar a diferença na perfeição técnica e a diferença superior a quatro anos no tempo de serviço entre as cotejadas.",
+        "(B) À empresa caberá provar a diferença superior a quatro anos no tempo de serviço e, à empregada, a diferença na perfeição técnica.",
+        "(C) À empregada caberá provar a diferença superior a quatro anos no tempo de serviço para o empregador e, à empresa, a diferença na perfeição técnica.",
+        "(D) À empregada caberá provar a diferença na perfeição técnica e a diferença superior a quatro anos no tempo de serviço entre as cotejadas."
+      ],
+      "answer": 0,
+      "explanation": "“Na equiparação salarial, compete ao empregado a prova do fato constitutivo do seu direito (identidade de funções) e ao empregador a prova dos fatos impeditivos, modificativos ou extintivos da equiparação (diferença de produtividade, perfeição técnica, tempo de serviço superior a quatro anos para o mesmo empregador ou a dois anos na função, existência de quadro de carreira etc).” — Súmula nº 6, VIII, do TST; e CLT, art. 461. Justificativa objetiva: Em ações de equiparação salarial, cabe ao empregado provar que exercia a mesma função que o paradigma (fato constitutivo). Cabe ao empregador provar qualquer fato que impeça a equiparação, como a maior perfeição técnica ou o tempo de serviço superior a quatro anos para a empresa. Portanto, o ônus da prova de ambos os pontos controvertidos é da empresa. A alternativa A está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Você é advogado(a) de uma sociedade empresária que figura como ré em quatro ações na Justiça do Trabalho. Uma ação versa sobre a dispensa de um empregado que aderiu a uma greve. Outra, sobre indenização por dano moral, em razão de suposto assédio moral praticado por um superior hierárquico de um empregado. A terceira versa sobre horas extras. E a quarta, versa exclusivamente sobre cobrança de contribuições previdenciárias supostamente não efetuadas pelo empregador ao longo de um contrato de trabalho de um outro empregado.\nSobre a competência da Justiça do Trabalho nas quatro ações apresentadas, assinale a afirmativa correta.",
+      "options": [
+        "(A) A Justiça do Trabalho é competente para todos os pedidos formulados nas ações.",
+        "(B) A competência para o pedido de indenização por danos morais é da Justiça Comum.",
+        "(C) A Justiça do Trabalho não tem competência para os dissídios oriundos de direito de greve.",
+        "(D) A Justiça do Trabalho é incompetente para julgar o pedido de cobrança de contribuições previdenciárias supostamente não efetuadas pelo empregador."
+      ],
+      "answer": 3,
+      "explanation": "“Compete à Justiça do Trabalho processar e julgar: [...] VIII - a execução, de ofício, das contribuições sociais previstas no art. 195, I, a , e II, e seus acréscimos legais, decorrentes das sentenças que proferir.” — CRFB/88, art. 114, VIII. E “Compete à Justiça Federal processar e julgar as execuções fiscais para cobrança de contribuições previdenciárias.” — Jurisprudência do STF. Justificativa objetiva: A Justiça do Trabalho tem competência para executar as contribuições previdenciárias incidentes sobre os valores das condenações que profere, mas não para processar uma ação autônoma que vise unicamente à cobrança de contribuições não recolhidas durante o contrato de trabalho. Esta última é uma competência da Justiça Federal. As ações sobre direito de greve, dano moral na relação de trabalho e horas extras são de competência da Justiça do Trabalho. Portanto, a alternativa D está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "No bojo de uma execução que tramita perante a 100ª Vara do Trabalho de Porto Velho/RO, o Juiz, após conceder vista ao executado, homologou o cálculo apresentado pelo exequente e fixou a dívida em R$ 20.000,00. O executado pretende se valer do parcelamento da dívida na forma do CPC, subsidiariamente aplicado ao Processo do Trabalho.\nConsiderando esses fatos e de acordo com a legislação em vigor, sabendo-se que não há oposição do credor, assinale a afirmativa correta.",
+      "options": [
+        "(A) O executado poderá honrar a dívida em 5 parcelas iguais e sucessivas e, após garantido o Juízo, apresentar embargos à execução.",
+        "(B) O executado depositará 30% da execução acrescido de custas e honorários advocatícios, e o restante, em até seis parcelas mensais, acrescidas de correção monetária e de juros de 1% ao mês.",
+        "(C) A pretensão não terá sucesso porque o parcelamento somente é possível quando o valor homologado for o cálculo apresentado pelo executado.",
+        "(D) Caberá à sociedade empresária apresentar metade do valor juntamente com uma petição onde irá requerer o parcelamento, devendo pagar o restante em três parcelas iguais e sucessivas."
+      ],
+      "answer": 1,
+      "explanation": "“No prazo para embargos, reconhecendo o crédito do exequente e comprovando o depósito de trinta por cento do valor em execução, acrescido de custas e de honorários de advogado, o executado poderá requerer que lhe seja permitido pagar o restante em até 6 (seis) parcelas mensais, acrescidas de correção monetária e de juros de um por cento ao mês.” — CPC/2015, art. 916. E “Aplica-se ao Processo do Trabalho o disposto no art. 916 do CPC.” — Instrução Normativa nº 39/2016 do TST, art. 3º, XXI. Justificativa objetiva: O parcelamento do débito previsto no CPC é aplicável ao processo do trabalho. A regra exige o depósito de 30% do valor total da execução (principal, custas e honorários), podendo o restante ser pago em até seis parcelas mensais, com juros e correção. A alternativa B descreve corretamente este procedimento."
+    },
+    {
+      "type": "multiple",
+      "q": "Helena foi empregada de uma sociedade empresária de fevereiro de 2022 a janeiro de 2024, quando foi dispensada sob a alegação de justa causa. Ciente de que não fez absolutamente nada de errado, e considerando que sua única testemunha é uma outra ex-funcionária que se encontra enferma e terá pouco tempo de vida, Helena ajuizou, em março de 2024, uma ação para produção antecipada de provas, distribuída por sorteio para a 950ª Vara do Trabalho de São Paulo. Na referida ação foi colhido o depoimento da testemunha, que pouco depois veio a falecer. Arquivada a produção antecipada de provas, Helena pretende ajuizar reclamação trabalhista para anular a justa causa aplicada, valendo-se inclusive do testemunho da finada.\nSobre o fato narrado, considerando o disposto na norma de regência, assinale a afirmativa correta.",
+      "options": [
+        "(A) A ação deverá ser distribuída ao Juízo da 950ª Vara do Trabalho de São Paulo, que é prevento para apreciar a lide.",
+        "(B) A reclamação trabalhista será livremente distribuída a uma das Varas do Trabalho de São Paulo.",
+        "(C) Qualquer Juízo do Trabalho poderá apreciar a demanda na localidade de São Paulo, exceto a 950ª Vara, que já realizou parte da instrução e formou juízo de valor.",
+        "(D) Far-se-á a distribuição por dependência à 950ª Vara do Trabalho de São Paulo, cabendo ao(à) advogado(a) do réu suscitar exceção de suspeição, caso o mesmo Magistrado que instruiu a produção antecipada da prova queira julgar a causa."
+      ],
+      "answer": 1,
+      "explanation": "“A produção antecipada da prova não previne a competência do juízo para a ação que venha a ser proposta.” — CPC/2015, art. 381, § 3º. Justificativa objetiva: A ação de produção antecipada de prova tem como único objetivo a produção e documentação da prova, não havendo análise de mérito. Por essa razão, a lei processual estabelece expressamente que o juízo que processa essa medida não se torna prevento para a ação principal. Portanto, a reclamação trabalhista de Helena deverá ser submetida à livre distribuição. A alternativa B está correta."
+    },
+    {
+      "type": "multiple",
+      "q": "Soraya integrava o contrato social de uma sociedade empresária, mas se afastou dela em janeiro de 2019 e registrou sua saída perante a Junta Comercial em dezembro de 2021. Joana foi empregada da sociedade empresária em questão de abril de 2019 a setembro de 2022, tendo ajuizado reclamação trabalhista em outubro de 2023. Obteve vitória judicial e iniciou a execução em janeiro de 2025. Não tendo a sociedade empresária solvabilidade, requereu o direcionamento da execução contra os sócios atuais, sem êxito. Então, requereu que a execução fosse feita em relação à Soraya.\nConsiderando esses fatos e o que prevê a CLT, assinale a afirmativa correta.",
+      "options": [
+        "(A) É possível a execução de Soraya porque, entre a averbação de sua saída e o ajuizamento da ação, transcorreu prazo inferior a 2 anos.",
+        "(B) Uma vez que entre o afastamento de Soraya e o início da execução transcorreu prazo superior a 2 anos, ela não poderá ser executada.",
+        "(C) Entre o afastamento de Soraya e o ajuizamento da ação transcorreu prazo superior a 2 anos, pelo que a ex-sócia não poderá ser executada.",
+        "(D) Tendo sido sócia à época da prestação dos serviços de Joana, e enriquecido com o seu labor, Soraya pode ser executada a qualquer tempo."
+      ],
+      "answer": 0,
+      "explanation": "“O sócio retirante responde subsidiariamente pelas obrigações trabalhistas da sociedade relativas ao período em que figurou como sócio, somente em ações ajuizadas até dois anos depois de averbada a modificação do contrato [...].” — CLT, art. 10-A. Justificativa objetiva: A responsabilidade do sócio retirante por dívidas trabalhistas da empresa é limitada. Ele responde apenas pelas obrigações do período em que foi sócio e somente se a ação for ajuizada em até dois anos após a averbação de sua saída. No caso, a saída de Soraya foi averbada em Dez/2021 e a ação foi ajuizada em Out/2023, ou seja, dentro do prazo de dois anos. Portanto, ela pode ser responsabilizada. A alternativa A está correta."
     }
+  ],
+  "skipped": []
+}
   ]
 }
