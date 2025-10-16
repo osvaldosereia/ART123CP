@@ -1,9 +1,9 @@
 # A respeito dos elementos do ato administrativo, analise as assertivas abaixo
 
-- I. A competência é elemento essencial do ato administrativo e decorre de norma jurídica. Admite-se a delegação e a avocação, desde que não haja vedação legal expressa.
-- II. O elemento forma consiste na exteriorização da decisão administrativa. E, em regra, vinculado, mas sua inobservância pode acarretar vício sanável quando não se tratar de requisito essencial.
-- III. O fim corresponde ao interesse público, sendo elemento sempre vinculado. Sua violação caracteriza desvio de finalidade, vício insanável do ato administrativo.
-- IV. O motivo traduz-se nas circunstâncias de fato e nos elementos de direito que ensejam a prática do ato administrativo.
+--- I. A competência é elemento essencial do ato administrativo e decorre de norma jurídica. Admite-se a delegação e a avocação, desde que não haja vedação legal expressa.
+-- II. O elemento forma consiste na exteriorização da decisão administrativa. E, em regra, vinculado, mas sua inobservância pode acarretar vício sanável quando não se tratar de requisito essencial.
+--- III. O fim corresponde ao interesse público, sendo elemento sempre vinculado. Sua violação caracteriza desvio de finalidade, vício insanável do ato administrativo.
+--- IV. O motivo traduz-se nas circunstâncias de fato e nos elementos de direito que ensejam a prática do ato administrativo.
 - A) Apenas I e II.
 - B) Apenas I, III e IV.
 - C) Apenas II, III e IV.
@@ -16,10 +16,10 @@ Competência administrativa, Elementos do ato, Desvio de finalidade
 
 # Sobre controle e invalidação dos atos administrativos, analise as assertivas a seguir
 
-- I. Na invalidação de ato, contrato, ajuste, processo ou norma administrativa, a decisão deverá indicar, de modo expresso, suas consequências jurídicas e administrativas.
-- II. A revisão poderá reconhecer a invalidade de situações definitivamente constituídas por ato administrativo já exaurido em seus efeitos, ainda que amparadas em interpretação de norma vigente à época, desde que sobrevenha alteração posterior de entendimento.
-- III. Ao decidir sobre a regularidade de contrato administrativo, a autoridade administrativa deverá considerar as circunstâncias práticas que houverem imposto, limitado ou condicionado a ação do agente responsável por firmá-lo.
-- IV. A decisão administrativa ou judicial que estabelecer nova interpretação sobre norma de conteúdo indeterminado, impondo novo dever ou novo condicionamento de direito, deve prever, quando indispensável, regime de transição proporcional e equânime.
+--- I. Na invalidação de ato, contrato, ajuste, processo ou norma administrativa, a decisão deverá indicar, de modo expresso, suas consequências jurídicas e administrativas.
+--- II. A revisão poderá reconhecer a invalidade de situações definitivamente constituídas por ato administrativo já exaurido em seus efeitos, ainda que amparadas em interpretação de norma vigente à época, desde que sobrevenha alteração posterior de entendimento.
+--- III. Ao decidir sobre a regularidade de contrato administrativo, a autoridade administrativa deverá considerar as circunstâncias práticas que houverem imposto, limitado ou condicionado a ação do agente responsável por firmá-lo.
+--- IV. A decisão administrativa ou judicial que estabelecer nova interpretação sobre norma de conteúdo indeterminado, impondo novo dever ou novo condicionamento de direito, deve prever, quando indispensável, regime de transição proporcional e equânime.
 - A) Apenas I e III.
 - B) Apenas II e IV.
 - C) Apenas I, III e IV.
