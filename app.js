@@ -678,7 +678,23 @@ async function globalSearchAndOpen(termRaw){
   const term = String(termRaw||'').trim();
   if(!term){ toast('Informe um termo para busca global','warn'); return; }
 
-  const searchTerms = normalizeText(term).split(/\s+/).filter(Boolean);
+// Normaliza e divide a busca
+let rawTerms = normalizeText(term).split(/\s+/).filter(Boolean);
+
+// Palavras ignoradas (stopwords)
+const stopWords = new Set([
+  'de','do','da','dos','das','para','pra','por','com','como','em','no','na',
+  'nos','nas','ao','aos','às','as','os','um','uma','uns','umas','foi','era',
+  'ser','se','que','e','ou','a','o','ao','à','às','todo','toda','todos','todas'
+]);
+
+// Filtro: apenas números OU palavras com ≥3 letras que não sejam stopwords
+const searchTerms = rawTerms.filter(w => {
+  if (/^\d+$/.test(w)) return true;            // aceita números inteiros
+  if (w.length < 3) return false;              // ignora curtas
+  if (stopWords.has(w)) return false;          // ignora stopwords
+  return true;
+});
   if (searchTerms.length === 0) return;
 
   const allPaths=[];
@@ -700,12 +716,17 @@ async function globalSearchAndOpen(termRaw){
         const normalizedTags= (q.tags    || []).map(t => normalizeText(String(t || '')));
 
         const allTermsFound = searchTerms.every(st => {
-          const re   = new RegExp('\\b' + st + '\\b');
-          const inQ   = re.test(normalizedQ);
-          const inOpt = normalizedOpts.some(optText => re.test(optText));
-          const inTag = normalizedTags.some(tagText => re.test(tagText));
-          return inQ || inOpt || inTag; // agora considera tags
-        });
+  // número deve ser igual exato, texto deve bater como palavra inteira
+  const re = /^\d+$/.test(st)
+    ? new RegExp(`\\b${st}\\b`, 'g')
+    : new RegExp(`\\b${st}\\b`, 'gi');
+
+  const inQ   = re.test(normalizedQ);
+  const inOpt = normalizedOpts.some(optText => re.test(optText));
+  const inTag = normalizedTags.some(tagText => re.test(tagText));
+  return inQ || inOpt || inTag;
+});
+
 
         if(allTermsFound){
           const clone = JSON.parse(JSON.stringify(q));
