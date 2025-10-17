@@ -1,12 +1,13 @@
 /* app.js — com suporte a TAGS clicáveis e formato com * ** *** **** ----- */
 
 const CONFIG = {
-  useGitHubIndexer: false,
-  owner: null,
-  repo: null,
+  useGitHubIndexer: true,
+  owner: 'osvaldosereia',
+  repo: 'ART123CP',
   branch: 'main',
   dataDir: 'data'
 };
+
 const AUTO_RESUME = true;
 
 /* ===== util ===== */
