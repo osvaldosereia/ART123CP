@@ -690,15 +690,15 @@ async function globalSearchAndOpen(termRaw){
 
   // Filtro: apenas números OU palavras com ≥3 letras que não sejam stopwords
   const searchTerms = rawTerms.filter(w => {
-    if (/^\d+$/.test(w)) return true;   // aceita números inteiros
-    if (w.length < 3) return false;     // ignora curtas
-    if (stopWords.has(w)) return false; // ignora stopwords
+    if (/^\d+$/.test(w)) return true;
+    if (w.length < 3) return false;
+    if (stopWords.has(w)) return false;
     return true;
   });
   if (searchTerms.length === 0) return;
 
-  // Verifica se termos estão próximos (≤8 palavras de distância)
-  function termsAreNear(text, terms, maxDistance = 8) {
+  // Função: verifica se termos estão próximos (≤3 posições de distância)
+  function termsAreNear(text, terms, maxDistance = 3) {
     const words = text.split(/\s+/);
     const positions = terms.map(t => {
       const re = new RegExp(`\\b${t}\\b`, 'i');
@@ -737,7 +737,6 @@ async function globalSearchAndOpen(termRaw){
         const normalizedOpts= (q.options || []).map(o => normalizeText(String(o || '')));
         const normalizedTags= (q.tags    || []).map(t => normalizeText(String(t || '')));
 
-        // verifica presença dos termos
         const allTermsFound = searchTerms.every(st => {
           const re = /^\d+$/.test(st)
             ? new RegExp(`\\b${st}\\b`, 'g')
@@ -748,24 +747,21 @@ async function globalSearchAndOpen(termRaw){
           return inQ || inOpt || inTag;
         });
 
-        // verifica proximidade se houver 2+ termos
+        // proximidade máxima de 3 palavras (2 entre os termos)
         let nearEnough = true;
         if (searchTerms.length > 1) {
           const textBlob = [normalizedQ, ...normalizedOpts, ...normalizedTags].join(' ');
-          nearEnough = termsAreNear(textBlob, searchTerms, 8);
+          nearEnough = termsAreNear(textBlob, searchTerms, 3);
         }
 
         if(allTermsFound && nearEnough){
           const clone = JSON.parse(JSON.stringify(q));
           clone.__origin = { path:p };
-
-          // realce dos termos buscados
           searchTerms.forEach(st => {
             const re = new RegExp('(' + st.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
             clone.q = String(clone.q).replace(re, '<mark class="hl">$1</mark>');
             clone.options = (clone.options || []).map(o => String(o).replace(re, '<mark class="hl">$1</mark>'));
           });
-
           results.push(clone);
         }
       });
@@ -793,6 +789,7 @@ async function globalSearchAndOpen(termRaw){
   await loadVirtualQuiz(virtual, synth, true);
   toast(`Busca global: ${results.length} questões`, 'info', 2200);
 }
+
 
 
 /* ===== GitHub manifest index ===== */
