@@ -1,5 +1,6 @@
 /* app.js — quiz com TAGS, parser * ** *** **** -----, busca global, suporte a HTML Inertia (QConcursos)
-   + agregação automática de múltiplos arquivos do mesmo tema (ex.: mutuo.html, mutuo1.html, mutuo2.html) */
+   + agregação automática de múltiplos arquivos do mesmo tema (ex.: mutuo.html, mutuo1.html, mutuo2.html)
+   + TAGS = “temas irmãos” da mesma matéria (exibe e troca de tema dentro da mesma pasta) */
 
 const CONFIG = {
   useGitHubIndexer: true,
@@ -52,6 +53,49 @@ function prettyName(id){
   return key.split(/[-_\s]+/).map(s=> s? s[0].toUpperCase()+s.slice(1) : '').join(' ');
 }
 
+/* ===== helpers p/ “temas irmãos” ===== */
+function getCurrentContext(){
+  const first = Array.isArray(KEY?.path) ? KEY.path[0] : KEY?.path;
+  if(!first || typeof first!=='string') return null;
+  const parts = first.split('/'); // data / disciplina / materia / arquivo
+  if(parts.length < 4) return null;
+  const disciplinaId = parts[1];
+  const materiaId    = parts[2];
+  const file         = parts[3];
+  const baseId       = file.replace(/\.(txt|html?|json)$/i,'').replace(/\d+$/,'');
+  return {disciplinaId, materiaId, baseId};
+}
+function listSiblingThemes(){
+  const ctx = getCurrentContext(); 
+  if(!ctx || !MANIFEST) return [];
+  const cat = (MANIFEST.categories||[]).find(c => c.id === ctx.disciplinaId);
+  if(!cat) return [];
+  const sameMateria = (cat.themes||[]).filter(t => t.id.startsWith(ctx.materiaId + '-'));
+  return sameMateria.filter(t => !t.id.endsWith('-' + ctx.baseId));
+}
+function shortThemeName(theme){
+  const n = String(theme.name||'');
+  const parts = n.split('·').map(s=>s.trim());
+  return parts.length>1 ? parts[1] : n;
+}
+function renderSiblingTags(){
+  const tagsArea = document.getElementById('tagsBar');
+  if(!tagsArea) return;
+  tagsArea.innerHTML = '';
+  const siblings = listSiblingThemes();
+  siblings.forEach(t => {
+    const a = document.createElement('a');
+    a.href = '#tema:' + encodeURIComponent(t.id);
+    a.textContent = shortThemeName(t);
+    a.className = 'tag';
+    a.addEventListener('click', ev => {
+      ev.preventDefault();
+      loadQuiz(t.path, true);
+    });
+    tagsArea.appendChild(a);
+  });
+}
+
 /* ===== DOM ===== */
 const selCategory = document.getElementById('selCategory');
 const selTheme = document.getElementById('selTheme');
@@ -74,7 +118,7 @@ const explainEl = document.getElementById('explanation');
 const btnGoHome = document.getElementById('btnGoHome');
 const btnPrev = document.getElementById('btnPrev');
 const btnNext = document.getElementById('btnNext');
-let btnAI = document.getElementById('btnAI'); // pode ser reempacotado pelo ensureAIMenu()
+let btnAI = document.getElementById('btnAI');
 
 const resultTitle = document.getElementById('resultTitle');
 const resultScore = document.getElementById('resultScore');
@@ -89,7 +133,7 @@ const txtSearch = document.getElementById('txtSearch');
 const btnSearch = document.getElementById('btnSearch');
 const btnClearSearch = document.getElementById('btnClearSearch');
 
-/* TAGS */
+/* TAGS host */
 let tagsBarEl = document.getElementById('tagsBar');
 (function ensureTagsBar(){
   if(tagsBarEl) return;
@@ -153,7 +197,7 @@ function formatParagraphs(s){
   return parts.map(p=>`<p>${htmlEscape(p)}</p>`).join('');
 }
 
-/* ===== TAG helpers ===== */
+/* ===== TAG helpers (internas por questão — mantido para busca global) ===== */
 function buildTagIndex(items){
   TAG_INDEX.clear();
   for(let i=0;i<items.length;i++){
@@ -324,7 +368,7 @@ async function init() {
   window.addEventListener('online', ()=>toast('Conexão restabelecida','success',1800));
 }
 
-/* ===== IA: construir menu dropdown “para cima” no HTML atual ===== */
+/* ===== IA ===== */
 function ensureAIMenu(){
   let aiMenu = document.getElementById('aiMenu');
   let aiDropdown = document.getElementById('aiDropdown');
@@ -382,7 +426,27 @@ function ensureAIMenu(){
     btnAI.dataset.bound='1';
   }
 }
-
+function openGoogleAIMode(mode) {
+  const q = current(); if (!q) return;
+  let prompt = '';
+  if (mode === 'gabarito') {
+    prompt = 'Explique por que esta é a alternativa correta e por que as demais estão incorretas. Enunciado: ' +
+      String(q.q).replace(/<[^>]+>/g,'') +
+      ' | Opções: ' + (q.type==='vf' ? 'Verdadeiro | Falso' : q.options.join(' | ')) +
+      (typeof q.answer==='number' ? ' | Alternativa correta: ' + q.options[q.answer] : '');
+  } else if (mode === 'glossario') {
+    prompt = 'Liste e defina os principais conceitos jurídicos do enunciado a seguir: ' +
+      String(q.q).replace(/<[^>]+>/g,'');
+  } else if (mode === 'video') {
+    prompt = 'Indique uma videoaula no YouTube que explique o tema desta questão: ' +
+      String(q.q).replace(/<[^>]+>/g,'');
+  } else {
+    prompt = 'Explique detalhadamente a questão a seguir. Enunciado: ' +
+      String(q.q).replace(/<[^>]+>/g,'');
+  }
+  const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt);
+  window.open(url, '_blank', 'noopener');
+}
 
 /* ===== seleção ===== */
 function applyLabels(){
@@ -431,7 +495,7 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
   state.textContent='carregando';
   let qz=null;
 
-  // NOVO: aceitar lista de caminhos e agregar
+  // aceitar lista de caminhos e agregar
   if(Array.isArray(path)){
     const quizzes = [];
     for(const p of path){
@@ -444,7 +508,6 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
     const all = quizzes.filter(q=>q && Array.isArray(q.questions));
     const questions = all.flatMap(q=>q.questions);
 
-    // derivar Disciplina, Matéria, Tema da primeira rota
     let disciplina='Geral', materia='Geral', tema='Tema';
     if(path.length>0){
       const parts = String(path[0]).split('/');
@@ -479,7 +542,7 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
   await loadVirtualQuiz(qz, path, fresh);
 }
 async function loadVirtualQuiz(quizObj, synthKey, fresh){
-  QUIZ=quizObj; KEY={path:synthKey, key:`quiz:${JSON.stringify(synthKey)}`};// chave segura p/ array
+  QUIZ=quizObj; KEY={path:synthKey, key:`quiz:${JSON.stringify(synthKey)}`};
   buildTagIndex(QUIZ.questions);
   const total=QUIZ.questions.length;
   ORDER=[...Array(total).keys()];
@@ -509,24 +572,8 @@ function render(){
   const categoryText = QUIZ?.meta?.category || 'Geral';
   const themeText = QUIZ?.meta?.title || 'Quiz';
 
-  /* tags */
-  const tagsArea = document.getElementById('tagsBar');
-  if (tagsArea) {
-    tagsArea.innerHTML = '';
-    if (Array.isArray(q.tags) && q.tags.length > 0) {
-      q.tags.forEach(t => {
-        const a = document.createElement('a');
-        a.href = '#tag:' + encodeURIComponent(t);
-        a.textContent = t;
-        a.className = 'tag';
-        a.addEventListener('click', ev => {
-          ev.preventDefault();
-          globalSearchAndOpen(t);
-        });
-        tagsArea.appendChild(a);
-      });
-    }
-  }
+  /* TAGS = temas irmãos da mesma matéria */
+  renderSiblingTags();
 
   /* enunciado */
   questionEl.innerHTML = `
@@ -691,29 +738,6 @@ function finish(){
 function next(){ if(I < ORDER.length - 1){ I++; render(); } else { finish(); } }
 function prev(){ if(I > 0){ I--; render(); } }
 
-/* ===== IA: três modos ===== */
-function openGoogleAIMode(mode) {
-  const q = current(); if (!q) return;
-  let prompt = '';
-  if (mode === 'gabarito') {
-    prompt = 'Explique por que esta é a alternativa correta e por que as demais estão incorretas. Enunciado: ' +
-      String(q.q).replace(/<[^>]+>/g,'') +
-      ' | Opções: ' + (q.type==='vf' ? 'Verdadeiro | Falso' : q.options.join(' | ')) +
-      (typeof q.answer==='number' ? ' | Alternativa correta: ' + q.options[q.answer] : '');
-  } else if (mode === 'glossario') {
-    prompt = 'Liste e defina os principais conceitos jurídicos do enunciado a seguir: ' +
-      String(q.q).replace(/<[^>]+>/g,'');
-  } else if (mode === 'video') {
-    prompt = 'Indique uma videoaula no YouTube que explique o tema desta questão: ' +
-      String(q.q).replace(/<[^>]+>/g,'');
-  } else {
-    prompt = 'Explique detalhadamente a questão a seguir. Enunciado: ' +
-      String(q.q).replace(/<[^>]+>/g,'');
-  }
-  const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt);
-  window.open(url, '_blank', 'noopener');
-}
-
 /* ===== filtros ===== */
 function getVisibleQuestions(){
   const baseIdx = [...Array(QUIZ.questions.length).keys()];
@@ -768,7 +792,7 @@ function recalcOrderFromFilters(){
   persist();
 }
 
-/* ===== barra de tags ===== */
+/* ===== barra de tags (placeholder) ===== */
 function renderTagBar(){
   if(tagsBarEl) tagsBarEl.innerHTML = '';
 }
@@ -831,7 +855,7 @@ async function globalSearchAndOpen(termRaw){
 
         quizObj.questions.forEach((q)=>{
           const normalizedQ   = normalizeText(String(q.q||'').replace(/<[^>]+>/g,'')); 
-          const normalizedOpts= (q.options || []).map(o => normalizeText(String(o || '')));
+          const normalizedOpts= (q.options||[]).map(o => normalizeText(String(o || '')));
           const normalizedTags= (q.tags    || []).map(t => normalizeText(String(t || '')));
 
           const allTermsFound = searchTerms.every(st => {
@@ -904,9 +928,7 @@ async function buildManifestFromGitHub(){
       (n.path.endsWith('.txt') || n.path.endsWith('.html') || n.path.endsWith('.json'))
     );
 
-    // catMap por Disciplina (1º nível após data/)
     const catMap = new Map(); // id => { id, name, themes: [] }
-    // maps auxiliares por categoria
     const groupMap = new Map(); // catId => Map< materia/baseId , paths[] >
 
     for (const node of nodes) {
@@ -918,11 +940,11 @@ async function buildManifestFromGitHub(){
       const themeIdRaw = file.replace(/\.(txt|html?|json)$/i, '');
       const baseId = themeIdRaw.replace(/\d+$/,''); // remove sufixo numérico
 
-      const catId = disciplinaId; // 1º nível
+      const catId = disciplinaId;
       const cat = catMap.get(catId) || { id: catId, name: prettyName(catId), themes: [] };
       catMap.set(catId, cat);
 
-      const key = `${materiaId}/${baseId}`; // garante unicidade por matéria+tema
+      const key = `${materiaId}/${baseId}`; // unicidade por matéria+tema
       const byCat = groupMap.get(catId) || new Map();
       const arr = byCat.get(key) || [];
       arr.push(node.path);
@@ -930,12 +952,11 @@ async function buildManifestFromGitHub(){
       groupMap.set(catId, byCat);
     }
 
-    // montar temas agregados
     for(const [catId, byCat] of groupMap.entries()){
       const cat = catMap.get(catId);
       for(const [key, paths] of byCat.entries()){
         const [materiaId, baseId] = key.split('/');
-        const id = `${materiaId}-${baseId}`; // id único
+        const id = `${materiaId}-${baseId}`;
         const name = `${prettyName(materiaId)} · ${prettyName(baseId)}`;
         cat.themes.push({ id, name, path: paths.sort((a,b)=> a.localeCompare(b,'pt-BR')) });
       }
