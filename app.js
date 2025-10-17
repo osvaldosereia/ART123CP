@@ -729,8 +729,7 @@ async function buildManifestFromGitHub(){
     const catMap = new Map();
     for(const node of nodes){
       const parts = node.path.split('/');
-      if(parts.length < 2) continue;
-      const catId = parts[1];
+            const catId = parts[1];
       const file = parts[parts.length-1];
       const themeId = file.replace(/\.txt$/i,'');
       const cat = catMap.get(catId) || { id: catId, name: catId, themes: [] };
