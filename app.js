@@ -1,7 +1,7 @@
 /* app.js — com suporte a TAGS clicáveis e formato com * ** *** **** ----- */
 
 const CONFIG = {
-  useGitHubIndexer: true,
+  useGitHubIndexer: false,
   owner: null,
   repo: null,
   branch: 'main',
