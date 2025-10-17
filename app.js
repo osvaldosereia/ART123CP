@@ -280,7 +280,8 @@ function ensureAIMenu(){
 btnAI.innerHTML =
   'Pergunte ao <span class="google-word">' +
   '<span class="g1">G</span><span class="g2">o</span><span class="g3">o</span>' +
-  '<span class="g4">g</span><span class="g5">l</span><span class="g6">e</span></span> Modo I.A.';
+  '<span class="g4">g</span><span class="g5">l</span><span class="g6">e</span>' +
+  '</span> Modo I.A.';
     container.appendChild(btnAI);
 
     // dropdown
