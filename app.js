@@ -1,4 +1,4 @@
-// app.js — MeuJus (HTML seguro, chips de origem, histórico de respostas, deep link #q=n)
+// app.js — MeuJus (HTML seguro, chips de origem, histórico global, deep link #q=n)
 
 const CONFIG = {
   useGitHubIndexer: true,
@@ -373,7 +373,8 @@ async function init() {
     };
   }
 
-  state.textContent = 'pronto';
+  if(state) state.classList.add('hide'); // esconde “respondendo” do topo
+
   appTitle.textContent = MANIFEST?.title || 'MeuJus';
   applyLabels();
 
@@ -398,7 +399,7 @@ async function init() {
   btnClearSearch.addEventListener('click', clearFilter);
   txtSearch.addEventListener('keydown', e=>{ if(e.key==='Enter') btnSearch.click(); });
 
-  const goHome = ()=>{ resetState(); show(screenIntro,true); show(screenQuiz,false); show(screenResult,false); state.textContent='pronto'; };
+  const goHome = ()=>{ resetState(); show(screenIntro,true); show(screenQuiz,false); show(screenResult,false); };
   btnGoHome.addEventListener('click', goHome);
   btnHome.addEventListener('click', goHome);
   appTitle.addEventListener('click', goHome);
@@ -407,8 +408,8 @@ async function init() {
 
   ensureAIMenu();
 
-  loadHistory();
-  renderHistory();
+  loadHistory();            // global
+  setupHeaderActions();     // engrenagem + painel
 
   const last=lsGet('quiz:last');
   if(last&&last.path){
@@ -550,7 +551,6 @@ function resetState(){
 
 /* ===== loadQuiz ===== */
 async function loadQuiz(path,fresh=false,tryRestore=false){
-  state.textContent='carregando';
   let qz=null;
 
   if(Array.isArray(path)){
@@ -594,7 +594,7 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
   }
 
   if(!qz||!Array.isArray(qz.questions)){
-    toast('Falha ao carregar o quiz','error',3000); state.textContent='erro'; return;
+    toast('Falha ao carregar o quiz','error',3000); return;
   }
   await loadVirtualQuiz(qz, path, fresh);
 }
@@ -606,7 +606,6 @@ async function loadVirtualQuiz(quizObj, synthKey, fresh){
   CHOSEN=new Array(total).fill(null);
   I=0; FILTER=null; TAG_FILTER=null;
   btnClearSearch.classList.add('hide');
-  state.textContent='respondendo';
   show(screenIntro,false); show(screenQuiz,true); show(screenResult,false);
   render();
 }
@@ -714,7 +713,14 @@ function lockAndExplain(value) {
     buttons[q.answer ? 0 : 1].classList.add('correct');
     const chosenIdx = value ? 0 : 1;
     if (chosenIdx !== answerIdx) buttons[chosenIdx]?.classList.add('wrong');
-    upsertHistoryItem({ idx: ORDER[I], chosenIdx, correctIdx: answerIdx });
+    upsertHistoryItem({
+      idx: ORDER[I],
+      chosenIdx,
+      correctIdx: answerIdx,
+      quizTitle: QUIZ?.meta?.title || 'Geral',
+      path: KEY?.path,
+      preview: plainText(q.q).slice(0, 80)
+    });
   } else {
     answerIdx = q.answer;
     buttons.forEach(b => {
@@ -724,7 +730,14 @@ function lockAndExplain(value) {
     const chosenIdx = (typeof value==='number') ? value : null;
     const chosenBtn = buttons.find(b => parseInt(b.dataset.origIdx ?? '-1', 10) === chosenIdx);
     if (chosenBtn && chosenIdx !== answerIdx) chosenBtn.classList.add('wrong');
-    upsertHistoryItem({ idx: ORDER[I], chosenIdx, correctIdx: answerIdx });
+    upsertHistoryItem({
+      idx: ORDER[I],
+      chosenIdx,
+      correctIdx: answerIdx,
+      quizTitle: QUIZ?.meta?.title || 'Geral',
+      path: KEY?.path,
+      preview: plainText(q.q).slice(0, 80)
+    });
   }
 
   const gLetter = ['A','B','C','D','E','F','G'][q.answer] || '?';
@@ -766,8 +779,7 @@ function persist(){
     filter:FILTER,
     tag:TAG_FILTER,
     quizLen: QUIZ.questions.length,
-    path: KEY.path,
-    ts: Date.now()
+    path: KEY.path
   });
   lsSet('quiz:last', KEY);
 }
@@ -789,7 +801,6 @@ function finish(){
   const pct = total>0 ? Math.round(ok/total*100) : 0;
   resultScore.textContent=`${pct}% (${ok}/${total})`;
   resultMsg.textContent=QUIZ.meta?.outroMessage || MANIFEST?.outro?.message || '';
-  state.textContent='concluído';
   show(screenQuiz,false); show(screenResult,true);
   toast('Você concluiu o quiz','success',2500);
 }
@@ -894,7 +905,6 @@ async function globalSearchAndOpen(termRaw){
   });
   if(allPaths.length===0){ toast('Nenhum tema disponível para busca','error'); return; }
 
-  state.textContent='buscando';
   let results=[];
 
   for(const p of allPaths){
@@ -944,7 +954,6 @@ async function globalSearchAndOpen(termRaw){
   }
 
   if(results.length===0){
-    state.textContent='pronto';
     toast('Nada encontrado na busca global','warn',2400);
     return;
   }
@@ -1043,125 +1052,46 @@ window.addEventListener('keydown',(e)=>{
   } else if(e.key==='Enter'||e.key==='ArrowRight'){
     if(I===ORDER.length-1) finish(); else next();
   } else if(e.key==='ArrowLeft'){ prev(); }
-  else if(e.key.toLowerCase()==='h'){ const p=document.getElementById('historyPanel'); if(p) p.classList.toggle('hide'); }
 });
 window.addEventListener('beforeunload', persist);
 document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='hidden') persist(); });
 
-/* ===== HISTÓRICO DA SESSÃO ===== */
+/* ===== HISTÓRICO GLOBAL (compacto, na aba lateral) ===== */
 const LETTERS = ['A','B','C','D','E','F','G'];
-let HISTORY = []; // [{ idx, number, chosenIdx, chosenLetter, correctIdx, correctLetter, isCorrect }]
+const GLOBAL_HIST_KEY = 'meujus:hist';
+let HISTORY = []; // [{key, path, idx, number, chosenIdx, chosenLetter, correctIdx, correctLetter, isCorrect, quizTitle, preview}]
 
-function histKey(){ return KEY ? (KEY.key + ':hist') : 'hist:tmp'; }
+function histKey(){ return GLOBAL_HIST_KEY; }
 function loadHistory(){ HISTORY = lsGet(histKey(), []); }
 function saveHistory(){ lsSet(histKey(), HISTORY); }
+function pathKey(p){ return typeof p==='string' ? p : JSON.stringify(p||''); }
 
-function upsertHistoryItem({ idx, chosenIdx, correctIdx }){
+function upsertHistoryItem({ idx, chosenIdx, correctIdx, quizTitle, path, preview }){
   const number = idx + 1;
   const chosenLetter  = typeof chosenIdx  === 'number' ? LETTERS[chosenIdx]  || '?' : '∅';
   const correctLetter = typeof correctIdx === 'number' ? LETTERS[correctIdx] || '?' : '∅';
   const isCorrect = (typeof chosenIdx==='number' && chosenIdx===correctIdx);
+  const key = pathKey(path) + '::' + idx;
 
-  const pos = HISTORY.findIndex(h => h.idx === idx);
-  const rec = { idx, number, chosenIdx, chosenLetter, correctIdx, correctLetter, isCorrect };
-  if(pos>=0) HISTORY[pos] = rec; else HISTORY.push(rec);
-  if(HISTORY.length>200) HISTORY = HISTORY.slice(-200);
-  saveHistory();
-  renderHistory();
-}
-
-function renderHistory(){
-  let side = document.getElementById('historyPanel');
-  if(!side){
-    side = document.createElement('aside');
-    side.id = 'historyPanel';
-    side.className = 'history';
-    side.innerHTML = `
-      <div class="hist-head">
-        <strong>Histórico</strong>
-        <div class="hist-actions">
-          <button id="histAll" class="btn ghost sm">Todas</button>
-          <button id="histWrong" class="btn ghost sm">Erradas</button>
-          <button id="histClear" class="btn ghost sm">Limpar</button>
-        </div>
-      </div>
-      <div id="histList" class="hist-list"></div>
-    `;
-    document.body.appendChild(side);
-    document.getElementById('histAll').onclick = ()=> renderHistoryList('all');
-    document.getElementById('histWrong').onclick = ()=> renderHistoryList('wrong');
-    document.getElementById('histClear').onclick = ()=> { HISTORY=[]; saveHistory(); renderHistoryList('all'); };
+  const rec = { key, path, idx, number, chosenIdx, chosenLetter, correctIdx, correctLetter, isCorrect, quizTitle, preview };
+  const pos = HISTORY.findIndex(h => h.key === key);
+  if(pos>=0) HISTORY[pos] = { ...HISTORY[pos], ...rec };
+  else {
+    HISTORY.push(rec);
+    if(HISTORY.length>100) HISTORY = HISTORY.slice(-100);
   }
-  renderHistoryList(window.__histFilter||'all');
+  saveHistory();
+  if(PANEL_OPEN) renderSideHistory(false);
 }
 
-function renderHistoryList(filter){
-  window.__histFilter = filter;
-  const list = document.getElementById('histList');
-  if(!list) return;
-  const items = (filter==='wrong') ? HISTORY.filter(h=>!h.isCorrect) : HISTORY.slice();
-  items.sort((a,b)=> a.number-b.number);
+/* ===== PAINEL LATERAL ===== */
+let PANEL_OPEN = false;
+let panelEl = null, backdropEl = null;
+let SP_HIST_PAGE = 1; // 10 itens por página
 
-  list.innerHTML = items.map(h=>{
-    const status = h.isCorrect ? 'ok' : 'bad';
-    const detail = h.isCorrect
-      ? `✔ ${h.chosenLetter}`
-      : `✖ ${h.chosenLetter} → correta: ${h.correctLetter}`;
-    return `
-      <button class="hist-item ${status}" data-idx="${h.idx}" aria-label="Questão ${h.number}">
-        <span class="n">#${h.number}</span>
-        <span class="d">${detail}</span>
-      </button>`;
-  }).join('');
-
-  list.querySelectorAll('.hist-item').forEach(btn=>{
-    btn.onclick = ()=>{
-      const idx = parseInt(btn.dataset.idx,10);
-      const pos = ORDER.indexOf(idx);
-      if(pos>=0){ I = pos; render(); }
-      try{ history.replaceState(null,'',`#q=${(pos>=0?pos+1:1)}`); }catch{}
-    };
-  });
-}
-
-/* Estilo injetado para histórico e chips (caso CSS externo não esteja presente) */
-(function injectHistCss(){
-  if(document.getElementById('hist-css')) return;
-  const css = document.createElement('style');
-  css.id='hist-css';
-  css.textContent = `
-  .history{position:fixed;right:12px;top:12px;width:260px;max-height:70vh;overflow:auto;
-    background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:10px;z-index:999}
-  .hist-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-  .hist-actions .btn{margin-left:6px}
-  .hist-list{display:flex;flex-direction:column;gap:6px}
-  .hist-item{display:flex;gap:8px;align-items:center;justify-content:flex-start;border:1px solid #e5e7eb;
-    padding:6px 8px;border-radius:8px;background:#fff;cursor:pointer}
-  .hist-item .n{font-weight:600;min-width:40px}
-  .hist-item.ok{border-color:#10b98133;background:#f0fdf4}
-  .hist-item.bad{border-color:#ef444433;background:#fef2f2}
-  .chips{margin:4px 0 10px}
-  .chip{display:inline-block;font-size:12px;padding:2px 8px;border:1px solid #e5e7eb;border-radius:999px;cursor:pointer;user-select:none;margin-right:6px;background:#fff}
-  .chip:hover{background:#f3f4f6}
-  `;
-  document.head.appendChild(css);
-})();
-
-/* Clique nos chips aplica filtro por tag */
-questionEl?.addEventListener('click', (e)=>{
-  const el = e.target.closest?.('.chip[data-tag]');
-  if(!el) return;
-  TAG_FILTER = el.dataset.tag;
-  recalcOrderFromFilters();
-  toast(`Filtro: ${TAG_FILTER}`,'info',1600);
-});
-/* ====== TOPO: remove "state" e injeta botão engrenagem ====== */
-(function setupHeaderActions(){
+function setupHeaderActions(){
   const brand = document.querySelector('.brand') || document.getElementById('appTitle');
-  const stateEl = document.getElementById('state');
-  if(stateEl) stateEl.remove(); // remove "respondendo" do topo
 
-  // botão engrenagem alinhado à direita na mesma linha da logo
   let gear = document.getElementById('btnGear');
   if(!gear){
     gear = document.createElement('button');
@@ -1170,8 +1100,10 @@ questionEl?.addEventListener('click', (e)=>{
     gear.className = 'btn icon gear-btn';
     gear.setAttribute('aria-label','Abrir painel');
     gear.innerHTML = `
-      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-        <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M19.4 15a7.9 7.9 0 0 0 .1-1l2-1.6-2-3.4-2.3.5a7.9 7.9 0 0 0-.9-.6l-.4-2.3H10l-.4 2.3-.9.6-2.3-.5-2 3.4 2 1.6.1 1-.1 1-2 1.6 2 3.4 2.3-.5.9.6.4 2.3h4.6l.4-2.3.9-.6 2.3.5 2-3.4-2-1.6-.1-1Z"/>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"
+           fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/>
+        <path d="M19.8 13.5a8 8 0 0 0 0-3l2-1.2-2-3.3-2.3.5a8 8 0 0 0-2.1-1.2l-.4-2.3H9l-.4 2.3a8 8 0 0 0-2.1 1.2L4.2 6 2.2 9.3l2 1.2a8 8 0 0 0 0 3l-2 1.2 2 3.3 2.3-.5a8 8 0 0 0 2.1 1.2l.4 2.3h4.4l.4-2.3a8 8 0 0 0 2.1-1.2l2.3.5 2-3.3-2-1.2Z"/>
       </svg>`;
     const header = document.querySelector('header.site') || brand?.parentElement;
     if(header){
@@ -1182,11 +1114,7 @@ questionEl?.addEventListener('click', (e)=>{
     }
   }
   gear.onclick = ()=> toggleSidePanel(true);
-})();
-
-/* ====== PAINEL LATERAL ====== */
-let PANEL_OPEN = false;
-let panelEl = null, backdropEl = null;
+}
 
 function ensureSidePanel(){
   if(panelEl) return panelEl;
@@ -1250,16 +1178,13 @@ function ensureSidePanel(){
     if(link){ toggleSidePanel(false); }
   });
 
-  // fechar com ESC
   document.addEventListener('keydown', (e)=>{ if(PANEL_OPEN && e.key==='Escape') toggleSidePanel(false); });
 
-  // carregar mais histórico
   const moreBtn = panelEl.querySelector('#sp-hist-more');
   moreBtn.onclick = ()=> renderSideHistory(true);
 
   return panelEl;
 }
-
 function toggleSidePanel(open){
   ensureSidePanel();
   PANEL_OPEN = open;
@@ -1268,10 +1193,7 @@ function toggleSidePanel(open){
   if(open){ renderSideHistory(false); }
 }
 
-/* ====== HISTÓRICO NO PAINEL: resumo, cards, paginação ====== */
-let SP_HIST_PAGE = 1; // 1 página = 10 cards
 function histSlice(){
-  // limita a 100; pagina de 10
   const items = HISTORY.slice(-100);
   const perPage = 10;
   return items.slice(0, SP_HIST_PAGE * perPage);
@@ -1289,60 +1211,59 @@ function renderSideHistory(loadMore){
   const certas = list.filter(h=>h.isCorrect).length;
   const erradas = total - certas;
 
-  sumEl.textContent = total ? `${total} questões · ${certas} certas · ${erradas} erradas` : 'Sem histórico nesta sessão';
+  sumEl.textContent = total ? `${total} questões · ${certas} certas · ${erradas} erradas` : 'Sem histórico';
 
-  // group por "tela" (título do quiz)
-  const groupTitle = QUIZ?.meta?.title || 'Geral';
-  const rows = histSlice().map(h=>{
-    const q = QUIZ?.questions?.[h.idx];
-    const raw = q ? String(q.q).replace(/<[^>]+>/g,'') : '';
-    const preview = raw.slice(0, 40).trim();
-    const status = h.isCorrect ? 'Acertou' : `Errou (correta: ${h.correctLetter})`;
-    return {
-      group: groupTitle,
-      html: `
-        <div class="sp-card ${h.isCorrect?'ok':'bad'}" data-idx="${h.idx}">
-          <div class="sp-card-title">${groupTitle}</div>
-          <div class="sp-card-text">${preview || '—'}</div>
-          <div class="sp-card-meta">#${h.number} · ${status}</div>
-        </div>`
-    };
-  });
-
-  // render: título do grupo + cards
+  // compactar por quizTitle
+  const rows = histSlice();
   cardsEl.innerHTML = '';
-  if(rows.length){
-    const group = rows[0].group;
-    const head = document.createElement('div');
-    head.className='sp-group';
-    head.innerHTML = `<div class="sp-group-title">${group}</div>`;
-    cardsEl.appendChild(head);
-    rows.forEach(r=>{
-      const div = document.createElement('div');
-      div.innerHTML = r.html;
-      cardsEl.appendChild(div.firstElementChild);
-    });
-  }
+  let lastTitle = '';
+  rows.forEach(h=>{
+    if(h.quizTitle !== lastTitle){
+      const sep = document.createElement('div');
+      sep.className = 'sp-line';
+      sep.innerHTML = `<div class="sp-group-title">${h.quizTitle}</div>`;
+      cardsEl.appendChild(sep);
+      lastTitle = h.quizTitle;
+    }
+    const line = document.createElement('button');
+    line.type='button';
+    line.className='sp-item';
+    const status = h.isCorrect ? `✓ ${h.chosenLetter}` : `✖ ${h.chosenLetter} → ${h.correctLetter}`;
+    const pv = (h.preview||'').replace(/\s+/g,' ').trim();
+    line.innerHTML = `
+      <span class="sp-left">#${h.number}</span>
+      <span class="sp-mid">${htmlEscape(pv)}</span>
+      <span class="sp-right">${status}</span>
+    `;
+    line.onclick = ()=> openHistoryItem(h);
+    cardsEl.appendChild(line);
 
-  // clique no card vai para a questão e fecha painel
-  cardsEl.querySelectorAll('.sp-card').forEach(c=>{
-    c.onclick = ()=>{
-      const idx = parseInt(c.getAttribute('data-idx'),10);
-      const pos = ORDER.indexOf(idx);
-      if(pos>=0){ I = pos; render(); }
-      toggleSidePanel(false);
-      try{ history.replaceState(null,'',`#q=${(pos>=0?pos+1:1)}`); }catch{}
-    };
+    const hr = document.createElement('div');
+    hr.className='sp-sep';
+    cardsEl.appendChild(hr);
   });
 
-  // botão "carregar mais"
   const shown = histSlice().length;
   moreBtn.style.display = (shown < Math.min(100, HISTORY.length)) ? 'block' : 'none';
 }
+async function openHistoryItem(h){
+  const targetPath = h.path;
+  const currentPathKey = pathKey(KEY?.path);
+  if(pathKey(targetPath) !== currentPathKey){
+    await loadQuiz(targetPath,false,false);
+  }
+  // ir para o índice global da questão
+  const pos = ORDER.indexOf(h.idx);
+  if(pos>=0){ I = pos; render(); }
+  try{ history.replaceState(null,'',`#q=${(pos>=0?pos+1:1)}`); }catch{}
+  toggleSidePanel(false);
+}
 
-/* Atualize o histórico existente para também acionar a lista do painel */
-const _oldUpsert = upsertHistoryItem;
-upsertHistoryItem = function(p){
-  _oldUpsert(p);
-  if(PANEL_OPEN) renderSideHistory(false);
-};
+/* ===== clique em chips aplica tag ===== */
+questionEl?.addEventListener('click', (e)=>{
+  const el = e.target.closest?.('.chip[data-tag]');
+  if(!el) return;
+  TAG_FILTER = el.dataset.tag;
+  recalcOrderFromFilters();
+  toast(`Filtro: ${TAG_FILTER}`,'info',1600);
+});
