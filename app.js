@@ -219,65 +219,102 @@ async function loadTxtAsQuiz(path){
 /* ===== init ===== */
 init();
 async function init(){
+  // tenta usar o indexador GitHub
   if(CONFIG.useGitHubIndexer){
     const dyn = await buildManifestFromGitHub();
     if(dyn) MANIFEST = dyn;
   }
+
+  // fallback automático: monta manifesto local
   if(!MANIFEST){
-    const manifestFallback={
-      title:'MeuJus',
-      categories:[{id:'intro',name:'Introdução',themes:[{id:'basico',name:'Básico',path:'data/intro/basico.txt'}]}],
-      shuffleDefault:{questions:false,options:true},
-      persistDefault:true,
-      outro:{message:'Obrigado por participar.'}
+    MANIFEST = {
+      title: 'MeuJus',
+      categories: [{
+        id: 'data',
+        name: 'Questões',
+        themes: await fetchLocalThemes()
+      }],
+      shuffleDefault: { questions: false, options: true },
+      persistDefault: true,
+      outro: { message: 'Obrigado por participar.' }
     };
-    MANIFEST = await loadJSON('data/manifest.json', manifestFallback);
   }
 
-  state.textContent='pronto';
+  /* ===== interface ===== */
+  state.textContent = 'pronto';
   appTitle.textContent = MANIFEST?.title || 'MeuJus';
-  try{ if(MANIFEST?.labels) LABELS={...DEFAULT_LABELS, ...(await loadJSON(MANIFEST.labels))}; }catch{}
+  try {
+    if (MANIFEST?.labels)
+      LABELS = { ...DEFAULT_LABELS, ...(await loadJSON(MANIFEST.labels)) };
+  } catch {}
   applyLabels();
 
-  selCategory.innerHTML='';
-  (MANIFEST?.categories||[]).forEach((c,idx)=>{
-    const o=document.createElement('option');
-    o.value=c.id; o.textContent=c.name||c.id;
-    if(idx===0) o.selected=true;
+  selCategory.innerHTML = '';
+  (MANIFEST?.categories || []).forEach((c, idx) => {
+    const o = document.createElement('option');
+    o.value = c.id;
+    o.textContent = c.name || c.id;
+    if (idx === 0) o.selected = true;
     selCategory.appendChild(o);
   });
   updateThemes();
 
+  /* ===== eventos ===== */
   selCategory.addEventListener('change', updateThemes);
   btnStart.addEventListener('click', startQuizFromSelection);
   btnPrev.addEventListener('click', prev);
   btnNext.addEventListener('click', next);
   btnAI.addEventListener('click', openGoogleAI);
 
-  btnGlobal.addEventListener('click', ()=> globalSearchAndOpen(txtGlobal.value||''));
-  txtGlobal.addEventListener('keydown', e=>{ if(e.key==='Enter') btnGlobal.click(); });
+  btnGlobal.addEventListener('click', () => globalSearchAndOpen(txtGlobal.value || ''));
+  txtGlobal.addEventListener('keydown', e => { if (e.key === 'Enter') btnGlobal.click(); });
 
-  btnSearch.addEventListener('click', ()=> applyFilter(txtSearch.value||''));
+  btnSearch.addEventListener('click', () => applyFilter(txtSearch.value || ''));
   btnClearSearch.addEventListener('click', clearFilter);
-  txtSearch.addEventListener('keydown', e=>{ if(e.key==='Enter') btnSearch.click(); });
+  txtSearch.addEventListener('keydown', e => { if (e.key === 'Enter') btnSearch.click(); });
 
-  const goHome = ()=>{ resetState(); show(screenIntro,true); show(screenQuiz,false); show(screenResult,false); state.textContent='pronto'; };
+  const goHome = () => {
+    resetState();
+    show(screenIntro, true);
+    show(screenQuiz, false);
+    show(screenResult, false);
+    state.textContent = 'pronto';
+  };
   btnGoHome.addEventListener('click', goHome);
   btnHome.addEventListener('click', goHome);
   appTitle.addEventListener('click', goHome);
 
-  btnRetry.addEventListener('click', ()=>{ loadQuiz(KEY?.path,true); toast('Quiz reiniciado','info'); });
+  btnRetry.addEventListener('click', () => { loadQuiz(KEY?.path, true); toast('Quiz reiniciado', 'info'); });
 
-  const last=lsGet('quiz:last');
-  if(last&&last.path){
+  const last = lsGet('quiz:last');
+  if (last && last.path) {
     btnResume.classList.remove('hide');
-    btnResume.addEventListener('click', async()=>{ KEY=last; await loadQuiz(last.path,false,true); });
-    if(AUTO_RESUME){ KEY=last; await loadQuiz(last.path,false,true); return; }
+    btnResume.addEventListener('click', async () => { KEY = last; await loadQuiz(last.path, false, true); });
+    if (AUTO_RESUME) { KEY = last; await loadQuiz(last.path, false, true); return; }
   }
 
-  window.addEventListener('offline', ()=>toast('Sem conexão. Usando cache local','warn',3000));
-  window.addEventListener('online', ()=>toast('Conexão restabelecida','success',1800));
+  window.addEventListener('offline', () => toast('Sem conexão. Usando cache local', 'warn', 3000));
+  window.addEventListener('online', () => toast('Conexão restabelecida', 'success', 1800));
 }
+
+/* ===== nova função auxiliar para detectar arquivos locais ===== */
+async function fetchLocalThemes() {
+  try {
+    const res = await fetch('data/');
+    const html = await res.text();
+    const matches = [...html.matchAll(/href="([^"]+\.txt)"/g)];
+    const themes = matches.map(m => {
+      const path = 'data/' + m[1];
+      const id = m[1].replace(/\.txt$/i, '');
+      return { id, name: id, path };
+    });
+    return themes.length > 0 ? themes : [{ id: 'exemplo', name: 'Exemplo', path: 'data/exemplo.txt' }];
+  } catch {
+    // fallback simples caso não seja possível listar o diretório
+    return [{ id: 'exemplo', name: 'Exemplo', path: 'data/exemplo.txt' }];
+  }
+}
+
 
 /* ===== seleção ===== */
 function applyLabels(){
