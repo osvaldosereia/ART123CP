@@ -417,7 +417,11 @@ function render(){
         a.href = '#tag:' + encodeURIComponent(t);
         a.textContent = t; // sem '#'
         a.className = 'tag';
-    a.addEventListener('click', ev => { ev.preventDefault(); onTagClick(t, ev); });
+    a.addEventListener('click', ev => {
+  ev.preventDefault();
+  globalSearchAndOpen(t); // como na página inicial
+});
+
         tagsArea.appendChild(a);
       });
     }
@@ -642,16 +646,6 @@ function clearFilter(){
   btnClearSearch.classList.add('hide');
   recalcOrderFromFilters();
   toast('Filtro removido','info');
-  render();
-}
-function onTagClick(tag, ev){
-  const isGlobal = ev && (ev.ctrlKey || ev.metaKey);
-  if (isGlobal) {
-    globalSearchAndOpen(tag); // busca global pela tag
-    return;
-  }
-  TAG_FILTER = (TAG_FILTER === tag) ? null : tag;
-  recalcOrderFromFilters();
   render();
 }
 
