@@ -1252,10 +1252,4 @@ async function openHistoryItem(h){
   toggleSidePanel(false);
 }
 
-/* ===== clique em chips aplica tag ===== */
-  const el = e.target.closest?.('.chip[data-tag]');
-  if(!el) return;
-  TAG_FILTER = el.dataset.tag;
-  recalcOrderFromFilters();
-  toast(`Filtro: ${TAG_FILTER}`,'info',1600);
 });
