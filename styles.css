@@ -302,3 +302,11 @@ select, input { width: 100%; }
 .google-word .g4 { color:#4285F4; } /* g azul */
 .google-word .g5 { color:#34A853; } /* l verde */
 .google-word .g6 { color:#EA4335; } /* e vermelho */
+
+/* só o botão "Pergunte ao Google" */
+#aiMenu #btnAI{
+  border-color:#4285F4;        /* azul Google */
+}
+/* opcional: estados */
+#aiMenu #btnAI:hover{ border-color:#1a73e8; }
+#aiMenu #btnAI:focus-visible{ outline:2px solid #1a73e8; outline-offset:2px; }
