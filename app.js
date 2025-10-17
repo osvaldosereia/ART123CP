@@ -264,23 +264,23 @@ function ensureAIMenu(){
   let aiMenu = document.getElementById('aiMenu');
   let aiDropdown = document.getElementById('aiDropdown');
 
- if (!aiMenu) {
-  // cria estrutura: <div id="aiMenu" class="ai-menu"><button id="btnAI">Pergunte ao Google Modo I.A.</button><div id="aiDropdown" class="ai-dropdown">...</div></div>
-  const container = document.createElement('div');
-  container.id = 'aiMenu';
-  container.className = 'ai-menu hide';
+  if(!aiMenu){
+    const container = document.createElement('div');
+    container.id = 'aiMenu';
+    container.className = 'ai-menu hide';
 
-  // reaproveita o botão existente
-  if (!btnAI) {
-    btnAI = document.createElement('button');
-    btnAI.id = 'btnAI';
-    btnAI.className = 'btn ghost';
-    btnAI.type = 'button';
-  }
-  btnAI.innerHTML = 'Pergunte ao <span class="google-word"><span class="g1">G</span><span class="g2">o</span><span class="g3">o</span><span class="g4">g</span><span class="g5">l</span><span class="g6">e</span></span> Modo I.A.';
-  container.appendChild(btnAI);
-}
-
+    // botão principal
+    if(!btnAI){
+      btnAI = document.createElement('button');
+      btnAI.id = 'btnAI';
+      btnAI.className = 'btn ghost';
+      btnAI.type = 'button';
+    }
+    btnAI.innerHTML =
+      'Pergunte ao <span class="google-word">' +
+      '<span class="g1">G</span><span class="g2">o</span><span class="g3">o</span>' +
+      '<span class="g4">g</span><span class="g5">l</span><span class="g6">e</span></span> Modo I.A.';
+    container.appendChild(btnAI);
 
     // dropdown
     const dd = document.createElement('div');
@@ -293,7 +293,7 @@ function ensureAIMenu(){
     `;
     container.appendChild(dd);
 
-    // insere ao lado do botão original, na mesma barra de ações
+    // injeta na barra de ações
     const actions = btnNext?.parentElement || document.querySelector('.actions');
     actions?.appendChild(container);
 
@@ -301,21 +301,25 @@ function ensureAIMenu(){
     aiDropdown = dd;
   }
 
-  // eventos
-  btnAI.addEventListener('click', (e)=>{
-    e.stopPropagation();
-    aiMenu.classList.toggle('open');
-  });
-  document.addEventListener('click', (e)=>{
-    if(!aiMenu.contains(e.target)) aiMenu.classList.remove('open');
-  });
-  aiDropdown.querySelectorAll('button').forEach(b=>{
-    b.addEventListener('click', ()=>{
-      aiMenu.classList.remove('open');
-      openGoogleAIMode(b.dataset.mode);
+  // liga eventos uma única vez
+  if(!btnAI.dataset.bound){
+    btnAI.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      aiMenu.classList.toggle('open');
     });
-  });
+    document.addEventListener('click', (e)=>{
+      if(!aiMenu.contains(e.target)) aiMenu.classList.remove('open');
+    });
+    aiDropdown?.querySelectorAll('button').forEach(b=>{
+      b.addEventListener('click', ()=>{
+        aiMenu.classList.remove('open');
+        openGoogleAIMode(b.dataset.mode);
+      });
+    });
+    btnAI.dataset.bound = '1';
+  }
 }
+
 
 /* ===== seleção ===== */
 function applyLabels(){
