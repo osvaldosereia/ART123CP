@@ -361,7 +361,7 @@ async function loadTxtAsQuiz(path){
 init();
 async function init() {
   // tudo escondido até decidir rota
-  show(screenIntro, false);
+  show(screenIntro, true);
   show(screenQuiz,  false);
   show(screenResult,false);
 
