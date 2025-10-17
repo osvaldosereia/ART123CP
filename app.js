@@ -1340,3 +1340,25 @@ async function openHistoryItem(h){
   try{ history.replaceState(null,'',`#q=${(pos>=0?pos+1:1)}`); }catch{}
   toggleSidePanel(false);
 }
+// ===== Dropdown moderno de disciplinas =====
+const toggleBtn = document.querySelector('.discipline-toggle');
+const list = document.querySelector('.discipline-list');
+toggleBtn.addEventListener('click', () => list.classList.toggle('hide'));
+document.addEventListener('click', e => {
+  if (!e.target.closest('.discipline-dropdown')) list.classList.add('hide');
+});
+list.querySelectorAll('li').forEach(li => {
+  li.addEventListener('click', () => {
+    toggleBtn.textContent = li.textContent + ' ▼';
+    list.classList.add('hide');
+    // Carregar lista de temas correspondentes (placeholder por enquanto)
+  });
+});
+
+// ===== Subtemas clicáveis =====
+document.querySelectorAll('.subthemes button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const path = btn.dataset.path;
+    if (path) loadQuiz(path, true);
+  });
+});
