@@ -209,77 +209,72 @@ function buildTagIndex(items){
 }
 
 /* ===== parser TXT com tags ===== */
-function parseTxtQuestions(raw){
-  const text = String(raw||'').replace(/\uFEFF/g,'').replace(/\r\n?/g,'\n');
-  const blocks = text.split(/\n-{3,}\n/g).map(b=>b.trim()).filter(Boolean);
+function parseTxtQuestions(raw) {
+  const text = String(raw || '').replace(/\uFEFF/g, '').replace(/\r\n?/g, '\n');
+  const blocks = text.split(/\n-{5,}\n/g).map(b => b.trim()).filter(Boolean);
   const qs = [];
-  for(const blockRaw of blocks){
-    let block = blockRaw.replace(/\[cite_start\]/gi,'').replace(/\[cite:[^\]]*\]/gi,'');
-    // coleta tags: LINHA LOGO ABAIXO do Gabarito, separadas por vírgula, sem identificação
+
+  for (const block of blocks) {
     const lines = block.split('\n');
+
+    let enunciado = [];
+    let opcoes = [];
+    let gabarito = null;
     let tags = [];
-    // acha índice do gabarito
-    let gabIdx = -1;
-    for (let i = 0; i < lines.length; i++) {
-      if (/^\s*--\s*Gabarito\s*:/i.test(lines[i])) { gabIdx = i; break; }
-    }
-    // se existir, lê a próxima linha como lista de tags "a, b, c"
-    if (gabIdx >= 0 && gabIdx + 1 < lines.length) {
-      const tagLine = String(lines[gabIdx + 1] || '').trim();
-      // ignora se parecer uma opção (- A) ou outro marcador (-- XXX)
-      if (tagLine && !/^\s*-\s*\(?[A-E]\)/i.test(tagLine) && !/^\s*--\s*\w+/i.test(tagLine)) {
-        tags = tagLine.split(',').map(s => s.trim()).filter(Boolean).map(s => normTag(s.replace(/^#+/, '')));
-        // remove a linha das tags do bloco
-        lines.splice(gabIdx + 1, 1);
+
+    for (const line of lines) {
+      const trimmed = line.trim();
+
+      // Enunciado: começa com "* " e não com "**"
+      if (/^\*\s(?!\*)/.test(trimmed)) {
+        enunciado.push(trimmed.replace(/^\*\s*/, ''));
+        continue;
+      }
+
+      // Alternativas: começam com "** "
+      if (/^\*\*\s*[A-E]\)/i.test(trimmed) || /^\*\*\s*[A-E]\)/.test(trimmed)) {
+        const optMatch = trimmed.match(/^\*\*\s*\(?([A-E])\)\s*(.+)$/i);
+        if (optMatch) {
+          opcoes.push(optMatch[2].trim());
+        }
+        continue;
+      }
+
+      // Gabarito
+      if (/^\*\*\*\s*Gabarito\s*:/i.test(trimmed)) {
+        const gMatch = trimmed.match(/^\*\*\*\s*Gabarito\s*:\s*([A-E])/i);
+        if (gMatch) gabarito = gMatch[1].toUpperCase();
+        continue;
+      }
+
+      // Tags
+      if (/^\*\*\*\*/.test(trimmed)) {
+        const tagLine = trimmed.replace(/^\*\*\*\*\s*/, '');
+        tags = tagLine.split(',').map(t => t.trim().toLowerCase()).filter(Boolean);
+        continue;
       }
     }
-    block = lines.join('\n');
 
-    const gabLine = block.match(/--\s*Gabarito\s*:\s*([^\n]+)/i);
-    let gabTxt = gabLine ? gabLine[1].trim() : '';
-    let annulled = /\*/.test(gabTxt) || /anulad[oa]/i.test(gabTxt);
-    const gabLetter = (gabTxt.match(/[A-E]/i)||[])[0]?.toUpperCase() || null;
+    if (enunciado.length === 0 || opcoes.length === 0) continue;
 
-    const optRegex = /^\s*-\s*\(?([A-E])\)\s*/m;
-    const firstOptIdx = block.search(optRegex);
-    if(firstOptIdx<0) continue;
+    const answerMap = { A: 0, B: 1, C: 2, D: 3, E: 4 };
+    const hasAnswer = gabarito && answerMap[gabarito] != null;
 
-    // enunciado: tudo antes da primeira opção
-    const head = block.slice(0, firstOptIdx).replace(/^#\s*/,'').trim();
-    if(!head) continue;
-
-    function grabOpt(letter){
-      const reStart = new RegExp(`^\\s*-\\s*\\(?${letter}\\)\\s*`, 'm');
-      const m = reStart.exec(block); if(!m) return '';
-      const start = m.index + m[0].length;
-      const nextAnchors = ['A','B','C','D','E'].filter(l=>l!==letter).map(l=>{
-        const r = new RegExp(`^\\s*-\\s*\\(?${l}\\)\\s*`, 'm');
-        const x = r.exec(block); return x?x.index:null;
-      }).filter(x=>x!=null).sort((a,b)=>a-b);
-      const g = block.search(/\n\s*--\s*Gabarito\b/m);
-      if(g>=0) nextAnchors.push(g);
-      const end = nextAnchors.find(n=>n>start) ?? block.length;
-      return block.slice(start, end).trim();
-    }
-    const A = grabOpt('A'), B = grabOpt('B'), C = grabOpt('C'), D = grabOpt('D'), E = grabOpt('E');
-    const options = [A,B,C,D,E].filter(x=>x!=='').map(t=>t.replace(/\n{2,}/g,'\n\n'));
-    if(options.length===0) continue;
-
-    const answerMap = {A:0,B:1,C:2,D:3,E:4};
-    const hasAnswer = !annulled && gabLetter && answerMap[gabLetter] != null;
     const qObj = {
-      type:'multiple',
-      q: formatParagraphs(head),
-      options,
-      answer: hasAnswer ? answerMap[gabLetter] : null,
-      explanation: annulled ? 'Questão anulada.' : '',
+      type: 'multiple',
+      q: formatParagraphs(enunciado.join('\n')),
+      options: opcoes,
+      answer: hasAnswer ? answerMap[gabarito] : null,
+      explanation: '',
       tags
     };
-    if(annulled) qObj.annulled = true;
+
     qs.push(qObj);
   }
+
   return qs;
 }
+
 
 /* ===== carregamento de TXT/JSON ===== */
 async function loadTxtAsQuiz(path){
