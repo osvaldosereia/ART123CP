@@ -193,3 +193,12 @@ select,input{width:100%}
 
 /* Ajustes menores */
 hr{border:0;border-top:1px solid var(--line);margin:10px 0}
+
+/* Aumentar o respiro acima da linha 'Pergunta 1/256 0 respondidas' */
+.meta {
+  margin-top: 36px; /* aumenta o espaço superior */
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--muted);
+}
