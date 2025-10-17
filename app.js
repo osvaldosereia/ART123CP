@@ -472,7 +472,7 @@ function openGoogleAIMode(mode) {
   const q = current(); if (!q) return;
   let prompt = '';
   if (mode === 'gabarito') {
-    prompt = 'Explique por que esta é a alternativa correta e por que as demais estão incorretas. Enunciado: ' +
+    prompt = 'Explique e fundamente a todas as alternativas do Enunciado: ' +
       String(q.q).replace(/<[^>]+>/g,'') +
       ' | Opções: ' + (q.type==='vf' ? 'Verdadeiro | Falso' : q.options.join(' | ')) +
       (typeof q.answer==='number' ? ' | Alternativa correta: ' + (q.options[q.answer]||'') : '');
