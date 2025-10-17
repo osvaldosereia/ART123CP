@@ -177,3 +177,184 @@
 ** D) podem ser considerados gastos eleitorais, caso o candidato assim os declare, e estão incluídos no limite de gastos de campanha.
 *** Gabarito: B
 **** gastos de campanha, honorários advocatícios, despesa eleitoral
+-----
+* O cidadão francês Pierre Renoir, residente e domiciliado em Portugal, foi casado com uma espanhola, com quem teve dois filhos nascidos na Alemanha.
+* Pierre faleceu em 2022 e deixou como herança um apartamento no Brasil, onde viveu durante a fase universitária. Nesta hipótese, à sucessão do bem será aplicada a lei
+** A) francesa.
+** B) portuguesa.
+** C) brasileira.
+** D) alemã.
+*** Gabarito: B
+**** sucessão, lei aplicável, domicílio do falecido
+-----
+* Um brasileiro teve seu pedido de visto de trabalho negado por uma representação consular de um Estado estrangeiro.
+* Inconformado, consultou você, como advogado (a), para a adoção das providências cabíveis no Brasil. Após a avaliação do caso, você concluiu que
+** A) nenhuma medida judicial é cabível.
+** B) deve ser proposto mandado de segurança perante a Justiça Federal.
+** C) cabe reclamação trabalhista perante a Justiça do Trabalho.
+** D) deve ser proposta ação condenatória por obrigação de fazer, perante o Tribunal de Justiça competente.
+*** Gabarito: A
+**** visto de trabalho, ato de soberania, competência judicial
+-----
+* O Presidente da República está elaborando projeto de lei que estabelece, de forma regionalizada, as diretrizes, objetivos e metas da Administração Pública federal para as despesas de capital e outras delas decorrentes e para as relativas aos programas de duração continuada.
+* Diante desse cenário, assinale a afirmativa correta.
+** A) A matéria tratada em tal projeto de lei objetiva instituir a Lei de Diretrizes Orçamentárias, a qual deve ser aprovada por quórum de maioria simples no Congresso Nacional.
+** B) Tal projeto versa sobre a Lei de Diretrizes Orçamentárias e se submete à reserva de lei complementar.
+** C) Embora institua o Plano Plurianual, tal projeto de lei necessita ser aprovado por quórum de maioria absoluta no Congresso Nacional.
+** D) Trata-se de projeto de lei que institui o Plano Plurianual, a ser veiculado por meio de lei ordinária.
+*** Gabarito: D
+**** Plano Plurianual, despesas de capital, lei ordinária
+-----
+* João ganhou uma ação movida em face do Estado Gama, na qual este foi condenado a pagar o equivalente a 30 salários mínimos a título de danos morais pelo uso indevido de sua imagem em uma publicidade institucional do governo estadual.
+* A ação transitou em julgado em 15 de julho de 2022. Seu advogado verifica que não há legislação específica estadual acerca de prazos e limites de valores sobre pagamentos pela Fazenda Pública em caso de condenação judicial. Diante desse cenário, e à luz da Constituição Federal de 1988, João receberá o valor a que tem direito
+** A) por meio de precatório alimentar, que tem prioridade em relação aos demais, dentro do próprio ano do trânsito em julgado.
+** B) por meio de Requisição de Pequeno Valor (RPV).
+** C) por meio de precatório comum, a ser pago no ano seguinte ao do trânsito em julgado da condenação judicial.
+** D) em dinheiro, no prazo máximo de 15 (quinze) dias contados da intimação da Fazenda Pública do trânsito em julgado da ação, através de transferência bancária entre a instituição financeira que administra o tesouro estadual e o banco em que João tem sua conta.
+*** Gabarito: B
+**** Requisição de Pequeno Valor, RPV, condenação da Fazenda Pública
+-----
+* A Sociedade Empresária Aguardente 100% Ltda., fabricante de bebidas destiladas, por meio de sua advogada Sophia, protocolou perante a Secretaria Especial da Receita Federal do Brasil, ainda dentro do prazo legal para pagamento, consulta referente à necessidade de recolhimento de Imposto sobre Produtos Industrializados (IPI) acerca de operação específica por ela desempenhada.
+* Escoado o prazo original para pagamento e ainda não decidida a consulta, à luz do Código Tributário Nacional (CTN) assinale a afirmativa correta.
+** A) Aguardente 100% Ltda. poderá ter cobrados contra si juros de mora que correm mesmo na pendência da consulta tributária.
+** B) Por ocasião da decisão final da consulta, o Fisco federal poderá impor multa tributária caso a solução de consulta seja contrária aos interesses de Aguardente 100% Ltda.
+** C) A obrigação tributária a ser cumprida por Aguardente 100% Ltda., por ter sido objeto de consulta, não poderá ser acrescida de juros de mora e nem poderá ser imposta multa tributária à empresa.
+** D) Podem ser aplicadas contra Aguardente 100% Ltda. medidas de garantia previstas no CTN ou em lei tributária na pendência da consulta tributária.
+*** Gabarito: C
+**** consulta tributária, suspensão da exigibilidade, juros e multa
+-----
+* A Sociedade Empresária ABC Ltda. adquiriu no exterior um lote de dez mil unidades de um determinado perfume francês.
+* Antes da chegada das mercadorias ao porto, foi publicado no Diário Oficial da União, em 20/04/2023, um decreto editado pelo Poder Executivo Federal majorando imediatamente a alíquota do Imposto sobre a Importação de perfumes de 20% para 30%, prevendo expressamente sua vigência e produção de efeitos a partir da data de sua publicação. Em 30/04/2023, as mercadorias finalmente chegam ao porto no Brasil, devendo agora a empresa realizar o desembaraço aduaneiro. Preocupada com possível prejuízo decorrente do aumento inesperado do custo da mercadoria devido à elevação do imposto de importação, a sociedade empresária procura você, como advogado(a), indagando sobre a validade daquele decreto. Diante deste cenário, assinale a afirmativa correta.
+** A) A elevação desta alíquota por decreto violou o princípio da legalidade tributária.
+** B) O prazo previsto para produção de efeitos da elevação de alíquota violou o princípio da anterioridade tributária nonagesimal.
+** C) Embora tal imposto seja classificado como extrafiscal, deve obediência ao princípio da anterioridade tributária anual.
+** D) A majoração dessa alíquota e a sua produção de efeitos imediata são válidas.
+*** Gabarito: D
+**** Imposto de Importação, majoração de alíquota, anterioridade nonagesimal
+-----
+* Em dezembro de 2022, um decreto do prefeito do Município Alfa atualizou o valor do Imposto Predial e Territorial Urbano (IPTU), a contar de 1º de janeiro de 2023, atendo-se à aplicação de índice oficial de atualização monetária.
+* Além disso, neste mesmo decreto, acompanhado da estimativa de impacto orçamentário e financeiro, estabeleceu-se, também a contar de 1º de janeiro de 2023, a isenção do IPTU para os imóveis localizados no Centro da cidade que fossem destinados exclusivamente para moradia, visando a diversificar a ocupação naquele local e dar efetividade ao princípio da função social da propriedade. Diante deste cenário, assinale a afirmativa correta.
+** A) Tal decreto poderia ser usado apenas para atualizar o valor do IPTU.
+** B) A concessão de tal isenção, por ter base na função social da propriedade, poderia ser feita por meio de decreto.
+** C) Embora possa ser usado tanto para a atualização deste valor do IPTU como para a concessão deste tipo de isenção, tal decreto violou o princípio da anterioridade tributária nonagesimal.
+** D) Este decreto não é instrumento normativo hábil seja para a atualização deste valor do IPTU, seja para a concessão deste tipo de isenção.
+*** Gabarito: A
+**** IPTU, atualização monetária, isenção por decreto
+-----
+* O Estado Alfa alterou, por meio de lei, a contribuição social para custeio do regime próprio de previdência social, cobrada dos seus servidores ativos, dos aposentados e dos pensionistas.
+* José e Márcio são servidores públicos do mesmo órgão estadual, ganhando cada um, respectivamente, a remuneração mensal de 15 mil reais e 10 mil reais. José, ao notar que a alíquota incidente sobre sua remuneração era de 16,5%, ao passo que para Márcio a alíquota era de 14,5%, ficou indignado e, em relação a essa situação diferenciada, resolve contratar você, como advogado(a), para um eventual questionamento judicial. A respeito da posição de José, assinale a afirmativa correta.
+** A) Nenhum tributo incidente sobre a renda ou proventos poderá ter alíquotas progressivas, sob pena de violar a capacidade contributiva.
+** B) É vedada a adoção de alíquotas progressivas para esta espécie de contribuição social, em respeito ao princípio da capacidade contributiva.
+** C) A progressividade tributária deve ser obrigatoriamente adotada para todos os tributos estaduais, nos termos da CRFB/88, garantindo-se efetividade ao princípio da capacidade contributiva.
+** D) Esta espécie de contribuição social poderá ter alíquotas progressivas de acordo com o valor da base de contribuição.
+*** Gabarito: D
+**** contribuição previdenciária, alíquotas progressivas, servidores públicos
+-----
+* O Governador do Estado Alfa, diante da grande quantidade de bicicletas elétricas circulando em seu território, e visando aumentar a arrecadação, oficiou à sua Secretaria da Fazenda para adotar alguma forma de cobrança quanto a tais veículos.
+* Esta, por sua vez, orientou seus fiscais a cobrar o Imposto sobre Propriedade de Veículos Automotores (IPVA), aplicando a incidência deste imposto, por analogia, às bicicletas elétricas, ainda que não classificadas como veículos automotores propriamente ditos pela legislação de trânsito pertinente. O sindicato dos lojistas do setor o(a) consulta, como advogado(a), a respeito desta incidência. Diante desse cenário, assinale a afirmativa correta.
+** A) É válida a exigência deste imposto, uma vez que as bicicletas elétricas se enquadram no conceito de veículo automotor por analogia.
+** B) Está dentro da competência estadual a tributação sobre a propriedade de bicicletas elétricas.
+** C) Tal tributação por analogia envolvendo bicicletas elétricas é vedada no ordenamento jurídico nacional.
+** D) A exigência deste imposto sobre bicicletas elétricas dependeria da edição de um decreto, cuja competência é privativa do Governador.
+*** Gabarito: C
+**** IPVA, analogia, bicicleta elétrica
+-----
+* O pequeno Município Alfa, situado no interior do Estado Beta, enfrenta grave problema de abastecimento de água potável, pois não há fornecimento de água encanada para determinada região da cidade, por dificuldades técnicas.
+* Visando à resolução para a questão juntamente com a iniciativa privada, o Município Alfa pretende, mediante licitação, contratar objeto que envolva inovação tecnológica ou técnica, sendo imprescindível a adaptação de soluções disponíveis no mercado. Atualmente, verifica-se a impossibilidade de as especificações técnicas serem definidas com precisão suficiente pela Administração, razão pela qual é preciso o prévio debate com o setor privado, para se definirem e se identificarem os meios e as alternativas que possam satisfazer as necessidades da administração municipal. Ao tomar conhecimento de que o Município Alfa pretende realizar licitação nas condições narradas, com o intuito de desenvolver uma ou mais alternativas capazes de atender às suas necessidades da forma mais adequada, dada a complexidade da questão local de abastecimento de água, a sociedade empresária Delta se interessou em participar do certame. Como advogado(a) da sociedade empresária, você informou à diretoria que, de acordo com a nova Lei de Licitações (Lei nº 14.133/21), a modalidade de licitação mais adequada diante da realidade fática descrita, é o(a)
+** A) concorrência, que é mais abrangente, seja do ponto de vista do valor do contrato, seja por contemplar variados objetos.
+** B) leilão, em que serão admitidos como licitantes todos os interessados que preencherem os requisitos objetivos estabelecidos.
+** C) concurso, no qual o poder público municipal não poderá revelar a outros licitantes as soluções técnicas propostas por um concorrente.
+** D) diálogo competitivo, em que os licitantes devem apresentar proposta final após o encerramento dos diálogos.
+*** Gabarito: D
+**** licitação, diálogo competitivo, inovação tecnológica
+-----
+* O Município Alfa, observadas as cautelas legais, instituiu servidão administrativa sobre o imóvel de propriedade de Gabriel, com a finalidade de instalar postes e fios de energia elétrica, com escopo de regularizar o serviço de iluminação pública na localidade.
+* Diante das circunstâncias do caso concreto, em especial pelo grande espaço cuja utilização é necessária para manutenção dos equipamentos instalados, verifica-se, de forma incontroversa, que Gabriel sofreu efetivo dano no direito de propriedade. Para melhor compreender o regime jurídico próprio dessa modalidade de intervenção do Estado na propriedade e ficar ciente de seus direitos e obrigações, em especial em matéria de indenização, Gabriel contratou você, como advogado(a). No caso em tela, atento às normas de regência, você orientou seu cliente no sentido de que a servidão administrativa instituída pelo Município Alfa,
+** A) enseja o pagamento de indenização, se houver dano comprovado.
+** B) ocorre com prazo determinado, podendo ser prorrogado mediante prévia indenização.
+** C) ostenta natureza de direito pessoal da Administração Pública, que prescinde de registro no Cartório de Registro de Imóveis, e ocorre mediante indenização em títulos da dívida pública.
+** D) tem por pressuposto a necessidade ou utilidade pública, ou por interesse social, e deve ocorrer mediante justa e prévia indenização em dinheiro.
+*** Gabarito: A
+**** servidão administrativa, indenização, dano comprovado
+-----
+* Ariquemes é servidor público federal e vem cumprindo diligentemente com as obrigações estabelecidas em lei para obter sua progressão funcional e assim aumentar sua remuneração.
+* Os critérios para tanto estão estabelecidos em lei, são de caráter objetivo, mediante pontuação a ser adquirida pelo servidor, sendo certo que o provimento derivado em questão é ato vinculado. O mencionado servidor acredita ter cumprido todos os requisitos estabelecidos na aludida lei, mas foi surpreendido com o indeferimento de sua progressão, sob o fundamento de que não alcançou a pontuação necessária. Em razão disso, com fulcro na Lei nº 12.527/11, Ariquemes pleiteou acesso às informações que levaram a tal conclusão da Administração, que considera flagrantemente equivocada. Contudo, o fornecimento dos dados foi negado sob o fundamento de que não há interesse público na respectiva divulgação. Diante dessa situação hipotética, assinale a afirmativa correta.
+** A) O preenchimento dos requisitos previstos em lei não confere a Ariquemes o direito subjetivo à progressão almejada.
+** B) As informações pleiteadas constituem atos internos da Administração e, portanto, são informação reservada, protegida por sigilo.
+** C) O fornecimento dos dados pessoais pretendido por Ariquemes submete-se à discricionariedade da Administração, que atuou nos limites da lei.
+** D) Ariquemes tem direito ao acesso a tais dados, considerando que este direito compreende as atividades exercidas pelos órgãos, inclusive as relativas a sua organização e serviços.
+*** Gabarito: D
+**** Lei de Acesso à Informação, dados pessoais, interesse público
+-----
+* No ano corrente, o Ministério Público ajuizou duas ações por improbidade administrativa distintas, uma em desfavor de Carlos, prefeito do Município Alfa, e, outra, em desfavor de Bruno, servidor do Município Beta.
+* Ambas as ações buscavam a aplicação de penalidade pela prática de atos de improbidade que violam princípios da Administração Pública, com a descrição objetiva dos fatos exigida em lei e apontando a lesividade relevante ao bem jurídico tutelado. A primeira tem fundamento na negativa, pelo próprio prefeito, de publicidade aos atos oficiais, que não estavam protegidos por sigilo. A segunda ação foi proposta porque Bruno nomeou sua esposa para cargo administrativo em comissão a ele subordinado, no qual ela vinha laborando com afinco. Diante dessa situação hipotética, considerando a atual redação da Lei nº 8.429/92, assinale a afirmativa correta.
+** A) Revela-se pertinente o ajuizamento de ambas as ações, sendo imprescindível, em cada caso, a demonstração de dolo, bem como de que a conduta funcional de cada agente público tinha o fim de obter proveito ou benefício indevido para si ou para outra pessoa ou entidade.
+** B) A ação ajuizada em desfavor de Carlos é pertinente, mas aquela em desfavor de Bruno não, considerando que, apesar de o nepotismo ser vedado pelo ordenamento, não há previsão no sentido de que sua prática caracteriza ato de improbidade administrativa.
+** C) Apenas é pertinente a ação ajuizada em desfavor de Bruno, na medida em que a negativa de publicidade aos atos oficiais por Carlos não constitui uma ilegalidade passivel de caracterizar ato de improbidade administrativa.
+** D) Ambas as ações são despropositadas, pois, além da lesividade relevante ao bem jurídico tutelado, é imprescindível o reconhecimento de danos ao erário para a caracterização da improbidade administrativa, o que não ocorreu em nenhum dos casos.
+*** Gabarito: A
+**** improbidade administrativa, nepotismo, publicidade dos atos oficiais
+-----
+* Josias e Januário são servidores públicos federais de alta hierarquia e estavam conversando sobre os problemas inerentes ao exercício de suas atribuições.
+* Enquanto Josias está extremamente exacerbado de trabalho e precisa delegar algumas de suas atribuições, para não comprometer o funcionamento da atividade administrativa, Januário entende ser necessário avocar competência atribuída a órgão hierarquicamente inferior, por questões excepcionais que são de extrema relevância para o interesse público. Considerando as circunstâncias narradas, em consonância com a Lei nº 9.784/99, assinale a afirmativa correta.
+** A) Josias poderá delegar verbalmente parcela de sua competência, considerando que esta é renunciável por servidor de alta hierarquia.
+** B) Eventual delegação de competência por parte de Josias não poderá ser revogada após a sua formalização.
+** C) A delegação de competência por Josias só pode ser realizada para órgão que lhe seja hierarquicamente inferior.
+** D) A avocação temporária de competência por Januário será permitida em caráter excepcional e por motivos relevantes devidamente justificados.
+*** Gabarito: D
+**** delegação de competência, avocação, Lei 9.784/99
+-----
+* O condomínio residencial Alfa Orquídeas é constituído por diversos blocos, com médio núcleo populacional, e está localizado em zona urbana do Município Beta, situado no Estado Gama.
+* Diante da inexistência de rede canalizada para distribuição e abastecimento de água potável na localidade, desde a recente construção do condomínio, os condôminos fazem uso de caminhões pipas. Seja pelo alto custo, seja pela escassez dos caminhões pipas, os condôminos aprovaram, por unanimidade em assembleia, que o condomínio iria proceder à construção de um poço semiartesiano, para extração de água de um aquífero subterrâneo existente no local, para fins de consumo final. Sabe-se que o citado aquífero não é de domínio da União, que não tem qualquer tipo de interesse na questão. Para agir dentro da legalidade, antes da construção do poço, o síndico do condomínio residencial Alfa Orquideas deve requerer
+** A) licença ambiental ao Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (Ibama).
+** B) licença ambiental ao órgão ambiental do Município Beta.
+** C) licença de uso de recursos hídricos ao Município Beta.
+** D) outorga de uso de recursos hídricos ao Estado Gama.
+*** Gabarito: D
+**** recursos hídricos, outorga de uso, competência estadual
+-----
+* Tramita na Câmara do Município Alfa projeto de lei que dispõe sobre proteção ao meio ambiente no âmbito de seu território, observado o interesse local.
+* Sabe-se que o projeto de lei está harmônico com a disciplina legislativa estadual e federal atualmente vigente. No caso em tela, em matéria de competência legislativa ambiental, de acordo com a CRFB/88, é correto afirmar que o projeto de lei, em tese,
+** A) ofende a Carta Magna, porque compete à União legislar privativamente sobre proteção ao meio ambiente, observadas as premissas constitucionais.
+** B) é incompatível com a Carta Magna, porque compete à União, aos Estados e ao Distrito Federal legislar privativamente sobre proteção ao meio ambiente.
+** C) não viola a Carta Magna, porque o Município possui competência suplementar à da União e à dos Estados para legislar sobre proteção ao meio ambiente, no limite do seu interesse local e desde que tal regramento seja harmônico com a disciplina estabelecida pelos demais entes federados.
+** D) não afronta a Carta Magna, porque o Município possui competência concorrente e não suplementar com a União e os Estados para legislar sobre proteção ao meio ambiente, de maneira que pode dispor de forma diversa e menos protetiva ao ambiente do que a disciplina estadual.
+*** Gabarito: C
+**** competência legislativa, meio ambiente, interesse local
+-----
+* Robson, advogado de sucesso e bem-sucedido profissionalmente, foi preso e condenado, com sentença transitada em julgado, pelo crime de homicídio, iniciando o cumprimento de sua pena no regime fechado.
+* Ele é pai de Raquel, 17 anos, fruto de sua união com Rose e ambos compartilham a guarda da filha. Rose e Robson divorciaram-se e, em ação própria, foi fixado o dever de Robson prover alimentos para Raquel. A respeito dos efeitos da prisão de Robson sobre o dever de alimentos, assinale a afirmativa correta.
+** A) Afasta-se a obrigação de prestar alimentos de Robson considerando que a mãe de Raquel, Rose, ainda está viva.
+** B) A prisão de Robson suspende o dever de prestar alimentos, que volta a produzir seus efeitos imediatamente após o cumprimento integral da pena.
+** C) Robson poderá cessar a prestação de alimentos, independente de interpelação judicial, assim que Raquel alcançar a maioridade, o que acontecerá muito em breve.
+** D) O fato de Robson estar preso não afasta sua obrigação alimentar.
+*** Gabarito: D
+**** obrigação alimentar, prisão do alimentante, poder familiar
+-----
+* Maria Cristina era casada com Roberto, falecido no início de 2022, sem deixar testamento, sob o regime de separação convencional de bens.
+* O casal sempre viveu em um imóvel de propriedade de Roberto com seus dois filhos, Alcino e Valério, que não moram mais com os pais. Roberto deixou, além do referido imóvel residencial, alguns investimentos e outro imóvel, de natureza comercial. Sobre o direito real de habitação do cônjuge sobrevivente, assinale a afirmativa correta.
+** A) Maria Cristina é titular do direito real de habitação, sem prejuízo de sua participação na herança de Roberto.
+** B) Maria Cristina não é titular do direito real de habitação, uma vez que existe mais de um imóvel a inventariar dentre os bens que compõem a herança de Roberto.
+** C) Maria Cristina receberá seu quinhão da herança, mas só tem o direito de permanecer morando no imóvel em que vivia com Roberto, caso Alcino e Valério autorizem.
+** D) Maria não é titular do direito real de habitação, pois esse não se aplica aos casamentos sob a vigência do regime de separação convencional de bens.
+*** Gabarito: A
+**** direito real de habitação, cônjuge sobrevivente, regime de separação de bens
+-----
+* Joana, conhecida durante toda a sua vida em sua cidade natal pelo prenome Giovanna, começa a enfrentar uma série de embaraços e constrangimentos ao ser chamada em órgãos públicos por seu prenome registral, constante de seus documentos de identificação civil.
+* Diante disso, Joana, de 19 anos de idade, consulta você, como advogado (a), buscando descobrir a viabilidade jurídica de alterar o seu prenome e os eventuais requisitos jurídicos que deveriam ser observados caso seja possível a mudança. Sobre a pretensão de Joana, assinale a afirmativa correta.
+** A) Poderá alterar seu prenome para Giovanna, bastando realizar solicitação, por escrito e fundamentada, diante do oficial do Registro Civil, dependendo, no entanto, de sentença judicial.
+** B) Não poderá alterar seu prenome para Giovanna, pois vigora no Direito Brasileiro o princípio da imutabilidade do nome.
+** C) Poderá alterar seu prenome para Giovanna, mediante requerimento pessoal e imotivadamente, independentemente de decisão judicial.
+** D) Não poderá alterar seu prenome registral, mas poderá incluir o nome Giovanna, por ser este apelido público e notório.
+*** Gabarito: C
+**** alteração de prenome, registro civil, imutabilidade do nome
+-----
+* Antônio é proprietário de um prédio que não tem acesso à via pública.
+* De um lado, Antônio tem Ricardo como vizinho, cuja propriedade alcança a via pública. Do outro lado, Antônio tem Luíza como vizinha, cuja propriedade também alcança a via pública. Todavia, no caso do imóvel de Luíza, o caminho até a via pública é menos natural e mais difícil. Ricardo e Luíza recusaram-se a oferecer voluntariamente a passagem. Diante disso, Antônio pode exigir
+** A) tanto a passagem de Ricardo quanto a de Luiza, a seu critério, mas só precisará pagar indenização cabal se escolher Luiza.
+** B) tanto a passagem de Ricardo quanto a de Luiza, a seu critério, e deverá pagar indenização cabal a quem escolher.
+** C) que Ricardo lhe dê a passagem, sem que seja obrigado a pagar qualquer indenização a ele.
+** D) que Ricardo lhe dê a passagem, mediante pagamento de indenização cabal.
+*** Gabarito: D
+**** direito de passagem, imóvel encravado, indenização
+-----
