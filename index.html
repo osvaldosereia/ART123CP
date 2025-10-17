@@ -14,6 +14,7 @@
       <div class="state" id="state">pronto</div>
     </header>
 
+    <!-- TELA INICIAL -->
     <section class="intro" id="screenIntro">
       <p class="muted" id="introSubtitle">Escolha uma categoria e um tema para começar ou faça uma busca global.</p>
 
@@ -44,6 +45,7 @@
       </div>
     </section>
 
+    <!-- TELA DO QUIZ -->
     <section class="quiz hide" id="screenQuiz">
       <div class="progress" aria-label="Progresso"><span id="bar"></span></div>
 
@@ -62,28 +64,34 @@
       <div id="options" class="options" role="listbox"></div>
       <div id="explanation" class="explain hide"></div>
 
+      <!-- Botões de navegação -->
       <div class="actions">
         <button id="btnGoHome" class="btn ghost" type="button">Início</button>
         <button id="btnPrev" class="btn ghost" type="button">Anterior</button>
         <button id="btnNext" class="btn primary" type="button">Próximo</button>
-<div class="ai-menu hide" id="aiMenu">
-  <button id="btnAI" class="btn ghost" type="button">Pergunte ao Google</button>
-  <div class="ai-dropdown" id="aiDropdown">
-    <button data-mode="gabarito">Gabarito</button>
-    <button data-mode="glossario">Glossário</button>
-    <button data-mode="video">Vídeo-aula</button>
-  </div>
-</div>
+      </div>
 
-      <!-- Barra de tags: simples, texto linkado, mesma linha, logo abaixo dos botões -->
+      <!-- MENU IA (fica escondido até o usuário responder uma questão) -->
+      <div class="ai-menu hide" id="aiMenu">
+        <button id="btnAI" class="btn ghost" type="button">Pergunte ao Google</button>
+        <div class="ai-dropdown" id="aiDropdown">
+          <button data-mode="gabarito">Gabarito</button>
+          <button data-mode="glossario">Glossário</button>
+          <button data-mode="video">Vídeo-aula</button>
+        </div>
+      </div>
+
+      <!-- Barra de tags -->
       <div id="tagsBar" class="tagsbar" aria-label="Tags relacionadas"></div>
 
+      <!-- Rodapé do quiz -->
       <div class="meta">
         <span id="footLeft">—</span>
         <span id="footRight">—</span>
       </div>
     </section>
 
+    <!-- RESULTADOS -->
     <section class="results hide" id="screenResult">
       <h2 id="resultTitle">Resultado</h2>
       <div class="score" id="resultScore"></div>
