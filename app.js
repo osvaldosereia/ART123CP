@@ -83,6 +83,10 @@ function renderSiblingTags(){
   if(!tagsArea) return;
   tagsArea.innerHTML = '';
   const siblings = listSiblingThemes();
+
+  // mostra/oculta a barra conforme houver irmãos
+  tagsArea.style.display = siblings.length ? 'flex' : 'none';
+
   siblings.forEach(t => {
     const a = document.createElement('a');
     a.href = '#tema:' + encodeURIComponent(t.id);
@@ -95,6 +99,7 @@ function renderSiblingTags(){
     tagsArea.appendChild(a);
   });
 }
+
 
 /* ===== DOM ===== */
 const selCategory = document.getElementById('selCategory');
@@ -251,9 +256,22 @@ async function fetchInertiaFromHtml(url){
   const decoded = decodeHTMLEntities(attr);
   try{ return JSON.parse(decoded); }catch{ return null; }
 }
+// transforma HTML em texto simples preservando quebras
+function plainText(html){
+  if(!html) return '';
+  let s = String(html)
+    .replace(/\r\n?/g,'\n')
+    .replace(/<\s*br\s*\/?>/gi, '\n')
+    .replace(/<\s*\/p\s*>/gi, '\n\n')
+    .replace(/<\s*p[^>]*>/gi, '');
+  s = s.replace(/<[^>]+>/g, ''); // strip tags
+  s = decodeHTMLEntities(s);
+  return s.replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
+}
+
 function normalizeQCQuestion(q){
   const letters = Object.keys(q.alternatives||{}).sort(); // A..E
-  const options = letters.map(L => q.alternatives[L]);
+  const options = letters.map(L => plainText(q.alternatives[L])); // texto puro
   const letter = String(q.correct_answer||'').trim().toUpperCase();
   const answer = Math.max(0, letters.indexOf(letter));
   const metaTags = [];
@@ -262,13 +280,14 @@ function normalizeQCQuestion(q){
   if(q.position) metaTags.push(String(q.position).toLowerCase());
   return {
     type: 'multiple',
-    q: q.statement || '',
+    q: formatParagraphs(plainText(q.statement)),          // texto puro + <p>…</p>
     options,
     answer: answer >= 0 ? answer : null,
     explanation: '',
     tags: metaTags
   };
 }
+
 async function loadHtmlAsQuiz(url){
   const data = await fetchInertiaFromHtml(url);
   if(!data){ return { meta:{title:'HTML',category:'HTML',theme:'HTML',shuffle:{questions:false,options:true},persist:true,outroMessage:''}, questions:[] }; }
@@ -922,11 +941,13 @@ async function buildManifestFromGitHub(){
     if(!r.ok) return null;
     const data = await r.json();
     if(!data || !Array.isArray(data.tree)) return null;
-    const nodes = data.tree.filter(n =>
-      n.type==='blob' &&
-      n.path.startsWith(CONFIG.dataDir+'/') &&
-      (n.path.endsWith('.txt') || n.path.endsWith('.html') || n.path.endsWith('.json'))
-    );
+    const root = (CONFIG.dataDir + '/').toLowerCase(); // aceita Data/ ou data/
+const nodes = data.tree.filter(n =>
+  n.type==='blob' &&
+  n.path.toLowerCase().startsWith(root) &&
+  (/\.(txt|html?|json)$/i).test(n.path)
+);
+
 
     const catMap = new Map(); // id => { id, name, themes: [] }
     const groupMap = new Map(); // catId => Map< materia/baseId , paths[] >
