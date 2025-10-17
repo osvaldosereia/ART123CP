@@ -122,3 +122,34 @@
 .ai-menu.open .ai-dropdown {
   display: flex;
 }
+.tagsbar {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ai-menu { position: relative; display: inline-block; }
+.ai-dropdown {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+  margin-bottom: 8px;
+  z-index: 50;
+}
+.ai-dropdown button {
+  background: none;
+  border: 0;
+  padding: 8px 14px;
+  text-align: left;
+  font-size: 14px;
+  color: #222;
+  cursor: pointer;
+}
+.ai-dropdown button:hover { background: #f3f4f6; }
+.ai-menu.open .ai-dropdown { display: flex; }
