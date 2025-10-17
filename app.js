@@ -702,8 +702,19 @@ async function globalSearchAndOpen(termRaw){
 
         if(allTermsFound){
           const clone = JSON.parse(JSON.stringify(q));
-          clone.__origin = { path:p };
-          results.push(clone);
+clone.__origin = { path:p };
+
+// realce dos termos buscados
+searchTerms.forEach(st => {
+  const re = new RegExp('(' + st.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+  // grifa em enunciado
+  clone.q = String(clone.q).replace(re, '<mark class="hl">$1</mark>');
+  // grifa nas opções
+  clone.options = (clone.options || []).map(o => String(o).replace(re, '<mark class="hl">$1</mark>'));
+});
+
+results.push(clone);
+
         }
       });
     }catch{}
