@@ -365,13 +365,13 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
 /* ===== render ===== */
 function render(){
   const total = QUIZ.questions.length;
-const answered = ORDER.filter(idx => CHOSEN[idx] !== null).length;
-footRight.textContent = `${answered}/${denom} respondidas${filterBadge}`;
+  const answered = ORDER.filter(idx => CHOSEN[idx] !== null).length;
   const denom = ORDER.length || total;
   const progBase = Math.max(1, denom - 1);
+  const filterBadge = TAG_FILTER ? ` · tag: ${TAG_FILTER}` : '';
+
   bar.style.width = Math.round((I) / progBase * 100) + '%';
   footLeft.textContent = `Pergunta ${I + 1}/${denom}`;
-  const filterBadge = TAG_FILTER ? ` · tag: #${TAG_FILTER}` : '';
   footRight.textContent = FILTER
     ? `${answered}/${denom} respondidas · filtro: "${FILTER.term}" (${denom})${filterBadge}`
     : `${answered}/${denom} respondidas${filterBadge}`;
@@ -381,21 +381,20 @@ footRight.textContent = `${answered}/${denom} respondidas${filterBadge}`;
   const themeText = QUIZ?.meta?.title || 'Quiz';
 
   /* ===== palavras-chave (tags) logo abaixo da busca ===== */
-const tagsArea = document.getElementById('tagsBar');
-if (tagsArea) {
-  tagsArea.innerHTML = '';
-  if (Array.isArray(q.tags) && q.tags.length > 0) {
-    q.tags.forEach(t => {
-      const a = document.createElement('a');
-      a.href = '#tag:' + encodeURIComponent(t);
-      a.textContent = t;            // sem '#'
-      a.className = 'tag';
-      a.addEventListener('click', ev => { ev.preventDefault(); onTagClick(t); });
-      tagsArea.appendChild(a);
-    });
+  const tagsArea = document.getElementById('tagsBar');
+  if (tagsArea) {
+    tagsArea.innerHTML = '';
+    if (Array.isArray(q.tags) && q.tags.length > 0) {
+      q.tags.forEach(t => {
+        const a = document.createElement('a');
+        a.href = '#tag:' + encodeURIComponent(t);
+        a.textContent = t;
+        a.className = 'tag';
+        a.addEventListener('click', ev => { ev.preventDefault(); onTagClick(t); });
+        tagsArea.appendChild(a);
+      });
+    }
   }
-}
-
 
   /* ===== enunciado ===== */
   questionEl.innerHTML = `
@@ -422,9 +421,9 @@ if (tagsArea) {
   btnNext.textContent = I < denom - 1 ? (LABELS.next || 'Próximo') : 'Finalizar';
 
   if (CHOSEN[ORDER[I]] !== null) markLocked();
-
   persist();
 }
+
 
 /* ===== renderização das opções ===== */
 function renderOptions(texts, onPick, origIdxs = null) {
