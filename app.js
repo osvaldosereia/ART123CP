@@ -39,6 +39,7 @@ function decodeHTMLEntities(s){
   return d.documentElement.textContent||'';
 }
 function slug(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
+function rqIdle(cb, timeout=60){ return (window.requestIdleCallback||((f)=>setTimeout(()=>f({didTimeout:false,timeRemaining:()=>0}),0)))(cb,{timeout}); }
 
 /* pretty names */
 const SPECIAL_NAMES = new Map([
@@ -150,16 +151,14 @@ let tagsBarEl = document.getElementById('tagsBar');
 const DEFAULT_LABELS = { start:'Começar', next:'Próximo', prev:'Anterior', retry:'Refazer', home:'Início', category:'Disciplina', theme:'Tema', result:'Resultado' };
 let LABELS = { ...DEFAULT_LABELS };
 
-// ===== estado =====
+/* ===== estado ===== */
 let MANIFEST = null, QUIZ = null, ORDER = [], CHOSEN = [], I = 0, KEY = null;
 let FILTER = null;
 let TAG_FILTER = null;
 let TAG_INDEX = new Map();
-
-// flags de fluxo
+let TAG_READY = false;
 let ROUTED = false;
 let LOADING = false;
-
 
 /* ===== fetch ===== */
 function readEmbedded(path){ const t=document.querySelector(`script[type="application/json"][data-path="${path}"]`); if(!t) return null; try{ return JSON.parse(t.textContent);}catch{ return null; } }
@@ -213,6 +212,7 @@ function buildTagIndex(items){
       TAG_INDEX.get(t).push(i);
     });
   }
+  TAG_READY = true;
 }
 
 /* ===== sanitização básica de HTML ===== */
@@ -271,8 +271,11 @@ async function fetchInertiaFromHtml(url){
   const doc = new DOMParser().parseFromString(html, 'text/html');
   const attr = doc.querySelector('#app')?.getAttribute('data-page');
   if(!attr) return null;
-  const decoded = decodeHTMLEntities(attr);
+  const decoded = decodeHTMLEntITIES(attr);
   try{ return JSON.parse(decoded); }catch{ return null; }
+}
+function decodeHTMLEntITIES(s){ // evita sombreamento
+  return decodeHTMLEntities(s);
 }
 function plainText(html){
   if(!html) return '';
@@ -344,23 +347,50 @@ async function loadHtmlAsQuiz(url){
   };
 }
 
-/* ===== carregamento ===== */
-async function loadTxtAsQuiz(path){
-  const raw = await fetchText(path);
-  const questions = parseTxtQuestions(raw);
-  const parts = path.split('/');
+/* ===== carregamento TXT rápido + cache ===== */
+function quizMetaFromPath(path){
+  const parts = String(path||'').split('/');
   const category = parts[1] || 'Geral';
-  const file = (parts[parts.length-1]||'Quiz.txt').replace(/\.txt$/i,'');
-  return {
-    meta:{title:file,category,theme:file,shuffle:{questions:false,options:true},persist:true,outroMessage:''},
-    questions
-  };
+  const file = (parts.at(-1)||'Quiz.txt').replace(/\.(txt|html?|json)$/i,'');
+  return {title:file,category,theme:file,shuffle:{questions:false,options:true},persist:true,outroMessage:''};
+}
+function cacheKey(p){ return 'quiz:cache:' + (typeof p==='string'?p:JSON.stringify(p)); }
+function saveQuizCache(p,q){ try{ lsSet(cacheKey(p), {t:Date.now(),q}); }catch{} }
+function readQuizCache(p,maxAgeMs=7*24*3600e3){ const c=lsGet(cacheKey(p)); return c && Date.now()-c.t<maxAgeMs ? c.q : null; }
+
+async function loadTxtAsQuizFast(path){
+  const raw = await fetchText(path);
+  const allBlocks = String(raw||'').replace(/\r\n?/g,'\n').split(/\n-{5,}\n/g).map(b=>b.trim()).filter(Boolean);
+  const meta = quizMetaFromPath(path);
+  const questions = [];
+
+  // lote inicial
+  const firstN = Math.min(10, allBlocks.length);
+  for(let i=0;i<firstN;i++){
+    questions.push(...parseTxtQuestions(allBlocks[i]));
+  }
+  // entrega parcial
+  await loadVirtualQuiz({meta,questions:[...questions]}, path, true);
+
+  // continuar em lotes
+  for(let i=firstN;i<allBlocks.length;i+=25){
+    await new Promise(r=>rqIdle(r));
+    for(let j=i;j<Math.min(i+25,allBlocks.length);j++){
+      questions.push(...parseTxtQuestions(allBlocks[j]));
+    }
+    QUIZ.questions = questions;
+    if(!TAG_READY) rqIdle(()=>buildTagIndex(QUIZ.questions));
+    render();
+  }
+
+  const full = {meta,questions};
+  saveQuizCache(path, full);
+  return full;
 }
 
 /* ===== init ===== */
 init();
 async function init() {
-  // tudo escondido até decidir rota
   show(screenIntro, true);
   show(screenQuiz,  false);
   show(screenResult,false);
@@ -424,31 +454,28 @@ async function init() {
   window.addEventListener('offline', ()=>toast('Sem conexão. Usando cache local','warn',3000));
   window.addEventListener('online', ()=>toast('Conexão restabelecida','success',1800));
 
- // rota única: tenta retomar, senão mostra intro
-const last = lsGet('quiz:last');
-if (AUTO_RESUME && last?.path && !ROUTED) {
-  ROUTED = true;
-  KEY = last;
-  await loadQuiz(last.path, false, true);
-}
+  // auto-resume
+  const last = lsGet('quiz:last');
+  if (AUTO_RESUME && last?.path && !ROUTED) {
+    ROUTED = true;
+    KEY = last;
+    await loadQuiz(last.path, false, true);
+  }
 
-// aplica #q=n após o quiz carregar
-if (ROUTED) {
-  try{
-    const m = String(location.hash||'').match(/#q=(\d+)/i);
-    if(m){
-      const n = Math.max(1, parseInt(m[1],10));
-      I = Math.min(Math.max(0, n-1), (ORDER.length||1)-1);
-      render();
-    }
-  }catch{}
-}
+  // deep link #q=n
+  if (ROUTED) {
+    try{
+      const m = String(location.hash||'').match(/#q=(\d+)/i);
+      if(m){
+        const n = Math.max(1, parseInt(m[1],10));
+        I = Math.min(Math.max(0, n-1), (ORDER.length||1)-1);
+        render();
+      }
+    }catch{}
+  }
 
-if (!ROUTED) {
-  show(screenIntro, true);
+  if (!ROUTED) show(screenIntro, true);
 }
-}
-
 
 /* ===== IA ===== */
 function ensureAIMenu(){
@@ -566,7 +593,7 @@ async function startQuizFromSelection(){ const path=selectedPath(); if(!path) re
 
 function resetState(){
   QUIZ=null; ORDER=[]; CHOSEN=[]; I=0; KEY=null;
-  FILTER=null; TAG_FILTER=null;
+  FILTER=null; TAG_FILTER=null; TAG_READY=false;
   explainEl.classList.add('hide'); btnClearSearch.classList.add('hide'); txtSearch.value='';
   tagsBarEl&&(tagsBarEl.innerHTML='');
   TAG_INDEX.clear();
@@ -577,13 +604,21 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
   if (LOADING) return;
   LOADING = true;
   try{
+    // cache
+    const cached = readQuizCache(path);
+    if(cached){
+      await loadVirtualQuiz(cached, path, false);
+      LOADING = false;
+      return;
+    }
+
     let qz=null;
 
     if(Array.isArray(path)){
       const quizzes = [];
       for(const p of path){
         try{
-          if(/\.txt$/i.test(p)) quizzes.push(await loadTxtAsQuiz(p));
+          if(/\.txt$/i.test(p)) quizzes.push(await loadTxtAsQuizFast(p));
           else if(/\.json$/i.test(p)) quizzes.push(await loadJSON(p));
           else if(/\.html?/i.test(p) || /^https?:\/\//i.test(p)) quizzes.push(await loadHtmlAsQuiz(p));
         }catch{}
@@ -612,10 +647,18 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
         },
         questions
       };
+      await loadVirtualQuiz(qz, path, fresh);
+      saveQuizCache(path, qz);
     } else {
-      if(/\.txt$/i.test(path)) qz=await loadTxtAsQuiz(path);
-      else if(/\.json$/i.test(path)) qz=await loadJSON(path);
-      else if(/\.html?/i.test(path) || /^https?:\/\//i.test(path)) qz=await loadHtmlAsQuiz(path);
+      if(/\.txt$/i.test(path)){
+        qz = await loadTxtAsQuizFast(path); // entrega parcial dentro
+      } else if(/\.json$/i.test(path)){
+        qz = await loadJSON(path);
+        if(qz && Array.isArray(qz.questions)){ await loadVirtualQuiz(qz, path, fresh); saveQuizCache(path,qz); }
+      } else if(/\.html?/i.test(path) || /^https?:\/\//i.test(path)){
+        qz = await loadHtmlAsQuiz(path);
+        if(qz && Array.isArray(qz.questions)){ await loadVirtualQuiz(qz, path, fresh); saveQuizCache(path,qz); }
+      }
     }
 
     if(!qz||!Array.isArray(qz.questions)){
@@ -623,7 +666,6 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
       show(screenIntro,true); show(screenQuiz,false); show(screenResult,false);
       return;
     }
-    await loadVirtualQuiz(qz, path, fresh);
   } finally {
     LOADING = false;
   }
@@ -631,7 +673,10 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
 async function loadVirtualQuiz(quizObj, synthKey, fresh){
   QUIZ = quizObj;
   KEY  = { path: synthKey, key: `quiz:${JSON.stringify(synthKey)}` };
-  buildTagIndex(QUIZ.questions);
+
+  // índice de tags lazily
+  TAG_READY = false;
+  rqIdle(()=>buildTagIndex(QUIZ.questions));
 
   const total = QUIZ.questions.length;
   ORDER  = [...Array(total).keys()];
@@ -642,9 +687,11 @@ async function loadVirtualQuiz(quizObj, synthKey, fresh){
   show(screenIntro, false);
   show(screenQuiz,  true);
   show(screenResult,false);
+
+  // duplo RAF para pintar antes de trabalho pesado
+  await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
   render();
 }
-
 
 /* ===== render ===== */
 function render(){
@@ -686,7 +733,7 @@ function render(){
   if (type === 'vf') {
     renderOptions(['Verdadeiro', 'Falso'], idx => select(idx === 0), [0, 1]);
   } else {
-    const opts = q.options.map((t, i) => ({ t, i }));
+    const opts = (q.options||[]).map((t, i) => ({ t, i }));
     renderOptions(opts.map(o => o.t), idx => select(opts[idx].i), opts.map(o => o.i));
   }
 
@@ -696,8 +743,6 @@ function render(){
   if (CHOSEN[ORDER[I]] !== null) markLocked();
   persist();
 }
-
-
 
 /* ===== opções ===== */
 function renderOptions(texts, onPick, origIdxs = null) {
@@ -741,7 +786,7 @@ function lockAndExplain(value) {
   let answerIdx = null;
 
   if (type === 'vf') {
-    answerIdx = q.answer ? 0 : 1;           // A=Verdadeiro, B=Falso
+    answerIdx = q.answer ? 0 : 1;
     buttons[q.answer ? 0 : 1].classList.add('correct');
     const chosenIdx = value ? 0 : 1;
     if (chosenIdx !== answerIdx) buttons[chosenIdx]?.classList.add('wrong');
@@ -773,7 +818,7 @@ function lockAndExplain(value) {
   }
 
   const gLetter = ['A','B','C','D','E','F','G'][q.answer] || '?';
-  const gText = q.options[q.answer] || '';
+  const gText = (q.options||[])[q.answer] || '';
   explainEl.innerHTML = `<div class="explain"><strong>Gabarito: ${gLetter})</strong> ${gText}</div>`;
 
   const aiMenu = document.getElementById('aiMenu');
@@ -793,7 +838,7 @@ function markLocked() {
     lockAndExplain( val ? true : false );
     return;
   } else {
-    const opts = q.options.map((t, i) => ({ t, i }));
+    const opts = (q.options||[]).map((t, i) => ({ t, i }));
     renderOptions(opts.map(o => o.t), () => {}, opts.map(o => o.i));
   }
   lockAndExplain(val);
@@ -868,6 +913,7 @@ function applyFilter(termRaw){
   if(!QUIZ){ toast('Carregue um tema antes','warn'); return; }
   const term = String(termRaw||'').trim();
   if(!term){ toast('Informe um termo','warn'); return; }
+  if(!TAG_READY) buildTagIndex(QUIZ.questions);
   FILTER = { term };
   btnClearSearch.classList.remove('hide');
   recalcOrderFromFilters();
@@ -944,7 +990,7 @@ async function globalSearchAndOpen(termRaw){
       const paths = Array.isArray(p) ? p : [p];
       for(const single of paths){
         let quizObj = null;
-        if(/\.txt$/i.test(single)) quizObj = await loadTxtAsQuiz(single);
+        if(/\.txt$/i.test(single)) quizObj = await loadTxtAsQuizFast(single);
         else if(/\.json$/i.test(single)) quizObj = await loadJSON(single);
         else if(/\.html?/i.test(single) || /^https?:\/\//i.test(single)) quizObj = await loadHtmlAsQuiz(single);
         if(!quizObj || !Array.isArray(quizObj.questions)) continue;
@@ -1088,10 +1134,10 @@ window.addEventListener('keydown',(e)=>{
 window.addEventListener('beforeunload', persist);
 document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='hidden') persist(); });
 
-/* ===== HISTÓRICO GLOBAL (compacto, na aba lateral) ===== */
+/* ===== HISTÓRICO GLOBAL ===== */
 const LETTERS = ['A','B','C','D','E','F','G'];
 const GLOBAL_HIST_KEY = 'meujus:hist';
-let HISTORY = []; // [{key, path, idx, number, chosenIdx, chosenLetter, correctIdx, correctLetter, isCorrect, quizTitle, preview}]
+let HISTORY = [];
 
 function histKey(){ return GLOBAL_HIST_KEY; }
 function loadHistory(){ HISTORY = lsGet(histKey(), []); }
@@ -1119,7 +1165,7 @@ function upsertHistoryItem({ idx, chosenIdx, correctIdx, quizTitle, path, previe
 /* ===== PAINEL LATERAL ===== */
 let PANEL_OPEN = false;
 let panelEl = null, backdropEl = null;
-let SP_HIST_PAGE = 1; // 10 itens por página
+let SP_HIST_PAGE = 1;
 
 function setupHeaderActions(){
   const brand = document.querySelector('.brand') || document.getElementById('appTitle');
@@ -1135,7 +1181,7 @@ function setupHeaderActions(){
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"
            fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/>
-        <path d="M19.8 13.5a8 8 0 0 0 0-3l2-1.2-2-3.3-2.3.5a8 8 0 0 0-2.1-1.2l-.4-2.3H9l-.4 2.3a8 8 0 0 0-2.1 1.2L4.2 6 2.2 9.3l2 1.2a8 8 0 0 0 0 3l-2 1.2 2 3.3 2.3-.5a8 8 0 0 0 2.1 1.2l.4 2.3h4.4l.4-2.3a8 8 0 0 0 2.1-1.2l2.3.5 2-3.3-2-1.2Z"/>
+        <path d="M19.8 13.5a8 8 0 0 0 0-3l2-1.2-2-3.3-2.3.5a8 8 0 0 0-2.1-1.2l-.4-2.3H9l-.4 2.3a8 8 0 0 0-2.1 1.2L4.2 6 2.2 9.3l2 1.2a8 8 0 0 0 0 3l-2 1.2 2 3.3 2.3-.5a8 8 0 0 0 2.1 1.2l2.3.5 2-3.3-2-1.2Z"/>
       </svg>`;
     const header = document.querySelector('header.site') || brand?.parentElement;
     if(header){
@@ -1245,7 +1291,6 @@ function renderSideHistory(loadMore){
 
   sumEl.textContent = total ? `${total} questões · ${certas} certas · ${erradas} erradas` : 'Sem histórico';
 
-  // compactar por quizTitle
   const rows = histSlice();
   cardsEl.innerHTML = '';
   let lastTitle = '';
@@ -1284,10 +1329,8 @@ async function openHistoryItem(h){
   if(pathKey(targetPath) !== currentPathKey){
     await loadQuiz(targetPath,false,false);
   }
-  // ir para o índice global da questão
   const pos = ORDER.indexOf(h.idx);
   if(pos>=0){ I = pos; render(); }
   try{ history.replaceState(null,'',`#q=${(pos>=0?pos+1:1)}`); }catch{}
   toggleSidePanel(false);
-
 }
