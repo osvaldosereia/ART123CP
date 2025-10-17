@@ -14,47 +14,43 @@
       <div class="state" id="state">pronto</div>
     </header>
 
-<!-- TELA INICIAL -->
-<section class="intro" id="screenIntro">
+    <!-- TELA INICIAL -->
+    <section class="intro" id="screenIntro">
 
-      <div class="controls">
-        <div>
-          <label for="selCategory">Categoria</label>
-          <select id="selCategory" aria-label="Categoria"></select>
+      <!-- Dropdown moderno de Disciplinas -->
+      <div class="discipline-dropdown" id="disciplineDropdown">
+        <button class="discipline-toggle">Selecione uma disciplina ▼</button>
+        <ul class="discipline-list hide">
+          <li data-id="direito-civil">Direito Civil</li>
+          <li data-id="direito-penal">Direito Penal</li>
+          <li data-id="direito-trabalhista">Direito do Trabalho</li>
+        </ul>
+      </div>
+
+      <!-- Lista hierárquica de Temas/Subtemas -->
+      <div class="theme-browser" id="themeBrowser">
+        <div class="theme-group">
+          <div class="theme-title">Concurso de Pessoas</div>
+          <div class="subthemes">
+            <button data-path="data/direito-penal/concurso/autoria.html">Autoria e Coautoria</button>
+            <button data-path="data/direito-penal/concurso/participacao.html">Participação</button>
+            <button data-path="data/direito-penal/concurso/punibilidade.html">Punibilidade</button>
+          </div>
         </div>
-        <div>
-  <label for="selTheme">Tema</label>
-  <div class="theme-menu" id="themeMenu">
-    <div class="theme-group">
-      <div class="theme-title">Concurso de Pessoas</div>
-      <div class="subthemes">
-        <button data-path="data/direito-penal/concurso/autoria.html">Autoria e Coautoria</button>
-        <button data-path="data/direito-penal/concurso/participacao.html">Participação</button>
-        <button data-path="data/direito-penal/concurso/punibilidade.html">Punibilidade</button>
-      </div>
-    </div>
-    <div class="theme-group">
-      <div class="theme-title">Tipicidade</div>
-      <div class="subthemes">
-        <button data-path="data/direito-penal/tipicidade/conduta.html">Conduta</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-      <div class="actions">
-        <button id="btnStart" class="btn primary" type="button">Começar</button>
-        <button id="btnResume" class="btn ghost hide" type="button">Continuar anterior</button>
+        <div class="theme-group">
+          <div class="theme-title">Tipicidade</div>
+          <div class="subthemes">
+            <button data-path="data/direito-penal/tipicidade/conduta.html">Conduta</button>
+          </div>
+        </div>
       </div>
 
-      <div class="controls" style="margin-top:8px">
-        <div>
-          <label for="txtGlobal">Buscar em todos os temas</label>
+      <!-- Busca global (mantida) -->
+      <div class="global-search">
+        <label for="txtGlobal">Buscar em todos os temas</label>
+        <div class="global-bar">
           <input id="txtGlobal" type="search" placeholder="Termo exato em enunciados e opções" />
-        </div>
-        <div class="actions" style="align-items:end;padding-top:0">
-          <button id="btnGlobal" class="btn ghost" type="button">Buscar em todos</button>
+          <button id="btnGlobal" class="btn ghost" type="button">Buscar</button>
         </div>
       </div>
     </section>
@@ -62,17 +58,6 @@
     <!-- TELA DO QUIZ -->
     <section class="quiz hide" id="screenQuiz">
       <div class="progress" aria-label="Progresso"><span id="bar"></span></div>
-
-      <div class="controls">
-        <div>
-          <label for="txtSearch">Buscar neste tema</label>
-          <input id="txtSearch" type="search" placeholder="Termo exato" />
-        </div>
-        <div class="actions" style="align-items:end;padding-top:0">
-          <button id="btnSearch" class="btn ghost" type="button">Buscar</button>
-          <button id="btnClearSearch" class="btn ghost hide" type="button">Limpar filtro</button>
-        </div>
-      </div>
 
       <div id="question" class="statement"></div>
       <div id="options" class="options" role="listbox"></div>
@@ -85,7 +70,7 @@
         <button id="btnNext" class="btn primary" type="button">Próximo</button>
       </div>
 
-      <!-- MENU IA (fica escondido até o usuário responder uma questão) -->
+      <!-- MENU IA -->
       <div class="ai-menu hide" id="aiMenu">
         <button id="btnAI" class="btn ghost" type="button">Pergunte ao Google Modo I.A.</button>
         <div class="ai-dropdown" id="aiDropdown">
@@ -98,7 +83,7 @@
       <!-- Barra de tags -->
       <div id="tagsBar" class="tagsbar" aria-label="Tags relacionadas"></div>
 
-      <!-- Rodapé do quiz -->
+      <!-- Rodapé -->
       <div class="meta">
         <span id="footLeft">—</span>
         <span id="footRight">—</span>
