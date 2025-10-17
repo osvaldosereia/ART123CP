@@ -222,3 +222,138 @@
 *** Gabarito: C
 **** consulta tributária suspensão
 -----
+* O Presidente da República Federativa do Brasil, após ouvir os Conselhos da República e de Defesa Nacional, decretou estado de defesa em parte da Região Centro-Oeste do país, que fora atingida por calamidade natural de grandes proporções.
+* O Congresso Nacional, 12 horas após a veiculação do decreto presidencial, tomou ciência da justificativa que levou o Presidente a decretar o estado de defesa. Sobre a hipótese, segundo o sistema jurídico-constitucional brasileiro, assinale a afirmativa correta.
+** A) O procedimento apresenta uma inconstitucionalidade formal, pois a decretação do estado de defesa exige aprovação prévia das razões do ato pelo Congresso Nacional.
+** B) O decreto presidencial encontra-se formalmente correto, pois, diferentemente do estado de sítio, o estado de defesa dispensa qualquer manifestação, prévia ou a posteriori, do Congresso Nacional.
+** C) O ato de decretação somente poderia passar a vigorar na região apontada após prévia normatização por meio de decreto legislativo elaborado exclusivamente pelo Congresso Nacional.
+** D) O procedimento utilizado pelo Presidente da República converge com aquele que é constitucionalmente exigido, já que a decretação do estado de defesa não exige aprovação prévia do Congresso Nacional.
+*** Gabarito: D
+**** decretação estado defesa
+-----
+* Com grande adesão da população, o prefeito do Município Delta, situado no Estado-membro Alfa, declarou a independência do território municipal, criando um novo país.
+* Assustado com a rapidez do processo, o Presidente da República, após ouvir o Conselho de Defesa Nacional, sem perda de tempo, decidiu decretar a intervenção federal no Município. Ato contínuo, submeteu o decreto ao Congresso Nacional, que o aprovou, também de forma célere, por unanimidade. Sobre o decreto interventivo federal, segundo o sistema jurídico-constitucional brasileiro, assinale a afirmativa correta.
+** A) A Constituição da República de 1988 veda, de forma cabal, o direito de secessão, sendo o decreto constitucional.
+** B) O ato de insurreição traz consigo grave comprometimento à ordem pública, o que aponta para a constitucionalidade do decreto.
+** C) Como Delta está situado em um Estado-membro, não há previsão constitucional para a decretação de intervenção federal.
+** D) O fato de a decisão presidencial não ter sido antecedida de requisição pelo Supremo Tribunal Federal indica a invalidade do decreto.
+*** Gabarito: C
+**** intervenção federal município
+-----
+* Preocupado com a qualidade da educação básica ofertada pela rede de ensino municipal do Município Teta, o prefeito da cidade pretende apresentar projeto de lei à Câmara Municipal, no qual uma série de melhorias está prevista.
+* No entanto, ciente da ausência de recursos orçamentários e financeiros para efetivar o que está previsto no projeto, o Prefeito levantou a hipótese de criar uma taxa de serviço, que seria paga por aqueles que viessem a se utilizar dos serviços municipais de educação básica (ensinos fundamental e médio) em seus estabelecimentos oficiais. Antes de enviar o projeto de lei, o Prefeito consultou sua assessoria sobre a conformidade constitucional do projeto, sendo-lhe corretamente informado que a cobrança da referida taxa
+** A) caracterizaria efetiva violação à ordem constitucional, posto ser o acesso gratuito à educação básica um direito subjetivo de todos.
+** B) poderia ser exigida, contanto que o valor cobrado como contraprestação pelo serviço de educação não afrontasse o princípio da proporcionalidade.
+** C) apenas poderia ser exigida daqueles que não conseguissem comprovar, nos termos legalmente estabelecidos, a hipossuficiência económica.
+** D) poderia ser exigida dos estudantes do ensino médio, mas não dos estudantes do ensino fundamental, aos quais a ordem constitucional assegura a gratuidade.
+*** Gabarito: A
+**** gratuidade educação básica
+-----
+* A Lei nº YYY do Município Alfa revogou o adicional por tempo de serviços (ATS), abolindo-o por inteiro com efeitos retroativos absolutos.
+* Além disso, estabeleceu as regras para que os servidores não só deixassem de receber o referido adicional, como também para que devolvessem todas as quantias por eles recebidas a título de ATS. A medida foi justificada sob o argumento de que haveria significativa economia das despesas públicas e, por isso, seria possível o aumento nos investimentos em saúde e em educação. Os servidores, por sua vez, alegaram clara violação ao direito adquirido e ao ato jurídico perfeito em relação à determinação de devolução dos valores já recebidos. Sobre a questão em discussão, segundo o sistema jurídico-constitucional, assinale a afirmativa correta.
+** A) A Lei nº YYY apresenta indiscutível interesse público, portanto, a retroatividade absoluta é válida, encontrando-se de acordo com o que determina o sistema jurídico-constitucional.
+** B) A garantia ao direito adquirido não se aplica às normas municipais, que podem, por razões econômicas, produzir efeitos retroativos.
+** C) A retroatividade absoluta da Lei nº YYY fere o texto constitucional, pois afeta situações já constituídas e exauridas em momento pretérito.
+** D) O direito adquirido, por determinação constitucional expressa, pode ser desconsiderado nas situações em que o seu reconhecimento inviabilize políticas públicas nas áreas de educação e saúde.
+*** Gabarito: C
+**** retroatividade lei municipal
+-----
+* O Procurador-Geral da República, preocupado com o grande número de decisões judiciais divergentes, em âmbito nacional, referentes à possível inconstitucionalidade da Lei Federal nº XX/2021, ajuizou, perante o Supremo Tribunal Federal (STF), uma Ação Declaratória de Constitucionalidade (ADC) visando a elidir a controvérsia judicial.
+* Em março de 2022, no julgamento do mérito, o STF decidiu pela improcedência da ADC referente à Lei Federal nº XX/2021. No entanto, você, na qualidade de advogado(a) de uma determinada causa, deparou-se com a seguinte situação: em desfavor do seu cliente, o Tribunal Regional Federal (TRF) competente, mantendo decisão proferida pelo Juiz Federal responsável pelo caso, deu aplicação à Lei Federal nº XX/21 que já fora objeto de ADC, apreciada pelo STF em março de 2022. Diante de tal contexto, assinale a opção que apresenta a medida judicial a ser utilizada para preservar, de forma eficiente e célere, o interesse do seu cliente na causa.
+** A) Formular representação ao Procurador-Geral da República, para que seja deflagrado um novo processo objetivo perante o STF para retirar a Lei Federal nº XX/21 do mundo jurídico.
+** B) Interpor recurso especial perante o STF, com fundamento em violação de dispositivo constitucional.
+** C) Ajuizar reclamação perante o STF em relação à decisão proferida pelo TRF.
+** D) Formular representação ao Conselho Nacional de Justiça (CNJ), para que seja deflagrado um processo administrativo disciplinar contra os magistrados do TRF.
+*** Gabarito: C
+**** descumprimento decisão STF
+-----
+* José foi eleito deputado estadual por determinado Estado da Federação.
+* Uma semana após a sua posse e fora do recinto da Assembleia Legislativa do seu respectivo Estado, o deputado encontra João, candidato não eleito e seu principal opositor durante a campanha eleitoral, vindo a agredi-lo, causando-lhe lesões corporais gravíssimas, cuja persecução em juízo é iniciada mediante denúncia oferecida pelo Ministério Público. Diante de tal contexto, levando em consideração as imunidades do parlamentar estadual, de acordo com o Direito Constitucional brasileiro, assinale a opção correta.
+** A) Em relação à imunidade formal de processo, recebida a denúncia oferecida contra o deputado estadual José, por crime cometido após a posse, a Casa legislativa a que pertence o parlamentar denunciado poderá apenas sustar a tramitação da ação penal.
+** B) Por gozar da mesma imunidade material (inviolabilidade parlamentar) de deputados federais e senadores, o deputado estadual José não poderá ser responsabilizado por qualquer tipo de crime praticado durante o seu mandato eletivo.
+** C) Em relação à imunidade formal de processo, o deputado estadual José está sujeito a julgamento judicial pelo crime comum cometido, desde que a análise da denúncia oferecida contra ele seja autorizada pela respectiva casa legislativa.
+** D) Por não possuir as mesmas imunidades formais de deputados federais e senadores, mas apenas a imunidade material relativa aos atos praticados em razão do seu mandato, o deputado estadual José será julgado pelo crime comum cometido, não sendo possível que seja sustada a tramitação da ação penal.
+*** Gabarito: A
+**** imunidade parlamentar estadual
+-----
+* Numa acirrada disputa eleitoral pelo governo municipal de sua cidade, o prefeito atual e candidato à reeleição, divulgou, por meio do site da Prefeitura, informações inexatas e ofensivas contra o candidato da oposição.
+* Esse candidato o(a) procurou, por saber de sua atuação como advogado(a) em defesa dos Direitos Humanos, e disse que, amparado na Convenção Americana sobre Direitos Humanos, queria o direito de resposta na rádio local. Sobre a hipótese narrada, cabe a você esclarecer que a Convenção assegura
+** A) plenamente o direito à resposta, que deve ocorrer no órgão de difusão da escolha do ofendido.
+** B) o direito de resposta e determina que ele aconteça no órgão de difusão que tenha a capacidade de alcançar o maior número de pessoas.
+** C) o direito à resposta e determina que ela deve ser feita no mesmo órgão de difusão em que ocorreu a divulgação das informações inexatas e ofensivas.
+** D) o direito de resposta, mas estabelece como condição a apreciação judicial e o encerramento da lide em última instância.
+*** Gabarito: C
+**** direito de resposta
+-----
+* Considere a hipótese de ter sido decretado Estado de Emergência no país, implicando a suspensão de garantias judiciais, como o habeas corpus.
+* Argumentando a favor desse Decreto, o Governo alega que a própria Convenção Americana de Direitos Humanos prevê, em seu Art. 27, a suspensão de garantias. Como advogada(o) que atua na defesa dos Direitos Humanos, de acordo com as importantes Opiniões Consultivas OC-08/87 e OC-09/87 da Corte Interamericana de Direitos Humanos, você deve esclarecer que
+** A) uma vez que tais garantias judiciais não estejam previstas entre os direitos ressalvados expressamente no Art. 27.2 da Convenção, elas podem ser suspensas.
+** B) pode haver a suspensão de tais garantias, inclusive do habeas corpus em situações de estado de emergência, como o Estado de Defesa, desde que isso seja decidido pelo Poder Executivo e confirmado pelo Poder Judiciário.
+** C) as garantias judiciais, como o habeas corpus, não podem ser canceladas ou descontinuadas, pois visam à proteção dos direitos essenciais que, segundo o art. 27.2 da Convenção, não podem ser suspensos.
+** D) em situações de emergência, como o Estado de Defesa, tendo em vista a proteção da soberania nacional, pode haver a suspensão de alguns direitos e garantias, dentre eles o direito ao habeas corpus.
+*** Gabarito: C
+**** suspensão habeas corpus
+-----
+* No ano anterior à realização de eleições para cargos eletivos federais e estaduais, os dirigentes dos partidos políticos Alfa e Gama iniciaram tratativas para se aliançarem, tanto nas eleições majoritárias como nas proporcionais, mas havia dúvida em relação ao modelo a ser utilizado.
+* Após consultarem a legislação de regência, concluíram corretamente que deveriam formar
+** A) coligação, que se extinguirá ao fim do prazo para o ajuizamento da ação de impugnação de mandato eletivo.
+** B) gestão colegiada, somente utilizada nas eleições proporcionais, que deve perdurar até o fim do prazo do mandato eletivo obtido.
+** C) ajuntamento partidário, que se extinguirá após a diplomação dos eleitos.
+** D) federação, sendo que os partidos devem permanecer filiados por no mínimo quatro anos, contados da data do respectivo ingresso.
+*** Gabarito: D
+**** federação de partidos
+-----
+* Helena, filiada ao partido político Beta e candidata ao cargo de governadora do Estado Alfa, consultou seu advogado a respeito da composição dos gastos de campanha, mais especificamente se o pagamento de honorários em razão da prestação de serviços advocatícios, no curso e em razão da campanha eleitoral, teria essa natureza jurídica.
+* A assessoria respondeu, corretamente, que os referidos honorários
+** A) estão incluídos no limite de gastos de campanha, sendo tidos como despesas eleitorais.
+** B) são considerados gastos eleitorais e não estão incluídos no limite de gastos de campanha.
+** C) pela sua essência alimentar, não têm correlação com os gastos eleitorais, o que afasta a possibilidade de serem enquadrados em qualquer limitador de despesas.
+** D) podem ser considerados gastos eleitorais, caso o candidato assim os declare, e estão incluídos no limite de gastos de campanha.
+*** Gabarito: B
+**** honorários advocatícios campanha
+-----
+* O cidadão francês Pierre Renoir, residente e domiciliado em Portugal, foi casado com uma espanhola, com quem teve dois filhos nascidos na Alemanha.
+* Pierre faleceu em 2022 e deixou como herança um apartamento no Brasil, onde viveu durante a fase universitária. Nesta hipótese, à sucessão do bem será aplicada a lei
+** A) francesa.
+** B) portuguesa.
+** C) brasileira.
+** D) alemã.
+*** Gabarito: C
+**** sucessão bem Brasil
+-----
+* Um brasileiro teve seu pedido de visto de trabalho negado por uma representação consular de um Estado estrangeiro.
+* Inconformado, consultou você, como advogado (a), para a adoção das providências cabíveis no Brasil. Após a avaliação do caso, você concluiu que
+** A) nenhuma medida judicial é cabível.
+** B) deve ser proposto mandado de segurança perante a Justiça Federal.
+** C) cabe reclamação trabalhista perante a Justiça do Trabalho.
+** D) deve ser proposta ação condenatória por obrigação de fazer, perante o Tribunal de Justiça competente.
+*** Gabarito: A
+**** visto trabalho negado
+-----
+* O Presidente da República está elaborando projeto de lei que estabelece, de forma regionalizada, as diretrizes, objetivos e metas da Administração Pública federal para as despesas de capital e outras delas decorrentes e para as relativas aos programas de duração continuada.
+* Diante desse cenário, assinale a afirmativa correta.
+** A) A matéria tratada em tal projeto de lei objetiva instituir a Lei de Diretrizes Orçamentárias, a qual deve ser aprovada por quórum de maioria simples no Congresso Nacional.
+** B) Tal projeto versa sobre a Lei de Diretrizes Orçamentárias e se submete à reserva de lei complementar.
+** C) Embora institua o Plano Plurianual, tal projeto de lei necessita ser aprovado por quórum de maioria absoluta no Congresso Nacional.
+** D) Trata-se de projeto de lei que institui o Plano Plurianual, a ser veiculado por meio de lei ordinária.
+*** Gabarito: D
+**** plano plurianual
+-----
+* João ganhou uma ação movida em face do Estado Gama, na qual este foi condenado a pagar o equivalente a 30 salários mínimos a título de danos morais pelo uso indevido de sua imagem em uma publicidade institucional do governo estadual.
+* A ação transitou em julgado em 15 de julho de 2022. Seu advogado verifica que não há legislação específica estadual acerca de prazos e limites de valores sobre pagamentos pela Fazenda Pública em caso de condenação judicial. Diante desse cenário, e à luz da Constituição Federal de 1988, João receberá o valor a que tem direito
+** A) por meio de precatório alimentar, que tem prioridade em relação aos demais, dentro do próprio ano do trânsito em julgado.
+** B) por meio de Requisição de Pequeno Valor (RPV).
+** C) por meio de precatório comum, a ser pago no ano seguinte ao do trânsito em julgado da condenação judicial.
+** D) em dinheiro, no prazo máximo de 15 (quinze) dias contados da intimação da Fazenda Pública do trânsito em julgado da ação, através de transferência bancária entre a instituição financeira que administra o tesouro estadual e o banco em que João tem sua conta.
+*** Gabarito: B
+**** requisição pequeno valor
+-----
+* A Sociedade Empresária Aguardente 100% Ltda., fabricante de bebidas destiladas, por meio de sua advogada Sophia, protocolou perante a Secretaria Especial da Receita Federal do Brasil, ainda dentro do prazo legal para pagamento, consulta referente à necessidade de recolhimento de Imposto sobre Produtos Industrializados (IPI) acerca de operação específica por ela desempenhada.
+* Escoado o prazo original para pagamento e ainda não decidida a consulta, à luz do Código Tributário Nacional (CTN) assinale a afirmativa correta.
+** A) Aguardente 100% Ltda. poderá ter cobrados contra si juros de mora que correm mesmo na pendência da consulta tributária.
+** B) Por ocasião da decisão final da consulta, o Fisco federal poderá impor multa tributária caso a solução de consulta seja contrária aos interesses de Aguardente 100% Ltda.
+** C) A obrigação tributária a ser cumprida por Aguardente 100% Ltda., por ter sido objeto de consulta, não poderá ser acrescida de juros de mora e nem poderá ser imposta multa tributária à empresa.
+** D) Podem ser aplicadas contra Aguardente 100% Ltda. medidas de garantia previstas no CTN ou em lei tributária na pendência da consulta tributária.
+*** Gabarito: C
+**** consulta tributária suspensão
+-----
