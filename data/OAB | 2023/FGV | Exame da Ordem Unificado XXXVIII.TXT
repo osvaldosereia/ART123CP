@@ -1,0 +1,88 @@
+* Uma sociedade de advogados decidiu patrocinar a realização de um evento, sob o formato de um congresso, em certo hotel de lazer do tipo "resort", que conta com área de conferências, com o explícito fim de publicidade de suas atividades profissionais.
+* Considerando a forma de publicidade escolhida, assinale a afirmativa correta.
+** A) Não é autorizada, independetemente de quem seja o público convidado para o evento, tendo em vista o local escolhido.
+** B) É admitida, desde que os participantes sejam apenas integrantes da sociedade de advogados, funcionários ou clientes.
+** C) É autorizada, sendo admitida a participação de clientes da sociedade de advogados e de interessados do meio jurídico.
+** D) não é autorizada, independetemente de quem seja o público convidado para o evento, ou do local onde realizado.
+*** Gabarito: C
+**** publicidade, sociedade, advogados
+-----
+* A medida cautelar de busca e apreensão a ser cumprida no escritório do advogado José foi regularmente deferida, por Juízo competente.
+* Considerou o magistrado que havia nos autos indícios de autoria e materialidade da prática de crime por José, juntamente com um cliente seu, de nome Oswaldo. Quanto à situação hipotética narrada, assinale a afirmativa correta..
+** A) É dever do representante da OAB presente ao ato, durante o cumprimento do mandado de busca e apreensão, impedir que documentos referentes a outros processos em face de Oswaldo, não relacionados ao objeto da investigação que ensejou a cautelar, sejam retirados do escritório, exceto se o volume ou natureza dos objetos impedirem o resguardo do sigilo através da cadeia de custódia.
+** B) A análise dos documentos apreendidos deve ser feita mediante comunicação prévia ao Conselho Federal da OAB, com antecedência mínima e impreterível de 48 horas.
+** C) Caso seja essencial à sua defesa no processo criminal, é admitido que José efetue colaboração premiada em face de Oswaldo, desde que haja confirmação das imputações por outros meios de prova.
+** D) É direito de José estar presente na ocasião designada para análise do conteúdo dos documentos apreendidos, quando do cumprimento do mandado de busca e apreensão.
+*** Gabarito: D
+**** busca, apreensão, advogado
+-----
+* O advogado Luís Santos, regularmente inscrito na OAB, está em início de carreira.
+* Luís presta serviços jurídicos a determinada instituição social sem fins econômicos, consistentes em patrocinar seus interesses em demanda judicial em curso. Sobre a atuação de Luís, assinale a afirmativa correta.
+** A) Não poderá ser considerada advocacia pro bono a atuação gratuita de Luís como advogado das pessoas naturais, hipossuficientes econômicas, beneficiárias da instituição social.
+** B) É ilícito que Luís preste gratuitamente tais serviços jurídicos, se o objetivo é valer-se de sua atuação como instrumento de publicidade da sua atividade profissional.
+** C) A atuação gratuita de Luís, ainda que não seja eventual, na defesa em Juízo da mencionada instituição social, pode ser considerada advocacia pro bono.
+** D) É admitida a prestação por Luis, sob a forma de advocacia pro bono voluntária, de serviços jurídicos para uma instituição social cobrando preços simbólicos, haja vista a ausência de fins econômicos.
+*** Gabarito: B
+**** advocacia, pro bono, publicidade
+-----
+* Maria, advogada regularmente inscrita na OAB, encontra-se gestante. Em razão de sua condição, Maria tem direitos específicos previstos no Estatuto da Advocacia e da OAB.
+* Assinale a opção que apresenta, corretamente um desses direitos.
+** A) Durante a gravidez, ela terá direito a uma vaga garantida nas garagens dos fóruns de todos os tribunais.
+** B) Durante a gravidez ela terá preferência na realização das audiências a serem realizadas no dia, independentemente de comprovação de sua condição.
+** C) Após dar à luz, ela terá direito à suspensão dos prazos processuais por 60 (sessenta) dias, contados a partir da data do parto, se for a única patrona da causa.
+** D) Após dar à luz, ela terá preferência na ordem das sustentações orais, mediante comprovação de sua condição, pelo período de 90 (noventa) dias, contados a partir da data do parto.
+*** Gabarito: A
+**** advogada, gestante, direitos
+-----
+* Lucas, estagiário de Direito, descobre que Patrícia, advogada que o supervisiona, teve sua inscrição na OAB cancelada.
+* Na intenção de auxiliar Patrícia a restabelecer o exercício da advocacia, Lucas passa a estudar a legislação que disciplina o tema. Sobre o cancelamento da inscrição, Lucas concluiu, corretamente, que
+** A) deve ter motivo justificado, caso seja solicitada pelo profissional.
+** B) a aplicação de penalidade de exclusão impossibilita um novo pedido de inscrição.
+** C) deve ser promovido, de ofício, pelo conselho competente, caso decorra do exercício de atividade incompatível com a advocacia.
+** D) será restaurado o número cancelado, caso seja feito um novo pedido de inscrição.
+*** Gabarito: C
+**** cancelamento, inscrição, OAB
+-----
+* Teresa Silva, advogada atuante na área criminal, tem como clientes Luiz, acusado de tráfico ilícito de drogas, e Roberto, acusado de crimes contra o sistema financeiro nacional.
+* Após serem proferidas decisões judiciais que determinam o bloqueio universal dos patrimônios de Luiz e Roberto, Teresa se indaga a respeito dos meios disponíveis para obter os valores necessários ao reembolso de gastos com a defesa e ao recebimento de honorários desses clientes. Sobre esse assunto, é correto concluir que
+** A) garantir-se-á a Teresa a liberação de 20% (vinte por cento) dos bens bloqueados de Luiz para o fim de reembolso de gastos com a defesa, vedado o recebimento de honorários.
+** B) garantir-se-á a Teresa a liberação de 20% (vinte por cento) dos bens bloqueados de Roberto para o fim de reembolso de gastos com a defesa e o recebimento de honorários.
+** C) Teresa poderá optar pela venda de bens de Luiz em hasta pública para o reembolso de gastos com a defesa.
+** D) Teresa não poderá realizar a adjudicação de bens de Roberto para a satisfação dos honorários devidos.
+*** Gabarito: B
+**** honorários, bloqueio, bens
+-----
+* O advogado Alex encontra-se licenciado junto à OAB. Assinale a opção que, corretamente, apresenta uma causa para o licenciamento de Alex.
+** A) O requerimento de licenciamento, independentemente de motivação, formulado por Alex.
+** B) O fato de Alex passar a sofrer de doença física incurável.
+** C) O exercicio por Alex, de forma definitiva, de atividade incompatível com a advocacia.
+** D) O fato de Alex passar a sofrer de doença mental curável.
+*** Gabarito: D
+**** licenciamento, advogado, OAB
+-----
+* Marcelo, advogado, é acusado de usar atestado médico falso para libertar seu cliente da prisão.
+* O fato alcança grande repercussão, a ponto de um jornal local publicar matéria em que afirma que Marcelo deve ser suspenso preventivamente pela OAB, até que se conclua a apuração disciplinar da conduta. Sobre esse tema, assinale a afirmativa correta.
+** A) Cabe ao Tribunal de Ética e Disciplina do Conselho Seccional perante o qual a infração tenha ocorrido, suspendê-lo preventivamente.
+** B) A suspensão preventiva pressupõe a demonstração de que o fato tenha gerado repercussão prejudicial à dignidade da advocacia.
+** C) Antes de aplicada a suspensão preventiva, o acusado deve ser ouvido em sessão especial, salvo se não for possível notificá-lo para comparecer.
+** D) Caso aplicada a suspensão preventiva, o processo disciplinar deve ser concluído no prazo máximo de sessenta dias.
+*** Gabarito: B
+**** suspensão, preventiva, advogado
+-----
+* "Mas a disciplina traz consigo uma maneira específica de punir, e que é apenas um modelo reduzido do tribunal. O que pertence à penalidade disciplinar é a inobservância, tudo o que está inadequado à regra, tudo que se afasta dela, os desvios."
+* Michael Foucault. Foucault, em seu livro Vigiar e Punir, fala do poder disciplinar que recai sobre os corpos dos indivíduos e, também, dos castigos disciplinares que resultam de uma lei, um programa ou um regulamento. Assinale a opção que, segundo o autor da obra de referência, apresenta a função do castigo disciplinar.
+** A) Reduzir os desvios, funcionando, portanto, como algo essencialmente corretivo.
+** B) Coibir a ocorrência de crime, de modo a evitar a ocorrência de atos ilícitos.
+** C) Expiar a culpa de ter se afastado da norma, de forma a produzir arrependimento.
+** D) Indenizar a vítima da conduta indisciplinada, como forma de reparação de um dano.
+*** Gabarito: A
+**** Foucault, castigo, disciplinar
+-----
+* Há muitos tipos diferentes de relação entre o direito e a moral e a relação entre eles não pode ser isolada com proveito para efeitos de estudo.
+* Em vez disso, é importante distinguir algumas das muitas coisas diferentes que podem querer dizer-se através da afirmação ou negação de que o direito e a moral estão relacionados. Herbert Hart. Herbert Hart, em seu livro O Conceito de Direito, comenta sobre a influência da moral sobre o Direito, afirmando que nenhum positivista poderá negar que a estabilidade dos sistemas jurídicos depende, em parte, da correspondência com a moral. Assinale a opção que, segundo o autor no livro em referência, mostra como essa influência da moral sobre o direito pode ocorrer.
+** A) Pode se dar por meio da legislação ou por intermédio do processo judicial.
+** B) Por intermédio da religião, sobretudo naqueles estados que, mesmo tendo a forma laica, admitem a influência das autoridades religiosas sobre o funcionamento das instituições.
+** C) Ocorre meio do por pensamento científico. O desenvolvimento da ciência aponta possibilidades que exigem uma base moral que normatize os padrões de conduta em relação ao que seria aceitável ou não naquela sociedade.
+** D) A influência da moral sobre o direito acontece por força da própria natureza das coisas.
+*** Gabarito: A
+**** Hart, direito, moral
