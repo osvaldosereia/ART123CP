@@ -23,7 +23,7 @@
 ** C) A atuação gratuita de Luís, ainda que não seja eventual, na defesa em Juízo da mencionada instituição social, pode ser considerada advocacia pro bono.
 ** D) É admitida a prestação por Luis, sob a forma de advocacia pro bono voluntária, de serviços jurídicos para uma instituição social cobrando preços simbólicos, haja vista a ausência de fins econômicos.
 *** Gabarito: B
-**** advocacia pro bono, publicidade profissional, instituição social
+**** advocacia pro bono, publicidade, instituição social
 -----
 * Maria, advogada regularmente inscrita na OAB, encontra-se gestante. Em razão de sua condição, Maria tem direitos específicos previstos no Estatuto da Advocacia e da OAB.
 * Assinale a opção que apresenta, corretamente um desses direitos.
@@ -32,7 +32,7 @@
 ** C) Após dar à luz, ela terá direito à suspensão dos prazos processuais por 60 (sessenta) dias, contados a partir da data do parto, se for a única patrona da causa.
 ** D) Após dar à luz, ela terá preferência na ordem das sustentações orais, mediante comprovação de sua condição, pelo período de 90 (noventa) dias, contados a partir da data do parto.
 *** Gabarito: A
-**** advogada gestante, direitos da advogada, Estatuto da Advocacia
+**** advogada gestante, direitos da advogada, estatuto da OAB
 -----
 * Lucas, estagiário de Direito, descobre que Patrícia, advogada que o supervisiona, teve sua inscrição na OAB cancelada.
 * Na intenção de auxiliar Patrícia a restabelecer o exercício da advocacia, Lucas passa a estudar a legislação que disciplina o tema. Sobre o cancelamento da inscrição, Lucas concluiu, corretamente, que
@@ -41,7 +41,7 @@
 ** C) deve ser promovido, de ofício, pelo conselho competente, caso decorra do exercício de atividade incompatível com a advocacia.
 ** D) será restaurado o número cancelado, caso seja feito um novo pedido de inscrição.
 *** Gabarito: C
-**** cancelamento de inscrição, OAB, atividade incompatível
+**** cancelamento da inscrição, OAB, atividade incompatível
 -----
 * Teresa Silva, advogada atuante na área criminal, tem como clientes Luiz, acusado de tráfico ilícito de drogas, e Roberto, acusado de crimes contra o sistema financeiro nacional.
 * Após serem proferidas decisões judiciais que determinam o bloqueio universal dos patrimônios de Luiz e Roberto, Teresa se indaga a respeito dos meios disponíveis para obter os valores necessários ao reembolso de gastos com a defesa e ao recebimento de honorários desses clientes. Sobre esse assunto, é correto concluir que
@@ -50,16 +50,15 @@
 ** C) Teresa poderá optar pela venda de bens de Luiz em hasta pública para o reembolso de gastos com a defesa.
 ** D) Teresa não poderá realizar a adjudicação de bens de Roberto para a satisfação dos honorários devidos.
 *** Gabarito: B
-**** honorários advocatícios, bloqueio de bens, advocacia criminal
+**** honorários advocatícios, bloqueio de bens, reembolso de gastos
 -----
-* O advogado Alex encontra-se licenciado junto à OAB.
-* Assinale a opção que, corretamente, apresenta uma causa para o licenciamento de Alex.
+* O advogado Alex encontra-se licenciado junto à OAB. Assinale a opção que, corretamente, apresenta uma causa para o licenciamento de Alex.
 ** A) O requerimento de licenciamento, independentemente de motivação, formulado por Alex.
 ** B) O fato de Alex passar a sofrer de doença física incurável.
 ** C) O exercicio por Alex, de forma definitiva, de atividade incompatível com a advocacia.
 ** D) O fato de Alex passar a sofrer de doença mental curável.
 *** Gabarito: D
-**** licenciamento OAB, doença mental curável, inscrição de advogado
+**** licenciamento, OAB, doença mental curável
 -----
 * Marcelo, advogado, é acusado de usar atestado médico falso para libertar seu cliente da prisão.
 * O fato alcança grande repercussão, a ponto de um jornal local publicar matéria em que afirma que Marcelo deve ser suspenso preventivamente pela OAB, até que se conclua a apuração disciplinar da conduta. Sobre esse tema, assinale a afirmativa correta.
@@ -68,25 +67,25 @@
 ** C) Antes de aplicada a suspensão preventiva, o acusado deve ser ouvido em sessão especial, salvo se não for possível notificá-lo para comparecer.
 ** D) Caso aplicada a suspensão preventiva, o processo disciplinar deve ser concluído no prazo máximo de sessenta dias.
 *** Gabarito: B
-**** suspensão preventiva, OAB, processo disciplinar
+**** suspensão preventiva, OAB, processo disciplinar, repercussão prejudicial
 -----
 * "Mas a disciplina traz consigo uma maneira específica de punir, e que é apenas um modelo reduzido do tribunal. O que pertence à penalidade disciplinar é a inobservância, tudo o que está inadequado à regra, tudo que se afasta dela, os desvios."
-* Foucault, em seu livro Vigiar e Punir, fala do poder disciplinar que recai sobre os corpos dos indivíduos e, também, dos castigos disciplinares que resultam de uma lei, um programa ou um regulamento. Assinale a opção que, segundo o autor da obra de referência, apresenta a função do castigo disciplinar.
+* Michael Foucault. Foucault, em seu livro Vigiar e Punir, fala do poder disciplinar que recai sobre os corpos dos indivíduos e, também, dos castigos disciplinares que resultam de uma lei, um programa ou um regulamento. Assinale a opção que, segundo o autor da obra de referência, apresenta a função do castigo disciplinar.
 ** A) Reduzir os desvios, funcionando, portanto, como algo essencialmente corretivo.
 ** B) Coibir a ocorrência de crime, de modo a evitar a ocorrência de atos ilícitos.
 ** C) Expiar a culpa de ter se afastado da norma, de forma a produzir arrependimento.
 ** D) Indenizar a vítima da conduta indisciplinada, como forma de reparação de um dano.
 *** Gabarito: A
-**** Foucault, Vigiar e Punir, poder disciplinar
+**** filosofia do direito, Foucault, vigiar e punir, castigo disciplinar
 -----
 * Há muitos tipos diferentes de relação entre o direito e a moral e a relação entre eles não pode ser isolada com proveito para efeitos de estudo.
-* Herbert Hart, em seu livro O Conceito de Direito, comenta sobre a influência da moral sobre o Direito, afirmando que nenhum positivista poderá negar que a estabilidade dos sistemas jurídicos depende, em parte, da correspondência com a moral. Assinale a opção que, segundo o autor no livro em referência, mostra como essa influência da moral sobre o direito pode ocorrer.
+* Em vez disso, é importante distinguir algumas das muitas coisas diferentes que podem querer dizer-se através da afirmação ou negação de que o direito e a moral estão relacionados. Herbert Hart. Herbert Hart, em seu livro O Conceito de Direito, comenta sobre a influência da moral sobre o Direito, afirmando que nenhum positivista poderá negar que a estabilidade dos sistemas jurídicos depende, em parte, da correspondência com a moral. Assinale a opção que, segundo o autor no livro em referência, mostra como essa influência da moral sobre o direito pode ocorrer.
 ** A) Pode se dar por meio da legislação ou por intermédio do processo judicial. Pode ocorrer que, em alguns sistemas, os critérios últimos de validade incorporem explicitamente princípios de justiça ou valores morais substantivos.
 ** B) Por intermédio da religião, sobretudo naqueles estados que, mesmo tendo a forma laica, admitem a influência das autoridades religiosas sobre o funcionamento das instituições.
 ** C) Ocorre por meio do pensamento científico. O desenvolvimento da ciência aponta possibilidades que exigem uma base moral que normatize os padrões de conduta em relação ao que seria aceitável ou não naquela sociedade.
 ** D) A influência da moral sobre o direito acontece por força da própria natureza das coisas. São padrões de certo e errado que surgem naturalmente e em um determinado momento histórico são incorporados ao direito positivo de forma espontânea e automática.
 *** Gabarito: A
-**** Herbert Hart, O Conceito de Direito, direito e moral
+**** filosofia do direito, Herbert Hart, o conceito de direito, direito e moral
 -----
 * O Presidente da República Federativa do Brasil, após ouvir os Conselhos da República e de Defesa Nacional, decretou estado de defesa em parte da Região Centro-Oeste do país, que fora atingida por calamidade natural de grandes proporções.
 * O Congresso Nacional, 12 horas após a veiculação do decreto presidencial, tomou ciência da justificativa que levou o Presidente a decretar o estado de defesa. Sobre a hipótese, segundo o sistema jurídico-constitucional brasileiro, assinale a afirmativa correta.
@@ -95,7 +94,7 @@
 ** C) O ato de decretação somente poderia passar a vigorar na região apontada após prévia normatização por meio de decreto legislativo elaborado exclusivamente pelo Congresso Nacional.
 ** D) O procedimento utilizado pelo Presidente da República converge com aquele que é constitucionalmente exigido, já que a decretação do estado de defesa não exige aprovação prévia do Congresso Nacional.
 *** Gabarito: D
-**** estado de defesa, controle pelo congresso, sistema constitucional
+**** direito constitucional, estado de defesa, congresso nacional
 -----
 * Com grande adesão da população, o prefeito do Município Delta, situado no Estado-membro Alfa, declarou a independência do território municipal, criando um novo país.
 * Assustado com a rapidez do processo, o Presidente da República, após ouvir o Conselho de Defesa Nacional, sem perda de tempo, decidiu decretar a intervenção federal no Município. Ato contínuo, submeteu o decreto ao Congresso Nacional, que o aprovou, também de forma célere, por unanimidade. Sobre o decreto interventivo federal, segundo o sistema jurídico-constitucional brasileiro, assinale a afirmativa correta.
@@ -104,7 +103,7 @@
 ** C) Como Delta está situado em um Estado-membro, não há previsão constitucional para a decretação de intervenção federal.
 ** D) O fato de a decisão presidencial não ter sido antecedida de requisição pelo Supremo Tribunal Federal indica a invalidade do decreto.
 *** Gabarito: C
-**** intervenção federal, município, secessão
+**** intervenção federal, município, estado-membro, secessão
 -----
 * Preocupado com a qualidade da educação básica ofertada pela rede de ensino municipal do Município Teta, o prefeito da cidade pretende apresentar projeto de lei à Câmara Municipal, no qual uma série de melhorias está prevista.
 * No entanto, ciente da ausência de recursos orçamentários e financeiros para efetivar o que está previsto no projeto, o Prefeito levantou a hipótese de criar uma taxa de serviço, que seria paga por aqueles que viessem a se utilizar dos serviços municipais de educação básica (ensinos fundamental e médio) em seus estabelecimentos oficiais. Antes de enviar o projeto de lei, o Prefeito consultou sua assessoria sobre a conformidade constitucional do projeto, sendo-lhe corretamente informado que a cobrança da referida taxa
@@ -113,10 +112,10 @@
 ** C) apenas poderia ser exigida daqueles que não conseguissem comprovar, nos termos legalmente estabelecidos, a hipossuficiência económica.
 ** D) poderia ser exigida dos estudantes do ensino médio, mas não dos estudantes do ensino fundamental, aos quais a ordem constitucional assegura a gratuidade.
 *** Gabarito: A
-**** gratuidade da educação, taxa de serviço, direito constitucional
+**** educação básica, gratuidade de ensino, taxa de serviço, inconstitucionalidade
 -----
 * A Lei nº YYY do Município Alfa revogou o adicional por tempo de serviços (ATS), abolindo-o por inteiro com efeitos retroativos absolutos.
-* Além disso, estabeleceu as regras para que os servidores não só deixassem de receber o referido adicional, como também para que devolvessem todas as quantias por eles recebidas a título de ATS. A medida foi justificada sob o argumento de que haveria significativa economia das despesas públicas e, por isso, seria possível o aumento nos investimentos em saúde e em educação. Os servidores, por sua vez, alegaram clara violação ao direito adquirido e ao ato jurídico perfeito em relação à determinação de devolução dos valores já recebidos. Sobre a questão em discussão, segundo o sistema jurídico-constitucional, assinale a afirmativa correta.
+* Além disso, estabeleceu as regras para que os servidores não só deixassem de receber o referido adicional, como também para que devolvessem todas as quantias por eles recebidas a título de ATS. A medida foi justificada sob o argumento de que haveria significativa economia das despesas públicas e, por isso, seria possível o aumento nos investimentos em saúde e em educação. Os servidores, por sua vez, alegaram clara violação ao direito adquirido e ao ato jurídico perfeito em relação à determinação de devolução dos valores já recebidos. Sobre a questão em discussão, segundo o sistema jurídico- constitucional, assinale a afirmativa correta.
 ** A) A Lei nº YYY apresenta indiscutível interesse público, portanto, a retroatividade absoluta é válida, encontrando-se de acordo com o que determina o sistema jurídico-constitucional.
 ** B) A garantia ao direito adquirido não se aplica às normas municipais, que podem, por razões econômicas, produzir efeitos retroativos.
 ** C) A retroatividade absoluta da Lei nº YYY fere o texto constitucional, pois afeta situações já constituídas e exauridas em momento pretérito.
@@ -124,14 +123,14 @@
 *** Gabarito: C
 **** direito adquirido, ato jurídico perfeito, retroatividade da lei
 -----
-* O Procurador-Geral da República, preocupado com o grande número de decisões judiciais divergentes, em âmbito nacional, referentes à possível inconstitucionalidade da Lei Federal nº $XX/2021$, ajuizou, perante o Supremo Tribunal Federal (STF), uma Ação Declaratória de Constitucionalidade (ADC) visando a elidir a controvérsia judicial.
-* Em março de 2022, no julgamento do mérito, o STF decidiu pela improcedência da ADC referente à Lei Federal nº XX/2021. No entanto, você, na qualidade de advogado(a) de uma determinada causa, deparou-se com a seguinte situação: em desfavor do seu cliente, o Tribunal Regional Federal (TRF) competente, mantendo decisão proferida pelo Juiz Federal responsável pelo caso, deu aplicação à Lei Federal nº $XX/21$ que já fora objeto de ADC, apreciada pelo STF em março de 2022. Diante de tal contexto, assinale a opção que apresenta a medida judicial a ser utilizada para preservar, de forma eficiente e célere, o interesse do seu cliente na causa.
-** A) Formular representação ao Procurador-Geral da República, para que seja deflagrado um novo processo objetivo perante o STF para retirar a Lei Federal nº $XX/21$ do mundo jurídico.
+* O Procurador-Geral da República, preocupado com o grande número de decisões judiciais divergentes, em âmbito nacional, referentes à possível inconstitucionalidade da Lei Federal nº XX/2021, ajuizou, perante o Supremo Tribunal Federal (STF), uma Ação Declaratória de Constitucionalidade (ADC) visando a elidir a controvérsia judicial.
+* Em março de 2022, no julgamento do mérito, o STF decidiu pela improcedência da ADC referente à Lei Federal nº XX/2021. No entanto, você, na qualidade de advogado(a) de uma determinada causa, deparou-se com a seguinte situação: em desfavor do seu cliente, o Tribunal Regional Federal (TRF) competente, mantendo decisão proferida pelo Juiz Federal responsável pelo caso, deu aplicação à Lei Federal nº XX/21 que já fora objeto de ADC, apreciada pelo STF em março de 2022. Diante de tal contexto, assinale a opção que apresenta a medida judicial a ser utilizada para preservar, de forma eficiente e célere, o interesse do seu cliente na causa.
+** A) Formular representação ao Procurador-Geral da República, para que seja deflagrado um novo processo objetivo perante o STF para retirar a Lei Federal nº XX/21 do mundo jurídico.
 ** B) Interpor recurso especial perante o STF, com fundamento em violação de dispositivo constitucional.
 ** C) Ajuizar reclamação perante o STF em relação à decisão proferida pelo TRF.
 ** D) Formular representação ao Conselho Nacional de Justiça (CNJ), para que seja deflagrado um processo administrativo disciplinar contra os magistrados do TRF.
 *** Gabarito: C
-**** Ação Declaratória de Constitucionalidade, STF, reclamação constitucional
+**** ação declaratória de constitucionalidade, ADC, STF, reclamação constitucional
 -----
 * José foi eleito deputado estadual por determinado Estado da Federação.
 * Uma semana após a sua posse e fora do recinto da Assembleia Legislativa do seu respectivo Estado, o deputado encontra João, candidato não eleito e seu principal opositor durante a campanha eleitoral, vindo a agredi-lo, causando-lhe lesões corporais gravíssimas, cuja persecução em juízo é iniciada mediante denúncia oferecida pelo Ministério Público. Diante de tal contexto, levando em consideração as imunidades do parlamentar estadual, de acordo com o Direito Constitucional brasileiro, assinale a opção correta.
@@ -140,7 +139,7 @@
 ** C) Em relação à imunidade formal de processo, o deputado estadual José está sujeito a julgamento judicial pelo crime comum cometido, desde que a análise da denúncia oferecida contra ele seja autorizada pela respectiva casa legislativa.
 ** D) Por não possuir as mesmas imunidades formais de deputados federais e senadores, mas apenas a imunidade material relativa aos atos praticados em razão do seu mandato, o deputado estadual José será julgado pelo crime comum cometido, não sendo possível que seja sustada a tramitação da ação penal.
 *** Gabarito: A
-**** imunidade parlamentar, deputado estadual, imunidade formal
+**** imunidade parlamentar, deputado estadual, imunidade formal, sustação da ação penal
 -----
 * Numa acirrada disputa eleitoral pelo governo municipal de sua cidade, o prefeito atual e candidato à reeleição, divulgou, por meio do site da Prefeitura, informações inexatas e ofensivas contra o candidato da oposição.
 * Esse candidato o(a) procurou, por saber de sua atuação como advogado(a) em defesa dos Direitos Humanos, e disse que, amparado na Convenção Americana sobre Direitos Humanos, queria o direito de resposta na rádio local. Sobre a hipótese narrada, cabe a você esclarecer que a Convenção assegura
@@ -149,16 +148,16 @@
 ** C) o direito à resposta e determina que ela deve ser feita no mesmo órgão de difusão em que ocorreu a divulgação das informações inexatas e ofensivas.
 ** D) o direito de resposta, mas estabelece como condição a apreciação judicial e o encerramento da lide em última instância.
 *** Gabarito: C
-**** direito de resposta, Convenção Americana sobre Direitos Humanos, direitos humanos
+**** direitos humanos, convenção americana, direito de resposta
 -----
 * Considere a hipótese de ter sido decretado Estado de Emergência no país, implicando a suspensão de garantias judiciais, como o habeas corpus.
-* Argumentando a favor desse Decreto, o Governo alega que a própria Convenção Americana de Direitos Humanos prevê, em seu Art. 27, a suspensão de garantias. Como advogada(o) que atua na defesa dos Direitos Humanos, de acordo com as importantes Opiniões Consultivas OC-08/87 e OC-09/87 da Corte Interamericana de Direitos Humanos, você deve esclarecer que
+* Argumentando a favor desse Decreto, o Governo alega que a própria Convenção Americana de Direitos Humanos prevê, em seu Art. 27, a suspensão de garantias. Como advogada(o) que atua na defesa dos Direitos Humanos, de acordo com as importantes Opiniões Consultivas OC-08/87 e OC- 09/87 da Corte Interamericana de Direitos Humanos, você deve esclarecer que
 ** A) uma vez que tais garantias judiciais não estejam previstas entre os direitos ressalvados expressamente no Art. 27.2 da Convenção, elas podem ser suspensas.
 ** B) pode haver a suspensão de tais garantias, inclusive do habeas corpus em situações de estado de emergência, como o Estado de Defesa, desde que isso seja decidido pelo Poder Executivo e confirmado pelo Poder Judiciário.
 ** C) as garantias judiciais, como o habeas corpus, não podem ser canceladas ou descontinuadas, pois visam à proteção dos direitos essenciais que, segundo o art. 27.2 da Convenção, não podem ser suspensos.
 ** D) em situações de emergência, como o Estado de Defesa, tendo em vista a proteção da soberania nacional, pode haver a suspensão de alguns direitos e garantias, dentre eles o direito ao habeas corpus.
 *** Gabarito: C
-**** estado de emergência, suspensão de garantias, habeas corpus, Convenção Americana de Direitos Humanos
+**** direitos humanos, estado de emergência, suspensão de garantias, habeas corpus
 -----
 * No ano anterior à realização de eleições para cargos eletivos federais e estaduais, os dirigentes dos partidos políticos Alfa e Gama iniciaram tratativas para se aliançarem, tanto nas eleições majoritárias como nas proporcionais, mas havia dúvida em relação ao modelo a ser utilizado.
 * Após consultarem a legislação de regência, concluíram corretamente que deveriam formar
@@ -167,7 +166,7 @@
 ** C) ajuntamento partidário, que se extinguirá após a diplomação dos eleitos.
 ** D) federação, sendo que os partidos devem permanecer filiados por no mínimo quatro anos, contados da data do respectivo ingresso.
 *** Gabarito: D
-**** direito eleitoral, federação partidária, partidos políticos
+**** direito eleitoral, partidos políticos, federação partidária
 -----
 * Helena, filiada ao partido político Beta e candidata ao cargo de governadora do Estado Alfa, consultou seu advogado a respeito da composição dos gastos de campanha, mais especificamente se o pagamento de honorários em razão da prestação de serviços advocatícios, no curso e em razão da campanha eleitoral, teria essa natureza jurídica.
 * A assessoria respondeu, corretamente, que os referidos honorários
@@ -176,7 +175,7 @@
 ** C) pela sua essência alimentar, não têm correlação com os gastos eleitorais, o que afasta a possibilidade de serem enquadrados em qualquer limitador de despesas.
 ** D) podem ser considerados gastos eleitorais, caso o candidato assim os declare, e estão incluídos no limite de gastos de campanha.
 *** Gabarito: B
-**** gastos de campanha, honorários advocatícios, despesa eleitoral
+**** direito eleitoral, gastos de campanha, honorários advocatícios
 -----
 * O cidadão francês Pierre Renoir, residente e domiciliado em Portugal, foi casado com uma espanhola, com quem teve dois filhos nascidos na Alemanha.
 * Pierre faleceu em 2022 e deixou como herança um apartamento no Brasil, onde viveu durante a fase universitária. Nesta hipótese, à sucessão do bem será aplicada a lei
@@ -184,8 +183,8 @@
 ** B) portuguesa.
 ** C) brasileira.
 ** D) alemã.
-*** Gabarito: B
-**** sucessão, lei aplicável, domicílio do falecido
+*** Gabarito: C
+**** direito internacional privado, sucessão, lei aplicável
 -----
 * Um brasileiro teve seu pedido de visto de trabalho negado por uma representação consular de um Estado estrangeiro.
 * Inconformado, consultou você, como advogado (a), para a adoção das providências cabíveis no Brasil. Após a avaliação do caso, você concluiu que
@@ -194,7 +193,7 @@
 ** C) cabe reclamação trabalhista perante a Justiça do Trabalho.
 ** D) deve ser proposta ação condenatória por obrigação de fazer, perante o Tribunal de Justiça competente.
 *** Gabarito: A
-**** visto de trabalho, ato de soberania, competência judicial
+**** direito internacional, visto de trabalho, ato de soberania, não cabimento de ação
 -----
 * O Presidente da República está elaborando projeto de lei que estabelece, de forma regionalizada, as diretrizes, objetivos e metas da Administração Pública federal para as despesas de capital e outras delas decorrentes e para as relativas aos programas de duração continuada.
 * Diante desse cenário, assinale a afirmativa correta.
@@ -203,7 +202,7 @@
 ** C) Embora institua o Plano Plurianual, tal projeto de lei necessita ser aprovado por quórum de maioria absoluta no Congresso Nacional.
 ** D) Trata-se de projeto de lei que institui o Plano Plurianual, a ser veiculado por meio de lei ordinária.
 *** Gabarito: D
-**** Plano Plurianual, despesas de capital, lei ordinária
+**** direito financeiro, plano plurianual, PPA, lei ordinária
 -----
 * João ganhou uma ação movida em face do Estado Gama, na qual este foi condenado a pagar o equivalente a 30 salários mínimos a título de danos morais pelo uso indevido de sua imagem em uma publicidade institucional do governo estadual.
 * A ação transitou em julgado em 15 de julho de 2022. Seu advogado verifica que não há legislação específica estadual acerca de prazos e limites de valores sobre pagamentos pela Fazenda Pública em caso de condenação judicial. Diante desse cenário, e à luz da Constituição Federal de 1988, João receberá o valor a que tem direito
@@ -212,7 +211,7 @@
 ** C) por meio de precatório comum, a ser pago no ano seguinte ao do trânsito em julgado da condenação judicial.
 ** D) em dinheiro, no prazo máximo de 15 (quinze) dias contados da intimação da Fazenda Pública do trânsito em julgado da ação, através de transferência bancária entre a instituição financeira que administra o tesouro estadual e o banco em que João tem sua conta.
 *** Gabarito: B
-**** Requisição de Pequeno Valor, RPV, condenação da Fazenda Pública
+**** fazenda pública, condenação judicial, requisição de pequeno valor, RPV
 -----
 * A Sociedade Empresária Aguardente 100% Ltda., fabricante de bebidas destiladas, por meio de sua advogada Sophia, protocolou perante a Secretaria Especial da Receita Federal do Brasil, ainda dentro do prazo legal para pagamento, consulta referente à necessidade de recolhimento de Imposto sobre Produtos Industrializados (IPI) acerca de operação específica por ela desempenhada.
 * Escoado o prazo original para pagamento e ainda não decidida a consulta, à luz do Código Tributário Nacional (CTN) assinale a afirmativa correta.
@@ -221,7 +220,7 @@
 ** C) A obrigação tributária a ser cumprida por Aguardente 100% Ltda., por ter sido objeto de consulta, não poderá ser acrescida de juros de mora e nem poderá ser imposta multa tributária à empresa.
 ** D) Podem ser aplicadas contra Aguardente 100% Ltda. medidas de garantia previstas no CTN ou em lei tributária na pendência da consulta tributária.
 *** Gabarito: C
-**** consulta tributária, suspensão da exigibilidade, juros e multa
+**** direito tributário, consulta tributária, juros de mora, multa tributária
 -----
 * A Sociedade Empresária ABC Ltda. adquiriu no exterior um lote de dez mil unidades de um determinado perfume francês.
 * Antes da chegada das mercadorias ao porto, foi publicado no Diário Oficial da União, em 20/04/2023, um decreto editado pelo Poder Executivo Federal majorando imediatamente a alíquota do Imposto sobre a Importação de perfumes de 20% para 30%, prevendo expressamente sua vigência e produção de efeitos a partir da data de sua publicação. Em 30/04/2023, as mercadorias finalmente chegam ao porto no Brasil, devendo agora a empresa realizar o desembaraço aduaneiro. Preocupada com possível prejuízo decorrente do aumento inesperado do custo da mercadoria devido à elevação do imposto de importação, a sociedade empresária procura você, como advogado(a), indagando sobre a validade daquele decreto. Diante deste cenário, assinale a afirmativa correta.
@@ -230,7 +229,7 @@
 ** C) Embora tal imposto seja classificado como extrafiscal, deve obediência ao princípio da anterioridade tributária anual.
 ** D) A majoração dessa alíquota e a sua produção de efeitos imediata são válidas.
 *** Gabarito: D
-**** Imposto de Importação, majoração de alíquota, anterioridade nonagesimal
+**** imposto de importação, alíquota, extrafiscalidade, princípio da anterioridade
 -----
 * Em dezembro de 2022, um decreto do prefeito do Município Alfa atualizou o valor do Imposto Predial e Territorial Urbano (IPTU), a contar de 1º de janeiro de 2023, atendo-se à aplicação de índice oficial de atualização monetária.
 * Além disso, neste mesmo decreto, acompanhado da estimativa de impacto orçamentário e financeiro, estabeleceu-se, também a contar de 1º de janeiro de 2023, a isenção do IPTU para os imóveis localizados no Centro da cidade que fossem destinados exclusivamente para moradia, visando a diversificar a ocupação naquele local e dar efetividade ao princípio da função social da propriedade. Diante deste cenário, assinale a afirmativa correta.
@@ -239,7 +238,7 @@
 ** C) Embora possa ser usado tanto para a atualização deste valor do IPTU como para a concessão deste tipo de isenção, tal decreto violou o princípio da anterioridade tributária nonagesimal.
 ** D) Este decreto não é instrumento normativo hábil seja para a atualização deste valor do IPTU, seja para a concessão deste tipo de isenção.
 *** Gabarito: A
-**** IPTU, atualização monetária, isenção por decreto
+**** IPTU, atualização monetária, isenção, decreto
 -----
 * O Estado Alfa alterou, por meio de lei, a contribuição social para custeio do regime próprio de previdência social, cobrada dos seus servidores ativos, dos aposentados e dos pensionistas.
 * José e Márcio são servidores públicos do mesmo órgão estadual, ganhando cada um, respectivamente, a remuneração mensal de 15 mil reais e 10 mil reais. José, ao notar que a alíquota incidente sobre sua remuneração era de 16,5%, ao passo que para Márcio a alíquota era de 14,5%, ficou indignado e, em relação a essa situação diferenciada, resolve contratar você, como advogado(a), para um eventual questionamento judicial. A respeito da posição de José, assinale a afirmativa correta.
@@ -248,7 +247,7 @@
 ** C) A progressividade tributária deve ser obrigatoriamente adotada para todos os tributos estaduais, nos termos da CRFB/88, garantindo-se efetividade ao princípio da capacidade contributiva.
 ** D) Esta espécie de contribuição social poderá ter alíquotas progressivas de acordo com o valor da base de contribuição.
 *** Gabarito: D
-**** contribuição previdenciária, alíquotas progressivas, servidores públicos
+**** contribuição previdenciária, servidores públicos, alíquotas progressivas
 -----
 * O Governador do Estado Alfa, diante da grande quantidade de bicicletas elétricas circulando em seu território, e visando aumentar a arrecadação, oficiou à sua Secretaria da Fazenda para adotar alguma forma de cobrança quanto a tais veículos.
 * Esta, por sua vez, orientou seus fiscais a cobrar o Imposto sobre Propriedade de Veículos Automotores (IPVA), aplicando a incidência deste imposto, por analogia, às bicicletas elétricas, ainda que não classificadas como veículos automotores propriamente ditos pela legislação de trânsito pertinente. O sindicato dos lojistas do setor o(a) consulta, como advogado(a), a respeito desta incidência. Diante desse cenário, assinale a afirmativa correta.
@@ -257,7 +256,7 @@
 ** C) Tal tributação por analogia envolvendo bicicletas elétricas é vedada no ordenamento jurídico nacional.
 ** D) A exigência deste imposto sobre bicicletas elétricas dependeria da edição de um decreto, cuja competência é privativa do Governador.
 *** Gabarito: C
-**** IPVA, analogia, bicicleta elétrica
+**** IPVA, bicicletas elétricas, analogia, vedação
 -----
 * O pequeno Município Alfa, situado no interior do Estado Beta, enfrenta grave problema de abastecimento de água potável, pois não há fornecimento de água encanada para determinada região da cidade, por dificuldades técnicas.
 * Visando à resolução para a questão juntamente com a iniciativa privada, o Município Alfa pretende, mediante licitação, contratar objeto que envolva inovação tecnológica ou técnica, sendo imprescindível a adaptação de soluções disponíveis no mercado. Atualmente, verifica-se a impossibilidade de as especificações técnicas serem definidas com precisão suficiente pela Administração, razão pela qual é preciso o prévio debate com o setor privado, para se definirem e se identificarem os meios e as alternativas que possam satisfazer as necessidades da administração municipal. Ao tomar conhecimento de que o Município Alfa pretende realizar licitação nas condições narradas, com o intuito de desenvolver uma ou mais alternativas capazes de atender às suas necessidades da forma mais adequada, dada a complexidade da questão local de abastecimento de água, a sociedade empresária Delta se interessou em participar do certame. Como advogado(a) da sociedade empresária, você informou à diretoria que, de acordo com a nova Lei de Licitações (Lei nº 14.133/21), a modalidade de licitação mais adequada diante da realidade fática descrita, é o(a)
@@ -266,7 +265,7 @@
 ** C) concurso, no qual o poder público municipal não poderá revelar a outros licitantes as soluções técnicas propostas por um concorrente.
 ** D) diálogo competitivo, em que os licitantes devem apresentar proposta final após o encerramento dos diálogos.
 *** Gabarito: D
-**** licitação, diálogo competitivo, inovação tecnológica
+**** direito administrativo, licitação, lei 14.133/21, diálogo competitivo
 -----
 * O Município Alfa, observadas as cautelas legais, instituiu servidão administrativa sobre o imóvel de propriedade de Gabriel, com a finalidade de instalar postes e fios de energia elétrica, com escopo de regularizar o serviço de iluminação pública na localidade.
 * Diante das circunstâncias do caso concreto, em especial pelo grande espaço cuja utilização é necessária para manutenção dos equipamentos instalados, verifica-se, de forma incontroversa, que Gabriel sofreu efetivo dano no direito de propriedade. Para melhor compreender o regime jurídico próprio dessa modalidade de intervenção do Estado na propriedade e ficar ciente de seus direitos e obrigações, em especial em matéria de indenização, Gabriel contratou você, como advogado(a). No caso em tela, atento às normas de regência, você orientou seu cliente no sentido de que a servidão administrativa instituída pelo Município Alfa,
@@ -275,7 +274,7 @@
 ** C) ostenta natureza de direito pessoal da Administração Pública, que prescinde de registro no Cartório de Registro de Imóveis, e ocorre mediante indenização em títulos da dívida pública.
 ** D) tem por pressuposto a necessidade ou utilidade pública, ou por interesse social, e deve ocorrer mediante justa e prévia indenização em dinheiro.
 *** Gabarito: A
-**** servidão administrativa, indenização, dano comprovado
+**** servidão administrativa, intervenção na propriedade, indenização, dano comprovado
 -----
 * Ariquemes é servidor público federal e vem cumprindo diligentemente com as obrigações estabelecidas em lei para obter sua progressão funcional e assim aumentar sua remuneração.
 * Os critérios para tanto estão estabelecidos em lei, são de caráter objetivo, mediante pontuação a ser adquirida pelo servidor, sendo certo que o provimento derivado em questão é ato vinculado. O mencionado servidor acredita ter cumprido todos os requisitos estabelecidos na aludida lei, mas foi surpreendido com o indeferimento de sua progressão, sob o fundamento de que não alcançou a pontuação necessária. Em razão disso, com fulcro na Lei nº 12.527/11, Ariquemes pleiteou acesso às informações que levaram a tal conclusão da Administração, que considera flagrantemente equivocada. Contudo, o fornecimento dos dados foi negado sob o fundamento de que não há interesse público na respectiva divulgação. Diante dessa situação hipotética, assinale a afirmativa correta.
@@ -284,7 +283,7 @@
 ** C) O fornecimento dos dados pessoais pretendido por Ariquemes submete-se à discricionariedade da Administração, que atuou nos limites da lei.
 ** D) Ariquemes tem direito ao acesso a tais dados, considerando que este direito compreende as atividades exercidas pelos órgãos, inclusive as relativas a sua organização e serviços.
 *** Gabarito: D
-**** Lei de Acesso à Informação, dados pessoais, interesse público
+**** lei de acesso à informação, servidor público, progressão funcional, acesso a dados
 -----
 * No ano corrente, o Ministério Público ajuizou duas ações por improbidade administrativa distintas, uma em desfavor de Carlos, prefeito do Município Alfa, e, outra, em desfavor de Bruno, servidor do Município Beta.
 * Ambas as ações buscavam a aplicação de penalidade pela prática de atos de improbidade que violam princípios da Administração Pública, com a descrição objetiva dos fatos exigida em lei e apontando a lesividade relevante ao bem jurídico tutelado. A primeira tem fundamento na negativa, pelo próprio prefeito, de publicidade aos atos oficiais, que não estavam protegidos por sigilo. A segunda ação foi proposta porque Bruno nomeou sua esposa para cargo administrativo em comissão a ele subordinado, no qual ela vinha laborando com afinco. Diante dessa situação hipotética, considerando a atual redação da Lei nº 8.429/92, assinale a afirmativa correta.
@@ -293,7 +292,7 @@
 ** C) Apenas é pertinente a ação ajuizada em desfavor de Bruno, na medida em que a negativa de publicidade aos atos oficiais por Carlos não constitui uma ilegalidade passivel de caracterizar ato de improbidade administrativa.
 ** D) Ambas as ações são despropositadas, pois, além da lesividade relevante ao bem jurídico tutelado, é imprescindível o reconhecimento de danos ao erário para a caracterização da improbidade administrativa, o que não ocorreu em nenhum dos casos.
 *** Gabarito: A
-**** improbidade administrativa, nepotismo, publicidade dos atos oficiais
+**** improbidade administrativa, princípios da administração, nepotismo, publicidade
 -----
 * Josias e Januário são servidores públicos federais de alta hierarquia e estavam conversando sobre os problemas inerentes ao exercício de suas atribuições.
 * Enquanto Josias está extremamente exacerbado de trabalho e precisa delegar algumas de suas atribuições, para não comprometer o funcionamento da atividade administrativa, Januário entende ser necessário avocar competência atribuída a órgão hierarquicamente inferior, por questões excepcionais que são de extrema relevância para o interesse público. Considerando as circunstâncias narradas, em consonância com a Lei nº 9.784/99, assinale a afirmativa correta.
@@ -302,16 +301,16 @@
 ** C) A delegação de competência por Josias só pode ser realizada para órgão que lhe seja hierarquicamente inferior.
 ** D) A avocação temporária de competência por Januário será permitida em caráter excepcional e por motivos relevantes devidamente justificados.
 *** Gabarito: D
-**** delegação de competência, avocação, Lei 9.784/99
+**** delegação, avocação, competência administrativa, lei 9.784/99
 -----
 * O condomínio residencial Alfa Orquídeas é constituído por diversos blocos, com médio núcleo populacional, e está localizado em zona urbana do Município Beta, situado no Estado Gama.
-* Diante da inexistência de rede canalizada para distribuição e abastecimento de água potável na localidade, desde a recente construção do condomínio, os condôminos fazem uso de caminhões pipas. Seja pelo alto custo, seja pela escassez dos caminhões pipas, os condôminos aprovaram, por unanimidade em assembleia, que o condomínio iria proceder à construção de um poço semiartesiano, para extração de água de um aquífero subterrâneo existente no local, para fins de consumo final. Sabe-se que o citado aquífero não é de domínio da União, que não tem qualquer tipo de interesse na questão. Para agir dentro da legalidade, antes da construção do poço, o síndico do condomínio residencial Alfa Orquideas deve requerer
+* Diante da inexistência de rede canalizada para distribuição e abastecimento de água potável na localidade, desde a recente construção do condomínio, os condôminos fazem uso de caminhões pipas. Seja pelo alto custo, seja pela escassez dos caminhões pipas, os condôminos aprovaram, por unanimidade em assembleia, que o condomínio iria proceder à construção de um poço semiartesiano, para extração de água de um aquífero subterrâneo existente no local, para fins de consumo final. Sabe- se que o citado aquífero não é de domínio da União, que não tem qualquer tipo de interesse na questão. Para agir dentro da legalidade, antes da construção do poço, ο síndico do condomínio residencial Alfa Orquideas deve requerer
 ** A) licença ambiental ao Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (Ibama).
 ** B) licença ambiental ao órgão ambiental do Município Beta.
 ** C) licença de uso de recursos hídricos ao Município Beta.
 ** D) outorga de uso de recursos hídricos ao Estado Gama.
 *** Gabarito: D
-**** recursos hídricos, outorga de uso, competência estadual
+**** direito ambiental, recursos hídricos, outorga, competência estadual
 -----
 * Tramita na Câmara do Município Alfa projeto de lei que dispõe sobre proteção ao meio ambiente no âmbito de seu território, observado o interesse local.
 * Sabe-se que o projeto de lei está harmônico com a disciplina legislativa estadual e federal atualmente vigente. No caso em tela, em matéria de competência legislativa ambiental, de acordo com a CRFB/88, é correto afirmar que o projeto de lei, em tese,
@@ -320,16 +319,16 @@
 ** C) não viola a Carta Magna, porque o Município possui competência suplementar à da União e à dos Estados para legislar sobre proteção ao meio ambiente, no limite do seu interesse local e desde que tal regramento seja harmônico com a disciplina estabelecida pelos demais entes federados.
 ** D) não afronta a Carta Magna, porque o Município possui competência concorrente e não suplementar com a União e os Estados para legislar sobre proteção ao meio ambiente, de maneira que pode dispor de forma diversa e menos protetiva ao ambiente do que a disciplina estadual.
 *** Gabarito: C
-**** competência legislativa, meio ambiente, interesse local
+**** competência legislativa, meio ambiente, município, competência suplementar
 -----
 * Robson, advogado de sucesso e bem-sucedido profissionalmente, foi preso e condenado, com sentença transitada em julgado, pelo crime de homicídio, iniciando o cumprimento de sua pena no regime fechado.
 * Ele é pai de Raquel, 17 anos, fruto de sua união com Rose e ambos compartilham a guarda da filha. Rose e Robson divorciaram-se e, em ação própria, foi fixado o dever de Robson prover alimentos para Raquel. A respeito dos efeitos da prisão de Robson sobre o dever de alimentos, assinale a afirmativa correta.
 ** A) Afasta-se a obrigação de prestar alimentos de Robson considerando que a mãe de Raquel, Rose, ainda está viva.
-** B) A prisão de Robson suspende o dever de prestar alimentos, que volta a produzir seus efeitos imediatamente após o cumprimento integral da pena.
+** B) A prisão de Robson suspende o dever de prestar alimentos, que volta a produzir seus efeitos imediatamente apς ο cumprimento integral da pena.
 ** C) Robson poderá cessar a prestação de alimentos, independente de interpelação judicial, assim que Raquel alcançar a maioridade, o que acontecerá muito em breve.
 ** D) O fato de Robson estar preso não afasta sua obrigação alimentar.
 *** Gabarito: D
-**** obrigação alimentar, prisão do alimentante, poder familiar
+**** direito de família, alimentos, prisão, obrigação alimentar
 -----
 * Maria Cristina era casada com Roberto, falecido no início de 2022, sem deixar testamento, sob o regime de separação convencional de bens.
 * O casal sempre viveu em um imóvel de propriedade de Roberto com seus dois filhos, Alcino e Valério, que não moram mais com os pais. Roberto deixou, além do referido imóvel residencial, alguns investimentos e outro imóvel, de natureza comercial. Sobre o direito real de habitação do cônjuge sobrevivente, assinale a afirmativa correta.
@@ -338,7 +337,7 @@
 ** C) Maria Cristina receberá seu quinhão da herança, mas só tem o direito de permanecer morando no imóvel em que vivia com Roberto, caso Alcino e Valério autorizem.
 ** D) Maria não é titular do direito real de habitação, pois esse não se aplica aos casamentos sob a vigência do regime de separação convencional de bens.
 *** Gabarito: A
-**** direito real de habitação, cônjuge sobrevivente, regime de separação de bens
+**** direito das sucessões, direito real de habitação, cônjuge sobrevivente, separação convencional
 -----
 * Joana, conhecida durante toda a sua vida em sua cidade natal pelo prenome Giovanna, começa a enfrentar uma série de embaraços e constrangimentos ao ser chamada em órgãos públicos por seu prenome registral, constante de seus documentos de identificação civil.
 * Diante disso, Joana, de 19 anos de idade, consulta você, como advogado (a), buscando descobrir a viabilidade jurídica de alterar o seu prenome e os eventuais requisitos jurídicos que deveriam ser observados caso seja possível a mudança. Sobre a pretensão de Joana, assinale a afirmativa correta.
@@ -347,7 +346,7 @@
 ** C) Poderá alterar seu prenome para Giovanna, mediante requerimento pessoal e imotivadamente, independentemente de decisão judicial.
 ** D) Não poderá alterar seu prenome registral, mas poderá incluir o nome Giovanna, por ser este apelido público e notório.
 *** Gabarito: C
-**** alteração de prenome, registro civil, imutabilidade do nome
+**** direito civil, registro civil, alteração de prenome, imotivadamente
 -----
 * Antônio é proprietário de um prédio que não tem acesso à via pública.
 * De um lado, Antônio tem Ricardo como vizinho, cuja propriedade alcança a via pública. Do outro lado, Antônio tem Luíza como vizinha, cuja propriedade também alcança a via pública. Todavia, no caso do imóvel de Luíza, o caminho até a via pública é menos natural e mais difícil. Ricardo e Luíza recusaram-se a oferecer voluntariamente a passagem. Diante disso, Antônio pode exigir
@@ -356,185 +355,5 @@
 ** C) que Ricardo lhe dê a passagem, sem que seja obrigado a pagar qualquer indenização a ele.
 ** D) que Ricardo lhe dê a passagem, mediante pagamento de indenização cabal.
 *** Gabarito: D
-**** direito de passagem, imóvel encravado, indenização
------
-* Os irmãos Eduardo e Letícia herdaram um apartamento de sua mãe.
-* Concluído o inventário, decidiram vender o apartamento ao casal Pedro e Mariana. Para tanto, as partes celebraram contrato de compra e venda. Pedro e Mariana se obrigaram, solidariamente, a pagar o preço pactuado (R$ 600.000,00) no prazo de trinta dias. Não foi avençada cláusula de solidariedade ativa. Alcançado o prazo contratual, Pedro e Mariana não pagaram o preço. Tendo em vista a situação hipotética apresentada, assinale a afirmativa correta.
-** A) Eduardo, sozinho, tem direito de cobrar a integralidade do preço pactuado, R$ 600.000,00, de Mariana, sozinha.
-** B) Letícia, sozinha, tem direito de cobrar apenas a metade do preço pactuado, R$ 300.000,00, de Pedro, sozinho.
-** C) Letícia, sozinha, tem direito de cobrar apenas um quarto do preço pactuado, R$ 150.000,00, de Mariana, sozinha.
-** D) Eduardo e Letícia não podem pleitear sozinhos o pagamento do preço, ainda que parcial.
-*** Gabarito: B
-**** solidariedade passiva, obrigação divisível, ausência de solidariedade ativa
------
-* Renata alugou um imóvel a Tadeu. Como garantia das obrigações de Tadeu, Luzia e Humberto prestaram fiança a Renata.
-* Tadeu descumpriu suas obrigações contratuais, deixando de pagar as contraprestações ajustadas. Diante desse quadro hipotético, assinale a afirmativa correta.
-** A) Não havendo limitação contratual, Renata poderá cobrar de Luzia, sozinha, todos os acessórios da dívida principal, inclusive as despesas judiciais, desde a citação dos fiadores.
-** B) Caso sejam demandados, Luzia e Humberto não têm direito de exigir que sejam primeiro executados os bens de Tadeu, pois, salvo disposição expressa em sentido contrário, não há benefício de ordem na fiança.
-** C) Luzia e Humberto não respondem solidariamente pelas obrigações decorrentes do contrato de fiança, a não ser que haja disposição expressa.
-** D) A fiança constitui contrato informal, entre Renata e os fiadores (Luzia e Humberto), e poderia ter sido celebrada ainda que contrariamente à vontade de Tadeu. Ademais, não admite interpretação extensiva.
-*** Gabarito: A
-**** contrato de fiança, solidariedade entre fiadores, acessórios da dívida
------
-* Pedro, adolescente de quinze anos, foi apreendido pela prática de ato infracional análogo ao crime de roubo.
-* Realizados todos os procedimentos legais cabíveis, o juízo determinou cautelarmente que fosse recolhido à internação em instituição dedicada ao cumprimento de medida socioeducativa dessa natureza. Ocorre que não havia vaga na entidade de internação da comarca, pelo que Pedro foi recolhido a uma repartição policial, em seção isolada dos adultos e com instalações apropriadas, lá restando internado cautelarmente há vinte dias, aguardando o surgimento de vaga no estabelecimento dedicado. Com base nos fatos acima, assinale a afirmativa correta.
-** A) A internação jamais poderá ser realizada em repartição policial, nem mesmo cautelarmente, mesmo que seja impossível a transferência imediata.
-** B) É admissível a intenação cautelar em estabelecimento policial ou prisional quando da situação exposta no enunciado, por prazo indeterminado, até que seja encontrada vaga em entidade apropriada.
-** C) A manutenção de Pedro na repartição policial, por mais de cinco dias, é ilegal, comportando habeas corpus para fazer cessar tal estado de ilicitude.
-** D) A internação em estabelecimento prisional é admisível quando neste local puderem ser desenvolvidas as atividades pedagógicas próprias dessa medida socioeducativa.
-*** Gabarito: C
-**** medida socioeducativa, internação provisória, estatuto da criança e do adolescente
------
-* A mãe de Joaquim, criança com necessidades especiais, requereu acompanhamento por professor especializado em atendimento de pessoas com deficiência à escola-creche pública municipal em que o filho estuda.
-* A escola-creche, no entanto, alegou carência de tais profissionais, porque o custo muito alto impedia que a municipalidade os contratasse. Ao consultar você, como advogado(a), a genitora recebeu a seguinte orientação.
-** A) A criança tem direito à educação, não se inserindo nesse plexo, porém, o direito individual e específico de acompanhamento especializado.
-** B) Joaquim deve ter acesso à educação com metodologia especial, não significando, porém, que seja mandatória a presença de profissional especial.
-** C) A atenção especial por profissional especializado é devida a Joaquim, não sendo oponível a dificuldade orçamentária declarada pela municipalidade.
-** D) O ensino especializado é devido nas condições em que a entidade for capaz, não sendo obrigatória a presença de profissional especificamente capacitado, em razão da aplicabilidade da reserva do possível.
-*** Gabarito: * (Questão Anulada)
-**** educação inclusiva, profissional de apoio escolar, reserva do possível
------
-* Diego ofereceu papinha industrializada para seu filho que apresentou sintomas de diarreia e vômito algumas horas depois.
-* Ao observar a data de validade do produto, identificou que estava vencida. O produto havia sido adquirido naquela manhã na padaria vizinha e, ao retornar ao local, observou que os demais potinhos de papinha disponíveis na prateleira estavam com a data de validade adequada para o consumo. Indagando o comerciante, Diego foi informado de que os produtos estavam na mesma caixa lacrada enviada pelo fabricante naquela manhã e alegou que também foi vítima de tal erro do fabricante. Embora se conformasse e lamentasse a infelicidade de ter adquirido justamente o pote com data vencida, Diego procurou você como advogado (a) para saber se alguma providência jurídica poderia ser tomada. Diante desses fatos, assinale a opção correta.
-** A) O comerciante não responde pelo evento danoso na medida em que também foi prejudicado ao receber do fabricante o produto com a data de validade expirada.
-** B) Cuida-se de vício da segurança do produto, respondendo o comerciante objetivamente por ter disponibilizado o produto para venda, podendo ainda o fabricante ser responsabilizado, não podendo alegar culpa de terceiro.
-** C) Incide excludente de responsabilidade do fabricante e do comerciante por culpa da vítima que não observou o prazo de validade antes de consumir o produto.
-** D) Cuida-se de responsabilidade objetiva do fabricante do produto, recaindo sobre o comerciante a responsabilidade subsidiária.
-*** Gabarito: A
-**** fato do produto, responsabilidade do comerciante, código de defesa do consumidor
------
-* Carlos foi internado para tratamento de saúde. Apresentava estado grave, sendo seus familiares informados sobre a limitação do tempo de internação.
-* Junto à assinatura dos documentos de internação, o hospital exigiu dos familiares um depósito caução para assegurar a internação do paciente, caso extrapolado o dia-limite custeado pelo plano de saúde, o que fizeram prontamente. Os familiares de Carlos procuraram você, como advogado(a), informando o ocorrido e que, de fato, o contrato do seguro-saúde apresentava essa cláusula limitadora. Assinale a opção que apresenta a orientação correta dada para o caso.
-** A) A cláusula contratual que limita, no tempo, a internação hospitalar do segurado, é abusiva.
-** B) O fato de o hospital ter exigido a prestação da caução não configura conduta abusiva, apesar da evidente vulnerabilidade, por força do princípio do equilíbrio contratual.
-** C) A cláusula contratual que limita o tempo de internação não se mostra abusiva, por ter sido redigida de forma clara e compreensível.
-** D) A cláusula contratual que limita o tempo de internação, embora abusiva, não é nula e, sim, anulável, por se tratar de contrato de adesão celebrado em situação de lesão ao consumidor.
-*** Gabarito: A
-**** plano de saúde, limitação de tempo de internação, cláusula abusiva
------
-* Marco Araripe pretende iniciar uma empresa em nome próprio e mediante responsabilidade ilimitada pelas obrigações.
-* Antes de realizar sua inscrição na Junta Comercial, Marco Araripe precisa indicar o nome que adotará para o exercício de empresa. Consoante a determinação contida no Código Civil quanto à formação de firma individual, ela deve ser constituída
-** A) pelo nome do empresário, completo ou abreviado, aditando-lhe, se quiser, designação mais precisa da sua pessoa ou do gênero de atividade.
-** B) pelo nome de fantasia livremente escolhido, aditando-lhe, se quiser, designação do gênero de atividade.
-** C) pelo nome abreviado do empresário ou pelo nome de fantasia, aditando-lhe, se quiser, designação mais precisa da sua pessoa.
-** D) em duas partes: a primeira, o nome completo do empresário e, a segunda, o nome de fantasia, sendo vedada a indicação do gênero de atividade.
-*** Gabarito: A
-**** empresário individual, firma individual, nome empresarial
------
-* Para honrar um empréstimo que lhe foi concedido, o empresário Ruy Barbosa subscreveu nota promissória em favor de Medeiros Neto, com vencimento para o dia 30 de março de 2023.
-* O primeiro endossante transferiu o título em preto para Wagner Desidério e proibiu novo endosso. Considerando o efeito legal da cláusula de proibição de novo endosso, assinale a afirmativa correta.
-** A) para o endossante Medeiros Neto, a cláusula de proibição de novo endosso tem efeito de cessão de crédito perante o endossatário direto e de endosso perante os endossatários posteriores.
-** B) Wagner Desidério não poderá realizar novo endosso no título sob pena de desoneração de responsabilidade cambial dos coobrigados.
-** C) a cláusula de proibição de novo endosso é nula, tal qual a de endosso parcial, por restringir a responsabilidade cambiária do endossante a seu endossatário imediato.
-** D) Medeiros Neto, embora coobrigado, não responde pelo pagamento da nota promissória perante os endossatários posteriores a Wagner Desidério.
-*** Gabarito: D
-**** nota promissória, endosso, proibição de novo endosso
------
-* Cambira e Mallet adquiriram 1 (uma) quota da sociedade limitada Imbaú Ensino Superior Ltda.
-* no valor de R$ 250.000,00 (duzentos e cinquenta mil reais), sendo, portanto, condôminos desta quota. Considerando a situação de copropriedade da quota, assinale a afirmativa correta.
-** A) Cambira não poderá ceder sua parte ideal no condomínio a outro sócio ou a terceiro em razão da indivisibilidade da quota em relação à sociedade.
-** B) Cambira e Mallet respondem solidariamente perante a sociedade pelas prestações necessárias à integralização da quota.
-** C) Os direitos inerentes à quota poderão ser exercidos separadamente por cada condômino, não se aplicando a indivisilidade da quota neste caso.
-** D) Cambira poderá ceder sua parte ideal tanto para outro sócio quanto para terceiro independente de audiência dos demais sócios, ainda que omisso o contrato.
-*** Gabarito: B
-**** sociedade limitada, condomínio de quota, integralização de capital
------
-* Ainda que o Registro Público de Empresas Mercantis, a cargo das Juntas Comerciais, não possa examinar o mérito dos atos dos empresários, sociedades empresárias e cooperativas, limitando-se sua análise aos requisitos formais, existe proibição de arquivamento de documentos em razão de expressa disposição legal.
-* Assinale a opção que indica o documento que incorre na proibição legal de arquivamento.
-** A) Os atos de empresas mercantis com nome idêntico a outro já existente.
-** B) A prorrogação do contrato social depois de findo o prazo nele fixado.
-** C) A alteração contratual, por deliberação majoritária do capital social, quando não houver cláusula restritiva.
-** D) Os atos constitutivos de empresas mercantis que não designarem o nome do liquidante e a forma de liquidação.
-*** Gabarito: A
-**** junta comercial, registro de empresa, proibição de arquivamento
------
-* Joaquim celebrou com a concessionária Fast Car Ltda. contrato de compra e venda de veículo, com força de título executivo, em que restou prevista a entrega do automóvel, com indicação de seu valor (R$ 50.000,00), trinta dias após a avença.
-* Não cumprido o contrato, Joaquim ajuizou execução para a entrega de coisa certa em face da referida loja. Citada, a ré não satisfez a obrigação, tendo a ordem de busca e apreensão restado infrutífera, uma vez que o bem não foi encontrado. Na qualidade de advogado(a) de Joaquim indique a providência a ser adotada para que Joaquim seja ressarcido dos danos sofridos.
-** A) Propor ação de conhecimento para que a ré seja condenada ao pagamento da indenização pelos danos sofridos, na medida em que a ação proposta foi unicamente de execução para entrega de coisa certa.
-** B) Pleitear, no mesmo processo, o recebimento tanto do valor da coisa como de perdas e danos, apurando-se em liquidação os prejuízos.
-** C) Pleitear, no mesmo processo, o recebimento apenas do valor da coisa, sujeitando-se ao arbitramento judicial.
-** D) Ajuizar outra execução, agora por quantia certa, uma vez que possui título executivo extrajudicial.
-*** Gabarito: B
-**** execução para entrega de coisa certa, conversão em perdas e danos, processo civil
------
-* Rafael ajuizou ação de despejo em face de Luiz, sob o fundamento de que Luiz não teria pago o aluguel do imóvel de sua propriedade nos últimos meses.
-* Em primeira instância, foi proferida sentença que julgou improcedentes os pedidos formulados na petição inicial. Rafael, então, interpôs apelação, a qual foi desprovida pelo tribunal. Posteriormente, Rafael interpôs recurso extraordinário contra o acórdão, alegando violação a uma série de dispositivos constitucionais. Examinando o recurso extraordinário, a vice-presidência do tribunal negou-lhe seguimento, sob o fundamento de que o Supremo Tribunal Federal já havia reconhecido a inexistência de repercussão geral da questão constitucional discutida no referido recurso. Diante do caso narrado, assinale a opção que indica a medida judicial a ser adotada por Rafael.
-** A) interposição de agravo em recurso extraordinário, para que o Supremo Tribunal Federal examine se o recurso extraordinário preenche ou não seus requisitos de admissibilidade.
-** B) interposição de recurso extraordinário, para que o Supremo Tribunal Federal reexamine a existência de repercussão geral da questão constitucional discutida no recurso.
-** C) interposição de agravo interno, no intuito de demonstrar a distinção entre a questão constitucional discutida no recurso extraordinário e a discutida no recurso no qual o Supremo Tribunal Federal não reconheceu a existência de repercussão geral.
-** D) ajuizamento de reclamação constitucional, tendo em vista que apenas a presidência do tribunal de segunda instância tem competência para examinar o preenchimento dos requisitos de admissibilidade do recurso extraordinário.
-*** Gabarito: C
-**** recurso extraordinário, repercussão geral, agravo interno
------
-* Luíza ajuizou ação de cobrança contra Ricardo. Em sua petição inicial, informou que não possui interesse na realização de audiência de conciliação ou mediação.
-* Ricardo, por sua vez, apresentou manifestação informando que possui interesse na realização da audiência de conciliação ou mediação. Diante do interesse formalizado pelo réu, o juiz competente da causa designou data e local para a realização da audiência. Considerando o caso narrado, Luiza
-** A) não precisa comparecer à audiência de conciliação ou mediação, tendo em vista que já manifestou desinteresse em sua realização na petição inicial.
-** B) não deve comparecer à audiência de conciliação ou mediação, sob pena de o seu comparecimento representar anuência tácita em compor, obrigando-a a firmar acordo com Ricardo.
-** C) deve comparecer à audiência de conciliação ou mediação, sob pena de ter seu processo extinto sem resolução do mérito, por falta de interesse processual.
-** D) deve comparecer à audiência de conciliação ou mediação, e, caso de forma injustificada não compareça, será sancionada com multa, tendo em vista que sua ausência será considerada ato atentatório à dignidade da justiça.
-*** Gabarito: D
-**** audiência de conciliação, não comparecimento, ato atentatório à dignidade da justiça
------
-* Arthur e Felipe trabalham juntos na Transportadora Esporte S/A, que realiza campeonatos mensais de futebol entre suas diversas equipes.
-* No último torneio, houve um grande desentendimento, durante o qual Felipe dirigiu numerosas ofensas contra Arthur. Indignado, Arthur ajuizou ação indenizatória em face de Felipe, por meio da qual busca a compensação pelos danos morais decorrentes das ofensas proferidas na presença dos demais colegas de trabalho. Para comprovar a sua versão dos fatos, Arthur requereu o depoimento pessoal de Felipe, que foi deferido pelo juízo de primeiro grau, que o intimou pessoalmente, advertindo-o das consequências legais. Comparecendo à audiência de instrução e julgamento, o réu se recusou a depor, embora intimado pessoalmente e advertido das eventuais consequências legais. Nesse contexto, considerando as normas processuais em vigor, o advogado de Arthur deve requerer
-** A) a aplicação de multa de até 2% (dois por cento) da vantagem econômica pretendida ou do valor da causa ao réu, uma vez que a recusa caracteriza prática de ato atentatório à dignidade da justiça.
-** B) o regular prosseguimento do feito, sem a imposição de penalidade específica ao réu, que só poderia ser penalizado caso não tivesse comparecido à audiência de instrução e julgamento.
-** C) a condenação do réu por litigância de má-fé, com o pagamento de multa de até 10% (dez por cento) do valor corrigido da causa.
-** D) a aplicação da pena de confesso ao réu, diante de sua recusa a depor.
-*** Gabarito: D
-**** depoimento pessoal, recusa a depor, pena de confissão
------
-* Tatiana ingressou com ação de alimentos em face do seu ex-marido José, pleiteando pensão alimentícia no valor mensal de R$ 5.000,00 (cinco mil reais), e gratuidade de justiça que lhe foi concedida.
-* No processo restou comprovado que José estava desempregado e com grave enfermidade, não tendo a possibilidade de prestar alimentos. Dessa forma, o pedido de alimentos foi julgado improcedente, sendo Tatiana condenada em honorários de sucumbência equivalentes a 10% sobre o valor da causa. Contudo, por ser beneficiária da gratuidade de justiça, a exigibilidade dos honorários de sucumbência ficou suspensa. Dois anos após o trânsito em julgado da sentença, Tatiana ganhou sorteio lotérico e recebeu um prêmio milionário. Sabendo da atual situação de Tatiana, o advogado de José a procurou para cobrar os honorários de sucumbência fixados na ação de alimentos. Considerando o caso narrado, assinale a afirmativa correta.
-** A) O advogado de José poderá cobrar os honorários de sucumbência se, no prazo de 5 anos após o trânsito em julgado da sentença, demonstrar que deixou de existir a situação de insuficiência de recursos que justificou a concessão de gratuidade de justiça para Tatiana.
-** B) Uma vez concedida a gratuidade de justiça, essa não poderá ser revista, razão pela qual o advogado de José não poderá cobrar os honorários de sucumbência.
-** C) Após o trânsito em julgado da sentença não é possível cobrar honorários de sucumbência, ficando o advogado de José impedido de cobrar tal verba.
-** D) O advogado de José poderá cobrar os honorários de sucumbência se, no prazo de 1 ano após o trânsito em julgado da sentença, demonstrar que deixou de existir a situação de insuficiência de recursos que justificou a concessão de gratuidade de justiça para Tatiana.
-*** Gabarito: A
-**** gratuidade de justiça, honorários de sucumbência, suspensão da exigibilidade
------
-* Humberto, em conjunto com seus amigos Paulo e Maria, eram os únicos sócios da Sociedade Incorporadora Ltda.
-* Com o falecimento de Humberto e considerando que nenhum de seus sucessores integrava o quadro societário da Sociedade Incorporadora Ltda., seu espólio ajuizou ação de dissolução parcial da referida sociedade, requerendo a citação apenas de Paulo e Maria. Devidamente citados, Paulo e Maria concordaram com o pedido formulado na ação, pelo que o juiz proferiu sentença decretando a dissolução parcial da sociedade em relação ao espólio de Humberto e condenando Paulo e Maria ao pagamento de honorários advocatícios de sucumbência. Na sentença, o juiz relegou a apuração de haveres da sociedade para a fase subsequente e imediata de liquidação. Diante da situação hipotética acima descrita, assinale a afirmativa correta.
-** A) A sentença proferida pelo juiz está contaminada por vício de nulidade, tendo em vista que a Sociedade Incorporadora Ltda. não foi citada para integrar a lide, concordando com o pedido ou contestando a ação.
-** B) Paulo e Maria poderão interpor recurso de apelação contra a sentença, sob o argumento de que, não tendo eles se oposto ao pedido de dissolução parcial da sociedade, descaberia ao juiz condená-los ao pagamento de honorários advocatícios de sucumbência.
-** C) Ainda que não realizada a partilha dos bens de Humberto, seu espólio não possui legitimidade para ajuizar a ação, pois a legitimidade para requerer a dissolução parcial da Sociedade Incorporadora Ltda. é apenas dos sócios resmanescentes, Paulo e Maria.
-** D) O juiz não poderia ter determinado a apuração de haveres na fase subsequente e imediata de liquidação, visto ser necessário para a referida a apuração o ajuizamento de ação autônoma, distinta da ação de dissolução parcial de sociedade.
-*** Gabarito: B
-**** dissolução parcial de sociedade, honorários de sucumbência, concordância do pedido
------
-* Bruno, 20 anos, residente no Rio de Janeiro/RJ, conduzia seu veículo de madrugada com destino à cidade de São Paulo/SP.
-* Bruno dirigia dentro da velocidade permitida, portando sua carteira de habilitação e seu veículo apresentava condições adequadas de tráfego. Em determinado momento, André, 21 anos, que conduzia uma motocicleta alcoolizado, na outra mão, entrou na faixa na qual trafegava Bruno, violando a regra legal de mudança de faixa de rolamento. Bruno não conseguiu frear o veículo e evitar o contato. O veículo e a motocicleta chocaram-se lateralmente. Na sequência, André caiu da moto e esbarrou num fio de alta tensão que estava rompido de um poste na estrada. Bruno, assustado com o ocorrido, acelerou seu veículo, em retirada. Após 1 km, avistou um posto policial, mas acometido por forte emoção, optou por não parar para comunicar o fato. André permaneceu em coma por uma semana e depois veio a óbito. O laudo de necropsia constatou que a causa mortis fora determinada por eletrocussão, em razão do contato com o fio de alta tensão. Pelas razões expostas, analise penalmente as condutas praticadas por Bruno e assinale a afirmativa correta.
-** A) Deverá ser penalmente responsabilizado por omissão de socorro (Art. 304 do CTB), tendo em vista que o resultado morte foi determinado por culpa exclusiva da vítima.
-** B) Ele não praticou crime algum, porque a presença de concausa independente afasta a imputação de homicídio culposo, assim como a violenta emoção afasta a tipicidade do crime de omissão de socorro.
-** C) Deverá ser penalmente responsabilizado por homicídio culposo na condução de veículo, com a incidência da causa de aumento de omissão de socorro.
-** D) Bruno deverá ser penalmente responsabilizado por homicídio culposo na condução de veículo e omissão de socorro, em concurso material.
-*** Gabarito: * (Questão Anulada)
-**** nexo causal, concausa superveniente, omissão de socorro
------
-* Luís Alberto, primário, foi condenado a uma pena de oito meses de detenção, em regime inicial aberto, por ter agredido sua companheira, causando-lhe lesões corporais.
-* Na qualidade de advogado(a) de Luís Alberto, assinale a opção que apresenta o benefício de natureza penal que pode, neste momento processual, ser pleiteado em favor do seu assistido.
-** A) Aplicação de pena restritiva de direito, consistente em prestação de serviços à comunidade.
-** B) Suspensão condicional da pena, pelo período de dois anos.
-** C) Suspensão condicional do processo, pelo período de dois anos.
-** D) Substituição da pena privativa de liberdade por multa.
-*** Gabarito: B
-**** suspensão condicional da pena, sursis, violência doméstica
------
-* Alan é bombeiro civil e, atendendo a uma ocorrência, foi retirar um suposto animal selvagem de um condomínio residencial.
-* Lá chegando, deparou-se com um aparente filhote de onça, o qual foi recolhido por Alan, que deveria levar o animal ao Centro de Triagem, distante do local onde encontrado (e que seria o procedimento adequado). Porém, Alan teve a iniciativa de deixar o felino em uma área de mata próxima ao condomínio, onde imaginava ser o habitat natural do animal, e, assim, poupar seu tempo. Carmen, residente no referido condomínio, ao chegar em casa, percebeu que seu gato Bengal (raça caracterizada por ser muito similar a uma onça) está desaparecido. Ao saber do ocorrido, percebeu que seu gato foi confundido com um filhote de onça e, por isso, foi levado por Alan e deixado na área de mata. Assim, Carmen procurou a Delegacia de Polícia e relatou o ocorrido. Neste caso, como advogado de Alan, é correto afirmar, sobre a conduta de seu assistido, que houve erro
-** A) de tipo permissivo, uma vez que Alan pensava agir sob estrito cumprimento de dever legal, e por isso, sua conduta é lícita, abarcada por excludente de ilicitude.
-** B) de tipo inescusável, pois Alan efetivamente se confundiu sobre a espécie do animal, mas deixou de adotar as cautelas devidas, excluindo-se apenas o dolo.
-** C) de tipo escusável, pois Alan efetivamente não conhecia a espécie do animal apreendido, tendo adotado todas as cautelas que lhe eram exigidas na situação, de forma a excluir o dolo e a culpa.
-** D) de proibição, tendo em vista que Alan não conhecia a espécie de animal doméstico, afastando-se a culpabilidade da sua conduta.
-*** Gabarito: B
-**** erro de tipo, erro inescusável, teoria do erro
------
-* Após rigorosa fiscalização, uma empresa provedora de Internet verificou que sua rede de wifi com senha bloqueada estava sendo indevidamente utilizada por um grupo de pessoas.
-* Após notícia de fato formulada pela empresa, a Delegacia de Polícia instaurou Inquérito, tendo o Delegado Titular proferido relatório final pelo indiciamento dos envolvidos pelo crime de furto, na figura do Art. 155, § 3º, do Código Penal: "Equipara-se à coisa móvel a energia elétrica ou qualquer outra que tenha valor econômico". Diante do caso descrito, é correto afirmar que o indiciamento pelo crime de furto é:
-** A) inadmissível, tendo em vista que no Direito Penal não cabe analogia in malam partem.
-** B) admissível, tendo em vista que no Direito Penal cabe analogia in bonam partem.
-** C) inadmissível, pois a conduta dos investigados constitui fato atípico, tendo em vista a incidência do Princípio da Legalidade Estrita.
-** D) admissível, pois se trata de hipótese de interpretação analógica, cabível no Direito Penal.
-*** Gabarito: A
-**** furto de sinal de internet, analogia in malam partem, princípio da legalidade
+**** direito de vizinhança, passagem forçada, imóvel encravado, indenização
 -----
