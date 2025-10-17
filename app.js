@@ -619,11 +619,12 @@ function render(){
   const progBase = Math.max(1, denom - 1);
   const filterBadge = TAG_FILTER ? ` · tag: ${TAG_FILTER}` : '';
 
-  bar.style.width = Math.round((I) / progBase * 100) + '%';
+  bar.style.width = Math.round(I / progBase * 100) + '%';
   footLeft.textContent = `Pergunta ${I + 1}/${denom}`;
   footRight.textContent = FILTER
-    ? `${answered}/${denom} respondidas · filtro: "${FILTER.term}" (${denom})${filterBadge}`
-    : `${answered}/${denom} respondidas${filterBadge}`;
+    ? `${answered} respondidas · filtro: "${FILTER.term}"${filterBadge}`
+    : `${answered} respondidas${filterBadge}`;
+}
 
   const q = current();
   const categoryText = QUIZ?.meta?.category || 'Geral';
