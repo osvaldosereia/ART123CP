@@ -23,10 +23,25 @@
           <select id="selCategory" aria-label="Categoria"></select>
         </div>
         <div>
-          <label for="selTheme">Tema</label>
-          <select id="selTheme" aria-label="Tema"></select>
-        </div>
+  <label for="selTheme">Tema</label>
+  <div class="theme-menu" id="themeMenu">
+    <div class="theme-group">
+      <div class="theme-title">Concurso de Pessoas</div>
+      <div class="subthemes">
+        <button data-path="data/direito-penal/concurso/autoria.html">Autoria e Coautoria</button>
+        <button data-path="data/direito-penal/concurso/participacao.html">Participação</button>
+        <button data-path="data/direito-penal/concurso/punibilidade.html">Punibilidade</button>
       </div>
+    </div>
+    <div class="theme-group">
+      <div class="theme-title">Tipicidade</div>
+      <div class="subthemes">
+        <button data-path="data/direito-penal/tipicidade/conduta.html">Conduta</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <div class="actions">
         <button id="btnStart" class="btn primary" type="button">Começar</button>
