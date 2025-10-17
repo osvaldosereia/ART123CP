@@ -467,10 +467,15 @@ function lockAndExplain(value) {
   }
 
   // Mostrar gabarito sempre
-  const gLetter = ['A', 'B', 'C', 'D', 'E'][q.answer] || '?';
-  const gText = q.options[q.answer] || '';
-  explainEl.innerHTML = `<div style="font-size:14px"><strong>Gabarito: ${gLetter})</strong> ${htmlEscape(gText)}</div>`;
-  explainEl.classList.remove('hide');
+  // Mostrar gabarito sempre
+const gLetter = ['A','B','C','D','E'][q.answer] || '?';
+const gText = q.options[q.answer] || '';
+explainEl.innerHTML = `<div style="font-size:14px"><strong>Gabarito: ${gLetter})</strong> ${htmlEscape(gText)}</div>`;
+explainEl.classList.remove('hide');
+
+// ↓ mostre o botão IA após responder
+show(btnAI, true);
+
 }
 
 /* ===== corrigido: não duplicar opções ao voltar ===== */
