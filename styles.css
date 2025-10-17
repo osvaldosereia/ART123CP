@@ -295,13 +295,13 @@ select, input { width: 100%; }
 
 .ai-menu.open .ai-dropdown { display: flex; }
 /* Letras do "Google" nas cores oficiais */
-.google-word span { font-weight:700; }
-.google-word .g1{color:#4285F4}
-.google-word .g2{color:#EA4335}
-.google-word .g3{color:#FBBC05}
-.google-word .g4{color:#4285F4}
-.google-word .g5{color:#34A853}
-.google-word .g6{color:#EA4335}
+#btnAI .google-word .g1{color:#4285F4 !important;}
+#btnAI .google-word .g2{color:#EA4335 !important;}
+#btnAI .google-word .g3{color:#FBBC05 !important;}
+#btnAI .google-word .g4{color:#4285F4 !important;}
+#btnAI .google-word .g5{color:#34A853 !important;}
+#btnAI .google-word .g6{color:#EA4335 !important;}
+#btnAI .google-word span{font-weight:700;}
 
 
 /* só o botão "Pergunte ao Google" */
