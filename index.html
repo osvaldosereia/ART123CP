@@ -66,8 +66,14 @@
         <button id="btnGoHome" class="btn ghost" type="button">Início</button>
         <button id="btnPrev" class="btn ghost" type="button">Anterior</button>
         <button id="btnNext" class="btn primary" type="button">Próximo</button>
-        <button id="btnAI" class="btn ghost hide" type="button" aria-label="Gerar explicação do tema com IA">Comentário com IA</button>
-      </div>
+<div class="ai-menu hide" id="aiMenu">
+  <button id="btnAI" class="btn ghost" type="button">Pergunte ao Google</button>
+  <div class="ai-dropdown" id="aiDropdown">
+    <button data-mode="gabarito">Gabarito</button>
+    <button data-mode="glossario">Glossário</button>
+    <button data-mode="video">Vídeo-aula</button>
+  </div>
+</div>
 
       <!-- Barra de tags: simples, texto linkado, mesma linha, logo abaixo dos botões -->
       <div id="tagsBar" class="tagsbar" aria-label="Tags relacionadas"></div>
