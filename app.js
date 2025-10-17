@@ -150,11 +150,16 @@ let tagsBarEl = document.getElementById('tagsBar');
 const DEFAULT_LABELS = { start:'Começar', next:'Próximo', prev:'Anterior', retry:'Refazer', home:'Início', category:'Disciplina', theme:'Tema', result:'Resultado' };
 let LABELS = { ...DEFAULT_LABELS };
 
-/* ===== estado ===== */
+// ===== estado =====
 let MANIFEST = null, QUIZ = null, ORDER = [], CHOSEN = [], I = 0, KEY = null;
 let FILTER = null;
 let TAG_FILTER = null;
 let TAG_INDEX = new Map();
+
+// flags de fluxo
+let ROUTED = false;
+let LOADING = false;
+
 
 /* ===== fetch ===== */
 function readEmbedded(path){ const t=document.querySelector(`script[type="application/json"][data-path="${path}"]`); if(!t) return null; try{ return JSON.parse(t.textContent);}catch{ return null; } }
@@ -355,6 +360,11 @@ async function loadTxtAsQuiz(path){
 /* ===== init ===== */
 init();
 async function init() {
+  // tudo escondido até decidir rota
+  show(screenIntro, false);
+  show(screenQuiz,  false);
+  show(screenResult,false);
+
   MANIFEST = await buildManifestFromGitHub();
   if (!MANIFEST) {
     MANIFEST = {
@@ -373,7 +383,8 @@ async function init() {
     };
   }
 
-  if(state) state.classList.add('hide'); // esconde “respondendo” do topo
+  const stateEl = document.getElementById('state');
+  if(stateEl) stateEl.classList.add('hide');
 
   appTitle.textContent = MANIFEST?.title || 'MeuJus';
   applyLabels();
@@ -407,25 +418,38 @@ async function init() {
   btnRetry.addEventListener('click', ()=>{ loadQuiz(KEY?.path,true); toast('Quiz reiniciado','info'); });
 
   ensureAIMenu();
-
-  loadHistory();            // global
-  setupHeaderActions();     // engrenagem + painel
-
-  const last=lsGet('quiz:last');
-  if(last&&last.path){
-    btnResume.classList.remove('hide');
-    btnResume.addEventListener('click', async()=>{ KEY=last; await loadQuiz(last.path,false,true); });
-    if(AUTO_RESUME){ KEY=last; await loadQuiz(last.path,false,true); return; }
-  }
+  loadHistory();
+  setupHeaderActions();
 
   window.addEventListener('offline', ()=>toast('Sem conexão. Usando cache local','warn',3000));
   window.addEventListener('online', ()=>toast('Conexão restabelecida','success',1800));
 
+ // rota única: tenta retomar, senão mostra intro
+const last = lsGet('quiz:last');
+if (AUTO_RESUME && last?.path && !ROUTED) {
+  ROUTED = true;
+  KEY = last;
+  await loadQuiz(last.path, false, true);
+}
+
+// aplica #q=n após o quiz carregar
+if (ROUTED) {
   try{
     const m = String(location.hash||'').match(/#q=(\d+)/i);
-    if(m){ const n = Math.max(1, parseInt(m[1],10)); I = n-1; }
+    if(m){
+      const n = Math.max(1, parseInt(m[1],10));
+      I = Math.min(Math.max(0, n-1), (ORDER.length||1)-1);
+      render();
+    }
   }catch{}
 }
+
+if (!ROUTED) {
+  show(screenIntro, true);
+}
+  }
+
+
 
 /* ===== IA ===== */
 function ensureAIMenu(){
@@ -551,52 +575,59 @@ function resetState(){
 
 /* ===== loadQuiz ===== */
 async function loadQuiz(path,fresh=false,tryRestore=false){
-  let qz=null;
+  if (LOADING) return;
+  LOADING = true;
+  try{
+    let qz=null;
 
-  if(Array.isArray(path)){
-    const quizzes = [];
-    for(const p of path){
-      try{
-        if(/\.txt$/i.test(p)) quizzes.push(await loadTxtAsQuiz(p));
-        else if(/\.json$/i.test(p)) quizzes.push(await loadJSON(p));
-        else if(/\.html?/i.test(p) || /^https?:\/\//i.test(p)) quizzes.push(await loadHtmlAsQuiz(p));
-      }catch{}
-    }
-    const all = quizzes.filter(q=>q && Array.isArray(q.questions));
-    const questions = all.flatMap(q=>q.questions);
-
-    let disciplina='Geral', materia='Geral', tema='Tema';
-    if(path.length>0){
-      const parts = String(path[0]).split('/');
-      if(parts.length>=4){
-        disciplina = prettyName(parts[1]);
-        materia    = prettyName(parts[2]);
-        const base = String(parts[3]).replace(/\.(txt|html?|json)$/i,'').replace(/\d+$/,'');
-        tema       = prettyName(base);
+    if(Array.isArray(path)){
+      const quizzes = [];
+      for(const p of path){
+        try{
+          if(/\.txt$/i.test(p)) quizzes.push(await loadTxtAsQuiz(p));
+          else if(/\.json$/i.test(p)) quizzes.push(await loadJSON(p));
+          else if(/\.html?/i.test(p) || /^https?:\/\//i.test(p)) quizzes.push(await loadHtmlAsQuiz(p));
+        }catch{}
       }
+      const all = quizzes.filter(q=>q && Array.isArray(q.questions));
+      const questions = all.flatMap(q=>q.questions);
+
+      let disciplina='Geral', materia='Geral', tema='Tema';
+      if(path.length>0){
+        const parts = String(path[0]).split('/');
+        if(parts.length>=4){
+          disciplina = prettyName(parts[1]);
+          materia    = prettyName(parts[2]);
+          const base = String(parts[3]).replace(/\.(txt|html?|json)$/i,'').replace(/\d+$/,'');
+          tema       = prettyName(base);
+        }
+      }
+      qz = {
+        meta:{
+          title: `${materia} · ${tema}`,
+          category: disciplina,
+          theme: `${materia}`,
+          shuffle:{questions:false, options:true},
+          persist:true,
+          outroMessage:''
+        },
+        questions
+      };
+    } else {
+      if(/\.txt$/i.test(path)) qz=await loadTxtAsQuiz(path);
+      else if(/\.json$/i.test(path)) qz=await loadJSON(path);
+      else if(/\.html?/i.test(path) || /^https?:\/\//i.test(path)) qz=await loadHtmlAsQuiz(path);
     }
 
-    qz = {
-      meta:{
-        title: `${materia} · ${tema}`,
-        category: disciplina,
-        theme: `${materia}`,
-        shuffle:{questions:false, options:true},
-        persist:true,
-        outroMessage:''
-      },
-      questions
-    };
-  } else {
-    if(/\.txt$/i.test(path)) qz=await loadTxtAsQuiz(path);
-    else if(/\.json$/i.test(path)) qz=await loadJSON(path);
-    else if(/\.html?/i.test(path) || /^https?:\/\//i.test(path)) qz=await loadHtmlAsQuiz(path);
+    if(!qz||!Array.isArray(qz.questions)){
+      toast('Falha ao carregar o quiz','error',3000);
+      show(screenIntro,true); show(screenQuiz,false); show(screenResult,false);
+      return;
+    }
+    await loadVirtualQuiz(qz, path, fresh);
+  } finally {
+    LOADING = false;
   }
-
-  if(!qz||!Array.isArray(qz.questions)){
-    toast('Falha ao carregar o quiz','error',3000); return;
-  }
-  await loadVirtualQuiz(qz, path, fresh);
 }
 async function loadVirtualQuiz(quizObj, synthKey, fresh){
   QUIZ = quizObj;
@@ -608,16 +639,18 @@ async function loadVirtualQuiz(quizObj, synthKey, fresh){
   CHOSEN = new Array(total).fill(null);
   I = 0; FILTER = null; TAG_FILTER = null;
 
-  btnClearSearch.classList.add('hide');
+  btnClearSearch?.classList.add('hide');
   show(screenIntro, false);
   show(screenQuiz,  true);
   show(screenResult,false);
   render();
 }
 
+
 /* ===== render ===== */
 function render(){
   if(!QUIZ || !Array.isArray(QUIZ.questions) || QUIZ.questions.length===0) return;
+  if(!bar || !footLeft || !footRight || !questionEl || !optionsEl || !explainEl) return;
 
   const total = QUIZ.questions.length;
   const answered = ORDER.filter(idx => CHOSEN[idx] !== null).length;
@@ -664,6 +697,7 @@ function render(){
   if (CHOSEN[ORDER[I]] !== null) markLocked();
   persist();
 }
+
 
 
 /* ===== opções ===== */
