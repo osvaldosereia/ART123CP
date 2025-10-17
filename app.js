@@ -727,15 +727,17 @@ async function buildManifestFromGitHub(){
     if(!data || !Array.isArray(data.tree)) return null;
     const nodes = data.tree.filter(n => n.type==='blob' && n.path.startsWith(CONFIG.dataDir+'/') && n.path.endsWith('.txt'));
     const catMap = new Map();
-    for(const node of nodes){
-      const parts = node.path.split('/');
-            const catId = parts[1];
-      const file = parts[parts.length-1];
-      const themeId = file.replace(/\.txt$/i,'');
-      const cat = catMap.get(catId) || { id: catId, name: catId, themes: [] };
-      cat.themes.push({ id: themeId, name: themeId, path: node.path });
-      catMap.set(catId, cat);
-    }
+    for (const node of nodes) {
+  const parts = node.path.split('/');
+  if (parts.length < 2) continue;
+  const catId = parts.slice(1, -1).join('/') || 'Geral';
+  const file = parts[parts.length - 1];
+  const themeId = file.replace(/\.txt$/i, '');
+  const cat = catMap.get(catId) || { id: catId, name: catId, themes: [] };
+  cat.themes.push({ id: themeId, name: themeId, path: node.path });
+  catMap.set(catId, cat);
+}
+
     const categories = Array.from(catMap.values())
       .map(c => ({...c, themes: c.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'))}))
       .sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
