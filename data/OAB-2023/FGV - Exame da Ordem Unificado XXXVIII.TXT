@@ -538,3 +538,240 @@
 *** Gabarito: A
 **** furto de sinal de internet, analogia in malam partem, princípio da legalidade
 -----
+Você está absolutamente correto. Peço desculpas pelo erro e pela confusão. A instrução era para usar "frase-chave" e não "palavra".
+
+A configuração do modelo de resposta é exatamente como você especificou:
+
+```markdown
+* Texto do enunciado linha 1
+* Texto do enunciado linha 2 (opcional)
+** A) Alternativa A
+** B) Alternativa B
+** C) Alternativa C
+** D) Alternativa D
+*** Gabarito: C
+**** frase-chave 1, frase-chave 2, frase-chave 3
+-----
+```
+
+Retomarei a tarefa, seguindo rigorosamente este padrão para as questões 61 a 80.
+
+  * Francisco, funcionário público concursado de uma autarquia federal, recebeu de seu órgão de atuação um notebook funcional, tendo assinado o livro de carga referente ao objeto e assumido o compromisso de zelar pelo bem da administração.
+  * Durante suas férias, Francisco viaja para uma pousada no interior do estado de São Paulo e leva o computador na mochila, uma vez que tinha o costume de assistir séries através do aparelho. Durante sua estadia na pousada, Francisco leva o notebook para a piscina e o coloca na mesa onde deixara seus demais pertences. Após se ausentar por cerca de 40 minutos para jogar uma partida de futebol, retorna para a piscina e constata que o notebook fora furtado. Desesperado, procura a administração do local que após analisar as câmeras de segurança não consegue identificar quem teria subtraído o computador. Diante dos fatos, o órgão funcional ao qual Francisco era vinculado instaura procedimento administrativo e, ato continuo, encaminha pedido de instauração de Inquérito na Polícia Federal que culmina no oferecimento de denúncia por parte do Ministério Público Federal pela prática do crime de peculato culposo. Francisco procura a repartição pública e se oferece para pagar o valor referente ao notebook, o que é aceito, sendo certo que o ressarcimento ao erário se deu antes do julgamento da ação penal. Diante dos fatos narrados, é correto afirmar que Francisco
+     A) terá direito à redução de metade da pena pelo fato de o ressarcimento ter sido feito após o recebimento da denúncia.
+     B) terá direito à extinção da punibilidade pelo fato de o ressarcimento ter sido feito antes da sentença irrecorrível.
+     C) não terá direito à atenuante referente à reparação do dano, prevista no Art. 65, inciso III, alinea b, do CP, na medida em que esta exige a reparação do dano antes do recebimento da denúncia.
+     D) poderá ser beneficiado pelo arrependimento posterior, previsto no Art. 16 do Código Penal em razão de ter reparado o dano antes da sentença.
+     Gabarito: B
+     peculato culposo, reparação do dano, extinção da punibilidade
+
+-----
+
+  * Maria, adolescente de 13 anos, procura seu tio Roberto e informa que está grávida, mas que não deseja ter o filho, motivo pelo qual pede sua ajuda para interromper a gravidez.
+  * Roberto, diante da solicitação de sua sobrinha, resolve ajudá-la e realiza a manobra abortiva, vindo a causar a morte do feto, chegando Maria a expelir o produto da concepção de seu corpo. Acerca da responsabilização penal de Roberto e Maria, assinale a afirmativa correta.
+     A) Maria responderá pelo ato infracional análogo ao crime de aborto praticado pela gestante e Roberto será responsabilizado como partícipe do crime de aborto praticado pela gestante, previsto no Art. 124 do CP.
+     B) Maria não será responsabilizada penalmente e Roberto responderá pelo crime de aborto sem o consentimento da gestante, previsto no Art. 125 do CP.
+     C) Maria será responsabilizada por ato infracional análogo ao crime de aborto praticado pela gestante e Roberto será responsabilizado pelo crime de aborto com o consentimento da gestante, previsto no Art. 126 do CP.
+     D) Maria não será responsabilizada penalmente e Roberto será responsabilizado pelo crime de aborto com o consentimento da gestante, previsto no Art. 126 do CP.
+     Gabarito: \*
+     crime de aborto, consentimento de menor, ato infracional análogo
+
+-----
+
+  * Luciane ajuizou na Vara Criminal da Comarca de Roma (ES) uma ação penal privada contra Jorge (guarda municipal daquele município) por crime de injúria (Art. 140, caput, do CP).
+  * Antes de oferecer a queixa-crime, Luciane propôs uma ação cível de indenização contra Jorge e não conseguiu citá-lo pessoalmente em sua residência, sita no próprio Município de Romã (ES), tendo em vista que o oficial de justiça certificou que esteve em duas oportunidades na casa de Jorge e não o localizou. Luciane foi informada por vizinhos que Jorge estava temporariamente residindo com sua mãe na cidade vizinha de Oeiras (ES), onde ela já havia passado um final de semana. Em se tratando de infração penal de menor potencial ofensivo, você, como advogado(a) da querelante, deverá, na ação penal privada, requerer a citação de Jorge
+     A) por intermédio do seu chefe de serviço, em razão de Jorge ser guarda municipal, expedindo-se oficio ao comandante da Guarda Municipal.
+     B) por hora certa, haja vista que Jorge estava se ocultando para não ser encontrado.
+     C) por carta precatória, visto que Jorge está residindo temporariamente fora da jurisdição do juiz processante, considerando que a querelante tinha conhecimento do endereço da mãe do querelado na Comarca de Oeiras (ES).
+     D) por correspondência com aviso de recebimento em mão própria, considerando que a querelante tinha conhecimento do endereço da mãe do querelado na Comarca de Oeiras (ES).
+     Gabarito: C
+     citação por carta precatória, juizado especial criminal, infração de menor potencial ofensivo
+
+-----
+
+  * Arthur e sua esposa Aline, residentes no Distrito Federal, decidem viajar em um cruzeiro, partindo de Fortaleza com destino à cidade do Rio de Janeiro e fazendo uma parada em Recife.
+  * Durante passagem pela costa pernambucana, em alto-mar, o casal tem uma discussão e Arthur agride Aline, vindo a ser contido por seguranças do navio e retirado logo na primeira parada. Aline sofreu lesão que a incapacitou para suas atividades habituais por mais de trinta dias, mas que não deixou sequela ou debilidade permanente. Assinale a opção que indica a autoridade judiciária competente para processar Arthur.
+     A) O Juizado Especial Federal da cidade do Rio de Janeiro.
+     B) O Juizado Especial de Violência Doméstica e Familiar contra a Mulher do Distrito Federal.
+     C) O Juízo Federal de Recife.
+     D) A Vara Criminal da Comarca de Fortaleza.
+     Gabarito: C
+     competência territorial, crime em embarcação, primeiro porto de parada
+
+-----
+
+  * João dirigia seu veículo, um Porsche Cayenne ano 2015, por uma rodovia quando, em abordagem de rotina, foi parado pela Polícia Militar.
+  * João exibiu sua carteira nacional de habilitação e o certificado de registro e licenciamento de veículo (CRLV) do ano corrente. Após consulta ao sistema, o que é feito rotineiramente em abordagens na estrada, a Polícia Militar constatou que o CRLV era falso e o veículo era produto de roubo. João admitiu que pagou cerca de R$ 35.000,00 (trinta e cinco mil reais) pelo veículo, avaliado em R$ 400.000,00, mas que não sabia que o veículo havia sido roubado, exibindo o respectivo recibo. Sabe-se que a pena do crime de receptação é de 1 a 4 anos e multa; e que a pena do crime de uso de documento público falso é de 2 a 6 anos e multa. Considerando a situação hipotética acima, assinale a opção que contém as regras processuais penais corretamente aplicáveis ao caso.
+     A) A circunstância de o acusado ter adquirido o bem por preço muito inferior ao valor de mercado configura indício da prática de receptação.
+     B) O delito de receptação, por expressa disposição legal, impõe a inversão do ônus da prova à defesa, cabendo a esta produzir prova no sentido do desconhecimento da origem ilícita do bem.
+     C) A comprovação da materialidade do delito de uso de documento materialmente falso prescinde de produção de prova pericial.
+     D) O processo deve ser desmembrado, pois é cabível suspensão condicional do processo à receptação, devendo o feito prosseguir em relação ao uso de documento falso.
+     Gabarito: A
+     crime de receptação, indício de autoria, preço desproporcional
+
+-----
+
+  * Margot adquiriu de Cesar, de boa-fé e a título oneroso, um imóvel, mas não levou o instrumento ao Registro de Imóveis competente.
+  * Por isso, quando Cesar foi acusado de prática de crimes em uma ação penal, vindo a sofrer sequestro de todos os seus bens imóveis, foi incluído na ordem de sequestro o imóvel adquirido por Margot. Nessa situação hipotética, como advogado de Margot, assinale a opção que, de acordo com as disposições do Código de Processo Penal, melhor defenda os interesses da sua assistida.
+     A) Por não ser parte no processo penal, Margot não pode opor embargos ao sequestro, devendo efetuar pedido de reconsideração.
+     B) Margot pode opor embargos ao sequestro, alegando que a aquisição ocorreu a título oneroso e de boa-fé.
+     C) Por não ser parte no processo penal originário, Margot deve impetrar mandado de segurança em face da decisão que determinou o sequestro.
+     D) Margot pode opor embargos ao sequestro, alegando que os bens não foram adquiridos com os proventos da infração penal.
+     Gabarito: B
+     sequestro de bens, embargos de terceiro, aquisição de boa-fé
+
+-----
+
+  * A Polícia Civil ingressou na residência de Gustavo com o objetivo de cumprir mandado de prisão em desfavor de seu filho, Mariano, o qual era acusado de tráfico de drogas.
+  * A ordem de prisão foi expedida pelo Juiz de Direito da Comarca. Durante o cumprimento do mandado de prisão, a Polícia pegou o telefone celular de Gustavo, desbloqueado, que estava sobre uma mesa da residência e, sem sua autorização, passou a verificar seu conteúdo, constatando material de pornografia infantil, armazenado e compartilhado via aplicativo de troca de mensagens instantâneas, acessível pela internet a partir de qualquer país. Diante disso, a Polícia imediatamente realizou a prisão em flagrante de Gustavo. Sobre o meio de obtenção da prova extraída do celular de Gustavo, assinale a afirmativa correta.
+     A) É nula, e a nulidade decorre do fato de ser a pornografia infantil na internet crime de competência federal, de forma que somente a Polícia Federal poderia realizar a prisão em flagrante.
+     B) É válida, pois foi um encontro fortuito de provas, uma vez que os policiais tinham autorização legal para ingresso no domicílio de Gustavo e Mariano.
+     C) É ilícita, pois o cumprimento de mandado de prisão não compreende a autorização para busca em residência ou para o acesso a dados telemáticos, o que demandaria ordem judicial específica.
+     D) É anulável, porque somente com um mandado de busca e apreensão se poderia livremente acessar o conteúdo de comunicações telemáticas, ainda que diversos fossem o objeto ou o destinatário do mandado, podendo a autoridade judiciária, entretanto, ratificar a diligência.
+     Gabarito: C
+     acesso a dados de celular, prova ilícita, necessidade de ordem judicial específica
+
+-----
+
+  * Flávia foi acompanhada por você, na qualidade de advogado(a), à presença da Autoridade Policial, para noticiar a prática dos crimes de apropriação indébita e fraude processual supostamente praticados por seu ex-marido, descrevendo a prática do crime, fornecendo os dados qualificativos completos do suposto autor do fato, apresentando rol de testemunhas e anexando documentação pertinente à materialidade delitiva e de indícios de autoria.
+  * O Delegado de Polícia Civil, após cinco dias da confecção do registro da ocorrência, sem que tenha sido praticado nenhum ato para a verificação da procedência das informações, despachou nos autos do Inquérito Policial pelo indeferimento da instauração do Inquérito Policial e determinou a suspensão do procedimento. Nesse caso, você deve
+     A) requerer a remessa dos autos ao Ministério Público para que se manifeste, uma vez que o Delegado de Polícia não possui poderes para arquivar o procedimento.
+     B) requerer a remessa dos autos ao Juízo para que se manifeste, uma vez que o Delegado de Polícia não possui poderes para arquivar o procedimento.
+     C) apresentar recurso para a Chefia de Polícia para que se manifeste sobre o indeferimento da instauração do Inquérito Policial.
+     D) apresentar recurso ao Ministério Público para que se manifeste sobre o indeferimento da instauração do Inquérito Policial.
+     Gabarito: C
+     indeferimento de instauração de inquérito, recurso à chefia de polícia, controle da atividade policial
+
+-----
+
+  * Maria, empregada doméstica, deu à luz um menino. No mês em que seu filho nasceu, foram contabilizadas sete contribuições mensais feitas por ela para o Regime Geral de Previdência Social.
+  * Em relação ao salário-maternidade solicitado por Maria, assinale a afirmativa correta.
+     A) Ela tem direito, pois a concessão desse benefício para as empregadas domésticas independe de carência.
+     B) Ela terá direito, desde que contribua por mais três meses para o Regime Geral de Previdência Social.
+     C) Ela não tem direito, já que não cumpriu o período de carência para a concessão do benefício.
+     D) Ela não tem direito, pois as empregadas domésticas não podem gozar desse benefício.
+     Gabarito: A
+     salário-maternidade, empregada doméstica, isenção de carência
+
+-----
+
+  * Manoel, empresário do segmento de alimentação, desempenha suas atividades como sócio administrador de sua sociedade empresária, a qual desenvolve suas atividades em mais de uma cidade, recebendo seu pro-labore regularmente.
+  * Além da condição de empresário, Manoel também é engajado em diversas ações voluntárias em prol de pessoas carentes. Diante dessa realidade, sobre os direitos previdenciários de Manoel assinale a afirmativa correta.
+     A) Devido à atividade beneficente de Manoel, ele poderá verter contribuições ao Regime Geral de Previdência Social na condição de facultativo, além de seus aportes como empresário.
+     B) Na condição de empresário administrador de sua sociedade empresária, Manoel é segurado obrigatório do Regime Geral de Previdência Social, como contribuinte individual.
+     C) Manoel, na condição de administrador de sua sociedade, não poderá aposentar-se por invalidez, tendo em vista a prestação ser restrita a segurados empregados, somente.
+     D) Manoel, caso encerre suas atividades profissionais, não poderá manter recolhimentos ao Regime Geral de Previdência Social, haja vista a perda da qualidade de segurado.
+     Gabarito: B
+     segurado obrigatório, contribuinte individual, sócio administrador
+
+-----
+
+  * Francisco é caseiro desde 2019 em uma chácara localizada em área urbana, cujo proprietário aluga o imóvel por temporada por meio de um site especializado neste tipo de negociação.
+  * Francisco tem a incumbência de manter limpa a casa, receber os locatários e atender às eventuais necessidades deles no tocante ao conforto e à segurança. Além disso, de 2ª feira a sábado, Francisco faz a manutenção geral do local, independentemente de estar locado, para que a aparência esteja sempre impecável e, assim, os hóspedes recomendem a estadia na chácara a outros candidatos. Diante desta situação e das normas de regência, assinale a opção que indica a categoria profissional de Francisco.
+     A) Trabalhador intermitente.
+     B) Empregado doméstico.
+     C) Empregado rural.
+     D) Empregado comum.
+     Gabarito: D
+     empregado comum, atividade com fins lucrativos, descaracterização de doméstico
+
+-----
+
+  * Sílvio Luiz foi convidado pelo seu empregador para ocupar interinamente o cargo de supervisor administrativo;
+  * sendo certo que, em caso de vacância do cargo, este seria preenchido por Sílvio Luiz. Diante desta situação, você foi consultado, como advogado(a) do empregado, para saber acerca dos seus direitos na hipótese. Sobre o caso apresentado, de acordo com o texto em vigor da CLT e a jurisprudência consolidada do TST, assinale a afirmativa correta.
+     A) Caso não haja a vacância e cessada a interinidade do cargo, Sílvio Luiz terá que ser desligado da empresa por motivo econômico, o que afasta o pagamento da multa de 40%, pois a alteração contratual de reversão será ilícita e autorizada a dispensa na hipótese por justo motivo.
+     B) Sílvio Luiz, no caso de vacância definitiva do cargo, passará a ocupá-lo e terá necessariamente direito ao salário do seu antecessor.
+     C) Sendo a hipótese de férias do efetivo supervisor administrativo que ensejou o trabalho interino de Sílvio Luiz no cargo, este último não faz jus ao mesmo salário do substituído no período.
+     D) Considerando que o exercício do cargo será interino, não havendo a vacância posterior, Silvio Luiz terá garantido o retorno ao seu cargo anterior e a contagem de tempo de serviço no cargo ocupado temporariamente.
+     Gabarito: D
+     substituição interina, retorno ao cargo de origem, contagem de tempo de serviço
+
+-----
+
+  * Anne é diretora não-empregada de uma grande multinacional. Ela tem contraprestação pecuniária elevada e algumas vantagens pelo cargo que ocupa como, por exemplo, veículo com motorista e o aluguel de uma espaçosa residência.
+  * Na útima assembleia, no entanto, Anne levou a debate sua pretensão de receber mensalmente FGTS em conta vinculada. Sobre a pretensão de Anne, de acordo com a lei de regência, assinale a afirmativa correta.
+     A) A pretensão é inviável, porque Anne não tem o contrato regido pela CLT e, assim, não pode ter FGTS.
+     B) Se a sociedade empresária desejar, poderá equiparar, para fins de FGTS, o diretor não-empregado aos demais trabalhadores.
+     C) A Lei permite atender ao pedido, mas Anne terá creditada metade do percentual do FGTS de um empregado regular.
+     D) Para ter direito ao FGTS, Anne terá que renunciar ao cargo que ocupa e passar a ser diretora empregada.
+     Gabarito: B
+     diretor não empregado, FGTS facultativo, equiparação a empregado
+
+-----
+
+  * Vladimir, formado em Educação Física, 28 anos de idade, era instrutor em uma academia de ginástica há 1 ano, com a CTPS devidamente assinada.
+  * Ao ser comunicado pelo empregador de sua dispensa sem justa causa, com aviso prévio que deveria ser trabalhado, Vladimir foi tomado de intensa emoção e teve um ataque cardíaco fulminante, vindo a óbito. De acordo com a situação retratada e a norma de regência, assinale a afirmativa correta.
+     A) A sociedade empresária será condenada pelo acidente do trabalho sofrido, mas não haverá indenização pela extinção do contrato porque o aviso prévio não foi cumprido.
+     B) As verbas devidas serão pagas, em quotas iguais, aos dependentes de Vladimir habilitados perante a Previdência Social e, na falta, aos sucessores previstos na lei civil.
+     C) Não haverá responsabilidade civil do empregador por se tratar de caso fortuito e a Lei determina, no caso de morte suspeita, a consignação em pagamento dos valores devidos.
+     D) A morte do empregado extingue o contrato de trabalho e a indenização a ser paga será a metade do que é devido pela dispensa sem justa causa.
+     Gabarito: B
+     morte do empregado, pagamento de verbas rescisórias, dependentes habilitados
+
+-----
+
+  * Você advoga para uma rede de farmácias e recebeu uma petição inicial de reclamação trabalhista para elaborar defesa acerca de pedido de tempo despendido com troca de uniforme.
+  * No caso, alega o autor que levava cerca de 20 minutos para vestir o uniforme, composto por calça social comum, camisa social simples e sapato comum, só podendo registrar o ponto já uniformizado. Afirma, ainda, que levava o uniforme diariamente para casa para higienizá-lo, podendo chegar às dependências do empregador já uniformizado. Sobre a hipótese apresentada, observadas as normas da CLT, assinale a opção que você apresentaria em defesa de sua cliente.
+     A) O tempo despendido para a troca de uniforme sempre será computado na duração do trabalho, pois o empregado já se encontra nas dependências do empregador. Já o tempo despendido na higienização não deve ser computado.
+     B) Inexistindo obrigatoriedade de troca de uniforme nas dependências do empregador, o tempo despendido não é computado na jornada de trabalho. Tampouco deve ser computado o tempo de higienização.
+     C) O tempo despendido na troca de uniforme, assim como o gasto na higienização do mesmo, são computados na jornada de trabalho, pois estão relacionados diretamente com a função desempenhada e a obrigatoriedade de trabalhar com o uniforme.
+     D) O tempo despendido na higienização do uniforme deverá ser computado na duração do trabalho, pois reduz o intervalo mínimo entre duas jornadas. Já a troca de uniforme comum não deve ser computado, porque não há obrigatoriedade de troca na empresa.
+     Gabarito: B
+     tempo para troca de uniforme, não obrigatoriedade de troca na empresa, tempo à disposição
+
+-----
+
+  * Tomás teve o pedido de sua reclamação trabalhista julgado procedente em parte.
+  * Com o trânsito em julgado, adveio a fase executória e o juiz lhe conferiu prazo para apresentar os cálculos atualizados, o que foi feito. Desse cálculo, a executada foi intimada a se manifestar, mas quedou-se inerte. Em seguida, após ratificação pelo calculista da Vara, o juiz homologou o cálculo de Tomás e citou o executado para pagamento. O executado apresentou guia de depósito do valor homologado e, 5 dias após, ajuizou embargos à execução, questionando os cálculos homologados, entendendo que estavam majorados. Diante da situação retratada e da previsão da CLT, assinale a afirmativa correta.
+     A) Os embargos não serão apreciados porque intempestivos, já que o prazo é de 3 dias úteis.
+     B) Cabíveis embargos à execução no prazo de até 5 dias úteis após a garantia do juízo, daí, o mérito dele será apreciado.
+     C) Há preclusão porque a empresa silenciou acerca dos cálculos, logo o mérito dos embargos não será apreciado.
+     D) Os embargos são tempestivos, não há preclusão mas faltou realizar o preparo com acréscimo de 30%, daí o mérito não será apreciado.
+     Gabarito: C
+     preclusão na execução trabalhista, manifestação sobre cálculos, embargos à execução
+
+-----
+
+  * Pedro Arnaldo ajuizou reclamação trabalhista em face da ex-empregadora. No dia da audiência, rejeitada a possibilidade de acordo, o feito foi contestado.
+  * A parte ré, porém, requereu o adiamento em razão da ausência de uma testemunha, que estava intimada regularmente. Na audiência seguinte Pedro Arnaldo, sem qualquer justificativa, não compareceu. Diante disso, nos termos da CLT e do entendimento jurisprudencial consolidado do TST, assinale a afirmativa correta.
+     A) A ausência do reclamante, quando adiada a instrução após contestada a ação em audiência, não importa arquivamento do processo.
+     B) A ausência do reclamante importará no arquivamento do feito na hipótese.
+     C) O feito deverá ser novamente adiado para o comparecimento do reclamante, que não deu causa ao adiamento anterior.
+     D) Ausente o interesse de agir, o feito deverá ser extinto sem resolução do mérito.
+     Gabarito: A
+     ausência do reclamante, arquivamento do processo, audiência de instrução
+
+-----
+
+  * Leonardo Pereira e Panificação Pão Fresquinho Ltda. decidiram, amigavelmente, encerrar a relação de emprego mantida entre eles.
+  * Porém, as verbas rescisórias não eram incontroversas, uma vez que discutiam diferenças de horas extras e reflexos; trabalho em feriados e reflexos; intervalo para alimentação e descanso; além de adicional de insalubridade. Sendo assim, após muito conversarem, chegaram a um bom termo. Contudo, para segurança jurídica de ambos, gostariam que a avença fosse chancelada pela Justiça do Trabalho. Para isso, de acordo com o texto da CLT em vigor, as partes deverão
+     A) fazer uso do jus postulandi e ajuizar uma reclamação trabalhista do empregado em face do empregador com todos os pedidos, e, no dia designado para a audiência, deverão comparecer e celebrar o acordo.
+     B) fazer uso do jus postulandi e dar entrada no processo de homologação de transação extrajudicial em petição conjunta e aguardar a homologação do juiz.
+     C) estar representadas por advogados independentes que darão entrada em petição conjunta do processo de homologação de transação extrajudicial.
+     D) estar representadas por advogado, que poderá ser comum a ambas, e darão entrada em petição conjunta do processo de homologação de transação extrajudicial.
+     Gabarito: C
+     homologação de acordo extrajudicial, representação por advogados distintos, jurisdição voluntária trabalhista
+
+-----
+
+  * Depois de fracassar a tentativa pacífica de negociação para realizar uma convenção coletiva de âmbito municipal, o sindicato dos empregados ajuizou dissídio coletivo que, depois de regularmente processado nos moldes da Lei, recebeu sua sentença normativa.
+  * Ocorre que o sindicato dos empregadores não concorda com algumas das cláusulas fixadas, e pretende recorrer da decisão. Diante da situação retratada e dos termos da CLT, assinale a afirmativa correta.
+     A) Caberá recurso ordinário para o TST.
+     B) Por se tratar de sentença normativa, é irrecorrível.
+     C) Caberá recurso de revista para o TST.
+     D) Caberá recurso ordinário para o TRT.
+     Gabarito: A
+     recurso contra sentença normativa, dissídio coletivo, recurso ordinário para o TST
+
+-----
+
+  * Você advoga para um ex-empregado, em sede de reclamação trabalhista em face de uma sociedade empresária, e também em face dos sócios desta.
+  * O curso processual vem sendo bastante conturbado. A parte ré deduziu fatos manifesta e notoriamente inverídicos em juízo; ela vem utilizando meios e modos de retardar o desfecho processual, arrolando testemunhas que não são localizadas, requerendo a substituição de testemunhas e provocando adiamentos desnecessários de audiências, no intuito de suscitar eventual futura nulidade. Seu cliente perguntou se as condutas poderiam ensejar o requerimento e consequente condenação em litigância de má-fé, em razão de considerar que tais condutas representam procedimento contrário à boa ordem processual. Nesse sentido, de acordo com o texto da CLT, assinale a afirmativa correta.
+     A) Não é vedado a parte promover incidentes processuais sem fundamento, com intuito de retardar o andamento processual, já que o amplo direito de defesa é assegurado constitucionalmente.
+     B) Os valores da multa de litigância de má-fé sempre incidem sobre o valor da causa, ainda que irrisório o valor, pois existem as demais reparações previstas na lei.
+     C) Não constitui conduta passivel de litigância de má-fé a parte formular alegações em sede de contestação contrárias a texto expresso de lei, pois cabe ao juiz rechaçar a alegação.
+     D) As condutas ensejam litigância de má-fé e têm previsão legal, sendo passíveis de multa superior a 1% e inferior a 10% sobre o valor corrigido da causa, entre outras penalidades.
+     Gabarito: D
+     litigância de má-fé, processo do trabalho, multa e indenização
+
+-----
