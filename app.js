@@ -645,6 +645,10 @@ function clearFilter(){
   render();
 }
 function onTagClick(tag){
+  if (window.event && (window.event.ctrlKey || window.event.metaKey)) {
+    globalSearchAndOpen(tag); // busca global com o texto da tag
+    return;
+  }
   TAG_FILTER = (TAG_FILTER === tag) ? null : tag;
   recalcOrderFromFilters();
   render();
@@ -686,15 +690,20 @@ async function globalSearchAndOpen(termRaw){
       if(/\.txt$/i.test(p)) quizObj = await loadTxtAsQuiz(p);
       else if(/\.json$/i.test(p)) quizObj = await loadJSON(p);
       if(!quizObj || !Array.isArray(quizObj.questions)) continue;
+
       quizObj.questions.forEach((q)=>{
-        const normalizedQ = normalizeText(String(q.q||'').replace(/<[^>]+>/g,'')); 
-        const normalizedOpts = (q.options || []).map(o => normalizeText(String(o || '')));
+        const normalizedQ   = normalizeText(String(q.q||'').replace(/<[^>]+>/g,'')); 
+        const normalizedOpts= (q.options || []).map(o => normalizeText(String(o || '')));
+        const normalizedTags= (q.tags    || []).map(t => normalizeText(String(t || '')));
+
         const allTermsFound = searchTerms.every(st => {
-          const regex = new RegExp('\\b' + st + '\\b');
-          const inQ = regex.test(normalizedQ);
-          const inOpt = normalizedOpts.some(optText => regex.test(optText));
-          return inQ || inOpt;
+          const re   = new RegExp('\\b' + st + '\\b');
+          const inQ   = re.test(normalizedQ);
+          const inOpt = normalizedOpts.some(optText => re.test(optText));
+          const inTag = normalizedTags.some(tagText => re.test(tagText));
+          return inQ || inOpt || inTag; // agora considera tags
         });
+
         if(allTermsFound){
           const clone = JSON.parse(JSON.stringify(q));
           clone.__origin = { path:p };
@@ -721,6 +730,7 @@ async function globalSearchAndOpen(termRaw){
   await loadVirtualQuiz(virtual, synth, true);
   toast(`Busca global: ${results.length} questões`, 'info', 2200);
 }
+
 
 /* ===== GitHub manifest index ===== */
 async function buildManifestFromGitHub(){
