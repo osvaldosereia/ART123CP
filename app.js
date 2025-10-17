@@ -1155,3 +1155,194 @@ questionEl?.addEventListener('click', (e)=>{
   recalcOrderFromFilters();
   toast(`Filtro: ${TAG_FILTER}`,'info',1600);
 });
+/* ====== TOPO: remove "state" e injeta botão engrenagem ====== */
+(function setupHeaderActions(){
+  const brand = document.querySelector('.brand') || document.getElementById('appTitle');
+  const stateEl = document.getElementById('state');
+  if(stateEl) stateEl.remove(); // remove "respondendo" do topo
+
+  // botão engrenagem alinhado à direita na mesma linha da logo
+  let gear = document.getElementById('btnGear');
+  if(!gear){
+    gear = document.createElement('button');
+    gear.id = 'btnGear';
+    gear.type = 'button';
+    gear.className = 'btn icon gear-btn';
+    gear.setAttribute('aria-label','Abrir painel');
+    gear.innerHTML = `
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M19.4 15a7.9 7.9 0 0 0 .1-1l2-1.6-2-3.4-2.3.5a7.9 7.9 0 0 0-.9-.6l-.4-2.3H10l-.4 2.3-.9.6-2.3-.5-2 3.4 2 1.6.1 1-.1 1-2 1.6 2 3.4 2.3-.5.9.6.4 2.3h4.6l.4-2.3.9-.6 2.3.5 2-3.4-2-1.6-.1-1Z"/>
+      </svg>`;
+    const header = document.querySelector('header.site') || brand?.parentElement;
+    if(header){
+      header.style.display='flex';
+      header.style.alignItems='center';
+      header.style.justifyContent='space-between';
+      header.appendChild(gear);
+    }
+  }
+  gear.onclick = ()=> toggleSidePanel(true);
+})();
+
+/* ====== PAINEL LATERAL ====== */
+let PANEL_OPEN = false;
+let panelEl = null, backdropEl = null;
+
+function ensureSidePanel(){
+  if(panelEl) return panelEl;
+  backdropEl = document.createElement('div');
+  backdropEl.id = 'sidepanel-backdrop';
+  backdropEl.className = 'sidepanel-backdrop hide';
+  backdropEl.addEventListener('click', ()=> toggleSidePanel(false));
+
+  panelEl = document.createElement('aside');
+  panelEl.id = 'sidepanel';
+  panelEl.className = 'sidepanel hide';
+  panelEl.innerHTML = `
+    <div class="sp-head">
+      <strong>Menu</strong>
+      <button type="button" class="sp-close" aria-label="Fechar">×</button>
+    </div>
+    <nav class="sp-sections">
+      <a class="sp-icon" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6-1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg>
+        <span>@seuPerfil</span>
+      </a>
+      <a class="sp-icon" href="mailto:contato@exemplo.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M2 6h20v12H2z"/><path d="m2 6 10 7L22 6"/></svg>
+        <span>contato@exemplo.com</span>
+      </a>
+
+      <button class="sp-accordion" data-target="#sp-books">Dicas de Livros</button>
+      <div id="sp-books" class="sp-panel">
+        <ul class="sp-list">
+          <li><a href="https://exemplo.com/livro1" target="_blank" rel="noopener">Livro 1</a></li>
+          <li><a href="https://exemplo.com/livro2" target="_blank" rel="noopener">Livro 2</a></li>
+        </ul>
+      </div>
+
+      <button class="sp-accordion" data-target="#sp-about">Sobre</button>
+      <div id="sp-about" class="sp-panel">
+        <p>MeuJus organiza questões, histórico e filtros para estudo eficiente.</p>
+      </div>
+
+      <button class="sp-accordion" data-target="#sp-history">Histórico</button>
+      <div id="sp-history" class="sp-panel">
+        <div id="sp-hist-summary" class="sp-hist-summary"></div>
+        <div id="sp-hist-cards" class="sp-hist-cards"></div>
+        <button id="sp-hist-more" class="btn ghost sm" style="width:100%;margin-top:8px;">Carregar mais</button>
+      </div>
+    </nav>
+  `;
+  document.body.appendChild(backdropEl);
+  document.body.appendChild(panelEl);
+
+  panelEl.querySelector('.sp-close').onclick = ()=> toggleSidePanel(false);
+  panelEl.addEventListener('click', e=>{
+    const acc = e.target.closest('.sp-accordion');
+    if(acc){
+      const sel = acc.getAttribute('data-target');
+      const tgt = sel && panelEl.querySelector(sel);
+      if(tgt){ tgt.classList.toggle('open'); }
+      return;
+    }
+    const link = e.target.closest('a[href]');
+    if(link){ toggleSidePanel(false); }
+  });
+
+  // fechar com ESC
+  document.addEventListener('keydown', (e)=>{ if(PANEL_OPEN && e.key==='Escape') toggleSidePanel(false); });
+
+  // carregar mais histórico
+  const moreBtn = panelEl.querySelector('#sp-hist-more');
+  moreBtn.onclick = ()=> renderSideHistory(true);
+
+  return panelEl;
+}
+
+function toggleSidePanel(open){
+  ensureSidePanel();
+  PANEL_OPEN = open;
+  panelEl.classList.toggle('hide', !open);
+  backdropEl.classList.toggle('hide', !open);
+  if(open){ renderSideHistory(false); }
+}
+
+/* ====== HISTÓRICO NO PAINEL: resumo, cards, paginação ====== */
+let SP_HIST_PAGE = 1; // 1 página = 10 cards
+function histSlice(){
+  // limita a 100; pagina de 10
+  const items = HISTORY.slice(-100);
+  const perPage = 10;
+  return items.slice(0, SP_HIST_PAGE * perPage);
+}
+function renderSideHistory(loadMore){
+  if(loadMore) SP_HIST_PAGE = Math.min(SP_HIST_PAGE + 1, 10);
+  else SP_HIST_PAGE = 1;
+
+  const sumEl = panelEl.querySelector('#sp-hist-summary');
+  const cardsEl = panelEl.querySelector('#sp-hist-cards');
+  const moreBtn = panelEl.querySelector('#sp-hist-more');
+
+  const list = HISTORY.slice(-100);
+  const total = list.length;
+  const certas = list.filter(h=>h.isCorrect).length;
+  const erradas = total - certas;
+
+  sumEl.textContent = total ? `${total} questões · ${certas} certas · ${erradas} erradas` : 'Sem histórico nesta sessão';
+
+  // group por "tela" (título do quiz)
+  const groupTitle = QUIZ?.meta?.title || 'Geral';
+  const rows = histSlice().map(h=>{
+    const q = QUIZ?.questions?.[h.idx];
+    const raw = q ? String(q.q).replace(/<[^>]+>/g,'') : '';
+    const preview = raw.slice(0, 40).trim();
+    const status = h.isCorrect ? 'Acertou' : `Errou (correta: ${h.correctLetter})`;
+    return {
+      group: groupTitle,
+      html: `
+        <div class="sp-card ${h.isCorrect?'ok':'bad'}" data-idx="${h.idx}">
+          <div class="sp-card-title">${groupTitle}</div>
+          <div class="sp-card-text">${preview || '—'}</div>
+          <div class="sp-card-meta">#${h.number} · ${status}</div>
+        </div>`
+    };
+  });
+
+  // render: título do grupo + cards
+  cardsEl.innerHTML = '';
+  if(rows.length){
+    const group = rows[0].group;
+    const head = document.createElement('div');
+    head.className='sp-group';
+    head.innerHTML = `<div class="sp-group-title">${group}</div>`;
+    cardsEl.appendChild(head);
+    rows.forEach(r=>{
+      const div = document.createElement('div');
+      div.innerHTML = r.html;
+      cardsEl.appendChild(div.firstElementChild);
+    });
+  }
+
+  // clique no card vai para a questão e fecha painel
+  cardsEl.querySelectorAll('.sp-card').forEach(c=>{
+    c.onclick = ()=>{
+      const idx = parseInt(c.getAttribute('data-idx'),10);
+      const pos = ORDER.indexOf(idx);
+      if(pos>=0){ I = pos; render(); }
+      toggleSidePanel(false);
+      try{ history.replaceState(null,'',`#q=${(pos>=0?pos+1:1)}`); }catch{}
+    };
+  });
+
+  // botão "carregar mais"
+  const shown = histSlice().length;
+  moreBtn.style.display = (shown < Math.min(100, HISTORY.length)) ? 'block' : 'none';
+}
+
+/* Atualize o histórico existente para também acionar a lista do painel */
+const _oldUpsert = upsertHistoryItem;
+upsertHistoryItem = function(p){
+  _oldUpsert(p);
+  if(PANEL_OPEN) renderSideHistory(false);
+};
