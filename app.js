@@ -308,9 +308,14 @@ function normalizeQCQuestion(q){
   if(pos)   tags.push(slug(pos));
   if(yr)    tags.push(String(yr));
 
+  // ✅ agora inclui o associated_text antes do statement
+  const fullStatement = sanitizeBasicHTML(
+    (q.associated_text ? q.associated_text + "<br><br>" : "") + q.statement
+  );
+
   return {
     type: 'multiple',
-    q: sanitizeBasicHTML(q.statement),
+    q: fullStatement,
     options,
     answer: answer >= 0 ? answer : null,
     explanation: '',
@@ -327,6 +332,7 @@ function normalizeQCQuestion(q){
     }
   };
 }
+
 
 async function loadHtmlAsQuiz(url){
   const data = await fetchInertiaFromHtml(url);
