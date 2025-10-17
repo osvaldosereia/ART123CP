@@ -1,4 +1,4 @@
-/* app.js — com suporte a TAGS clicáveis e formato com * ** *** **** ----- */
+/* app.js — quiz com TAGS, parser * ** *** **** -----, busca global e menu IA expandido */
 
 const CONFIG = {
   useGitHubIndexer: true,
@@ -7,7 +7,6 @@ const CONFIG = {
   branch: 'main',
   dataDir: 'data'
 };
-
 const AUTO_RESUME = true;
 
 /* ===== util ===== */
@@ -26,8 +25,7 @@ function toast(msg, type='info', ms=2000){
   el.addEventListener('click', close);
   setTimeout(close, ms);
 }
-const show = (node, flag) => node.classList.toggle('hide', !flag);
-const clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
+const show = (node, flag) => node && node.classList.toggle('hide', !flag);
 function lsGet(k, def=null){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):def; }catch{ return def; } }
 function lsSet(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch{} }
 function htmlEscape(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -58,7 +56,7 @@ const explainEl = document.getElementById('explanation');
 const btnGoHome = document.getElementById('btnGoHome');
 const btnPrev = document.getElementById('btnPrev');
 const btnNext = document.getElementById('btnNext');
-const btnAI = document.getElementById('btnAI');
+let btnAI = document.getElementById('btnAI'); // pode ser reempacotado pelo ensureAIMenu()
 
 const resultTitle = document.getElementById('resultTitle');
 const resultScore = document.getElementById('resultScore');
@@ -73,7 +71,7 @@ const txtSearch = document.getElementById('txtSearch');
 const btnSearch = document.getElementById('btnSearch');
 const btnClearSearch = document.getElementById('btnClearSearch');
 
-/* ===== TAGS: área logo abaixo da busca ===== */
+/* TAGS */
 let tagsBarEl = document.getElementById('tagsBar');
 (function ensureTagsBar(){
   if(tagsBarEl) return;
@@ -150,52 +148,28 @@ function buildTagIndex(items){
   }
 }
 
-/* ===== parser TXT novo formato * ** *** **** ----- ===== */
+/* ===== parser TXT (* ** *** **** -----) ===== */
 function parseTxtQuestions(raw) {
   const text = String(raw || '').replace(/\uFEFF/g, '').replace(/\r\n?/g, '\n');
   const blocks = text.split(/\n-{5,}\n/g).map(b => b.trim()).filter(Boolean);
   const qs = [];
-
   for (const block of blocks) {
     const lines = block.split('\n');
-    let enunciado = [];
-    let opcoes = [];
-    let gabarito = null;
-    let tags = [];
-
+    let enunciado = [], opcoes = [], gabarito = null, tags = [];
     for (const line of lines) {
       const trimmed = line.trim();
-
-      if (/^\*\s(?!\*)/.test(trimmed)) { // * enunciado
-        enunciado.push(trimmed.replace(/^\*\s*/, ''));
-        continue;
-      }
-      if (/^\*\*\s*\(?[A-E]\)/i.test(trimmed)) { // ** alternativas
-        const optMatch = trimmed.match(/^\*\*\s*\(?([A-E])\)\s*(.+)$/i);
-        if (optMatch) opcoes.push(optMatch[2].trim());
-        continue;
-      }
-      if (/^\*\*\*\s*Gabarito\s*:/i.test(trimmed)) { // *** gabarito
-        const gMatch = trimmed.match(/^\*\*\*\s*Gabarito\s*:\s*([A-E])/i);
-        if (gMatch) gabarito = gMatch[1].toUpperCase();
-        continue;
-      }
-      if (/^\*\*\*\*/.test(trimmed)) { // **** tags
-        const tagLine = trimmed.replace(/^\*\*\*\*\s*/, '');
-        tags = tagLine.split(',').map(t => t.trim().toLowerCase()).filter(Boolean);
-        continue;
-      }
+      if (/^\*\s(?!\*)/.test(trimmed)) { enunciado.push(trimmed.replace(/^\*\s*/, '')); continue; }
+      if (/^\*\*\s*\(?[A-E]\)/i.test(trimmed)) { const m = trimmed.match(/^\*\*\s*\(?([A-E])\)\s*(.+)$/i); if (m) opcoes.push(m[2].trim()); continue; }
+      if (/^\*\*\*\s*Gabarito\s*:/i.test(trimmed)) { const g = trimmed.match(/^\*\*\*\s*Gabarito\s*:\s*([A-E])/i); if (g) gabarito = g[1].toUpperCase(); continue; }
+      if (/^\*\*\*\*/.test(trimmed)) { const tagLine = trimmed.replace(/^\*\*\*\*\s*/, ''); tags = tagLine.split(',').map(t => t.trim().toLowerCase()).filter(Boolean); continue; }
     }
-
     if (enunciado.length === 0 || opcoes.length === 0) continue;
-    const answerMap = {A:0,B:1,C:2,D:3,E:4};
-    const hasAnswer = gabarito && answerMap[gabarito]!=null;
-
+    const map = {A:0,B:1,C:2,D:3,E:4};
     const qObj = {
       type:'multiple',
       q: formatParagraphs(enunciado.join('\n')),
       options: opcoes,
-      answer: hasAnswer ? answerMap[gabarito] : null,
+      answer: gabarito && map[gabarito]!=null ? map[gabarito] : null,
       explanation:'',
       tags
     };
@@ -220,10 +194,7 @@ async function loadTxtAsQuiz(path){
 /* ===== init ===== */
 init();
 async function init() {
-  // tenta usar o indexador GitHub
   MANIFEST = await buildManifestFromGitHub();
-
-  // se falhar, usa o fallback local fixo
   if (!MANIFEST) {
     MANIFEST = {
       title: 'MeuJus',
@@ -231,11 +202,9 @@ async function init() {
         id: 'OAB-2023',
         name: 'OAB-2023',
         themes: [
-          {
-            id: 'FGV - Exame da Ordem Unificado XXXVIII',
+          { id: 'FGV - Exame da Ordem Unificado XXXVIII',
             name: 'FGV - Exame da Ordem Unificado XXXVIII',
-            path: 'data/OAB-2023/FGV - Exame da Ordem Unificado XXXVIII.TXT'
-          }
+            path: 'data/OAB-2023/FGV - Exame da Ordem Unificado XXXVIII.TXT' }
         ]
       }],
       shuffleDefault: { questions: false, options: true },
@@ -244,7 +213,6 @@ async function init() {
     };
   }
 
-  /* ===== interface ===== */
   state.textContent = 'pronto';
   appTitle.textContent = MANIFEST?.title || 'MeuJus';
   applyLabels();
@@ -252,62 +220,113 @@ async function init() {
   selCategory.innerHTML = '';
   (MANIFEST?.categories || []).forEach((c, idx) => {
     const o = document.createElement('option');
-    o.value = c.id;
-    o.textContent = c.name || c.id;
+    o.value = c.id; o.textContent = c.name || c.id;
     if (idx === 0) o.selected = true;
     selCategory.appendChild(o);
   });
   updateThemes();
 
-  /* ===== eventos ===== */
+  /* eventos */
   selCategory.addEventListener('change', updateThemes);
   btnStart.addEventListener('click', startQuizFromSelection);
   btnPrev.addEventListener('click', prev);
   btnNext.addEventListener('click', next);
-  btnAI.addEventListener('click', openGoogleAI);
 
   btnGlobal.addEventListener('click', () => globalSearchAndOpen(txtGlobal.value || ''));
-  txtGlobal.addEventListener('keydown', e => { if (e.key === 'Enter') btnGlobal.click(); });
+  txtGlobal.addEventListener('keydown', e=>{ if(e.key==='Enter') btnGlobal.click(); });
 
-  btnSearch.addEventListener('click', () => applyFilter(txtSearch.value || ''));
+  btnSearch.addEventListener('click', ()=> applyFilter(txtSearch.value||''));
   btnClearSearch.addEventListener('click', clearFilter);
-  txtSearch.addEventListener('keydown', e => { if (e.key === 'Enter') btnSearch.click(); });
+  txtSearch.addEventListener('keydown', e=>{ if(e.key==='Enter') btnSearch.click(); });
 
-  const goHome = () => {
-    resetState();
-    show(screenIntro, true);
-    show(screenQuiz, false);
-    show(screenResult, false);
-    state.textContent = 'pronto';
-  };
+  const goHome = ()=>{ resetState(); show(screenIntro,true); show(screenQuiz,false); show(screenResult,false); state.textContent='pronto'; };
   btnGoHome.addEventListener('click', goHome);
   btnHome.addEventListener('click', goHome);
   appTitle.addEventListener('click', goHome);
 
-  btnRetry.addEventListener('click', () => { loadQuiz(KEY?.path, true); toast('Quiz reiniciado', 'info'); });
+  btnRetry.addEventListener('click', ()=>{ loadQuiz(KEY?.path,true); toast('Quiz reiniciado','info'); });
 
-  const last = lsGet('quiz:last');
-  if (last && last.path) {
+  ensureAIMenu(); // cria menu IA se necessário e liga eventos
+
+  const last=lsGet('quiz:last');
+  if(last&&last.path){
     btnResume.classList.remove('hide');
-    btnResume.addEventListener('click', async () => { KEY = last; await loadQuiz(last.path, false, true); });
-    if (AUTO_RESUME) { KEY = last; await loadQuiz(last.path, false, true); return; }
+    btnResume.addEventListener('click', async()=>{ KEY=last; await loadQuiz(last.path,false,true); });
+    if(AUTO_RESUME){ KEY=last; await loadQuiz(last.path,false,true); return; }
   }
 
-  window.addEventListener('offline', () => toast('Sem conexão. Usando cache local', 'warn', 3000));
-  window.addEventListener('online', () => toast('Conexão restabelecida', 'success', 1800));
+  window.addEventListener('offline', ()=>toast('Sem conexão. Usando cache local','warn',3000));
+  window.addEventListener('online', ()=>toast('Conexão restabelecida','success',1800));
 }
 
+/* ===== IA: construir menu dropdown “para cima” no HTML atual ===== */
+function ensureAIMenu(){
+  let aiMenu = document.getElementById('aiMenu');
+  let aiDropdown = document.getElementById('aiDropdown');
 
+  if(!aiMenu){
+    // cria estrutura: <div id="aiMenu" class="ai-menu"><button id="btnAI">Pergunte ao Google</button><div id="aiDropdown" class="ai-dropdown">...</div></div>
+    const container = document.createElement('div');
+    container.id = 'aiMenu';
+    container.className = 'ai-menu hide';
 
+    // reaproveita o botão existente
+    if(!btnAI){
+      btnAI = document.createElement('button');
+      btnAI.id = 'btnAI';
+      btnAI.className = 'btn ghost';
+      btnAI.type = 'button';
+      btnAI.textContent = 'Pergunte ao Google';
+    } else {
+      btnAI.textContent = 'Pergunte ao Google';
+    }
+    container.appendChild(btnAI);
+
+    // dropdown
+    const dd = document.createElement('div');
+    dd.id = 'aiDropdown';
+    dd.className = 'ai-dropdown';
+    dd.innerHTML = `
+      <button type="button" data-mode="gabarito"  class="btn ghost sm">Gabarito</button>
+      <button type="button" data-mode="glossario" class="btn ghost sm">Glossário</button>
+      <button type="button" data-mode="video"     class="btn ghost sm">Vídeo-aula</button>
+    `;
+    container.appendChild(dd);
+
+    // insere ao lado do botão original, na mesma barra de ações
+    const actions = btnNext?.parentElement || document.querySelector('.actions');
+    actions?.appendChild(container);
+
+    aiMenu = container;
+    aiDropdown = dd;
+  }
+
+  // eventos
+  btnAI.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    aiMenu.classList.toggle('open');
+  });
+  document.addEventListener('click', (e)=>{
+    if(!aiMenu.contains(e.target)) aiMenu.classList.remove('open');
+  });
+  aiDropdown.querySelectorAll('button').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      aiMenu.classList.remove('open');
+      openGoogleAIMode(b.dataset.mode);
+    });
+  });
+}
 
 /* ===== seleção ===== */
 function applyLabels(){
-  document.querySelector('label[for="selCategory"]').textContent = LABELS.category||'Categoria';
-  document.querySelector('label[for="selTheme"]').textContent = LABELS.theme||'Tema';
+  const cat=document.querySelector('label[for="selCategory"]');
+  const th=document.querySelector('label[for="selTheme"]');
+  if(cat) cat.textContent = LABELS.category||'Categoria';
+  if(th) th.textContent = LABELS.theme||'Tema';
   btnStart.textContent = LABELS.start||'Começar';
   btnPrev.textContent = LABELS.prev||'Anterior';
   btnNext.textContent = LABELS.next||'Próximo';
-  document.getElementById('resultTitle').textContent = LABELS.result||'Resultado';
+  const r=document.getElementById('resultTitle'); if(r) r.textContent = LABELS.result||'Resultado';
   btnRetry.textContent = LABELS.retry||'Refazer';
   btnHome.textContent = LABELS.home||'Início';
   const h=document.getElementById('btnGoHome'); if(h) h.textContent=LABELS.home||'Início';
@@ -340,7 +359,7 @@ function resetState(){
   TAG_INDEX.clear();
 }
 
-/* ===== loadQuiz ===== */
+/* ===== loadQuiz e loadVirtualQuiz ===== */
 async function loadQuiz(path,fresh=false,tryRestore=false){
   state.textContent='carregando';
   let qz=null;
@@ -349,9 +368,11 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
   if(!qz||!Array.isArray(qz.questions)){
     toast('Falha ao carregar o quiz','error',3000); state.textContent='erro'; return;
   }
-  QUIZ=qz; KEY={path,key:`quiz:${path}`};
+  await loadVirtualQuiz(qz, path, fresh);
+}
+async function loadVirtualQuiz(quizObj, synthKey, fresh){
+  QUIZ=quizObj; KEY={path:synthKey, key:`quiz:${synthKey}`};
   buildTagIndex(QUIZ.questions);
-
   const total=QUIZ.questions.length;
   ORDER=[...Array(total).keys()];
   CHOSEN=new Array(total).fill(null);
@@ -380,7 +401,7 @@ function render(){
   const categoryText = QUIZ?.meta?.category || 'Geral';
   const themeText = QUIZ?.meta?.title || 'Quiz';
 
-  /* ===== palavras-chave (tags) logo abaixo da busca ===== */
+  /* tags */
   const tagsArea = document.getElementById('tagsBar');
   if (tagsArea) {
     tagsArea.innerHTML = '';
@@ -388,7 +409,7 @@ function render(){
       q.tags.forEach(t => {
         const a = document.createElement('a');
         a.href = '#tag:' + encodeURIComponent(t);
-        a.textContent = t;
+        a.textContent = t; // sem '#'
         a.className = 'tag';
         a.addEventListener('click', ev => { ev.preventDefault(); onTagClick(t); });
         tagsArea.appendChild(a);
@@ -396,7 +417,7 @@ function render(){
     }
   }
 
-  /* ===== enunciado ===== */
+  /* enunciado */
   questionEl.innerHTML = `
     <div style="font-size:12px;font-weight:400;color:var(--muted);letter-spacing:.2px;">
       ${htmlEscape(categoryText)} | ${htmlEscape(themeText)}
@@ -407,7 +428,8 @@ function render(){
 
   optionsEl.innerHTML = '';
   explainEl.classList.add('hide');
-  show(btnAI, false);
+  const aiMenu = document.getElementById('aiMenu');
+  show(aiMenu, false); // esconde menu IA até responder
 
   const type = q.type || 'multiple';
   if (type === 'vf') {
@@ -424,10 +446,9 @@ function render(){
   persist();
 }
 
-
-/* ===== renderização das opções ===== */
+/* ===== opções ===== */
 function renderOptions(texts, onPick, origIdxs = null) {
-  const labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+  const labels = ['A','B','C','D','E','F','G'];
   texts.forEach((txt, idx) => {
     const b = document.createElement('button');
     b.className = 'opt';
@@ -437,28 +458,24 @@ function renderOptions(texts, onPick, origIdxs = null) {
     const safe = htmlEscape(String(txt || ''))
       .replace(/\n{2,}/g, '\n\n')
       .split(/\n{2,}/)
-      .map(p => `<p style="margin:0">${p.replace(/\n/g, '<br>')}</p>`)
-      .join('');
+      .map(p => `<p style="margin:0">${p.replace(/\n/g, '<br>')}</p>`).join('');
     b.innerHTML = `${label}${safe}`;
     b.addEventListener('click', () => onPick(idx));
     optionsEl.appendChild(b);
   });
 }
 
-/* ===== seleção e exibição do gabarito ===== */
+/* ===== seleção e gabarito ===== */
 function select(value) {
   if (isLocked()) return;
   CHOSEN[ORDER[I]] = value;
   lockAndExplain(value);
   persist();
- render(); // ← atualiza o contador na base
-
+  render(); // atualiza contador
 }
-
 function isLocked() {
   return optionsEl.querySelector('.correct, .wrong') != null;
 }
-
 function lockAndExplain(value) {
   const q = current();
   const type = q.type || 'multiple';
@@ -483,32 +500,27 @@ function lockAndExplain(value) {
       const origIdx = parseInt(b.dataset.origIdx ?? '-1', 10);
       if (origIdx === answerIdx) b.classList.add('correct');
     });
-    const chosenBtn = buttons.find(
-      b => parseInt(b.dataset.origIdx ?? '-1', 10) === value
-    );
+    const chosenBtn = buttons.find(b => parseInt(b.dataset.origIdx ?? '-1', 10) === value);
     correct = typeof value === 'number' && value === answerIdx;
     if (!correct && chosenBtn) chosenBtn.classList.add('wrong');
   }
 
-  // Mostrar gabarito sempre
-  // Mostrar gabarito sempre
-const gLetter = ['A','B','C','D','E'][q.answer] || '?';
-const gText = q.options[q.answer] || '';
-explainEl.innerHTML = `<div style="font-size:14px"><strong>Gabarito: ${gLetter})</strong> ${htmlEscape(gText)}</div>`;
-explainEl.classList.remove('hide');
+  const gLetter = ['A','B','C','D','E'][q.answer] || '?';
+  const gText = q.options[q.answer] || '';
+  explainEl.innerHTML = `<div style="font-size:14px"><strong>Gabarito: ${gLetter})</strong> ${htmlEscape(gText)}</div>`;
+  explainEl.classList.remove('hide');
 
-// ↓ mostre o botão IA após responder
-show(btnAI, true);
-
+  const aiMenu = document.getElementById('aiMenu');
+  show(aiMenu, true); // mostra menu IA após responder
 }
 
-/* ===== corrigido: não duplicar opções ao voltar ===== */
+/* ===== voltar mantendo bloqueio ===== */
 function markLocked() {
   const q = current();
   const type = q.type || 'multiple';
   const val = CHOSEN[ORDER[I]];
   if (val === null) return;
-  optionsEl.innerHTML = ''; // limpa antes de recriar
+  optionsEl.innerHTML = '';
   if (type === 'vf') {
     renderOptions(['Verdadeiro', 'Falso'], () => {}, [0, 1]);
   } else {
@@ -562,26 +574,30 @@ function finish(){
 function next(){ if(I < ORDER.length - 1){ I++; render(); } else { finish(); } }
 function prev(){ if(I > 0){ I--; render(); } }
 
-/* ===== AI ===== */
-function openGoogleAI(){
-  const q=current(); if(!q) return;
-  const prompt = 'Fiquei com dúvida nessa questão. Me explique detalhadamente a certa e as erradas. Fundamente a sua resposta. Enunciado: '
-    + String((q && q.q) || '').replace(/<[^>]+>/g,'')
-    + ' | Opções: '
-    + (q && q.type === 'vf'
-        ? 'Verdadeiro | Falso'
-        : (Array.isArray(q && q.options) ? q.options.map((t,i)=> (i+1)+') '+t).join(' | ') : '')
-      )
-    + ' | Alternativa correta: '
-    + (q && q.type === 'vf'
-        ? (q && q.answer ? 'Verdadeiro' : 'Falso')
-        : (Array.isArray(q && q.options) && typeof q.answer === 'number' ? q.options[q.answer] : '')
-      );
+/* ===== IA: três modos ===== */
+function openGoogleAIMode(mode) {
+  const q = current(); if (!q) return;
+  let prompt = '';
+  if (mode === 'gabarito') {
+    prompt = 'Explique por que esta é a alternativa correta e por que as demais estão incorretas. Enunciado: ' +
+      String(q.q).replace(/<[^>]+>/g,'') +
+      ' | Opções: ' + (q.type==='vf' ? 'Verdadeiro | Falso' : q.options.join(' | ')) +
+      (typeof q.answer==='number' ? ' | Alternativa correta: ' + q.options[q.answer] : '');
+  } else if (mode === 'glossario') {
+    prompt = 'Liste e defina os principais conceitos jurídicos do enunciado a seguir: ' +
+      String(q.q).replace(/<[^>]+>/g,'');
+  } else if (mode === 'video') {
+    prompt = 'Indique uma videoaula no YouTube que explique o tema desta questão: ' +
+      String(q.q).replace(/<[^>]+>/g,'');
+  } else {
+    prompt = 'Explique detalhadamente a questão a seguir. Enunciado: ' +
+      String(q.q).replace(/<[^>]+>/g,'');
+  }
   const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt);
   window.open(url, '_blank', 'noopener');
 }
 
-/* ===== filtros: texto + tag ===== */
+/* ===== filtros ===== */
 function getVisibleQuestions(){
   const baseIdx = [...Array(QUIZ.questions.length).keys()];
   let idxs = baseIdx;
@@ -590,7 +606,6 @@ function getVisibleQuestions(){
     const tagSet = new Set(TAG_INDEX.get(TAG_FILTER)||[]);
     idxs = idxs.filter(i=>tagSet.has(i));
   }
-
   if(FILTER && FILTER.term){
     const terms = normalizeText(FILTER.term).split(/\s+/).filter(Boolean);
     idxs = idxs.filter(i=>{
@@ -666,7 +681,7 @@ async function globalSearchAndOpen(termRaw){
       else if(/\.json$/i.test(p)) quizObj = await loadJSON(p);
       if(!quizObj || !Array.isArray(quizObj.questions)) continue;
       quizObj.questions.forEach((q)=>{
-        const normalizedQ = normalizeText(String(q.q||'').replace(/<[^>]+>/g,''));
+        const normalizedQ = normalizeText(String(q.q||'').replace(/<[^>]+>/g,'')); 
         const normalizedOpts = (q.options || []).map(o => normalizeText(String(o || '')));
         const allTermsFound = searchTerms.every(st => {
           const regex = new RegExp('\\b' + st + '\\b');
@@ -714,16 +729,15 @@ async function buildManifestFromGitHub(){
     const nodes = data.tree.filter(n => n.type==='blob' && n.path.startsWith(CONFIG.dataDir+'/') && n.path.endsWith('.txt'));
     const catMap = new Map();
     for (const node of nodes) {
-  const parts = node.path.split('/');
-  if (parts.length < 2) continue;
-  const catId = parts.slice(1, -1).join('/') || 'Geral';
-  const file = parts[parts.length - 1];
-  const themeId = file.replace(/\.txt$/i, '');
-  const cat = catMap.get(catId) || { id: catId, name: catId, themes: [] };
-  cat.themes.push({ id: themeId, name: themeId, path: node.path });
-  catMap.set(catId, cat);
-}
-
+      const parts = node.path.split('/');
+      if (parts.length < 2) continue;
+      const catId = parts.slice(1, -1).join('/') || 'Geral';
+      const file = parts[parts.length - 1];
+      const themeId = file.replace(/\.txt$/i, '');
+      const cat = catMap.get(catId) || { id: catId, name: catId, themes: [] };
+      cat.themes.push({ id: themeId, name: themeId, path: node.path });
+      catMap.set(catId, cat);
+    }
     const categories = Array.from(catMap.values())
       .map(c => ({...c, themes: c.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'))}))
       .sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
