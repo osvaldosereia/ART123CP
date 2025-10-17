@@ -1,4 +1,4 @@
-/* app.js — quiz com TAGS, parser * ** *** **** -----, busca global e menu IA expandido */
+/* app.js — quiz com TAGS, parser * ** *** **** -----, busca global e suporte a HTML Inertia (QConcursos) */
 
 const CONFIG = {
   useGitHubIndexer: true,
@@ -32,6 +32,11 @@ function htmlEscape(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt
 function normalizeText(str) {
   if (!str) return '';
   return String(str).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ç/g, 'c');
+}
+function decodeHTMLEntities(s){
+  if(!s) return '';
+  const d=new DOMParser().parseFromString(s,'text/html');
+  return d.documentElement.textContent||'';
 }
 
 /* ===== DOM ===== */
@@ -178,6 +183,54 @@ function parseTxtQuestions(raw) {
   return qs;
 }
 
+/* ===== parser HTML Inertia (QConcursos) ===== */
+async function fetchInertiaFromHtml(url){
+  const res = await fetch(url, { cache:'no-store', credentials:'include' });
+  if(!res.ok) throw new Error(`HTTP ${res.status} ao carregar ${url}`);
+  const html = await res.text();
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const attr = doc.querySelector('#app')?.getAttribute('data-page');
+  if(!attr) return null;
+  const decoded = decodeHTMLEntities(attr);
+  try{ return JSON.parse(decoded); }catch{ return null; }
+}
+function normalizeQCQuestion(q){
+  const letters = Object.keys(q.alternatives||{}).sort(); // A..E
+  const options = letters.map(L => q.alternatives[L]);
+  const letter = String(q.correct_answer||'').trim().toUpperCase();
+  const answer = Math.max(0, letters.indexOf(letter));
+  const metaTags = [];
+  if(q.examining_board?.acronym) metaTags.push(q.examining_board.acronym.toLowerCase());
+  if(q.institute?.acronym) metaTags.push(q.institute.acronym.toLowerCase());
+  if(q.position) metaTags.push(String(q.position).toLowerCase());
+  return {
+    type: 'multiple',
+    q: q.statement || '',
+    options,
+    answer: answer >= 0 ? answer : null,
+    explanation: '',
+    tags: metaTags
+  };
+}
+async function loadHtmlAsQuiz(url){
+  const data = await fetchInertiaFromHtml(url);
+  if(!data){ return { meta:{title:'HTML',category:'HTML',theme:'HTML',shuffle:{questions:false,options:true},persist:true,outroMessage:''}, questions:[] }; }
+  const qs = (data?.props?.data?.questions || []).map(normalizeQCQuestion);
+  const meta = data?.props?.meta || {};
+  const title = data?.component || 'QConcursos';
+  return {
+    meta:{
+      title,
+      category: 'QConcursos',
+      theme: `Página ${meta.current_page||1}/${meta.total_pages||1}`,
+      shuffle:{questions:false, options:true},
+      persist:true,
+      outroMessage:''
+    },
+    questions: qs
+  };
+}
+
 /* ===== carregamento ===== */
 async function loadTxtAsQuiz(path){
   const raw = await fetchText(path);
@@ -199,12 +252,11 @@ async function init() {
     MANIFEST = {
       title: 'MeuJus',
       categories: [{
-        id: 'OAB-2023',
-        name: 'OAB-2023',
+        id: 'QConcursos',
+        name: 'QConcursos',
         themes: [
-          { id: 'FGV - Exame da Ordem Unificado XXXVIII',
-            name: 'FGV - Exame da Ordem Unificado XXXVIII',
-            path: 'data/OAB-2023/FGV - Exame da Ordem Unificado XXXVIII.TXT' }
+          { id: 'Exemplo HTML', name: 'Exemplo HTML',
+            path: 'https://app.qconcursos.com/simulados/tentativas/2256819/gabarito?page=2&per_page=20' }
         ]
       }],
       shuffleDefault: { questions: false, options: true },
@@ -246,7 +298,7 @@ async function init() {
 
   btnRetry.addEventListener('click', ()=>{ loadQuiz(KEY?.path,true); toast('Quiz reiniciado','info'); });
 
-  ensureAIMenu(); // cria menu IA se necessário e liga eventos
+  ensureAIMenu();
 
   const last=lsGet('quiz:last');
   if(last&&last.path){
@@ -264,10 +316,8 @@ function ensureAIMenu(){
   let aiMenu = document.getElementById('aiMenu');
   let aiDropdown = document.getElementById('aiDropdown');
 
-  // garanta a referência do botão
   if (!btnAI) btnAI = document.getElementById('btnAI');
 
-  // **SEMPRE** injeta o HTML colorido no botão
   if (btnAI) {
     btnAI.innerHTML =
       'Pergunte ao <span class="google-word">' +
@@ -276,7 +326,6 @@ function ensureAIMenu(){
       '</span> Modo I.A.';
   }
 
-  // cria estrutura se não existir
   if(!aiMenu){
     const container = document.createElement('div');
     container.id = 'aiMenu';
@@ -311,7 +360,6 @@ function ensureAIMenu(){
     aiDropdown = dd;
   }
 
-  // bind uma única vez
   if (btnAI && !btnAI.dataset.bound){
     btnAI.addEventListener('click', (e)=>{ e.stopPropagation(); aiMenu.classList.toggle('open'); });
     document.addEventListener('click', (e)=>{ if(!aiMenu.contains(e.target)) aiMenu.classList.remove('open'); });
@@ -371,6 +419,7 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
   let qz=null;
   if(/\.txt$/i.test(path)) qz=await loadTxtAsQuiz(path);
   else if(/\.json$/i.test(path)) qz=await loadJSON(path);
+  else if(/\.html?$/i.test(path) || /^https?:\/\//i.test(path)) qz=await loadHtmlAsQuiz(path);
   if(!qz||!Array.isArray(qz.questions)){
     toast('Falha ao carregar o quiz','error',3000); state.textContent='erro'; return;
   }
@@ -415,13 +464,12 @@ function render(){
       q.tags.forEach(t => {
         const a = document.createElement('a');
         a.href = '#tag:' + encodeURIComponent(t);
-        a.textContent = t; // sem '#'
+        a.textContent = t;
         a.className = 'tag';
-    a.addEventListener('click', ev => {
-  ev.preventDefault();
-  globalSearchAndOpen(t); // como na página inicial
-});
-
+        a.addEventListener('click', ev => {
+          ev.preventDefault();
+          globalSearchAndOpen(t);
+        });
         tagsArea.appendChild(a);
       });
     }
@@ -439,7 +487,7 @@ function render(){
   optionsEl.innerHTML = '';
   explainEl.classList.add('hide');
   const aiMenu = document.getElementById('aiMenu');
-  show(aiMenu, false); // esconde menu IA até responder
+  show(aiMenu, false);
 
   const type = q.type || 'multiple';
   if (type === 'vf') {
@@ -487,7 +535,7 @@ function select(value) {
   CHOSEN[ORDER[I]] = value;
   lockAndExplain(value);
   persist();
-  render(); // atualiza contador
+  render();
 }
 function isLocked() {
   return optionsEl.querySelector('.correct, .wrong') != null;
@@ -521,14 +569,13 @@ function lockAndExplain(value) {
     if (!correct && chosenBtn) chosenBtn.classList.add('wrong');
   }
 
-  const gLetter = ['A','B','C','D','E'][q.answer] || '?';
+  const gLetter = ['A','B','C','D','E','F','G'][q.answer] || '?';
   const gText = q.options[q.answer] || '';
-const safeG = /<mark class="hl">/i.test(gText) ? gText : htmlEscape(gText);
-explainEl.innerHTML = `<div style="font-size:14px"><strong>Gabarito: ${gLetter})</strong> ${safeG}</div>`;
-
+  const safeG = /<mark class="hl">/i.test(gText) ? gText : htmlEscape(gText);
+  explainEl.innerHTML = `<div style="font-size:14px"><strong>Gabarito: ${gLetter})</strong> ${safeG}</div>`;
 
   const aiMenu = document.getElementById('aiMenu');
-  show(aiMenu, true); // mostra menu IA após responder
+  show(aiMenu, true);
 }
 
 /* ===== voltar mantendo bloqueio ===== */
@@ -678,17 +725,12 @@ async function globalSearchAndOpen(termRaw){
   const term = String(termRaw||'').trim();
   if(!term){ toast('Informe um termo para busca global','warn'); return; }
 
-  // Normaliza e divide a busca
   let rawTerms = normalizeText(term).split(/\s+/).filter(Boolean);
-
-  // Palavras ignoradas (stopwords)
   const stopWords = new Set([
     'de','do','da','dos','das','para','pra','por','com','como','em','no','na',
     'nos','nas','ao','aos','às','as','os','um','uma','uns','umas','foi','era',
     'ser','se','que','e','ou','a','o','ao','à','às','todo','toda','todos','todas'
   ]);
-
-  // Filtro: apenas números OU palavras com ≥3 letras que não sejam stopwords
   const searchTerms = rawTerms.filter(w => {
     if (/^\d+$/.test(w)) return true;
     if (w.length < 3) return false;
@@ -697,7 +739,6 @@ async function globalSearchAndOpen(termRaw){
   });
   if (searchTerms.length === 0) return;
 
-  // Função: verifica se termos estão próximos (≤3 posições de distância)
   function termsAreNear(text, terms, maxDistance = 3) {
     const words = text.split(/\s+/);
     const positions = terms.map(t => {
@@ -730,6 +771,7 @@ async function globalSearchAndOpen(termRaw){
       let quizObj = null;
       if(/\.txt$/i.test(p)) quizObj = await loadTxtAsQuiz(p);
       else if(/\.json$/i.test(p)) quizObj = await loadJSON(p);
+      else if(/\.html?$/i.test(p) || /^https?:\/\//i.test(p)) quizObj = await loadHtmlAsQuiz(p);
       if(!quizObj || !Array.isArray(quizObj.questions)) continue;
 
       quizObj.questions.forEach((q)=>{
@@ -747,7 +789,6 @@ async function globalSearchAndOpen(termRaw){
           return inQ || inOpt || inTag;
         });
 
-        // proximidade máxima de 3 palavras (2 entre os termos)
         let nearEnough = true;
         if (searchTerms.length > 1) {
           const textBlob = [normalizedQ, ...normalizedOpts, ...normalizedTags].join(' ');
@@ -790,10 +831,9 @@ async function globalSearchAndOpen(termRaw){
   toast(`Busca global: ${results.length} questões`, 'info', 2200);
 }
 
-
-
 /* ===== GitHub manifest index ===== */
 async function buildManifestFromGitHub(){
+  if(!CONFIG.useGitHubIndexer) return null;
   const {owner, repo} = guessOwnerRepo();
   if(!owner || !repo) return null;
   const url = `https://api.github.com/repos/${owner}/${repo}/git/trees/${encodeURIComponent(CONFIG.branch)}?recursive=1`;
@@ -802,14 +842,18 @@ async function buildManifestFromGitHub(){
     if(!r.ok) return null;
     const data = await r.json();
     if(!data || !Array.isArray(data.tree)) return null;
-    const nodes = data.tree.filter(n => n.type==='blob' && n.path.startsWith(CONFIG.dataDir+'/') && n.path.endsWith('.txt'));
+    const nodes = data.tree.filter(n =>
+      n.type==='blob' &&
+      n.path.startsWith(CONFIG.dataDir+'/') &&
+      (n.path.endsWith('.txt') || n.path.endsWith('.html') || n.path.endsWith('.json'))
+    );
     const catMap = new Map();
     for (const node of nodes) {
       const parts = node.path.split('/');
       if (parts.length < 2) continue;
       const catId = parts.slice(1, -1).join('/') || 'Geral';
       const file = parts[parts.length - 1];
-      const themeId = file.replace(/\.txt$/i, '');
+      const themeId = file.replace(/\.(txt|html?|json)$/i, '');
       const cat = catMap.get(catId) || { id: catId, name: catId, themes: [] };
       cat.themes.push({ id: themeId, name: themeId, path: node.path });
       catMap.set(catId, cat);
