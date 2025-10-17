@@ -380,20 +380,21 @@ function render(){
   const themeText = QUIZ?.meta?.title || 'Quiz';
 
   /* ===== palavras-chave (tags) logo abaixo da busca ===== */
-  const tagsArea = document.getElementById('tagsBar');
-  if (tagsArea) {
-    tagsArea.innerHTML = '';
-    if (Array.isArray(q.tags) && q.tags.length > 0) {
-      q.tags.forEach(t => {
-        const a = document.createElement('a');
-        a.href = '#tag:' + encodeURIComponent(t);
-        a.textContent = '#' + t;
-        a.className = 'tag';
-        a.addEventListener('click', ev => { ev.preventDefault(); onTagClick(t); });
-        tagsArea.appendChild(a);
-      });
-    }
+const tagsArea = document.getElementById('tagsBar');
+if (tagsArea) {
+  tagsArea.innerHTML = '';
+  if (Array.isArray(q.tags) && q.tags.length > 0) {
+    q.tags.forEach(t => {
+      const a = document.createElement('a');
+      a.href = '#tag:' + encodeURIComponent(t);
+      a.textContent = t;            // sem '#'
+      a.className = 'tag';
+      a.addEventListener('click', ev => { ev.preventDefault(); onTagClick(t); });
+      tagsArea.appendChild(a);
+    });
   }
+}
+
 
   /* ===== enunciado ===== */
   questionEl.innerHTML = `
