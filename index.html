@@ -1,107 +1,210 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MeuJus — Quiz</title>
-  <meta name="description" content="MeuJus — Quiz minimalista com categorias e temas. Parser TXT e títulos vindos de pasta/arquivo." />
+  <title>MeuJus – Simulados</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" href="app.js" as="script" />
 </head>
+
 <body>
-  <div class="container">
-    <header class="site">
-      <div class="brand" id="appTitle" role="button" tabindex="0" aria-label="Voltar ao início">MeuJus</div>
-      <div class="state" id="state">pronto</div>
-    </header>
+  <!-- Skip link -->
+  <a class="skip-to-content" href="#main">Pular para o conteúdo</a>
 
-<!-- TELA INICIAL -->
-<section class="intro" id="screenIntro">
+  <!-- App header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Ir para a página inicial">MeuJus</a>
 
-      <div class="controls">
-        <div>
-          <label for="selCategory">Categoria</label>
-          <select id="selCategory" aria-label="Categoria"></select>
-        </div>
-        <div>
-          <label for="selTheme">Tema</label>
-          <select id="selTheme" aria-label="Tema"></select>
-        </div>
+      <nav class="top-nav" aria-label="Navegação principal">
+        <button id="openSidepanel" class="btn ghost" type="button" aria-haspopup="dialog" aria-controls="sidepanel" aria-expanded="false">
+          Menu
+        </button>
+        <button id="openHistory" class="btn ghost" type="button">
+          Histórico
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Toasts -->
+  <div id="toast-wrap" class="toast-wrap" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Sidepanel -->
+  <aside id="sidepanel" class="sidepanel" role="dialog" aria-modal="true" aria-labelledby="sidepanel-title" hidden>
+    <div class="sidepanel-backdrop" data-close="sidepanel" tabindex="-1"></div>
+    <div class="sidepanel-sheet" role="document">
+      <header class="sidepanel-header">
+        <h2 id="sidepanel-title" class="h5">Menu</h2>
+        <button class="icon-btn" type="button" data-close="sidepanel" aria-label="Fechar painel">✕</button>
+      </header>
+
+      <div class="sidepanel-body">
+        <section aria-labelledby="sec-catalogo">
+          <h3 id="sec-catalogo" class="h6">Catálogo</h3>
+          <div id="catalog" class="catalog" role="list"></div>
+        </section>
+
+        <hr />
+
+        <section aria-labelledby="sec-config">
+          <h3 id="sec-config" class="h6">Configurações</h3>
+          <div class="config-grid">
+            <label class="switch">
+              <input id="cfgAutoResume" type="checkbox" />
+              <span>Continuar sessão automaticamente</span>
+            </label>
+
+            <label class="switch">
+              <input id="cfgPrefetch" type="checkbox" checked />
+              <span>Pré-carregar próxima página</span>
+            </label>
+
+            <label class="switch">
+              <input id="cfgHaptics" type="checkbox" />
+              <span>Feedback háptico</span>
+            </label>
+          </div>
+        </section>
+
+        <hr />
+
+        <section aria-labelledby="sec-about">
+          <h3 id="sec-about" class="h6">Sobre</h3>
+          <p>Simulados em HTML com reconhecimento de dados preservado.</p>
+        </section>
       </div>
+    </div>
+  </aside>
 
-      <div class="actions">
-        <button id="btnStart" class="btn primary" type="button">Começar</button>
-        <button id="btnResume" class="btn ghost hide" type="button">Continuar anterior</button>
+  <!-- Resume dialog (controle de retomada explícita) -->
+  <div id="resume-dialog" class="modal" role="dialog" aria-modal="true" aria-labelledby="resume-title" hidden>
+    <div class="modal-backdrop" data-close="resume"></div>
+    <div class="modal-card" role="document">
+      <header class="modal-header">
+        <h2 id="resume-title" class="h5">Continuar de onde parou?</h2>
+      </header>
+      <div class="modal-body">
+        <p>Foi encontrada uma sessão anterior. Deseja retomar?</p>
+        <p id="resume-meta" class="muted"></p>
       </div>
-
-      <div class="controls" style="margin-top:8px">
-        <div>
-          <label for="txtGlobal">Buscar em todos os temas</label>
-          <input id="txtGlobal" type="search" placeholder="Termo exato em enunciados e opções" />
-        </div>
-        <div class="actions" style="align-items:end;padding-top:0">
-          <button id="btnGlobal" class="btn ghost" type="button">Buscar em todos</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- TELA DO QUIZ -->
-    <section class="quiz hide" id="screenQuiz">
-      <div class="progress" aria-label="Progresso"><span id="bar"></span></div>
-
-      <div class="controls">
-        <div>
-          <label for="txtSearch">Buscar neste tema</label>
-          <input id="txtSearch" type="search" placeholder="Termo exato" />
-        </div>
-        <div class="actions" style="align-items:end;padding-top:0">
-          <button id="btnSearch" class="btn ghost" type="button">Buscar</button>
-          <button id="btnClearSearch" class="btn ghost hide" type="button">Limpar filtro</button>
-        </div>
-      </div>
-
-      <div id="question" class="statement"></div>
-      <div id="options" class="options" role="listbox"></div>
-      <div id="explanation" class="explain hide"></div>
-
-      <!-- Botões de navegação -->
-      <div class="actions">
-        <button id="btnGoHome" class="btn ghost" type="button">Início</button>
-        <button id="btnPrev" class="btn ghost" type="button">Anterior</button>
-        <button id="btnNext" class="btn primary" type="button">Próximo</button>
-      </div>
-
-      <!-- MENU IA (fica escondido até o usuário responder uma questão) -->
-      <div class="ai-menu hide" id="aiMenu">
-        <button id="btnAI" class="btn ghost" type="button">Pergunte ao Google Modo I.A.</button>
-        <div class="ai-dropdown" id="aiDropdown">
-          <button data-mode="gabarito">Gabarito</button>
-          <button data-mode="glossario">Glossário</button>
-          <button data-mode="video">Vídeo-aula</button>
-        </div>
-      </div>
-
-      <!-- Barra de tags -->
-      <div id="tagsBar" class="tagsbar" aria-label="Tags relacionadas"></div>
-
-      <!-- Rodapé do quiz -->
-      <div class="meta">
-        <span id="footLeft">—</span>
-        <span id="footRight">—</span>
-      </div>
-    </section>
-
-    <!-- RESULTADOS -->
-    <section class="results hide" id="screenResult">
-      <h2 id="resultTitle">Resultado</h2>
-      <div class="score" id="resultScore"></div>
-      <p class="muted" id="resultMsg"></p>
-      <div class="actions">
-        <button id="btnRetry" class="btn ghost" type="button">Refazer</button>
-        <button id="btnHome" class="btn primary" type="button">Início</button>
-      </div>
-    </section>
+      <footer class="modal-footer">
+        <button id="resume-yes" class="btn primary" type="button">Retomar</button>
+        <button id="resume-no" class="btn" type="button" data-close="resume">Começar do início</button>
+      </footer>
+    </div>
   </div>
 
-  <script src="app.js"></script>
+  <!-- Main -->
+  <main id="main" class="site-main" role="main" tabindex="-1">
+    <div class="container">
+      <!-- Intro / Home -->
+      <section id="home" class="home" aria-labelledby="home-title">
+        <h1 id="home-title" class="h3">Escolha um tema para começar</h1>
+
+        <div class="controls" role="group" aria-label="Filtros">
+          <div class="field">
+            <label for="search">Buscar</label>
+            <input id="search" name="search" type="search" placeholder="busque por órgão, banca, assunto..." autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label for="tags">Tag</label>
+            <select id="tags" name="tags">
+              <option value="">Todas</option>
+            </select>
+          </div>
+
+          <button id="clearFilters" class="btn sm" type="button" aria-label="Limpar filtros">Limpar</button>
+        </div>
+
+        <div id="list" class="list" role="list" aria-label="Lista de temas"></div>
+
+        <div class="home-cta">
+          <button id="startLatest" class="btn primary" type="button">Começar último tema</button>
+          <button id="openSidepanel2" class="btn" type="button">Explorar catálogo</button>
+        </div>
+
+        <div id="network-status" class="muted" role="status" aria-live="polite"></div>
+      </section>
+
+      <!-- Quiz screen -->
+      <section id="quiz" class="quiz" aria-labelledby="quiz-title" hidden>
+        <header class="quiz-header">
+          <button id="backHome" class="btn ghost" type="button" aria-label="Voltar para a página inicial">← Início</button>
+          <h2 id="quiz-title" class="h4">Simulado</h2>
+
+          <div class="quiz-tools" role="group" aria-label="Ferramentas do quiz">
+            <button id="toggleNotes" class="btn sm" type="button">Notas</button>
+            <button id="toggleBookmark" class="btn sm" type="button" aria-pressed="false">Favorito</button>
+            <button id="openIA" class="btn sm ghost" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="ia-menu">IA</button>
+
+            <div id="ia-menu" class="menu" role="menu" hidden>
+              <button class="menu-item" role="menuitem" type="button" data-ia="explicar">Explicar questão</button>
+              <button class="menu-item" role="menuitem" type="button" data-ia="resumir">Resumir enunciado</button>
+              <button class="menu-item" role="menuitem" type="button" data-ia="refazer">Gerar similar</button>
+            </div>
+          </div>
+        </header>
+
+        <div class="progress">
+          <div id="progress-bar" class="progress-bar" aria-hidden="true"></div>
+          <div id="progress-label" class="progress-label" role="status" aria-live="polite">0%</div>
+        </div>
+
+        <article id="question" class="card" aria-live="polite">
+          <header class="card-header">
+            <p id="q-meta" class="muted"></p>
+            <h3 id="q-title" class="h5">Enunciado</h3>
+          </header>
+
+          <div id="q-statement" class="statement"></div>
+
+          <form id="q-options" class="options" role="listbox" aria-label="Alternativas"></form>
+
+          <footer class="card-footer">
+            <div class="actions">
+              <button id="prev" class="btn" type="button">Anterior</button>
+              <button id="next" class="btn primary" type="button">Próxima</button>
+              <button id="finish" class="btn ghost" type="button">Finalizar</button>
+            </div>
+          </footer>
+        </article>
+
+        <aside id="explanation" class="explanation card" hidden>
+          <header class="card-header">
+            <h4 class="h6">Gabarito e explicação</h4>
+          </header>
+          <div id="exp-body"></div>
+        </aside>
+      </section>
+
+      <!-- Results -->
+      <section id="results" class="results" aria-labelledby="results-title" hidden>
+        <h2 id="results-title" class="h4">Resultado</h2>
+        <div id="score" class="score"></div>
+        <div class="results-actions">
+          <button id="retry" class="btn primary" type="button">Refazer</button>
+          <button id="goHomeFromResults" class="btn" type="button">Início</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>© <span id="year"></span> MeuJus</small>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js" defer></script>
 </body>
 </html>
