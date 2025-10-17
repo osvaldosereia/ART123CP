@@ -1,0 +1,27 @@
+* Texto do enunciado linha 1
+* Texto do enunciado linha 2 (opcional)
+** A) Alternativa A
+** B) Alternativa B
+** C) Alternativa C
+** D) Alternativa D
+*** Gabarito: C
+**** palavra1, palavra2, palavra3
+-----
+* Texto do enunciado linha 1
+* Texto do enunciado linha 2 (opcional)
+** A) Alternativa A
+** B) Alternativa B
+** C) Alternativa C
+** D) Alternativa D
+*** Gabarito: C
+**** palavra1, palavra2, palavra3
+-----
+* Texto do enunciado linha 1
+* Texto do enunciado linha 2 (opcional)
+** A) Alternativa A
+** B) Alternativa B
+** C) Alternativa C
+** D) Alternativa D
+*** Gabarito: C
+**** palavra1, palavra2, palavra3
+-----
