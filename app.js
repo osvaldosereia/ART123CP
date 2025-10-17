@@ -599,20 +599,26 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
   await loadVirtualQuiz(qz, path, fresh);
 }
 async function loadVirtualQuiz(quizObj, synthKey, fresh){
-  QUIZ=quizObj; KEY={path:synthKey, key:`quiz:${JSON.stringify(synthKey)}`};
+  QUIZ = quizObj;
+  KEY  = { path: synthKey, key: `quiz:${JSON.stringify(synthKey)}` };
   buildTagIndex(QUIZ.questions);
-  const total=QUIZ.questions.length;
-  ORDER=[...Array(total).keys()];
-  CHOSEN=new Array(total).fill(null);
-  I=0; FILTER=null; TAG_FILTER=null;
+
+  const total = QUIZ.questions.length;
+  ORDER  = [...Array(total).keys()];
+  CHOSEN = new Array(total).fill(null);
+  I = 0; FILTER = null; TAG_FILTER = null;
+
   btnClearSearch.classList.add('hide');
-  show(screenIntro,false); show(screenQuiz,true); show(screenResult,false);
+  show(screenIntro, false);
+  show(screenQuiz,  true);
+  show(screenResult,false);
   render();
 }
 
-
 /* ===== render ===== */
 function render(){
+  if(!QUIZ || !Array.isArray(QUIZ.questions) || QUIZ.questions.length===0) return;
+
   const total = QUIZ.questions.length;
   const answered = ORDER.filter(idx => CHOSEN[idx] !== null).length;
   const denom = ORDER.length || total;
@@ -624,22 +630,20 @@ function render(){
   footRight.textContent = FILTER
     ? `${answered} respondidas · filtro: "${FILTER.term}"${filterBadge}`
     : `${answered} respondidas${filterBadge}`;
-}
 
   const q = current();
   const categoryText = QUIZ?.meta?.category || 'Geral';
-  const themeText = QUIZ?.meta?.title || 'Quiz';
+  const themeText    = QUIZ?.meta?.title    || 'Quiz';
 
   renderSiblingTags();
 
   questionEl.innerHTML = `
-  <div class="muted">
-    ${htmlEscape(categoryText)} | ${htmlEscape(themeText)}
-  </div>
-  <hr>
-  ${q.q}
-`;
-
+    <div class="muted">
+      ${htmlEscape(categoryText)} | ${htmlEscape(themeText)}
+    </div>
+    <hr>
+    ${q.q}
+  `;
 
   optionsEl.innerHTML = '';
   explainEl.classList.add('hide');
@@ -660,6 +664,7 @@ function render(){
   if (CHOSEN[ORDER[I]] !== null) markLocked();
   persist();
 }
+
 
 /* ===== opções ===== */
 function renderOptions(texts, onPick, origIdxs = null) {
