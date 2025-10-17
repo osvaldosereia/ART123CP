@@ -221,12 +221,9 @@ async function loadTxtAsQuiz(path){
 init();
 async function init() {
   // tenta usar o indexador GitHub
-  if (CONFIG.useGitHubIndexer) {
-    const dyn = await buildManifestFromGitHub();
-    if (dyn) MANIFEST = dyn;
-  }
+  MANIFEST = await buildManifestFromGitHub();
 
-  // fallback fixo: cria manualmente o manifesto local
+  // se falhar, usa o fallback local fixo
   if (!MANIFEST) {
     MANIFEST = {
       title: 'MeuJus',
@@ -250,10 +247,6 @@ async function init() {
   /* ===== interface ===== */
   state.textContent = 'pronto';
   appTitle.textContent = MANIFEST?.title || 'MeuJus';
-  try {
-    if (MANIFEST?.labels)
-      LABELS = { ...DEFAULT_LABELS, ...(await loadJSON(MANIFEST.labels)) };
-  } catch {}
   applyLabels();
 
   selCategory.innerHTML = '';
@@ -303,6 +296,7 @@ async function init() {
   window.addEventListener('offline', () => toast('Sem conexão. Usando cache local', 'warn', 3000));
   window.addEventListener('online', () => toast('Conexão restabelecida', 'success', 1800));
 }
+
 
 
 
