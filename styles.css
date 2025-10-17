@@ -310,4 +310,4 @@ select, input { width: 100%; }
 }
 /* opcional: estados */
 #aiMenu #btnAI:hover{ border-color:#1a73e8; }
-#aiMenu #btnAI:focus-visible{ outline:2px solid #1a73e8; outline-offset:2px; }
+#aiMenu #btnAI:focus-visible{ outline:3px solid #1a73e8; outline-offset:3px; }
