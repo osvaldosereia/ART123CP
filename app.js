@@ -127,7 +127,6 @@ let btnAI = document.getElementById('btnAI');
 
 const resultTitle = document.getElementById('resultTitle');
 const resultScore = document.getElementById('resultScore');
-const resultMsg = document.getElementById('resultMsg');
 const btnRetry = document.getElementById('btnRetry');
 const btnHome = document.getElementById('btnHome');
 
@@ -215,6 +214,30 @@ function buildTagIndex(items){
   }
 }
 
+/* ===== sanitização básica de HTML ===== */
+function sanitizeBasicHTML(html){
+  if(!html) return '';
+  let s = String(html);
+
+  // remove blocos perigosos
+  s = s.replace(/<(script|style|iframe|object|embed|meta|link)[\s\S]*?>[\s\S]*?<\/\1>/gi, '');
+  s = s.replace(/<(script|style|iframe|object|embed|meta|link)[^>]*?>/gi, '');
+
+  // permite tags básicas; remove atributos
+  const allowed = ['b','strong','i','em','u','sup','sub','br','p','ul','ol','li','mark'];
+  s = s.replace(/<([a-z0-9:-]+)(\s[^>]*)?>/gi, (m, tag)=>{
+    tag = tag.toLowerCase();
+    return allowed.includes(tag) ? `<${tag}>` : '';
+  });
+  s = s.replace(/<\/([a-z0-9:-]+)>/gi, (m, tag)=>{
+    tag = tag.toLowerCase();
+    return allowed.includes(tag) ? `</${tag}>` : '';
+  });
+
+  // normaliza quebras simples
+  return s.replace(/\r\n?/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
+}
+
 /* ===== parser TXT (* ** *** **** -----) ===== */
 function parseTxtQuestions(raw) {
   const text = String(raw || '').replace(/\uFEFF/g, '').replace(/\r\n?/g, '\n');
@@ -271,7 +294,7 @@ function plainText(html){
 
 function normalizeQCQuestion(q){
   const letters = Object.keys(q.alternatives||{}).sort(); // A..E
-  const options = letters.map(L => plainText(q.alternatives[L])); // texto puro
+  const options = letters.map(L => sanitizeBasicHTML(q.alternatives[L])); // mantém HTML básico
   const letter = String(q.correct_answer||'').trim().toUpperCase();
   const answer = Math.max(0, letters.indexOf(letter));
   const metaTags = [];
@@ -280,7 +303,7 @@ function normalizeQCQuestion(q){
   if(q.position) metaTags.push(String(q.position).toLowerCase());
   return {
     type: 'multiple',
-    q: formatParagraphs(plainText(q.statement)),          // texto puro + <p>…</p>
+    q: sanitizeBasicHTML(q.statement),     // mantém HTML básico
     options,
     answer: answer >= 0 ? answer : null,
     explanation: '',
@@ -452,7 +475,7 @@ function openGoogleAIMode(mode) {
     prompt = 'Explique por que esta é a alternativa correta e por que as demais estão incorretas. Enunciado: ' +
       String(q.q).replace(/<[^>]+>/g,'') +
       ' | Opções: ' + (q.type==='vf' ? 'Verdadeiro | Falso' : q.options.join(' | ')) +
-      (typeof q.answer==='number' ? ' | Alternativa correta: ' + q.options[q.answer] : '');
+      (typeof q.answer==='number' ? ' | Alternativa correta: ' + (q.options[q.answer]||'') : '');
   } else if (mode === 'glossario') {
     prompt = 'Liste e defina os principais conceitos jurídicos do enunciado a seguir: ' +
       String(q.q).replace(/<[^>]+>/g,'');
@@ -633,14 +656,7 @@ function renderOptions(texts, onPick, origIdxs = null) {
     if (origIdxs) b.dataset.origIdx = String(origIdxs[idx]);
 
     const label = labels[idx] ? `<strong>${labels[idx]})</strong> ` : '';
-
-    const hasMark = /<mark class="hl">/i.test(String(txt||''));
-    const base = hasMark ? String(txt||'') : htmlEscape(String(txt||''));
-
-    const safe = base
-      .replace(/\n{2,}/g, '\n\n')
-      .split(/\n{2,}/)
-      .map(p => `<p style="margin:0">${p.replace(/\n/g, '<br>')}</p>`).join('');
+    const safe = String(txt||''); // já sanitizado quando vem do QConcursos
 
     b.innerHTML = `${label}${safe}`;
     b.addEventListener('click', () => onPick(idx));
@@ -690,8 +706,7 @@ function lockAndExplain(value) {
 
   const gLetter = ['A','B','C','D','E','F','G'][q.answer] || '?';
   const gText = q.options[q.answer] || '';
-  const safeG = /<mark class="hl">/i.test(gText) ? gText : htmlEscape(gText);
-  explainEl.innerHTML = `<div style="font-size:14px"><strong>Gabarito: ${gLetter})</strong> ${safeG}</div>`;
+  explainEl.innerHTML = `<div style="font-size:14px"><strong>Gabarito: ${gLetter})</strong> ${gText}</div>`;
 
   const aiMenu = document.getElementById('aiMenu');
   show(aiMenu, true);
@@ -770,7 +785,7 @@ function getVisibleQuestions(){
     const terms = normalizeText(FILTER.term).split(/\s+/).filter(Boolean);
     idxs = idxs.filter(i=>{
       const q = QUIZ.questions[i];
-      const nq = normalizeText(String(q.q||'').replace(/<[^>]+>/g,''));
+      const nq = normalizeText(String(q.q||'').replace(/<[^>]+>/g,'')); 
       const no = (q.options||[]).map(o=>normalizeText(String(o||'')));
       return terms.every(st=>{
         const re = new RegExp('\\b'+st+'\\b');
@@ -942,12 +957,11 @@ async function buildManifestFromGitHub(){
     const data = await r.json();
     if(!data || !Array.isArray(data.tree)) return null;
     const root = (CONFIG.dataDir + '/').toLowerCase(); // aceita Data/ ou data/
-const nodes = data.tree.filter(n =>
-  n.type==='blob' &&
-  n.path.toLowerCase().startsWith(root) &&
-  (/\.(txt|html?|json)$/i).test(n.path)
-);
-
+    const nodes = data.tree.filter(n =>
+      n.type==='blob' &&
+      n.path.toLowerCase().startsWith(root) &&
+      (/\.(txt|html?|json)$/i).test(n.path)
+    );
 
     const catMap = new Map(); // id => { id, name, themes: [] }
     const groupMap = new Map(); // catId => Map< materia/baseId , paths[] >
