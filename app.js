@@ -1,6 +1,7 @@
 /* app.js — quiz com TAGS, parser * ** *** **** -----, busca global, suporte a HTML Inertia (QConcursos)
    + agregação automática de múltiplos arquivos do mesmo tema (ex.: mutuo.html, mutuo1.html, mutuo2.html)
-   + TAGS = “temas irmãos” da mesma matéria (exibe e troca de tema dentro da mesma pasta) */
+   + TAGS = “temas irmãos” da mesma matéria (exibe e troca de tema dentro da mesma pasta)
+   + Histórico da sessão (timeline): mostra alternativa marcada e, se errado, a correta (A–E) */
 
 const CONFIG = {
   useGitHubIndexer: true,
@@ -40,6 +41,7 @@ function decodeHTMLEntities(s){
   const d=new DOMParser().parseFromString(s,'text/html');
   return d.documentElement.textContent||'';
 }
+function slug(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
 
 /* pretty names */
 const SPECIAL_NAMES = new Map([
@@ -84,7 +86,6 @@ function renderSiblingTags(){
   tagsArea.innerHTML = '';
   const siblings = listSiblingThemes();
 
-  // mostra/oculta a barra conforme houver irmãos
   tagsArea.style.display = siblings.length ? 'flex' : 'none';
 
   siblings.forEach(t => {
@@ -99,7 +100,6 @@ function renderSiblingTags(){
     tagsArea.appendChild(a);
   });
 }
-
 
 /* ===== DOM ===== */
 const selCategory = document.getElementById('selCategory');
@@ -127,6 +127,7 @@ let btnAI = document.getElementById('btnAI');
 
 const resultTitle = document.getElementById('resultTitle');
 const resultScore = document.getElementById('resultScore');
+const resultMsg = document.getElementById('resultMsg');
 const btnRetry = document.getElementById('btnRetry');
 const btnHome = document.getElementById('btnHome');
 
@@ -218,12 +219,8 @@ function buildTagIndex(items){
 function sanitizeBasicHTML(html){
   if(!html) return '';
   let s = String(html);
-
-  // remove blocos perigosos
   s = s.replace(/<(script|style|iframe|object|embed|meta|link)[\s\S]*?>[\s\S]*?<\/\1>/gi, '');
   s = s.replace(/<(script|style|iframe|object|embed|meta|link)[^>]*?>/gi, '');
-
-  // permite tags básicas; remove atributos
   const allowed = ['b','strong','i','em','u','sup','sub','br','p','ul','ol','li','mark'];
   s = s.replace(/<([a-z0-9:-]+)(\s[^>]*)?>/gi, (m, tag)=>{
     tag = tag.toLowerCase();
@@ -233,8 +230,6 @@ function sanitizeBasicHTML(html){
     tag = tag.toLowerCase();
     return allowed.includes(tag) ? `</${tag}>` : '';
   });
-
-  // normaliza quebras simples
   return s.replace(/\r\n?/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
 }
 
@@ -279,7 +274,7 @@ async function fetchInertiaFromHtml(url){
   const decoded = decodeHTMLEntities(attr);
   try{ return JSON.parse(decoded); }catch{ return null; }
 }
-// transforma HTML em texto simples preservando quebras
+// texto simples (mantida para busca global)
 function plainText(html){
   if(!html) return '';
   let s = String(html)
@@ -287,27 +282,47 @@ function plainText(html){
     .replace(/<\s*br\s*\/?>/gi, '\n')
     .replace(/<\s*\/p\s*>/gi, '\n\n')
     .replace(/<\s*p[^>]*>/gi, '');
-  s = s.replace(/<[^>]+>/g, ''); // strip tags
+  s = s.replace(/<[^>]+>/g, '');
   s = decodeHTMLEntities(s);
   return s.replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
 }
+function yearFrom(text){ const m=String(text||'').match(/\b(19|20)\d{2}\b/); return m?m[0]:null; }
 
 function normalizeQCQuestion(q){
   const letters = Object.keys(q.alternatives||{}).sort(); // A..E
-  const options = letters.map(L => sanitizeBasicHTML(q.alternatives[L])); // mantém HTML básico
+  const options = letters.map(L => sanitizeBasicHTML(q.alternatives[L]));
   const letter = String(q.correct_answer||'').trim().toUpperCase();
   const answer = Math.max(0, letters.indexOf(letter));
-  const metaTags = [];
-  if(q.examining_board?.acronym) metaTags.push(q.examining_board.acronym.toLowerCase());
-  if(q.institute?.acronym) metaTags.push(q.institute.acronym.toLowerCase());
-  if(q.position) metaTags.push(String(q.position).toLowerCase());
+
+  const tags = [];
+  const board = q.examining_board?.acronym || q.examining_board?.name;
+  const inst  = q.institute?.acronym      || q.institute?.name;
+  const pos   = q.position;
+  const examName = (q.exams&&q.exams[0]?.name)||q.title||'';
+  const yr = q.year || yearFrom(examName) || yearFrom(q.title);
+
+  if(board) tags.push(slug(board));
+  if(inst)  tags.push(slug(inst));
+  if(pos)   tags.push(slug(pos));
+  if(yr)    tags.push(String(yr));
+
   return {
     type: 'multiple',
-    q: sanitizeBasicHTML(q.statement),     // mantém HTML básico
+    q: sanitizeBasicHTML(q.statement),
     options,
     answer: answer >= 0 ? answer : null,
     explanation: '',
-    tags: metaTags
+    tags,
+    source: {
+      boardAcr: q.examining_board?.acronym||null,
+      board: q.examining_board?.name||null,
+      instituteAcr: q.institute?.acronym||null,
+      institute: q.institute?.name||null,
+      position: q.position||null,
+      year: yr,
+      exam: examName||null,
+      questionId: q.question_id||null
+    }
   };
 }
 
@@ -399,6 +414,9 @@ async function init() {
 
   ensureAIMenu();
 
+  loadHistory();
+  renderHistory();
+
   const last=lsGet('quiz:last');
   if(last&&last.path){
     btnResume.classList.remove('hide');
@@ -408,6 +426,12 @@ async function init() {
 
   window.addEventListener('offline', ()=>toast('Sem conexão. Usando cache local','warn',3000));
   window.addEventListener('online', ()=>toast('Conexão restabelecida','success',1800));
+
+  // abrir pela hash #q=n
+  try{
+    const m = String(location.hash||'').match(/#q=(\d+)/i);
+    if(m){ const n = Math.max(1, parseInt(m[1],10)); I = n-1; }
+  }catch{}
 }
 
 /* ===== IA ===== */
@@ -472,7 +496,7 @@ function openGoogleAIMode(mode) {
   const q = current(); if (!q) return;
   let prompt = '';
   if (mode === 'gabarito') {
-    prompt = 'Explique e fundamente a todas as alternativas do Enunciado: ' +
+    prompt = 'Explique por que esta é a alternativa correta e por que as demais estão incorretas. Enunciado: ' +
       String(q.q).replace(/<[^>]+>/g,'') +
       ' | Opções: ' + (q.type==='vf' ? 'Verdadeiro | Falso' : q.options.join(' | ')) +
       (typeof q.answer==='number' ? ' | Alternativa correta: ' + (q.options[q.answer]||'') : '');
@@ -537,7 +561,6 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
   state.textContent='carregando';
   let qz=null;
 
-  // aceitar lista de caminhos e agregar
   if(Array.isArray(path)){
     const quizzes = [];
     for(const p of path){
@@ -596,6 +619,14 @@ async function loadVirtualQuiz(quizObj, synthKey, fresh){
   render();
 }
 
+/* ===== chips de origem (opcional) ===== */
+function chipsHTML(q){
+  const s=q.source||{};
+  const parts=[s.boardAcr||s.board, s.instituteAcr||s.institute, s.position, s.year].filter(Boolean);
+  const chips=parts.map(v=>`<span class="chip" data-tag="${htmlEscape(slug(v))}">${htmlEscape(v)}</span>`).join(' ');
+  return chips ? `<div class="chips">${chips}</div>` : '';
+}
+
 /* ===== render ===== */
 function render(){
   const total = QUIZ.questions.length;
@@ -614,15 +645,14 @@ function render(){
   const categoryText = QUIZ?.meta?.category || 'Geral';
   const themeText = QUIZ?.meta?.title || 'Quiz';
 
-  /* TAGS = temas irmãos da mesma matéria */
   renderSiblingTags();
 
-  /* enunciado */
   questionEl.innerHTML = `
     <div style="font-size:12px;font-weight:400;color:var(--muted);letter-spacing:.2px;">
       ${htmlEscape(categoryText)} | ${htmlEscape(themeText)}
     </div>
     <hr style="border:0;border-top:1px solid #e5e7eb;margin:10px 0;">
+    ${chipsHTML(q)}
     ${q.q}
   `;
 
@@ -657,7 +687,6 @@ function renderOptions(texts, onPick, origIdxs = null) {
 
     const label = labels[idx] ? `<strong>${labels[idx]})</strong> ` : '';
     const safe = String(txt||''); // já sanitizado quando vem do QConcursos
-
     b.innerHTML = `${label}${safe}`;
     b.addEventListener('click', () => onPick(idx));
     optionsEl.appendChild(b);
@@ -688,20 +717,27 @@ function lockAndExplain(value) {
   }
 
   let correct = false;
+  let answerIdx = null;
+
   if (type === 'vf') {
-    correct = value === !!q.answer;
+    // mapear V/F para letras A/B somente para exibição no histórico
+    answerIdx = q.answer ? 0 : 1;           // A=Verdadeiro, B=Falso
     buttons[q.answer ? 0 : 1].classList.add('correct');
     const chosenIdx = value ? 0 : 1;
+    correct = (chosenIdx === answerIdx);
     if (!correct) buttons[chosenIdx]?.classList.add('wrong');
+    upsertHistoryItem({ idx: ORDER[I], chosenIdx, correctIdx: answerIdx });
   } else {
-    const answerIdx = q.answer;
+    answerIdx = q.answer;
     buttons.forEach(b => {
       const origIdx = parseInt(b.dataset.origIdx ?? '-1', 10);
       if (origIdx === answerIdx) b.classList.add('correct');
     });
-    const chosenBtn = buttons.find(b => parseInt(b.dataset.origIdx ?? '-1', 10) === value);
-    correct = typeof value === 'number' && value === answerIdx;
+    const chosenIdx = (typeof value==='number') ? value : null;
+    const chosenBtn = buttons.find(b => parseInt(b.dataset.origIdx ?? '-1', 10) === chosenIdx);
+    correct = (typeof chosenIdx==='number' && chosenIdx===answerIdx);
     if (!correct && chosenBtn) chosenBtn.classList.add('wrong');
+    upsertHistoryItem({ idx: ORDER[I], chosenIdx, correctIdx: answerIdx });
   }
 
   const gLetter = ['A','B','C','D','E','F','G'][q.answer] || '?';
@@ -710,6 +746,9 @@ function lockAndExplain(value) {
 
   const aiMenu = document.getElementById('aiMenu');
   show(aiMenu, true);
+
+  // deep link da posição atual
+  try{ history.replaceState(null,'',`#q=${I+1}`); }catch{}
 }
 
 /* ===== voltar mantendo bloqueio ===== */
@@ -721,6 +760,8 @@ function markLocked() {
   optionsEl.innerHTML = '';
   if (type === 'vf') {
     renderOptions(['Verdadeiro', 'Falso'], () => {}, [0, 1]);
+    lockAndExplain( val ? true : false );
+    return;
   } else {
     const opts = q.options.map((t, i) => ({ t, i }));
     renderOptions(opts.map(o => o.t), () => {}, opts.map(o => o.i));
@@ -956,15 +997,15 @@ async function buildManifestFromGitHub(){
     if(!r.ok) return null;
     const data = await r.json();
     if(!data || !Array.isArray(data.tree)) return null;
-    const root = (CONFIG.dataDir + '/').toLowerCase(); // aceita Data/ ou data/
+    const root = (CONFIG.dataDir + '/').toLowerCase();
     const nodes = data.tree.filter(n =>
       n.type==='blob' &&
       n.path.toLowerCase().startsWith(root) &&
       (/\.(txt|html?|json)$/i).test(n.path)
     );
 
-    const catMap = new Map(); // id => { id, name, themes: [] }
-    const groupMap = new Map(); // catId => Map< materia/baseId , paths[] >
+    const catMap = new Map();
+    const groupMap = new Map();
 
     for (const node of nodes) {
       const parts = node.path.split('/'); // data / disciplina / materia / arquivo
@@ -973,13 +1014,13 @@ async function buildManifestFromGitHub(){
       const materiaId    = parts[2];
       const file = parts[3];
       const themeIdRaw = file.replace(/\.(txt|html?|json)$/i, '');
-      const baseId = themeIdRaw.replace(/\d+$/,''); // remove sufixo numérico
+      const baseId = themeIdRaw.replace(/\d+$/,'');
 
       const catId = disciplinaId;
       const cat = catMap.get(catId) || { id: catId, name: prettyName(catId), themes: [] };
       catMap.set(catId, cat);
 
-      const key = `${materiaId}/${baseId}`; // unicidade por matéria+tema
+      const key = `${materiaId}/${baseId}`;
       const byCat = groupMap.get(catId) || new Map();
       const arr = byCat.get(key) || [];
       arr.push(node.path);
@@ -1023,6 +1064,116 @@ window.addEventListener('keydown',(e)=>{
   } else if(e.key==='Enter'||e.key==='ArrowRight'){
     if(I===ORDER.length-1) finish(); else next();
   } else if(e.key==='ArrowLeft'){ prev(); }
+  else if(e.key.toLowerCase()==='h'){ const p=document.getElementById('historyPanel'); if(p) p.classList.toggle('hide'); }
 });
 window.addEventListener('beforeunload', persist);
 document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='hidden') persist(); });
+
+/* ===== HISTÓRICO DA SESSÃO ================================================= */
+const LETTERS = ['A','B','C','D','E','F','G'];
+let HISTORY = []; // [{ idx, number, chosenIdx, chosenLetter, correctIdx, correctLetter, isCorrect }]
+
+function histKey(){ return KEY ? (KEY.key + ':hist') : 'hist:tmp'; }
+function loadHistory(){ HISTORY = lsGet(histKey(), []); }
+function saveHistory(){ lsSet(histKey(), HISTORY); }
+
+function upsertHistoryItem({ idx, chosenIdx, correctIdx }){
+  const number = idx + 1;
+  const chosenLetter  = typeof chosenIdx  === 'number' ? LETTERS[chosenIdx]  || '?' : '∅';
+  const correctLetter = typeof correctIdx === 'number' ? LETTERS[correctIdx] || '?' : '∅';
+  const isCorrect = (typeof chosenIdx==='number' && chosenIdx===correctIdx);
+
+  const pos = HISTORY.findIndex(h => h.idx === idx);
+  const rec = { idx, number, chosenIdx, chosenLetter, correctIdx, correctLetter, isCorrect };
+  if(pos>=0) HISTORY[pos] = rec; else HISTORY.push(rec);
+  // limite simples
+  if(HISTORY.length>200) HISTORY = HISTORY.slice(-200);
+  saveHistory();
+  renderHistory();
+}
+
+function renderHistory(){
+  let side = document.getElementById('historyPanel');
+  if(!side){
+    side = document.createElement('aside');
+    side.id = 'historyPanel';
+    side.className = 'history';
+    side.innerHTML = `
+      <div class="hist-head">
+        <strong>Histórico</strong>
+        <div class="hist-actions">
+          <button id="histAll" class="btn ghost sm">Todas</button>
+          <button id="histWrong" class="btn ghost sm">Erradas</button>
+          <button id="histClear" class="btn ghost sm">Limpar</button>
+        </div>
+      </div>
+      <div id="histList" class="hist-list"></div>
+    `;
+    document.body.appendChild(side);
+    document.getElementById('histAll').onclick = ()=> renderHistoryList('all');
+    document.getElementById('histWrong').onclick = ()=> renderHistoryList('wrong');
+    document.getElementById('histClear').onclick = ()=> { HISTORY=[]; saveHistory(); renderHistoryList('all'); };
+  }
+  renderHistoryList(window.__histFilter||'all');
+}
+
+function renderHistoryList(filter){
+  window.__histFilter = filter;
+  const list = document.getElementById('histList');
+  if(!list) return;
+  const items = (filter==='wrong') ? HISTORY.filter(h=>!h.isCorrect) : HISTORY.slice();
+  items.sort((a,b)=> a.number-b.number);
+
+  list.innerHTML = items.map(h=>{
+    const status = h.isCorrect ? 'ok' : 'bad';
+    const detail = h.isCorrect
+      ? `✔ ${h.chosenLetter}`
+      : `✖ ${h.chosenLetter} → correta: ${h.correctLetter}`;
+    return `
+      <button class="hist-item ${status}" data-idx="${h.idx}" aria-label="Questão ${h.number}">
+        <span class="n">#${h.number}</span>
+        <span class="d">${detail}</span>
+      </button>`;
+  }).join('');
+
+  list.querySelectorAll('.hist-item').forEach(btn=>{
+    btn.onclick = ()=>{
+      const idx = parseInt(btn.dataset.idx,10);
+      const pos = ORDER.indexOf(idx);
+      if(pos>=0){ I = pos; render(); }
+      try{ history.replaceState(null,'',`#q=${(pos>=0?pos+1:1)}`); }catch{}
+    };
+  });
+}
+
+/* Estilo do histórico e chips */
+(function injectHistCss(){
+  if(document.getElementById('hist-css')) return;
+  const css = document.createElement('style');
+  css.id='hist-css';
+  css.textContent = `
+  .history{position:fixed;right:12px;top:12px;width:260px;max-height:70vh;overflow:auto;
+    background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:10px;z-index:999;}
+  .hist-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .hist-actions .btn{margin-left:6px}
+  .hist-list{display:flex;flex-direction:column;gap:6px}
+  .hist-item{display:flex;gap:8px;align-items:center;justify-content:flex-start;border:1px solid #e5e7eb;
+    padding:6px 8px;border-radius:8px;background:#fff;cursor:pointer}
+  .hist-item .n{font-weight:600;min-width:40px}
+  .hist-item.ok{border-color:#10b98133}
+  .hist-item.bad{border-color:#ef444433}
+  .chips{margin:4px 0 10px}
+  .chip{display:inline-block;font-size:12px;padding:2px 8px;border:1px solid #e5e7eb;border-radius:999px;cursor:pointer;user-select:none;margin-right:6px}
+  .chip:hover{background:#f3f4f6}
+  `;
+  document.head.appendChild(css);
+})();
+
+/* Clique nos chips aplica filtro por tag */
+questionEl?.addEventListener('click', (e)=>{
+  const el = e.target.closest?.('.chip[data-tag]');
+  if(!el) return;
+  TAG_FILTER = el.dataset.tag;
+  recalcOrderFromFilters();
+  toast(`Filtro: ${TAG_FILTER}`,'info',1600);
+});
