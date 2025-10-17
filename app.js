@@ -264,23 +264,23 @@ function ensureAIMenu(){
   let aiMenu = document.getElementById('aiMenu');
   let aiDropdown = document.getElementById('aiDropdown');
 
-  if(!aiMenu){
-    // cria estrutura: <div id="aiMenu" class="ai-menu"><button id="btnAI">Pergunte ao Google Modo I.A.</button><div id="aiDropdown" class="ai-dropdown">...</div></div>
-    const container = document.createElement('div');
-    container.id = 'aiMenu';
-    container.className = 'ai-menu hide';
+ if (!aiMenu) {
+  // cria estrutura: <div id="aiMenu" class="ai-menu"><button id="btnAI">Pergunte ao Google Modo I.A.</button><div id="aiDropdown" class="ai-dropdown">...</div></div>
+  const container = document.createElement('div');
+  container.id = 'aiMenu';
+  container.className = 'ai-menu hide';
 
-    // reaproveita o botão existente
-    if(!btnAI){
-      btnAI = document.createElement('button');
-      btnAI.id = 'btnAI';
-      btnAI.className = 'btn ghost';
-      btnAI.type = 'button';
-      btnAI.textContent = 'Pergunte ao Google Modo I.A.';
-    } else {
-      btnAI.textContent = 'Pergunte ao Google Modo I.A.';
-    }
-    container.appendChild(btnAI);
+  // reaproveita o botão existente
+  if (!btnAI) {
+    btnAI = document.createElement('button');
+    btnAI.id = 'btnAI';
+    btnAI.className = 'btn ghost';
+    btnAI.type = 'button';
+  }
+  btnAI.innerHTML = 'Pergunte ao <span class="google-word"><span class="g1">G</span><span class="g2">o</span><span class="g3">o</span><span class="g4">g</span><span class="g5">l</span><span class="g6">e</span></span> Modo I.A.';
+  container.appendChild(btnAI);
+}
+
 
     // dropdown
     const dd = document.createElement('div');
