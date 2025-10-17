@@ -1,7 +1,4 @@
-/* app.js — quiz com TAGS, parser * ** *** **** -----, busca global, suporte a HTML Inertia (QConcursos)
-   + agregação automática de múltiplos arquivos do mesmo tema (ex.: mutuo.html, mutuo1.html, mutuo2.html)
-   + TAGS = “temas irmãos” da mesma matéria (exibe e troca de tema dentro da mesma pasta)
-   + Histórico da sessão (timeline): mostra alternativa marcada e, se errado, a correta (A–E) */
+// app.js — MeuJus (HTML seguro, chips de origem, histórico de respostas, deep link #q=n)
 
 const CONFIG = {
   useGitHubIndexer: true,
@@ -85,9 +82,7 @@ function renderSiblingTags(){
   if(!tagsArea) return;
   tagsArea.innerHTML = '';
   const siblings = listSiblingThemes();
-
   tagsArea.style.display = siblings.length ? 'flex' : 'none';
-
   siblings.forEach(t => {
     const a = document.createElement('a');
     a.href = '#tema:' + encodeURIComponent(t.id);
@@ -202,7 +197,7 @@ function formatParagraphs(s){
   return parts.map(p=>`<p>${htmlEscape(p)}</p>`).join('');
 }
 
-/* ===== TAG helpers (internas por questão — mantido para busca global) ===== */
+/* ===== TAG helpers ===== */
 function buildTagIndex(items){
   TAG_INDEX.clear();
   for(let i=0;i<items.length;i++){
@@ -233,7 +228,7 @@ function sanitizeBasicHTML(html){
   return s.replace(/\r\n?/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
 }
 
-/* ===== parser TXT (* ** *** **** -----) ===== */
+/* ===== parser TXT ===== */
 function parseTxtQuestions(raw) {
   const text = String(raw || '').replace(/\uFEFF/g, '').replace(/\r\n?/g, '\n');
   const blocks = text.split(/\n-{5,}\n/g).map(b => b.trim()).filter(Boolean);
@@ -274,7 +269,6 @@ async function fetchInertiaFromHtml(url){
   const decoded = decodeHTMLEntities(attr);
   try{ return JSON.parse(decoded); }catch{ return null; }
 }
-// texto simples (mantida para busca global)
 function plainText(html){
   if(!html) return '';
   let s = String(html)
@@ -289,7 +283,7 @@ function plainText(html){
 function yearFrom(text){ const m=String(text||'').match(/\b(19|20)\d{2}\b/); return m?m[0]:null; }
 
 function normalizeQCQuestion(q){
-  const letters = Object.keys(q.alternatives||{}).sort(); // A..E
+  const letters = Object.keys(q.alternatives||{}).sort();
   const options = letters.map(L => sanitizeBasicHTML(q.alternatives[L]));
   const letter = String(q.correct_answer||'').trim().toUpperCase();
   const answer = Math.max(0, letters.indexOf(letter));
@@ -392,7 +386,6 @@ async function init() {
   });
   updateThemes();
 
-  /* eventos */
   selCategory.addEventListener('change', updateThemes);
   btnStart.addEventListener('click', startQuizFromSelection);
   btnPrev.addEventListener('click', prev);
@@ -427,7 +420,6 @@ async function init() {
   window.addEventListener('offline', ()=>toast('Sem conexão. Usando cache local','warn',3000));
   window.addEventListener('online', ()=>toast('Conexão restabelecida','success',1800));
 
-  // abrir pela hash #q=n
   try{
     const m = String(location.hash||'').match(/#q=(\d+)/i);
     if(m){ const n = Math.max(1, parseInt(m[1],10)); I = n-1; }
@@ -556,7 +548,7 @@ function resetState(){
   TAG_INDEX.clear();
 }
 
-/* ===== loadQuiz e loadVirtualQuiz ===== */
+/* ===== loadQuiz ===== */
 async function loadQuiz(path,fresh=false,tryRestore=false){
   state.textContent='carregando';
   let qz=null;
@@ -619,7 +611,7 @@ async function loadVirtualQuiz(quizObj, synthKey, fresh){
   render();
 }
 
-/* ===== chips de origem (opcional) ===== */
+/* ===== chips de origem ===== */
 function chipsHTML(q){
   const s=q.source||{};
   const parts=[s.boardAcr||s.board, s.instituteAcr||s.institute, s.position, s.year].filter(Boolean);
@@ -648,10 +640,10 @@ function render(){
   renderSiblingTags();
 
   questionEl.innerHTML = `
-    <div style="font-size:12px;font-weight:400;color:var(--muted);letter-spacing:.2px;">
+    <div class="muted">
       ${htmlEscape(categoryText)} | ${htmlEscape(themeText)}
     </div>
-    <hr style="border:0;border-top:1px solid #e5e7eb;margin:10px 0;">
+    <hr>
     ${chipsHTML(q)}
     ${q.q}
   `;
@@ -684,9 +676,8 @@ function renderOptions(texts, onPick, origIdxs = null) {
     b.className = 'opt';
     b.dataset.idx = idx;
     if (origIdxs) b.dataset.origIdx = String(origIdxs[idx]);
-
     const label = labels[idx] ? `<strong>${labels[idx]})</strong> ` : '';
-    const safe = String(txt||''); // já sanitizado quando vem do QConcursos
+    const safe = String(txt||'');
     b.innerHTML = `${label}${safe}`;
     b.addEventListener('click', () => onPick(idx));
     optionsEl.appendChild(b);
@@ -716,16 +707,13 @@ function lockAndExplain(value) {
     return;
   }
 
-  let correct = false;
   let answerIdx = null;
 
   if (type === 'vf') {
-    // mapear V/F para letras A/B somente para exibição no histórico
     answerIdx = q.answer ? 0 : 1;           // A=Verdadeiro, B=Falso
     buttons[q.answer ? 0 : 1].classList.add('correct');
     const chosenIdx = value ? 0 : 1;
-    correct = (chosenIdx === answerIdx);
-    if (!correct) buttons[chosenIdx]?.classList.add('wrong');
+    if (chosenIdx !== answerIdx) buttons[chosenIdx]?.classList.add('wrong');
     upsertHistoryItem({ idx: ORDER[I], chosenIdx, correctIdx: answerIdx });
   } else {
     answerIdx = q.answer;
@@ -735,19 +723,16 @@ function lockAndExplain(value) {
     });
     const chosenIdx = (typeof value==='number') ? value : null;
     const chosenBtn = buttons.find(b => parseInt(b.dataset.origIdx ?? '-1', 10) === chosenIdx);
-    correct = (typeof chosenIdx==='number' && chosenIdx===answerIdx);
-    if (!correct && chosenBtn) chosenBtn.classList.add('wrong');
+    if (chosenBtn && chosenIdx !== answerIdx) chosenBtn.classList.add('wrong');
     upsertHistoryItem({ idx: ORDER[I], chosenIdx, correctIdx: answerIdx });
   }
 
   const gLetter = ['A','B','C','D','E','F','G'][q.answer] || '?';
   const gText = q.options[q.answer] || '';
-  explainEl.innerHTML = `<div style="font-size:14px"><strong>Gabarito: ${gLetter})</strong> ${gText}</div>`;
+  explainEl.innerHTML = `<div class="explain"><strong>Gabarito: ${gLetter})</strong> ${gText}</div>`;
 
   const aiMenu = document.getElementById('aiMenu');
   show(aiMenu, true);
-
-  // deep link da posição atual
   try{ history.replaceState(null,'',`#q=${I+1}`); }catch{}
 }
 
@@ -794,7 +779,7 @@ function score(){
     const q=QUIZ.questions[k]; const v=CHOSEN[k];
     if(q.annulled || q.answer==null) continue;
     total++;
-    if((q.type||'multiple')==='vf'){ if(v===!!q.answer) ok++; }
+    if((q.type||'multiple')==='vf'){ if((v ? 0 : 1)===(q.answer ? 0 : 1)) ok++; }
     else if(typeof v==='number' && v===q.answer) ok++;
   }
   return {ok,total};
@@ -854,7 +839,6 @@ function clearFilter(){
   toast('Filtro removido','info');
   render();
 }
-
 function clearTagFilter(){
   TAG_FILTER = null;
   recalcOrderFromFilters();
@@ -865,11 +849,6 @@ function recalcOrderFromFilters(){
   ORDER = idxs;
   I = 0;
   persist();
-}
-
-/* ===== barra de tags (placeholder) ===== */
-function renderTagBar(){
-  if(tagsBarEl) tagsBarEl.innerHTML = '';
 }
 
 /* ===== busca global ===== */
@@ -986,7 +965,7 @@ async function globalSearchAndOpen(termRaw){
   toast(`Busca global: ${results.length} questões`, 'info', 2200);
 }
 
-/* ===== GitHub manifest index (agregação de temas com sufixo numérico) ===== */
+/* ===== GitHub manifest index ===== */
 async function buildManifestFromGitHub(){
   if(!CONFIG.useGitHubIndexer) return null;
   const {owner, repo} = guessOwnerRepo();
@@ -1056,7 +1035,7 @@ async function buildManifestFromGitHub(){
   }
 }
 
-/* ===== atalhos e persistência ===== */
+/* ===== atalhos ===== */
 window.addEventListener('keydown',(e)=>{
   if(screenQuiz.classList.contains('hide')) return;
   if(e.key>='1'&&e.key<='9'){
@@ -1069,7 +1048,7 @@ window.addEventListener('keydown',(e)=>{
 window.addEventListener('beforeunload', persist);
 document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='hidden') persist(); });
 
-/* ===== HISTÓRICO DA SESSÃO ================================================= */
+/* ===== HISTÓRICO DA SESSÃO ===== */
 const LETTERS = ['A','B','C','D','E','F','G'];
 let HISTORY = []; // [{ idx, number, chosenIdx, chosenLetter, correctIdx, correctLetter, isCorrect }]
 
@@ -1086,7 +1065,6 @@ function upsertHistoryItem({ idx, chosenIdx, correctIdx }){
   const pos = HISTORY.findIndex(h => h.idx === idx);
   const rec = { idx, number, chosenIdx, chosenLetter, correctIdx, correctLetter, isCorrect };
   if(pos>=0) HISTORY[pos] = rec; else HISTORY.push(rec);
-  // limite simples
   if(HISTORY.length>200) HISTORY = HISTORY.slice(-200);
   saveHistory();
   renderHistory();
@@ -1146,24 +1124,24 @@ function renderHistoryList(filter){
   });
 }
 
-/* Estilo do histórico e chips */
+/* Estilo injetado para histórico e chips (caso CSS externo não esteja presente) */
 (function injectHistCss(){
   if(document.getElementById('hist-css')) return;
   const css = document.createElement('style');
   css.id='hist-css';
   css.textContent = `
   .history{position:fixed;right:12px;top:12px;width:260px;max-height:70vh;overflow:auto;
-    background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:10px;z-index:999;}
+    background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:10px;z-index:999}
   .hist-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
   .hist-actions .btn{margin-left:6px}
   .hist-list{display:flex;flex-direction:column;gap:6px}
   .hist-item{display:flex;gap:8px;align-items:center;justify-content:flex-start;border:1px solid #e5e7eb;
     padding:6px 8px;border-radius:8px;background:#fff;cursor:pointer}
   .hist-item .n{font-weight:600;min-width:40px}
-  .hist-item.ok{border-color:#10b98133}
-  .hist-item.bad{border-color:#ef444433}
+  .hist-item.ok{border-color:#10b98133;background:#f0fdf4}
+  .hist-item.bad{border-color:#ef444433;background:#fef2f2}
   .chips{margin:4px 0 10px}
-  .chip{display:inline-block;font-size:12px;padding:2px 8px;border:1px solid #e5e7eb;border-radius:999px;cursor:pointer;user-select:none;margin-right:6px}
+  .chip{display:inline-block;font-size:12px;padding:2px 8px;border:1px solid #e5e7eb;border-radius:999px;cursor:pointer;user-select:none;margin-right:6px;background:#fff}
   .chip:hover{background:#f3f4f6}
   `;
   document.head.appendChild(css);
