@@ -1,4 +1,5 @@
-/* app.js — quiz com TAGS, parser * ** *** **** -----, busca global e suporte a HTML Inertia (QConcursos) */
+/* app.js — quiz com TAGS, parser * ** *** **** -----, busca global, suporte a HTML Inertia (QConcursos)
+   + agregação automática de múltiplos arquivos do mesmo tema (ex.: mutuo.html, mutuo1.html, mutuo2.html) */
 
 const CONFIG = {
   useGitHubIndexer: true,
@@ -37,6 +38,18 @@ function decodeHTMLEntities(s){
   if(!s) return '';
   const d=new DOMParser().parseFromString(s,'text/html');
   return d.documentElement.textContent||'';
+}
+
+/* pretty names */
+const SPECIAL_NAMES = new Map([
+  ['direito-civil','Direito Civil'],
+  ['contratos','Contratos'],
+  ['mutuo','Mútuo']
+]);
+function prettyName(id){
+  const key = String(id||'').toLowerCase();
+  if(SPECIAL_NAMES.has(key)) return SPECIAL_NAMES.get(key);
+  return key.split(/[-_\s]+/).map(s=> s? s[0].toUpperCase()+s.slice(1) : '').join(' ');
 }
 
 /* ===== DOM ===== */
@@ -90,7 +103,7 @@ let tagsBarEl = document.getElementById('tagsBar');
 })();
 
 /* ===== labels ===== */
-const DEFAULT_LABELS = { start:'Começar', next:'Próximo', prev:'Anterior', retry:'Refazer', home:'Início', category:'Categoria', theme:'Tema', result:'Resultado' };
+const DEFAULT_LABELS = { start:'Começar', next:'Próximo', prev:'Anterior', retry:'Refazer', home:'Início', category:'Disciplina', theme:'Tema', result:'Resultado' };
 let LABELS = { ...DEFAULT_LABELS };
 
 /* ===== estado ===== */
@@ -375,7 +388,7 @@ function ensureAIMenu(){
 function applyLabels(){
   const cat=document.querySelector('label[for="selCategory"]');
   const th=document.querySelector('label[for="selTheme"]');
-  if(cat) cat.textContent = LABELS.category||'Categoria';
+  if(cat) cat.textContent = LABELS.category||'Disciplina';
   if(th) th.textContent = LABELS.theme||'Tema';
   btnStart.textContent = LABELS.start||'Começar';
   btnPrev.textContent = LABELS.prev||'Anterior';
@@ -417,16 +430,56 @@ function resetState(){
 async function loadQuiz(path,fresh=false,tryRestore=false){
   state.textContent='carregando';
   let qz=null;
-  if(/\.txt$/i.test(path)) qz=await loadTxtAsQuiz(path);
-  else if(/\.json$/i.test(path)) qz=await loadJSON(path);
-  else if(/\.html?$/i.test(path) || /^https?:\/\//i.test(path)) qz=await loadHtmlAsQuiz(path);
+
+  // NOVO: aceitar lista de caminhos e agregar
+  if(Array.isArray(path)){
+    const quizzes = [];
+    for(const p of path){
+      try{
+        if(/\.txt$/i.test(p)) quizzes.push(await loadTxtAsQuiz(p));
+        else if(/\.json$/i.test(p)) quizzes.push(await loadJSON(p));
+        else if(/\.html?/i.test(p) || /^https?:\/\//i.test(p)) quizzes.push(await loadHtmlAsQuiz(p));
+      }catch{}
+    }
+    const all = quizzes.filter(q=>q && Array.isArray(q.questions));
+    const questions = all.flatMap(q=>q.questions);
+
+    // derivar Disciplina, Matéria, Tema da primeira rota
+    let disciplina='Geral', materia='Geral', tema='Tema';
+    if(path.length>0){
+      const parts = String(path[0]).split('/');
+      if(parts.length>=4){
+        disciplina = prettyName(parts[1]);
+        materia    = prettyName(parts[2]);
+        const base = String(parts[3]).replace(/\.(txt|html?|json)$/i,'').replace(/\d+$/,'');
+        tema       = prettyName(base);
+      }
+    }
+
+    qz = {
+      meta:{
+        title: `${materia} · ${tema}`,
+        category: disciplina,
+        theme: `${materia}`,
+        shuffle:{questions:false, options:true},
+        persist:true,
+        outroMessage:''
+      },
+      questions
+    };
+  } else {
+    if(/\.txt$/i.test(path)) qz=await loadTxtAsQuiz(path);
+    else if(/\.json$/i.test(path)) qz=await loadJSON(path);
+    else if(/\.html?/i.test(path) || /^https?:\/\//i.test(path)) qz=await loadHtmlAsQuiz(path);
+  }
+
   if(!qz||!Array.isArray(qz.questions)){
     toast('Falha ao carregar o quiz','error',3000); state.textContent='erro'; return;
   }
   await loadVirtualQuiz(qz, path, fresh);
 }
 async function loadVirtualQuiz(quizObj, synthKey, fresh){
-  QUIZ=quizObj; KEY={path:synthKey, key:`quiz:${synthKey}`};
+  QUIZ=quizObj; KEY={path:synthKey, key:`quiz:${JSON.stringify(synthKey)}`};// chave segura p/ array
   buildTagIndex(QUIZ.questions);
   const total=QUIZ.questions.length;
   ORDER=[...Array(total).keys()];
@@ -768,44 +821,47 @@ async function globalSearchAndOpen(termRaw){
 
   for(const p of allPaths){
     try{
-      let quizObj = null;
-      if(/\.txt$/i.test(p)) quizObj = await loadTxtAsQuiz(p);
-      else if(/\.json$/i.test(p)) quizObj = await loadJSON(p);
-      else if(/\.html?$/i.test(p) || /^https?:\/\//i.test(p)) quizObj = await loadHtmlAsQuiz(p);
-      if(!quizObj || !Array.isArray(quizObj.questions)) continue;
+      const paths = Array.isArray(p) ? p : [p];
+      for(const single of paths){
+        let quizObj = null;
+        if(/\.txt$/i.test(single)) quizObj = await loadTxtAsQuiz(single);
+        else if(/\.json$/i.test(single)) quizObj = await loadJSON(single);
+        else if(/\.html?/i.test(single) || /^https?:\/\//i.test(single)) quizObj = await loadHtmlAsQuiz(single);
+        if(!quizObj || !Array.isArray(quizObj.questions)) continue;
 
-      quizObj.questions.forEach((q)=>{
-        const normalizedQ   = normalizeText(String(q.q||'').replace(/<[^>]+>/g,'')); 
-        const normalizedOpts= (q.options || []).map(o => normalizeText(String(o || '')));
-        const normalizedTags= (q.tags    || []).map(t => normalizeText(String(t || '')));
+        quizObj.questions.forEach((q)=>{
+          const normalizedQ   = normalizeText(String(q.q||'').replace(/<[^>]+>/g,'')); 
+          const normalizedOpts= (q.options || []).map(o => normalizeText(String(o || '')));
+          const normalizedTags= (q.tags    || []).map(t => normalizeText(String(t || '')));
 
-        const allTermsFound = searchTerms.every(st => {
-          const re = /^\d+$/.test(st)
-            ? new RegExp(`\\b${st}\\b`, 'g')
-            : new RegExp(`\\b${st}\\b`, 'gi');
-          const inQ   = re.test(normalizedQ);
-          const inOpt = normalizedOpts.some(optText => re.test(optText));
-          const inTag = normalizedTags.some(tagText => re.test(tagText));
-          return inQ || inOpt || inTag;
-        });
-
-        let nearEnough = true;
-        if (searchTerms.length > 1) {
-          const textBlob = [normalizedQ, ...normalizedOpts, ...normalizedTags].join(' ');
-          nearEnough = termsAreNear(textBlob, searchTerms, 3);
-        }
-
-        if(allTermsFound && nearEnough){
-          const clone = JSON.parse(JSON.stringify(q));
-          clone.__origin = { path:p };
-          searchTerms.forEach(st => {
-            const re = new RegExp('(' + st.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-            clone.q = String(clone.q).replace(re, '<mark class="hl">$1</mark>');
-            clone.options = (clone.options || []).map(o => String(o).replace(re, '<mark class="hl">$1</mark>'));
+          const allTermsFound = searchTerms.every(st => {
+            const re = /^\d+$/.test(st)
+              ? new RegExp(`\\b${st}\\b`, 'g')
+              : new RegExp(`\\b${st}\\b`, 'gi');
+            const inQ   = re.test(normalizedQ);
+            const inOpt = normalizedOpts.some(optText => re.test(optText));
+            const inTag = normalizedTags.some(tagText => re.test(tagText));
+            return inQ || inOpt || inTag;
           });
-          results.push(clone);
-        }
-      });
+
+          let nearEnough = true;
+          if (searchTerms.length > 1) {
+            const textBlob = [normalizedQ, ...normalizedOpts, ...normalizedTags].join(' ');
+            nearEnough = termsAreNear(textBlob, searchTerms, 3);
+          }
+
+          if(allTermsFound && nearEnough){
+            const clone = JSON.parse(JSON.stringify(q));
+            clone.__origin = { path:single };
+            searchTerms.forEach(st => {
+              const re = new RegExp('(' + st.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+              clone.q = String(clone.q).replace(re, '<mark class="hl">$1</mark>');
+              clone.options = (clone.options || []).map(o => String(o).replace(re, '<mark class="hl">$1</mark>'));
+            });
+            results.push(clone);
+          }
+        });
+      }
     }catch{}
   }
 
@@ -831,7 +887,7 @@ async function globalSearchAndOpen(termRaw){
   toast(`Busca global: ${results.length} questões`, 'info', 2200);
 }
 
-/* ===== GitHub manifest index ===== */
+/* ===== GitHub manifest index (agregação de temas com sufixo numérico) ===== */
 async function buildManifestFromGitHub(){
   if(!CONFIG.useGitHubIndexer) return null;
   const {owner, repo} = guessOwnerRepo();
@@ -847,20 +903,48 @@ async function buildManifestFromGitHub(){
       n.path.startsWith(CONFIG.dataDir+'/') &&
       (n.path.endsWith('.txt') || n.path.endsWith('.html') || n.path.endsWith('.json'))
     );
-    const catMap = new Map();
+
+    // catMap por Disciplina (1º nível após data/)
+    const catMap = new Map(); // id => { id, name, themes: [] }
+    // maps auxiliares por categoria
+    const groupMap = new Map(); // catId => Map< materia/baseId , paths[] >
+
     for (const node of nodes) {
-      const parts = node.path.split('/');
-      if (parts.length < 2) continue;
-      const catId = parts.slice(1, -1).join('/') || 'Geral';
-      const file = parts[parts.length - 1];
-      const themeId = file.replace(/\.(txt|html?|json)$/i, '');
-      const cat = catMap.get(catId) || { id: catId, name: catId, themes: [] };
-      cat.themes.push({ id: themeId, name: themeId, path: node.path });
+      const parts = node.path.split('/'); // data / disciplina / materia / arquivo
+      if (parts.length < 4) continue;
+      const disciplinaId = parts[1];
+      const materiaId    = parts[2];
+      const file = parts[3];
+      const themeIdRaw = file.replace(/\.(txt|html?|json)$/i, '');
+      const baseId = themeIdRaw.replace(/\d+$/,''); // remove sufixo numérico
+
+      const catId = disciplinaId; // 1º nível
+      const cat = catMap.get(catId) || { id: catId, name: prettyName(catId), themes: [] };
       catMap.set(catId, cat);
+
+      const key = `${materiaId}/${baseId}`; // garante unicidade por matéria+tema
+      const byCat = groupMap.get(catId) || new Map();
+      const arr = byCat.get(key) || [];
+      arr.push(node.path);
+      byCat.set(key, arr);
+      groupMap.set(catId, byCat);
     }
+
+    // montar temas agregados
+    for(const [catId, byCat] of groupMap.entries()){
+      const cat = catMap.get(catId);
+      for(const [key, paths] of byCat.entries()){
+        const [materiaId, baseId] = key.split('/');
+        const id = `${materiaId}-${baseId}`; // id único
+        const name = `${prettyName(materiaId)} · ${prettyName(baseId)}`;
+        cat.themes.push({ id, name, path: paths.sort((a,b)=> a.localeCompare(b,'pt-BR')) });
+      }
+      cat.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
+    }
+
     const categories = Array.from(catMap.values())
-      .map(c => ({...c, themes: c.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'))}))
       .sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
+
     if(categories.length===0) return null;
     return {
       title: 'MeuJus',
