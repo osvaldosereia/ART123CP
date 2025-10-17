@@ -417,7 +417,7 @@ function render(){
         a.href = '#tag:' + encodeURIComponent(t);
         a.textContent = t; // sem '#'
         a.className = 'tag';
-        a.addEventListener('click', ev => { ev.preventDefault(); onTagClick(t); });
+    a.addEventListener('click', ev => { ev.preventDefault(); onTagClick(t, ev); });
         tagsArea.appendChild(a);
       });
     }
@@ -644,15 +644,17 @@ function clearFilter(){
   toast('Filtro removido','info');
   render();
 }
-function onTagClick(tag){
-  if (window.event && (window.event.ctrlKey || window.event.metaKey)) {
-    globalSearchAndOpen(tag); // busca global com o texto da tag
+function onTagClick(tag, ev){
+  const isGlobal = ev && (ev.ctrlKey || ev.metaKey);
+  if (isGlobal) {
+    globalSearchAndOpen(tag); // busca global pela tag
     return;
   }
   TAG_FILTER = (TAG_FILTER === tag) ? null : tag;
   recalcOrderFromFilters();
   render();
 }
+
 function clearTagFilter(){
   TAG_FILTER = null;
   recalcOrderFromFilters();
