@@ -563,7 +563,7 @@ function prev(){ if(I > 0){ I--; render(); } }
 /* ===== AI ===== */
 function openGoogleAI(){
   const q=current(); if(!q) return;
-  const prompt = 'VProfessor, por favor fundamente a alternativa correta e as incorretas. Enunciado: '
+  const prompt = 'Fiquei com dúvida nessa questão. Me explique detalhadamente a certa e as erradas. Fundamente a sua resposta. Enunciado: '
     + String((q && q.q) || '').replace(/<[^>]+>/g,'')
     + ' | Opções: '
     + (q && q.type === 'vf'
