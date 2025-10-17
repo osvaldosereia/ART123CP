@@ -464,11 +464,17 @@ function renderOptions(texts, onPick, origIdxs = null) {
     b.className = 'opt';
     b.dataset.idx = idx;
     if (origIdxs) b.dataset.origIdx = String(origIdxs[idx]);
+
     const label = labels[idx] ? `<strong>${labels[idx]})</strong> ` : '';
-    const safe = htmlEscape(String(txt || ''))
+
+    const hasMark = /<mark class="hl">/i.test(String(txt||''));
+    const base = hasMark ? String(txt||'') : htmlEscape(String(txt||''));
+
+    const safe = base
       .replace(/\n{2,}/g, '\n\n')
       .split(/\n{2,}/)
       .map(p => `<p style="margin:0">${p.replace(/\n/g, '<br>')}</p>`).join('');
+
     b.innerHTML = `${label}${safe}`;
     b.addEventListener('click', () => onPick(idx));
     optionsEl.appendChild(b);
@@ -517,8 +523,9 @@ function lockAndExplain(value) {
 
   const gLetter = ['A','B','C','D','E'][q.answer] || '?';
   const gText = q.options[q.answer] || '';
-  explainEl.innerHTML = `<div style="font-size:14px"><strong>Gabarito: ${gLetter})</strong> ${htmlEscape(gText)}</div>`;
-  explainEl.classList.remove('hide');
+const safeG = /<mark class="hl">/i.test(gText) ? gText : htmlEscape(gText);
+explainEl.innerHTML = `<div style="font-size:14px"><strong>Gabarito: ${gLetter})</strong> ${safeG}</div>`;
+
 
   const aiMenu = document.getElementById('aiMenu');
   show(aiMenu, true); // mostra menu IA após responder
