@@ -678,31 +678,53 @@ async function globalSearchAndOpen(termRaw){
   const term = String(termRaw||'').trim();
   if(!term){ toast('Informe um termo para busca global','warn'); return; }
 
-// Normaliza e divide a busca
-let rawTerms = normalizeText(term).split(/\s+/).filter(Boolean);
+  // Normaliza e divide a busca
+  let rawTerms = normalizeText(term).split(/\s+/).filter(Boolean);
 
-// Palavras ignoradas (stopwords)
-const stopWords = new Set([
-  'de','do','da','dos','das','para','pra','por','com','como','em','no','na',
-  'nos','nas','ao','aos','às','as','os','um','uma','uns','umas','foi','era',
-  'ser','se','que','e','ou','a','o','ao','à','às','todo','toda','todos','todas'
-]);
+  // Palavras ignoradas (stopwords)
+  const stopWords = new Set([
+    'de','do','da','dos','das','para','pra','por','com','como','em','no','na',
+    'nos','nas','ao','aos','às','as','os','um','uma','uns','umas','foi','era',
+    'ser','se','que','e','ou','a','o','ao','à','às','todo','toda','todos','todas'
+  ]);
 
-// Filtro: apenas números OU palavras com ≥3 letras que não sejam stopwords
-const searchTerms = rawTerms.filter(w => {
-  if (/^\d+$/.test(w)) return true;            // aceita números inteiros
-  if (w.length < 3) return false;              // ignora curtas
-  if (stopWords.has(w)) return false;          // ignora stopwords
-  return true;
-});
+  // Filtro: apenas números OU palavras com ≥3 letras que não sejam stopwords
+  const searchTerms = rawTerms.filter(w => {
+    if (/^\d+$/.test(w)) return true;   // aceita números inteiros
+    if (w.length < 3) return false;     // ignora curtas
+    if (stopWords.has(w)) return false; // ignora stopwords
+    return true;
+  });
   if (searchTerms.length === 0) return;
 
+  // Verifica se termos estão próximos (≤8 palavras de distância)
+  function termsAreNear(text, terms, maxDistance = 8) {
+    const words = text.split(/\s+/);
+    const positions = terms.map(t => {
+      const re = new RegExp(`\\b${t}\\b`, 'i');
+      return words.map((w, i) => re.test(w) ? i : -1).filter(i => i >= 0);
+    });
+    if (positions.some(arr => arr.length === 0)) return false;
+    for (const i of positions[0]) {
+      let ok = true;
+      for (let k = 1; k < positions.length; k++) {
+        const found = positions[k].some(j => Math.abs(j - i) <= maxDistance);
+        if (!found) { ok = false; break; }
+      }
+      if (ok) return true;
+    }
+    return false;
+  }
+
   const allPaths=[];
-  (MANIFEST?.categories||[]).forEach(c=>{ (c.themes||[]).forEach(t=> allPaths.push(t.path)); });
+  (MANIFEST?.categories||[]).forEach(c=>{
+    (c.themes||[]).forEach(t=> allPaths.push(t.path));
+  });
   if(allPaths.length===0){ toast('Nenhum tema disponível para busca','error'); return; }
 
   state.textContent='buscando';
   let results=[];
+
   for(const p of allPaths){
     try{
       let quizObj = null;
@@ -715,40 +737,46 @@ const searchTerms = rawTerms.filter(w => {
         const normalizedOpts= (q.options || []).map(o => normalizeText(String(o || '')));
         const normalizedTags= (q.tags    || []).map(t => normalizeText(String(t || '')));
 
+        // verifica presença dos termos
         const allTermsFound = searchTerms.every(st => {
-  // número deve ser igual exato, texto deve bater como palavra inteira
-  const re = /^\d+$/.test(st)
-    ? new RegExp(`\\b${st}\\b`, 'g')
-    : new RegExp(`\\b${st}\\b`, 'gi');
+          const re = /^\d+$/.test(st)
+            ? new RegExp(`\\b${st}\\b`, 'g')
+            : new RegExp(`\\b${st}\\b`, 'gi');
+          const inQ   = re.test(normalizedQ);
+          const inOpt = normalizedOpts.some(optText => re.test(optText));
+          const inTag = normalizedTags.some(tagText => re.test(tagText));
+          return inQ || inOpt || inTag;
+        });
 
-  const inQ   = re.test(normalizedQ);
-  const inOpt = normalizedOpts.some(optText => re.test(optText));
-  const inTag = normalizedTags.some(tagText => re.test(tagText));
-  return inQ || inOpt || inTag;
-});
+        // verifica proximidade se houver 2+ termos
+        let nearEnough = true;
+        if (searchTerms.length > 1) {
+          const textBlob = [normalizedQ, ...normalizedOpts, ...normalizedTags].join(' ');
+          nearEnough = termsAreNear(textBlob, searchTerms, 8);
+        }
 
-
-        if(allTermsFound){
+        if(allTermsFound && nearEnough){
           const clone = JSON.parse(JSON.stringify(q));
-clone.__origin = { path:p };
+          clone.__origin = { path:p };
 
-// realce dos termos buscados
-searchTerms.forEach(st => {
-  const re = new RegExp('(' + st.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-  // grifa em enunciado
-  clone.q = String(clone.q).replace(re, '<mark class="hl">$1</mark>');
-  // grifa nas opções
-  clone.options = (clone.options || []).map(o => String(o).replace(re, '<mark class="hl">$1</mark>'));
-});
+          // realce dos termos buscados
+          searchTerms.forEach(st => {
+            const re = new RegExp('(' + st.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+            clone.q = String(clone.q).replace(re, '<mark class="hl">$1</mark>');
+            clone.options = (clone.options || []).map(o => String(o).replace(re, '<mark class="hl">$1</mark>'));
+          });
 
-results.push(clone);
-
+          results.push(clone);
         }
       });
     }catch{}
   }
 
-  if(results.length===0){ state.textContent='pronto'; toast('Nada encontrado na busca global','warn',2400); return; }
+  if(results.length===0){
+    state.textContent='pronto';
+    toast('Nada encontrado na busca global','warn',2400);
+    return;
+  }
 
   const virtual = {
     meta: {
