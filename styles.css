@@ -90,3 +90,5 @@
   cursor:pointer;
 }
 .tags-top .tag-top:hover{ text-decoration:underline }
+/* mais respiro acima das hashtags */
+#tagsBar.tagsbar { margin-top: 20px; }   /* ajuste o valor */
