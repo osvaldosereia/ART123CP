@@ -610,13 +610,6 @@ async function loadVirtualQuiz(quizObj, synthKey, fresh){
   render();
 }
 
-/* ===== chips de origem ===== */
-function chipsHTML(q){
-  const s=q.source||{};
-  const parts=[s.boardAcr||s.board, s.instituteAcr||s.institute, s.position, s.year].filter(Boolean);
-  const chips=parts.map(v=>`<span class="chip" data-tag="${htmlEscape(slug(v))}">${htmlEscape(v)}</span>`).join(' ');
-  return chips ? `<div class="chips">${chips}</div>` : '';
-}
 
 /* ===== render ===== */
 function render(){
@@ -639,13 +632,13 @@ function render(){
   renderSiblingTags();
 
   questionEl.innerHTML = `
-    <div class="muted">
-      ${htmlEscape(categoryText)} | ${htmlEscape(themeText)}
-    </div>
-    <hr>
-    ${chipsHTML(q)}
-    ${q.q}
-  `;
+  <div class="muted">
+    ${htmlEscape(categoryText)} | ${htmlEscape(themeText)}
+  </div>
+  <hr>
+  ${q.q}
+`;
+
 
   optionsEl.innerHTML = '';
   explainEl.classList.add('hide');
@@ -1260,7 +1253,6 @@ async function openHistoryItem(h){
 }
 
 /* ===== clique em chips aplica tag ===== */
-questionEl?.addEventListener('click', (e)=>{
   const el = e.target.closest?.('.chip[data-tag]');
   if(!el) return;
   TAG_FILTER = el.dataset.tag;
