@@ -219,21 +219,27 @@ async function loadTxtAsQuiz(path){
 
 /* ===== init ===== */
 init();
-async function init(){
+async function init() {
   // tenta usar o indexador GitHub
-  if(CONFIG.useGitHubIndexer){
+  if (CONFIG.useGitHubIndexer) {
     const dyn = await buildManifestFromGitHub();
-    if(dyn) MANIFEST = dyn;
+    if (dyn) MANIFEST = dyn;
   }
 
-  // fallback automático: monta manifesto local
-  if(!MANIFEST){
+  // fallback fixo: cria manualmente o manifesto local
+  if (!MANIFEST) {
     MANIFEST = {
       title: 'MeuJus',
       categories: [{
-        id: 'data',
-        name: 'Questões',
-        themes: await fetchLocalThemes()
+        id: 'OAB-2023',
+        name: 'OAB-2023',
+        themes: [
+          {
+            id: 'FGV - Exame da Ordem Unificado XXXVIII',
+            name: 'FGV - Exame da Ordem Unificado XXXVIII',
+            path: 'data/OAB-2023/FGV - Exame da Ordem Unificado XXXVIII.TXT'
+          }
+        ]
       }],
       shuffleDefault: { questions: false, options: true },
       persistDefault: true,
@@ -298,23 +304,6 @@ async function init(){
   window.addEventListener('online', () => toast('Conexão restabelecida', 'success', 1800));
 }
 
-/* ===== nova função auxiliar para detectar arquivos locais ===== */
-async function fetchLocalThemes() {
-  try {
-    const res = await fetch('data/');
-    const html = await res.text();
-    const matches = [...html.matchAll(/href="([^"]+\.txt)"/g)];
-    const themes = matches.map(m => {
-      const path = 'data/' + m[1];
-      const id = m[1].replace(/\.txt$/i, '');
-      return { id, name: id, path };
-    });
-    return themes.length > 0 ? themes : [{ id: 'exemplo', name: 'Exemplo', path: 'data/exemplo.txt' }];
-  } catch {
-    // fallback simples caso não seja possível listar o diretório
-    return [{ id: 'exemplo', name: 'Exemplo', path: 'data/exemplo.txt' }];
-  }
-}
 
 
 /* ===== seleção ===== */
