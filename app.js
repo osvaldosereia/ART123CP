@@ -1250,6 +1250,5 @@ async function openHistoryItem(h){
   if(pos>=0){ I = pos; render(); }
   try{ history.replaceState(null,'',`#q=${(pos>=0?pos+1:1)}`); }catch{}
   toggleSidePanel(false);
-}
 
 });
