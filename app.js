@@ -365,7 +365,8 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
 /* ===== render ===== */
 function render(){
   const total = QUIZ.questions.length;
-  const answered = ORDER.filter(idx => CHOSEN[idx] !== null).length;
+const answered = ORDER.filter(idx => CHOSEN[idx] !== null).length;
+footRight.textContent = `${answered}/${denom} respondidas${filterBadge}`;
   const denom = ORDER.length || total;
   const progBase = Math.max(1, denom - 1);
   bar.style.width = Math.round((I) / progBase * 100) + '%';
@@ -451,6 +452,8 @@ function select(value) {
   CHOSEN[ORDER[I]] = value;
   lockAndExplain(value);
   persist();
+ render(); // ← atualiza o contador na base
+
 }
 
 function isLocked() {
