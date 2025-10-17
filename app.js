@@ -265,7 +265,7 @@ function ensureAIMenu(){
   let aiDropdown = document.getElementById('aiDropdown');
 
   if(!aiMenu){
-    // cria estrutura: <div id="aiMenu" class="ai-menu"><button id="btnAI">Pergunte ao Google</button><div id="aiDropdown" class="ai-dropdown">...</div></div>
+    // cria estrutura: <div id="aiMenu" class="ai-menu"><button id="btnAI">Pergunte ao Google Modo I.A.</button><div id="aiDropdown" class="ai-dropdown">...</div></div>
     const container = document.createElement('div');
     container.id = 'aiMenu';
     container.className = 'ai-menu hide';
@@ -276,9 +276,9 @@ function ensureAIMenu(){
       btnAI.id = 'btnAI';
       btnAI.className = 'btn ghost';
       btnAI.type = 'button';
-      btnAI.textContent = 'Pergunte ao Google';
+      btnAI.textContent = 'Pergunte ao Google Modo I.A.';
     } else {
-      btnAI.textContent = 'Pergunte ao Google';
+      btnAI.textContent = 'Pergunte ao Google Modo I.A.';
     }
     container.appendChild(btnAI);
 
