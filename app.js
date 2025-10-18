@@ -99,7 +99,9 @@ function renderSiblingTags(){
 
 /* ===== DOM ===== */
 const selCategory = document.getElementById('selCategory');
-const selTheme = document.getElementById('selTheme');
+const selTheme    = document.getElementById('selTheme');
+const selSubject  = document.getElementById('selSubject'); // <- NOVO
+
 const btnStart = document.getElementById('btnStart');
 const btnResume = document.getElementById('btnResume');
 const txtGlobal = document.getElementById('txtGlobal');
@@ -133,6 +135,7 @@ const footRight = document.getElementById('footRight');
 const txtSearch = document.getElementById('txtSearch');
 const btnSearch = document.getElementById('btnSearch');
 const btnClearSearch = document.getElementById('btnClearSearch');
+
 
 /* TAGS host */
 let tagsBarEl = document.getElementById('tagsBar');
@@ -241,7 +244,9 @@ function enhanceSelect(selectEl, { size='sm' } = {}){
 function applyCustomSelects(){
   enhanceSelect(selCategory, {size:'sm'});
   enhanceSelect(selTheme,    {size:'sm'});
+  if (selSubject) enhanceSelect(selSubject, {size:'sm'});
 }
+
 
 /* ===== labels ===== */
 const DEFAULT_LABELS = { start:'Começar', next:'Próximo', prev:'Anterior', retry:'Refazer', home:'Início', category:'Disciplina', theme:'Tema', result:'Resultado' };
@@ -533,6 +538,8 @@ async function init() {
 
 
   selCategory.addEventListener('change', updateThemes);
+  selTheme.addEventListener('change', updateSubjects); // <- ENTRA AQUI
+
   btnStart.addEventListener('click', startQuizFromSelection);
   btnPrev.addEventListener('click', prev);
   btnNext.addEventListener('click', next);
@@ -676,25 +683,73 @@ function applyLabels(){
   const h=document.getElementById('btnGoHome'); if(h) h.textContent=LABELS.home||'Início';
 }
 function updateThemes(){
-  const catId=selCategory.value;
-  const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId)||{themes:[]};
-  selTheme.innerHTML='';
+  const catId = selCategory.value;
+  const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId) || {themes:[]};
+  selTheme.innerHTML = '';
   (cat.themes||[]).forEach((t,idx)=>{
-    const o=document.createElement('option');
-    o.value=t.id; o.textContent=(t.name||t.id).toUpperCase();
-    if(idx===0) o.selected=true;
+    const o = document.createElement('option');
+    o.value = t.id;
+    o.textContent = (t.name||t.id).toUpperCase();
+    if(idx===0) o.selected = true;
     selTheme.appendChild(o);
   });
-  applyCustomSelects(); // reaplica o componente após repopular
+  applyCustomSelects();
+  updateSubjects(); // encadeia o novo dropdown
+}
+function updateSubjects(){
+  if(!selSubject) return;
+
+  // achar tema atual
+  const catId = selCategory.value;
+  const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId);
+  const theme = (cat?.themes||[]).find(t=>t.id===selTheme.value);
+
+  // normalizar paths
+  const paths = Array.isArray(theme?.path) ? theme.path
+               : theme?.path ? [theme.path]
+               : [];
+
+  // limpar e montar
+  selSubject.innerHTML = '';
+  const opt0 = document.createElement('option');
+  opt0.value = '';
+  opt0.textContent = 'Selecione um assunto';
+  selSubject.appendChild(opt0);
+
+  if(paths.length <= 1){
+    // sem subdivisão: esconder o dropdown de Assunto
+    selSubject.parentElement?.classList?.add('hide');
+  } else {
+    selSubject.parentElement?.classList?.remove('hide');
+    paths.forEach(p=>{
+      const file = String(p).split('/').pop() || '';
+      const base = file.replace(/\.(txt|html?|json)$/i,'').replace(/\d+$/,'');
+      const label = prettyName(base);
+      const o = document.createElement('option');
+      o.value = p;
+      o.textContent = label;
+      selSubject.appendChild(o);
+    });
+  }
+
+  applyCustomSelects(); // reestiliza o novo select
 }
 
+
 function selectedPath(){
-  const catId=selCategory.value;
-  const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId);
-  const themeId=selTheme.value;
-  const theme=(cat?.themes||[]).find(t=>t.id===themeId);
-  return theme?.path||(catId&&themeId?`data/${catId}/${themeId}.txt`:null);
+  const catId = selCategory.value;
+  const cat   = (MANIFEST?.categories||[]).find(c=>c.id===catId);
+  const theme = (cat?.themes||[]).find(t=>t.id===selTheme.value);
+
+  // prioridade ao assunto escolhido
+  const subjectPath = selSubject?.value || '';
+  if (subjectPath) return subjectPath;
+
+  // fallback para o tema como antes
+  if (Array.isArray(theme?.path)) return theme.path[0] || null;
+  return theme?.path || (catId && selTheme.value ? `data/${catId}/${selTheme.value}.txt` : null);
 }
+
 async function startQuizFromSelection(){ const path=selectedPath(); if(!path) return; await loadQuiz(path,true); }
 
 function resetState(){
