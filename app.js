@@ -690,27 +690,32 @@ function materiaFromThemeId(themeId){
   return i > 0 ? s.slice(0, i) : s;
 }
 
+/* helper: base do arquivo sem número final e sem extensão (USAR ANTES DE updateThemes) */
+function baseKeyFromPath(p){
+  const file = String(p||'').split('/').pop() || '';
+  return file.replace(/\.(txt|html?|json)$/i,'').replace(/\d+$/,'');
+}
+
 function updateThemes(){
   const catId = selCategory.value;
   const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId) || {themes:[]};
 
-  // coletar matérias únicas a partir dos themes
-  const materias = Array.from(
-    new Set((cat.themes||[]).map(t => materiaFromThemeId(t.id)))
-  ).sort((a,b)=> prettyName(a).localeCompare(prettyName(b),'pt-BR'));
+  // matérias únicas extraídas de theme.id antes do primeiro "-"
+  const materias = [...new Set((cat.themes||[]).map(t=>{
+    const s = String(t.id||''); const i = s.indexOf('-'); return i>0 ? s.slice(0,i) : s;
+  }))].sort((a,b)=> prettyName(a).localeCompare(prettyName(b), 'pt-BR'));
 
-  // preencher o 1º dropdown apenas com as matérias
   selTheme.innerHTML = '';
   materias.forEach((m, idx)=>{
     const o = document.createElement('option');
-    o.value = m;                               // agora guarda só a matéria
-    o.textContent = prettyName(m).toUpperCase();
+    o.value = m;                                // agora guarda SÓ a matéria
+    o.textContent = prettyName(m).toUpperCase();// rótulo limpo
     if(idx===0) o.selected = true;
     selTheme.appendChild(o);
   });
 
   applyCustomSelects();
-  updateSubjects(); // repopula o 2º dropdown com os HTMLs da matéria
+  updateSubjects(); // repovoa o 2º dropdown com os assuntos da matéria escolhida
 }
 
 
@@ -718,17 +723,23 @@ function updateSubjects(){
   if(!selSubject) return;
 
   const catId = selCategory.value;
-  const materiaId = selTheme.value; // agora o 1º dropdown guarda só a matéria
+  const materiaId = selTheme.value;
   const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId);
 
-  // pegar TODOS os themes cuja id começa com "materiaId-"
+  // coletar todos os paths da matéria
   const themesDaMateria = (cat?.themes||[]).filter(t=> t.id.startsWith(materiaId + '-'));
-
-  // achatar todos os paths desses themes
-  const paths = [];
+  const allPaths = [];
   themesDaMateria.forEach(t=>{
-    if(Array.isArray(t.path)) paths.push(...t.path);
-    else if(t.path) paths.push(t.path);
+    if(Array.isArray(t.path)) allPaths.push(...t.path);
+    else if(t.path) allPaths.push(t.path);
+  });
+
+  // agrupar por base (Participacao, Nocoes-Gerais, etc.)
+  const group = new Map(); // base -> paths[]
+  allPaths.forEach(p=>{
+    const base = baseKeyFromPath(p);
+    if(!group.has(base)) group.set(base, []);
+    group.get(base).push(p);
   });
 
   selSubject.innerHTML = '';
@@ -737,19 +748,17 @@ function updateSubjects(){
   opt0.textContent = 'Selecione um assunto';
   selSubject.appendChild(opt0);
 
-  if(paths.length === 0){
+  const entries = [...group.entries()].sort((a,b)=> prettyName(a[0]).localeCompare(prettyName(b[0]), 'pt-BR'));
+
+  if(entries.length === 0){
     selSubject.parentElement?.classList?.add('hide');
   } else {
     selSubject.parentElement?.classList?.remove('hide');
-
-    // montar rótulo usando o nome base do arquivo
-    paths.forEach(p=>{
-      const file = String(p).split('/').pop() || '';
-      const base = file.replace(/\.(txt|html?|json)$/i,'').replace(/\d+$/,'');
-      const label = prettyName(base);
+    entries.forEach(([base, paths])=>{
       const o = document.createElement('option');
-      o.value = p;        // cada HTML/TXT individual
-      o.textContent = label;
+      // value carrega TODOS os paths daquele assunto em JSON
+      o.value = JSON.stringify(paths);
+      o.textContent = prettyName(base);
       selSubject.appendChild(o);
     });
   }
@@ -758,21 +767,28 @@ function updateSubjects(){
 }
 
 
+
 function selectedPath(){
   const catId = selCategory.value;
   const cat   = (MANIFEST?.categories||[]).find(c=>c.id===catId);
-  const materiaId = selTheme.value;
+  const theme = (cat?.themes||[]).find(t=>t.id===selTheme.value);
 
-  const subjectPath = selSubject?.value || '';
-  if (subjectPath) return subjectPath;
+  // prioridade ao assunto escolhido
+  const v = selSubject?.value || '';
+  if (v) {
+    try{
+      const arr = JSON.parse(v);
+      if (Array.isArray(arr) && arr.length) return arr; // múltiplos arquivos unidos
+    }catch{
+      return v; // valor simples
+    }
+  }
 
-  // pega o primeiro theme que pertença à matéria escolhida
-  const firstTheme = (cat?.themes||[]).find(t => t.id.startsWith(materiaId + '-'));
-  if(!firstTheme) return null;
-
-  if (Array.isArray(firstTheme.path)) return firstTheme.path[0] || null;
-  return firstTheme.path || null;
+  // fallback
+  if (Array.isArray(theme?.path)) return theme.path[0] || null;
+  return theme?.path || (catId && selTheme.value ? `data/${catId}/${selTheme.value}.txt` : null);
 }
+
 
 
 async function startQuizFromSelection(){ const path=selectedPath(); if(!path) return; await loadQuiz(path,true); }
