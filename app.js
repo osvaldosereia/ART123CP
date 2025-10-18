@@ -682,6 +682,14 @@ function applyLabels(){
   btnHome.textContent = LABELS.home||'Início';
   const h=document.getElementById('btnGoHome'); if(h) h.textContent=LABELS.home||'Início';
 }
+
+/* ===== helper: extrai matéria a partir do theme.id (antes do primeiro "-") ===== */
+function materiaFromThemeId(themeId){
+  const s = String(themeId||'');
+  const i = s.indexOf('-');
+  return i > 0 ? s.slice(0, i) : s;
+}
+
 function updateThemes(){
   const catId = selCategory.value;
   const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId) || {themes:[]};
@@ -696,43 +704,48 @@ function updateThemes(){
   applyCustomSelects();
   updateSubjects(); // encadeia o novo dropdown
 }
+
 function updateSubjects(){
   if(!selSubject) return;
 
-  // achar tema atual
   const catId = selCategory.value;
+  const materiaId = selTheme.value; // agora o 1º dropdown guarda só a matéria
   const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId);
-  const theme = (cat?.themes||[]).find(t=>t.id===selTheme.value);
 
-  // normalizar paths
-  const paths = Array.isArray(theme?.path) ? theme.path
-               : theme?.path ? [theme.path]
-               : [];
+  // pegar TODOS os themes cuja id começa com "materiaId-"
+  const themesDaMateria = (cat?.themes||[]).filter(t=> t.id.startsWith(materiaId + '-'));
 
-  // limpar e montar
+  // achatar todos os paths desses themes
+  const paths = [];
+  themesDaMateria.forEach(t=>{
+    if(Array.isArray(t.path)) paths.push(...t.path);
+    else if(t.path) paths.push(t.path);
+  });
+
   selSubject.innerHTML = '';
   const opt0 = document.createElement('option');
   opt0.value = '';
   opt0.textContent = 'Selecione um assunto';
   selSubject.appendChild(opt0);
 
-  if(paths.length <= 1){
-    // sem subdivisão: esconder o dropdown de Assunto
+  if(paths.length === 0){
     selSubject.parentElement?.classList?.add('hide');
   } else {
     selSubject.parentElement?.classList?.remove('hide');
+
+    // montar rótulo usando o nome base do arquivo
     paths.forEach(p=>{
       const file = String(p).split('/').pop() || '';
       const base = file.replace(/\.(txt|html?|json)$/i,'').replace(/\d+$/,'');
       const label = prettyName(base);
       const o = document.createElement('option');
-      o.value = p;
+      o.value = p;        // cada HTML/TXT individual
       o.textContent = label;
       selSubject.appendChild(o);
     });
   }
 
-  applyCustomSelects(); // reestiliza o novo select
+  applyCustomSelects();
 }
 
 
