@@ -14,9 +14,8 @@
       <div class="state" id="state">pronto</div>
     </header>
 
-<!-- TELA INICIAL -->
-<section class="intro" id="screenIntro">
-
+    <!-- TELA INICIAL -->
+    <section class="intro" id="screenIntro">
       <div class="controls">
         <div>
           <label for="selCategory">Categoria</label>
@@ -27,10 +26,9 @@
           <select id="selTheme" aria-label="Tema"></select>
         </div>
         <label for="selSubject">Assunto</label>
-<select id="selSubject">
-  <option value="">Selecione um assunto</option>
-</select>
-
+        <select id="selSubject">
+          <option value="">Selecione um assunto</option>
+        </select>
       </div>
 
       <div class="actions">
@@ -68,14 +66,12 @@
       <div id="options" class="options" role="listbox"></div>
       <div id="explanation" class="explain hide"></div>
 
-      <!-- Botões de navegação -->
       <div class="actions">
         <button id="btnGoHome" class="btn ghost" type="button">Início</button>
         <button id="btnPrev" class="btn ghost" type="button">Anterior</button>
         <button id="btnNext" class="btn primary" type="button">Próximo</button>
       </div>
 
-      <!-- MENU IA (fica escondido até o usuário responder uma questão) -->
       <div class="ai-menu hide" id="aiMenu">
         <button id="btnAI" class="btn ghost" type="button">Pergunte ao Google Modo I.A.</button>
         <div class="ai-dropdown" id="aiDropdown">
@@ -85,10 +81,8 @@
         </div>
       </div>
 
-      <!-- Barra de tags -->
       <div id="tagsBar" class="tagsbar" aria-label="Tags relacionadas"></div>
 
-      <!-- Rodapé do quiz -->
       <div class="meta">
         <span id="footLeft">—</span>
         <span id="footRight">—</span>
@@ -107,6 +101,15 @@
     </section>
   </div>
 
-  <script src="app.js"></script>
+  <!-- CONFIG precisa vir antes de app.js -->
+  <script>
+    window.CONFIG = {
+      owner: 'osvaldosereia',
+      repo:  'ART123CP',
+      branch:'main',
+      dataDir:'data'
+    };
+  </script>
+  <script src="app.js" defer></script>
 </body>
 </html>
