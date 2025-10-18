@@ -1,13 +1,13 @@
 // app.js — MeuJus (HTML seguro, chips de origem, histórico global, deep link #q=n)
 
-const CONFIG = {
+// deve ficar no topo do arquivo
+window.CONFIG = {
   owner: 'osvaldosereia',
-  repo: 'ART123CP',
-  branch: 'main',
-  dataDir: 'data'
+  repo:  'ART123CP',
+  branch:'main',
+  dataDir:'data'
 };
-
-const AUTO_RESUME = false;
+const CONFIG = window.CONFIG; // se o código usa CONFIG direto
 
 /* ===== util ===== */
 const getToastWrap = ()=> {
