@@ -552,7 +552,11 @@ async function buildManifest(){
   if(!treeSha) throw new Error('Tree SHA não localizado');
 
   // 2) lista a árvore completa
-  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/${treeSha}?recursive=1`, { cache:'no-store' });
+  const res = await fetch(
+  `https://api.github.com/repos/${owner}/${repo}/git/trees/${treeSha}?recursive=1`,
+  { cache: 'no-store' }
+);
+
   if(!res.ok) throw new Error('Git trees falhou');
   const json = await res.json();
   const tree = Array.isArray(json.tree) ? json.tree : [];
