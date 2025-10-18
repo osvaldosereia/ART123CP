@@ -1,83 +1,372 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MeuJus — Quiz de Direito</title>
-  <link rel="stylesheet" href="./style.css" />
-  <!-- PDF.js (worker separado por performance) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.min.js" integrity="sha512-n3j5hO4/1uWdZlWdu3pH93v0z1OZV+8lZLaW1f3nE1QnJ6g48kR0MCoB18n3hQZbYv3c3nWw1nVx3K7QkE2dTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    // Caminho do worker do PDF.js
-    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.worker.min.js";
-  </script>
+  <title>MeuJus Quiz</title>
+  <style>
+    :root{--bg:#0b0d10;--panel:#11151a;--muted:#9aa4af;--fg:#e6edf3;--brand:#69d;--ok:#25a56a;--bad:#cd4141}
+    *{box-sizing:border-box}html,body{height:100%}body{margin:0;font:16px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--fg)}
+    .wrap{max-width:980px;margin:32px auto;padding:0 16px}
+    h1{font-size:24px;margin:0 0 16px}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    .card{background:var(--panel);border:1px solid #1c2128;border-radius:14px;padding:14px}
+    .select{position:relative;min-width:260px}
+    .select-toggle{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;background:#0e1318;border:1px solid #1c2128;border-radius:12px;cursor:pointer;user-select:none}
+    .select-toggle span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .select-menu{position:absolute;inset:auto 0 0 0;transform:translateY(100%);background:#0d1117;border:1px solid #1c2128;border-radius:12px;margin-top:6px;max-height:280px;overflow:auto;padding:6px;list-style:none}
+    .select-menu li{padding:8px 10px;border-radius:8px;cursor:pointer}
+    .select-menu li:hover{background:#151b23}
+    .btn{padding:10px 14px;border-radius:12px;background:var(--brand);color:#03152b;border:none;cursor:pointer;font-weight:600}
+    .btn.secondary{background:#202733;color:var(--fg)}
+    .btn:disabled{opacity:.5;cursor:not-allowed}
+    .muted{color:var(--muted)}
+    #quiz{display:grid;gap:12px;margin-top:16px}
+    .q{background:#0d1117;border:1px solid #1c2128;border-radius:14px}
+    .q h3{margin:0;padding:14px;border-bottom:1px solid #1c2128;font-size:16px}
+    .q .meta{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:12px}
+    .q .body{padding:12px}
+    .q .enun{margin:8px 0 12px;white-space:pre-wrap}
+    .q .opts{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+    .q .opts li{padding:10px 12px;border:1px solid #273244;border-radius:10px;cursor:pointer}
+    .q .opts li.correct{border-color:var(--ok)}
+    .q .opts li.wrong{border-color:var(--bad)}
+    .toolbar{display:flex;gap:8px;align-items:center;margin-top:10px}
+    .pill{font-size:12px;border:1px solid #273244;border-radius:999px;padding:4px 8px}
+    #load-more-wrap{margin:16px 0;display:flex;justify-content:center}
+    .small{font-size:12px}
+    .grid{display:grid;gap:10px}
+    .two{grid-template-columns:1fr 1fr}
+    @media (max-width:720px){.two{grid-template-columns:1fr}}
+    .kbd{font:12px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;background:#0b0f14;border:1px solid #1c2128;border-radius:6px;padding:2px 6px}
+  </style>
+  <!-- PDF.js (versão compatível) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.5.136/pdf.min.js" integrity="sha512-2c3xgd5+f0lb1Jjwmm3xC0c9lOtxc2nq4f1C0qO3clJfv/3+qW9WYGp7A7zX5Q0o9hIj1X60m9pC8nQIJmFfSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.5.136/pdf.worker.min.js";</script>
 </head>
 <body>
-  <header class="site-header">
-    <h1 class="brand">MeuJus</h1>
-    <nav class="actions">
-      <button id="btn-novo" class="btn-plain">Novo quiz</button>
-    </nav>
-  </header>
+  <div class="wrap">
+    <h1>MeuJus – Quiz de PDFs</h1>
 
-  <main class="container">
-    <section class="filters">
-      <div class="field">
-        <label class="label">Categoria</label>
-        <div class="select like-select" id="cat-select" data-placeholder="Escolha a categoria">
-          <button class="select-toggle" type="button"><span>Direito Penal</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button>
-          <!-- fixo por enquanto. outras categorias podem ser adicionadas no futuro -->
-        </div>
+    <div class="card grid two">
+      <div class="select" id="cat-select">
+        <div class="select-toggle"><span>Escolha uma categoria</span><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M4 6l4 4 4-4"/></svg></div>
+        <ul class="select-menu" hidden></ul>
       </div>
-
-      <div class="field">
-        <label class="label">Tema</label>
-        <div class="select like-select" id="tema-select" data-placeholder="Selecione o tema">
-          <button class="select-toggle" type="button"><span>Selecione o tema</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button>
-          <ul class="select-menu" hidden></ul>
-        </div>
+      <div class="select" id="tema-select">
+        <div class="select-toggle"><span>Escolha um tema</span><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M4 6l4 4 4-4"/></svg></div>
+        <ul class="select-menu" hidden></ul>
       </div>
-
-      <div class="field">
-        <button id="btn-buscar" class="btn-primary">Buscar</button>
+      <div class="toolbar" style="grid-column:1/-1">
+        <button id="btn-buscar" class="btn">Montar quiz</button>
+        <button id="btn-novo" class="btn secondary">Novo</button>
+        <span class="muted small">PDFs: <span id="pdf-count">0</span>. Você pode editar <span class="kbd">/data/index.json</span> para listar arquivos.</span>
       </div>
-    </section>
-
-    <hr class="sep"/>
-
-    <section id="quiz" class="quiz"></section>
-
-    <div id="load-more-wrap" class="load-more-wrap" hidden>
-      <button id="btn-load-more" class="btn-outline">Carregar mais</button>
     </div>
-  </main>
 
-  <footer class="site-footer">
-    <small>© MeuJus</small>
-  </footer>
+    <div id="quiz"></div>
+    <div id="load-more-wrap"><button id="btn-load-more" class="btn">Carregar mais</button></div>
 
-  <template id="q-item">
-    <article class="q">
-      <header class="q-head">
-        <div class="q-meta">
-          <span class="q-cat"></span>
-          <span class="dot">•</span>
-          <span class="q-tema"></span>
+    <template id="q-item">
+      <article class="q">
+        <h3>
+          <span class="meta"><span class="pill q-cat"></span><span class="pill q-tema"></span></span>
+        </h3>
+        <div class="body">
+          <div class="enun q-title"></div>
+          <ol class="opts q-options"></ol>
+          <div class="toolbar small">
+            <span class="muted">Clique para verificar resposta.</span>
+          </div>
         </div>
-        <h3 class="q-title"></h3>
-      </header>
-      <ul class="q-options"></ul>
-      <div class="q-tools">
-        <button class="btn-ai" type="button">Pergunte ao Google modo I.A.</button>
-        <div class="mini" hidden>
-          <a class="mini-btn" target="_blank" rel="noopener">Gabarito Comentado</a>
-          <a class="mini-btn" target="_blank" rel="noopener">Glossário</a>
-          <a class="mini-btn" target="_blank" rel="noopener">Vídeos</a>
-        </div>
-      </div>
-    </article>
-  </template>
+      </article>
+    </template>
+  </div>
 
-  <script src="./app.js" type="module"></script>
+  <script>
+  const CONFIG = {
+    LOAD_CHUNK: 5,
+    // Lista preferida por /data/index.json. Se não existir, usa fallback abaixo.
+    FALLBACK_PDFS: [
+      // Edite estes nomes conforme seus arquivos em /data/
+      // "Questões de Provas - Questões de Concursos _ Qconcursos.com.pdf",
+      // "Questões de Provas - Questões de Concursos _ Qconcursos.com2.pdf"
+    ]
+  };
+
+  const state = {
+    pdfFiles: [], // ["data/arquivo.pdf", ...]
+    catalog: {},  // { categoria: { tema: [q...] } }
+    temasByCat: {}, // { categoria: Set(temas) }
+    current: { cat: null, tema: null },
+    flat: [],
+    viewIndex: 0
+  };
+
+  const $catSelect = document.getElementById('cat-select');
+  const $temaSelect = document.getElementById('tema-select');
+  const $btnBuscar = document.getElementById('btn-buscar');
+  const $btnNovo = document.getElementById('btn-novo');
+  const $quiz = document.getElementById('quiz');
+  const $btnLoadMore = document.getElementById('btn-load-more');
+  const $loadMoreWrap = document.getElementById('load-more-wrap');
+  const $pdfCount = document.getElementById('pdf-count');
+
+  init();
+
+  async function init(){
+    wireSelect($catSelect);
+    wireSelect($temaSelect);
+    $btnBuscar.addEventListener('click', onBuscar);
+    $btnNovo.addEventListener('click', resetQuiz);
+    $btnLoadMore.addEventListener('click', onLoadMore);
+
+    const files = await discoverPdfList();
+    state.pdfFiles = files.map(f => `data/${encodeURIComponent(f)}`);
+    $pdfCount.textContent = state.pdfFiles.length;
+
+    await buildCatalogFromPdfs();
+    populateCategorias();
+  }
+
+  async function discoverPdfList(){
+    try{
+      const res = await fetch('data/index.json', {cache:'no-store'});
+      if(res.ok){
+        const arr = await res.json();
+        if(Array.isArray(arr) && arr.every(x => typeof x === 'string')) return arr;
+      }
+    }catch(e){}
+    return CONFIG.FALLBACK_PDFS.slice();
+  }
+
+  function wireSelect(root){
+    const toggle = root.querySelector('.select-toggle');
+    const menu = root.querySelector('.select-menu');
+    toggle.addEventListener('click', () => { menu.hidden = !menu.hidden; });
+    document.addEventListener('click', (e)=>{ if(!root.contains(e.target)) menu.hidden = true; });
+    root._set = (label, value) => { toggle.querySelector('span').textContent = label; root.dataset.value = value; };
+    root._fill = (items) => { menu.innerHTML = ''; items.forEach(({label, value}) => { const li = document.createElement('li'); li.textContent = label; li.addEventListener('click', ()=>{ root._set(label, value); menu.hidden = true; }); menu.appendChild(li); }); if(items.length) root._set(items[0].label, items[0].value); };
+  }
+
+  function populateCategorias(){
+    const cats = Object.keys(state.temasByCat).sort();
+    $catSelect._fill(cats.map(c => ({label:c, value:c})));
+    populateTemas();
+  }
+
+  function populateTemas(){
+    const cat = $catSelect.dataset.value || null;
+    state.current.cat = cat;
+    const temas = [...(state.temasByCat[cat] || new Set())].sort();
+    $temaSelect._fill(temas.length ? temas.map(t => ({label:t, value:t})) : [{label:'Sem tema', value:'Sem tema'}]);
+  }
+
+  $catSelect.addEventListener('click', (e)=>{
+    if(e.target.closest('li')) setTimeout(populateTemas, 0);
+  });
+
+  async function buildCatalogFromPdfs(){
+    state.catalog = {};
+    state.temasByCat = {};
+
+    for(const url of state.pdfFiles){
+      try{
+        const {categoria, temas, questions, gabarito} = await parsePdf(url);
+        if(!categoria) continue;
+        if(!state.temasByCat[categoria]) state.temasByCat[categoria] = new Set();
+        temas.forEach(t => state.temasByCat[categoria].add(t));
+
+        // Atribui respostas pelo gabarito por ordem
+        const ans = gabaritoAsArray(gabarito);
+        const qList = questions.map((q, idx) => ({...q, correctIndex: letterToIndex(ans[idx])}));
+
+        // Se houver vários temas no cabeçalho, replica a lista em cada tema
+        for(const tema of temas){
+          if(!state.catalog[categoria]) state.catalog[categoria] = {};
+          if(!state.catalog[categoria][tema]) state.catalog[categoria][tema] = [];
+          state.catalog[categoria][tema].push(...qList);
+        }
+      }catch(err){
+        console.warn('Falha no PDF', url, err);
+      }
+    }
+
+    // Ordena
+    for(const cat of Object.keys(state.catalog)){
+      for(const tema of Object.keys(state.catalog[cat])){
+        state.catalog[cat][tema] = dedupeByTitle(state.catalog[cat][tema]).sort((a,b)=>a.title.localeCompare(b.title));
+      }
+    }
+  }
+
+  function dedupeByTitle(list){
+    const seen = new Set();
+    const out = [];
+    for(const q of list){
+      const key = (q.title||'').slice(0,200);
+      if(seen.has(key)) continue; seen.add(key); out.push(q);
+    }
+    return out;
+  }
+
+  function gabaritoAsArray(g){
+    // Converte para ["E","A","C",...]
+    if(!g) return [];
+    const map = [];
+    const rx = /(\d+)\s*[:\-–]\s*([ABCDE])/gi;
+    let m; while((m = rx.exec(g))){ map.push(m[2].toUpperCase()); }
+    if(map.length) return map;
+    // fallback: linhas com só letras
+    return g.replace(/[^A-E]/gi,'').toUpperCase().split('');
+  }
+
+  function letterToIndex(L){
+    if(!L) return -1; const i = 'ABCDE'.indexOf(L.toUpperCase()); return i >= 0 ? i : -1;
+  }
+
+  async function parsePdf(url){
+    const doc = await pdfjsLib.getDocument({url, useSystemFonts:true}).promise;
+    let text = '';
+    for(let p=1;p<=doc.numPages;p++){
+      const page = await doc.getPage(p);
+      const content = await page.getTextContent({normalizeWhitespace:true});
+      const str = content.items.map(i=>i.str).join('\n');
+      text += '\n' + str;
+    }
+
+    // Normaliza
+    const lines = text.replace(/\u00A0/g,' ').split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+
+    // 1) Cabeçalho: "Categoria > Tema1, Tema2"
+    let categoria = null; let temas = [];
+    for(const L of lines){
+      const m = L.match(/^(.+?)\s*>\s*(.+)$/);
+      if(m){ categoria = m[1].trim(); temas = m[2].split(',').map(s=>s.trim()).filter(Boolean); break; }
+    }
+
+    // 2) Gabarito: bloco após uma linha que começa com "Respostas"
+    let gabarito = '';
+    const idxResp = lines.findIndex(l=>/^Respostas?/i.test(l));
+    if(idxResp>=0){ gabarito = lines.slice(idxResp+1).join(' '); }
+
+    // 3) Questões: heurística
+    // Uma questão começa por um parágrafo "enunciado" que NÃO começa por A-/B-/C- e que é seguido por alternativas.
+    // Alternativas são linhas que começam por "A -", "B -", etc., admitindo quebras.
+    const questions = [];
+    let i = 0;
+    const isAltStart = l => /^[A-E]\s*[-–—]\s*/i.test(l);
+    const isLetter = l => /^[A-E]$/i.test(l);
+
+    while(i < lines.length){
+      // Busca enunciado
+      if(/^Respostas?/i.test(lines[i])) break;
+      // pula cabeçalhos e ruídos evidentes
+      if(/^\w+\s*>\s*/.test(lines[i])) { i++; continue; }
+
+      const enun = [];
+      while(i < lines.length && !isAltStart(lines[i]) && !/^Respostas?/i.test(lines[i])){
+        enun.push(lines[i]);
+        i++;
+        // heurística: enunciados costumam ter pelo menos 1 frase e antes das alternativas
+        if(isAltStart(lines[i])) break;
+      }
+      // Se não há alternativas a seguir, descarta este bloco
+      if(!(i < lines.length && isAltStart(lines[i]))){ i++; continue; }
+
+      // Coleta alternativas A..E com suporte a quebra de linha
+      const opts = [];
+      let current = null;
+      while(i < lines.length){
+        const L = lines[i];
+        if(/^Respostas?/i.test(L)) break;
+        if(isAltStart(L)){
+          if(current) opts.push(current);
+          const letter = L.substring(0,1).toUpperCase();
+          current = letter + ' ' + L.replace(/^[A-E]\s*[-–—]\s*/i,'').trim();
+        } else if(isLetter(L)){
+          // caso a linha seja só a letra, junta na próxima
+          if(current) opts.push(current);
+          const letter = L.toUpperCase();
+          i++; const nxt = (lines[i]||'').trim();
+          current = letter + ' ' + nxt;
+        } else {
+          if(current) current += ' ' + L; // quebra de linha
+        }
+        i++;
+        if(opts.length===5) break;
+      }
+      if(current) opts.push(current);
+
+      const cleanOpts = opts
+        .filter(s=>/^[A-E]\s+/i.test(s))
+        .slice(0,5)
+        .map(s=>s.replace(/^[A-E]\s+/i,'').trim());
+
+      if(enun.join(' ').trim() && cleanOpts.length>=2){
+        questions.push({
+          cat: categoria || 'Sem categoria',
+          tema: (temas[0]||'Sem tema'),
+          title: enun.join(' ').replace(/\s{2,}/g,' ').trim(),
+          options: cleanOpts.map((t,i)=>({text:t,i})),
+          correctIndex: -1,
+          source: url
+        });
+      }
+    }
+
+    return {categoria, temas: temas.length?temas:['Sem tema'], questions, gabarito};
+  }
+
+  function onBuscar(){
+    const cat = $catSelect.dataset.value || null;
+    const tema = $temaSelect.dataset.value || 'Sem tema';
+    state.current.cat = cat; state.current.tema = tema;
+    state.flat = [...(state.catalog[cat]?.[tema] || [])];
+    state.viewIndex = 0; $quiz.innerHTML = ''; $loadMoreWrap.hidden = true;
+    renderNextChunk();
+  }
+
+  function onLoadMore(){ renderNextChunk(); }
+
+  function renderNextChunk(){
+    const start = state.viewIndex; const end = Math.min(start + CONFIG.LOAD_CHUNK, state.flat.length);
+    for(let i=start;i<end;i++) renderQuestion(state.flat[i]);
+    state.viewIndex = end; $loadMoreWrap.hidden = state.viewIndex >= state.flat.length;
+  }
+
+  function renderQuestion(q){
+    const tpl = document.getElementById('q-item');
+    const node = tpl.content.cloneNode(true);
+    node.querySelector('.q-cat').textContent = q.cat;
+    node.querySelector('.q-tema').textContent = q.tema;
+    node.querySelector('.q-title').textContent = q.title;
+
+    const $opts = node.querySelector('.q-options');
+    if(!q.options || !q.options.length){ q.options = [{text:'Certo',i:0},{text:'Errado',i:1}]; }
+    q.options.forEach((opt, idx) => {
+      const li = document.createElement('li');
+      li.textContent = opt.text; li.addEventListener('click', ()=> handleAnswer(li, idx, q));
+      $opts.appendChild(li);
+    });
+
+    $quiz.appendChild(node);
+  }
+
+  function handleAnswer(li, idx, q){
+    const ul = li.parentElement; const items = [...ul.children];
+    items.forEach(el => el.classList.remove('correct','wrong'));
+    if(q.correctIndex >= 0){
+      if(idx === q.correctIndex) li.classList.add('correct');
+      else { li.classList.add('wrong'); items[q.correctIndex]?.classList.add('correct'); }
+    } else {
+      li.classList.add('wrong');
+    }
+  }
+
+  function resetQuiz(){
+    $quiz.innerHTML = ''; state.viewIndex = 0; state.flat = []; $loadMoreWrap.hidden = true;
+  }
+  </script>
 </body>
 </html>
