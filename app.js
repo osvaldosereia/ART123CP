@@ -326,6 +326,104 @@ function sanitizeBasicHTML(html){
   });
   return s.replace(/\r\n?/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
 }
+/* ===== PDF support ===== */
+async function ensurePdfJs(){
+  if(window.pdfjsLib) return window.pdfjsLib;
+  await new Promise((res, rej)=>{
+    const s=document.createElement('script');
+    s.src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.7.76/pdf.min.js';
+    s.onload=res; s.onerror=rej; document.head.appendChild(s);
+  });
+  try{
+    if(window.pdfjsLib?.GlobalWorkerOptions){
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.7.76/pdf.worker.min.js';
+    }
+  }catch{}
+  return window.pdfjsLib;
+}
+
+async function extractPdfText(input){
+  const pdfjs = await ensurePdfJs();
+  const doc = pdfjs.getDocument(typeof input==='string' ? input : {data: input});
+  const pdf = await doc.promise;
+  const out = [];
+  for(let p=1;p<=pdf.numPages;p++){
+    const page = await pdf.getPage(p);
+    const content = await page.getTextContent();
+    const txt = content.items.map(it=>it.str).join(' ').replace(/\s+/g,' ').trim();
+    out.push(txt);
+  }
+  return out.join('\n\n');
+}
+
+function parsePdfToQuiz(raw){
+  const text = String(raw||'').replace(/\u00A0/g,' ').replace(/\s+/g,' ').trim();
+
+  // gabarito no fim: "Respostas 1: D 2: C ..."
+  const gabMap = new Map();
+  const gabMatch = text.match(/Respostas\s+([\s\S]+?)(?:\s+https?:\/\/www\.qconcursos|$)/i) || text.match(/Respostas\s+([\s\S]+)$/i);
+  if (gabMatch) {
+    const rx = /(\d{1,4})\s*:\s*([A-ECE])\b/gi; // C/E para VF
+    let m; while ((m = rx.exec(gabMatch[1]))) gabMap.set(Number(m[1]), m[2].toUpperCase());
+  }
+
+  // cabeça antes de "Respostas"
+  const head = text.split(/Respostas\b/i)[0] || text;
+
+  // blocos "NN Qdddddd"
+  const blocks = [];
+  const reBlock = /(\d{1,4})\s+Q\d{5,}\s*([\s\S]*?)(?=(?:\s+\d{1,4}\s+Q\d{5,}\s*)|$)/g;
+  let bm; while ((bm = reBlock.exec(head))) blocks.push({ qnum: Number(bm[1]), body: bm[2].trim() });
+
+  const mapLetter = {A:0,B:1,C:2,D:3,E:4};
+  const questions = [];
+
+  for (const { qnum, body } of blocks) {
+    const opts = [];
+    const altRx = /\b([A-E])\s+([^A-E]+?)(?=\s+[A-E]\s+|$)/gi;
+    let m; while ((m = altRx.exec(body))) {
+      const L = m[1].toUpperCase();
+      const txt = m[2].trim();
+      opts[mapLetter[L]] = sanitizeBasicHTML(txt);
+    }
+    const aPos = body.search(/\bA\s+/);
+    const enun = aPos > 0 ? body.slice(0, aPos).trim() : body.trim();
+
+    const hasVF = /\bCerto\b\s+\bErrado\b|\bErrado\b\s+\bCerto\b/i.test(body);
+    const gabLetter = gabMap.get(qnum) || null;
+
+    if (hasVF && (!opts || opts.length === 0)) {
+      questions.push({ type:'vf', q:sanitizeBasicHTML(enun), options:[], answer: gabLetter ? (gabLetter==='C') : null, explanation:'', tags:[] });
+      continue;
+    }
+    if (!opts.length) continue;
+
+    questions.push({
+      type:'multiple',
+      q: sanitizeBasicHTML(enun),
+      options: opts,
+      answer: gabLetter ? (mapLetter[gabLetter] ?? null) : null,
+      explanation:'',
+      tags:[]
+    });
+  }
+
+  return {
+    meta:{ title:'PDF QConcursos', category:'QConcursos', theme:'PDF', shuffle:{questions:false,options:true}, persist:true, outroMessage:'' },
+    questions
+  };
+}
+
+async function loadPdfAsQuiz(path){
+  const raw = await extractPdfText(path);
+  const quiz = parsePdfToQuiz(raw);
+  if(quiz && Array.isArray(quiz.questions)){
+    await loadVirtualQuiz(quiz, path, true);
+    saveQuizCache(path, quiz);
+  }
+  return quiz;
+}
+
 
 /* ===== IA ===== */
 function ensureAIMenu(){
@@ -445,6 +543,45 @@ function materiaLabel(cat, materiaId){
   }
   return prettyName(materiaId); // fallback seguro
 }
+/* ===== manifest (PDF-only via GitHub contents) ===== */
+async function githubList(dir){
+  const api = `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/${dir}?ref=${CONFIG.branch}`;
+  const res = await fetch(api, {cache:'no-store'}); if(!res.ok) throw new Error('GitHub list falhou');
+  return await res.json();
+}
+async function buildManifest(){
+  const cats = await githubList(CONFIG.dataDir);
+  const out = { title:'MeuJus', categories: [], shuffleDefault:{questions:false,options:true}, persistDefault:true, outro:{message:''} };
+
+  for(const c of cats){
+    if (c.type !== 'dir') continue;
+    const catId = c.name;
+    const cat = { id: catId, name: prettyName(catId), themes: [] };
+
+    const mats = await githubList(`${CONFIG.dataDir}/${catId}`);
+    for(const m of mats){
+      if (m.type !== 'dir') continue;
+      const matId = m.name;
+      let files = [];
+      try{ files = await githubList(`${CONFIG.dataDir}/${catId}/${matId}`); }catch{}
+      for(const f of files){
+        if (f.type==='file' && /\.pdf$/i.test(f.name)){
+          const path = f.download_url ||
+            `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/` +
+            `${encodeURIComponent(CONFIG.dataDir)}/${encodeURIComponent(catId)}/${encodeURIComponent(matId)}/${encodeURIComponent(f.name)}`;
+          cat.themes.push({
+            id: `${matId}-${f.name.replace(/\.pdf$/i,'')}`,
+            name: `${prettyName(matId)} · ${prettyName(f.name.replace(/\.pdf$/i,''))}`,
+            path
+          });
+        }
+      }
+    }
+    out.categories.push(cat);
+    await new Promise(r=>requestAnimationFrame(r));
+  }
+  return out;
+}
 
 function updateThemes(){
   const catId = selCategory.value;
@@ -546,6 +683,52 @@ function resetState(){
   explainEl.classList.add('hide'); btnClearSearch.classList.add('hide'); txtSearch.value='';
   tagsBarEl&&(tagsBarEl.innerHTML='');
   TAG_INDEX.clear();
+}
+async function loadQuiz(path, fresh=false){
+  if (LOADING) return;
+  LOADING = true;
+  try{
+    const cached = lsGet(`quiz:${JSON.stringify(path)}`, null);
+    if(cached && !fresh){
+      await loadVirtualQuiz(cached, path, false);
+      return;
+    }
+
+    let qz = null;
+
+    if(Array.isArray(path)){
+      const allQuestions = [];
+      for(const p of path){
+        if(!/\.pdf$/i.test(p)) continue;
+        try{
+          const partial = await loadPdfAsQuiz(p);
+          if(partial?.questions?.length) allQuestions.push(...partial.questions);
+        }catch{}
+      }
+      qz = { meta:{ title:'PDFs combinados', category:'QConcursos', theme:'PDF', shuffle:{questions:false,options:true}, persist:true, outroMessage:'' }, questions: allQuestions };
+      await loadVirtualQuiz(qz, path, true);
+      lsSet(`quiz:${JSON.stringify(path)}`, qz);
+    } else {
+      if(!/\.pdf$/i.test(path)){
+        toast('Apenas PDFs são suportados', 'error', 2400);
+        show(screenIntro,true); show(screenQuiz,false); show(screenResult:false);
+        return;
+      }
+      qz = await loadPdfAsQuiz(path);
+    }
+
+    if(!qz || !Array.isArray(qz.questions) || qz.questions.length===0){
+      toast('Nenhuma questão encontrada no PDF','warn',2800);
+      show(screenIntro,true); show(screenQuiz:false); show(screenResult:false);
+      return;
+    }
+  }catch(err){
+    console.error(err);
+    toast('Erro ao carregar PDF','error',3000);
+    show(screenIntro,true); show(screenQuiz:false); show(screenResult:false);
+  }finally{
+    LOADING = false;
+  }
 }
 
 async function loadVirtualQuiz(quizObj, synthKey, fresh){
@@ -1031,4 +1214,57 @@ async function openHistoryItem(h){
   if(pos>=0){ I = pos; render(); }
   try{ history.replaceState(null,'',`#q=${(pos>=0?pos+1:1)}`); }catch{}
   toggleSidePanel(false);
+}
+/* ===== init (PDF-only) ===== */
+init();
+async function init(){
+  show(screenIntro,true); show(screenQuiz,false); show(screenResult:false);
+
+  try{
+    MANIFEST = await buildManifest();
+  }catch(e){
+    console.warn('manifest build failed', e);
+    MANIFEST = { title:'MeuJus', categories:[], shuffleDefault:{questions:false,options:true}, persistDefault:true, outro:{message:''} };
+  }
+
+  const stateEl = document.getElementById('state');
+  if(stateEl) stateEl.classList.add('hide');
+
+  appTitle.textContent = MANIFEST?.title || 'MeuJus';
+  applyLabels();
+
+  selCategory.innerHTML = '';
+  (MANIFEST?.categories || []).forEach((c, idx) => {
+    const o = document.createElement('option');
+    o.value = c.id; o.textContent = c.name || c.id;
+    if (idx === 0) o.selected = true;
+    selCategory.appendChild(o);
+  });
+  updateThemes();
+  applyCustomSelects();
+
+  selCategory.addEventListener('change', updateThemes);
+  selTheme.addEventListener('change', updateSubjects);
+
+  btnStart.addEventListener('click', startQuizFromSelection);
+  btnPrev.addEventListener('click', prev);
+  btnNext.addEventListener('click', next);
+
+  btnSearch.addEventListener('click', ()=> applyFilter(txtSearch.value||''));
+  btnClearSearch.addEventListener('click', clearFilter);
+  txtSearch.addEventListener('keydown', e=>{ if(e.key==='Enter') btnSearch.click(); });
+
+  const goHome = ()=>{ resetState(); show(screenIntro,true); show(screenQuiz,false); show(screenResult:false); };
+  btnGoHome.addEventListener('click', goHome);
+  btnHome.addEventListener('click', goHome);
+  appTitle.addEventListener('click', goHome);
+
+  btnRetry.addEventListener('click', ()=>{ loadQuiz(KEY?.path,true); toast('Quiz reiniciado','info'); });
+
+  ensureAIMenu(); loadHistory(); setupHeaderActions();
+
+  try{
+    const m = String(location.hash||'').match(/#q=(\d+)/i);
+    if(m){ I = Math.max(0, parseInt(m[1],10)-1); }
+  }catch{}
 }
