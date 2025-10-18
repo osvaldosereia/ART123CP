@@ -143,7 +143,6 @@ const txtSearch = document.getElementById('txtSearch');
 const btnSearch = document.getElementById('btnSearch');
 const btnClearSearch = document.getElementById('btnClearSearch');
 
-
 /* TAGS host */
 let tagsBarEl = document.getElementById('tagsBar');
 (function ensureTagsBar(){
@@ -363,7 +362,7 @@ function parsePdfToQuiz(raw){
   const gabMap = new Map();
   const gabMatch = text.match(/Respostas\s+([\s\S]+?)(?:\s+https?:\/\/www\.qconcursos|$)/i) || text.match(/Respostas\s+([\s\S]+)$/i);
   if (gabMatch) {
-    const rx = /(\d{1,4})\s*:\s*([A-ECE])\b/gi; // C/E para VF
+    const rx = /(\d{1,4})\s*:\s*([A-E])\b/gi; // corrige classe
     let m; while ((m = rx.exec(gabMatch[1]))) gabMap.set(Number(m[1]), m[2].toUpperCase());
   }
 
@@ -421,7 +420,6 @@ async function loadPdfAsQuiz(path){
   await loadVirtualQuiz(quiz, path, true);
   lsSet(`quiz:${JSON.stringify(path)}`, quiz);
 }
-
   return quiz;
 }
 
@@ -521,50 +519,44 @@ function applyLabels(){
   const h=document.getElementById('btnGoHome'); if(h) h.textContent=LABELS.home||'Início';
 }
 
-/* ===== helper: extrai matéria a partir do theme.id (antes do primeiro "-") ===== */
+/* ===== helper: IDs ===== */
 function materiaFromThemeId(themeId){
   const s = String(themeId||'');
   const i = s.indexOf('-');
   return i > 0 ? s.slice(0, i) : s;
 }
-
-/* helper: base do arquivo sem número final e sem extensão (USAR ANTES DE updateThemes) */
 function baseKeyFromPath(p){
   const file = String(p||'').split('/').pop() || '';
   return file.replace(/\.pdf$/i,'').replace(/\d+$/,'');
 }
 function materiaLabel(cat, materiaId){
   const k = String(materiaId||'').toLowerCase();
-  if (SPECIAL_NAMES.has(k)) return SPECIAL_NAMES.get(k); // override opcional
-
+  if (SPECIAL_NAMES.has(k)) return SPECIAL_NAMES.get(k);
   const sample = (cat?.themes||[]).find(t => String(t.id||'').startsWith(materiaId + '-'));
   if (sample && sample.name){
-    const left = String(sample.name).split('·')[0].trim(); // antes do “·”
+    const left = String(sample.name).split('·')[0].trim();
     if (left) return left;
   }
-  return prettyName(materiaId); // fallback seguro
+  return prettyName(materiaId);
 }
-// ===== manifest (PDF-only via Git Trees API) =====
+
+/* ===== manifest (PDF-only via Git Trees API) ===== */
 async function buildManifest(){
   const { owner, repo, branch, dataDir } = CONFIG;
 
-  // pegar SHA da árvore do branch
   const brRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/branches/${branch}`, { cache:'no-store' });
   if(!brRes.ok) throw new Error('Git branches falhou');
   const brJson = await brRes.json();
   const treeSha = brJson?.commit?.commit?.tree?.sha;
   if(!treeSha) throw new Error('Tree SHA não localizado');
 
-  // listar a árvore recursiva usando o SHA
   const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/${treeSha}?recursive=1`, { cache:'no-store' });
   if (!res.ok) throw new Error('Git trees falhou');
   const json = await res.json();
   const tree = Array.isArray(json.tree) ? json.tree : [];
 
-  // PDFs dentro de dataDir
   const pdfs = tree.filter(n => n.type === 'blob' && n.path.startsWith(`${dataDir}/`) && /\.pdf$/i.test(n.path));
 
-  // montar categorias e temas: data/<cat>/<materia>/<arquivo.pdf>
   const categories = new Map();
   for (const f of pdfs){
     const parts = f.path.split('/'); // [data, cat, materia, file...]
@@ -586,7 +578,6 @@ async function buildManifest(){
     cat.themes.push({ id: themeId, name: themeName, path: raw });
   }
 
-  // ordenar
   return {
     title:'MeuJus',
     categories: [...categories.values()]
@@ -598,6 +589,16 @@ async function buildManifest(){
   };
 }
 
+/* ===== popula dropdowns por categoria ===== */
+function updateThemes(){
+  const catId = selCategory.value;
+  const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId);
+  if(!cat){
+    selTheme.innerHTML = '';
+    if(selSubject){ selSubject.innerHTML=''; selSubject.parentElement?.classList?.add('hide'); }
+    return;
+  }
+
   // matérias únicas extraídas de theme.id antes do primeiro "-"
   const materias = [...new Set((cat.themes||[]).map(t=>{
     const s = String(t.id||''); const i = s.indexOf('-'); return i>0 ? s.slice(0,i) : s;
@@ -606,8 +607,8 @@ async function buildManifest(){
   selTheme.innerHTML = '';
   materias.forEach((m, idx)=>{
     const o = document.createElement('option');
-    o.value = m;                                // agora guarda SÓ a matéria
-   o.textContent = materiaLabel(cat, m).toUpperCase();
+    o.value = m;
+    o.textContent = materiaLabel(cat, m).toUpperCase();
     if(idx===0) o.selected = true;
     selTheme.appendChild(o);
   });
@@ -616,7 +617,6 @@ async function buildManifest(){
   updateSubjects(); // repovoa o 2º dropdown com os assuntos da matéria escolhida
 }
 
-
 function updateSubjects(){
   if(!selSubject) return;
 
@@ -624,7 +624,6 @@ function updateSubjects(){
   const materiaId = selTheme.value;
   const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId);
 
-  // coletar todos os paths da matéria
   const themesDaMateria = (cat?.themes||[]).filter(t=> t.id.startsWith(materiaId + '-'));
   const allPaths = [];
   themesDaMateria.forEach(t=>{
@@ -632,7 +631,6 @@ function updateSubjects(){
     else if(t.path) allPaths.push(t.path);
   });
 
-  // agrupar por base (Participacao, Nocoes-Gerais, etc.)
   const group = new Map(); // base -> paths[]
   allPaths.forEach(p=>{
     const base = baseKeyFromPath(p);
@@ -654,8 +652,7 @@ function updateSubjects(){
     selSubject.parentElement?.classList?.remove('hide');
     entries.forEach(([base, paths])=>{
       const o = document.createElement('option');
-      // value carrega TODOS os paths daquele assunto em JSON
-      o.value = JSON.stringify(paths);
+      o.value = JSON.stringify(paths); // todos os PDFs do assunto
       o.textContent = prettyName(base);
       selSubject.appendChild(o);
     });
@@ -664,27 +661,20 @@ function updateSubjects(){
   applyCustomSelects();
 }
 
-
-
+/* ===== escolha de path ===== */
 function selectedPath(){
   const v = selSubject?.value || '';
-
-  // assunto escolhido
   if (v) {
     try{
       const arr = JSON.parse(v);
-      if (Array.isArray(arr) && arr.length) return arr; // vários arquivos unidos
+      if (Array.isArray(arr) && arr.length) return arr;
     }catch{
-      return v; // valor simples
+      return v;
     }
   }
-
-  // sem assunto, impedir início
   toast('Selecione um assunto primeiro', 'warn', 2200);
   return null;
 }
-
-
 
 async function startQuizFromSelection(){ const path=selectedPath(); if(!path) return; await loadQuiz(path,true); }
 
@@ -730,14 +720,13 @@ async function loadQuiz(path, fresh=false){
 
     if(!qz || !Array.isArray(qz.questions) || qz.questions.length===0){
       toast('Nenhuma questão encontrada no PDF','warn',2800);
-show(screenIntro,true); show(screenQuiz,false); show(screenResult,false);
-return;
-
+      show(screenIntro,true); show(screenQuiz,false); show(screenResult,false);
+      return;
     }
   }catch(err){
     console.error(err);
     toast('Erro ao carregar PDF','error',3000);
-show(screenIntro,true); show(screenQuiz,false); show(screenResult,false);
+    show(screenIntro,true); show(screenQuiz,false); show(screenResult,false);
   }finally{
     LOADING = false;
   }
@@ -747,7 +736,6 @@ async function loadVirtualQuiz(quizObj, synthKey, fresh){
   QUIZ = quizObj;
   KEY  = { path: synthKey, key: `quiz:${JSON.stringify(synthKey)}` };
 
-  // índice de tags lazily
   TAG_READY = false;
   rqIdle(()=>buildTagIndex(QUIZ.questions));
 
@@ -761,7 +749,6 @@ async function loadVirtualQuiz(quizObj, synthKey, fresh){
   show(screenQuiz,  true);
   show(screenResult,false);
 
-  // duplo RAF para pintar antes de trabalho pesado
   await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
   render();
 }
@@ -1013,8 +1000,6 @@ function recalcOrderFromFilters(){
   persist();
 }
 
-
-
 /* ===== atalhos ===== */
 window.addEventListener('keydown',(e)=>{
   if(screenQuiz.classList.contains('hide')) return;
@@ -1227,6 +1212,7 @@ async function openHistoryItem(h){
   try{ history.replaceState(null,'',`#q=${(pos>=0?pos+1:1)}`); }catch{}
   toggleSidePanel(false);
 }
+
 /* ===== init (PDF-only) ===== */
 init();
 async function init(){
@@ -1281,4 +1267,3 @@ async function init(){
     if(m){ I = Math.max(0, parseInt(m[1],10)-1); }
   }catch{}
 }
-
