@@ -46,6 +46,7 @@ const SPECIAL_NAMES = new Map([
   ['direito-civil','Direito Civil'],
   ['contratos','Contratos'],
   ['mutuo','Mútuo']
+  ['concurso','Concurso de Pessoas']
 ]);
 function prettyName(id){
   const key = String(id||'').toLowerCase();
