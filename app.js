@@ -263,7 +263,7 @@ async function loadQuiz(path,fresh=false,tryRestore=false){
   }catch(err){
     console.error(err);
     toast('Erro ao carregar', 'error', 3000);
-    show(screenIntro,true); show(screenQuiz,false); show(screenResult:false);
+    show(screenIntro,true); show(screenQuiz,false); show(screenResult,false);
   }finally{
     LOADING = false;
   }
@@ -331,7 +331,7 @@ function parsePdfToQuiz(raw){
   const gabMap = new Map();
   const gabMatch = text.match(/Respostas\s+([\s\S]+?)\s+(?:www\.qconcursos|https?:\/\/www\.qconcursos|$)/i);
   if (gabMatch) {
-    const rx = /(\d{1,3})\s*:\s*([A-ECE])\b/gi; // inclui C/E p/ Certo/Errado
+    const rx = /(\d{1,3})\s*:\s*([A-E])\b/gi; // inclui C/E p/ Certo/Errado
     let m; while ((m = rx.exec(gabMatch[1]))) gabMap.set(Number(m[1]), m[2].toUpperCase());
   }
 
