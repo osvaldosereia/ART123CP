@@ -693,17 +693,26 @@ function materiaFromThemeId(themeId){
 function updateThemes(){
   const catId = selCategory.value;
   const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId) || {themes:[]};
+
+  // coletar matérias únicas a partir dos themes
+  const materias = Array.from(
+    new Set((cat.themes||[]).map(t => materiaFromThemeId(t.id)))
+  ).sort((a,b)=> prettyName(a).localeCompare(prettyName(b),'pt-BR'));
+
+  // preencher o 1º dropdown apenas com as matérias
   selTheme.innerHTML = '';
-  (cat.themes||[]).forEach((t,idx)=>{
+  materias.forEach((m, idx)=>{
     const o = document.createElement('option');
-    o.value = t.id;
-    o.textContent = (t.name||t.id).toUpperCase();
+    o.value = m;                               // agora guarda só a matéria
+    o.textContent = prettyName(m).toUpperCase();
     if(idx===0) o.selected = true;
     selTheme.appendChild(o);
   });
+
   applyCustomSelects();
-  updateSubjects(); // encadeia o novo dropdown
+  updateSubjects(); // repopula o 2º dropdown com os HTMLs da matéria
 }
+
 
 function updateSubjects(){
   if(!selSubject) return;
@@ -752,16 +761,19 @@ function updateSubjects(){
 function selectedPath(){
   const catId = selCategory.value;
   const cat   = (MANIFEST?.categories||[]).find(c=>c.id===catId);
-  const theme = (cat?.themes||[]).find(t=>t.id===selTheme.value);
+  const materiaId = selTheme.value;
 
-  // prioridade ao assunto escolhido
   const subjectPath = selSubject?.value || '';
   if (subjectPath) return subjectPath;
 
-  // fallback para o tema como antes
-  if (Array.isArray(theme?.path)) return theme.path[0] || null;
-  return theme?.path || (catId && selTheme.value ? `data/${catId}/${selTheme.value}.txt` : null);
+  // pega o primeiro theme que pertença à matéria escolhida
+  const firstTheme = (cat?.themes||[]).find(t => t.id.startsWith(materiaId + '-'));
+  if(!firstTheme) return null;
+
+  if (Array.isArray(firstTheme.path)) return firstTheme.path[0] || null;
+  return firstTheme.path || null;
 }
+
 
 async function startQuizFromSelection(){ const path=selectedPath(); if(!path) return; await loadQuiz(path,true); }
 
