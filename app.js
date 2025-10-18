@@ -1,12 +1,12 @@
 // app.js — MeuJus (HTML seguro, chips de origem, histórico global, deep link #q=n)
 
 const CONFIG = {
-  useGitHubIndexer: true,
   owner: 'osvaldosereia',
   repo: 'ART123CP',
   branch: 'main',
   dataDir: 'data'
 };
+
 const AUTO_RESUME = false;
 
 /* ===== util ===== */
@@ -38,6 +38,12 @@ function decodeHTMLEntities(s){
   const d=new DOMParser().parseFromString(s,'text/html');
   return d.documentElement.textContent||'';
 }
+function plainText(html){
+  if(!html) return '';
+  const d = new DOMParser().parseFromString('<div>'+html+'</div>','text/html');
+  return d.body.textContent || '';
+}
+
 function slug(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');}
 function rqIdle(cb, timeout=60){ return (window.requestIdleCallback||((f)=>setTimeout(()=>f({didTimeout:false,timeRemaining:()=>0}),0)))(cb,{timeout}); }
 
@@ -63,7 +69,7 @@ function getCurrentContext(){
   const disciplinaId = parts[1];
   const materiaId    = parts[2];
   const file         = parts[3];
-  const baseId       = file.replace(/\.(txt|html?|json)$/i,'').replace(/\d+$/,'');
+  const baseId       = file.replace(/\.pdf$/i,'').replace(/\d+$/,'');
   return {disciplinaId, materiaId, baseId};
 }
 function listSiblingThemes(){
@@ -262,21 +268,7 @@ let TAG_READY = false;
 let ROUTED = false;
 let LOADING = false;
 
-/* ===== fetch ===== */
-function readEmbedded(path){ const t=document.querySelector(`script[type="application/json"][data-path="${path}"]`); if(!t) return null; try{ return JSON.parse(t.textContent);}catch{ return null; } }
-function mustUseEmbedded(){ return new URLSearchParams(location.search).get('embedded')==='1'; }
-async function fetchText(path){
-  if(!mustUseEmbedded()){
-    try{ const res = await fetch(path, {cache:'no-store'}); if(res.ok) return await res.text(); }catch{}
-  }
-  return '';
-}
-async function loadJSON(path, fallback=undefined){
-  if(!mustUseEmbedded()){
-    try{ const res=await fetch(path,{cache:'no-store'}); if(res.ok) return res.json(); }catch{}
-  }
-  const emb=readEmbedded(path); if(emb!=null) return emb; if(fallback!==undefined) return fallback; return null;
-}
+
 
 /* ===== regras ===== */
 function isCorrectQuestion(q, pick){
@@ -333,260 +325,6 @@ function sanitizeBasicHTML(html){
     return allowed.includes(tag) ? `</${tag}>` : '';
   });
   return s.replace(/\r\n?/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
-}
-
-/* ===== parser TXT ===== */
-function parseTxtQuestions(raw) {
-  const text = String(raw || '').replace(/\uFEFF/g, '').replace(/\r\n?/g, '\n');
-  const blocks = text.split(/\n-{5,}\n/g).map(b => b.trim()).filter(Boolean);
-  const qs = [];
-  for (const block of blocks) {
-    const lines = block.split('\n');
-    let enunciado = [], opcoes = [], gabarito = null, tags = [];
-    for (const line of lines) {
-      const trimmed = line.trim();
-      if (/^\*\s(?!\*)/.test(trimmed)) { enunciado.push(trimmed.replace(/^\*\s*/, '')); continue; }
-      if (/^\*\*\s*\(?[A-E]\)/i.test(trimmed)) { const m = trimmed.match(/^\*\*\s*\(?([A-E])\)\s*(.+)$/i); if (m) opcoes.push(m[2].trim()); continue; }
-      if (/^\*\*\*\s*Gabarito\s*:/i.test(trimmed)) { const g = trimmed.match(/^\*\*\*\s*Gabarito\s*:\s*([A-E])/i); if (g) gabarito = g[1].toUpperCase(); continue; }
-      if (/^\*\*\*\*/.test(trimmed)) { const tagLine = trimmed.replace(/^\*\*\*\*\s*/, ''); tags = tagLine.split(',').map(t => t.trim().toLowerCase()).filter(Boolean); continue; }
-    }
-    if (enunciado.length === 0 || opcoes.length === 0) continue;
-    const map = {A:0,B:1,C:2,D:3,E:4};
-    const qObj = {
-      type:'multiple',
-      q: formatParagraphs(enunciado.join('\n')),
-      options: opcoes,
-      answer: gabarito && map[gabarito]!=null ? map[gabarito] : null,
-      explanation:'',
-      tags
-    };
-    qs.push(qObj);
-  }
-  return qs;
-}
-
-/* ===== parser HTML Inertia (QConcursos) ===== */
-async function fetchInertiaFromHtml(url){
-  const res = await fetch(url, { cache:'no-store', credentials:'include' });
-  if(!res.ok) throw new Error(`HTTP ${res.status} ao carregar ${url}`);
-  const html = await res.text();
-  const doc = new DOMParser().parseFromString(html, 'text/html');
-  const attr = doc.querySelector('#app')?.getAttribute('data-page');
-  if(!attr) return null;
-  const decoded = decodeHTMLEntITIES(attr);
-  try{ return JSON.parse(decoded); }catch{ return null; }
-}
-function decodeHTMLEntITIES(s){ // evita sombreamento
-  return decodeHTMLEntities(s);
-}
-function plainText(html){
-  if(!html) return '';
-  let s = String(html)
-    .replace(/\r\n?/g,'\n')
-    .replace(/<\s*br\s*\/?>/gi, '\n')
-    .replace(/<\s*\/p\s*>/gi, '\n\n')
-    .replace(/<\s*p[^>]*>/gi, '');
-  s = s.replace(/<[^>]+>/g, '');
-  s = decodeHTMLEntities(s);
-  return s.replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
-}
-function yearFrom(text){ const m=String(text||'').match(/\b(19|20)\d{2}\b/); return m?m[0]:null; }
-
-function normalizeQCQuestion(q){
-  const letters = Object.keys(q.alternatives||{}).sort();
-  const options = letters.map(L => sanitizeBasicHTML(q.alternatives[L]));
-  const letter = String(q.correct_answer||'').trim().toUpperCase();
-  const answer = Math.max(0, letters.indexOf(letter));
-
-  const tags = [];
-  const board = q.examining_board?.acronym || q.examining_board?.name;
-  const inst  = q.institute?.acronym      || q.institute?.name;
-  const pos   = q.position;
-  const examName = (q.exams&&q.exams[0]?.name)||q.title||'';
-  const yr = q.year || yearFrom(examName) || yearFrom(q.title);
-
-  if(board) tags.push(slug(board));
-  if(inst)  tags.push(slug(inst));
-  if(pos)   tags.push(slug(pos));
-  if(yr)    tags.push(String(yr));
-
-  // ✅ agora inclui o associated_text antes do statement
-  const fullStatement = sanitizeBasicHTML(
-    (q.associated_text ? q.associated_text + "<br><br>" : "") + q.statement
-  );
-
-  return {
-    type: 'multiple',
-    q: fullStatement,
-    options,
-    answer: answer >= 0 ? answer : null,
-    explanation: '',
-    tags,
-    source: {
-      boardAcr: q.examining_board?.acronym||null,
-      board: q.examining_board?.name||null,
-      instituteAcr: q.institute?.acronym||null,
-      institute: q.institute?.name||null,
-      position: q.position||null,
-      year: yr,
-      exam: examName||null,
-      questionId: q.question_id||null
-    }
-  };
-}
-
-
-async function loadHtmlAsQuiz(url){
-  const data = await fetchInertiaFromHtml(url);
-  if(!data){ return { meta:{title:'HTML',category:'HTML',theme:'HTML',shuffle:{questions:false,options:true},persist:true,outroMessage:''}, questions:[] }; }
-  const qs = (data?.props?.data?.questions || []).map(normalizeQCQuestion);
-  const meta = data?.props?.meta || {};
-  const title = data?.component || 'QConcursos';
-  return {
-    meta:{
-      title,
-      category: 'QConcursos',
-      theme: `Página ${meta.current_page||1}/${meta.total_pages||1}`,
-      shuffle:{questions:false, options:true},
-      persist:true,
-      outroMessage:''
-    },
-    questions: qs
-  };
-}
-
-/* ===== carregamento TXT rápido + cache ===== */
-function quizMetaFromPath(path){
-  const parts = String(path||'').split('/');
-  const category = parts[1] || 'Geral';
-  const file = (parts.at(-1)||'Quiz.txt').replace(/\.(txt|html?|json)$/i,'');
-  return {title:file,category,theme:file,shuffle:{questions:false,options:true},persist:true,outroMessage:''};
-}
-function cacheKey(p){ return 'quiz:cache:' + (typeof p==='string'?p:JSON.stringify(p)); }
-function saveQuizCache(p,q){ try{ lsSet(cacheKey(p), {t:Date.now(),q}); }catch{} }
-function readQuizCache(p,maxAgeMs=7*24*3600e3){ const c=lsGet(cacheKey(p)); return c && Date.now()-c.t<maxAgeMs ? c.q : null; }
-
-async function loadTxtAsQuizFast(path){
-  const raw = await fetchText(path);
-  const allBlocks = String(raw||'').replace(/\r\n?/g,'\n').split(/\n-{5,}\n/g).map(b=>b.trim()).filter(Boolean);
-  const meta = quizMetaFromPath(path);
-  const questions = [];
-
-  // lote inicial
-  const firstN = Math.min(10, allBlocks.length);
-  for(let i=0;i<firstN;i++){
-    questions.push(...parseTxtQuestions(allBlocks[i]));
-  }
-  // entrega parcial
-  await loadVirtualQuiz({meta,questions:[...questions]}, path, true);
-
-  // continuar em lotes
-  for(let i=firstN;i<allBlocks.length;i+=25){
-    await new Promise(r=>rqIdle(r));
-    for(let j=i;j<Math.min(i+25,allBlocks.length);j++){
-      questions.push(...parseTxtQuestions(allBlocks[j]));
-    }
-    QUIZ.questions = questions;
-    if(!TAG_READY) rqIdle(()=>buildTagIndex(QUIZ.questions));
-    render();
-  }
-
-  const full = {meta,questions};
-  saveQuizCache(path, full);
-  return full;
-}
-
-/* ===== init ===== */
-init();
-async function init() {
-  show(screenIntro, true);
-  show(screenQuiz,  false);
-  show(screenResult,false);
-
-  MANIFEST = await buildManifestFromGitHub();
-  if (!MANIFEST) {
-    MANIFEST = {
-      title: 'MeuJus',
-      categories: [{
-        id: 'QConcursos',
-        name: 'QConcursos',
-        themes: [
-          { id: 'Exemplo HTML', name: 'Exemplo HTML',
-            path: 'https://app.qconcursos.com/simulados/tentativas/2256819/gabarito?page=2&per_page=20' }
-        ]
-      }],
-      shuffleDefault: { questions: false, options: true },
-      persistDefault: true,
-      outro: { message: 'Obrigado por participar.' }
-    };
-  }
-
-  const stateEl = document.getElementById('state');
-  if(stateEl) stateEl.classList.add('hide');
-
-  appTitle.textContent = MANIFEST?.title || 'MeuJus';
-  applyLabels();
-
-  selCategory.innerHTML = '';
-  (MANIFEST?.categories || []).forEach((c, idx) => {
-    const o = document.createElement('option');
-    o.value = c.id; o.textContent = c.name || c.id;
-    if (idx === 0) o.selected = true;
-    selCategory.appendChild(o);
-  });
-  updateThemes();
-  applyCustomSelects(); // <— ENTRA
-
-
-  selCategory.addEventListener('change', updateThemes);
-  selTheme.addEventListener('change', updateSubjects); // <- ENTRA AQUI
-
-  btnStart.addEventListener('click', startQuizFromSelection);
-  btnPrev.addEventListener('click', prev);
-  btnNext.addEventListener('click', next);
-
-  btnGlobal.addEventListener('click', () => globalSearchAndOpen(txtGlobal.value || ''));
-  txtGlobal.addEventListener('keydown', e=>{ if(e.key==='Enter') btnGlobal.click(); });
-
-  btnSearch.addEventListener('click', ()=> applyFilter(txtSearch.value||''));
-  btnClearSearch.addEventListener('click', clearFilter);
-  txtSearch.addEventListener('keydown', e=>{ if(e.key==='Enter') btnSearch.click(); });
-
-  const goHome = ()=>{ resetState(); show(screenIntro,true); show(screenQuiz,false); show(screenResult,false); };
-  btnGoHome.addEventListener('click', goHome);
-  btnHome.addEventListener('click', goHome);
-  appTitle.addEventListener('click', goHome);
-
-  btnRetry.addEventListener('click', ()=>{ loadQuiz(KEY?.path,true); toast('Quiz reiniciado','info'); });
-
-  ensureAIMenu();
-  loadHistory();
-  setupHeaderActions();
-
-  window.addEventListener('offline', ()=>toast('Sem conexão. Usando cache local','warn',3000));
-  window.addEventListener('online', ()=>toast('Conexão restabelecida','success',1800));
-
-  // auto-resume
-  const last = lsGet('quiz:last');
-  if (AUTO_RESUME && last?.path && !ROUTED) {
-    ROUTED = true;
-    KEY = last;
-    await loadQuiz(last.path, false, true);
-  }
-
-  // deep link #q=n
-  if (ROUTED) {
-    try{
-      const m = String(location.hash||'').match(/#q=(\d+)/i);
-      if(m){
-        const n = Math.max(1, parseInt(m[1],10));
-        I = Math.min(Math.max(0, n-1), (ORDER.length||1)-1);
-        render();
-      }
-    }catch{}
-  }
-
-  if (!ROUTED) show(screenIntro, true);
 }
 
 /* ===== IA ===== */
@@ -694,7 +432,7 @@ function materiaFromThemeId(themeId){
 /* helper: base do arquivo sem número final e sem extensão (USAR ANTES DE updateThemes) */
 function baseKeyFromPath(p){
   const file = String(p||'').split('/').pop() || '';
-  return file.replace(/\.(txt|html?|json)$/i,'').replace(/\d+$/,'');
+  return file.replace(/\.pdf$/i,'').replace(/\d+$/,'');
 }
 function materiaLabel(cat, materiaId){
   const k = String(materiaId||'').toLowerCase();
@@ -810,77 +548,6 @@ function resetState(){
   TAG_INDEX.clear();
 }
 
-/* ===== loadQuiz ===== */
-async function loadQuiz(path,fresh=false,tryRestore=false){
-  if (LOADING) return;
-  LOADING = true;
-  try{
-    // cache
-    const cached = readQuizCache(path);
-    if(cached){
-      await loadVirtualQuiz(cached, path, false);
-      LOADING = false;
-      return;
-    }
-
-    let qz=null;
-
-    if(Array.isArray(path)){
-      const quizzes = [];
-      for(const p of path){
-        try{
-          if(/\.txt$/i.test(p)) quizzes.push(await loadTxtAsQuizFast(p));
-          else if(/\.json$/i.test(p)) quizzes.push(await loadJSON(p));
-          else if(/\.html?/i.test(p) || /^https?:\/\//i.test(p)) quizzes.push(await loadHtmlAsQuiz(p));
-        }catch{}
-      }
-      const all = quizzes.filter(q=>q && Array.isArray(q.questions));
-      const questions = all.flatMap(q=>q.questions);
-
-      let disciplina='Geral', materia='Geral', tema='Tema';
-      if(path.length>0){
-        const parts = String(path[0]).split('/');
-        if(parts.length>=4){
-          disciplina = prettyName(parts[1]);
-          materia    = prettyName(parts[2]);
-          const base = String(parts[3]).replace(/\.(txt|html?|json)$/i,'').replace(/\d+$/,'');
-          tema       = prettyName(base);
-        }
-      }
-      qz = {
-        meta:{
-          title: `${materia} · ${tema}`,
-          category: disciplina,
-          theme: `${materia}`,
-          shuffle:{questions:false, options:true},
-          persist:true,
-          outroMessage:''
-        },
-        questions
-      };
-      await loadVirtualQuiz(qz, path, fresh);
-      saveQuizCache(path, qz);
-    } else {
-      if(/\.txt$/i.test(path)){
-        qz = await loadTxtAsQuizFast(path); // entrega parcial dentro
-      } else if(/\.json$/i.test(path)){
-        qz = await loadJSON(path);
-        if(qz && Array.isArray(qz.questions)){ await loadVirtualQuiz(qz, path, fresh); saveQuizCache(path,qz); }
-      } else if(/\.html?/i.test(path) || /^https?:\/\//i.test(path)){
-        qz = await loadHtmlAsQuiz(path);
-        if(qz && Array.isArray(qz.questions)){ await loadVirtualQuiz(qz, path, fresh); saveQuizCache(path,qz); }
-      }
-    }
-
-    if(!qz||!Array.isArray(qz.questions)){
-      toast('Falha ao carregar o quiz','error',3000);
-      show(screenIntro,true); show(screenQuiz,false); show(screenResult,false);
-      return;
-    }
-  } finally {
-    LOADING = false;
-  }
-}
 async function loadVirtualQuiz(quizObj, synthKey, fresh){
   QUIZ = quizObj;
   KEY  = { path: synthKey, key: `quiz:${JSON.stringify(synthKey)}` };
@@ -1151,187 +818,7 @@ function recalcOrderFromFilters(){
   persist();
 }
 
-/* ===== busca global ===== */
-async function globalSearchAndOpen(termRaw){
-  const term = String(termRaw||'').trim();
-  if(!term){ toast('Informe um termo para busca global','warn'); return; }
 
-  let rawTerms = normalizeText(term).split(/\s+/).filter(Boolean);
-  const stopWords = new Set([
-    'de','do','da','dos','das','para','pra','por','com','como','em','no','na',
-    'nos','nas','ao','aos','às','as','os','um','uma','uns','umas','foi','era',
-    'ser','se','que','e','ou','a','o','ao','à','às','todo','toda','todos','todas'
-  ]);
-  const searchTerms = rawTerms.filter(w => {
-    if (/^\d+$/.test(w)) return true;
-    if (w.length < 3) return false;
-    if (stopWords.has(w)) return false;
-    return true;
-  });
-  if (searchTerms.length === 0) return;
-
-  function termsAreNear(text, terms, maxDistance = 3) {
-    const words = text.split(/\s+/);
-    const positions = terms.map(t => {
-      const re = new RegExp(`\\b${t}\\b`, 'i');
-      return words.map((w, i) => re.test(w) ? i : -1).filter(i => i >= 0);
-    });
-    if (positions.some(arr => arr.length === 0)) return false;
-    for (const i of positions[0]) {
-      let ok = true;
-      for (let k = 1; k < positions.length; k++) {
-        const found = positions[k].some(j => Math.abs(j - i) <= maxDistance);
-        if (!found) { ok = false; break; }
-      }
-      if (ok) return true;
-    }
-    return false;
-  }
-
-  const allPaths=[];
-  (MANIFEST?.categories||[]).forEach(c=>{
-    (c.themes||[]).forEach(t=> allPaths.push(t.path));
-  });
-  if(allPaths.length===0){ toast('Nenhum tema disponível para busca','error'); return; }
-
-  let results=[];
-
-  for(const p of allPaths){
-    try{
-      const paths = Array.isArray(p) ? p : [p];
-      for(const single of paths){
-        let quizObj = null;
-        if(/\.txt$/i.test(single)) quizObj = await loadTxtAsQuizFast(single);
-        else if(/\.json$/i.test(single)) quizObj = await loadJSON(single);
-        else if(/\.html?/i.test(single) || /^https?:\/\//i.test(single)) quizObj = await loadHtmlAsQuiz(single);
-        if(!quizObj || !Array.isArray(quizObj.questions)) continue;
-
-        quizObj.questions.forEach((q)=>{
-          const normalizedQ   = normalizeText(String(q.q||'').replace(/<[^>]+>/g,'')); 
-          const normalizedOpts= (q.options||[]).map(o => normalizeText(String(o || '')));
-          const normalizedTags= (q.tags    || []).map(t => normalizeText(String(t || '')));
-
-          const allTermsFound = searchTerms.every(st => {
-            const re = /^\d+$/.test(st)
-              ? new RegExp(`\\b${st}\\b`, 'g')
-              : new RegExp(`\\b${st}\\b`, 'gi');
-            const inQ   = re.test(normalizedQ);
-            const inOpt = normalizedOpts.some(optText => re.test(optText));
-            const inTag = normalizedTags.some(tagText => re.test(tagText));
-            return inQ || inOpt || inTag;
-          });
-
-          let nearEnough = true;
-          if (searchTerms.length > 1) {
-            const textBlob = [normalizedQ, ...normalizedOpts, ...normalizedTags].join(' ');
-            nearEnough = termsAreNear(textBlob, searchTerms, 3);
-          }
-
-          if(allTermsFound && nearEnough){
-            const clone = JSON.parse(JSON.stringify(q));
-            clone.__origin = { path:single };
-            searchTerms.forEach(st => {
-              const re = new RegExp('(' + st.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-              clone.q = String(clone.q).replace(re, '<mark class="hl">$1</mark>');
-              clone.options = (clone.options || []).map(o => String(o).replace(re, '<mark class="hl">$1</mark>'));
-            });
-            results.push(clone);
-          }
-        });
-      }
-    }catch{}
-  }
-
-  if(results.length===0){
-    toast('Nada encontrado na busca global','warn',2400);
-    return;
-  }
-
-  const virtual = {
-    meta: {
-      title: `Busca global: "${term}"`,
-      category: 'busca',
-      theme: 'global',
-      shuffle: {questions:false, options:true},
-      persist: true,
-      outroMessage: `${results.length} resultados encontrados na busca global.`
-    },
-    questions: results
-  };
-  const synth = `search://global?term=${encodeURIComponent(term)}`;
-  await loadVirtualQuiz(virtual, synth, true);
-  toast(`Busca global: ${results.length} questões`, 'info', 2200);
-}
-
-/* ===== GitHub manifest index ===== */
-async function buildManifestFromGitHub(){
-  if(!CONFIG.useGitHubIndexer) return null;
-  const {owner, repo} = guessOwnerRepo();
-  if(!owner || !repo) return null;
-  const url = `https://api.github.com/repos/${owner}/${repo}/git/trees/${encodeURIComponent(CONFIG.branch)}?recursive=1`;
-  try{
-    const r = await fetch(url, {headers:{'Accept':'application/vnd.github+json'}});
-    if(!r.ok) return null;
-    const data = await r.json();
-    if(!data || !Array.isArray(data.tree)) return null;
-    const root = (CONFIG.dataDir + '/').toLowerCase();
-    const nodes = data.tree.filter(n =>
-      n.type==='blob' &&
-      n.path.toLowerCase().startsWith(root) &&
-      (/\.(txt|html?|json)$/i).test(n.path)
-    );
-
-    const catMap = new Map();
-    const groupMap = new Map();
-
-    for (const node of nodes) {
-      const parts = node.path.split('/'); // data / disciplina / materia / arquivo
-      if (parts.length < 4) continue;
-      const disciplinaId = parts[1];
-      const materiaId    = parts[2];
-      const file = parts[3];
-      const themeIdRaw = file.replace(/\.(txt|html?|json)$/i, '');
-      const baseId = themeIdRaw.replace(/\d+$/,'');
-
-      const catId = disciplinaId;
-      const cat = catMap.get(catId) || { id: catId, name: prettyName(catId), themes: [] };
-      catMap.set(catId, cat);
-
-      const key = `${materiaId}/${baseId}`;
-      const byCat = groupMap.get(catId) || new Map();
-      const arr = byCat.get(key) || [];
-      arr.push(node.path);
-      byCat.set(key, arr);
-      groupMap.set(catId, byCat);
-    }
-
-    for(const [catId, byCat] of groupMap.entries()){
-      const cat = catMap.get(catId);
-      for(const [key, paths] of byCat.entries()){
-        const [materiaId, baseId] = key.split('/');
-        const id = `${materiaId}-${baseId}`;
-        const name = `${prettyName(materiaId)} · ${prettyName(baseId)}`;
-        cat.themes.push({ id, name, path: paths.sort((a,b)=> a.localeCompare(b,'pt-BR')) });
-      }
-      cat.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
-    }
-
-    const categories = Array.from(catMap.values())
-      .sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
-
-    if(categories.length===0) return null;
-    return {
-      title: 'MeuJus',
-      labels: 'labels/pt-BR.json',
-      shuffleDefault: {questions:false, options:true},
-      persistDefault: true,
-      outro: { message: 'Obrigado por participar.' },
-      categories
-    };
-  }catch{
-    return null;
-  }
-}
 
 /* ===== atalhos ===== */
 window.addEventListener('keydown',(e)=>{
