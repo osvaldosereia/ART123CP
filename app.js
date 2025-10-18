@@ -547,25 +547,31 @@ function materiaLabel(cat, materiaId){
 // ===== manifest (PDF-only via Git Trees API) =====
 async function buildManifest(){
   const { owner, repo, branch, dataDir } = CONFIG;
-  const api = `https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`;
-  const res = await fetch(api, { cache:'no-store' });
+
+  // pegar SHA da árvore do branch
+  const brRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/branches/${branch}`, { cache:'no-store' });
+  if(!brRes.ok) throw new Error('Git branches falhou');
+  const brJson = await brRes.json();
+  const treeSha = brJson?.commit?.commit?.tree?.sha;
+  if(!treeSha) throw new Error('Tree SHA não localizado');
+
+  // listar a árvore recursiva usando o SHA
+  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/${treeSha}?recursive=1`, { cache:'no-store' });
   if (!res.ok) throw new Error('Git trees falhou');
   const json = await res.json();
   const tree = Array.isArray(json.tree) ? json.tree : [];
 
-  // pega só PDFs dentro de dataDir
-  const pdfs = tree
-    .filter(n => n.type === 'blob' && n.path.startsWith(`${dataDir}/`) && /\.pdf$/i.test(n.path));
+  // PDFs dentro de dataDir
+  const pdfs = tree.filter(n => n.type === 'blob' && n.path.startsWith(`${dataDir}/`) && /\.pdf$/i.test(n.path));
 
-  // group: data/<cat>/<materia>/<arquivo.pdf>
-  const categories = new Map(); // catId -> { id,name,themes:[] }
-
+  // montar categorias e temas: data/<cat>/<materia>/<arquivo.pdf>
+  const categories = new Map();
   for (const f of pdfs){
-    const parts = f.path.split('/'); // [data, cat, materia, file]
+    const parts = f.path.split('/'); // [data, cat, materia, file...]
     if (parts.length < 4) continue;
     const catId = parts[1];
     const matId = parts[2];
-    const file  = parts.slice(3).join('/'); // suporta subpastas extras, se houver
+    const file  = parts.slice(3).join('/');
 
     if (!categories.has(catId)){
       categories.set(catId, { id: catId, name: prettyName(catId), themes: [] });
@@ -573,31 +579,24 @@ async function buildManifest(){
     const cat = categories.get(catId);
 
     const fileName = file.split('/').pop();
-    const themeId  = `${matId}-${fileName.replace(/\.pdf$/i,'')}`;
-    const themeName= `${prettyName(matId)} · ${prettyName(fileName.replace(/\.pdf$/i,''))}`;
+    const themeId   = `${matId}-${fileName.replace(/\.pdf$/i,'')}`;
+    const themeName = `${prettyName(matId)} · ${prettyName(fileName.replace(/\.pdf$/i,''))}`;
     const raw = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${f.path.split('/').map(encodeURIComponent).join('/')}`;
 
     cat.themes.push({ id: themeId, name: themeName, path: raw });
   }
 
-  // ordena para UX
-  const out = {
+  // ordenar
+  return {
     title:'MeuJus',
-    categories: [...categories.values()].map(c => ({
-      ...c,
-      themes: c.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'))
-    })).sort((a,b)=> a.name.localeCompare(b.name,'pt-BR')),
+    categories: [...categories.values()]
+      .map(c => ({ ...c, themes: c.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR')) }))
+      .sort((a,b)=> a.name.localeCompare(b.name,'pt-BR')),
     shuffleDefault:{questions:false,options:true},
     persistDefault:true,
     outro:{message:''}
   };
-
-  return out;
 }
-
-function updateThemes(){
-  const catId = selCategory.value;
-  const cat = (MANIFEST?.categories||[]).find(c=>c.id===catId) || {themes:[]};
 
   // matérias únicas extraídas de theme.id antes do primeiro "-"
   const materias = [...new Set((cat.themes||[]).map(t=>{
