@@ -7,7 +7,7 @@ const CONFIG = {
   branch: 'main',
   dataDir: 'data'
 };
-const AUTO_RESUME = true;
+const AUTO_RESUME = false;
 
 /* ===== util ===== */
 const getToastWrap = ()=> {
