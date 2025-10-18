@@ -45,7 +45,7 @@ function rqIdle(cb, timeout=60){ return (window.requestIdleCallback||((f)=>setTi
 const SPECIAL_NAMES = new Map([
   ['direito-civil','Direito Civil'],
   ['contratos','Contratos'],
-  ['mutuo','Mútuo']
+  ['mutuo','Mútuo'],
   ['concurso','Concurso de Pessoas']
 ]);
 function prettyName(id){
@@ -710,7 +710,7 @@ function updateThemes(){
   materias.forEach((m, idx)=>{
     const o = document.createElement('option');
     o.value = m;                                // agora guarda SÓ a matéria
-    o.textContent = prettyName(m).toUpperCase();// rótulo limpo
+   o.textContent = materiaLabel(cat, m).toUpperCase();
     if(idx===0) o.selected = true;
     selTheme.appendChild(o);
   });
