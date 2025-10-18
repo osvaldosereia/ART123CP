@@ -1,12 +1,12 @@
 // app.js
 // MeuJus — GitHub Pages + GitHub API + PDF.js
-// Lê automaticamente PDFs em /data/direito-penal/, extrai temas e monta quiz incremental.
+// Lê automaticamente PDFs em /data/direito_penal/, extrai temas e monta quiz incremental.
 
 const CONFIG = {
   OWNER: null,   // auto se null
   REPO: null,    // auto se null
   BRANCH_CANDIDATES: ["main", "master"],
-  PATHS: [{ cat: "Direito Penal", dir: "data/direito-penal" }],
+  PATHS: [{ cat: "Direito Penal", dir: "data/direito_penal" }],
   LOAD_CHUNK: 3
 };
 
