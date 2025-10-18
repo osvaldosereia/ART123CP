@@ -1,297 +1,249 @@
-// app.js
-// SPA: Home → Quiz. Fonte: arquivos locais em /data/<categoria>/*.txt
-// Formato único: dump bruto QConcursos com gabarito ao final.
+// app.js  —  SPA de estudo com dump QC (gabarito ao final)
+// Requisitos: IDs e template conforme index.html fornecido
 
-const els = {
-  // topbar
-  pathInfo: document.getElementById('pathInfo'),
-  kTotal: document.getElementById('kTotal'),
-  kDone: document.getElementById('kDone'),
-  kScore: document.getElementById('kScore'),
-  btnReset: document.getElementById('btnReset'),
-
-  // home
-  home: document.getElementById('home'),
-  catTrigger: document.getElementById('catTrigger'),
-  catTriggerText: document.getElementById('catTriggerText'),
-  catMenu: document.getElementById('catMenu'),
-  themesGrid: document.getElementById('themesGrid'),
-  btnSelectAll: document.getElementById('btnSelectAll'),
-  themesCount: document.getElementById('themesCount'),
-  optShuffle: document.getElementById('optShuffle'),
-  btnStart: document.getElementById('btnStart'),
-
-  // quiz
-  quiz: document.getElementById('quiz'),
-  quizList: document.getElementById('quizList'),
-  sentinel: document.getElementById('sentinel'),
-
-  // template
-  tpl: document.getElementById('tplQuestion'),
-};
-
-/* ================== CONFIG DOS DADOS ================== */
-/* Adicione categorias e arquivos abaixo */
-const CATEGORIES = {
+// ====== CATÁLOGO ESTÁTICO (ajuste os caminhos conforme seu /data) ======
+const CATALOG = {
   'Direito Penal': [
     'data/direito-penal/p3_p2_p1_merged.txt',
-    // adicione outros dumps aqui
   ],
-  // 'Direito Constitucional': ['data/constitucional/lote1.txt'],
+  // Exemplo para expandir:
+  // 'Direito Constitucional': ['data/constitucional/lote1.txt','data/constitucional/lote2.txt'],
 };
 
-const STOPWORDS_PT = new Set(`
-a à ao aos as às o os um uma umas uns de da das do dos dum duma duns dumas
-e em no na nos nas num numa nuns numas por para com sem sob sobre entre até
-ou como mais menos muito muitos muita muitas pouco poucos pouca poucas
-que qual quais cujo cuja cujos cujas cujo cuja se já só também porém todavia
-porque porquê portanto sendo sendo-se ser ter há houve tinham tinham-se
-é são foi eram estava estavam estiveram estivera sendo sido
-eu tu ele ela nós vós eles elas me te se nos vos lhes lhe meu minha meus minhas
-teu tua teus tuas seu sua seus suas nosso nossa nossos nossas vosso vossa vossos vossas
-depois antes durante quando onde enquanto então assim ainda cada todo toda todos todas
-`.split(/\s+/).filter(Boolean));
+// ====== ELEMENTOS ======
+const $ = (sel, root = document) => root.querySelector(sel);
+const els = {
+  catMenu: $('#catMenu'),
+  catTrigger: $('#catTrigger'),
+  catText: $('#catTriggerText'),
+  themesGrid: $('#themesGrid'),
+  themesCount: $('#themesCount'),
+  btnSelectAll: $('#btnSelectAll'),
+  btnStart: $('#btnStart'),
+  optShuffle: $('#optShuffle'),
 
-/* ================== ESTADO DA APLICAÇÃO ================== */
-let state = {
-  route: 'home',
+  quiz: $('#quiz'),
+  home: $('#home'),
+  list: $('#quizList'),
+  sentinel: $('#sentinel'),
+  tpl: $('#tplQuestion'),
+
+  kTotal: $('#kTotal'),
+  kDone: $('#kDone'),
+  kScore: $('#kScore'),
+  pathInfo: $('#pathInfo'),
+  btnReset: $('#btnReset'),
+};
+
+// ====== ESTADO ======
+const state = {
   category: null,
-  themesAll: [],       // lista de temas possíveis para a categoria
-  themesSelected: new Set(),
-  questionsAll: [],    // todas questões da categoria
-  questionsFiltered: [],
+  files: [],
+  allQuestions: [],      // todas as questões da categoria
+  themesIndex: new Map(),// tema -> array de índices (em allQuestions)
+  selectedThemes: new Set(),
+  sessionQuestions: [],  // questões filtradas por tema
   order: [],
   pageSize: 3,
   page: 0,
-  done: new Set(),     // índices em questionsFiltered
+  done: new Set(),
   score: 0,
+  io: null,
+  storageKey: null,
 };
 
-const io = new IntersectionObserver((entries) => {
-  for (const e of entries) if (e.isIntersecting) mountNextPage();
+// ====== BOOT ======
+document.addEventListener('DOMContentLoaded', () => {
+  populateCategories();
+  wireUI();
+  restoreLastSession();
 });
-io.observe(els.sentinel);
 
-/* ================== BOOT ================== */
-init();
-
-function init() {
-  buildCategoryMenu();
-  bindUI();
-  loadSessionIfAny();
-  renderStats();
+// ====== UI ======
+function populateCategories(){
+  const items = Object.keys(CATALOG).map((name,i) =>
+    `<div class="item" role="option" aria-selected="false" data-i="${i}" data-name="${escapeHtml(name)}">${escapeHtml(name)}</div>`
+  ).join('');
+  els.catMenu.innerHTML = items;
 }
 
-/* ================== UI BINDINGS ================== */
-function bindUI() {
-  // Dropdown de categoria
+function wireUI(){
+  // Dropdown
   els.catTrigger.addEventListener('click', () => {
-    const open = els.catMenu.classList.toggle('open');
-    els.catTrigger.setAttribute('aria-expanded', String(open));
-    if (open) els.catMenu.focus();
+    els.catMenu.classList.toggle('open');
+    els.catTrigger.setAttribute('aria-expanded', els.catMenu.classList.contains('open'));
   });
   document.addEventListener('click', (e) => {
     if (!els.catMenu.contains(e.target) && !els.catTrigger.contains(e.target)) {
       els.catMenu.classList.remove('open');
-      els.catTrigger.setAttribute('aria-expanded', 'false');
+      els.catTrigger.setAttribute('aria-expanded','false');
     }
   });
+  els.catMenu.addEventListener('click', async (e) => {
+    const item = e.target.closest('.item');
+    if (!item) return;
+    const name = item.dataset.name;
+    await onSelectCategory(name);
+    els.catMenu.classList.remove('open');
+    els.catTrigger.setAttribute('aria-expanded','false');
+  });
 
-  // Selecionar todos os temas
+  // Chips de tema
   els.btnSelectAll.addEventListener('click', () => {
-    if (state.themesSelected.size === state.themesAll.length) {
-      state.themesSelected.clear();
-    } else {
-      state.themesAll.forEach(t => state.themesSelected.add(t));
-    }
-    renderThemes();
-    updateStartButton();
+    const allPressed = [...els.themesGrid.querySelectorAll('.chip[aria-pressed="true"]')].length === els.themesGrid.children.length;
+    [...els.themesGrid.children].forEach(ch => ch.setAttribute('aria-pressed', String(!allPressed)));
+    state.selectedThemes = new Set(
+      !allPressed ? [...els.themesGrid.children].map(c => c.dataset.theme) : []
+    );
+    updateThemesCount();
+    updateStartEnabled();
   });
 
-  // Embaralhar opt
-  els.optShuffle.addEventListener('change', () => {
-    if (state.route === 'quiz') {
-      prepareOrder();
-      rerenderQuiz();
-    }
-  });
-
-  // Iniciar quiz
+  // Start
   els.btnStart.addEventListener('click', () => {
-    if (!state.category || state.themesSelected.size === 0) return;
     startQuiz();
   });
 
-  // Zerar sessão
+  // Reset
   els.btnReset.addEventListener('click', () => {
     clearSession();
-    if (state.route === 'quiz') {
-      state.done.clear();
-      state.score = 0;
-      rerenderQuiz();
-      renderStats();
-      saveSession();
-    }
   });
-}
 
-/* ================== MENU DE CATEGORIAS ================== */
-function buildCategoryMenu() {
-  els.catMenu.innerHTML = '';
-  Object.keys(CATEGORIES).forEach((name, i) => {
-    const item = document.createElement('div');
-    item.className = 'item';
-    item.setAttribute('role', 'option');
-    item.dataset.value = name;
-    item.textContent = name;
-    item.addEventListener('click', () => onChooseCategory(name));
-    if (i === 0) item.setAttribute('aria-selected', 'false');
-    els.catMenu.append(item);
-  });
-}
-
-async function onChooseCategory(name) {
-  if (state.category === name && state.questionsAll.length) {
-    els.catTriggerText.textContent = name;
-    els.catMenu.querySelectorAll('.item').forEach(i => {
-      i.setAttribute('aria-selected', i.dataset.value === name ? 'true' : 'false');
+  // Infinite scroll
+  state.io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) mountNextPage();
     });
-    renderThemes();
-    updateStartButton();
-    return;
-  }
-
-  // UI
-  els.catTriggerText.textContent = 'Carregando…';
-  els.catMenu.classList.remove('open');
-  els.catTrigger.setAttribute('aria-expanded', 'false');
-  els.catMenu.querySelectorAll('.item').forEach(i => {
-    i.setAttribute('aria-selected', i.dataset.value === name ? 'true' : 'false');
   });
+  state.io.observe(els.sentinel);
+}
 
-  // Estado
-  resetStateKeepCategory();
+async function onSelectCategory(name){
+  if (state.category === name) return;
   state.category = name;
+  els.catText.textContent = name;
+  els.pathInfo.textContent = `${name} • selecione temas`;
+  state.files = CATALOG[name] || [];
+  state.storageKey = `qcquiz:${name}`;
+  setProgress(0,0,0);
+  state.done.clear(); state.score = 0;
 
   // Carregar e parsear todos os arquivos da categoria
-  const files = CATEGORIES[name];
-  const allQuestions = [];
-  for (const path of files) {
-    const txt = await fetchLocal(path);
-    const parsed = parseQC(txt, path);
-    allQuestions.push(...parsed.questions);
-  }
-  state.questionsAll = allQuestions;
+  const texts = await Promise.all(state.files.map(loadText));
+  const parsed = texts.map((txt, i) => parseQC(txt, basename(state.files[i])));
+  const flat = parsed.flatMap(p => p.questions);
+  state.allQuestions = flat;
 
-  // Derivar temas pela frequência de termos do enunciado
-  state.themesAll = extractThemes(state.questionsAll);
-  state.themesSelected = new Set(state.themesAll.slice(0, 8)); // seleção inicial
-  els.catTriggerText.textContent = name;
-  renderThemes();
-  updateStartButton();
-  els.pathInfo.textContent = `${name} • selecione temas`;
-  saveSession();
+  // Construir índice de temas
+  state.themesIndex = buildThemesIndex(state.allQuestions);
+  renderThemeChips(state.themesIndex);
+
+  els.btnStart.disabled = state.selectedThemes.size === 0;
+  els.kTotal.textContent = state.allQuestions.length;
 }
 
-function resetStateKeepCategory() {
-  state = {
-    route: 'home',
-    category: state.category,
-    themesAll: [],
-    themesSelected: new Set(),
-    questionsAll: [],
-    questionsFiltered: [],
-    order: [],
-    pageSize: 3,
-    page: 0,
-    done: new Set(),
-    score: 0,
-  };
-  els.quizList.innerHTML = '';
-  renderStats();
-}
-
-/* ================== TEMAS ================== */
-function renderThemes() {
-  els.themesGrid.innerHTML = '';
-  const list = state.themesAll;
-  list.forEach(t => {
-    const chip = document.createElement('button');
-    chip.type = 'button';
-    chip.className = 'chip';
-    chip.setAttribute('aria-pressed', state.themesSelected.has(t) ? 'true' : 'false');
-    chip.textContent = t;
-    chip.addEventListener('click', () => {
-      if (state.themesSelected.has(t)) state.themesSelected.delete(t);
-      else state.themesSelected.add(t);
-      chip.setAttribute('aria-pressed', state.themesSelected.has(t) ? 'true' : 'false');
-      updateThemesCount();
-      updateStartButton();
-      saveSession();
-    });
-    els.themesGrid.append(chip);
-  });
+function renderThemeChips(map){
+  state.selectedThemes.clear();
+  const entries = [...map.keys()].sort((a,b)=> a.localeCompare(b,'pt-BR'));
+  // Sempre incluir "Todos"
+  if (!entries.includes('*')) entries.unshift('*');
+  els.themesGrid.innerHTML = entries.map(t =>
+    `<button class="chip" type="button" aria-pressed="${t === '*' ? 'true':'false'}" data-theme="${escapeHtml(t)}">${escapeHtml(labelTheme(t))}</button>`
+  ).join('');
+  // seleção default: "Todos"
+  state.selectedThemes = new Set(['*']);
   updateThemesCount();
+  els.themesGrid.addEventListener('click', onThemeClick, { once: true });
+  updateStartEnabled();
 }
 
-function updateThemesCount() {
-  els.themesCount.textContent = `${state.themesSelected.size} selecionado(s)`;
-}
-
-function updateStartButton() {
-  els.btnStart.disabled = !(state.category && state.themesSelected.size > 0);
-}
-
-/* ================== QUIZ ================== */
-function startQuiz() {
-  state.route = 'quiz';
-  // Filtrar por temas
-  state.questionsFiltered = state.questionsAll.filter(q => {
-    const tags = guessQuestionThemes(q);
-    return tags.some(t => state.themesSelected.has(t));
-  });
-  if (state.questionsFiltered.length === 0) {
-    // fallback: se filtro ficou vazio, usa todas
-    state.questionsFiltered = [...state.questionsAll];
+function onThemeClick(e){
+  const chip = e.target.closest('.chip');
+  if (!chip) return;
+  const t = chip.dataset.theme;
+  const pressed = chip.getAttribute('aria-pressed') === 'true';
+  // lógica "Todos"
+  if (t === '*'){
+    // toggle todos para o estado do chip "*"
+    const newState = !pressed;
+    [...els.themesGrid.children].forEach(c => c.setAttribute('aria-pressed', String(newState)));
+    state.selectedThemes = new Set(newState ? [...els.themesGrid.children].map(c=>c.dataset.theme) : []);
+  } else {
+    chip.setAttribute('aria-pressed', String(!pressed));
+    const on = !pressed;
+    if (on) state.selectedThemes.add(t); else state.selectedThemes.delete(t);
+    // se todos exceto "*" estão ligados, liga "*"; se qualquer um desligar, desliga "*"
+    const others = [...els.themesGrid.children].filter(c => c.dataset.theme !== '*');
+    const allOn = others.every(c => c.getAttribute('aria-pressed') === 'true');
+    const star = els.themesGrid.querySelector('.chip[data-theme="*"]');
+    if (star){
+      star.setAttribute('aria-pressed', String(allOn));
+      if (allOn) state.selectedThemes.add('*'); else state.selectedThemes.delete('*');
+    }
   }
-  prepareOrder();
+  updateThemesCount();
+  updateStartEnabled();
+  // Re-ligar listener contínuo
+  els.themesGrid.addEventListener('click', onThemeClick, { once: true });
+}
+
+function updateStartEnabled(){
+  els.btnStart.disabled = state.selectedThemes.size === 0;
+}
+function updateThemesCount(){
+  const count = [...state.selectedThemes].filter(t=>t!=='*').length || (state.selectedThemes.has('*') ? state.themesIndex.size-1 : 0);
+  els.themesCount.textContent = `${count} selecionado(s)`;
+}
+
+function startQuiz(){
+  // filtrar por temas
+  const selected = [...state.selectedThemes];
+  let ids = new Set();
+  if (selected.includes('*')) {
+    ids = new Set(state.allQuestions.map((_,i)=>i));
+  } else {
+    for (const t of selected) {
+      for (const idx of state.themesIndex.get(t) || []) ids.add(idx);
+    }
+  }
+  state.sessionQuestions = [...ids].sort((a,b)=> a-b).map(i => state.allQuestions[i]);
+
+  // embaralhar
+  state.order = state.sessionQuestions.map((_,i)=>i);
+  if (els.optShuffle.checked) shuffle(state.order);
+
   // UI
+  els.list.innerHTML = '';
+  state.page = 0;
+  state.done.clear();
+  state.score = 0;
+  els.kDone.textContent = '0';
+  els.kScore.textContent = '0';
+  els.kTotal.textContent = state.sessionQuestions.length;
+  els.pathInfo.textContent = `${state.category} • ${summaryThemes()}`;
   els.home.classList.add('hidden');
   els.quiz.classList.remove('hidden');
-  els.pathInfo.textContent = `${state.category} • ${[...state.themesSelected].slice(0,3).join(', ')}${state.themesSelected.size>3?'…':''}`;
-  rerenderQuiz();
-  renderStats();
-  saveSession();
-}
 
-function prepareOrder() {
-  state.order = [...state.questionsFiltered.keys()];
-  if (els.optShuffle.checked) shuffle(state.order);
-  state.page = 0;
-}
+  // Persistência
+  persistProgress('init');
 
-function rerenderQuiz() {
-  els.quizList.innerHTML = '';
-  state.page = 0;
+  // Primeiro lote
   mountNextPage();
 }
 
-function mountNextPage() {
+function mountNextPage(){
   const start = state.page * state.pageSize;
   const end = Math.min(start + state.pageSize, state.order.length);
-  if (start >= end) {
-    els.sentinel.textContent = 'Fim';
-    return;
+  if (start >= end) { els.sentinel.textContent = 'Fim'; return; }
+  for (let i=start; i<end; i++){
+    const idx = state.order[i];
+    mountCard(idx);
   }
-  els.sentinel.textContent = 'Carregando…';
-  const slice = state.order.slice(start, end);
-  for (const idx of slice) mountQuestion(idx);
   state.page++;
-  els.sentinel.textContent = 'Carregando…';
 }
 
-function mountQuestion(i) {
-  const q = state.questionsFiltered[i];
+function mountCard(sessionIndex){
+  const q = state.sessionQuestions[sessionIndex];
   const node = els.tpl.content.firstElementChild.cloneNode(true);
   node.dataset.num = q.numero;
   node.querySelector('.q-num').textContent = `#${q.numero}`;
@@ -300,102 +252,311 @@ function mountQuestion(i) {
   node.querySelector('.q-stem').textContent = q.enunciado;
 
   const ol = node.querySelector('.q-options');
-  q.alternativas.forEach(({ key, text }) => {
+  q.alternativas.forEach(({key,text})=>{
     const li = document.createElement('li');
-    li.setAttribute('role', 'button');
-    li.setAttribute('aria-disabled', 'false');
+    li.setAttribute('role','button');
+    li.setAttribute('aria-disabled','false');
     li.dataset.key = key;
-    const k = document.createElement('span');
-    k.className = 'opt-key';
-    k.textContent = key + ')';
-    const t = document.createElement('div');
-    t.className = 'opt-text';
-    t.textContent = text;
-    li.append(k, t);
-    li.addEventListener('click', () => onAnswer(li, q, i, node));
+    const k = document.createElement('span'); k.className='opt-key'; k.textContent = key + ')';
+    const t = document.createElement('div'); t.className='opt-text'; t.textContent = text;
+    li.append(k,t);
+    li.addEventListener('click', () => onAnswer(li, q, sessionIndex, node));
     ol.append(li);
   });
 
-  node.querySelector('.q-show').addEventListener('click', () => reveal(node, q.correta, i));
-  node.querySelector('.q-next').addEventListener('click', () => scrollToNextCard(node));
+  node.querySelector('.q-show').addEventListener('click', () => reveal(node, q.correta, sessionIndex));
+  node.querySelector('.q-next').addEventListener('click', () => {
+    // rolar até próximo card
+    const next = node.nextElementSibling;
+    if (next) next.scrollIntoView({behavior:'smooth', block:'start'});
+    else els.sentinel.scrollIntoView({behavior:'smooth', block:'end'});
+  });
 
-  els.quizList.append(node);
+  els.list.append(node);
 }
 
-function onAnswer(li, q, idx, card) {
+function onAnswer(li, q, sessionIndex, card){
   if (li.getAttribute('aria-disabled') === 'true') return;
   const chosen = li.dataset.key;
   const correct = q.correta;
   const options = card.querySelectorAll('.q-options li');
   options.forEach(o => o.setAttribute('aria-disabled','true'));
-  if (chosen === correct) {
+  if (chosen === correct){
     li.classList.add('correct');
     state.score++;
   } else {
     li.classList.add('wrong');
     options.forEach(o => { if (o.dataset.key === correct) o.classList.add('correct'); });
   }
-  state.done.add(idx);
+  state.done.add(sessionIndex);
   card.querySelector('.q-result').textContent = `Gabarito: ${correct}`;
-  renderStats();
-  saveSession();
+  setProgress(state.sessionQuestions.length, state.done.size, state.score);
+  persistProgress('answer', {sessionIndex, chosen});
 }
 
-function reveal(card, correct, idx) {
+function reveal(card, correct, sessionIndex){
   const options = card.querySelectorAll('.q-options li');
   options.forEach(o => o.setAttribute('aria-disabled','true'));
   options.forEach(o => { if (o.dataset.key === correct) o.classList.add('correct'); });
-  state.done.add(idx);
   card.querySelector('.q-result').textContent = `Gabarito: ${correct}`;
-  renderStats();
-  saveSession();
+  state.done.add(sessionIndex);
+  setProgress(state.sessionQuestions.length, state.done.size, state.score);
 }
 
-function scrollToNextCard(card) {
-  const next = card.nextElementSibling;
-  if (next) next.scrollIntoView({ behavior: 'smooth', block: 'start' });
+function setProgress(total, done, score){
+  els.kTotal.textContent = String(total ?? state.sessionQuestions.length ?? 0);
+  els.kDone.textContent = String(done ?? state.done.size);
+  els.kScore.textContent = String(score ?? state.score);
 }
 
-/* ================== PARSER QC ================== */
-function parseQC(raw, pathName) {
+function clearSession(){
+  state.done.clear(); state.score = 0;
+  els.kDone.textContent = '0'; els.kScore.textContent = '0';
+  document.querySelectorAll('.q-options li').forEach(li => {
+    li.classList.remove('correct','wrong');
+    li.setAttribute('aria-disabled','false');
+  });
+  document.querySelectorAll('.q-result').forEach(e => e.textContent = '');
+  localStorage.removeItem(state.storageKey);
+}
+
+function summaryThemes(){
+  const t = [...state.selectedThemes].filter(x=>x!=='*');
+  if (state.selectedThemes.has('*') || t.length === 0) return 'Todos os temas';
+  return t.slice(0,4).map(labelTheme).join(', ') + (t.length>4 ? ` +${t.length-4}` : '');
+}
+
+// ====== PERSISTÊNCIA ======
+function persistProgress(kind, extra={}){
+  if (!state.storageKey) return;
+  const data = {
+    kind, ts: Date.now(),
+    category: state.category,
+    selectedThemes: [...state.selectedThemes],
+    optShuffle: els.optShuffle.checked,
+    done: [...state.done],
+    score: state.score,
+    total: state.sessionQuestions.length,
+    ...extra,
+  };
+  localStorage.setItem(state.storageKey, JSON.stringify(data));
+}
+function restoreLastSession(){
+  // opcional: apenas exibe badge “Zerar” funcional desde o início
+  els.btnReset.disabled = false;
+}
+
+// ====== PARSER QC ======
+function parseQC(raw, sourceName){
   const norm = normalize(raw);
-  const keyMap = parseAnswerKey(norm);
+  const keyMap = parseAnswerKey_full(norm);
   const blocks = splitQuestions(norm);
   const questions = [];
 
   for (const b of blocks) {
     const q = parseQuestionBlock(b);
     if (!q) continue;
-    const correct = keyMap.get(q.numero);
-    if (!correct) continue;
-    const corr = mapCEtoVF(correct);
-    // garantir existência
-    const ok = q.alternativas.some(a => a.key === corr) ||
-               ((corr === 'V' || corr === 'F') && q.alternativas.every(a => a.key === 'V' || a.key === 'F'));
-    if (!ok) continue;
+    const k = keyMap.get(q.numero);
+    if (!k) continue;
+    const corr = mapCEtoVF(k);
+    // manter consistente com alternativas
+    const has = q.alternativas.some(a => a.key === corr);
+    if (!has) {
+      const isVF = q.alternativas.every(a => a.key === 'V' || a.key === 'F');
+      if (isVF && (corr === 'V' || corr === 'F')) {
+        // ok
+      } else {
+        continue;
+      }
+    }
     q.correta = corr;
+    q.fonte = sourceName || 'QConcursos dump';
     questions.push(q);
   }
-  return { questions, sourceName: pathName || '' };
+  return { questions };
 }
 
-function normalize(text) {
+function normalize(text){
   let t = text.replace(/\r\n?/g, '\n');
   t = t.replace(/\t/g, ' ');
   t = t.replace(/[–—]/g, '-');
-  t = t.split('\n').map(l => l.replace(/\s+$/,'')).join('\n');
-  // remover banners/rodapés óbvios
-  t = t.replace(/Treinador\s*→.*?\n/g, '');
-  t = t.replace(/Conferir resumão.*?\n/gi, '');
-  t = t.replace(/qconcursos\.com.*?\n/gi, '');
+  t = t.split('\n').map(line => line.replace(/\s+$/,'')).join('\n');
   return t;
 }
 
-function parseAnswerKey(text) {
+function parseAnswerKey_full(text){
+  // Captura blocos intitulados “Respostas” ou “Gabarito”, se existirem; se não, usa o arquivo todo
+  const sections = [...text.matchAll(/(?:^|\n)\s*(?:Respostas?|Gabarito)[^\n]*\n([\s\S]*?)(?=\n\s*(?:Respostas?|Gabarito)\b|$)/gmi)];
+  const body = sections.length ? sections.map(m=>m[1]).join('\n') : text;
   const map = new Map();
-  const mid = Math.floor(text.length * 0.4);
-  const tail = text.slice(mid);
+  // intervalos: 61-80: D
+  for (const m of body.matchAll(/(^|\s)(\d+)\s*-\s*(\d+)\s*:\s*([A-ECEVF])/gmi)){
+    const a = +m[2], b = +m[3], v = m[4].toUpperCase();
+    for (let n=a; n<=b; n++) map.set(n, v);
+  }
+  // pares: 61: D  62:B
+  for (const m of body.matchAll(/(^|\s)(\d+)\s*:\s*([A-ECEVF])/gmi)){
+    map.set(+m[2], m[3].toUpperCase()); // última ocorrência vence
+  }
+  return map;
+}
 
-  const range = /(^|\s)(\d{1,5})\s*-\s*(\d{1,5})\s*:\s*([A-ECEVF])/gmi;
-  for (const m of tail.matchAll(range)) {
-    const a = Number(m[2]); const b = Number(m[3]); const v = m[
+function splitQuestions(text){
+  // Delimita por linha iniciando com número e opcional Q\d+
+  const lines = text.split('\n');
+  const idxs = [];
+  const head = /^\s*(\d{1,5})(?:\s+Q\d+)?\b/;
+  for (let i=0;i<lines.length;i++){
+    if (head.test(lines[i])) idxs.push(i);
+    // parar antes do primeiro "Respostas"/"Gabarito"
+    if (/^\s*(Respostas?|Gabarito)\b/i.test(lines[i])) break;
+  }
+  const blocks = [];
+  for (let i=0;i<idxs.length;i++){
+    const start = idxs[i];
+    const end = i+1<idxs.length ? idxs[i+1] : lines.length;
+    const chunk = lines.slice(start,end).join('\n').trim();
+    if (chunk) blocks.push(chunk);
+  }
+  return blocks;
+}
+
+function parseQuestionBlock(block){
+  // Cabeçalho
+  const headerRe = /^\s*(\d{1,5})(?:\s+Q(\d+))?/;
+  const h = block.match(headerRe);
+  if (!h) return null;
+  const numero = Number(h[1]);
+  const id_qc = h[2] ? String(h[2]) : null;
+
+  const body = block.split('\n').slice(1); // remove cabeçalho
+  // Encontrar primeira alternativa
+  const altMarkers = body.map((l,i)=> isAltMarker(l) ? i : -1).filter(i=>i>=0);
+  if (!altMarkers.length) return null;
+  const firstAlt = altMarkers[0];
+
+  const stem = cleanNoise(body.slice(0, firstAlt)).join('\n').trim();
+  const altLines = body.slice(firstAlt);
+
+  const alts = [];
+  let current = null;
+  for (let i=0;i<altLines.length;i++){
+    const line = altLines[i];
+    if (isAltMarker(line)){
+      if (current) alts.push(current);
+      const m = splitMarker(line);
+      // caso “letra sozinha”, anexar próxima(s) linhas até outro marcador
+      if (m.text === '' || !m.text.trim()){
+        let j = i+1;
+        let buf = [];
+        while (j < altLines.length && !isAltMarker(altLines[j])){
+          const s = altLines[j].trim();
+          if (s) buf.push(s);
+          j++;
+        }
+        i = j-1;
+        current = { key: m.key, text: buf.join('\n') };
+      } else {
+        current = { key: m.key, text: m.text };
+      }
+    } else if (current){
+      const s = line.trim();
+      if (s) current.text += '\n' + s;
+    }
+  }
+  if (current) alts.push(current);
+
+  // Tipo
+  const keys = new Set(alts.map(a=>a.key));
+  let tipo = (keys.size && [...keys].every(k => k==='V'||k==='F')) ? 'VF' : 'ME';
+
+  // Filtrar e normalizar
+  const valid = tipo==='ME' ? ['A','B','C','D','E'] : ['V','F'];
+  const alternativas = alts
+    .filter(a => valid.includes(a.key))
+    .map(a => ({ key: a.key, text: a.text.trim() }))
+    .filter(a => a.text.length);
+
+  if (!alternativas.length) return null;
+
+  return { numero, id_qc, tipo, enunciado: stem, alternativas, correta: null };
+}
+
+function cleanNoise(lines){
+  return lines.filter(l => !/^\s*(https?:\/\/|www\.|Treinador|Resumão|Conferir|Baixe|Assine|Prova comentada)/i.test(l));
+}
+
+function isAltMarker(line){
+  // A)  B.  C-  V)  F)   OU letra sozinha na linha
+  return /^\s*([ABCDEVFabcdevf])(?:[\)\.\-]\s+|\s*$)/.test(line);
+}
+function splitMarker(line){
+  const m = line.match(/^\s*([ABCDEVFabcdevf])(?:[\)\.\-]\s+|\s*$)(.*)$/);
+  const key = normalizeKey(m[1]);
+  return { key, text: (m[2]||'').trim() };
+}
+function normalizeKey(k){
+  k = k.toUpperCase();
+  if (k==='C') return 'C'; // só no gabarito
+  if (k==='E') return 'E'; // ambíguo, resolvido no gabarito
+  return k;
+}
+function mapCEtoVF(letter){
+  if (letter==='C') return 'V';
+  if (letter==='E') return 'F';
+  return letter.toUpperCase();
+}
+
+// ====== TEMAS ======
+function buildThemesIndex(questions){
+  // Heurística leve. Cria pelo menos o tema "*" = Todos.
+  const idx = new Map();
+  idx.set('*', questions.map((_,i)=>i));
+  // Extração: pega bigramas frequentes de palavras-chave no enunciado
+  const stop = new Set(['de','da','do','dos','das','e','a','o','os','as','em','no','na','nos','nas','para','por','com','sem','um','uma','ao','à','às','ou','que','se','é','ser','sobre','não','nos','às','um','uma','sua','seu','são','como','qual','quais','entre','pela','pelo']);
+  const freq = new Map();
+  questions.forEach((q,i)=>{
+    const words = q.enunciado
+      .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+      .toLowerCase().replace(/[^a-z0-9\s]/g,' ')
+      .split(/\s+/).filter(w => w && !stop.has(w) && w.length >= 3);
+    for (let j=0;j<words.length-1;j++){
+      const bg = words[j] + ' ' + words[j+1];
+      if (bg.length < 7) continue;
+      freq.set(bg, (freq.get(bg)||0)+1);
+    }
+  });
+  const top = [...freq.entries()].sort((a,b)=>b[1]-a[1]).slice(0,12).map(e=>e[0]);
+  top.forEach(t => idx.set(t, []));
+  questions.forEach((q,i)=>{
+    let tagged = false;
+    for (const t of top){
+      if (q.enunciado.toLowerCase().includes(t)){
+        idx.get(t).push(i); tagged = true;
+      }
+    }
+    if (!tagged){
+      // nada
+    }
+  });
+  // Remover temas vazios
+  for (const [t,arr] of [...idx.entries()]){
+    if (t !== '*' && arr.length === 0) idx.delete(t);
+  }
+  return idx;
+}
+function labelTheme(t){ return t === '*' ? 'Todos' : t; }
+
+// ====== HELPERS ======
+async function loadText(path){
+  const res = await fetch(path, {cache:'no-store'});
+  if (!res.ok) throw new Error(`Falha ao carregar ${path}: HTTP ${res.status}`);
+  return await res.text();
+}
+function shuffle(arr){
+  for (let i=arr.length-1;i>0;i--){
+    const j = (Math.random()*(i+1))|0; [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+}
+function basename(p){ return p.split('/').pop(); }
+function escapeHtml(s){ return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
