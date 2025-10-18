@@ -540,54 +540,62 @@ function materiaLabel(cat, materiaId){
   return prettyName(materiaId);
 }
 
-/* ===== manifest (PDF-only via Git Trees API) ===== */
+// ===== manifest (PDF-only via Git Trees API)
 async function buildManifest(){
   const { owner, repo, branch, dataDir } = CONFIG;
 
+  // 1) pega o SHA da tree do branch
   const brRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/branches/${branch}`, { cache:'no-store' });
   if(!brRes.ok) throw new Error('Git branches falhou');
   const brJson = await brRes.json();
   const treeSha = brJson?.commit?.commit?.tree?.sha;
   if(!treeSha) throw new Error('Tree SHA não localizado');
 
+  // 2) lista a árvore completa
   const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/${treeSha}?recursive=1`, { cache:'no-store' });
-  if (!res.ok) throw new Error('Git trees falhou');
+  if(!res.ok) throw new Error('Git trees falhou');
   const json = await res.json();
   const tree = Array.isArray(json.tree) ? json.tree : [];
 
+  // 3) somente blobs .pdf dentro de data/
   const pdfs = tree.filter(n => n.type === 'blob' && n.path.startsWith(`${dataDir}/`) && /\.pdf$/i.test(n.path));
 
+  // 4) agrupa: categoria = nível 1, tema = nível 2
   const categories = new Map();
-  for (const f of pdfs){
-    const parts = f.path.split('/'); // [data, cat, materia, file...]
+  for (const f of pdfs) {
+    const parts = f.path.split('/'); // data/<categoria>/<tema>/<arquivo>.pdf
     if (parts.length < 4) continue;
-    const catId = parts[1];
-    const matId = parts[2];
-    const file  = parts.slice(3).join('/');
+    const categoriaId = parts[1];
+    const temaId      = parts[2];
+    const file        = parts[3];
+    const base        = file.replace(/\.pdf$/i,'').replace(/\d+$/,''); // agrupa 1,2,3…
 
-    if (!categories.has(catId)){
-      categories.set(catId, { id: catId, name: prettyName(catId), themes: [] });
-    }
-    const cat = categories.get(catId);
+    const cat = categories.get(categoriaId) || categories.set(categoriaId, {
+      id: categoriaId,
+      name: prettyName(categoriaId),
+      themes: []
+    }).get(categoriaId);
 
-    const fileName = file.split('/').pop();
-    const themeId   = `${matId}-${fileName.replace(/\.pdf$/i,'')}`;
-    const themeName = `${prettyName(matId)} · ${prettyName(fileName.replace(/\.pdf$/i,''))}`;
+    const themeName = `${prettyName(categoriaId)} · ${prettyName(temaId)} · ${prettyName(base)}`;
+    const themeId   = `${temaId}-${base}`;
+
+    // URL crua para o PDF
     const raw = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${f.path.split('/').map(encodeURIComponent).join('/')}`;
 
     cat.themes.push({ id: themeId, name: themeName, path: raw });
   }
 
   return {
-    title:'MeuJus',
+    title: 'MeuJus',
     categories: [...categories.values()]
       .map(c => ({ ...c, themes: c.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR')) }))
       .sort((a,b)=> a.name.localeCompare(b.name,'pt-BR')),
-    shuffleDefault:{questions:false,options:true},
-    persistDefault:true,
-    outro:{message:''}
+    shuffleDefault: { questions:false, options:true },
+    persistDefault: true,
+    outro: { message:'' }
   };
 }
+
 
 /* ===== popula dropdowns por categoria ===== */
 function updateThemes(){
