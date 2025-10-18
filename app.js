@@ -146,6 +146,102 @@ let tagsBarEl = document.getElementById('tagsBar');
   row.parentElement ? row.parentElement.insertBefore(wrap, row.nextSibling) : document.body.appendChild(wrap);
   tagsBarEl = wrap;
 })();
+/* ===== Custom Select (progressive enhancement) ===== */
+function enhanceSelect(selectEl, { size='sm' } = {}){
+  if(!selectEl || selectEl.dataset.enhanced) return;
+  const wrap = document.createElement('div');
+  wrap.className = 'custom-select';
+
+  const trigger = document.createElement('button');
+  trigger.type = 'button';
+  trigger.className = `select-trigger ${size}`;
+  trigger.setAttribute('aria-haspopup','listbox');
+  trigger.setAttribute('aria-expanded','false');
+
+  const labelText = ()=> {
+    const opt = selectEl.options[selectEl.selectedIndex];
+    return opt ? opt.textContent : '—';
+  };
+  trigger.innerHTML = `<span class="sel-text">${labelText()}</span>
+    <span class="chev" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </span>`;
+
+  const list = document.createElement('div');
+  list.className = 'select-list';
+  list.role = 'listbox';
+
+  function buildList(){
+    list.innerHTML = '';
+    if(selectEl.options.length === 0){
+      const empty = document.createElement('div');
+      empty.className = 'select-empty';
+      empty.textContent = 'Sem opções';
+      list.appendChild(empty);
+      return;
+    }
+    [...selectEl.options].forEach((o, idx)=>{
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'select-option';
+      b.role = 'option';
+      b.setAttribute('data-value', o.value);
+      b.setAttribute('aria-selected', String(idx === selectEl.selectedIndex));
+      b.textContent = o.textContent;
+      b.addEventListener('click', ()=>{
+        selectEl.selectedIndex = idx;
+        selectEl.dispatchEvent(new Event('change', {bubbles:true}));
+        trigger.querySelector('.sel-text').textContent = o.textContent;
+        close();
+      });
+      list.appendChild(b);
+    });
+  }
+
+  function open(){
+    wrap.classList.add('is-open');
+    trigger.setAttribute('aria-expanded','true');
+    document.addEventListener('click', onDocClick, { once:true });
+  }
+  function close(){
+    wrap.classList.remove('is-open');
+    trigger.setAttribute('aria-expanded','false');
+  }
+  function onDocClick(e){
+    if(!wrap.contains(e.target)) close();
+  }
+
+  trigger.addEventListener('click', ()=>{
+    if(wrap.classList.contains('is-open')) close();
+    else { buildList(); open(); }
+  });
+
+  // esconder select nativo
+  selectEl.classList.add('select-hidden');
+  selectEl.parentElement.insertBefore(wrap, selectEl);
+  wrap.appendChild(trigger);
+  wrap.appendChild(list);
+  selectEl.dataset.enhanced = '1';
+
+  // sincronizar quando app troca as opções
+  const mo = new MutationObserver(()=> {
+    trigger.querySelector('.sel-text').textContent = labelText();
+    buildList();
+  });
+  mo.observe(selectEl, { childList:true, subtree:false, attributes:true, attributeFilter:['value'] });
+
+  selectEl.addEventListener('change', ()=>{
+    trigger.querySelector('.sel-text').textContent = labelText();
+    buildList();
+  });
+}
+
+function applyCustomSelects(){
+  enhanceSelect(selCategory, {size:'sm'});
+  enhanceSelect(selTheme,    {size:'sm'});
+}
 
 /* ===== labels ===== */
 const DEFAULT_LABELS = { start:'Começar', next:'Próximo', prev:'Anterior', retry:'Refazer', home:'Início', category:'Disciplina', theme:'Tema', result:'Resultado' };
@@ -433,6 +529,8 @@ async function init() {
     selCategory.appendChild(o);
   });
   updateThemes();
+  applyCustomSelects(); // <— ENTRA
+
 
   selCategory.addEventListener('change', updateThemes);
   btnStart.addEventListener('click', startQuizFromSelection);
@@ -587,7 +685,9 @@ function updateThemes(){
     if(idx===0) o.selected=true;
     selTheme.appendChild(o);
   });
+  applyCustomSelects(); // reaplica o componente após repopular
 }
+
 function selectedPath(){
   const catId=selCategory.value;
   const cat=(MANIFEST?.categories||[]).find(c=>c.id===catId);
