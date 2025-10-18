@@ -418,9 +418,10 @@ async function loadPdfAsQuiz(path){
   const raw = await extractPdfText(path);
   const quiz = parsePdfToQuiz(raw);
   if(quiz && Array.isArray(quiz.questions)){
-    await loadVirtualQuiz(quiz, path, true);
-    saveQuizCache(path, quiz);
-  }
+  await loadVirtualQuiz(quiz, path, true);
+  lsSet(`quiz:${JSON.stringify(path)}`, quiz);
+}
+
   return quiz;
 }
 
@@ -719,13 +720,14 @@ async function loadQuiz(path, fresh=false){
 
     if(!qz || !Array.isArray(qz.questions) || qz.questions.length===0){
       toast('Nenhuma questão encontrada no PDF','warn',2800);
-      show(screenIntro,true); show(screenQuiz:false); show(screenResult:false);
-      return;
+show(screenIntro,true); show(screenQuiz,false); show(screenResult,false);
+return;
+
     }
   }catch(err){
     console.error(err);
     toast('Erro ao carregar PDF','error',3000);
-    show(screenIntro,true); show(screenQuiz:false); show(screenResult:false);
+show(screenIntro,true); show(screenQuiz,false); show(screenResult,false);
   }finally{
     LOADING = false;
   }
