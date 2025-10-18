@@ -326,49 +326,68 @@ async function extractPdfText(input){
 function parsePdfToQuiz(raw){
   const text = String(raw||'').replace(/\u00A0/g,' ').replace(/\s+/g,' ').trim();
 
-  // Gabarito ao final: "Respostas 1: D 2: C ..."
-  const gabMatch = text.match(/Respostas\s+([\s\S]+?)\s+(?:www\.qconcursos|https?:\/\/www\.qconcursos|$)/i);
+  // --- gabarito no fim ---
+  // Ex.: "Respostas 41: C 42: E ... 60: D"
   const gabMap = new Map();
-  if(gabMatch){
-    const all = gabMatch[1];
-    const rx = /(\d+)\s*:\s*([A-E])/gi;
-    let m; while((m=rx.exec(all))) gabMap.set(Number(m[1]), m[2].toUpperCase());
+  const gabMatch = text.match(/Respostas\s+([\s\S]+?)\s+(?:www\.qconcursos|https?:\/\/www\.qconcursos|$)/i);
+  if (gabMatch) {
+    const rx = /(\d{1,3})\s*:\s*([A-ECE])\b/gi; // inclui C/E p/ Certo/Errado
+    let m; while ((m = rx.exec(gabMatch[1]))) gabMap.set(Number(m[1]), m[2].toUpperCase());
   }
 
-  // Parte das questões antes do bloco "Respostas"
+  // --- recorta cada questão por "NN Q\d+" até a próxima ou até "Respostas" ---
   const head = text.split(/Respostas\b/i)[0];
-
-  // Cortes por cabeçalhos padronizados que se repetem entre questões do QC
-  const chunks = head
-    .split(/\bAno:\s*20\d{2}[^A]*?OAB\b/i)
-    .map(s=>s.trim()).filter(Boolean);
+  const blocks = [];
+  const reBlock = /(\d{1,3})\s+Q\d{5,}\s*([\s\S]*?)(?=(?:\s+\d{1,3}\s+Q\d{5,}\s*)|$)/g;
+  let bm;
+  while ((bm = reBlock.exec(head))) {
+    const qnum = Number(bm[1]);
+    const body = bm[2].trim();
+    blocks.push({ qnum, body });
+  }
 
   const mapLetter = {A:0,B:1,C:2,D:3,E:4};
   const questions = [];
-  let idx=0;
 
-  for(const ch of chunks){
-    // agrupa alternativas A–E
+  for (const { qnum, body } of blocks) {
+    // detectar alternativas A–E
+    const opts = [];
     const altRx = /\b([A-E])\s+([^A-E]+?)(?=\s+[A-E]\s+|$)/gi;
-    let m, opts=[];
-    while((m=altRx.exec(ch))){
+    let m; while ((m = altRx.exec(body))) {
       const L = m[1].toUpperCase();
-      const val = m[2].trim();
-      opts[mapLetter[L]] = sanitizeBasicHTML(val);
+      const txt = m[2].trim();
+      opts[mapLetter[L]] = sanitizeBasicHTML(txt);
     }
-    if(!opts.length) continue;
 
-    const firstA = ch.search(/\bA\s+/);
-    const enun = firstA>0 ? ch.slice(0, firstA).trim() : ch.trim();
+    // enunciado = trecho antes da primeira alternativa " A "
+    const aPos = body.search(/\bA\s+/);
+    let enun = aPos > 0 ? body.slice(0, aPos).trim() : body.trim();
 
-    idx += 1;
-    const gabLetter = gabMap.get(idx) || null;
+    // V/F sem letras: contém “Certo Errado” ou “Errado Certo”
+    const hasVF = /\bCerto\b\s+\bErrado\b|\bErrado\b\s+\bCerto\b/i.test(body);
+    const gabLetter = gabMap.get(qnum) || null;
+
+    if (hasVF && (!opts || opts.length === 0)) {
+      // Usa tipo 'vf' com resposta booleana: C=true, E=false
+      questions.push({
+        type: 'vf',
+        q: sanitizeBasicHTML(enun),
+        options: [],        // render usa padrão Verdadeiro/Falso
+        answer: gabLetter ? (gabLetter === 'C') : null,
+        explanation: '',
+        tags: []
+      });
+      continue;
+    }
+
+    if (!opts.length) continue; // sem alternativas, pula
+
     questions.push({
-      type:'multiple',
+      type: 'multiple',
       q: sanitizeBasicHTML(enun),
       options: opts,
       answer: gabLetter ? (mapLetter[gabLetter] ?? null) : null,
-      explanation:'',
+      explanation: '',
       tags: []
     });
   }
@@ -385,6 +404,7 @@ function parsePdfToQuiz(raw){
     questions
   };
 }
+
 
 async function loadPdfAsQuiz(path){
   const raw = await extractPdfText(path);
