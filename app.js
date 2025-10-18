@@ -1,13 +1,12 @@
 // app.js — MeuJus (HTML seguro, chips de origem, histórico global, deep link #q=n)
 
-// deve ficar no topo do arquivo
-window.CONFIG = {
+window.CONFIG = window.CONFIG || {
   owner: 'osvaldosereia',
   repo:  'ART123CP',
   branch:'main',
   dataDir:'data'
 };
-const CONFIG = window.CONFIG; // se o código usa CONFIG direto
+const CONFIG = window.CONFIG;
 
 /* ===== util ===== */
 const getToastWrap = ()=> {
@@ -553,10 +552,9 @@ async function buildManifest(){
 
   // 2) lista a árvore completa
   const res = await fetch(
-  `https://api.github.com/repos/${owner}/${repo}/git/trees/${treeSha}?recursive=1`,
-  { cache: 'no-store' }
-);
-
+    `https://api.github.com/repos/${owner}/${repo}/git/trees/${treeSha}?recursive=1`,
+    { cache: 'no-store' }
+  );
   if(!res.ok) throw new Error('Git trees falhou');
   const json = await res.json();
   const tree = Array.isArray(json.tree) ? json.tree : [];
@@ -599,6 +597,7 @@ async function buildManifest(){
     outro: { message:'' }
   };
 }
+
 
 
 /* ===== popula dropdowns por categoria ===== */
