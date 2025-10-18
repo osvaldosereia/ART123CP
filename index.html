@@ -1,159 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MeuJus — Quiz</title>
-  <style>
-    :root { --fg:#0b1220; --muted:#6b7280; --bg:#ffffff; --bg2:#f3f4f6; --pri:#0ea5e9; --ok:#16a34a; --err:#dc2626; }
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,Segoe UI,Roboto,Helvetica,Arial}
-    .site{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid #e5e7eb;position:sticky;top:0;background:#fff;z-index:5}
-    .brand{display:flex;align-items:center;gap:10px}
-    #appTitle{margin:0;font-size:20px;cursor:pointer}
-    .controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;padding:12px 18px;border-bottom:1px solid #e5e7eb}
-    label{font-size:12px;color:var(--muted)}
-    select,input[type="text"]{width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:10px;background:#fff}
-    .btn{border:1px solid #e5e7eb;background:#fff;border-radius:10px;padding:10px 14px;cursor:pointer}
-    .btn.primary{background:var(--pri);border-color:var(--pri);color:#fff}
-    .btn.ghost{background:#fff}
-    .btn.icon{display:inline-flex;align-items:center;justify-content:center}
-    .row{display:flex;gap:10px;align-items:center}
-    .hide{display:none !important}
-    main{max-width:980px;margin:0 auto;padding:14px 18px}
-    .intro{padding:18px}
-    .progress{height:6px;background:var(--bg2);border-radius:999px;margin:10px 0 16px;overflow:hidden}
-    #bar{height:100%;width:0;background:var(--pri);transition:width .2s}
-    .muted{color:var(--muted);font-size:13px}
-    #question{padding:8px 0}
-    #options{display:grid;gap:10px;margin:14px 0}
-    .opt{padding:12px 14px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;cursor:pointer;text-align:left}
-    .opt.correct{border-color:var(--ok);outline:2px solid #16a34a22}
-    .opt.wrong{border-color:var(--err);outline:2px solid #dc262622}
-    #explanation{padding:10px 12px;border:1px dashed #e5e7eb;border-radius:10px}
-    .actions{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:8px}
-    footer.foot{display:flex;justify-content:space-between;color:var(--muted);padding-top:10px}
-    .tagsbar{display:flex;gap:8px;flex-wrap:wrap;padding:8px 18px;border-top:1px solid #e5e7eb;background:#fff}
-    .tag{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;color:#111;text-decoration:none;font-size:13px}
-    /* AI menu */
-    .ai-menu{position:relative}
-    .ai-menu.open .ai-dropdown{display:block}
-    .ai-dropdown{position:absolute;right:0;top:110%;display:none;min-width:180px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:8px;box-shadow:0 6px 20px #00000014}
-    .ai-dropdown .btn{width:100%}
-    .google-word{letter-spacing:.5px}
-    .g1{color:#4285F4}.g2{color:#EA4335}.g3{color:#FBBC05}.g4{color:#4285F4}.g5{color:#34A853}.g6{color:#EA4335}
-    /* Toast */
-    .toast-wrap{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:8px;z-index:50}
-    .toast{background:#111;color:#fff;padding:10px 12px;border-radius:10px;transition:.18s;box-shadow:0 6px 20px #00000024}
-    .toast.warn{background:#a16207}.toast.success{background:#15803d}.toast.error{background:#b91c1c}
-    /* Side panel */
-    #sidepanel-backdrop{position:fixed;inset:0;background:#0005;z-index:40}
-    #sidepanel{position:fixed;top:0;right:0;width:360px;max-width:90vw;height:100%;background:#fff;z-index:41;border-left:1px solid #e5e7eb;display:flex;flex-direction:column}
-    .sp-head{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid #e5e7eb}
-    .sp-close{font-size:22px;border:0;background:none;cursor:pointer}
-    .sp-sections{padding:10px 12px;overflow:auto}
-    .sp-icon{display:flex;gap:10px;align-items:center;padding:8px 6px;color:#111;text-decoration:none;border-radius:8px}
-    .sp-accordion{width:100%;text-align:left;margin-top:10px}
-    .sp-panel{padding:8px 4px;display:none}
-    .sp-panel.open{display:block}
-    .sp-list{margin:0 0 0 14px}
-    .sp-hist-summary{font-size:13px;color:var(--muted);margin:8px 2px}
-    .sp-hist-cards{display:block}
-    .sp-item{display:grid;grid-template-columns:44px 1fr auto;gap:8px;width:100%;text-align:left;padding:8px 10px;border:1px solid #e5e7eb;border-radius:10px;background:#fff}
-    .sp-sep{height:8px}
-    .sp-line{padding:8px 2px 2px}.sp-group-title{font-weight:600}
-  </style>
+  <meta charset="utf-8">
+  <title>Quiz Jurídico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-  <header class="site">
-    <div class="brand">
-      <h1 id="appTitle">MeuJus</h1>
-      <span id="state" class="hide"></span>
-    </div>
-    <div class="row" style="margin-left:auto;gap:8px">
-      <input id="txtGlobal" type="text" placeholder="Busca global…" />
-      <button id="btnGlobal" class="btn">Buscar</button>
-      <button id="btnGoHome" class="btn ghost">Início</button>
-    </div>
+  <header class="topbar">
+    <h1 class="brand">Quiz Jurídico</h1>
+    <button id="btnHome" class="btn ghost sm">Voltar ao início</button>
   </header>
 
-  <!-- barra de filtros e seleções -->
-  <div class="controls">
-    <div>
-      <label for="selCategory">Disciplina</label>
-      <select id="selCategory"></select>
-    </div>
-    <div>
-      <label for="selTheme">Tema</label>
-      <select id="selTheme"></select>
-    </div>
-    <div class="row" style="align-self:end">
-      <button id="btnStart" class="btn primary">Começar</button>
-    </div>
-    <div>
-      <label for="txtSearch">Filtro no tema</label>
-      <div class="row">
-        <input id="txtSearch" type="text" placeholder="termos do enunciado/opções" />
-        <button id="btnSearch" class="btn">Filtrar</button>
-        <button id="btnClearSearch" class="btn ghost hide">Limpar</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- tags irmãos (preenchido via JS) -->
-  <div id="tagsBar" class="tagsbar" style="display:none"></div>
-
   <main>
-    <!-- Tela de introdução -->
-    <section class="intro" id="screenIntro">
-      <p>Selecione disciplina e tema. Clique em Começar.</p>
-    </section>
+    <!-- TELA INICIAL -->
+    <section id="screenIntro" class="screen">
+      <div class="panel">
+        <h2>Escolha a categoria e os temas</h2>
 
-    <!-- Tela do quiz -->
-    <section class="hide" id="screenQuiz">
-      <div class="progress"><div id="bar"></div></div>
-      <div id="question"></div>
-      <div id="options"></div>
-      <div id="explanation" class="hide"></div>
-
-      <div class="actions">
-        <div class="row">
-          <button id="btnPrev" class="btn">Anterior</button>
-          <button id="btnNext" class="btn primary">Próximo</button>
+        <!-- Dropdown custom de categorias -->
+        <div class="select" id="catSelect">
+          <button id="catToggle" class="select-toggle">Selecionar categoria</button>
+          <div id="catMenu" class="select-menu"></div>
         </div>
-        <div id="aiMenu" class="ai-menu hide">
-          <button id="btnAI" class="btn ghost" type="button">
-            Pergunte ao <span class="google-word">
-              <span class="g1">G</span><span class="g2">o</span><span class="g3">o</span>
-              <span class="g4">g</span><span class="g5">l</span><span class="g6">e</span>
-            </span> Modo I.A.
-          </button>
-          <div id="aiDropdown" class="ai-dropdown">
-            <button type="button" data-mode="gabarito"  class="btn ghost sm">Gabarito</button>
-            <button type="button" data-mode="glossario" class="btn ghost sm">Glossário</button>
-            <button type="button" data-mode="video"     class="btn ghost sm">Vídeo-aula</button>
-          </div>
+
+        <!-- Lista de temas (2 colunas no desktop) -->
+        <div id="themesGrid" class="grid"></div>
+
+        <div class="actions">
+          <button id="btnSearch" class="btn primary" disabled>Buscar</button>
         </div>
       </div>
-
-      <footer class="foot">
-        <span id="footLeft">Pergunta 0/0</span>
-        <span id="footRight">0 respondidas</span>
-      </footer>
     </section>
 
-    <!-- Tela de resultado -->
-    <section class="hide" id="screenResult">
-      <h2 id="resultTitle">Resultado</h2>
-      <p id="resultScore">0%</p>
-      <p id="resultMsg"></p>
-      <div class="row">
-        <button id="btnRetry" class="btn">Refazer</button>
-        <button id="btnHome" class="btn ghost">Início</button>
+    <!-- TELA QUIZ -->
+    <section id="screenQuiz" class="screen hide">
+      <div class="toolbar">
+        <div id="pathInfo" class="muted"></div>
       </div>
+
+      <div id="quizList" class="q-list"></div>
+
+      <!-- sentinela para rolagem infinita -->
+      <div id="sentinel"></div>
     </section>
   </main>
 
-  <!-- scripts -->
+  <!-- Template de questão -->
+  <template id="tplQuestion">
+    <article class="question">
+      <header class="q-head">
+        <span class="q-cat"></span>
+        <span class="q-themes"></span>
+      </header>
+      <div class="q-body"></div>
+      <div class="q-options"></div>
+      <div class="q-feedback hide"></div>
+
+      <div class="ia">
+        <button class="ia-btn btn ghost sm">Pergunte ao Google Modo I.A.</button>
+        <div class="ia-menu hide">
+          <button data-mode="explicacao" class="btn ghost sm">Explicação</button>
+          <button data-mode="glossario"  class="btn ghost sm">Glossário</button>
+          <button data-mode="videos"     class="btn ghost sm">Vídeos</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <div class="toast-wrap"></div>
   <script src="app.js"></script>
 </body>
 </html>
