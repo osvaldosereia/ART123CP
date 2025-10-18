@@ -4,89 +4,94 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quiz QC Dump · Gabarito ao final</title>
+  <title>Quiz Jurídico • QC Dump</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- HOME -->
   <header class="topbar">
-    <h1>Quiz QC Dump</h1>
-    <div class="actions">
-      <input id="txtUrl" type="url" placeholder="URL do .txt (opcional)" />
-      <label class="file">
-        <input id="txtFile" type="file" accept=".txt" />
-        <span>Escolher .txt</span>
-      </label>
-      <button id="btnLoad">Carregar</button>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">⚖️</div>
+      <div class="title">
+        <h1>Quiz Jurídico</h1>
+        <p class="muted">Dump QConcursos com gabarito ao final</p>
+      </div>
     </div>
+
+    <nav class="progress" aria-live="polite">
+      <span id="pathInfo" class="path">Selecione uma categoria</span>
+      <div class="kpis">
+        <div class="kpi"><strong id="kTotal">0</strong><span>questões</span></div>
+        <div class="kpi"><strong id="kDone">0</strong><span>respondidas</span></div>
+        <div class="kpi"><strong id="kScore">0</strong><span>acertos</span></div>
+      </div>
+      <button id="btnReset" class="ghost" type="button" aria-label="Zerar sessão">Zerar</button>
+    </nav>
   </header>
 
-  <main class="layout">
-    <aside class="panel">
-      <section class="info">
-        <h2>Fonte</h2>
-        <div id="srcInfo" class="muted">aguardando arquivo…</div>
-      </section>
-      <section class="stats">
-        <h2>Progresso</h2>
-        <div class="kpis">
-          <div class="kpi">
-            <div class="kpi-val" id="kTotal">0</div>
-            <div class="kpi-label">questões</div>
-          </div>
-          <div class="kpi">
-            <div class="kpi-val" id="kDone">0</div>
-            <div class="kpi-label">respondidas</div>
-          </div>
-          <div class="kpi">
-            <div class="kpi-val" id="kScore">0</div>
-            <div class="kpi-label">acertos</div>
-          </div>
+  <main class="container">
+    <section id="home" class="home">
+      <!-- Dropdown não nativo -->
+      <div class="control">
+        <label class="label">Categoria</label>
+        <div class="dropdown" id="catSelect">
+          <button id="catTrigger" class="trigger" aria-haspopup="listbox" aria-expanded="false">
+            <span id="catTriggerText">Escolha a categoria</span>
+            <svg class="chev" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M5 7l5 6 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div id="catMenu" class="menu" role="listbox" tabindex="-1" aria-label="Categorias"></div>
         </div>
-        <button id="btnReset" class="ghost">Zerar respostas</button>
-      </section>
-      <section class="filters">
-        <h2>Exibir</h2>
-        <label class="check">
-          <input id="fShowOnlyPending" type="checkbox" />
-          <span>Apenas pendentes</span>
-        </label>
-        <label class="check">
-          <input id="fShuffle" type="checkbox" />
-          <span>Embaralhar questões</span>
-        </label>
-      </section>
-      <section class="help">
-        <h2>Formato aceito</h2>
-        <ul>
-          <li>Dump bruto do QConcursos</li>
-          <li>Gabarito no final: “61: D … 80: D” ou “61–80: D”</li>
-          <li>Alternativas em linhas iniciadas por A) B) … ou V) F)</li>
-        </ul>
-      </section>
-    </aside>
+      </div>
 
-    <section class="content">
-      <div id="list" class="list"></div>
-      <div id="sentinel" class="sentinel">Carregando…</div>
+      <!-- Temas como chips -->
+      <div class="control">
+        <label class="label">Temas</label>
+        <div class="themesbar">
+          <button id="btnSelectAll" class="ghost small" type="button">Selecionar todos</button>
+          <span class="muted small" id="themesCount">0 selecionado(s)</span>
+        </div>
+        <div id="themesGrid" class="chips" aria-live="polite"></div>
+      </div>
+
+      <div class="actions">
+        <label class="check">
+          <input id="optShuffle" type="checkbox" />
+          <span>Embaralhar</span>
+        </label>
+        <button id="btnStart" type="button" disabled>Iniciar quiz</button>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="quiz hidden" aria-label="Lista de questões">
+      <div id="quizList" class="list"></div>
+      <div id="sentinel" class="sentinel" role="status" aria-live="polite">Carregando…</div>
     </section>
   </main>
 
+  <!-- TEMPLATE DE QUESTÃO -->
   <template id="tplQuestion">
     <article class="question" data-num="">
       <header class="q-head">
-        <span class="q-num"></span>
+        <span class="q-num">#0</span>
         <span class="q-id muted"></span>
-        <span class="q-type pill"></span>
+        <span class="pill q-type">ME</span>
       </header>
       <div class="q-stem"></div>
       <ol class="q-options"></ol>
-      <div class="q-feedback">
+      <footer class="q-foot">
         <span class="q-result"></span>
-        <button class="q-show">Mostrar gabarito</button>
-      </div>
+        <div class="q-actions">
+          <button class="q-show ghost small" type="button">Mostrar gabarito</button>
+          <button class="q-next small" type="button">Próxima</button>
+        </div>
+      </footer>
     </article>
   </template>
 
-  <script src="app.js"></script>
+  <script src="app.js" type="module"></script>
 </body>
 </html>
