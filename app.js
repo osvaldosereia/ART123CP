@@ -532,13 +532,19 @@ async function init(){
       const mats = await githubList(`${CONFIG.dataDir}/${catId}`);
       for(const m of mats){ if(m.type!=='dir') continue; const matId=m.name;
         const files = await githubList(`${CONFIG.dataDir}/${catId}/${matId}`);
-        for(const f of files){
-          if(/\.(txt|json|html?|pdf)$/i.test(f.name)){
-            cat.themes.push({ id: slug(f.name), name: prettyName(f.name.replace(/\.[^.]+$/,'')), path: `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/${CONFIG.dataDir}/${catId}/${matId}/${f.name}` });
-          }
-        }
-      }
-      MANIFEST.categories.push(cat);
+        for (const f of files) {
+  if (f.type === "file" && /\.(txt|json|html?|pdf)$/i.test(f.name)) {
+    const path = f.download_url ||
+      `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/` +
+      `${encodeURIComponent(CONFIG.dataDir)}/${encodeURIComponent(catId)}/${encodeURIComponent(matId)}/${encodeURIComponent(f.name)}`;
+    cat.themes.push({
+      id: slug(f.name),
+      name: prettyName(f.name.replace(/\.[^.]+$/,'')),
+      path
+    });
+  }
+}
+ MANIFEST.categories.push(cat);
     }
   }catch(e){ console.warn('manifest build failed', e); }
 
