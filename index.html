@@ -1,74 +1,92 @@
+<!-- index.html -->
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <title>Quiz Jurídico</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/styles.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz QC Dump · Gabarito ao final</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="topbar">
-    <h1 class="brand">Quiz Jurídico</h1>
-    <button id="btnHome" class="btn ghost sm">Voltar ao início</button>
+    <h1>Quiz QC Dump</h1>
+    <div class="actions">
+      <input id="txtUrl" type="url" placeholder="URL do .txt (opcional)" />
+      <label class="file">
+        <input id="txtFile" type="file" accept=".txt" />
+        <span>Escolher .txt</span>
+      </label>
+      <button id="btnLoad">Carregar</button>
+    </div>
   </header>
 
-  <main>
-    <!-- TELA INICIAL -->
-    <section id="screenIntro" class="screen">
-      <div class="panel">
-        <h2>Escolha a categoria e os temas</h2>
-
-        <!-- Dropdown custom de categorias -->
-        <div class="select" id="catSelect">
-          <button id="catToggle" class="select-toggle">Selecionar categoria</button>
-          <div id="catMenu" class="select-menu"></div>
+  <main class="layout">
+    <aside class="panel">
+      <section class="info">
+        <h2>Fonte</h2>
+        <div id="srcInfo" class="muted">aguardando arquivo…</div>
+      </section>
+      <section class="stats">
+        <h2>Progresso</h2>
+        <div class="kpis">
+          <div class="kpi">
+            <div class="kpi-val" id="kTotal">0</div>
+            <div class="kpi-label">questões</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-val" id="kDone">0</div>
+            <div class="kpi-label">respondidas</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-val" id="kScore">0</div>
+            <div class="kpi-label">acertos</div>
+          </div>
         </div>
+        <button id="btnReset" class="ghost">Zerar respostas</button>
+      </section>
+      <section class="filters">
+        <h2>Exibir</h2>
+        <label class="check">
+          <input id="fShowOnlyPending" type="checkbox" />
+          <span>Apenas pendentes</span>
+        </label>
+        <label class="check">
+          <input id="fShuffle" type="checkbox" />
+          <span>Embaralhar questões</span>
+        </label>
+      </section>
+      <section class="help">
+        <h2>Formato aceito</h2>
+        <ul>
+          <li>Dump bruto do QConcursos</li>
+          <li>Gabarito no final: “61: D … 80: D” ou “61–80: D”</li>
+          <li>Alternativas em linhas iniciadas por A) B) … ou V) F)</li>
+        </ul>
+      </section>
+    </aside>
 
-        <!-- Lista de temas (2 colunas no desktop) -->
-        <div id="themesGrid" class="grid"></div>
-
-        <div class="actions">
-          <button id="btnSearch" class="btn primary" disabled>Buscar</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- TELA QUIZ -->
-    <section id="screenQuiz" class="screen hide">
-      <div class="toolbar">
-        <div id="pathInfo" class="muted"></div>
-      </div>
-
-      <div id="quizList" class="q-list"></div>
-
-      <!-- sentinela para rolagem infinita -->
-      <div id="sentinel"></div>
+    <section class="content">
+      <div id="list" class="list"></div>
+      <div id="sentinel" class="sentinel">Carregando…</div>
     </section>
   </main>
 
-  <!-- Template de questão -->
   <template id="tplQuestion">
-    <article class="question">
+    <article class="question" data-num="">
       <header class="q-head">
-        <span class="q-cat"></span>
-        <span class="q-themes"></span>
+        <span class="q-num"></span>
+        <span class="q-id muted"></span>
+        <span class="q-type pill"></span>
       </header>
-      <div class="q-body"></div>
-      <div class="q-options"></div>
-      <div class="q-feedback hide"></div>
-
-      <div class="ia">
-        <button class="ia-btn btn ghost sm">Pergunte ao Google Modo I.A.</button>
-        <div class="ia-menu hide">
-          <button data-mode="explicacao" class="btn ghost sm">Explicação</button>
-          <button data-mode="glossario"  class="btn ghost sm">Glossário</button>
-          <button data-mode="videos"     class="btn ghost sm">Vídeos</button>
-        </div>
+      <div class="q-stem"></div>
+      <ol class="q-options"></ol>
+      <div class="q-feedback">
+        <span class="q-result"></span>
+        <button class="q-show">Mostrar gabarito</button>
       </div>
     </article>
   </template>
 
-  <div class="toast-wrap"></div>
   <script src="app.js"></script>
 </body>
 </html>
