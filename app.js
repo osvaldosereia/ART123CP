@@ -1,470 +1,387 @@
-/* Quiz Jurídico — aceita TXT bruto do QConcursos em /data/<categoria>/*.txt
-   - Indexa categorias pelo diretório
-   - Lê temas do conteúdo dos TXT
-   - Monta quiz com rolagem infinita (3 por lote)
-   - Marca correto/errado e exibe menu “Pergunte ao Google Modo I.A.”
-*/
+// app.js
+/* Site: Quiz para "dump bruto do QConcursos" com gabarito ao final. */
 
-const CONFIG = {
-  owner: 'osvaldosereia',   // ajuste se necessário
-  repo:  'ART123CP',        // ajuste se necessário
-  branch:'main',
-  dataDir:'data',
-  pageSize: 3
+const els = {
+  url: document.getElementById('txtUrl'),
+  file: document.getElementById('txtFile'),
+  load: document.getElementById('btnLoad'),
+  reset: document.getElementById('btnReset'),
+  info: document.getElementById('srcInfo'),
+  list: document.getElementById('list'),
+  sentinel: document.getElementById('sentinel'),
+  kTotal: document.getElementById('kTotal'),
+  kDone: document.getElementById('kDone'),
+  kScore: document.getElementById('kScore'),
+  fOnlyPending: document.getElementById('fShowOnlyPending'),
+  fShuffle: document.getElementById('fShuffle'),
+  tpl: document.getElementById('tplQuestion'),
 };
 
-/* ===== util ===== */
-const $ = sel => document.querySelector(sel);
-const $$ = sel => Array.from(document.querySelectorAll(sel));
-function toast(msg, ms=2200){
-  const wrap = $('.toast-wrap');
-  const el = document.createElement('div');
-  el.className = 'toast';
-  el.textContent = msg;
-  wrap.appendChild(el);
-  setTimeout(()=>{ el.style.opacity='0'; el.style.transform='translateY(6px)'; setTimeout(()=>el.remove(),180); }, ms);
-}
-function decodeHTMLEntities(s){
-  if(!s) return '';
-  const d = new DOMParser().parseFromString(s,'text/html');
-  return d.documentElement.textContent || '';
-}
-function slug(s){
-  return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
-}
-function stripHtmlAllowPBrMark(html){
-  if(!html) return '';
-  const s = decodeHTMLEntities(String(html));
-  return s.replace(/<(?!\/?(?:p|br|mark)\b)[^>]+>/gi, '');
-}
-function toParasKeepMark(s){
-  const raw = stripHtmlAllowPBrMark(s);
-  return raw
-    .replace(/\r\n?/g,'\n')
-    .replace(/\n{3,}/g,'\n\n')
-    .split(/\n{2,}/)
-    .map(p => `<p style="margin:0">${p.replace(/\n/g,'<br>')}</p>`)
-    .join('');
-}
-function htmlEscape(x){return String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+let state = {
+  questions: [],
+  order: [],
+  pageSize: 12,
+  page: 0,
+  done: new Set(),
+  score: 0,
+  sourceName: '',
+};
 
-/* ===== GitHub tree loader ===== */
-async function listDataFiles(){
-  const url = `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/git/trees/${encodeURIComponent(CONFIG.branch)}?recursive=1`;
-  const r = await fetch(url, {headers:{'Accept':'application/vnd.github+json'}});
-  if(!r.ok) throw new Error('Falha ao listar o repositório');
-  const data = await r.json();
-  const root = (CONFIG.dataDir + '/').toLowerCase();
-  const files = (data.tree||[])
-    .filter(n => n.type==='blob' && n.path.toLowerCase().startsWith(root) && n.path.toLowerCase().endsWith('.txt'))
-    .map(n => n.path);
-  return files;
-}
-async function fetchText(path){
-  const url = `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/${path}`;
-  const r = await fetch(url, {cache:'no-store'});
-  if(!r.ok) throw new Error('Falha ao baixar ' + path);
-  return await r.text();
-}
+els.load.addEventListener('click', async () => {
+  const text = await readInputText();
+  if (!text) return;
+  resetAll();
+  const { questions, sourceName } = parseQC(text);
+  state.questions = questions;
+  state.sourceName = sourceName;
+  els.info.textContent = sourceName;
+  state.order = [...questions.keys()];
+  if (els.fShuffle.checked) shuffle(state.order);
+  renderStats();
+  mountFirstPage();
+});
 
-/* ===== parser TXT bruto QConcursos + formato nativo (* ** *** -----) ===== */
-function parseTxtQuestions(raw){ // formato nativo do seu app
-  const text = String(raw||'').replace(/\uFEFF/g,'').replace(/\r\n?/g,'\n');
-  const blocks = text.split(/\n-{5,}\n/g).map(b=>b.trim()).filter(Boolean);
-  const map = {A:0,B:1,C:2,D:3,E:4};
-  const qs = [];
-  for(const block of blocks){
-    const lines = block.split('\n');
-    let enun=[], opts=[], gab=null;
-    for(const line of lines){
-      const t = line.trim();
-      if(/^\*\s(?!\*)/.test(t)){ enun.push(t.replace(/^\*\s*/,'')); continue; }
-      if(/^\*\*\s*\(?[A-E]\)/i.test(t)){ const m=t.match(/^\*\*\s*\(?([A-E])\)\s*(.+)$/i); if(m) opts.push(m[2].trim()); continue; }
-      if(/^\*\*\*\s*Gabarito\s*:/i.test(t)){ const g=t.match(/^\*\*\*\s*Gabarito\s*:\s*([A-E])/i); if(g) gab=g[1].toUpperCase(); continue; }
-    }
-    if(enun.length && opts.length){
-      qs.push({category:'', themes:[], type:'multiple', q: enun.join('\n'), options:opts, answer: gab? map[gab]:null, explanation:''});
-    }
+els.file.addEventListener('change', async () => {
+  if (els.file.files?.length) {
+    const txt = await els.file.files[0].text();
+    els.url.value = '';
+    resetAll();
+    const { questions, sourceName } = parseQC(txt, els.file.files[0].name);
+    state.questions = questions;
+    state.sourceName = sourceName;
+    els.info.textContent = sourceName;
+    state.order = [...questions.keys()];
+    if (els.fShuffle.checked) shuffle(state.order);
+    renderStats();
+    mountFirstPage();
   }
-  return qs;
-}
-function parseTxtDump(txt){ // QConcursos bruto
-  if(!txt) return { meta:{}, questions:[] };
+});
 
-  const answersMap = new Map();
-  const tail = txt.split(/\n/).slice(-400).join('\n');
-  for(const m of tail.matchAll(/\b(\d+)\s*:\s*([A-E])\b/gi)){
-    answersMap.set(parseInt(m[1],10), m[2].toUpperCase());
-  }
+els.fOnlyPending.addEventListener('change', () => {
+  rerenderList();
+});
+els.fShuffle.addEventListener('change', () => {
+  if (!state.questions.length) return;
+  state.order = [...state.questions.keys()];
+  if (els.fShuffle.checked) shuffle(state.order);
+  state.page = 0;
+  els.list.innerHTML = '';
+  mountFirstPage();
+});
 
-  const lines = txt.replace(/\r\n?/g,'\n').split('\n');
-  const heads = [];
-  for(let i=0;i<lines.length;i++){
-    if(/^\s*\d+\s+Q\d+\b/.test(lines[i])) heads.push(i);
-  }
-  const blocks = heads.map((start,k)=> lines.slice(start, heads[k+1] ?? lines.length).join('\n').trim());
-
-  const QUESTIONS = [];
-  const mapLetter = {A:0,B:1,C:2,D:3,E:4};
-  const norm = s => String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z]/g,'');
-
-  blocks.forEach((block, idx0)=>{
-    const head = block.split('\n',1)[0] || '';
-    let category='Geral', themes=[];
-    const mHead = head.match(/Q\d+\s+(.+?)>(.+)$/);
-    if(mHead){
-      category = mHead[1].trim().replace(/\s+/g,' ');
-      themes = mHead[2].split(',').map(s=>s.trim()).filter(Boolean);
-    }
-    const body = block.split('\n').slice(1);
-    const altRe = /^\s*(?:\(?([A-E])\)?[)\.\-:]?)\s+(.*)$/i;
-    const alts=[]; let cur=null;
-    body.forEach(line=>{
-      const m = line.match(altRe);
-      if(m){
-        cur = { L:m[1].toUpperCase(), txt:m[2].trim() };
-        alts.push(cur.txt);
-      }else if(cur && line.trim() && !/^\s*\d+\s*:\s*[A-E]\b/i.test(line)){
-        cur.txt += '\n' + line.trim();
-        alts[alts.length-1] = cur.txt;
-      }
-    });
-    const firstAltIdx = body.findIndex(l=>altRe.test(l));
-    let question = firstAltIdx>=0 ? body.slice(0, firstAltIdx).join('\n').trim() : body.join('\n').trim();
-    question = question
-      .replace(/^\s*(Ano|Banca|Órgão)\s*:.+$/gmi,'')
-      .replace(/^\s*Treinador.*$/gmi,'')
-      .trim();
-
-    let type = 'multiple';
-    if(alts.length===2){
-      const n0=norm(alts[0]), n1=norm(alts[1]);
-      const isVF = (n0==='verdadeiro'&&n1==='falso') || (n0==='falso'&&n1==='verdadeiro');
-      const isCE = (n0==='certo'&&n1==='errado')       || (n0==='errado'&&n1==='certo');
-      if(isVF||isCE) type='vf';
-    }
-
-    const pos = idx0+1;
-    const gLetter = answersMap.get(pos) || null;
-
-    let answer = null, answerBool = undefined;
-    if(type==='multiple'){
-      if(gLetter && mapLetter[gLetter]!=null) answer = mapLetter[gLetter];
-    }else{
-      if(gLetter==='A' || gLetter==='B'){
-        const first = norm(alts[0]);
-        const firstIsTrue = (first==='verdadeiro'||first==='certo');
-        answerBool = (gLetter==='A') ? firstIsTrue : !firstIsTrue;
-      }
-    }
-
-    QUESTIONS.push({
-      category, themes, type,
-      q: question,
-      options: type==='multiple' ? alts : undefined,
-      answer: type==='multiple' ? answer : undefined,
-      answerBool: type==='vf' ? !!answerBool : undefined,
-      explanation: ''
-    });
+els.reset.addEventListener('click', () => {
+  state.done.clear();
+  state.score = 0;
+  document.querySelectorAll('.q-options li').forEach(li => {
+    li.classList.remove('correct','wrong');
+    li.setAttribute('aria-disabled','false');
   });
+  document.querySelectorAll('.q-result').forEach(e => e.textContent = '');
+  renderStats();
+});
 
-  return { meta:{}, questions: QUESTIONS };
-}
-
-/* ===== estado ===== */
-let ALL_FILES = [];                // todos os .txt em /data
-let CATEGORIES = [];               // categorias pelo diretório
-let THEMES_CACHE = new Map();      // key = categoriaSlug -> [{name,count}]
-let FILES_BY_CATEGORY = new Map(); // categoriaSlug -> [paths]
-let CURRENT = {catSlug:null, catName:null, themes:[], pool:[], cursor:0};
-
-/* ===== UI refs ===== */
-const screenIntro = $('#screenIntro');
-const screenQuiz  = $('#screenQuiz');
-const btnHome     = $('#btnHome');
-const sel         = $('#catSelect');
-const selTrigger  = $('#selTrigger');
-const selText     = $('#selTriggerText');
-const selMenu     = $('#selMenu');
-const themesWrap  = $('#themesWrap');
-const btnBuscar   = $('#btnBuscar');
-const qList       = $('#questions');
-const sentinel    = $('#sentinel');
-const currentCat  = $('#currentCat');
-const currentThemes = $('#currentThemes');
-
-/* ===== init ===== */
-init().catch(e=>toast('Erro: '+e.message));
-async function init(){
-  btnHome.addEventListener('click', goHome);
-  selTrigger.addEventListener('click', ()=> sel.classList.toggle('open'));
-  document.addEventListener('click', e=>{ if(!sel.contains(e.target)) sel.classList.remove('open'); });
-
-  btnBuscar.addEventListener('click', startQuiz);
-
-  ALL_FILES = await listDataFiles();
-  buildCategoriesFromPaths(ALL_FILES);
-  renderCategoryDropdown();
-
-  toast('Categorias carregadas');
-}
-
-/* ===== categorias por diretório ===== */
-function buildCategoriesFromPaths(paths){
-  const set = new Map(); // slug -> {name, slug}
-  const byCat = new Map(); // slug -> [file paths]
-  for(const p of paths){
-    const parts = p.split('/');
-    if(parts.length<3) continue;
-    const catName = parts[1]; // diretório imediato após data/
-    const slugCat = slug(catName);
-    set.set(slugCat, {name:catName, slug:slugCat});
-    const arr = byCat.get(slugCat)||[];
-    arr.push(p); byCat.set(slugCat, arr);
-  }
-  CATEGORIES = Array.from(set.values()).sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
-  FILES_BY_CATEGORY = byCat;
-}
-
-/* ===== dropdown custom ===== */
-function renderCategoryDropdown(){
-  selMenu.innerHTML = '';
-  CATEGORIES.forEach(c=>{
-    const item = document.createElement('div');
-    item.className = 'select-item';
-    item.textContent = c.name;
-    item.addEventListener('click', ()=>{
-      CURRENT.catSlug = c.slug;
-      CURRENT.catName = c.name;
-      selText.textContent = c.name;
-      sel.classList.remove('open');
-      btnHome.classList.add('hide');
-      loadThemesForCategory(c.slug, c.name);
-    });
-    selMenu.appendChild(item);
-  });
-}
-
-/* ===== ler temas de uma categoria lendo os TXT e parseando cabeçalhos ===== */
-async function loadThemesForCategory(catSlug, catName){
-  themesWrap.innerHTML = '';
-  btnBuscar.disabled = true;
-
-  if(!THEMES_CACHE.has(catSlug)){
-    const files = FILES_BY_CATEGORY.get(catSlug) || [];
-    const themeCount = new Map(); // name -> count
-    for(const path of files){
-      const raw = await fetchText(path);
-      const isDump = /\bQ\d{6,}\b/.test(raw) && /Respostas[\s\S]{0,600}\b\d+\s*:\s*[A-E]\b/i.test(raw);
-      let questions = [];
-      if(isDump) questions = parseTxtDump(raw).questions;
-      else questions = parseTxtQuestions(raw);
-      // acumular temas
-      questions.forEach(q=>{
-        (q.themes||[]).forEach(t=>{
-          if(!t) return;
-          themeCount.set(t, (themeCount.get(t)||0)+1);
-        });
-      });
+const io = new IntersectionObserver((entries) => {
+  for (const e of entries) {
+    if (e.isIntersecting) {
+      mountNextPage();
     }
-    const themesArr = Array.from(themeCount.entries()).map(([name,count])=>({name,count})).sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'));
-    THEMES_CACHE.set(catSlug, themesArr);
   }
+});
+io.observe(els.sentinel);
 
-  const themes = THEMES_CACHE.get(catSlug);
-  if(!themes.length){
-    themesWrap.innerHTML = `<div class="muted">Nenhum tema encontrado nesta categoria.</div>`;
+async function readInputText() {
+  const url = els.url.value.trim();
+  if (url) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const txt = await res.text();
+      return txt;
+    } catch (e) {
+      alert('Falha ao baixar URL.');
+      return '';
+    }
+  }
+  if (els.file.files?.length) {
+    return await els.file.files[0].text();
+  }
+  alert('Informe uma URL ou selecione um arquivo .txt.');
+  return '';
+}
+
+function resetAll() {
+  state = { questions: [], order: [], pageSize: 12, page: 0, done: new Set(), score: 0, sourceName: '' };
+  els.list.innerHTML = '';
+  els.info.textContent = 'carregando…';
+  renderStats();
+}
+
+function renderStats() {
+  els.kTotal.textContent = state.questions.length;
+  els.kDone.textContent = state.done.size;
+  els.kScore.textContent = state.score;
+}
+
+function mountFirstPage() {
+  els.list.innerHTML = '';
+  state.page = 0;
+  mountNextPage();
+}
+
+function mountNextPage() {
+  const start = state.page * state.pageSize;
+  const end = Math.min(start + state.pageSize, state.order.length);
+  if (start >= end) {
+    els.sentinel.textContent = 'Fim';
     return;
   }
+  const onlyPending = els.fOnlyPending.checked;
+  for (let i = start; i < end; i++) {
+    const idx = state.order[i];
+    if (onlyPending && state.done.has(idx)) continue;
+    mountQuestion(idx);
+  }
+  state.page++;
+}
 
-  themes.forEach(t=>{
-    const chip = document.createElement('div');
-    chip.className = 'chip';
-    chip.innerHTML = `<input type="checkbox" /><span>${htmlEscape(t.name)}</span><small style="color:var(--muted)">(${t.count})</small>`;
-    chip.addEventListener('click', (e)=>{
-      const on = chip.classList.toggle('on');
-      chip.querySelector('input').checked = on;
-      toggleThemeSelection(t.name, on);
-    });
-    themesWrap.appendChild(chip);
+function rerenderList() {
+  els.list.innerHTML = '';
+  state.page = 0;
+  mountNextPage();
+}
+
+function mountQuestion(index) {
+  const q = state.questions[index];
+  const node = els.tpl.content.firstElementChild.cloneNode(true);
+  node.dataset.num = q.numero;
+  node.querySelector('.q-num').textContent = `#${q.numero}`;
+  node.querySelector('.q-id').textContent = q.id_qc ? `Q${q.id_qc}` : '';
+  node.querySelector('.q-type').textContent = q.tipo;
+  node.querySelector('.q-stem').textContent = q.enunciado;
+  const ol = node.querySelector('.q-options');
+
+  q.alternativas.forEach(({ key, text }) => {
+    const li = document.createElement('li');
+    li.setAttribute('role', 'button');
+    li.setAttribute('aria-disabled', 'false');
+    li.dataset.key = key;
+    const k = document.createElement('span');
+    k.className = 'opt-key';
+    k.textContent = key + ')';
+    const t = document.createElement('div');
+    t.className = 'opt-text';
+    t.textContent = text;
+    li.append(k, t);
+    li.addEventListener('click', () => onAnswer(li, q, index, node));
+    ol.append(li);
   });
+
+  node.querySelector('.q-show').addEventListener('click', () => {
+    reveal(node, q.correta);
+  });
+
+  els.list.append(node);
 }
 
-function toggleThemeSelection(themeName, on){
-  CURRENT.themes = CURRENT.themes || [];
-  if(on){
-    if(!CURRENT.themes.includes(themeName)) CURRENT.themes.push(themeName);
-  }else{
-    CURRENT.themes = CURRENT.themes.filter(t=>t!==themeName);
+function onAnswer(li, q, idx, card) {
+  if (li.getAttribute('aria-disabled') === 'true') return;
+  const chosen = li.dataset.key;
+  const correct = q.correta;
+  const options = card.querySelectorAll('.q-options li');
+  options.forEach(o => o.setAttribute('aria-disabled','true'));
+  if (chosen === correct) {
+    li.classList.add('correct');
+    state.score++;
+  } else {
+    li.classList.add('wrong');
+    options.forEach(o => { if (o.dataset.key === correct) o.classList.add('correct'); });
   }
-  btnBuscar.disabled = CURRENT.themes.length===0;
+  state.done.add(idx);
+  card.querySelector('.q-result').textContent = `Gabarito: ${correct}`;
+  renderStats();
 }
 
-/* ===== montar quiz com rolagem infinita ===== */
-async function startQuiz(){
-  // coletar questões da categoria selecionada filtrando pelos temas escolhidos
-  const files = FILES_BY_CATEGORY.get(CURRENT.catSlug) || [];
-  const wanted = new Set(CURRENT.themes.map(t=>t.toLowerCase()));
+function reveal(card, correct) {
+  const options = card.querySelectorAll('.q-options li');
+  options.forEach(o => o.setAttribute('aria-disabled','true'));
+  options.forEach(o => { if (o.dataset.key === correct) o.classList.add('correct'); });
+  const num = Number(card.dataset.num);
+  const idx = state.questions.findIndex(q => q.numero === num);
+  if (idx >= 0) state.done.add(idx);
+  card.querySelector('.q-result').textContent = `Gabarito: ${correct}`;
+  renderStats();
+}
 
-  const pool = [];
-  for(const path of files){
-    const raw = await fetchText(path);
-    const isDump = /\bQ\d{6,}\b/.test(raw) && /Respostas[\s\S]{0,600}\b\d+\s*:\s*[A-E]\b/i.test(raw);
-    const parsed = isDump ? parseTxtDump(raw) : {questions: parseTxtQuestions(raw)};
-    parsed.questions.forEach(q=>{
-      const qThemes = (q.themes||[]).map(x=>x.toLowerCase());
-      if(qThemes.some(t=>wanted.has(t))){
-        pool.push({...q, __src:path});
+/* ===================== PARSER QC ===================== */
+
+function parseQC(raw, overrideName) {
+  const sourceName = overrideName || guessSourceName(raw);
+  const norm = normalize(raw);
+  const keyMap = parseAnswerKey(norm);
+  const blocks = splitQuestions(norm);
+  const questions = [];
+
+  for (const b of blocks) {
+    const q = parseQuestionBlock(b);
+    if (!q) continue;
+    const correct = keyMap.get(q.numero);
+    if (!correct) continue; // ignorar sem gabarito
+    // coerção C/E -> V/F quando aplicável
+    const corr = mapCEtoVF(correct);
+    // manter só alternativas que existem
+    const has = q.alternativas.some(a => a.key === corr);
+    if (!has) {
+      // se corr C/E e alternativas V/F, converter
+      if ((corr === 'V' || corr === 'F') &&
+          q.alternativas.every(a => a.key === 'V' || a.key === 'F')) {
+        // ok
+      } else {
+        continue;
       }
-    });
-  }
-
-  if(!pool.length){ toast('Nenhuma questão para os temas selecionados'); return; }
-
-  // reset
-  CURRENT.pool = pool;
-  CURRENT.cursor = 0;
-  qList.innerHTML = '';
-  $('#currentCat').textContent = CURRENT.catName;
-  $('#currentThemes').textContent = '· ' + CURRENT.themes.join(', ');
-
-  screenIntro.classList.add('hide');
-  screenQuiz.classList.remove('hide');
-  btnHome.classList.remove('hide');
-
-  // primeira carga
-  renderNextBatch();
-
-  // observer para rolagem infinita
-  if(window._obs) window._obs.disconnect();
-  window._obs = new IntersectionObserver((entries)=>{
-    for(const e of entries){
-      if(e.isIntersecting) renderNextBatch();
     }
-  }, {root:null, rootMargin:'200px', threshold:0});
-  window._obs.observe(sentinel);
-}
-
-function renderNextBatch(){
-  const start = CURRENT.cursor;
-  const end = Math.min(CURRENT.cursor + CONFIG.pageSize, CURRENT.pool.length);
-  if(start>=end) return;
-  for(let i=start;i<end;i++){
-    const q = CURRENT.pool[i];
-    qList.appendChild(renderQuestionCard(q, i+1));
+    q.correta = corr;
+    questions.push(q);
   }
-  CURRENT.cursor = end;
+
+  return { questions, sourceName };
 }
 
-/* ===== cartão de questão ===== */
-function renderQuestionCard(q, idx){
-  const card = document.createElement('article');
-  card.className = 'card';
-  const metaThemes = (q.themes||[]).join(', ');
-  const header = `
-    <div class="meta">${htmlEscape(q.category)} · ${htmlEscape(metaThemes||'Tema')}</div>
-    <h3>Q${idx}</h3>
-  `;
-  const body = `<div class="enun">${toParasKeepMark(q.q)}</div>`;
-  const opts = q.type==='vf'
-    ? ['Verdadeiro','Falso']
-    : (q.options||[]);
+function normalize(text) {
+  // normalizações básicas
+  let t = text.replace(/\r\n?/g, '\n');
+  t = t.replace(/\t/g, ' ');
+  // colar linhas que são continuações de alternativa por indentação
+  t = t.split('\n').map(line => line.replace(/\s+$/,'')).join('\n');
+  // padronizar travessão/range
+  t = t.replace(/–|—/g, '-');
+  return t;
+}
 
-  const mapLetters = ['A','B','C','D','E'];
+function guessSourceName(text) {
+  const firstLine = text.split('\n').find(l => l.trim().length);
+  return firstLine ? `arquivo: ${firstLine.slice(0,60)}…` : 'arquivo sem título';
+}
 
-  const optsHtml = opts.map((t,i)=>`<button class="opt" data-idx="${i}"><strong>${mapLetters[i]||''}</strong> ${toParasKeepMark(t)}</button>`).join('');
-  const explain = `<div class="explain hide"></div>`;
+function parseAnswerKey(text) {
+  // Captura pares e intervalos como "61: D" ou "61-80: D"
+  const map = new Map();
+  const keyRegex = /(^|\s)(\d+)\s*-\s*(\d+)\s*:\s*([A-ECEVF])/gmi;
+  const pairRegex = /(^|\s)(\d+)\s*:\s*([A-ECEVF])/gmi;
 
-  const ia = `
-    <div class="ia">
-      <button class="btn ia-btn sm">Pergunte ao Google Modo I.A.</button>
-      <div class="ia-menu">
-        <button class="btn ghost sm" data-ia="exp">Explicação</button>
-        <button class="btn ghost sm" data-ia="gloss">Glossário</button>
-        <button class="btn ghost sm" data-ia="vid">Vídeos</button>
-      </div>
-    </div>`;
+  // Buscar da metade final do arquivo para evitar falsos positivos no enunciado
+  const mid = Math.floor(text.length * 0.5);
+  const tail = text.slice(mid);
 
-  card.innerHTML = header + body + optsHtml + explain + ia;
+  for (const m of tail.matchAll(keyRegex)) {
+    const a = Number(m[2]); const b = Number(m[3]); const v = m[4].toUpperCase();
+    for (let n = a; n <= b; n++) map.set(n, v);
+  }
+  for (const m of tail.matchAll(pairRegex)) {
+    const n = Number(m[2]); const v = m[3].toUpperCase();
+    map.set(n, v); // última ocorrência vence
+  }
+  return map;
+}
 
-  // interação
-  const btns = Array.from(card.querySelectorAll('.opt'));
-  const explainEl = card.querySelector('.explain');
-  let locked = false;
+function splitQuestions(text) {
+  // Delimitar por linhas que começam com número e opcional "Q\d+"
+  const lines = text.split('\n');
+  const idxs = [];
+  const head = /^\s*(\d{1,5})(?:\s+Q\d+)?\b/;
+  for (let i = 0; i < lines.length; i++) {
+    if (head.test(lines[i])) idxs.push(i);
+  }
+  const blocks = [];
+  for (let i = 0; i < idxs.length; i++) {
+    const start = idxs[i];
+    const end = i + 1 < idxs.length ? idxs[i+1] : lines.length;
+    const chunk = lines.slice(start, end).join('\n').trim();
+    if (chunk) blocks.push(chunk);
+  }
+  return blocks;
+}
 
-  btns.forEach(b=>{
-    b.addEventListener('click', ()=>{
-      if(locked) return;
-      locked = true;
-      const pick = parseInt(b.dataset.idx,10);
-      if(q.type==='vf'){
-        const correctIdx = q.answerBool ? 0 : 1; // Verdadeiro = índice 0
-        if(pick===correctIdx){ b.classList.add('correct'); toast('Parabéns'); }
-        else{
-          b.classList.add('wrong');
-          const correctBtn = btns[correctIdx]; correctBtn.classList.add('correct');
-          explainEl.classList.remove('hide');
-          explainEl.textContent = 'Resposta correta marcada em verde.';
-        }
-      }else{
-        const isRight = typeof q.answer==='number' && pick===q.answer;
-        if(isRight){ b.classList.add('correct'); toast('Parabéns'); }
-        else{
-          b.classList.add('wrong');
-          const correctBtn = btns.find(x=> parseInt(x.dataset.idx,10)===q.answer);
-          if(correctBtn) correctBtn.classList.add('correct');
-          explainEl.classList.remove('hide');
-          const letter = ['A','B','C','D','E'][q.answer]||'?';
-          explainEl.innerHTML = `Gabarito: <strong>${letter}</strong>`;
-        }
+function parseQuestionBlock(block) {
+  // Cabeçalho
+  const headerRe = /^\s*(\d{1,5})(?:\s+Q(\d+))?/;
+  const m = block.match(headerRe);
+  if (!m) return null;
+  const numero = Number(m[1]);
+  const id_qc = m[2] ? String(m[2]) : null;
+
+  // Separar enunciado e alternativas
+  const lines = block.split('\n').slice(1); // remove cabeçalho
+  const altStartIdx = lines.findIndex(l => isAltMarker(l));
+  if (altStartIdx === -1) return null;
+
+  const stem = lines.slice(0, altStartIdx).join('\n').trim();
+  const altLines = lines.slice(altStartIdx);
+
+  // Unir linhas contínuas de cada alternativa
+  const alts = [];
+  let current = null;
+  for (const raw of altLines) {
+    if (isAltMarker(raw)) {
+      if (current) alts.push(current);
+      const { key, text } = splitMarker(raw);
+      current = { key, text };
+    } else {
+      if (current) {
+        const s = raw.trim();
+        if (s) current.text += '\n' + s;
       }
-      // desabilitar restantes
-      btns.forEach(x=> x.disabled = true);
-      // habilitar IA
-      const iaWrap = card.querySelector('.ia');
-      iaWrap.classList.add('open'); // mostra menu no primeiro erro/acerto
-    });
-  });
-
-  // IA menu
-  const iaBtn = card.querySelector('.ia-btn');
-  const iaMenu = card.querySelector('.ia-menu');
-  iaBtn.addEventListener('click', (e)=>{ e.stopPropagation(); card.querySelector('.ia').classList.toggle('open'); });
-  iaMenu.querySelectorAll('button').forEach(x=>{
-    x.addEventListener('click', ()=>{
-      openGoogleIA(x.dataset.ia, q);
-      card.querySelector('.ia').classList.remove('open');
-    });
-  });
-  document.addEventListener('click', e=>{ if(!card.contains(e.target)) card.querySelector('.ia').classList.remove('open'); });
-
-  return card;
-}
-
-/* ===== Google IA prompts ===== */
-function openGoogleIA(mode, q){
-  const plainQ = String(q.q||'').replace(/<[^>]+>/g,'');
-  const opts = q.type==='vf' ? ['Verdadeiro','Falso'] : (q.options||[]);
-  let prompt = '';
-  if(mode==='exp'){
-    const base = q.type==='vf'
-      ? `Enunciado: ${plainQ}. Opções: Verdadeiro | Falso.`
-      : `Enunciado: ${plainQ}. Opções: ${opts.map((t,i)=>String.fromCharCode(65+i)+') '+t).join(' | ')}.`;
-    prompt = `Explique didaticamente por que a alternativa correta está certa e as demais estão erradas. ${base}`;
-  }else if(mode==='gloss'){
-    prompt = `Liste e defina de forma concisa os principais conceitos jurídicos presentes no enunciado: ${plainQ}`;
-  }else{
-    prompt = `Indique videoaulas no YouTube que expliquem o tema desta questão: ${plainQ}`;
+    }
   }
-  const url = 'https://www.google.com/search?udm=50&q=' + encodeURIComponent(prompt);
-  window.open(url, '_blank', 'noopener');
+  if (current) alts.push(current);
+
+  // Determinar tipo
+  const keys = new Set(alts.map(a => a.key));
+  let tipo = 'ME';
+  if (keys.size <= 2 && subset(keys, new Set(['V','F'])) ) tipo = 'VF';
+
+  // Filtrar alternativas inválidas
+  const validKeys = tipo === 'ME' ? ['A','B','C','D','E'] : ['V','F'];
+  const alternativas = alts
+    .filter(a => validKeys.includes(a.key))
+    .map(a => ({ key: a.key, text: a.text.trim() }))
+    .filter(a => a.text.length);
+
+  if (!alternativas.length) return null;
+
+  return { numero, id_qc, tipo, enunciado: stem, alternativas, correta: null };
 }
 
-/* ===== navegação ===== */
-function goHome(){
-  screenQuiz.classList.add('hide');
-  screenIntro.classList.remove('hide');
-  btnHome.classList.add('hide');
-  qList.innerHTML = '';
-  CURRENT.pool = []; CURRENT.cursor = 0;
+function isAltMarker(line) {
+  // Início de alternativa no começo da linha
+  return /^\s*([ABCDEVFabcdevf])[\)\.\-]\s+/.test(line);
+}
+function splitMarker(line) {
+  const m = line.match(/^\s*([ABCDEVFabcdevf])[\)\.\-]\s+(.*)$/);
+  const key = normalizeKey(m[1]);
+  return { key, text: m[2] || '' };
+}
+function normalizeKey(k) {
+  k = k.toUpperCase();
+  if (k === 'E') return 'E'; // cuidado: pode ser alternativa E ou Errado, resolvemos no gabarito
+  if (k === 'C') return 'C'; // só aparece em gabarito; não aqui
+  if (k === 'V' || k === 'F') return k;
+  return k; // A-D-E
+}
+function mapCEtoVF(letter) {
+  if (letter === 'C') return 'V';
+  if (letter === 'E') return 'F';
+  return letter;
+}
+function subset(a, b) {
+  for (const x of a) if (!b.has(x)) return false;
+  return true;
+}
+
+/* ===================== UTILS ===================== */
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = (Math.random() * (i + 1)) | 0;
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
 }
