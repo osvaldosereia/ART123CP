@@ -544,43 +544,54 @@ function materiaLabel(cat, materiaId){
   }
   return prettyName(materiaId); // fallback seguro
 }
-/* ===== manifest (PDF-only via GitHub contents) ===== */
-async function githubList(dir){
-  const api = `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/${dir}?ref=${CONFIG.branch}`;
-  const res = await fetch(api, {cache:'no-store'}); if(!res.ok) throw new Error('GitHub list falhou');
-  return await res.json();
-}
+// ===== manifest (PDF-only via Git Trees API) =====
 async function buildManifest(){
-  const cats = await githubList(CONFIG.dataDir);
-  const out = { title:'MeuJus', categories: [], shuffleDefault:{questions:false,options:true}, persistDefault:true, outro:{message:''} };
+  const { owner, repo, branch, dataDir } = CONFIG;
+  const api = `https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`;
+  const res = await fetch(api, { cache:'no-store' });
+  if (!res.ok) throw new Error('Git trees falhou');
+  const json = await res.json();
+  const tree = Array.isArray(json.tree) ? json.tree : [];
 
-  for(const c of cats){
-    if (c.type !== 'dir') continue;
-    const catId = c.name;
-    const cat = { id: catId, name: prettyName(catId), themes: [] };
+  // pega só PDFs dentro de dataDir
+  const pdfs = tree
+    .filter(n => n.type === 'blob' && n.path.startsWith(`${dataDir}/`) && /\.pdf$/i.test(n.path));
 
-    const mats = await githubList(`${CONFIG.dataDir}/${catId}`);
-    for(const m of mats){
-      if (m.type !== 'dir') continue;
-      const matId = m.name;
-      let files = [];
-      try{ files = await githubList(`${CONFIG.dataDir}/${catId}/${matId}`); }catch{}
-      for(const f of files){
-        if (f.type==='file' && /\.pdf$/i.test(f.name)){
-          const path = f.download_url ||
-            `https://raw.githubusercontent.com/${CONFIG.owner}/${CONFIG.repo}/${CONFIG.branch}/` +
-            `${encodeURIComponent(CONFIG.dataDir)}/${encodeURIComponent(catId)}/${encodeURIComponent(matId)}/${encodeURIComponent(f.name)}`;
-          cat.themes.push({
-            id: `${matId}-${f.name.replace(/\.pdf$/i,'')}`,
-            name: `${prettyName(matId)} · ${prettyName(f.name.replace(/\.pdf$/i,''))}`,
-            path
-          });
-        }
-      }
+  // group: data/<cat>/<materia>/<arquivo.pdf>
+  const categories = new Map(); // catId -> { id,name,themes:[] }
+
+  for (const f of pdfs){
+    const parts = f.path.split('/'); // [data, cat, materia, file]
+    if (parts.length < 4) continue;
+    const catId = parts[1];
+    const matId = parts[2];
+    const file  = parts.slice(3).join('/'); // suporta subpastas extras, se houver
+
+    if (!categories.has(catId)){
+      categories.set(catId, { id: catId, name: prettyName(catId), themes: [] });
     }
-    out.categories.push(cat);
-    await new Promise(r=>requestAnimationFrame(r));
+    const cat = categories.get(catId);
+
+    const fileName = file.split('/').pop();
+    const themeId  = `${matId}-${fileName.replace(/\.pdf$/i,'')}`;
+    const themeName= `${prettyName(matId)} · ${prettyName(fileName.replace(/\.pdf$/i,''))}`;
+    const raw = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${f.path.split('/').map(encodeURIComponent).join('/')}`;
+
+    cat.themes.push({ id: themeId, name: themeName, path: raw });
   }
+
+  // ordena para UX
+  const out = {
+    title:'MeuJus',
+    categories: [...categories.values()].map(c => ({
+      ...c,
+      themes: c.themes.sort((a,b)=> a.name.localeCompare(b.name,'pt-BR'))
+    })).sort((a,b)=> a.name.localeCompare(b.name,'pt-BR')),
+    shuffleDefault:{questions:false,options:true},
+    persistDefault:true,
+    outro:{message:''}
+  };
+
   return out;
 }
 
@@ -1220,12 +1231,13 @@ async function openHistoryItem(h){
 /* ===== init (PDF-only) ===== */
 init();
 async function init(){
-  show(screenIntro,true); show(screenQuiz,false); show(screenResult:false);
+  show(screenIntro,true); show(screenQuiz,false); show(screenResult,false);
 
   try{
     MANIFEST = await buildManifest();
   }catch(e){
-    console.warn('manifest build failed', e);
+    console.error('Falha ao montar manifest:', e);
+    toast('Falha ao listar PDFs no GitHub', 'error', 4000);
     MANIFEST = { title:'MeuJus', categories:[], shuffleDefault:{questions:false,options:true}, persistDefault:true, outro:{message:''} };
   }
 
@@ -1270,3 +1282,4 @@ async function init(){
     if(m){ I = Math.max(0, parseInt(m[1],10)-1); }
   }catch{}
 }
+
