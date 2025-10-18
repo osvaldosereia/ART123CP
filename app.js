@@ -696,6 +696,17 @@ function baseKeyFromPath(p){
   const file = String(p||'').split('/').pop() || '';
   return file.replace(/\.(txt|html?|json)$/i,'').replace(/\d+$/,'');
 }
+function materiaLabel(cat, materiaId){
+  const k = String(materiaId||'').toLowerCase();
+  if (SPECIAL_NAMES.has(k)) return SPECIAL_NAMES.get(k); // override opcional
+
+  const sample = (cat?.themes||[]).find(t => String(t.id||'').startsWith(materiaId + '-'));
+  if (sample && sample.name){
+    const left = String(sample.name).split('·')[0].trim(); // antes do “·”
+    if (left) return left;
+  }
+  return prettyName(materiaId); // fallback seguro
+}
 
 function updateThemes(){
   const catId = selCategory.value;
