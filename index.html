@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MeuJus — Quiz de Direito</title>
+  <link rel="stylesheet" href="./style.css" />
+  <!-- PDF.js (worker separado por performance) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.min.js" integrity="sha512-n3j5hO4/1uWdZlWdu3pH93v0z1OZV+8lZLaW1f3nE1QnJ6g48kR0MCoB18n3hQZbYv3c3nWw1nVx3K7QkE2dTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    // Caminho do worker do PDF.js
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.worker.min.js";
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="brand">MeuJus</h1>
+    <nav class="actions">
+      <button id="btn-novo" class="btn-plain">Novo quiz</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <div class="field">
+        <label class="label">Categoria</label>
+        <div class="select like-select" id="cat-select" data-placeholder="Escolha a categoria">
+          <button class="select-toggle" type="button"><span>Direito Penal</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button>
+          <!-- fixo por enquanto. outras categorias podem ser adicionadas no futuro -->
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Tema</label>
+        <div class="select like-select" id="tema-select" data-placeholder="Selecione o tema">
+          <button class="select-toggle" type="button"><span>Selecione o tema</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button>
+          <ul class="select-menu" hidden></ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <button id="btn-buscar" class="btn-primary">Buscar</button>
+      </div>
+    </section>
+
+    <hr class="sep"/>
+
+    <section id="quiz" class="quiz"></section>
+
+    <div id="load-more-wrap" class="load-more-wrap" hidden>
+      <button id="btn-load-more" class="btn-outline">Carregar mais</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <small>© MeuJus</small>
+  </footer>
+
+  <template id="q-item">
+    <article class="q">
+      <header class="q-head">
+        <div class="q-meta">
+          <span class="q-cat"></span>
+          <span class="dot">•</span>
+          <span class="q-tema"></span>
+        </div>
+        <h3 class="q-title"></h3>
+      </header>
+      <ul class="q-options"></ul>
+      <div class="q-tools">
+        <button class="btn-ai" type="button">Pergunte ao Google modo I.A.</button>
+        <div class="mini" hidden>
+          <a class="mini-btn" target="_blank" rel="noopener">Gabarito Comentado</a>
+          <a class="mini-btn" target="_blank" rel="noopener">Glossário</a>
+          <a class="mini-btn" target="_blank" rel="noopener">Vídeos</a>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
