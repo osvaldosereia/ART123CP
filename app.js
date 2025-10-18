@@ -769,24 +769,21 @@ function updateSubjects(){
 
 
 function selectedPath(){
-  const catId = selCategory.value;
-  const cat   = (MANIFEST?.categories||[]).find(c=>c.id===catId);
-  const theme = (cat?.themes||[]).find(t=>t.id===selTheme.value);
-
-  // prioridade ao assunto escolhido
   const v = selSubject?.value || '';
+
+  // assunto escolhido
   if (v) {
     try{
       const arr = JSON.parse(v);
-      if (Array.isArray(arr) && arr.length) return arr; // múltiplos arquivos unidos
+      if (Array.isArray(arr) && arr.length) return arr; // vários arquivos unidos
     }catch{
       return v; // valor simples
     }
   }
 
-  // fallback
-  if (Array.isArray(theme?.path)) return theme.path[0] || null;
-  return theme?.path || (catId && selTheme.value ? `data/${catId}/${selTheme.value}.txt` : null);
+  // sem assunto, impedir início
+  toast('Selecione um assunto primeiro', 'warn', 2200);
+  return null;
 }
 
 
