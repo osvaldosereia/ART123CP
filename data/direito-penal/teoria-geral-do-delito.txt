@@ -238,7 +238,7 @@ De acordo com as definições do art. 18 do Código Penal Brasileiro, assinale a
 ** D) O crime é culposo, quando o agente deu causa ao resultado por assumir o risco do produzi-lo.
 ** E) O crime é doloso, quando o agente deu causa ao resultado, assumindo o risco de produzi-lo, por imprudência, negligência ou imperícia.
 *** Gabarito: B
-**** Tipicidade, Tipo Penal Doloso, Tipo Penal Culposo Teoria Geral do Delito, Conceito de crime
+**** Tipicidade, Tipo Penal Doloso, Tipo Penal Culposo, Teoria Geral do Delito, Conceito de crime
 -----
 * Em um determinado período, durante a evolução da Teoria do Crime, a culpabilidade era integrada por quatro elementos, quais sejam: dolo, culpa, exigibilidade de conduta diversa e imputabilidade. Nesse cenário, o sistema da teoria do delito e a concepção da culpabilidade ventilados são, respectivamente:
 ** A) sistema neoclássico e concepção psicológico-normativa da culpabilidade;
@@ -389,7 +389,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) Com o surgimento do finalismo, o tipo sofreu forte mudança estrutural no que se refere ao dolo e à culpa, notadamente porque estes dois elementos passaram a integrar a culpabilidade.
 ** E) Segundo entendimento dos doutrinadores brasileiros acerca da evolução da teoria do tipo, a concepção que mais se adapta ao direito penal pátrio é a de Hans Wezel, precursor do finalismo, para o qual a tipicidade é ratio essendi da antijuridicidade.
 *** Gabarito: A
-**** Tipicidade, Teoria Geral do Delito, Sistemas penais Tipicidade formal
+**** Tipicidade, Teoria Geral do Delito, Sistemas penais, Tipicidade formal
 -----
 * E aí está o apelante. Vagando de bares a cadeia, de cadeia a internações, com cessações de periculosidade e recidivas a testemunhar a falência da sociedade em termos de recuperação do ser humano desajustado.
 * Des. Adauto Suannes, TACRIM/SP, AC 284.059.
@@ -1233,7 +1233,7 @@ Para o sistema causal-naturalista de Liszt-Beling, a parte externa do delito, ou
 ** D) somente tem aplicabilidade em crimes contra o patrimônio.
 ** E) exige, para seu reconhecimento, que as conseqüências da conduta tenham sido de pequena relevância.
 *** Gabarito: D
-**** Tipicidade, Noções Fundamentais, Princípios limitadores do poder punitivo estatal Teoria Geral do Delito, Crimes contra o patrimônio
+**** Tipicidade, Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito, Crimes contra o patrimônio
 -----
 * Tendo em vista que, segundo Aníbal Bruno, "o tipo é por definição a fórmula descritiva das circunstâncias objetivas do crime", os tipos anormais:
 ** A) são os que contêm elementos normativos, como a expressão "sem justa causa".
