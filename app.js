@@ -265,6 +265,58 @@ async function buildThemesMultiselect(){
     $("#btnBuscar").disabled = true;
   });
 }
+/* ==== IO ==== */
+async function loadTxt(path){
+  const res = await fetch(path);
+  if(!res.ok) throw new Error(`Falhou ${path}: ${res.status}`);
+  return await res.text();
+}
+
+/* ==== Cache por arquivo: adiciona themesCanon ==== */
+async function getParsedForPath(path){
+  if (STATE.cache.has(path)) return STATE.cache.get(path).parsed;
+  const text = await loadTxt(path);
+  const parsed = parseTxt(text).map(q=>({
+    ...q,
+    themesCanon: (q.themes||[]).map(canon)
+  }));
+  STATE.cache.set(path, { text, parsed });
+  return parsed;
+}
+
+/* ==== Render da lista do multiselect de temas ==== */
+function renderMsList(){
+  const list = $("#msList"); list.innerHTML="";
+  const items = getVisibleItems(); // chaves CANÔNICAS
+  const frag = document.createDocumentFragment();
+
+  items.forEach(cKey=>{
+    const label = STATE.themeMap.get(cKey) || cKey;
+    const on = STATE.temasSel.has(cKey);
+    const row = document.createElement("div");
+    row.className = "ms-item"+(on?" on":"");
+    row.dataset.tema = cKey; // guarda canônica
+    row.innerHTML = `<input type="checkbox" ${on?"checked":""} aria-label="${label}"><span>${label}</span>`;
+    frag.appendChild(row);
+  });
+
+  list.appendChild(frag);
+
+  list.onclick = (e)=>{
+    const item = e.target.closest(".ms-item");
+    if(!item || !list.contains(item)) return;
+    const cKey = item.dataset.tema;
+    const ck = item.querySelector("input");
+    ck.checked = !ck.checked;
+    item.classList.toggle("on", ck.checked);
+    if(ck.checked) STATE.temasSel.add(cKey); else STATE.temasSel.delete(cKey);
+    updateTriggerLabel(); updateCount();
+    $("#btnBuscar").disabled = STATE.temasSel.size===0;
+  };
+
+  updateTriggerLabel();
+  updateCount();
+}
 
 /* ==================== BUSCA E QUIZ ==================== */
 async function startSearch(){
