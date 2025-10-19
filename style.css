@@ -24,7 +24,10 @@ body{
   position:sticky;top:0;z-index:50;
   display:flex;justify-content:space-between;align-items:center;
   padding:10px 14px;background:#fff;border-bottom:1px solid var(--line);
+  transition:transform .18s ease;
 }
+.topbar.hide{ transform:translateY(-100%); }
+
 .logo{font-weight:700;letter-spacing:.2px}
 .btn{
   appearance:none;border:1px solid var(--line);background:#fff;color:var(--text);
@@ -62,9 +65,13 @@ body{
 .chev{opacity:.6}
 
 /* Chips */
-.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips{
+  display:flex;flex-wrap:wrap;gap:8px;
+  justify-content:flex-start;align-items:flex-start;
+}
 .chip{
   border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;cursor:pointer;
+  text-align:left;white-space:normal;max-width:100%;
 }
 .chip.on{background:#111;color:#fff;border-color:#111}
 
