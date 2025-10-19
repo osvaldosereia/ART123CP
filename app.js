@@ -1,30 +1,12 @@
-/* app.js — Parser exclusivo para TXT no formato especificado. Sem legado. */
+/* app.js — Parser TXT + integração com index.html atual */
 "use strict";
 
-/** ========================= Núcleo de parsing ========================= **/
+/* ================= PARSER TXT ================= */
 
-/**
- * Converte o conteúdo TXT no formato padronizado em uma lista de questões.
- * Regras:
- * - Blocos separados por linha contendo apenas traços: `-----` (com ou sem espaços).
- * - Enunciado: linhas iniciando com `* `, podem ser múltiplas e intercaladas com linhas em branco.
- * - Alternativas: linhas iniciando com `** X) ` onde X ∈ {A,B,C,D,E}.
- * - Gabarito: linha única `*** Gabarito: X` onde X ∈ {A,B,C,D,E}.
- * @param {string} rawTxt
- * @returns {{questions: ParsedQuestion[], warnings: string[]}}
- */
 function parseTxt(rawTxt) {
-  if (typeof rawTxt !== "string") {
-    throw new TypeError("Entrada deve ser string");
-  }
-
-  const lines = normalizeNewlines(rawTxt).split("\n");
-
-  /** @type {ParsedQuestion[]} */
-  const out = [];
-  /** @type {string[]} */
-  const warnings = [];
-
+  if (typeof rawTxt !== "string") throw new TypeError("Entrada deve ser string");
+  const lines = rawTxt.replace(/\r\n?/g, "\n").split("\n");
+  const out = [], warnings = [];
   let cur = resetCurrent();
 
   const pushIfComplete = () => {
@@ -36,328 +18,201 @@ function parseTxt(rawTxt) {
   };
 
   for (let i = 0; i < lines.length; i++) {
-    const raw = lines[i];
-    const line = raw.trimEnd();
+    const line = lines[i].trimEnd();
 
-    // Separador de blocos
-    if (isSeparator(line)) {
-      pushIfComplete();
-      continue;
+    if (/^-+\s*$/.test(line)) { pushIfComplete(); continue; }
+
+    if (line.trim() === "") { if (cur.stage === "stem") { cur.stem.push(""); cur.hasData = true; } continue; }
+
+    const g = (/^\*\*\*\s*Gabarito:\s*([A-E])\s*$/.exec(line) || [])[1];
+    if (g) { cur.answer = g; cur.stage = "answer"; cur.hasData = true; continue; }
+
+    const mAlt = /^\*\*\s*([A-E])\)\s*(.+)$/.exec(line);
+    if (mAlt) {
+      const alt = { key: mAlt[1], text: mAlt[2].trim() };
+      if (!cur.options.some(o => o.key === alt.key)) cur.options.push(alt);
+      else warnings.push(warn(i + 1, `Alternativa "${alt.key}" repetida; linha ignorada.`));
+      cur.stage = "options"; cur.hasData = true; continue;
     }
 
-    // Linha vazia: preserva como parágrafo do enunciado enquanto em "stem"
-    if (line.trim() === "") {
-      if (cur.stage === "stem") {
-        cur.stem.push("");
-        cur.hasData = true;
-      }
-      continue;
-    }
+    if (line.startsWith("* ")) { cur.stem.push(line.slice(2)); cur.stage = "stem"; cur.hasData = true; continue; }
 
-    // Gabarito
-    const g = parseGabarito(line);
-    if (g) {
-      cur.answer = g;
-      cur.stage = "answer";
-      cur.hasData = true;
-      continue;
-    }
-
-    // Alternativa
-    const alt = parseAlternativa(line);
-    if (alt) {
-      if (cur.options.some(o => o.key === alt.key)) {
-        warnings.push(warn(i + 1, `Alternativa "${alt.key}" repetida; linha ignorada.`));
-      } else {
-        cur.options.push(alt);
-      }
-      cur.stage = "options";
-      cur.hasData = true;
-      continue;
-    }
-
-    // Enunciado
-    const stemLine = parseStemLine(line);
-    if (stemLine !== null) {
-      cur.stem.push(stemLine);
-      cur.stage = "stem";
-      cur.hasData = true;
-      continue;
-    }
-
-    // Ruído
-    if (cur.stage === "stem" || !cur.hasData) {
-      cur.stem.push(line);
-      cur.hasData = true;
-      continue;
-    } else if (cur.stage === "options") {
-      warnings.push(warn(i + 1, "Linha ignorada: conteúdo fora do padrão após alternativas."));
-      continue;
-    } else if (cur.stage === "answer") {
-      warnings.push(warn(i + 1, "Linha ignorada: conteúdo após gabarito."));
-      continue;
-    }
+    if (cur.stage === "stem" || !cur.hasData) { cur.stem.push(line); cur.hasData = true; continue; }
+    if (cur.stage === "options") { warnings.push(warn(i + 1, "Linha ignorada após alternativas.")); continue; }
+    if (cur.stage === "answer") { warnings.push(warn(i + 1, "Linha ignorada após gabarito.")); continue; }
   }
-
-  // Fim do arquivo
   pushIfComplete();
-
-  // Filtra questões sem enunciado útil
-  const questions = out.filter(q => q.stem.trim().length > 0);
-  return { questions, warnings };
+  return { questions: out.filter(q => q.stem.trim().length > 0), warnings };
 }
 
-/** ========================= Utilidades ========================= **/
-
-/** @typedef {{ id: string, stem: string, stemLines: string[], options: {key: string, text: string}[], answer: string }} ParsedQuestion */
-
-function normalizeNewlines(s) {
-  return s.replace(/\r\n?/g, "\n");
+function resetCurrent() { return { hasData:false, stage:"empty", stem:[], options:[], answer:null }; }
+function finalizeCurrent(cur){
+  const stemLines = trimEmpty(cur.stem);
+  return { id: uuid(), stemLines, stem: stemLines.join("\n").trim(), options: cur.options.slice(), answer: cur.answer ?? "" };
 }
-function isSeparator(line) {
-  return /^-+\s*$/.test(line);
+function trimEmpty(arr){ let a=0,b=arr.length; while(a<b&&arr[a].trim()==="")a++; while(b>a&&arr[b-1].trim()==="")b--; return arr.slice(a,b); }
+function validateQuestion(q,w){
+  const keys = new Set(q.options.map(o=>o.key));
+  for (const k of ["A","B","C","D","E"]) if(!keys.has(k)) w.push(`Questão "${shorten(q.stem)}": faltou ${k}.`);
+  if(!q.answer) w.push(`Questão "${shorten(q.stem)}": gabarito ausente.`);
+  else if(!keys.has(q.answer)) w.push(`Questão "${shorten(q.stem)}": gabarito "${q.answer}" não existe.`);
 }
-function parseStemLine(line) {
-  return line.startsWith("* ") ? line.slice(2) : null;
-}
-function parseAlternativa(line) {
-  // ** A) Texto...
-  const m = /^\*\*\s*([A-E])\)\s*(.+)$/.exec(line);
-  if (!m) return null;
-  return { key: m[1], text: m[2].trim() };
-}
-function parseGabarito(line) {
-  const m = /^\*\*\*\s*Gabarito:\s*([A-E])\s*$/.exec(line);
-  return m ? m[1] : null;
-}
-function resetCurrent() {
-  return {
-    hasData: false,
-    stage: "empty", // "empty" | "stem" | "options" | "answer"
-    stem: [],
-    options: [],
-    answer: null,
-  };
-}
-function finalizeCurrent(cur) {
-  const stemLines = trimEmptyEdges(cur.stem);
-  /** @type {ParsedQuestion} */
-  return {
-    id: cryptoId(),
-    stemLines,
-    stem: joinStem(stemLines),
-    options: cur.options.slice(),
-    answer: cur.answer ?? "",
-  };
-}
-function joinStem(lines) {
-  return lines.join("\n").trim();
-}
-function trimEmptyEdges(lines) {
-  let a = 0, b = lines.length;
-  while (a < b && lines[a].trim() === "") a++;
-  while (b > a && lines[b - 1].trim() === "") b--;
-  return lines.slice(a, b);
-}
-function validateQuestion(q, warnings) {
-  const keys = new Set(q.options.map(o => o.key));
-  const missing = [];
-  for (const k of ["A", "B", "C", "D", "E"]) if (!keys.has(k)) missing.push(k);
-  if (missing.length > 0) {
-    warnings.push(`Questão "${shorten(q.stem)}": alternativas ausentes: ${missing.join(", ")}.`);
-  }
-  if (!q.answer) {
-    warnings.push(`Questão "${shorten(q.stem)}": gabarito ausente.`);
-  } else if (!keys.has(q.answer)) {
-    warnings.push(`Questão "${shorten(q.stem)}": gabarito "${q.answer}" não corresponde a alternativa existente.`);
-  }
-}
-function warn(lineNumber, msg) {
-  return `L${lineNumber}: ${msg}`;
-}
-function shorten(s, n = 80) {
-  const t = s.replace(/\s+/g, " ").trim();
-  return t.length <= n ? t : t.slice(0, n - 1) + "…";
-}
-function cryptoId() {
-  try {
-    if (typeof crypto !== "undefined" && crypto.randomUUID) return crypto.randomUUID();
-  } catch {}
-  return "q_" + Math.random().toString(36).slice(2, 10);
-}
+function warn(n,msg){ return `L${n}: ${msg}`; }
+function shorten(s,n=80){ s=s.replace(/\s+/g," ").trim(); return s.length<=n?s:s.slice(0,n-1)+"…"; }
+function uuid(){ try{ if(crypto?.randomUUID) return crypto.randomUUID(); }catch{} return "q_"+Math.random().toString(36).slice(2,10); }
 
-/** ========================= API pública ========================= **/
+function parseQuestions(txt){ return parseTxt(txt).questions; }
+function parseWithWarnings(txt){ return parseTxt(txt); }
+function toJSON(questions){ return JSON.stringify({version:1,format:"txt:v1",count:questions.length,questions},null,2); }
 
-/**
- * Retorna apenas as questões.
- * @param {string} txt
- * @returns {ParsedQuestion[]}
- */
-function parseQuestions(txt) {
-  return parseTxt(txt).questions;
-}
+/* Expor API global mesmo em módulo */
+globalThis.QuestionsTxt = { parseQuestions, parseWithWarnings, toJSON };
+globalThis.debugParse = (s)=>{ const r=parseWithWarnings(s); console.log(r); return r; };
 
-/**
- * Retorna questões e avisos.
- * @param {string} txt
- * @returns {{questions: ParsedQuestion[], warnings: string[]}}
- */
-function parseWithWarnings(txt) {
-  return parseTxt(txt);
-}
+/* ================= INTEGRAÇÃO COM index.html ================= */
 
-/**
- * Serializa em JSON estável.
- * @param {ParsedQuestion[]} questions
- * @returns {string}
- */
-function toJSON(questions) {
-  return JSON.stringify({ version: 1, format: "txt:v1", count: questions.length, questions }, null, 2);
-}
+const $ = (sel)=>document.querySelector(sel);
+const $$ = (sel)=>document.querySelectorAll(sel);
 
-/** ========================= UI opcional (progressive enhancement) =========================
- * IDs esperados no HTML, caso existam:
- *  - #filePicker (input[type=file])
- *  - #txtInput (textarea)
- *  - #parseBtn (button)
- *  - #downloadJsonBtn (button)
- *  - #warnings (pre)
- *  - #questionsContainer (div)
- */
-document.addEventListener("DOMContentLoaded", () => {
-  try {
-    const $file = document.getElementById("filePicker");
-    const $txt = document.getElementById("txtInput");
-    const $parse = document.getElementById("parseBtn");
-    const $dl = document.getElementById("downloadJsonBtn");
-    const $warn = document.getElementById("warnings");
-    const $list = document.getElementById("questionsContainer");
+let STATE = {
+  all: /** @type {ParsedQuestion[]} */([]),
+  filtered: /** @type {ParsedQuestion[]} */([]),
+  idx: 0,
+  shuffle: false,
+};
 
-    /** @type {ParsedQuestion[]} */
-    let lastQuestions = [];
-
-    const renderWarnings = (warnings) => {
-      if (!$warn) return;
-      $warn.textContent = warnings.length ? warnings.join("\n") : "";
-    };
-
-    const renderQuestions = (questions) => {
-      if (!$list) return;
-      $list.innerHTML = "";
-      questions.forEach((q, i) => {
-        const card = document.createElement("div");
-        card.className = "qcard";
-        card.style.border = "1px solid #ddd";
-        card.style.borderRadius = "12px";
-        card.style.padding = "12px";
-        card.style.margin = "10px 0";
-
-        const h = document.createElement("div");
-        h.textContent = `Q${i + 1}`;
-        h.style.fontWeight = "600";
-        h.style.marginBottom = "8px";
-        card.appendChild(h);
-
-        const stem = document.createElement("pre");
-        stem.textContent = q.stem;
-        stem.style.whiteSpace = "pre-wrap";
-        stem.style.margin = "0 0 8px 0";
-        card.appendChild(stem);
-
-        const ul = document.createElement("ul");
-        ul.style.margin = "0 0 8px 16px";
-        for (const opt of q.options) {
-          const li = document.createElement("li");
-          li.textContent = `${opt.key}) ${opt.text}`;
-          ul.appendChild(li);
-        }
-        card.appendChild(ul);
-
-        const ans = document.createElement("div");
-        ans.textContent = `Gabarito: ${q.answer || "—"}`;
-        ans.style.fontFamily = "monospace";
-        card.appendChild(ans);
-
-        $list.appendChild(card);
-      });
-    };
-
-    const doParse = (txt) => {
-      const { questions, warnings } = parseWithWarnings(txt);
-      lastQuestions = questions;
-      renderWarnings(warnings);
-      renderQuestions(questions);
-      console.debug("[QuestionsTxt] parsed", { count: questions.length, warnings });
-    };
-
-    if ($file) {
-      $file.addEventListener("change", async (e) => {
-        try {
-          const input = /** @type {HTMLInputElement} */ (e.target);
-          const f = input.files && input.files[0];
-          if (!f) return;
-          const txt = await f.text();
-          doParse(txt);
-        } catch (err) {
-          console.error("[QuestionsTxt] erro lendo arquivo:", err);
-          alert("Erro ao ler o arquivo selecionado.");
-        }
-      });
-    }
-
-    if ($parse && $txt) {
-      $parse.addEventListener("click", () => {
-        try {
-          doParse($txt.value || "");
-        } catch (err) {
-          console.error("[QuestionsTxt] erro no parse:", err);
-          alert("Erro no parse. Veja o console para detalhes.");
-        }
-      });
-    }
-
-    if ($dl) {
-      $dl.addEventListener("click", () => {
-        try {
-          const blob = new Blob([toJSON(lastQuestions)], { type: "application/json;charset=utf-8" });
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.href = url;
-          const ts = new Date().toISOString().replace(/[:.]/g, "-");
-          a.download = `questions-${ts}.json`;
-          document.body.appendChild(a);
-          a.click();
-          URL.revokeObjectURL(url);
-          a.remove();
-        } catch (err) {
-          console.error("[QuestionsTxt] erro no download:", err);
-          alert("Erro ao preparar o download do JSON.");
-        }
-      });
-    }
-  } catch (err) {
-    console.error("[QuestionsTxt] falha na inicialização da UI:", err);
-  }
+window.addEventListener("DOMContentLoaded", async () => {
+  // Carrega penal.txt da raiz do site
+  const txt = await fetchTxt("penal.txt");
+  const { questions, warnings } = parseWithWarnings(txt);
+  if (warnings.length) console.warn("[warnings]", warnings);
+  STATE.all = questions.slice();
+  updateKpis(STATE.all.length, 0, 0);
+  wireHome();
 });
 
-/** ========================= Exposição global e Node ========================= **/
-const api = { parseQuestions, parseWithWarnings, toJSON };
-try {
-  // Disponível mesmo com <script type="module">
-  globalThis.QuestionsTxt = api;
-  // Função de depuração global
-  globalThis.debugParse = function (sampleTxt) {
-    const res = parseWithWarnings(sampleTxt);
-    console.log("[debugParse] resultado:", res);
-    return res;
-  };
-} catch { /* ambiente sem globalThis não esperado no navegador moderno */ }
-
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = api;
+async function fetchTxt(path){
+  const res = await fetch(path, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Falha ao carregar ${path}: ${res.status}`);
+  return await res.text();
 }
 
-/** ========================= Tipos JSDoc ========================= **/
+function wireHome(){
+  const btnStart = $("#btnStart");
+  const shuffle = $("#optShuffle");
+  const pathInfo = $("#pathInfo");
+
+  if (pathInfo) pathInfo.textContent = "Banco: penal.txt";
+
+  if (shuffle) shuffle.addEventListener("change", (e)=>{
+    STATE.shuffle = e.target.checked;
+  });
+
+  if (btnStart) {
+    btnStart.disabled = STATE.all.length === 0;
+    btnStart.addEventListener("click", startQuiz);
+    btnStart.disabled = false;
+  }
+
+  $("#btnReset")?.addEventListener("click", resetAll);
+}
+
+function startQuiz(){
+  STATE.filtered = STATE.all.slice();
+  if (STATE.shuffle) shuffleInPlace(STATE.filtered);
+  STATE.idx = 0;
+  $("#home")?.classList.add("hidden");
+  $("#quiz")?.classList.remove("hidden");
+  renderNext();
+}
+
+function resetAll(){
+  $("#quizList").innerHTML = "";
+  $("#home")?.classList.remove("hidden");
+  $("#quiz")?.classList.add("hidden");
+  updateKpis(STATE.all.length, 0, 0);
+}
+
+function renderNext(){
+  if (STATE.idx >= STATE.filtered.length) {
+    $("#sentinel").textContent = "Fim.";
+    return;
+  }
+  const q = STATE.filtered[STATE.idx];
+  const el = buildQuestion(q, STATE.idx + 1);
+  $("#quizList").appendChild(el);
+  STATE.idx++;
+  $("#sentinel").textContent = `${STATE.idx}/${STATE.filtered.length}`;
+  updateKpis(STATE.filtered.length, STATE.idx - 1, countHits());
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function buildQuestion(q, num){
+  const tpl = /** @type {HTMLTemplateElement} */($("#tplQuestion"));
+  const node = tpl.content.firstElementChild.cloneNode(true);
+  const $num = node.querySelector(".q-num");
+  const $id = node.querySelector(".q-id");
+  const $stem = node.querySelector(".q-stem");
+  const $opts = node.querySelector(".q-options");
+  const $res = node.querySelector(".q-result");
+  const $btnShow = node.querySelector(".q-show");
+  const $btnNext = node.querySelector(".q-next");
+
+  node.dataset.num = String(num);
+  $num.textContent = `#${num}`;
+  $id.textContent = q.id.slice(0,8);
+  $stem.innerText = q.stem;
+
+  q.options.forEach(opt=>{
+    const li = document.createElement("li");
+    li.innerText = `${opt.key}) ${opt.text}`;
+    li.dataset.key = opt.key;
+    li.tabIndex = 0;
+    li.addEventListener("click", ()=>select(li, q, $res));
+    li.addEventListener("keypress", (e)=>{ if(e.key==="Enter") select(li, q, $res); });
+    $opts.appendChild(li);
+  });
+
+  $btnShow.addEventListener("click", ()=>{
+    $res.textContent = `Gabarito: ${q.answer}`;
+    $res.className = "q-result ok";
+    highlightCorrect($opts, q.answer);
+  });
+  $btnNext.addEventListener("click", renderNext);
+
+  return node;
+}
+
+function select(li, q, $res){
+  const key = li.dataset.key;
+  const correct = key === q.answer;
+  $res.textContent = correct ? "Correto" : `Errado • Gabarito: ${q.answer}`;
+  $res.className = "q-result " + (correct ? "ok" : "bad");
+  highlightCorrect(li.parentElement, q.answer);
+  li.parentElement.querySelectorAll("li").forEach(el=>el.classList.add("locked"));
+}
+
+function highlightCorrect(ol, ans){
+  ol.querySelectorAll("li").forEach(el=>{
+    el.classList.toggle("hit", el.dataset.key === ans);
+  });
+}
+
+function updateKpis(total, done, hits){
+  $("#kTotal").textContent = String(total);
+  $("#kDone").textContent = String(done);
+  $("#kScore").textContent = String(hits);
+}
+
+function countHits(){
+  return [...$$(".q-result.ok")].length;
+}
+
+function shuffleInPlace(a){
+  for (let i=a.length-1;i>0;i--){ const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+}
+
+/* ===== Tipagem JSDoc ===== */
 /**
  * @typedef {Object} ParsedQuestion
  * @property {string} id
