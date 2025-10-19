@@ -2826,7 +2826,7 @@
 ** D) Incorreta, pois o instituto da escusa absolutória ficará afastado ante o crime ter sido perpetrado durante a madrugada.
 ** E) Incorreta, pois o instituto da escusa absolutória ficará afastado pela representação da vítima.
 *** Gabarito: C
-**** Culpabilidade, Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Potencial conhecimento da ilicitude - Erro de proibição, Noções Gerais da Culpabilidade, Ação penal, Ação penal pública condicionada à representação, Causas de extinção da punibilidade, , Perdão judicial
+**** Culpabilidade, Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Potencial conhecimento da ilicitude, Erro de proibição, Noções Gerais da Culpabilidade, Ação penal, Ação penal pública condicionada à representação, Causas de extinção da punibilidade, Perdão judicial
 
 -----
 * Pedrinho, com 19 anos de idade, trazia consigo arma branca (faca) em seu veículo automotor.
@@ -3002,7 +3002,7 @@
 ** D) I, III e IV.
 ** E) II, III e IV.
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, Lei penal no tempo, Teoria Geral do Delito, Causas de extinção da punibilidade, , Abolitio criminis
+**** Noções Fundamentais do Direito Penal, Lei penal no tempo, Teoria Geral do Delito, Causas de extinção da punibilidade, Abolitio criminis
 -----
 * Considere o seguinte caso hipotético: Kantiferes, no dia 20 de outubro de 2020, no município de São Paulo, utilizando-se de um revólver Calibre .38, ameaça matar Artêmios e o obriga a lhe entregar seu relógio.
 * Após conseguir o objeto, Kantiferes foge, sendo capturado, antes do oferecimento da denúncia, no município de Guarulhos, ainda na posse do armamento e do relógio. Diante desta situação e nos termos do Código Penal, é correto afirmar que:
@@ -3995,7 +3995,7 @@
 ** D) O direito penal só deverá ser utilizado subsidiariamente (como ultima ratio) para a resolução de conflitos sociais.
 ** E) A autolesão e, em geral, condutas que não excedam o âmbito do próprio autor não devem ser objeto de incriminação.
 *** Gabarito: E
-**** Noções Fundamentais do Direito Penal, , Princípios limitadores do poder punitivo estatal
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal
 -----
 * A respeito da aplicação da lei penal, julgue o item a seguir.
 * Lei posterior que deixe de considerar crime determinado fato faz cessarem tanto os efeitos penais quanto os efeitos cíveis de eventual sentença condenatória.
@@ -4010,7 +4010,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Noções Fundamentais do Direito Penal, , A norma penal
+**** Noções Fundamentais do Direito Penal, A norma penal
 
 -----
 * Considere a seguinte situação hipotética:
@@ -4671,7 +4671,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, , Principios limitadores do poder punitivo estatal
+**** Noções Fundamentais do Direito Penal, Principios limitadores do poder punitivo estatal
 
 -----
 * Analise o conceito abaixo e, depois, assinale a alternativa que corresponde ao Princípio correspondente:
@@ -4832,7 +4832,7 @@ IV - Winfried Hassemer, da chamada "Escola Penal de Frankfurt", observa que o Di
 ** C) São corretos os itens II e III.
 ** D) É correto apenas o item I.
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, , Teoria Geral do Delito Sistemas penais
+**** Noções Fundamentais do Direito Penal, Teoria Geral do Delito Sistemas penais
 
 -----
 * A norma penal incriminadora é formada basicamente por dois preceitos: o preceito primário (ou preceptum juris), em que se prevê a conduta abstrata que a sociedade pretende punir, o preceito secundário (ou sanctio juris), em que se fixa a sanção penal correspondente.
@@ -5919,7 +5919,7 @@ Estão certos apenas os itens
 ** D) a criação de crimes e penas por meio de medida provisória não ofende o princípio da legalidade.
 ** E) nenhuma pena passará da pessoa do condenado, podendo a obrigação de reparar o dano e a decretação do perdimento de bens ser, nos termos da lei, estendidas aos sucessores e contra eles executadas, até o limite do valor do patrimônio transferido.
 *** Gabarito: D
-**** Noções Fundamentais do Direito Penal, , Princípios limitadores do poder punitivo estatal, Conflito aparente de normas
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Conflito aparente de normas
 -----
 * Com base na jurisprudência dos tribunais superiores, julgue os itens seguintes, a respeito dos crimes contra o patrimônio e contra a propriedade imaterial.
 * I No caso de furto qualificado, não é possível o reconhecimento do privilégio da substituição da pena de reclusão pela de detenção nem a diminuição da pena de um a dois terços ou a aplicação somente da pena de multa.
@@ -5962,7 +5962,7 @@ Estão certos apenas os itens
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, , A norma penal
+**** Noções Fundamentais do Direito Penal, A norma penal
 -----
 * A respeito da aplicação da lei penal, julgue o item a seguir.
 * No ordenamento jurídico brasileiro, é adotada a teoria da ubiquidade quando se fala do tempo do crime, ou seja, o crime é considerado praticado no momento da ação ou da omissão.
@@ -6191,7 +6191,7 @@ Estão certos apenas os itens
 ** D) As alternativas "a", "b" e "c" estão corretas.
 ** E) Apenas as alternativas "a" e "b" estão corretas.
 *** Gabarito: E
-**** Noções Fundamentais do Direito Penal, , Antijuridicidade, Legítima defesa
+**** Noções Fundamentais do Direito Penal, Antijuridicidade, Legítima defesa
 -----
 * Assinale a alternativa correta.
 ** A) Na fixação da pena, o Magistrado após o reconhecimento da existência do crime e sua autoria tem uma discricionariedade "regrada ou vinculada".
