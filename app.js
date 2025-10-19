@@ -1,13 +1,8 @@
 // app.js — SPA de estudo
-// ATENÇÃO: UI intacta. Alterado apenas o parser para aceitar JSON (novo formato) além do texto antigo.
+// UI intacta. Parser aceita JSON novo e texto antigo. Catálogo autodetectado via GitHub API.
 
-const CATALOG = {
-  'Direito Penal': [
-    // Ajuste estes caminhos conforme sua pasta /data
-    // Ex.: 'data/quiz-1-10.json',
-    'data/direito-penal/p3_p2_p1_merged.txt',
-  ],
-};
+// ====== CATÁLOGO DINÂMICO ======
+let CATALOG = {}; // preenchido em discoverCatalog()
 
 // ====== ELEMENTOS ======
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -52,22 +47,23 @@ const state = {
 };
 
 // ====== BOOT ======
-document.addEventListener('DOMContentLoaded', () => {
-  populateCategories();
+document.addEventListener('DOMContentLoaded', async () => {
   wireUI();
+  await discoverCatalog();
+  populateCategories();
   restoreLastSession();
 });
 
 // ====== UI ======
 function populateCategories(){
-  const items = Object.keys(CATALOG).map((name,i) =>
+  const names = Object.keys(CATALOG).sort((a,b)=>a.localeCompare(b,'pt-BR'));
+  const items = names.map((name,i) =>
     `<div class="item" role="option" aria-selected="false" data-i="${i}" data-name="${escapeHtml(name)}">${escapeHtml(name)}</div>`
   ).join('');
-  els.catMenu.innerHTML = items;
+  els.catMenu.innerHTML = items || `<div class="item" role="option" aria-selected="false" data-i="0" data-name="Geral">Geral</div>`;
 }
 
 function wireUI(){
-  // Dropdown
   els.catTrigger.addEventListener('click', () => {
     els.catMenu.classList.toggle('open');
     els.catTrigger.setAttribute('aria-expanded', els.catMenu.classList.contains('open'));
@@ -87,7 +83,6 @@ function wireUI(){
     els.catTrigger.setAttribute('aria-expanded','false');
   });
 
-  // Chips de tema
   els.btnSelectAll.addEventListener('click', () => {
     const allPressed = [...els.themesGrid.querySelectorAll('.chip[aria-pressed="true"]')].length === els.themesGrid.children.length;
     [...els.themesGrid.children].forEach(ch => ch.setAttribute('aria-pressed', String(!allPressed)));
@@ -98,21 +93,11 @@ function wireUI(){
     updateStartEnabled();
   });
 
-  // Start
-  els.btnStart.addEventListener('click', () => {
-    startQuiz();
-  });
+  els.btnStart.addEventListener('click', () => startQuiz());
+  els.btnReset.addEventListener('click', () => clearSession());
 
-  // Reset
-  els.btnReset.addEventListener('click', () => {
-    clearSession();
-  });
-
-  // Infinite scroll
   state.io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) mountNextPage();
-    });
+    entries.forEach(e => { if (e.isIntersecting) mountNextPage(); });
   });
   state.io.observe(els.sentinel);
 }
@@ -127,13 +112,10 @@ async function onSelectCategory(name){
   setProgress(0,0,0);
   state.done.clear(); state.score = 0;
 
-  // Carregar e parsear todos os arquivos da categoria
   const texts = await Promise.all(state.files.map(loadText));
   const parsed = texts.map((txt, i) => parseQC(txt, basename(state.files[i])));
-  const flat = parsed.flatMap(p => p.questions);
-  state.allQuestions = flat;
+  state.allQuestions = parsed.flatMap(p => p.questions);
 
-  // Construir índice de temas (mesma heurística de antes)
   state.themesIndex = buildThemesIndex(state.allQuestions);
   renderThemeChips(state.themesIndex);
 
@@ -333,13 +315,11 @@ function restoreLastSession(){
 
 // ====== PARSER (JSON novo + texto antigo) ======
 function parseQC(raw, sourceName){
-  // 1) Tenta JSON do novo formato
   const asJson = tryParseJson(raw);
   if (asJson) {
     const questions = parseFromJson(asJson, sourceName);
     return { questions };
   }
-  // 2) Fallback: texto antigo com “Respostas/Gabarito”
   const norm = normalize(raw);
   const keyMap = parseAnswerKey_full(norm);
   const blocks = splitQuestions(norm);
@@ -348,7 +328,6 @@ function parseQC(raw, sourceName){
   for (const b of blocks) {
     const q = parseQuestionBlock(b);
     if (!q) continue;
-    // descartar questões com imagem (URLs de imagem ou tags)
     if (hasImageHint(q.enunciado) || q.alternativas.some(a => hasImageHint(a.text))) continue;
 
     const k = keyMap.get(q.numero);
@@ -373,7 +352,6 @@ function tryParseJson(t){
 }
 
 function parseFromJson(doc, sourceName){
-  // Esperado: { pages: [ { questions: [ { title, options: [...], correctIndex } ] } ] }
   const pages = Array.isArray(doc?.pages) ? doc.pages : Array.isArray(doc) ? doc : [];
   const questions = [];
   let seq = 1;
@@ -381,29 +359,18 @@ function parseFromJson(doc, sourceName){
   for (const p of pages){
     const qs = Array.isArray(p?.questions) ? p.questions : [];
     for (const q of qs){
-      // Enunciado
       let stem = String(q?.title ?? '').trim();
-      // Se houver um “header” em options[0], preferir o texto do title e ignorar metadados
       const opts = Array.isArray(q?.options) ? q.options : [];
-      // Alternativas: mapear de A..E
       const alts = collectAlternativesFromOptions(opts);
 
-      // Descartar questões sem alternativas úteis
       if (alts.length < 4) { seq++; continue; }
-
-      // Descartar questões com imagem
       if (hasImageHint(stem) || alts.some(a => hasImageHint(a.text))) { seq++; continue; }
 
-      // id_qc opcional a partir do título “Q12345”
       const id_qc = extractQCId(stem);
-
-      // correta a partir de correctIndex
       const ciRaw = Number.isInteger(q?.correctIndex) ? q.correctIndex : null;
       const ci = normalizeCorrectIndex(ciRaw, alts.length);
       if (ci == null) { seq++; continue; }
-      const letter = indexToLetter(ci); // 0-based -> A,B,C,...
-
-      // Validar que a letra existe
+      const letter = indexToLetter(ci);
       if (!alts.some(a => a.key === letter)) { seq++; continue; }
 
       questions.push({
@@ -422,7 +389,6 @@ function parseFromJson(doc, sourceName){
 }
 
 function collectAlternativesFromOptions(options){
-  // options pode conter um cabeçalho em [0]; mapear as alternativas textuais seguintes
   const out = [];
   const startAt = detectOptionsStart(options);
   const letters = ['A','B','C','D','E'];
@@ -437,7 +403,6 @@ function collectAlternativesFromOptions(options){
 }
 
 function detectOptionsStart(options){
-  // Heurística: se options[0] parecer cabeçalho (contém “Disciplina”/“Banca”/“Ano” ou for muito longo), começar em 1
   if (!Array.isArray(options) || options.length === 0) return 0;
   const first = typeof options[0] === 'string' ? options[0] : String(options[0]?.text ?? '');
   const hint = /Disciplina|Banca|Órgão|Orgao|Ano|Alternativas/i.test(first) || first.length > 240;
@@ -446,13 +411,12 @@ function detectOptionsStart(options){
 
 function normalizeCorrectIndex(ci, altsLen){
   if (!Number.isInteger(ci)) return null;
-  // aceitar 1-based (1..altsLen) ou 0-based (0..altsLen-1)
   if (ci >= 1 && ci <= altsLen) return ci - 1;
   if (ci >= 0 && ci < altsLen) return ci;
   return null;
 }
 
-function indexToLetter(i){ return String.fromCharCode(65 + i); } // 0->A
+function indexToLetter(i){ return String.fromCharCode(65 + i); }
 function deduceType(alts){
   const keys = new Set(alts.map(a=>a.key));
   return ([...keys].every(k => k==='V' || k==='F')) ? 'VF' : 'ME';
@@ -617,10 +581,9 @@ function buildThemesIndex(questions){
   const top = [...freq.entries()].sort((a,b)=>b[1]-a[1]).slice(0,12).map(e=>e[0]);
   top.forEach(t => idx.set(t, []));
   questions.forEach((q,i)=>{
-    let tagged = false;
     for (const t of top){
       if (q.enunciado.toLowerCase().includes(t)){
-        idx.get(t).push(i); tagged = true;
+        idx.get(t).push(i);
       }
     }
   });
@@ -644,3 +607,91 @@ function shuffle(arr){
 }
 function basename(p){ return p.split('/').pop(); }
 function escapeHtml(s){ return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+// ====== DISCOVERY (GitHub API) ======
+async function discoverCatalog(){
+  try {
+    const { owner, repo } = inferRepoFromLocation();
+    if (!owner || !repo) throw new Error('repo indefinido');
+    const branch = await getDefaultBranch(owner, repo);
+    const base = `https://api.github.com/repos/${owner}/${repo}/contents`;
+
+    // listar /data
+    const dataRoot = await ghList(`${base}/data?ref=${encodeURIComponent(branch)}`);
+    const dirs = dataRoot.filter(e => e.type === 'dir');
+
+    const catalog = {};
+    // categorias por subpastas de /data
+    for (const d of dirs){
+      const files = await collectJsonFiles(`${base}/data/${encodeURIComponent(d.name)}?ref=${encodeURIComponent(branch)}`);
+      if (files.length) catalog[humanize(d.name)] = files.map(u => u.download_url);
+    }
+    // JSONs soltos em /data
+    const loose = dataRoot.filter(e => e.type === 'file' && e.name.toLowerCase().endsWith('.json'));
+    if (loose.length){
+      catalog['Geral'] = (catalog['Geral'] || []).concat(loose.map(u => u.download_url));
+    }
+
+    if (Object.keys(catalog).length) {
+      CATALOG = catalog;
+      return;
+    }
+
+    // fallback mínimo: tenta um arquivo padrão se existir em pages
+    const fallback = 'data/quiz-1-10.json';
+    try {
+      const r = await fetch(fallback, {cache:'no-store'});
+      if (r.ok) CATALOG = { Geral: [fallback] };
+    } catch {}
+  } catch (e){
+    console.warn('Discovery falhou', e);
+  }
+}
+
+async function collectJsonFiles(listUrl){
+  const items = await ghList(listUrl);
+  const acc = [];
+  for (const it of items){
+    if (it.type === 'file' && it.name.toLowerCase().endsWith('.json')) acc.push(it);
+    if (it.type === 'dir'){
+      const nested = await collectJsonFiles(`${it.url}?ref=${encodeURIComponent(getQueryRef(listUrl))}`);
+      acc.push(...nested);
+    }
+  }
+  return acc;
+}
+
+async function ghList(url){
+  const res = await fetch(url, { headers: { 'Accept': 'application/vnd.github+json' }});
+  if (!res.ok) throw new Error(`GitHub API ${res.status} @ ${url}`);
+  return await res.json();
+}
+
+async function getDefaultBranch(owner, repo){
+  try {
+    const r = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+    if (r.ok){
+      const j = await r.json();
+      return j.default_branch || 'main';
+    }
+  } catch {}
+  return 'main';
+}
+
+function inferRepoFromLocation(){
+  // Ex.: https://usuario.github.io/REPO/...
+  const host = location.hostname;               // usuario.github.io
+  const path = location.pathname.replace(/^\/+/,''); // REPO/...
+  const owner = host.split('.')[0];
+  const repo = path.split('/')[0] || '';
+  return { owner, repo };
+}
+
+function getQueryRef(url){
+  const u = new URL(url, location.origin);
+  return u.searchParams.get('ref') || 'main';
+}
+
+function humanize(s){
+  return s.replace(/[-_]+/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+}
