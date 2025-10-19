@@ -171,7 +171,7 @@
 ** C) A Medida Provisória é inconstitucional, ofendendo o princípio da reserva legal, pois o Presidente da República não pode criar tipos penais incriminadores por esse meio, mesmo que o Congresso Nacional a tenha convertido em lei.
 ** D) A Medida Provisória é válida, pois a competência para legislar em matéria penal pode ser exercida, em qualquer hipótese, desde que seja de forma provisória, pelo Presidente da República em situações de urgência, excepcionando o princípio da reserva legal.
 *** Gabarito: C
-**** Tipicidade, Tipo Penal Doloso, Noções Fundamentais Conceitos e caracteres, Princípios limitadores do poder punitivo estatal, Antijuridicidade, Legítima defesa
+**** Tipicidade, Tipo Penal Doloso, Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Antijuridicidade, Legítima defesa
 
 -----
 * "A Câmara dos Deputados aprovou nesta quarta feira dia 04/11/2024, a urgência do projeto de lei que torna obrigatória a decretação de prisão preventiva na audiência de custódia em casos de crimes hediondos, roubo, associação criminosa qualificada e quando for configurada reincidência criminal. Hoje, a liberdade provisória permite ao acusado aguardar o julgamento em liberdade, com ou sem a imposição de medidas cautelares".
@@ -373,7 +373,7 @@
 **** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Lei penal no espaço
 
 -----
-* [Questão Inédita] Quanto às hipóteses de extraterritorialidade incondicionada previstas no Código Penal brasileiro, é CORRETO afirmar que:
+* Quanto às hipóteses de extraterritorialidade incondicionada previstas no Código Penal brasileiro, é CORRETO afirmar que:
 ** A) Aplicam-se somente aos crimes cometidos por brasileiros contra estrangeiros no exterior.
 ** B) Incluem os crimes contra a humanidade e de genocídio, conforme previsão específica.
 ** C) São condicionadas à comprovação de dupla tipicidade entre os ordenamentos brasileiro e estrangeiro.
@@ -383,7 +383,7 @@
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
-* [Questão Inédita] De acordo com o Código Penal brasileiro, a extraterritorialidade da lei penal aplica-se:
+* De acordo com o Código Penal brasileiro, a extraterritorialidade da lei penal aplica-se:
 ** A) Exclusivamente a crimes cometidos no Brasil por estrangeiros.
 ** B) Apenas aos crimes que afetam bens jurídicos internacionais, como terrorismo.
 ** C) À prática de crimes contra a administração pública por funcionário público brasileiro, ainda que cometidos no exterior.
@@ -393,7 +393,7 @@
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
-* [Questão Inédita] Sobre o Princípio da Reserva Legal no Direito Penal, é CORRETO afirmar que:
+* Sobre o Princípio da Reserva Legal no Direito Penal, é CORRETO afirmar que:
 ** A) Permite a aplicação de analogia in malam partem nos casos em que a lei for omissa.
 ** B) Prevê que somente a lei formal pode definir crimes e cominar penas.
 ** C) Admite a criação de crimes por meio de medidas provisórias desde que ratificadas pelo Congresso Nacional.
@@ -535,7 +535,7 @@
 **** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
 
 -----
-* [Questão Inédita] Em 2022, Pedro foi condenado por um crime de estelionato praticado em 2021, sob a vigência de uma lei que previa pena de 2 a 5 anos de reclusão.
+* Em 2022, Pedro foi condenado por um crime de estelionato praticado em 2021, sob a vigência de uma lei que previa pena de 2 a 5 anos de reclusão.
 * No entanto, em 2023, após o trânsito em julgado da sentença, uma nova lei entrou em vigor, reduzindo a pena para 1 a 3 anos de reclusão. O juiz, ao analisar o caso, decidiu aplicar a nova lei, mais benéfica, mesmo após a condenação. Considerando o caso narrado, assinale a alternativa correta:
 ** A) A nova lei não pode ser aplicada, pois a sentença já foi proferida sob a vigência da lei anterior.
 ** B) A nova lei pode ser aplicada, pois a sucessão de leis penais no tempo beneficia o réu quando a lei posterior é mais favorável.
@@ -546,7 +546,7 @@
 **** Noções Fundamentais, Lei penal no tempo
 
 -----
-* [Questão Inédita] Durante a pandemia de COVID-19, foi editada uma lei que aumentava as penas para crimes contra a saúde pública, como a venda irregular de medicamentos.
+* Durante a pandemia de COVID-19, foi editada uma lei que aumentava as penas para crimes contra a saúde pública, como a venda irregular de medicamentos.
 * A lei tinha um tempo determinado para validade, isto é, 6 meses. Antes de findar o prazo de sua vigência, Maria praticou uma conduta tipificada entre os crimes contra a saúde pública. Posteriormente, a lei foi revogada. Após a revogação, Maria foi processada e condenada pela lei que era mais gravosa ao tempo do crime. Considerando o caso narrado, assinale a alternativa correta:
 ** A) A lei temporária não pode ultragir, pois sua aplicação após a revogação viola o princípio da irretroatividade da lei penal.
 ** B) A lei temporária pode ultragir para prejudicar o réu, pois se trata de uma lei excepcional.
@@ -1557,7 +1557,7 @@
 **** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
 
 -----
-* [Questão Inédita] Sobre a ultratividade da lei penal, é correto afirmar que:
+* Sobre a ultratividade da lei penal, é correto afirmar que:
 ** A) A lei penal revogada nunca pode ser aplicada após sua revogação.
 ** B) A ultratividade se aplica apenas a leis penais mais severas.
 ** C) A ultratividade é um princípio que permite a aplicação de qualquer lei penal, independentemente de ser mais benéfica ou mais severa.
@@ -1567,7 +1567,7 @@
 **** Noções Fundamentais, Lei penal no tempo
 
 -----
-* [Questão Inédita] Considere que João, maior e capaz, foi condenado em 2018 por um crime de roubo, cuja pena prevista é de 4 a 10 anos de reclusão.
+* Considere que João, maior e capaz, foi condenado em 2018 por um crime de roubo, cuja pena prevista é de 4 a 10 anos de reclusão.
 * Em 2020, uma nova lei reduziu a pena desse mesmo crime para 2 a 5 anos de reclusão. Considerando a aplicação da lei penal no tempo, assinale a alternativa correta:
 ** A) João continuará cumprindo a pena original, pois a condenação ocorreu antes da nova lei.
 ** B) João terá direito à revisão de sua pena, aplicando-se a nova lei mais benéfica.
@@ -1804,7 +1804,7 @@
 **** Noções Fundamentais, Lei penal no tempo
 
 -----
-* [Questão Inédita] Mevinho, 19 anos, resolveu jogar o "jogo do tigrinho" e como havia perdido muito dinheiro no primeiro semestre de 2024, precisava se recompor financeiramente.
+* Mevinho, 19 anos, resolveu jogar o "jogo do tigrinho" e como havia perdido muito dinheiro no primeiro semestre de 2024, precisava se recompor financeiramente.
 * Em determinado dia, leu em uma doutrina penal que é isento de pena quem comente crime contra o patrimônio em prejuízo de ascendente. Nesses termos, Mevinho resolve subtrair R$ 1.000,00 de sua avó, Dona Mevôna, nascida em 1960. Dito e feito, Mevinho, então, ruma ao quarto da Dona Mevôna, durante a madrugada, e de lá subtrai R$ 1.000,00. Contudo, sua empreitada criminosa é gravada pelo sistema de câmeras e Dona Mevôna resolve denunciar seu neto. Nesses termos, a premissa inicial de Mevinho estava:
 ** A) Correta, pois haverá isenção de pena por ter sido o crime patrimonial, sem violência ou grave ameaça, perpetrado contra ascendente.
 ** B) Incorreta, pois o instituto da escusa absolutória não se aplica aos netos.
@@ -1815,7 +1815,7 @@
 **** Culpabilidade, Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Potencial conhecimento da ilicitude - Erro de proibição, Noções Gerais da Culpabilidade, Ação penal, Ação penal pública condicionada à representação, Causas de extinção da punibilidade, Causas de Extinção da Punibilidade - Noções gerais, Perdão judicial
 
 -----
-* [Questão Inédita] Pedrinho, com 19 anos de idade, trazia consigo arma branca (faca) em seu veículo automotor.
+* Pedrinho, com 19 anos de idade, trazia consigo arma branca (faca) em seu veículo automotor.
 * Em blitz de trânsito, o instrumento é localizado e apreendido pelo agente da lei. Nesses termos, Pedrinho deve:
 ** A) ser absolvido, pois a ausência de regulamentação impede que o porte de arma branca seja conduta penalmente sancionada.
 ** B) ser condenado, como incurso no art. 19 da Lei de Contravenções penais permanece válido e é aplicável ao porte de arma branca, sendo desnecessária aferição da potencialidade lesiva do instrumento.
@@ -1858,7 +1858,7 @@
 **** Noções Fundamentais, A norma penal, Conflito aparente de normas
 
 -----
-* [Questão Inédita] De acordo com o Código Penal brasileiro, sobre a extraterritorialidade da lei penal, é CORRETO afirmar que:
+* De acordo com o Código Penal brasileiro, sobre a extraterritorialidade da lei penal, é CORRETO afirmar que:
 ** A) A lei penal brasileira não se aplica a crimes cometidos por brasileiros no exterior.
 ** B) A extraterritorialidade só é aplicada quando houver tratado internacional nesse sentido.
 ** C) Crimes contra a vida ou liberdade do Presidente da República, praticados no estrangeiro, são sujeitos à lei penal brasileira, independente se o agente foi absolvido ou condenado no estrangeiro.
@@ -1868,7 +1868,7 @@
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
-* [Questão Inédita] Acerca da sucessão de leis penais no tempo, assinale a alternativa CORRETA:
+* Acerca da sucessão de leis penais no tempo, assinale a alternativa CORRETA:
 ** A) A lei penal mais benéfica ao réu aplica-se apenas se o fato for praticado após a sua vigência.
 ** B) A abolitio criminis extingue tanto a punibilidade quanto os efeitos penais e civis do crime.
 ** C) A lei penal mais gravosa aplica-se retroativamente, se for de interesse da justiça.
