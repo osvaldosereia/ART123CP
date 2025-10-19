@@ -6,6 +6,8 @@ const $$ = (s, r=document)=>r.querySelectorAll(s);
 function toast(msg, t=1600){ const el=$("#toast"); el.textContent=msg; el.classList.add("show"); setTimeout(()=>el.classList.remove("show"), t); }
 function uid(){ try{ if(crypto?.randomUUID) return crypto.randomUUID(); }catch{} return "q_"+Math.random().toString(36).slice(2,10); }
 function pretty(s){ return s.replace(/[-_]/g," ").replace(/\.txt$/,""); }
+const deb = (fn,ms=150)=>{let h;return (...a)=>{clearTimeout(h);h=setTimeout(()=>fn(...a),ms);} };
+const strip = (s)=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
 
 /* ==================== PARSER TXT (com temas ****) ==================== */
 function parseTxt(raw){
@@ -32,30 +34,21 @@ function parseTxt(raw){
     if (/^-+\s*$/.test(L)){ push(); continue; }
     if (L.trim()===""){ if(cur.stage==="stem"){cur.stem.push(""); cur.has=true;} continue; }
 
-    // Temas: **** tema1, tema2, tema3
     const t = /^\*\*\*\*\s*(.+)$/.exec(L);
-    if (t){
-      cur.themes = t[1].split(",").map(s=>s.trim()).filter(Boolean);
-      cur.has = true;
-      continue;
-    }
+    if (t){ cur.themes = t[1].split(",").map(s=>s.trim()).filter(Boolean); cur.has = true; continue; }
 
-    // Gabarito
     const g = (/^\*\*\*\s*Gabarito:\s*([A-E])\s*$/.exec(L)||[])[1];
     if (g){ cur.ans=g; cur.stage="ans"; cur.has=true; continue; }
 
-    // Alternativa
     const m = /^\*\*\s*([A-E])\)\s*(.+)$/.exec(L);
     if (m){ const key=m[1],text=m[2].trim();
       if (!cur.opts.some(o=>o.key===key)) cur.opts.push({key,text});
       cur.stage="opts"; cur.has=true; continue;
     }
 
-    // Enunciado
     if (L.startsWith("* ")){ cur.stem.push(L.slice(2)); cur.stage="stem"; cur.has=true; continue; }
 
     if (cur.stage==="stem" || !cur.has){ cur.stem.push(L); cur.has=true; continue; }
-    // demais linhas fora do padrão são ignoradas
   }
   push();
   return out;
@@ -69,7 +62,6 @@ async function discoverDataTree(){
   toast("Lendo data/…");
   const base = `https://api.github.com/repos/${gh.owner}/${gh.repo}/contents/data`;
   const nodes = await walkGitHub(base);
-  /** @type {Record<string, {label:string, files:string[]}>} */
   const map = {};
   for(const n of nodes){
     if(n.type!=="file" || !n.path.endsWith(".txt")) continue;
@@ -109,18 +101,20 @@ const STATE = {
   tree: /** @type {Record<string,{label:string,files:string[]}>} */({}),
   disciplina: "",
   temasSel: /** @type {Set<string>} */(new Set()),
+  temasAll: /** @type {string[]} */([]),
   allQuestions: /** @type {any[]} */([]),
   batchSize: 3,
   cursor: 0,
   observer: /** @type {IntersectionObserver|null} */ (null),
   cache: /** @type {Map<string,{text:string, parsed:any[]}>>} */(new Map()),
+  ms:{ open:false, filter:"", list:[], listStripped:[] }
 };
 
 /* ==================== UI HOME ==================== */
 window.addEventListener("DOMContentLoaded", async ()=>{
   $("#btnHome").addEventListener("click", goHome);
   setupDropdown();
-  initTopbarAutoHide(); // mostra a topbar mais rápido ao subir
+  initTopbarAutoHide();
   try{
     STATE.tree = await discoverDataTree();
     fillDisciplines(Object.keys(STATE.tree).sort());
@@ -130,6 +124,12 @@ window.addEventListener("DOMContentLoaded", async ()=>{
     toast("Erro ao ler /data/");
   }
   $("#btnBuscar").addEventListener("click", startSearch);
+  document.addEventListener("keydown",(e)=>{ if(e.key==="Escape") closeThemesPanel(); });
+  document.addEventListener("click",(e)=>{
+    const wrap = $("#chipsTemas");
+    if(!wrap) return;
+    if(STATE.ms.open && !wrap.contains(e.target)) closeThemesPanel();
+  });
 });
 
 function setupDropdown(){
@@ -157,22 +157,20 @@ function fillDisciplines(keys){
       STATE.disciplina=k;
       $("#ddDiscLabel").textContent=pretty(k);
       ul.classList.remove("show");
-      await renderTemasFromFiles(); // temas lidos das linhas ****
+      await buildThemesMultiselect();
     });
     ul.appendChild(li);
   }
 }
 
-/* === Temas a partir de **** dentro dos arquivos (lista compacta) === */
-async function renderTemasFromFiles(){
+/* ==================== TEMAS: Multiselect tipo dropdown ==================== */
+async function buildThemesMultiselect(){
   const box=$("#chipsTemas"); box.innerHTML="";
-  box.className = "topics";         // grid de lista compacta
-  box.onclick = null;               // limpa delegação anterior
   STATE.temasSel.clear();
   $("#btnBuscar").disabled = true;
 
   const node = STATE.tree[STATE.disciplina];
-  if(!node){ return; }
+  if(!node) return;
 
   toast("Lendo temas…");
   const allParsed = [];
@@ -181,40 +179,110 @@ async function renderTemasFromFiles(){
     allParsed.push(...parsed);
   }
   const set = new Set();
-  for (const q of allParsed){
-    if (Array.isArray(q.themes)) q.themes.forEach(t=>set.add(t));
-  }
-  const temas = [...set].sort((a,b)=>a.localeCompare(b,'pt-BR', {sensitivity:"base"}));
+  for (const q of allParsed){ if (Array.isArray(q.themes)) q.themes.forEach(t=>set.add(t)); }
+  const temas = [...set].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
+  STATE.temasAll = temas;
 
-  if (!temas.length){
-    const p=document.createElement("p");
-    p.textContent="Nenhum tema encontrado nesta disciplina.";
-    p.style.color="var(--muted)";
-    box.appendChild(p);
-    return;
-  }
+  // Trigger
+  const trigger = document.createElement("button");
+  trigger.type="button";
+  trigger.className="dd-btn ms-trigger";
+  trigger.id="msTemasBtn";
+  trigger.innerHTML = `<span id="msTemasLabel">Selecionar temas</span><span class="chev">▾</span>`;
+  trigger.addEventListener("click", toggleThemesPanel);
+  box.appendChild(trigger);
 
-  const frag = document.createDocumentFragment();
-  temas.forEach((tema)=>{
-    const item = document.createElement("div");
-    item.className = "topic";
-    item.dataset.tema = tema;
-    item.innerHTML = `<input type="checkbox" aria-label="${tema}"><span class="lbl">${tema}</span>`;
-    frag.appendChild(item);
+  // Painel
+  const panel = document.createElement("div");
+  panel.className="ms-panel";
+  panel.innerHTML = `
+    <div class="ms-head">
+      <input id="msSearch" type="text" placeholder="Buscar tema…" autocomplete="off" />
+      <div class="ms-actions">
+        <button type="button" id="msSelAll" class="btn ghost">Selecionar exibidos</button>
+        <button type="button" id="msClear" class="btn ghost">Limpar</button>
+      </div>
+    </div>
+    <div id="msList" class="ms-list" role="listbox" aria-multiselectable="true"></div>
+    <div class="ms-foot"><span id="msCount"></span></div>
+  `;
+  box.appendChild(panel);
+
+  // Estado lista
+  STATE.ms.list = temas.slice();
+  STATE.ms.listStripped = STATE.ms.list.map(strip);
+  STATE.ms.filter = "";
+  renderMsList();
+
+  // Eventos
+  $("#msSearch").addEventListener("input", deb((e)=>{
+    STATE.ms.filter = e.target.value;
+    renderMsList();
+  },150));
+
+  $("#msSelAll").addEventListener("click", ()=>{
+    const visible = getVisibleItems();
+    visible.forEach(t=>STATE.temasSel.add(t));
+    // marcar visuais
+    $$("#msList .ms-item input").forEach(i=>{ i.checked=true; i.closest(".ms-item").classList.add("on"); });
+    updateTriggerLabel(); updateCount(); $("#btnBuscar").disabled = STATE.temasSel.size===0;
   });
-  box.appendChild(frag);
 
-  // Delegação: clicar em qualquer área do item alterna seleção
-  box.onclick = (e)=>{
-    const item = e.target.closest(".topic");
-    if(!item || !box.contains(item)) return;
+  $("#msClear").addEventListener("click", ()=>{
+    STATE.temasSel.clear();
+    $$("#msList .ms-item").forEach(el=>{ el.classList.remove("on"); el.querySelector("input").checked=false; });
+    updateTriggerLabel(); updateCount(); $("#btnBuscar").disabled = true;
+  });
+}
+
+function toggleThemesPanel(){
+  const panel = $(".ms-panel");
+  if(!panel) return;
+  const open = panel.classList.toggle("show");
+  STATE.ms.open = open;
+}
+function closeThemesPanel(){
+  const panel = $(".ms-panel");
+  if(panel){ panel.classList.remove("show"); STATE.ms.open=false; }
+}
+function updateTriggerLabel(){
+  const n = STATE.temasSel.size;
+  $("#msTemasLabel").textContent = n ? `${n} tema(s) selecionado(s)` : "Selecionar temas";
+}
+function updateCount(){
+  const vis = getVisibleItems().length;
+  $("#msCount").textContent = `${vis} exibidos · ${STATE.temasSel.size} selecionados`;
+}
+function getVisibleItems(){
+  const f = strip(STATE.ms.filter);
+  if(!f) return STATE.ms.list.slice();
+  const out=[]; for(let i=0;i<STATE.ms.list.length;i++){ if(STATE.ms.listStripped[i].includes(f)) out.push(STATE.ms.list[i]); }
+  return out;
+}
+function renderMsList(){
+  const list = $("#msList"); list.innerHTML="";
+  const items = getVisibleItems();
+  const frag = document.createDocumentFragment();
+  items.forEach(t=>{
+    const on = STATE.temasSel.has(t);
+    const row = document.createElement("div");
+    row.className = "ms-item"+(on?" on":"");
+    row.dataset.tema=t;
+    row.innerHTML = `<input type="checkbox" ${on?"checked":""} aria-label="${t}"><span>${t}</span>`;
+    frag.appendChild(row);
+  });
+  list.appendChild(frag);
+  list.onclick = (e)=>{
+    const item = e.target.closest(".ms-item");
+    if(!item || !list.contains(item)) return;
     const tema = item.dataset.tema;
     const ck = item.querySelector("input");
     ck.checked = !ck.checked;
-    const on = item.classList.toggle("on", ck.checked);
-    if(on) STATE.temasSel.add(tema); else STATE.temasSel.delete(tema);
-    $("#btnBuscar").disabled = STATE.temasSel.size===0;
+    item.classList.toggle("on", ck.checked);
+    if(ck.checked) STATE.temasSel.add(tema); else STATE.temasSel.delete(tema);
+    updateTriggerLabel(); updateCount(); $("#btnBuscar").disabled = STATE.temasSel.size===0;
   };
+  updateTriggerLabel(); updateCount();
 }
 
 /* Cache por arquivo */
@@ -245,6 +313,7 @@ async function startSearch(){
     $("#home").classList.add("hidden");
     $("#quiz").classList.remove("hidden");
     mountInfinite();
+    closeThemesPanel();
   }catch(err){
     console.error(err);
     toast("Erro ao ler dados");
@@ -289,8 +358,6 @@ async function renderBatch(){
   }
   STATE.cursor = end;
 }
-
-// Bombeia mais lotes enquanto o sentinel estiver dentro da viewport
 function pumpIfVisible(){
   const s = document.getElementById("sentinel");
   if (!s) return;
@@ -327,12 +394,9 @@ function buildQuestion(q, num){
     ol.appendChild(li);
   });
 
-  // IA toggle
   const btnIA = node.querySelector('[data-role="ia-toggle"]');
   const menu = node.querySelector(".ia-menu");
-  btnIA.addEventListener("click", ()=>{
-    menu.classList.toggle("show");
-  });
+  btnIA.addEventListener("click", ()=>{ menu.classList.toggle("show"); });
   menu.querySelectorAll(".ia-item").forEach(a=>{
     a.addEventListener("click", ()=>{
       const kind = a.getAttribute("data-ia");
@@ -353,9 +417,7 @@ function mark(card, li, q){
   const correct = key === q.answer;
   const res = card.querySelector(".q-res");
   card.querySelectorAll(".q-opts li").forEach(el=>el.classList.add("lock"));
-  card.querySelectorAll(".q-opts li").forEach(el=>{
-    if (el.dataset.key === q.answer) el.classList.add("hit");
-  });
+  card.querySelectorAll(".q-opts li").forEach(el=>{ if (el.dataset.key === q.answer) el.classList.add("hit"); });
 
   if (correct){
     card.classList.add("ok");
@@ -367,7 +429,6 @@ function mark(card, li, q){
     res.className = "q-res bad";
   }
 
-  // Destacar botão IA
   const btnIA = card.querySelector('[data-role="ia-toggle"]');
   btnIA.classList.remove("ia");
   btnIA.classList.add(correct ? "primary" : "");
@@ -407,11 +468,8 @@ function initTopbarAutoHide(){
     const y = window.scrollY;
     const dy = y - last;
     if (y < 48) { bar.classList.remove("hide"); hidden = false; last = y; return; }
-    if (dy > 6 && y > 80) {            // descendo
-      if (!hidden){ bar.classList.add("hide"); hidden = true; }
-    } else if (dy < -2) {              // subindo (sensível)
-      if (hidden){ bar.classList.remove("hide"); hidden = false; }
-    }
+    if (dy > 6 && y > 80) { if (!hidden){ bar.classList.add("hide"); hidden = true; } }
+    else if (dy < -2) { if (hidden){ bar.classList.remove("hide"); hidden = false; } }
     last = y;
   }, { passive: true });
 }
