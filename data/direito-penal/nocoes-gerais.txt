@@ -3091,7 +3091,7 @@
 ** D) roubo simples.
 ** E) contrabando.
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio Roubo, Crimes contra a fé pública, Uso de documento falso, Supressão de documento, Crimes contra a administração pública, Contrabando, Descaminho
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio, Roubo, Crimes contra a fé pública, Uso de documento falso, Supressão de documento, Crimes contra a administração pública, Contrabando, Descaminho
 
 -----
 * O princípio da insignificância é compatível com o furto praticado
@@ -3101,7 +3101,7 @@
 ** D) em concurso de pessoas.
 ** E) por clandestinidade.
 *** Gabarito: E
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio Furto
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio, Furto
 
 -----
 * Assinale a opção que corresponde a bem jurídico coletivo aparente.
@@ -3508,7 +3508,7 @@
 ** D) Consoante jurisprudência atual do Superior Tribunal de Justiça, é possível o reconhecimento do delito de evasão de divisas como crime antecedente para a caracterização da lavagem de dinheiro, pois, se o agente pratica atos visando à ocultação de numerários ilicitamente enviados ao exterior, também incide em lavagem de dinheiro.
 ** E) Segundo a jurisprudência atual do Superior Tribunal de Justiça, uma vez preenchidos os pressupostos para a aplicação da extraterritorialidade da lei penal brasileira, crime de homicídio praticado por brasileiro nato contra estrangeiro no exterior, cuja extradição tenha sido negada, deve ser processado e julgado pela Justiça Estadual, já que a situação não se enquadra nas hipóteses do artigo 109 da Constituição Federal.
 *** Gabarito: E
-**** Noções Fundamentais do Direito Penal, Lei penal no espaço, Crimes contra o patrimônio Estelionato
+**** Noções Fundamentais do Direito Penal, Lei penal no espaço, Crimes contra o patrimônio, Estelionato
 
 -----
 * A Extraterritorialidade do art. 7º do CP é fenômeno que
@@ -3560,7 +3560,7 @@
 ** D) sinal de TV a cabo.
 ** E) animais.
 *** Gabarito: D
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio Furto
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio, Furto
 
 -----
 * A respeito da aplicação da lei penal, assinale a alternativa correta.
@@ -3831,7 +3831,7 @@
 ** D) falsidade ideológica.
 ** E) adulteração de sinal identificador de veículo automotor.
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio Roubo, Estelionato, Crimes contra a fé pública, Falsidade ideológica, Crimes contra a administração pública, Contrabando
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio, Roubo, Estelionato, Crimes contra a fé pública, Falsidade ideológica, Crimes contra a administração pública, Contrabando
 
 -----
 * Em relação à lei penal no tempo, assinale a alternativa correta.
@@ -4287,7 +4287,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio Furto
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio, Furto
 
 -----
 * É correto afirmar segundo o Código Penal:
@@ -5738,7 +5738,7 @@ Estão certos apenas os itens
 ** C) O mandado de segurança não se presta para atribuir efeito suspensivo a recurso criminal interposto pelo Ministério Público.
 ** D) Compete ao juízo do local da falsificação do cheque processar e julgar crime de estelionato nessa modalidade, sendo irrelevante o local da obtenção da vantagem ilícita.
 *** Gabarito: D
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio Extorsão, Crimes contra a fé pública, Falsidade de títulos e outros papéis públicos
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio, Extorsão, Crimes contra a fé pública, Falsidade de títulos e outros papéis públicos
 -----
 * Determinado empregado de uma empresa brasileira de exportação, em negociação realizada fora do Brasil, oferece vantagem indevida a funcionário público estrangeiro com o intuito de fechar negócio e, de imediato, a proposta ilícita é recusada pelo funcionário público estrangeiro.
 * Com base nos fatos hipotéticos narrados, assinale a alternativa correta.
@@ -6164,7 +6164,7 @@ Estão certos apenas os itens
 ** D) A caracterização do delito de falsidade ideológica se contenta com a potencialidade de dano e imitação da verdade.
 ** E) O crime progressivo e a progressão criminosa se identificam uma vez que se dão ao mesmo tempo e no mesmo momento, ou seja, se desdobram em dois atos.
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra a fé pública Falsidade ideológica
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra a fé pública, Falsidade ideológica
 -----
 * Assinale a alternativa correta.
 ** A) As circunstâncias legais são descritas pela lei penal de maneira prévia, ou na parte geral, ou na parte especial do Código, ou em leis extravagantes.
@@ -6352,7 +6352,7 @@ Estão certos apenas os itens
 ** D) Trata-se de crime impossível por ineficácia absoluta do meio.
 ** E) A hipótese configura tentativa de furto simples.
 *** Gabarito: C
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio Furto
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra o patrimônio, Furto
 -----
 * Em sete de janeiro de 2017, João praticou conduta que, à época, configurava crime punível com prisão.
 * O resultado desejado pelo autor, no entanto, foi alcançado somente dois meses depois, ou seja, em sete de março do mesmo ano, momento no qual a conduta criminosa tinha previsão de ser punida com pena menos grave, de restrição de direitos.
@@ -7661,7 +7661,7 @@ A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da senten�
 ** D) No crime de uso de documento falso, o Código Penal brasileiro emprega a técnica de leis penais em branco ao revés, isto é, daquelas leis penais que remetem a outras normas incriminadoras para especificação da pena.
 ** E) As leis penais em branco consistem em modalidade de lei temporária.
 *** Gabarito: D
-**** Noções Fundamentais do Direito Penal, A norma penal, Crimes contra a fé pública Uso de documento falso
+**** Noções Fundamentais do Direito Penal, A norma penal, Crimes contra a fé pública, Uso de documento falso
 -----
 * Assinale a alternativa INCORRETA.
 ** A) Segundo entendimento sumulado pelo Supremo Tribunal Federal, a lei penal mais grave aplica-se ao crime continuado, se a sua vigência é anterior à cessação da continuidade.
