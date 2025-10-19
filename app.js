@@ -438,18 +438,22 @@ function mark(card, li, q){
 function buildGoogleIA(kind, q){
   const enc=(s)=>encodeURIComponent(s);
   const alts = q.options.map(o=>`${o.key}) ${o.text}`).join(" ");
+  const correct = q.options.find(o=>o.key===q.answer);
+  const gab = correct ? `${q.answer}) ${correct.text}` : q.answer;
+
   let prompt="";
   if (kind==="gabarito"){
-    prompt = `Considere a questão a seguir e responda SOMENTE a letra correta e uma linha de justificativa. Questão: "${q.stem}" Alternativas: ${alts}`;
+    prompt = `Considere a questão a seguir e justifique a alternativa escolhida. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
   } else if (kind==="glossario"){
-    prompt = `Liste e defina, em tópicos curtos, os principais termos jurídicos presentes nesta questão: "${q.stem}"`;
+    prompt = `Liste e defina, em tópicos curtos, os principais termos jurídicos presentes nesta questão. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
   } else {
     const tema = q.themes?.join(", ");
-    prompt = `Sugira 3 links de vídeos objetivos e confiáveis para estudar o tema desta questão. Mostre título curto e link. Tema(s): ${tema || "Direito"}. Questão: "${q.stem}"`;
+    prompt = `Sugira 3 links de vídeos objetivos e confiáveis para estudar o tema desta questão. Mostre título curto e link. Tema(s): ${tema || "Direito"}. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
   }
   const url = `https://www.google.com/search?udm=50&hl=pt-BR&gl=BR&q=${enc(prompt)}`;
   return url;
 }
+
 
 /* ==================== NAV ==================== */
 function goHome(){
