@@ -522,9 +522,9 @@ function buildGoogleIA(kind, q){
 
   let prompt="";
   if (kind==="gabarito"){
-    prompt = `Considere a questão a seguir e responda SOMENTE a letra correta e uma linha de justificativa. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
+    prompt = `Considere a questão a seguir, analise a alternativa escolhida, explique, exemplifique e justifique juridicamente. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
   } else if (kind==="glossario"){
-    prompt = `Liste e defina, em tópicos curtos, os principais termos jurídicos presentes nesta questão. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
+    prompt = `Liste e defina, em tópicos curtos, os termos jurídicos presentes nesta questão. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
   } else {
     const tema = q.themes?.join(", ");
     prompt = `Sugira 3 links de vídeos objetivos e confiáveis para estudar o tema desta questão. Mostre título curto e link. Tema(s): ${tema || "Direito"}. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
