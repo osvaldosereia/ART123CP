@@ -224,3 +224,9 @@ body{
 
 /* Chips mais próximos */
 #quizThemes{ margin:6px 0 12px; }                /* antes ~6px 0 12px */
+
+.ms-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
+  gap:4px;
+}
