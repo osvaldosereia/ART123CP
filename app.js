@@ -186,22 +186,29 @@ function renderTemas(){
 
 /* ==================== BUSCA E QUIZ ==================== */
 async function startSearch(){
-  toast("Carregando questões…");
-  const files = [...STATE.temasSel];
-  const texts = await Promise.all(files.map(loadTxt));
-  const joined = texts.join("\n-----\n");
-  STATE.allQuestions = parseTxt(joined);
-  STATE.cursor = 0;
-  $("#quizList").innerHTML="";
-  $("#home").classList.add("hidden");
-  $("#quiz").classList.remove("hidden");
-  mountInfinite();
+  try{
+    toast("Carregando questões…");
+    const files = [...STATE.temasSel];
+    const texts = await Promise.all(files.map(loadTxt));
+    const joined = texts.join("\n-----\n");
+    STATE.allQuestions = parseTxt(joined);
+    if (!STATE.allQuestions.length){ toast("Nenhuma questão encontrada"); return; }
+    STATE.cursor = 0;
+    $("#quizList").innerHTML="";
+    $("#home").classList.add("hidden");
+    $("#quiz").classList.remove("hidden");
+    mountInfinite();
+  }catch(err){
+    console.error(err);
+    toast("Erro ao ler dados");
+  }
 }
 async function loadTxt(path){
-  // Arquivo acessível diretamente via GitHub Pages
-  const res = await fetch(`/${path}`);
+  const res = await fetch(path); // relativo a /<repo>/
   if(!res.ok) throw new Error(`Falhou ${path}: ${res.status}`);
-  return await res.text();
+  const txt = await res.text();
+  console.debug("OK:", path, txt.length, "bytes");
+  return txt;
 }
 
 function mountInfinite(){
