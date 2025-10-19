@@ -184,31 +184,26 @@ async function buildThemesMultiselect(){
   if(!node) return;
 
   toast("Lendo temas…");
+
+  // Carregar questões da disciplina e preparar chave canônica dos temas
   const allParsed = [];
   for (const path of node.files){
-    const parsed = await getParsedForPath(path); // já retorna themesCanon
+    const parsed = await getParsedForPath(path); // já inclui themesCanon
     allParsed.push(...parsed);
   }
   STATE.poolQuestions = allParsed;
 
-  // Monta mapa canônico -> rótulo bonito
-  STATE.themeMap.clear();
+  // Montar mapa canônico -> rótulo original
+  STATE.themeMap = new Map();
   for (const q of allParsed){
-    for (const t of (q.themes||[])){
+    const origThemes = q.themes || [];
+    for (const t of origThemes){
       const c = canon(t);
       if (!STATE.themeMap.has(c)) STATE.themeMap.set(c, t);
     }
   }
 
-  // Lista de chaves canônicas ordenada pelo rótulo bonito
-  STATE.ms.list = [...STATE.themeMap.keys()].sort((a,b)=>{
-    return (STATE.themeMap.get(a)||a).localeCompare(STATE.themeMap.get(b)||b,'pt-BR',{sensitivity:'base'});
-  });
-  STATE.ms.listStripped = STATE.ms.list.map(k=>strip(STATE.themeMap.get(k)||k));
-  STATE.ms.filter = "";
-  renderMsList();
-
-  // Trigger
+  // UI: trigger + painel
   const trigger = document.createElement("button");
   trigger.type="button";
   trigger.className="dd-btn ms-trigger";
@@ -217,7 +212,6 @@ async function buildThemesMultiselect(){
   trigger.addEventListener("click", toggleThemesPanel);
   box.appendChild(trigger);
 
-  // Painel
   const panel = document.createElement("div");
   panel.className="ms-panel";
   panel.innerHTML = `
@@ -233,108 +227,43 @@ async function buildThemesMultiselect(){
   `;
   box.appendChild(panel);
 
-  // Eventos
+  // Dados da lista para o multiselect
+  STATE.ms.list = [...STATE.themeMap.keys()].sort((a,b)=>{
+    const A = STATE.themeMap.get(a) || a;
+    const B = STATE.themeMap.get(b) || b;
+    return A.localeCompare(B, 'pt-BR', {sensitivity:'base'});
+  });
+  STATE.ms.listStripped = STATE.ms.list.map(k => strip(STATE.themeMap.get(k) || k));
+  STATE.ms.filter = "";
+
+  // Render inicial e eventos
+  renderMsList();
+  updateTriggerLabel();
+  updateCount();
+
   $("#msSearch").addEventListener("input", deb((e)=>{
     STATE.ms.filter = e.target.value;
     renderMsList();
   },150));
 
   $("#msSelAll").addEventListener("click", ()=>{
-    const visible = getVisibleItems();
-    visible.forEach(cKey=>STATE.temasSel.add(cKey)); // canônicas
-    $$("#msList .ms-item input").forEach(i=>{ i.checked=true; i.closest(".ms-item").classList.add("on"); });
-    updateTriggerLabel(); updateCount(); $("#btnBuscar").disabled = STATE.temasSel.size===0;
+    const visible = getVisibleItems();          // chaves canônicas visíveis
+    visible.forEach(cKey=>STATE.temasSel.add(cKey));
+    $$("#msList .ms-item input").forEach(i=>{
+      i.checked=true; i.closest(".ms-item").classList.add("on");
+    });
+    updateTriggerLabel(); updateCount();
+    $("#btnBuscar").disabled = STATE.temasSel.size===0;
   });
 
   $("#msClear").addEventListener("click", ()=>{
     STATE.temasSel.clear();
-    $$("#msList .ms-item").forEach(el=>{ el.classList.remove("on"); el.querySelector("input").checked=false; });
-    updateTriggerLabel(); updateCount(); $("#btnBuscar").disabled = true;
+    $$("#msList .ms-item").forEach(el=>{
+      el.classList.remove("on"); el.querySelector("input").checked=false;
+    });
+    updateTriggerLabel(); updateCount();
+    $("#btnBuscar").disabled = true;
   });
-}
-
-function toggleThemesPanel(){
-  const panel = $(".ms-panel");
-  if(!panel) return;
-  const open = panel.classList.toggle("show");
-  STATE.ms.open = open;
-}
-function closeThemesPanel(){
-  const panel = $(".ms-panel");
-  if(panel){ panel.classList.remove("show"); STATE.ms.open=false; }
-}
-function updateTriggerLabel(){
-  const n = STATE.temasSel.size;
-  $("#msTemasLabel").textContent = n ? `${n} tema(s) selecionado(s)` : "Selecionar temas";
-}
-
-function updateCount(){
-  const vis = getVisibleItems().length;
-  const sel = STATE.temasSel.size;
-
-  // contar questões do pool que têm AO MENOS um dos temas selecionados (usando themesCanon)
-  let found = 0;
-  if (sel > 0 && Array.isArray(STATE.poolQuestions)){
-    const want = new Set(STATE.temasSel); // canônicas
-    for (const q of STATE.poolQuestions){
-      const th = q.themesCanon || [];
-      for (let i = 0; i < th.length; i++){
-        if (want.has(th[i])) { found++; break; }
-      }
-    }
-  }
-
-  const suffix = sel ? ` · ${found} questões` : "";
-  $("#msCount").textContent = `${vis} exibidos · ${sel} selecionados${suffix}`;
-}
-
-function getVisibleItems(){
-  const f = strip(STATE.ms.filter);
-  if(!f) return STATE.ms.list.slice(); // canônicas
-  const out=[];
-  for(let i=0;i<STATE.ms.list.length;i++){
-    if(STATE.ms.listStripped[i].includes(f)) out.push(STATE.ms.list[i]); // compara por rótulo stripped
-  }
-  return out;
-}
-
-function renderMsList(){
-  const list = $("#msList"); list.innerHTML="";
-  const items = getVisibleItems(); // canônicas
-  const frag = document.createDocumentFragment();
-  items.forEach(cKey=>{
-    const label = STATE.themeMap.get(cKey) || cKey;
-    const on = STATE.temasSel.has(cKey);
-    const row = document.createElement("div");
-    row.className = "ms-item"+(on?" on":"");
-    row.dataset.tema=cKey; // guarda CANÔNICA
-    row.innerHTML = `<input type="checkbox" ${on?"checked":""} aria-label="${label}"><span>${label}</span>`;
-    frag.appendChild(row);
-  });
-  list.appendChild(frag);
-  list.onclick = (e)=>{
-    const item = e.target.closest(".ms-item");
-    if(!item || !list.contains(item)) return;
-    const cKey = item.dataset.tema;            // canônica
-    const ck = item.querySelector("input");
-    ck.checked = !ck.checked;
-    item.classList.toggle("on", ck.checked);
-    if(ck.checked) STATE.temasSel.add(cKey); else STATE.temasSel.delete(cKey);
-    updateTriggerLabel(); updateCount(); $("#btnBuscar").disabled = STATE.temasSel.size===0;
-  };
-  updateTriggerLabel(); updateCount();
-}
-
-/* Cache por arquivo: adiciona themesCanon */
-async function getParsedForPath(path){
-  if (STATE.cache.has(path)) return STATE.cache.get(path).parsed;
-  const text = await loadTxt(path);
-  const parsed = parseTxt(text).map(q=>({
-    ...q,
-    themesCanon: (q.themes||[]).map(canon)
-  }));
-  STATE.cache.set(path, { text, parsed });
-  return parsed;
 }
 
 /* ==================== BUSCA E QUIZ ==================== */
