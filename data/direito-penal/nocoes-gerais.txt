@@ -92,7 +92,7 @@
 * Caso um funcionário público a serviço do Brasil no exterior seja condenado no estrangeiro por crime contra a administração pública brasileira, ele não poderá ser punido pelo mesmo fato perante a justiça brasileira.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
@@ -100,7 +100,7 @@
 * Os empregados da Ordem dos Advogados do Brasil (OAB) são equiparados a funcionários públicos para fins penais.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Noções Fundamentais, Conceitos e caracteres
 
 -----
@@ -108,7 +108,7 @@
 * Segundo a teoria da ubiquidade, adotada pelo Código Penal brasileiro, considera-se praticado o crime tanto no lugar em que ocorreu a ação ou omissão, quanto no local onde se produziu ou deveria se produzir o resultado.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
@@ -116,7 +116,7 @@
 * O princípio da legalidade ou da reserva legal determina que não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal, razão pela qual a analogia é vedada no direito penal brasileiro.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
 
 -----
@@ -124,7 +124,7 @@
 * O indivíduo preso em decorrência de cometimento de crime contra o patrimônio conserva todos os direitos não atingidos pela perda da liberdade, impondo-se a todas as autoridades o respeito à sua integridade física e moral e devendo o seu trabalho ser sempre remunerado.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
 
 -----
@@ -132,7 +132,7 @@
 * A partir da situação hipotética apresentada, julgue o item que se segue, com base no Código Penal. Considera-se como tempo do crime o momento em que o resultado do delito ocorre, independentemente do instante em que se iniciou a conduta criminosa, o que, no caso em apreço, corresponde ao momento da agressão ao morador da casa invadida.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais, Lei penal no tempo
 
 -----
@@ -150,7 +150,7 @@
 * Dispõe a CF/1988 que não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal, e ainda que a lei penal não retroagirá, salvo para beneficiar o réu.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Noções Fundamentais
 
 -----
@@ -188,7 +188,7 @@
 * A lei penal não retroagirá, nem mesmo para beneficiar o réu.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais
 
 -----
@@ -454,7 +454,7 @@
 * O direito penal só admite a interpretação analógica quando esta for usada em favor do réu.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais
 
 -----
@@ -462,7 +462,7 @@
 * Segundo o princípio da continuidade normativo-típica, revogada a norma penal, mantém-se o caráter proibido da conduta, deslocando-se o conteúdo criminoso para outro tipo penal.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Noções Fundamentais
 
 -----
@@ -470,7 +470,7 @@
 * A teoria dos poderes implícitos excepciona o princípio da legalidade estrita, pois, como a lei permite ao juiz aplicar pena mais severa, entende-se, por extensão, que é aplicável pena mais branda, ainda que esta não venha positivada na legislação penal de modo expresso.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais
 
 -----
@@ -478,7 +478,7 @@
 * A vedação da analogia no direito penal decorre do próprio princípio da legalidade, pois não se admite outra fonte que não a lei para o que é prescrito como crime e pena.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Noções Fundamentais
 
 -----
@@ -486,7 +486,7 @@
 * A lei penal posterior mais benéfica retroagirá, respeitando-se, porém, a coisa julgada, definida pelo trânsito em julgado de sentença penal condenatória.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais
 
 -----
@@ -589,7 +589,7 @@
 * É necessária a homologação de sentença penal estrangeira para que uma pena privativa de liberdade possa produzir efeitos no Brasil e ser cumprida em prisão brasileira, exigindo-se, para tanto, que o condenado seja nacional e a lei penal brasileira produza, para a mesma espécie de crime, as mesmas consequências.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
@@ -597,7 +597,7 @@
 * Considere que, durante evento realizado no exterior, a honra do presidente da República tenha sido ofendida por um cidadão comum estrangeiro, que proferiu xingamentos e palavras de baixo calão à autoridade, incorrendo em crime previsto na legislação penal brasileira. Nessa situação, embora o crime tenha sido cometido no estrangeiro, o autor ficará sujeito à aplicação da lei penal brasileira, ainda que, pela prática delituosa, tenha sido absolvido ou condenado no exterior.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
@@ -605,7 +605,7 @@
 * Considere que um agente tenha praticado um crime na vigência da Lei A, mais favorável ao agente, e que, posteriormente, essa lei tenha sido revogada pela Lei B, mais prejudicial a ele. Nessa situação, mesmo que tenha sido revogada, a Lei A ainda produzirá efeitos e será aplicável aos fatos praticados sob sua vigência, em razão do fenômeno da ultratividade da lei penal mais benéfica.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Noções Fundamentais, Lei penal no tempo
 
 -----
@@ -623,7 +623,7 @@
 * Suponha que uma pessoa tenha sido sequestrada na Argentina e transportada em via terrestre até o Uruguai, tendo passado antes pelo território brasileiro. Nesse caso, o processamento e julgamento do agente da conduta criminosa no Brasil é possível, de acordo com a legislação penal brasileira.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
@@ -832,7 +832,7 @@
 * Segundo doutrinadores em direito penal, expressões como "segurança pública" e "paz pública" não aludem a bens jurídicos reais, mas apenas a bens jurídicos aparentes, seja porque correspondem à soma de bens jurídicos individuais verdadeiros, que, todavia, não cria um bem jurídico coletivo, seja porque a sua indeterminação não permite que a teoria do bem jurídico cumpra sua função crítica.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Noções Fundamentais, Conceitos e caracteres
 
 -----
@@ -840,7 +840,7 @@
 * O conceito de bem jurídico foi criado por Johann Birnbaum, segundo o qual a enunciação do bem jurídico correspondente ao modelo proibitivo de conduta é um critério de interpretação da norma, confundindo-se com a ratio legis.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais, Conceitos e caracteres
 
 -----
@@ -848,7 +848,7 @@
 * As autoridades estrangeiras permitiram que o Brasil conduzisse a investigação e eventual processo criminal, já que a embarcação estava registrada no Brasil. Com base na situação hipotética precedente e no disposto no CP, julgue o item abaixo. Como o crime ocorreu fora do território brasileiro, em alto-mar, e não envolveu embarcação pública, a lei penal brasileira não pode ser aplicada ao caso.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
@@ -856,7 +856,7 @@
 * Dias depois, em 15 de janeiro do mesmo ano, a vítima faleceu em uma cidade na Argentina, em decorrência dos ferimentos provocados pelos disparos. Nessa data, o autor do crime já havia completado dezoito anos de idade. Considerando essa situação hipotética, julgue o item seguinte. Conforme a teoria da atividade adotada pelo Código Penal brasileiro, o tempo do crime deve ser fixado no momento da ação ou omissão, razão pela qual, na situação apresentada, o agente deverá ser considerado inimputável.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Culpabilidade, Noções Fundamentais, Lei penal no tempo Imputabilidade penal
 
 -----
@@ -864,7 +864,7 @@
 * Dias depois, em 15 de janeiro do mesmo ano, a vítima faleceu em uma cidade na Argentina, em decorrência dos ferimentos provocados pelos disparos. Nessa data, o autor do crime já havia completado dezoito anos de idade. Considerando essa situação hipotética, julgue o item seguinte. Nos termos da teoria da ubiquidade adotada pelo Código Penal brasileiro, o crime em questão deverá ser considerado praticado apenas no local onde o resultado morte se consumou, ou seja, na Argentina.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
@@ -924,7 +924,7 @@
 * A lei penal mais grave aplica-se aos crimes permanentes se sua vigência for iniciada durante a permanência do resultado, desde que não haja sentença penal condenatória transitada em julgado.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais, Lei penal no tempo
 
 -----
@@ -973,7 +973,7 @@
 * O ordenamento penal brasileiro, em regra, adota a teoria da atividade para determinar o momento do crime, sendo considerado praticado o crime no instante da conduta, seja esta comissiva ou omissiva, independentemente do momento em que se verifica o resultado.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Noções Fundamentais, A norma penal
 
 -----
@@ -981,7 +981,7 @@
 * Se uma lei excepcional ou temporária estiver vigente no momento da prática de um crime, ela será aplicada ao fato, ainda que ela tenha perdido sua vigência no momento do julgamento.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Noções Fundamentais, A norma penal
 
 -----
@@ -989,7 +989,7 @@
 * No caso dos crimes "a distância", em que a ação delituosa ocorre em determinado local, mas o resultado é produzido em localidade diversa, o lugar do crime, para efeitos penais, em regra, é aquele em que ocorreu a ação ou omissão, independentemente do resultado.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
@@ -997,7 +997,7 @@
 * Considere que uma nova lei penal que tenha sido publicada tenha deixado de considerar determinada conduta como crime. Nessa situação, a referida lei deverá ser aplicada a todos os fatos anteriores, mesmo que já tenham sido decididos por sentença condenatória já transitada em julgado.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
+*** Gabarito: A
 **** Noções Fundamentais, A norma penal
 
 -----
@@ -1005,5 +1005,5 @@
 * De acordo com a teoria que determina o tempo do crime, para efeitos penais, não se computa no prazo o dia em que este se inicia, incluindo-se, porém, o dia de seu vencimento.
 ** A) Certo
 ** B) Errado
-*** Gabarito: E
+*** Gabarito: B
 **** Noções Fundamentais, Lei penal no tempo, Teoria Geral do Delito
