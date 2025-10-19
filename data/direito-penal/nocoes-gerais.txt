@@ -719,7 +719,7 @@
 ** D) A jurisprudência admite a aplicação do princípio da insignificância nos crimes patrimoniais em que não há emprego de violência ou grave ameaça, mas há resistência para o reconhecimento para o crime de roubo.
 ** E) Há precedentes nos tribunais superiores reconhecendo a aplicação do princípio da insignificância mesmo que a vida pregressa do indivíduo denote reincidência criminal.
 *** Gabarito: C
-**** Noções Fundamentais do Direito Penal, A norma penal Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito
+**** Noções Fundamentais do Direito Penal, A norma penal, Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito
 
 -----
 * Em relação à aplicação da lei penal, de acordo com as disposições do Código Penal, assinale a opção correta.
@@ -1596,7 +1596,7 @@
 ** D) I, II e IV.
 ** E) III e V.
 *** Gabarito: D
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Antijuridicidade Legítima defesa
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Antijuridicidade, Legítima defesa
 
 -----
 * Em relação à aplicação da lei penal no tempo, à eficácia de sentença estrangeira em âmbito penal e aos crimes contra a pessoa, julgue o item a seguir.
@@ -2672,7 +2672,7 @@
 ** D) A renúncia do direito de queixa ou perdão aceito, nos crimes de ação penal pública.
 ** E) A rejeição da denúncia.
 *** Gabarito: C
-**** Noções Fundamentais do Direito Penal, Medida de segurança, Conceito de Medida de Segurança, Causas de extinção da punibilidade, 
+**** Noções Fundamentais do Direito Penal, Medida de segurança, Medida de Segurança, Causas de extinção da punibilidade, 
 
 -----
 * É correto afirmar que a coação física irresistível exclui:
@@ -3366,7 +3366,7 @@
 ** D) Considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado. Portanto, no Brasil, adota-se a teoria da atividade.
 ** E) Em relação à contagem do prazo para cumprimento da pena, o dia do começo inclui-se no cômputo do prazo. Contam-se os dias, os meses e os anos pelo calendário comum.
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, Lei penal no tempo, Lei penal no espaço Penas privativas de liberdade, Noções gerais de dosimetria da pena privativa de liberdade
+**** Noções Fundamentais do Direito Penal, Lei penal no tempo, Lei penal no espaço, Penas privativas de liberdade, Noções gerais de dosimetria da pena privativa de liberdade
 
 -----
 * Sandro foi preso em flagrante ao subtrair um pacote de macarrão, cujo valor era R$9,00, de um hipermercado do bairro onde morava.
@@ -3650,7 +3650,7 @@
 ** D) o princípio da insignificância, por entender que o crime não possui relevância penal, constitui uma causa de exclusão da culpabilidade.
 ** E) é admitida a ocorrência de legítima defesa real contra legítima defesa putativa e de legítima defesa real contra legitima defesa real.
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Antijuridicidade Legítima defesa, Estado de necessidade, Estrito cumprimento de dever legal e exercício regular de direito
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Antijuridicidade, Legítima defesa, Estado de necessidade, Estrito cumprimento de dever legal e exercício regular de direito
 
 -----
 * Determinado crime teve nova lei promulgada e entrou em vigor, trazendo uma parte de dispositivos mais benéficos e outros dispositivos mais graves em relação aos crimes que dispõe.
@@ -4157,7 +4157,7 @@
 ** D) Para a configuração do delito de violação de direito autoral e a comprovação de sua materialidade, é suficiente a perícia realizada por amostragem do produto apreendido, nos aspectos externos do material, e é desnecessária a identificação dos titulares dos direitos autorais violados ou daqueles que os representem.
 ** E) O crime de estupro de vulnerável se configura com a conjunção carnal ou prática de ato libidinoso com menor de catorze anos, sendo irrelevante eventual consentimento da vítima para a prática do ato, sua experiência sexual anterior ou existência de relacionamento amoroso com o agente.
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, Lei penal no espaço, Causas de extinção da punibilidade Perdão judicial, Crimes contra o patrimônio, Roubo, Crimes contra a propriedade imaterial, Crimes contra a dignidade sexual, Estupro de vulnerável, Legislação Penal Especial
+**** Noções Fundamentais do Direito Penal, Lei penal no espaço, Causas de extinção da punibilidade, Perdão judicial, Crimes contra o patrimônio, Roubo, Crimes contra a propriedade imaterial, Crimes contra a dignidade sexual, Estupro de vulnerável, Legislação Penal Especial
 
 -----
 * Em relação ao Direito Penal, assinale a alternativa correta.
@@ -4681,7 +4681,7 @@
 ** C) Princípio da Intervenção Mínima.
 ** D) Princípio da Insignificância.
 *** Gabarito: D
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Antijuridicidade Causas supralegais de exclusão da antijuridicidade
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Antijuridicidade, Causas supralegais de exclusão da antijuridicidade
 
 -----
 * De acordo com o entendimento do Supremo Tribunal Federal e do Superior Tribunal de Justiça, para a incidência do Princípio da Insignificância a conduta do agente deve estar acompanhada dos seguintes requisitos, EXCETO:
@@ -6191,7 +6191,7 @@ Estão certos apenas os itens
 ** D) As alternativas "a", "b" e "c" estão corretas.
 ** E) Apenas as alternativas "a" e "b" estão corretas.
 *** Gabarito: E
-**** Noções Fundamentais do Direito Penal, , Antijuridicidade Legítima defesa
+**** Noções Fundamentais do Direito Penal, , Antijuridicidade, Legítima defesa
 -----
 * Assinale a alternativa correta.
 ** A) Na fixação da pena, o Magistrado após o reconhecimento da existência do crime e sua autoria tem uma discricionariedade "regrada ou vinculada".
@@ -8502,7 +8502,7 @@ A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da senten�
 ** D) Sobre a lei penal no tempo, o Código Penal Brasileiro adotou a Teoria da Ubiquidade.
 ** E) O crime é consumado quando nele se reúnem todos os elementos de sua definição legal.
 *** Gabarito: E
-**** Tipicidade, Noções Fundamentais do Direito Penal, Lei penal no tempo, Teoria Geral do Delito, Conceito de crime, Consumação e tentativa, Antijuridicidade, Noções Gerais Antijuridicidade
+**** Tipicidade, Noções Fundamentais do Direito Penal, Lei penal no tempo, Teoria Geral do Delito, Conceito de crime, Consumação e tentativa, Antijuridicidade, Noções Gerais, Antijuridicidade
 -----
 * Acerca do princípio da retroatividade da lei penal mais benéfica, assinale a afirmação INCORRETA.
 ** A) Determina que a lei penal poderá retroagir para atingir fatos praticados antes da sua entrada em vigor quando possuir sanção mais branda ao acusado.
@@ -8814,7 +8814,7 @@ A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da senten�
 ** D) Somente as assertivas I, III e IV.
 ** E) Somente as assertivas I e IV.
 *** Gabarito: E
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Lei penal no tempo, Causas de extinção da punibilidade, Causas de Extinção da Punibilidade - Noções gerais, Crimes contra a liberdade pessoal, Sequestro ou cárcere privado
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Lei penal no tempo, Causas de extinção da punibilidade, Crimes contra a liberdade pessoal, Sequestro ou cárcere privado
 -----
 * Relativamente ao princípio da insignificância, assinale a alternativa correta:
 ** A) O princípio da insignificância pode ser aplicado no plano abstrato.
