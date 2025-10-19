@@ -121,6 +121,7 @@ const STATE = {
 window.addEventListener("DOMContentLoaded", async ()=>{
   $("#btnHome").addEventListener("click", goHome);
   setupDropdown();
+  initTopbarAutoHide(); // mostra a topbar mais rápido ao subir
   try{
     STATE.tree = await discoverDataTree();
     fillDisciplines(Object.keys(STATE.tree).sort());
@@ -157,13 +158,13 @@ function fillDisciplines(keys){
       STATE.disciplina=k;
       $("#ddDiscLabel").textContent=pretty(k);
       ul.classList.remove("show");
-      await renderTemasFromFiles(); // NOVO: temas saem de **** dentro dos .txt
+      await renderTemasFromFiles(); // temas lidos das linhas ****
     });
     ul.appendChild(li);
   }
 }
 
-/* === NOVO: coletar temas varrendo arquivos da disciplina selecionada === */
+/* === Temas a partir de **** dentro dos arquivos === */
 async function renderTemasFromFiles(){
   const box=$("#chipsTemas"); box.innerHTML="";
   STATE.temasSel.clear();
@@ -178,14 +179,12 @@ async function renderTemasFromFiles(){
     const parsed = await getParsedForPath(path);
     allParsed.push(...parsed);
   }
-  // União de temas
   const set = new Set();
   for (const q of allParsed){
     if (Array.isArray(q.themes)) q.themes.forEach(t=>set.add(t));
   }
   const temas = [...set].sort((a,b)=>a.localeCompare(b,'pt-BR'));
 
-  // Render chips
   if (!temas.length){
     const p=document.createElement("p");
     p.textContent="Nenhum tema encontrado nesta disciplina.";
@@ -220,12 +219,10 @@ async function getParsedForPath(path){
 async function startSearch(){
   try{
     toast("Carregando questões…");
-    // Carregar todos os arquivos da disciplina
     const files = STATE.tree[STATE.disciplina]?.files || [];
     const batches = await Promise.all(files.map(getParsedForPath));
     const all = batches.flat();
 
-    // Filtrar por temas selecionados (interseção)
     const wanted = new Set(STATE.temasSel);
     const filtered = all.filter(q => q.themes.some(t => wanted.has(t)));
 
@@ -362,6 +359,25 @@ function goHome(){
   $("#quiz").classList.add("hidden");
   $("#home").classList.remove("hidden");
   window.scrollTo({top:0,behavior:"smooth"});
+}
+
+/* === Topbar: esconder ao descer, mostrar rápido ao subir === */
+function initTopbarAutoHide(){
+  const bar = document.querySelector(".topbar");
+  if (!bar) return;
+  let last = window.scrollY;
+  let hidden = false;
+  window.addEventListener("scroll", () => {
+    const y = window.scrollY;
+    const dy = y - last;
+    if (y < 48) { bar.classList.remove("hide"); hidden = false; last = y; return; }
+    if (dy > 6 && y > 80) {            // descendo
+      if (!hidden){ bar.classList.add("hide"); hidden = true; }
+    } else if (dy < -2) {              // subindo (sensível)
+      if (hidden){ bar.classList.remove("hide"); hidden = false; }
+    }
+    last = y;
+  }, { passive: true });
 }
 
 /* ==================== EXPOSE DEBUG ==================== */
