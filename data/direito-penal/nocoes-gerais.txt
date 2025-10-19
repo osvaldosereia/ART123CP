@@ -4490,7 +4490,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Tipicidade, Noções Fundamentais do Direito Penal, A norma penal Lei penal no tempo, Lei penal no espaço, Consumação e tentativa
+**** Tipicidade, Noções Fundamentais do Direito Penal, A norma penal, Lei penal no tempo, Lei penal no espaço, Consumação e tentativa
 
 -----
 * Considerando a interpretação do STJ e do STF a respeito da legislação penal extravagante, julgue o item seguinte.
@@ -6994,7 +6994,7 @@ Estão certos apenas os itens
 ** D) A lei posterior, que de qualquer modo favorecer o agente, aplica-se aos fatos anteriores, ainda que decididos por sentença condenatória.
 ** E) Considera-se praticado o crime no momento do resultado, ainda que outro seja o tempo da ação ou omissão que lhe deu causa.
 *** Gabarito: E
-**** Culpabilidade, Noções Fundamentais do Direito Penal, A norma penal Lei penal no tempo, Inimputabilidade pela embriaguez, Noções Gerais da Culpabilidade
+**** Culpabilidade, Noções Fundamentais do Direito Penal, A norma penal, Lei penal no tempo, Inimputabilidade pela embriaguez, Noções Gerais da Culpabilidade
 -----
 * O princípio do direito penal que possui claro sentido de garantia fundamental da pessoa, impedindo que alguém possa ser punido por fato que, ao tempo do seu cometimento, não constituía delito é
 ** A) atipicidade.
