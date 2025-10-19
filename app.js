@@ -3,7 +3,6 @@
 /* ==================== UTIL ==================== */
 const $ = (s, r=document)=>r.querySelector(s);
 const $$ = (s, r=document)=>r.querySelectorAll(s);
-const sleep = (ms)=>new Promise(r=>setTimeout(r,ms));
 function toast(msg, t=1600){ const el=$("#toast"); el.textContent=msg; el.classList.add("show"); setTimeout(()=>el.classList.remove("show"), t); }
 function uid(){ try{ if(crypto?.randomUUID) return crypto.randomUUID(); }catch{} return "q_"+Math.random().toString(36).slice(2,10); }
 function pretty(s){ return s.replace(/[-_]/g," ").replace(/\.txt$/,""); }
@@ -246,6 +245,7 @@ async function loadTxt(path){
   return await res.text();
 }
 
+/* ==================== INFINITE SCROLL ROBUSTO ==================== */
 function mountInfinite(){
   const sentinel=$("#sentinel");
   STATE.observer?.disconnect();
@@ -258,10 +258,15 @@ function mountInfinite(){
         toast("Fim da lista");
         STATE.observer.disconnect();
       }
+      // se ainda visível, continue bombeando
+      pumpIfVisible();
     }
-  }, {rootMargin:"200px"});
+  }, {rootMargin:"1000px"});
   STATE.observer.observe(sentinel);
   renderBatch();
+  pumpIfVisible();
+  window.addEventListener("scroll", pumpIfVisible, { passive:true });
+  window.addEventListener("resize", pumpIfVisible);
 }
 
 async function renderBatch(){
@@ -270,9 +275,29 @@ async function renderBatch(){
   for(let i=start;i<end;i++){
     const q = STATE.allQuestions[i];
     $("#quizList").appendChild(buildQuestion(q, i+1));
-    await sleep(0);
   }
   STATE.cursor = end;
+}
+
+// Bombeia mais lotes enquanto o sentinel estiver dentro da viewport
+function pumpIfVisible(){
+  const s = document.getElementById("sentinel");
+  if (!s) return;
+  if (STATE.cursor >= STATE.allQuestions.length) return;
+  const r = s.getBoundingClientRect();
+  const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  if (r.top - vh < 200) {
+    let guard = 0;
+    (async function loop(){
+      while (guard++ < 20 && STATE.cursor < STATE.allQuestions.length) {
+        const before = STATE.cursor;
+        await renderBatch();
+        if (STATE.cursor === before) break;
+        const rr = s.getBoundingClientRect();
+        if (rr.top - vh > 200) break;
+      }
+    })();
+  }
 }
 
 /* ==================== RENDER QUESTÃO ==================== */
