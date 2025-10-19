@@ -1811,4 +1811,537 @@ Considera-se crime toda ação ou omissão típica, antijurídica e culpável.
 *** Gabarito: A
 **** Teoria Geral do Delito, Conceito de crime
 -----
-
+* Quanto ao elemento moral, os crimes podem ser
+** A) comissivos, omissivos e comissivos por omissão.
+** B) dolosos, culposos e qualificados pelo resultado.
+** C) individuais, coletivos, gerais e especiais.
+** D) comuns, políticos e mistos.
+** E) simples, complexos, formais e materiais.
+*** Gabarito: D
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Com relação à aplicação da lei penal, analise o caso abaixo e o enquadre na teoria do crime prevista no Código Penal Brasileiro, assinalando a assertiva correta.
+* Carlos atira em João com a intenção de matá-lo. Entretanto, a bala passa de raspão no braço de João. Este é socorrido e levado para o hospital. Tragicamente, o hospital é incendiado por Abelardo que deseja matar todos os pacientes do hospital e João morre carbonizado.
+** A) Carlos deverá ser denunciado por tentativa de homicídio.
+** B) Abelardo não pode ser denunciado pelo homicídio de João.
+** C) Abelardo não cometeu crime algum em relação a João.
+** D) Carlos deverá ser denunciado por homicídio.
+** E) Carlos e Abelardo deverão ser denunciados em concurso de agentes como co-autores do homicídio de João.
+*** Gabarito: A
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Com relação a direito penal, julgue os seguintes itens.
+* A tentativa incruenta não é punível, pois considera-se que o agente não iniciou a fase executória do iter criminis.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Quanto a tipicidade, ilicitude, culpabilidade e punibilidade, julgue os itens a seguir.
+* Os crimes comissivos por omissão - também chamados de crimes omissivos impróprios - são aqueles para os quais o tipo penal descreve uma ação, mas o resultado é obtido por inação.
+** A) Certo
+** B) Errado
+*** Gabarito: D
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* O agente que deixa de agir, desconhecendo a sua qualidade de garantidor, incorre em:
+** A) erro de tipo;
+** B) erro de proibição;
+** C) delito putativo por erro de tipo;
+** D) delito putativo por erro de proibição;
+** E) crime impossível.
+*** Gabarito: B
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* No que concerne ao estado de necessidade, é correto afirmar que:
+** A) o código penal adota a teoria diferenciadora, sendo todo estado de necessidade justificante;
+** B) não há distinção entre estado de necessidade justificante e estado de necessidade exculpante;
+** C) o código penal adota a teoria unitária, sendo todo estado de necessidade exculpante;
+** D) no estado de necessidade exculpante, o bem jurídico preservado sempre será de maior valor do que o bem jurídico sacrificado;
+** E) para distinguir estado de necessidade exculpante e estado de necessidade justificante, é preciso ponderar bens jurídicos depois de confrontá-los.
+*** Gabarito: C
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* A respeito da tentativa, é correto afirmar que:
+** A) a tentativa imperfeita pode também ser denominada tentativa branca;
+** B) a consumação não pode ser obtida por razões alheias ou não à vontade do agente;
+** C) pode ocorrer nos crimes habituais;
+** D) o código penal adota a teoria objetiva moderada ou temperada no que concerne à punibilidade na tentativa;
+** E) não pode ocorrer nos crimes complexos.
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* NÃO ocorre nexo de causalidade nos crimes:
+** A) de mera conduta;
+** B) materiais;
+** C) omissivos impróprios;
+** D) comissivos por omissão;
+** E) de dano.
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Segundo a redação do artigo 18, I, do Código Penal ("Diz-se o crime: I - doloso, quando o agente quis o resultado ou assumiu o risco de produzi-lo"), é possível concluir que foi adotada:
+** A) a teoria do assentimento;
+** B) a teoria da representação;
+** C) as teorias do assentimento e da representação;
+** D) as teorias do assentimento e da vontade;
+** E) as teorias da representação e da vontade.
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Assinale a alternativa correta.
+** A) Não há crime pela ausência de dolo pelo fato de este ser um elemento da antijuridicidade.
+** B) Em virtude da teoria da presunção do dolo, adotada pelo ordenamento penal, o erro sobre elemento constitutivo do tipo somente excluirá a culpa.
+** C) Considere a seguinte situação hipotética: João foi contratado para tirar a vida de Fernando. Quando vai executar o homicídio, não encontra Fernando e, como o irmão deste estava no local e era seu desafeto, tira- lhe a vida. Nessa situação, João praticou um homicídio com erro sobre a pessoa, não se devendo considerar as condições ou qualidades da vítima, mas as de Fernando.
+** D) Tratando-se de crime complexo, a ausência de objetos de valores com a vítima de roubo descaracteriza a figura típica do crime de roubo, face o erro sobre o elemento constitutivo do tipo.
+** E) É isento de pena quem imagina verdadeiramente estar agindo em legítima defesa, já que toda situação fática assim indica, apesar de tal não ocorrer, estar-se-á diante de uma discriminante putativa.
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Marque a alternativa CORRETA. O erro de proibição escusável, como excludente da potencial consciência da ilicitude, leva à
+* absolvição por exclusão da:
+** A) Imputabilidade
+** B) Tipicidade
+** C) Punibilidade
+** D) Culpabilidade
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Cada um dos itens subseqüentes apresenta uma situação
+* hipotética, seguida de uma assertiva a ser julgada com base noCódigo Penal.
+* Enrico, com intenção de matar seu irmão Lauro, ficou escondido atrás de uma moita, esperando o momento em que a vítima sairia de seu trabalho, com direção à residência de ambos. No horário de costume, ao ver uma pessoa trajando roupas semelhantes às que Lauro usava e acreditando que tal pessoa era seu irmão, efetuou dois disparos contra essa pessoa, em região letal, o que ocasionou o imediato óbito. Posteriormente, todavia, Enrico constatou que Lauro ainda não havia saído do trabalho e que a pessoa morta era um colega de trabalho de Lauro, desconhecido do autor do fato. Nessa situação, ocorreu erro sobre a pessoa, o qual não isenta Enrico de pena. Não se consideram as condições e qualidades da vítima efetiva, mas sim as da vítima virtual, ou seja, o irmão do agente, de modo que ficará Enrico sujeito à circunstância agravante de ter cometido o crime contra ascendente, descendente, irmão ou cônjuge.
+** A) Certo
+** B) Errado
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Constituem elementos do estado de necessidade:
+** A) Perigo atual ou iminente, que o agente não tenha provocado, nem podia de outro modo ter evitado.
+** B) Reação à injusta agressão, atual ou iminente, fazendo uso dos meios necessários moderadamente.
+** C) Agressão atual, defesa de direito próprio ou de outrem e reação moderada.
+** D) Existência de perigo atual, cujo sacrifício, nas circunstâncias era razoável exigir-se.
+** E) Defesa de direito próprio ou de outrem, voluntariamente provocado pelo agente e exigibilidade de conduta diversa.
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Quanto ao elemento moral, os crimes podem ser:
+** A) comissivos e omissivos.
+** B) simples e complexos.
+** C) individuais e coletivos.
+** D) dolosos e culposos.
+** E) políticos e mistos.
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Nos chamados crimes monossubjetivos,
+** A) o concurso de pessoas é eventual.
+** B) o concurso de pessoas só ocorre no caso de autoria mediata.
+** C) o concurso de pessoas é necessário.
+** D) não há concurso de pessoas.
+** E) há concurso de pessoas apenas na forma de participação.
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Ainda que não encontre tipificação em excludente prevista em lei, a doutrina tem aceito a inexigibilidade de conduta diversa como causa supralegal de exclusão da
+** A) antijuridicidade.
+** B) culpabilidade.
+** C) tipicidade.
+** D) ilicitude.
+** E) punibilidade.
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Para a configuração do crime culposo, além da tipicidade, torna-se necessária a prática de conduta com
+** A) inobservância do dever de cuidado que causa um resultado cujo risco foi assumido pelo agente.
+** B) observância do dever de cuidado que causa um resultado desejado, mas previsível.
+** C) inobservância do dever de cuidado que causa um resultado desejado, mas previsível.
+** D) inobservância do dever de cuidado que causa um resultado não desejado e imprevisível.
+** E) observância do dever de cuidado e vontade consciente.
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Assinale a afirmativa INCORRETA, quanto à omissão em matéria penal:
+** A) a figura do "garantidor" ou "garante" é aplicável aos crimes omissivos impróprios;
+** B) crimes omissivos impróprios são aqueles objetivamente descritos com uma conduta negativa de não fazer o que a lei determina;
+** C) a causalidade nos crimes omissivos impróprios é normativa, estabelecendo-se entre o resultado e o comportamento que o agente estava juridicamente obrigado a fazer e do qual se omitiu;
+** D) o crime de omissão de socorro é exemplo de crime omissivo próprio;
+** E) não respondida.
+**** Concurso de Pessoas, Teoria Geral do Delito, Conceito de crime
+-----
+* O agente que, voluntariamente, desiste de prosseguir na execução do crime, responde:
+** A) pela prática do crime tentado.
+** B) pela prática do crime consumado.
+** C) somente pelos atos já praticados.
+** D) pelo crime consumado, mas reduzida a pena de um a dois terços em virtude do arrependimento posterior.
+** E) pelo crime consumado, sem qualquer redução da pena.
+**** Concurso de Pessoas, Teoria Geral do Delito, Conceito de crime
+-----
+* Assinale a alternativa correta.
+** A) A interpretação analógica é permitida somente para beneficiar o acusado.
+** B) No caso de o fato punível constituir delito autônomo, uma vez descaracterizado este, é possível o enquadramento do fato em outro tipo penal.
+** C) A edição de lei caracterizadora de abolitio criminis faz cessar os efeitos penais e os efeitos civis da sentença condenatória.
+** D) A prescrição da pretensão punitiva não tem conseqüências distintas da prescrição da pretensão executória.
+** E) A Constituição Federal permite a edição de Medida Provisória em matéria penal, somente nos casos em que houver relevância e urgência.
+*** Gabarito: B
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito Causas de extinção da punibilidade, Abolitio criminis
+-----
+* Em relação à infração penal, assinale a opção correta.
+** A) Considera-se crime a infração penal a que a lei comina pena de reclusão, de detenção ou prisão simples, quer isoladamente, quer alternativa ou cumulativamente com a pena de multa.
+** B) Considera-se contravenção penal a infração penal a que a lei comina pena máxima não superior a dois anos de reclusão.
+** C) No ordenamento jurídico brasileiro, a diferença entre crime e delito está na gravidade do fato e na pena cominada à infração penal.
+** D) A infração penal é gênero que abrange como espécies as contravenções penais e os crimes, sendo estes últimos também identificados como delitos.
+** E) Os crimes apenados com reclusão se submetem aos regimes fechado e semi-aberto, enquanto os apenados com detenção se submetem aos regimes aberto e prisão simples.
+*** Gabarito: D
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Com relação aos crimes culposos, assinale a opção correta.
+** A) A culpa consciente ocorre quando o agente assume ou aceita o risco de produzir o resultado. Nesse caso, o agente não quer o resultado, caso contrário, ter-se-ia um crime doloso.
+** B) A culpa imprópria ou culpa por extensão é aquela em que a vontade do sujeito dirige-se a um ou outro resultado, indiferentemente dos danos que cause à vítima.
+** C) A compensação de culpas no direito penal, aceita pela doutrina penal contemporânea e acolhida pela jurisprudência pátria, diz respeito à possibilidade de compensar a culpa da vítima com a culpa do agente da conduta delituosa, de modo a assegurar equilíbrio na relação penal estabelecida.
+** D) São elementos do fato típico culposo: conduta humana voluntária (ação/omissão), inobservância do cuidado objetivo (imprudência/negligência/imperícia), previsibilidade objetiva, ausência de previsão, resultado involuntário, nexo de causalidade e tipicidade.
+** E) A autoria dos crimes culposos é basicamente atribuída àquele que causou o resultado. Com isso admite-se a participação culposa em delito doloso, participação dolosa em crime culposo e participação culposa em fato típico culposo.
+*** Gabarito: D
+**** Teoria Geral do Delito, Conceito de crime, Crimes contra a administração pública
+-----
+* A respeito de tipicidade e ilicitude, julgue os itens que se seguem.
+* Fato ilícito ou injusto é a contrariedade entre o fato e a lei, não comportando escalonamentos de índole subjetiva.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Teoria Geral do Delito
+-----
+* Com relação ao direito penal, julgue os itens subsecutivos.
+* Os crimes omissivos próprios são previstos em tipos penais específicos e dependem da ocorrência de resultado para a sua consumação.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Sobre a teoria geral do delito, é correto afirmar:
+** A) Na concorrência plúrima, o instituto da cooperação dolosamente diversa ocorre quando todos os agentes, mesmo sem vínculo subjetivo, se comportam para o mesmo fim, mas desconhecem a conduta alheia.
+** B) Nas descriminantes putativas é isento de pena quem, por erro plenamente justificado pelas circunstâncias, supõe situação de fato que, se existisse, tornaria a ação legítima, havendo também isenção de pena quando o erro deriva de culpa e o fato é punível como crime culposo.
+** C) Se o fato é cometido sob coação irresistível ou em estrita obediência a ordem, não manifestamente ilegal, de superior hierárquico, só é punível o autor da coação ou da ordem, atuando o coacto com excludente legal de culpabilidade.
+** D) O crime impossível é causa legal de exclusão da ilicitude, ocorrendo quando o agente, por ineficácia absoluta do meio ou por absoluta impropriedade do objeto, não consegue consumar o crime.
+** E) No concurso formal de crimes, o agente, mediante mais de uma ação ou omissão, que pratica dois ou mais crimes, idênticos ou não, é punido aplicando-se cumulativamente as penas privativas de liberdade em que haja incorrido, mesmo que a ação ou omissão seja dolosa e os crimes concorrentes decorram de desígnios autônomos.
+*** Gabarito: C
+**** Concurso de Pessoas, Teoria Geral do Delito, Conceito de crime
+-----
+* Analise as proposições e assinale a única alternativa correta:
+* I-O concurso formal imperfeito ocorre quando os desígnios não são autônomos.
+* II - Crime progressivo e progressão criminosa são a mesma coisa.
+* III - No crime continuado, devem ser aplicadas distintas e cumulativamente as penas de multa.
+** A) Todas as proposições são verdadeiras.
+** B) Todas as proposições são falsas.
+** C) Apenas uma das proposições é verdadeira.
+** D) Apenas uma das proposições é falsa.
+*** Gabarito: B
+**** Teoria Geral do Delito, Conceito de crime, Concurso de crimes Concurso formal, Crime continuado
+-----
+* Assinale a opção correta com relação às teorias do direito penal.
+** A) De acordo com a tipicidade conglobante, devem-se analisar outros elementos além daqueles previstos no tipo penal para que o fato seja considerado típico. Essa abordagem tem por fundamento o modelo clássico do finalismo, que, se afastando da teoria indiciária, adota o modelo da teoria dos elementos negativos do tipo.
+** B) De acordo com a teoria constitucionalista do delito, crime é fato típico, antijurídico e punível. A culpabilidade, fundamento para a aplicação da pena, não é requisito do crime.
+** C) De acordo com a teoria do funcionalismo moderado, o crime é composto por três requisitos: tipicidade, antijuridicidade e punibilidade, e este último requisito compreende culpabilidade e necessidade concreta da pena.
+** D) Segundo a teoria finalista, a culpabilidade é puro juízo de reprovação do crime, ou seja, nem puramente psicológica, como na teoria neokantista, nem psicológica e normativa, como na teoria causalista.
+** E) Segundo a teoria do funcionalismo moderado, caso um lutador de boxe mate o adversário no ringue, o fato deverá ser considerado atípico, uma vez que o agente somente comete fato materialmente típico se criar riscos proibidos pelo direito; tal posicionamento contraria a doutrina tradicional, que caracteriza o fato como exercício regular de direito.
+*** Gabarito: E
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* A respeito da teoria do crime adotada pelo CP, assinale a opção correta.
+** A) A ausência de previsão é requisito da culpa inconsciente, pois, se o agente consegue prever o delito, trata-se de conduta dolosa e não culposa.
+** B) O CP limitou-se a adotar a teoria do assentimento em relação ao dolo ao dispor que age dolosamente o agente que aceita o resultado, embora não o tenha visado como fim específico.
+** C) A conduta do agente que, após iniciar a execução de crime por iniciativa própria, impede a produção do resultado caracteriza arrependimento posterior e tem a mesma consequência jurídica da desistência voluntária.
+** D) Na desistência voluntária, o agente poderá responder pelos atos já praticados, pelo resultado ocorrido até o momento da desistência ou pela tentativa do crime inicialmente pretendido.
+** E) A previsibilidade subjetiva é um dos elementos da culpa e consiste na possibilidade de ser antevisto o resultado nas circunstâncias específicas em que o agente se encontrava no momento da infração penal.
+*** Gabarito: A
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Em relação à aplicação da lei penal e aos diversos aspectos do crime, julgue os itens seguintes.
+* No Código Penal brasileiro, adota-se, em relação ao conceito de crime, o sistema tricotômico, de acordo com o qual as infrações penais são separadas em crimes, delitos e contravenções.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Sobre um Direito Penal Quântico, que seria fruto da influência do paradigma quântico nas ciências criminais, é CORRETO afirmar
+** A) que estuda a repercussão, no campo penal, dos danos reais e potenciais da energia nuclear, trazendo, como consequência, o reforço do princípio da exclusiva proteção de bens jurídicos.
+** B) que estuda a relação entre a quantidade de pena aplicada e a quantidade de pena necessária para a ressocialização do condenado, trazendo, como principal consequência, a desnecessidade de execução do período remanescente.
+** C) que, tomando como base o princípio da incerteza ou indeterminação, estuda a causalidade a partir de critérios de probabilidade, relacionando-se, nesse aspecto, com a moderna teoria da imputação objetiva.
+** D) que estuda a repercussão, no campo da tutela penal ambiental, dos danos gerados por atividades altamente poluidoras, trazendo, como consequência, a possibilidade de responsabilização penal das pessoas jurídicas de direito público.
+*** Gabarito: C
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* Analise as assertivas abaixo, assinalando, em seguida, a alternativa que sobre elas contenha o correto julgamento:
+* I- O crime de apropriação de coisa achada é exemplo do que a Doutrina denomina de crime a prazo.
+* II - Os crimes condicionados não admitem tentativa. III - Crimes vagos são aqueles que não possuem objeto material determinado.
+* IV-A ameaça praticada verbalmente constitui hipótese de crime não transeunte.
+** A) Todas as assertivas estão erradas.
+** B) Estão corretas apenas as assertivas I e II.
+** C) Nenhuma das assertivas está errada.
+** D) Estão corretas apenas as assertivas I e IV.
+** E) Apenas a assertiva III está errada.
+*** Gabarito: B
+**** Concurso de Pessoas, Teoria Geral do Delito, Conceito de crime
+-----
+* Segundo a concepção material, crime é tudo aquilo que a sociedade entende que pode e deve ser proibido, mediante aplicação de sanção penal.
+* Para a concepção formal, crime é a conduta proibida por lei, sob ameaça de aplicação de pena, ou seja, o fenômeno é tratado por uma visão legislativa.
+* No seu conceito analítico, prevalece o entendimento de que crime é uma conduta típica, antijurídica e culpável.
+* Acerca dos desdobramentos desta última teoria, assinale a alternativa correta.
+** A) Pela teoria bipartida, o autor de um fato típico e antijurídico que tenha sido levado à sua prática por erro escusável de proibição, sem ter a menor ideia de que o que pratica é ilícito, não é considerado um criminoso.
+** B) O finalismo, de Hans Welzel, nem sempre considerou o crime como fato típico, antijurídico e culpável.
+** C) Para a teoria causalista, o dolo e a culpa estão situados na culpabilidade. Então, logicamente, para quem adota essa teoria, impossível se torna acolher o conceito bipartido de crime.
+** D) Da concepção analítica de crime, é possível inferir que o Direito Penal não estabeleceu distinção entre crime e contravenção penal. Tanto no crime quanto na contravenção não é cabível a fixação da multa de maneira isolada.
+** E) É correto afirmar que a estrutura analítica do crime se liga, necessariamente, à adoção da concepção finalista, causalista ou social da ação delituosa.
+*** Gabarito: C
+**** Teoria Geral do Delito, Conceito de crime
+-----
+* A, decidido a matar B, sua namorada, leva-a a passeio de barco.
+* No decorrer deste, B tropeça num banco, desequilibra-se, cai no lago e morre afogada, ante a inércia de A, que se abstém de qualquer socorro, não obstante saber nadar, dispor de bote salva-vida na embarcação e não correr risco pessoal.
+* Assinale a alternativa correta.
+** A) A deve responder por homicídio doloso por omissão.
+** B) A deve responder por homicídio culposo agravado pela omissão de socorro.
+** C) A não pode ser punido em decorrência da atipicidade da conduta.
+** D) A deve responder por crime de omissão de socorro, qualificado pela morte da vítima.
+*** Gabarito: D
+**** Concurso de Pessoas, Teoria Geral do Delito, Conceito de crime
+-----
+* Acerca das teorias que regem o direito penal e os seus institutos, assinale a opção correta.
+** A) A teoria final da ação foi elaborada por Von Liszt no final do século XIX, tendo sido desenvolvida também por Beling e Radbruch, resultando na estrutura mundialmente conhecida como sistema Liszt-Beling-Radbruch.
+** B) A teoria causal da ação teve por mérito superar a taxativa separação dos aspectos objetivos e subjetivos da ação e do próprio injusto, transformando, assim, o injusto naturalístico em injusto pessoal.
+** C) Para a teoria constitucional do direito penal, a verificação da ocorrência do fato típico doloso não se resume ao aspecto formal-objetivo, dependendo, ainda, da ocorrência de outros elementos de índole material-normativa e subjetiva.
+** D) Para a teoria social da ação, um fato considerado normal, correto, justo e adequado pela coletividade, ainda que formalmente enquadrável em um tipo incriminador, pode ser considerado típico pelo ordenamento jurídico, devendo, no entanto, ser excluída a culpabilidade do agente.
+** E) A teoria funcional da conduta está estruturada em duas vertentes: para a primeira, que tem Claus Roxin como principal defensor, a função da norma é a reafirmação da autoridade do direito; a segunda, cujo principal representante é Günther Jakobs, sustenta que um moderno direito penal deve estar estruturado teleologicamente, isto é, atendendo a finalidades valorativas.
+*** Gabarito: C
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* No trajeto do transporte de dois presos para o foro criminal por agentes penitenciários um deles saca de um instrumento perfurante e desfere diversos golpes contra o outro preso.
+* Os agentes da lei presenciaram a ação desde o início e permaneceram inertes. Na conduta dos agentes
+** A) há amparo pela excludente de ilicitude do exercício regular do direito, deixando de agir por exposição do risco às próprias vidas.
+** B) a omissão é penalmente irrelevante porque a causalidade é fática.
+** C) não há punição porque o Estado criou o risco da ocorrência do resultado.
+** D) a omissão é penalmente relevante porque a causalidade é normativa.
+** E) a omissão é penalmente relevante porque a causalidade é fática-normativa.
+*** Gabarito: D
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* Os crimes culposos
+** A) admitem tentativa.
+** B) não dispensam a previsibilidade do resultado pelo agente.
+** C) não admitem co-autoria.
+** D) independem de expressa previsão legal.
+** E) não admitem a substituição da pena privativa de liberdade por restritiva de direitos.
+*** Gabarito: B
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* O agente iniciou a execução de um delito, cuja consumação não ocorreu pela:
+* I. Ineficácia relativa do meio empregado. II. Impropriedade absoluta do objeto. III. Reação da vítima. IV.
+* Ineficácia absoluta do meio empregado. V. Impropriedade relativa do objeto. Haverá tentativa punível na(s) hipótese(s) indicada(s) SOMENTE em
+** A) I, III e V.
+** B) III.
+** C) I e V.
+** D) II e IV.
+** E) I, II e IV.
+*** Gabarito: A
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* O art. 14, § único, do Código Penal dispõe que "salvo disposição em contrário, pune-se a tentativa com a pena correspondente ao crime consumado, diminuída de um a dois terços".
+* O percentual de diminuição de pena a ser considerado levará em conta
+** A) a intensidade do dolo.
+** B) o inter criminis percorrido pelo agente.
+** C) a periculosidade do agente.
+** D) a reincidência.
+** E) os antecedentes do agente.
+*** Gabarito: B
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* Considere as seguintes proposições:
+* 1. Age com dolo direto o chefe de seção de empresa que, para agilizar a produção, retira de máquina dispositivo de segurança que sabe ser necessário para evitar acidentes.II.
+* São elementos do crime culposo a conduta; a inobservância do dever de cuidado objetivo;
+* o resultado lesivo involuntário e a tipicidade, sendo irrelevante a previsibilidade. III.
+* No crime de assédio sexual, o fato de o agente prevalecer-se de sua condição de superior hierárquico ou ascendência com relação ao ofendido é circunstância que agrava a pena.
+* IV. Se o empregado comete crime em estrita obediência a ordem, não manifestamente ilegal, de superior hierárquico, essa circunstância atenua a pena.
+* Assinale a alternativa correta:
+** A) Todas as proposições estão corretas;
+** B) Apenas as proposições I, III e IV estão corretas;
+** C) Apenas as proposições I, II e IV estão corretas;
+** D) Apenas as proposições II, III e IV estão corretas;
+** E) Nenhuma proposição está correta.
+*** Gabarito: E
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* João, com intenção de matar, agrediu José a golpes de faca, ferindo-o no abdome. Atendido por terceiros, José foi levado a um hospital. Quando estava sendo medicado, ocorreu um incêndio no hospital e José morreu queimado. Nesse caso, João responderá por
+** A) lesões corporais leves.
+** B) lesões corporais graves.
+** C) homicídio doloso.
+** D) tentativa de homicídio.
+** E) homicídio culposo.
+*** Gabarito: D
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* Com relação ao direito penal, em cada uma das opções abaixo é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada. Assinale a opção que apresenta a assertiva correta.
+** A) Um empregado de um banco recusou-se a atender um cliente, alegando motivos de ordem religiosa; a religião praticada pelo cliente afrontava os preceitos morais e filosóficos do empregado. Nessa situação, a rejeição de atendimento pelo empregado tem fundamento na liberdade religiosa e de crença, assegurada na CF.
+** B) Um sentenciado cumpriu integralmente a pena privativa de liberdade e não pagou a pena de multa fixada na sentença de cem dias-multa, com valor do dia-multa fixado pelo juiz em um trigésimo do maior salário mínimo mensal vigente ao tempo do fato. Nessa situação, em face da inadimplência, ficará o processo de execução penal suspenso até o efetivo pagamento e, caso seja constatado que o executado é solvente e voluntariamente deixou de pagar a pena de multa ou por qualquer outro meio frustra a execução desta, poderá ter convertidos os dias-multa em detenção simples.
+** C) Juvenal, brasileiro, maior, casado, sócio-gerente da Mercearia Vende Tudo, primário, sem antecedentes, de bom comportamento social, foi denunciado pelo Ministério Público pela prática da conduta de expor à venda mercadorias em condições impróprias ao consumo, cujo tipo penal vem prescrito na lei dos crimes contra a relação de consumo, cuja pena é de detenção de dois a cinco anos ou multa. Nessa situação, se preencher todos os requisitos para a suspensão condicional do processo, aceitar a proposta juntamente com o defensor e se submeter às condições estabelecidas pelo juízo, na forma da lei de regência, Juvenal poderá gozar do benefício da suspensão condicional do processo.
+** D) Um cliente de determinado banco falsificou documentos pessoais de terceiro, comprovante de residência, entre outros documentos, com a finalidade de abertura de conta-corrente em estabelecimento bancário. Após a abertura da conta, recebeu cartões de crédito e débito e, decorridas algumas semanas, solicitou e conseguiu empréstimos bancários. Entretanto, antes de levantar os valores disponibilizados na conta-corrente, o agente arrependeu-se das condutas delituosas praticadas e confessou todo o ocorrido ao gerente do banco que imediatamente fez o bloqueio da conta. Nessa situação, está presente a figura da desistência voluntária prevista no CP, o que enseja a exclusão de ilicitude do fato.
+** E) Uma cliente de determinado banco, enquanto aguardava atendimento pessoal pelo gerente, sorrateiramente subtraiu duas pequenas peças de decoração da agência, consistentes em duas estatuetas banhadas a ouro, por relevante prêmio comercial, avaliadas em R$ 5.000,00. Em face do ostensivo aparato de segurança da agência, monitoramento eletrônico e câmeras de vigilância, entre outros, descobriu-se, de pronto, a infração penal e, antes da saída da cliente da agência, ela foi abordada por agentes de segurança e, em seguida, presa em flagrante. Nessa situação, configurou-se a hipótese do crime impossível previsto no CP pela absoluta impropriedade do meio utilizado pela agente.
+*** Gabarito: C
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* Um oficial de justiça executava mandado judicial expedido em ação possessória ajuizada por um banco, com a finalidade de desocupar imóvel residencial e proceder à imissão da posse do mesmo, com a subsequente entrega ao representante do banco que acompanhava a diligência. Chegando ao local indicado na ordem judicial, foram recebidos pelo morador, que, ao tomar ciência do que se tratava, negou-se a abrir o portão de acesso ao imóvel, soltou dois bravos cães de guarda, praticou gestos obscenos e, em altos brados e de forma escandalosa, proferiu palavras de baixo calão contra o oficial e o representante do banco, com desígnio autônomo de denegrir, ofender e afrontar a dignidade do funcionário público em razão da função que este desempenhava. Além disso, exibiu uma arma da janela da casa, dizendo que, caso fosse executada a ordem de arrombamento, iria resistir. Diante da gravidade da situação vivenciada, o oficial de justiça deixou de cumprir o mandado, certificou todo o ocorrido, comunicando ao juízo as razões do não cumprimento da ordem judicial, e solicitou auxílio de força policial para ulterior diligência.
+* Com base na situação hipotética apresentada acima e nos mandamentos do direito penal, assinale a opção correta.
+** A) A caracterização do crime de resistência depende de a oposição apresentada pelo agente ser consubstanciada em atos de violência contra os executores do ato legal e de a ordem judicial não ser efetivamente cumprida.
+** B) A responsabilização penal do agente agressor somente se efetivará mediante ação penal privada, com o oferecimento da competente queixa-crime.
+** C) Não haverá crime de resistência se a oposição for praticada em face de particular que preste auxílio ao servidor público no cumprimento da ordem judicial, a exemplo de chaveiro convocado para abertura de portas e cadeados.
+** D) Nos termos da situação apresentada, a conduta de desobedecer à ordem legal de desocupação e acesso ao imóvel, emanada de servidor público, no estrito cumprimento de dever legal, restou abrangida pelo crime de resistência.
+** E) Na situação considerada, o crime de desacato não será punido de forma autônoma e em concurso material, uma vez que constitui elemento constitutivo e meio para a prática do crime de resistência.
+*** Gabarito: D
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* A respeito da infração penal no ordenamento jurídico brasileiro, assinale a opção correta.
+** A) Crimes, delitos e contravenções são termos sinônimos.
+** B) Adotou-se o critério tripartido, existindo diferença entre crime, delito e contravenção.
+** C) Adotou-se o critério bipartido, segundo o qual as condutas puníveis dividem-se em crimes ou contravenções (como sinônimos) e delitos.
+** D) O critério distintivo entre crime e contravenção é dado pela natureza da pena privativa de liberdade cominada.
+** E) A expressão infração penal abrange apenas crimes e delitos.
+*** Gabarito: D
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* Julgue os itens seguintes, acerca do fato típico e de seus elementos.
+* Todo crime tem resultado jurídico, porque sempre agride um bem tutelado pela norma.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* A respeito de crimes culposo e impossível, da obediência hierárquica, do erro de proibição e do arrependimento posterior, assinale a opção correta.
+** A) Caso um renomado e habilidoso médico, especializado em cirurgias abdominais, ao realizar uma intervenção, esqueça uma pinça no abdome do paciente, nesse caso, tal conduta representará culpa por imperícia, pois é relativa ao exercício da profissão.
+** B) Se, em um supermercado dotado de sistema eletrônico de vigilância, um cliente colocar diversos objetos do estabelecimento dentro de sua bolsa, com intenção de subtraí-los para si, a simples presença do sistema eletrônico de vigilância no supermercado tornará o crime impossível.
+** C) Caso o fato seja cometido em estrita obediência a ordem, não manifestamente ilegal, de superior hierárquico, não serão puníveis o agente que obedeceu nem o autor da coação ou da ordem.
+** D) O desconhecimento da lei é inescusável. Desse modo, o erro sobre a ilicitude do fato, evitável ou inevitável, não elidirá a pena, podendo apenas atenuá-la.
+** E) Em crimes cometidos sem violência ou grave ameaça a pessoa, a pena será reduzida de um a dois terços se, por ato voluntário do agente, for reparado o dano ou restituída a coisa até o recebimento da denúncia ou da queixa.
+*** Gabarito: E
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* Analise as proposições a seguir.
+* I. O exame do direito positivo é a metodologia indicada para promover a distinção entre crime e contravenção penal posto que não há diferença ontológica entre ambos.
+* II. Segundo dispõe o legislador penal, crime é a infração penal a que a lei comina pena de reclusão ou de detenção, quer isoladamente, quer alternativa ou cumulativamente com a pena de multa; contravenção é a infração penal a que a lei comina, isoladamente, pena de prisão simples ou multa, ou ambas, alternativa ou cumulativamente.
+* III. No direito penal pátrio a expressão crime é tida como gênero, do qual são espécies as contravenções penais e os delitos.
+* IV. A diferença entre ilícito civil e ilícito penal é que o primeiro gera a imposição de uma pena, que pode até chegar ao extremo de privação da liberdade do agente; já o segundo tem como consequência a obrigação de reparar o dano, primordialmente.
+* Assinale:
+** A) se somente as proposições III e IV estiverem corretas.
+** B) se somente as proposições I e Il estiverem corretas.
+** C) se somente as proposições II e IV estiverem corretas.
+** D) se somente as proposições I e IV estiverem corretas.
+** E) se somente as proposições II e III estiverem corretas.
+*** Gabarito: B
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* Considere as afirmações:
+* I. No Estado democrático de direito é dada especial relevância à noção de que o direito penal tem como missão a proteção de bens jurídicos e se considera que o conceito de bem jurídico tem por função legitimar e delimitar o poder punitivo estatal.
+* II. O poder legiferante penal independe dos bens jurídicos postos na Constituição Federal para determinar quais serão os bens tutelados.
+* III. Só se legitima a intervenção penal nos casos em que a conduta possa colocar em grave risco ou lesionar bem jurídico relevante.
+* SOMENTE está correto o que se afirma em
+** A) 1.
+** B) II.
+** C) III.
+** D) e III.
+** E) Elle III.
+*** Gabarito: D
+**** Teoria Geral do Delito
+-----
+* Agnelo foi acusado de praticar quatro roubos e dois furtos no decorrer de 2001. Pela prática de dois roubos foi condenado definitivamente em 2003, quanto aos outros dois crimes de roubo pende recurso da defesa, em um, e da acusação, no outro. Pela prática de um crime de furto foi condenado definitivamente em 2002, no outro processo, a sentença condenatória transitou em julgado para a defesa e o Ministério Público recorreu. Pode-se afirmar, tendo em vista a Parte Geral do Código Penal de 1984, que Agnelo é
+** A) reincidente específico em crime de furto, porque já tem duas condenações pela prática desse crime.
+** B) reincidente específico em crime de roubo, porque só transitou em julgado para as partes sentença condenatória relativa a crime de roubo.
+** C) reincidente, mas não específico, porque na reforma, de 1984, da Parte Geral do Código Penal, não foi adotada a figura da reincidência específica.
+** D) primário, pois não consta tenha cometido novo crime após o trânsito em julgado de sentença penal que o tenha condenado por crime anterior.
+** E) tecnicamente primário, conforme prevê a Parte Geral do Código Penal, pois, embora não conste que tenha cometido novo crime após o trânsito em julgado de decisão penal condenatória já tem outras condenações.
+*** Gabarito: D
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime Penas privativas de liberdade, Reincidência
+-----
+* Há crime quando o sujeito ativo pratica fato típico em função de
+** A) estado de necessidade.
+** B) coação moral irresistível.
+** C) legítima defesa.
+** D) estrito cumprimento do dever legal.
+** E) exercício regular do direito.
+*** Gabarito: B
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* Relativamente ao Direito Penal Brasileiro, analise as afirmativas a seguir:
+* I. Os crimes unissubsistentes, habituais próprios, comissivos e permanentes na forma omissiva não admitem tentativa.
+* II. Considera-se desistência voluntária ou arrependimento posterior a conduta do agente que, depois de consumado o crime, repara o dano causado respondendo o agente somente pelos fatos praticados.
+* III. Considera-se impossível o crime quando o meio utilizado pelo agente é relativamente incapaz de alcançar o resultado.
+* IV. Nos crimes tentados, aplica-se a pena do crime consumado reduzindo-a de $1/3$ a $2/3$, ao passo que no arrependimento eficaz se aplica a pena do crime consumado reduzindo-a de $1/6$ a $1/3$
+* Assinale:
+** A) se apenas as afirmativas I e II estiverem corretas.
+** B) se apenas as afirmativas I e III estiverem corretas.
+** C) se apenas as afirmativas I e IV estiverem corretas.
+** D) se nenhuma afirmativa estiver correta.
+** E) se apenas as afirmativas II e III estiverem corretas.
+*** Gabarito: D
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* Um domingo, ao chegar em casa vindo do jogo de futebol a que fora assistir, Tício encontra sua esposa Calpúrnia traindo-o com seu melhor amigo, Mévio. No mesmo instante, Tício saca sua arma e dispara um tiro na cabeça de Calpúrnia e outro na cabeça de Mévio. Embora pudesse fazer outros disparos, Ticio guarda a arma. Ato contínuo, apercebendo-se da besteira que fizera, coloca os amantes em seu carro e parte em disparada para um hospital. O trabalho dos médicos é extremamente bem--sucedido, retirando a bala da cabeça dos amantes sem que ambos tivessem qualquer espécie de seqüela. Aliás, não fosse a imediata atuação de Tício, Calpúrnia e Mévio teriam morrido. Com efeito, quinze dias depois, ambos já retornaram às suas atividades profissionais habituais.
+* A partir do texto, assinale a alternativa que indique o crime praticado por Tício.
+** A) lesão corporal leve
+** B) lesão corporal grave
+** C) tentativa de homicídio
+** D) Tício não praticou crime
+** E) exercício arbitrário das próprias razões
+*** Gabarito: B
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* Denomina-se crime complexo o que
+** A) exige que os agentes atuem uns contra os outros.
+** B) se enquadra num único tipo legal.
+** C) é formado pela fusão de dois ou mais tipos legais de crime.
+** D) exige a atuação de dois ou mais agentes.
+** E) atinge mais de um bem jurídico.
+*** Gabarito: C
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime
+-----
+* Acerca da parte geral do direito penal, julgue os itens seguintes.
+* Crime próprio impuro é aquele que, se for cometido por outro sujeito ativo que não aquele indicado pelo tipo penal, transforma-se em figura típica diversa.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Teoria Geral do Delito, Consumação e tentativa
+-----
+* Segundo a teoria da causalidade adequada, adotada pelo Código Penal, o resultado, de que depende a existência do crime, somente é imputável a quem lhe deu causa. Considera-se causa a ação ou omissão sem a qual o resultado não teria ocorrido.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Tipicidade, Teoria Geral do Delito, Nexo de causalidade
+-----
+* Assinale a alternativa INCORRETA.
+** A) Ocorre o estado de necessidade defensivo quando a conduta do agente atinge um interesse de quem causou a situação de perigo.
+** B) Antes de passar em julgado a sentença final, a prescrição não corre enquanto o agente cumpre pena no estrangeiro.
+** C) A tentativa inidônea ou inadequada identifica a hipótese denominada pela doutrina de crime de flagrante esperado.
+** D) O agente que, na condição de garantidor, omite-se, ensejando a que o resultado lesivo ocorra, pratica crime omissivo impróprio.
+** E) A reincidência poderá ocorrer entre crimes culposos, um crime doloso e outro culposo e entre crimes tentados.
+*** Gabarito: C
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+-----
+* Assinale a alternativa CORRETA.
+** A) A pessoa pode ser, ao mesmo tempo, sujeito ativo e passivo de um delito em face de sua própria conduta.
+** B) O agente responderá tão-somente por tentativa de crime se ocorrer a desistência voluntária ou o arrependimento eficaz.
+** C) O condenado não reincidente, cuja pena não exceda a doze anos, poderá, desde o princípio, cumpri-la em regime semiaberto.
+** D) O positivismo criminológico utiliza método empírico-intuitivo experimental, contrapondo-se à análise filosófico-metafísica da escola clássica.
+** E) Na contagem dos prazos, leva-se em consideração o dia do final, excluindo-se o do começo.
+*** Gabarito: D
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime Conduta: ação / omissão
+-----
+* Assinale a alternativa incorreta.
+** A) O controle social pode ser difuso ou institucionalizado. O sistema penal compõe o controle social punitivo institucionalizado e formalmente punitivo.
+** B) Com a expressão 'Direito Penal', são abarcados o conjunto de leis penais e o sistema de interpretação dessas leis, que é o saber do Direito Penal.
+** C) A lei penal em sentido amplo é a que relaciona uma conduta a uma pena, estabelecendo um crime ou delito.
+** D) Pode-se falar que nem todas as condutas antijurídicas são crimes, mas todos os crimes são condutas antijurídicas.
+** E) O direito penal deve ter como objeto, para uns, a segurança jurídica (entendida como a tutela de bens jurídicos ou de valores ético-sociais); para outros, a defesa social.
+*** Gabarito: C
+**** Teoria Geral do Delito, Conceito de crime, Antijuridicidade Noções Gerais Antijuridicidade
+-----
+* A combatida responsabilidade penal objetiva
+** A) não encontra exemplos concretos em nossa legislação penal.
+** B) é doutrinariamente definida como à sujeição de alguém à imposição de pena sem que tenha agido com dolo ou culpa ou sem que tenha ficado demonstrada sua culpabilidade, com fundamento no nexo de causalidade, todavia, não encontra aplicação prática em casos concretos.
+** C) pode ser exemplificada em nossa legislação penal na rixa qualificada e na actio libera in causa na embriaguez.
+** D) tem um único exemplo em nossa legislação penal consistente na responsabilização das pessoas jurídicas por crimes ambientais.
+** E) deve ser utilizada em ultima ratio, uma vez que, pode violar direitos e garantias fundamentais da pessoa humana.
+*** Gabarito: C
+**** Tipicidade, Noções Fundamentais, Conceitos e caracteres, Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito, Conceito de crime, Crime praticado por pessoa jurídica
+-----
+* Considerando-se o que determina a doutrina majoritária, é CORRETO afirmar que o injusto penal consiste em uma conduta
+** A) apenas típica.
+** B) apenas típica e ilícita.
+** C) típica, ilícita e culpável.
+** D) atípica.
+*** Gabarito: B
+**** Teoria Geral do Delito, Conceito de crime
+-----
