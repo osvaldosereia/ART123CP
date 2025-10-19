@@ -1536,7 +1536,7 @@
 ** D) parcialmente a nova lei, because a lei posterior, que de qualquer modo favorecer o agente, aplica-se aos fatos anteriores, exceto se decididos por sentença condenatória transitada em julgado.
 ** E) parcialmente a nova lei, because a lei posterior, que de qualquer modo favorecer o agente, aplica-se aos fatos anteriores, exceto se já tiver ocorrido o interrogatório do réu.
 *** Gabarito: A
-**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Causas de extinção da punibilidade Abolitio criminis
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Causas de extinção da punibilidade
 
 -----
 * Segundo a definição do lugar do crime, o Código Penal Brasileiro estabelece que "considera-se praticado o crime no lugar em que ocorreu a ação ou a omissão, no todo ou em parte, bem como onde se produziu ou deveria produzir-se o resultado" (artigo 6º, do CP). O conteúdo do mencionado artigo revela a adoção pelo legislador brasileiro:
@@ -1627,7 +1627,7 @@
 ** D) excludente de ilicitude.
 ** E) excludente de responsabilidade.
 *** Gabarito: A
-**** Noções Fundamentais, Causas de extinção da punibilidade, Causas de Extinção da Punibilidade - Noções gerais
+**** Noções Fundamentais, Causas de extinção da punibilidade
 
 -----
 * Com relação à aplicação da lei penal, analise as afirmativas a seguir.
@@ -1658,7 +1658,7 @@
 ** D) A renúncia do direito de queixa ou perdão aceito, nos crimes de ação penal pública.
 ** E) A rejeição da denúncia.
 *** Gabarito: C
-**** Noções Fundamentais, Medida de segurança, Conceito de Medida de Segurança, Causas de extinção da punibilidade, Causas de Extinção da Punibilidade - Noções gerais
+**** Noções Fundamentais, Medida de segurança, Conceito de Medida de Segurança, Causas de extinção da punibilidade, 
 
 -----
 * É correto afirmar que a coação física irresistível exclui:
@@ -1678,7 +1678,7 @@
 ** D) nos crimes permanentes, do dia em que iniciou a permanência.
 ** E) nos crimes contra a vida de crianças e adolescentes, previstos no Código Penal, da data em que a vítima completar 18 (dezoito) anos, salvo se a esse tempo já houver sido proposta a ação penal.
 *** Gabarito: B
-**** Noções Fundamentais, Causas de extinção da punibilidade, Causas de Extinção da Punibilidade - Noções gerais
+**** Noções Fundamentais, Causas de extinção da punibilidade, 
 
 -----
 * Assinale a alternativa em que há elementos da culpabilidade, segundo a teoria normativa pura, adotada pelo nosso ordenamento jurídico.
@@ -1812,7 +1812,7 @@
 ** D) Incorreta, pois o instituto da escusa absolutória ficará afastado ante o crime ter sido perpetrado durante a madrugada.
 ** E) Incorreta, pois o instituto da escusa absolutória ficará afastado pela representação da vítima.
 *** Gabarito: C
-**** Culpabilidade, Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Potencial conhecimento da ilicitude - Erro de proibição, Noções Gerais da Culpabilidade, Ação penal, Ação penal pública condicionada à representação, Causas de extinção da punibilidade, Causas de Extinção da Punibilidade - Noções gerais, Perdão judicial
+**** Culpabilidade, Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Potencial conhecimento da ilicitude - Erro de proibição, Noções Gerais da Culpabilidade, Ação penal, Ação penal pública condicionada à representação, Causas de extinção da punibilidade, , Perdão judicial
 
 -----
 * Pedrinho, com 19 anos de idade, trazia consigo arma branca (faca) em seu veículo automotor.
@@ -1988,4 +1988,4 @@
 ** D) I, III e IV.
 ** E) II, III e IV.
 *** Gabarito: A
-**** Noções Fundamentais, Lei penal no tempo, Teoria Geral do Delito, Causas de extinção da punibilidade, Causas de Extinção da Punibilidade - Noções gerais, Abolitio criminis
+**** Noções Fundamentais, Lei penal no tempo, Teoria Geral do Delito, Causas de extinção da punibilidade, , Abolitio criminis
