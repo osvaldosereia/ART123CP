@@ -1,15 +1,15 @@
-/* app.js — parser único para TXT no formato especificado. Sem suporte a formatos antigos. */
+/* app.js — Parser exclusivo para TXT no formato especificado. Sem legado. */
 "use strict";
 
-/** ========= Núcleo de parsing ========= **/
+/** ========================= Núcleo de parsing ========================= **/
 
 /**
- * Converte um texto .txt no formato especificado em uma lista de questões.
+ * Converte o conteúdo TXT no formato padronizado em uma lista de questões.
  * Regras:
- * - Blocos separados por linhas que contenham apenas `-----` (com ou sem espaços).
- * - Enunciado: uma ou mais linhas iniciadas por `* ` (um asterisco e espaço).
- * - Alternativas: linhas iniciadas por `** X) ` onde X ∈ {A,B,C,D,E}.
- * - Gabarito: linha única iniciada por `*** Gabarito: ` seguida por uma letra válida.
+ * - Blocos separados por linha contendo apenas traços: `-----` (com ou sem espaços).
+ * - Enunciado: linhas iniciando com `* `, podem ser múltiplas e intercaladas com linhas em branco.
+ * - Alternativas: linhas iniciando com `** X) ` onde X ∈ {A,B,C,D,E}.
+ * - Gabarito: linha única `*** Gabarito: X` onde X ∈ {A,B,C,D,E}.
  * @param {string} rawTxt
  * @returns {{questions: ParsedQuestion[], warnings: string[]}}
  */
@@ -25,20 +25,18 @@ function parseTxt(rawTxt) {
   /** @type {string[]} */
   const warnings = [];
 
-  /** Estado do bloco em construção */
   let cur = resetCurrent();
 
   const pushIfComplete = () => {
     if (!cur.hasData) return;
-
     const q = finalizeCurrent(cur);
     validateQuestion(q, warnings);
     out.push(q);
     cur = resetCurrent();
   };
 
-  for (let idx = 0; idx < lines.length; idx++) {
-    const raw = lines[idx];
+  for (let i = 0; i < lines.length; i++) {
+    const raw = lines[i];
     const line = raw.trimEnd();
 
     // Separador de blocos
@@ -47,10 +45,12 @@ function parseTxt(rawTxt) {
       continue;
     }
 
-    // Linha vazia entre partes do mesmo bloco
+    // Linha vazia: preserva como parágrafo do enunciado enquanto em "stem"
     if (line.trim() === "") {
-      // preserva linhas em branco do enunciado, se já estamos em enunciado e ainda não iniciamos alternativas
-      if (cur.stage === "stem") cur.stem.push("");
+      if (cur.stage === "stem") {
+        cur.stem.push("");
+        cur.hasData = true;
+      }
       continue;
     }
 
@@ -66,13 +66,17 @@ function parseTxt(rawTxt) {
     // Alternativa
     const alt = parseAlternativa(line);
     if (alt) {
-      cur.options.push(alt);
+      if (cur.options.some(o => o.key === alt.key)) {
+        warnings.push(warn(i + 1, `Alternativa "${alt.key}" repetida; linha ignorada.`));
+      } else {
+        cur.options.push(alt);
+      }
       cur.stage = "options";
       cur.hasData = true;
       continue;
     }
 
-    // Enunciado: linha começando com "* "
+    // Enunciado
     const stemLine = parseStemLine(line);
     if (stemLine !== null) {
       cur.stem.push(stemLine);
@@ -81,31 +85,29 @@ function parseTxt(rawTxt) {
       continue;
     }
 
-    // Se cair aqui, é ruído dentro do bloco: anexar ao enunciado se nada além do enunciado foi iniciado
+    // Ruído: agrega ao enunciado se só houver enunciado; do contrário avisa e ignora
     if (cur.stage === "stem" || !cur.hasData) {
       cur.stem.push(line);
       cur.hasData = true;
       continue;
     } else if (cur.stage === "options") {
-      // Texto solto após alternativas não é permitido pelo formato. Aviso e ignorar.
-      warnings.push(warn(idx + 1, "Linha ignorada: conteúdo fora do padrão após alternativas."));
+      warnings.push(warn(i + 1, "Linha ignorada: conteúdo fora do padrão após alternativas."));
       continue;
     } else if (cur.stage === "answer") {
-      warnings.push(warn(idx + 1, "Linha ignorada: conteúdo após gabarito."));
+      warnings.push(warn(i + 1, "Linha ignorada: conteúdo após gabarito."));
       continue;
     }
   }
 
-  // Final do arquivo: empurrar último bloco
+  // Fim do arquivo
   pushIfComplete();
 
-  // Filtrar questões vazias ocasionais
-  const filtered = out.filter(q => q.stem.trim().length > 0);
-
-  return { questions: filtered, warnings };
+  // Filtra questões sem enunciado útil
+  const questions = out.filter(q => q.stem.trim().length > 0);
+  return { questions, warnings };
 }
 
-/** ========= Utilidades de parsing ========= **/
+/** ========================= Utilidades ========================= **/
 
 /** @typedef {{ id: string, stem: string, stemLines: string[], options: {key: string, text: string}[], answer: string }} ParsedQuestion */
 
@@ -116,43 +118,39 @@ function isSeparator(line) {
   return /^-+\s*$/.test(line);
 }
 function parseStemLine(line) {
-  // aceita "* " no início exato
-  if (line.startsWith("* ")) return line.slice(2);
-  return null;
+  return line.startsWith("* ") ? line.slice(2) : null;
 }
 function parseAlternativa(line) {
-  // ** A) Texto
+  // ** A) Texto...
   const m = /^\*\*\s*([A-E])\)\s*(.+)$/.exec(line);
   if (!m) return null;
   return { key: m[1], text: m[2].trim() };
 }
 function parseGabarito(line) {
-  // *** Gabarito: C
   const m = /^\*\*\*\s*Gabarito:\s*([A-E])\s*$/.exec(line);
   return m ? m[1] : null;
 }
 function resetCurrent() {
-  return /** @type {{hasData:boolean, stage:"empty"|"stem"|"options"|"answer", stem:string[], options:{key:string,text:string}[], answer:string|null}} */ ({
+  return {
     hasData: false,
-    stage: "empty",
+    stage: "empty", // "empty" | "stem" | "options" | "answer"
     stem: [],
     options: [],
     answer: null,
-  });
+  };
 }
 function finalizeCurrent(cur) {
+  const stemLines = trimEmptyEdges(cur.stem);
   /** @type {ParsedQuestion} */
-  const q = {
+  return {
     id: cryptoId(),
-    stemLines: trimEmptyEdges(cur.stem),
-    stem: joinStem(trimEmptyEdges(cur.stem)),
+    stemLines,
+    stem: joinStem(stemLines),
     options: cur.options.slice(),
     answer: cur.answer ?? "",
   };
-  return q;
 }
 function joinStem(lines) {
-  // Preserva parágrafos conforme linhas, unindo por "\n"
   return lines.join("\n").trim();
 }
 function trimEmptyEdges(lines) {
@@ -164,9 +162,7 @@ function trimEmptyEdges(lines) {
 function validateQuestion(q, warnings) {
   const keys = new Set(q.options.map(o => o.key));
   const missing = [];
-  for (const k of ["A", "B", "C", "D", "E"]) {
-    if (!keys.has(k)) missing.push(k);
-  }
+  for (const k of ["A", "B", "C", "D", "E"]) if (!keys.has(k)) missing.push(k);
   if (missing.length > 0) {
     warnings.push(`Questão "${shorten(q.stem)}": alternativas ausentes: ${missing.join(", ")}.`);
   }
@@ -184,14 +180,16 @@ function shorten(s, n = 80) {
   return t.length <= n ? t : t.slice(0, n - 1) + "…";
 }
 function cryptoId() {
-  if (typeof crypto !== "undefined" && crypto.randomUUID) return crypto.randomUUID();
+  try {
+    if (typeof crypto !== "undefined" && crypto.randomUUID) return crypto.randomUUID();
+  } catch {}
   return "q_" + Math.random().toString(36).slice(2, 10);
 }
 
-/** ========= API pública ========= **/
+/** ========================= API pública ========================= **/
 
 /**
- * Faz o parse e retorna apenas as questões.
+ * Retorna apenas as questões.
  * @param {string} txt
  * @returns {ParsedQuestion[]}
  */
@@ -200,7 +198,7 @@ function parseQuestions(txt) {
 }
 
 /**
- * Faz o parse e retorna resultado com warnings.
+ * Retorna questões e avisos.
  * @param {string} txt
  * @returns {{questions: ParsedQuestion[], warnings: string[]}}
  */
@@ -209,7 +207,7 @@ function parseWithWarnings(txt) {
 }
 
 /**
- * Exporta em JSON estável para salvar.
+ * Serializa em JSON estável.
  * @param {ParsedQuestion[]} questions
  * @returns {string}
  */
@@ -217,120 +215,148 @@ function toJSON(questions) {
   return JSON.stringify({ version: 1, format: "txt:v1", count: questions.length, questions }, null, 2);
 }
 
-/** ========= UI opcional, ativada se elementos existirem ========= **/
-
-/* IDs suportados no HTML (opcional):
-   - #filePicker (input[type=file])
-   - #txtInput (textarea)       // alternativa ao file
-   - #parseBtn (button)         // dispara parse do textarea
-   - #downloadJsonBtn (button)  // baixa JSON
-   - #warnings (pre)            // exibe avisos
-   - #questionsContainer (div)  // render das questões
-*/
-
+/** ========================= UI opcional (progressive enhancement) =========================
+ * IDs esperados no HTML, caso existam:
+ *  - #filePicker (input[type=file])
+ *  - #txtInput (textarea)
+ *  - #parseBtn (button)
+ *  - #downloadJsonBtn (button)
+ *  - #warnings (pre)
+ *  - #questionsContainer (div)
+ */
 document.addEventListener("DOMContentLoaded", () => {
-  const $file = document.getElementById("filePicker");
-  const $txt = document.getElementById("txtInput");
-  const $parse = document.getElementById("parseBtn");
-  const $dl = document.getElementById("downloadJsonBtn");
-  const $warn = document.getElementById("warnings");
-  const $list = document.getElementById("questionsContainer");
+  try {
+    const $file = document.getElementById("filePicker");
+    const $txt = document.getElementById("txtInput");
+    const $parse = document.getElementById("parseBtn");
+    const $dl = document.getElementById("downloadJsonBtn");
+    const $warn = document.getElementById("warnings");
+    const $list = document.getElementById("questionsContainer");
 
-  /** @type {ParsedQuestion[]} */
-  let lastQuestions = [];
+    /** @type {ParsedQuestion[]} */
+    let lastQuestions = [];
 
-  const renderWarnings = (warnings) => {
-    if (!$warn) return;
-    $warn.textContent = warnings.length ? warnings.join("\n") : "";
-  };
+    const renderWarnings = (warnings) => {
+      if (!$warn) return;
+      $warn.textContent = warnings.length ? warnings.join("\n") : "";
+    };
 
-  const renderQuestions = (questions) => {
-    if (!$list) return;
-    $list.innerHTML = "";
-    questions.forEach((q, i) => {
-      const card = document.createElement("div");
-      card.className = "qcard";
-      card.style.border = "1px solid #ddd";
-      card.style.borderRadius = "12px";
-      card.style.padding = "12px";
-      card.style.margin = "10px 0";
+    const renderQuestions = (questions) => {
+      if (!$list) return;
+      $list.innerHTML = "";
+      questions.forEach((q, i) => {
+        const card = document.createElement("div");
+        card.className = "qcard";
+        card.style.border = "1px solid #ddd";
+        card.style.borderRadius = "12px";
+        card.style.padding = "12px";
+        card.style.margin = "10px 0";
 
-      const h = document.createElement("div");
-      h.textContent = `Q${i + 1}`;
-      h.style.fontWeight = "600";
-      h.style.marginBottom = "8px";
-      card.appendChild(h);
+        const h = document.createElement("div");
+        h.textContent = `Q${i + 1}`;
+        h.style.fontWeight = "600";
+        h.style.marginBottom = "8px";
+        card.appendChild(h);
 
-      const stem = document.createElement("pre");
-      stem.textContent = q.stem;
-      stem.style.whiteSpace = "pre-wrap";
-      stem.style.margin = "0 0 8px 0";
-      card.appendChild(stem);
+        const stem = document.createElement("pre");
+        stem.textContent = q.stem;
+        stem.style.whiteSpace = "pre-wrap";
+        stem.style.margin = "0 0 8px 0";
+        card.appendChild(stem);
 
-      const ul = document.createElement("ul");
-      ul.style.margin = "0 0 8px 16px";
-      for (const opt of q.options) {
-        const li = document.createElement("li");
-        li.textContent = `${opt.key}) ${opt.text}`;
-        ul.appendChild(li);
-      }
-      card.appendChild(ul);
+        const ul = document.createElement("ul");
+        ul.style.margin = "0 0 8px 16px";
+        for (const opt of q.options) {
+          const li = document.createElement("li");
+          li.textContent = `${opt.key}) ${opt.text}`;
+          ul.appendChild(li);
+        }
+        card.appendChild(ul);
 
-      const ans = document.createElement("div");
-      ans.textContent = `Gabarito: ${q.answer || "—"}`;
-      ans.style.fontFamily = "monospace";
-      card.appendChild(ans);
+        const ans = document.createElement("div");
+        ans.textContent = `Gabarito: ${q.answer || "—"}`;
+        ans.style.fontFamily = "monospace";
+        card.appendChild(ans);
 
-      $list.appendChild(card);
-    });
-  };
+        $list.appendChild(card);
+      });
+    };
 
-  const doParse = (txt) => {
-    const { questions, warnings } = parseWithWarnings(txt);
-    lastQuestions = questions;
-    renderWarnings(warnings);
-    renderQuestions(questions);
-  };
+    const doParse = (txt) => {
+      const { questions, warnings } = parseWithWarnings(txt);
+      lastQuestions = questions;
+      renderWarnings(warnings);
+      renderQuestions(questions);
+      console.debug("[QuestionsTxt] parsed", { count: questions.length, warnings });
+    };
 
-  if ($file) {
-    $file.addEventListener("change", async (e) => {
-      const f = /** @type {HTMLInputElement} */(e.target).files?.[0];
-      if (!f) return;
-      const txt = await f.text();
-      doParse(txt);
-    });
-  }
+    if ($file) {
+      $file.addEventListener("change", async (e) => {
+        try {
+          const input = /** @type {HTMLInputElement} */ (e.target);
+          const f = input.files && input.files[0];
+          if (!f) return;
+          const txt = await f.text();
+          doParse(txt);
+        } catch (err) {
+          console.error("[QuestionsTxt] erro lendo arquivo:", err);
+          alert("Erro ao ler o arquivo selecionado.");
+        }
+      });
+    }
 
-  if ($parse && $txt) {
-    $parse.addEventListener("click", () => {
-      doParse($txt.value || "");
-    });
-  }
+    if ($parse && $txt) {
+      $parse.addEventListener("click", () => {
+        try {
+          doParse($txt.value || "");
+        } catch (err) {
+          console.error("[QuestionsTxt] erro no parse:", err);
+          alert("Erro no parse. Veja o console para detalhes.");
+        }
+      });
+    }
 
-  if ($dl) {
-    $dl.addEventListener("click", () => {
-      const blob = new Blob([toJSON(lastQuestions)], { type: "application/json;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      const ts = new Date().toISOString().replace(/[:.]/g, "-");
-      a.download = `questions-${ts}.json`;
-      document.body.appendChild(a);
-      a.click();
-      URL.revokeObjectURL(url);
-      a.remove();
-    });
+    if ($dl) {
+      $dl.addEventListener("click", () => {
+        try {
+          const blob = new Blob([toJSON(lastQuestions)], { type: "application/json;charset=utf-8" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          const ts = new Date().toISOString().replace(/[:.]/g, "-");
+          a.download = `questions-${ts}.json`;
+          document.body.appendChild(a);
+          a.click();
+          URL.revokeObjectURL(url);
+          a.remove();
+        } catch (err) {
+          console.error("[QuestionsTxt] erro no download:", err);
+          alert("Erro ao preparar o download do JSON.");
+        }
+      });
+    }
+
+    // Autoteste opcional: cria uma função global para você colar o texto e ver o resultado no console
+    window.debugParse = function (sampleTxt) {
+      const res = parseWithWarnings(sampleTxt);
+      console.log("[debugParse] resultado:", res);
+      return res;
+    };
+  } catch (err) {
+    console.error("[QuestionsTxt] falha na inicialização da UI:", err);
   }
 });
 
-/** ========= Exposição global para uso externo ========= **/
-window.QuestionsTxt = {
-  parseQuestions,
-  parseWithWarnings,
-  toJSON,
-};
+/** ========================= Exposição global e Node ========================= **/
+const api = { parseQuestions, parseWithWarnings, toJSON };
+if (typeof window !== "undefined") {
+  window.QuestionsTxt = api;
+}
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = api;
+}
 
-/** ========= Tipos JSDoc ========= **/
+/** ========================= Tipos JSDoc ========================= **/
 /**
  * @typedef {Object} ParsedQuestion
  * @property {string} id
@@ -339,4 +365,3 @@ window.QuestionsTxt = {
  * @property {{key:string,text:string}[]} options
  * @property {string} answer
  */
-
