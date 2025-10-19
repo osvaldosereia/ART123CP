@@ -19,16 +19,18 @@ body{
   font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
 
-/* Topbar */
+/* Topbar: centralizada no mesmo max-width do site */
 .topbar{
   position:sticky;top:0;z-index:50;
-  display:flex;justify-content:space-between;align-items:center;
+  display:flex;align-items:center;gap:12px;
   padding:10px 14px;background:#fff;border-bottom:1px solid var(--line);
   transition:transform .18s ease;
+  max-width:900px;margin:0 auto; /* limita à largura do site */
 }
 .topbar.hide{ transform:translateY(-100%); }
+.topbar .logo{font-weight:700;letter-spacing:.2px;margin-right:auto}
+.topbar #btnHome{margin-left:auto}
 
-.logo{font-weight:700;letter-spacing:.2px}
 .btn{
   appearance:none;border:1px solid var(--line);background:#fff;color:var(--text);
   padding:10px 14px;border-radius:999px;cursor:pointer;box-shadow:none;
@@ -64,16 +66,17 @@ body{
 .dd-list li:hover{background:#f3f4f6}
 .chev{opacity:.6}
 
-/* Chips */
-.chips{
-  display:flex;flex-wrap:wrap;gap:8px;
-  justify-content:flex-start;align-items:flex-start;
+/* ---- Lista compacta de temas (substitui chips) ---- */
+.topics{display:grid;grid-template-columns:1fr;gap:6px;margin:8px 0}
+.topic{
+  display:flex;align-items:flex-start;gap:8px;
+  padding:6px 8px;border:1px solid var(--line);border-radius:10px;background:#fff;
+  font-size:14px; line-height:1.25; cursor:pointer; user-select:none; text-align:left;
 }
-.chip{
-  border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;cursor:pointer;
-  text-align:left;white-space:normal;max-width:100%;
-}
-.chip.on{background:#111;color:#fff;border-color:#111}
+.topic:hover{background:#f8fafc}
+.topic input{margin-top:2px; inline-size:14px; block-size:14px}
+.topic.on{background:#111;color:#fff;border-color:#111}
+.topic.on input{accent-color:#fff}
 
 /* Quiz list */
 .list{display:flex;flex-direction:column;gap:14px}
@@ -117,6 +120,9 @@ body{
 /* Helpers */
 .hidden{display:none}
 
+/* Responsividade */
+@media (min-width:780px){ .topics{grid-template-columns:repeat(2, minmax(0,1fr))} }
+@media (min-width:1080px){ .topics{grid-template-columns:repeat(3, minmax(0,1fr))} }
 @media (min-width:900px){
   .page{padding-top:84px}
 }
