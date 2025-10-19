@@ -380,20 +380,23 @@ function renderSelectedThemesChips(){
 /* Aplica interseção dos chips ativos ao conjunto base e repagina */
 function applyThemeFilter(){
   const act = [...STATE.activeThemes];
-  if (act.length===0){
-    STATE.viewQuestions = STATE.allQuestions.slice();
-  }else{
-    STATE.viewQuestions = STATE.allQuestions.filter(q=>{
-      const set = new Set(q.themes);
-      // interseção: a questão precisa conter TODOS os temas ativos
-      return act.every(t=>set.has(t));
-    });
+
+  if (act.length === 0){
+    STATE.viewQuestions = STATE.allQuestions.slice();              // sem filtro
+  } else {
+    // UNIÃO: mostra questões que tenham pelo menos um dos temas ativos
+    const want = new Set(act);
+    STATE.viewQuestions = STATE.allQuestions.filter(q =>
+      q.themes.some(t => want.has(t))
+    );
   }
+
   $("#quizList").innerHTML = "";
   STATE.cursor = 0;
   mountInfinite();
-  toast(`Filtro: ${act.length?act.join(", "):"Todos"} · ${STATE.viewQuestions.length} questões`);
+  toast(`Filtro: ${act.length ? act.join(", ") : "Todos"} · ${STATE.viewQuestions.length} questões`);
 }
+
 
 async function loadTxt(path){
   const res = await fetch(path);
