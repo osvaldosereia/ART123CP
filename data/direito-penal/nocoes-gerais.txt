@@ -6242,7 +6242,7 @@ Estão certos apenas os itens
 ** D) abolitio criminis.
 ** E) ultra-atividade da lei.
 *** Gabarito: E
-**** Tipicidade, Culpabilidade, Noções Fundamentais do Direito Penal Lei penal no tempo, Tipicidade conglobante, Noções Gerais da Culpabilidade
+**** Tipicidade, Culpabilidade, Noções Fundamentais do Direito Penal, Lei penal no tempo, Tipicidade conglobante, Noções Gerais da Culpabilidade
 -----
 * De acordo com a doutrina, os delitos que dependem da ocorrência de um resultado naturalístico para sua consumação são conhecidos como crimes:
 ** A) formais.
@@ -6468,7 +6468,7 @@ Estão certos apenas os itens
 ** D) O desconhecimento da lei é inescusável. O erro sobre a ilicitude do fato, se evitável, isenta de pena; se inevitável, poderá diminuí-la de um sexto a um terço.
 ** E) É isento de pena o agente que pratica crime sem violência ou grave ameaça à pessoa, desde que, voluntariamente, repare o dano ou restitua a coisa, até o recebimento da denúncia ou da queixa.
 *** Gabarito: C
-**** Tipicidade, Culpabilidade, Noções Fundamentais do Direito Penal Lei penal no espaço, Potencial conhecimento da ilicitude - Erro de proibição, Crimes omissivos, Erro do tipo essencial, Penas privativas de liberdade, Reincidência
+**** Tipicidade, Culpabilidade, Noções Fundamentais do Direito Penal, Lei penal no espaço, Potencial conhecimento da ilicitude, Erro de proibição, Crimes omissivos, Erro do tipo essencial, Penas privativas de liberdade, Reincidência
 -----
 * Analise as assertivas e assinale a alternativa que aponta as corretas.
 * I. Não há crime sem lei anterior que o defina. Não há pena sem prévia cominação legal.
@@ -6851,7 +6851,7 @@ Estão certos apenas os itens
 ** D) Para a teoria do domínio do fato, autor é quem executa a ação típica, por conduta própria ou pela utilização de outro como instrumento de realização; também quem, mesmo não executando o fato típico em sentido estrito, participa da resolução criminosa, realizando parte necessária da execução do plano global. A teoria, partindo do conceito restritivo de autor, segue um critério objetivo-subjetivo.
 ** E) Para a teoria finalista, ação é a conduta do homem, comissiva ou omissiva, dirigida a uma finalidade e desenvolvida sob o domínio da vontade do agente, razão pela qual não reputa criminosa a ação ocorrida em estado de inconsciência, como no caso de quem, durante o sono, sonhando estar em legítima defesa, esbofeteia e causa lesão corporal na pessoa que dorme ao seu lado. Para esta mesma teoria, a culpabilidade não é psicológica, nem psicológico-normativa.
 *** Gabarito: C
-**** Concurso de Pessoas, Tipicidade, Noções Fundamentais do Direito Penal Princípios limitadores do poder punitivo estatal, Conduta: ação / omissão, Imputação objetiva, Autoria e coautoria, Causas absolutamente independentes
+**** Concurso de Pessoas, Tipicidade, Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Conduta: ação / omissão, Imputação objetiva, Autoria e coautoria, Causas absolutamente independentes
 -----
 * Assinale a opção correta:
 ** A) A doutrina dominante aponta que, em regra, o crime culposo admite tentativa, especialmente quando a culpa é própria.
@@ -7230,7 +7230,7 @@ IV. A insignificância, enquanto princípio, se revela, conforme a visão de Rox
 ** D) Estão corretas apenas as assertivas III e IV.
 ** E) Estão corretas todas as assertivas.
 *** Gabarito: E
-**** Tipicidade, Tipo Penal Doloso, Noções Fundamentais do Direito Penal Princípios limitadores do poder punitivo estatal, Concurso de crimes, Crime continuado, Causas de extinção da punibilidade, Anistia, graça e indulto
+**** Tipicidade, Tipo Penal Doloso, Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Concurso de crimes, Crime continuado, Causas de extinção da punibilidade, Anistia, graça, indulto
 -----
 * O direito penal não admite analogias incriminadoras Essa afirmativa é uma decorrência do princípio da:
 ** A) adequação social.
