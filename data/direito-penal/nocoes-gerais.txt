@@ -1,204 +1,185 @@
-* Quanto aos crimes previstos na Lei 13.869/10 (Lei de Abuso de Autoridade), assinale a alternativa correta.
-** A) Não cabe a ação penal privada subsidiária da pública
-** B) Pode ser sujeito ativo qualquer servidor público, da administração direta, indireta ou fundacional de qualquer dos Poderes da União, dos Estados, do Distrito Federal, dos Municípios e de Território
-** C) Possibilita a substituição das penas privativas de liberdade por restritivas de direito
-** D) As responsabilidades civil e administrativa são independentes da criminal, se podendo questionar sobre a existência ou a autoria do fato ainda quando essas questões tenham sido decididas no juízo criminal
-*** Gabarito: C
-
------
-* Aquele que oculta uma arma de fogo utilizada por terceiro para a prática anterior de um roubo, consignando-se não haver qualquer vínculo de parentesco entre ambos, pode-se atribuir o crime de
-* Assinale a alternativa que preencha corretamente a lacuna.
-** A) favorecimento pessoal
-** B) favorecimento real
-** C) coautoria do crime de roubo
-** D) participação do crime de roubo
-*** Gabarito: A
-
------
-* No primeiro semestre de 2025, o Senado aprovou a Lei nº 15.159, que aumenta a punição para crimes cometidos dentro de escolas, como homicídios e lesões corporais dolosas.
-* A lei foi sancionada pelo governo federal em julho, visando maior proteção às instituições de ensino e aos estudantes. Assinale a alternativa que apresenta corretamente uma das mudanças trazidas pela Lei nº 15.159.
-** A) A pena para lesão corporal dolosa não sofreu alterações em função do local do crime.
-** B) A Lei nº 15.159 reduz a pena mínima para crimes cometidos em instituições de ensino.
-** C) A pena, que normalmente varia de 6 a 20 anos de prisão, passa a ser de 12 a 30 anos.
-** D) A Lei determina que a pena para homicídios fora da escola seja igual à pena aplicada dentro da escola.
-*** Gabarito: C
-
------
-* Fátima, maior e capaz, foi vítima de injúria (art. 140, "caput", do Código Penal) praticada por dois colegas de trabalho durante uma reunião interna da empresa.
-* Inconformada, ajuizou queixa-crime contra ambos. No entanto, antes da citação dos querelados, Fátima decidiu renunciar expressamente ao direito de queixa em relação a apenas um deles, por meio de documento protocolado em cartório e juntado ao processo. A defesa do segundo querelado pleiteou a extinção da punibilidade também em favor de seu cliente. Diante do caso narrado, assinale a alternativa correta.
-** A) A renúncia ao direito de queixa feita em favor de um dos querelados estende-se automaticamente aos demais, impedindo a continuidade da ação penal
-** B) A renúncia ao direito de queixa é ato bilateral, dependendo da aceitação do querelado para produzir efeitos jurídicos
-** C) A renúncia ao direito de queixa feita em favor de apenas um dos querelados é válida exclusively para ele, produzindo efeitos limitados
-** D) A renúncia não interfere na ação penal, salvo se homologada pelo Ministério Público
-*** Gabarito: A
-
------
-* Josias e Josué resolvem furtar a casa de Mário. Para tanto, solicitam o auxílio de Pedro, que, com seu veículo, os levará à residência da vítima.
-* Pedro permanece do lado de fora da casa, enquanto Josias e Josué nela adentram. Ocorre que, já no interior da casa, são surpreendidos pelo mordomo, tendo Josias desferido um golpe de faca neste último, acabando por feri-lo mortalmente. Considerando-se que o resultado, diante das particularidades descritas e outras do caso concreto, não poderia ser previsível a Pedro, assinale a alternativa correta quanto ao crime cometido por Pedro.
-** A) Furto
-** B) Roubo
-** C) Latrocínio
-** D) Furto, com a pena aumentada até a metade
-*** Gabarito: A
-
------
-* A coação física irresistível, também denominada vis absoluta ou vis corporalis, não traz responsabilização penal ao autor direto.
-* Isso se dá por tratar-se de Assinale a alternativa que preencha corretamente a lacuna.
-** A) fato atípico
-** B) excludente de ilicitude
-** C) excludente de culpabilidade
-** D) erro do tipo
-*** Gabarito: A
-
------
-* Durante a fase de instrução processual, ficou comprovado que Gustavo praticou fato típico e antijurídico previsto no art. 129, § 9º, do Código Penal (Lesão corporal em decorrência de violência doméstica).
-* Entretanto, o laudo pericial constatou que, ao tempo da ação, Gustavo era inteiramente incapaz de entender o caráter ilícito do fato, por sofrer de transtorno mental grave e permanente. Diante disso, ao proferir a sentença, o juiz reconheceu a inimputabilidade de Gustavo, absolvendo-o, mas aplicando medida de segurança. Diante do exposto, assinale a alternativa correta.
-** A) O juiz errou, pois deveria absolvê-lo pura e simplesmente, pois o reconhecimento da inimputabilidade impede qualquer tipo de sanção penal
-** B) A sentença está incorreta, pois o juiz deveria aplicar pena independentemente da inimputabilidade do agente
-** C) A aplicação de medida de segurança depende de reincidência específica, mesmo nos casos de doença mental comprovada
-** D) A decisão proferida está correta, pois reconhece a inimputabilidade e aplica medida de segurança
-*** Gabarito: D
-
------
-* O Brasil enfrenta desafios significativos na área de segurança pública, incluindo o avanço da criminalidade organizada em redes, que ultrapassa as fronteiras geográficas e interage com outros tipos de crimes, como o tráfico internacional de drogas, armas, pessoas e o cibercrime.
-* Com base nesse contexto, analise as seguintes assertivas:
-* I.O avanço da criminalidade organizada em redes representa um desafio crescente para a segurança pública no Brasil.
-* II.O tráfico internacional de drogas, armas e pessoas não está relacionado às atividades de organizações criminosas no Brasil.
-* III.O cibercrime tem se tornado uma preocupação crescente, com aumento de estelionatos virtuais e fraudes online.
-* IV.A interação entre diferentes tipos de crimes, como o tráfico e o cibercrime, dificulta o enfrentamento da criminalidade organizada.
-* Assinale a alternativa correta:
-** A) I, III e IV apenas.
-** B) I, II e III apenas.
-** C) I e II apenas.
-** D) II e IV apenas
-*** Gabarito: A
-
------
-* O ordenamento jurídico brasileiro prevê sanções para quem exerce atividades profissionais regulamentadas sem a devida habilitação legal ou sem preencher os requisitos exigidos pelo poder público.
-* Esse tipo de conduta está disciplinado no art. 47 da Lei das Contravenções Penais (Decreto-Lei $n^{\circ}3.688/1941)$, o qual tipifica como contravenção penal o exercício de profissão ou atividade econômica sem autorização ou em desacordo com a lei. Diante desse contexto normativo, assinale a alternativa que corretamente trata do exercício ilegal de profissão.
-** A) O art. 47 da Lei das Contravenções Penais tipifica o exercício de profissão ou atividade econômica sem autorização legal, sendo considerado contravenção penal.
-** B) A Lei $n^{\circ}9.608/1998$, ao regulamentar o voluntariado, prevê como crime a prática de atividade profissional sem habilitação legal.
-** C) O Código Penal, em seu art. 171, prevê o exercício ilegal de profissão como modalidade de estelionato.
-** D) A Constituição Federal, em seu art. 5º, inciso XIII, considera crime o exercício de profissão sem prévia habilitação.
-** E) O exercício ilegal de profissão não constitui infração penal, tratando-se apenas de ilícito administrativo.
-*** Gabarito: A
-
------
-* No exercício profissional, os fisioterapeutas e terapeutas ocupacionais devem observar normas legais para evitar infrações penais.
-* Sobre o Decreto-Lei $3.688/1941$, assinale a alternativa correta.
-** A) Trata de normas administrativas, sem previsão de penalidades criminais.
-** B) Substitui todas as legislações específicas de fiscalização profissional.
-** C) Restringe-se à atuação de médicos e enfermeiros.
-** D) Define contravenções penais que podem ser cometidas por qualquer cidadão, inclusive profissionais de saúde, como infrações à ordem pública e segurança coletiva.
-** E) Limita-se à ambientes hospitalares privados.
-*** Gabarito: D
-
------
-* Douglas e Andreia são namorados há três anos. Em um momento de fúria, Douglas agrediu Andreia na rua.
-* A Lei Maria da Penha poderia ser aplicada nesse caso?
-** A) Não, porque o relacionamento tem menos de cinco anos.
-** B) Não, porque o fato ocorreu fora do ambiente doméstico.
-** C) Sim, pois se trata de violência contra a mulher no contexto de relação íntima de afeto, independentemente de coabitação e do local dos fatos.
-** D) Sim, desde que houver coabitação mínima de dois anos.
-** E) Sim, desde que não tenha sido a primeira vez que Andreia sofreu agressão por parte de Douglas.
-*** Gabarito: C
-
------
-* Acerca dos crimes em licitações e contratos administrativos, assinale a alternativa correta.
-** A) O patrocínio de contratação indevida ocorre quando o agente frustra, com o intuito de obter para si vantagem decorrente da adjudicação do objeto da licitação, o caráter competitivo do processo licitatório.
-** B) A perturbação de processo licitatório ocorre quando o agente devassa o sigilo de proposta apresentada em processo licitatório.
-** C) A fraude em licitação ou contrato ocorre exclusivamente mediante a alteração da substância, qualidade ou quantidade da mercadoria ou do serviço fornecido.
-** D) A contratação inidônea ocorre quando o agente dificulta injustamente a inscrição de qualquer interessado nos registros cadastrais.
-** E) Modificação ou pagamento irregular em contrato administrativo ocorre quando o agente dá causa a qualquer alteração, inclusive prorrogação contratual, em favor do contratado, durante a execução dos contratos celebrados com a Administração Pública, sem autorização em lei.
+* Julgue o item a seguir, a respeito da aplicação da lei penal.
+* A regra segundo a qual aplica-se a lei brasileira, sem prejuízo de convenções, tratados e regras de direito internacional, ao crime cometido no território nacional consubstancia o princípio da extraterritorialidade.
+** A) Certo
+** B) Errado
 *** Gabarito: E
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
 
 -----
-* Constitui crime admitir, possibilitar ou dar causa à contratação direta fora das hipóteses previstas em lei.
-* A pena cominada para essa conduta é:
-** A) Reclusão, de 2 a 4 anos, e multa.
-** B) Reclusão, de 3 a 6 anos, e multa.
-** C) Reclusão, de 4 a 8 anos, e multa.
-** D) Detenção, de 1 a 3 anos, e multa..
-** E) Detenção, de 6 meses a 2 anos, e multa.
-*** Gabarito: C
-
------
-* De acordo com a Lei nº 13.869/2019, que dispõe sobre os crimes de abuso de autoridade, verifique os itens e assinale a alternativa que apresenta, dentre outros, os efeitos da condenação, previstos no artigo 4º da lei, independentemente da condição ou situação a ser aplicada.
-* I- Inabilitação para o exercício de cargo, mandato ou função pública, pelo período de 1 (um) a 5 (cinco) anos.
-* II- Perda do cargo, do mandato ou da função pública.
-* III- Inelegibilidade pelo período de 8 (oito) anos.
-* Estão CORRETOS os itens:
-** A) II e III apenas.
-** B) I apenas.
-** C) Il apenas.
-** D) I, II e III.
-** E) l e Il apenas.
+* Julgue o item a seguir, a respeito da aplicação da lei penal.
+* As regras gerais estabelecidas pelo Código Penal não se aplicam aos delitos previstos na legislação especial ou extravagante.
+** A) Certo
+** B) Errado
 *** Gabarito: E
+**** Noções Fundamentais, Conceitos e caracteres
 
 -----
-* "Exigir, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida" é um crime praticado por funcionário público contra a administração em geral.
-* Assinale a alternativa que apresenta o nome dado a este crime:
-** A) Corrupção ativa.
-** B) Prevaricação.
-** C) Concussão.
-** D) Peculato.
-** E) Descaminho.
+* Com relação ao crime consumado e tentado e à lei penal no tempo e no espaço, julgue o item a seguir.
+* Considere que uma pessoa tenha sido denunciada pela prática de determinado fato definido como crime, que, em seguida, foi descriminalizado pela lei A. Posteriormente, foi editada a lei B, que revogou a lei A e voltou a criminalizar aquela conduta. Nessa situação, a última lei deve ser aplicada ao caso.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Assinale a alternativa CORRETA em se tratando das regras gerais de Direito Penal:
+** A) A lei posterior, que de qualquer modo favorecer o agente, aplica-se aos fatos anteriores, desde que ainda não decididos por sentença condenatória transitada em julgado.
+** B) A lei excepcional ou temporária aplica-se ao fato praticado durante sua vigência, somente quando não decorrido o período de sua duração ou cessadas as circunstâncias que a determinaram.
+** C) Considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado.
+** D) Considera-se praticado o crime onde se produziu ou deveria produzir-se o resultado, independente de onde tenha ocorrido a ação ou omissão que lhe deu causa.
 *** Gabarito: C
+**** Noções Fundamentais, Lei penal no tempo, Consumação e tentativa
 
 -----
-* "Apropriar-se o funcionário público de dinheiro, valor ou qualquer outro bem móvel, público ou particular, de que tem a posse em razão do cargo, ou desviá-lo, em proveito próprio ou alheio" é um crime praticado por funcionário público contra a administração em geral.
-* Assinale a alternativa que apresenta o nome dado a este crime.
-** A) Peculato.
-** B) Concussão.
-** C) Corrupção passiva.
-** D) Prevaricação.
-** E) Usurpação de função pública.
-*** Gabarito: A
+* Julgue o item que se segue.
+* Em face do princípio da retroatividade de lei mais benigna, a lei anterior mais severa possui ultra-atividade.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Lei penal no tempo
 
 -----
-* A imputabilidade penal se refere à idade e às condições em que uma pessoa poderá ser penalizada/responsabilizada, respondendo pelos seus atos diretamente na esfera penal (CP).
-* O Código Penal, em seus artigos de 26 a 28, apresenta condições em que uma pessoa ficará isenta dessa responsabilização (Inimputabilidade). Assinale os itens em que ocorre a inimputabilidade penal:
-* 1- Por doença mental ou desenvolvimento mental incompleto ou retardado, era, ao tempo da ação ou da omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento.
-* II- Agir com emoção ou paixão.
-* III- Menores de 21 anos.
-* IV- Por embriaguez completa, proveniente de caso fortuito ou força maior, era, ao tempo da ação ou da omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento.
-* Estão CORRETOS com relação à inimputabilidade apenas os itens:
-** A) I, III e IV.
-** B) II e III.
-** C) I, II e IV.
-** D) I e IV.
-** E) I e II.
-*** Gabarito: D
-
------
-* De acordo com a Lei nº 7.210/1984 (Lei de Execução Penal), o condenado que cumpre a pena em regime fechado ou semiaberto poderá remir, por trabalho ou por estudo, parte do tempo de execução da pena.
-* Ciente desse benefício, durante o cumprimento de sua pena em regime fechado, o apenado Paulo, que possui bom comportamento carcerário, trabalhou 90 (noventa) dias e participou de um curso de requalificação profissional com duração de 120 (cento e vinte) horas. A respeito desse caso hipotético, assinale a alternativa que apresenta corretamente a quantidade de dias que Paulo poderá remir de sua pena.
-** A) 30 dias.
-** B) 40 dias.
-** C) 90 dias.
-** D) 100 dias.
-** E) 102 dias.
+* Julgue os itens seguintes, com relação aos princípios constitucionais de direito penal.
+* I A decisão acerca da regressão de regime deve ser calcada em procedimento no qual sejam obedecidos os princípios do contraditório e da ampla defesa, sendo, sempre que possível, indispensável a inquirição, em juízo, do sentenciado.
+* II A vigente Constituição da República, obediente à tradição constitucional, reservou exclusivamente à lei anterior a definição dos crimes, das penas correspondentes e a conseqüente disciplina de sua individualização.
+* III O princípio da presunção de inocência proíbe a aplicação de penas cruéis que agridam a dignidade da pessoa humana.
+* IV Em virtude do princípio da irretroatividade in pejus, somente o condenado é que terá de se submeter à sanção que lhe foi aplicada pelo Estado.
+* A quantidade de itens certos é igual a
+** A) 1
+** B) 2
+** C) 3
+** D) 4
 *** Gabarito: B
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
 
 -----
-* Assinale a alternativa correta a respeito da desistência voluntária e do arrependimento eficaz no Direito Penal.
-** A) A desistência voluntária e o arrependimento eficaz são reconhecidos como causa excludente de culpabilidade.
-** B) A desistência voluntária é admitida nos crimes unissubsistentes.
-** C) O arrependimento eficaz só se aplica aos crimes materiais.
-** D) Diversamente da desistência voluntária, no arrependimento eficaz, o agente responde pela forma tentada do crime inicialmente desejado.
-** E) É possível afirmar que a desistência voluntária é tratada de forma idêntica à tentativa ou conatus, em que, iniciada a execução de um delito, a consumação não ocorre por circunstâncias alheias à vontade do agente.
+* A respeito da lei penal no tempo e no espaço, julgue os seguintes itens, tendo como referência o Código Penal e a jurisprudência dos tribunais superiores.
+* I A lei penal mais benéfica retroagirá em benefício do réu, de acordo com o princípio da retroatividade benéfica penal.
+* II Em relação ao tempo do crime, o direito penal brasileiro adota a teoria da atividade.
+* III Em relação ao lugar do crime, o direito penal brasileiro adota a teoria do resultado.
+* IV A lei penal mais benéfica aplica-se ao crime continuado ou ao crime permanente, ainda que ocorra superveniência de lei penal mais gravosa ao longo da atividade delitiva.
+* Estão certos apenas o item
+** A) I e II.
+** B) I e IV.
+** C) II e III.
+** D) I, III e IV.
+** E) II, III e IV.
+*** Gabarito: A
+**** Noções Fundamentais, Lei penal no tempo, Lei penal no espaço
+
+-----
+* No item a seguir, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada.
+* Um cidadão sueco tentou matar o presidente do Brasil, que se encontrava em visita oficial à Suécia. Nessa hipótese, o crime praticado não ficará sujeito à lei brasileira.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Considerando o texto [...] "Apenas as leis podem fixar penas com relação aos delitos praticados; e essa autoridade não pode residir senão na pessoa do legislador, que representa toda a sociedade agrupada por um contrato social." [...] julgue o seguinte item.
+* A lei penal formal é a mais importante do direito penal, pois só ela pode criar delitos e penas. A interpretação procura conformar o ato interpretativo aos princípios constitucionais e aos valores fundamentais (segurança jurídica e justiça), dentro das margens legais.
+** A) Certo
+** B) Errado
 *** Gabarito: C
+**** Noções Fundamentais, A norma penal, Princípios limitadores do poder punitivo estatal
 
 -----
-* O concurso de crimes é o instituto que se verifica quando o agente, mediante uma ou várias condutas, pratica duas ou mais infrações penais.
-* Com base nesse assunto, informe se é verdadeiro (V) ou falso (F) o que se afirma a seguir e assinale a alternativa com a sequência correta.
-* () O concurso material, também chamado de real, é aquele em que o agente, mediante uma única conduta, pratica dois ou mais crimes, idênticos ou não.
-* () No concurso material, há pluralidade de condutas e pluralidade de resultados.
-* () No que diz respeito ao concurso formal impróprio ou imperfeito, tal como no concurso material, serão somadas as penas de todos os crimes praticados pelo agente.
-* () De acordo com o Código Penal brasileiro, no concurso de crimes, as penas de multa são aplicadas distinta e integralmente para cada crime.
-** A) V-F-V-F.
-** B) F-V-F-V.
-** C) V-V-F-V.
-** D) F-V-V-V
-** E) F-F-V-F.
+* Considerando o texto [...] "Apenas as leis podem fixar penas com relação aos delitos praticados; e essa autoridade não pode residir senão na pessoa do legislador, que representa toda a sociedade agrupada por um contrato social." [...] julgue o seguinte item. Considere a seguinte situação hipotética.
+* Túlio, representante dos funcionários de determinada empresa, foi indiciado criminalmente na polícia federal, por proferir pesadas críticas à empresa empregadora durante um movimento grevista. Não houve, porém, qualquer ameaça grave ou de violência por parte dos indiciado. Nessa situação, em face de competir à justiça federal processar e julgar os delitos decorrentes de greve que atentem contra a organização do trabalho como um todo ou contra os direitos e deveres dos trabalhadores coletivamente considerados, a decisão do procurador do trabalho deve ser no sentido do arquivamento do inquérito, por falta de elemento objetivo do tipo penal.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais, A norma penal
+
+-----
+* A respeito dos crimes contra a fé pública, dos crimes previstos na Lei de Licitações, bem como dos princípios e conceitos gerais de direito penal, julgue o item a seguir.
+* Segundo os princípios que regem a lei penal no tempo, a nova lei penal, independentemente de ser mais ou menos benéfica ao acusado, será aplicada aos fatos ocorridos a partir do momento de sua entrada em vigor, mas a lei revogada, desde que mais benéfica ao acusado, continua a ser aplicada a fato anterior, ou seja, a fato praticado durante o período de sua vigência.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Sobre as regras de extraterritorialidade, previstas no Código Penal, assinale a alternativa correta.
+** A) Consideram como extensão do território nacional as aeronaves brasileiras, mercantes ou de propriedade privada, que se achem no espaço aéreo correspondente.
+** B) Consideram praticado o crime no lugar em que ocorreu a ação ou omissão, no todo ou em parte, bem como onde se produziu ou deveria produzir-se o resultado.
+** C) Estabelecem situações pelas quais a lei penal brasileira pode ser aplicada a crimes cometidos no estrangeiro.
+** D) Preveem que a pena cumprida no estrangeiro atenua a pena imposta no Brasil pelo mesmo crime, quando diversas, ou nela é computada, quando idênticas.
+** E) Estabelecem a possibility de homologação, no Brasil, da sentença estrangeira, para obrigar o condenado à reparação do dano.
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* A respeito da eficácia da lei no tempo e no espaço, julgue o item a seguir.
+* O princípio da irretroatividade da lei nova se aplica às leis de ordem pública.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito
+
+-----
+* No concernente à interpretação e aplicação da lei penal, julgue o item abaixo.
+* É vedada a aplicação analógica em normas penais incriminadoras. Nas normas penais não-incriminadoras gerais, admite-se o emprego da analogia in bonam partem.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais, A norma penal, Conflito aparente de normas
+
+-----
+* A respeito dos princípios e fontes do direito penal, julgue o item subseqüente.
+* Em matéria penal, o costume contra legem não possui eficácia jurídica, mesmo que haja descompasso entre a lei penal e a realidade histórico-cultural.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais, Conceitos e caracteres, Principios limitadores do poder punitivo estatal
+
+-----
+* Analise o conceito abaixo e, depois, assinale a alternativa que corresponde ao Princípio correspondente:
+* "Devem ser tidas como atípicas as ações ou omissões que afetam muito infimamente a um bem jurídico penal. A irrelevante lesão do bem jurídico protegido não justifica a imposição de uma pena, devendo-se excluir a tipicidade em caso de danos de pouca importância."
+** A) Princípio da Culpabilidade.
+** B) Princípio da Ofensividade.
+** C) Princípio da Intervenção Mínima.
+** D) Princípio da Insignificância.
 *** Gabarito: D
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Antijuridicidade Causas supralegais de exclusão da antijuridicidade
+
+-----
+* De acordo com o entendimento do Supremo Tribunal Federal e do Superior Tribunal de Justiça, para a incidência do Princípio da Insignificância a conduta do agente deve estar acompanhada dos seguintes requisitos, EXCETO:
+** A) Mínima onerosidade.
+** B) Inexpressividade da lesão jurídica.
+** C) Ausência de periculosidade social da ação.
+** D) Mínima ofensividade da conduta.
+** E) Reduzido grau de reprovabilidade do comportamento.
+*** Gabarito: A
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+
+-----
+* De acordo com o Código Penal, ficam sujeitos à lei brasileira, embora cometidos no estrangeiro, os crimes:
+* I. Que, por tratado ou convenção, o Brasil se obrigou a reprimir.
+* II. Praticados por brasileiro.
+* III. Praticados em aeronaves ou embarcações brasileiras, mercantes ou de propriedade privada, quando em território estrangeiro em qualquer circunstância.
+* Quais estão corretas?
+** A) Apenas I.
+** B) Apenas II.
+** C) Apenas III.
+** D) Apenas I e III.
+** E) Apenas II e III.
+*** Gabarito: X
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Acerca das noções gerais de direito, julgue o item.
+* No âmbito do direito penal, aplica-se, em regra, o princípio do tempus regit actum, por meio do qual se deve aplicar a lei penal em vigor na data da prática do ato delituoso. No entanto, se a nova lei, mesmo não estando em vigor na data do crime, for mais benéfica ao acusado, deverá retroagir para ser aplicada no caso concreto.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Assinale a alternativa correta:
+** A) Ficam sujeitos à lei brasileira, embora cometidos no estrangeiro, os crimes contra a vida ou a liberdade do Presidente da República ou seus familiares.
+** B) Ficam sujeitos à lei brasileira, embora cometidos no estrangeiro os crimes contra o patrimônio ou a fé pública da União e dos Estados, sendo sujeitos às leis estrangeiras os crimes cometidos contra o patrimônio ou a fé publica do Distrito Federal, de Estado, de Território, de Município, de empresa pública, sociedade de economia mista, autarquia ou fundação instituída pelo Poder Público.
+** C) Ficam sujeitos à lei brasileira, embora cometidos no estrangeiro, os crimes contra a administração pública, por quem está a seu serviço.
+** D) Ficam sujeitos à lei brasileira, embora cometidos no estrangeiro, os crimes de infanticídio, quando o agente for brasileiro ou domiciliado no Brasil.
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no espaço
