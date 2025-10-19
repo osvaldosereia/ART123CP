@@ -204,7 +204,7 @@ Estão corretas as afirmativas
 ** D) III e IV, apenas.
 ** E) II e IV, apenas.
 *** Gabarito: A
-**** Culpabilidade, Teoria Geral do Delito, Conceito de crime Noções Gerais da Culpabilidade
+**** Culpabilidade, Teoria Geral do Delito, Conceito de crime,  Noções Gerais da Culpabilidade
 -----
 * Sobre a teoria do crime, analise as afirmativas a seguir.
 I. O Código Penal brasileiro trouxe o conceito de crime, mas deixou para a doutrina a tarefa de regular o nexo de causalidade, sendo atualmente mais aceita a teoria da causalidade adequada.
@@ -228,7 +228,7 @@ Estão corretas as afirmativas
 ** D) A jurisprudência admite a aplicação do princípio da insignificância nos crimes patrimoniais em que não há emprego de violência ou grave ameaça, mas há resistência para o reconhecimento para o crime de roubo.
 ** E) Há precedentes nos tribunais superiores reconhecendo a aplicação do princípio da insignificância mesmo que a vida pregressa do indivíduo denote reincidência criminal.
 *** Gabarito: C
-**** Noções Fundamentais, Conceitos e caracteres, A norma penal Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito
+**** Noções Fundamentais, A norma penal Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito
 -----
 * A Lei de Introdução do Código Penal diz no "Art. 1º Considera-se crime a infração penal que a lei comina pena de reclusão ou de detenção, quer isoladamente, quer alternativa ou cumulativamente com a pena de multa; contravenção, a infração penal a que a lei comina, isoladamente, pena de prisão simples ou de multa, ou ambas, alternativa ou cumulativamente."
 De acordo com as definições do art. 18 do Código Penal Brasileiro, assinale a alternativa CORRETA.
@@ -303,7 +303,7 @@ Assinale a alternativa que completa corretamente as lacunas do texto.
 ** D) De acordo com o modelo social de ação, cujo principal formulador é o alemão Günther Jakobs, a ação é uma conduta socialmente irrelevante, ou seja, incapaz de ser objeto de um juízo de valor ou intervir no círculo jurídico de outrem, o que permite excluir de seu conceito fatos ou fenômenos que independam da vontade do sujeito.
 ** E) De acordo com o modelo funcional de ação, o elemento central da ação é a base material da conduta, o que permite a análise do crime como lesão a bem jurídico.
 *** Gabarito: C
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Conduta: ação / omissão
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Conduta: ação / omissão
 -----
 * No Direito Penal brasileiro, infração penal é toda conduta previamente tipificada pela legislação como ilícita, imbuída de culpabilidade. Diante disso, assinale a resposta correta:
 ** A) São consideradas crimes todas as infrações às quais a Lei preveja sanção com pena e de reclusão em regime fechado.
@@ -321,7 +321,7 @@ Assinale a alternativa que completa corretamente as lacunas do texto.
 ** D) arrependimento eficaz.
 ** E) ato preparatório impunível.
 *** Gabarito: E
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Nexo de causalidade, Desistência voluntária e arrependimento eficaz, Arrependimento posterior
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Nexo de causalidade, Desistência voluntária e arrependimento eficaz, Arrependimento posterior
 -----
 * Nos termos do art. 31 do CP, salvo disposição expressa em contrário: se o crime não chega, pelo menos, a ser tentado
 ** A) não são puníveis o ajuste, a determinação ou instigação e o auxílio.
@@ -330,7 +330,7 @@ Assinale a alternativa que completa corretamente as lacunas do texto.
 ** D) não são puníveis o ajuste e a determinação ou instigação, mas é punível o auxílio.
 ** E) não é punível o ajuste, mas são puníveis a determinação ou instigação e o auxílio.
 *** Gabarito: A
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * Durante assalto a uma joalheria, dois homens armados obrigaram a gerente, mediante grave ameaça, a abrir o cofre e a acondicionar as joias que estavam guardadas ali em uma mochila, que eles levaram consigo na fuga. Com base no caso descrito e no conceito tripartite de crime, assinale a afirmativa correta.
 ** A) A cooperação da gerente com os roubadores é um fato penalmente atípico.
@@ -339,7 +339,7 @@ Assinale a alternativa que completa corretamente as lacunas do texto.
 ** D) A gerente cometeu o crime de roubo em concurso de agentes, mas é favorecida por uma escusa absolutória.
 ** E) A gerente agiu em legítima defesa, razão por que a sua colaboração com os roubadores é justificada.
 *** Gabarito: C
-**** Culpabilidade, Teoria Geral do Delito, Conceito de crime Noções Gerais da Culpabilidade
+**** Culpabilidade, Teoria Geral do Delito, Conceito de crime,  Noções Gerais da Culpabilidade
 -----
 * Sobre a perspectiva da teoria finalista, que influenciou intensamente a reforma do Código Penal Brasileiro (1984), é INCORRETO afirmar:
 ** A) O dolo é considerado como "dolo natural", não o integrando a consciência da ilicitude.
@@ -356,7 +356,7 @@ Assinale a alternativa que completa corretamente as lacunas do texto.
 ** D) A omissão é penalmente relevante quando o omitente devia e podia agir para evitar o resultado
 ** E) Salvo disposição em contrário, pune-se a tentativa com a pena correspondente ao crime consumado, diminuída de um a dois terços
 *** Gabarito: A
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Conduta: ação / omissão, Consumação e tentativa, Desistência voluntária e arrependimento eficaz
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Conduta: ação / omissão, Consumação e tentativa, Desistência voluntária e arrependimento eficaz
 -----
 * A respeito de temas da teoria geral do Direito Penal, assinale a alternativa CORRETA:
 ** A) O Supremo Tribunal Federal considera o crime de injúria racial prescritível, pois não pode ser equiparado a crime de racismo, constitucionalmente considerado imprescritível. Tal equiparação violaria o princípio da estrita legalidade penal.
@@ -448,7 +448,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Tipicidade, Tipo Penal Culposo, Teoria Geral do Delito Conceito de crime
+**** Tipicidade, Tipo Penal Culposo, Teoria Geral do Delito, Conceito de crime
 -----
 * Ainda no que diz respeito à teoria geral do crime e aos crimes em espécie, julgue o item seguinte.
 * É nos casos de crime falho (ou tentativa perfeita) que tem cabimento o arrependimento eficaz.
@@ -462,7 +462,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Tipicidade formal
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Tipicidade formal
 -----
 * A respeito de princípios gerais do direito penal, julgue o item a seguir.
 * Em caso de urgência, a definição do que é crime pode ser realizada por meio de medida provisória.
@@ -516,7 +516,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) ocorre quando alguém, usando moderadamente dos meios necessários, repele injusta agressão, atual ou iminente, a direito seu ou de outrem.
 ** E) é evitável se o agente atua ou se omite sem a consciência da ilicitude do fato, quando lhe era possível, nas circunstâncias, ter ou atingir essa consciência.
 *** Gabarito: C
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Erro do tipo essencial
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Erro do tipo essencial
 -----
 * Segundo Dotti (2012), na dogmática jurídico-penal, a definição dominante do conceito de crime compreende a "conduta humana [ação ou omissão] típica, ilícita e culpável".
 * Nessa linha teórica, a tipicidade refere-se
@@ -537,7 +537,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** C) São corretos os itens II e III.
 ** D) É correto apenas o item I.
 *** Gabarito: A
-**** Noções Fundamentais, Conceitos e caracteres, Teoria Geral do Delito Sistemas penais
+**** Noções Fundamentais, Teoria Geral do Delito, Sistemas penais
 -----
 * A finalidade da pena, conforme o funcionalismo sistêmico do Jakobs, é a prevenção geral implementada pela sensação de segurança decorrente da regular aplicação e execução das penas, e do índice de ressocialização dos condenados.
 ** A) Certo
@@ -581,7 +581,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) III e IV.
 ** E) II, III e IV.
 *** Gabarito: B
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Crimes omissivos
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Crimes omissivos
 -----
 * Assinale a opção correta com referência ao direito das vítimas.
 ** A) O termo instituições de garantia, nas quais se enquadra o Ministério Público - referência feita por Luigi Ferrajoli -, é fruto das chamadas Constituições de segunda geração, como a Constituição Portuguesa de 1976.
@@ -599,7 +599,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) Os tipos abertos demandam do operador do direito conhecimento que ultrapasse o teor literal da norma para a sua completa integração, como nos casos de leis penais em branco.
 ** E) Os tipos preventivos são aqueles que antecipam a tutela penal, punindo condutas que servem, em regra, como preparação para outros delitos.
 *** Gabarito: E
-**** Classificação dos crimes, Teoria Geral do Delito, Conceito de crime Outras classificações
+**** Classificação dos crimes, Teoria Geral do Delito, Conceito de crime 
 -----
 * Segundo o conceito analítico de crime, o instituto é composto por três elementos, quais sejam, o fato típico, a ilicitude ou antijuridicidade e a culpabilidade.
 * O fato típico, por sua vez, é composto por conduta, resultado, nexo de causalidade e tipicidade.
@@ -679,7 +679,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) José cometeu homicídio culposo na modalidade comissiva por omissão, pois exercia a função de garantidor (Art. 121, § 3º, c/c. o Art. 13, § 2º, ambos do CP).
 ** E) José cometeu homicídio doloso na modalidade comissiva por omissão, pois exercia a função de garantidor (Art. 121, caput, c/c. o Art. 13, § 2º, ambos do CP).
 *** Gabarito: A
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Conduta: ação / omissão
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Conduta: ação / omissão
 -----
 * Quanto às TEORIAS DO CRIME, pode-se ASSEVERAR que:
 ** A) O modelo Neokantista, da teoria teleológica do delito, manteve o dolo natural e a culpa strictu sensu na culpabilidade, acrescentando a esta, apenas, o elemento exigibilidade de conduta conforme o Direito.
@@ -704,7 +704,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) culpabilidade, tipicidade, conduta e resultado.
 ** E) conduta, resultado, nexo causal e subjetividade.
 *** Gabarito: C
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Conduta: ação / omissão, Nexo de causalidade
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Conduta: ação / omissão, Nexo de causalidade
 -----
 * Assinale a alternativa correta.
 ** A) A relação de causalidade é prescindível nos crimes omissivos em geral.
@@ -713,7 +713,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) Para a teoria finalista da ação a culpabilidade não pode constituir elemento do crime, mas, sim, pressuposto de pena.
 ** E) Nenhuma das alternativas.
 *** Gabarito: B
-**** Tipicidade, Culpabilidade, Teoria Geral do Delito Conceito de crime, Sistemas penais, Nexo de causalidade, Noções Gerais da Culpabilidade
+**** Tipicidade, Culpabilidade, Teoria Geral do Delito, Conceito de crime, Sistemas penais, Nexo de causalidade, Noções Gerais da Culpabilidade
 -----
 * O servidor público municipal ABC aproveitou o final de semana para digitar seu trabalho de conclusão de curso universitário, cujo prazo esgotava-se. Depois de iniciá-lo, porém, seu computador apresentou defeitos e deixou de funcionar. Embora ausente qualquer ânimo de apropriar-se de coisa pública municipal, ABC entrou no prédio público, retirou o computador pertencente à Secretaria Municipal de Administração e levou-o para casa, a fim de empregá-lo momentaneamente. Na noite de domingo, o computador foi devolvido espontaneamente, tendo sido colocado no mesmo lugar de onde fora retirado. A restituição da coisa deu-se de forma integral. Considerada a estrutura analítica do crime (elementos do delito), o problema comporta a:
 ** A) exclusão da conduta humana punível;
@@ -752,7 +752,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) A teoria funcionalista radical, de Gunther Jackobs, assevera que a missão do direito penal é a proteção da norma e a punição do indivíduo desviante.
 ** E) A ação, na teoria do funcionalismo sistêmico, de Claus Roxin, designa o exercício de uma atividade final, que direciona a conduta humana ao ato consciente e voluntário para o cometimento do crime.
 *** Gabarito: D
-**** Tipicidade, Teoria Geral do Delito, Sistemas penais Conduta: ação / omissão
+**** Tipicidade, Teoria Geral do Delito, Sistemas penais, Conduta: ação / omissão
 -----
 * Constitui uma das características do direito penal do inimigo
 ** A) a legislação diferenciada.
@@ -809,7 +809,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) é plenamente possível a compensação de culpas quando ambos os agentes agiram com imprudência, negligência ou imperícia na prática do ilícito.
 ** E) considera-se praticado o crime no momento do resultado, ainda que outro seja o momento da ação ou omissão.
 *** Gabarito: A
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Conduta: ação / omissão, Antijuridicidade, Legítima defesa, Estado de necessidade
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Conduta: ação / omissão, Antijuridicidade, Legítima defesa, Estado de necessidade
 -----
 * É certo afirmar:
     I. A finalidade do conceito analítico do crime é a análise dos seus caracteres e elementos, por isso seu foco são os elementos ou requisitos do delito, onde é entendido como conduta típica, antijurídica e culpável (conceito tripartido, teoria clássica ou tridimensional), ou apenas conduta típica e antijurídica, ou ainda, como fato típico, antijurídico e punível abstratamente.
@@ -822,7 +822,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** C) Somente as proposições I e III estão corretas.
 ** D) Somente as proposições II e IV estão corretas.
 *** Gabarito: A
-**** Teoria Geral do Delito, Conceito de crime, Concurso de crimes Concurso material, Concurso formal, Crime continuado, Pena de multa, Conceito e Características da Pena de Multa, Dosimetria
+**** Teoria Geral do Delito, Conceito de crime, Concurso de crimes, Concurso material, Concurso formal, Crime continuado, Pena de multa, Dosimetria
 -----
 * É certo afirmar:
     I. Mesmo nos crimes cometidos com violência ou grave ameaça à pessoa, reparado o dano ou restituída a coisa, até o recebimento da denúncia ou da queixa, por ato voluntário do agente, a pena será reduzida de um a dois terços. É o que o Código Penal define como "arrependimento posterior".
@@ -835,7 +835,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** C) Somente as proposições I e III estão corretas.
 ** D) Somente as proposições III e IV estão corretas.
 *** Gabarito: B
-**** Tipicidade, Culpabilidade, Teoria Geral do Delito Conceito de crime, Arrependimento posterior, Crime preterdoloso, Imputabilidade penal
+**** Tipicidade, Culpabilidade, Teoria Geral do Delito, Conceito de crime, Arrependimento posterior, Crime preterdoloso, Imputabilidade penal
 -----
 * Mévio, superior hierárquico de Tício, Oficial de Justiça, solicitou que ele alterasse o teor de determinada certidão em mandado de busca e apreensão. Apesar de ter conhecimento de que a conduta não era correta, Tício atendeu a solicitação de Mévio, já que este era seu superior hierárquico e os dois eram também amigos de infância. Descobertos os fatos, foi instaurado procedimento investigatório, razão pela qual Tício procura seu advogado para esclarecimentos. Considerando apenas as informações narradas, o advogado de Tício deverá esclarecer que sua conduta configura:
 ** A) fato típico, ilícito e culpável;
@@ -888,7 +888,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** C) A extinção da punibilidade de crime que é pressuposto, elemento constitutivo ou circunstância agravante de outro não se estende a este. Nos crimes conexos, a extinção da punibilidade de um deles impede, quanto aos outros, a agravação da pena resultante da conexão.
 ** D) Tratando-se de Medida de Segurança, a fixação do período de internação ou tratamento ambulatorial não comportará tempo determinado, perdurando enquanto não for averiguada, mediante perícia médica, a cessação de periculosidade. O prazo mínimo, contudo, deverá ser de 1 (um) a 3 (três) anos.
 *** Gabarito: D
-**** Teoria Geral do Delito, Conceito de crime, Medida de segurança Prazo de duração, Causas de extinção da punibilidade, Causas de Extinção da Punibilidade - Noções gerais
+**** Teoria Geral do Delito, Conceito de crime, Medida de segurança, Prazo de duração, Causas de extinção da punibilidade, Causas de Extinção da Punibilidade - Noções gerais
 -----
 * Majoritariamente entende-se que, de acordo com o conceito analítico, crime é um:
 ** A) Fato típico e antijurídico.
@@ -932,7 +932,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) concepção da culpabilidade como uma relação psicológica entre o autor e o fato por ele praticado, de sorte que dolo e culpa, para a teoria, são espécies de culpabilidade.
 ** E) fusão entre dois substratos do conceito analítico de crime, a saber, a tipicidade e a antijuridicidade, sendo aquela reconhecida como a razão de ser desta; assim, o crime é composto pelo fato antijurídico (injusto) e pela culpabilidade.
 *** Gabarito: E
-**** Culpabilidade, Teoria Geral do Delito, Conceito de crime Noções Gerais da Culpabilidade
+**** Culpabilidade, Teoria Geral do Delito, Conceito de crime,  Noções Gerais da Culpabilidade
 -----
 * Sobre a evolução das Escolas Penais,
 ** A) a base ontológica do funcionalismo permitiu a construção da teoria da imputação objetiva.
@@ -949,7 +949,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** C) Considera-se crime tentado quando nele se reúnem todos os elementos de sua definição legal.
 ** D) O agente que, voluntariamente, desiste de prosseguir na execução ou impede que o resultado se produza, responde nas mesmas penas aplicáveis ao crime consumado.
 *** Gabarito: B
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa, Crimes omissivos
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa, Crimes omissivos
 -----
 * A corrente/teoria penal que se funda na ideia de que as normas jurídicas devem ser protegidas por si mesmas, pouco importando o bem jurídico por trás delas, é
 ** A) a teoria do garantismo penal, de Luigi Ferrajoli.
@@ -958,7 +958,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) a teoria da tipicidade conglobante, de Eugenio Zaffaroni.
 ** E) a teoria constitucionalista do delito.
 *** Gabarito: C
-**** Noções Fundamentais, Conceitos e caracteres, Teoria Geral do Delito Sistemas penais
+**** Noções Fundamentais, Teoria Geral do Delito, Sistemas penais
 -----
 * No que respeita às infrações penais, assinale a alternativa correta.
 ** A) A doutrina brasileira majoritária adota o conceito analítico de crime, definindo-o como toda conduta típica, antijurídica, culpável e punível.
@@ -982,7 +982,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Noções Fundamentais, Conceitos e caracteres, Teoria Geral do Delito Conceito de crime
+**** Noções Fundamentais, Teoria Geral do Delito, Conceito de crime
 -----
 * A respeito das leis penais em branco e da teoria geral do delito, assinale a opção correta.
 ** A) A concepção welzeliana de ação implicou a inclusão do dolo sem a consciência de ilicitude e da culpa nos tipos de injustos. Além disso, conforme essa concepção, ao desvalor da ação corresponderia um desvalor do resultado, consistente na lesão ou perigo de lesão ao bem jurídico tutelado.
@@ -997,7 +997,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Teoria Geral do Delito, Conceito de crime, Antijuridicidade Legítima defesa
+**** Teoria Geral do Delito, Conceito de crime, Antijuridicidade, Legítima defesa
 -----
 * Acerca da aplicação da lei penal, do conceito analítico de crime, da exclusão de ilicitude e da imputabilidade penal, julgue o item que se segue. O direito penal brasileiro não admite a punição de atos meramente preparatórios anteriores à fase executória de um crime, uma vez que a criminalização de atos anteriores à execução de delito é uma violação ao princípio da lesividade.
 ** A) Certo
@@ -1041,7 +1041,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) Sobre a lei penal no tempo, o Código Penal Brasileiro adotou a Teoria da Ubiquidade.
 ** E) O crime é consumado quando nele se reúnem todos os elementos de sua definição legal.
 *** Gabarito: E
-**** Tipicidade, Noções Fundamentais, Lei penal no tempo Teoria Geral do Delito, Conceito de crime, Consumação e tentativa, Antijuridicidade, Noções Gerais Antijuridicidade
+**** Tipicidade, Noções Fundamentais, Lei penal no tempo, Teoria Geral do Delito, Conceito de crime, Consumação e tentativa, Antijuridicidade, Noções Gerais Antijuridicidade
 -----
 * No tipo do crime descrito no art. 319 do Código Penal "Retardar, ou deixar de praticar, indevidamente, ato de ofício, ou praticá-lo contra disposição expressa de lei, para satisfazer interesse ou sentimento pessoal", a expressão "para satisfazer interesse ou sentimento pessoal" constitui
 ** A) elemento normativo do tipo.
@@ -1059,7 +1059,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) a ação ou omissão praticada pelo autor, independentemente de qualquer causa superveniente.
 ** E) exclusivamente a ação ou omissão que mais contribui para o resultado.
 *** Gabarito: A
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Conduta: ação / omissão
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Conduta: ação / omissão
 -----
 * Quanto às penas, à tipicidade, à ilicitude e aos elementos e espécies da infração penal, julgue os itens a seguir. Na legislação pátria, adotou-se o critério bipartido na definição das infrações penais, ou seja, estas se subdividem em contravenções penais e crimes ou delitos, inexistindo diferença conceitual entre as duas últimas espécies.
 ** A) Certo
@@ -1105,7 +1105,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) A definição do consentimento do ofendido como hipótese de atipicidade ou de justificação da conduta é dependente do tipo penal de que se trata no caso concreto.
 ** E) São causas supralegais de exclusão de ilicitude: insignificância penal, consentimento do ofendido, adequação social da conduta.
 *** Gabarito: D
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * Assinale a alternativa correta, entre as seguintes assertivas relacionadas à teoria do crime:
 ** A) São hipóteses de ausência de conduta: coação física irresistível, atos reflexos, omissão de ação.
@@ -1114,7 +1114,7 @@ Entre as teorias que buscam explicar a relação de causalidade entre a conduta 
 ** D) Em sede de estado de necessidade, a teoria diferenciadora acolhida no Código Penal brasileiro admite a exculpação do homicídio, quando postas em confronto as vidas de duas distintas pessoas em situação de perigo.
 ** E) Nos tipos penais de conteúdo misto alternativo não há fungibilidade entre as condutas, aplicando-se a regra do concurso material no caso de realização de mais de uma dessas condutas.
 *** Gabarito: B
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * Adotada a teoria finalista da ação, o dolo e a culpa integram a
 ** A) punibilidade.
@@ -1164,7 +1164,7 @@ V- O irmão omitente cometeu homicídio qualificado.
 ** D) As alternativas I, III e V estão corretas.
 ** E) As alternativas III e V estão corretas.
 *** Gabarito: B
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * Sobre a evolução do conceito de bem jurídico, cuja "criação não é apenas produto de uma elaboração jurídica pura, mas também de um contexto político e econômico", é INCORRETO afirmar que
 ** A) a noção positivista de bem jurídico parte da ideia de que o bem jurídico se reduz a um elemento da própria norma, porque somente a lei expressa os objetos jurídicos ao encerrar a vontade declarada do Estado.
@@ -1172,7 +1172,7 @@ V- O irmão omitente cometeu homicídio qualificado.
 ** C) tanto na visão positivista quanto na visão neokantiana, o bem jurídico é visto como um pressuposto formal da incriminação, trabalhando com os dados existentes na ordem jurídica, sem questioná-los.
 ** D) na visão funcionalista, o bem jurídico é visto na perspectiva dos valores ético-sociais elementares, relativos à pessoa, ao patrimônio, à família e ao Estado, negando-se o fim de estabilidade da norma como instrumental à manutenção do sistema.
 *** Gabarito: D
-**** Noções Fundamentais, Conceitos e caracteres, Teoria Geral do Delito Sistemas penais
+**** Noções Fundamentais, Teoria Geral do Delito, Sistemas penais
 -----
 * Acerca do direito penal e do direito processual penal, julgue os
 itens de 73 a 80.
@@ -1198,7 +1198,7 @@ A diferença entre crime e contravenção penal consiste na aplicação de pena 
 ** D) se o agente, em virtude de perturbação de saúde mental ou por desenvolvimento mental incompleto ou retardado, não era inteiramente capaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento.
 ** E) a embriaguez completa proveniente de caso fortuito ou força maior, se o agente era, ao tempo da ação ou da omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento.
 *** Gabarito: E
-**** Culpabilidade, Teoria Geral do Delito, Conceito de crime Imputabilidade penal
+**** Culpabilidade, Teoria Geral do Delito, Conceito de crime,  Imputabilidade penal
 -----
 * É certo afirmar:
 I. A punibilidade é requisito do crime. II. Sob o aspecto formal crime é um fato atípico e antijurídico. III. Não basta que o fato seja típico para que exista crime. É preciso que seja contrário ao direito, que seja antijurídico. IV. Pressupostos do crime são circunstâncias jurídicas anteriores à execução do fato, positivas ou negativas, a cuja existência ou inexistência é condicionada a configuração do título delitivo de que se trata.
@@ -1267,7 +1267,7 @@ Segundo a teoria da causalidade adequada, quando inúmeras e sucessivas causas c
 ** D) não constitui crime de falsidade, para efeitos de emissão, substituição ou anotação de Carteira de Trabalho e Previdência Social, anotar dolosamente em Carteira de Trabalho e Previdência Social ou registro de empregado, ou confessar ou declarar em juízo ou fora dele, data de admissão em emprego diversa da verdadeira.
 ** E) constitui crime de atentado contra a liberdade de trabalho constranger alguém, em qualquer hipótese, a participar de parede ou paralisação de atividade econômica.
 *** Gabarito: B
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * João possui um restaurante. No mesmo dia, os garçons José e Pedro quebraram vários copos, porque os transportavam empilhados nas bandejas. Quando da admissão dos garçons, João os ensinou a não colocar os copos empilhados nas bandejas, mas a transportá-los um ao lado do outro. Entendeu João que os garçons foram imprudentes, ao não agirem com a cautela necessária para evitar o dano. Pedro, aliás, já havia sofrido punição de advertência anteriormente, pela prática da mesma falta. José procurou João para contar que havia quebrado os copos, enquanto que João ficou sabendo que Pedro quebrou os copos porque a cozinheira lhe avisou. Quando João chamou José para conversar sobre o ocorrido, José estava colando os copos quebrados. Por sua vez, Pedro já havia colocado os cacos dos copos na lata de lixo. João, então, resolveu punir José com uma advertência por escrito e Pedro com uma suspensão de 1 dia de serviço.
 Assinale qual conceito penal aplicável ao Direito do Trabalho que o empregador não poderia ter utilizado no exercício de seu poder disciplinar:
@@ -1277,7 +1277,7 @@ Assinale qual conceito penal aplicável ao Direito do Trabalho que o empregador 
 ** D) arrependimento eficaz.
 ** E) individualização da pena.
 *** Gabarito: D
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * Cada alternativa possui duas afirmações ("1" e "2") relacionadas ou não entre si. Marque a alternativa em que as duas afirmações sejam corretas:
 ** A) 1. Considera-se tentado o crime quando, iniciada a execução, não se consuma por circunstâncias alheias à vontade do agente. 2. Salvo disposição em contrário, pune-se a tentativa com a pena correspondente ao crime consumado, diminuida pela metade.
@@ -1296,7 +1296,7 @@ Analisando as proposições, pode-se afirmar:
 ** C) Somente as proposições I e IV estão corretas.
 ** D) Somente as proposições II e III estão corretas.
 *** Gabarito: C
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * No que diz respeito ao ordenamento jurídico brasileiro, em relação à infração penal, assinale a opção correta.
 ** A) Adotou-se no direito penal brasileiro o critério bipartido, segundo o qual as condutas puníveis dividem-se em crimes ou contravenções, como sinônimos, e delitos.
@@ -1304,7 +1304,7 @@ Analisando as proposições, pode-se afirmar:
 ** C) O Código Penal brasileiro adotou o critério tripartite, existindo diferença entre crime, delito e contravenção.
 ** D) No âmbito do direito penal, crimes, delitos e contravenções são expressões equivalentes ou sinônimas.
 *** Gabarito: B
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * Marque a opção correta.
 ** A) Quanto ao Lugar do crime, o Direito brasileiro adotou a Teoria da Atividade segundo a qual o Lugar do delito é aquele em que se verificou o ato executivo.
@@ -1322,7 +1322,7 @@ Analisando as proposições, pode-se afirmar:
 ** D) Idealizado por Günther Jakobs, o direito penal do inimigo é entendido como um direito penal de terceira velocidade, por utilizar a pena privativa de liberdade, mas permitir a flexibilização de garantias materiais e processuais, podendo ser observado, no direito brasileiro, em alguns institutos da lei que trata dos crimes hediondos e da que trata do crime organizado.
 ** E) O abolicionismo, ou minimalismo penal, prega a eliminação total, do ordenamento jurídico penal, da pena de prisão como meio de controle social formal e a sua substituição por outro mecanismo de controle.
 *** Gabarito: D
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * A respeito do iter criminis e do momento de consumação do delito, assinale a opção correta.
 ** A) A tentativa, uma norma de extensão temporal, não se enquadra diretamente no tipo incriminador; faz-se necessária uma norma que amplie a figura típica até alcançar o fato material.
@@ -1331,7 +1331,7 @@ Analisando as proposições, pode-se afirmar:
 ** D) A tentativa de homicídio se distingue do delito de lesões corporais dolosas pela gravidade da ofensa à integridade física da vítima.
 ** E) O crime tentado é punido da mesma forma que o crime consumado, pois o que vale é a intenção do agente.
 *** Gabarito: A
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * Considere as afirmações abaixo, entre tipicidade e antijuridicidade.
 I. Para a teoria do "tipo avalorado" (também chamado de "neutro", "acromático"), a tipicidade não indica coisa alguma acerca da antijuridicidade.
@@ -1437,14 +1437,14 @@ ANALISANDO AS ASSERTIVAS ACIMA, PODE-SE AFIRMAR QUE:
 ** C) () estão corretas as de números III e IV;
 ** D) () todas estão corretas.
 *** Gabarito: B
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * Acerca da tipicidade, da culpabilidade e da punibilidade, julgue os itens a seguir.
 Na doutrina e jurisprudência contemporâneas, predomina o entendimento de que a punibilidade não integra o conceito analítico de delito, que ficaria definido como conduta típica, ilícita e culpável.
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * Majoritariamente, a doutrina conceitua crime como sendo um fato típico, ilícito e culpável. Como elementos do fato típico estão a conduta, o resultado, o nexo de causalidade e a tipicidade. Com relação a tais elementos, assinale a afirmativa correta.
 ** A) Não há crime sem resultado jurídico.
@@ -1466,7 +1466,7 @@ Quais estão corretas?
 ** D) Apenas II e III.
 ** E) I, II e III.
 *** Gabarito: C
-**** Noções Fundamentais, Lei penal no tempo, Teoria Geral do Delito Sistemas penais, Causas de extinção da punibilidade, Abolitio criminis
+**** Noções Fundamentais, Lei penal no tempo, Teoria Geral do Delito, Sistemas penais, Causas de extinção da punibilidade, Abolitio criminis
 -----
 * Considerando a teoria do crime, assinale a alternativa correta.
 ** A) Conforme entendimento jurisprudencial, é suficiente para fundamentar a aplicação do princípio da insignificância a presença de um dos seguintes elementos: mínima ofensividade da conduta do agente, ínfima periculosidade da ação, ausência total de reprovabilidade do comportamento e mínima expressividade da lesão jurídica.
@@ -1538,7 +1538,7 @@ IV. De acordo com a jurisprudência do Superior Tribunal de Justiça, o monitora
 ** C) Para que se possa reconhecer o instituto consentimento do ofendido, doutrina enumera alguns requisitos que deverão ser preenchidos pelo agente, dentre eles que o ofendido seja capaz de consentir; que o bem sobre o qual recaia a conduta do agente seja indisponível, que o consentimento tenha sido dado posteriormente à conduta do agente.
 ** D) A estrutura da culpabilidade na concepção finalista preconizada por Welzel ficaria com o seguinte conteúdo, qual seja, a imputabilidade; dolo e culpa e exigibilidade de conduta diversa.
 *** Gabarito: B
-**** Teoria Geral do Delito, Sistemas penais, Antijuridicidade Legítima defesa, Estado de necessidade
+**** Teoria Geral do Delito, Sistemas penais, Antijuridicidade, Legítima defesa, Estado de necessidade
 -----
 * Dentre as escolas penais a seguir, aquela na qual se pretendeu inicialmente aplicar ao direito penal os mesmos métodos de observação e investigação que se utilizavam em outras ciências naturais é a
 ** A) Clássica.
@@ -1574,7 +1574,7 @@ IV. De acordo com a jurisprudência do Superior Tribunal de Justiça, o monitora
 ** D) O conhecimento atual das circunstâncias de fato do tipo objetivo deve abranger os elementos presentes - a vítima, a coisa, o documento etc. e futuros - o curso causal e o resultado - do tipo objetivo, bem como as condições objetivas de punibilidade.
 ** E) O conceito clássico de delito é falho, na medida em que nele não é estabelecido vínculo entre a conduta e o resultado por meio do nexo de causalidade.
 *** Gabarito: C
-**** Tipicidade, Tipo Penal Doloso, Teoria Geral do Delito Conceito de crime
+**** Tipicidade, Tipo Penal Doloso, Teoria Geral do Delito, Conceito de crime
 -----
 * Em relação à interpretação da norma penal, é CORRETO afirmar:
 ** A) O Direito Penal veda o uso da interpretação analógica em desfavor do réu.
@@ -1641,7 +1641,7 @@ IV. De acordo com a jurisprudência do Superior Tribunal de Justiça, o monitora
 ** D) conduta.
 ** E) lesão.
 *** Gabarito: D
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Conduta: ação / omissão
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Conduta: ação / omissão
 -----
 * Acerca dos princípios gerais que norteiam o direito penal, das teorias do crime e dos institutos da Parte Geral do Código Penal brasileiro, julgue os itens a seguir.
 A teoria finalista adota o conceito clássico de ação, entendida como mero impulso mecânico, dissociado de qualquer conteúdo da vontade.
@@ -1672,7 +1672,7 @@ Segundo a teoria causal, o dolo causalista é conhecido como dolo normativo, pel
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Tipicidade, Tipo Penal Doloso, Teoria Geral do Delito Conceito de crime
+**** Tipicidade, Tipo Penal Doloso, Teoria Geral do Delito, Conceito de crime
 -----
 * Adotada a teoria finalista, é possível afirmar que o dolo e a culpa integram a
 ** A) tipicidade e culpabilidade, respectivamente.
@@ -1690,7 +1690,7 @@ Segundo a teoria causal, o dolo causalista é conhecido como dolo normativo, pel
 ** D) Considera-se praticado o crime no momento da ação se houver resultado e no momento do resultado se houver omissão
 ** E) Considera-se praticado o crime no momento da ação ou da omissão
 *** Gabarito: E
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Conduta: ação / omissão
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Conduta: ação / omissão
 -----
 * Acerca da ação penal nos crimes contra os costumes, julgue os itens a seguir.
 O direito penal moderno é o direito penal da culpa, sendo, portanto, presumíveis os fatos delituosos, conforme jurisprudência dominante.
@@ -1706,7 +1706,7 @@ O direito penal moderno é o direito penal da culpa, sendo, portanto, presumíve
 ** D) crime frustrado.
 ** E) desistência voluntária.
 *** Gabarito: C
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * Acerca do conceito de crime, considerando a corrente majoritária do Direito, assinale a alternativa INCORRETA.
 ** A) O crime é o fato típico, ilícito e culpável.
@@ -1733,14 +1733,14 @@ A sequência numérica correta, de cima para baixo, da coluna da direita, é
 ** D) 1-4-5
 ** E) 1-3-2
 *** Gabarito: E
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * A respeito do direito penal, julgue os itens que se seguem.
 Considera-se crime toda ação ou omissão típica, antijurídica e culpável.
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * No que se refere aos elementos do crime, é correto afirmar que
 ** A) o estrito cumprimento do dever legal exclui a imputabilidade.
@@ -1749,7 +1749,7 @@ Considera-se crime toda ação ou omissão típica, antijurídica e culpável.
 ** D) a exigibilidade de conduta diversa é pressuposto da culpabilidade.
 ** E) o crime impossível extingue a punibilidade.
 *** Gabarito: D
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * Infração penal significa:
 ** A) Quando um caso não previsto em lei é regulado por um preceito legal, que rege um semelhante.
@@ -1776,7 +1776,7 @@ Considera-se crime toda ação ou omissão típica, antijurídica e culpável.
 ** D) De acordo com a doutrina finalista, a consciência da ilicitude é elemento do dolo.
 ** E) O erro de tipo sempre exclui o dolo.
 *** Gabarito: E
-**** Tipicidade, Culpabilidade, Teoria Geral do Delito Conceito de crime, Potencial conhecimento da ilicitude - Erro de proibição, Erro do tipo essencial, Erro de tipo acidental
+**** Tipicidade, Culpabilidade, Teoria Geral do Delito, Conceito de crime, Potencial conhecimento da ilicitude - Erro de proibição, Erro do tipo essencial, Erro de tipo acidental
 -----
 * Sobre o sujeito da infração penal, tem-se que
 ** A) nos denominados crimes vagos, não se fazível determinar o sujeito passivo.
@@ -2244,7 +2244,7 @@ Considera-se crime toda ação ou omissão típica, antijurídica e culpável.
 ** D) primário, pois não consta tenha cometido novo crime após o trânsito em julgado de sentença penal que o tenha condenado por crime anterior.
 ** E) tecnicamente primário, conforme prevê a Parte Geral do Código Penal, pois, embora não conste que tenha cometido novo crime após o trânsito em julgado de decisão penal condenatória já tem outras condenações.
 *** Gabarito: D
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Penas privativas de liberdade, Reincidência
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Penas privativas de liberdade, Reincidência
 -----
 * Há crime quando o sujeito ativo pratica fato típico em função de
 ** A) estado de necessidade.
@@ -2308,7 +2308,7 @@ Considera-se crime toda ação ou omissão típica, antijurídica e culpável.
 ** D) O agente que, na condição de garantidor, omite-se, ensejando a que o resultado lesivo ocorra, pratica crime omissivo impróprio.
 ** E) A reincidência poderá ocorrer entre crimes culposos, um crime doloso e outro culposo e entre crimes tentados.
 *** Gabarito: C
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Consumação e tentativa
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Consumação e tentativa
 -----
 * Assinale a alternativa CORRETA.
 ** A) A pessoa pode ser, ao mesmo tempo, sujeito ativo e passivo de um delito em face de sua própria conduta.
@@ -2317,7 +2317,7 @@ Considera-se crime toda ação ou omissão típica, antijurídica e culpável.
 ** D) O positivismo criminológico utiliza método empírico-intuitivo experimental, contrapondo-se à análise filosófico-metafísica da escola clássica.
 ** E) Na contagem dos prazos, leva-se em consideração o dia do final, excluindo-se o do começo.
 *** Gabarito: D
-**** Tipicidade, Teoria Geral do Delito, Conceito de crime Conduta: ação / omissão
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime,  Conduta: ação / omissão
 -----
 * Assinale a alternativa incorreta.
 ** A) O controle social pode ser difuso ou institucionalizado. O sistema penal compõe o controle social punitivo institucionalizado e formalmente punitivo.
@@ -2335,7 +2335,7 @@ Considera-se crime toda ação ou omissão típica, antijurídica e culpável.
 ** D) tem um único exemplo em nossa legislação penal consistente na responsabilização das pessoas jurídicas por crimes ambientais.
 ** E) deve ser utilizada em ultima ratio, uma vez que, pode violar direitos e garantias fundamentais da pessoa humana.
 *** Gabarito: C
-**** Tipicidade, Noções Fundamentais, Conceitos e caracteres, Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito, Conceito de crime, Crime praticado por pessoa jurídica
+**** Tipicidade, Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito, Conceito de crime, Crime praticado por pessoa jurídica
 -----
 * Considerando-se o que determina a doutrina majoritária, é CORRETO afirmar que o injusto penal consiste em uma conduta
 ** A) apenas típica.
