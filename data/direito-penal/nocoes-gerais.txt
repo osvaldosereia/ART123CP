@@ -1,185 +1,1009 @@
-* Julgue o item a seguir, a respeito da aplicação da lei penal.
-* A regra segundo a qual aplica-se a lei brasileira, sem prejuízo de convenções, tratados e regras de direito internacional, ao crime cometido no território nacional consubstancia o princípio da extraterritorialidade.
+* A aplicação da Lei Penal no tempo é regulada pelo princípio da irretroatividade. Sobre esse tema, é CORRETO afirmar:
+** A) A Lei Penal mais benéfica aplica-se mesmo a fatos anteriores à sua vigência.
+** B) A revogação de Lei Penal sempre extingue os efeitos penais de condenações anteriores.
+** C) A aplicação da Lei Penal no tempo depende exclusivamente de decisão judicial transitada em julgado.
+** D) A aplicação da Lei Penal é regida exclusivamente pelo critério territorial.
+*** Gabarito: A
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* De acordo com Direito Penal brasileiro, considera-se lugar do crime:
+** A) apenas o local em que ocorreu a conduta criminosa.
+** B) o local em que ocorreu a conduta, bem como o local onde se produziu o resultado.
+** C) exclusivamente o local onde se produziu o resultado.
+** D) o local onde foi preparada e organizada a conduta criminosa futura.
+** E) o local em que a autoridade policial tomou conhecimento da conduta delituosa.
+*** Gabarito: B
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Adão praticou cinco furtos contra mulheres na mesma cidade no intervalo de um mês.
+* Após a terceira infração penal, entrou em vigor uma lei que aumentou a pena aplicável ao crime de furto. Diante de tal situação hipotética, assinale a afirmativa correta.
+** A) Por força do princípio da irretroatividade, a lei referida não se aplica a nenhum dos furtos.
+** B) Por força do princípio da irretroatividade, a lei referida somente se aplica aos furtos posteriores à sua vigência.
+** C) A lei referida se aplica a todos os furtos cometidos em continuidade.
+** D) A lei anterior mais benéfica é aplicável a todos os furtos cometidos em continuidade delitiva.
+** E) Ante os furtos continuadamente cometidos, Adão deverá ser apenado com a média aritmética das sanções previstas.
+*** Gabarito: C
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+
+-----
+* Após ser aprovado em concurso público, João, cidadão brasileiro, viajou ao Paraguai para comemorar e, após discutir com um vendedor ambulante, foi baleado.
+* João conseguiu retornar ao Brasil, mas faleceu no hospital. Diante de tal situação hipotética, acerca da aplicação da lei penal no espaço é correto afirmar que é aplicável a teoria
+** A) da atividade, haja vista que se considera praticado o crime estritamente no lugar da prática da conduta criminosa, independentemente de se tratar de ação ou omissão.
+** B) da ambulatoriedade, haja vista que se considera praticado o crime no lugar onde o agente for encontrado.
+** C) da ubiquidade, haja vista que se considera praticado o crime no lugar em que ocorreu a ação ou omissão, bem como onde se produziu ou deveria produzir-se o resultado.
+** D) da paridade, haja vista que, a depender das circunstâncias e do tipo penal, considera-se praticado o crime no lugar em que, segundo o dolo do agente, deveria ter sido produzido o resultado.
+** E) consequencialista, haja vista que se considera praticado o crime estritamente no lugar onde se produziu ou deveriam ter sido produzidos os efeitos da conduta criminosa.
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Acerca da aplicação da lei penal no tempo, assinale a afirmativa correta.
+** A) É aplicável a teoria da ubiquidade, haja vista que se considera praticado o crime no momento da ação e do resultado.
+** B) É aplicável a teoria da consequência, haja vista que se considera praticado o crime no momento do resultado.
+** C) É aplicável a teoria da conduta ou da atividade, haja vista que se considera praticado o crime no momento da ação ou omissão.
+** D) É aplicável a teoria da alternatividade, haja vista que se considera praticado o crime no momento da ação ou do resultado.
+** E) É aplicável a teoria da paridade, haja vista que, a depender do delito, considera-se praticado o crime desde o momento da ação até a produção do resultado.
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* A norma penal que incrimina determinada conduta ou agrava a situação do investigado, acusado ou condenado não pode ser aplicada a fatos anteriores à sua vigência.
+* A norma penal incriminadora não deve conter expressões dúbias e imprecisas. Diante de tais afirmações, é correto afirmar que tais postulados retratam, respectivamente,
+** A) os princípios da alteridade e da objetividade, que decorrem do princípio da singularidade.
+** B) os princípios do in dubio pro reo e da significância, que decorrem do princípio da retroatividade.
+** C) os princípios da singularidade e da superveniência, que decorrem do princípio da culpabilidade.
+** D) os princípios da subsidiariedade e da proporcionalidade, que decorrem do princípio da fragmentariedade.
+** E) os princípios da irretroatividade e da taxatividade, que decorrem do princípio da legalidade.
+*** Gabarito: E
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+
+-----
+* Em tema de princípios aplicáveis ao direito penal, analise as seguintes afirmativas:
+* I. O princípio da subsidiariedade do direito penal preconiza que não deve ser criminalizada a conduta socialmente nociva que possa ser controlada eficazmente por espécies normativas menos onerosas ao indivíduo.
+* II. O princípio da legalidade abrange a diretriz da taxatividade, que orienta o legislador penal no sentido de evitar o emprego de expressões imprecisas, dúbias e obscuras.
+* III. Por força do princípio da responsabilidade penal pessoal, é vedada a decretação do perdimento de bens em desfavor dos sucessores do condenado, independentemente do montante de patrimônio transferido.
+* Está correto apenas o que se afirma em
+** A) I.
+** B) II e III.
+** C) I e II.
+** D) III.
+** E) I e III.
+*** Gabarito: C
+**** Noções Fundamentais
+
+-----
+* De acordo com o Código Penal Brasileiro, leia as afirmativas abaixo.
+* I. Considera-se praticado o crime exclusivamente onde se produziu ou deveria produzir-se o resultado.
+* II. Aplica-se a lei brasileira, sem prejuízo de convenções, tratados e regras de direito internacional, ao crime cometido no território nacional.
+* III. Desprezam-se, nas penas privativas de liberdade e nas restritivas de direitos, as frações de dia, e, na pena de multa, as frações de cruzeiro.
+* IV. O resultado, de que depende a existência do crime, somente é imputável a quem lhe deu causa. Considera-se causa a ação ou omissão sem a qual o resultado não teria ocorrido.
+* Estão CORRETAS as afirmativas:
+** A) I e II, apenas.
+** B) I e III, apenas.
+** C) II, III e IV, apenas.
+** D) I, II, III e IV.
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no tempo, Lei penal no espaço
+
+-----
+* Julgue o item seguinte, relativo à aplicação da lei penal brasileira, à classificação dos crimes, aos conceitos de tentativa e de concurso de pessoas e à prescrição no direito penal.
+* Caso um funcionário público a serviço do Brasil no exterior seja condenado no estrangeiro por crime contra a administração pública brasileira, ele não poderá ser punido pelo mesmo fato perante a justiça brasileira.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* A respeito da punibilidade e das suas causas de extinção, da prescrição, dos crimes contra a administração pública e do abuso de autoridade, julgue o próximo item, considerando o entendimento jurisprudencial dos tribunais superiores.
+* Os empregados da Ordem dos Advogados do Brasil (OAB) são equiparados a funcionários públicos para fins penais.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais, Conceitos e caracteres
+
+-----
+* Em relação ao tempo e ao local do crime, às causas excludentes de ilicitude, ao concurso de pessoas e às penas, bem como aos princípios aplicáveis ao direito penal, julgue o item a seguir, com base no Código Penal e na doutrina majoritária.
+* Segundo a teoria da ubiquidade, adotada pelo Código Penal brasileiro, considera-se praticado o crime tanto no lugar em que ocorreu a ação ou omissão, quanto no local onde se produziu ou deveria se produzir o resultado.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Em relação ao tempo e ao local do crime, às causas excludentes de ilicitude, ao concurso de pessoas e às penas, bem como aos princípios aplicáveis ao direito penal, julgue o item a seguir, com base no Código Penal e na doutrina majoritária.
+* O princípio da legalidade ou da reserva legal determina que não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal, razão pela qual a analogia é vedada no direito penal brasileiro.
 ** A) Certo
 ** B) Errado
 *** Gabarito: E
 **** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
 
 -----
-* Julgue o item a seguir, a respeito da aplicação da lei penal.
-* As regras gerais estabelecidas pelo Código Penal não se aplicam aos delitos previstos na legislação especial ou extravagante.
+* Em relação ao tempo e ao local do crime, às causas excludentes de ilicitude, ao concurso de pessoas e às penas, bem como aos princípios aplicáveis ao direito penal, julgue o item a seguir, com base no Código Penal e na doutrina majoritária.
+* O indivíduo preso em decorrência de cometimento de crime contra o patrimônio conserva todos os direitos não atingidos pela perda da liberdade, impondo-se a todas as autoridades o respeito à sua integridade física e moral e devendo o seu trabalho ser sempre remunerado.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+
+-----
+* João, com a intenção de subtrair um veículo, rendeu o motorista com o emprego de arma de fogo. Antes mesmo de ingressar no interior do veículo, o agente criminoso foi surpreendido pela polícia e, na tentativa de fuga, invadiu casa alheia, vindo a agredir um dos moradores.
+* A partir da situação hipotética apresentada, julgue o item que se segue, com base no Código Penal. Considera-se como tempo do crime o momento em que o resultado do delito ocorre, independentemente do instante em que se iniciou a conduta criminosa, o que, no caso em apreço, corresponde ao momento da agressão ao morador da casa invadida.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Um cidadão alemão pratica crime de lesão corporal grave contra um cidadão belga a bordo de um navio público brasileiro quando este se encontra ancorado num porto argentino.
+* De acordo com o Código Penal brasileiro, assinale a alternativa que apresenta qual legislação se aplica ao caso e com base em qual princípio.
+** A) A legislação alemã. Princípio da extraterritorialidade (nacionalidade ativa)
+** B) A legislação belga. Princípio da extraterritorialidade (nacionalidade passiva)
+** C) A legislação brasileira. Princípio da extraterritorialidade (representação ou "da bandeira")
+** D) A legislação brasileira. Princípio da territorialidade
+*** Gabarito: D
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Em relação à Constituição Federal de 1988 (CF/1988), julgue o item seguinte.
+* Dispõe a CF/1988 que não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal, e ainda que a lei penal não retroagirá, salvo para beneficiar o réu.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais
+
+-----
+* Assinale a alternativa correta.
+** A) Conforme entendimento pacificado no Supremo Tribunal Federal e no Superior Tribunal de Justiça, é atípica a conduta daquele que, após ter sido flagrado cometendo um delito, atribui-se falsa identidade perante autoridade policial, seja em razão da aplicação do princípio do nemo tenetur se detegere, seja porque configura crime impossível pela absoluta ineficácia do meio nos termos do art. 17 do Código Penal, já que as autoridades públicas possuem amplos meios de identificação pessoal, inclusive pela coleta e posterior pesquisa de impressões digitais.
+** B) O agente que instiga alguém a suicidar-se responde pelo delito previsto no art. 122 do Código Penal na modalidade de participação moral.
+** C) É aplicável a lei penal brasileira para um crime de genocídio cometido na cidade de Paris, na França, por um cidadão espanhol, domiciliado há 3 (três) anos no estado do Rio de Janeiro, mesmo se absolvido no país onde o delito se consumou.
+** D) A previsão de aplicação da lei penal brasileira a um crime de homicídio praticado por um cidadão italiano contra uma vítima peruana, no interior de uma embarcação brasileira mercante enquanto se achava em alto-mar, deve-se ao fenômeno da extraterritorialidade e, por consequência, ao princípio da justiça penal cosmopolita, que leva em conta a gravidade do crime ou a importância do bem jurídico violado para justificar a punição do fato, independentemente do local onde foi praticado e a nacionalidade do agente.
+** E) Configura hipótese de crime de latrocínio consumado, nos termos da Súmula 610 do Supremo Tribunal Federal, quando o agente aponta uma arma de fogo para a vítima, anunciando assalto e exigindo a entrega dos bens que trazia consigo, mas esta, diante do grave temor provocado, acaba por sofrer um infarto agudo do miocárdio e morre instantaneamente, o que faz com que o criminoso, assustado, fuja do local sem nada subtrair.
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* O Presidente da República, preocupado com o aumento significativo de atos de violência em eventos esportivos e com o impacto negativo para a segurança pública, decide editar uma Medida Provisória criando um novo tipo penal para punir esses comportamentos.
+* A Medida Provisória foi aprovada pelo Congresso Nacional e convertida em lei, sem que houvesse impugnações formais. Com base no caso apresentado, na legislação vigente e nos princípios pertinentes, assinale a afirmativa correta.
+** A) O princípio da reserva legal é respeitado, desde que a Medida Provisória seja aprovada pelo Congresso Nacional e transformada em lei.
+** B) A Medida Provisória não é válida, afrontando o princípio da reserva legal, pois não cabe ao Presidente da República a iniciativa de lei em matéria penal.
+** C) A Medida Provisória é inconstitucional, ofendendo o princípio da reserva legal, pois o Presidente da República não pode criar tipos penais incriminadores por esse meio, mesmo que o Congresso Nacional a tenha convertido em lei.
+** D) A Medida Provisória é válida, pois a competência para legislar em matéria penal pode ser exercida, em qualquer hipótese, desde que seja de forma provisória, pelo Presidente da República em situações de urgência, excepcionando o princípio da reserva legal.
+*** Gabarito: C
+**** Tipicidade, Tipo Penal Doloso, Noções Fundamentais Conceitos e caracteres, Princípios limitadores do poder punitivo estatal, Antijuridicidade, Legítima defesa
+
+-----
+* "A Câmara dos Deputados aprovou nesta quarta feira dia 04/11/2024, a urgência do projeto de lei que torna obrigatória a decretação de prisão preventiva na audiência de custódia em casos de crimes hediondos, roubo, associação criminosa qualificada e quando for configurada reincidência criminal. Hoje, a liberdade provisória permite ao acusado aguardar o julgamento em liberdade, com ou sem a imposição de medidas cautelares".
+* [Disponível em: [https://exame.com/brasil/camara-aprova-urgencia-deprojeto-que-antecipa-prisao-por-crimes-hediondos-](https://exame.com/brasil/camara-aprova-urgencia-deprojeto-que-antecipa-prisao-por-crimes-hediondos-) em-audienciasde-custodia/. Acesso: 05/11/2024]. O fragmento de noticia acima exemplifica alguns crimes, com base no conceito de crime e contravenção penal, é correto afirmar que constituem crime, EXCETO:
+** A) Violação de domicílio.
+** B) Sequestro.
+** C) Furto.
+** D) Perturbação do sossego.
+*** Gabarito: D
+**** Noções Fundamentais
+
+-----
+* Quanto aos direitos e às garantias fundamentais estabelecidos na Constituição Federal de 1988, julgue o item a seguir.
+* A lei penal não retroagirá, nem mesmo para beneficiar o réu.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais
+
+-----
+* Considere que um indivíduo está sendo processado por um determinado crime. Lei posterior ao fato criminoso deixa de considerá-lo crime.
+* Para que a nova lei beneficie o acusado,
+** A) é necessário que ela entre em vigor antes do oferecimento da denúncia.
+** B) basta que ela entre em vigor a qualquer tempo, mesmo após o trânsito em julgado da decisão condenatória.
+** C) é necessário que ela entre em vigor antes do recebimento da denúncia.
+** D) é necessário que ela entre em vigor antes de proferida a sentença de primeiro grau.
+** E) é necessário que ela entre em vigor antes do trânsito em julgado.
+*** Gabarito: B
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Com relação à aplicação da lei penal brasileira, tendo como base o Código Penal, assinale a alternativa CORRETA.
+** A) Uma aeronave, a serviço do governo brasileiro, que se encontre em pouso em um país estrangeiro, será submetida exclusivamente à legislação estrangeira, quando da aplicação da lei penal.
+** B) Todos os crimes praticados no estrangeiro seguem a lei do local onde eles foram consumados, independentemente do autor do fato ou da vítima.
+** C) Mesmo que uma lei posterior deixe de considerar determinado fato como crime, não cessam em virtude dela a execução e os efeitos penais da sentença condenatória, pois já foram decididos por sentença condenatória transitada em julgado.
+** D) É aplicável a lei brasileira aos crimes praticados a bordo de aeronaves ou embarcações estrangeiras de propriedade privada, achando-se aquelas em pouso no território nacional ou em voo no espaço aéreo correspondente, e estas em porto ou mar territorial do Brasil.
+** E) Uma lei posterior, que de algum modo favorecer um réu, só poderá ser utilizada a seu favor se ainda não existir sentença condenatória transitada em julgado.
+*** Gabarito: D
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* O Direito Penal, enquanto mecanismo de controle social gerido pelo Estado, é viabilizado por meio dos processos de criminalização.
+* A respeito desse assunto, avalie as afirmativas a seguir:
+* I. Entende-se por criminalização primária o ato formal de definir, por meio da edição de uma lei, a incriminação de determinada conduta.
+* II. Este ato é levado a cabo pelo poder legislativo. O processo de criminalização secundária guarda necessária correlação com a reincidência, uma vez que pressupõe que o sujeito já tenha cometido outro crime antecedente.
+* III. A criminalização secundária é exercida sobre pessoas concretas e é realizada pelas agências policiais, pelo Ministério Público, pelo Poder Judiciário.
+* Sobre as afirmativas, estão CORRETAS:
+** A) I, II e III.
+** B) I e II.
+** C) I e III.
+** D) II e III.
+*** Gabarito: C
+**** Noções Fundamentais, Conceitos e caracteres
+
+-----
+* Sobre o Princípio da Ultratividade da Lei Penal, indique a opção correta.
+** A) Esse instrumento não se aplica às leis penais temporárias ou excepcionais.
+** B) Esse instrumento se aplica apenas aos casos de crimes de competência do tribunal do júri em virtude da gravidade dos delitos.
+** C) A ultratividade da lei penal sempre ocorrerá em prejuízo do réu.
+** D) Somente ocorrerá a ultratividade da lei penal em prejuízo do réu nos casos de reincidência do mesmo.
+** E) A lei excepcional ou temporária, embora decorrido o período de sua duração ou cessadas as circunstâncias que a determinaram, aplica-se ao fato praticado durante sua vigência.
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Analise os itens a seguir de acordo com o Código Penal e em seguida assinale a alternativa correta.
+* I - Para os efeitos penais, consideram-se como extensão do território nacional as embarcações e aeronaves brasileiras, de natureza pública ou a serviço do governo brasileiro onde quer que se encontrem, bem como as aeronaves e as embarcações brasileiras, mercantes ou de propriedade privada, que se achem, respectively, no espaço aéreo correspondente ou em alto-mar.
+* II - A pena cumprida no estrangeiro atenua a pena imposta no Brasil pelo mesmo crime, quando idênticas, ou nela é computada, quando diversas.
+** A) A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.
+** B) As asserções I e II são proposições verdadeiras, e a II é um complemento da I.
+** C) A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.
+** D) As asserções I e II são proposições falsas.
+** E) As asserções I e II são proposições verdadeiras, mas a II não é um complemento da I.
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Considere a seguinte situação hipotética: João praticou um ato que era previsto na lei como crime e, por tal razão, somada aos demais requisitos legais, foi condenado por sentença transitada em julgado.
+* Ocorre que, enquanto João cumpria a pena, entrou em vigor uma lei posterior que deixou de considerar o ato praticado por João como um crime. Diante dessa narrativa e considerando os princípios básicos do Direito Penal brasileiro, julgue as seguintes assertivas:
+* I. A lei posterior, justamente por ser posterior, não terá qualquer influência na situação, devendo João cumprir sua pena normalmente, conforme fixada na sentença condenatória.
+* II. No Direito Penal, quando novas leis entram em vigor, devem envolver somente fatos concretizados sob a sua vigência. Na situação de João, a lei posterior somente poderia retroagir caso diminuísse a pena fixada, não podendo, dessa forma, abolir o crime cometido na vigência da lei anterior.
+* III. No Direito Penal, a regra é a irretroatividade da lei penal, de modo que a lei penal não poderá retroagir. Excepcionalmente, haverá a retroatividade da lei benéfica ao réu ou ao condenado, de modo que, na situação hipotética, a lei posterior retroagiria para beneficiar João.
+* É correto o que se afirma em:
+** A) II e III, apenas.
+** B) I, apenas.
+** C) I e II, apenas.
+** D) I, II e III.
+** E) III, apenas.
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Durante o estado de calamidade pública decretado em decorrência de uma pandemia, foi promulgada a Lei X, com vigência temporária, que tipificava como crime a elevação abusiva de preços de produtos essenciais à saúde pública.
+* João, comerciante, praticou tal conduta enquanto a lei estava em vigor, mas sua denúncia ocorreu após o término da vigência da referida norma. Com base nos princípios que regem a lei penal excepcional e temporária e na contagem de prazo penal, assinale η afirmativa correta.
+** A) João não poderá ser processado, pois, com o término da vigência da lei temporária, não há mais respaldo jurídico para a persecução penal.
+** B) A contagem do prazo de vigência da lei temporária inclui o primeiro dia e exclui o último, sendo possível aplicá-la a condutas que ocorram fora desse intervalo.
+** C) O término da vigência da lei temporária não afeta a responsabilidade penal de João, pois as leis temporárias produzem efeitos retroativos em relação às condutas praticadas durante sua vigência.
+** D) As leis temporárias e excepcionais regem os fatos praticados durante sua vigência, mesmo após cessarem os motivos que justificaram sua criação, mantendo a responsabilidade penal de João.
+** E) A responsabilidade penal de João subsiste apenas se a denúncia for oferecida durante a vigência da lei temporária, pois o encerramento de sua vigência extingue automaticamente sua aplicação.
+*** Gabarito: D
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Marcos, cidadão brasileiro, cometeu, em território estrangeiro, o crime de tráfico internacional de drogas, sendo preso naquele país.
+* Após cumprir integralmente a pena imposta no estrangeiro, retorna ao Brasil. No momento do desembarque, autoridades brasileiras tomam conhecimento do fato e instauram inquérito policial para apuração. Com base no Código Penal brasileiro e nos princípios aplicáveis à extraterritorialidade, assinale a afirmativa correta.
+** A) A lei penal brasileira não poderá ser aplicada, pois o fato ocorreu integralmente fora do território nacional, ficando restrita à soberania do país estrangeiro.
+** B) Marcos não poderá ser punido no Brasil pelo mesmo fato, uma vez que já cumpriu integralmente a pena no estrangeiro, aplicando-se o princípio do ne bis in idem.
+** C) A extraterritorialidade da lei penal brasileira é aplicada no caso, mas o tempo de pena cumprido no estrangeiro será abatido da pena eventualmente aplicada no Brasil.
+** D) A lei penal brasileira não pode ser aplicada em crimes de tráfico de drogas praticados fora do território nacional, mesmo que o Brasil seja signatário de tratados internacionais sobre o tema.
+** E) Marcos poderá ser processado e punido no Brasil, desde que o crime de tráfico de drogas também seja previsto como crime no país onde foi praticado, e o Brasil tenha solicitado sua extradição.
+*** Gabarito: B
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Carlos foi condenado pelo crime de furto qualificado (Art. 155, §4°, do Código Penal) por ter subtraído cabos de cobre de uma obra abandonada, cujo valor total foi estimado em R$ 500,00. Durante a instrução processual, ficou comprovado que Carlos se encontrava em situação de vulnerabilidade social extrema e utilizava os cabos para revenda e posterior compra de alimentos.
+* Apesar disso, o juízo de primeiro grau entendeu que, sendo o furto qualificado um crime formal, o princípio da insignificância não seria aplicável. Em sede de apelação, o Tribunal de Justiça reformou a sentença, aplicando o princípio da intervenção mínima e reconhecendo a ausência de relevância material do fato, declarando Carlos absolvido. Inconformado, o Ministério Público recorreu ao Superior Tribunal de Justiça (STJ), argumentando que a aplicação de princípios implícitos, como o da insignificância, violaria o princípio da legalidade. Com base na situação hipotética e nos princípios aplicáveis ao Direito Penal, assinale a afirmativa correta.
+** A) A jurisprudência do STJ não admite o princípio da insignificância em crimes qualificados ou em situações em que a subtração de bens gere qualquer prejuízo ao titular do bem jurídico protegido.
+** B) O princípio da legalidade impede a aplicação do princípio da insignificância a crimes formalmente tipificados, como o furto qualificado, devido à ausência de previsão legal expressa no Código Penal.
+** C) A aplicação do princípio da insignificância está condicionada à análise do elemento subjetivo do agente, como a sua situação de vulnerabilidade social, sendo inócua a análise da lesão ao bem jurídico protegido.
+** D) O princípio da intervenção mínima não se aplica a crimes qualificados, pois, nesses casos, o legislador já indicou um maior grau de reprovabilidade da conduta, excluindo a possibilidade de afastar η tipicidade material.
+** E) O princípio da intervenção mínima fundamenta a aplicação do princípio da insignificância, que é admitido tanto pela doutrina quanto pela jurisprudência como causa de exclusão da tipicidade material, desde que presentes requisitos objetivos e subjetivos.
+*** Gabarito: E
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+
+-----
+* Tendo em vista o grande aumento de crimes contra o patrimônio sempre no primeiro semestre da cada ano, em 1º de janeiro de 2023, foi publicada uma lei penal temporária que introduziu uma causa de aumento de pena de 1/3 para crimes de furto (Art. 155 do Código Penal), desde que praticados entre 1º de janeiro de 2023 e 30 de junho de 2023. Alan praticou um furto no dia 15 de março de 2023, ou seja, durante o período de vigência da referida lei.
+* Contudo, na data do julgamento, ocorrida em 1º de agosto de 2023, a lei penal temporária já não estava mais em vigor. Diante desse contexto hipotético, da legislação vigente e do entendimento dos Tribunais Superiores, é correto afirmar que:
+** A) Como a lei penal temporária não está mais em vigor, a causa de aumento nela prevista não se aplica à conduta de Alan.
+** B) O Juiz poderá ou não aplicar a causa de aumento prevista na lei penal temporária, a depender da análise concreta do caso.
+** C) Houve abolitio criminis em relação à causa de aumento prevista na lei penal temporária; portanto, essa não se aplica a Alan.
+** D) Alan deverá responder com a incidência da causa de aumento prevista na lei penal temporária, mesmo que tal normativa não esteja mais em vigor.
+*** Gabarito: D
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* A interpretação da lei penal busca revelar o alcance e o sentido do texto normativo, adequando-o às mudanças sociais, econômicas e culturais, garantindo, assim, que sua aplicação seja justa e compatível com a realidade atual. (BITENCOURT, Cezar Roberto. Tratado de Direito Penal: Parte Geral. 24. ed. São Paulo: Saraiva Educação, 2020.)
+* Com base nesse conceito sobre os métodos de interpretação da lei penal, assinale a afirmativa correta.
+** A) A interpretação literal consiste em interpretar a norma penal de forma gramatical e textual, considerando o contexto e as intenções do legislador.
+** B) A interpretação teleológica busca identificar a finalidade da norma, considerando as intenções do legislador e os objetivos sociais que ela pretende alcançar.
+** C) A interpretação sistemática se restringe ao entendimento da norma penal isoladamente, sem considerar sua interação com outras normas do ordenamento jurídico.
+** D) A interpretação histórica visa compreender a norma penal à luz dos costumes e valores do período em que foi promulgada, ignorando completamente as mudanças sociais posteriores.
+** E) A interpretação lógico-sistemática procura o sentido da lei, através da função gramatical dos vocábulos. Trata-se da primeira etapa do processo interpretativo, pois as palavras podem ser equívocas, não espelhando com fidelidade a vontade da lei.
+*** Gabarito: B
+**** Noções Fundamentais, Conceitos e caracteres
+
+-----
+* Carlos, brasileiro, estava em um voo com destino ao exterior em aeronave pertencente a uma empresa aérea privada brasileira. Enquanto sobrevoava espaço aéreo italiano, ele foi flagrado praticando conduta típica criminosa, segundo o Código Penal Brasileiro, que ofendia passageiros brasileiros e estrangeiros a bordo.
+* Ao chegar ao destino, Carlos foi detido pelas autoridades locais e julgado por tais condutas, mas, teve seu processo arquivado por decisão judicial italiana, apesar de a conduta ser considerada como típica, de acordo com a legislação do país. Após retornar ao Brasil, a repercussão do caso levou as autoridades brasileiras a iniciarem uma investigação contra Carlos pelos mesmos atos. Destaca-se que o crime praticado por ele está entre aqueles pelos quais a lei brasileira autoriza a extradição. Com base nas normas de aplicação da lei penal no espaço e nos tratados internacionais assumidos pelo Brasil, analise a situação e assinale a afirmativa correta.
+** A) Carlos não poderá ser processado no Brasil, pois a absolvição no exterior impede a instauração de novo processo penal, respeitando-se o princípio do ne bis in idem.
+** B) Carlos não poderá ser processado no Brasil, uma vez que a lei penal brasileira não pode ser aplicada em caso de absolvição no estrangeiro por fatos atípicos naquele território.
+** C) Carlos somente poderá ser processado no Brasil caso exista representação da vítima, pois para aplicação da extraterritorial da lei penal brasileira, faz-se necessário esse requisito.
+** D) Carlos poderá ser processado no Brasil, pois a lei penal brasileira é aplicável a crimes cometidos por brasileiros no exterior em aeronaves brasileiras, sendo irrelevante a absolvição no estrangeiro para os fins de aplicação da legislação nacional.
+** E) Carlos poderá ser processado no Brasil, pois a lei penal brasileira aplica-se aos crimes cometidos por brasileiros em aeronaves de bandeira nacional, ainda que em espaço aéreo estrangeiro, independentemente da decisão judicial estrangeira, desde que presentes os requisitos da extraterritorialidade condicionada.
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Ana, com a intenção de matar Carlos, desferiu-lhe golpes de faca em 15/04/2024. Carlos foi socorrido e submetido a tratamento médico, mas veio a falecer em 20/06/2024 em decorrência das complicações causadas pelos ferimentos.
+* Ocorre que, em 01/05/2024, entrou em vigor uma nova lei que reduziu a pena-base para o homicídio doloso qualificado. A lei anterior era de quinze a vinte anos, já a nova lei trouxe uma pena-base de doze a dezoito anos. A nova lei introduziu a possibilidade de aplicação de uma pena de multa, penalidade inexistente na legislação anterior. Considerando as disposições do Código Penal e a jurisprudência consolidada dos Tribunais Superiores, analise o caso e assinale a afirmativa correta.
+** A) O crime ocorreu em 15/04/2024, data da conduta, mas a nova lei poderá retroagir apenas na parte que beneficia a ré.
+** B) O crime ocorreu em 20/06/2024, data da morte de Carlos, sendo integralmente aplicável a nova lei, ainda que prejudicial à ré.
+** C) O crime ocorreu em 15/04/2024, devendo ser aplicada a lei vigente na data do fato, sendo vedada qualquer retroatividade da lei posterior.
+** D) O crime ocorreu em 15/04/2024, data da conduta, mas a aplicação da nova lei só poderá ser utilizada se integralmente mais favorável à ré no caso concreto.
+** E) O crime ocorreu em 20/06/2024, data da morte de Carlos, vez que o crime é considerado um processo contínuo entre a conduta e o resultado, permitindo a aplicação parcial da nova lei para combinar o aumento da pena mínima e a atenuante.
+*** Gabarito: D
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Lei penal no tempo
+
+-----
+* Durante um cenário de instabilidade política e social, o Congresso Nacional editou, em 01/03/2023, duas normas penais: a primeira, uma lei penal excepcional, destinada a regular comportamentos e punir condutas durante um período de grave crise nacional, sem prazo definido de vigência; a segunda, uma lei penal temporária, instituída com vigência expressamente limitada a noventa dias, para garantir a segurança em grandes eventos ocorridos naquele período.
+* Em 15/05/2023, João praticou um fato típico previsto na lei excepcional e um fato típico previsto na lei temporária. Ressalta-se que as circunstâncias que motivaram a edição da lei excepcional cessaram em 25/05/2023. Além disso, o prazo de vigência da lei temporária expirou em 31/05/2023. Com base no Código Penal e na jurisprudência consolidada, analise a aplicabilidade dessas normas no caso descrito e assinale a afirmativa correta.
+** A) Será aplicada apenas a lei excepcional ao fato praticado por João, independentemente de as condições que justificaram sua edição.
+** B) O fato praticado por João durante a vigência da lei excepcional será regido por ela. Da mesma forma, o fato típico praticado durante a vigência da lei temporária será regido pela mesma, mesmo após expirado seu prazo de vigência.
+** C) A lei excepcional será aplicada ao fato praticado por João, ainda que as circunstâncias que a motivaram tenham cessado. Da mesma forma, a lei temporária será aplicada a qualquer fato típico por ela previsto, mesmo após o término de seu prazo de vigência.
+** D) O fato praticado por João durante a vigência da lei excepcional estará sujeito a ela enquanto perdurarem as circunstâncias que motivaram sua edição. Já o fato típico previsto na lei temporária continuará sendo punido, ainda que seu prazo de vigência tenha expirado.
+** E) A lei excepcional não será aplicada ao fato praticado por João, independentemente de as circunstâncias extraordinárias que a motivaram já terem cessado. Contudo, a lei temporária só será aplicada aos fatos praticados dentro do prazo expressamente delimitado por sua vigência.
+*** Gabarito: B
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* A Parte Geral do Código Penal inicia com as diretrizes sobre a aplicação da lei penal, em seu Título I, dispostas entre os artigos primeiro e décimo segundo.
+* Considerando que essas regras gerais se aplicam aos fatos incriminados por lei especial, se esta não dispuser de modo diverso, é correto afirmar que:
+** A) A entrada em vigor de uma nova lei que deixa de considerar criminoso determinado fato (abolitio criminis) faz retroagir as suas disposições; contudo, não gera efeitos em processos com condenação com trânsito em julgado.
+** B) A lei penal temporária não é admitida em nosso ordenamento penal, por ausência de previsão legal.
+** C) A lei excepcional, embora cessadas as circunstâncias que a determinaram, aplica-se ao fato praticado durante sua vigência.
+** D) Em nenhuma hipótese é possível a aplicação da lei penal brasileira ao crime cometido no estrangeiro.
+** E) Ninguém pode ser punido por fato que lei posterior deixa de considerar crime (abolitio criminis), cessando, em favor do agente, todos os efeitos penais e civis da sentença condenatória.
+*** Gabarito: C
+**** Noções Fundamentais, Conceitos e caracteres, A norma penal
+
+-----
+* O Código Penal é o conjunto de normas jurídicas que regulam os crimes e as penas correspondentes no Brasil. Ele estabelece o que é considerado crime, as circunstâncias agravantes e atenuantes, e as penas aplicáveis para cada tipo de infração.
+* Quanto ao Direito Penal, é correto afirmar que:
+** A) A lei brasileira não se aplica ao crime cometido por estrangeiro contra brasileiro fora do Brasil.
+** B) Ninguém pode ser punido por fato que lei posterior deixa de considerar crime, cessando em virtude dela a execução e os efeitos penais da sentença condenatória.
+** C) A lei posterior, que de qualquer modo favorecer o agente, aplica-se aos fatos anteriores, excluídos aqueles decididos por sentença condenatória transitada em julgado.
+** D) Considera-se praticado o crime no momento da ação ou omissão, não sendo possível que outro seja o momento do resultado.
+** E) Considera-se praticado o crime no lugar em que ocorreu a ação ou omissão, exclusivamente no todo, bem como onde se produziu ou deveria produzir-se o resultado.
+*** Gabarito: B
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Lei penal no espaço
+
+-----
+* [Questão Inédita] Quanto às hipóteses de extraterritorialidade incondicionada previstas no Código Penal brasileiro, é CORRETO afirmar que:
+** A) Aplicam-se somente aos crimes cometidos por brasileiros contra estrangeiros no exterior.
+** B) Incluem os crimes contra a humanidade e de genocídio, conforme previsão específica.
+** C) São condicionadas à comprovação de dupla tipicidade entre os ordenamentos brasileiro e estrangeiro.
+** D) Abrangem crimes contra a vida ou liberdade do Presidente da República, independentemente de tratado ou convenção internacional.
+** E) Excluem crimes relacionados à falsificação de moeda praticados no exterior.
+*** Gabarito: D
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* [Questão Inédita] De acordo com o Código Penal brasileiro, a extraterritorialidade da lei penal aplica-se:
+** A) Exclusivamente a crimes cometidos no Brasil por estrangeiros.
+** B) Apenas aos crimes que afetam bens jurídicos internacionais, como terrorismo.
+** C) À prática de crimes contra a administração pública por funcionário público brasileiro, ainda que cometidos no exterior.
+** D) Apenas mediante solicitação expressa do governo estrangeiro, independentemente de tratado internacional.
+** E) Exclusivamente a crimes cometidos em alto-mar, em navios estrangeiros.
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* [Questão Inédita] Sobre o Princípio da Reserva Legal no Direito Penal, é CORRETO afirmar que:
+** A) Permite a aplicação de analogia in malam partem nos casos em que a lei for omissa.
+** B) Prevê que somente a lei formal pode definir crimes e cominar penas.
+** C) Admite a criação de crimes por meio de medidas provisórias desde que ratificadas pelo Congresso Nacional.
+** D) A norma penal não pode ser complementada para fiel aplicação, devendo ser concreta.
+** E) Autoriza a aplicação de costumes para suprir lacunas legais na tipificação de condutas criminosas.
+*** Gabarito: B
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+
+-----
+* Sobre a aplicação da lei penal no tempo, qual das alternativas está correta?
+** A) A lei penal mais gravosa aplica-se retroativamente aos crimes praticados anteriormente à sua vigência.
+** B) A lei penal mais benéfica aplica-se apenas quando já houver sentença condenatória transitada em julgado.
+** C) A abolitio criminis é causa de extinção de punibilidade, aplicando-se a fatos ocorridos antes de sua vigência.
+** D) O princípio da irretroatividade impede a aplicação de leis penais mais favoráveis ao réu.
+** E) A continuidade normativa típica ocorre quando a conduta deixa de ser tipificada pela norma penal, mas mantém caráter ilícito.
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Em consonância com o Código Penal Brasileiro, assinale a alternativa que corresponda com um indivíduo que é considerado funcionário público, para fins penais:
+** A) tutor
+** B) curador
+** C) estagiário do ministério público
+** D) inventariante
+** E) presidente de sindicato dos trabalhadores
+*** Gabarito: C
+**** Noções Fundamentais, Crimes contra a administração pública
+
+-----
+* Em consonância com o Código Penal Brasileiro, analise as assertivas a seguir:
+* I - Não ocorre crime sem lei anterior que o defina.
+* II - A prévia cominação legal é prescindível para que o agente possa ser penalizado.
+* III - A pena cumprida no estrangeiro atenua a pena imposta no Brasil pelo mesmo crime, quando idênticas.
+* Após analise, assinale a alternativa correta:
+** A) Somente a sentença II está correta
+** B) Somente a sentença I está correta
+** C) As sentenças II e III estão corretas
+** D) As sentenças I e II estão corretas
+** E) As sentenças I, II e III estão corretas
+*** Gabarito: B
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+
+-----
+* A aplicação da lei penal segue princípios fundamentais de tempo, espaço, completude e subsidiariedade.
+* Esses princípios definem como e quando uma lei penal deve ser aplicada, considerando o momento do crime, o território em que ocorreu e as particularidades de cada norma. Assim, avalie as proposições:
+* I. A lei penal mais benéfica ao réu pode retroagir para abranger crimes cometidos antes de sua vigência.
+* II. A lei penal de um país só pode ser aplicada dentro de seu território, sem exceções para crimes cometidos no exterior.
+* III. Leis penais incompletas necessitam de complementos valorativos ou normativos para sua aplicação. Assinale a alternativa correta:
+** A) Apenas as proposições II e III estão corretas.
+** B) Apenas a proposição II está correta.
+** C) As proposições I e III estão corretas.
+** D) Apenas a proposição III está correta.
+*** Gabarito: C
+**** Noções Fundamentais
+
+-----
+* No que se refere aos princípios aplicáveis ao direito penal, à aplicação da lei penal, bem como a ilicitude e culpabilidade, julgue o item seguinte.
+* O direito penal só admite a interpretação analógica quando esta for usada em favor do réu.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais
+
+-----
+* No que se refere aos princípios aplicáveis ao direito penal, à aplicação da lei penal, bem como a ilicitude e culpabilidade, julgue o item seguinte.
+* Segundo o princípio da continuidade normativo-típica, revogada a norma penal, mantém-se o caráter proibido da conduta, deslocando-se o conteúdo criminoso para outro tipo penal.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais
+
+-----
+* Considerando os princípios do direito penal, julgue o item seguinte.
+* A teoria dos poderes implícitos excepciona o princípio da legalidade estrita, pois, como a lei permite ao juiz aplicar pena mais severa, entende-se, por extensão, que é aplicável pena mais branda, ainda que esta não venha positivada na legislação penal de modo expresso.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais
+
+-----
+* Considerando os princípios do direito penal, julgue o item seguinte.
+* A vedação da analogia no direito penal decorre do próprio princípio da legalidade, pois não se admite outra fonte que não a lei para o que é prescrito como crime e pena.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais
+
+-----
+* Considerando os princípios do direito penal, julgue o item seguinte.
+* A lei penal posterior mais benéfica retroagirá, respeitando-se, porém, a coisa julgada, definida pelo trânsito em julgado de sentença penal condenatória.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais
+
+-----
+* Nos termos do Código Penal, é correto afirmar:
+** A) o agente que, voluntariamente, desiste de prosseguir na execução do crime responderá pela tentativa.
+** B) considera-se consumado o crime quando nele se reúnem todos os elementos de sua definição legal.
+** C) pune-se a tentativa com a pena correspondente ao crime consumado, diminuída de metade.
+** D) pune-se a tentativa quando, por ineficácia absoluta do meio ou por absoluta impropriedade do objeto, é impossível consumar-se o crime.
+** E) considera-se praticado o crime no lugar em que ocorreu a ação ou omissão independentemente de onde se produziu o resultado.
+*** Gabarito: B
+**** Noções Fundamentais, Teoria Geral do Delito
+
+-----
+* Analise as afirmativas abaixo atribuindo (V) para Verdadeira e (F) para Falsa, em seguida assinale a alternativa com a sequência correta de acordo o Código Penal.
+* ( ) A pena cumprida no estrangeiro atenua a pena imposta no Brasil pelo mesmo crime, quando diversas, ou nela é computada, quando idênticas.
+* ( ) A lei excepcional ou temporária, embora decorrido o período de sua duração ou cessadas as circunstâncias que a determinaram, aplica-se ao fato praticado durante sua vigência.
+* ( ) A lei posterior, que de qualquer modo favorecer o agente, aplica-se aos fatos anteriores, ainda que decididos por sentença condenatória transitada em julgado.
+** A) V, V, V
+** B) F, F, V
+** C) V, F, V
+** D) F, V, V
+** E) F, F, F
+*** Gabarito: A
+**** Noções Fundamentais, A norma penal
+
+-----
+* Analise as seguintes asserções e a relação proposta entre elas:
+* I. A reincidência não impede o reconhecimento do princípio da insignificância. PORQUE
+* II. No Brasil, aplica-se o Direito Penal do Autor. A respeito dessas asserções, assinale a alternativa correta.
+** A) As asserções I e II são proposições verdadeiras, e a II é uma justificativa da I.
+** B) As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa da I.
+** C) A asserção I é uma proposição verdadeira, e a II é uma proposição falsa, não servindo de justificativa para a primeira.
+** D) A asserção I é uma proposição falsa, e a II é uma proposição verdadeira, não servindo de fundamento para a primeira.
+** E) As asserções I e II são proposições falsas.
+*** Gabarito: C
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito Sistemas penais, Penas privativas de liberdade, Reincidência
+
+-----
+* A desnecessidade de se aplicar sanção penal a uma infração considerada irrelevante em relação à proporcionalidade da lesão ao bem jurídico tutelado pela lei penal diz respeito ao princípio da
+** A) ofensividade.
+** B) taxatividade.
+** C) insignificância.
+** D) adequação social.
+** E) individualização da pena.
+*** Gabarito: C
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+
+-----
+* [Questão Inédita] Em 2022, Pedro foi condenado por um crime de estelionato praticado em 2021, sob a vigência de uma lei que previa pena de 2 a 5 anos de reclusão.
+* No entanto, em 2023, após o trânsito em julgado da sentença, uma nova lei entrou em vigor, reduzindo a pena para 1 a 3 anos de reclusão. O juiz, ao analisar o caso, decidiu aplicar a nova lei, mais benéfica, mesmo após a condenação. Considerando o caso narrado, assinale a alternativa correta:
+** A) A nova lei não pode ser aplicada, pois a sentença já foi proferida sob a vigência da lei anterior.
+** B) A nova lei pode ser aplicada, pois a sucessão de leis penais no tempo beneficia o réu quando a lei posterior é mais favorável.
+** C) A nova lei não pode ser aplicada, pois a ultratividade só se aplica a leis mais gravosas.
+** D) A nova lei pode ser aplicada, uma vez que se trata de ultratividade de lei mais benéfica.
+** E) A nova lei não pode ser aplicada, pois o princípio da irretroatividade da lei penal impede a revisão de sentenças já proferidas.
+*** Gabarito: B
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* [Questão Inédita] Durante a pandemia de COVID-19, foi editada uma lei que aumentava as penas para crimes contra a saúde pública, como a venda irregular de medicamentos.
+* A lei tinha um tempo determinado para validade, isto é, 6 meses. Antes de findar o prazo de sua vigência, Maria praticou uma conduta tipificada entre os crimes contra a saúde pública. Posteriormente, a lei foi revogada. Após a revogação, Maria foi processada e condenada pela lei que era mais gravosa ao tempo do crime. Considerando o caso narrado, assinale a alternativa correta:
+** A) A lei temporária não pode ultragir, pois sua aplicação após a revogação viola o princípio da irretroatividade da lei penal.
+** B) A lei temporária pode ultragir para prejudicar o réu, pois se trata de uma lei excepcional.
+** C) A lei temporária não pode ser aplicada após sua revogação, pois a ultratividade só beneficia o réu.
+** D) A lei temporária não pode ser aplicada, pois a sucessão de leis penais no tempo sempre favorece o réu.
+** E) A lei temporária pode ultragir, ainda que cessado o período de sua duração, pois a eficácia permanece para quem praticou o fato sob sua vigência.
+*** Gabarito: D
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Decisão do Supremo Tribunal Federal de junho de 2024 descriminalizou o porte de maconha (Cannabis sativa) para uso pessoal em quantidades de até 40 gramas.
+* Sobre essa decisão, assinale a afirmativa correta.
+** A) A Cannabis sativa não é mais considerada uma droga ilícita.
+** B) O tráfico de maconha deixou de ser tipificado como um crime.
+** C) O consumo de Cannabis sativa não causa dependência química.
+** D) O usuário de Cannabis sativa deve ter um tratamento distinto daquele dispensado ao traficante.
+** E) As substâncias psicoativas só trazem risco se consumidas em quantidades acima de 40g.
+*** Gabarito: D
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+
+-----
+* O artigo 23, caput, do Código Penal trata das excludentes de ilicitude, dispondo não haver crime quando o agente pratica o fato em estado de necessidade, em legítima defesa e em estrito do cumprimento de dever legal ou no exercício regular de direito. Entre referidas excludentes, qual seja, a da legítima defesa, disseminou-se no sistema de justiça brasileiro, por longos anos, uma forma que ficou conhecida como "legítima defesa da honra".
+* Recentemente, no entanto, o Supremo Tribunal Federal decidiu sobre o tema em Arguição de Descumprimento de Preceito Fundamental (ADPF 779/DF). Levando-se em consideração os fundamentos e conclusões contidos no Acórdão proferido na referida ADPF 779/DF e resumidos na ementa, analise as seguintes postulações.
+* I. Firmou-se o entendimento de que a tese da legítima defesa da honra é inconstitucional, por contrariar os princípios constitucionais da dignidade da pessoa humana, da proteção à vida e da igualdade de gênero, inscritos respectivamente nos artigos 1º, inciso III, e 5º, caput, inciso I, ambos da Constituição Federal.
+* II. Conferiu-se interpretação conforme à Constituição Federal aos artigos 23, inciso II, e 25, caput e parágrafo único, ambos do Código Penal, bem como ao artigo 65 do Código de Processo Penal para excluir a legítima defesa da honra do âmbito do instituto da legítima defesa.
+* III. Reconheceu-se que a legítima defesa da honra pode ser invocada como argumento inerente à plenitude de defesa própria do Tribunal do Júri.
+* IV. Obstou-se à defesa, à acusação, à autoridade policial e ao juízo que utilizem, direta ou indiretamente, a tese da legítima defesa da honra (ou qualquer argumento que induza à tese) nas fases pré-processual ou processual penais, bem como durante o Tribunal do Júri, sob pena de nulidade do ato e do julgamento.
+* V. Reafirmaram-se entendimentos anteriores de que fere a soberania dos vereditos do Tribunal do Júri o provimento de apelação que anule a absolvição fundada no quesito absolutório genérico (artigo 483, inciso III e § 2º do Código de Processo Penal) mesmo quando, de algum modo, ele possa implicar a repristinação da tese da legítima defesa da honra.
+* Estão entre as fundamentações ou conclusões contidas no Acórdão proferido na referida ADPF 779/DF e resumidos na ementa apenas as postulações referidas nos itens:
+** A) IV e V.
+** B) I, II e V.
+** C) III, IV e V.
+** D) I, II e IV.
+** E) III e V.
+*** Gabarito: D
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Antijuridicidade Legítima defesa
+
+-----
+* Em relação à aplicação da lei penal no tempo, à eficácia de sentença estrangeira em âmbito penal e aos crimes contra a pessoa, julgue o item a seguir.
+* É necessária a homologação de sentença penal estrangeira para que uma pena privativa de liberdade possa produzir efeitos no Brasil e ser cumprida em prisão brasileira, exigindo-se, para tanto, que o condenado seja nacional e a lei penal brasileira produza, para a mesma espécie de crime, as mesmas consequências.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Em relação à aplicação da lei penal no tempo, à eficácia de sentença estrangeira em âmbito penal e aos crimes contra a pessoa, julgue o item a seguir.
+* Considere que, durante evento realizado no exterior, a honra do presidente da República tenha sido ofendida por um cidadão comum estrangeiro, que proferiu xingamentos e palavras de baixo calão à autoridade, incorrendo em crime previsto na legislação penal brasileira. Nessa situação, embora o crime tenha sido cometido no estrangeiro, o autor ficará sujeito à aplicação da lei penal brasileira, ainda que, pela prática delituosa, tenha sido absolvido ou condenado no exterior.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Em relação à aplicação da lei penal no tempo, à eficácia de sentença estrangeira em âmbito penal e aos crimes contra a pessoa, julgue o item a seguir.
+* Considere que um agente tenha praticado um crime na vigência da Lei A, mais favorável ao agente, e que, posteriormente, essa lei tenha sido revogada pela Lei B, mais prejudicial a ele. Nessa situação, mesmo que tenha sido revogada, a Lei A ainda produzirá efeitos e será aplicável aos fatos praticados sob sua vigência, em razão do fenômeno da ultratividade da lei penal mais benéfica.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* As regras gerais do Código Penal (CP), por expressa disposição legal,
+** A) não se aplicam aos fatos incriminados por outros diplomas legais.
+** B) admitirão interpretação analógica.
+** C) aplicam-se aos fatos incriminados por lei especial, se esta não dispuser de modo diverso.
+** D) não podem ser aplicadas para fatos ocorridos fora do território nacional.
+** E) admitirão interpretação extensiva.
+*** Gabarito: C
+**** Noções Fundamentais, A norma penal, Lei penal no espaço
+
+-----
+* Julgue o item a seguir, com relação aos princípios do direito penal e à aplicação da legislação penal.
+* Suponha que uma pessoa tenha sido sequestrada na Argentina e transportada em via terrestre até o Uruguai, tendo passado antes pelo território brasileiro. Nesse caso, o processamento e julgamento do agente da conduta criminosa no Brasil é possível, de acordo com a legislação penal brasileira.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* No que diz respeito à aplicação da lei penal, nos termos do Código Penal, é correto afirmar que:
+** A) A lei temporária, embora decorrido o período de sua duração ou cessadas as circunstâncias que a determinaram, não se aplica ao fato praticado durante sua vigência.
+** B) Para efeitos penais, não se considera como extensão do território nacional as aeronaves brasileiras de natureza pública.
+** C) As penas podem ser aplicadas sem prévia cominação legal.
+** D) Não há crime sem lei anterior que o defina.
+** E) Considera-se praticado o crime no momento do resultado.
+*** Gabarito: D
+**** Noções Fundamentais
+
+-----
+* O direito penal é uma área jurídica responsável por
+** A) lidar com as questões da família, da vida e da morte da pessoa física com a relação de propriedade, do casamento, entre outras.
+** B) regulamentar a condição jurídica dos trabalhadores, estabelecendo normas e princípios que regulamentam o relacionamento entre empregado e empregadores.
+** C) regular as relações entre o Estado e os contribuintes no que diz respeito à arrecadação dos tributos.
+** D) atribuir penas aos delitos cometidos na sociedade, tendo como base as leis originadas do Poder Legislativo.
+*** Gabarito: D
+**** Noções Fundamentais
+
+-----
+* Mário foi definitivamente condenado por estupro na França em 2013, quando residia naquele país.
+* Mário respondeu ao processo em liberdade, sem qualquer imposição de medida cautelar, tendo se mudado para o Brasil antes de decisão definitiva. Assinale a alternativa correta, segundo o ordenamento jurídico pátrio:
+** A) Não se aplica a lei brasileira uma vez que o fato foi praticado na França.
+** B) Não se aplica a lei brasileira porque Mário deveria ter sido julgado pela jurisdição brasileira.
+** C) Aplica-se a lei penal brasileira porque o crime é hediondo.
+** D) Aplica-se a lei penal brasileira porque se trata de crime praticado por brasileiro no exterior que retornou ao território nacional, bem como por ser fato punível no Brasil e suscetível à extradição.
+** E) Não se aplica a lei penal pátria porque o brasileiro, quando adentra no território nacional, está imune a condenações proferidas no estrangeiro.
+*** Gabarito: D
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Acerca da Teoria da Norma Penal, assinale a alternativa correta:
+** A) A interpretação sistemática pressupõe a hermenêutica da norma à luz do contexto histórico no qual ela foi criada.
+** B) A interpretação teleológica busca extrair o sentido literal da norma penal.
+** C) O emprego da analogia é proibido no Direito Penal, exceto quando utilizada in malam partem.
+** D) A interpretação analógica é admitida o Direito Penal, mesmo em desfavor do réu.
+** E) A Lei e os Costumes constituem fonte imediata de conhecimento da norma penal.
+*** Gabarito: D
+**** Noções Fundamentais, A norma penal
+
+-----
+* Sobre a aplicação da lei penal, é correto afirmar:
+** A) No caso de genocídio praticado no exterior, por se tratar de crime de interesse da humanidade e em nome dos princípios da justiça universal e da extraterritorialidade incondicionada, aplica-se a lei brasileira para a hipótese de o autor do delito, mesmo sendo estrangeiro, ter domicílio no Brasil.
+** B) No crime de estelionato tentado praticado no estrangeiro, estando a vitima em solo brasileiro, não haverá crime a ser perseguido no Brasil, na hipótese de não haver efetivo prejuízo ao ofendido, sendo que se aplica, nesse caso, a teoria da atividade para se fixar o lugar do delito.
+** C) Na hipótese dos crimes omissivos impróprios, considera-se praticado o delito no momento do resultado, uma vez que a omissão para essa modalidade de delito necessita de resultado material para ser punível.
+** D) O surgimento de lei penal que determina a abolição de um crime ocasiona a cessação dos efeitos penais, administrativos e civis decorrentes da condenação pelo delito abolido, salvo se eventual indenização em favor da vítima já tenha sido fixada em sentença irrecorrível.
+** E) De acordo com o Código Penal, nas hipóteses de crimes cometidos no exterior contra a administração pública, por quem está a seu serviço ou por particular, o agente não poderá ser punido segundo a lei brasileira, caso seja absolvido no país de cometimento do delito, desde que tenha sido garantido, no processamento da ação estrangeira, o devido processo legal.
+*** Gabarito: A
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Pedro, brasileiro residente no exterior, cometeu, fora do território brasileiro, crime de genocídio contra um grupo religioso e, posteriormente, retornou ao Brasil.
+* Nessa situação hipotética, Pedro
+** A) não poderá ser julgado no Brasil, pois o país não é signatário de tratado sobre genocídio.
+** B) não poderá ser julgado no Brasil, pois o crime não foi cometido em território nacional.
+** C) poderá ser julgado no Brasil, ainda que absolvido ou condenado no estrangeiro.
+** D) poderá ser julgado no Brasil desde que o crime também seja punível no país onde foi praticado.
+** E) poderá ser julgado no Brasil se o país onde ocorreu o crime não exercer sua jurisdição.
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Acerca do concurso aparente de normas penais, assinale a opção correta.
+** A) Os princípios que embasam as normas penais não são suficientes para resolver adequadamente o concurso aparente entre crime-meio e crime-fim.
+** B) Segundo o princípio da especialidade, diante da impossibilidade de aplicação da norma mais grave, aplica-se a norma menos grave.
+** C) O princípio da alternatividade é aplicável a infrações penais de ação múltipla ou de conteúdo variado.
+** D) Aplica-se o princípio da subsidiariedade apenas quando expressamente previsto em lei.
+** E) O princípio da consunção jamais é aplicável a crimes contra bens jurídicos distintos.
+*** Gabarito: C
+**** Noções Fundamentais, Conflito aparente de normas
+
+-----
+* O princípio da insignificância
+** A) é inaplicável a crimes tributários federais.
+** B) é aplicável, de forma irrestrita, aos crimes contra a administração pública.
+** C) sempre exclui a culpabilidade do agente.
+** D) é inaplicável a crimes ou contravenções penais praticados contra a mulher no âmbito das relações domésticas.
+** E) é inaplicável a crimes ambientais, segundo a jurisprudência consolidada dos tribunais superiores.
+*** Gabarito: D
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+
+-----
+* A respeito do concurso aparente de normas, é correto afirmar que:
+** A) na relação de especialidade entre duas normas, prevalecerá a norma cujo preceito secundário preveja a maior pena;
+** B) o princípio da especialidade expressa uma relação de gênero e espécie entre as normas em conflito, ao passo que o princípio da subsidiariedade expressa uma relação de continente e conteúdo e, nesse último, a norma prevalente é obrigatoriamente mais grave;
+** C) o agente que pratica dois ou mais núcleos do tipo penal responde apenas por um crime, graças à aplicação do princípio da absorção;
+** D) a punição exclusivamente pelo crime de descaminho, quando o crime de falso naquele se exaure, é hipótese de aplicação do princípio da subsidiariedade;
+** E) crime progressivo, sinônimo de progressão criminosa, é exemplo da aplicação do princípio da consunção.
+*** Gabarito: B
+**** Noções Fundamentais, Conflito aparente de normas
+
+-----
+* Dentre os princípios basilares do Direito Penal, está o da legalidade.
+* Acerca dele, é correto afirmar, à luz da Constituição da República e da jurisprudência dos Tribunais Superiores, que:
+** A) o Supremo Tribunal Federal, no julgamento do ADO nº 26, expressamente excepcionou o princípio da legalidade e admitiu o emprego da analogia in malam partem, para equiparar as condutas homotransfóbicas aos crimes de racismo;
+** B) se admite que medidas provisórias tipifiquem penalmente comportamentos;
+** C) não se admite combinação de leis, salvo para beneficiar o réu;
+** D) tratados e convenções internacionais, ainda que ratificados, não têm o condão de, no direito interno, tipificar crimes e cominar penas, por conta do princípio da reserva legal;
+** E) leis complementares não podem tipificar penalmente comportamentos.
+*** Gabarito: D
+**** Noções Fundamentais
+
+-----
+* Sobre η eficácia da Lei Penal no tempo, avalie as afirmativas a seguir e assinale (V) para verdadeira e (F) para a falsa.
+* ( ) A Lei Penal temporária ou excepcional, mesmo após a sua autorrevogação, goza de ultra-atividade, sendo aplicada ao fato praticado durante a sua vigência.
+* ( ) A lei posterior, que deixa de considerar determinado fato como criminoso, retroage para alcançar fatos anteriores, ainda que definitivamente julgados no âmbito criminal, cessando, em virtude dela, a execução e os efeitos penais e extrapenais da sentença condenatória.
+* ( ) No crime permanente, se este é iniciado sob a eficácia de uma lei e sua situação consumativa danosa persiste já sob a vigência de uma lei nova, aplica-se esta, ainda que mais severa que a primeira, por ela revogada.
+* As afirmativas são, respectivamente,
+** A) F - F - V.
+** B) V - V - V.
+** C) V - V - F.
+** D) F - V - F.
+** E) V - F - V.
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Em 2023, André cometeu crime cuja pena máxima era de quatro anos de reclusão.
+* Em 2024, nova lei entrou em vigor, aumentando a pena para oito anos. André ainda não havia sido julgado quando a nova norma passou a valer. Nessa situação, assinale a alternativa correta.
+** A) A nova lei penal será aplicada a André somente se ainda não houver sentença.
+** B) A lei nova é mais gravosa, mas retroage por se tratar de crime doloso.
+** C) A nova lei aplica-se imediatamente a todos os casos, independentemente do tempo do fato.
+** D) A nova lei penal não retroage, por ser mais severa, salvo se expressamente previsto em lei.
+** E) A lei penal mais gravosa não retroage, devendo aplicar-se a norma vigente à época dos fatos.
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* O princípio da irretroatividade da lei penal brasileira é uma das garantias jurídicas fundamentais do nosso ordenamento jurídico.
+* Considerando-se o exposto, pode-se atestar que tal princípio estabelece que as leis penais brasileiras
+** A) não devem retroagir, ou seja, elas não podem ser aplicadas a fatos ocorridos antes da sua vigência, a menos que o juiz do caso entenda que sim. A isso chamamos de princípio da irretroatividade mitigada, decorrente do princípio da segurança jurídica, o qual estabelece que as leis devem ser claras e previsíveis, de modo a garantir a estabilidade das relações jurídicas e a proteção dos direitos dos cidadãos. Assim, a aplicação de uma lei penal a fatos ocorridos no passado violaria o direito à segurança jurídica, uma vez que os indivíduos não teriam como prever as consequências de seus atos.
+** B) sempre podem retroagir, ou seja, elas podem ser aplicadas a fatos ocorridos, desde que o fato seja grave e cause danos substanciais às vítimas, mesmo antes da vigência da lei. O princípio da irretroatividade é decorrente do princípio da segurança jurídica, o qual estabelece que as leis devem ser claras e previsíveis, de modo a garantir a estabilidade das relações jurídicas e a proteção dos direitos dos cidadãos. Assim, a aplicação de uma lei penal a fatos ocorridos no passado violaria o direito à segurança jurídica, exceto nos casos mais graves, uma vez que os indivíduos sempre podem prever as consequências de seus atos.
+** C) podem retroagir, ou seja, elas podem ser aplicadas a fatos ocorridos antes da sua vigência. O princípio da irretroatividade é decorrente do princípio da insegurança jurídica, o qual estabelece que as leis devem ser claras e previsíveis, de modo a garantir a estabilidade das relações jurídicas e a proteção dos direitos dos cidadãos. Assim, a aplicação de uma lei penal a fatos ocorridos no passado garantiria o direito à segurança jurídica, uma vez que os indivíduos teriam como prever as consequências de seus atos.
+** D) não podem retroagir, ou seja, elas não podem ser aplicadas a fatos ocorridos antes da sua vigência. O princípio da irretroatividade é decorrente do princípio da segurança jurídica, o qual estabelece que as leis devem ser claras e previsíveis, de modo a garantir a estabilidade das relações jurídicas e a proteção dos direitos dos cidadãos. Assim, a aplicação de uma lei penal a fatos ocorridos no passado violaria o direito à segurança jurídica, uma vez que os indivíduos não teriam como prever as consequências de seus atos.
+** E) não podem retroagir, ou seja, elas não podem ser aplicadas a fatos ocorridos antes da sua vigência, a menos que sejam declaradas ultrativas. O princípio da irretroatividade é decorrente do princípio da segurança jurídica, o qual estabelece que as leis devem ser claras e previsíveis, de modo a garantir a estabilidade das relações jurídicas e a proteção dos direitos dos cidadãos. Assim, a aplicação de uma lei penal a fatos ocorridos no passado violaria o direito à segurança jurídica, uma vez que os indivíduos não teriam como prever as consequências de seus atos.
+*** Gabarito: D
+**** Noções Fundamentais
+
+-----
+* Leia o texto a seguir.
+* ...] impõe-se sua intervenção mínima, somente devendo atuar para proteção dos bens jurídicos de maior relevância e transcendência para a vida social. Em outras palavras, não cabe ao Direito Penal, como instrumento de controle mais rígido e duro que é, ocupar-se de condutas insignificantes, que ofendam com o mínimo grau de lesividade o bem jurídico tutelado. [...] Só cabe ao Direito Penal intervir quando outros ramos do direito se demonstrarem ineficazes para prevenir práticas delituosas. SUPREMO TRIBUNAL FEDERAL. Ag. Reg. no Habeas Corpus/RJ nº 187.500, Rel. Gilmar Mendes, j. 12 de mai. de 2021. [...] O princípio da intervenção mínima, nos termos do trecho citado, se expressa em outros dois princípios do Direito Penal, que são:
+** A) fragmentariedade e subsidiariedade.
+** B) subsidiariedade e adequação social.
+** C) fragmentariedade e adequação social.
+** D) subsidiariedade e alteridade.
+** E) fragmentariedade e alteridade.
+*** Gabarito: A
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+
+-----
+* Leia o caso a seguir.
+* Um pai de família, que nunca havia praticado crime algum, deseja presentear sua filha com um vestido no dia de seu aniversário, mas está desempregado. Após entrar em uma loja de departamento de um shopping, aproveitando-se da ausência de seguranças no local, colocou o vestido, que custava R$ 100,00 (cem reais), em seu casaco. O fato foi capturado pelas câmeras de vigilância da loja e informado aos seguranças do shopping, que detiveram o homem antes que este deixasse o shopping, quando já estava fora da loja. Elaborado pelo(a) autor(a). O fato praticado pelo homem configura
+** A) crime impossível porque a presença das câmeras de vigilância e o serviço dos seguranças tornaram impossível a realização do resultado.
+** B) crime de furto consumado porque ocorreu a inversão da posse sobre o bem por um período, afastado o reconhecimento de privilégio.
+** C) fato típico, porém, não culpável, porque incide o princípio da insignificância por ser inexpressiva a lesão jurídica provocada e reduzidíssimo o grau de reprovabilidade da conduta.
+** D) crime de furto tentado porque o autor foi impedido de deixar o shopping e, com isso, não retirou o bem da esfera patrimonial da vítima, afastado o reconhecimento de privilégio.
+** E) fato atípico porque incide o princípio da insignificância por ser inexpressiva a lesão jurídica provocada e reduzidíssimo o grau de reprovabilidade da conduta.
+*** Gabarito: E
+**** Tipicidade, Noções Fundamentais, Princípios limitadores do poder punitivo estatal Consumação e tentativa, Crimes contra o patrimônio, Furto
+
+-----
+* Em relação ao Código Penal, é correto o que se afirma em:
+** A) diz-se que o crime é tentado quando, iniciada a execução, não se consuma quando voluntariamente o agente desiste de prosseguir ou impede o resultado;
+** B) dolo é a consciência e a vontade de realização da conduta descrita em um tipo penal;
+** C) pune-se a tentativa com a pena imposta ao crime consumado, sempre reduzida em 1/3 (um terço) a 2/3 (dois terços);
+** D) o erro sobre o elemento constitutivo do tipo legal do crime exclui o dolo, mas permite a punição por crime culposo, mesmo que não previsto em lei;
+** E) considera-se cometido o crime no lugar onde se produziu o resultado, independente da ação ou omissão.
+*** Gabarito: B
+**** Noções Fundamentais
+
+-----
+* As situações de aplicação da extraterritorialidade da lei penal brasileira estão previstas no Art. 7º do Código Penal e constituem exceção ao princípio da territorialidade (Art. 5º do CP).
+* De acordo com o tema, assinale a afirmativa correta.
+** A) Aplica-se a lei brasileira aos crimes praticados por brasileiros no exterior, independente de satisfazer qualquer condição.
+** B) Não se aplica a lei brasileira ao crime praticado contra a vida do Presidente da República do Brasil, cometido no estrangeiro.
+** C) Não se aplica a lei brasileira aos crimes cometidos a bordo de aeronaves estrangeiras de propriedade privada, quando em pouso no território nacional ou em voo no espaço aéreo correspondente, e estas em porto ou mar territorial do Brasil.
+** D) Aplica-se a lei brasileira ao crime praticado a bordo de embarcações de propriedade de governo estrangeiro quando se encontrarem em mar territorial brasileiro.
+** E) Consideram-se como extensão do território nacional as embarcações e aeronaves brasileiras, de natureza pública ou a serviço do governo brasileiro, onde quer que se encontrem.
+*** Gabarito: E
+**** Noções Fundamentais
+
+-----
+* No Direito Penal, o respeito à integridade física e moral do preso, bem como a vedação à aplicação de penas de natureza cruel ou degradante se traduzem no princípio da:
+** A) legalidade;
+** B) humanidade;
+** C) intervenção mínima;
+** D) individualização da pena;
+** E) personalidade ou responsabilidade pessoal.
+*** Gabarito: B
+**** Noções Fundamentais
+
+-----
+* Acerca da aplicação da lei penal no tempo, assinale a alternativa correta:
+** A) A lei penal mais severa pode ser aplicada retroativamente aos crimes cometidos antes de sua vigência, desde que ainda não haja sentença definitiva.
+** B) A lei penal mais benéfica somente poderá ser aplicada aos processos com sentença condenatória transitada em julgado.
+** C) A abolitio criminis configura causa extintiva da punibilidade e incide também sobre fatos ocorridos anteriormente à vigência da norma descriminalizadora.
+** D) O princípio da irretroatividade da lei penal impede a aplicação de normas penais mais favoráveis ao réu.
+** E) A continuidade normativa típica ocorre quando uma conduta deixa de ser prevista expressamente na lei penal, tornando-se irrelevante para o Direito.
+*** Gabarito: C
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Julgue o item a seguir, relativos à evolução da teoria do bem jurídico e suas emanações.
+* Segundo doutrinadores em direito penal, expressões como "segurança pública" e "paz pública" não aludem a bens jurídicos reais, mas apenas a bens jurídicos aparentes, seja porque correspondem à soma de bens jurídicos individuais verdadeiros, que, todavia, não cria um bem jurídico coletivo, seja porque a sua indeterminação não permite que a teoria do bem jurídico cumpra sua função crítica.
+** A) Certo
+** B) Errado
+*** Gabarito: C
+**** Noções Fundamentais, Conceitos e caracteres
+
+-----
+* Julgue o item a seguir, relativos à evolução da teoria do bem jurídico e suas emanações.
+* O conceito de bem jurídico foi criado por Johann Birnbaum, segundo o qual a enunciação do bem jurídico correspondente ao modelo proibitivo de conduta é um critério de interpretação da norma, confundindo-se com a ratio legis.
 ** A) Certo
 ** B) Errado
 *** Gabarito: E
 **** Noções Fundamentais, Conceitos e caracteres
 
 -----
-* Com relação ao crime consumado e tentado e à lei penal no tempo e no espaço, julgue o item a seguir.
-* Considere que uma pessoa tenha sido denunciada pela prática de determinado fato definido como crime, que, em seguida, foi descriminalizado pela lei A. Posteriormente, foi editada a lei B, que revogou a lei A e voltou a criminalizar aquela conduta. Nessa situação, a última lei deve ser aplicada ao caso.
-** A) Certo
-** B) Errado
-*** Gabarito: E
-**** Noções Fundamentais, Lei penal no tempo
-
------
-* Assinale a alternativa CORRETA em se tratando das regras gerais de Direito Penal:
-** A) A lei posterior, que de qualquer modo favorecer o agente, aplica-se aos fatos anteriores, desde que ainda não decididos por sentença condenatória transitada em julgado.
-** B) A lei excepcional ou temporária aplica-se ao fato praticado durante sua vigência, somente quando não decorrido o período de sua duração ou cessadas as circunstâncias que a determinaram.
-** C) Considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado.
-** D) Considera-se praticado o crime onde se produziu ou deveria produzir-se o resultado, independente de onde tenha ocorrido a ação ou omissão que lhe deu causa.
-*** Gabarito: C
-**** Noções Fundamentais, Lei penal no tempo, Consumação e tentativa
-
------
-* Julgue o item que se segue.
-* Em face do princípio da retroatividade de lei mais benigna, a lei anterior mais severa possui ultra-atividade.
-** A) Certo
-** B) Errado
-*** Gabarito: E
-**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Lei penal no tempo
-
------
-* Julgue os itens seguintes, com relação aos princípios constitucionais de direito penal.
-* I A decisão acerca da regressão de regime deve ser calcada em procedimento no qual sejam obedecidos os princípios do contraditório e da ampla defesa, sendo, sempre que possível, indispensável a inquirição, em juízo, do sentenciado.
-* II A vigente Constituição da República, obediente à tradição constitucional, reservou exclusivamente à lei anterior a definição dos crimes, das penas correspondentes e a conseqüente disciplina de sua individualização.
-* III O princípio da presunção de inocência proíbe a aplicação de penas cruéis que agridam a dignidade da pessoa humana.
-* IV Em virtude do princípio da irretroatividade in pejus, somente o condenado é que terá de se submeter à sanção que lhe foi aplicada pelo Estado.
-* A quantidade de itens certos é igual a
-** A) 1
-** B) 2
-** C) 3
-** D) 4
-*** Gabarito: B
-**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
-
------
-* A respeito da lei penal no tempo e no espaço, julgue os seguintes itens, tendo como referência o Código Penal e a jurisprudência dos tribunais superiores.
-* I A lei penal mais benéfica retroagirá em benefício do réu, de acordo com o princípio da retroatividade benéfica penal.
-* II Em relação ao tempo do crime, o direito penal brasileiro adota a teoria da atividade.
-* III Em relação ao lugar do crime, o direito penal brasileiro adota a teoria do resultado.
-* IV A lei penal mais benéfica aplica-se ao crime continuado ou ao crime permanente, ainda que ocorra superveniência de lei penal mais gravosa ao longo da atividade delitiva.
-* Estão certos apenas o item
-** A) I e II.
-** B) I e IV.
-** C) II e III.
-** D) I, III e IV.
-** E) II, III e IV.
-*** Gabarito: A
-**** Noções Fundamentais, Lei penal no tempo, Lei penal no espaço
-
------
-* No item a seguir, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada.
-* Um cidadão sueco tentou matar o presidente do Brasil, que se encontrava em visita oficial à Suécia. Nessa hipótese, o crime praticado não ficará sujeito à lei brasileira.
+* Durante operação de fiscalização em águas internacionais (alto-mar), uma embarcação brasileira de propriedade privada foi flagrada transportando substâncias entorpecentes.
+* As autoridades estrangeiras permitiram que o Brasil conduzisse a investigação e eventual processo criminal, já que a embarcação estava registrada no Brasil. Com base na situação hipotética precedente e no disposto no CP, julgue o item abaixo. Como o crime ocorreu fora do território brasileiro, em alto-mar, e não envolveu embarcação pública, a lei penal brasileira não pode ser aplicada ao caso.
 ** A) Certo
 ** B) Errado
 *** Gabarito: E
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
-* Considerando o texto [...] "Apenas as leis podem fixar penas com relação aos delitos praticados; e essa autoridade não pode residir senão na pessoa do legislador, que representa toda a sociedade agrupada por um contrato social." [...] julgue o seguinte item.
-* A lei penal formal é a mais importante do direito penal, pois só ela pode criar delitos e penas. A interpretação procura conformar o ato interpretativo aos princípios constitucionais e aos valores fundamentais (segurança jurídica e justiça), dentro das margens legais.
+* Durante a investigação de um crime de homicídio doloso, ficou constatado que, no dia 10 de janeiro de 2020, o agente (à época, menor de idade) efetuara disparos de arma de fogo contra a vítima no território brasileiro, em uma cidade que fazia fronteira com a Argentina.
+* Dias depois, em 15 de janeiro do mesmo ano, a vítima faleceu em uma cidade na Argentina, em decorrência dos ferimentos provocados pelos disparos. Nessa data, o autor do crime já havia completado dezoito anos de idade. Considerando essa situação hipotética, julgue o item seguinte. Conforme a teoria da atividade adotada pelo Código Penal brasileiro, o tempo do crime deve ser fixado no momento da ação ou omissão, razão pela qual, na situação apresentada, o agente deverá ser considerado inimputável.
 ** A) Certo
 ** B) Errado
 *** Gabarito: C
-**** Noções Fundamentais, A norma penal, Princípios limitadores do poder punitivo estatal
+**** Culpabilidade, Noções Fundamentais, Lei penal no tempo Imputabilidade penal
 
 -----
-* Considerando o texto [...] "Apenas as leis podem fixar penas com relação aos delitos praticados; e essa autoridade não pode residir senão na pessoa do legislador, que representa toda a sociedade agrupada por um contrato social." [...] julgue o seguinte item. Considere a seguinte situação hipotética.
-* Túlio, representante dos funcionários de determinada empresa, foi indiciado criminalmente na polícia federal, por proferir pesadas críticas à empresa empregadora durante um movimento grevista. Não houve, porém, qualquer ameaça grave ou de violência por parte dos indiciado. Nessa situação, em face de competir à justiça federal processar e julgar os delitos decorrentes de greve que atentem contra a organização do trabalho como um todo ou contra os direitos e deveres dos trabalhadores coletivamente considerados, a decisão do procurador do trabalho deve ser no sentido do arquivamento do inquérito, por falta de elemento objetivo do tipo penal.
+* Durante a investigação de um crime de homicídio doloso, ficou constatado que, no dia 10 de janeiro de 2020, o agente (à época, menor de idade) efetuara disparos de arma de fogo contra a vítima no território brasileiro, em uma cidade que fazia fronteira com a Argentina.
+* Dias depois, em 15 de janeiro do mesmo ano, a vítima faleceu em uma cidade na Argentina, em decorrência dos ferimentos provocados pelos disparos. Nessa data, o autor do crime já havia completado dezoito anos de idade. Considerando essa situação hipotética, julgue o item seguinte. Nos termos da teoria da ubiquidade adotada pelo Código Penal brasileiro, o crime em questão deverá ser considerado praticado apenas no local onde o resultado morte se consumou, ou seja, na Argentina.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no espaço
+
+-----
+* Joaquim é servidor efetivo do Instituto Federal Alfa. Recentemente, ele permitiu o acesso de pessoas não autorizadas aos sistemas de informações e aos bancos de dados do Instituto, mediante o empréstimo de sua senha pessoal.
+* Felizmente, este ato praticado por Joaquim não resultou em nenhum dano ao Instituto, nem a outrem. Com base nesta situação hipotética, e nos termos do que dispõe o Código Penal (Decreto-lei nº 2.848/1940) é CORRETO afirmar que:
+** A) Joaquim cometeu crime punível com reclusão, de 2 (dois) a 12 (doze) anos, e multa.
+** B) Joaquim cometeu crime punível com detenção, de seis meses a dois anos, ou multa, se o fato não constitui crime mais grave.
+** C) Joaquim cometeu crime punível com detenção, de 2 (dois) a 12 (doze) anos, ou multa.
+** D) Joaquim cometeu crime punível com reclusão, de seis meses a dois anos, e multa, se o fato não constitui crime mais grave.
+** E) Joaquim não cometeu nenhum ato ilícito passível de punição.
+*** Gabarito: B
+**** Noções Fundamentais
+
+-----
+* Atena é Vice-Presidente da República Federativa do Brasil. Ao viajar para o país Corfus, foi vítima de um furto de seu celular pessoal, adquirido muito antes do exercício do mandato, fatos estes prontamente noticiados às autoridades estrangeiras.
+* Diante da situação narrada e considerando as disposições do Código Penal, assinale a alternativa correta.
+** A) O crime cometido contra Atena está sujeito, de forma incondicionada, à lei brasileira.
+** B) Caso o Brasil tivesse se obrigado por tratado a reprimir o crime de furto, a aplicação da lei brasileira independeria desse crime também ser punido no país Corfus.
+** C) Ainda que o autor do furto tivesse sido perdoado no país Corfus, sendo o Brasil obrigado por convenção a reprimir o crime de furto, poderia ser aplicável a lei brasileira.
+** D) É dispensada a entrada do autor do furto no território nacional para que seja aplicável a lei brasileira no caso narrado.
+** E) Caso o bem furtado não se tratasse de celular pessoal, mas sim compusesse o patrimônio da União, o crime cometido estaria sujeito, de forma incondicionada, à lei brasileira.
+*** Gabarito: E
+**** Noções Fundamentais
+
+-----
+* Larissa é brasileira e cometeu um crime de lesão corporal grave enquanto fazia turismo na Tailândia.
+* Sobre o tema e de acordo com o Código Penal, assinale a alternativa correta.
+** A) Larissa só poderá ser julgada pela lei tailandesa, porque o lugar do crime não foi em território brasileiro.
+** B) Larissa poderá ser processada pela lei brasileira se, dentre outras condições, tiver retornado ao território brasileiro e não tiver sido absolvida perante a lei tailandesa.
+** C) Larissa poderá ser processada pela lei brasileira contanto que haja requisição de tal expediente pelo Ministro da Justiça.
+** D) Larissa poderá ser processada pela lei brasileira ainda que tenha sido julgada e absolvida pela lei tailandesa.
+** E) Larissa poderá ser julgada pela lei brasileira contanto que fique provado que o crime foi cometido em aeronave ou embarcação brasileira.
+*** Gabarito: B
+**** Noções Fundamentais
+
+-----
+* Manuel é legislador federal e, impactado com determinados crimes cibernéticos que ocorrem na sociedade, decide apresentar um projeto de lei para a criação de um novo tipo criminoso assim preceituado: "causar perplexidade na internet".
+* A pena do delito varia de um a três anos de detenção. Sobre esse projeto, é correto dizer que ele pode violar o princípio penal da
+** A) moralidade.
+** B) anterioridade.
+** C) taxatividade.
+** D) irretroatividade.
+** E) subsidiariedade.
+*** Gabarito: C
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+
+-----
+* Julgue o item a seguir a respeito da sucessão de leis penais no tempo.
+* A revogação de norma penal incriminadora, em seu sentido material, configura hipótese de abolitio criminis, ainda que seja deslocado para outro dispositivo.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Julgue o item a seguir a respeito da sucessão de leis penais no tempo.
+* A lei penal mais grave aplica-se aos crimes permanentes se sua vigência for iniciada durante a permanência do resultado, desde que não haja sentença penal condenatória transitada em julgado.
+** A) Certo
+** B) Errado
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no tempo
+
+-----
+* Assinale a alternativa INCORRETA em relação à aplicação da lei penal no tempo, de acordo com jurisprudência dos tribunais superiores.
+** A) Uma lei penal intermediária mais benéfica ao réu, vigente entre a data do crime e a data da sentença condenatória, será relevante para aplicação no direito penal brasileiro.
+** B) No caso de lei posterior que beneficie, em parte, o acusado e, em outra, o prejudique, deve o juiz da causa ou da execução aplicar, em sua integralidade, a lei posterior.
+** C) É vedada a combinação de partes de uma lei, criando-se uma lex tertia a ser aplicada ao caso concreto.
+** D) A lei penal mais grave aplica-se ao crime continuado ou ao crime permanente, se a sua vigência é anterior à cessação da continuidade ou da permanência.
+** E) Não se aplica a retroatividade da lei penal mais benéfica quando houver evolução de interpretações jurisprudenciais mais benéficas.
+*** Gabarito: B
+**** Noções Fundamentais
+
+-----
+* O Ministério Público Federal ofereceu denúncia em face de pessoa jurídica e de dois de seus dirigentes, em razão de poluição causada em rio que banha mais de um estado.
+* À luz da jurisprudência dos Tribunais Superiores, o juiz deverá:
+** A) observar, no que couber, as garantias fundamentais, como, por exemplo, o princípio da intranscendência da pena;
+** B) observar que as sanções criminais impostas pela sentença equiparam-se a obrigações cíveis;
+** C) observar que a denúncia somente poderá ser recebida se houver imputação concomitante de crime à pessoa física;
+** D) observar que, em caso de incorporação, não se admite a transmissão dos efeitos extrapenais da condenação à incorporadora;
+** E) rejeitar a denúncia no que toca à pessoa jurídica, porque a falta de capacidade natural de ação, a carência de culpabilidade e a ausência de indicação clara dos tipos penais impedem a responsabilidade penal dela.
+*** Gabarito: A
+**** Noções Fundamentais, Principios limitadores do poder punitivo estatal
+
+-----
+* Sobre a definição de funcionário público para efeitos penais, conforme o artigo 327 do Código Penal, é correto afirmar que:
+** A) Funcionário público para efeitos penais é apenas o concursado com funções determinadas em lei.
+** B) Funcionário público para efeitos penais inclui apenas aqueles que exercem cargo público de forma permanente e remunerada.
+** C) Funcionário público para efeitos penais inclui aqueles que exercem cargo, emprego ou função em entidade paraestatal ou prestadora de serviço contratado pela administração pública.
+** D) Funcionário público para efeitos penais é aquele que exerce cargo ou função pública exclusivamente no âmbito federal.
+*** Gabarito: C
+**** Noções Fundamentais
+
+-----
+* Suponha que um juiz de direito tenha recebido uma demanda para a qual não existe uma lei com conteúdo normativo aplicável, ou seja, não há previsão legal do perdão judicial para certo tipo penal, e há, portanto, uma lacuna na lei.
+* Ciente do postulado da plenitude da ordem jurídica, ao identificar um caso semelhante que possui uma norma aplicável que trata do perdão judicial referente a outro tipo penal, no qual se comprova semelhança essencial entre os fatos, bem como identidade de motivos entre a hipótese prevista e a não prevista, o decisor aplicou o perdão judicial a despeito da lacuna existente na lei. Nessa hipótese, o juiz utilizou a (o)
+** A) interpretação restritiva.
+** B) costume jurídico.
+** C) lei em sentido estrito.
+** D) princípio geral do direito.
+** E) analogia in bonam partem.
+*** Gabarito: E
+**** Noções Fundamentais, A norma penal
+
+-----
+* Acerca da aplicação da lei penal, julgue o item que se segue.
+* O ordenamento penal brasileiro, em regra, adota a teoria da atividade para determinar o momento do crime, sendo considerado praticado o crime no instante da conduta, seja esta comissiva ou omissiva, independentemente do momento em que se verifica o resultado.
 ** A) Certo
 ** B) Errado
 *** Gabarito: C
 **** Noções Fundamentais, A norma penal
 
 -----
-* A respeito dos crimes contra a fé pública, dos crimes previstos na Lei de Licitações, bem como dos princípios e conceitos gerais de direito penal, julgue o item a seguir.
-* Segundo os princípios que regem a lei penal no tempo, a nova lei penal, independentemente de ser mais ou menos benéfica ao acusado, será aplicada aos fatos ocorridos a partir do momento de sua entrada em vigor, mas a lei revogada, desde que mais benéfica ao acusado, continua a ser aplicada a fato anterior, ou seja, a fato praticado durante o período de sua vigência.
+* Acerca da aplicação da lei penal, julgue o item que se segue.
+* Se uma lei excepcional ou temporária estiver vigente no momento da prática de um crime, ela será aplicada ao fato, ainda que ela tenha perdido sua vigência no momento do julgamento.
 ** A) Certo
 ** B) Errado
 *** Gabarito: C
-**** Noções Fundamentais, Lei penal no tempo
+**** Noções Fundamentais, A norma penal
 
 -----
-* Sobre as regras de extraterritorialidade, previstas no Código Penal, assinale a alternativa correta.
-** A) Consideram como extensão do território nacional as aeronaves brasileiras, mercantes ou de propriedade privada, que se achem no espaço aéreo correspondente.
-** B) Consideram praticado o crime no lugar em que ocorreu a ação ou omissão, no todo ou em parte, bem como onde se produziu ou deveria produzir-se o resultado.
-** C) Estabelecem situações pelas quais a lei penal brasileira pode ser aplicada a crimes cometidos no estrangeiro.
-** D) Preveem que a pena cumprida no estrangeiro atenua a pena imposta no Brasil pelo mesmo crime, quando diversas, ou nela é computada, quando idênticas.
-** E) Estabelecem a possibility de homologação, no Brasil, da sentença estrangeira, para obrigar o condenado à reparação do dano.
-*** Gabarito: C
+* Acerca da aplicação da lei penal, julgue o item que se segue.
+* No caso dos crimes "a distância", em que a ação delituosa ocorre em determinado local, mas o resultado é produzido em localidade diversa, o lugar do crime, para efeitos penais, em regra, é aquele em que ocorreu a ação ou omissão, independentemente do resultado.
+** A) Certo
+** B) Errado
+*** Gabarito: E
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
-* A respeito da eficácia da lei no tempo e no espaço, julgue o item a seguir.
-* O princípio da irretroatividade da lei nova se aplica às leis de ordem pública.
+* Acerca da aplicação da lei penal, julgue o item que se segue.
+* Considere que uma nova lei penal que tenha sido publicada tenha deixado de considerar determinada conduta como crime. Nessa situação, a referida lei deverá ser aplicada a todos os fatos anteriores, mesmo que já tenham sido decididos por sentença condenatória já transitada em julgado.
 ** A) Certo
 ** B) Errado
 *** Gabarito: C
-**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito
+**** Noções Fundamentais, A norma penal
 
 -----
-* No concernente à interpretação e aplicação da lei penal, julgue o item abaixo.
-* É vedada a aplicação analógica em normas penais incriminadoras. Nas normas penais não-incriminadoras gerais, admite-se o emprego da analogia in bonam partem.
+* Acerca da aplicação da lei penal, julgue o item que se segue.
+* De acordo com a teoria que determina o tempo do crime, para efeitos penais, não se computa no prazo o dia em que este se inicia, incluindo-se, porém, o dia de seu vencimento.
 ** A) Certo
 ** B) Errado
-*** Gabarito: C
-**** Noções Fundamentais, A norma penal, Conflito aparente de normas
-
------
-* A respeito dos princípios e fontes do direito penal, julgue o item subseqüente.
-* Em matéria penal, o costume contra legem não possui eficácia jurídica, mesmo que haja descompasso entre a lei penal e a realidade histórico-cultural.
-** A) Certo
-** B) Errado
-*** Gabarito: C
-**** Noções Fundamentais, Conceitos e caracteres, Principios limitadores do poder punitivo estatal
-
------
-* Analise o conceito abaixo e, depois, assinale a alternativa que corresponde ao Princípio correspondente:
-* "Devem ser tidas como atípicas as ações ou omissões que afetam muito infimamente a um bem jurídico penal. A irrelevante lesão do bem jurídico protegido não justifica a imposição de uma pena, devendo-se excluir a tipicidade em caso de danos de pouca importância."
-** A) Princípio da Culpabilidade.
-** B) Princípio da Ofensividade.
-** C) Princípio da Intervenção Mínima.
-** D) Princípio da Insignificância.
-*** Gabarito: D
-**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Antijuridicidade Causas supralegais de exclusão da antijuridicidade
-
------
-* De acordo com o entendimento do Supremo Tribunal Federal e do Superior Tribunal de Justiça, para a incidência do Princípio da Insignificância a conduta do agente deve estar acompanhada dos seguintes requisitos, EXCETO:
-** A) Mínima onerosidade.
-** B) Inexpressividade da lesão jurídica.
-** C) Ausência de periculosidade social da ação.
-** D) Mínima ofensividade da conduta.
-** E) Reduzido grau de reprovabilidade do comportamento.
-*** Gabarito: A
-**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
-
------
-* De acordo com o Código Penal, ficam sujeitos à lei brasileira, embora cometidos no estrangeiro, os crimes:
-* I. Que, por tratado ou convenção, o Brasil se obrigou a reprimir.
-* II. Praticados por brasileiro.
-* III. Praticados em aeronaves ou embarcações brasileiras, mercantes ou de propriedade privada, quando em território estrangeiro em qualquer circunstância.
-* Quais estão corretas?
-** A) Apenas I.
-** B) Apenas II.
-** C) Apenas III.
-** D) Apenas I e III.
-** E) Apenas II e III.
-*** Gabarito: X
-**** Noções Fundamentais, Lei penal no espaço
-
------
-* Acerca das noções gerais de direito, julgue o item.
-* No âmbito do direito penal, aplica-se, em regra, o princípio do tempus regit actum, por meio do qual se deve aplicar a lei penal em vigor na data da prática do ato delituoso. No entanto, se a nova lei, mesmo não estando em vigor na data do crime, for mais benéfica ao acusado, deverá retroagir para ser aplicada no caso concreto.
-** A) Certo
-** B) Errado
-*** Gabarito: C
-**** Noções Fundamentais, Lei penal no tempo
-
------
-* Assinale a alternativa correta:
-** A) Ficam sujeitos à lei brasileira, embora cometidos no estrangeiro, os crimes contra a vida ou a liberdade do Presidente da República ou seus familiares.
-** B) Ficam sujeitos à lei brasileira, embora cometidos no estrangeiro os crimes contra o patrimônio ou a fé pública da União e dos Estados, sendo sujeitos às leis estrangeiras os crimes cometidos contra o patrimônio ou a fé publica do Distrito Federal, de Estado, de Território, de Município, de empresa pública, sociedade de economia mista, autarquia ou fundação instituída pelo Poder Público.
-** C) Ficam sujeitos à lei brasileira, embora cometidos no estrangeiro, os crimes contra a administração pública, por quem está a seu serviço.
-** D) Ficam sujeitos à lei brasileira, embora cometidos no estrangeiro, os crimes de infanticídio, quando o agente for brasileiro ou domiciliado no Brasil.
-*** Gabarito: C
-**** Noções Fundamentais, Lei penal no espaço
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no tempo, Teoria Geral do Delito
