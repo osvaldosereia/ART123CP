@@ -34,18 +34,22 @@ function parseTxt(raw){
     if (/^-+\s*$/.test(L)){ push(); continue; }
     if (L.trim()===""){ if(cur.stage==="stem"){cur.stem.push(""); cur.has=true;} continue; }
 
+    // Temas: **** tema1, tema2, tema3
     const t = /^\*\*\*\*\s*(.+)$/.exec(L);
     if (t){ cur.themes = t[1].split(",").map(s=>s.trim()).filter(Boolean); cur.has = true; continue; }
 
+    // Gabarito
     const g = (/^\*\*\*\s*Gabarito:\s*([A-E])\s*$/.exec(L)||[])[1];
     if (g){ cur.ans=g; cur.stage="ans"; cur.has=true; continue; }
 
+    // Alternativa
     const m = /^\*\*\s*([A-E])\)\s*(.+)$/.exec(L);
     if (m){ const key=m[1],text=m[2].trim();
       if (!cur.opts.some(o=>o.key===key)) cur.opts.push({key,text});
       cur.stage="opts"; cur.has=true; continue;
     }
 
+    // Enunciado
     if (L.startsWith("* ")){ cur.stem.push(L.slice(2)); cur.stage="stem"; cur.has=true; continue; }
 
     if (cur.stage==="stem" || !cur.has){ cur.stem.push(L); cur.has=true; continue; }
@@ -100,9 +104,11 @@ async function walkGitHub(url){
 const STATE = {
   tree: /** @type {Record<string,{label:string,files:string[]}>} */({}),
   disciplina: "",
-  temasSel: /** @type {Set<string>} */(new Set()),
+  temasSel: /** @type {Set<string>} */(new Set()),    // seleção feita na Home
   temasAll: /** @type {string[]} */([]),
-  allQuestions: /** @type {any[]} */([]),
+  allQuestions: /** @type {any[]} */([]),             // conjunto base do quiz
+  viewQuestions: /** @type {any[]} */([]),            // conjunto após segmentação por chips
+  activeThemes: /** @type {Set<string>} */(new Set()),// chips ativos no topo do quiz
   batchSize: 3,
   cursor: 0,
   observer: /** @type {IntersectionObserver|null} */ (null),
@@ -164,7 +170,7 @@ function fillDisciplines(keys){
   }
 }
 
-/* ==================== TEMAS: Multiselect tipo dropdown ==================== */
+/* ==================== TEMAS: Multiselect tipo dropdown (Home) ==================== */
 async function buildThemesMultiselect(){
   const box=$("#chipsTemas"); box.innerHTML="";
   STATE.temasSel.clear();
@@ -298,17 +304,21 @@ async function startSearch(){
     const batches = await Promise.all(files.map(getParsedForPath));
     const all = batches.flat();
 
+    // Base do quiz: somente questões que contêm pelo menos um dos temas selecionados
     const wanted = new Set(STATE.temasSel);
     const filtered = all.filter(q => q.themes.some(t => wanted.has(t)));
-
     if (!filtered.length){ toast("Nenhuma questão encontrada"); return; }
 
     STATE.allQuestions = filtered;
+    STATE.activeThemes.clear();              // nenhum chip ativo inicialmente
+    STATE.viewQuestions = STATE.allQuestions.slice();
+
     STATE.cursor = 0;
     $("#quizList").innerHTML="";
     $("#home").classList.add("hidden");
     $("#quiz").classList.remove("hidden");
-    renderSelectedThemesBanner();      // <<< mostra os temas escolhidos
+
+    renderSelectedThemesChips();             // chips de segmentação
     mountInfinite();
     closeThemesPanel();
   }catch(err){
@@ -317,20 +327,72 @@ async function startSearch(){
   }
 }
 
-/* Banner de temas selecionados no topo do quiz */
-function renderSelectedThemesBanner(){
+/* Chips de segmentação no topo do quiz */
+function renderSelectedThemesChips(){
   const quiz = $("#quiz");
   if (!quiz) return;
-  let banner = $("#quizThemes");
-  if (!banner){
-    banner = document.createElement("div");
-    banner.id = "quizThemes";
-    banner.className = "hint"; // usa estilo já existente, discreto
-    // insere antes da lista
-    quiz.insertBefore(banner, $("#quizList"));
+  let box = $("#quizThemes");
+  if (!box){
+    box = document.createElement("div");
+    box.id = "quizThemes";
+    box.className = "chips";
+    box.style.justifyContent = "center"; // centralizado
+    box.style.margin = "6px 0 12px";
+    quiz.insertBefore(box, $("#quizList"));
+  }
+  box.innerHTML = "";
+
+  // Contagem por tema dentro do conjunto base
+  const counts = new Map();
+  for (const q of STATE.allQuestions){
+    for (const t of q.themes){ if(STATE.temasSel.has(t)) counts.set(t, (counts.get(t)||0)+1); }
   }
   const temas = [...STATE.temasSel].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
-  banner.textContent = temas.length ? `Temas: ${temas.join(", ")}` : "";
+
+  // Chip "Todos"
+  const chipAll = document.createElement("button");
+  chipAll.className = "chip" + (STATE.activeThemes.size===0 ? " on" : "");
+  chipAll.textContent = "Todos";
+  chipAll.addEventListener("click", ()=>{
+    STATE.activeThemes.clear();
+    applyThemeFilter();
+    renderSelectedThemesChips();
+  });
+  box.appendChild(chipAll);
+
+  // Demais chips
+  temas.forEach(t=>{
+    const c = counts.get(t)||0;
+    const b = document.createElement("button");
+    b.className = "chip" + (STATE.activeThemes.has(t) ? " on" : "");
+    b.textContent = c ? `${t} (${c})` : t;
+    b.dataset.tema = t;
+    b.addEventListener("click", ()=>{
+      if (STATE.activeThemes.has(t)) STATE.activeThemes.delete(t);
+      else STATE.activeThemes.add(t);
+      applyThemeFilter();
+      renderSelectedThemesChips();
+    });
+    box.appendChild(b);
+  });
+}
+
+/* Aplica interseção dos chips ativos ao conjunto base e repagina */
+function applyThemeFilter(){
+  const act = [...STATE.activeThemes];
+  if (act.length===0){
+    STATE.viewQuestions = STATE.allQuestions.slice();
+  }else{
+    STATE.viewQuestions = STATE.allQuestions.filter(q=>{
+      const set = new Set(q.themes);
+      // interseção: a questão precisa conter TODOS os temas ativos
+      return act.every(t=>set.has(t));
+    });
+  }
+  $("#quizList").innerHTML = "";
+  STATE.cursor = 0;
+  mountInfinite();
+  toast(`Filtro: ${act.length?act.join(", "):"Todos"} · ${STATE.viewQuestions.length} questões`);
 }
 
 async function loadTxt(path){
@@ -347,7 +409,7 @@ function mountInfinite(){
     const entry = entries[0];
     if(entry.isIntersecting){
       await renderBatch();
-      if(STATE.cursor >= STATE.allQuestions.length){
+      if(STATE.cursor >= STATE.viewQuestions.length){
         $("#sentinel").textContent="Fim.";
         toast("Fim da lista");
         STATE.observer.disconnect();
@@ -364,9 +426,9 @@ function mountInfinite(){
 
 async function renderBatch(){
   const start = STATE.cursor;
-  const end = Math.min(STATE.cursor + STATE.batchSize, STATE.allQuestions.length);
+  const end = Math.min(STATE.cursor + STATE.batchSize, STATE.viewQuestions.length);
   for(let i=start;i<end;i++){
-    const q = STATE.allQuestions[i];
+    const q = STATE.viewQuestions[i];
     $("#quizList").appendChild(buildQuestion(q, i+1));
   }
   STATE.cursor = end;
@@ -374,13 +436,13 @@ async function renderBatch(){
 function pumpIfVisible(){
   const s = document.getElementById("sentinel");
   if (!s) return;
-  if (STATE.cursor >= STATE.allQuestions.length) return;
+  if (STATE.cursor >= STATE.viewQuestions.length) return;
   const r = s.getBoundingClientRect();
   const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
   if (r.top - vh < 200) {
     let guard = 0;
     (async function loop(){
-      while (guard++ < 20 && STATE.cursor < STATE.allQuestions.length) {
+      while (guard++ < 20 && STATE.cursor < STATE.viewQuestions.length) {
         const before = STATE.cursor;
         await renderBatch();
         if (STATE.cursor === before) break;
@@ -407,6 +469,7 @@ function buildQuestion(q, num){
     ol.appendChild(li);
   });
 
+  // Google modo IA
   const btnIA = node.querySelector('[data-role="ia-toggle"]');
   const menu = node.querySelector(".ia-menu");
   btnIA.addEventListener("click", ()=>{ menu.classList.toggle("show"); });
