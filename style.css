@@ -190,7 +190,7 @@ body{
   justify-content:center; row-gap:6px; column-gap:6px; margin:6px 0 12px;
 }
 #quizThemes .chip{
-  padding:6px 10px; font-size:12px; border-radius:999px; border:1px solid var(--line);
+  padding:6px 10px; font-size:10px; border-radius:999px; border:1px solid var(--line);
   background:#fff; color:var(--text); cursor:pointer;
 }
 #quizThemes .chip.on{ background:#111; color:#fff; border-color:#111; }
@@ -207,10 +207,10 @@ body{
 .backtop:active{ transform:translateY(1px); }
 
 /* Menos espaço entre topbar e chips no QUIZ */
-#quiz.page{ padding-top:18px; }                 /* antes era 80px */
+#quiz.page{ padding-top:10px; }                 /* antes era 80px */
 @media (min-width:900px){
-  #quiz.page{ padding-top:16px; }               /* antes era 84px */
+  #quiz.page{ padding-top:10px; }               /* antes era 84px */
 }
 
 /* Chips mais próximos */
-#quizThemes{ margin:4px 0 8px; }                /* antes ~6px 0 12px */
+#quizThemes{ margin:6px 0 12px; }                /* antes ~6px 0 12px */
