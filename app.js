@@ -163,9 +163,11 @@ function fillDisciplines(keys){
   }
 }
 
-/* === Temas a partir de **** dentro dos arquivos === */
+/* === Temas a partir de **** dentro dos arquivos (lista compacta) === */
 async function renderTemasFromFiles(){
   const box=$("#chipsTemas"); box.innerHTML="";
+  box.className = "topics";         // grid de lista compacta
+  box.onclick = null;               // limpa delegação anterior
   STATE.temasSel.clear();
   $("#btnBuscar").disabled = true;
 
@@ -182,7 +184,7 @@ async function renderTemasFromFiles(){
   for (const q of allParsed){
     if (Array.isArray(q.themes)) q.themes.forEach(t=>set.add(t));
   }
-  const temas = [...set].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+  const temas = [...set].sort((a,b)=>a.localeCompare(b,'pt-BR', {sensitivity:"base"}));
 
   if (!temas.length){
     const p=document.createElement("p");
@@ -191,18 +193,28 @@ async function renderTemasFromFiles(){
     box.appendChild(p);
     return;
   }
+
+  const frag = document.createDocumentFragment();
   temas.forEach((tema)=>{
-    const chip=document.createElement("button");
-    chip.className="chip";
-    chip.textContent=tema;
-    chip.dataset.tema=tema;
-    chip.addEventListener("click", ()=>{
-      const on = chip.classList.toggle("on");
-      if(on) STATE.temasSel.add(tema); else STATE.temasSel.delete(tema);
-      $("#btnBuscar").disabled = STATE.temasSel.size===0;
-    });
-    box.appendChild(chip);
+    const item = document.createElement("div");
+    item.className = "topic";
+    item.dataset.tema = tema;
+    item.innerHTML = `<input type="checkbox" aria-label="${tema}"><span class="lbl">${tema}</span>`;
+    frag.appendChild(item);
   });
+  box.appendChild(frag);
+
+  // Delegação: clicar em qualquer área do item alterna seleção
+  box.onclick = (e)=>{
+    const item = e.target.closest(".topic");
+    if(!item || !box.contains(item)) return;
+    const tema = item.dataset.tema;
+    const ck = item.querySelector("input");
+    ck.checked = !ck.checked;
+    const on = item.classList.toggle("on", ck.checked);
+    if(on) STATE.temasSel.add(tema); else STATE.temasSel.delete(tema);
+    $("#btnBuscar").disabled = STATE.temasSel.size===0;
+  };
 }
 
 /* Cache por arquivo */
@@ -258,7 +270,6 @@ function mountInfinite(){
         toast("Fim da lista");
         STATE.observer.disconnect();
       }
-      // se ainda visível, continue bombeando
       pumpIfVisible();
     }
   }, {rootMargin:"1000px"});
