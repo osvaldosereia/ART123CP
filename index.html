@@ -1,97 +1,75 @@
-<!-- index.html -->
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quiz Jurídico • QC Dump</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MeuJus</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- HOME -->
+  <!-- Top bar fixa -->
   <header class="topbar">
-    <div class="brand">
-      <div class="logo" aria-hidden="true">⚖️</div>
-      <div class="title">
-        <h1>Quiz Jurídico</h1>
-        <p class="muted">Dump QConcursos com gabarito ao final</p>
-      </div>
-    </div>
-
-    <nav class="progress" aria-live="polite">
-      <span id="pathInfo" class="path">Selecione uma categoria</span>
-      <div class="kpis">
-        <div class="kpi"><strong id="kTotal">0</strong><span>questões</span></div>
-        <div class="kpi"><strong id="kDone">0</strong><span>respondidas</span></div>
-        <div class="kpi"><strong id="kScore">0</strong><span>acertos</span></div>
-      </div>
-      <button id="btnReset" class="ghost" type="button" aria-label="Zerar sessão">Zerar</button>
-    </nav>
+    <div class="logo">👩‍⚖️ MeuJus</div>
+    <button id="btnHome" class="btn ghost">Início</button>
   </header>
 
-  <main class="container">
-    <section id="home" class="home">
+  <!-- Toast -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <!-- Home -->
+  <main id="home" class="page">
+    <section class="card">
+      <h1>Quiz Jurídico</h1>
+
       <!-- Dropdown não nativo -->
-      <div class="control">
-        <label class="label">Categoria</label>
-        <div class="dropdown" id="catSelect">
-          <button id="catTrigger" class="trigger" aria-haspopup="listbox" aria-expanded="false">
-            <span id="catTriggerText">Escolha a categoria</span>
-            <svg class="chev" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M5 7l5 6 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </button>
-          <div id="catMenu" class="menu" role="listbox" tabindex="-1" aria-label="Categorias"></div>
-        </div>
+      <label class="lbl">Disciplina</label>
+      <div class="dropdown" id="ddDisc">
+        <button class="dd-btn" id="ddDiscBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="ddDiscLabel">Escolha a disciplina</span>
+          <span class="chev">▾</span>
+        </button>
+        <ul class="dd-list" id="ddDiscList" role="listbox" tabindex="-1"></ul>
       </div>
 
-      <!-- Temas como chips -->
-      <div class="control">
-        <label class="label">Temas</label>
-        <div class="themesbar">
-          <button id="btnSelectAll" class="ghost small" type="button">Selecionar todos</button>
-          <span class="muted small" id="themesCount">0 selecionado(s)</span>
-        </div>
-        <div id="themesGrid" class="chips" aria-live="polite"></div>
-      </div>
+      <!-- Chips de temas -->
+      <label class="lbl">Temas</label>
+      <div id="chipsTemas" class="chips"></div>
 
       <div class="actions">
-        <label class="check">
-          <input id="optShuffle" type="checkbox" />
-          <span>Embaralhar</span>
-        </label>
-        <button id="btnStart" type="button" disabled>Iniciar quiz</button>
+        <button id="btnBuscar" class="btn primary" disabled>Buscar</button>
       </div>
-    </section>
-
-    <!-- QUIZ -->
-    <section id="quiz" class="quiz hidden" aria-label="Lista de questões">
-      <div id="quizList" class="list"></div>
-      <div id="sentinel" class="sentinel" role="status" aria-live="polite">Carregando…</div>
+      <p class="hint">Dados lidos automaticamente de <code>/data/</code>.</p>
     </section>
   </main>
 
-  <!-- TEMPLATE DE QUESTÃO -->
+  <!-- Quiz -->
+  <main id="quiz" class="page hidden">
+    <section id="quizList" class="list"></section>
+    <div id="sentinel" class="sentinel">Carregando…</div>
+  </main>
+
+  <!-- Template de questão -->
   <template id="tplQuestion">
-    <article class="question" data-num="">
-      <header class="q-head">
-        <span class="q-num">#0</span>
-        <span class="q-id muted"></span>
-        <span class="pill q-type">ME</span>
-      </header>
-      <div class="q-stem"></div>
-      <ol class="q-options"></ol>
-      <footer class="q-foot">
-        <span class="q-result"></span>
-        <div class="q-actions">
-          <button class="q-show ghost small" type="button">Mostrar gabarito</button>
-          <button class="q-next small" type="button">Próxima</button>
+    <article class="q">
+      <div class="q-head">
+        <span class="q-num"></span>
+      </div>
+      <pre class="q-stem"></pre>
+      <ol class="q-opts"></ol>
+
+      <div class="q-ai">
+        <button class="btn ia" data-role="ia-toggle">Google modo I.A.</button>
+        <div class="ia-menu">
+          <a class="ia-item" data-ia="gabarito" target="_blank" rel="noopener">Gabarito</a>
+          <a class="ia-item" data-ia="glossario" target="_blank" rel="noopener">Glossário</a>
+          <a class="ia-item" data-ia="videos" target="_blank" rel="noopener">Vídeos</a>
         </div>
-      </footer>
+      </div>
+
+      <div class="q-res" aria-live="polite"></div>
     </article>
   </template>
 
-  <script src="app.js" type="module"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
