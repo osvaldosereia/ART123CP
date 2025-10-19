@@ -1,6 +1,6 @@
 // app.js — SPA de estudo
 // UI intacta. Parser aceita: JSON novo (pages/questions), JSON {lines:[...]}, texto antigo.
-// Catálogo autodetectado via /data/index.json (manifest) ou GitHub API.
+// Catálogo autodetectado via Git Trees API em /data/**/*.json.
 
 // ====== CATÁLOGO DINÂMICO ======
 let CATALOG = {}; // preenchido em discoverCatalog()
@@ -636,81 +636,50 @@ function shuffle(arr){
 function basename(p){ return p.split('/').pop(); }
 function escapeHtml(s){ return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
-// ====== DISCOVERY ======
+// ====== DISCOVERY (Git Trees API) ======
 async function discoverCatalog(){
-  // 1) Manifesto local opcional: /data/index.json  -> { "Categoria":[ "data/arquivo.json", ... ] }
-  try {
-    const r = await fetch('data/index.json', {cache:'no-store'});
-    if (r.ok) {
-      const j = await r.json();
-      if (j && typeof j === 'object' && Object.keys(j).length){
-        CATALOG = j;
-        return;
-      }
-    }
-  } catch {}
-
-  // 2) GitHub API (GitHub Pages). Funciona para repositório público.
   try {
     const { owner, repo } = inferRepoFromLocation();
     if (!owner || !repo) throw new Error('repo indefinido');
-    const branch = await getDefaultBranch(owner, repo);
-    const base = `https://api.github.com/repos/${owner}/${repo}/contents`;
 
-    const dataRoot = await ghList(`${base}/data?ref=${encodeURIComponent(branch)}`);
-    const dirs = dataRoot.filter(e => e.type === 'dir');
+    // branch padrão
+    const brRes = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+    if (!brRes.ok) throw new Error(`repo ${brRes.status}`);
+    const brJson = await brRes.json();
+    const branch = brJson.default_branch || 'main';
 
+    // árvore completa do repo
+    const treeRes = await fetch(
+      `https://api.github.com/repos/${owner}/${repo}/git/trees/${encodeURIComponent(branch)}?recursive=1`,
+      { headers: { 'Accept': 'application/vnd.github+json' } }
+    );
+    if (!treeRes.ok) throw new Error(`trees ${treeRes.status}`);
+    const tree = await treeRes.json();
+
+    // todos os .json dentro de /data
+    const files = (tree.tree || [])
+      .filter(n => n.type === 'blob' && /^data\//i.test(n.path) && /\.json$/i.test(n.path))
+      .map(n => n.path);
+
+    // agrupa por subpasta imediata de /data
     const catalog = {};
-    for (const d of dirs){
-      const files = await collectJsonFiles(`${base}/data/${encodeURIComponent(d.name)}?ref=${encodeURIComponent(branch)}`, branch);
-      if (files.length) catalog[humanize(d.name)] = files.map(u => u.download_url);
-    }
-    const loose = dataRoot.filter(e => e.type === 'file' && e.name.toLowerCase().endsWith('.json'));
-    if (loose.length){
-      catalog['Geral'] = (catalog['Geral'] || []).concat(loose.map(u => u.download_url));
+    for (const p of files){
+      // ex: data/direito-penal/penal.json -> "Direito Penal"
+      const segs = p.split('/');
+      const cat = segs.length > 2 ? humanize(segs[1]) : 'Geral';
+      const raw = `https://raw.githubusercontent.com/${owner}/${repo}/${encodeURIComponent(branch)}/${p}`;
+      (catalog[cat] ||= []).push(raw);
     }
 
     if (Object.keys(catalog).length) { CATALOG = catalog; return; }
-  } catch (e){
-    console.warn('Discovery via GitHub API falhou', e);
-  }
 
-  // 3) Fallback mínimo: tenta um arquivo padrão
-  try {
+    // fallback: tenta um arquivo servido pelo Pages
     const fallback = 'data/quiz-1-10.json';
     const r = await fetch(fallback, {cache:'no-store'});
     if (r.ok) { CATALOG = { Geral: [fallback] }; return; }
-  } catch {}
-}
-
-async function collectJsonFiles(apiUrl, branch){
-  const items = await ghList(apiUrl);
-  const acc = [];
-  for (const it of items){
-    if (it.type === 'file' && it.name.toLowerCase().endsWith('.json')) acc.push(it);
-    if (it.type === 'dir'){
-      const nested = await collectJsonFiles(`${it.url}?ref=${encodeURIComponent(branch)}`, branch);
-      acc.push(...nested);
-    }
+  } catch (e){
+    console.warn('Discovery falhou', e);
   }
-  return acc;
-}
-
-async function ghList(url){
-  const res = await fetch(url, { headers: { 'Accept': 'application/vnd.github+json' }});
-  if (!res.ok) throw new Error(`GitHub API ${res.status} @ ${url}`);
-  return await res.json();
-}
-
-async function getDefaultBranch(owner, repo){
-  try {
-    const r = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
-    if (r.ok){
-      const j = await r.json();
-      return j.default_branch || 'main';
-    }
-  } catch {}
-  return 'main';
 }
 
 function inferRepoFromLocation(){
@@ -721,7 +690,6 @@ function inferRepoFromLocation(){
   const repo = path.split('/')[0] || '';
   return { owner, repo };
 }
-
 function humanize(s){
   return s.replace(/[-_]+/g,' ').replace(/\b\w/g, c => c.toUpperCase());
 }
