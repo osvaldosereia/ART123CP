@@ -37,7 +37,7 @@
 ** D) perpassando por vários códigos até chegar ao atual texto, de 1984, dividido em parte geral e especial, além da adoção da teoria dualista para fins de tipificação criminal em casos de concurso de pessoas, diferenciando o autor do partícipe.
 ** E) perpassando por três códigos que entraram em vigência: o Código Criminal do Império do Brasil, de 1830; o Código Penal dos Estados Unidos do Brasil, de 1890; e o Código Penal de 1940, em vigor até hoje.
 *** Gabarito: E
-**** Noções Fundamentais, Conceitos e caracteres
+**** Noções Fundamentais, Conceitos e características
 
 -----
 * Segundo o Supremo Tribunal Federal, para a aplicação do princípio da insignificância, exige-se os seguintes requisitos objetivos: ofensividade mínima da conduta, ausência de periculosidade social da ação, reduzido grau de reprovabilidade do comportamento e inexpressividade da lesão jurídica causada.
@@ -102,7 +102,7 @@
 ** D) A pena é a resposta a um fato e não contém julgamentos sobre a personalidade do autor.
 ** E) O direito penal deve ser usado como instrumento de proteção de qualquer bem jurídico, independentemente da intensidade da lesão a ele infligida.
 *** Gabarito: D
-**** Noções Fundamentais, Conceitos e caracteres
+**** Noções Fundamentais, Conceitos e características
 
 -----
 * Com relação ao Código Penal brasileiro e o tempo e lugar do crime, assinale a alternativa CORRETA.
@@ -129,7 +129,7 @@
 ** C) improrrogáveis, incluindo-se em seu cômputo o dia do começo.
 ** D) prorrogáveis, excluindo-se o dia do começo em sua contagem.
 *** Gabarito: C
-**** Noções Fundamentais, Conceitos e caracteres, A norma penal
+**** Noções Fundamentais, Conceitos e características, A norma penal
 
 -----
 * Conforme as disposições do Código Penal pátrio (Dec. Lei n.º 2.848/1940) acerca da aplicação da lei penal, assinale a alternativa CORRETA.
@@ -709,7 +709,7 @@
 ** D) As normas penais em branco de que é exemplo o crime previsto no art. 39 da Lei 9.605/98 (cortar árvores em floresta considerada de preservação permanente, sem permissão da autoridade competente), dependem de complemento por atos legislativos ou administrativos para perfectibilização de sua tipicidade.
 ** E) A lei nova, que prevê elevação do prazo prescricional para extinção da punibilidade de determinado crime, não se aplica a fatos anteriores à sua vigência, em razão do princípio da irretroatividade da lei penal.
 *** Gabarito: B
-**** Noções Fundamentais, Conceitos e caracteres, Lei penal no tempo Lei penal no espaço
+**** Noções Fundamentais, Conceitos e características, Lei penal no tempo Lei penal no espaço
 
 -----
 * O direito positivo não esgota a ciência penal. Dessa maneira, considerando a principiologia do Direito Penal, assinale a alternativa incorreta.
@@ -719,7 +719,7 @@
 ** D) A jurisprudência admite a aplicação do princípio da insignificância nos crimes patrimoniais em que não há emprego de violência ou grave ameaça, mas há resistência para o reconhecimento para o crime de roubo.
 ** E) Há precedentes nos tribunais superiores reconhecendo a aplicação do princípio da insignificância mesmo que a vida pregressa do indivíduo denote reincidência criminal.
 *** Gabarito: C
-**** Noções Fundamentais, Conceitos e caracteres, A norma penal Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito
+**** Noções Fundamentais, Conceitos e características, A norma penal Princípios limitadores do poder punitivo estatal, Teoria Geral do Delito
 
 -----
 * Em relação à aplicação da lei penal, de acordo com as disposições do Código Penal, assinale a opção correta.
@@ -771,7 +771,7 @@
 ** D) Sá Pereira.
 ** E) Alfredo Buzaid.
 *** Gabarito: C
-**** Noções Fundamentais, Conceitos e caracteres
+**** Noções Fundamentais, Conceitos e características
 
 -----
 * A função do Direito Penal é
@@ -781,7 +781,7 @@
 ** D) construir uma sociedade livre, justa e solidária.
 ** E) garantir a execução das leis.
 *** Gabarito: A
-**** Noções Fundamentais, Conceitos e caracteres
+**** Noções Fundamentais, Conceitos e características
 
 -----
 * São teorias adotadas no Código Penal em relação ao tempo e ao lugar do crime, respectivamente:
@@ -1010,7 +1010,7 @@
 ** D) A lei posterior, que de qualquer modo favorecer o agente, aplica-se aos fatos anteriores, salvo se decididos por sentença condenatória transitada em julgado
 ** E) Não há crime sem lei anterior que o defina
 *** Gabarito: D
-**** Noções Fundamentais, Conceitos e caracteres, A norma penal
+**** Noções Fundamentais, Conceitos e características, A norma penal
 -----
 * A aplicação da Lei Penal no tempo é regulada pelo princípio da irretroatividade. Sobre esse tema, é CORRETO afirmar:
 ** A) A Lei Penal mais benéfica aplica-se mesmo a fatos anteriores à sua vigência.
@@ -2944,7 +2944,7 @@
 ** D) Apenas os itens 2, 4 e 5 são verdadeiros.
 ** E) Todos os itens são verdadeiros.
 *** Gabarito: B
-**** Tipicidade, Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Consumação e tentativa, Modalidades das Penas Restritivas de Direito, Conceito e características, Substituição - Concessão.
+**** Tipicidade, Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Consumação e tentativa, Modalidades das Penas Restritivas de Direito, Conceitos e características, Substituição - Concessão.
 
 -----
 * Visando estabelecer parâmetros mínimos de civilidade no convívio social, o Estado assume o papel de agente regulador, fiscalizador e punitivo junto aos cidadãos que descumprem suas leis.
