@@ -230,3 +230,38 @@ body{
   grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
   gap:4px;
 }
+/* Destaque forte para a alternativa correta */
+.q-opts li.hit{
+  border:2px solid var(--good) !important;
+  background:#ecfdf5;
+  font-weight:600;
+  position:relative;
+  opacity:1;                 /* garante visibilidade mesmo com .lock */
+}
+
+/* Check ✓ na alternativa correta */
+.q-opts li.hit::after{
+  content:"✓";
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  font-weight:700;
+  color:var(--good);
+}
+
+/* Se a questão estiver marcada como correta, mantém o destaque */
+.q.ok .q-opts li.hit{
+  border-width:2px;
+  background:#ecfdf5;
+}
+
+/* Se a questão estiver marcada como errada, mantém o mesmo destaque na correta */
+.q.bad .q-opts li.hit{
+  border:2px solid var(--good);
+  background:#ecfdf5;
+}
+
+/* Opcional: engrossar o contorno do cartão da questão quando correta/errada */
+.q.ok{ border:2px solid var(--good); }
+.q.bad{ border:2px solid var(--bad); }
