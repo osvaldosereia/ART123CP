@@ -85,7 +85,7 @@ function parseTxt(rawTxt) {
       continue;
     }
 
-    // Ruído: agrega ao enunciado se só houver enunciado; do contrário avisa e ignora
+    // Ruído
     if (cur.stage === "stem" || !cur.hasData) {
       cur.stem.push(line);
       cur.hasData = true;
@@ -335,13 +335,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }
-
-    // Autoteste opcional: cria uma função global para você colar o texto e ver o resultado no console
-    window.debugParse = function (sampleTxt) {
-      const res = parseWithWarnings(sampleTxt);
-      console.log("[debugParse] resultado:", res);
-      return res;
-    };
   } catch (err) {
     console.error("[QuestionsTxt] falha na inicialização da UI:", err);
   }
@@ -349,9 +342,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /** ========================= Exposição global e Node ========================= **/
 const api = { parseQuestions, parseWithWarnings, toJSON };
-if (typeof window !== "undefined") {
-  window.QuestionsTxt = api;
-}
+try {
+  // Disponível mesmo com <script type="module">
+  globalThis.QuestionsTxt = api;
+  // Função de depuração global
+  globalThis.debugParse = function (sampleTxt) {
+    const res = parseWithWarnings(sampleTxt);
+    console.log("[debugParse] resultado:", res);
+    return res;
+  };
+} catch { /* ambiente sem globalThis não esperado no navegador moderno */ }
+
 if (typeof module !== "undefined" && module.exports) {
   module.exports = api;
 }
