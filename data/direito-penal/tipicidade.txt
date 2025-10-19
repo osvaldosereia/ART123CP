@@ -9676,3 +9676,1130 @@ Nesse caso, a conduta do indivíduo corresponde ao conceito jurídico de
 *** Gabarito: E
 **** Tipicidade, Consumação e tentativa
 -----
+* Julgue os itens seguintes, relativos a aspectos diversos do direito penal.
+* Nos termos do CP, a caracterização de uma conduta dolosa prescinde da consciência ou do conhecimento da antijuridicidade dessa conduta e requer apenas a presença dos elementos que compõem o tipo objetivo.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Tipo Penal Doloso
+-----
+* Aquele que assume o risco de produzir um resultado criminoso comete crime movido por
+** A) culpa.
+** B) imprudência.
+** C) dolo.
+** D) imperícia.
+** E) negligência.
+*** Gabarito: C
+**** Tipicidade, Tipo Penal Doloso, Tipo Penal Culposo
+-----
+* Na hipótese de uma terceira pessoa desviar amão do homicida no exato instante em que este efetuava disparos de arma de fogo em direção ao peito da vítima, vindo apenas a lhe gerar lesão corporal, o agente responderá por:
+** A) homicídio doloso consumado, pois o resultado morte somente não ocorreu por circunstâncias alheias à sua vontade.
+** B) tentativa de homicídio, porque, muito embora tenha dado início à execução do crime, este não se consumou por circunstâncias alheias à sua vontade.
+** C) tentativa de lesão corporal seguida de morte, a qual não se consumou por circunstâncias alheias à sua vontade.
+** D) lesão corporal dolosa consumada, em concurso com tentativa de homicídio, o qual não se consumou por circunstâncias alheias à sua vontade.
+** E) lesão corporal culposa, sendo o homicídio, nesse caso, caracterizado como crime impossível, em virtude de ter sido o meio adotado absolutamente ineficaz.
+*** Gabarito: B
+**** Tipicidade, Consumação e tentativa, Crimes contra a vida, Homicídio, Lesões corporais, Lesão corporal e suas diversas modalidades
+-----
+* Há mera culpa consciente, e não dolo eventual, quando o agente:
+** A) atua sem se dar conta de que sua conduta é perigosa, e de que desatende aos cuidados necessários para evitar a produção do resultado típico, por puro desleixo e desatenção.
+** B) não quer diretamente a realização do tipo, mas a aceita como possível ou até provável, assumindo o risco da produção do resultado.
+** C) conhece a periculosidade da sua conduta, prevê o resultado típico como possível, mas age deixando de observar a diligência a que estava obrigado, por confiar que este não se verificará.
+** D) quer o resultado representado como fim de sua ação, sendo sua vontade dirigida à realização do fato típico.
+** E) não dá causa ao resultado, do qual depende a existência do crime.
+*** Gabarito: C
+**** Tipicidade, Tipo Penal Doloso, Tipo Penal Culposo
+-----
+* Associe os institutos jurídicos previstos no Código Penal (coluna da esquerda) às situações a eles relacionadas (coluna da direita).
+* 1- Resultado diverso do Pretendido 2- Concurso Material
+* 3- Erro na execução 4- Concurso
+* Formal 5- Crime continuado
+* ( ) O agente, visando um determinado objetivo, termina atingindo outro fim.
+* ( ) O agente, em vez de atingir a pessoa visada, alcança pessoa diversa em razão de desvio no golpe.
+* ( ) O agente, mediante mais de uma ação ou omissão, pratica dois ou mais crimes.
+* A sequência numérica correta, de cima para baixo, da coluna da direita, é
+** A) 5-3-2
+** B) 3-4-5
+** C) 3-1-4
+** D) 1-4-5
+** E) 1-3-2
+*** Gabarito: E
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime, Consumação e tentativa
+-----
+* Considere as assertivas abaixo sobre o instituto do erro.
+* I-O instituto do erro de proibição é uma exceção à norma de que ninguém se escusa de cumprir a lei, alegando que não a conhece.
+* II - A clássica distinção no Direito Penal entre erro de fato e erro de direito é mantida, com nomenclatura diversa, com a adoção da distinção entre erro de tipo e erro de proibição.
+* III - O erro relativo à pessoa, sendo acidental, não isenta de pena, não se considerando na apreciação do fato concreto as condições e qualidades da vítima real, e sim as daquela que o agente pretendia atingir.
+* Quais são corretas?
+** A) Apenas I
+** B) Apenas II
+** C) Apenas III
+** D) Apenas I e III
+** E) I, II e III
+*** Gabarito: C
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição, Erro do tipo essencial, Erro de tipo acidental
+-----
+* Considere as assertivas abaixo.
+* I - Não se aplica a lei penal mais grave ao crime continuado, ainda que sua vigência seja anterior à cessação da continuidade.
+* II - Nos casos de desistência voluntária e arrependimento eficaz, o agente não responde pela tentativa, porque o resultado deixa de ocorrer em virtude da sua vontade.
+* III - Uma babá, embora não tenha o dever legal, como no caso dos pais, responde por omissão penal mente relevante se não agir para evitar o resultado lesivo no bebê de que cuidava.
+* Quais são corretas?
+** A) Apenas I
+** B) Apenas II
+** C) Apenas III
+** D) Apenas II e III
+** E) I, II e III
+*** Gabarito: D
+**** Tipicidade, Desistência voluntária e arrependimento eficaz, Concurso de crimes, Crime continuado, Periclitação da vida e da saúde, Omissão de socorro
+-----
+* Com relação ao crime culposo, assinale a alternativa correta.
+** A) Imprudência é uma omissão, uma ausência de precaução em relação ao ato realizado.
+** B) Na culpa consciente, o resultado não é previsto pelo agente, embora previsível.
+** C) O resultado involuntário trata de elemento do fato típico culposo.
+** D) Na culpa imprópria, o resultado não é previsto, embora seja previsível.
+*** Gabarito: C
+**** Tipicidade, Tipo Penal Culposo
+-----
+* A respeito do direito penal, julgue os itens que se seguem.
+* Considera-se crime toda ação ou omissão típica, antijurídica e culpável.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime, Consumação e tentativa
+-----
+* Em 18/2/2011, às 21 horas, na cidade X, João, que planejara detalhadamente toda a empreitada criminosa, Pedro, Jerônimo e Paulo, de forma livre e consciente, em unidade dedesígnios com o adolescente José, que já havia sido processado poratos infracionais, decidiram subtrair para o grupo uma geladeira, umfogão, um botijão de gás e um micro-ondas, pertencentes a Lúcia, que não estava em casa naquele momento.
+* Enquanto João e Pedropermaneceram na rua, dando cobertura à ação criminosa, Paulo, Jerônimo e José entraram na residência, tendo pulado um pequenomuro e utilizado grampos para abrir a porta da casa.
+* Antes dasubtração dos bens, Jerônimo, arrependido, evadiu-se do local echamou a polícia.
+* Ainda assim, Paulo e José se apossaram de todosos bens referidos e fugiram antes da chegada da polícia.
+* Dias depois, o grupo foi preso, mas os bens não foram encontrados.
+* Na delegacia, verificou-se que João, Pedro e Paulo já haviam sidocondenados anteriormente pelo crime de estelionato, mas a sentençanão havia transitado em julgado e que Jerônimo tinha sidocondenado, em sentença transitada em julgado, por contravençãopenal.Com base na situação hipotética apresentada, julgue os itens de47 a 54.
+* Jerônimo, por ter desistido voluntariamente da execução do crime, responderá pelo crime de violação de domicílio, e não pelo delito de furto.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Desistência voluntária e arrependimento eficaz
+-----
+* No que se refere aos elementos do crime, é correto afirmar que
+** A) o estrito cumprimento do dever legal exclui a imputabilidade.
+** B) o dolo e a culpa integram a tipicidade e a culpabilidade, respectivamente.
+** C) o arrependimento eficaz afasta a ilicitude.
+** D) a exigibilidade de conduta diversa é pressuposto da culpabilidade.
+** E) o crime impossível extingue a punibilidade.
+*** Gabarito: D
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime, Consumação e tentativa
+-----
+* ANALISE O ENUNCIADO DA QUESTÃO ABAIXO E ASSINALE "CERTO" (C) OU "ERRADO" (E)
+* Na hipótese do sujeito, na condução de um ônibus pela via pública, colidir com um poste que sustenta fios elétricos, um dos quais, caindo ao chão, atinge um passageiro ileso e já fora do veículo, provocando a sua morte em decorrência da forte descarga elétrica recebida, corresponde a causa superveniente relativamente independente.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Causas relativamente independentes
+-----
+* ANALISE O ENUNCIADO DA QUESTÃO ABAIXO E ASSINALE "CERTO" (C) OU "ERRADO" (E)
+* No caso do dono de estabelecimento, desconfiado da honestidade de um de seus funcionários, manda-o selecionar determinado produto, deixando-o sozinho num cômodo, ao mesmo tempo que coloca policiais de atalaia, previamente solicitados, que o surpreendem no ato de furtar, conduta que corresponde a crime de ensaio.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Crime impossível
+-----
+* No que diz respeito à relação de causalidade, à superveniência de causa independente e à relevância da omissão no direito penal, assinale a opção correta.
+** A) A teoria adotada pelo CP tem como inconveniente a possibilidade de se levar ad infinitum a pesquisa da causa, abrangendo todos os agentes das causas anteriores, sendo limitada pelo dolo ou culpa da conduta e do vínculo objetivo do agente com a ação.
+** B) A exclusão do nexo de causalidade ocorre nas concausas absolutamente independentes quando estas forem supervenientes, mas não ocorre quando estas forem preexistentes ou concomitantes.
+** C) A relevância causal da omissão diz respeito tão somente aos crimes omissivos próprios, em face da relação causal objetiva preconizada pelo CP.
+** D) De acordo com preceito expresso no CP, a relação de causalidade limita-se aos crimes materiais.
+** E) O CP adota a teoria da causalidade jurídica, uma vez que a causalidade relevante para o direito penal é aquela que pode ser prevista pelo agente, ou seja, que se encontra na esfera da previsibilidade, podendo ser mentalmente antecipada.
+*** Gabarito: D
+**** Tipicidade, Nexo de causalidade, Causas absolutamente independentes
+-----
+* Manoel estava cortando uma laranja com um canivete em seu sítio, distraído, quando seu primo, Paulo, por mera brincadeira, veio por trás e deu um grito.
+* Em razão do susto, Manoel virou subitamente, ferindo Paulo no pescoço, provocando uma lesão que o levou a óbito.
+* Logo, Manoel:
+** A) não praticou crime, pois agiu por ato reflexo.
+** B) praticou o crime de homicídio culposo.
+** C) praticou o crime de homicídio doloso por dolo direto.
+** D) praticou o crime de homicídio doloso por dolo eventual.
+** E) praticou crime de lesão corporal seguida de morte.
+*** Gabarito: A
+**** Tipicidade, Conduta: ação / omissão, Crimes contra a vida, Homicídio, Lesões corporais, Lesão corporal leve e culposa
+-----
+* Em uma caçada, José Carlos viu um animal próximo do seu grande amigo Edson.
+* Percebe que, atirando na caça, poderá acertar o companheiro, mas, por confiar em sua pontaria, atira e erra o animal, matando Edson.
+* Assim, José Carlos:
+** A) poderá ser condenado pelo crime de homicídio culposo, pela prática de culpa inconsciente.
+** B) poderá ser condenado pelo crime de homicídio culposo, pela prática de culpa consciente.
+** C) poderá ser condenado pelo crime de homicídio doloso, pela prática de dolo direto.
+** D) poderá ser condenado pelo crime de homicídio doloso, pela prática de dolo eventual.
+** E) não poderá ser condenado por crime algum, pois ocorreu um acidente.
+*** Gabarito: B
+**** Tipicidade, Tipo Penal Doloso
+-----
+* Dois veículos chocaram-se em um cruzamento. Em razão da colisão, um dos motoristas fraturou um braço, o que o impossibilitou de trabalhar por seis meses.
+* O outro motorista teve uma luxação no joelho direito. O fato foi apurado pela delegacia local, restando cabalmente provado que os motoristas de ambos os carros concorreram para a colisão, pois um, em face da ausência de manutenção, estava sem freio, e o outro havia avançado o sinal e estava em velocidade acima da permitida.Assim, conclui-se que se trata de hipótese de:
+** A) autoria colateral.
+** B) compensação de culpa.
+** C) lesão corporal culposa, preceituada no artigo 129, § 6º doCP.
+** D) aberratio delicti.
+** E) culpa consciente.
+*** Gabarito: A
+**** Concurso de Pessoas, Tipicidade, Tipo Penal Culposo, Autoria e coautoria, Lesões corporais, Lesão corporal leve e culposa
+-----
+* No que se refere à teoria e à aplicação do direito penal, assinale a opção correta.
+** A) O condutor de veículo automotor que, por imprudência, colidir em veículo dirigido por uma gestante, causando-lhe lesões corporais de natureza leve, responderá criminalmente por sua conduta, incidindo, na aplicação da pena, a circunstância agravante de ter sido o crime praticado contra mulher grávida.
+** B) Crime profissional consiste na prática de ações com intenção de lucro, como é o caso, por exemplo, do curandeirismo, enquanto o crime habitual consiste na reiteração da mesma conduta reprovável, como um meio usual de sobrevivência, como, por exemplo, o rufianismo.
+** C) Na hipótese de tentativa irreal ou supersticiosa, o agente não responde pelo crime pretendido porque sua intenção não basta para ofender o bem jurídico visado, sendo a tentativa impunível e, conforme o caso, o crime impossível ou o delito putativo.
+** D) Não pode alegar, em sua defesa, estado de necessidade o indivíduo que tem o dever legal ou contratual de enfrentar o perigo.
+** E) Será reduzida de um a dois terços a pena do condenado pelo crime de latrocínio que colaborar voluntariamente com a investigação policial e o processo criminal na identificação dos demais coautores ou partícipes do crime, na localização da vítima e na recuperação total ou parcial do produto do crime.
+*** Gabarito: C
+**** Tipicidade, Noções Fundamentais, Teoria Geral do Delito, Consumação e tentativa
+-----
+* Assinale a alternativa correta.
+** A) No conceito analítico do crime, a imputabilidade penal constitui elemento autônomo do crime.
+** B) A adequação social constitui, segundo doutrina majoritária, excludente de ilicitude.
+** C) Para a doutrina finalista, o princípio da insignificância constitui causa exculpante.
+** D) De acordo com a doutrina finalista, a consciência da ilicitude é elemento do dolo.
+** E) O erro de tipo sempre exclui o dolo.
+*** Gabarito: E
+**** Tipicidade, Culpabilidade, Teoria Geral do Delito, Conceito de crime, Potencial conhecimento da ilicitude - Erro de proibição, Erro do tipo essencial, Erro de tipo acidental
+-----
+* "Marius" tinha um revólver eficiente, municiado com seis projéteis. Com a intenção de matar, efetuou com esta arma dois disparos contra "Tercius", sem acertá-lo.
+* Podia prosseguir atirando, mas, por vontade própria, não prosseguiu no seu intento.
+* No exemplo ocorreu:
+** A) desistência voluntária.
+** B) arrependimento eficaz.
+** C) crime-falho.
+** D) arrependimento posterior.
+*** Gabarito: A
+**** Tipicidade, Desistência voluntária e arrependimento eficaz, Arrependimento posterior
+-----
+* A respeito dos institutos da desistência voluntária, do arrependimento eficaz e do arrependimento posterior, assinale a opção correta.
+** A) A aplicação do arrependimento posterior restringe-se aos crimes dolosos e aos crimes cometidos sem violência ou grave ameaça à vítima.
+** B) Em se tratando de crimes contra a ordem tributária, a reparação do dano ocorrida após a consumação do delito fiscal, depois de recebida a denúncia, não afasta a punibilidade do agente, não se confundindo com os institutos da desistência voluntária e do arrependimento eficaz.
+** C) A lei penal impõe que a desistência seja voluntária, mas não espontânea.
+** D) A desistência voluntária e o arrependimento eficaz constituem causas que excluem a antijuridicidade do fato típico.
+** E) Caracteriza arrependimento posterior o fato de o agente, após esgotar todos os meios de que disponha para chegar à consumação do crime, arrepender-se e atuar em sentido contrário, evitando a produção do resultado inicialmente por ele pretendido.
+*** Gabarito: C
+**** Tipicidade, Desistência voluntária e arrependimento eficaz, Arrependimento posterior
+-----
+* No que se refere a fato típico e a seus elementos, assinale a opção correta.
+** A) O fato típico é composto apenas pela conduta do agente, dolosa ou culposa, comissiva ou omissiva, e pelo resultado.
+** B) As normas de extensão ampliam o tipo penal, incluindo hipóteses não previstas expressamente pelo legislador, e não são admitidas no ordenamento jurídico brasileiro, em face do princípio da taxatividade da lei penal.
+** C) Entende-se por injusto penal a conduta já valorada como ilícita e culpável.
+** D) Crimes omissivos próprios, puros ou simples são descritos por meio de uma conduta negativa, de não fazer o que a lei determina, consistindo a omissão na transgressão da norma jurídica somada à ocorrência de um resultado naturalístico.
+** E) Um resultado típico perpetrado por alguém em razão de força irresistível, de movimentos reflexos ou de estado de inconsciência não pode ser atribuído penalmente a seu causador, dada a inexistência de conduta.
+*** Gabarito: E
+**** Tipicidade
+-----
+* No que diz respeito ao erro de tipo e ao erro de proibição, assinale a opção correta.
+** A) É isento de pena quem, por erro plenamente justificado pelas circunstâncias, supõe situação de fato que, se existisse, tornaria a ação legítima, mesmo na hipótese de o erro derivar de culpa do agente.
+** B) O desconhecimento da lei é inescusável, mas o erro sobre a ilicitude do fato, se inevitável, isenta o agente de pena.
+** C) O erro sobre a ilicitude do fato, se evitável, não isenta o agente de pena nem permite a sua redução.
+** D) Considera-se evitável o erro de tipo se o agente atuar ou se omitir sem a consciência da ilicitude do fato, quando lhe seja possível, nas circunstâncias, ter ou atingir essa consciência.
+** E) O erro sobre elemento constitutivo do tipo legal de crime exclui a ilicitude, mas permite a punição por crime culposo, caso previsto em lei.
+*** Gabarito: B
+**** Tipicidade, Erro do tipo essencial
+-----
+* Admite tentativa a seguinte categoria de infração penal:
+** A) crimes omissivos puros;
+** B) contravenções penais;
+** C) crimes omissivos impróprios;
+** D) crimes unissubsistentes;
+** E) crimes de atentado.
+*** Gabarito: C
+**** Tipicidade, Consumação e tentativa, Crimes omissivos
+-----
+* É correto afirmar que a coação irresistível:
+** A) é circunstância atenuante em relação ao coagido e circunstância agravante para o coator;
+** B) é causa excludente da antijuridicidade em relação ao coagido;
+** C) exclui o próprio fato típico em relação ao coagido, desde que física;
+** D) sendo moral, responde pelo fato apenas o coator, a título de autoria imediata;
+** E) quando praticada mediante vis absoluta exclui a culpabilidade do coagido por inexigibilidade de conduta diversa.
+*** Gabarito: C
+**** Tipicidade
+-----
+* As três principais teorias sobre o dolo são as seguintes:
+** A) Eventualidade, Assentimento e Vontade:
+** B) Assentimento, Representação e Atividade;
+** C) Eventualidade, Vontade e Representação:
+** D) Representação, Assentimento e Vontade;
+** E) Eventualidade, Atividade e Representação.
+*** Gabarito: D
+**** Tipicidade, Tipo Penal Doloso
+-----
+* São elementos objetivos da relação de tipicidade
+** A) a conduta, o resultado e a relação de causalidade.
+** B) a antijuridicidade e a culpabilidade.
+** C) as circunstâncias do fato.
+** D) o dolo e a culpa.
+** E) a imputabilidade e o juízo de reprovação.
+*** Gabarito: A
+**** Tipicidade
+-----
+* Na hipótese de um contribuinte não recolher um tributo devido, consumando a conduta descrita como crime contra a ordem tributária, por ter cometido um erro na interpretação da lei tributária, estará configurado, em tese, o seguinte instituto de direito penal:
+** A) erro de tipo
+** B) erro de proibição
+** C) crime putativo
+** D) crime culposo
+** E) exclusão de antijuridicidade
+*** Gabarito: A
+**** Tipicidade, Erro do tipo essencial, Erro de tipo acidental
+-----
+* Com base no direito penal brasileiro, julgue os itens a seguir.
+* Considere a seguinte situação hipotética.
+* Júlio, com intenção de matar Maria, disparou tiros de revólver em sua direção.
+* Socorrida, Maria foi conduzida, com vida, de ambulância, ao hospital;
+* entretanto, no trajeto, o veículo foi abalroado pelo caminhão de José, que ultrapassara um sinal vermelho, tendo Maria falecido em razão do acidente.
+* Nessa situação, Júlio deverá responder por tentativa de homicídio e José, por homicídio culposo.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Causas absolutamente independentes, Causas relativamente independentes
+-----
+* De acordo com o Código Penal, a execução iniciada de um crime, que não se consuma por circunstâncias alheias à vontade do agente, caracteriza o(a)
+** A) arrependimento eficaz.
+** B) arrependimento posterior.
+** C) tentativa.
+** D) crime frustrado.
+** E) desistência voluntária.
+*** Gabarito: C
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime, Consumação e tentativa
+-----
+* No tocante aos crimes dolosos e culposos, assinale a alternativa correta.
+** A) Em tese, o homicídio culposo traz como consequência uma pena mais grave se comparada à pena do homicídio doloso.
+** B) A negligência e a imperícia estão diretamente relacionadas ao crime culposo.
+** C) Todo e qualquer crime de trânsito que venha a causar a morte de alguém é considerado doloso.
+** D) No crime doloso, a lei não pune a simples tentativa de cometê-lo, enquanto que, no culposo, a tentativa é punida pela lei.
+** E) O crime culposo caracteriza-se quando uma pessoa possui a vontade e a consciência de cometer um crime.
+*** Gabarito: B
+**** Tipicidade, Tipo Penal Doloso, Tipo Penal Culposo
+-----
+* A vista do ordenamento jurídico-penal brasileiro, e de acordo com a teoria finalista da ação, há crime doloso:
+** A) se o autor do fato, conquanto não deseje o resultado de dano ou perigo, esteja consciente de sua efetiva possibilidade e acredite poder evitá-lo;
+** B) se o autor do fato, conquanto não deseje o resultado de dano ou perigo, produza-o por meio de ação ou omissão voluntária, ainda que inconscientemente;
+** C) apenas se o autor do fato detiver, em relação aos elementos do fato típico, consciência atual (dimensão intelectiva) e intenção de produzir o resultado (dimensão volitiva);
+** D) imputável a pessoas jurídicas, em regime de strict liability, independentemente de participação do elemento humano;
+** E) se o autor do fato, conquanto não deseje o resultado de dano ou perigo, esteja consciente de sua efetiva possibilidade, resignando-se com ela.
+*** Gabarito: E
+**** Tipicidade, Tipo Penal Doloso
+-----
+* Examine as proposições abaixo e assinale a alternativa correta:
+* I. Em se tratando de nexo causal, o resultado, nas causas supervenientes relativamente independentes, somente poderá ser imputado ao agente se estiver na mesma linha de desdobramento natural da ação.
+* II. Ocorre erro de tipo quando o equívoco do agente recai sobre o conteúdo proibitivo de uma norma penal.
+* III. Mélvio e Acio entraram em luta corporal e ambos restaram lesionados.
+* Se ao final da instrução processual não restar evidenciado quem teria dado início às agressões, a solução é a absolvição de ambos com base no reconhecimento da legítima defesa recíproca.
+* IV. Os crimes habituais, os preterdolosos, os culposos, os unissubisistentes e os omissivos próprios não admitem a tentativa.
+** A) Somente as proposições I e III estão corretas.
+** B) Somente as proposições II e IV estão corretas.
+** C) Somente as proposições I e IV estão corretas.
+** D) Somente as proposições II e III estão corretas.
+** E) Todas as proposições estão corretas.
+*** Gabarito: C
+**** Tipicidade, Nexo de causalidade, Crime preterdoloso
+-----
+* Considere as afirmações abaixo.
+* I. De acordo com o sistema de fixação de pena previsto no Código Penal, o Juiz primeiramente estabelece a "pena base", tendo em vista as circunstâncias judiciais do artigo 59 do Código Penal;
+* em seguida, considera as causas de aumento e diminuição; e, por último, as circunstâncias agravantes e atenuantes.
+* II. De acordo com o entendimento dominante na jurisprudência, a incidência de circunstância atenuante pode conduzir a pena para aquém do mínimo legal.
+* III. A tentativa (art. 14, parágrafo único, do Código Penal) é uma causa de diminuição da pena.
+* IV. Somente pode ser substituída por penas restritivas de direitos a pena privativa de liberdade aplicada, por crime doloso, não superior a dois anos.
+* V. Pela prática de um crime de tentativa de homicídio simples, Frederico foi condenado à pena de três anos e seis meses de reclusão.
+* Desde que ele não seja reincidente, o Juiz poderá fixar o regime aberto para o início do cumprimento da pena.
+* Quais estão corretas?
+** A) Apenas II e IV.
+** B) Apenas I e II.
+** C) Apenas I, III e V.
+** D) Apenas III, IV e V.
+** E) Apenas III e V.
+*** Gabarito: E
+**** Tipicidade, Consumação e tentativa
+-----
+* Julgue os itens a seguir, que versam sobre a desistência voluntária, o arrependimento eficaz e posterior e o crime impossível.
+* Os efeitos da desistência voluntária e do arrependimento eficaz ficam condicionados à presença dos requisitos objetivos e subjetivos, aliados à espontaneidade do comportamento do agente, evitando-se a consumação do delito.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Tipicidade, Desistência voluntária e arrependimento eficaz
+-----
+* O crime impossível caracteriza-se pela ineficácia absoluta do meio ou por absoluta impropriedade do objeto, não ocorrendo a consumação do crime;
+* nesse delito, considerado putativo pela doutrina, o agente acredita estar agindo ilicitamente, quando, na verdade, não está.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Tipicidade, Crime impossível
+-----
+* Acerca da parte geral do direito penal e seus Institutos, julgue o item seguinte.
+* As causas ou concausas absolutamente independentes e as causas relativamente independentes constituem limitações ao alcance da teoria da equivalência das condições.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Causas absolutamente independentes, Causas relativamente independentes
+-----
+* Tanto a conduta do agente que age imprudentemente, por desconhecimento invencível de algum elemento do tipo quanto a conduta do agente que age acreditando estar autorizado a fazê-lo ensejam como consequência a exclusão do dolo e, por conseguinte, a do próprio crime.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição, Erro do tipo essencial
+-----
+* Suponha que em naufrágio de embarcação de grande porte, tenha havido tombamento das cabines e demais dependências, antes da evacuação da embarcação e resgate dos passageiros e, em razão desse fato, os sobreviventes tenham sofrido diversos tipos de lesões corporais e centenas tenham morrido por politraumatismo e afogamento.
+* Com base nessa situação hipotética, julgue o item seguinte, de acordo com a legislação brasileira.
+* Caso seja comprovada imperícia, negligência ou imprudência da tripulação, esta poderá responder judicialmente pelo crime de homicídio em relação às mortes ocorridas no naufrágio.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Tipo Penal Culposo, Crimes contra a vida, Homicídio
+-----
+* O parágrafo único do art. 14 do Código Penal pune a tentativa, caracterizando-se como norma de extensão da
+** A) tipicidade.
+** B) desistência voluntária.
+** C) culpabilidade formal.
+** D) culpabilidade material.
+** E) reprovação social.
+*** Gabarito: A
+**** Tipicidade, Consumação e tentativa
+-----
+* No que se refere à teoria geral do crime, julgue o próxima item.
+* Segundo a teoria causal, o dolo causalista é conhecido como dolo normativo, pelo fato de existir, nesse dolo, juntamente com os elementos volitivos e cognitivos, considerados psicológicos, elemento de natureza normativa (real ou potencial consciência sobre a ilicitude do fato).
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Tipo Penal Doloso, Teoria Geral do Delito, Conceito de crime
+-----
+* Em relação ao concurso de agentes, à desistência voluntária e ao arrependimento eficaz, bem como à cominação das penas, ao erro do tipo e, ainda, à teoria geral da culpabilidade, julgue os itens subsecutivos.
+* No arrependimento eficaz, é irrelevante que o agente proceda virtutis amore ou formidine poence, ou por motivos subalternos, egoísticos, desde que não tenha sido obstado por causas exteriores independentes de sua vontade.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Desistência voluntária e arrependimento eficaz
+-----
+* A conduta para a teoria:
+** A) social constitui um comportamento humano voluntário no mundo exterior, consistente num fazer ou não fazer, sendo estranha a qualquer valoração.
+** B) naturalista constitui um comportamento humano volun tário no mundo exterior, consistente num fazer ou não fazer, sendo estranha a qualquer valoração.
+** C) naturalista é o comportamento humano, voluntário e consciente (doloso ou culposo) dirigido a uma finali dade.
+** D) social é tratada como simples exteriorização de movi mento ou abstenção de comportamento, desprovida de qualquer finalidade
+** E) finalista é concebida com um simples comportamento, sem apreciação sobre a sua ilicitude ou reprovabilidade
+*** Gabarito: B
+**** Tipicidade, Conduta: ação / omissão
+-----
+* Assinale a alternativa incorreta:
+** A) Semprônio pretendendo matar seu pai Tício, desfere disparos de arma de fogo contra este, enquanto Tício conversava com seu vizinho Esmenio. Entretanto por erro na execução, Semprônio acaba apenas por atingir e matar Esmenio. Neste caso Semprônio responderá pelo crime de homicídio doloso, com a incidência da agravante genérica prevista no art. 61, II, letra "a" do CP (ter praticado o crime contra ascendente);
+** B) Semprônio pretendendo matar seu vizinho Esmenio, desfere disparos de arma de fogo contra Esmenio enquanto ele conversava com Tício pai de Semprônio. Entretanto por erro na execução, Semprônio acaba apenas por atingir e matar Tício. Neste caso Semprônio responderá pelo crime de homicídio doloso, sem a incidência da agravante genérica prevista no art. 61, II, letra "a" do CP (ter praticado o crime contra ascendente);
+** C) Semprônio pretendendo matar seu vizinho Esmenio, desfere contra ele disparos de arma de fogo, enquanto Esmenio conversava com Tício, pai de Semprônio. Entretanto por erro na execução, além de atingir e matar Esmenio, também atinge e mata seu pai Tício. Neste caso Semprônio responderá por crime de homicídio doloso, com a aplicação da regra prevista para o concurso formal de crimes;
+** D) Semprônio pretendendo lesionar seu vizinho Esmenio, e visualizando que este se encontrava na sala distraído, arremessa uma pedra através da vidraça da residência de Esmenio. Entretanto por erro na execução do crime, a pedra acaba por atingir o aparelho de televisão da sala, danificando-o. Neste caso Semprônio responderá por crime de dano;
+** E) Semprônio pretendendo lesionar seu vizinho Esmenio, e visualizando que este se encontrava na sala distraído, arremessa uma pedra através da vidraça da residência de Esmenio. Entretanto por erro na execução do crime, além da pedra atingir e lesionar superficialmente Esmenio, acaba também por acertar e danificar o aparelho de televisão da sala. Neste caso Semprônio responderá apenas por crime de lesões corporais leves.
+*** Gabarito: D
+**** Tipicidade, Erro de tipo acidental
+-----
+* Assinale a alternativa correta:
+** A) No crime comissivo por omissão ou omissivo impróprio inexiste o dever jurídico de agir, não respondendo o omitente pelo resultado, mas pela própria prática da conduta omissiva, podendo ser citado, como exemplo, o crime de omissão de socorro. Já no crime omissivo próprio o omitente devia e podia agir para evitar o resultado;
+** B) No crime omissivo próprio o agente responde pelo resultado que deu causa. Já no caso do crime omissivo impróprio este se aperfeiçoa com a simples omissão;
+** C) Os denominados delitos omissivos próprios, como os omissivos impróprios ou comissivos por omissão, são considerados crimes de mera conduta, posto que a omissão não pode dar causa a qualquer resultado;
+** D) Os denominados crimes omissivos próprios admitem tentativa;
+** E) No crime omissivo próprio o omitente não responde pelo resultado, perfazendo-se o crime com a simples omissão do agente, podendo ser citado, como exemplo, o crime de omissão de socorro. Já no crime comissivo por omissão ou omissivo impróprio o omitente devia e podia agir para evitar o resultado.
+*** Gabarito: E
+**** Tipicidade, Crimes omissivos
+-----
+* Assinale a alternativa incorreta:
+** A) Segundo a sistemática do Código Penal, a desistência voluntária é compatível com a tentativa perfeita ou crime falho;
+** B) O chamado arrependimento posterior, nos moldes previstos no Código Penal, é causa de redução de pena;
+** C) Para que o agente somente responda pelos atos já praticados, o chamado arrependimento eficaz deve ser suficiente para impedir a ocorrência resultado, pouco importando, a voluntariedade do arrependimento do agente ou a reparação posterior do dano, caso o resultado venha a ocorrer;
+** D) Segundo a doutrina, para a que ocorra a desistência voluntária ou o arrependimento eficaz, basta voluntariedade por parte do agente, não sendo exigida espontaneidade em sua decisão de abandonar a trajetória criminosa ou de impedir a ocorrência do resultado;
+** E) Pode-se afirmar que a desistência voluntária é incabível nos chamados crimes unissubsistentes.
+*** Gabarito: A
+**** Tipicidade, Desistência voluntária e arrependimento eficaz, Arrependimento posterior
+-----
+* Assinale a alternativa incorreta:
+** A) Diz-se "tentativa imperfeita" ou "propriamente dita", quando o processo executório do crime é interrompido por circunstâncias alheias à vontade do agente;
+** B) No dito "crime falho" ou "tentativa perfeita", apesar do agente realizar toda a fase de execução do crime, o resultado não ocorre por circunstâncias independentes de sua vontade;
+** C) Os crimes culposos, os omissivos próprios, omissivos impróprios, e os preterdolosos não admitem tentativa;
+** D) O dolo no crime tentado é o mesmo do crime consumado;
+** E) A denominada "tentativa inidônea", ocorre quando, por ineficácia absoluta do meio ou por absoluta impropriedade do objeto, é impossível consumar-se o crime.
+*** Gabarito: C
+**** Tipicidade, Consumação e tentativa
+-----
+* Caio, decidido a matar Denise, para a casa dela se dirigiu portando seu revólver devidamente municiado com seis projéteis. Chegando ao local, tocou a campainha e, assim que Denise abriu a porta, contra ela disparou um tiro, que a atingiu no ombro esquerdo. Ao ver Denise caída, Caio optou por não fazer mais disparos, guardou seu revólver e se retirou do local. Denise foi socorrida por terceiros e sobreviveu, ficando, porém, com pouca mobilidade em seu braço esquerdo. Diante do exposto, é correto afirmar que Caio responderá criminalmente por
+** A) lesão corporal de natureza grave (houve desistência voluntária).
+** B) tentativa de homicídio.
+** C) lesão corporal de natureza grave (houve arrependimento posterior).
+** D) lesão corporal de natureza gravíssima (houve arrependimento eficaz).
+*** Gabarito: A
+**** Tipicidade, Desistência voluntária e arrependimento eficaz
+-----
+* No tocante aos crimes contra o patrimônio, é correto afirmar que
+** A) a subtração de coisa comum não constitui crime.
+** B) é cabível o arrependimento posterior no crime de extorsão.
+** C) o dano culposo constitui infração de menor potencial ofensivo.
+** D) a apropriação indébita admite a figura priveligiada do delito.
+** E) no estelionato praticado em prejuízo de irmão a ação penal é privada.
+*** Gabarito: D
+**** Tipicidade, Arrependimento posterior, Crimes contra o patrimônio, Dano, Apropriação indébita, Estelionato
+-----
+* O arrependimento posterior
+** A) permite, como causa geral de diminuição, que se reduza a pena abaixo do mínimo legal.
+** B) não permite, como circunstância atenuante, que se reduza a pena abaixo do mínimo legal.
+** C) exclui a tipicidade da conduta.
+** D) não permite, como causa geral de diminuição, que se reduza a pena abaixo do mínimo legal.
+** E) permite, como circunstância atenuante, que se reduza a pena abaixo do mínimo legal.
+*** Gabarito: A
+**** Tipicidade, Arrependimento posterior
+-----
+* Com relação aos princípios, institutos e dispositivos da parte geral do Código Penal (CP), julgue os itens seguintes.
+* O ordenamento jurídico brasileiro prevê a possibilidade de ocorrência de tipicidade sem antijuridicidade, assim como de antijuridicidade sem culpabilidade.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Culpabilidade, Antijuridicidade
+-----
+* Considere a seguinte situação hipotética.
+* Joaquim, plenamente capaz, desferiu diversos golpes de facão contra Manoel, com o intuito de matá-lo, mas este, tendo sido socorrido e levado ao hospital, sobreviveu. Nessa situação hipotética, Joaquim responderá pela prática de homicídio tentado, com pena reduzida levando-se em conta a sanção prevista para o homicídio consumado.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Consumação e tentativa, Crimes contra a vida, Homicídio
+-----
+* No que se refere às espécies de concurso de crimes, ao erro de tipo e ao erro de proibição, assinale a opção correta.
+** A) Conforme a teoria limitada da culpabilidade, adotada no Código Penal, o erro sobre os pressupostos fáticos de uma causa de exclusão da ilicitude constitui modalidade de erro de proibição.
+** B) É isento de pena, em razão da ausência de dolo ou culpa, o agente que age mediante erro de tipo acidental, ou seja, o agente que desconhece os dados acessórios ou secundários do crime.
+** C) O concurso material ou real consiste na prática, mediante uma só ação ou omissão, de dois ou mais crimes, idênticos ou não, ensejando a aplicação da mais grave das penas cabíveis ou, se iguais, somente de uma delas, mas aumentada, em qualquer caso, de um sexto até metade.
+** D) Em se tratando de concurso formal impróprio ou imperfeito, a ação ou omissão é dolosa, e os crimes concorrentes resultam de desígnios autônomos, por isso as penas são aplicadas cumulativamente.
+** E) Configura-se crime continuado no caso de o agente, mediante mais de uma ação ou omissão, praticar dois ou mais crimes da mesma espécie, sendo os crimes subsequentes, por condições como tempo, lugar e maneira de execução, havidos como continuação do primeiro, como ocorre, por exemplo, entre o crime de roubo e o de extorsão.
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição, Erro do tipo essencial, Erro de tipo acidental, Concurso de crimes
+-----
+* Acerca da desistência voluntária, do arrependimento eficaz, do arrependimento posterior, do crime impossível e do crime preterdoloso, assinale a opção correta.
+** A) O denominado crime impossível ocorre apenas na hipótese de absoluta ineficácia, no que se refere à produção do resultado desejado, do meio de execução utilizado pelo agente.
+** B) Caracteriza-se crime preterdoloso ou preterintencional caso o agente cause um resultado mais grave que o desejado, em virtude da inobservância do cuidado objetivo necessário, inclusive na modalidade tentada.
+** C) Em se tratando de crimes materiais, formais e de mera conduta, é possível a aplicação dos institutos da desistência voluntária e do arrependimento posterior.
+** D) Para que fique caracterizado o arrependimento eficaz ou a desistência, a atitude do agente deve ser espontânea, ou seja, natural, sincera e verdadeira.
+** E) O arrependimento posterior só pode ser aplicado se crime tiver sido cometido sem violência ou grave ameaça a pessoa, se houver reparação do dano ou restituição do objeto material antes do recebimento da denúncia ou da queixa e se o ato do agente for voluntário.
+*** Gabarito: E
+**** Tipicidade, Arrependimento posterior
+-----
+* No que se refere às teorias do crime, assinale a opção correta.
+** A) Com base na teoria constitucionalista do delito, seriam inconstitucionais os dispositivos do Código Penal que protegem outros bens jurídicos além dos direitos fundamentais constitucionalmente previstos, únicos bens que merecem proteção na seara criminal, de acordo com essa teoria.
+** B) Conforme a teoria causal-naturalista, ou concepção clássica positivista naturalista, o delito constitui-se apenas de elementos objetivos, que são o fato típico e a ilicitude.
+** C) De acordo com a teoria causal-valorativa ou neokantista, a tipicidade não deve ser concebida apenas como descrição formal de comportamentos, devendo ser considerada também materialmente, como uma unidade de sentido socialmente danoso, o que implica, em muitos casos, a análise de elementos subjetivos, como a intenção de apropriação no tipo de furto.
+** D) De acordo com a teoria finalista, a ação típica deve ser concebida como ato de vontade com conteúdo, figurando como elementos da culpabilidade o dolo, a culpa, a potencial consciência da ilicitude, a imputabilidade e a exigibilidade de conduta.
+** E) Conforme o funcionalismo moderado de Roxin, sendo o direito um instrumento de estabilização social, o indivíduo deve ser um centro de imputação e responsabilidade, de modo que a violação da norma é considerada socialmente disfuncional porque questiona a violação do sistema, e não porque viola bem jurídico.
+*** Gabarito: C
+**** Tipicidade
+-----
+* Assinale a opção correta:
+** A) Considera-se praticado o crime no momento do resultado.
+** B) Considera-se praticado o crime no momento da ação ou da omissão ou no momento do resultado.
+** C) Considera-se praticado o crime no momento da ação ou da omissão, no momento do resultado ou no momento em que deveria ocorrer o resultado.
+** D) Considera-se praticado o crime no momento da ação se houver resultado e no momento do resultado se houver omissão
+** E) Considera-se praticado o crime no momento daação ou da omissão
+*** Gabarito: E
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime, Conduta: ação / omissão
+-----
+* Na hipótese do crime tentado, o juiz poderá diminuir a pena do agente de $1/3$ a $2/3$. Esta diminuição levará em conta
+** A) os antecedentes do agente.
+** B) a intensidade da culpa.
+** C) a intensidade do dolo.
+** D) o iter criminis percorrido pelo agente na execução do crime tentado.
+** E) as conseqüências causadas à vítima.
+*** Gabarito: D
+**** Tipicidade, Consumação e tentativa
+-----
+* Para que haja relevância penal a conduta típica deve ser exteriorizada seja de ordem comissiva seja de ordem omissiva. Com outras palavras, faz-se o que é proibido ou não se faz o que era devido.
+* Com relação ao tema, indique a afirmativa correta.
+** A) O movimento reflexo, a hipnose e o sonambulismo não afastam a conduta.
+** B) Os crimes omissivos não admitem a forma tentada.
+** C) Os crimes omissivos exigem para a sua consumação resultado naturalístico.
+** D) O Art. 13, § 2º, do Código Penal ostenta a natureza de norma de extensão.
+** E) O crime omissivo impróprio não admite participação ou coautoria, sendo caso de autoria colateral quando ambos os envolvidos tinham o dever de agir.
+*** Gabarito: D
+**** Tipicidade, Crimes omissivos
+-----
+* No que concerne a infração penal, fato típico e seus elementos, formas consumadas e tentadas do crime, culpabilidade, ilicitude e imputabilidade penal, julgue os itens que se seguem.
+* A culpa inconsciente distingue-se da culpa consciente no que diz respeito à previsão do resultado: na culpa consciente, o agente, embora prevendo o resultado, acredita sinceramente que pode evitá-lo; na culpa inconsciente, o resultado, embora previsível, não foi previsto pelo agente.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Tipicidade, Tipo Penal Culposo
+-----
+* Considerando que, em determinada casa noturna, tenha ocorrido, durante a apresentação de espetáculo musical, incêndio acidental em decorrência do qual morreram centenas de pessoas e que a superlotação do local e a falta de saídas de emergência, entre outras irregularidades, tenham contribuído para esse resultado, julgue os itens seguintes.
+* A causa jurídica das mortes, nesse caso, pode ser atribuída a acidente ou a suicídio, descartando-se a possibilidade de homicídio, visto que não se pode supor que promotores, realizadores e apresentadores de shows em casas noturnas tenham, deliberadamente, intenção de matar o público presente.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Tipicidade, Tipo Penal Doloso, Tipo Penal Culposo
+-----
+* Em face das seguintes considerações acerca da tipicidade, ilicitude e culpabilidade, assinale a alternativa incorreta:
+** A) No estado de necessidade defensivo, a ação de salvamento do direito em perigo volta-se contra bem jurídico de titularidade de quem provocou a situação de risco.
+** B) Sob a ótica da teoria do tipo penal conglobante, a constatação de que o agente moveu-se no estrito cumprimento do dever importa na atipicidade do seu comportamento.
+** C) Pela teoria limitada da culpabilidade, o erro de tipo permissivo recai sobre os pressupostos fáticos das situações justificantes, enquanto o erro de permissão incide sobre a existência ou sobre os limites das causas de justificação.
+** D) A perturbação de saúde mental e o desenvolvimento mental incompleto ou retardado não autorizam a redução da pena quando o agente tenha preservado parcialmente sua capacidade de compreensão do ilícito ou de autodeterminação.
+** E) Mero temor reverencial não se confunde com coação moral irresistível, não caracterizando causa de exculpação.
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Antijuridicidade
+-----
+* Julgue as assertivas sobre as etapas de realização do delito e questões correlatas, marcando a alternativa correta:
+** A) O iter criminis compreende os seguintes momentos: cogitação, preparação, execução, consumação formal e exaurimento.
+** B) Nos termos do Código Penal brasileiro, a pena da tentativa será a pena prevista para o crime consumado, sempre diminuída, nos limites legais, de acordo com a maior ou menor realização do iter criminis pelo autor.
+** C) É possível identificar, quanto ao aspecto objetivo, desistência voluntária e tentativa imperfeita, de um lado, e arrependimento eficaz e tentativa perfeita, de outro: no primeiro caso, o iter criminis é interrompido na fase de execução; no segundo, os atos de execução se esgotam sem a produção do resultado.
+** D) O crime impossível, quando absolutamente impróprio o objeto, é também denominado de crime falho.
+** E) O autor de crime de furto faz jus à diminuição de pena, por reconhecimento do arrependimento posterior, se a res furtiva é integralmente apreendida em seu poder e restituída intacta à vítima, antes do recebimento da acusação
+*** Gabarito: C
+**** Tipicidade, Consumação e tentativa, Desistência voluntária e arrependimento eficaz, Arrependimento posterior
+-----
+* Em face das seguintes assertivas, assinale a alternativa incorreta:
+** A) O dolo direto de segundo grau versa sobre as conseqüências secundárias, decorrentes dos meios elegidos pelo autor para a prática da conduta, desde que por ele representadas como certas ou necessárias, ainda que não desejadas.
+** B) O comportamento típico culposo apresenta os seguintes elementos: conduta voluntária; inobservância do dever de cuidado objetivo; produção de resultado naturalístico, não desejado nem consentido; nexo de causalidade; previsão ou previsibilidade objetiva; subsunção a norma penal expressa.
+** C) O preenchimento do tipo penal doloso pode exigir, ao lado do dolo, a verificação de outros elementos de natureza subjetiva, sem os quais a conduta será desclassificada para outro tipo penal ou simplesmente considerada atípica.
+** D) A combinação entre o dolo (no precedente) e a culpa (no conseqüente) é essencial para a caracterização dos crimes qualificados pelo resultado.
+** E) O Código Penal brasileiro acolheu, no caput de seu artigo 13, a teoria da equivalência dos antecedentes causais, admitindo, todavia, o rompimento do nexo causal por causa superveniente relativamente independente (artigo 13, § 1º), o que representa limite à amplitude da teoria elegida pelo legislador para regular a causalidade natural no Direito Penal.
+*** Gabarito: D
+**** Tipicidade, Tipo Penal Doloso, Tipo Penal Culposo
+-----
+* Destaque, à luz do entendimento doutrinário preponderante acerca das seguintes questões atinentes à teoria do delito, a alternativa correta:
+** A) A conduta típica, segundo a teoria finalista da ação, é integrada por ação ou omissão, dolo normativo ou culpa, resultado e relação de causalidade.
+** B) O conceito de reprovabilidade, como elemento normativo da culpabilidade, surge após o desenvolvimento da teoria finalista do delito.
+** C) Para a teoria finalista extremada da culpabilidade, o erro sobre os pressupostos objetivos de uma causa de justificação é sempre erro de proibição.
+** D) A não aceitação do conceito valorativo de ação pelos modelos causais de fato punível levou a que fossem superados pelo finalismo.
+** E) São elementos necessários e comuns ao tipo penal objetivo da omissão própria e da omissão imprópria: situação de perigo para o bem jurídico; possibilidade real de ação; omissão da ação cumpridora do mandato; resultado típico.
+*** Gabarito: C
+**** Tipicidade, Teoria Geral do Delito, Erro do tipo essencial
+-----
+* Analise os itens e assinale a quantidade de itens errados.
+* I-O compromisso previamente assumido de comprar o produto do crime leva o agente, consumado o delito, a responder pela forma dolosa de receptação, afastando a forma culposa.
+* II - Há possibilidade do cúmulo de três qualificadoras para o crime de homicídio, sendo duas de natureza subjetiva e uma objetiva.
+* III - Uma das das causas de aumento de pena de homicídio culposo prevista no § $4^{\circ}$ do artigo 121 do CP é dirigida aquele que se aventura a atuar em área fora de sua profissão, configurando a imperícia.
+* IV - A existência de autoria colateral leva os agentes a responderem necessariamente pela forma tentada do homicídio.
+* V - A impropriedade relativa do meio impede o reconhecimento da tentativa de crime.
+** A) Um.
+** B) Dois.
+** C) Três.
+** D) Quatro.
+** E) Cinco.
+*** Gabarito: E
+**** Tipicidade, Consumação e tentativa, Crimes contra a vida, Homicídio
+-----
+* Analise os itens e assinale a quantidade de itens errados.
+* I- O crime culposo, seja próprio ou impróprio, não admite a tentativa, que se restringe aos crimes dolosos.
+* II - Na desistência voluntária, o agente interrompe o processo de execução do crime antes da sua consumação, e a mesma se configura apenas quando voluntária e espontânea.
+* III - O crime culposo não admite participação.
+* IV - Como decorrência do reconhecimento do arrependimento posterior, ocorrerá a desclassificação da infração penal para outra menos grave.
+* V - No caso do concurso de pessoas, o partícipe, necessariamente, não pratica nenhuma das condutas descritas no tipo penal violado.
+** A) Um.
+** B) Dois.
+** C) Três.
+** D) Quatro.
+** E) Cinco.
+*** Gabarito: C
+**** Tipicidade, Tipo Penal Doloso, Tipo Penal Culposo, Desistência voluntária e arrependimento eficaz, Arrependimento posterior
+-----
+* Analise os itens e assinale a quantidade de itens errados.
+* I - A embriaguez completa, se acidental, exclui a imputabilidade.
+* II - A coação moral irresistível e a obediência hierárquica afastam a ilicitude da conduta.
+* III - Para a teoria estrita da culpabilidade o erro sobre a ilicitude do fato é sempre erro de proibição.
+* IV - O Erro sobre elemento essencial do tipo exclui o dolo e a culpa.
+* V - Na tentativa o agente não consegue ultimar a execução do crime, porque o dolo que informa a sua conduta não abrange todos os elementos do tipo.
+** A) Um.
+** B) Dois.
+** C) Três.
+** D) Quatro.
+** E) Cinco.
+*** Gabarito: C
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição, Erro do tipo essencial, Erro de tipo acidental, Inimputabilidade pela embriaguez
+-----
+* Analise os itens e assinale a quantidade de itens errados.
+* I - A culpa, embora seja uma conduta humana violadora de uma norma de cuidado que realiza um tipo penal, não é elemento normativo do tipo.
+* II - O dolo eventual se caracteriza pela previsão de um resultado penalmente relevante, mas com a expectativa da sua inocorrência.
+* III - A ilicitude, em seu aspecto formal, se caracteriza pela efetiva contradição entre a conduta do agente e a norma penal incriminadora.
+* IV - Em matéria de ilicitude, é correto afirmar que toda ação ilícita é típica e toda ação típica é ilícita.
+* V - O uso de instrumentos pré-dispostos para defesa da propriedade em um eventual futuro ataque (ofendícula), caracteriza hipótese de exclusão da culpabilidade.
+** A) Um.
+** B) Dois.
+** C) Três.
+** D) Quatro.
+** E) Cinco.
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Tipo Penal Doloso, Tipo Penal Culposo, Antijuridicidade
+-----
+* Examine os itens que se seguem e assinale a alternativa CORRETA:
+** A) Nos termos da legislação penal brasileira, a aberratio ictus com resultado duplo conduz à aplicação da regra da continuidade delitiva
+** B) O erro de proibição invencível por parte de um dos coautores do delito impede a aplicação de pena aos demais concorrentes.
+** C) Na omissão, o erro de mandamento se caracteriza quando o omitente se abstém da ação ordenada pelo direito, na justificável crença de inexistir o dever de agir.
+** D) Segundo o Código Penal, atua em erro de proibição o agente que, diante da aproximação de pessoa que acredita tratar-se de um ladrão, desfere-lhe golpes com pedaço de madeira.
+** E) Para o finalismo, é erro de tipo o que incide sobre a consciência da ilicitude, que pode ser meramente potencial.
+*** Gabarito: C
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição, Erro do tipo essencial
+-----
+* Em face das seguintes assertivas, indique a que se apresenta CORRETA:
+** A) O ordenamento jurídico brasileiro adotou a teoria psicológica do dolo, segundo a qual dolo é a consciência e a vontade de concretizar os elementos do tipo penal.
+** B) No conceito finalista de delito, dolo e culpabilidade têm como característica comum a sua natureza normativa.
+** C) Para punição do agente, a título de culpa, segundo a teoria finalista da ação, é suficiente a demonstração de conduta realizada com imprudência, negligência ou imperícia.
+** D) O "dolo geral" é gênero do qual são espécies o "dolo direto" e o "dolo eventual", responsabilizando-se o agente tanto diante da vontade de produção do resultado quanto da simples aceitação de sua ocorrência.
+** E) A teoria normativa do dolo, ínsita à doutrina finalista da ação e acolhida no Código Penal Brasileiro, exige do agente a consciência da ilicitude de sua conduta.
+*** Gabarito: A
+**** Tipicidade, Tipo Penal Doloso
+-----
+* Assinale a alternativa CORRETA:
+** A) Como exceção à teoria da equivalência dos antecedentes causais, para o Código Penal a imputação do resultado ao agente somente pode ser afastada por causa preexistente.
+** B) Para o Código Penal, causas preexistentes e concomitantes relativamente independentes, adentrando a esfera de consciência do agente, não excluem a imputação do resultado.
+** C) É exemplo de causa superveniente absolutamente independente a situação do passageiro de ônibus colidido com poste de eletricidade, o qual, ileso e no exterior do veículo, morre atingido por fio energizado.
+** D) Na omissão própria, o nexo de causalidade normativo é estabelecido pelo legislador penal a partir da posição de garante.
+** E) Não caracteriza homicídio, ainda que sobrevenha o resultado morte, a conduta de quem dolosamente interrompe eficaz ação de salvamento da vítima por outrem.
+*** Gabarito: B
+**** Tipicidade, Causas absolutamente independentes, Causas relativamente independentes
+-----
+* Examine os itens seguintes, indicando o CORRETO:
+** A) O princípio da culpabilidade limita-se à impossibilidade de declaração de culpa sem o trânsito em julgado de sentença penal condenatória.
+** B) O princípio da legalidade impede a aplicação de lei penal ao fato ocorrido antes do início de sua vigência.
+** C) Integram o núcleo do princípio da estrita legalidade os seguintes postulados: reserva legal, proibição de aplicação de pena em hipótese de lesões irrelevantes, proibição de analogia in malam partem.
+** D) A aplicação de pena aos inimputáveis, dada a sua incapacidade de sensibilização pela norma penal, viola o princípio da culpabilidade.
+** E) Os princípios da insignificância penal e da adequação social se identificam, ambos caracterizados pela ausência de preenchimento formal do tipo penal.
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Tipicidade conglobante
+-----
+* Conforme o disposto no artigo 14, parágrafo único, do Código Penal, "Salvo disposição em contrário, pune-se a tentativa com a pena correspondente ao crime consumado, diminuída de um a dois terços".
+* O critério de diminuição da pena levará em consideração
+** A) a motivação do crime.
+** B) a intensidade do dolo.
+** C) o iter criminis percorrido pelo agente.
+** D) a periculosidade do agente.
+*** Gabarito: C
+**** Tipicidade, Consumação e tentativa
+-----
+* A foi processado como incurso no artigo 217A, § 1.º, do Código Penal (estupro de vulnerável), por ter tido conjunção carnal com pessoa de 19 anos, portadora de deficiência mental. Finda a instrução, resultou provado que o réu atuou em erro sobre a vulnerabilidade da ofendida, decorrente da deficiência mental, cuja circunstância desconhecia.
+* Considerada a hipótese, o juiz deve
+** A) absolver o réu, com fundamento em causa de exclusão da antijuridicidade.
+** B) absolver o réu, com fundamento em causa de exclusão da tipicidade.
+** C) absolver o réu, com fundamento em causa de exclusão da culpabilidade.
+** D) condenar o réu pelo crime de estupro, na forma simples
+*** Gabarito: B
+**** Tipicidade, Erro do tipo essencial
+-----
+* Quando a descrição legal do tipo penal contém o dis- senso, expresso ou implícito, como elemento específico, o consentimento do ofendido funciona como causa de exclusão da
+** A) antijuridicidade formal
+** B) tipicidade.
+** C) antijuridicidade material.
+** D) punibilidade do fato.
+*** Gabarito: B
+**** Tipicidade, Conduta: ação / omissão
+-----
+* No que se refere ao crime consumado e ao tentado, ao crime impossível, ao arrependimento posterior, à desistência voluntária e ao arrependimento eficaz, assinale a opção correta.
+** A) Para a configuração do arrependimento posterior, o agente deve agir espontaneamente, e a reparação do dano ou a restituição do bem devem ser integrais
+** B) No quase crime, segundo a teoria objetiva temperada, absoluta ou relativa, inexiste objeto jurídico em perigo de lesão, não havendo conduta punível
+** C) A pena imposta ao conatus, de acordo com a teoria subjetiva é motivada pelo perigo a que é exposto o bem jurídico.
+** D) Ocorre tentativa qualificada na desistência voluntária, no arrependimento eficaz e no arrependimento posterior
+** E) Segundo a teoria sintomática, examina-se, no que se refere à punibilidade da tentativa inidônea, se a realização da conduta do agente é a revelação de sua periculosidade.
+*** Gabarito: E
+**** Tipicidade, Consumação e tentativa, Desistência voluntária e arrependimento eficaz, Arrependimento posterior
+-----
+* A respeito do concurso de pessoas e do erro sobre a ilicitude do fato e sobre os elementos do tipo, assinale a opção correta.
+** A) Considera-se partícipe de crime comissivo, com ação omissiva, o gerente de estabelecimento comercial, detentor das chaves do local, que, ao sair do estabelecimento, deixa a porta aberta a fim de facilitar a prática de furto.
+** B) Considera-se partícipe o passageiro que em ônibus coletivo, instigue o motorista a empregar velocidade excessiva, o que ocasione atropelamento culposo de vítima que faleça em razão do acidente.
+** C) Configura erro de tipo essencial a conduta de um indivíduo que, após estrangular outro, crendo que ele esteja morto, enforque-o para simular suicídio, com comprovação posterior de que a vítima tenha morrido em decorrência do enforcamento.
+** D) Considere que um servidor público receba, por escrito, séria ameaça a fim de não realizar ato de ofício e se omita, e verifique, posteriormente, que a carta tenha sido endereçada a outro servidor público em idêntica situação funcional. Nesse caso, a conduta do servidor que recebe a carta configura erro de tipo essencial invencível.
+** E) Considere que um médico, de forma negligente, entregue a um enfermeiro substância venenosa imaginando tratar-se de substância medicinal, para ser ministrada a paciente, e que o enfermeiro, mesmo percebendo o equívoco, ministre ao paciente a substância fatal, com a intenção de matá-lo. Nesse caso, ocorre participação culposa em crime doloso.
+*** Gabarito: A
+**** Concurso de Pessoas, Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição, Erro do tipo essencial, Erro de tipo acidental
+-----
+* Determinado agente, insatisfeito com as diversas brigas que tinha com seu vizinho, resolve matá-lo. Ao ver seu desafeto passando pela rua, pega sua arma, que estava em situação regular e contava com apenas uma bala, e atira, vindo a atingi-lo na barriga. Lembrando-se que o vizinho era pai de duas crianças, arrepende-se de seu ato e leva a vítima ao hospital. O médico, diante do pronto atendimento e rápida cirurgia, salva a vida da vítima.
+* Diante da situação acima, o membro do Ministério Público deve
+** A) denunciar o agente pelo crime de lesão corporal, pois o arrependimento posterior no caso impede que o agente responda pelo resultado pretendido inicialmente.
+** B) denunciar o agente pelo crime de lesão corporal, pois houve arrependimento eficaz.
+** C) denunciar o agente pelo crime de lesão corporal, pois houve desistência voluntária.
+** D) denunciar o agente pelo crime de tentativa de homicídio, tendo em vista que o resultado pretendido inicialmente não foi obtido.
+** E) requerer o arquivamento, diante da atipicidade da conduta.
+*** Gabarito: B
+**** Tipicidade, Desistência voluntária e arrependimento eficaz
+-----
+* Y, POLICIAL RODOVIÁRIO FEDERAL EM SERVIÇO, NO CURSO DE UMA DILIGÊNCIA NA RODOVIA PRES. DUTRA, ALTURA DO MUNICÍPIO DE PORTO REAL/RJ, INVADIU IMPRUDENTEMENTE O ACOSTAMENTO, PRECIPITANDO-SE SOBRE DOIS PEDESTRES QUE LÁ CAMINHAVAM. UM DELES, M, CONSEGUIU SE ESQUIVAR DA VIATURA. CONTUDO, O SEGUNDO, P, FALECEU VÍTIMA DO ATROPELAMENTO. IMEDIATAMENTE APÓS O OCORRIDO, M, ESPANTADO, SAIU CORRENDO PARA AVISAR Q, A MÃE DE P, QUE SE ENCONTRAVA NAS IMEDIAÇÕES. ESTA SOFREU UM INFARTO FULMINANTE AO SABER DA TRÁGICA NOTÍCIA.
+* DIANTE DISSO, PODE-SE AFIRMAR COMO CERTO:
+** A) Faz-se Y imputável pela morte de Q, decorrente da notícia trágica, conforme a teoria da equivalência da condições, adotada pelo Código Penal, uma vez que foi ele o causador do atropelamento de P.
+** B) Não se faz Y imputável pela morte de Q, porque seu falecimento, decorrente da notícia trágica, cuidou-se de causa superveniente absolutamente independente do atropelamento de P.
+** C) Faz-se Y imputável pela morte de Q, porque seu falecimento, decorrente da notícia trágica, cuidou-se de causa concomitante relativamente independente do atropelamento de P.
+** D) Não se faz Y imputável pela morte de Q, porque seu falecimento, decorrente da notícia trágica, encontra-se fora do âmbito de proteção da norma que tipifica o homicídio culposo na condução de veículo.
+*** Gabarito: D
+**** Tipicidade, Causas relativamente independentes
+-----
+* SOBRE A TEORIA DO ERRO JURÍDICO- PENAL, É CORRETO AFIRMAR:
+** A) Segundo os adeptos da teoria dos elementos negativos do tipo, deve o mesmo ser apreendido de maneira total, inserindo-se, pois, as causas de justificação.
+** B) Consoante a teoria extremada ou estrita da culpabilidade, o erro ou a ignorância que vicia o aspecto cognitivo do dolo exclui a culpabilidade do agente.
+** C) Para a doutrina, o erro invencível é aquele inescusável, na medida em que pode ser superado por pessoa dotada de diligência ordinária, ou seja, pelo "juízo profano".
+** D) O erro de tipo e o erro de proibição correspondem aos modelos fundamentais do erro de fato e erro de direito, sendo este inescusável, salvo raras exceções, e, aquele, em regra escusável.
+*** Gabarito: A
+**** Tipicidade, Erro do tipo essencial, Erro de tipo acidental
+-----
+* Julgue os itens seguintes, relativos ao direito penal.
+* Nos crimes culposos, é dispensável a produção do resultado naturalístico involuntário.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Tipicidade, Tipo Penal Culposo
+-----
+* De acordo com o Direito Penal, não comete crime aquele que age:
+** A) por culpa.
+** B) em embriaguez fortuita.
+** C) no exercício regular do direito.
+** D) em embriaguez completa.
+** E) sob violenta emoção.
+*** Gabarito: C
+**** Tipicidade, Culpabilidade, Tipo Penal Culposo, Antijuridicidade, Estrito cumprimento de dever legal e exercício regular de direito, Exigibilidade de conduta diversa, Inimputabilidade pela embriaguez, Noções Gerais da Culpabilidade
+-----
+* Assinale a alternativa correta de acordo com o Direito Penal.
+** A) Diz-se tentado o crime, quando nele se reúnem todos os elementos de sua definição legal.
+** B) O crime é tentado quando o agente causa o resultado por imprudência.
+** C) O crime é consumado quando o agente assumiu o risco de produzi-lo.
+** D) O crime é culposo quando o agente assumiu o risco de produzi-lo.
+** E) O crime é culposo, quando o agente deu causa ao resultado por imprudência, negligência ou imperícia.
+*** Gabarito: E
+**** Tipicidade, Tipo Penal Culposo, Consumação e tentativa
+-----
+* É incorreto afirmar, sabendo-se que o crime pode ser doloso ou culposo, que:
+** A) não se admite compensação de culpa;
+** B) há concorrência de culpas quando 2 (dois) individuos, um ignorando a participação do outro, contribuem culposamente para a produção de um fato definido como crime;
+** C) a regra é de que as infrações penais sejam imputadas a titulo de dolo e somente excepcionalmente a titulo de culpa, quando expressamente prevista tal modalidade;
+** D) culpa imprópria ocorre quando o sujeito prevê e quer o resultado, mas sua vontade baseia-se em erro de tipo inescusável ou vencivel;
+** E) o crime culposo prescinde da existência real de um resultado.
+*** Gabarito: E
+**** Tipicidade, Tipo Penal Doloso, Tipo Penal Culposo
+-----
+* O agente que, voluntariamente, desiste de prosseguir na execução do crime somente responde pelos atos já praticados.
+* A assertiva acima disciplina qual benefício legal previsto no Código Penal?
+** A) Tentativa branca.
+** B) Arrependimento posterior.
+** C) Desistência voluntária.
+** D) Tentativa imperfeita.
+** E) Tentativa inidônea.
+*** Gabarito: C
+**** Tipicidade, Desistência voluntária e arrependimento eficaz
+-----
+* É certo afirmar:
+* I. Anterioridade da Lei Penal significa que é obrigatória a previa existência de lei penal incriminadora para que alguém possa ser por um fato condenado, exigindo, também, prévia cominação de sanção para que alguém possa sofrê-la.
+* II. Quanto à eficácia do princípio da legalidade, adota-se no Brasil a legalidade material, somente constituindo crime a conduta descrita em lei como tal, devendo-se exigir que os tipos penais sejam regidos de maneira clara e minuciosa, evitando-se tipos demasiadamente abertos.
+* III. Leis penais temporais são aquelas que não possuem no seu próprio texto a data da revogação, vigorando assim por tempo indeterminado.
+* IV. Considera-se tipo penal um modelo legal de conduta.
+* Analisando as proposições, pode-se afirmar:
+** A) Somente as proposições I e III estão corretas.
+** B) Somente as proposições II e III estão corretas.
+** C) Somente as proposições I e IV estão corretas.
+** D) Somente as proposições II e IV estão corretas.
+*** Gabarito: C
+**** Tipicidade, Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Lei penal no tempo, Conduta: ação / omissão
+-----
+* É certo afirmar:
+* I. Auto acusar-se falsamente perante a autoridade policial ou judicial se constitui em crime, inexistindo na modalidade culposa.
+* II. Havendo embriaguez preordenada, será ela caso de inimputabilidade penal.
+* III. A imputabilidade penal se confunde com a responsabilidade penal, já que corresponde às consequências jurídicas oriundas da prática de uma infração.
+* IV. As causas especiais de aumento e de diminuição da pena estão previstas tanto na parte geral quanto na parte especial do Código Penal.
+* Analisando as proposições, pode-se afirmar:
+** A) Somente as proposições II e IV estão corretas.
+** B) Somente as proposições I e IV estão corretas.
+** C) Somente as proposições II e III estão corretas.
+** D) Somente as proposições I e III estão corretas.
+*** Gabarito: B
+**** Tipicidade, Culpabilidade, Tipo Penal Culposo, Inimputabilidade pela embriaguez, Imputabilidade penal
+-----
+* Analise o que consta dos itens I a III e depois identifique a assertiva correta:
+* I. Segundo o expressamente previsto pelo Código Penal quanto ao concurso de pessoas, estabelece o ajuste, a determinação ou instigação e o auxílio, salvo disposição expressa em contrário, não são puníveis, se o crime não chega, pelo menos, a ser tentado.
+* II. Segundo o expressamente previsto pelo Código Penal, nos crimes cometidos sem violência ou grave ameaça à pessoa, reparado o dano ou restituída a coisa, até o recebimento da denúncia ou da queixa, por ato voluntário do agente, a pena será reduzida.
+* III. Segundo o expressamente previsto pelo Código Penal quanto ao furto, a pena aumenta-se se o crime é praticado durante o repouso noturno.
+* Identifique a assertiva correta:
+** A) Está incorreto o que consta do item I e correto o que consta do item II.
+** B) Está incorreto o que consta do item II.
+** C) Está correto o que consta do item I e incorreto o que consta do item III.
+** D) Está correto o que consta do item III.
+*** Gabarito: D
+**** Concurso de Pessoas, Tipicidade, Arrependimento posterior, Noções gerais de Concursos de Pessoas, Crimes contra o patrimônio, Furto
+-----
+* É certo afirmar:
+* I. Crime é um fato típico, antijurídico e culpável.
+* II. O resultado, de que depende a existência do crime, é imputável tanto a quem deu quanto a quem não lhe deu causa.
+* III. A Lei penal brasileira por ser soberana se sobrepõe aos tratados e convenções internacionais, sendo de aplicação absoluta.
+* IV. Considera-se praticado o crime no lugar em que ocorreu a ação ou omissão, no todo ou em parte, bem como onde se produziu ou deveria produzir-se o resultado.
+* Analisando as proposições, pode-se afirmar:
+** A) Somente as proposições II e IV estão corretas.
+** B) Somente as proposições I e III estão corretas.
+** C) Somente as proposições I e IV estão corretas.
+** D) Somente as proposições II e III estão corretas.
+*** Gabarito: C
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime, Consumação e tentativa
+-----
+* A respeito do sujeito ativo da infração penal e dos institutos da tipicidade e da antijuridicidade, assinale a opção correta.
+** A) Em legítima defesa encontra-se aquele que, usando moderadamente os meios necessários, repele injusta agressão, atual, iminente ou futura, a direito seu ou de outrem.
+** B) A coação irresistível exclui a conduta criminosa do agente que, em tese, praticou um fato típico.
+** C) A pessoa jurídica pode ser sujeito ativo de infração penal no ordenamento jurídico brasileiro.
+** D) O agente que atua no estrito cumprimento do dever legal é isento de responsabilização criminal pelo excesso doloso ou culposo.
+*** Gabarito: C
+**** Tipicidade, Antijuridicidade, Legítima defesa, Estado de necessidade, Crime praticado por pessoa jurídica
+-----
+* No que diz respeito ao ordenamento jurídico brasileiro, em relação à infração penal, assinale a opção correta.
+** A) Adotou-se no direito penal brasileiro o critério bipartido, segundo o qual as condutas puníveis dividem-se em crimes ou contravenções, como sinônimos, e delitos.
+** B) O critério adotado para a distinção entre crime e contravenção é dado pela natureza da pena privativa de liberdade cominada.
+** C) O Código Penal brasileiro adotou o critério tripartite, existindo diferença entre crime, delito e contravenção.
+** D) No âmbito do direito penal, crimes, delitos e contravenções são expressões equivalentes ou sinônimas.
+*** Gabarito: B
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime, Consumação e tentativa
+-----
+* Assinale a hipótese que configura arrependimento posterior (CP, art. 16).
+** A) Autor de sonegação fiscal que, quando de seu interrogatório em juízo, junta aos autos do processo o com provante de pagamento de todos os impostos devidos, acrescidos de juros, multas e correção monetária.
+** B) Autor de estelionato que, antes de ser descoberto e consternado pelo prejuízo que causaria, não deposita em favor próprio o cheque que ardilosamente obteve da vítima.
+** C) Autor de peculato doloso que no momento de sua prisão em flagrante devolve, voluntariamente, os bens móveis de que se havia apropriado.
+** D) Autor de resistência que, antes do início da ação penal, desculpase com a vítima e por ela é perdoado.
+*** Gabarito: C
+**** Tipicidade, Arrependimento posterior
+-----
+* É INCORRETO afirmar:
+** A) O Código Penal Brasileiro adotou a teoria da actio libera in causa.
+** B) As leis temporárias e excepcionais são ultra-ativas.
+** C) No crime de apropriação indébita, o dolo do agente é subsequente à posse do bem.
+** D) O delito de lesão corporal seguida de morte, previsto no art. 129, § 30, do Código Penal, contempla hipótese de crime preterdoloso.
+** E) A imprudência, a negligência e a imperícia são modalidades da culpa consciente.
+*** Gabarito: E
+**** Tipicidade, Tipo Penal Culposo
+-----
+* É correto afirmar:
+** A) O crime de receptação é chamado de crime acessório ou parasitário, porque o seu reconhecimento depende da ocorrência de um crime anterior.
+** B) Não configura crime impossível, por absoluta impropriedade do objeto, a hipótese de furto em que a vítima não tem consigo qualquer bem ou valor a ser subtraído pelo agente.
+** C) O agente que, voluntariamente, desiste de prosseguir na execução do crime ou impede que o resultado se produza, só responde pelos atos já praticados, ocorrendo a hipótese de arrependimento posterior.
+** D) Não se admite a aplicação do arrependimento posterior (art. 16, CP) no crime de furto qualificado pela destruição ou rompimento de obstáculo, em razão da violência empregada pelo agente na subtração.
+** E) No tocante ao crime culposo, a culpa concorrente da vítima exclui a do acusado.
+*** Gabarito: A
+**** Tipicidade, Arrependimento posterior
+-----
+* Motorista que, em estacionamento, se apodera de veículo pertencente a terceiro supondo-o seu, em decorrência de absoluta semelhança entre os automóveis, incide em
+** A) erro de proibição.
+** B) erro de tipo.
+** C) crime impossível.
+** D) erro determinado por terceiro.
+** E) erro na execução.
+*** Gabarito: B
+**** Tipicidade, Erro do tipo essencial
+-----
+* Sobre tentativa e consumação, assinale a alternativa incorreta:
+** A) O arrependimento eficaz pode ocorrer em hipóteses de tentativa acabada, estando excluído em hipóteses de tentativa inacabada;
+** B) A desistência do autor de prosseguir na execução do crime, estimulada por prévia conscientização de testemunha presencial, é suficiente para configurar a desistência voluntária;
+** C) Para definir o início de execução da ação típica, a teoria objetiva material e a teoria objetiva formal não trabalham com elementos subjetivos;
+** D) Para a teoria objetiva individual, a tentativa se caracteriza pela realização de ação imediatamente anterior ao tipo legal, produtora de perigo direto para o bem jurídico protegido, independente da representação do fato pelo autor;
+** E) O fundamento para a isenção de pena na tentativa inidônea é a ausência de perigo objetivo de lesão ao bem jurídico protegido no tipo.
+*** Gabarito: D
+**** Tipicidade, Arrependimento posterior
+-----
+* Sobre o tipo dos crimes de omissão de ação, assinale a alternativa correta:
+** A) O erro de tipo é admissível tanto na omissão de ação própria como na omissão de ação imprópria, e, na área do conhecimento do injusto, é admissível o erro sobre o dever jurídico geral ou especial de agir, que constitui erro de mandado;
+** B) As hipóteses de dever legal de agir, expressamente previstas no art. 13, § 2º, alíneas " ", "b" e "c", do Código Penal, constituem modalidades de omissão de ação própria;
+** C) Nos crimes de omissão de ação, o dolo pode existir sob as modalidades de dolo direto de 1º grau e de 2º grau, não sendo admissível, entretanto, sob a modalidade de dolo eventual;
+** D) A, nadador experimentado, convence seu amigo B a nadarem juntos em mar bravio, sabendo que este é mau nadador: se A, com consciência da situação de perigo e podendo concretamente agir, não impede o afogamento fatal de B, abandonando-o à própria sorte, responde pelo crime de omissão de socorro, majorado pelo resultado de morte (CP, art. 135, § único);
+** E) Se o motorista A, podendo concretamente agir e consciente da situação de perigo, deixa de socorrer o desconhecido B, ferido na rodovia em razão de atropelamento, pode ser responsabilizado por omissão de ação própria, exceto se B for socorrido na sequência por terceiro, sobrevivendo ao atropelamento sem sequelas, hipótese em que A não será responsabilizado criminalmente.
+*** Gabarito: A
+**** Tipicidade, Arrependimento posterior
+-----
+* Sobre o tipo dos crimes culposos, assinale a alternativa incorreta:
+** A) Na culpa inconsciente, o autor não prevê resultado previsível de lesão ao bem jurídico;
+** B) na culpa consciente, o autor prevê resultado previsível de lesão ao bem jurídico, mas confia poder evitar;
+** C) O erro de tipo evitável sobre a posição de garantidor do bem jurídico admite imputação penal do fato por omissão de ação imprópria, na modalidade culposa, se prevista em lei;
+** D) A imputação do resultado de lesão do bem jurídico ao autor pode ser excluída em hipóteses de resultados situados fora da área de proteção do tipo como a autoexposição a perigo, por exemplo;
+** E) Para a teoria da individualização, a capacidade individual, que orienta o juízo sobre o dever de cuidado ou o risco permitido, deve ser verificada na culpabilidade.
+*** Gabarito: E
+**** Tipicidade, Tipo Penal Culposo
+-----
+* Marque a opção correta.
+** A) Quanto ao Lugar do crime, o Direito brasileiro adotou a Teoria da Atividade segundo a qual o Lugar do delito é aquele em que se verificou o ato executivo.
+** B) O princípio da irretroatividade da lei penal é corolário do princípio da anterioridade da lei penal e limita-se às normas penais de caráter material.
+** C) O Código Penal Brasileiro adotou, em relação ao dolo, a Teoria da Representação, segundo a qual para a existência do dolo é suficiente a representação subjetiva ou a previsão do resultado como certo ou provável.
+** D) Os crimes comissivos por omissão são objetivamente descritos com uma conduta negativa, não se exigindo um resultado naturalístico.
+** E) O conceito analítico de crime, segundo a Teoria Tripartite, crime é fato típico, antijurídico, culpável e punível.
+*** Gabarito: B
+**** Tipicidade, Tipo Penal Doloso, Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Lei penal no espaço, Teoria Geral do Delito, Conceito de crime, Conduta: ação / omissão
+-----
+* Marque a opção correta.
+** A) "W" foi condenado definitivamente a uma pena privativa de liberdade de 10 (dez) anos de reclusão e à perda do cargo público. Durante o trâmite processual penal, foi concedido a "W" aposentadoria proporcional ao tempo de serviço. Nesses termos, a autoridade administrativa deverá instaurar processo administrativo disciplinar para cassar a aposentadoria concedida.
+** B) "Z" comete crime mediante grave ameaça e decide reparar, integralmente, o dano por ele causado à vítima após o recebimento da denúncia, mas antes de proferida a sentença. Nesses termos, aplica-se a "Z" o Instituto do Arrependimento Posterior.
+** C) "X", pretendendo matar "U" para que esse não participasse de procedimento licitatório, desferiu- lhe uma facada no abdômen, mas, voluntariamente, desiste de prosseguir em seu intento e imediatamente leva "U" para o hospital, o qual não resiste e morre em consequência da lesão. Aplica-se a "X" o Instituto da Desistência Voluntária.
+** D) Age negligentemente o cirurgião plástico que causa a morte da paciente durante um ato cirúrgico.
+** E) Nos crimes unissubsistentes o processo executivo coincide temporalmente com a consumação, não se admitindo a tentativa.
+*** Gabarito: E
+**** Tipicidade, Classificação dos crimes, Desistência voluntária e arrependimento eficaz, Arrependimento posterior, Crimes plurissubsistentes e unissubsistentes
+-----
+* É correto afirmar que, o "error in persona" (erro sobre a pessoa):
+** A) é caso de erro acidental.
+** B) é caso de erro essencial.
+** C) configura descriminante putativa.
+** D) configura escusa absolutória.
+*** Gabarito: A
+**** Tipicidade, Erro de tipo acidental
+-----
+* O advogado "Caio", por engano, pegou o guarda-chuva de seu colega "Tício", que estava pendurado no balcão do cartório.
+* Com base no exemplo, é correto afirmar que "Caio" não responderá por crime de furto, pois:
+** A) ele incidiu em erro acidental sobre dados secundários da figura tópica do furto.
+** B) incorreu em erro de proibição invencível.
+** C) faltou-lhe potencial consciência da ilicitude.
+** D) ele incidiu em erro sobre elemento constitutivo do tipo legal do crime de furto (erro de tipo essencial).
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição, Erro do tipo essencial, Erro de tipo acidental
+-----
+* Sobre o erro de tipo essencial, que recai sobre elemento constitutivo do tipo legal de crime, é correto afirmar que:
+** A) exclui o dolo somente quando for evitável.
+** B) permite a redução da pena, se for inevitável.
+** C) sempre exclui o dolo, seja evitável, seja inevitável, mas permite a punição por crime culposo, se houver previsão legal dessa modalidade.
+** D) sempre exclui o dolo e a culpa quer seja inevitável ou evitável.
+*** Gabarito: C
+**** Tipicidade, Erro do tipo essencial
+-----
+* "Alpha", com intenção de matar, põe veneno na comida de "Beta", seu desafeto.
+* Este, quando já está tomando a refeição envenenada, vem a falecer exclusivamente em conseqüência de um desabamento do teto.
+* No exemplo dado, é correto afirmar que "Alpha" responderá tão-somente por tentativa de homicídio, porquanto:
+** A) o desabamento é causa concomitante relativamente independente da conduta de "Alpha", que exclui o nexo causal entre esta e o resultado "morte".
+** B) o desabamento é causa superveniente relativamente independente da conduta de "Alpha", que exclui o nexo causal entre esta e o resultado "morte".
+** C) o desabamento do teto é causa superveniente absolutamente independente da conduta de "Alpha", que exclui o nexo causal entre esta e o resultado "morte".
+** D) o desabamento é causa concomitante absolutamente independente da conduta de "Alpha", que exclui o nexo causal entre esta e o resultado "morte".
+*** Gabarito: C
+**** Tipicidade, Nexo de causalidade, Crimes contra a vida, Homicídio
+-----
+* No que concerne aos crimes consumado e tentado, é correto afirmar:
+** A) Há crime consumado quando o agente praticou todos os atos necessários à consumação do delito, que não ocorreu por circunstâncias alheias à sua vontade.
+** B) A cogitação não externada a terceiros da prática de um delito só é punível a título de culpa.
+** C) O crime de peculato culposo não admite tentativa.
+** D) Por ser a tentativa a realização incompleta do tipo penal, no crime tentado não há tipicidade.
+** E) A consumação do crime de concussão ocorre com o recebimento da vantagem indevida.
+*** Gabarito: C
+**** Tipicidade, Consumação e tentativa
+-----
+* A respeito da relação de causalidade, é INCORRETO afirmar:
+** A) Se o evento resultou de causa absolutamente independente, o agente por ele responde a título de culpa.
+** B) Concausa é a confluência de uma causa na produção de um mesmo resultado, estando lado a lado com a ação do agente.
+** C) A superveniência de causa relativamente independente exclui a imputação quando, por si só, produziu o resultado, imputando-se, porém, os fatos anteriores a quem os praticou.
+** D) O Código Penal brasileiro considera causa a ação ou omissão sem a qual o resultado não teria ocorrido.
+** E) O resultado, de que depende a existência do crime, somente é imputável a quem lhe deu causa.
+*** Gabarito: A
+**** Tipicidade, Nexo de causalidade, Causas absolutamente independentes, Causas relativamente independentes
+-----
+* João, que nunca usou uma arma de fogo, manuseia uma e acaba por dispará-la, matando José, que a tudo assistia ao seu lado.
+* Ao fazer isso, pratica uma conduta culposa
+** A) imprudente
+** B) negligente
+** C) imperita
+** D) inconsciente
+*** Gabarito: A
+**** Tipicidade, Tipo Penal Culposo
+-----
+* João, ao sair do mercado, pega uma bicicleta idêntica à sua, que havia estacionado do lado de fora do estabelecimento, e deixa o local conduzindo-a.
+* Ao fazer isso, incide em erro
+** A) de direito
+** B) na execução
+** C) de tipo
+** D) de proibição
+*** Gabarito: C
+**** Tipicidade, Erro de tipo acidental
+-----
+* O tipo penal objetivo é composto, além do núcleo, por elementos secundários ou circunstanciais explícitos ou implícitos.
+* Nesse contexto, qual das expressões típicas abaixo constitui um elemento normativo do tipo?
+** A) O "alguém", no crime de homicídio.
+** B) O "assenhoreamento definitivo", no crime de furto.
+** C) O "documento", no crime de falsidade documental.
+** D) A "coisa móvel", no crime de roubo ou furto.
+*** Gabarito: C
+**** Tipicidade
+-----
+* Magrillo, contumaz praticante de crimes contra o patrimônio, decide subtrair uma quantia em dinheiro que supostamente X traria para casa.
+* Para tanto, convida Cabelo de Anjo, seu velho conhecido de empreitadas criminosas.
+* Ao chegar em casa do trabalho, X é ameaçado e, posteriormente, amarrado pelos agentes, que exigem a entrega do dinheiro, mas ao perceberem que não havia nenhum dinheiro com a vítima, a abandonam amarrada aos pés da mesa da cozinha.
+* Nessa hipótese, Magrillo e Cabelo de Anjo praticaram
+** A) roubo na forma tentada
+** B) crime impossível por absoluta ineficácia do meio
+** C) furto na forma tentada
+** D) crime impossível por absoluta impropriedade do objeto
+*** Gabarito: A
+**** Tipicidade, Crime impossível, Crimes contra o patrimônio, Furto, Roubo
+-----
+* Abel, com intenção de matar, disparou um tiro de revólver contra Bruno, que foi socorrido e, dias depois, faleceu em decorrência do desabamento do prédio do hospital onde convalescia dos ferimentos causados pelo disparo.
+* Carlos foi esfaqueado por Daniel, que pretendia matá-lo, e, embora tenha resistido às feridas, morreu dias depois, em decorrência de septicemia originada por infecção bacteriana contraída em razão dos ferimentos, apesar do rigoroso tratamento médico a que fora submetido.
+* Fátima submeteu-se a uma cirurgia, após haver sido gravemente ferida por Eliana, que pretendia matá-la, e, já bastante debilitada pelos ferimentos sofridos, morreu em razão de hemorragia no curso do procedimento cirúrgico realizado por médico imperito.
+* Considerando as situações hipotéticas acima apresentadas, assinale a opção correta.
+** A) O médico imperito e Eliana, autora das lesões, podem responder, em concurso de pessoas, pelo resultado morte.
+** B) Abel deve responder por homicídio, pois, se não houvesse disparado o tiro contra Bruno, este não teria sido internado no hospital e, portanto, não teria morrido em decorrência do desabamento do prédio.
+** C) Daniel deve responder por tentativa de homicidio, pois a septicemia não foi, no caso em questão, decorrência natural dos ferimentos produzidos em Carlos.
+** D) Eliana deve responder por homicídio se for comprovado que a hemorragia poderia ter sido contida, não fosse a gravidade do estado de Fátima, em decorrência da lesão produzida por Eliana.
+*** Gabarito: D
+**** Tipicidade, Nexo de causalidade
+-----
+* Com relação ao que dispõe o Código Penal brasileiro sobre o erro de tipo, assinale a opção correta.
+** A) Se o erro de tipo for evitável, isenta-se de pena o agente.
+** B) O erro de tipo inevitável exclui o dolo e a culpa.
+** C) Sendo inevitável o erro de tipo, exclui-se a culpabilidade.
+** D) Se o erro de tipo for evitável, diminui-se a pena de $1/6$ a $1/3$ em relação ao total legalmente estipulado.
+*** Gabarito: B
+**** Tipicidade, Erro do tipo essencial, Erro de tipo acidental
+-----
+* A respeito do erro em matéria penal, assinale a opção correta.
+** A) Erro de pessoa e aberratio ictus são espécies de erro na execução do crime, não tendo nenhuma relação com a representação que o agente faz da realidade.
+** B) Consoante a teoria estrita da culpabilidade, o erro penalmente relevante referido a uma causa de exclusão da ilicitude pode, ou não, configurar erro de permissão, ou seja, erro de proibição indireto.
+** C) De acordo com a teoria limitada da culpabilidade, o erro de tipo permissivo é inconfundível com a hipótese descrita expressamente no Código Penal brasileiro como descriminante putativa.
+** D) Segundo a teoria extremada do dolo, o erro inevitável, seja em relação aos elementos do tipo, seja em relação à consciência da ilicitude, sempre exclui o dolo e, em consequência, também a culpabilidade.
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição, Erro do tipo essencial, Erro de tipo acidental
+-----
+* Analise a alternativa que contém a afirmação correta:
+** A) Considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado.
+** B) A lei penal posterior que venha a favorecer o réu não se aplica se o mesmo já houver sido julgado.
+** C) Diz-se doloso o crime quando o agente dá causa ao resultado por imprudência ou imperícia.
+** D) Cessando a duração da lei penal temporária, a mesma não pode ser aplicada aos fatos praticados durante a sua vigência.
+** E) Não há crime quando o agente pratica o fato em razão de embriaguez involuntária completa proveniente de caso fortuito ou força maior.
+*** Gabarito: A
+**** Tipicidade, Conduta: ação / omissão
+-----
+* Em relação aos crimes dolosos e culposos, é correto afirmar:
+** A) a culpa estará caracterizada se o agente previu o resultado e assumiu o risco de produzi-lo.
+** B) o dolo estará caracterizado quando o agente quis o resultado ou assumiu o risco de produzi-lo.
+** C) a culpa consciente estará caracterizada quando o agente assumiu o risco de produzir o resultado do crime.
+** D) o dolo estará caracterizado se o agente previu o resultado, mas não assumiu o risco de produzi-lo.
+** E) com fundamento na parte geral do Código Penal, o agente será responsabilizado pela prática de crime culposo se praticar uma conduta prevista na lei como crime doloso, mas tenha agido com imprudência, imperícia ou negligência, independentemente da previsão legal do crime na modalidade culposa.
+*** Gabarito: B
+**** Tipicidade, Tipo Penal Doloso, Tipo Penal Culposo
+-----
+* O arrependimento posterior
+** A) não influi no cálculo da prescrição penal.
+** B) prescinde de voluntariedade do agente.
+** C) deve ocorrer até o oferecimento da denúncia ou da queixa.
+** D) constitui circunstância atenuante, a ser considerada na segunda etapa do cálculo da pena.
+** E) pode reduzir a pena abaixo do mínimo previsto para o crime.
+*** Gabarito: E
+**** Tipicidade, Arrependimento posterior
+-----
+* Assinale a alternativa correta:
+** A) não é nulo o contrato de trabalho que tem por objeto o jogo do bicho, mesmo se tratando de uma contravenção penal.
+** B) constitui apropriação indébita previdenciária deixar de repassar à previdência social as contribuições recolhidas dos contribuintes, no prazo e forma legal ou convencional, podendo ser extinta a punibilidade se o agente, espontaneamente, declara, confessa e efetua o pagamento das contribuições, importâncias ou valores e presta as informações devidas à previdência social, na forma definida em lei ou regulamento, antes do início da ação fiscal.
+** C) a responsabilidade pelos atos praticados, ilícitos ou crimes cometidos, no curso da greve, será apurada, conforme o caso, segundo a legislação trabalhista ou penal, e não segundo a legislação civil.
+** D) não constitui crime de falsidade, para efeitos de emissão, substituição ou anotação de Carteira de Trabalho e Previdência Social, anotar dolosamente em Carteira de Trabalho e Previdência Social ou registro de empregado, ou confessar ou declarar em juízo ou fora dele, data de admissão em emprego diversa da verdadeira.
+** E) constitui crime de atentado contra a liberdade de trabalho constranger alguém, em qualquer hipótese, a participar de parede ou paralisação de atividade econômica.
+*** Gabarito: B
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime, Consumação e tentativa
+-----
+* João possui um restaurante. No mesmo dia, os garçons José e Pedro quebraram vários copos, porque os transportavam empilhados nas bandejas.
+* Quando da admissão dos garçons, João os ensinou a não colocar os copos empilhados nas bandejas, mas a transportá-los um ao lado do outro.
+* Entendeu João que os garçons foram imprudentes, ao não agirem com a cautela necessária para evitar o dano.
+* Pedro, aliás, já havia sofrido punição de advertência anteriormente, pela prática da mesma falta.
+* José procurou João para contar que havia quebrado os copos, enquanto que João ficou sabendo que Pedro quebrou os copos porque a cozinheira lhe avisou.
+* Quando João chamou José para conversar sobre o ocorrido, José estava colando os copos quebrados.
+* Por sua vez, Pedro já havia colocado os cacos dos copos na lata de lixo.
+* João, então, resolveu punir José com uma advertência por escrito e Pedro com uma suspensão de 1 dia de serviço.
+* Assinale qual conceito penal aplicável ao Direito do Trabalho que o empregador não poderia ter utilizado no exercício de seu poder disciplinar:
+** A) modalidade de culpa.
+** B) circunstância atenuante da confissão espontânea.
+** C) reincidência.
+** D) arrependimento eficaz.
+** E) individualização da pena.
+*** Gabarito: D
+**** Tipicidade, Teoria Geral do Delito, Conceito de crime, Consumação e tentativa
+-----
+* Quanto aos crimes contra o patrimônio, é possível afirmar que
+** A) na extorsão o agente busca a obtenção de vantagem ilícita, ainda que não econômica.
+** B) a fraude, no furto qualificado, antecede o apossamento da coisa e é a causa de sua entrega ao agente pela vítima.
+** C) a receptação qualificada exige que a coisa seja recebida pelo agente no exercício de atividade comercial ou industrial clandestinas.
+** D) o delito de dano culposo contra o patrimônio da União é de ação penal pública incondicionada.
+** E) é incabível o arrependimento posterior no crime de roubo.
+*** Gabarito: E
+**** Tipicidade, Arrependimento posterior, Ação penal, Crimes contra o patrimônio, Furto, Roubo, Extorsão, Dano, Receptação
+-----
+* Em matéria de dolo e culpa, é correto afirmar que
+** A) é indispensável a previsibilidade do resultado pelo agente nos crimes culposos.
+** B) é prescindível o nexo causal entre a conduta e o resultado nos crimes culposos.
+** C) há culpa consciente quando o agente não prevê o resultado, embora este seja previsível.
+** D) excluem a culpabilidade, se ausentes.
+** E) o agente só responderá pelo resultado que agrava especialmente a pena quando o houver causado dolosamente.
+*** Gabarito: A
+**** Tipicidade, Tipo Penal Doloso, Tipo Penal Culposo
+-----
