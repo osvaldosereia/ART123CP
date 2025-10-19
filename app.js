@@ -1,13 +1,12 @@
-// app.js  —  SPA de estudo com dump QC (gabarito ao final)
-// Requisitos: IDs e template conforme index.html fornecido
+// app.js — SPA de estudo
+// ATENÇÃO: UI intacta. Alterado apenas o parser para aceitar JSON (novo formato) além do texto antigo.
 
-// ====== CATÁLOGO ESTÁTICO (ajuste os caminhos conforme seu /data) ======
 const CATALOG = {
   'Direito Penal': [
+    // Ajuste estes caminhos conforme sua pasta /data
+    // Ex.: 'data/quiz-1-10.json',
     'data/direito-penal/p3_p2_p1_merged.txt',
   ],
-  // Exemplo para expandir:
-  // 'Direito Constitucional': ['data/constitucional/lote1.txt','data/constitucional/lote2.txt'],
 };
 
 // ====== ELEMENTOS ======
@@ -39,10 +38,10 @@ const els = {
 const state = {
   category: null,
   files: [],
-  allQuestions: [],      // todas as questões da categoria
-  themesIndex: new Map(),// tema -> array de índices (em allQuestions)
+  allQuestions: [],
+  themesIndex: new Map(),
   selectedThemes: new Set(),
-  sessionQuestions: [],  // questões filtradas por tema
+  sessionQuestions: [],
   order: [],
   pageSize: 3,
   page: 0,
@@ -134,7 +133,7 @@ async function onSelectCategory(name){
   const flat = parsed.flatMap(p => p.questions);
   state.allQuestions = flat;
 
-  // Construir índice de temas
+  // Construir índice de temas (mesma heurística de antes)
   state.themesIndex = buildThemesIndex(state.allQuestions);
   renderThemeChips(state.themesIndex);
 
@@ -145,12 +144,10 @@ async function onSelectCategory(name){
 function renderThemeChips(map){
   state.selectedThemes.clear();
   const entries = [...map.keys()].sort((a,b)=> a.localeCompare(b,'pt-BR'));
-  // Sempre incluir "Todos"
   if (!entries.includes('*')) entries.unshift('*');
   els.themesGrid.innerHTML = entries.map(t =>
     `<button class="chip" type="button" aria-pressed="${t === '*' ? 'true':'false'}" data-theme="${escapeHtml(t)}">${escapeHtml(labelTheme(t))}</button>`
   ).join('');
-  // seleção default: "Todos"
   state.selectedThemes = new Set(['*']);
   updateThemesCount();
   els.themesGrid.addEventListener('click', onThemeClick, { once: true });
@@ -162,9 +159,7 @@ function onThemeClick(e){
   if (!chip) return;
   const t = chip.dataset.theme;
   const pressed = chip.getAttribute('aria-pressed') === 'true';
-  // lógica "Todos"
   if (t === '*'){
-    // toggle todos para o estado do chip "*"
     const newState = !pressed;
     [...els.themesGrid.children].forEach(c => c.setAttribute('aria-pressed', String(newState)));
     state.selectedThemes = new Set(newState ? [...els.themesGrid.children].map(c=>c.dataset.theme) : []);
@@ -172,7 +167,6 @@ function onThemeClick(e){
     chip.setAttribute('aria-pressed', String(!pressed));
     const on = !pressed;
     if (on) state.selectedThemes.add(t); else state.selectedThemes.delete(t);
-    // se todos exceto "*" estão ligados, liga "*"; se qualquer um desligar, desliga "*"
     const others = [...els.themesGrid.children].filter(c => c.dataset.theme !== '*');
     const allOn = others.every(c => c.getAttribute('aria-pressed') === 'true');
     const star = els.themesGrid.querySelector('.chip[data-theme="*"]');
@@ -183,7 +177,6 @@ function onThemeClick(e){
   }
   updateThemesCount();
   updateStartEnabled();
-  // Re-ligar listener contínuo
   els.themesGrid.addEventListener('click', onThemeClick, { once: true });
 }
 
@@ -196,7 +189,6 @@ function updateThemesCount(){
 }
 
 function startQuiz(){
-  // filtrar por temas
   const selected = [...state.selectedThemes];
   let ids = new Set();
   if (selected.includes('*')) {
@@ -208,11 +200,9 @@ function startQuiz(){
   }
   state.sessionQuestions = [...ids].sort((a,b)=> a-b).map(i => state.allQuestions[i]);
 
-  // embaralhar
   state.order = state.sessionQuestions.map((_,i)=>i);
   if (els.optShuffle.checked) shuffle(state.order);
 
-  // UI
   els.list.innerHTML = '';
   state.page = 0;
   state.done.clear();
@@ -224,10 +214,7 @@ function startQuiz(){
   els.home.classList.add('hidden');
   els.quiz.classList.remove('hidden');
 
-  // Persistência
   persistProgress('init');
-
-  // Primeiro lote
   mountNextPage();
 }
 
@@ -266,7 +253,6 @@ function mountCard(sessionIndex){
 
   node.querySelector('.q-show').addEventListener('click', () => reveal(node, q.correta, sessionIndex));
   node.querySelector('.q-next').addEventListener('click', () => {
-    // rolar até próximo card
     const next = node.nextElementSibling;
     if (next) next.scrollIntoView({behavior:'smooth', block:'start'});
     else els.sentinel.scrollIntoView({behavior:'smooth', block:'end'});
@@ -342,12 +328,18 @@ function persistProgress(kind, extra={}){
   localStorage.setItem(state.storageKey, JSON.stringify(data));
 }
 function restoreLastSession(){
-  // opcional: apenas exibe badge “Zerar” funcional desde o início
   els.btnReset.disabled = false;
 }
 
-// ====== PARSER QC ======
+// ====== PARSER (JSON novo + texto antigo) ======
 function parseQC(raw, sourceName){
+  // 1) Tenta JSON do novo formato
+  const asJson = tryParseJson(raw);
+  if (asJson) {
+    const questions = parseFromJson(asJson, sourceName);
+    return { questions };
+  }
+  // 2) Fallback: texto antigo com “Respostas/Gabarito”
   const norm = normalize(raw);
   const keyMap = parseAnswerKey_full(norm);
   const blocks = splitQuestions(norm);
@@ -356,26 +348,135 @@ function parseQC(raw, sourceName){
   for (const b of blocks) {
     const q = parseQuestionBlock(b);
     if (!q) continue;
+    // descartar questões com imagem (URLs de imagem ou tags)
+    if (hasImageHint(q.enunciado) || q.alternativas.some(a => hasImageHint(a.text))) continue;
+
     const k = keyMap.get(q.numero);
     if (!k) continue;
     const corr = mapCEtoVF(k);
-    // manter consistente com alternativas
     const has = q.alternativas.some(a => a.key === corr);
-    if (!has) {
-      const isVF = q.alternativas.every(a => a.key === 'V' || a.key === 'F');
-      if (isVF && (corr === 'V' || corr === 'F')) {
-        // ok
-      } else {
-        continue;
-      }
-    }
+    const isVF = q.alternativas.every(a => a.key === 'V' || a.key === 'F');
+    if (!has && !(isVF && (corr === 'V' || corr === 'F'))) continue;
+
     q.correta = corr;
-    q.fonte = sourceName || 'QConcursos dump';
+    q.fonte = sourceName || 'dump';
     questions.push(q);
   }
   return { questions };
 }
 
+// ====== JSON (novo formato) ======
+function tryParseJson(t){
+  const s = t.trim();
+  if (!s || (s[0] !== '{' && s[0] !== '[')) return null;
+  try { return JSON.parse(s); } catch { return null; }
+}
+
+function parseFromJson(doc, sourceName){
+  // Esperado: { pages: [ { questions: [ { title, options: [...], correctIndex } ] } ] }
+  const pages = Array.isArray(doc?.pages) ? doc.pages : Array.isArray(doc) ? doc : [];
+  const questions = [];
+  let seq = 1;
+
+  for (const p of pages){
+    const qs = Array.isArray(p?.questions) ? p.questions : [];
+    for (const q of qs){
+      // Enunciado
+      let stem = String(q?.title ?? '').trim();
+      // Se houver um “header” em options[0], preferir o texto do title e ignorar metadados
+      const opts = Array.isArray(q?.options) ? q.options : [];
+      // Alternativas: mapear de A..E
+      const alts = collectAlternativesFromOptions(opts);
+
+      // Descartar questões sem alternativas úteis
+      if (alts.length < 4) { seq++; continue; }
+
+      // Descartar questões com imagem
+      if (hasImageHint(stem) || alts.some(a => hasImageHint(a.text))) { seq++; continue; }
+
+      // id_qc opcional a partir do título “Q12345”
+      const id_qc = extractQCId(stem);
+
+      // correta a partir de correctIndex
+      const ciRaw = Number.isInteger(q?.correctIndex) ? q.correctIndex : null;
+      const ci = normalizeCorrectIndex(ciRaw, alts.length);
+      if (ci == null) { seq++; continue; }
+      const letter = indexToLetter(ci); // 0-based -> A,B,C,...
+
+      // Validar que a letra existe
+      if (!alts.some(a => a.key === letter)) { seq++; continue; }
+
+      questions.push({
+        numero: seq,
+        id_qc,
+        tipo: deduceType(alts),
+        enunciado: plain(stem),
+        alternativas: alts,
+        correta: letter,
+        fonte: sourceName || 'json',
+      });
+      seq++;
+    }
+  }
+  return questions;
+}
+
+function collectAlternativesFromOptions(options){
+  // options pode conter um cabeçalho em [0]; mapear as alternativas textuais seguintes
+  const out = [];
+  const startAt = detectOptionsStart(options);
+  const letters = ['A','B','C','D','E'];
+  for (let i = startAt; i < options.length && out.length < letters.length; i++){
+    const raw = options[i];
+    const text = typeof raw === 'string' ? raw : String(raw?.text ?? '');
+    const clean = cleanupOption(text);
+    if (!clean) continue;
+    out.push({ key: letters[out.length], text: clean });
+  }
+  return out;
+}
+
+function detectOptionsStart(options){
+  // Heurística: se options[0] parecer cabeçalho (contém “Disciplina”/“Banca”/“Ano” ou for muito longo), começar em 1
+  if (!Array.isArray(options) || options.length === 0) return 0;
+  const first = typeof options[0] === 'string' ? options[0] : String(options[0]?.text ?? '');
+  const hint = /Disciplina|Banca|Órgão|Orgao|Ano|Alternativas/i.test(first) || first.length > 240;
+  return hint ? 1 : 0;
+}
+
+function normalizeCorrectIndex(ci, altsLen){
+  if (!Number.isInteger(ci)) return null;
+  // aceitar 1-based (1..altsLen) ou 0-based (0..altsLen-1)
+  if (ci >= 1 && ci <= altsLen) return ci - 1;
+  if (ci >= 0 && ci < altsLen) return ci;
+  return null;
+}
+
+function indexToLetter(i){ return String.fromCharCode(65 + i); } // 0->A
+function deduceType(alts){
+  const keys = new Set(alts.map(a=>a.key));
+  return ([...keys].every(k => k==='V' || k==='F')) ? 'VF' : 'ME';
+}
+function plain(s){ return String(s).replace(/\s+/g,' ').trim(); }
+function cleanupOption(s){
+  const t = String(s || '').replace(/\s+/g,' ').trim();
+  if (!t) return '';
+  if (/^alternativas?:?\s*$/i.test(t)) return '';
+  return t;
+}
+function extractQCId(s){
+  const m = String(s).match(/\bQ(\d{3,})\b/i);
+  return m ? m[1] : null;
+}
+function hasImageHint(s){
+  if (!s) return false;
+  const txt = String(s);
+  if (/<img\b/i.test(txt)) return true;
+  if (/\bhttps?:\/\/\S+\.(png|jpe?g|gif|webp|svg)\b/i.test(txt)) return true;
+  return false;
+}
+
+// ====== TEXTO ANTIGO ======
 function normalize(text){
   let t = text.replace(/\r\n?/g, '\n');
   t = t.replace(/\t/g, ' ');
@@ -385,30 +486,25 @@ function normalize(text){
 }
 
 function parseAnswerKey_full(text){
-  // Captura blocos intitulados “Respostas” ou “Gabarito”, se existirem; se não, usa o arquivo todo
   const sections = [...text.matchAll(/(?:^|\n)\s*(?:Respostas?|Gabarito)[^\n]*\n([\s\S]*?)(?=\n\s*(?:Respostas?|Gabarito)\b|$)/gmi)];
   const body = sections.length ? sections.map(m=>m[1]).join('\n') : text;
   const map = new Map();
-  // intervalos: 61-80: D
   for (const m of body.matchAll(/(^|\s)(\d+)\s*-\s*(\d+)\s*:\s*([A-ECEVF])/gmi)){
     const a = +m[2], b = +m[3], v = m[4].toUpperCase();
     for (let n=a; n<=b; n++) map.set(n, v);
   }
-  // pares: 61: D  62:B
   for (const m of body.matchAll(/(^|\s)(\d+)\s*:\s*([A-ECEVF])/gmi)){
-    map.set(+m[2], m[3].toUpperCase()); // última ocorrência vence
+    map.set(+m[2], m[3].toUpperCase());
   }
   return map;
 }
 
 function splitQuestions(text){
-  // Delimita por linha iniciando com número e opcional Q\d+
   const lines = text.split('\n');
   const idxs = [];
   const head = /^\s*(\d{1,5})(?:\s+Q\d+)?\b/;
   for (let i=0;i<lines.length;i++){
     if (head.test(lines[i])) idxs.push(i);
-    // parar antes do primeiro "Respostas"/"Gabarito"
     if (/^\s*(Respostas?|Gabarito)\b/i.test(lines[i])) break;
   }
   const blocks = [];
@@ -422,15 +518,13 @@ function splitQuestions(text){
 }
 
 function parseQuestionBlock(block){
-  // Cabeçalho
   const headerRe = /^\s*(\d{1,5})(?:\s+Q(\d+))?/;
   const h = block.match(headerRe);
   if (!h) return null;
   const numero = Number(h[1]);
   const id_qc = h[2] ? String(h[2]) : null;
 
-  const body = block.split('\n').slice(1); // remove cabeçalho
-  // Encontrar primeira alternativa
+  const body = block.split('\n').slice(1);
   const altMarkers = body.map((l,i)=> isAltMarker(l) ? i : -1).filter(i=>i>=0);
   if (!altMarkers.length) return null;
   const firstAlt = altMarkers[0];
@@ -445,7 +539,6 @@ function parseQuestionBlock(block){
     if (isAltMarker(line)){
       if (current) alts.push(current);
       const m = splitMarker(line);
-      // caso “letra sozinha”, anexar próxima(s) linhas até outro marcador
       if (m.text === '' || !m.text.trim()){
         let j = i+1;
         let buf = [];
@@ -466,11 +559,9 @@ function parseQuestionBlock(block){
   }
   if (current) alts.push(current);
 
-  // Tipo
   const keys = new Set(alts.map(a=>a.key));
   let tipo = (keys.size && [...keys].every(k => k==='V'||k==='F')) ? 'VF' : 'ME';
 
-  // Filtrar e normalizar
   const valid = tipo==='ME' ? ['A','B','C','D','E'] : ['V','F'];
   const alternativas = alts
     .filter(a => valid.includes(a.key))
@@ -487,7 +578,6 @@ function cleanNoise(lines){
 }
 
 function isAltMarker(line){
-  // A)  B.  C-  V)  F)   OU letra sozinha na linha
   return /^\s*([ABCDEVFabcdevf])(?:[\)\.\-]\s+|\s*$)/.test(line);
 }
 function splitMarker(line){
@@ -497,8 +587,8 @@ function splitMarker(line){
 }
 function normalizeKey(k){
   k = k.toUpperCase();
-  if (k==='C') return 'C'; // só no gabarito
-  if (k==='E') return 'E'; // ambíguo, resolvido no gabarito
+  if (k==='C') return 'C';
+  if (k==='E') return 'E';
   return k;
 }
 function mapCEtoVF(letter){
@@ -509,10 +599,8 @@ function mapCEtoVF(letter){
 
 // ====== TEMAS ======
 function buildThemesIndex(questions){
-  // Heurística leve. Cria pelo menos o tema "*" = Todos.
   const idx = new Map();
   idx.set('*', questions.map((_,i)=>i));
-  // Extração: pega bigramas frequentes de palavras-chave no enunciado
   const stop = new Set(['de','da','do','dos','das','e','a','o','os','as','em','no','na','nos','nas','para','por','com','sem','um','uma','ao','à','às','ou','que','se','é','ser','sobre','não','nos','às','um','uma','sua','seu','são','como','qual','quais','entre','pela','pelo']);
   const freq = new Map();
   questions.forEach((q,i)=>{
@@ -535,11 +623,7 @@ function buildThemesIndex(questions){
         idx.get(t).push(i); tagged = true;
       }
     }
-    if (!tagged){
-      // nada
-    }
   });
-  // Remover temas vazios
   for (const [t,arr] of [...idx.entries()]){
     if (t !== '*' && arr.length === 0) idx.delete(t);
   }
