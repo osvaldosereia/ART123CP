@@ -3208,7 +3208,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra a administração pública Peculato
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Crimes contra a administração pública, Peculato
 
 -----
 * Dentro dos critérios de solução do conflito aparente de normas, é correto afirmar que o princípio da:
@@ -6076,7 +6076,7 @@ Estão certos apenas os itens
 ** C) Somente as proposições II e III estão corretas.
 ** D) Somente as proposições I e IV estão corretas.
 *** Gabarito: C
-**** Noções Fundamentais do Direito Penal, Lei penal no espaço, Crimes contra a administração pública Fraude processual
+**** Noções Fundamentais do Direito Penal, Lei penal no espaço, Crimes contra a administração pública, Fraude processual
 -----
 * É certo afirmar:
 * I. Para os efeitos penais, consideram-se como extensão do território nacional as embarcações e aeronaves brasileiras, de natureza pública ou a serviço do governo brasileiro onde quer que se encontrem, bem como as aeronaves e as embarcações brasileiras, mercantes ou de propriedade privada, que se achem, respectivamente, no espaço aéreo correspondente ou em alto-mar.
@@ -6779,7 +6779,7 @@ Estão certos apenas os itens
 ** D) transforma tipos penais clássicos, como a desobediência e o desacato, em meros ilícitos administrativos.
 ** E) é uma forma de expansão do direito penal, em que este, que normalmente reage a posteriori quanto ao fato lesivo individualmente delimitado, se converte em um direito de gestão punitiva de riscos gerais.
 *** Gabarito: E
-**** Noções Fundamentais do Direito Penal, A norma penal, Crimes contra a administração pública Noções Gerais de Crimes Contra a Administração Pública, Desobediência, Desacato
+**** Noções Fundamentais do Direito Penal, A norma penal, Crimes contra a administração pública, Desobediência, Desacato
 -----
 * De acordo com o Código Penal Brasileiro,
 ** A) nos crimes sem violência ou grave ameaça à pessoa, o arrependimento posterior isenta de pena o autor do crime, desde que reparado o dano até o recebimento da denúncia ou queixa.
