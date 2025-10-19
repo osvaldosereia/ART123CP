@@ -113,7 +113,11 @@ const STATE = {
   cursor: 0,
   observer: /** @type {IntersectionObserver|null} */ (null),
   cache: /** @type {Map<string,{text:string, parsed:any[]}>>} */(new Map()),
-  ms:{ open:false, filter:"", list:[], listStripped:[] }
+  ms:{ open:false, filter:"", list:[], listStripped:[] },
+
+  // NOVO
+  poolQuestions: /** @type {any[]} */([]),
+  
 };
 
 /* ==================== UI HOME ==================== */
@@ -185,6 +189,7 @@ async function buildThemesMultiselect(){
     const parsed = await getParsedForPath(path);
     allParsed.push(...parsed);
   }
+  STATE.poolQuestions = allParsed;
   const set = new Set();
   for (const q of allParsed){ if (Array.isArray(q.themes)) q.themes.forEach(t=>set.add(t)); }
   const temas = [...set].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
@@ -251,15 +256,36 @@ function updateTriggerLabel(){
   const n = STATE.temasSel.size;
   $("#msTemasLabel").textContent = n ? `${n} tema(s) selecionado(s)` : "Selecionar temas";
 }
+
 function updateCount(){
   const vis = getVisibleItems().length;
-  $("#msCount").textContent = `${vis} exibidos · ${STATE.temasSel.size} selecionados`;
+  const sel = STATE.temasSel.size;
+
+  // contar questões do pool que têm AO MENOS um dos temas selecionados
+  let found = 0;
+  if (sel > 0 && Array.isArray(STATE.poolQuestions)){
+    const want = new Set(STATE.temasSel);
+    for (const q of STATE.poolQuestions){
+      const th = q.themes || [];
+      for (let i = 0; i < th.length; i++){
+        if (want.has(th[i])) { found++; break; }
+      }
+    }
+  }
+
+  const suffix = sel ? ` · ${found} questões` : "";
+  $("#msCount").textContent = `${vis} exibidos · ${sel} selecionados${suffix}`;
 }
+
 function getVisibleItems(){
   const f = strip(STATE.ms.filter);
   if(!f) return STATE.ms.list.slice();
-  const out=[]; for(let i=0;i<STATE.ms.list.length;i++){ if(STATE.ms.listStripped[i].includes(f)) out.push(STATE.ms.list[i]); }
+  const out=[];
+  for(let i=0;i<STATE.ms.list.length;i++){
+    if(STATE.ms.listStripped[i].includes(f)) out.push(STATE.ms.list[i]);
+  }
   return out;
+
 }
 function renderMsList(){
   const list = $("#msList"); list.innerHTML="";
