@@ -1,5 +1,6 @@
 // app.js — SPA de estudo
-// UI intacta. Parser aceita JSON novo e texto antigo. Catálogo autodetectado via GitHub API.
+// UI intacta. Parser aceita: JSON novo (pages/questions), JSON {lines:[...]}, texto antigo.
+// Catálogo autodetectado via GitHub API.
 
 // ====== CATÁLOGO DINÂMICO ======
 let CATALOG = {}; // preenchido em discoverCatalog()
@@ -194,7 +195,7 @@ function startQuiz(){
   els.kTotal.textContent = state.sessionQuestions.length;
   els.pathInfo.textContent = `${state.category} • ${summaryThemes()}`;
   els.home.classList.add('hidden');
-  els.quiz.classList.remove('hidden');
+  els.quiz.classList.removeClass?.('hidden') || els.quiz.classList.remove('hidden'); // compat
 
   persistProgress('init');
   mountNextPage();
@@ -313,13 +314,28 @@ function restoreLastSession(){
   els.btnReset.disabled = false;
 }
 
-// ====== PARSER (JSON novo + texto antigo) ======
+// ====== PARSER (JSON novo + JSON {lines} + texto antigo) ======
 function parseQC(raw, sourceName){
   const asJson = tryParseJson(raw);
-  if (asJson) {
+
+  // 1) JSON com pages/questions (novo)
+  if (asJson && (Array.isArray(asJson?.pages) || Array.isArray(asJson))) {
     const questions = parseFromJson(asJson, sourceName);
     return { questions };
   }
+
+  // 2) JSON no formato {lines:[...]} -> junta e reaproveita caminho textual
+  if (asJson && Array.isArray(asJson?.lines)) {
+    const text = asJson.lines.join('\n');
+    return parseFromText(text, sourceName);
+  }
+
+  // 3) Texto antigo ou HTML convertido para texto
+  return parseFromText(raw, sourceName);
+}
+
+// ====== CAMINHO TEXTO ======
+function parseFromText(raw, sourceName){
   const norm = normalize(raw);
   const keyMap = parseAnswerKey_full(norm);
   const blocks = splitQuestions(norm);
@@ -328,25 +344,30 @@ function parseQC(raw, sourceName){
   for (const b of blocks) {
     const q = parseQuestionBlock(b);
     if (!q) continue;
+
+    // descartar questões com imagem
     if (hasImageHint(q.enunciado) || q.alternativas.some(a => hasImageHint(a.text))) continue;
 
+    // gabarito por índice
     const k = keyMap.get(q.numero);
     if (!k) continue;
     const corr = mapCEtoVF(k);
-    const has = q.alternativas.some(a => a.key === corr);
+
+    // validações
     const isVF = q.alternativas.every(a => a.key === 'V' || a.key === 'F');
-    if (!has && !(isVF && (corr === 'V' || corr === 'F'))) continue;
+    const has = q.alternativas.some(a => a.key === corr) || (isVF && (corr === 'V' || corr === 'F'));
+    if (!has) continue;
 
     q.correta = corr;
-    q.fonte = sourceName || 'dump';
+    q.fonte = sourceName || 'text';
     questions.push(q);
   }
   return { questions };
 }
 
-// ====== JSON (novo formato) ======
+// ====== JSON (pages/questions) ======
 function tryParseJson(t){
-  const s = t.trim();
+  const s = String(t || '').trim();
   if (!s || (s[0] !== '{' && s[0] !== '[')) return null;
   try { return JSON.parse(s); } catch { return null; }
 }
@@ -411,8 +432,8 @@ function detectOptionsStart(options){
 
 function normalizeCorrectIndex(ci, altsLen){
   if (!Number.isInteger(ci)) return null;
-  if (ci >= 1 && ci <= altsLen) return ci - 1;
-  if (ci >= 0 && ci < altsLen) return ci;
+  if (ci >= 1 && ci <= altsLen) return ci - 1; // 1-based
+  if (ci >= 0 && ci < altsLen) return ci;      // 0-based
   return null;
 }
 
@@ -442,13 +463,14 @@ function hasImageHint(s){
 
 // ====== TEXTO ANTIGO ======
 function normalize(text){
-  let t = text.replace(/\r\n?/g, '\n');
+  let t = String(text ?? '').replace(/\r\n?/g, '\n');
   t = t.replace(/\t/g, ' ');
   t = t.replace(/[–—]/g, '-');
   t = t.split('\n').map(line => line.replace(/\s+$/,'')).join('\n');
   return t;
 }
 
+// aceita blocos "1-5: A" e "1: A" etc.
 function parseAnswerKey_full(text){
   const sections = [...text.matchAll(/(?:^|\n)\s*(?:Respostas?|Gabarito)[^\n]*\n([\s\S]*?)(?=\n\s*(?:Respostas?|Gabarito)\b|$)/gmi)];
   const body = sections.length ? sections.map(m=>m[1]).join('\n') : text;
@@ -463,13 +485,14 @@ function parseAnswerKey_full(text){
   return map;
 }
 
+// divide pelos cabeçalhos numéricos "1", "2", "3"… até antes de "Respostas"
 function splitQuestions(text){
   const lines = text.split('\n');
   const idxs = [];
-  const head = /^\s*(\d{1,5})(?:\s+Q\d+)?\b/;
   for (let i=0;i<lines.length;i++){
-    if (head.test(lines[i])) idxs.push(i);
-    if (/^\s*(Respostas?|Gabarito)\b/i.test(lines[i])) break;
+    const line = lines[i];
+    if (/^\s*\d{1,5}\s*(?:Q\d+)?\s*$/.test(line)) idxs.push(i); // número sozinho ou "n Qxxxx"
+    if (/^\s*(Respostas?|Gabarito)\b/i.test(line)) break;
   }
   const blocks = [];
   for (let i=0;i<idxs.length;i++){
@@ -482,70 +505,84 @@ function splitQuestions(text){
 }
 
 function parseQuestionBlock(block){
-  const headerRe = /^\s*(\d{1,5})(?:\s+Q(\d+))?/;
-  const h = block.match(headerRe);
+  // primeira linha: número (e opcional QID ao lado)
+  const firstLine = block.split('\n',1)[0];
+  const headerRe = /^\s*(\d{1,5})(?:\s+Q(\d+))?\s*$/;
+  const h = firstLine.match(headerRe);
   if (!h) return null;
   const numero = Number(h[1]);
   const id_qc = h[2] ? String(h[2]) : null;
 
   const body = block.split('\n').slice(1);
-  const altMarkers = body.map((l,i)=> isAltMarker(l) ? i : -1).filter(i=>i>=0);
-  if (!altMarkers.length) return null;
-  const firstAlt = altMarkers[0];
 
-  const stem = cleanNoise(body.slice(0, firstAlt)).join('\n').trim();
+  // localizar primeira alternativa A..E ou V/F
+  const altIdxs = body.map((l,i)=> isAltMarker(l) ? i : -1).filter(i=>i>=0);
+  if (!altIdxs.length) return null;
+  const firstAlt = altIdxs[0];
+
+  // enunciado: do início até a primeira alternativa, limpando ruído e metadados
+  const stemLines = cleanNoise(body.slice(0, firstAlt))
+    .filter(l => !/^\s*(Ano|Banca|Órgão|Orgao|Prova)\b/i.test(l))
+    .filter(l => !/^\s*(www\.|https?:\/\/)/i.test(l))
+    .filter(l => !/^\s*(>|Breadcrumb|Assunto|Disciplina)\b/i.test(l));
+  const stem = stemLines.join(' ').replace(/\s+/g,' ').trim();
+
+  // alternativas: consolidar letra + texto subsequente até próxima letra
   const altLines = body.slice(firstAlt);
-
   const alts = [];
   let current = null;
   for (let i=0;i<altLines.length;i++){
     const line = altLines[i];
     if (isAltMarker(line)){
-      if (current) alts.push(current);
       const m = splitMarker(line);
-      if (m.text === '' || !m.text.trim()){
-        let j = i+1;
-        let buf = [];
+      // colapsar repetições de letra em linhas seguidas
+      if (current && current.key === m.key && !m.text) continue;
+      if (current) alts.push(current);
+      if (m.text && m.text.trim()){
+        current = { key: m.key, text: m.text.trim() };
+      } else {
+        // agrega linhas até a próxima marca
+        let j = i+1, buf = [];
         while (j < altLines.length && !isAltMarker(altLines[j])){
           const s = altLines[j].trim();
           if (s) buf.push(s);
           j++;
         }
         i = j-1;
-        current = { key: m.key, text: buf.join('\n') };
-      } else {
-        current = { key: m.key, text: m.text };
+        current = { key: m.key, text: buf.join(' ').replace(/\s+/g,' ').trim() };
       }
     } else if (current){
       const s = line.trim();
-      if (s) current.text += '\n' + s;
+      if (s) current.text += ' ' + s;
     }
   }
   if (current) alts.push(current);
 
   const keys = new Set(alts.map(a=>a.key));
-  let tipo = (keys.size && [...keys].every(k => k==='V'||k==='F')) ? 'VF' : 'ME';
-
+  const tipo = (keys.size && [...keys].every(k => k==='V'||k==='F')) ? 'VF' : 'ME';
   const valid = tipo==='ME' ? ['A','B','C','D','E'] : ['V','F'];
   const alternativas = alts
     .filter(a => valid.includes(a.key))
     .map(a => ({ key: a.key, text: a.text.trim() }))
     .filter(a => a.text.length);
 
-  if (!alternativas.length) return null;
+  if (!alternativas.length || !stem) return null;
 
   return { numero, id_qc, tipo, enunciado: stem, alternativas, correta: null };
 }
 
 function cleanNoise(lines){
-  return lines.filter(l => !/^\s*(https?:\/\/|www\.|Treinador|Resumão|Conferir|Baixe|Assine|Prova comentada)/i.test(l));
+  return lines.filter(l =>
+    !/^\s*(https?:\/\/|www\.)/i.test(l) &&
+    !/^\s*(Treinador|Resumão|Conferir|Baixe|Assine|Prova comentada)\b/i.test(l)
+  );
 }
 
 function isAltMarker(line){
-  return /^\s*([ABCDEVFabcdevf])(?:[\)\.\-]\s+|\s*$)/.test(line);
+  return /^\s*([ABCDEVFabcdevf])(?:[\)\.\-:]\s*|\s*$)/.test(line);
 }
 function splitMarker(line){
-  const m = line.match(/^\s*([ABCDEVFabcdevf])(?:[\)\.\-]\s+|\s*$)(.*)$/);
+  const m = line.match(/^\s*([ABCDEVFabcdevf])(?:[\)\.\-:]\s*|\s*)(.*)$/);
   const key = normalizeKey(m[1]);
   return { key, text: (m[2]||'').trim() };
 }
@@ -567,7 +604,7 @@ function buildThemesIndex(questions){
   idx.set('*', questions.map((_,i)=>i));
   const stop = new Set(['de','da','do','dos','das','e','a','o','os','as','em','no','na','nos','nas','para','por','com','sem','um','uma','ao','à','às','ou','que','se','é','ser','sobre','não','nos','às','um','uma','sua','seu','são','como','qual','quais','entre','pela','pelo']);
   const freq = new Map();
-  questions.forEach((q,i)=>{
+  questions.forEach((q)=>{
     const words = q.enunciado
       .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
       .toLowerCase().replace(/[^a-z0-9\s]/g,' ')
@@ -582,9 +619,7 @@ function buildThemesIndex(questions){
   top.forEach(t => idx.set(t, []));
   questions.forEach((q,i)=>{
     for (const t of top){
-      if (q.enunciado.toLowerCase().includes(t)){
-        idx.get(t).push(i);
-      }
+      if (q.enunciado.toLowerCase().includes(t)) idx.get(t).push(i);
     }
   });
   for (const [t,arr] of [...idx.entries()]){
@@ -616,17 +651,14 @@ async function discoverCatalog(){
     const branch = await getDefaultBranch(owner, repo);
     const base = `https://api.github.com/repos/${owner}/${repo}/contents`;
 
-    // listar /data
     const dataRoot = await ghList(`${base}/data?ref=${encodeURIComponent(branch)}`);
     const dirs = dataRoot.filter(e => e.type === 'dir');
 
     const catalog = {};
-    // categorias por subpastas de /data
     for (const d of dirs){
       const files = await collectJsonFiles(`${base}/data/${encodeURIComponent(d.name)}?ref=${encodeURIComponent(branch)}`);
       if (files.length) catalog[humanize(d.name)] = files.map(u => u.download_url);
     }
-    // JSONs soltos em /data
     const loose = dataRoot.filter(e => e.type === 'file' && e.name.toLowerCase().endsWith('.json'));
     if (loose.length){
       catalog['Geral'] = (catalog['Geral'] || []).concat(loose.map(u => u.download_url));
@@ -637,7 +669,6 @@ async function discoverCatalog(){
       return;
     }
 
-    // fallback mínimo: tenta um arquivo padrão se existir em pages
     const fallback = 'data/quiz-1-10.json';
     try {
       const r = await fetch(fallback, {cache:'no-store'});
