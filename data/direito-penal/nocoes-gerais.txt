@@ -3893,7 +3893,7 @@
 ** D) A omissão nunca será penalmente relevante;
 ** E) Nenhuma das assertivas anteriores está correta.
 *** Gabarito: E
-**** Tipicidade, Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal Lei penal no tempo, Consumação e tentativa, Crimes omissivos
+**** Tipicidade, Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Lei penal no tempo, Consumação e tentativa, Crimes omissivos
 
 -----
 * Quanto ao tempo do crime, assinale a opção correta.
@@ -5946,7 +5946,7 @@ Estão certos apenas os itens
 ** D) A reincidência do acusado não é motivo suficiente para afastar a aplicação do princípio da insignificância.
 ** E) Não cabe ao caso a compensação integral da atenuante de confissão espontânea e da agravante de reincidência específica.
 *** Gabarito: D
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Penas privativas de liberdade Reincidência
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Penas privativas de liberdade, Reincidência
 -----
 * A respeito dos princípios constitucionais penais e das escolas penais, assinale a opção correta.
 ** A) Legalidade ou reserva legal, anterioridade, retroatividade da lei penal benéfica, humanidade e in dubio pro reo são espécies de princípios constitucionais penais explícitos.
@@ -6155,7 +6155,7 @@ Estão certos apenas os itens
 ** D) O agente que efetua diversos disparos contra a vítima sinaliza com sua conduta várias ações identificadoras do concurso material homogêneo, aplicando-se cumulativamente as penas.
 ** E) Admite-se a instigação, induzimento ou cumplicidade no fato culposo de outrem em face de contrariedade às normas que instituem um dever de cuidado objetivo.
 *** Gabarito: B
-**** Culpabilidade, Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal Concurso de crimes, Penas privativas de liberdade, Diferenças entre reclusão e detenção
+**** Culpabilidade, Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Concurso de crimes, Penas privativas de liberdade, Diferenças entre reclusão e detenção
 -----
 * Assinale a alternativa correta.
 ** A) A assertiva de que ninguém pode ser punido pelo que pensa ou pelo modo de viver reflete o princípio da exteriorização do fato em direito penal.
@@ -6200,7 +6200,7 @@ Estão certos apenas os itens
 ** D) As alternativas "b" e "c" estão corretas.
 ** E) A individualização da pena é um princípio de direito material implícito atento à individualidade objetiva do delito e condição subjetiva de cada delinquente.
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Penas privativas de liberdade Noções gerais de dosimetria da pena privativa de liberdade
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal, Penas privativas de liberdade, Noções gerais de dosimetria da pena privativa de liberdade
 -----
 * Analise as proposição a seguir:
 * I. Segundo entendimento sumulado pelo Supremo Tribunal Federal, no crime continuado, se entrar em vigor lei mais grave enquanto não cessada a continuidade, aplica-se a lei penal mais grave.
