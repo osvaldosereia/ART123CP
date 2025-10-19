@@ -186,29 +186,22 @@ function renderTemas(){
 
 /* ==================== BUSCA E QUIZ ==================== */
 async function startSearch(){
-  try{
-    toast("Carregando questões…");
-    const files = [...STATE.temasSel];
-    const texts = await Promise.all(files.map(loadTxt));
-    const joined = texts.join("\n-----\n");
-    STATE.allQuestions = parseTxt(joined);
-    if (!STATE.allQuestions.length){ toast("Nenhuma questão encontrada"); return; }
-    STATE.cursor = 0;
-    $("#quizList").innerHTML="";
-    $("#home").classList.add("hidden");
-    $("#quiz").classList.remove("hidden");
-    mountInfinite();
-  }catch(err){
-    console.error(err);
-    toast("Erro ao ler dados");
-  }
+  toast("Carregando questões…");
+  const files = [...STATE.temasSel];
+  const texts = await Promise.all(files.map(loadTxt));
+  const joined = texts.join("\n-----\n");
+  STATE.allQuestions = parseTxt(joined);
+  STATE.cursor = 0;
+  $("#quizList").innerHTML="";
+  $("#home").classList.add("hidden");
+  $("#quiz").classList.remove("hidden");
+  mountInfinite();
 }
 async function loadTxt(path){
-  const res = await fetch(path); // relativo a /<repo>/
+  const res = await fetch(path);            // REMOVIDO a barra inicial
   if(!res.ok) throw new Error(`Falhou ${path}: ${res.status}`);
-  const txt = await res.text();
-  console.debug("OK:", path, txt.length, "bytes");
-  return txt;
+  return await res.text();
+
 }
 
 function mountInfinite(){
@@ -305,23 +298,21 @@ function mark(card, li, q){
   if (!correct){ btnIA.style.background="#dc2626"; btnIA.style.borderColor="#b91c1c"; }
 }
 
- function buildGoogleIA(kind, q){
-   const enc=(s)=>encodeURIComponent(s);
-   const alts = q.options.map(o=>`${o.key}) ${o.text}`).join(" ");
-   let prompt="";
-   if (kind==="gabarito"){
-     prompt = `Considere a questão a seguir e responda SOMENTE a letra correta e uma linha de justificativa. Questão: "${q.stem}" Alternativas: ${alts}`;
-   } else if (kind==="glossario"){
-     prompt = `Liste e defina, em tópicos curtos, os principais termos jurídicos presentes nesta questão: "${q.stem}"`;
-   } else {
-     // vídeos
-     prompt = `Sugira 3 links de vídeos objetivos e confiáveis para estudar o tema desta questão. Mostre título curto e link. Questão: "${q.stem}"`;
-   }
--  const url = `https://www.google.com/search?q=${enc(prompt)}`;
-+  const url = `https://www.google.com/search?udm=50&hl=pt-BR&gl=BR&q=${enc(prompt)}`;
-   return url;
- }
-
+function buildGoogleIA(kind, q){
+  const enc=(s)=>encodeURIComponent(s);
+  const alts = q.options.map(o=>`${o.key}) ${o.text}`).join(" ");
+  let prompt="";
+  if (kind==="gabarito"){
+    prompt = `Considere a questão a seguir e responda SOMENTE a letra correta e uma linha de justificativa. Questão: "${q.stem}" Alternativas: ${alts}`;
+  } else if (kind==="glossario"){
+    prompt = `Liste e defina, em tópicos curtos, os principais termos jurídicos presentes nesta questão: "${q.stem}"`;
+  } else {
+    // vídeos
+    prompt = `Sugira 3 links de vídeos objetivos e confiáveis para estudar o tema desta questão. Mostre título curto e link. Questão: "${q.stem}"`;
+  }
+  const url = `https://www.google.com/search?q=${enc(prompt)}`;
+  return url;
+}
 
 /* ==================== NAV ==================== */
 function goHome(){
