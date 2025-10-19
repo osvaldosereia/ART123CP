@@ -126,3 +126,25 @@ body{
 @media (min-width:900px){
   .page{padding-top:84px}
 }
+/* ===== Multiselect de Temas (painel) ===== */
+.ms-trigger{ width:100%; justify-content:space-between; }
+.ms-panel{
+  position:relative; margin-top:6px; display:none;
+  background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);
+}
+.ms-panel.show{ display:block; }
+.ms-head{ display:flex; gap:8px; padding:8px; align-items:center; border-bottom:1px solid var(--line); }
+#msSearch{
+  flex:1; border:1px solid var(--line); border-radius:10px; padding:8px 10px; font-size:14px;
+}
+.ms-actions{ display:flex; gap:6px; }
+.ms-list{ max-height:300px; overflow:auto; padding:6px; }
+.ms-item{
+  display:flex; align-items:center; gap:8px;
+  padding:6px 8px; border:1px solid transparent; border-radius:8px; cursor:pointer; user-select:none;
+  font-size:14px; line-height:1.25;
+}
+.ms-item:hover{ background:#f8fafc; }
+.ms-item input{ inline-size:14px; block-size:14px; }
+.ms-item.on{ border-color:var(--brand); background:#eef4ff; }
+.ms-foot{ border-top:1px solid var(--line); padding:8px 10px; color:var(--muted); font-size:12px; }
