@@ -115,6 +115,7 @@ window.addEventListener("DOMContentLoaded", async ()=>{
   $("#btnHome").addEventListener("click", goHome);
   setupDropdown();
   initTopbarAutoHide();
+  initBackToTop();                 // botão "voltar ao topo"
   try{
     STATE.tree = await discoverDataTree();
     fillDisciplines(Object.keys(STATE.tree).sort());
@@ -223,7 +224,6 @@ async function buildThemesMultiselect(){
   $("#msSelAll").addEventListener("click", ()=>{
     const visible = getVisibleItems();
     visible.forEach(t=>STATE.temasSel.add(t));
-    // marcar visuais
     $$("#msList .ms-item input").forEach(i=>{ i.checked=true; i.closest(".ms-item").classList.add("on"); });
     updateTriggerLabel(); updateCount(); $("#btnBuscar").disabled = STATE.temasSel.size===0;
   });
@@ -472,6 +472,27 @@ function initTopbarAutoHide(){
     else if (dy < -2) { if (hidden){ bar.classList.remove("hide"); hidden = false; } }
     last = y;
   }, { passive: true });
+}
+
+/* === Botão voltar ao topo === */
+function initBackToTop(){
+  const btn = document.createElement("button");
+  btn.className = "backtop";
+  btn.setAttribute("aria-label","Voltar ao topo");
+  btn.textContent = "↑";
+  document.body.appendChild(btn);
+
+  const toggle = ()=>{
+    if (window.scrollY > 400) btn.classList.add("show");
+    else btn.classList.remove("show");
+  };
+  window.addEventListener("scroll", toggle, {passive:true});
+  window.addEventListener("resize", toggle);
+  toggle();
+
+  btn.addEventListener("click", ()=>{
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
 }
 
 /* ==================== EXPOSE DEBUG ==================== */
