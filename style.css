@@ -206,3 +206,11 @@ body{
 .backtop.show{ display:flex; }
 .backtop:active{ transform:translateY(1px); }
 
+/* Menos espaço entre topbar e chips no QUIZ */
+#quiz.page{ padding-top:48px; }                 /* antes era 80px */
+@media (min-width:900px){
+  #quiz.page{ padding-top:56px; }               /* antes era 84px */
+}
+
+/* Chips mais próximos */
+#quizThemes{ margin:4px 0 8px; }                /* antes ~6px 0 12px */
