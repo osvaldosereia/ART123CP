@@ -159,3 +159,50 @@ body{
 }
 .backtop.show{ display:flex; }
 .backtop:active{ transform:translateY(1px); }
+
+/* --- Multiselect de temas (Home) --- */
+.ms-trigger{ width:100%; }
+.ms-panel{
+  position:relative; margin-top:8px; border:1px solid var(--line); border-radius:12px;
+  background:#fff; box-shadow:var(--shadow); padding:8px;
+}
+.ms-head{ display:flex; gap:8px; align-items:center; }
+#msSearch{
+  flex:1; border:1px solid var(--line); border-radius:10px; padding:10px 12px;
+  font-size:14px;
+}
+.ms-actions{ display:flex; gap:6px; }
+.ms-list{
+  display:grid; grid-template-columns:1fr; gap:4px; margin-top:8px; max-height:320px; overflow:auto;
+}
+@media (min-width:900px){
+  .ms-list{ grid-template-columns:repeat(3, 1fr); }
+}
+.ms-item{
+  display:flex; align-items:center; gap:8px; padding:8px 10px; border:1px solid var(--line);
+  border-radius:10px; cursor:pointer; font-size:14px;
+}
+.ms-item.on{ background:#111; color:#fff; border-color:#111; }
+.ms-item input{ pointer-events:none; }
+
+/* --- Chips compactos e centrados no topo do quiz --- */
+#quizThemes.chips{
+  justify-content:center; row-gap:6px; column-gap:6px; margin:6px 0 12px;
+}
+#quizThemes .chip{
+  padding:6px 10px; font-size:12px; border-radius:999px; border:1px solid var(--line);
+  background:#fff; color:var(--text); cursor:pointer;
+}
+#quizThemes .chip.on{ background:#111; color:#fff; border-color:#111; }
+
+/* Botão voltar ao topo (se ainda não tiver) */
+.backtop{
+  position:fixed; right:16px; bottom:72px; z-index:60;
+  display:none; align-items:center; justify-content:center;
+  width:44px; height:44px; border-radius:999px;
+  border:1px solid var(--brand); background:var(--brand); color:#fff;
+  box-shadow:var(--shadow); cursor:pointer; font-size:18px; line-height:1;
+}
+.backtop.show{ display:flex; }
+.backtop:active{ transform:translateY(1px); }
+
