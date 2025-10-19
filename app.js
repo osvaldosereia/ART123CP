@@ -305,21 +305,23 @@ function mark(card, li, q){
   if (!correct){ btnIA.style.background="#dc2626"; btnIA.style.borderColor="#b91c1c"; }
 }
 
-function buildGoogleIA(kind, q){
-  const enc=(s)=>encodeURIComponent(s);
-  const alts = q.options.map(o=>`${o.key}) ${o.text}`).join(" ");
-  let prompt="";
-  if (kind==="gabarito"){
-    prompt = `Considere a questão a seguir e responda SOMENTE a letra correta e uma linha de justificativa. Questão: "${q.stem}" Alternativas: ${alts}`;
-  } else if (kind==="glossario"){
-    prompt = `Liste e defina, em tópicos curtos, os principais termos jurídicos presentes nesta questão: "${q.stem}"`;
-  } else {
-    // vídeos
-    prompt = `Sugira 3 links de vídeos objetivos e confiáveis para estudar o tema desta questão. Mostre título curto e link. Questão: "${q.stem}"`;
-  }
-  const url = `https://www.google.com/search?q=${enc(prompt)}`;
-  return url;
-}
+ function buildGoogleIA(kind, q){
+   const enc=(s)=>encodeURIComponent(s);
+   const alts = q.options.map(o=>`${o.key}) ${o.text}`).join(" ");
+   let prompt="";
+   if (kind==="gabarito"){
+     prompt = `Considere a questão a seguir e responda SOMENTE a letra correta e uma linha de justificativa. Questão: "${q.stem}" Alternativas: ${alts}`;
+   } else if (kind==="glossario"){
+     prompt = `Liste e defina, em tópicos curtos, os principais termos jurídicos presentes nesta questão: "${q.stem}"`;
+   } else {
+     // vídeos
+     prompt = `Sugira 3 links de vídeos objetivos e confiáveis para estudar o tema desta questão. Mostre título curto e link. Questão: "${q.stem}"`;
+   }
+-  const url = `https://www.google.com/search?q=${enc(prompt)}`;
++  const url = `https://www.google.com/search?udm=50&hl=pt-BR&gl=BR&q=${enc(prompt)}`;
+   return url;
+ }
+
 
 /* ==================== NAV ==================== */
 function goHome(){
