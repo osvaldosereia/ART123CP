@@ -115,7 +115,7 @@ window.addEventListener("DOMContentLoaded", async ()=>{
   $("#btnHome").addEventListener("click", goHome);
   setupDropdown();
   initTopbarAutoHide();
-  initBackToTop();                 // botão "voltar ao topo"
+  initBackToTop();
   try{
     STATE.tree = await discoverDataTree();
     fillDisciplines(Object.keys(STATE.tree).sort());
@@ -184,7 +184,6 @@ async function buildThemesMultiselect(){
   const temas = [...set].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
   STATE.temasAll = temas;
 
-  // Trigger
   const trigger = document.createElement("button");
   trigger.type="button";
   trigger.className="dd-btn ms-trigger";
@@ -193,7 +192,6 @@ async function buildThemesMultiselect(){
   trigger.addEventListener("click", toggleThemesPanel);
   box.appendChild(trigger);
 
-  // Painel
   const panel = document.createElement("div");
   panel.className="ms-panel";
   panel.innerHTML = `
@@ -209,13 +207,11 @@ async function buildThemesMultiselect(){
   `;
   box.appendChild(panel);
 
-  // Estado lista
   STATE.ms.list = temas.slice();
   STATE.ms.listStripped = STATE.ms.list.map(strip);
   STATE.ms.filter = "";
   renderMsList();
 
-  // Eventos
   $("#msSearch").addEventListener("input", deb((e)=>{
     STATE.ms.filter = e.target.value;
     renderMsList();
@@ -312,12 +308,29 @@ async function startSearch(){
     $("#quizList").innerHTML="";
     $("#home").classList.add("hidden");
     $("#quiz").classList.remove("hidden");
+    renderSelectedThemesBanner();      // <<< mostra os temas escolhidos
     mountInfinite();
     closeThemesPanel();
   }catch(err){
     console.error(err);
     toast("Erro ao ler dados");
   }
+}
+
+/* Banner de temas selecionados no topo do quiz */
+function renderSelectedThemesBanner(){
+  const quiz = $("#quiz");
+  if (!quiz) return;
+  let banner = $("#quizThemes");
+  if (!banner){
+    banner = document.createElement("div");
+    banner.id = "quizThemes";
+    banner.className = "hint"; // usa estilo já existente, discreto
+    // insere antes da lista
+    quiz.insertBefore(banner, $("#quizList"));
+  }
+  const temas = [...STATE.temasSel].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
+  banner.textContent = temas.length ? `Temas: ${temas.join(", ")}` : "";
 }
 
 async function loadTxt(path){
@@ -443,7 +456,7 @@ function buildGoogleIA(kind, q){
 
   let prompt="";
   if (kind==="gabarito"){
-    prompt = `Considere a questão a seguir e justifique juridicamente a alternativa escolhida. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
+    prompt = `Considere a questão a seguir e responda SOMENTE a letra correta e uma linha de justificativa. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
   } else if (kind==="glossario"){
     prompt = `Liste e defina, em tópicos curtos, os principais termos jurídicos presentes nesta questão. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
   } else {
@@ -453,7 +466,6 @@ function buildGoogleIA(kind, q){
   const url = `https://www.google.com/search?udm=50&hl=pt-BR&gl=BR&q=${enc(prompt)}`;
   return url;
 }
-
 
 /* ==================== NAV ==================== */
 function goHome(){
