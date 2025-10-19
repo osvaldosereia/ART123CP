@@ -7191,7 +7191,7 @@ Estão certos apenas os itens
 No Código Penal brasileiro, adota-se a teoria da ubiquidade, conforme a qual o lugar do crime é o da ação ou da omissão, bem como o lugar onde se produziu ou deveria produzir-se o resultado.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais, Lei penal no espaço
 -----
 * Aplica-se a lei penal brasileira ao crime cometido no território nacional. O art. 5º do CP estende a aplicação da lei penal brasileira para fato cometido em
@@ -7206,7 +7206,7 @@ No Código Penal brasileiro, adota-se a teoria da ubiquidade, conforme a qual o 
 * No tocante ao princípio da extra-atividade da lei penal, em se tratando de crimes continuados ou permanentes, aplica-se a legislação mais grave se a sua vigência é anterior à cessação da continuidade ou da permanência.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais, Lei penal no tempo
 -----
 * O código penal brasileiro considera praticado o crime no lugar em que ocorreu a
@@ -7399,7 +7399,7 @@ Considerando a situação hipotética descrita, julgue o item a seguir.
 O fato de a vítima ser juiz de direito demonstra maior reprovabilidade da conduta de João, o que impede o reconhecimento do princípio da insignificância.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Errado
+*** Gabarito: B
 **** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
 -----
 * As regras gerais do Código Penal aplicam-se aos fatos incriminados por lei especial?
@@ -7433,42 +7433,42 @@ O fato de a vítima ser juiz de direito demonstra maior reprovabilidade da condu
 Em se tratando de direito penal, admite-se a analogia quando existir efetiva lacuna a ser preenchida e sua aplicação for favorável ao réu. Constitui exemplo de analogia a aplicação ao companheiro em união estável da regra que isenta de pena o cônjuge que subtrai bem pertencente ao outro cônjuge, na constância da sociedade conjugal.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais
 -----
 * Em relação à aplicação, à interpretação e à integração da lei penal, julgue o item seguinte.
 No Código Penal, a exposição de motivos é exemplo de interpretação autêntica, pois é realizada no próprio texto legal.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Errado
+*** Gabarito: B
 **** Noções Fundamentais, A norma penal
 -----
 * Em relação à aplicação da lei penal e aos institutos do arrependimento eficaz e do erro de execução, julgue o item seguinte.
 Se um indivíduo praticar uma série de crimes da mesma espécie, em continuidade delitiva e sob a vigência de duas leis distintas, aplicar-se-á, em processo contra ele, a lei vigente ao tempo em que cessaram os delitos, ainda que seja mais gravosa.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais, Lei penal no tempo
 -----
 * Acerca do crime e da aplicação da lei penal no tempo e no espaço, julgue o item que se segue.
 Ainda que se trate de tentativa delituosa, considera-se lugar do crime não só aquele onde o agente tiver praticado atos executórios, mas também aquele onde deveria produzir-se o resultado.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais, Lei penal no espaço
 -----
 * Acerca do crime e da aplicação da lei penal no tempo e no espaço, julgue o item que se segue.
 Sob o prisma formal, crime corresponde à concepção do direito acerca do delito, em uma visão legislativa do fenômeno; sob o prisma material, o conceito de crime é pré-jurídico, ou seja, é a concepção da sociedade a respeito do que pode e deve ser proibido.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais, Conceitos e caracteres, Teoria Geral do Delito Conceito de crime
 -----
 * Acerca do crime e da aplicação da lei penal no tempo e no espaço, julgue o item que se segue.
 A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da sentença - em decorrência do fenômeno da ultratividade mesmo já tendo sido revogada a lei que vigia no momento da consumação do crime.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais, Lei penal no tempo
 -----
 * Segundo MIRABETE, são hipóteses de conflitos de Leis Penais no tempo:
@@ -7571,7 +7571,7 @@ A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da senten�
 * A lei penal somente pode retroagir para que o réu seja beneficiado.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais, Lei penal no tempo
 -----
 * Conforme a jurisprudência do STF, o princípio da insignificância
@@ -7693,21 +7693,21 @@ A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da senten�
 * Segundo o princípio da intervenção mínima, o direito penal somente deverá cuidar da proteção dos bens mais relevantes e imprescindíveis à vida social.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
 -----
 * Acerca da aplicação da lei penal, dos princípios de direito penal e do arrependimento posterior, julgue o item a seguir.
 * O crime contra a fé pública de autarquia estadual brasileira cometido no território da República Argentina fica sujeito à lei do Brasil, ainda que o agente seja absolvido naquele país.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais, Lei penal no espaço
 -----
 * Acerca da aplicação da lei penal, dos princípios de direito penal e do arrependimento posterior, julgue o item a seguir.
 * Pelo princípio da irretroatividade da lei penal, não é possível a aplicação de lei posterior a fato anterior à edição desta. É exceção ao referido princípio a possibilidade de retroatividade da lei penal benéfica que atenue a pena ou torne atípico o fato, desde que não haja trânsito em julgado da sentença penal condenatória.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Errado
+*** Gabarito: B
 **** Noções Fundamentais, Lei penal no tempo
 -----
 * João, brasileiro, é vítima de um furto na cidade de Paris, na França. O autor do delito foi identificado na ocasião, José, um colega brasileiro que residia no mesmo edifício que João. A Justiça francesa realizou o processo e ao final José foi definitivamente condenado a uma pena de 2 anos de prisão. Ambos retornaram ao país e José o fez antes mesmo de cumprir a sua condenação.
@@ -7725,7 +7725,7 @@ A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da senten�
 * Assertiva: Nessa situação, a lei brasileira pode ser aplicada ao crime praticado por João em Portugal.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais, Lei penal no espaço
 -----
 * Sobre a aplicação da lei penal, assinale a alternativa correta.
@@ -7857,6 +7857,6 @@ A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da senten�
 * Em consequência da fragmentaridade do direito penal, ainda que haja outras formas de sanção ou outros meios de controle social para a tutela de determinado bem jurídico, a criminalização, pelo direito penal, de condutas que invistam contra esse bem será adequada e recomendável.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Errado
+*** Gabarito: B
 **** Noções FundamentAIS, Princípios limitadores do poder punitivo estatal
 -----
