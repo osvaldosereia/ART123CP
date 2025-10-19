@@ -1,6 +1,6 @@
 // app.js — SPA de estudo
 // UI intacta. Parser aceita: JSON novo (pages/questions), JSON {lines:[...]}, texto antigo.
-// Catálogo autodetectado via GitHub API.
+// Catálogo autodetectado via /data/index.json (manifest) ou GitHub API.
 
 // ====== CATÁLOGO DINÂMICO ======
 let CATALOG = {}; // preenchido em discoverCatalog()
@@ -195,7 +195,7 @@ function startQuiz(){
   els.kTotal.textContent = state.sessionQuestions.length;
   els.pathInfo.textContent = `${state.category} • ${summaryThemes()}`;
   els.home.classList.add('hidden');
-  els.quiz.classList.removeClass?.('hidden') || els.quiz.classList.remove('hidden'); // compat
+  els.quiz.classList.remove('hidden');
 
   persistProgress('init');
   mountNextPage();
@@ -318,19 +318,19 @@ function restoreLastSession(){
 function parseQC(raw, sourceName){
   const asJson = tryParseJson(raw);
 
-  // 1) JSON com pages/questions (novo)
+  // 1) JSON pages/questions
   if (asJson && (Array.isArray(asJson?.pages) || Array.isArray(asJson))) {
     const questions = parseFromJson(asJson, sourceName);
     return { questions };
   }
 
-  // 2) JSON no formato {lines:[...]} -> junta e reaproveita caminho textual
+  // 2) JSON {lines:[...]} -> junta e usa caminho textual
   if (asJson && Array.isArray(asJson?.lines)) {
     const text = asJson.lines.join('\n');
     return parseFromText(text, sourceName);
   }
 
-  // 3) Texto antigo ou HTML convertido para texto
+  // 3) Texto puro
   return parseFromText(raw, sourceName);
 }
 
@@ -345,10 +345,10 @@ function parseFromText(raw, sourceName){
     const q = parseQuestionBlock(b);
     if (!q) continue;
 
-    // descartar questões com imagem
+    // filtra imagens
     if (hasImageHint(q.enunciado) || q.alternativas.some(a => hasImageHint(a.text))) continue;
 
-    // gabarito por índice
+    // gabarito pelo índice n:
     const k = keyMap.get(q.numero);
     if (!k) continue;
     const corr = mapCEtoVF(k);
@@ -470,7 +470,7 @@ function normalize(text){
   return t;
 }
 
-// aceita blocos "1-5: A" e "1: A" etc.
+// aceita blocos "1-5: A" e "1: A"
 function parseAnswerKey_full(text){
   const sections = [...text.matchAll(/(?:^|\n)\s*(?:Respostas?|Gabarito)[^\n]*\n([\s\S]*?)(?=\n\s*(?:Respostas?|Gabarito)\b|$)/gmi)];
   const body = sections.length ? sections.map(m=>m[1]).join('\n') : text;
@@ -491,7 +491,7 @@ function splitQuestions(text){
   const idxs = [];
   for (let i=0;i<lines.length;i++){
     const line = lines[i];
-    if (/^\s*\d{1,5}\s*(?:Q\d+)?\s*$/.test(line)) idxs.push(i); // número sozinho ou "n Qxxxx"
+    if (/^\s*\d{1,5}\s*(?:Q\d+)?\s*$/.test(line)) idxs.push(i);
     if (/^\s*(Respostas?|Gabarito)\b/i.test(line)) break;
   }
   const blocks = [];
@@ -505,7 +505,6 @@ function splitQuestions(text){
 }
 
 function parseQuestionBlock(block){
-  // primeira linha: número (e opcional QID ao lado)
   const firstLine = block.split('\n',1)[0];
   const headerRe = /^\s*(\d{1,5})(?:\s+Q(\d+))?\s*$/;
   const h = firstLine.match(headerRe);
@@ -515,19 +514,16 @@ function parseQuestionBlock(block){
 
   const body = block.split('\n').slice(1);
 
-  // localizar primeira alternativa A..E ou V/F
   const altIdxs = body.map((l,i)=> isAltMarker(l) ? i : -1).filter(i=>i>=0);
   if (!altIdxs.length) return null;
   const firstAlt = altIdxs[0];
 
-  // enunciado: do início até a primeira alternativa, limpando ruído e metadados
   const stemLines = cleanNoise(body.slice(0, firstAlt))
     .filter(l => !/^\s*(Ano|Banca|Órgão|Orgao|Prova)\b/i.test(l))
     .filter(l => !/^\s*(www\.|https?:\/\/)/i.test(l))
     .filter(l => !/^\s*(>|Breadcrumb|Assunto|Disciplina)\b/i.test(l));
   const stem = stemLines.join(' ').replace(/\s+/g,' ').trim();
 
-  // alternativas: consolidar letra + texto subsequente até próxima letra
   const altLines = body.slice(firstAlt);
   const alts = [];
   let current = null;
@@ -535,13 +531,10 @@ function parseQuestionBlock(block){
     const line = altLines[i];
     if (isAltMarker(line)){
       const m = splitMarker(line);
-      // colapsar repetições de letra em linhas seguidas
-      if (current && current.key === m.key && !m.text) continue;
       if (current) alts.push(current);
       if (m.text && m.text.trim()){
         current = { key: m.key, text: m.text.trim() };
       } else {
-        // agrega linhas até a próxima marca
         let j = i+1, buf = [];
         while (j < altLines.length && !isAltMarker(altLines[j])){
           const s = altLines[j].trim();
@@ -643,8 +636,21 @@ function shuffle(arr){
 function basename(p){ return p.split('/').pop(); }
 function escapeHtml(s){ return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
-// ====== DISCOVERY (GitHub API) ======
+// ====== DISCOVERY ======
 async function discoverCatalog(){
+  // 1) Manifesto local opcional: /data/index.json  -> { "Categoria":[ "data/arquivo.json", ... ] }
+  try {
+    const r = await fetch('data/index.json', {cache:'no-store'});
+    if (r.ok) {
+      const j = await r.json();
+      if (j && typeof j === 'object' && Object.keys(j).length){
+        CATALOG = j;
+        return;
+      }
+    }
+  } catch {}
+
+  // 2) GitHub API (GitHub Pages). Funciona para repositório público.
   try {
     const { owner, repo } = inferRepoFromLocation();
     if (!owner || !repo) throw new Error('repo indefinido');
@@ -656,7 +662,7 @@ async function discoverCatalog(){
 
     const catalog = {};
     for (const d of dirs){
-      const files = await collectJsonFiles(`${base}/data/${encodeURIComponent(d.name)}?ref=${encodeURIComponent(branch)}`);
+      const files = await collectJsonFiles(`${base}/data/${encodeURIComponent(d.name)}?ref=${encodeURIComponent(branch)}`, branch);
       if (files.length) catalog[humanize(d.name)] = files.map(u => u.download_url);
     }
     const loose = dataRoot.filter(e => e.type === 'file' && e.name.toLowerCase().endsWith('.json'));
@@ -664,28 +670,26 @@ async function discoverCatalog(){
       catalog['Geral'] = (catalog['Geral'] || []).concat(loose.map(u => u.download_url));
     }
 
-    if (Object.keys(catalog).length) {
-      CATALOG = catalog;
-      return;
-    }
-
-    const fallback = 'data/quiz-1-10.json';
-    try {
-      const r = await fetch(fallback, {cache:'no-store'});
-      if (r.ok) CATALOG = { Geral: [fallback] };
-    } catch {}
+    if (Object.keys(catalog).length) { CATALOG = catalog; return; }
   } catch (e){
-    console.warn('Discovery falhou', e);
+    console.warn('Discovery via GitHub API falhou', e);
   }
+
+  // 3) Fallback mínimo: tenta um arquivo padrão
+  try {
+    const fallback = 'data/quiz-1-10.json';
+    const r = await fetch(fallback, {cache:'no-store'});
+    if (r.ok) { CATALOG = { Geral: [fallback] }; return; }
+  } catch {}
 }
 
-async function collectJsonFiles(listUrl){
-  const items = await ghList(listUrl);
+async function collectJsonFiles(apiUrl, branch){
+  const items = await ghList(apiUrl);
   const acc = [];
   for (const it of items){
     if (it.type === 'file' && it.name.toLowerCase().endsWith('.json')) acc.push(it);
     if (it.type === 'dir'){
-      const nested = await collectJsonFiles(`${it.url}?ref=${encodeURIComponent(getQueryRef(listUrl))}`);
+      const nested = await collectJsonFiles(`${it.url}?ref=${encodeURIComponent(branch)}`, branch);
       acc.push(...nested);
     }
   }
@@ -716,11 +720,6 @@ function inferRepoFromLocation(){
   const owner = host.split('.')[0];
   const repo = path.split('/')[0] || '';
   return { owner, repo };
-}
-
-function getQueryRef(url){
-  const u = new URL(url, location.origin);
-  return u.searchParams.get('ref') || 'main';
 }
 
 function humanize(s){
