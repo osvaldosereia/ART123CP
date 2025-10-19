@@ -7,7 +7,8 @@ function toast(msg, t=3000){ const el=$("#toast"); el.textContent=msg; el.classL
 function uid(){ try{ if(crypto?.randomUUID) return crypto.randomUUID(); }catch{} return "q_"+Math.random().toString(36).slice(2,10); }
 function pretty(s){ return s.replace(/[-_]/g," ").replace(/\.txt$/,""); }
 const deb = (fn,ms=150)=>{let h;return (...a)=>{clearTimeout(h);h=setTimeout(()=>fn(...a),ms);} };
-const strip = (s)=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const strip = (s)=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const canon = (s)=>strip(s); // chave canônica para temas
 
 /* ==================== PARSER TXT (com temas ****) ==================== */
 function parseTxt(raw){
@@ -104,20 +105,19 @@ async function walkGitHub(url){
 const STATE = {
   tree: /** @type {Record<string,{label:string,files:string[]}>} */({}),
   disciplina: "",
-  temasSel: /** @type {Set<string>} */(new Set()),    // seleção feita na Home
-  temasAll: /** @type {string[]} */([]),
-  allQuestions: /** @type {any[]} */([]),             // conjunto base do quiz
-  viewQuestions: /** @type {any[]} */([]),            // conjunto após segmentação por chips
-  activeThemes: /** @type {Set<string>} */(new Set()),// chips ativos no topo do quiz
+  temasSel: /** @type {Set<string>} */(new Set()),    // seleção feita na Home (chaves CANÔNICAS)
+  temasAll: /** @type {string[]} */([]),              // lista de chaves canônicas para UI
+  themeMap: /** @type {Map<string,string>} */(new Map()), // canon -> rótulo bonito
+  allQuestions: /** @type {any[]} */([]),             // base do quiz
+  viewQuestions: /** @type {any[]} */([]),            // após segmentação por chips
+  activeThemes: /** @type {Set<string>} */(new Set()),// chips ativos (CANÔNICAS)
   batchSize: 3,
   cursor: 0,
   observer: /** @type {IntersectionObserver|null} */ (null),
   cache: /** @type {Map<string,{text:string, parsed:any[]}>>} */(new Map()),
   ms:{ open:false, filter:"", list:[], listStripped:[] },
 
-  // NOVO
   poolQuestions: /** @type {any[]} */([]),
-  
 };
 
 /* ==================== UI HOME ==================== */
@@ -186,15 +186,29 @@ async function buildThemesMultiselect(){
   toast("Lendo temas…");
   const allParsed = [];
   for (const path of node.files){
-    const parsed = await getParsedForPath(path);
+    const parsed = await getParsedForPath(path); // já retorna themesCanon
     allParsed.push(...parsed);
   }
   STATE.poolQuestions = allParsed;
-  const set = new Set();
-  for (const q of allParsed){ if (Array.isArray(q.themes)) q.themes.forEach(t=>set.add(t)); }
-  const temas = [...set].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
-  STATE.temasAll = temas;
 
+  // Monta mapa canônico -> rótulo bonito
+  STATE.themeMap.clear();
+  for (const q of allParsed){
+    for (const t of (q.themes||[])){
+      const c = canon(t);
+      if (!STATE.themeMap.has(c)) STATE.themeMap.set(c, t);
+    }
+  }
+
+  // Lista de chaves canônicas ordenada pelo rótulo bonito
+  STATE.ms.list = [...STATE.themeMap.keys()].sort((a,b)=>{
+    return (STATE.themeMap.get(a)||a).localeCompare(STATE.themeMap.get(b)||b,'pt-BR',{sensitivity:'base'});
+  });
+  STATE.ms.listStripped = STATE.ms.list.map(k=>strip(STATE.themeMap.get(k)||k));
+  STATE.ms.filter = "";
+  renderMsList();
+
+  // Trigger
   const trigger = document.createElement("button");
   trigger.type="button";
   trigger.className="dd-btn ms-trigger";
@@ -203,6 +217,7 @@ async function buildThemesMultiselect(){
   trigger.addEventListener("click", toggleThemesPanel);
   box.appendChild(trigger);
 
+  // Painel
   const panel = document.createElement("div");
   panel.className="ms-panel";
   panel.innerHTML = `
@@ -218,11 +233,7 @@ async function buildThemesMultiselect(){
   `;
   box.appendChild(panel);
 
-  STATE.ms.list = temas.slice();
-  STATE.ms.listStripped = STATE.ms.list.map(strip);
-  STATE.ms.filter = "";
-  renderMsList();
-
+  // Eventos
   $("#msSearch").addEventListener("input", deb((e)=>{
     STATE.ms.filter = e.target.value;
     renderMsList();
@@ -230,7 +241,7 @@ async function buildThemesMultiselect(){
 
   $("#msSelAll").addEventListener("click", ()=>{
     const visible = getVisibleItems();
-    visible.forEach(t=>STATE.temasSel.add(t));
+    visible.forEach(cKey=>STATE.temasSel.add(cKey)); // canônicas
     $$("#msList .ms-item input").forEach(i=>{ i.checked=true; i.closest(".ms-item").classList.add("on"); });
     updateTriggerLabel(); updateCount(); $("#btnBuscar").disabled = STATE.temasSel.size===0;
   });
@@ -261,12 +272,12 @@ function updateCount(){
   const vis = getVisibleItems().length;
   const sel = STATE.temasSel.size;
 
-  // contar questões do pool que têm AO MENOS um dos temas selecionados
+  // contar questões do pool que têm AO MENOS um dos temas selecionados (usando themesCanon)
   let found = 0;
   if (sel > 0 && Array.isArray(STATE.poolQuestions)){
-    const want = new Set(STATE.temasSel);
+    const want = new Set(STATE.temasSel); // canônicas
     for (const q of STATE.poolQuestions){
-      const th = q.themes || [];
+      const th = q.themesCanon || [];
       for (let i = 0; i < th.length; i++){
         if (want.has(th[i])) { found++; break; }
       }
@@ -279,45 +290,49 @@ function updateCount(){
 
 function getVisibleItems(){
   const f = strip(STATE.ms.filter);
-  if(!f) return STATE.ms.list.slice();
+  if(!f) return STATE.ms.list.slice(); // canônicas
   const out=[];
   for(let i=0;i<STATE.ms.list.length;i++){
-    if(STATE.ms.listStripped[i].includes(f)) out.push(STATE.ms.list[i]);
+    if(STATE.ms.listStripped[i].includes(f)) out.push(STATE.ms.list[i]); // compara por rótulo stripped
   }
   return out;
-
 }
+
 function renderMsList(){
   const list = $("#msList"); list.innerHTML="";
-  const items = getVisibleItems();
+  const items = getVisibleItems(); // canônicas
   const frag = document.createDocumentFragment();
-  items.forEach(t=>{
-    const on = STATE.temasSel.has(t);
+  items.forEach(cKey=>{
+    const label = STATE.themeMap.get(cKey) || cKey;
+    const on = STATE.temasSel.has(cKey);
     const row = document.createElement("div");
     row.className = "ms-item"+(on?" on":"");
-    row.dataset.tema=t;
-    row.innerHTML = `<input type="checkbox" ${on?"checked":""} aria-label="${t}"><span>${t}</span>`;
+    row.dataset.tema=cKey; // guarda CANÔNICA
+    row.innerHTML = `<input type="checkbox" ${on?"checked":""} aria-label="${label}"><span>${label}</span>`;
     frag.appendChild(row);
   });
   list.appendChild(frag);
   list.onclick = (e)=>{
     const item = e.target.closest(".ms-item");
     if(!item || !list.contains(item)) return;
-    const tema = item.dataset.tema;
+    const cKey = item.dataset.tema;            // canônica
     const ck = item.querySelector("input");
     ck.checked = !ck.checked;
     item.classList.toggle("on", ck.checked);
-    if(ck.checked) STATE.temasSel.add(tema); else STATE.temasSel.delete(tema);
+    if(ck.checked) STATE.temasSel.add(cKey); else STATE.temasSel.delete(cKey);
     updateTriggerLabel(); updateCount(); $("#btnBuscar").disabled = STATE.temasSel.size===0;
   };
   updateTriggerLabel(); updateCount();
 }
 
-/* Cache por arquivo */
+/* Cache por arquivo: adiciona themesCanon */
 async function getParsedForPath(path){
   if (STATE.cache.has(path)) return STATE.cache.get(path).parsed;
   const text = await loadTxt(path);
-  const parsed = parseTxt(text);
+  const parsed = parseTxt(text).map(q=>({
+    ...q,
+    themesCanon: (q.themes||[]).map(canon)
+  }));
   STATE.cache.set(path, { text, parsed });
   return parsed;
 }
@@ -330,13 +345,12 @@ async function startSearch(){
     const batches = await Promise.all(files.map(getParsedForPath));
     const all = batches.flat();
 
-    // Base do quiz: somente questões que contêm pelo menos um dos temas selecionados
-    const wanted = new Set(STATE.temasSel);
-    const filtered = all.filter(q => q.themes.some(t => wanted.has(t)));
+    const wanted = new Set(STATE.temasSel); // canônicas
+    const filtered = all.filter(q => (q.themesCanon||[]).some(t => wanted.has(t)));
     if (!filtered.length){ toast("Nenhuma questão encontrada"); return; }
 
     STATE.allQuestions = filtered;
-    STATE.activeThemes.clear();              // nenhum chip ativo inicialmente
+    STATE.activeThemes.clear();
     STATE.viewQuestions = STATE.allQuestions.slice();
 
     STATE.cursor = 0;
@@ -344,7 +358,7 @@ async function startSearch(){
     $("#home").classList.add("hidden");
     $("#quiz").classList.remove("hidden");
 
-    renderSelectedThemesChips();             // chips de segmentação
+    renderSelectedThemesChips();
     mountInfinite();
     closeThemesPanel();
   }catch(err){
@@ -362,18 +376,22 @@ function renderSelectedThemesChips(){
     box = document.createElement("div");
     box.id = "quizThemes";
     box.className = "chips";
-    box.style.justifyContent = "center"; // centralizado
+    box.style.justifyContent = "center";
     box.style.margin = "6px 0 12px";
     quiz.insertBefore(box, $("#quizList"));
   }
   box.innerHTML = "";
 
-  // Contagem por tema dentro do conjunto base
+  // Contagem por tema dentro do conjunto base usando chave canônica
   const counts = new Map();
   for (const q of STATE.allQuestions){
-    for (const t of q.themes){ if(STATE.temasSel.has(t)) counts.set(t, (counts.get(t)||0)+1); }
+    for (const cKey of (q.themesCanon||[])){
+      if(STATE.temasSel.has(cKey)) counts.set(cKey, (counts.get(cKey)||0)+1);
+    }
   }
-  const temas = [...STATE.temasSel].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
+  const temas = [...STATE.temasSel].sort((a,b)=>{
+    return (STATE.themeMap.get(a)||a).localeCompare(STATE.themeMap.get(b)||b,'pt-BR',{sensitivity:"base"});
+  });
 
   // Chip "Todos"
   const chipAll = document.createElement("button");
@@ -387,15 +405,16 @@ function renderSelectedThemesChips(){
   box.appendChild(chipAll);
 
   // Demais chips
-  temas.forEach(t=>{
-    const c = counts.get(t)||0;
+  temas.forEach(cKey=>{
+    const c = counts.get(cKey)||0;
+    const label = STATE.themeMap.get(cKey) || cKey;
     const b = document.createElement("button");
-    b.className = "chip" + (STATE.activeThemes.has(t) ? " on" : "");
-    b.textContent = c ? `${t} (${c})` : t;
-    b.dataset.tema = t;
+    b.className = "chip" + (STATE.activeThemes.has(cKey) ? " on" : "");
+    b.textContent = c ? `${label} (${c})` : label;
+    b.dataset.tema = cKey; // canônica
     b.addEventListener("click", ()=>{
-      if (STATE.activeThemes.has(t)) STATE.activeThemes.delete(t);
-      else STATE.activeThemes.add(t);
+      if (STATE.activeThemes.has(cKey)) STATE.activeThemes.delete(cKey);
+      else STATE.activeThemes.add(cKey);
       applyThemeFilter();
       renderSelectedThemesChips();
     });
@@ -403,26 +422,25 @@ function renderSelectedThemesChips(){
   });
 }
 
-/* Aplica interseção dos chips ativos ao conjunto base e repagina */
+/* Aplica união dos chips ativos ao conjunto base e repagina */
 function applyThemeFilter(){
   const act = [...STATE.activeThemes];
 
   if (act.length === 0){
-    STATE.viewQuestions = STATE.allQuestions.slice();              // sem filtro
+    STATE.viewQuestions = STATE.allQuestions.slice();
   } else {
-    // UNIÃO: mostra questões que tenham pelo menos um dos temas ativos
-    const want = new Set(act);
+    const want = new Set(act); // canônicas
     STATE.viewQuestions = STATE.allQuestions.filter(q =>
-      q.themes.some(t => want.has(t))
+      (q.themesCanon||[]).some(t => want.has(t))
     );
   }
 
   $("#quizList").innerHTML = "";
   STATE.cursor = 0;
   mountInfinite();
-  toast(`Filtro: ${act.length ? act.join(", ") : "Todos"} · ${STATE.viewQuestions.length} questões`);
+  const names = act.map(k=>STATE.themeMap.get(k)||k);
+  toast(`Filtro: ${act.length ? names.join(", ") : "Todos"} · ${STATE.viewQuestions.length} questões`);
 }
-
 
 async function loadTxt(path){
   const res = await fetch(path);
@@ -552,7 +570,7 @@ function buildGoogleIA(kind, q){
   } else if (kind==="glossario"){
     prompt = `Liste e defina, em tópicos curtos, os termos jurídicos presentes nesta questão. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
   } else {
-    const tema = q.themes?.join(", ");
+    const tema = (q.themes||[]).join(", ");
     prompt = `Sugira 3 links de vídeos objetivos e confiáveis para estudar o tema desta questão. Mostre título curto e link. Tema(s): ${tema || "Direito"}. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
   }
   const url = `https://www.google.com/search?udm=50&hl=pt-BR&gl=BR&q=${enc(prompt)}`;
