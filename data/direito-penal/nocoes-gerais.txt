@@ -145,14 +145,14 @@
 * No caso dos crimes continuados, aplica-se a lei mais severa, ainda que posterior à cessação da continuidade, haja vista se tratar de ficção jurídica.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Errado
+*** Gabarito: B
 **** Noções Fundamentais, Lei penal no tempo, Concurso de crimes Crime continuado
 
 -----
 * O crime permanente é aquele cujo resultado prolonga-se no tempo, atraindo a aplicação da lei penal vigente ao término do resultado.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Errado
+*** Gabarito: A
 **** Classificação dos crimes, Noções Fundamentais, Lei penal no tempo Lei penal no espaço, Crimes instantâneos e permanentes
 
 -----
@@ -160,7 +160,7 @@
 * Merece reprimenda penal a agressão que afetar os bens jurídicos de forma relevante.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Errado
+*** Gabarito: B
 **** Noções Fundamentais
 
 -----
@@ -168,14 +168,14 @@
 * O princípio da consunção é um princípio de resolução de conflito de leis penais no tempo, sem previsão expressa na parte geral do Código Penal brasileiro.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Errado
+*** Gabarito: B
 **** Noções Fundamentais, Conflito aparente de normas
 
 -----
 * Com previsão expressa na parte geral do Código Penal brasileiro, o princípio da consunção pode ser caracterizado como um subprincípio do princípio da intervenção mínima.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Errado
+*** Gabarito: B
 **** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
 
 -----
@@ -183,7 +183,7 @@
 * Em caso de crime que, por tratado, o Brasil se obrigue a reprimir, há extraterritorialidade incondicionada.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Errado
+*** Gabarito: B
 **** Noções Fundamentais, Lei penal no espaço
 
 -----
@@ -243,7 +243,7 @@
 * O artigo que define o conceito de drogas na Lei Antidrogas é considerado norma penal em branco.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais, A norma penal, Legislação Penal Especial Lei de Tóxicos - Lei nº 11.343 de 2006
 
 -----
@@ -625,7 +625,7 @@
 * Suponha que, no dia 15 de dezembro de 2023, João tenha efetuado três disparos de arma de fogo contra Antônio, atingindo-o na cabeça, e que a vítima tenha sido socorrida por terceiros e levada ao hospital, mas, apesar dos esforços médicos, tenha falecido no dia 17 de dezembro de 2023. Nessa situação hipotética, de acordo com o Código Penal, o crime de homicídio considera-se praticado no momento da ação, ainda que o resultado morte tenha ocorrido em momento posterior.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Certo
+*** Gabarito: A
 **** Noções Fundamentais, Lei penal no tempo
 
 -----
@@ -904,7 +904,7 @@
 * O sistema constitucional proíbe que uma lei penal, qualquer que seja, possa ser aplicada a fatos ocorridos antes de sua vigência. Todavia, a lei penal mais grave aplica-se ao crime continuado ou ao crime permanente, se a sua vigência é anterior à cessação da continuidade ou da permanência.
 ** A) Certo
 ** B) Errado
-*** Gabarito: Errado
+*** Gabarito: B
 **** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
 
 -----
