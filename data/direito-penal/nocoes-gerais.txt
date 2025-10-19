@@ -101,7 +101,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Noções Fundamentais, Conceitos e caracteres
+**** Noções Fundamentais, Conceitos e características
 
 -----
 * Em relação ao tempo e ao local do crime, às causas excludentes de ilicitude, ao concurso de pessoas e às penas, bem como aos princípios aplicáveis ao direito penal, julgue o item a seguir, com base no Código Penal e na doutrina majoritária.
@@ -224,7 +224,7 @@
 ** C) I e III.
 ** D) II e III.
 *** Gabarito: C
-**** Noções Fundamentais, Conceitos e caracteres
+**** Noções Fundamentais, Conceitos e características
 
 -----
 * Sobre o Princípio da Ultratividade da Lei Penal, indique a opção correta.
@@ -315,7 +315,7 @@
 ** D) A interpretação histórica visa compreender a norma penal à luz dos costumes e valores do período em que foi promulgada, ignorando completamente as mudanças sociais posteriores.
 ** E) A interpretação lógico-sistemática procura o sentido da lei, através da função gramatical dos vocábulos. Trata-se da primeira etapa do processo interpretativo, pois as palavras podem ser equívocas, não espelhando com fidelidade a vontade da lei.
 *** Gabarito: B
-**** Noções Fundamentais, Conceitos e caracteres
+**** Noções Fundamentais, Conceitos e características
 
 -----
 * Carlos, brasileiro, estava em um voo com destino ao exterior em aeronave pertencente a uma empresa aérea privada brasileira. Enquanto sobrevoava espaço aéreo italiano, ele foi flagrado praticando conduta típica criminosa, segundo o Código Penal Brasileiro, que ofendia passageiros brasileiros e estrangeiros a bordo.
@@ -359,7 +359,7 @@
 ** D) Em nenhuma hipótese é possível a aplicação da lei penal brasileira ao crime cometido no estrangeiro.
 ** E) Ninguém pode ser punido por fato que lei posterior deixa de considerar crime (abolitio criminis), cessando, em favor do agente, todos os efeitos penais e civis da sentença condenatória.
 *** Gabarito: C
-**** Noções Fundamentais, Conceitos e caracteres, A norma penal
+**** Noções Fundamentais, Conceitos e características, A norma penal
 
 -----
 * O Código Penal é o conjunto de normas jurídicas que regulam os crimes e as penas correspondentes no Brasil. Ele estabelece o que é considerado crime, as circunstâncias agravantes e atenuantes, e as penas aplicáveis para cada tipo de infração.
@@ -833,7 +833,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Noções Fundamentais, Conceitos e caracteres
+**** Noções Fundamentais, Conceitos e características
 
 -----
 * Julgue o item a seguir, relativos à evolução da teoria do bem jurídico e suas emanações.
@@ -841,7 +841,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Noções Fundamentais, Conceitos e caracteres
+**** Noções Fundamentais, Conceitos e características
 
 -----
 * Durante operação de fiscalização em águas internacionais (alto-mar), uma embarcação brasileira de propriedade privada foi flagrada transportando substâncias entorpecentes.
@@ -857,7 +857,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Culpabilidade, Noções Fundamentais, Lei penal no tempo Imputabilidade penal
+**** Culpabilidade, Noções Fundamentais, Lei penal no tempo, Imputabilidade penal
 
 -----
 * Durante a investigação de um crime de homicídio doloso, ficou constatado que, no dia 10 de janeiro de 2020, o agente (à época, menor de idade) efetuara disparos de arma de fogo contra a vítima no território brasileiro, em uma cidade que fazia fronteira com a Argentina.
@@ -1235,7 +1235,7 @@
 ** D) Em caso de novidade tecnológica, há crime mesmo sem lei anterior que o defina.
 ** E) A lei brasileira aplica-se aos crimes praticados em aeronaves estrangeiras de propriedade pública no território nacional.
 *** Gabarito: B
-**** Noções Fundamentais, Conceitos e caracteres, A norma penal, Princípios limitadores do poder punitivo estatal, Conflito aparente de normas, Lei penal no tempo, Lei penal no espaço
+**** Noções Fundamentais, Conceitos e características, A norma penal, Princípios limitadores do poder punitivo estatal, Conflito aparente de normas, Lei penal no tempo, Lei penal no espaço
 
 -----
 * Leia as afirmativas abaixo e marque V para verdadeiro e F para falso.
@@ -1648,7 +1648,7 @@
 ** D) Esse princípio é a expressão da taxatividade, pois delimita o bem jurídico que pode ou não ser passível de tutela penal.
 ** E) Esse princípio é a expressão da exterioridade e alteridade (bilateralidade), significa que a tutela penal não tem relevância para reprimir a os meramente internos à psique do agente.
 *** Gabarito: E
-**** Noções Fundamentais, Conceitos e caracteres
+**** Noções Fundamentais, Conceitos e características
 
 -----
 * De acordo com o Código Penal, qual alternativa corresponde à causa de extinção da punibilidade?
@@ -1668,7 +1668,7 @@
 ** D) o fato típico.
 ** E) a ilicitude.
 *** Gabarito: D
-**** Noções Fundamentais, Conceitos e caracteres, Causas de extinção da punibilidade
+**** Noções Fundamentais, Conceitos e características, Causas de extinção da punibilidade
 
 -----
 * Pode-se afirmar corretamente que a prescrição, antes de transitar em julgado a sentença final, começa a correr:
@@ -1748,7 +1748,7 @@
 ** D) Fica a critério da autoridade ou do agente público o uso de algemas diante das circunstâncias reais que envolvem o caso concreto.
 ** E) O uso indevido de algemas não pode resultar na nulidade da prisão e em qualquer consequência processual.
 *** Gabarito: C
-**** Noções Fundamentais, Conceitos e caracteres
+**** Noções Fundamentais, Conceitos e características
 
 -----
 * No que concerne a aplicação da lei penal no tempo prevista no Código Penal Brasileiro, cuidou o legislador de definir importantes parâmetros, sendo possível dizer que:
@@ -1940,7 +1940,7 @@
 ** C) IV.
 ** D) I, II, III e IV.
 *** Gabarito: C
-**** Noções Fundamentais, Conceitos e caracteres, Princípios limitadores do poder punitivo estatal, Lei penal no tempo, Lei penal no espaço
+**** Noções Fundamentais, Conceitos e características, Princípios limitadores do poder punitivo estatal, Lei penal no tempo, Lei penal no espaço
 
 -----
 * Em relação à aplicação da lei penal, assinale a opção correta.
@@ -1977,7 +1977,7 @@
 ** C) A coação moral irresistível é causa de exclusão de antijuridicidade, pois afasta o caráter injusto do delito.
 ** D) O erro sobre elemento constitutivo do tipo legal de crime exclui o dolo e impede a punição do agente por crime culposo.
 *** Gabarito: A
-**** Noções Fundamentais, Conceitos e caracteres
+**** Noções Fundamentais, Conceitos e características
 
 -----
 * Com relação à aplicação de lei penal, julgue os itens a seguir.
