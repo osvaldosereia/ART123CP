@@ -7140,7 +7140,7 @@ Estão certos apenas os itens
 ** D) a teoria da tipicidade conglobante, de Eugenio Zaffaroni.
 ** E) a teoria constitucionalista do delito.
 *** Gabarito: C
-**** Noções Fundamentais do Direito Penal, Conceitos e caracteres, Teoria Geral do Delito Sistemas penais
+**** Noções Fundamentais do Direito Penal, Teoria Geral do Delito Sistemas penais
 -----
 * Considere hipoteticamente que determinado cidadão japonês rouba um cidadão indiano a bordo de certa aeronave privada pertencente a uma companhia aérea brasileira, a qual se encontra em território inglês (no aeroporto). Nesse caso, ao cidadão japonês
 ** A) não se aplica a lei penal brasileira, segundo o princípio da bandeira ou da representação.
@@ -7276,7 +7276,7 @@ V. O princípio da legalidade não veda o uso da analogia in malam partem, pois 
 ** D) Apenas as assertivas II, III e IV são verdadeiras.
 ** E) Apenas as alternativas II, III e V são verdadeiras.
 *** Gabarito: B
-**** Noções Fundamentais do Direito Penal, Conceitos e caracteres, Princípios limitadores do poder punitivo estatal
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal
 -----
 * I- Em nome do princípio da retroatividade da lei penal mais benéfica, a abolitio criminis e a lex mitior alcançam todos os fatos delitivos anteriores à sua entrada em vigor, inclusive aqueles previstos em legislação penal temporária ou excepcional.
 II - A lei penal brasileira é aplicável aos crimes cometidos a bordo de embarcações e aeronaves estrangeiras de propriedade privada que estejam localizadas no mar territorial ou sobrevoando o espaço aéreo brasileiro, sendo também consideradas como extensão do território nacional as embarcações e aeronaves brasileiras, mercantes ou de propriedade privada, localizadas em mar territorial ou no espaço aéreo de outro país, desde que estejam a serviço do governo brasileiro.
@@ -7462,7 +7462,7 @@ Sob o prisma formal, crime corresponde à concepção do direito acerca do delit
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, Conceitos e caracteres, Teoria Geral do Delito Conceito de crime
+**** Noções Fundamentais do Direito Penal, Teoria Geral do Delito Conceito de crime
 -----
 * Acerca do crime e da aplicação da lei penal no tempo e no espaço, julgue o item que se segue.
 A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da sentença - em decorrência do fenômeno da ultratividade mesmo já tendo sido revogada a lei que vigia no momento da consumação do crime.
@@ -7496,7 +7496,7 @@ A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da senten�
 ** D) Depreende-se da aplicação do princípio da insignificância a determinado caso que a conduta em questão é formal e materialmente atípica.
 ** E) As medidas provisórias podem regular matéria penal nas hipóteses de leis temporárias ou excepcionais.
 *** Gabarito: C
-**** Noções Fundamentais do Direito Penal, Conceitos e caracteres, Princípios limitadores do poder punitivo estatal
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal
 -----
 * Determinada lei dispõe: "Subtrair objetos de arte. Pena: a ser fixada livremente pelo juiz de acordo com as circunstâncias do fato".
 * Para um fato cometido após a sua vigência, é correto afirmar que a referida lei
@@ -7687,7 +7687,7 @@ A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da senten�
 ** D) Dado o princípio da legalidade estrita, é proibido o uso de analogia em direito penal.
 ** E) Dada a ampla margem de escolha atribuída ao legislador no que se refere à tipificação dos crimes e cominações de pena, é-lhe permitido tipificar crimes de perigo abstrato e criminalizar atitudes internas das pessoas, como orientações sexuais.
 *** Gabarito: B
-**** Noções Fundamentais do Direito Penal, Conceitos e caracteres, Lei penal no tempo, Lei penal no espaço
+**** Noções Fundamentais do Direito Penal, Lei penal no tempo, Lei penal no espaço
 -----
 * Acerca do concurso de pessoas e dos princípios de direito penal, julgue o item seguinte.
 * Segundo o princípio da intervenção mínima, o direito penal somente deverá cuidar da proteção dos bens mais relevantes e imprescindíveis à vida social.
@@ -8760,7 +8760,7 @@ A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da senten�
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Noções Fundamentais do Direito Penal, Conceitos e caracteres, Crimes contra o patrimônio, Outras fraudes
+**** Noções Fundamentais do Direito Penal, Crimes contra o patrimônio, Outras fraudes
 -----
 * No que concerne aos crimes contra a seguridade social, aos delitos contra a administração pública e aos crimes contra a fé pública, julgue o item.
 * O princípio constitucional da autodefesa não alcança o indivíduo que se atribua falsa identidade perante autoridade policial com o intento de ocultar seus maus antecedentes criminais.
@@ -8832,7 +8832,7 @@ A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da senten�
 ** D) A missão do direito penal é proteger a convivência humana, assegurando-se, por meio da coação estatal, a inquebrantabilidade da ordem jurídica.
 ** E) O direito penal não se presta à tutela de bens ou interesses difusos ou coletivos.
 *** Gabarito: D
-**** Noções Fundamentais do Direito Penal, Conceitos e caracteres, Princípios limitadores do poder punitivo estatal
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal
 -----
 * De acordo com o Código Penal, assinale a alternativa correta.
 ** A) Considera-se em estado de necessidade quem pratica o fato criminoso para salvar de perigo atual, que tenha provocado por sua vontade, direito próprio ou alheio.
@@ -8864,7 +8864,7 @@ A lei mais benéfica deve ser aplicada pelo juiz quando da prolação da senten�
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Noções Fundamentais do Direito Penal, Conceitos e caracteres, Princípios limitadores do poder punitivo estatal
+**** Noções Fundamentais do Direito Penal, Princípios limitadores do poder punitivo estatal
 -----
 * Observadas as disposições do Código Penal, assinale a alternativa correta.
 ** A) É aplicável a lei do país de procedência aos crimes praticados a bordo de aeronaves ou embarcações estrangeiras de propriedade privada, achando-se aquelas em pouso no território nacional ou em vôo no espaço aéreo correspondente, e estas em porto ou mar territorial do Brasil.
