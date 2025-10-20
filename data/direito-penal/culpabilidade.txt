@@ -1,0 +1,719 @@
+-----
+***** Ano: 2010 | Banca: TRF-4ª REGIÃO | Órgão: TRF-4ª REGIÃO
+* Dadas as assertivas abaixo, assinale a alternativa correta. I. Estar o ofendido sob a imediata proteção da autoridade é circunstância que sempre agrava a pena, quando não constituir ou qualificar o crime. II. O desconhecimento da lei é circunstância que sempre atenua a pena. III. A perda, em favor da União, de bem que constitua proveito auferido pelo agente com a prática do ato criminoso, ressalvado o direito do lesado ou de terceiro de boa-fé, é efeito automático da condenação. IV. A incapacidade para o exercício do pátrio poder, nos casos de crimes dolosos apenados com reclusão cometidos contra filhos, é efeito automático da condenação. V. Concorrer para a realização de crime mediante participação de menor importância sujeita às mesmas penas.
+** A) Está correta apenas a assertiva III.
+** B) Estão corretas apenas as assertivas III e V.
+** C) Estão corretas apenas as assertivas I, II e III.
+** D) Estão corretas todas as assertivas.
+** E) Nenhuma assertiva está correta.
+*** Gabarito: A
+**** Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: PC-RN
+* Exclui-se a culpabilidade do agente
+** A) que falece após a ocorrência do fato.
+** B) inteiramente incapaz ao tempo do fato.
+** C) que age em estrito cumprimento do dever legal.
+** D) portador de perturbação mental após o fato.
+** E) maior de 70 anos de idade na data da sentença.
+*** Gabarito: B
+**** Culpabilidade
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: PC-RN
+* A imputabilidade penal pode ser excluída pela embriaguez
+** A) proposital.
+** B) pré-ordenada.
+** C) voluntária.
+** D) culposa.
+** E) por caso fortuito.
+*** Gabarito: E
+**** Culpabilidade
+-----
+***** Ano: 2010 | Banca: CESPE / CEBRASPE | Órgão: DETRAN-ES
+* Julgue os próximos itens, acerca de culpabilidade e de punibilidade. Tratando-se de culpabilidade, a teoria estrita ou extremada e a teoria limitada são derivações da teoria normativa pura e divergem apenas a respeito do tratamento das descriminantes putativas.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade
+-----
+***** Ano: 2010 | Banca: CESPE / CEBRASPE | Órgão: DETRAN-ES
+* A respeito de tipicidade e ilicitude, julgue os itens que se seguem. As qualificadoras não representam tipos derivados autônomos, uma vez que a mera previsão de novos limites abstratos de pena não faz surgir delitos independentes.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição
+-----
+***** Ano: 2011 | Banca: CESPE / CEBRASPE | Órgão: STM
+* Com relação ao direito penal, julgue os itens subsecutivos. Na ocorrência de erro de proibição inevitável, deste deve-se excluir a culpabilidade, em razão da falta de potencial consciência da ilicitude, e, na ocorrência de erro evitável, deve-se, obrigatoriamente, atenuar a pena.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade
+-----
+***** Ano: 2011 | Banca: CESPE / CEBRASPE | Órgão: TRE-ES
+* Em cada um dos próximos itens, é apresentada uma situação hipotética seguida de uma assertiva a ser julgada no que se refereaos institutos de direito penal. Abel, em completo estado de embriaguez proveniente de caso fortuito, cometeu delito de roubo, tendo sido comprovado que, ao tempo do crime, ele era inteiramente incapaz de entender o caráter ilícito do fato. Nessa situação, embora tenha praticado fato penalmente típico e ilícito, Abel ficará isento de pena.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade
+-----
+***** Ano: 2011 | Banca: VUNESP | Órgão: TJ-SP
+* Analise as proposições seguintes. 1. O livramento condicional poderá ser revogado se o liberado é condenado, por crime cometido na vigência do benefício, à pena de multa. II. A reincidência é causa interruptiva tanto da prescrição da pretensão punitiva como da prescrição executória. III. As causas de diminuição e de aumento de pena devem ser consideradas na terceira fase prevista no art. 68, do Código Penal. IV. A decadência é instituto aplicável apenas na ação penal privada. V. Se o agente for inimputável, mas o fato previsto como crime for punível com detenção, poderá o juiz, ao invés de determinar a sua internação, submetê-lo a tratamento ambulatorial. Está correto somente o contido em
+** A) I, IV e V.
+** B) II, III e IV.
+** C) I, III e V
+** D) II, IV e V
+** E) III, IV e V.
+*** Gabarito: C
+**** Culpabilidade, Penas privativas de liberdade, Terceira fase da dosimetria Livramento condicional, Causas e consequências da revogação do benefício, Imputabilidade penal
+-----
+***** Ano: 2011 | Banca: CESPE / CEBRASPE | Órgão: TJ-ES
+* Com relação aos princípios de direito penal, à aplicação da lei penal e ao crime, julgue os itens subsecutivos. No direito penal, o critério adotado para aferir a inimputabilidade do agente, como regra, é o biopsicológico.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade
+-----
+***** Ano: 2011 | Banca: FCC | Órgão: DPE-RS
+* Sobre a teoria geral do delito, é correto afirmar:
+** A) O erro de tipo afeta a compreensão da tipicidade subjetiva culposa, enquanto o erro de proibição afeta o entendimento sobre a ilicitude do agente que praticou o injusto penal, podendo levar à sua exclusão.
+** B) O erro de tipo tem como consequência jurídica a exclusão do dolo e, portanto, a exclusão da tipicidade dolosa da conduta, podendo, no caso penal concreto, ser vencível ou invencível.
+** C) O fato de um consumidor de uma loja de joias tocar um abajur sem saber que serve de apoio a uma prateleira, que despenca e quebra uma rara peça de arte é exemplo de erro de proibição.
+** D) Havendo orientação da Autoridade Administrativa acerca da legitimidade da conduta, a prática da ação realiza-se coberta pela boa-fé de que não é a mesma ilegal, atuando o agente em erro de tipo permissivo.
+** E) A partir da adoção da teoria limitada da culpabilidade pelo Código Penal, tanto na hipótese de ser o erro de tipo essencial vencível quanto na hipótese de ser invencível, a consequência jurídica é a exclusão do juízo de culpabilidade do agente que se equivoca em relação às circunstâncias concomitantes do ato praticado.
+*** Gabarito: B
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição Erro do tipo essencial, Erro de tipo acidental
+-----
+***** Ano: 2011 | Banca: CESPE / CEBRASPE | Órgão: PC-ES
+* Acerca do direito penal, julgue o item subsequente. Nos termos do Código Penal, é inimputável aquele que, por doença mental ou desenvolvimento mental incompleto ou retardado, era, ao tempo da ação ou da omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de determinarse de acordo com esse entendimento.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade
+-----
+***** Ano: 2011 | Banca: CESPE / CEBRASPE | Órgão: PC-ES
+* A falta de consciência da ilicitude, se inevitável, exclui a culpabilidade.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade, Noções Gerais da Culpabilidade
+-----
+***** Ano: 2011 | Banca: FCC | Órgão: TRE-TO
+* De acordo com o Código Penal brasileiro, são penalmente inimputáveis:
+** A) os menores de dezoito anos.
+** B) os maiores de dezoito e menores de 21 anos.
+** C) os que praticam fato definido como crime em estado de violenta emoção.
+** D) os que praticam fato definido como crime em estado de embriaguez, sendo esta voluntária ou culposa.
+** E) os maiores de setenta anos.
+*** Gabarito: A
+**** Culpabilidade
+-----
+***** Ano: 2007 | Banca: TJ-DFT | Órgão: TJ-DFT
+* Analise as proposições e assinale a única alternativa correta: I - Decorrido o prazo de cinco anos, a sentença condenatória anterior, transitada em julgado, não prevalece para quaisquer efeitos. II - Caso o agente erre, supondo situação de fato que, caso existisse, tornaria legítima sua conduta, a pena pode ser diminuída se o erro derivar de culpa. III - Imposta pena de detenção, sendo reincidente o condenado, o regime será fechado.
+** A) Todas as proposições são verdadeiras.
+** B) Todas as proposições são falsas.
+** C) Apenas uma das proposições é verdadeira.
+** D) Apenas uma das proposições é falsa.
+*** Gabarito: B
+**** Tipicidade, Culpabilidade, Descriminantes Putativas Penas privativas de liberdade, Fixação do regime inicial da pena privativa de liberdade
+-----
+***** Ano: 2007 | Banca: TJ-DFT | Órgão: TJ-DFT
+* Analise as proposições e assinale a única alternativa correta: 1- O erro sobre a ilicitude do fato, se evitável, isenta de pena. II - Ocorre prescrição retroativa mesmo que o recurso da acusação seja provido, desde que a pena seja aumentada sem afetar o prazo prescricional. III - O condenado que cumpre pena, não pode ser transferido de um regime mais rigoroso para outro.
+** A) Todas as proposições são verdadeiras.
+** B) Todas as proposições são falsas.
+** C) Apenas uma das proposições é verdadeira.
+** D) Apenas uma das proposições é falsa.
+*** Gabarito: B
+**** Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição, Penas privativas de liberdade Regressão de regime penitenciário, Causas de extinção da punibilidade, Prescrição da pretensão punitiva pela pena em concreto
+-----
+***** Ano: 2007 | Banca: TJ-DFT | Órgão: TJ-DFT
+* Analise as proposições e assinale a única alternativa correta: 1 - A conduta do agente é lícita quando pratica o fato acometido de doença mental que lhe retira a capacidade de discernimento. II - O peculato, diversamente do infanticídio, é crime próprio. III - O recebimento do aditamento da denúncia, para inclusão de co-réu, não interrompe o prazo prescricional.
+** A) Todas as proposições são verdadeiras.
+** B) Todas as proposições são falsas.
+** C) Apenas uma das proposições é verdadeira.
+** D) Apenas uma das proposições é falsa.
+*** Gabarito: C
+**** Culpabilidade, Inimputabilidade por doença mental, Causas de extinção da punibilidade Prazos prescricionais e forma de contagem dos prazos, Crimes contra a administração pública, Peculato
+-----
+***** Ano: 2007 | Banca: TJ-DFT | Órgão: TJ-DFT
+* Analise as proposições e assinale a única alternativa correta: 1 - Não há nexo causal entre a omissão e o resultado. II - O Código Penal Brasileiro adotou o sistema binário para o agente imputável. III - As causas interruptivas da prescrição estendem-se a todos os autores do delito, excetuadas os de cunho personalíssimo.
+** A) Todas as proposições são verdadeiras.
+** B) Todas as proposições são falsas.
+** C) Apenas uma das proposições é verdadeira.
+** D) Apenas uma das proposições é falsa.
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Nexo de causalidade Crimes omissivos, Causas de extinção da punibilidade, Prescrição. Conceito e modalidades, Imputabilidade penal
+-----
+***** Ano: 2010 | Banca: CESPE / CEBRASPE | Órgão: DPE-BA
+* Com base no direito penal, julgue o item que se segue. No que diz respeito ao erro de proibição indireto, ou erro de permissão, o agente atua com a convicção de que a ação que pratica não está proibida pela ordem normativa, seja por desconhecer a norma penal, seja por interpretá-la mal, supondo ser permitida a conduta.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição
+-----
+***** Ano: 2010 | Banca: CESPE / CEBRASPE | Órgão: DPE-BA
+* A inexigibilidade de outra conduta afasta elemento que integra a culpabilidade normativa pura.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade
+-----
+***** Ano: 2011 | Banca: CESPE / CEBRASPE | Órgão: STM
+* A respeito da tipicidade, ilicitude e culpabilidade, julgue os itens subsequentes. As causas legais de exclusão da culpabilidade por inexigibilidade de conduta diversa incluem a estrita obediência a ordem não manifestamente ilegal de superior hierárquico. Caso o agente cumpra ordem ilegal ou extrapole os limites que lhe foram determinados, a conduta é culpável.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade
+-----
+***** Ano: 2011 | Banca: CESPE / CEBRASPE | Órgão: PC-ES
+* Acerca das disposições constitucionais e legais aplicáveis ao processo penal, julgue os itens a seguir. O erro sobre a ilicitude do fato, se inevitável, isenta de pena; e, se evitável, poderá diminuí-la, de um sexto a um terço. Tal modalidade de erro, segundo a doutrina penal brasileira, pode ser classificada adequadamente como erro de tipo e pode, em circunstâncias excepcionais, excluir a culpabilidade pela prática da conduta.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: SEJUS-ES
+* Acerca dos institutos relativos à parte especial do Código Penal, julgue os itens de 78 a 84. Suponha que um holandês, maior de 18 anos de idade, tenha viajado para o Brasil para estudos e, por falta de conhecimento da legislação brasileira, tenha acendido, em praça pública, um cigarro de maconha, acreditando ser permitido o seu comportamento. Nessa situação, se flagrado pela polícia, o estrangeiro terá excluída a culpabilidade de sua conduta por erro de proibição.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: SEJUS-ES
+* Suponha que um indivíduo penalmente capaz, em estado de embriaguez completa, tenha praticado determinado crime, sendo, por consequência, processado criminalmente por sua conduta. Nessa situação, esse indivíduo deve ser absolvido, pois a embriaguez completa no momento do delito, por si só, é suficiente para excluir a culpabilidade do agente.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Culpabilidade, Inimputabilidade pela embriaguez
+-----
+***** Ano: 2010 | Banca: UPENET/IAUPE | Órgão: SERES-PE
+* Considere a seguinte situação: Policiais militares ingressaram num coletivo que ia do município de Salgueiro para o Município de Arcoverde, ambos no sertão pernambucano, e relataram aos passageiros que haviam recebido informe no sentido de que algum daqueles passageiros estaria transportando significativa quantidade da substância entorpecente de uso proscrito, popularmente conhecida por cocaína. Alguns passageiros, voluntariamente, passaram a exibir suas bagagens. O passageiro "X" exibiu sua bagagem, e os policiais militares constataram que ele trazia consigo duas embalagens de talco, em cujo interior havia 400g (quatrocentos gramas) da droga pesquisada. O passageiro foi preso e autuado em flagrante, na delegacia de polícia local, onde afirmou que não tinha conhecimento de que transportava cocaína, pois pensava que, nas embalagens, havia talco e que sua irmã "Y" teria arrumado as malas. Diante disso e considerando a teoria finalista da ação, assinale a alternativa CORRETA.
+** A) Constatada a veracidade da alegação de "X", ele deverá ser absolvido, porque sua conduta caracterizaria erro de tipo essencial e seria atípica.
+** B) Constatada a veracidade da alegação de "X", ele deverá ser absolvido, porque sua conduta caracterizaria erro de proibição inevitável e haveria a exclusão da culpabilidade.
+** C) Constatada a veracidade da alegação de "X", ele deverá ser absolvido, porque sua conduta caracterizaria erro de proibição inevitável e seria atípica. Nesse caso, "Y" seria responsabilizada por tráfico de entorpecentes.
+** D) Ainda que seja verdadeira a alegação de "X", ele deverá ser condenado por crime de tráfico de entorpecentes (Lei nº 11.343/2006). Nesse caso, "Y" também seria co-responsabilizada pelo mesmo crime.
+** E) Ainda que verdadeira a alegação de "X", ele deve ser condenado, pois a Lei nº 11.343/2006, ao equiparar o tráfico de entorpecentes aos crimes hediondos (Lei nº 8.072/90), estabelece, também, a responsabilidade penal objetiva.
+*** Gabarito: A
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição Erro do tipo essencial
+-----
+***** Ano: 2010 | Banca: UPENET/IAUPE | Órgão: SERES-PE
+* Analise as seguintes proposições. I. No que pertine à inimputabilidade por menoridade, a Constituição Federal e o Código Penal Brasileiro adotaram o critério biopsicológico, razão pela qual os menores de 18 (dezoito) anos serão sempre inimputáveis. II. A embriaguez, voluntária ou culposa, não exclui a culpabilidade, devendo o agente ser apenado normalmente. III. Quanto às medidas de segurança, pode-se dizer que elas são aplicáveis exclusivamente aos inimputáveis por doença mental. IV. Aquele que pratica crime sob os influxos de uma violenta emoção, decorrente de injusta provocação da vítima, não tem sua culpabilidade excluída, São CORRETAS
+** A) I e II.
+** B) II e IV.
+** C) I e III.
+** D) II e III.
+** E) III e IV.
+*** Gabarito: B
+**** Culpabilidade
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: PC-RN
+* Acerca da sujeição ativa e passiva da infração penal, assinale a opção correta.
+** A) Doentes mentais, desde que maiores de dezoito anos de idade, têm capacidade penal ativa.
+** B) É possível que os mortos figurem como sujeito passivo em determinados crimes, como, por exemplo, no delito de vilipêndio a cadáver.
+** C) No estelionato com fraude para recebimento de seguro, em que o agente se autolesiona no afã de receber prêmio, é possível se concluir que se reúnem, na mesma pessoa, as sujeições ativa e passiva da infração.
+** D) No crime de autoaborto, a gestante é, ao mesmo tempo e em razão da mesma conduta, autora do crime e sujeito passivo.
+** E) O Estado costuma figurar, constantemente, na sujeição passiva dos crimes, salvo, porém, quando se tratar de delito perquirido por iniciativa exclusiva da vítima, em que não há nenhum interesse estatal, apenas do ofendido.
+*** Gabarito: A
+**** Culpabilidade, Crimes contra a vida, Aborto Crimes contra o patrimônio, Estelionato, Imputabilidade penal
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: PC-RN
+* A legítima defesa putativa exclui a
+** A) punibilidade em abstrato.
+** B) ilicitude.
+** C) culpabilidade.
+** D) tipicidade.
+** E) punibilidade em concreto.
+*** Gabarito: C
+**** Culpabilidade
+-----
+***** Ano: 2008 | Banca: FCC | Órgão: MPE-RS
+* Quem, supondo por erro plenamente justificável pelas circunstâncais, que está sendo injustamente agredido, repele moderadamente e usando dos meios necessários a suposta agressão, age
+** A) em legítima defesa putativa.
+** B) em estado de necessidade.
+** C) em estado de necessidade putativo.
+** D) no exercício regular de um direito.
+** E) no estrito cumprimento de um dever legal.
+*** Gabarito: A
+**** Culpabilidade
+-----
+***** Ano: 2010 | Banca: CESPE / CEBRASPE | Órgão: ABIN
+* Julgue os itens a seguir, referentes a institutos de direito penal. O erro de proibição escusável exclui o dolo e a culpa; o inescusável exclui o dolo, permanecendo, contudo, a modalidade culposa.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Culpabilidade, Noções Gerais da Culpabilidade
+-----
+***** Ano: 2010 | Banca: MPE-MG | Órgão: MPE-MG
+* Considerando as funções que o consentimento do ofendido desempenha na área penal, assinale a alternativa INCORRETA.
+** A) Elemento essencial do tipo
+** B) Causa de exclusão da tipicidade
+** C) Causa de exclusão da ilicitude
+** D) Causa de extinção da punibilidade
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Antijuridicidade Causas de extinção da punibilidade
+-----
+***** Ano: 2010 | Banca: FCC | Órgão: TCE-AP
+* O erro em matéria penal
+** A) afasta a culpabilidade, se o engano recai sobre elemento do tipo penal.
+** B) exclui sempre o dolo, mas permite a punição por crime culposo, se previsto em lei.
+** C) reflete na culpabilidade, de modo apenas a atenuála, se o engano incide sobre elemento do tipo penal.
+** D) afasta a tipicidade, se o engano incide sobre a ilicitude do fato.
+** E) reflete na culpabilidade, podendo inclusive excluí-la, se o engano recai sobre a ilicitude do fato.
+*** Gabarito: E
+**** Tipicidade, Culpabilidade, Tipo Penal Doloso Tipo Penal Culposo, Erro do tipo essencial
+-----
+***** Ano: 2010 | Banca: MPE-PB | Órgão: MPE-PB
+* Considere as assertivas abaixo, assinalando a alternativa que contenha sobre elas o devido julgamento: 1- As doutrinariamente denominadas normas preceptivas estão relacionadas aos crimes omissivos, abrangendo tanto as normas mandamentais, em caso de omissões próprias, quanto as normas proibitivas, na hipótese de omissões impróprias. II - O Estado, entendido como a própria Federação Brasileira, é a única fonte imediata de conhecimento do Direito Penal pátrio. III - A atenuante referente à cooperação dolosamente distinta somente se aplica à modalidade de participação, não abrangendo os casos de autoria ou coautoria. IV - O excesso exculpante, entendido como aquele decorrente de medo, surpresa ou perturbação de ânimo, é uma causa supralegal de exclusão da culpabilidade, estando expressamente prevista no Código Penal Militar Pátrio.
+** A) Somente as assertivas II e III são falsas.
+** B) Todas as assertivas são falsas.
+** C) Nenhuma das assertivas é falsa.
+** D) Somente as assertivas I e IV são falsas.
+** E) Somente a assertiva I é falsa.
+*** Gabarito: A
+**** Concurso de Pessoas, Culpabilidade, Classificação dos crimes Noções Fundamentais, Cooperação dolosamente distinta
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: DPE-PI
+* Em relação às excludentes de antijuridicidade e culpabilidade, assinale a opção correta.
+** A) Segundo o CP, o agente que repele injusta agressão de um menor ou de um louco não age em legítima defesa, pois essa excludente de antijuridicidade só está presente se a agressão for, além de injusta, ilícita.
+** B) No CP, o estado de necessidade é excludente da antijuridicidade fundada no balanceamento de bens, na comparação entre os bens em jogo, não podendo o bem sacrificado ser mais valioso que o salvo.
+** C) Só é possível a ocorrência da excludente de culpabilidade denominada obediência hierárquica nas estruturas de direito público, pois o tipo não se refere à subordinação existente nas relações privadas entre patrão e empregado.
+** D) A dependência patológica de substância psicotrópica, como drogas, não configura doença mental, ainda que retire a capacidade de entender ou de querer do agente, sendo certo que deve incidir, nessas hipóteses, apenas uma causa especial de redução de pena.
+** E) O erro de proibição, escusável ou inescusável, exclui a culpabilidade do agente, isentando-o de pena.
+*** Gabarito: C
+**** Culpabilidade, Noções Gerais da Culpabilidade
+-----
+***** Ano: 2010 | Banca: CESPE / CEBRASPE | Órgão: DPU
+* Segundo a teoria normativa pura, a fim de tipificar uma conduta, ingressa-se na análise do dolo ou da culpa, que se encontram, pois, na tipicidade, e não, na culpabilidade. A culpabilidade, dessa forma, é um juízo de reprovação social, incidente sobre o fato típico e antijurídico e sobre seu autor.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade
+-----
+***** Ano: 2010 | Banca: CESPE / CEBRASPE | Órgão: DPU
+* A respeito das teorias da culpabilidade, julgue os itens que se seguem. Segundo a teoria psicológica da culpabilidade, o dolo e a culpa fazem parte da análise da culpabilidade, e a imputabilidade penal é pressuposto desta.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade, Imputabilidade penal
+-----
+***** Ano: 2009 | Banca: FUNIVERSA | Órgão: PC-DF
+* Acerca da culpabilidade e da ilicitude, assinale a alternativa correta.
+** A) Segundo a teoria finalista, a imputabilidade, a consciência acerca da ilicitude do fato e da exigibilidade de conduta diversa são elementos normativos da culpabilidade.
+** B) A coação irresistível e a obediência hierárquica são causas de exclusão da ilicitude.
+** C) Considera-se em estado de necessidade quem pratica o fato para repelir injusta agressão, atual ou iminente.
+** D) Não há excludentes de ilicitude previstas na Parte Especial do Código Penal.
+** E) A legítima defesa é causa excludente da culpabilidade.
+*** Gabarito: A
+**** Culpabilidade, Exigibilidade de conduta diversa, Potencial conhecimento da ilicitude - Erro de proibição Imputabilidade penal
+-----
+***** Ano: 2009 | Banca: VUNESP | Órgão: TJ-SP
+* Depois de haver saído do restaurante onde havia almoçado, Tício, homem de pouco cultivo, percebeu que lá havia esquecido sua carteira e voltou para recuperá-la, mas não mais a encontrou. Acreditando ter o direito de fazer justiça pelas próprias mãos, tomou para si objeto pertencente ao dono do referido restaurante, supostamente de valor igual ao seu prejuízo. Esse fato pode configurar
+** A) erro determinado por terceiro.
+** B) erro de tipo.
+** C) erro de permissão.
+** D) erro de proibição.
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição Erro do tipo essencial, Erro de tipo acidental
+-----
+***** Ano: 2009 | Banca: VUNESP | Órgão: TJ-SP
+* O pai que, tendo o filho sequestrado e ameaçado de morte, é coagido por sequestradores armados e forçado a dirigir-se a certa agência bancária para efetuar um roubo a fim de obter a quantia necessária para o pagamento do resgate e livrar o filho do cárcere privado em que se encontra pode, em tese, lograr a absolvição com base na alegação de
+** A) inexigibilidade de conduta diversa.
+** B) legítima defesa.
+** C) exercício regular de direito.
+** D) estrito cumprimento de dever legal.
+*** Gabarito: A
+**** Culpabilidade, Exigibilidade de conduta diversa
+-----
+***** Ano: 2009 | Banca: VUNESP | Órgão: TJ-SP
+* Com relação à coação moral irresistível, é correto afirmar que
+** A) exclui a culpabilidade.
+** B) exclui a tipicidade.
+** C) exclui a antijuridicidade.
+** D) o coato age sem vontade.
+*** Gabarito: A
+**** Culpabilidade, Exigibilidade de conduta diversa
+-----
+***** Ano: 2008 | Banca: VUNESP | Órgão: TJ-SP
+* Após a morte da mãe, A recebeu, durante um ano, a pensão previdenciária daquela, depositada mensalmente em sua conta bancária, em virtude de ser procuradora da primeira. Descoberto o fato, A foi denunciada por apropriação indébita. Se a sentença concluir que a acusada (em razão de sua incultura, pouca vivência, etc.) não tinha percepção da antijuricidade de sua conduta, estará reconhecendo
+** A) erro sobre elemento do tipo, que exclui o dolo.
+** B) erro de proibição.
+** C) descriminante putativa.
+** D) ignorância da lei.
+*** Gabarito: B
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição Erro do tipo essencial, Descriminantes Putativas
+-----
+  -----
+***** Ano: 2009 | Banca: UESPI | Órgão: PC-PI
+* Com relação às excludentes da tipicidade, da ilicitude e da culpabilidade, marque, à luz da legislação penal, a opção correta.
+** A) O estrito cumprimento do dever legal e a obediência hierárquica são excludentes da ilicitude.
+** B) A coação moral irresistível e a legítima defesa são excludentes da culpabilidade
+** C) A embriaguez voluntária e a menoridade penal são excludentes da imputabilidade.
+** D) A coação moral irresistível e o erro de proibição são excludentes da culpabilidade.
+** E) O princípio da insignificância exclui a ilicitude.
+*** Gabarito: D
+**** Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição
+-----
+***** Ano: 2010 | Banca: FGV | Órgão: SEAD-AP
+* Trata-se de hipótese de exclusão de culpabilidade:
+** A) estado de necessidade.
+** B) estrito cumprimento de dever legal.
+** C) erro inevitável sobre a ilicitude do fato.
+** D) exercício regular de direito.
+** E) legítima defesa.
+*** Gabarito: C
+**** Culpabilidade
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: TRF - 2ª REGIÃO
+* Acerca de culpa, culpabilidade e ilicitude, julgue os seguintes itens.
+* I Para a teoria diferenciadora alemã, a qual chegou a ser prevista no CP de 1969, que não chegou a entrar em vigor, há necessidade de ponderação entre os bens e deveres em conflito e somente o bem reputado de menor valor pode ser licitamente sacrificado para proteção do de maior valor.
+* II O CP brasileiro não adotou a teoria diferenciadora, todavia, em relação ao agente que tinha o dever legal de enfrentar o perigo, poderá haver a aplicação do estado de necessidade justificante, se o bem que sacrificou era de menor valor do que o protegido.
+* III O desconhecimento da lei é inescusável. O erro sobre a ilicitude do fato, se inevitável, isenta de pena; se evitável, não constitui causa de diminuição da reprimenda, podendo ser valorado como circunstância judicial, quando da aplicação da pena, na primeira fase da dosimetria.
+* IV Nos crimes culposos, o tipo penal é aberto, o que decorre da impossibilidade do legislador de antever todas as formas de realização culposa; assim, o legislador prevê apenas genericamente a ocorrência da culpa, sem defini-la, e, no caso concreto, o aplicador deve comparar o comportamento do sujeito ativo com o que uma pessoa de prudência normal teria, na mesma situação.
+* Estão certos apenas os itens
+** A) I e IV.
+** B) II e III.
+** C) II e IV.
+** D) I, II e III.
+** E) I, III e IV.
+*** Gabarito: A
+**** Culpabilidade, Noções Gerais da Culpabilidade
+-----
+***** Ano: 2010 | Banca: CESPE / CEBRASPE | Órgão: TRE-MT
+* A respeito de erro de tipo e erro de proibição, assinale a opção correta.
+** A) O erro sobre elemento constitutivo do tipo legal de crime exclui o dolo e a culpa, podendo o agente, no entanto, responder civilmente pelos danos eventualmente ocasionados.
+** B) Com relação à disciplina das descriminantes putativas, é isento de pena quem, por erro plenamente justificado pelas circunstâncias, supõe situação de fato que, se existisse, tornaria a ação legítima, mas essa isenção de pena não ocorre se o erro derivar de culpa e o fato for punível como crime culposo.
+** C) O erro quanto à pessoa contra a qual o crime é praticado não isenta de pena e, nesse caso, não se consideram, para fins de aplicação da pena e definição do tipo, as condições ou qualidades da pessoa contra quem o agente queria praticar o crime, mas sim as da vítima real.
+** D) A depender das circunstâncias pessoais do autor do crime, o desconhecimento da lei pode ser escusado.
+** E) O erro sobre a ilicitude do fato, se inevitável, exclui o dolo; se evitável, constitui causa de isenção da pena.
+*** Gabarito: B
+**** Culpabilidade, Descriminantes Putativas
+-----
+***** Ano: 2004 | Banca: CESPE / CEBRASPE | Órgão: Polícia Federal
+* Com relação à parte geral do direito penal, julgue os seguintesitens.
+* O sujeito ativo que pratica crime em face de embriaguez voluntária ou culposa responde pelo crime praticado. Adota-se, no caso, a teoria da conditio sine qua non para se imputar ao sujeito ativo a responsabilidade penal.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Culpabilidade, Inimputabilidade pela embriaguez
+-----
+***** Ano: 2004 | Banca: CESPE / CEBRASPE | Órgão: Polícia Federal
+* Julgue os seguintes itens, à luz do direito penal.
+* Segundo o Código Penal, a emoção e a paixão não são causas excludentes da imputabilidade penal.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade, Imputabilidade penal
+-----
+***** Ano: 2004 | Banca: CESPE / CEBRASPE | Órgão: Polícia Federal
+* O Código Penal, ao dispor que "é isento de pena o agente que, por doença mental ou desenvolvimento mental incompleto ou retardado, era, ao tempo da ação ou da omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento", adotou o critério biológico de exclusão da imputabilidade.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Culpabilidade
+-----
+***** Ano: 2004 | Banca: CESPE / CEBRASPE | Órgão: Polícia Federal
+* Em cada um dos itens seguintes, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada.
+* Raul, funcionário público, cumprindo ordem não manifestamente ilegal de seu superior hierárquico, acabou por praticar crime contra a administração pública. Nessa situação, apenas o superior hierárquico de Raul será punível, ficando Raul isento de pena.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade
+-----
+***** Ano: 2002 | Banca: FCC | Órgão: MPE-PE
+* José praticou crime de roubo qualificado pelo emprego de arma de fogo. Submetido a exame de insanidade mental, constataram os peritos que, em virtude de desenvolvimento mental retardado, não era, ao tempo do crime, inteiramente capaz de entender o caráter criminoso do fato. Nesse caso, José
+** A) deve ser condenado e a pena reduzida de um a dois terços, com imposição, também, de medida de segurança.
+** B) está isento de pena em razão da semi-imputabilidade, mas deve ser a ele imposta medida de segurança.
+** C) deve ser condenado e a pena reduzida de um a dois terços, podendo a pena privativa de liberdade ser substituída por medida de segurança.
+** D) deve ser condenado e a pena reduzida de dois terços até a metade, em razão de tratar-se de crime cometido com emprego de arma de fogo, com imposição, também, de medida de segurança.
+** E) deve ser absolvido, em razão da anormalidade mental constatada, sem imposição de pena, nem de medida de segurança.
+*** Gabarito: C
+**** Culpabilidade, Inimputabilidade por doença mental
+-----
+***** Ano: 2008 | Banca: CESPE / CEBRASPE | Órgão: STF
+* Com base na parte geral do direito penal, julgue os itens abaixo.
+* Considere a seguinte situação hipotética. Durante processo movido contra Vitor por tentativa de homicídio, o MP requereu a instauração de incidente de insanidade mental, pedido que foi deferido pelo juiz. No laudo final, foi atestada a sanidade mental de Vitor à época dos fatos. Anteriormente à juntada do laudo aos autos, entretanto, a defesa comprovou que Vítor havia sido interditado, o que acarretou, inclusive, sua aposentadoria no serviço público. Nessa situação, Vitor será considerado plenamente imputável, pois a existência de laudo específico de sanidade mental sobrepõe-se à interdição.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade, Inimputabilidade por doença mental
+-----
+***** Ano: 2006 | Banca: FCC | Órgão: SEFAZ-PB
+* A coação irresistível e a obediência hierárquica são causas de exclusão
+** A) culpabilidade.
+** B) ilicitude.
+** C) tipicidade.
+** D) punibilidade.
+** E) antijuridicidade.
+*** Gabarito: A
+**** Culpabilidade, Noções Gerais da Culpabilidade
+-----
+***** Ano: 2010 | Banca: FGV | Órgão: SEAD-AP
+* Exclui, em qualquer caso, a imputabilidade penal:
+** A) a violenta emoção.
+** B) a embriaguez culposa.
+** C) a embriaguez preordenada.
+** D) a menoridade, ainda que o indivíduo seja casado.
+** E) a perturbação da saúde mental.
+*** Gabarito: D
+**** Culpabilidade, Imputabilidade penal
+-----
+***** Ano: 2010 | Banca: FCC | Órgão: TRE-AL
+* A dispara seu revólver e mata B, acreditando tratar-se de um animal. A respeito dessa hipótese é correto afirmar que se trata de
+** A) fato típico, pois o dolo abrangeu todos os elementos objetivos do tipo.
+** B) erro de proibição, que exclui a culpabilidade.
+** C) erro de proibição, que gera apenas a diminuição da pena, posto que inescusável.
+** D) erro de tipo, que exclui o dolo e a culpa, se escusável.
+** E) erro quanto à existência de excludente de ilicitude (descriminante putativa).
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição Erro do tipo essencial, Descriminantes Putativas
+-----
+***** Ano: 2010 | Banca: CESPE / CEBRASPE | Órgão: TRE-BA
+* Com relação ao crime e aos seus elementos, julgue o próximoitem.
+* A imputabilidade penal é um dos elementos que constituem a culpabilidade e não integra a tipicidade.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade, Imputabilidade penal
+-----
+***** Ano: 2010 | Banca: FCC | Órgão: TRE-AM
+* De acordo com o Código Penal, são inimputáveis
+** A) os que cometem o crime sob emoção ou paixão.
+** B) aqueles que cometem o crime em legítima defesa, estado de necessidade ou estrito cumprimento do dever legal.
+** C) apenas os menores de 18 (dezoito) anos.
+** D) aqueles que, por embriaguez completa, proveniente de caso fortuito ou força maior, eram inteiramente incapazes de determinarem-se de acordo com o entendimento da ilicitude do fato.
+** E) aqueles que, em virtude de perturbação de saúde mental, não eram inteiramente capazes de entender o caráter ilícito do fato.
+*** Gabarito: D
+**** Culpabilidade, Antijuridicidade, Legítima defesa Estado de necessidade, Estrito cumprimento de dever legal e exercício regular de direito, Imputabilidade penal
+-----
+***** Ano: 2008 | Banca: CESPE / CEBRASPE | Órgão: TCU
+* Em cada um dos itens a seguir, é apresentada uma situação hipotética, seguida de uma assertiva a serjulgada.
+* Ricardo, obrigado por Sandra, mediante ameaça de arma de fogo, a ingerir quantidade excessiva de bebida alcoólica, ficou completamente embriagado. Nessa hipótese, se Ricardo viesse a cometer um delito, sua pena poderia ser reduzida em até $2/3$, caso ele fosse, ao tempo da ação, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Culpabilidade, Inimputabilidade pela embriaguez
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: DPE-ES
+* A respeito do crime impossível, da execução da pena e dosdelitos em espécie, julgue os itens subsequentes.
+* O estado de embriaguez pode, em tese, reduzir ou eliminar a capacidade do autor de entender o caráter ilícito ou determinar-se de acordo com esse entendimento, razão pela qual, segundo a jurisprudência do STJ, tal circunstância afasta o reconhecimento da eventual futilidade de sua conduta.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Culpabilidade, Inimputabilidade pela embriaguez
+-----
+***** Ano: 2005 | Banca: NCE-UFRJ | Órgão: PC-DF
+* A inimputabilidade por doença mental ou desenvolvimento mental incompleto ou retardado, conforme o que prescreve o Código Penal, adapta-se à teoria:
+** A) biológica;
+** B) psicológica;
+** C) biopsicológica;
+** D) social;
+** E) normativa.
+*** Gabarito: C
+**** Culpabilidade, Inimputabilidade por doença mental
+-----
+***** Ano: 2005 | Banca: NCE-UFRJ | Órgão: PC-DF
+* A prática de fato definido como crime por obediência à ordem ilegal de superior hierárquico:
+** A) não exclui a culpabilidade, já que ilegal a ordem;
+** B) exclui a culpabilidade, se não manifestamente ilegal a ordem;
+** C) exclui a ilicitude, por estrito cumprimento de dever legal;
+** D) exclui o dolo, porque não há potencial conhecimento da licitude do fato;
+** E) exclui o nexo causal, por irrelevância da condição antecedente.
+*** Gabarito: B
+**** Culpabilidade, Descriminantes Putativas
+-----
+***** Ano: 2009 | Banca: FUNIVERSA | Órgão: PC-DF
+* Além do erro sobre elementos do tipo (ou erro de tipo) previsto no art. 20, o Código Penal também trata do erro sobre a ilicitude do fato (ou erro de proibição) no art. 21. Quanto à distinção entre ambos, assinale a alternativa correta.
+** A) O erro de tipo essencial vencível exclui o dolo e a culpa.
+** B) O erro sobre a ilicitude do fato, quando inevitável, poderá diminuir a pena.
+** C) O erro de tipo inescusável exclui a culpa, mas não o dolo.
+** D) O erro de tipo vencível exclui o dolo, mas não a culpa, quando previsto em lei.
+** E) O erro de proibição inescusável exclui a culpa.
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição Erro do tipo essencial, Erro de tipo acidental
+-----
+***** Ano: 2009 | Banca: FCC | Órgão: TJ-GO
+* Há exclusão da culpabilidade em função de não se poder exigir conduta diversa do agente no caso de
+** A) coação moral irresistível.
+** B) doença mental ou desenvolvimento mental incompleto ou retardado.
+** C) erro sobre a ilicitude do fato.
+** D) embriaguez completa proveniente de força maior.
+** E) menoridade.
+*** Gabarito: A
+**** Culpabilidade, Exigibilidade de conduta diversa
+-----
+***** Ano: 2010 | Banca: FCC | Órgão: TRE-RS
+* "A", menor de 18 anos, efetua disparos de arma de fogo contra a vítima que, em virtude dos ferimentos recebidos, vem a falecer um mês depois, quando "A" já havia atingido aquela idade. Nesse caso, "A":
+** A) não será tido como imputável, porque se considera como tempo do crime o momento da ação ou omissão.
+** B) só será considerado inimputável se provar que, ao tempo do crime, não possuía a plena capacidade de entender o caráter ilícito do fato.
+** C) será tido como imputável, pois o Código Penal considera como tempo do crime tanto o momento da ação quanto o momento do resultado.
+** D) não será considerado imputável se provar que cometeu o delito sob estado de necessidade ou em legítima defesa.
+** E) será considerado imputável, pois a consumação do crime ocorreu quando já era maior de 18 anos.
+*** Gabarito: A
+**** Culpabilidade, Imputabilidade penal
+-----
+***** Ano: 2006 | Banca: FCC | Órgão: BACEN
+* Excluem a ilicitude e a imputabilidade, respectivamente,
+** A) a obediência hierárquica e a embriaguez acidental completa.
+** B) a coação moral irresistível e a doença mental.
+** C) a desistência voluntária e o desenvolvimento mental incompleto.
+** D) o exercício regular de direito e a menoridade.
+** E) o estrito cumprimento do dever legal e a emoção.
+*** Gabarito: D
+**** Culpabilidade, Antijuridicidade, Estrito cumprimento de dever legal e exercício regular de direito Imputabilidade penal
+-----
+***** Ano: 2009 | Banca: FCC | Órgão: DPE-MT
+* Considera-se, dentre outras, causa excludente da culpabilidade
+** A) o erro evitável.
+** B) o exercício regular de um direito.
+** C) o estado de necessidade.
+** D) a legítima defesa putativa.
+** E) a tolerância das autoridades.
+*** Gabarito: D
+**** Culpabilidade
+-----
+***** Ano: 2006 | Banca: FCC | Órgão: TRE-SP
+* É isento de pena o agente que, era, ao tempo da ação ou da omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento, por motivo de
+** A) perturbação da saúde mental.
+** B) embriaguez culposa, pelo álcool.
+** C) emoção ou paixão.
+** D) embriaguez voluntária pela ingestão de substâncias de efeitos análogos ao do álcool.
+** E) desenvolvimento mental incompleto.
+*** Gabarito: E
+**** Culpabilidade, Inimputabilidade por doença mental
+-----
+***** Ano: 2008 | Banca: CESPE / CEBRASPE | Órgão: STJ
+* Quanto a tipicidade, ilicitude, culpabilidade, punibilidade e causas de exclusão de ilicitude e culpabilidade, julgue osseguintes itens.
+* Na obediência hierárquica, para que se configure a causa de exclusão de culpabilidade, é necessário que exista dependência funcional do executor da ordem dentro do serviço público, de forma que não há que se falar, para fins de exclusão da culpabilidade, em relação hierárquica entre particulares.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade
+-----
+***** Ano: 2008 | Banca: CESPE / CEBRASPE | Órgão: STJ
+* De acordo com parte da doutrina, a evolução da teoria da culpabilidade fez que, nos dias atuais, não se exija mais a consciência da ilicitude, contentando-se o direito com a consciência profana do injusto, consubstanciada pelo conhecimento da anti-sociedade, da imoralidade e da lesividade da conduta, conforme normas gerais de conduta e de princípios morais e éticos.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade, Noções Gerais da Culpabilidade
+-----
+***** Ano: 2008 | Banca: CESPE / CEBRASPE | Órgão: TJ-DFT
+* Considerando as causas excludentes da ilicitude e da culpabilidade e acerca da imputabilidade, julgue os itensseguintes com base no Código Penal.
+* Considere a seguinte situação hipotética. Raimundo praticou, em outubro de 2007, crime de furto mediante fraude. Dois meses após a prática do crime, laudo pericial comprovou que, por doença mental, Raimundo passou a ser inteiramente incapaz de entender o caráter ilícito do fato, embora na data do delito não possuísse tal distúrbio. Nessa situação, é correto afirmar que a doença mental adquirida após a prática do crime isenta Raimundo de pena.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Culpabilidade, Inimputabilidade por doença mental
+-----
+***** Ano: 2007 | Banca: FCC | Órgão: MPU
+* Considere: I. Estado de necessidade. II. Estrito cumprimento de dever legal. III. Obediência hierárquica. IV. Exercício regular de um direito. V. Legítima defesa putativa.
+* São excludentes da culpabilidade SOMENTE o que se considera em
+** A) I e V.
+** B) II e III.
+** C) III e V.
+** D) I, II e IV.
+** E) II, III e IV.
+*** Gabarito: C
+**** Culpabilidade, Descriminantes Putativas, Noções Gerais da Culpabilidade
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: PC-PB
+* No ordenamento jurídico brasileiro, a imputabilidade penal
+** A) exclui a ilicitude do fato criminoso pela legítima defesa ou pela falta de discernimento.
+** B) é irrelevante para a aplicação da pena, pois não impede a condenação do criminoso.
+** C) é a capacidade de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento.
+** D) equivale à potencial consciência da ilicitude.
+** E) equivale à exigibilidade de conduta diversa.
+*** Gabarito: C
+**** Culpabilidade, Exigibilidade de conduta diversa, Potencial conhecimento da ilicitude - Erro de proibição Imputabilidade penal
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: DPE-AL
+* Quanto à culpabilidade e à imputabilidade penal, julgue ospróximos itens.
+* Considere a seguinte situação hipotética. Em uma festividade de calouros de determinada faculdade, João foi obrigado por vários veteranos, mediante coação física, a ingerir grande quantidade de bebida alcoólica, ficando completamente embriagado, uma vez que não tinha costume de tomar bebida com álcool. Nesse estado, João praticou lesões corporais e atentado violento ao pudor contra uma colega que também estava na festa. Nessa situação, trata-se de embriaguez acidental decorrente de força maior, devendo ser excluída a imputabilidade de João, que fica isento de pena pelos delitos que praticou.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade, Inimputabilidade pela embriaguez
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: DPE-AL
+* Para a teoria limitada da culpabilidade, adotada pelo CP brasileiro, toda espécie de descriminante putativa, seja sobre os limites autorizadores da norma, seja incidente sobre situação fática pressuposto de uma causa de justificação, é sempre considerada erro de proibição.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Culpabilidade, Descriminantes Putativas
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: DPE-AL
+* Julgue os itens seguintes, acerca do fato típico e de seuselementos.
+* Segundo a teoria dos elementos negativos do tipo, as causas de exclusão de culpabilidade devem ser agregadas ao tipo como requisitos negativos deste, resultando no conceito denominado pela doutrina de tipo total de injusto.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Culpabilidade, Noções Gerais da Culpabilidade
+-----
+***** Ano: 2008 | Banca: VUNESP | Órgão: DPE-MS
+* "A" foi condenado por crime de roubo. Todavia, após a prolação da sentença, veio aos autos a prova de que "A" é menor de 18 anos de idade. Nesse caso,
+** A) "A" deve ser absolvido por não constituir o fato infração penal.
+** B) "A" deve ser absolvido por ser inimputável.
+** C) deve ser anulada ab initio a ação penal, em razão da inimputabilidade do autor do fato.
+** D) "A" deve ter declarada extinta a punibilidade.
+*** Gabarito: C
+**** Culpabilidade, Imputabilidade penal
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: PC-PB
+* Um jovem religioso, fervoroso e abstêmio, durante uma comemoração de casamento, ingeriu aguardente. Transtornado e embriagado, agrediu sua companheira com golpes de faca, completamente descontrolado. A situação acima descreve um exemplo de embriaguez
+** A) por força maior.
+** B) dolosa.
+** C) preterdolosa.
+** D) proveniente de caso fortuito.
+** E) acidental.
+*** Gabarito: D
+**** Culpabilidade, Inimputabilidade pela embriaguez
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: PC-PB
+* Assinale a opção correta relacionada à imputabilidade penal, considerando um caso em que o laudo de exame médico-legal psiquiátrico não foi capaz de estabelecer o nexo causal entre o distúrbio mental apresentado pelo periciado eo comportamento delituoso.
+** A) O diagnóstico de doença mental é suficiente para tornar o agente inimputável.
+** B) A doença mental seria atenuante quando considerada a dosimetria da pena, devendo o incriminado cumprir de um sexto a um terço da pena.
+** C) Trata-se de caso de aplicação de medidas de segurança.
+** D) Deverá ser realizada nova perícia.
+** E) O agente deve ser responsabilizado criminalmente.
+*** Gabarito: E
+**** Culpabilidade, Imputabilidade penal
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: PC-PB
+* Acerca das excludentes de culpabilidade, da imputabilidade e do concurso de pessoas, assinale a opção correta.
+** A) Exclui a culpabilidade do crime, por inexigibilidade de conduta diversa, a coação física irresistível ou vis absoluta.
+** B) Na prática de crime em obediência hierárquica, se a ordem não for manifestamente ilegal, o subordinado e o superior hierárquico não respondem por crime algum.
+** C) Dividem-se os crimes em monossubjetivo e plurissubjetivo, sendo que somente neste último pode ocorrer concurso de pessoas.
+** D) A participação de menor importância configura exceção à teoria monista, adotada pelo CP quanto ao concurso de pessoas.
+** E) Ocorrendo coação moral resistível, não se afasta a culpabilidade, havendo simplesmente reconhecimento de atenuante genérica.
+*** Gabarito: E
+**** Culpabilidade, Exigibilidade de conduta diversa
+-----
+***** Ano: 2006 | Banca: FCC | Órgão: PGE-RR
+* NÃO exclui a culpabilidade
+** A) a embriaguez fortuita completa.
+** B) a doença mental.
+** C) o erro inevitável sobre a ilicitude do fato.
+** D) a obediência à ordem, manifestamente ilegal, de superior hierárquico.
+** E) a coação moral irresistível.
+*** Gabarito: D
+**** Culpabilidade, Noções Gerais da Culpabilidade
+-----
+***** Ano: 2009 | Banca: CESPE / CEBRASPE | Órgão: PGE-PE
+* Tarso, embriagado, colidiu o veículo que dirigia, vindo a lesionar gravemente uma pessoa. Nessa situação hipotética, a respeito da imputabilidade penal de Tarso, assinale a opção correta.
+** A) Pela teoria da actio libera in causa, Tarso não poderá responder pelo crime, pois não era capaz de se autodeterminar no momento da ação criminosa.
+** B) A responsabilidade de Tarso depende de a embriaguez ser voluntária ou culposa.
+** C) Caso a embriaguez de Tarso tenha sido preordenada, ele responderá pelo crime, mas de forma atenuada.
+** D) Caso seja comprovado que Tarso sofre da doença do alcoolismo, sua pena será apenas o tratamento médico.
+** E) Se Tarso estava completamente embriagado por ter sido obrigado a ingerir uma garrafa inteira de uísque por um desafeto seu, que lhe apontava uma arma e intencionava humilhá-lo, então, nesse caso, Tarso será isento de pena.
+*** Gabarito: E
+**** Culpabilidade, Inimputabilidade pela embriaguez
+-----
+***** Ano: 2009 | Banca: UESPI | Órgão: PC-PI
+* Juan, 19 anos, argentino residente em Córdoba/Argentina, recebeu um convite de seu amigo Pedro, brasileiro, residente em Teresina, para passar as férias no Delta do Parnaíba. Juan, entusiasmado com a possibilidade de conhecer o Brasil, aceitou o convite. Porém, Pedro, quando convidou o amigo, solicitou que trouxesse consigo 10 vidros de lançaperfume (cloreto de etila), e Juan, tendo total desconhecimento de que esta substância fosse proibida no Brasil, pois na Argentina tal substância circula livremente, prontamente atendeu ao pedido. Sendo Juan, em tese, apreendido com tal mercadoria, que excludente é possível alegar ao seu favor?
+** A) A excludente é o erro de tipo inevitável, que afasta o dolo e a culpa.
+** B) A excludente é o erro de tipo evitável, que afasta o dolo, mas permite a punição por culpa.
+** C) A excludente é o erro de proibição, que afasta a ilicitude do fato.
+** D) A excludente é o erro de proibição, que afasta o potencial conhecimento da ilicitude do fato.
+** E) A excludente é o erro na execução, que também é chamado de aberratius ictus.
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição Erro do tipo essencial, Erro de tipo acidental
+-----
