@@ -265,3 +265,5 @@ body{
 /* Opcional: engrossar o contorno do cartão da questão quando correta/errada */
 .q.ok{ border:2px solid var(--good); }
 .q.bad{ border:2px solid var(--bad); }
+
+.q-meta{font-size:12px;color:#6b7280;margin-bottom:6px}
