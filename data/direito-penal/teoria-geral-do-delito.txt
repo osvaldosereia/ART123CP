@@ -294,7 +294,7 @@ Assinale a alternativa que completa corretamente as lacunas do texto.
 ** D) Nos crimes cometidos sem violência ou grave ameaça à pessoa, reparado o dano ou restituída a coisa, até a conclusão do inquérito penal, por ato voluntário do agente, a pena será reduzida de um terço até a metade.
 ** E) Não há crime quando o agente pratica o fato em estado de embriaguez, voluntária ou culposa, pelo álcool ou substância de efeitos análogos.
 *** Gabarito: A
-**** Tipicidade, Teoria Geral do Delito, Conduta: ação / omissão Consumação e tentativa, Desistência voluntária e arrependimento eficaz, Arrependimento posterior, Antijuridicidade, Legítima defesa, Crime praticado por pessoa jurídica
+**** Tipicidade, Teoria Geral do Delito, Conduta: ação / omissão, Consumação e tentativa, Desistência voluntária e arrependimento eficaz, Arrependimento posterior, Antijuridicidade, Legítima defesa, Crime praticado por pessoa jurídica
 -----
 * Considerando os modelos de conceituação de ação, assinale a opção correta.
 ** A) De acordo com o modelo estratégico de ação, esta é um ato de fala, traduzido na forma de um discurso, com pretensão de validade.
@@ -2024,7 +2024,7 @@ Considera-se crime toda ação ou omissão típica, antijurídica e culpável.
 ** C) Apenas uma das proposições é verdadeira.
 ** D) Apenas uma das proposições é falsa.
 *** Gabarito: B
-**** Teoria Geral do Delito, Conceito de crime, Concurso de crimes Concurso formal, Crime continuado
+**** Teoria Geral do Delito, Conceito de crime, Concurso de crimes, Concurso formal, Crime continuado
 -----
 * Assinale a opção correta com relação às teorias do direito penal.
 ** A) De acordo com a tipicidade conglobante, devem-se analisar outros elementos além daqueles previstos no tipo penal para que o fato seja considerado típico. Essa abordagem tem por fundamento o modelo clássico do finalismo, que, se afastando da teoria indiciária, adota o modelo da teoria dos elementos negativos do tipo.
