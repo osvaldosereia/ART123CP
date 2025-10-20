@@ -2146,7 +2146,7 @@
 ** C) I e III, apenas.
 ** D) I e IV, apenas.
 *** Gabarito: A
-**** Tipicidade, Culpabilidade, Classificação dos crimes, Crimes omissivos, Descriminantes Putativas, Crimes comuns, próprios e de mão própria
+**** Tipicidade, Culpabilidade, Classificação dos crimes, Crimes omissivos, Descriminantes Putativas, Crimes comuns, Próprios e de Mão Própria
 -----
 * Medidas adotadas no curso de inquérito policial militar levaram à apreensão dos seguintes armamentos e munições: na casa de Laila, coronel da reserva remunerada da Força Aérea Brasileira, uma arma de fogo quebrada, cuja ineficácia foi atestada por perícia, e trinta munições intactas; no escritório de contabilidade de Joaquim, primeiro-tenente da reserva não remunerada da Marinha, uma arma de fogo e dez munições percutidas; em mala deixada por Lúcio, civil, na casa de sua namorada, uma arma de fogo; na casa de Augusta, duas munições intactas, segundo ela presenteadas por seu namorado, com as iniciais do nome dela e dele pintadas. Todos os artefatos são de uso permitido e nenhum agente tinha autorização para sua posse ou porte. Nesse contexto e de acordo com a jurisprudência do STJ, pode-se afirmar que
 ** A) há causa de aumento de pena para Laila e Joaquim, por serem integrantes das Forças Armadas.
@@ -3463,7 +3463,7 @@ o tipo subjetivo e à luz do artigo 18 do Código Penal,
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Tipicidade, Classificação dos crimes, Conduta: ação / omissão, Crimes omissivos, Crimes comuns, próprios e de mão própria
+**** Tipicidade, Classificação dos crimes, Conduta: ação / omissão, Crimes omissivos, Crimes comuns, Próprios e de Mão Própria
 -----
 * O Código Penal Brasileiro define que o crime se consuma quando nele se reúnem todos os elementos de sua definição legal e que será tentado, quando, iniciada a execução, não se consuma por circunstância alheias à vontade do agente.
 * Nesse sentido, salvo disposição em contrário, é CORRETO afirmar que se pune a tentativa com a pena correspondente ao crime consumado, diminuída de:
@@ -6289,7 +6289,7 @@ Nesse caso, a conduta do indivíduo corresponde ao conceito jurídico de
 ** D) Crimes de forma livre são aqueles que admitem qualquer meio de execução.
 ** E) Crimes transeuntes são aqueles que não deixam vestígios materiais.
 *** Gabarito: A
-**** Tipicidade, Classificação dos crimes, Consumação e tentativa, Crimes materiais, formais e de mera conduta, Outras classificações, Crimes comuns, próprios e de mão própria
+**** Tipicidade, Classificação dos crimes, Consumação e tentativa, Crimes materiais, formais e de mera conduta, Outras classificações, Crimes comuns, Próprios e de Mão Própria
 -----
 * NÃO é elemento constitutivo do crime culposo:
 ** A) a inobservância de um dever objetivo de cuidado.
@@ -6670,7 +6670,7 @@ Nesse caso, a conduta do indivíduo corresponde ao conceito jurídico de
 ** D) Crimes de forma livre são aqueles que admitem qualquer meio de execução.
 ** E) Crimes transeuntes são aqueles que não deixam vestígios materiais.
 *** Gabarito: A
-**** Tipicidade, Classificação dos crimes, Consumação e tentativa, Crimes materiais, formais e de mera conduta, Outras classificações, Crimes comuns, próprios e de mão própria
+**** Tipicidade, Classificação dos crimes, Consumação e tentativa, Crimes materiais, formais e de mera conduta, Outras classificações, Crimes comuns, Próprios e de Mão Própria
 -----
 * NÃO é elemento constitutivo do crime culposo:
 ** A) a inobservância de um dever objetivo de cuidado.
@@ -8493,7 +8493,7 @@ Nesse caso, a conduta do indivíduo corresponde ao conceito jurídico de
 ** D) A prescrição retroativa antecipada ou em perspectiva tem previsão legal e serve de fundamento para a extinção da punibilidade.
 ** E) No concurso material de crimes, a extinção da punibilidade pela prescrição incidirá sobre a soma das penas dos delitos
 *** Gabarito: B
-**** Tipicidade, Antijuridicidade, Causas supralegais de exclusão da antijuridicidade, Erro do tipo essencial, Erro de tipo acidental, Causas de extinção da punibilidade, Prescrição., Conceito e modalidades
+**** Tipicidade, Antijuridicidade, Causas supralegais de exclusão da antijuridicidade, Erro do tipo essencial, Erro de tipo acidental, Causas de extinção da punibilidade, Prescrição, Conceito e modalidades
 -----
 * A respeito da criminologia, da lei penal e da teoria geral do crime, julgue o seguinte item.
 * Conforme a teoria do perigo desprotegido, se, durante excursão, um professor permitir que seus alunos nadem em rio perigoso, apesar da existência de placa ostensiva de advertência do perigo, e um dos alunos vier a morrer afogado, tal conduta caracterizará a assunção do risco do resultado, razão por que o professor responderá por homicídio doloso por omissão imprópria.
@@ -12274,7 +12274,7 @@ III - As causas interruptivas da prescrição estendem-se a todos os autores do 
 ** C) Apenas uma das proposições é verdadeira.
 ** D) Apenas uma das proposições é falsa.
 *** Gabarito: D
-**** Tipicidade, Culpabilidade, Nexo de causalidade, Crimes omissivos, Causas de extinção da punibilidade, Prescrição. Conceito e modalidades, Imputabilidade penal
+**** Tipicidade, Culpabilidade, Nexo de causalidade, Crimes omissivos, Causas de extinção da punibilidade, Prescrição Conceito e modalidades, Imputabilidade penal
 -----
 * Com base no direito penal, julgue o item que se segue.
 Na tentativa perfeita, ou tentativa propriamente dita, o agente não consegue praticar todos os atos executórios necessários à consumação do crime, sendo o processo executório interrompido por interferências externas, alheias à vontade do agente.
