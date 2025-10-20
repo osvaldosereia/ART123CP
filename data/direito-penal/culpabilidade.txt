@@ -717,9 +717,6 @@
 *** Gabarito: D
 **** Tipicidade, Culpabilidade, Potencial conhecimento da ilicitude - Erro de proibição Erro do tipo essencial, Erro de tipo acidental
 -----
-Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição das questões conforme o modelo solicitado, sem as marcações extras.
-
------
 ***** Ano: 2008 | Banca: VUNESP | Órgão: MPE-SP | Prova: VUNESP-2008-MPE-SP-Promotor de Justiça
 * Assinale a alternativa correta.
 ** A) O erro sobre a ilicitude do fato, se inevitável, determina a redução da pena de um sexto a um terço.
@@ -1204,7 +1201,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -1220,7 +1217,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -1242,7 +1239,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -1276,7 +1273,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -1296,7 +1293,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -1336,7 +1333,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -1352,7 +1349,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -1372,7 +1369,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -1392,7 +1389,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Exigibilidade de conduta diversa
+**** Culpabilidade , Exigibilidade de conduta diversa
 
 -----
 
@@ -1412,7 +1409,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Crimes contra a vida , Homicídio Infanticídio , Imputabilidade penal
+**** Culpabilidade , Crimes contra a vida , Homicídio Infanticídio , Imputabilidade penal
 
 -----
 
@@ -1432,7 +1429,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
+**** Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
 
 -----
 
@@ -1452,7 +1449,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
+**** Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
 
 -----
 
@@ -1472,7 +1469,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Noções Gerais da Culpabilidade , Lesões corporais Lesão corporal leve e culposa , Lesões corporais qualificadas , Violência doméstica
+**** Culpabilidade , Noções Gerais da Culpabilidade , Lesões corporais Lesão corporal leve e culposa , Lesões corporais qualificadas , Violência doméstica
 
 -----
 
@@ -1528,7 +1525,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Exigibilidade de conduta diversa
+**** Culpabilidade , Exigibilidade de conduta diversa
 
 -----
 
@@ -1548,7 +1545,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Medida de segurança
+**** Culpabilidade , Medida de segurança
 
 -----
 
@@ -1566,7 +1563,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Exigibilidade de conduta diversa , Potencial conhecimento da ilicitude – Erro de proibição Imputabilidade penal
+**** Culpabilidade , Exigibilidade de conduta diversa , Potencial conhecimento da ilicitude – Erro de proibição Imputabilidade penal
 
 -----
 
@@ -1606,7 +1603,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Antijuridicidade
+**** Culpabilidade , Antijuridicidade
 
 -----
 
@@ -1640,7 +1637,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -1654,7 +1651,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -1674,7 +1671,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -1694,7 +1691,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
+**** Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
 
 -----
 
@@ -1724,7 +1721,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -1764,7 +1761,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Antijuridicidade , Causas supralegais de exclusão da antijuridicidade
+**** Culpabilidade , Antijuridicidade , Causas supralegais de exclusão da antijuridicidade
 
 -----
 
@@ -1784,7 +1781,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
+**** Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
 
 -----
 
@@ -1804,7 +1801,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -1820,7 +1817,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Noções Gerais da Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Noções Gerais da Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -1840,7 +1837,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -1860,7 +1857,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
+**** Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
 
 -----
 
@@ -1880,7 +1877,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -1900,7 +1897,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -1920,7 +1917,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Noções Gerais da Culpabilidade
+**** Culpabilidade , Noções Gerais da Culpabilidade
 
 -----
 
@@ -1940,11 +1937,7 @@ Entendido. Peço desculpas pelas marcações indesejadas. Segue a transcrição 
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
-
------
-
-O texto contém as questões 561 a 580, totalizando 20 questões. A transcrição, na ordem apresentada e com os gabaritos associados, é a seguinte:
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -1962,7 +1955,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -1982,7 +1975,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -2058,7 +2051,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -2074,7 +2067,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -2090,7 +2083,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
+**** Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
 
 -----
 
@@ -2106,7 +2099,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -2126,7 +2119,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -2142,7 +2135,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -2158,7 +2151,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -2178,7 +2171,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -2194,7 +2187,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
+**** Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
 
 -----
 
@@ -2208,7 +2201,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Exigibilidade de conduta diversa
+**** Culpabilidade , Exigibilidade de conduta diversa
 
 -----
 
@@ -2292,7 +2285,7 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -2315,9 +2308,6 @@ O texto contém as questões 561 a 580, totalizando 20 questões. A transcriçã
 **** Direito Penal Tipicidade , Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição Erro do tipo essencial
 
 -----
-O texto contém as questões 541 a 560, totalizando 20 questões. A transcrição, na ordem apresentada e com os gabaritos associados, é a seguinte:
-
------
 
 ***** Ano: 2014 | Banca: CESPE / CEBRASPE | Órgão: TJ-DFT
 
@@ -2336,7 +2326,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Noções Gerais da Culpabilidade
+**** Culpabilidade , Noções Gerais da Culpabilidade
 
 -----
 
@@ -2412,7 +2402,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -2430,7 +2420,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -2448,7 +2438,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
+**** Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
 
 -----
 
@@ -2466,7 +2456,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Inimputabilidade por doença mental , Inimputabilidade pela embriaguez Imputabilidade penal
+**** Culpabilidade , Inimputabilidade por doença mental , Inimputabilidade pela embriaguez Imputabilidade penal
 
 -----
 
@@ -2486,7 +2476,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Inimputabilidade por doença mental , Inimputabilidade pela embriaguez Imputabilidade penal
+**** Culpabilidade , Inimputabilidade por doença mental , Inimputabilidade pela embriaguez Imputabilidade penal
 
 -----
 
@@ -2506,7 +2496,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Teoria Geral do Delito
+**** Culpabilidade , Teoria Geral do Delito
 
 -----
 
@@ -2546,7 +2536,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Inimputabilidade por doença mental , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade por doença mental , Inimputabilidade pela embriaguez
 
 -----
 
@@ -2566,7 +2556,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -2586,7 +2576,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Noções Gerais da Culpabilidade , Crimes contra a administração pública Favorecimento pessoal
+**** Culpabilidade , Noções Gerais da Culpabilidade , Crimes contra a administração pública Favorecimento pessoal
 
 -----
 
@@ -2604,7 +2594,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -2624,7 +2614,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -2645,7 +2635,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Modalidades das Penas Restritivas de Direito , Substituição - Concessão. Imputabilidade penal
+**** Culpabilidade , Modalidades das Penas Restritivas de Direito , Substituição - Concessão. Imputabilidade penal
 
 -----
 
@@ -2661,7 +2651,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
+**** Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição
 
 -----
 
@@ -2701,10 +2691,7 @@ O texto contém as questões 541 a 560, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Inimputabilidade por doença mental , Imputabilidade penal
-
------
-O texto contém as questões 521 a 540, totalizando 20 questões. A transcrição, na ordem apresentada e com os gabaritos associados, é a seguinte:
+**** Culpabilidade , Inimputabilidade por doença mental , Imputabilidade penal
 
 -----
 
@@ -2744,7 +2731,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -2764,7 +2751,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -2780,7 +2767,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -2800,7 +2787,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -2858,7 +2845,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -2877,7 +2864,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Descriminantes Putativas
+**** Culpabilidade , Descriminantes Putativas
 
 -----
 
@@ -2895,7 +2882,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Inimputabilidade por doença mental , Inimputabilidade pela embriaguez Imputabilidade penal
+**** Culpabilidade , Inimputabilidade por doença mental , Inimputabilidade pela embriaguez Imputabilidade penal
 
 -----
 
@@ -2913,7 +2900,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Inimputabilidade por doença mental
+**** Culpabilidade , Inimputabilidade por doença mental
 
 -----
 
@@ -2951,7 +2938,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Inimputabilidade por doença mental , Noções Gerais da Culpabilidade Imputabilidade penal
+**** Culpabilidade , Inimputabilidade por doença mental , Noções Gerais da Culpabilidade Imputabilidade penal
 
 -----
 
@@ -2969,7 +2956,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -2987,7 +2974,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3007,7 +2994,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Exigibilidade de conduta diversa
+**** Culpabilidade , Exigibilidade de conduta diversa
 
 -----
 
@@ -3027,7 +3014,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3045,7 +3032,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Noções Gerais da Culpabilidade
+**** Culpabilidade , Noções Gerais da Culpabilidade
 
 -----
 
@@ -3065,7 +3052,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3086,9 +3073,6 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 **** Direito Penal Tipicidade , Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição Erro do tipo essencial , Erro de tipo acidental
 
 -----
-O texto contém as questões 501 a 520, totalizando 20 questões. A transcrição, na ordem apresentada e com os gabaritos associados, é a seguinte:
-
------
 
 ***** Ano: 2013 | Banca: FGV | Órgão: AL-MA
 
@@ -3106,7 +3090,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3126,7 +3110,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Antijuridicidade
+**** Culpabilidade , Antijuridicidade
 
 -----
 
@@ -3146,7 +3130,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3166,7 +3150,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Noções Gerais da Culpabilidade
+**** Culpabilidade , Noções Gerais da Culpabilidade
 
 -----
 
@@ -3186,7 +3170,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3226,7 +3210,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Antijuridicidade
+**** Culpabilidade , Antijuridicidade
 
 -----
 
@@ -3269,7 +3253,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -3307,7 +3291,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Antijuridicidade , Legítima defesa Estado de necessidade , Estrito cumprimento de dever legal e exercício regular de direito , Inimputabilidade por doença mental
+**** Culpabilidade , Antijuridicidade , Legítima defesa Estado de necessidade , Estrito cumprimento de dever legal e exercício regular de direito , Inimputabilidade por doença mental
 
 -----
 
@@ -3323,7 +3307,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Exigibilidade de conduta diversa
+**** Culpabilidade , Exigibilidade de conduta diversa
 
 -----
 
@@ -3364,7 +3348,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Noções Fundamentais , Lei penal no espaço Antijuridicidade , Estado de necessidade , Imputabilidade penal
+**** Culpabilidade , Noções Fundamentais , Lei penal no espaço Antijuridicidade , Estado de necessidade , Imputabilidade penal
 
 -----
 
@@ -3404,7 +3388,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Noções Gerais da Culpabilidade
+**** Culpabilidade , Noções Gerais da Culpabilidade
 
 -----
 
@@ -3424,7 +3408,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -3440,7 +3424,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -3460,7 +3444,7 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Antijuridicidade , Estrito cumprimento de dever legal e exercício regular de direito Potencial conhecimento da ilicitude – Erro de proibição , Inimputabilidade pela embriaguez
+**** Culpabilidade , Antijuridicidade , Estrito cumprimento de dever legal e exercício regular de direito Potencial conhecimento da ilicitude – Erro de proibição , Inimputabilidade pela embriaguez
 
 -----
 
@@ -3485,9 +3469,6 @@ O texto contém as questões 501 a 520, totalizando 20 questões. A transcriçã
 **** Direito Penal Tipicidade , Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição Erro do tipo essencial
 
 -----
-O texto contém as questões 481 a 500, totalizando 20 questões. A transcrição, na ordem apresentada e com os gabaritos associados, é a seguinte:
-
------
 
 ***** Ano: 2015 | Banca: VUNESP | Órgão: PC-CE
 
@@ -3505,7 +3486,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -3525,7 +3506,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3541,7 +3522,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3557,7 +3538,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -3598,7 +3579,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -3618,7 +3599,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Inimputabilidade por doença mental
+**** Culpabilidade , Inimputabilidade por doença mental
 
 -----
 
@@ -3638,7 +3619,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3674,7 +3655,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Noções Gerais da Culpabilidade
+**** Culpabilidade , Noções Gerais da Culpabilidade
 
 -----
 
@@ -3694,7 +3675,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -3714,7 +3695,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3752,7 +3733,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3771,7 +3752,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3791,7 +3772,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -3811,7 +3792,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -3831,7 +3812,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -3851,7 +3832,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -3871,10 +3852,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade
-
------
-O texto contém as questões 521 a 540, totalizando 20 questões. A transcrição, na ordem apresentada e com os gabaritos associados, é a seguinte:
+**** Culpabilidade
 
 -----
 
@@ -3914,7 +3892,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -3934,7 +3912,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -3950,7 +3928,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -3970,7 +3948,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -4028,7 +4006,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -4047,7 +4025,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Descriminantes Putativas
+**** Culpabilidade , Descriminantes Putativas
 
 -----
 
@@ -4065,7 +4043,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Inimputabilidade por doença mental , Inimputabilidade pela embriaguez Imputabilidade penal
+**** Culpabilidade , Inimputabilidade por doença mental , Inimputabilidade pela embriaguez Imputabilidade penal
 
 -----
 
@@ -4083,7 +4061,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Inimputabilidade por doença mental
+**** Culpabilidade , Inimputabilidade por doença mental
 
 -----
 
@@ -4121,7 +4099,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Inimputabilidade por doença mental , Noções Gerais da Culpabilidade Imputabilidade penal
+**** Culpabilidade , Inimputabilidade por doença mental , Noções Gerais da Culpabilidade Imputabilidade penal
 
 -----
 
@@ -4139,7 +4117,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -4157,7 +4135,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -4177,7 +4155,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Exigibilidade de conduta diversa
+**** Culpabilidade , Exigibilidade de conduta diversa
 
 -----
 
@@ -4197,7 +4175,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -4215,7 +4193,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Noções Gerais da Culpabilidade
+**** Culpabilidade , Noções Gerais da Culpabilidade
 
 -----
 
@@ -4235,7 +4213,7 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -4256,9 +4234,6 @@ O texto contém as questões 521 a 540, totalizando 20 questões. A transcriçã
 **** Direito Penal Tipicidade , Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição Erro do tipo essencial , Erro de tipo acidental
 
 -----
-O texto contém as questões 481 a 500, totalizando 20 questões. A transcrição, na ordem apresentada e com os gabaritos associados, é a seguinte:
-
------
 
 ***** Ano: 2015 | Banca: VUNESP | Órgão: PC-CE
 
@@ -4276,7 +4251,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -4296,7 +4271,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -4312,7 +4287,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -4328,7 +4303,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -4369,7 +4344,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -4389,7 +4364,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Inimputabilidade por doença mental
+**** Culpabilidade , Inimputabilidade por doença mental
 
 -----
 
@@ -4409,7 +4384,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -4445,7 +4420,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Noções Gerais da Culpabilidade
+**** Culpabilidade , Noções Gerais da Culpabilidade
 
 -----
 
@@ -4465,7 +4440,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -4485,7 +4460,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -4523,7 +4498,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -4542,7 +4517,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
 
 -----
 
@@ -4562,7 +4537,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: A
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -4582,7 +4557,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: E
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -4602,7 +4577,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: D
 
-**** Direito Penal Culpabilidade , Inimputabilidade pela embriaguez
+**** Culpabilidade , Inimputabilidade pela embriaguez
 
 -----
 
@@ -4622,7 +4597,7 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: C
 
-**** Direito Penal Culpabilidade , Imputabilidade penal
+**** Culpabilidade , Imputabilidade penal
 
 -----
 
@@ -4642,6 +4617,394 @@ O texto contém as questões 481 a 500, totalizando 20 questões. A transcriçã
 
 *** Gabarito: B
 
-**** Direito Penal Culpabilidade
+**** Culpabilidade
+
+-----
+
+***** Ano: 2013 | Banca: CESPE / CEBRASPE | Órgão: TJ-DFT
+
+* Marcos, de cinquenta anos de idade, com histórico bem documentado de esquizofrenia paranoide, assim que entrou em casa, após um dia de trabalho, encontrou a esposa com o amante e os matou com uma faca de cozinha. Após o crime, Marcos tentou esconder os corpos em um buraco cavado no jardim e eliminou os sinais de sangue do interior de sua residência.
+* Tendo como referência a situação hipotética apresentada acima, julgue o seguinte item.Por ser portador de esquizofrenia paranoide, Marcos deve ser considerado inimputável e deverá ser submetido a medida de segurança.
+
+** A) Certo
+
+** B) Errado
+
+*** Gabarito: E
+
+**** Culpabilidade , Inimputabilidade por doença mental , Noções Gerais da Culpabilidade
+
+-----
+
+***** Ano: 2013 | Banca: CESPE / CEBRASPE | Órgão: TJ-DFT
+
+* Marcos, de cinquenta anos de idade, com histórico bem documentado de esquizofrenia paranoide, assim que entrou em casa, após um dia de trabalho, encontrou a esposa com o amante e os matou com uma faca de cozinha. Após o crime, Marcos tentou esconder os corpos em um buraco cavado no jardim e eliminou os sinais de sangue do interior de sua residência.
+* Tendo como referência a situação hipotética apresentada acima, julgue o seguinte item.Se for condenado e, durante o cumprimento da pena, ocorrer exacerbação de sintomas psicóticos, Marcos deverá ser submetido a exame de superveniência de doença mental e transferido para hospital de custódia e tratamento.
+
+** A) Certo
+
+** B) Errado
+
+*** Gabarito: C
+
+**** Culpabilidade , Inimputabilidade por doença mental , Medida de segurança Superveniência de doença mental
+
+-----
+
+***** Ano: 2015 | Banca: VUNESP | Órgão: MPE-SP
+
+* Assinale a alternativa correta a respeito da imputabilidade penal.
+
+** A) Comprovada a doença mental ou o desenvolvimento mental incompleto ou retardado, o agente será considerado inimputável para os efeitos legais.
+
+** B) Aos inimputáveis e aos semi-imputáveis, comprovada essa condição por perícia médica, será substituída a pena por medida de segurança consistente em internação em hospital de custódia e tratamento psiquiátrico.
+
+** C) A imputabilidade é um dos elementos da culpabilidade, ao lado da potencial consciência sobre a ilicitude do fato e a exigibilidade de conduta diversa.
+
+** D) A imputabilidade, de acordo com o Código Penal, pode se dar por doença mental, imaturidade natural ou embriaguez do agente.
+
+** E) A emoção e a paixão, além de não afastarem a imputabilidade penal do agente, podem ser consideradas como circunstâncias agravantes no momento da fixação da pena.
+
+*** Gabarito: C
+
+**** Culpabilidade , Inimputabilidade por doença mental , Imputabilidade penal
+
+-----
+
+***** Ano: 2015 | Banca: FCC | Órgão: TCE-CE
+
+* A diferença entre erro sobre elementos do tipo e erro sobre a ilicitude do fato reside na circunstância de que
+
+** A) o erro de tipo exclui a culpabilidade, o de fato a imputabilidade.
+
+** B) o erro de tipo exclui o dolo, o de fato a culpabilidade.
+
+** C) o erro de tipo exclui a reprovabilidade da conduta, o de fato o elemento do injusto.
+
+** D) o erro de tipo exclui o dolo, o de fato a invencibilidade do erro.
+
+** E) a discriminante putativa é o que distingue o erro de tipo do erro de fato.
+
+*** Gabarito: B
+
+**** Direito Penal Tipicidade , Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição Erro do tipo essencial , Descriminantes Putativas
+
+-----
+
+***** Ano: 2015 | Banca: FGV | Órgão: TCE-RJ
+
+* A embriaguez provocada pelo uso do álcool pode excluir a culpabilidade quando:
+
+** A) for preordenada;
+
+** B) decorrer de força maior e diminuir a capacidade de entender a ilicitude do fato;
+
+** C) for culposa;
+
+** D) for patológica;
+
+** E) for habitual.
+
+*** Gabarito: D
+
+**** Culpabilidade , Inimputabilidade pela embriaguez
+
+-----
+
+***** Ano: 2015 | Banca: FGV | Órgão: DPE-RO
+
+* Joana foi para a festa de aniversário de sua melhor amiga em uma boate e, feliz pela comemoração, passou a ingerir bebida alcoólica em quantidade exagerada. Ao final da festa, Joana estava completamente alcoolizada, apesar de ela não ter tido intenção de ficar nesse estado. Saindo da boate, deparou-se com sua inimiga Gabriela e, alterada pela bebida, jogou um copo de vidro na cabeça desta, causando-lhe lesões graves. Diante dessa situação, considerando apenas os fatos narrados e que esses foram provados, é correto afirmar que Joana:
+
+** A) deverá ser absolvida impropriamente, com aplicação de medida de segurança, pois estava inimputável no momento dos fatos;
+
+** B) deverá ser condenada, pois houve embriaguez voluntária e apenas a embriaguez culposa exclui a imputabilidade;
+
+** C) deverá ser condenada, pois a embriaguez culposa não exclui a imputabilidade;
+
+** D) deverá ser absolvida, pois houve embriaguez completa e decorrente de caso fortuito ou força maior;
+
+** E) deverá ser absolvida por ausência de culpabilidade, sem aplicação de medida de segurança, já que a inimputabilidade era apenas momentânea.
+
+*** Gabarito: C
+
+**** Culpabilidade , Inimputabilidade pela embriaguez
+
+-----
+
+***** Ano: 2015 | Banca: MPE-SP | Órgão: MPE-SP
+
+* A actio libera in causa se caracteriza:
+
+** A) quando o agente, nos limites do livre arbítrio que rege a conduta humana, pratica o crime de forma livre e consciente.
+
+** B) quando o agente, por impossibilidade de conhecer a ilicitude de sua conduta, pratica fato tipificado como crime.
+
+** C) quando o agente, em estado de embriaguez, proveniente de caso fortuito ou força maior, que enseja a diminuição de pena, pratica fato definido como crime.
+
+** D) quando o agente, em estado de embriaguez completa, proveniente de caso fortuito ou força maior, que enseja isenção de pena, pratica fato definido como crime.
+
+** E) quando o agente comete o crime em estado de embriaguez não proveniente de caso fortuito ou força maior.
+
+*** Gabarito: E
+
+**** Culpabilidade , Imputabilidade penal
+
+-----
+
+***** Ano: 2015 | Banca: FUNIVERSA | Órgão: PC-DF
+
+* Com base na doutrina majoritária, na jurisprudência, no CP e na Lei de Contravenções Penais, assinale a alternativa correta.
+
+** A) É formalmente atípica a conduta consistente em ter, mediante fraude, conjunção carnal com pessoa maior de idade e capaz.
+
+** B) Tanto na teoria psicológica da culpabilidade como na teoria psicológico-normativa da culpabilidade, exige-se atual, real e efetiva consciência da ilicitude.
+
+** C) Conforme o STF, a lesão corporal leve praticada com violência doméstica contra a mulher é crime de ação penal pública condicionada à representação da ofendida.
+
+** D) O criminoso que coloca bomba em avião, a fim de que exploda durante o voo e mate seu desafeto – que se encontra na aeronave –, atua mediante dolo direto em face do desafeto e mediante dolo eventual em face das demais pessoas dentro do avião.
+
+** E) Nos termos da Lei das Contravenções Penais, é punível a tentativa de contravenção.
+
+*** Gabarito: B
+
+**** Culpabilidade , Noções Gerais da Culpabilidade
+
+-----
+
+***** Ano: 2015 | Banca: FCC | Órgão: TJ-RR
+
+* Se o agente, em virtude de perturbação de saúde mental ou por desenvolvimento mental incompleto ou retardado, não era inteiramente incapaz de entender o caráter criminoso do fato ou de determinar-se de acordo com esse entendimento, a
+
+** A) circunstância atuará como atenuante, a ser considerada na segunda etapa do cálculo da pena.
+
+** B) pena poderá ser substituída por tratamento ambulatorial, mas não por internação.
+
+** C) pena será reduzida de um a dois terços, podendo-se considerar, na escolha do redutor, o grau de perturbação da saúde mental.
+
+** D) hipótese será de absolvição imprópria, com imposição necessária de medida de segurança.
+
+** E) pena será reduzida de um a dois terços, não se admitindo, porém, a substituição por medida de segurança.
+
+*** Gabarito: C
+
+**** Culpabilidade , Inimputabilidade por doença mental
+
+-----
+
+***** Ano: 2013 | Banca: TRT 14R | Órgão: TRT - 14ª Região (RO e AC)
+
+* Analise as proposições abaixo e após marque a alternativa correta:
+* I. O crime de extorsão consuma-se independentemente da obtenção da vantagem indevida. II. A incidência da circunstância atenuante não pode conduzir à redução da pena abaixo do mínimo legal. III. Em determinados casos, pode não existir a punibilidade do agente, ou este pode beneficiar-se de uma das causas de extinção de punibilidade, no entanto, o delito praticado persiste.
+
+** A) Apenas o item I é falso.
+
+** B) Apenas o item II é falso.
+
+** C) Apenas o item III é falso.
+
+** D) Todos os itens são verdadeiros.
+
+** E) Todos os itens são falsos.
+
+*** Gabarito: D
+
+**** Culpabilidade , Penas privativas de liberdade , Noções gerais de dosimetria da pena privativa de liberdade Crimes contra o patrimônio , Extorsão
+
+-----
+
+***** Ano: 2009 | Banca: FCC | Órgão: TJ-AP
+
+* Sao pressupostos da culpabilidade
+
+** A) a possibilidade de conhecer a ilicitude do fato e a exigibilidade de conduta diversa.
+
+** B) a imputabilidade e a falta de dever de cuidado.
+
+** C) previsibilidade do resultado e a exigibilidade de conduta diversa.
+
+** D) a falta de dever de cuidado e a previsibilidade do resultado
+
+** E) a possibilidade de conhecer a ilicitude do fato e a falta de dever de cuidado.
+
+*** Gabarito: A
+
+**** Culpabilidade , Noções Gerais da Culpabilidade
+
+-----
+
+***** Ano: 2015 | Banca: FCC | Órgão: TCM-GO
+
+* A respeito das causas excludentes da culpabilidade, é correto afirmar que
+
+** A) o desconhecimento da lei nos crimes culposos isenta o agente de pena.
+
+** B) o erro invencível sobre a ilicitude do fato não isenta o réu de pena.
+
+** C) na coação moral irresistível o coator responde por dolo e o coacto por culpa.
+
+** D) as descriminantes putativas excluem a culpabilidade.
+
+** E) na obediência hierárquica é dispensável a existência de relação de direito público entre superior e subordinado.
+
+*** Gabarito: D
+
+**** Culpabilidade
+
+-----
+
+***** Ano: 2015 | Banca: FCC | Órgão: TJ-PE
+
+* Em matéria de erro, correto afirmar que
+
+** A) o erro sobre a ilicitude do fato exclui a culpabilidade, por não exigibilidade de conduta diversa
+
+** B) o erro sobre elemento constitutivo do tipo penal não exclui a possibilidade de punição por crime culposo.
+
+** C) o erro sobre a ilicitude do fato, se evitável, isenta de pena.
+
+** D) o erro sobre elemento constitutivo do tipo penal exclui a culpabilidade.
+
+** E) o erro quanto à pessoa contra a qual o crime é praticado não isenta de pena, considerando-se as condições ou qualidades da vítima, e não as da pessoa contra quem o agente queria praticar o crime.
+
+*** Gabarito: B
+
+**** Direito Penal Tipicidade , Culpabilidade , Potencial conhecimento da ilicitude – Erro de proibição Erro do tipo essencial , Erro de tipo acidental
+
+-----
+
+***** Ano: 2014 | Banca: VUNESP | Órgão: TJ-PA
+
+* Se o agente, por embriaguez, proveniente de caso fortuito ou força maior, não possuía, ao tempo da ação ou da omissão, a plena capacidade de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento, a pena
+
+** A) pode ser reduzida de um a dois terços.
+
+** B) pode ser aumentada de um a dois terços.
+
+** C) fica excluída por inimputabilidade
+
+** D) não sofre qualquer alteração.
+
+** E) não é aplicada por ausência de culpabilidade.
+
+*** Gabarito: A
+
+**** Culpabilidade , Inimputabilidade pela embriaguez
+
+-----
+
+***** Ano: 2013 | Banca: Quadrix | Órgão: CRF-RS
+
+* Segundo o Código Penal:
+
+** A) Equipara-se a funcionário público quem exerce cargo, emprego ou função em entidade paraestatal, com exceção de quem trabalha para empresa prestadora de serviço contratada ou conveniada para a execução de atividade típica da Administração Pública.
+
+** B) Considera-se funcionário público, para os efeitos penais, quem, exceto transitoriamente ou sem remuneração, exerce cargo, emprego ou função pública.
+
+** C) É isento de pena o agente que, por doença mental ou desenvolvimento mental incompleto ou retardado, não era, ao tempo da ação ou da omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento.
+
+** D) É isento de pena o agente que, por embriaguez completa, proveniente de caso fortuito ou força maior, era, ao tempo da ação ou da omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento.
+
+** E) A pena será aumentada da terça parte quando os autores dos crimes praticados por funcionário público contra a Administração em geral forem ocupantes de cargos em comissão ou de função de direção ou assessoramento de órgão da administração direta, sociedade de economia mista, empresa pública ou fundação instituida pelo poder público.
+
+*** Gabarito: D
+
+**** Culpabilidade , Crimes contra a administração pública , Noções Gerais de Crimes Contra a Administração Pública Imputabilidade penal
+
+-----
+
+***** Ano: 2015 | Banca: CESPE / CEBRASPE | Órgão: TRE-GO
+
+* Julgue o item seguinte, a respeito de concurso de pessoas, tipicidade, ilicitude, culpabilidade e fixação da pena.
+
+* Aquele que for fisicamente coagido, de forma irresistível, a praticar uma infração penal cometerá fato típico e ilícito, porém não culpável.
+
+** A) Certo
+
+** B) Errado
+
+*** Gabarito: E
+
+**** Direito Penal Tipicidade , Culpabilidade , Conduta: ação / omissão Exigibilidade de conduta diversa
+
+-----
+
+***** Ano: 2014 | Banca: IPAD | Órgão: Prefeitura de Recife - PE- Guarda Municipal
+
+* Beltrano e Ciclano saem juntos para comemorar o sucesso obtido em concurso público. Beltrano não pode ingerir em hipótese alguma bebida alcoólica. Entretanto, Ciclano coloca as escondidas álcool no refrigerante de Beltrano. Ao tomar o refrigerante, Beltrano perde a capacidade de se comportar conforme o direito e de entender inteiramente o caráter ilícito de seus atos. Totalmente fora de si, Beltrano quebra uma garrafa na cabeça de Ciclano que falece. Considerando o exposto, e correto afirmar:
+
+** A) Beltrano esta isento de pena porque no momento que ceifou a vida de Ciclano encontra-se em situação de inimputabilidade.
+
+** B) Beltrano não cometeu nenhum crime, visto que está amparado pela excludente de estado de necessidade.
+
+** C) Beltrano responderá por homicídio, pois a embriaguez em nenhuma hipótese o isenta de pena.
+
+** D) Beltrano responderá por homicídio visto que deveria ser mais cuidadoso para não ingerir bebida alcoólica.
+
+** E) Beltrano está isento de pena porque agiu sob coação irresistivel.
+
+*** Gabarito: A
+
+**** Culpabilidade , Antijuridicidade , Estado de necessidade Inimputabilidade pela embriaguez , Crimes contra a vida , Homicídio , Imputabilidade penal
+
+-----
+
+***** Ano: 2015 | Banca: FCC | Órgão: TRE-RR
+
+* Paulo é estudante de uma determinada faculdade do Estado de Roraima, cursando o primeiro semestre. No início deste ano de 2015 Paulo é submetido a um trote acadêmico violento e, amarrado, é obrigado a consumir à força bebida alcoólica e substância entorpecente. Após o trote, Paulo, completamente embriagado e incapacitado de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento por conta desta embriaguez e do uso de droga, desloca-se até uma Delegacia de Polícia da cidade de Boa Vista, onde tramita um inquérito contra ele por crime de lesão corporal dolosa decorrente de uma briga em uma casa noturna, e oferece R$ 10.000,00 em dinheiro ao Delegado de Polícia para que este não dê prosseguimento às investigações. Paulo acaba preso em flagrante pela Autoridade Policial. No caso hipotético exposto, Paulo
+
+** A) praticou crime de corrupção ativa e terá a pena reduzida de um a dois terços no caso de condenação.
+
+** B) é isento de pena pelo crime cometido nas dependências da Delegacia de Polícia.
+
+** C) praticou crime de corrupção ativa e não terá a pena reduzida no caso de condenação pela embriaguez.
+
+** D) praticou crime de concussão e não terá a pena reduzida no caso de condenação.
+
+** E) praticou crime de concussão e terá a pena reduzida de um a dois terços no caso de condenação.
+
+*** Gabarito: B
+
+**** Culpabilidade , Inimputabilidade pela embriaguez
+
+-----
+
+***** Ano: 2008 | Banca: CONSULPLAN | Órgão: TRE-RS
+
+* É isento de pena o agente que, por doença mental ou desenvolvimento mental incompleto ou retardado, era, ao tempo da ação ou da omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento. A isenção de pena, in casu, é reconhecida em virtude da:
+
+** A) Ausência de conduta penalmente relevante.
+
+** B) Existência de uma causa justificante.
+
+** C) Existência de uma escusa absolutória.
+
+** D) Ausência de culpabilidade.
+
+** E) Ausência de tipicidade.
+
+*** Gabarito: D
+
+**** Direito Penal Tipicidade , Culpabilidade , Tipicidade formal Inimputabilidade por doença mental
+
+-----
+
+***** Ano: 2015 | Banca: MPE-BA | Órgão: MPE-BA
+
+* Analise as seguintes assertivas acerca da culpabilidade e punibilidade:
+* I – O Código Penal Brasileiro adotou o critério biológico em relação à inimputabilidade em razão da idade e o critério biopsicológico em relação à inimputabilidade em razão de doença mental. II – A desobediência civil e a cláusula de consciência são exemplos de causas de exclusão de culpabilidade. III – A decadência é causa de exclusão de punibilidade e, no seu cômputo temporal, deve ser computado o dia inicial e excluído o dia final. IV – No cálculo do prazo de prescrição, em relação às causas de aumento ou diminuição variável de pena, devem ser considerados o menor valor de aumento e o maior valor de diminuição, enquanto que, na hipótese de continuidade delitiva, a prescrição deve ser regulada sem o cômputo do acréscimo decorrente da continuação. V – Segundo a teoria psicológica normativa da culpabilidade, o erro de proibição, ainda que evitável, isenta o agente de pena. Estão CORRETAS as assertivas:
+
+** A) I e II.
+
+** B) I e V.
+
+** C) II e III.
+
+** D) III e IV.
+
+** E) IV e V.
+
+*** Gabarito: A
+
+**** Culpabilidade , Causas de extinção da punibilidade , Causas de Extinção da Punibilidade - Noções gerais
 
 -----
