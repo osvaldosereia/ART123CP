@@ -183,16 +183,64 @@ async function buildThemesMultiselect(){
   const node = STATE.tree[STATE.disciplina];
   if(!node) return;
 
+  // helpers locais
+  const norm = (s)=>strip(String(s||"")).replace(/\s+/g," ").trim(); // sem acento, 1 espaço
+  const first3 = (s)=>{
+    const w = norm(s).split(" ");
+    return w.slice(0,3).join(" ");
+  };
+  const pickLabel = (arr)=>{
+    // menor número de palavras; em empate, menor comprimento; depois ordem local
+    return arr.slice().sort((a,b)=>{
+      const aw=a.trim().split(/\s+/).length, bw=b.trim().split(/\s+/).length;
+      if(aw!==bw) return aw-bw;
+      if(a.length!==b.length) return a.length-b.length;
+      return a.localeCompare(b,'pt-BR',{sensitivity:"base"});
+    })[0];
+  };
+
   toast("Lendo temas…");
   const allParsed = [];
   for (const path of node.files){
     const parsed = await getParsedForPath(path);
     allParsed.push(...parsed);
   }
+
+  // Agrupar por 3 primeiras palavras da forma sem acentos
+  const groups = new Map(); // key3 -> [temas originais]
+  for (const q of allParsed){
+    if (!Array.isArray(q.themes)) continue;
+    for (const t of q.themes){
+      const k = first3(t);
+      if(!k) continue;
+      if(!groups.has(k)) groups.set(k, []);
+      groups.get(k).push(t);
+    }
+  }
+
+  // key -> rótulo canônico
+  const keyToLabel = new Map();
+  for (const [k, list] of groups){
+    keyToLabel.set(k, pickLabel(list));
+  }
+
+  // Reescrever temas das questões para o rótulo canônico e deduplicar por questão
+  for (const q of allParsed){
+    if (!Array.isArray(q.themes)) { q.themes = []; continue; }
+    const mapped = q.themes.map(t=>{
+      const k = first3(t);
+      return keyToLabel.get(k) ?? t;
+    });
+    const seen = new Set();
+    q.themes = mapped.filter(t=>{ if(seen.has(t)) return false; seen.add(t); return true; });
+  }
+
+  // Lista final para o multiselect
+  const setLabels = new Set();
+  for (const q of allParsed){ for (const t of q.themes) setLabels.add(t); }
+  const temas = [...setLabels].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
+
   STATE.poolQuestions = allParsed;
-  const set = new Set();
-  for (const q of allParsed){ if (Array.isArray(q.themes)) q.themes.forEach(t=>set.add(t)); }
-  const temas = [...set].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
   STATE.temasAll = temas;
 
   const trigger = document.createElement("button");
@@ -224,8 +272,9 @@ async function buildThemesMultiselect(){
   renderMsList();
 
   $("#msSearch").addEventListener("input", deb((e)=>{
-    STATE.ms.filter = e.target.value;
+    STATE.ms.filter = e.target.value || "";
     renderMsList();
+    updateCount();
   },150));
 
   $("#msSelAll").addEventListener("click", ()=>{
@@ -285,8 +334,8 @@ function getVisibleItems(){
     if(STATE.ms.listStripped[i].includes(f)) out.push(STATE.ms.list[i]);
   }
   return out;
-
 }
+
 function renderMsList(){
   const list = $("#msList"); list.innerHTML="";
   const items = getVisibleItems();
@@ -326,17 +375,18 @@ async function getParsedForPath(path){
 async function startSearch(){
   try{
     toast("Carregando questões…");
-    const files = STATE.tree[STATE.disciplina]?.files || [];
-    const batches = await Promise.all(files.map(getParsedForPath));
-    const all = batches.flat();
+
+    // Use o pool já normalizado por buildThemesMultiselect
+    const all = Array.isArray(STATE.poolQuestions) ? STATE.poolQuestions : [];
+    if (!all.length){ toast("Nenhuma questão carregada"); return; }
 
     // Base do quiz: somente questões que contêm pelo menos um dos temas selecionados
     const wanted = new Set(STATE.temasSel);
-    const filtered = all.filter(q => q.themes.some(t => wanted.has(t)));
+    const filtered = all.filter(q => Array.isArray(q.themes) && q.themes.some(t => wanted.has(t)));
     if (!filtered.length){ toast("Nenhuma questão encontrada"); return; }
 
     STATE.allQuestions = filtered;
-    STATE.activeThemes.clear();              // nenhum chip ativo inicialmente
+    STATE.activeThemes.clear();
     STATE.viewQuestions = STATE.allQuestions.slice();
 
     STATE.cursor = 0;
@@ -344,7 +394,7 @@ async function startSearch(){
     $("#home").classList.add("hidden");
     $("#quiz").classList.remove("hidden");
 
-    renderSelectedThemesChips();             // chips de segmentação
+    renderSelectedThemesChips();
     mountInfinite();
     closeThemesPanel();
   }catch(err){
@@ -352,6 +402,7 @@ async function startSearch(){
     toast("Erro ao ler dados");
   }
 }
+
 
 /* Chips de segmentação no topo do quiz */
 function renderSelectedThemesChips(){
