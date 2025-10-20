@@ -4321,3 +4321,187 @@ ere privado, em concurso material.
 *** Gabarito: C
 **** Culpabilidade, Antijuridicidade, Legítima defesa, Imputabilidade penal
 -----
+* Assinale a alternativa que apresenta causas de excludente da ilicitude.
+** A) O estado de necessidade e a ausência de dolo.
+** B) A legítima defesa e o exercício regular de direito.
+** C) A coação moral irresistível e a obediência hierárquica.
+** D) A obediência hierárquica e o estrito cumprimento do dever legal.
+** E) O consentimento do ofendido quando o dissenso da vítima faz parte do tipo, estado de necessidade e a legítima defesa.
+*** Gabarito: B
+**** Antijuridicidade, Legítima defesa, Estrito cumprimento de dever legal e exercício regular de direito
+-----
+* Segundo o previsto no Código Penal, incorrerá na excludente de ilicitude denominada estado de necessidade aquele que
+** A) atua ou se omite sem a consciência da ilicitude do fato, quando não lhe era possível, nas circunstâncias, ter ou atingir essa consciência.
+** B) pratica o fato para salvar de perigo atual, que não provocou por sua vontade, nem podia de outro modo evitar, direito próprio ou alheio, cujo sacrifício, nas circunstâncias, não era razoável exigir-se
+** C) pratica o fato para salvar de perigo atual, que não provocou por sua vontade, nem podia de outro modo evitar, direito próprio ou alheio, cujo sacrifício, nas circunstâncias, era razoável exigir-se.
+** D) tendo o dever legal de enfrentar o perigo, pratica o fato para salvar de perigo atual, que não provocou por sua vontade, nem podia de outro modo evitar, direito próprio ou alheio, cujo sacrifício, nas circunstâncias, não era razoável se exigir.
+** E) pratica o fato usando moderadamente dos meios necessários, para repelir injusta agressão, atual ou iminente, a direito seu ou de outrem.
+*** Gabarito: B
+**** Antijuridicidade, Estado de necessidade
+-----
+* Considera-se em estado de necessidade quem
+** A) pratica o fato para salvar de perigo atual, que não provocou por sua vontade, nem podia de outro modo evitar, direito próprio ou alheio, ainda que nas circunstâncias seja exigível sacrifício.
+** B) exclusivamente em situação de calamidade pública, pratica o fato para salvar de perigo atual, que não provocou por sua vontade, nem podia de outro modo evitar, direito próprio ou alheio, cujo sacrifício, nas circunstâncias, não era razoável exigir-se.
+** C) pratica o fato para salvar de perigo atual, que não provocou por sua vontade, nem podia de outro modo evitar, direito próprio ou alheio, cujo sacrifício, nas circunstâncias, não era razoável exigir-se
+** D) exclusivamente em situação de calamidade pública, pratica o fato para salvar de perigo atual, que não provocou por sua vontade, nem podia de outro modo evitar, direito próprio (excluído direito alheio), cujo sacrifício, nas circunstâncias, não era razoável exigir-se
+** E) pratica o fato para salvar de perigo iminente ou atual, que não provocou por sua vontade, nem podia de outro modo evitar, direito próprio ou alheio, ainda que nas circunstâncias seja exigível sacrifício.
+*** Gabarito: C
+**** Antijuridicidade, Estado de necessidade
+-----
+* Com relação à exclusão de ilicitude é correto afirmar:
+** A) Há crime quando o agente pratica o fato em exclusão de ilicitude, havendo, no entanto, redução da pena.
+** B) Considera-se em estado de necessidade quem, usando moderadamente dos meios necessários, repele injusta agressão, atual ou iminente, a direito seu ou de outrem.
+** C) Considera-se em legítima defesa quem pratica o fato para salvar de perigo atual, que não provocou por sua vontade, nem podia de outro modo evitar, direito próprio ou alheio, cujo sacrifício, nas circunstâncias, não era razoável exigir-se.
+** D) Pode alegar estado de necessidade mesmo quem tinha o dever legal de enfrentar o perigo.
+** E) Ainda que o agente haja em caso de exclusão de ilicitude, este responderá pelo excesso doloso ou culposo.
+*** Gabarito: E
+**** Antijuridicidade
+-----
+* Considere:
+* I. Cícerus aceitou desafio para lutar. II. Marcus atingiu o agressor após uma agressão finda. III. Lícius reagiu a uma agressão iminente. Presentes os demais requisitos legais, a excludente da legítima defesa pode ser reconhecida em favor de
+** A) Lícius, apenas.
+** B) Cícerus e Marcus.
+** C) Cícerus e Lícius.
+** D) Marcus e Lícius.
+** E) Cícerus, apenas
+*** Gabarito: A
+**** Antijuridicidade, Legítima defesa
+-----
+* Referente à Teoria Geral do Crime, é correto afirmar:
+** A) O erro de tipo essencial invencível exclui o dolo, mas permite a punição de crime culposo, se previsto em lei.
+** B) O estado de necessidade agressivo ocorre quando o ato necessário se dirige contra a coisa que promana o perigo para o bem jurídico defendido.
+** C) No caso de excesso culposo da legítima defesa, embora o agente somente possa resultar punido com a pena do crime culposo, quando prevista em lei esta estrutura típica, a vontade deste é dirigida ao resultado, de modo que age, na realidade, dolosamente, mas, por erro vencível ou evitável, não sabe que transpôs os limites legais da causa de justificação e exercita defesa desnecessária.
+** D) Nas discriminantes putativas, quando o erro recair sobre os limites ou o alcance da justificativa, estaremos diante do erro de tipo permissivo.
+** E) Tanto a legítima defesa como o estado de necessidade possuem o caráter de agressão autorizada a bens jurídicos, com diferença, entretanto, de que no estado de necessidade ocorre uma ação predominantemente defensiva com aspectos agressivos, ao passo que na legítima defesa se dá uma ação predominantemente agressiva com aspectos defensivos.
+*** Gabarito: C
+**** Tipicidade, Antijuridicidade, Legítima defesa, Estado de necessidade, Erro do tipo essencial
+-----
+* Segundo entendimento doutrinário, o consentimento do ofendido (quando não integra a própria descrição típica), a adequação social e a inexigibilidade de conduta diversa constituem causas supralegais de exclusão, respectivamente, da
+** A) tipicidade, da culpabilidade e da ilicitude.
+** B) culpabilidade, da tipicidade e da ilicitude.
+** C) ilicitude, da tipicidade e da culpabilidade.
+** D) ilicitude, da culpabilidade e da tipicidade.
+** E) culpabilidade, da ilicitude e da tipicidade.
+*** Gabarito: C
+**** Tipicidade, Culpabilidade, Antijuridicidade
+-----
+* O Código Penal elenca a legítima defesa dentre as hipóteses de causas de exclusão da ilicitude.
+* Sobre o tema, NÃO é cabível
+** A) legítima defesa real contra legítima defesa real
+** B) legítima defesa real contra legítima defesa putativa.
+** C) legítima defesa contra agressão injusta de inimputável.
+** D) legítima defesa putativa contra legítima defesa putativa.
+** E) legítima defesa real contra agressão acobertada por excludente da culpabilidade
+*** Gabarito: A
+**** Antijuridicidade, Legítima defesa
+-----
+* Assinale a alternativa correta no tocante às previsões relativas aos crimes no Código Penal.
+** A) Para a omissão ser considerada penalmente relevante, é suficiente que o omitente possa agir para evitar o resultado.
+** B) Diz-se o crime tentado, quando, iniciada a preparação, não se consuma por circunstâncias alheias à vontade do agente.
+** C) O erro sobre elemento constitutivo do tipo legal de crime exclui a culpabilidade e isenta de pena o autor do crime.
+** D) O erro sobre a ilicitude do fato, se inevitável, isenta de pena; se evitável, poderá diminuí-la de um sexto a um terço.
+** E) Se o fato criminoso é cometido em estrita obediência à ordem manifestamente ilegal de superior hierárquico, só é punível o autor da coação ou da ordem.
+*** Gabarito: D
+**** Tipicidade, Culpabilidade, Conduta: ação / omissão, Consumação e tentativa, Antijuridicidade, Potencial conhecimento da ilicitude - Erro de proibição, Erro do tipo essencial, Erro de tipo acidental
+-----
+* Analise o caso a seguir.
+* Para repelir a arremetida de um cão feroz, o agente usa uma arma de fogo matando o animal. O animal tinha sido instado ao ataque pelo seu dono, o que era do conhecimento do agente. O agente praticou o fato
+** A) em estado de necessidade.
+** B) em legítima defesa.
+** C) em exercício regular de direito.
+** D) em inexigibilidade de outra conduta.
+*** Gabarito: B
+**** Antijuridicidade, Legítima defesa
+-----
+* Analise o caso a seguir.
+* Ao passar próximo ao estoque de uma loja de roupas, um dos vendedores viu que havia ali um incêndio de grandes proporções. Naquela situação, correu em direção à porta do estabelecimento que, por ser estreita, estava totalmente obstruída por um cliente que entrava no local. Desconhecendo o incêndio e achando que estava sofrendo uma agressão, o cliente reagiu empurrando o vendedor, que lhe desferiu um soco. Os empurrões do cliente, assim como a agressão do vendedor produziram recíprocas lesões corporais de natureza leve. Na hipótese, é CORRETO afirmar.
+** A) que o vendedor agiu em estado de necessidade e o cliente, em legítima defesa putativa.
+** B) que o vendedor agiu em estado de necessidade putativo e o cliente, em legítima defesa.
+** C) que o vendedor agiu em legítima defesa e o cliente, em estado de necessidade.
+** D) que o vendedor agiu em legítima defesa putativa e o cliente, em estado de necessidade putativo.
+*** Gabarito: A
+**** Antijuridicidade, Legítima defesa, Estado de necessidade
+-----
+* Prevalece na doutrina o conceito de crime como sendo um fato típico, ilícito e culpável.
+* Acerca destes requisitos do crime, assinale a afirmativa correta.
+** A) A coação moral resistível exclui a culpabilidade, enquanto a coação física exclui a conduta e, assim, o fato típico.
+** B) O Código Penal vigente reconhece o estado de necessidade exculpante como causa de exclusão da ilicitude.
+** C) Pelo resultado que agrava especialmente a pena, só responde o agente que o houver causado dolosamente.
+** D) A legítima defesa, o estado de necessidade, o exercício regular de direito, o estrito cumprimento de dever legal e o consentimento do ofendido são causas de exclusão de ilicitude, podendo o último, em alguns casos, excluir a própria tipicidade.
+** E) A embriaguez culposa completa exclui a culpabilidade.
+*** Gabarito: D
+**** Antijuridicidade, Noções Gerais, Antijuridicidade
+-----
+* Para o direito penal brasileiro, crime é o fato típico e ilícito.
+* No entanto, a lei penal alinha causas que excluem a ilicitude da conduta típica, o que afasta a incidência da norma penal especial. Em relação às causas de exclusão de ilicitude, é correto afirmar:
+** A) Considera-se em estado de necessidade quem pratica o fato para salvar de perigo atual, que provocou por sua vontade, direito próprio ou alheio, cujo sacrifício, nas circunstâncias, não era razoável exigir-se.
+** B) Entende-se em legítima defesa quem, usando moderadamente dos meios necessários, repele injusta agressão, atual ou iminente, a direito seu ou de outrem.
+** C) O exercício regular de direito consiste na atuação do agente dentro dos limites conferidos pelo ordenamento legal, afastando a incidência do crime mesmo quando o agente se excede dolosamente.
+** D) No estado de necessidade, ocorre uma repulsa contra um ataque, enquanto, na legítima defesa, há um conflito entre bens jurídicos legalmente tutelados.
+*** Gabarito: B
+**** Antijuridicidade, Causas supralegais de exclusão da antijuridicidade
+-----
+* Assinale a alternativa correta em relação à legítima defesa.
+** A) Exige o uso moderado dos meios.
+** B) Não admite o seu uso para defesa de direito de terceiro.
+** C) Pode ser usado como forma de repulsa a ato sofrido no passado.
+** D) Pode ser utilizada contra servidor público no exercício legal da função
+** E) Eventual excesso na sua utilização não poderá ser reprovado.
+*** Gabarito: A
+**** Antijuridicidade, Legítima defesa
+-----
+* De acordo com o Código Penal, é excludente de ilicitude:
+** A) a paixão.
+** B) a emoção.
+** C) a menoridade.
+** D) o exercício regular de direito..
+** E) a embriaguez.
+*** Gabarito: D
+**** Antijuridicidade, Causas supralegais de exclusão da antijuridicidade
+-----
+* Sobre as causas de exclusão da culpabilidade, assinale a afirmativa correta.
+** A) O exercício regular do direito e a obediência hierárquica são causas que excluem a culpabilidade pela inexigibilidade de conduta diversa.
+** B) A ação em coação física irresistível, apesar de configurar fato típico e ilícito, afasta a culpabilidade do agente em face da inexigibilidade de conduta diversa.
+** C) A embriaguez culposa pelo álcool ou substância de efeitos análogos isenta o réu de pena
+** D) O agente que em razão de perturbação mental não era inteiramente capaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento, é isento de pena.
+** E) A obediência hierárquica faz com que apenas o autor da ordem seja punido, desde que a ordem seja proferida por superior hierárquico, que não seja manifestamente ilegal e que o cumpridor se atenha aos limites da ordem.
+*** Gabarito: E
+**** Culpabilidade, Antijuridicidade
+-----
+* João passeava com seu filho de 3 anos em um bosque ermo quando um cão feroz, sem coleira e desacompanhado, tentou atacar a criança.
+* Encontrando um tronco de madeira no chão, pegou o objeto e deu uma paulada no animal, que fugiu machucado. Diante da situação hipotética, João fo i denunciado. Nesse caso, de acordo com o entendimento majoritário nos Tribunais pátrios,
+** A) João praticou o crime do Art. 32 da Lei n. 9.605 (Praticar ato de abuso, maus tratos, ferir ou mutilar animais silvestres, domésticos ou domesticados, nativos ou exóticos.) e, por isso, deve ser condenado.
+** B) João atuou em legítima defesa, devendo ser absolvido.
+** C) João não poderá ter reconhecida a legítima defesa pelo fato de que esta causa de exclusão da ilicitude não pode ser aplicada quando a injusta agressão for praticada em face de terceiro.
+** D) João atuou em estado de necessidade, devendo ser absolvido.
+** E) João não poderá ter reconhecido o estado de necessidade, pois como pai ele tinha o dever legal de enfrentar o perigo.
+*** Gabarito: D
+**** Antijuridicidade, Legítima defesa, Estado de necessidade
+-----
+* Quanto à legítima defesa é incorreto afirmar:
+** A) A expressão excesso intensivo é usada para referir-se ao uso imoderado de meios necessários, sendo que a expressão excesso extensivo é usada para referir-se ao uso de meios desnecessários;
+** B) A expressão excesso intensivo é usada para referir-se ao uso de meios desnecessários, sendo que a expressão excesso extensivo é usada para referir-se ao uso imoderado de meios necessários;
+** C) Inexiste legítima defesa real de legítima defesa real;
+** D) Há possibilidade de legítima defesa real de legítima defesa putativa;
+** E) Há possibilidade de duas legítimas defesas putativas concomitantes.
+*** Gabarito: A
+**** Antijuridicidade, Legítima defesa
+-----
+* Quanto ao estado de necessidade, assinale a alternativa correta:
+** A) O direito penal brasileiro adota a teoria unitária do estado de necessidade, reconhecendo-o unicamente como causa de exculpação;
+** B) Para a teoria diferenciadora, se o bem jurídico sacrificado tiver valor inferior àquele protegido na situação de necessidade, estaremos diante do chamado estado de necessidade exculpante;
+** C) Para a teoria diferenciadora, se o bem jurídico sacrificado tiver valor igual àquele protegido na situação de necessidade, estaremos diante do chamado estado de necessidade justificante;
+** D) O direito penal brasileiro adota a teoria unitária do estado de necessidade, reconhecendo-o unicamente como causa de justificação;
+** E) O direito penal brasileiro adota a teoria diferenciadora do estado de necessidade, reconhecendo-o em certos casos como causa de exculpação e em outros como de justificação, conforme a ponderação de valores entre o bem sacrificado e o protegido.
+*** Gabarito: D
+**** Antijuridicidade, Estado de necessidade
+-----
+* Assinale a alternativa correta
+** A) O dever de agir para impedir o resultado está relacionado à tipicidade dos crimes omissivos impróprios e impede a exclusão da ilicitude por estado de necessidade;
+** B) O dever legal de enfrentar o perigo esta relacionado com a tipicidade dos crimes comissivos por omissão e impede a exclusão da ilicitude por estado de necessidade;
+** C) O dever de enfrentar o perigo é norma que impede a exclusão da ilicitude por estado de necessidade;
+** D) Tanto o dever de agir como o de impedir o resultado impedem a exclusão da ilicitude por estado de necessidade;
+** E) O dever de agir para impedir o resultado é norma que impede a exclusão da ilicitude por estado de necessidade.
+*** Gabarito: C
+**** Antijuridicidade, Estado de necessidade
+-----
