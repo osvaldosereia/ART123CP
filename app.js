@@ -9,56 +9,80 @@ function pretty(s){ return s.replace(/[-_]/g," ").replace(/\.txt$/,""); }
 const deb = (fn,ms=150)=>{let h;return (...a)=>{clearTimeout(h);h=setTimeout(()=>fn(...a),ms);} };
 const strip = (s)=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
 
-/* ==================== PARSER TXT (com temas ****) ==================== */
+/* ==================== PARSER TXT (com metas ***** e temas ****) ==================== */
 function parseTxt(raw){
-  const lines = raw.replace(/\r\n?/g,"\n").split("\n");
-  const out=[];
-  let cur = { has:false, stage:"empty", stem:[], opts:[], ans:null, themes:[] };
+  const lines = raw.replace(/\r\n?/g, "\n").split("\n");
+  const out = [];
+  let cur = { has:false, stage:"empty", stem:[], opts:[], ans:null, themes:[], meta:null };
 
-  const push=()=>{ if(!cur.has) return;
-    const stemLines=trimBlank(cur.stem);
+  const push = () => {
+    if (!cur.has) return;
+    const stemLines = trimBlank(cur.stem);
     out.push({
       id: uid(),
       stemLines,
       stem: stemLines.join("\n").trim(),
       options: cur.opts.slice(),
       answer: cur.ans || "",
-      themes: cur.themes.length ? cur.themes : []
+      themes: cur.themes.length ? cur.themes : [],
+      meta: cur.meta || ""
     });
-    cur = { has:false, stage:"empty", stem:[], opts:[], ans:null, themes:[] };
+    cur = { has:false, stage:"empty", stem:[], opts:[], ans:null, themes:[], meta:null };
   };
 
-  for(let i=0;i<lines.length;i++){
-    const L=lines[i].trimEnd();
+  for (let i = 0; i < lines.length; i++){
+    const L = lines[i].trimEnd();
 
     if (/^-+\s*$/.test(L)){ push(); continue; }
-    if (L.trim()===""){ if(cur.stage==="stem"){cur.stem.push(""); cur.has=true;} continue; }
+    if (L.trim() === ""){ if (cur.stage === "stem"){ cur.stem.push(""); cur.has = true; } continue; }
+
+    // Metadados: ***** Ano | Banca | Órgão ...
+    const mm = /^\*{5}\s*(.+)$/.exec(L);
+    if (mm){ 
+      if (cur.has && (cur.stem.length || cur.opts.length || cur.ans || cur.themes.length)) push();
+      cur.meta = mm[1].trim(); 
+      cur.stage = "meta";
+      cur.has = true; 
+      continue; 
+    }
 
     // Temas: **** tema1, tema2, tema3
     const t = /^\*\*\*\*\s*(.+)$/.exec(L);
-    if (t){ cur.themes = t[1].split(",").map(s=>s.trim()).filter(Boolean); cur.has = true; continue; }
+    if (t){ 
+      cur.themes = t[1].split(",").map(s => s.trim()).filter(Boolean); 
+      cur.has = true; 
+      continue; 
+    }
 
     // Gabarito
-    const g = (/^\*\*\*\s*Gabarito:\s*([A-E])\s*$/.exec(L)||[])[1];
-    if (g){ cur.ans=g; cur.stage="ans"; cur.has=true; continue; }
+    const g = (/^\*\*\*\s*Gabarito:\s*([A-E])\s*$/.exec(L) || [])[1];
+    if (g){ cur.ans = g; cur.stage = "ans"; cur.has = true; continue; }
 
     // Alternativa
     const m = /^\*\*\s*([A-E])\)\s*(.+)$/.exec(L);
-    if (m){ const key=m[1],text=m[2].trim();
-      if (!cur.opts.some(o=>o.key===key)) cur.opts.push({key,text});
-      cur.stage="opts"; cur.has=true; continue;
+    if (m){ 
+      const key = m[1], text = m[2].trim();
+      if (!cur.opts.some(o => o.key === key)) cur.opts.push({ key, text });
+      cur.stage = "opts"; 
+      cur.has = true; 
+      continue;
     }
 
     // Enunciado
-    if (L.startsWith("* ")){ cur.stem.push(L.slice(2)); cur.stage="stem"; cur.has=true; continue; }
+    if (L.startsWith("* ")){ cur.stem.push(L.slice(2)); cur.stage = "stem"; cur.has = true; continue; }
 
-    if (cur.stage==="stem" || !cur.has){ cur.stem.push(L); cur.has=true; continue; }
+    if (cur.stage === "stem" || !cur.has){ cur.stem.push(L); cur.has = true; continue; }
   }
   push();
   return out;
 }
-function trimBlank(arr){ let a=0,b=arr.length; while(a<b&&arr[a].trim()==="")a++; while(b>a&&arr[b-1].trim()==="")b--; return arr.slice(a,b); }
 
+function trimBlank(arr){
+  let a = 0, b = arr.length;
+  while (a < b && arr[a].trim() === "") a++;
+  while (b > a && arr[b - 1].trim() === "") b--;
+  return arr.slice(a, b);
+}
 /* ==================== DISCOVERY data/ ==================== */
 async function discoverDataTree(){
   const gh = detectGithubRepo();
@@ -537,12 +561,35 @@ function pumpIfVisible(){
 function buildQuestion(q, num){
   const tpl = /** @type {HTMLTemplateElement} */($("#tplQuestion"));
   const node = tpl.content.firstElementChild.cloneNode(true);
-  node.querySelector(".q-num").textContent = `#${num}`;
-  node.querySelector(".q-stem").textContent = q.stem;
 
+  // número
+  node.querySelector(".q-num").textContent = `#${num}`;
+
+  // enunciado
+  const stemEl = node.querySelector(".q-stem");
+  stemEl.textContent = q.stem;
+
+  // metadados acima do enunciado + separador discreto
+  if (q.meta){
+    const meta = document.createElement("div");
+    meta.className = "q-meta";
+    meta.textContent = q.meta;
+    meta.style.fontSize = "12px";
+    meta.style.color = "var(--muted, #6b7280)";
+    meta.style.marginBottom = "6px";
+    stemEl.parentNode.insertBefore(meta, stemEl);
+
+    const hr = document.createElement("hr");
+    hr.style.border = "0";
+    hr.style.borderTop = "1px solid #e5e7eb";
+    hr.style.margin = "0 0 8px 0";
+    stemEl.parentNode.insertBefore(hr, stemEl);
+  }
+
+  // alternativas
   const ol = node.querySelector(".q-opts");
   q.options.forEach(opt=>{
-    const li=document.createElement("li");
+    const li = document.createElement("li");
     li.textContent = `${opt.key}) ${opt.text}`;
     li.dataset.key = opt.key;
     li.addEventListener("click", ()=>mark(node, li, q));
@@ -552,18 +599,21 @@ function buildQuestion(q, num){
   // Google modo IA
   const btnIA = node.querySelector('[data-role="ia-toggle"]');
   const menu = node.querySelector(".ia-menu");
-  btnIA.addEventListener("click", ()=>{ menu.classList.toggle("show"); });
-  menu.querySelectorAll(".ia-item").forEach(a=>{
-    a.addEventListener("click", ()=>{
-      const kind = a.getAttribute("data-ia");
-      const url = buildGoogleIA(kind, q);
-      a.setAttribute("href", url);
-      menu.classList.remove("show");
+  if (btnIA && menu){
+    btnIA.addEventListener("click", ()=>{ menu.classList.toggle("show"); });
+    menu.querySelectorAll(".ia-item").forEach(a=>{
+      a.addEventListener("click", ()=>{
+        const kind = a.getAttribute("data-ia");
+        const url = buildGoogleIA(kind, q);
+        a.setAttribute("href", url);
+        menu.classList.remove("show");
+      });
     });
-  });
+  }
 
   return node;
 }
+
 
 function mark(card, li, q){
   const already = card.classList.contains("ok") || card.classList.contains("bad");
