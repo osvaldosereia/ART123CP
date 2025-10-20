@@ -1,7 +1,6 @@
 
 -----
-* Ano: 2019 Banca: ZAMBINI Órgão: Prefeitura de Itatiba - SP
---
+* Ano: 2019 | Banca: ZAMBINI | Órgão: Prefeitura de Itatiba - SP
 * Com relação à idade, são penalmente inimputáveis, nos termos do Código Penal:
 ** A) Somente os menores de 21 anos.
 ** B) Somente os menores de 18 anos.
@@ -10,8 +9,7 @@
 *** Gabarito: B
 **** Direito Penal, Culpabilidade, Imputabilidade penal
 -----
-* Ano: 2019 Banca: EJUD-PI Órgão: TJ-PI
---
+* Ano: 2019 | Banca: EJUD-PI | Órgão: TJ-PI
 * Considera-se causa excludente de antijuridicidade, segundo a doutrina:
 ** A) Inimputabilidade.
 ** B) Potencial consciência da ilicitude.
@@ -19,8 +17,7 @@
 *** Gabarito: D
 **** Direito Penal, Culpabilidade, Imputabilidade penal
 -----
-* Ano: 2024 Banca: INSTITUTO AOCP Órgão: POLÍCIA CIENTÍFICA - PE
---
+* Ano: 2024 | Banca: INSTITUTO AOCP | Órgão: POLÍCIA CIENTÍFICA - PE
 * São elementos que compõem a culpabilidade como fato constituinte do delito: I. imputabilidade; II. potencial consciência de ilicitude; III. inexigibilidade de conduta diversa; IV. culpabilidade em sentido estrito. Estão corretos:
 ** A) apenas I, II e III.
 ** B) apenas I e II.
