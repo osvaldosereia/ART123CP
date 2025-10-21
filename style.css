@@ -113,12 +113,12 @@ input:focus,textarea:focus{
 .q-opts{margin:0 0 10px 16px;padding:0}
 .q-opts li{
   margin:6px 0;padding:10px 12px;border:1px solid var(--line);border-radius:10px;cursor:pointer;
-  transition:border-color .12s ease,box-shadow .12s ease,background-color .12s ease;
+  transition:border-color .12s ease,box-shadow .12s ease,background-color .12s ease,color .12s ease;
 }
 .q-opts li:hover{background:#f8fafc}
 .q-opts li.lock{opacity:.7;cursor:default}
 
-/* Correta: destaque sutil na opção */
+/* Correta: destaque sutil só na opção correta */
 .q-opts li.hit{
   display:flex;align-items:center;gap:6px;
   background:var(--good-bg);
@@ -130,17 +130,22 @@ input:focus,textarea:focus{
   content:"✓";font-weight:700;color:var(--good-600);
 }
 
-/* Errada selecionada: destaque só na opção errada */
-.q-opts li.wrong{
+/* Errada selecionada: deixe vermelha também */
+.q-opts li.wrong,
+.q-opts li.selected:not(.hit){
   display:flex;align-items:center;gap:6px;
   background:var(--bad-bg);
   border:2px solid var(--bad);
   box-shadow:0 0 0 2px color-mix(in srgb,var(--bad),transparent 78%);
   position:relative;
 }
-.q-opts li.wrong::before{
+.q-opts li.wrong::before,
+.q-opts li.selected:not(.hit)::before{
   content:"✕";font-weight:700;color:var(--bad-600);
 }
+/* manter o vermelho ao passar o mouse */
+.q-opts li.wrong:hover,
+.q-opts li.selected:not(.hit):hover{ background:var(--bad-bg) }
 
 /* Sem pintura global no cartão */
 .q.ok,.q.bad{background:#fff;border-color:var(--line)}
@@ -243,5 +248,6 @@ input:focus,textarea:focus{
   .topic, .ms-item, .q{background:#0f172a}
   .q-opts li:hover{background:#0b1429}
   .q-opts li.hit{background:color-mix(in srgb,var(--good-bg),#0f172a 40%)}
-  .q-opts li.wrong{background:color-mix(in srgb,var(--bad-bg),#0f172a 40%)}
+  .q-opts li.wrong,
+  .q-opts li.selected:not(.hit){background:color-mix(in srgb,var(--bad-bg),#0f172a 40%)}
 }
