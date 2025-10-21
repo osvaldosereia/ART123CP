@@ -1,11 +1,10 @@
-/* ===== HIGH-END MINIMAL · BLACK/GRAYS/WHITE ===== */
+/* ====== HIGH-END MINIMAL – MONOCHROME ====== */
 :root{
   --black:#0b0b0b;
-  --g1:#1e1e1e;
-  --g2:#6d6d6d;
-  --g3:#e6e6e6;
-  --g4:#f6f6f6;
-  --white:#ffffff;
+  --g1:#1f1f1f;      /* superfícies escuras */
+  --g2:#7a7a7a;      /* texto secundário */
+  --g3:#e8e8e8;      /* linhas e preenchimentos leves */
+  --white:#fff;
 
   --ok:#16a34a;
   --no:#dc2626;
@@ -18,13 +17,13 @@
 html,body{height:100%}
 body{
   margin:0;color:var(--black);background:var(--white);
-  font:16px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font:16px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
 
 /* ===== Container ===== */
 .page{padding:72px 16px 28px;max-width:980px;margin:0 auto}
 
-/* ===== Topbar ===== */
+/* ===== Topbar reta ===== */
 .topbar{
   position:sticky;top:0;z-index:50;
   max-width:980px;margin:0 auto;display:flex;gap:12px;align-items:center;
@@ -34,14 +33,14 @@ body{
 .topbar.hide{transform:translateY(-100%)}
 .topbar .logo{font-weight:700;letter-spacing:.2px;margin-right:auto}
 
-/* ===== Type ===== */
+/* ===== Tipografia ===== */
 h1,h2,h3{margin:0 0 .5rem;font-weight:700}
 h1{font-size:28px;letter-spacing:-.02em}
 h2{font-size:20px;letter-spacing:-.01em}
 p{margin:.5rem 0}
 .small{font-size:12px;color:var(--g2)}
 
-/* ===== Cards ===== */
+/* ===== Cards planos ===== */
 .card{
   background:var(--white);padding:16px;border:1px solid var(--g3);
   box-shadow:var(--shadow-sm);
@@ -49,71 +48,63 @@ p{margin:.5rem 0}
 .lbl{display:block;margin:12px 0 6px;color:var(--g2);font-size:13px}
 .hint{color:var(--g2);font-size:12px}
 
-/* ===== Buttons ===== */
-.btn{
-  appearance:none;border:none;border-radius:0;cursor:pointer;user-select:none;
-  padding:12px 14px;background:var(--g4);color:var(--black);
-  transition:background .12s ease,transform .06s ease;
-}
-.btn:hover{background:#ededed}
+/* ===== Botões retangulares ===== */
+.btn{appearance:none;border:none;border-radius:0;cursor:pointer;user-select:none;
+  padding:12px 14px;background:#f5f5f5;color:var(--black);transition:background .12s ease,transform .06s ease}
+.btn:hover{background:#efefef}
 .btn:active{transform:translateY(1px)}
 .btn.primary{background:var(--black);color:#fff}
 .btn.primary:hover{background:#111}
 .btn.ghost{background:transparent}
 .btn:disabled{opacity:.5;cursor:not-allowed}
 
-/* ===== Inputs + Select ===== */
-.field{display:flex;gap:8px;align-items:center}
+/* ===== Inputs ===== */
 input,select,textarea{
-  width:100%;font:inherit;color:inherit;background:var(--g4);
-  border:1px solid var(--g3);padding:10px 12px;
+  font:inherit;color:inherit;background:#f7f7f7;border:1px solid var(--g3);padding:10px 12px;
 }
-input::placeholder,textarea::placeholder{color:#9a9a9a}
+input::placeholder,textarea::placeholder{color:var(--g2)}
 :where(button,[role="button"],a,input,select,textarea):focus-visible{
   outline:0;box-shadow:0 0 0 3px rgba(0,0,0,.08)
 }
 
-/* ===== Dropdown ===== */
-.dropdown{position:relative}
-.dd-btn{
-  width:100%;display:flex;justify-content:space-between;align-items:center;
-  background:var(--g4);border:1px solid var(--g3);padding:12px 14px;cursor:pointer
-}
-.dd-list{
-  list-style:none;margin:6px 0 0;padding:6px 0;position:absolute;left:0;right:0;max-height:320px;overflow:auto;
-  background:var(--white);border:1px solid var(--g3);box-shadow:var(--shadow-md);display:none;z-index:20
-}
-.dd-list.show{display:block}
-.dd-list li{padding:10px 12px;cursor:pointer}
-.dd-list li:hover{background:#f2f2f2}
-.chev{opacity:.6}
-
-/* ===== Multiselect – colunas automáticas ===== */
+/* ===========================================================
+   MULTISELECT – “recuperar colunas” (auto-ajuste por largura)
+   =========================================================== */
 .ms-panel{
   position:relative;margin-top:8px;padding:8px;background:var(--white);
   border:1px solid var(--g3);box-shadow:var(--shadow-sm)
 }
+/* Cabeçalho fixo dentro do painel em listas longas */
 .ms-head{
   position:sticky;top:0;z-index:1;display:flex;gap:8px;align-items:center;
   padding:8px;background:var(--white);box-shadow:inset 0 -1px 0 var(--g3)
 }
-#msSearch{flex:1;border:1px solid var(--g3);padding:10px 12px;background:var(--g4)}
+#msSearch{flex:1;border:1px solid var(--g3);padding:10px 12px;background:#f7f7f7}
 
+/* AQUI estão as colunas responsivas como “eram antes” */
 .ms-list{
-  display:grid;gap:6px;margin-top:8px;max-height:360px;overflow:auto;
+  display:grid;gap:6px;margin-top:8px;max-height:320px;overflow:auto;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 }
-@media (min-width:640px){ .ms-list{ grid-template-columns:repeat(auto-fit,minmax(220px,1fr)) } }
-@media (min-width:1024px){ .ms-list{ grid-template-columns:repeat(auto-fit,minmax(280px,1fr)) } }
+@media (min-width:640px){
+  .ms-list{ grid-template-columns:repeat(auto-fit,minmax(220px,1fr)) }
+}
+@media (min-width:1024px){
+  .ms-list{ grid-template-columns:repeat(auto-fit,minmax(280px,1fr)) }
+}
 
 .ms-item{
   display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;
-  padding:10px 12px;background:#fafafa;border:1px solid var(--g3);
-  transition:background .12s ease,border-color .12s ease
+  padding:10px 12px;background:#f9f9f9;border:1px solid var(--g3);
+  transition:background .12s ease,border-color .12s ease,transform .06s ease
 }
-.ms-item:hover{background:#f2f2f2}
+.ms-item:hover{background:#f3f3f3}
 .ms-item input{inline-size:16px;block-size:16px}
-.ms-item.on{background:#111;color:#fff;border-color:#111}
+.ms-item.on{
+  background:#101010;color:#fff;border-color:#101010
+}
+
+/* Ações do painel */
 .ms-actions{display:flex;gap:6px}
 .ms-foot{padding:8px 10px;color:var(--g2);font-size:12px;border-top:1px solid var(--g3)}
 
@@ -122,32 +113,40 @@ input::placeholder,textarea::placeholder{color:#9a9a9a}
   display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0 14px
 }
 #quizThemes .chip{
-  padding:6px 10px;font-size:11px;background:var(--g4);color:var(--black);
-  cursor:pointer;border:1px solid var(--g3)
+  padding:6px 10px;font-size:11px;background:#f7f7f7;color:var(--black);cursor:pointer;border:1px solid var(--g3)
 }
 #quizThemes .chip.on{background:var(--black);color:#fff;border-color:var(--black)}
 
-/* ===== Topics ===== */
+/* ===== Dropdown ===== */
+.dropdown{position:relative}
+.dd-btn{
+  width:100%;display:flex;justify-content:space-between;align-items:center;
+  background:#f7f7f7;border:1px solid var(--g3);padding:12px 14px;cursor:pointer
+}
+.dd-list{
+  list-style:none;margin:6px 0 0;padding:6px 0;position:absolute;left:0;right:0;max-height:320px;overflow:auto;
+  background:var(--white);border:1px solid var(--g3);box-shadow:var(--shadow-md);display:none;z-index:20
+}
+.dd-list.show{display:block}
+.dd-list li{padding:10px 12px;cursor:pointer}
+.dd-list li:hover{background:#f6f6f6}
+.chev{opacity:.6}
+
+/* ===== Lista de tópicos ===== */
 .topics{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .topic{
-  display:flex;align-items:flex-start;gap:8px;padding:10px 12px;background:#fafafa;border:1px solid var(--g3);
+  display:flex;align-items:flex-start;gap:8px;padding:10px 12px;background:#f9f9f9;border:1px solid var(--g3);
   font-size:14px;line-height:1.25;cursor:pointer;user-select:none;text-align:left
 }
-.topic:hover{background:#f2f2f2}
-.topic.on{background:var(--black);color:#fff;border-color:#000}
+.topic:hover{background:#f3f3f3}
+.topic.on{background:var(--black);color:#fff;border-color:var(--black)}
 .topic input{margin-top:2px}
 
-/* ===== Quiz – feedback profissional ===== */
+/* ================= QUIZ – feedback moderno ================= */
 .list{display:flex;flex-direction:column;gap:14px}
 .q{
-  position:relative;background:var(--white);border:1px solid var(--g3);padding:16px;box-shadow:var(--shadow-sm)
+  background:var(--white);border:1px solid var(--g3);padding:16px;box-shadow:var(--shadow-sm)
 }
-.q::before{
-  content:"";position:absolute;left:-1px;top:-1px;bottom:-1px;width:4px;background:transparent;
-}
-.q.ok::before{ background:var(--ok) }
-.q.bad::before{ background:var(--no) }
-
 .q-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .q-num{font-weight:700}
 .q-stem{white-space:pre-wrap;margin:8px 0 10px}
@@ -155,37 +154,44 @@ input::placeholder,textarea::placeholder{color:#9a9a9a}
 /* Opções */
 .q-opts{margin:0;padding:0}
 .q-opts li{
-  margin:8px 0;padding:12px;background:#fafafa;border:1px solid var(--g3);cursor:pointer;
-  transition:background .12s ease,border-color .12s ease
+  margin:8px 0;padding:12px;background:#f7f7f7;border:1px solid var(--g3);cursor:pointer;
+  transition:background .12s ease,border-color .12s ease,transform .04s ease
 }
-.q-opts li:hover{background:#f2f2f2}
+.q-opts li:hover{background:#efefef}
 .q-opts li.lock{opacity:.7;cursor:default}
 
-/* Correta */
+/* Correta: borda verde + ícone minimal */
 .q-opts li.hit{
-  position:relative;background:#fbfefc;border-color:color-mix(in srgb,var(--ok) 50%, var(--g3) 50%);
-  box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 18%, transparent);
+  border-color:color-mix(in srgb,var(--ok) 60%, var(--g3) 40%);
+  background:color-mix(in srgb,var(--ok) 6%, #f7fff9 94%);
+  position:relative
 }
 .q-opts li.hit::after{
-  content:"";position:absolute;right:12px;top:50%;transform:translateY(-50%) rotate(45deg);
-  width:12px;height:6px;border-right:2px solid var(--ok);border-bottom:2px solid var(--ok)
+  content:"";position:absolute;right:10px;top:50%;transform:translateY(-50%) rotate(45deg);
+  width:10px;height:5px;border-right:2px solid var(--ok);border-bottom:2px solid var(--ok)
 }
 
-/* Errada escolhida */
+/* Errada marcada: leve vermelho e X minimal */
 .q-opts li.miss{
-  position:relative;background:#fffafa;border-color:color-mix(in srgb,var(--no) 50%, var(--g3) 50%);
-  box-shadow:0 0 0 3px color-mix(in srgb,var(--no) 18%, transparent);
+  border-color:color-mix(in srgb,var(--no) 55%, var(--g3) 45%);
+  background:color-mix(in srgb,var(--no) 6%, #fff7f7 94%);
+  position:relative
+}
+.q-opts li.miss::after{
+  content:"";position:absolute;right:12px;top:50%;width:10px;height:10px;transform:translateY(-50%); 
 }
 .q-opts li.miss::before,
 .q-opts li.miss::after{
-  content:"";position:absolute;right:13px;top:50%;width:12px;border-top:2px solid var(--no)
+  border-top:2px solid var(--no);display:block
 }
-.q-opts li.miss::before{transform:translateY(-50%) rotate(45deg)}
-.q-opts li.miss::after{transform:translateY(-50%) rotate(-45deg)}
+.q-opts li.miss::before{content:"";position:absolute;right:12px;top:50%;width:12px;transform:translateY(-50%) rotate(45deg)}
+.q-opts li.miss::after{width:12px;transform:translateY(-50%) rotate(-45deg)}
 
+/* Resultado do item e estados do cartão */
 .q-res{min-height:22px;font-weight:600}
-.q-res.good{color:var(--ok)}
-.q-res.bad{color:var(--no)}
+.q.ok{border-color:color-mix(in srgb,var(--ok) 40%, var(--g3) 60%);background:color-mix(in srgb,var(--ok) 4%, #fafffb 96%)}
+.q.bad{border-color:color-mix(in srgb,var(--no) 40%, var(--g3) 60%);background:color-mix(in srgb,var(--no) 4%, #fffafa 96%)}
+.q-res.good{color:var(--ok)} .q-res.bad{color:var(--no)}
 
 /* ===== Toast / Back to top ===== */
 .toast{
@@ -198,9 +204,5 @@ input::placeholder,textarea::placeholder{color:#9a9a9a}
 }
 .backtop.show{display:flex}
 
-/* ===== Helpers ===== */
+/* ===== Util ===== */
 .hidden{display:none}
-
-/* ===== Responsive ===== */
-@media (min-width:780px){ .topics{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))} }
-@media (min-width:900px){ .page{padding-top:76px} }
