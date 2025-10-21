@@ -600,12 +600,24 @@ function buildQuestion(q, num){
   const btnIA = node.querySelector('[data-role="ia-toggle"]');
   const menu = node.querySelector(".ia-menu");
   if (btnIA && menu){
+    // insere o novo item "Princípios" no menu
+    const a = document.createElement("a");
+    a.className = "ia-item";
+    a.textContent = "Princípios";
+    a.setAttribute("data-ia","principios");
+    a.setAttribute("href","#");
+    a.setAttribute("rel","noopener");
+    a.setAttribute("target","_blank");
+    menu.appendChild(a);
+
     btnIA.addEventListener("click", ()=>{ menu.classList.toggle("show"); });
-    menu.querySelectorAll(".ia-item").forEach(a=>{
-      a.addEventListener("click", ()=>{
-        const kind = a.getAttribute("data-ia");
+
+    // listeners para todos os itens, incluindo o novo
+    menu.querySelectorAll(".ia-item").forEach(link=>{
+      link.addEventListener("click", ()=>{
+        const kind = link.getAttribute("data-ia");
         const url = buildGoogleIA(kind, q);
-        a.setAttribute("href", url);
+        link.setAttribute("href", url);
         menu.classList.remove("show");
       });
     });
@@ -646,15 +658,17 @@ function buildGoogleIA(kind, q){
   const alts = q.options.map(o=>`${o.key}) ${o.text}`).join(" ");
   const correct = q.options.find(o=>o.key===q.answer);
   const gab = correct ? `${q.answer}) ${correct.text}` : q.answer;
+  const tema = Array.isArray(q.themes) && q.themes.length ? q.themes.join(", ") : "Direito";
 
   let prompt="";
   if (kind==="gabarito"){
     prompt = `Considere a questão a seguir, analise a alternativa escolhida, explique, exemplifique e justifique juridicamente. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
   } else if (kind==="glossario"){
     prompt = `Liste e defina, em tópicos curtos, os termos jurídicos presentes nesta questão. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
+  } else if (kind==="principios"){
+    prompt = `Pesquise em bibliotecas e obras jurídicas reconhecidas os PRINCÍPIOS relacionados ao tema desta questão e apresente cada princípio com: (1) nome do princípio, (2) breve comentário de 1–2 frases, (3) referência completa da fonte consultada (autor, título da obra, edição/ano e página; ou URL institucional quando aplicável). Foque em doutrina e repositórios confiáveis. Tema(s): ${tema}. Contexto: Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}. Formate em tópicos claros.`;
   } else {
-    const tema = q.themes?.join(", ");
-    prompt = `Sugira 3 links de vídeos objetivos e confiáveis para estudar o tema desta questão. Mostre título curto e link. Tema(s): ${tema || "Direito"}. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
+    prompt = `Sugira 3 links de vídeos objetivos e confiáveis para estudar o tema desta questão. Mostre título curto e link. Tema(s): ${tema}. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
   }
   const url = `https://www.google.com/search?udm=50&hl=pt-BR&gl=BR&q=${enc(prompt)}`;
   return url;
