@@ -1,10 +1,10 @@
 /* ===== HIGH-END MINIMAL · BLACK/GRAYS/WHITE ===== */
 :root{
   --black:#0b0b0b;
-  --g1:#1e1e1e;      /* surfaces dark */
-  --g2:#6d6d6d;      /* secondary text */
-  --g3:#e6e6e6;      /* strokes */
-  --g4:#f6f6f6;      /* field bg */
+  --g1:#1e1e1e;
+  --g2:#6d6d6d;
+  --g3:#e6e6e6;
+  --g4:#f6f6f6;
   --white:#ffffff;
 
   --ok:#16a34a;
@@ -62,7 +62,7 @@ p{margin:.5rem 0}
 .btn.ghost{background:transparent}
 .btn:disabled{opacity:.5;cursor:not-allowed}
 
-/* ===== Inputs + Select: contraste alto ===== */
+/* ===== Inputs + Select ===== */
 .field{display:flex;gap:8px;align-items:center}
 input,select,textarea{
   width:100%;font:inherit;color:inherit;background:var(--g4);
@@ -88,9 +88,7 @@ input::placeholder,textarea::placeholder{color:#9a9a9a}
 .dd-list li:hover{background:#f2f2f2}
 .chev{opacity:.6}
 
-/* ===========================================================
-   MULTISELECT – colunas automáticas (retorno do antigo)
-   =========================================================== */
+/* ===== Multiselect – colunas automáticas ===== */
 .ms-panel{
   position:relative;margin-top:8px;padding:8px;background:var(--white);
   border:1px solid var(--g3);box-shadow:var(--shadow-sm)
@@ -139,8 +137,7 @@ input::placeholder,textarea::placeholder{color:#9a9a9a}
 .topic.on{background:var(--black);color:#fff;border-color:#000}
 .topic input{margin-top:2px}
 
-/* ================= QUIZ – feedback profissional ================= */
-/* Cartão do item com “barra de status” lateral, não pinta o fundo todo */
+/* ===== Quiz – feedback profissional ===== */
 .list{display:flex;flex-direction:column;gap:14px}
 .q{
   position:relative;background:var(--white);border:1px solid var(--g3);padding:16px;box-shadow:var(--shadow-sm)
@@ -148,8 +145,8 @@ input::placeholder,textarea::placeholder{color:#9a9a9a}
 .q::before{
   content:"";position:absolute;left:-1px;top:-1px;bottom:-1px;width:4px;background:transparent;
 }
-.q.ok::before{ background:var(--ok) }      /* linha verde discreta à esquerda */
-.q.bad::before{ background:var(--no) }      /* linha vermelha discreta à esquerda */
+.q.ok::before{ background:var(--ok) }
+.q.bad::before{ background:var(--no) }
 
 .q-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .q-num{font-weight:700}
@@ -164,7 +161,7 @@ input::placeholder,textarea::placeholder{color:#9a9a9a}
 .q-opts li:hover{background:#f2f2f2}
 .q-opts li.lock{opacity:.7;cursor:default}
 
-/* Correta: realce por “anel” e ícone sutil; não pinta tudo */
+/* Correta */
 .q-opts li.hit{
   position:relative;background:#fbfefc;border-color:color-mix(in srgb,var(--ok) 50%, var(--g3) 50%);
   box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 18%, transparent);
@@ -174,7 +171,7 @@ input::placeholder,textarea::placeholder{color:#9a9a9a}
   width:12px;height:6px;border-right:2px solid var(--ok);border-bottom:2px solid var(--ok)
 }
 
-/* Errada escolhida: anel vermelho + X minimal; mantém leitura */
+/* Errada escolhida */
 .q-opts li.miss{
   position:relative;background:#fffafa;border-color:color-mix(in srgb,var(--no) 50%, var(--g3) 50%);
   box-shadow:0 0 0 3px color-mix(in srgb,var(--no) 18%, transparent);
@@ -186,7 +183,6 @@ input::placeholder,textarea::placeholder{color:#9a9a9a}
 .q-opts li.miss::before{transform:translateY(-50%) rotate(45deg)}
 .q-opts li.miss::after{transform:translateY(-50%) rotate(-45deg)}
 
-/* Rodapé do item */
 .q-res{min-height:22px;font-weight:600}
 .q-res.good{color:var(--ok)}
 .q-res.bad{color:var(--no)}
