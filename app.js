@@ -596,32 +596,37 @@ function buildQuestion(q, num){
     ol.appendChild(li);
   });
 
-  // Google modo IA
+    // Google modo IA
   const btnIA = node.querySelector('[data-role="ia-toggle"]');
   const menu = node.querySelector(".ia-menu");
   if (btnIA && menu){
-    // insere o novo item "Princípios" no menu
-    const a = document.createElement("a");
-    a.className = "ia-item";
-    a.textContent = "Princípios";
-    a.setAttribute("data-ia","principios");
-    a.setAttribute("href","#");
-    a.setAttribute("rel","noopener");
-    a.setAttribute("target","_blank");
-    menu.appendChild(a);
+    // adiciona "Princípios" e "Check-list"
+    const addItem = (label, kind)=>{
+      const a = document.createElement("a");
+      a.className = "ia-item";
+      a.textContent = label;
+      a.setAttribute("data-ia", kind);
+      a.setAttribute("href", "#");
+      a.setAttribute("rel", "noopener");
+      a.setAttribute("target", "_blank");
+      menu.appendChild(a);
+    };
+    addItem("Princípios", "principios");
+    addItem("Check-list", "checklist");
 
     btnIA.addEventListener("click", ()=>{ menu.classList.toggle("show"); });
 
-    // listeners para todos os itens, incluindo o novo
-    menu.querySelectorAll(".ia-item").forEach(link=>{
-      link.addEventListener("click", ()=>{
-        const kind = link.getAttribute("data-ia");
-        const url = buildGoogleIA(kind, q);
-        link.setAttribute("href", url);
-        menu.classList.remove("show");
-      });
+    // listeners
+    menu.addEventListener("click", (ev)=>{
+      const link = ev.target.closest(".ia-item");
+      if(!link) return;
+      const kind = link.getAttribute("data-ia");
+      const url = buildGoogleIA(kind, q);
+      link.setAttribute("href", url);
+      menu.classList.remove("show");
     });
   }
+
 
   return node;
 }
@@ -654,25 +659,27 @@ function mark(card, li, q){
 }
 
 function buildGoogleIA(kind, q){
-  const enc=(s)=>encodeURIComponent(s);
+  const enc = (s)=>encodeURIComponent(s);
   const alts = q.options.map(o=>`${o.key}) ${o.text}`).join(" ");
   const correct = q.options.find(o=>o.key===q.answer);
   const gab = correct ? `${q.answer}) ${correct.text}` : q.answer;
   const tema = Array.isArray(q.themes) && q.themes.length ? q.themes.join(", ") : "Direito";
 
-  let prompt="";
-  if (kind==="gabarito"){
+  let prompt = "";
+  if (kind === "gabarito"){
     prompt = `Considere a questão a seguir, analise a alternativa escolhida, explique, exemplifique e justifique juridicamente. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
-  } else if (kind==="glossario"){
+  } else if (kind === "glossario"){
     prompt = `Liste e defina, em tópicos curtos, os termos jurídicos presentes nesta questão. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
-  } else if (kind==="principios"){
+  } else if (kind === "principios"){
     prompt = `Pesquise em bibliotecas e obras jurídicas reconhecidas os PRINCÍPIOS relacionados ao tema desta questão e apresente cada princípio com: (1) nome do princípio, (2) breve comentário de 1–2 frases, (3) referência completa da fonte consultada (autor, título da obra, edição/ano e página; ou URL institucional quando aplicável). Foque em doutrina e repositórios confiáveis. Tema(s): ${tema}. Contexto: Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}. Formate em tópicos claros.`;
+  } else if (kind === "checklist"){
+    prompt = `Gere um CHECK-LIST de estudo para prova com base na questão abaixo. Estruture em tópicos: (1) o que o aluno precisa dominar (conceitos, fórmulas, dispositivos legais, súmulas), (2) erros comuns e PEGADINHAS de prova, (3) dicas práticas de resolução, (4) 3–5 microexercícios sugeridos. Seja objetivo. Tema(s): ${tema}. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}.`;
   } else {
     prompt = `Sugira 3 links de vídeos objetivos e confiáveis para estudar o tema desta questão. Mostre título curto e link. Tema(s): ${tema}. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
   }
-  const url = `https://www.google.com/search?udm=50&hl=pt-BR&gl=BR&q=${enc(prompt)}`;
-  return url;
+  return `https://www.google.com/search?udm=50&hl=pt-BR&gl=BR&q=${enc(prompt)}`;
 }
+
 
 /* ==================== NAV ==================== */
 function goHome(){
