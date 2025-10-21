@@ -1,5 +1,111 @@
 "use strict";
 
+/* ====== STORY INSTAGRAM 1080x1920, 3 LAYOUTS ====== */
+function wrapLines(ctx, text, maxWidth){
+  const lines=[], raw=String(text??"").replace(/\r\n?/g,"\n").split("\n");
+  for(const par of raw){
+    const words=par.split(/\s+/); let cur="";
+    for(const w of words){
+      const test=cur?cur+" "+w:w;
+      if(ctx.measureText(test).width<=maxWidth){ cur=test; }
+      else{
+        if(cur) lines.push(cur);
+        if(ctx.measureText(w).width>maxWidth){
+          let chunk=""; for(const ch of w){
+            const t2=chunk+ch;
+            if(ctx.measureText(t2).width<=maxWidth) chunk=t2;
+            else{ if(chunk) lines.push(chunk); chunk=ch; }
+          } cur=chunk;
+        }else cur=w;
+      }
+    }
+    if(cur) lines.push(cur);
+  }
+  return lines;
+}
+
+async function renderStoryJPG(q, num){
+  const W=1080, H=1920, PAD=72;
+  const cv=document.createElement("canvas"); cv.width=W; cv.height=H;
+  const ctx=cv.getContext("2d");
+
+  // fundo
+  ctx.fillStyle="#ffffff"; ctx.fillRect(0,0,W,H);
+
+  // dados
+  const meta = q.meta||"";
+  const stem = q.stem||"";
+  const alts = Array.isArray(q.options)&&q.options.length
+    ? q.options.map(o=>`${o.key}) ${o.text}`).join("\n") : "";
+
+  // tamanho por quantidade de caracteres
+  const total=(meta+stem+alts).length;
+  let S={ meta:28, stem:48, alt:36, footer:24, gap:28, top:120, bot:120, maxW:W-PAD*2 };
+  if(total<=280){ S={ meta:30, stem:56, alt:42, footer:24, gap:36, top:140, bot:140, maxW:W-PAD*2 }; }
+  else if(total>700){ S={ meta:26, stem:40, alt:32, footer:20, gap:24, top:96, bot:96, maxW:W-PAD*2 }; }
+
+  let y=S.top;
+
+  // meta
+  if(meta){
+    ctx.font=`600 ${S.meta}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
+    ctx.fillStyle="#111111";
+    for(const line of wrapLines(ctx, meta, S.maxW)){ ctx.fillText(line, PAD, y+S.meta); y+=S.meta+2; }
+    y+=S.gap;
+  }
+
+  // enunciado
+  ctx.font=`700 ${S.stem}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
+  ctx.fillStyle="#1e40af";
+  for(const line of wrapLines(ctx, stem, S.maxW)){
+    if(y+S.stem > H-S.bot-260) break;
+    ctx.fillText(line, PAD, y+S.stem); y+=S.stem+6;
+  }
+  y+=S.gap;
+
+  // alternativas
+  if(alts){
+    ctx.font=`400 ${S.alt}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
+    ctx.fillStyle="#0b0f19";
+    for(const line of wrapLines(ctx, alts, S.maxW)){
+      if(y+S.alt > H-S.bot-220) break;
+      ctx.fillText(line, PAD, y+S.alt); y+=S.alt+4;
+    }
+  }
+
+  // rodapé 2 linhas
+  const footer="Faça questões grátis\ncom meujus.com.br";
+  ctx.font=`500 ${S.footer}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
+  ctx.fillStyle="#6b7280";
+  const f=footer.split("\n");
+  let fy=H-S.bot-(f.length*(S.footer+2));
+  for(const line of f){ ctx.fillText(line, PAD, fy+S.footer); fy+=S.footer+2; }
+
+  return cv;
+}
+
+async function shareOrDownload(canvas, filename="story.jpg"){
+  const blob = await new Promise(r => canvas.toBlob(r, "image/jpeg", 0.92));
+  if(!blob) return;
+  const file = new File([blob], filename, { type:"image/jpeg" });
+  if(navigator.canShare && navigator.canShare({ files:[file] })){
+    try{ await navigator.share({ files:[file], title:"Questão" }); return; }catch{}
+  }
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob); a.download=filename; document.body.appendChild(a);
+  a.click(); a.remove();
+}
+
+async function handleShareStory(q, num){
+  try{
+    toast("Gerando Story…");
+    const cv=await renderStoryJPG(q,num);
+    await shareOrDownload(cv, `story-q${num}.jpg`);
+    toast("Pronto");
+  }catch(e){ console.error(e); toast("Falha ao gerar Story"); }
+}
+/* ====== FIM STORY ====== */
+
 /* ==================== UTIL ==================== */
 const $ = (s, r=document)=>r.querySelector(s);
 const $$ = (s, r=document)=>r.querySelectorAll(s);
@@ -625,6 +731,12 @@ function buildQuestion(q, num){
       link.setAttribute("href", url);
       menu.classList.remove("show");
     });
+  }
+
+  // botão Compartilhar Story
+  const btnShare = node.querySelector('[data-role="share"]');
+  if (btnShare){
+    btnShare.addEventListener("click", ()=>handleShareStory(q, num));
   }
 
 
