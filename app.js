@@ -1,4 +1,162 @@
 "use strict";
+// === Compartilhar Prova: link com payload no hash; fallback arquivo ===
+(function setupShareExamButton(){
+  document.addEventListener("DOMContentLoaded", ()=>{
+    const btn = document.getElementById("examShareLink");
+    if(!btn) return;
+    btn.addEventListener("click", async ()=>{
+      try{
+        const url = await buildExamShareLink(); // cria #exam=…
+        if (url.length <= 1800){
+          await shareOrCopyLink(url);
+        }else{
+          await shareExamFile(); // fallback .mjexam
+        }
+      }catch(e){ console.error(e); toast("Falha ao compartilhar a prova"); }
+    });
+  });
+})();
+
+// monta payload mínimo da prova atual; se não houver, cria a partir do pool visível
+function buildExamPayload(){
+  if(!STATE.exam){
+    const pool = STATE.viewQuestions || [];
+    if(!pool.length) throw new Error("Sem questões para a prova");
+    const N = Math.min(10, pool.length);
+    const picked = (function pickRandomDistinct(arr, n){
+      const idx = [...Array(arr.length).keys()];
+      for(let i=idx.length-1;i>0;i--){
+        const j=(Math.random()* (i+1))|0;
+        [idx[i], idx[j]]=[idx[j], idx[i]];
+      }
+      return idx.slice(0,n).map(i=>arr[i]);
+    })(pool, N);
+    // construir STATE.exam mínimo
+    const questions = picked.map(q=>({
+      id: q.id,
+      meta: q.meta || "",
+      stem: q.stem,
+      options: q.options.map(o=>({ k:o.key, t:o.text })), // compacto
+      answerKey: q.answer
+    }));
+    STATE.exam = {
+      id: uid(),
+      questions: questions.map(q=>({
+        id:q.id, meta:q.meta, stem:q.stem,
+        options: q.options.map(o=>({ key:o.k, text:o.t })),
+        answerKey: q.answerKey
+      })),
+      shuffleMap: {},
+      answers: Object.fromEntries(questions.map(q=>[q.id, null])),
+      student: "",
+      startedAt: Date.now(),
+      finishedAt: null
+    };
+  }
+
+  const ex = STATE.exam;
+  return {
+    v:1,
+    title: document.getElementById("examTitle")?.textContent || "Prova",
+    questions: ex.questions.map(q=>({
+      id: q.id,
+      meta: q.meta || "",
+      stem: q.stem,
+      options: q.options.map(o=>({ k:o.key, t:o.text })),
+      answerKey: q.answerKey
+    }))
+  };
+}
+
+function base64EncodeUTF8(str){ return btoa(unescape(encodeURIComponent(str))); }
+function base64DecodeUTF8(b64){ return decodeURIComponent(escape(atob(b64))); }
+
+// cria link com hash #exam=<b64>
+async function buildExamShareLink(){
+  const payload = buildExamPayload();
+  const json = JSON.stringify(payload);
+  const b64  = base64EncodeUTF8(json);
+  const base = `${location.origin}${location.pathname}`;
+  return `${base}#exam=${b64}`;
+}
+
+async function shareOrCopyLink(url){
+  try{
+    if(navigator.share){
+      await navigator.share({ title:"Prova MeuJus", text:"Faça esta prova:", url });
+      return;
+    }
+  }catch(e){ /* fallback copiar */ }
+  try{
+    await navigator.clipboard.writeText(url);
+    toast("Link copiado");
+  }catch{
+    const ta=document.createElement("textarea");
+    ta.value=url; document.body.appendChild(ta); ta.select();
+    document.execCommand("copy"); ta.remove();
+    toast("Link copiado");
+  }
+}
+
+// fallback: exportar arquivo .mjexam
+async function shareExamFile(){
+  const payload = buildExamPayload();
+  const blob = new Blob([JSON.stringify(payload,null,2)], {type:"application/json"});
+  const file = new File([blob], `prova-${(payload.title||"local").replace(/\s+/g,"-")}.mjexam`, {type:"application/json"});
+  if(navigator.canShare && navigator.canShare({files:[file]})){
+    try{ await navigator.share({files:[file], title:"Prova MeuJus"}); return; }catch{}
+  }
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download=file.name;
+  a.click();
+}
+
+// importar prova via #exam=...
+function checkHashExam(){
+  const m = /[#&]exam=([^&]+)/.exec(location.hash);
+  if(!m) return;
+  try{
+    const json = base64DecodeUTF8(m[1]);
+    const data = JSON.parse(json);
+    if(!data || !Array.isArray(data.questions)) return;
+
+    const questions = data.questions.map(q=>{
+      // embaralhar alternativas ao abrir
+      const order = [...Array(q.options.length).keys()];
+      for(let i=order.length-1;i>0;i--){ const j=(Math.random()*(i+1))|0; [order[i],order[j]]=[order[j],order[i]]; }
+      return {
+        id: q.id,
+        meta: q.meta || "",
+        stem: q.stem,
+        options: order.map(i=>({ key:q.options[i].k, text:q.options[i].t })),
+        answerKey: q.answerKey
+      };
+    });
+
+    STATE.exam = {
+      id: uid(),
+      questions,
+      shuffleMap: {},
+      answers: Object.fromEntries(questions.map(q=>[q.id, null])),
+      student: "",
+      startedAt: Date.now(),
+      finishedAt: null
+    };
+
+    // abrir tela da prova
+    document.getElementById("home")?.classList.add("hidden");
+    document.getElementById("quiz")?.classList.add("hidden");
+    document.getElementById("exam")?.classList.remove("hidden");
+    document.getElementById("examTitle").textContent = data.title || "Prova";
+    renderExam();
+    window.scrollTo({top:0, behavior:"smooth"});
+    toast("Prova carregada");
+  }catch(e){
+    console.error(e);
+    toast("Não foi possível importar a prova");
+  }
+}
 
 /* ====== STORY INSTAGRAM 1080x1920, 3 LAYOUTS ====== */
 function wrapLines(ctx, text, maxWidth){
@@ -249,7 +407,7 @@ async function walkGitHub(url){
 }
 
 /* ==================== ESTADO ==================== */
-const STATE = {
+const STATE = { exam: null, }
   tree: /** @type {Record<string,{label:string,files:string[]}>} */({}),
   disciplina: "",
   temasSel: /** @type {Set<string>} */(new Set()),    // seleção feita na Home
@@ -289,7 +447,13 @@ window.addEventListener("DOMContentLoaded", async ()=>{
     if(!wrap) return;
     if(STATE.ms.open && !wrap.contains(e.target)) closeThemesPanel();
   });
+
+  // importa prova se vier no hash
+  checkHashExam();
 });
+
+// reimporta ao mudar o hash
+window.addEventListener("hashchange", checkHashExam);
 
 function setupDropdown(){
   const btn=$("#ddDiscBtn"), list=$("#ddDiscList");
@@ -321,6 +485,7 @@ function fillDisciplines(keys){
     ul.appendChild(li);
   }
 }
+
 
 /* ==================== TEMAS: Multiselect tipo dropdown (Home) ==================== */
 async function buildThemesMultiselect(){
