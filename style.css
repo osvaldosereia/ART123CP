@@ -248,3 +248,29 @@ input:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px color-
 .topbar{ height:56px; padding:8px 16px; }
 main,.main,.container,.page{ margin-top:0 !important; }
 #quizThemes{ margin-top:8px !important; }
+
+/* === Chips: cores configuráveis === */
+/* Edite os valores abaixo para trocar as cores */
+:root{
+  --chip-bg:#fff;
+  --chip-fg:#0b0f19;
+  --chip-bd:#cbd5e1;
+  --chip-hover:#f8fafc;
+
+  --chip-on-bg:#0b0f19;
+  --chip-on-fg:#fff;
+  --chip-on-bd:#0b0f19;
+}
+
+#quizThemes .chip{
+  background:var(--chip-bg);
+  color:var(--chip-fg);
+  border:1px solid var(--chip-bd);
+  transition:background .12s ease,border-color .12s ease,color .12s ease;
+}
+#quizThemes .chip:hover{ background:var(--chip-hover); }
+#quizThemes .chip.on{
+  background:var(--chip-on-bg);
+  color:var(--chip-on-fg);
+  border-color:var(--chip-on-bd);
+}
