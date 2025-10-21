@@ -224,3 +224,10 @@ input:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px color-
   .q-opts li.wrong,
   .q-opts li.selected:not(.hit){background:color-mix(in srgb,var(--bad-bg),#0f172a 40%)}
 }
+/* reduzir espaço entre a topbar e os chips */
+:root { --topbar-h: 56px; }            /* antes devia estar ~80–96px */
+.topbar{ height: var(--topbar-h); padding: 8px 16px; }
+body{ padding-top: var(--topbar-h); }  /* compensação da topbar fixa */
+
+.chips,.filters{ margin-top: 8px !important; }  /* aproxima os chips */
+main,.main,.container{ margin-top: 0 !important; } /* zera quaisquer gaps extras */
