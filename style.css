@@ -1,208 +1,269 @@
-/* ====== HIGH-END MINIMAL – MONOCHROME ====== */
 :root{
-  --black:#0b0b0b;
-  --g1:#1f1f1f;      /* superfícies escuras */
-  --g2:#7a7a7a;      /* texto secundário */
-  --g3:#e8e8e8;      /* linhas e preenchimentos leves */
-  --white:#fff;
-
-  --ok:#16a34a;
-  --no:#dc2626;
-
-  --shadow-sm:0 1px 0 rgba(0,0,0,.06);
-  --shadow-md:0 10px 30px rgba(0,0,0,.08);
+  --bg:#fafafa;
+  --card:#fff;
+  --text:#111;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --brand:#2563eb;
+  --brand-600:#1d4ed8;
+  --good:#16a34a;
+  --bad:#dc2626;
+  --shadow:0 8px 24px rgba(0,0,0,.06);
+  --radius:16px;
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
-  margin:0;color:var(--black);background:var(--white);
-  font:16px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  margin:0;background:var(--bg);color:var(--text);
+  font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
 
-/* ===== Container ===== */
-.page{padding:72px 16px 28px;max-width:980px;margin:0 auto}
-
-/* ===== Topbar reta ===== */
+/* Topbar: centralizada no mesmo max-width do site */
 .topbar{
   position:sticky;top:0;z-index:50;
-  max-width:980px;margin:0 auto;display:flex;gap:12px;align-items:center;
-  padding:12px 16px;background:var(--white);
-  box-shadow:inset 0 -1px 0 var(--g3);
+  display:flex;align-items:center;gap:12px;
+  padding:10px 14px;background:#fff;border-bottom:1px solid var(--line);
+  transition:transform .18s ease;
+  max-width:900px;margin:0 auto; /* limita à largura do site */
 }
-.topbar.hide{transform:translateY(-100%)}
+.topbar.hide{ transform:translateY(-100%); }
 .topbar .logo{font-weight:700;letter-spacing:.2px;margin-right:auto}
+.topbar #btnHome{margin-left:auto}
 
-/* ===== Tipografia ===== */
-h1,h2,h3{margin:0 0 .5rem;font-weight:700}
-h1{font-size:28px;letter-spacing:-.02em}
-h2{font-size:20px;letter-spacing:-.01em}
-p{margin:.5rem 0}
-.small{font-size:12px;color:var(--g2)}
-
-/* ===== Cards planos ===== */
-.card{
-  background:var(--white);padding:16px;border:1px solid var(--g3);
-  box-shadow:var(--shadow-sm);
+.btn{
+  appearance:none;border:1px solid var(--line);background:#fff;color:var(--text);
+  padding:10px 14px;border-radius:999px;cursor:pointer;box-shadow:none;
 }
-.lbl{display:block;margin:12px 0 6px;color:var(--g2);font-size:13px}
-.hint{color:var(--g2);font-size:12px}
-
-/* ===== Botões retangulares ===== */
-.btn{appearance:none;border:none;border-radius:0;cursor:pointer;user-select:none;
-  padding:12px 14px;background:#f5f5f5;color:var(--black);transition:background .12s ease,transform .06s ease}
-.btn:hover{background:#efefef}
-.btn:active{transform:translateY(1px)}
-.btn.primary{background:var(--black);color:#fff}
-.btn.primary:hover{background:#111}
-.btn.ghost{background:transparent}
+.btn.ghost{background:#fff}
+.btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+.btn.primary:active{transform:translateY(1px)}
+.btn.ia{background:#111;color:#fff;border-color:#111}
 .btn:disabled{opacity:.5;cursor:not-allowed}
 
-/* ===== Inputs ===== */
-input,select,textarea{
-  font:inherit;color:inherit;background:#f7f7f7;border:1px solid var(--g3);padding:10px 12px;
+/* Pages */
+.page{padding:80px 12px 24px;max-width:900px;margin:0 auto}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;box-shadow:var(--shadow);
 }
-input::placeholder,textarea::placeholder{color:var(--g2)}
-:where(button,[role="button"],a,input,select,textarea):focus-visible{
-  outline:0;box-shadow:0 0 0 3px rgba(0,0,0,.08)
-}
+.lbl{display:block;margin:12px 0 6px;color:var(--muted);font-size:14px}
+.actions{margin-top:12px}
+.hint{color:var(--muted);font-size:12px}
 
-/* ===========================================================
-   MULTISELECT – “recuperar colunas” (auto-ajuste por largura)
-   =========================================================== */
-.ms-panel{
-  position:relative;margin-top:8px;padding:8px;background:var(--white);
-  border:1px solid var(--g3);box-shadow:var(--shadow-sm)
-}
-/* Cabeçalho fixo dentro do painel em listas longas */
-.ms-head{
-  position:sticky;top:0;z-index:1;display:flex;gap:8px;align-items:center;
-  padding:8px;background:var(--white);box-shadow:inset 0 -1px 0 var(--g3)
-}
-#msSearch{flex:1;border:1px solid var(--g3);padding:10px 12px;background:#f7f7f7}
-
-/* AQUI estão as colunas responsivas como “eram antes” */
-.ms-list{
-  display:grid;gap:6px;margin-top:8px;max-height:320px;overflow:auto;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-}
-@media (min-width:640px){
-  .ms-list{ grid-template-columns:repeat(auto-fit,minmax(220px,1fr)) }
-}
-@media (min-width:1024px){
-  .ms-list{ grid-template-columns:repeat(auto-fit,minmax(280px,1fr)) }
-}
-
-.ms-item{
-  display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;
-  padding:10px 12px;background:#f9f9f9;border:1px solid var(--g3);
-  transition:background .12s ease,border-color .12s ease,transform .06s ease
-}
-.ms-item:hover{background:#f3f3f3}
-.ms-item input{inline-size:16px;block-size:16px}
-.ms-item.on{
-  background:#101010;color:#fff;border-color:#101010
-}
-
-/* Ações do painel */
-.ms-actions{display:flex;gap:6px}
-.ms-foot{padding:8px 10px;color:var(--g2);font-size:12px;border-top:1px solid var(--g3)}
-
-/* ===== Chips ===== */
-#quizThemes.chips{
-  display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0 14px
-}
-#quizThemes .chip{
-  padding:6px 10px;font-size:11px;background:#f7f7f7;color:var(--black);cursor:pointer;border:1px solid var(--g3)
-}
-#quizThemes .chip.on{background:var(--black);color:#fff;border-color:var(--black)}
-
-/* ===== Dropdown ===== */
+/* Dropdown não nativo */
 .dropdown{position:relative}
 .dd-btn{
   width:100%;display:flex;justify-content:space-between;align-items:center;
-  background:#f7f7f7;border:1px solid var(--g3);padding:12px 14px;cursor:pointer
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;
 }
 .dd-list{
-  list-style:none;margin:6px 0 0;padding:6px 0;position:absolute;left:0;right:0;max-height:320px;overflow:auto;
-  background:var(--white);border:1px solid var(--g3);box-shadow:var(--shadow-md);display:none;z-index:20
+  list-style:none;margin:6px 0 0;padding:6px 0;position:absolute;left:0;right:0;max-height:240px;overflow:auto;
+  background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);display:none;z-index:20;
 }
 .dd-list.show{display:block}
 .dd-list li{padding:10px 12px;cursor:pointer}
-.dd-list li:hover{background:#f6f6f6}
+.dd-list li:hover{background:#f3f4f6}
 .chev{opacity:.6}
 
-/* ===== Lista de tópicos ===== */
-.topics{display:grid;gap:8px;margin:10px 0;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+/* ---- Lista compacta de temas (substitui chips) ---- */
+.topics{display:grid;grid-template-columns:1fr;gap:6px;margin:8px 0}
 .topic{
-  display:flex;align-items:flex-start;gap:8px;padding:10px 12px;background:#f9f9f9;border:1px solid var(--g3);
-  font-size:14px;line-height:1.25;cursor:pointer;user-select:none;text-align:left
+  display:flex;align-items:flex-start;gap:8px;
+  padding:6px 8px;border:1px solid var(--line);border-radius:10px;background:#fff;
+  font-size:14px; line-height:1.25; cursor:pointer; user-select:none; text-align:left;
 }
-.topic:hover{background:#f3f3f3}
-.topic.on{background:var(--black);color:#fff;border-color:var(--black)}
-.topic input{margin-top:2px}
+.topic:hover{background:#f8fafc}
+.topic input{margin-top:2px; inline-size:14px; block-size:14px}
+.topic.on{background:#111;color:#fff;border-color:#111}
+.topic.on input{accent-color:#fff}
 
-/* ================= QUIZ – feedback moderno ================= */
+/* Quiz list */
 .list{display:flex;flex-direction:column;gap:14px}
 .q{
-  background:var(--white);border:1px solid var(--g3);padding:16px;box-shadow:var(--shadow-sm)
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:var(--shadow);
 }
 .q-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .q-num{font-weight:700}
 .q-stem{white-space:pre-wrap;margin:8px 0 10px}
-
-/* Opções */
-.q-opts{margin:0;padding:0}
-.q-opts li{
-  margin:8px 0;padding:12px;background:#f7f7f7;border:1px solid var(--g3);cursor:pointer;
-  transition:background .12s ease,border-color .12s ease,transform .04s ease
-}
-.q-opts li:hover{background:#efefef}
+.q-opts{margin:0 0 10px 16px;padding:0}
+.q-opts li{margin:6px 0;padding:10px;border:1px solid var(--line);border-radius:10px;cursor:pointer}
+.q-opts li:hover{background:#f8fafc}
 .q-opts li.lock{opacity:.7;cursor:default}
-
-/* Correta: borda verde + ícone minimal */
-.q-opts li.hit{
-  border-color:color-mix(in srgb,var(--ok) 60%, var(--g3) 40%);
-  background:color-mix(in srgb,var(--ok) 6%, #f7fff9 94%);
-  position:relative
-}
-.q-opts li.hit::after{
-  content:"";position:absolute;right:10px;top:50%;transform:translateY(-50%) rotate(45deg);
-  width:10px;height:5px;border-right:2px solid var(--ok);border-bottom:2px solid var(--ok)
-}
-
-/* Errada marcada: leve vermelho e X minimal */
-.q-opts li.miss{
-  border-color:color-mix(in srgb,var(--no) 55%, var(--g3) 45%);
-  background:color-mix(in srgb,var(--no) 6%, #fff7f7 94%);
-  position:relative
-}
-.q-opts li.miss::after{
-  content:"";position:absolute;right:12px;top:50%;width:10px;height:10px;transform:translateY(-50%); 
-}
-.q-opts li.miss::before,
-.q-opts li.miss::after{
-  border-top:2px solid var(--no);display:block
-}
-.q-opts li.miss::before{content:"";position:absolute;right:12px;top:50%;width:12px;transform:translateY(-50%) rotate(45deg)}
-.q-opts li.miss::after{width:12px;transform:translateY(-50%) rotate(-45deg)}
-
-/* Resultado do item e estados do cartão */
+.q-opts li.hit{border-color:var(--good)}
+.q.ok{border-color:var(--good);background:#ecfdf5}
+.q.bad{border-color:var(--bad);background:#fef2f2}
 .q-res{min-height:22px;font-weight:600}
-.q.ok{border-color:color-mix(in srgb,var(--ok) 40%, var(--g3) 60%);background:color-mix(in srgb,var(--ok) 4%, #fafffb 96%)}
-.q.bad{border-color:color-mix(in srgb,var(--no) 40%, var(--g3) 60%);background:color-mix(in srgb,var(--no) 4%, #fffafa 96%)}
-.q-res.good{color:var(--ok)} .q-res.bad{color:var(--no)}
+.q-res.good{color:var(--good)} .q-res.bad{color:var(--bad)}
 
-/* ===== Toast / Back to top ===== */
+/* IA menu */
+.q-ai{position:relative;margin:8px 0}
+.ia-menu{
+  position:absolute;bottom:46px;left:0;display:none;flex-direction:column;gap:6px;
+}
+.ia-menu.show{display:flex}
+.ia-item{
+  text-decoration:none;color:#fff;background:var(--brand);
+  padding:8px 12px;border-radius:10px;border:1px solid var(--brand-600);
+}
+
+/* Sentinel */
+.sentinel{text-align:center;color:var(--muted);padding:16px}
+
+/* Toast */
 .toast{
   position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:60;
-  background:var(--black);color:#fff;padding:10px 14px;font-size:12px
-}
-.backtop{
-  position:fixed;right:16px;bottom:72px;z-index:60;display:none;align-items:center;justify-content:center;
-  width:44px;height:44px;background:var(--black);color:#fff;cursor:pointer;border:none;font-size:18px
-}
-.backtop.show{display:flex}
+  background:#111;color:#fff;box-shadow:var(--shadow);display:none;
+  padding:8px 14px;
+  font-size:12px;line-height:1.3;border-radius:10px;
 
-/* ===== Util ===== */
+  /* largura mais ampla e responsiva */
+  min-width:260px;
+  max-width:90vw;
+  text-align:center;
+  white-space:normal;          /* permite quebrar linha */
+}
+.toast.show{display:block}
+
+
+
+/* Helpers */
 .hidden{display:none}
+
+/* Responsividade */
+@media (min-width:780px){ .topics{grid-template-columns:repeat(2, minmax(0,1fr))} }
+@media (min-width:1080px){ .topics{grid-template-columns:repeat(3, minmax(0,1fr))} }
+@media (min-width:900px){
+  .page{padding-top:84px}
+}
+/* ===== Multiselect de Temas (painel) ===== */
+.ms-trigger{ width:100%; justify-content:space-between; }
+.ms-panel{
+  position:relative; margin-top:6px; display:none;
+  background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);
+}
+.ms-panel.show{ display:block; }
+.ms-head{ display:flex; gap:8px; padding:8px; align-items:center; border-bottom:1px solid var(--line); }
+#msSearch{
+  flex:1; border:1px solid var(--line); border-radius:10px; padding:8px 10px; font-size:14px;
+}
+.ms-actions{ display:flex; gap:6px; }
+.ms-list{ max-height:300px; overflow:auto; padding:6px; }
+.ms-item{
+  display:flex; align-items:center; gap:8px;
+  padding:6px 8px; border:1px solid transparent; border-radius:8px; cursor:pointer; user-select:none;
+  font-size:14px; line-height:1.25;
+}
+.ms-item:hover{ background:#f8fafc; }
+.ms-item input{ inline-size:14px; block-size:14px; }
+.ms-item.on{ border-color:var(--brand); background:#eef4ff; }
+.ms-foot{ border-top:1px solid var(--line); padding:8px 10px; color:var(--muted); font-size:12px; }
+
+/* Botão subir ao topo */
+.backtop{
+  position:fixed; right:16px; bottom:72px; z-index:60;
+  display:none; align-items:center; justify-content:center;
+  width:44px; height:44px; border-radius:999px;
+  border:1px solid var(--brand); background:var(--brand); color:#fff;
+  box-shadow:var(--shadow); cursor:pointer; font-size:18px; line-height:1;
+}
+.backtop.show{ display:flex; }
+.backtop:active{ transform:translateY(1px); }
+
+/* --- Multiselect de temas (Home) --- */
+.ms-trigger{ width:100%; }
+.ms-panel{
+  position:relative; margin-top:8px; border:1px solid var(--line); border-radius:12px;
+  background:#fff; box-shadow:var(--shadow); padding:8px;
+}
+.ms-head{ display:flex; gap:8px; align-items:center; }
+#msSearch{
+  flex:1; border:1px solid var(--line); border-radius:10px; padding:10px 12px;
+  font-size:14px;
+}
+.ms-actions{ display:flex; gap:6px; }
+.ms-list{
+  display:grid; grid-template-columns:1fr; gap:4px; margin-top:8px; max-height:320px; overflow:auto;
+}
+@media (min-width:900px){
+  .ms-list{ grid-template-columns:repeat(3, 1fr); }
+}
+.ms-item{
+  display:flex; align-items:center; gap:8px; padding:8px 10px; border:1px solid var(--line);
+  border-radius:10px; cursor:pointer; font-size:14px;
+}
+.ms-item.on{ background:#111; color:#fff; border-color:#111; }
+.ms-item input{ pointer-events:none; }
+
+/* --- Chips compactos e centrados no topo do quiz --- */
+#quizThemes.chips{
+  justify-content:center; row-gap:6px; column-gap:6px; margin:6px 0 12px;
+}
+#quizThemes .chip{
+  padding:6px 10px; font-size:10px; border-radius:999px; border:1px solid var(--line);
+  background:#fff; color:var(--text); cursor:pointer;
+}
+#quizThemes .chip.on{ background:#111; color:#fff; border-color:#111; }
+
+/* Botão voltar ao topo (se ainda não tiver) */
+.backtop{
+  position:fixed; right:16px; bottom:72px; z-index:60;
+  display:none; align-items:center; justify-content:center;
+  width:44px; height:44px; border-radius:999px;
+  border:1px solid var(--brand); background:var(--brand); color:#fff;
+  box-shadow:var(--shadow); cursor:pointer; font-size:18px; line-height:1;
+}
+.backtop.show{ display:flex; }
+.backtop:active{ transform:translateY(1px); }
+
+/* Menos espaço entre topbar e chips no QUIZ */
+#quiz.page{ padding-top:10px; }                 /* antes era 80px */
+@media (min-width:900px){
+  #quiz.page{ padding-top:10px; }               /* antes era 84px */
+}
+
+/* Chips mais próximos */
+#quizThemes{ margin:6px 0 12px; }                /* antes ~6px 0 12px */
+
+.ms-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px,1fr));
+  gap:4px;
+}
+/* Destaque forte para a alternativa correta */
+.q-opts li.hit{
+  border:2px solid var(--good) !important;
+  background:#ecfdf5;
+  font-weight:600;
+  position:relative;
+  opacity:1;                 /* garante visibilidade mesmo com .lock */
+}
+
+/* Check ✓ na alternativa correta */
+.q-opts li.hit::after{
+  content:"✓";
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  font-weight:700;
+  color:var(--good);
+}
+
+/* Se a questão estiver marcada como correta, mantém o destaque */
+.q.ok .q-opts li.hit{
+  border-width:2px;
+  background:#ecfdf5;
+}
+
+/* Se a questão estiver marcada como errada, mantém o mesmo destaque na correta */
+.q.bad .q-opts li.hit{
+  border:2px solid var(--good);
+  background:#ecfdf5;
+}
+
+/* Opcional: engrossar o contorno do cartão da questão quando correta/errada */
+.q.ok{ border:2px solid var(--good); }
+.q.bad{ border:2px solid var(--bad); }
+
+.q-meta{font-size:12px;color:#6b7280;margin-bottom:6px}
