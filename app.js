@@ -25,12 +25,13 @@ function wrapLines(ctx, text, maxWidth){
 }
 
 async function renderStoryJPG(q, num){
-  const W=1080, H=1920, PAD=72, MAXW=720; // texto mais estreito
+  const W=1080, H=1920, PAD=72, MAXW=720, EXTRA_TOP=30; // +30px de respiro no topo
   const cv=document.createElement("canvas"); cv.width=W; cv.height=H;
   const ctx=cv.getContext("2d");
 
-  // fundo transparente (PNG)
-  // ctx.clearRect(0,0,W,H); // implícito
+  // fundo cinza claro
+  ctx.fillStyle="#f8fafc";
+  ctx.fillRect(0,0,W,H);
 
   // helpers
   const rrect=(x,y,w,h,r=12)=>{
@@ -61,16 +62,16 @@ async function renderStoryJPG(q, num){
   const alts = Array.isArray(q.options)&&q.options.length
     ? q.options.map(o=>`${o.key}) ${o.text}`).join("\n") : "";
 
-  // tamanhos + espaçamento maior
+  // tamanhos
   const total=(meta+stem+alts).length;
   let S={ meta:28, stem:48, alt:36, gap:28, top:120, bot:120 };
   if(total<=280){ S={ meta:30, stem:56, alt:42, gap:36, top:140, bot:140 }; }
   else if(total>700){ S={ meta:26, stem:40, alt:32, gap:24, top:96, bot:96 }; }
 
-  let y=S.top;
+  let y=S.top + EXTRA_TOP;
 
   // tag meujus.com.br com fundo cinza limitado ao texto
-  const TAG_BG="#f1f5f9", TAG_FG="#1e40af";
+  const TAG_BG="#e5e7eb", TAG_FG="#1e40af";
   const tag=`meujus.com.br`;
   ctx.font=`600 ${S.meta}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
   const tw=ctx.measureText(tag).width;
@@ -85,17 +86,44 @@ async function renderStoryJPG(q, num){
     y += S.gap;
   }
 
-  // enunciado azul com mais entrelinhas
+  // enunciado azul, entrelinhas maiores
   drawLines(stem, S.stem, "#1e40af", 0.50);
   y += S.gap;
 
-  // alternativas, sem gabarito
+  // alternativas
   if(alts){
     drawLines(alts, S.alt, "#0b0f19", 0.42);
   }
 
+  // nota centralizada no espaço restante inferior
+  const restTop = y;
+  const restH = Math.max(0, H - S.bot - restTop);
+  if(restH > 40){
+    const note = [
+      "Coloque aqui uma Caixa de Perguntas.",
+      "Sugestão de Frase:",
+      `"Responda e justifique!" 🙂`
+    ];
+    const nSize = Math.max(18, Math.min(24, Math.floor(S.meta*0.9)));
+    const lead = Math.round(nSize*0.35);
+    ctx.font = `500 ${nSize}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
+    ctx.fillStyle = "#6b7280";
+
+    const linesW = note.map(t => ctx.measureText(t).width);
+    const nH = note.length*nSize + (note.length-1)*lead;
+    let ny = restTop + Math.floor((restH - nH)/2);
+
+    for(let i=0;i<note.length;i++){
+      const lw = linesW[i];
+      const nx = Math.floor((W - lw)/2); // centraliza horizontalmente
+      ctx.fillText(note[i], nx, ny + nSize);
+      ny += nSize + lead;
+    }
+  }
+
   return cv;
 }
+
 
 async function shareOrDownload(canvas, filename="story.png"){
   const blob = await new Promise(r => canvas.toBlob(r, "image/png"));
