@@ -25,82 +25,82 @@ function wrapLines(ctx, text, maxWidth){
 }
 
 async function renderStoryJPG(q, num){
-  const W=1080, H=1920, PAD=72;
+  const W=1080, H=1920, PAD=72, MAXW=720; // texto mais estreito
   const cv=document.createElement("canvas"); cv.width=W; cv.height=H;
   const ctx=cv.getContext("2d");
 
-  // fundo
-  ctx.fillStyle="#ffffff"; ctx.fillRect(0,0,W,H);
+  // fundo transparente (PNG)
+  // ctx.clearRect(0,0,W,H); // implícito
+
+  // helpers
+  const rrect=(x,y,w,h,r=12)=>{
+    ctx.beginPath();
+    ctx.moveTo(x+r,y);
+    ctx.arcTo(x+w,y,x+w,y+h,r);
+    ctx.arcTo(x+w,y+h,x,y+h,r);
+    ctx.arcTo(x,y+h,x,y,r);
+    ctx.arcTo(x,y,x+w,y,r);
+    ctx.closePath();
+  };
+  const drawLines=(text, size, color, leadK)=>{
+    ctx.font=`${size===S.stem?700: (size===S.meta?600:400)} ${size}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
+    ctx.fillStyle=color;
+    const lines=wrapLines(ctx, text, Math.min(MAXW, W-PAD*2));
+    const lead=Math.round(size*leadK);
+    for(const line of lines){
+      if (y+size > H-S.bot-200) break;
+      ctx.fillText(line, PAD, y+size);
+      y += size + lead;
+    }
+    return lines.length;
+  };
 
   // dados
-  const meta = q.meta||"";              // "Banca | Ano | Órgão | Prova"
+  const meta = q.meta||"";
   const stem = q.stem||"";
   const alts = Array.isArray(q.options)&&q.options.length
     ? q.options.map(o=>`${o.key}) ${o.text}`).join("\n") : "";
 
-  // tamanhos por quantidade de caracteres
+  // tamanhos + espaçamento maior
   const total=(meta+stem+alts).length;
-  let S={ meta:28, stem:48, alt:36, gap:28, top:120, bot:120, maxW:W-PAD*2 };
-  if(total<=280){ S={ meta:30, stem:56, alt:42, gap:36, top:140, bot:140, maxW:W-PAD*2 }; }
-  else if(total>700){ S={ meta:26, stem:40, alt:32, gap:24, top:96, bot:96, maxW:W-PAD*2 }; }
+  let S={ meta:28, stem:48, alt:36, gap:28, top:120, bot:120 };
+  if(total<=280){ S={ meta:30, stem:56, alt:42, gap:36, top:140, bot:140 }; }
+  else if(total>700){ S={ meta:26, stem:40, alt:32, gap:24, top:96, bot:96 }; }
 
   let y=S.top;
 
-  // 1) TAG "meujus.com.br" ANTES DA META, discreto
-  const TAG_BG="#f1f5f9";           // cinza claro
-  const TAG_FG="#1e40af";           // azul do enunciado
-  const tagPadY=12;
-  const tagH=S.meta + tagPadY*2;
-
-  ctx.fillStyle=TAG_BG;
-  ctx.fillRect(0, y, W, tagH);
-
+  // tag meujus.com.br com fundo cinza limitado ao texto
+  const TAG_BG="#f1f5f9", TAG_FG="#1e40af";
+  const tag=`meujus.com.br`;
   ctx.font=`600 ${S.meta}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
-  ctx.fillStyle=TAG_FG;
-  ctx.fillText("meujus.com.br", PAD, y + tagPadY + S.meta);
-  y += tagH + S.gap;
+  const tw=ctx.measureText(tag).width;
+  const padX=16, padY=12, th=S.meta+padY*2, twBox=tw+padX*2;
+  ctx.fillStyle=TAG_BG; rrect(PAD, y, twBox, th, 10); ctx.fill();
+  ctx.fillStyle=TAG_FG; ctx.fillText(tag, PAD+padX, y+padY+S.meta);
+  y += th + S.gap;
 
-  // 2) META: banca | ano | órgão | prova
+  // meta
   if(meta){
-    ctx.font=`600 ${S.meta}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
-    ctx.fillStyle="#111111";
-    for(const line of wrapLines(ctx, meta, S.maxW)){
-      ctx.fillText(line, PAD, y+S.meta);
-      y+=S.meta+2;
-    }
-    y+=S.gap;
+    drawLines(meta, S.meta, "#111111", 0.40);
+    y += S.gap;
   }
 
-  // 3) ENUNCIADO azul, mais pesado
-  ctx.font=`700 ${S.stem}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
-  ctx.fillStyle="#1e40af";
-  for(const line of wrapLines(ctx, stem, S.maxW)){
-    if(y+S.stem > H-S.bot-260) break;
-    ctx.fillText(line, PAD, y+S.stem);
-    y+=S.stem+6;
-  }
-  y+=S.gap;
+  // enunciado azul com mais entrelinhas
+  drawLines(stem, S.stem, "#1e40af", 0.50);
+  y += S.gap;
 
-  // 4) ALTERNATIVAS, sem gabarito
+  // alternativas, sem gabarito
   if(alts){
-    ctx.font=`400 ${S.alt}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
-    ctx.fillStyle="#0b0f19";
-    for(const line of wrapLines(ctx, alts, S.maxW)){
-      if(y+S.alt > H-S.bot-220) break;
-      ctx.fillText(line, PAD, y+S.alt);
-      y+=S.alt+4;
-    }
+    drawLines(alts, S.alt, "#0b0f19", 0.42);
   }
 
-  // sem rodapé
   return cv;
 }
 
-
-async function shareOrDownload(canvas, filename="story.jpg"){
-  const blob = await new Promise(r => canvas.toBlob(r, "image/jpeg", 0.92));
+async function shareOrDownload(canvas, filename="story.png"){
+  const blob = await new Promise(r => canvas.toBlob(r, "image/png"));
   if(!blob) return;
-  const file = new File([blob], filename, { type:"image/jpeg" });
+  const file = new File([blob], filename, { type:"image/png" });
   if(navigator.canShare && navigator.canShare({ files:[file] })){
     try{ await navigator.share({ files:[file], title:"Questão" }); return; }catch{}
   }
@@ -108,6 +108,7 @@ async function shareOrDownload(canvas, filename="story.jpg"){
   a.href=URL.createObjectURL(blob); a.download=filename; document.body.appendChild(a);
   a.click(); a.remove();
 }
+
 
 async function handleShareStory(q, num){
   try{
