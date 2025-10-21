@@ -158,22 +158,86 @@ function checkHashExam(){
   }
 }
 
+// SUBSTITUA sua função renderExam por esta
 function renderExam(){
-  const el = document.getElementById("examBody");
-  if(!STATE.exam || !el) return;
-  el.innerHTML = "";
-  STATE.exam.questions.forEach((q,i)=>{
-    const wrap=document.createElement("article");
-    const h=document.createElement("h3"); h.textContent=`${i+1}. ${q.stem}`; wrap.appendChild(h);
-    const ul=document.createElement("ul");
+  const list = document.getElementById("examList");
+  if(!STATE.exam || !list) return;
+  list.innerHTML = "";
+  const tpl = /** @type {HTMLTemplateElement} */(document.getElementById("tplExamQuestion"));
+
+  STATE.exam.questions.forEach((q, i)=>{
+    const li = tpl.content.firstElementChild.cloneNode(true);
+    li.querySelector(".ex-stem").textContent = `${i+1}. ${q.stem}`;
+
+    const ul = li.querySelector(".ex-opts");
     q.options.forEach(o=>{
-      const li=document.createElement("li"); li.textContent=`${o.key}) ${o.text}`;
-      ul.appendChild(li);
+      const item = document.createElement("li");
+      const id = `${q.id}_${o.key}`;
+      item.innerHTML = `
+        <label for="${id}">
+          <input type="radio" name="${q.id}" id="${id}" value="${o.key}">
+          <span>${o.key}) ${o.text}</span>
+        </label>
+      `;
+      ul.appendChild(item);
     });
-    wrap.appendChild(ul);
-    el.appendChild(wrap);
+
+    list.appendChild(li);
   });
 }
+// concluir prova e exibir relatório simples
+(function setupExamFinish(){
+  document.addEventListener("DOMContentLoaded", ()=>{
+    const btn = document.getElementById("examFinish");
+    if(!btn) return;
+    btn.addEventListener("click", ()=>{
+      if(!STATE.exam) return;
+
+      // capturar nome
+      const name = document.getElementById("examStudent")?.value?.trim() || "";
+      STATE.exam.student = name;
+
+      // coletar respostas
+      STATE.exam.questions.forEach(q=>{
+        const sel = document.querySelector(`input[name="${q.id}"]:checked`);
+        STATE.exam.answers[q.id] = sel ? sel.value : null;
+      });
+      STATE.exam.finishedAt = Date.now();
+
+      // corrigir
+      let acertos = 0;
+      STATE.exam.questions.forEach(q=>{
+        if(STATE.exam.answers[q.id] === q.answerKey) acertos++;
+      });
+
+      // render relatório
+      const rep = document.getElementById("examReport");
+      if(rep){
+        const total = STATE.exam.questions.length;
+        rep.classList.remove("hidden");
+        rep.innerHTML = `
+          <h3>Resultado</h3>
+          <p>Aluno: <strong>${name || "—"}</strong></p>
+          <p>Acertos: <strong>${acertos}/${total}</strong></p>
+          <details>
+            <summary>Gabarito</summary>
+            <ol>
+              ${STATE.exam.questions.map((q,i)=>{
+                const got = STATE.exam.answers[q.id] ?? "—";
+                const ok  = q.answerKey;
+                const hit = got===ok;
+                return `<li>#${i+1}: você <strong>${got}</strong> · correto <strong>${ok}</strong> ${hit?"✅":"❌"}</li>`;
+              }).join("")}
+            </ol>
+          </details>
+        `;
+        toast("Prova concluída");
+        rep.scrollIntoView({behavior:"smooth"});
+      }
+    });
+  });
+})();
+
 
 /* ====== STORY INSTAGRAM 1080x1920, 3 LAYOUTS ====== */
 function wrapLines(ctx, text, maxWidth){
@@ -460,6 +524,40 @@ window.addEventListener("DOMContentLoaded", async ()=>{
     if(!wrap) return;
     if(STATE.ms.open && !wrap.contains(e.target)) closeThemesPanel();
   });
+// botão flutuante Criar Prova
+const btnCreate = document.getElementById("btnCreateExam");
+if (btnCreate){
+  btnCreate.addEventListener("click", ()=>{
+    const pool = STATE.viewQuestions?.length ? STATE.viewQuestions : STATE.allQuestions;
+    if(!pool?.length){ toast("Carregue questões primeiro"); return; }
+    const N = Math.min(10, pool.length);
+    const idx = [...Array(pool.length).keys()];
+    for(let i=idx.length-1;i>0;i--){ const j=(Math.random()*(i+1))|0; [idx[i],idx[j]]=[idx[j],idx[i]]; }
+    const picked = idx.slice(0,N).map(i=>pool[i]);
+
+    STATE.exam = {
+      id: uid(),
+      questions: picked.map(q=>({
+        id: q.id,
+        meta: q.meta || "",
+        stem: q.stem,
+        options: q.options.map(o=>({ key:o.key, text:o.text })),
+        answerKey: q.answer
+      })),
+      answers: Object.fromEntries(picked.map(q=>[q.id, null])),
+      student: "",
+      startedAt: Date.now(),
+      finishedAt: null
+    };
+
+    document.getElementById("home")?.classList.add("hidden");
+    document.getElementById("quiz")?.classList.add("hidden");
+    document.getElementById("exam")?.classList.remove("hidden");
+    document.getElementById("examTitle").textContent = "Prova";
+    renderExam();
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+}
 
   // importa prova se vier no hash
   checkHashExam();
