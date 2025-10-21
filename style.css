@@ -253,12 +253,12 @@ main,.main,.container,.page{ margin-top:0 !important; }
 /* Edite os valores abaixo para trocar as cores */
 :root{
   --chip-bg:#fff;
-  --chip-fg:#0b0f19;
+  --chip-fg:#385396;
   --chip-bd:#cbd5e1;
   --chip-hover:#f8fafc;
 
   --chip-on-bg:#0b0f19;
-  --chip-on-fg:#fff;
+  --chip-on-fg:#385396;
   --chip-on-bd:#0b0f19;
 }
 
