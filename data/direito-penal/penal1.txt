@@ -2618,3 +2618,588 @@
 *** Gabarito: A
 **** Crimes contra o patrimônio, Latrocínio tentado, Tentativa
 -----
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*No Brasil, o gênero “infrações penais” é subdividido em duas espécies: os crimes ou delitos (expressões sinônimas) e as contravenções penais. Uma diferença entre tais categorias é baseada na consequência punitiva da lesão causada ao ordenamento jurídico. Destarte, nos termos da legislação vigente, em relação às contravenções, assinale a afirmativa correta.
+** A) É aplicável apenas a pena de multa.
+** B) São aplicáveis as penas de reclusão e detenção.
+** C) São aplicáveis as penas de prisão simples e multa, alternativa ou cumulativamente.
+** D) São aplicáveis as penas de detenção e multa.
+** E) São aplicáveis as penas de reclusão e multa.
+*** Gabarito: C
+**** Legislação Penal Especial, Lei de Contravenções Penais - Decreto-Lei nº 3.688 de 1941
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*O conceito de imputabilidade abrange um conjunto de requisitos que conferem ao indivíduo a capacidade para que lhe possa ser atribuída responsabilidade por comportamento legalmente definido como infração penal. Nos termos da legislação vigente, pode-se afirmar corretamente que não exclui a imputabilidade
+** A) o desenvolvimento mental incompleto ou retardado.
+** B) a embriaguez completa proveniente de caso fortuito.
+** C) a menoridade.
+** D) a emoção ou a paixão.
+** E) a doença mental.
+*** Gabarito: D
+**** Culpabilidade, Imputabilidade penal
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*Segundo a vigente legislação, os crimes contra o patrimônio da União Federal ficam sujeitos à lei brasileira, ainda que cometidos no estrangeiro. Essa norma é fundamentada no
+** A) Princípio da atividade.
+** B) Princípio de taxatividade.
+** C) Princípio da ultratividade.
+** D) Princípio da excepcionalidade.
+** E) Princípio da extraterritorialidade.
+*** Gabarito: E
+**** Noções Fundamentais, Lei penal no espaço
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*Arão foi denunciado em ação penal na qual lhe foi imputada a prática de conduta típica prevista em lei temporária. Considerando que foi ultrapassado o prazo de vigência da mencionada lei, assinale a opção correta segundo o disposto no Código Penal.
+** A) A conduta deixa de ser punível, exceto se houve danos causados a terceiros.
+** B) A pena permanece aplicável, porém, de maneira atenuada.
+** C) A nova legislação impõe a abolição da imputabilidade.
+** D) A conduta permanece incriminada e punível.
+** E) A conduta praticada é fulminada pela prescrição.
+*** Gabarito: D
+**** Noções Fundamentais, Lei penal no tempo
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*Em relação à aplicação da lei penal no tempo, é correto afirmar que
+** A) a lei penal mais branda não retroage no caso de crime permanente ou continuado.
+** B) a lei penal posterior, benéfica para o réu, não pode ser aplicada se o processo já estiver na fase de execução da condenação.
+** C) a lei penal superveniente mais rigorosa retroage apenas em caso de reincidência.
+** D) a lei penal posterior retroage desde que seja benéfica para o réu, mesmo já tendo sido prolatada a decisão condenatória transitada em julgado.
+** E) a lei penal temporária ou excepcional sempre será revogada pela legislação posterior.
+*** Gabarito: D
+**** Noções Fundamentais, Lei penal no tempo
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*Sobre a ação penal pública, assinale a afirmativa correta.
+** A) A ação penal pública será promovida por denúncia do Ministério Público, mas dependerá, quando a lei o exigir, de requisição do Ministro da Justiça ou de representação do ofendido.
+** B) A representação será irretratável depois de recebida a denúncia.
+** C) No caso de morte do ofendido ou quando declarado ausente por decisão judicial, extingue-se automaticamente o direito de representação.
+** D) Nos casos em que caiba a ação pública, qualquer pessoa poderá provocar a iniciativa do Ministério Público, exceto se reincidente em crime doloso.
+** E) Não há hipótese legal de admissão do ajuizamento de ação penal privada nos crimes submetidos à ação penal pública.
+*** Gabarito: A
+**** Ação penal
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: TJ-SC
+*João, agente público, se apropriou, em proveito próprio e atuando com vontade e consciência, de um computador portátil, pertencente ao município Alfa, de que tinha a posse em razão da função pública desempenhada, avaliado em três mil reais. Nesse cenário, considerando as disposições do Código Penal, é correto afirmar que João:
+** A) não responderá por qualquer crime, pois o peculato não é criminalizado na modalidade culposa;
+** B) não responderá por qualquer crime, em razão do reduzido valor do bem apropriado;
+** C) responderá pelo crime de corrupção passiva;
+** D) responderá pelo crime de peculato culpos;
+** E) responderá pelo crime de peculato doloso.
+*** Gabarito: E
+**** Crimes contra a administração pública, Peculato
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: TJ-SC
+*Caio, particular, falsificou, com extrema qualidade, papel moeda de curso legal na República Federativa do Brasil, fabricando dezenas de notas de cinquenta reais, com o objetivo de colocá-las em circulação no mercado. Nesse cenário, considerando as disposições do Código Penal, é correto afirmar que Caio responderá pelo crime de:
+** A) falsificação de documento particular;
+** B) falsificação de documento público;
+** C) petrechos de falsificação;
+** D) falsidade ideológica;
+** E) moeda falsa.
+*** Gabarito: E
+**** Crimes contra a fé pública, Moeda falsa
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: TJ-SC
+*O estado Alfa e a sociedade empresária XYZ celebraram contrato administrativo para o fornecimento de bens, sem prévia licitação, sob o fundamento de que ela, no caso, seria inexigível. Contudo, após a realização de investigação pelas autoridades competentes, concluiu-se que não era admissível a celebração do contrato administrativo sem o prévio procedimento licitatório. Apurou-se, ainda, que João, agente público, deu causa, de forma dolosa, à contratação da sociedade empresária XYZ, sem licitação, fora das hipóteses previstas em lei. Nesse cenário, considerando as disposições do Código Penal, é correto afirmar que João responderá pelo crime de:
+** A) perturbação de processo licitatório;
+** B) patrocínio de contratação indevida;
+** C) fraude em licitação ou contrato;
+** D) contratação direta ilegal;
+** E) contratação inidônea.
+*** Gabarito: D
+**** Crimes contra a administração pública, Crimes em Licitações e Contratos Administrativos
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*Acerca da Lei nº 14.532/2023, que alterou a lei de crimes raciais(Lei nº 7.716/89), é correto afirmar que
+** A) o crime de injúria racial não se equipara ao crime de racismo, o qual possui tipificação específica e acarreta a sua imprescritibilidade.
+** B) houve a previsão de causa de aumento quando o crime de racismo ocorre em contexto ou com intuito de descontração, diversão ou recreação, configurando o denominado racismo recreativo.
+** C) quando o crime de injúria racial ou por origem da pessoa for cometido por funcionário público no exercício de suas funções ou a pretexto de exercê-las, a pena é diminuída, em razão de sua fé pública.
+** D) o plenário do STF julgou reconhecendo a possibilidade de aplicação acordo de não persecução penal (ANPP) em crimes raciais, nas hipóteses de presença dos requisitos para oferta desta medida despenalizadora.
+** E) na hipótese de o crime de racismo ser cometido por intermédio dos meios de comunicação social ou postagem em redes sociais ou na internet, a apuração será impossível, tendo em vista o direito a intimidade.
+*** Gabarito: B
+**** Legislação Penal Especial, Crimes Resultantes de Preconceito de Raça ou Cor – Lei nº 7.716 de 1989
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*O cyberbullying pode ser compreendido como a prática de intimidação, humilhação e/ou exposição vexatória em face de um determinado sujeito em ambientes virtuais. A incidência maior de casos de cyberbullying ocorre entre crianças e adolescentes. Enquanto o bullying entre menores ocorre muitas vezes no ambiente escolar, o cyberbullying ultrapassa fronteiras físicas, sendo de diversas formas opressor, e deixa um rastro digital. Em relação ao assunto, assinale a afirmativa que expressa corretamente o regramento jurídico do tema no Brasil.
+** A) Define-se como “Intimidação sistemática” intimidar sistematicamente, individualmente ou em grupo, mediante violência física ou psicológica, uma ou mais pessoas, de modo intencional e repetitivo, sem motivação evidente, por meio de atos de intimidação, de humilhação ou de discriminação ou de ações verbais, morais, sexuais, sociais, psicológicas, físicas, materiais ou virtuais. Para o tipo penal, aplica-se pena de reclusão de 3 (três) anos a 5 (cinco) anos, se a conduta não constituir crime mais grave.
+** B) No caso de intimidação sistemática virtual ( cyberbullying ), se a conduta for realizada por meio da rede de computadores, de rede social, de aplicativos, de jogos on-line ou por qualquer outro meio ou ambiente digital, ou transmitida em tempo real, deverá ser aplicada pena de reclusão, de 2 (dois) anos a 4 (quatro) anos, e multa, se a conduta não constituir crime mais grave.
+** C) O induzimento e a instigação a suicídio ou a automutilação realizados por meio da rede de computadores foram tipificados no código penal, porém não como crimes hediondos.
+** D) É de responsabilidade prioritária do poder público federal desenvolver, em conjunto com os órgãos de segurança pública e de saúde e com a participação da comunidade escolar, protocolos para estabelecer medidas de proteção à criança contra qualquer forma de violência no âmbito escolar.
+** E) No caso de intimidação sistemática virtual ( cyberbullying ), se a conduta for realizada por meio da rede de computadores, de rede social, de aplicativos, de jogos on-line ou por qualquer outro meio ou ambiente digital, ou transmitida em tempo real, deverá ser aplicada pena de reclusão, de 4 (quatro) anos a 6 (seis) anos, se a conduta não constituir crime mais grave.
+*** Gabarito: B
+**** Crimes contra a liberdade pessoal, Intimidação sistemática (bullying)
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*No que diz respeito à hermenêutica, em teoria, a aplicação de norma incriminadora para punir conduta não expressamente prevista em lei configura
+** A) interpretação extensiva, sendo juridicamente admissível.
+** B) interpretação assistemática, sendo juridicamente inadmissível.
+** C) analogia in malam partem , sendo juridicamente inadmissível.
+** D) interpretação declarativa, sendo juridicamente admissível.
+** E) interpretação analógica, sendo juridicamente inadmissível.
+*** Gabarito: C
+**** Noções Fundamentais, A norma penal, Princípios limitadores do poder punitivo estatal
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*No que diz respeito aos fundamentos do Direito Penal, analise as afirmações a seguir. I. Não há medida de segurança sem prévia cominação legal. II. Ao crime cometido no território nacional sempre será aplicável, em caráter exclusivo, a lei brasileira. III. A abolitio criminis pode ser instituída por medida provisória. Está correto o que se afirma em
+** A) I, II e III.
+** B) II e III, apenas.
+** C) I e II, apenas.
+** D) I, apenas.
+** E) I e III, apenas.
+*** Gabarito: D
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*No tocante às normas gerais do Direito Penal, analise as afirmações a seguir. I. A pena cumprida no estrangeiro não atenua a pena imposta no Brasil pelo mesmo crime, quando diversas, ou nela é computada, quando idênticas. II. Considera-se praticado o crime no momento da ação ou omissão, mesmo que outro seja o momento do resultado. III. Ninguém pode ser punido por fato que lei posterior deixa de considerar crime, não cessando, porém, em virtude dela a execução e os efeitos penais da sentença condenatória. Está correto o que se afirma em
+** A) I, II e III.
+** B) II, apenas.
+** C) I e II, apenas.
+** D) II e III, apenas.
+** E) I, apenas.
+*** Gabarito: B
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal, Lei penal no tempo
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*A diretriz segundo a qual as regras penais gerais se aplicam aos fatos incriminados por norma especial, exceto se esta dispuser de modo diverso, retrata o Princípio
+** A) do bem jurídico.
+** B) da taxatividade.
+** C) da proporcionalidade.
+** D) da especialidade.
+** E) da razoabilidade.
+*** Gabarito: D
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*Revoltados com a mecanização da produção e sentindo-se ameaçados com o desemprego gerado pelo avanço da inteligência artificial, José e mais dois colegas deixaram seus postos de trabalho, invadiram o centro de controle da fábrica de tecidos na qual eram empregados e destruíram as máquinas e computadores existentes no local. Assim agindo, nos termos da legislação vigente, pode-se afirmar que José e seus colegas praticaram o crime de
+** A) exercício arbitrário das próprias razões.
+** B) invasão de estabelecimento industrial, comercial ou agrícola e sabotagem.
+** C) dano.
+** D) paralisação de trabalho, seguida de violência ou perturbação da ordem.
+** E) exercício de atividade com infração de decisão administrativa.
+*** Gabarito: D
+**** Crimes contra a organização do trabalho
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*Assédio sexual é uma conduta sexual abusiva e indesejada, concretizada por meio de manifestações verbais e/ou físicas, com a finalidade de prejudicar o desempenho laboral da vítima, causando-lhe constrangimentos e intimidação, ou ainda a obtenção de favores de cunho sexual, prevalecendo-se o agente da sua condição de ascendência inerente ao exercício do emprego, cargo ou função. Acerca do assédio sexual no ambiente de trabalho, assinale a afirmativa correta.
+** A) Não pode ocorrer assédio sexual entre pessoas do mesmo sexo.
+** B) O assédio sexual por intimidação é crime capitulado no Código Penal.
+** C) Assédio sexual por chantagem são incitações sexuais inoportunas ou outras manifestações de cunho sexual, verbais ou físicas.
+** D) No assédio sexual por chantagem o assediador busca obter favores sexuais para si ou para terceiro.
+** E) A caracterização do assédio sexual exige a prática de atos reiterados, não se caracterizando com um único ato.
+*** Gabarito: D
+**** Crimes contra a dignidade sexual, Assédio sexual
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*João, funcionário contratado temporariamente para fiscalizar o cumprimento do Código de Posturas do Município de Flamengolândia, cobrou pagamento em dinheiro de alguns empresários sob a promessa de não autuá-los por descumprimento da legislação. João não chegou a receber qualquer quantia, pois o prazo de duração do seu contrato de trabalho chegara ao fim e não foi renovado. O amigo e superior hierárquico de João, José, tomou conhecimento do ocorrido à época da cobrança, mas, em razão da amizade, resolveu não instaurar procedimento administrativo-disciplinar e sequer encaminhou a notícia e seus indícios ao Ministério Público. Diante de tal situação hipotética e da legislação vigente, é correto afirmar que
+** A) João não praticou fato típico, pois não chegou a receber o dinheiro.
+** B) José não praticou fato típico, pois João não chegou a se locupletar e não houve prejuízo aos cofres públicos.
+** C) João praticou o crime de corrupção passiva e José praticou o crime de prevaricação.
+** D) João praticou o crime de excesso de exação e José praticou o mesmo delito como partícipe por omissão.
+** E) os fatos são atípicos, pois João não era funcionário concursado e permanente e José não descumpriu dever legal de ofício.
+*** Gabarito: C
+**** Crimes contra a administração pública, Corrupção passiva, Prevaricação
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*Filisteu, funcionário público, forneceu a Paulo, empresário, a relação dos contribuintes e seus respectivos dados pessoais constantes do banco de dados da Administração Pública para que este enviasse mensagens de marketing e brindes de sua empresa. A utilização efetiva dos dados repassados não chegou a ocorrer e Filisteu não cobrou ou recebeu qualquer vantagem para fornecer os dados. Diante de tal situação hipotética, em relação à conduta de Filisteu, pode-se afirmar corretamente que
+** A) o fato é atípico, pois não houve uso efetivo das informações e nem recebimento de vantagem pessoal.
+** B) Filisteu cometeu o crime de favorecimento pessoal.
+** C) Filisteu cometeu o crime de condescendência criminosa.
+** D) Filisteu cometeu o crime de violação de sigilo funcional.
+** E) Filisteu cometeu o crime de advocacia administrativa.
+*** Gabarito: D
+**** Crimes contra a administração pública, Violação de sigilo funcional
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: Câmara dos Deputados
+*Revoltado com o alarmante déficit da Previdência Social e o consequente valor ínfimo dos proventos recebidos por sua mãe, aposentada e portadora de câncer terminal, Ataulfo, auditor fiscal, passa a exigir, em dobro, o pagamento das contribuições sociais devidas pelos empregadores que fiscaliza, advertindo-os de que, em caso de descumprimento, divulgaria nas redes sociais a lista de devedores e os respectivos débitos fiscais. Uma vez na posse dos valores pagos a ele diretamente pelos contribuintes, Ataulfo não repassa as quantias ao erário e as utiliza em viagem com sua mãe. Diante de tal situação hipotética e da legislação vigente, é correto afirmar que Ataulfo praticou o crime de
+** A) exercício arbitrário das próprias razões.
+** B) corrupção passiva.
+** C) excesso de exação.
+** D) constrangimento ilegal.
+** E) ameaça.
+*** Gabarito: C
+**** Crimes contra a administração pública, Concussão e Excesso de Exação
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: ENAM
+*No que diz respeito às figuras da desistência voluntária, do arrependimento eficaz e do arrependimento posterior, analise as afirmativas a seguir. I. A espontaneidade e o esgotamento da atividade executória são requisitos da desistência voluntária. II. O esgotamento da atividade executória, o impedimento da ocorrência do resultado típico e a voluntariedade são requisitos legais do arrependimento eficaz. III. No arrependimento posterior, a redução da pena do agente ocorrerá conforme a celeridade da reparação do dano ou restituição da coisa, podendo ocorrer a exclusão da punibilidade se o crime foi cometido sem violência ou grave ameaça à pessoa. Está correto o que se afirma em
+** A) I, apenas.
+** B) II, apenas.
+** C) III, apenas.
+** D) I e II, apenas.
+** E) II e III, apenas.
+*** Gabarito: B
+**** Tipicidade, Desistência voluntária e arrependimento eficaz
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: ENAM
+*Acerca do instituto da reincidência , nos termos da legislação vigente, assinale a afirmativa correta.
+** A) A condenação anterior não é computada para fins de reincidência se entre a data do cumprimento ou de extinção da pena e a infração posterior tiver decorrido período de tempo superior a 5 (cinco) anos, excluindo-se o período de prova da suspensão ou do livramento condicional.
+** B) Na verificação da reincidência não são considerados os crimes políticos, exceto se restar concomitantemente configurada a prática de infração penal militar.
+** C) A reincidência se configura quando o agente comete infração penal depois de transitada em julgado a sentença condenatória por prática de infração penal anterior.
+** D) No concurso de agravantes e atenuantes, a pena deve aproximar-se do limite indicado pelas circunstâncias preponderantes, inclusive a reincidência.
+** E) A execução da pena privativa de liberdade não superior a 2 (dois) anos poderá ser suspensa desde que o condenado não seja reincidente em crime culposo ou doloso.
+*** Gabarito: D
+**** Penas privativas de liberdade, Reincidência
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: ENAM
+*Para vencer a concorrência no mercado profissional, Jacó, advogado, solicitou a um potencial cliente o pagamento de acréscimo de 20% no valor dos honorários, sob a promessa de que a quantia garantiria o sucesso em sua demanda, pois seria repassada ao magistrado com o fim de influenciar o julgamento da respectiva ação judicial. O pagamento não chegou a ser feito e o cliente acabou optando por contratar formalmente os serviços de Mateus, também advogado, que solicitara o pagamento de acréscimo no valor de apenas 10% dos honorários, sob a mesma insinuação. Diante de tal situação hipotética, nos termos da legislação vigente, assinale a afirmativa correta.
+** A) Jacó praticou ato penalmente atípico, porque a proposta não chegou a ser efetivamente aceita pelo cliente.
+** B) Jacó praticou ato penalmente atípico, porque a quantia não chegou a ser efetivamente paga pelo cliente.
+** C) Mateus praticou o crime de corrupção ativa na modalidade tentada.
+** D) Mateus praticou o crime de exploração de prestígio, que deverá ter a pena aumentada em razão da alegação de que o pagamento solicitado era destinado ao magistrado.
+** E) Jacó praticou o crime de tráfico de influência, devendo ter a pena aumentada em razão da consumação formal do acordo.
+*** Gabarito: D
+**** Crimes contra a administração pública, Sonegação de papel ou objeto de valor probatório. Exploração de prestígio
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: ENAM
+*Acerca do concurso de agentes , analise as afirmativas a seguir. I. O Código Penal vigente adota a teoria monista estrita quanto ao concurso de agentes. II. A cooperação dolosamente distinta implica no fato de que, embora um dos agentes tenha almejado praticar infração penal menos grave do que o resultado pretendido e concretizado pelos demais agentes, todos os concorrentes responderão solidariamente pelo fato concretizado, ainda que mais grave. III. A participação do agente na infração penal pode ocorrer desde a fase da cogitação até a consumação, porém, a relevância penal da conduta do partícipe é condicionada, salvo disposição em contrário, ao ingresso do autor na fase da execução. Está correto o que se afirma em
+** A) I, apenas.
+** B) II, apenas.
+** C) III, apenas.
+** D) I e III, apenas.
+** E) II e III, apenas.
+*** Gabarito: A
+**** Concurso de Pessoas
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: ENAM
+*Mário, líder sindical dos empregados da Sosafi S.A. , iniciou um movimento grevista, em conjunto com outros empregados. Para tanto, acomodaram-se nas portas do estabelecimento empresarial e passaram a tentar convencer todos os demais empregados a aderirem ao movimento. A causa da greve foi o fato de Jorge, administrador e sócio majoritário da companhia, ter deixado, consciente e voluntariamente, de anotar a vigência do contrato de trabalho na Carteira de Trabalho e Previdência Social (CTPS) dos empregados Gustavo e Adalberto, bem como de efetuar o pagamento da gratificação natalina de todos os empregados em 2023. Analise as condutas dos envolvidos apresentadas a seguir e assinale a opção correta.
+** A) Mário praticou atentado contra a liberdade do trabalho; Jorge praticou delito de falsificação de documento público por omissão e frustração do direito assegurado por lei trabalhista.
+** B) Mário praticou o delito de paralisação de trabalho, seguida de violência ou perturbação da ordem; Jorge praticou frustração do direito assegurado por lei trabalhista, em três ocasiões.
+** C) Mário não praticou crime; Jorge praticou os delitos de falsificação de documento público em relação à ausência de anotação na CTPS e de apropriação indébita, em razão da ausência de pagamento da gratificação natalina dos empregados.
+** D) Mário praticou paralisação do trabalho de interesse coletivo; Jorge praticou o delito de frustração de direito assegurado por lei trabalhista, ao deixar de anotar o contrato de trabalho na CTPS dos empregados.
+** E) Mário não praticou crime; Jorge praticou apenas o delito de falsificação de documento público por omissão, ao deixar de anotar o contrato de trabalho na CTPS dos empregados.
+*** Gabarito: E
+**** Crimes contra a fé pública, Falsidade de documento público
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: ENAM
+*Sobre as medidas de segurança estabelecidas no Código Penal e o tratamento da inimputabilidade penal, em conformidade com a jurisprudência dos Tribunais Superiores, assinale a afirmativa correta.
+** A) A medida de segurança é aplicável apenas aos totalmente inimputáveis.
+** B) A internação em hospital de custódia e tratamento é restrita ao delito que admita a fixação de regime fechado.
+** C) O tratamento ambulatorial é aplicável ao delito que cominar penas de detenção, vedada a conversão em internação.
+** D) Sempre que identificada a inimputabilidade do acusado haverá a imposição de medida de segurança.
+** E) A medida de segurança será por tempo indeterminado, limitada à pena máxima cominada ao delito.
+*** Gabarito: E
+**** Medida de segurança
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: ENAM
+*De acordo com a jurisprudência do Superior Tribunal de Justiça, assinale a opção que indica a hipótese em que pode ser aplicado o princípio da insignificância.
+** A) Jaci, primária, subtraiu um fardo de cervejas avaliado em R$40,00 (quarenta reais). Ao sofrer a resistência da vítima, Jaci empregou violência para a manutenção da posse da res furtiva.
+** B) Arthur, servidor público, primário, subtraiu o fone de ouvido que pertencia à repartição pública em que trabalhava, avaliado em cinquenta reais, do qual teve posse em razão de sua função.
+** C) Michele, empresária, primária, iludiu o pagamento de imposto de importação no valor de R$19.000,00 (dezenove mil reais) ao trazer, do exterior, mercadorias que seriam revendidas no Brasil.
+** D) Gustavo, reincidente específico em delitos de furto, subtraiu R$300,00 (trezentos reais) em carnes de um pequeno mercado, mediante rompimento de obstáculo.
+** E) Raissa, primária, internalizou 2.000 (dois mil) maços de cigarros fabricados no Paraguai, produto de venda proibida no Brasil, cuja carga foi avaliada em R$8.000,00 (oito mil reais).
+*** Gabarito: C
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+-----
+***** Ano: 2024 | Banca: FGV | Órgão: ENAM
+*Em julgamento emblemático, o Supremo Tribunal Federal reconheceu que os integrantes do grupo LGBTI+, como qualquer outra pessoa, nascem iguais em dignidade e direitos e possuem igual capacidade de autodeterminação quanto às suas escolhas pessoais em matéria afetiva e amorosa. Nesse contexto, de acordo com o STF
+** A) a existência de omissão normativa inconstitucional do Poder Legislativo da União foi declarada, para fins de cientificar o Congresso Nacional, para os efeitos legais cabíveis, visando à edição de lei no prazo de 180 (cento e oitenta) dias, que regulamente os mandados constitucionais de incriminação inscritos no Art. 5º, incisos XLI e XLII, da CRFB/88, que passam a ser considerados autoaplicáveis, após tal prazo, para enquadrar a homofobia e a transfobia em tipos penais já existentes no Código Penal.
+** B) até que sobrevenha lei emanada do Congresso Nacional destinada a implementar os mandados de criminalização definidos no Art. 5º, incisos XLI e XLII, da CRFB/88, as condutas homofóbicas e transfóbicas, reais ou supostas, que envolvem aversão odiosa à orientação sexual ou à identidade de gênero de alguém, por traduzirem expressões de racismo, compreendido este em sua dimensão social, ajustam-se, por identidade de razão e mediante adequação típica, aos preceitos primários de incriminação definidos na Lei nº 7.716/1989, constituindo, também, na hipótese de homicídio doloso, circunstância que o qualifica, por configurar motivo torpe.
+** C) a repressão penal à prática da homotransfobia alcança, restringe e limita o exercício da liberdade religiosa, qualquer que seja a denominação confessional professada, a cujos fiéis e ministros é vedado o direito de pregar e de divulgar, pela palavra, pela imagem ou por qualquer outro meio, o seu pensamento e de externar suas convicções de acordo com o que estiver contido em seus livros e códigos sagrados, porque o ordenamento jurídico veda o discurso de ódio.
+** D) até que seja editada lei sobre a matéria pelo Poder Legislativo, as condutas reais homofóbicas e transfóbicas, que envolvem discurso de ódio contra orientação sexual ou identidade de gênero de alguém, por traduzirem expressões de preconceito, compreendido este em sua dimensão social, ajustam-se, por identidade de razão e mediante adequação típica, aos preceitos primários de incriminação como terrorismo.
+** E) a omissão normativa inconstitucional do Poder Legislativo da União foi constituída, para fins de cientificar o Congresso Nacional, para os efeitos legais cabíveis, visando à edição de lei no prazo de 1 (um) ano, que regulamente os mandados constitucionais de incriminação inscritos no Art. 5º, incisos XLI e XLII, da CRFB/88, que passam a ser considerados autoaplicáveis, após tal prazo, em razão de analogia pro societate, para enquadrar a homofobia e a transfobia em tipos penais já existentes na legislação penal extravagante.
+*** Gabarito: B
+**** Legislação Penal Especial, Crimes Resultantes de Preconceito de Raça ou Cor – Lei nº 7.716 de 1989, Jurisprudência
+-----
+***** Ano: 2024 | Banca: Quadrix | Órgão: CREFITO - 8ª Região (PR)
+*Com base na interpretação da lei penal, julgue o item. A interpretação restritiva compreende que a lei foi além de sua vontade e que, por isso, deve ser limitada em sua aplicação.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Noções Fundamentais, A norma penal
+-----
+***** Ano: 2024 | Banca: Quadrix | Órgão: CREFITO - 8ª Região (PR)
+*Com base na interpretação da lei penal, julgue o item. A interpretação declaratória é aquela em que a declaração judicial vai contra a literalidade da norma.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Noções Fundamentais, A norma penal
+-----
+***** Ano: 2024 | Banca: Quadrix | Órgão: CREFITO - 8ª Região (PR)
+*Com base na interpretação da lei penal, julgue o item. A interpretação teleológica é voltada aos fins almejados pela lei.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Noções Fundamentais, A norma penal
+-----
+***** Ano: 2024 | Banca: Quadrix | Órgão: CREFITO - 8ª Região (PR)
+*Com base na interpretação da lei penal, julgue o item. A interpretação contextual é dada pelo próprio texto da norma, que explica seus ditames.
+** A) Certo
+** B) Errado
+*** Gabarito: B
+**** Noções Fundamentais, A norma penal
+-----
+***** Ano: 2024 | Banca: Quadrix | Órgão: CREFITO - 8ª Região (PR)
+*Com base na interpretação da lei penal, julgue o item. A interpretação da lei penal deve buscar fazer preponderar a vontade original do legislador.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Noções Fundamentais, A norma penal
+-----
+***** Ano: 2024 | Banca: Ibest | Órgão: Prefeitura de Cristalina - GO
+*O Sistema Nacional de Políticas Públicas sobre Drogas (SISNAD) compreende uma série de políticas, programas e ações voltadas para a prevenção do uso indevido, a atenção e reinserção social de usuários e dependentes, bem como o combate ao tráfico ilícito. Assinale a alternativa que diz respeito ao SISNAD.
+** A) Entre as atividades de natureza preventiva, priorizam-se aquelas relacionadas ao incentivo e à promoção de ações que divulgam a proibição do uso de drogas e seus malefícios.
+** B) Promover a construção e a socialização do conhecimento sobre drogas no país é um dos objetivos do SISNAD.
+** C) A internação de dependentes de drogas será realizada em unidades de saúde, hospitais gerais ou comunidades terapêuticas.
+** D) O fortalecimento da autonomia e da responsabilidade coletiva em relação ao uso indevido de drogas é uma finalidade do SISNAD.
+*** Gabarito: B
+**** Legislação Penal Especial, Lei de Tóxicos – Lei nº 11.343 de 2006
+-----
+***** Ano: 2024 | Banca: Avança SP | Órgão: Prefeitura de Valinhos - SP
+*Qual das seguintes ações é caracterizada como concussão , de acordo com o Art. 316 do Código Penal?
+** A) Extraviar livro oficial ou qualquer documento, de que tem a guarda em razão do cargo; sonegá-lo ou inutilizá-lo, total ou parcialmente.
+** B) Apropriar-se de dinheiro ou qualquer utilidade que, no exercício do cargo, recebeu por erro de outrem.
+** C) Apropriar-se o funcionário público de dinheiro, valor ou qualquer outro bem móvel, público ou particular, de que tem a posse em razão do cargo, ou desviá-lo, em proveito próprio ou alheio.
+** D) Modificar ou alterar, o funcionário, sistema de informações ou programa de informática sem autorização ou solicitação de autoridade competente.
+** E) Exigir, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida.
+*** Gabarito: E
+**** Crimes contra a administração pública, Concussão e Excesso de Exação
+-----
+***** Ano: 2024 | Banca: Avança SP | Órgão: Prefeitura de Valinhos - SP
+*Qual é o procedimento estabelecido pela Lei nº 11.343/2006 (Lei de Drogas) Art. 50-A. para a destruição das drogas apreendidas quando não há ocorrência de prisão em flagrante?
+** A) o juiz, no prazo de 10 (dez) dias, certificará a regularidade formal do laudo de constatação e determinará a destruição das drogas apreendidas, no prazo máximo de 10 (dez) dias guardando-se amostra necessária à realização do laudo definitivo.
+** B) o juiz, no prazo de 10 (dez) dias, certificará a regularidade formal do laudo de constatação e determinará a destruição das drogas apreendidas sem a ocorrência de prisão em flagrante, por incineração no prazo máximo de 15 (quinze) dias guardando-se amostra necessária à realização do laudo definitivo.
+** C) A destruição das drogas apreendidas sem a ocorrência de prisão em flagrante será executada pelo delegado de polícia competente no prazo de 20 (vinte) dias na presença do Ministério Público e da autoridade sanitária.
+** D) A destruição das drogas apreendidas sem a ocorrência de prisão em flagrante será feita por incineração, no prazo máximo de 30 (trinta) dias contados da data da apreensão, guardando-se amostra necessária à realização do laudo definitivo.
+** E) A destruição das drogas apreendidas sem a ocorrência de prisão em flagrante será feita por incineração, no prazo máximo de 10 (dez) dias contados da data da apreensão, guardando-se amostra necessária à realização do laudo definitivo.
+*** Gabarito: D
+**** Legislação Penal Especial, Lei de Tóxicos – Lei nº 11.343 de 2006
+-----
+***** Ano: 2024 | Banca: Avança SP | Órgão: Prefeitura de Valinhos - SP
+*De acordo com a Lei 10.826/2003 analise as afirmativas abaixo atribuindo (V) para Verdadeira e (F) para Falsa, em seguida assinale a alternativa com a sequência correta. Para adquirir arma de fogo de uso permitido o interessado deverá, além de declarar a efetiva necessidade, atender aos seguintes requisitos: ( ) cadastrar as transferências de propriedade, extravio, furto, roubo e outras ocorrências suscetíveis de alterar os dados cadastrais, inclusive as decorrentes de fechamento de empresas de segurança privada e de transporte de valores; ( ) informar às Secretarias de Segurança Pública dos Estados e do Distrito Federal os registros e autorizações de porte de armas de fogo nos respectivos territórios, bem como manter o cadastro atualizado para consulta. ( ) identificar as características e a propriedade de armas de fogo, mediante cadastro;
+** A) F F F
+** B) F V V
+** C) V V V
+** D) V F F
+** E) V F V
+*** Gabarito: A
+**** Legislação Penal Especial, Lei de Armas (Estatuto do Desarmamento) – Lei nº 10.826 de 2003 e Decretos Regulamentares
+-----
+***** Ano: 2024 | Banca: Avança SP | Órgão: Prefeitura de Valinhos - SP
+*Analise os itens e assinale a alternativa correta de acordo com a Lei n.º 13.869/2019 (Abuso de autoridade). A pena para aquele que decretar medida de privação da liberdade em manifesta desconformidade com as hipóteses legais é: detenção, de 1 (um) a 4 (quatro) anos, e multa. Incorre na mesma pena a autoridade judiciária que, dentro de prazo razoável, deixar de: I - deixa de comunicar, imediatamente, a execução de prisão temporária ou preventiva à autoridade judiciária que a decretou; II - substituir a prisão preventiva por medida cautelar diversa ou de conceder liberdade provisória, quando manifestamente cabível; III - deixa de entregar ao preso, no prazo de 24 (vinte e quatro) horas, a nota de culpa, assinada pela autoridade, com o motivo da prisão e os nomes do condutor e das testemunhas;
+** A) Apenas os itens II e III estão corretos.
+** B) Apenas os itens I e III estão corretos.
+** C) Apenas o item III está incorreto.
+** D) Apenas o item II está correto.
+** E) Todos os itens estão incorretos.
+*** Gabarito: D
+**** Legislação Penal Especial, Lei do Abuso de Autoridade – Lei nº 4.898 de 1965 e Lei n° 13.869 de 2019
+-----
+***** Ano: 2024 | Banca: Avança SP | Órgão: Prefeitura de Valinhos - SP
+*De acordo com a Lei nº 11.343/2006 analise os itens a seguir. I - Importar, exportar, remeter, preparar, produzir, fabricar, adquirir, vender, expor à venda, oferecer, ter em depósito, transportar, trazer consigo, guardar, prescrever, ministrar, entregar a consumo ou fornecer drogas, ainda que gratuitamente, sem autorização ou em desacordo com determinação legal ou regulamentar: Pena - reclusão de 5 (cinco) a 15 (quinze) anos e pagamento de 500 (quinhentos) a 1.500 (mil e quinhentos) dias-multa. II - Induzir, instigar ou auxiliar alguém ao uso indevido de droga: Pena - detenção, de 6 (seis) meses a 1 (um) ano, e pagamento de 700 (setecentos) a 1.500 (mil e quinhentos) diasmulta.
+** A) A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.
+** B) As asserções I e II são proposições verdadeiras, e a II é um complemento da I.
+** C) A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.
+** D) As asserções I e II são proposições falsas.
+** E) As asserções I e II são proposições verdadeiras, mas a II não é um complemento da I.
+*** Gabarito: C
+**** Legislação Penal Especial, Lei de Tóxicos – Lei nº 11.343 de 2006
+-----
+***** Ano: 2024 | Banca: Avança SP | Órgão: Prefeitura de Valinhos - SP
+*A Lei nº 11.343/2006, institui o Sistema Nacional de Políticas Públicas sobre Drogas - Sisnad; prescreve medidas para prevenção do uso indevido, atenção e reinserção social de usuários e dependentes de drogas; estabelece normas para repressão à produção não autorizada e ao tráfico ilícito de drogas e define crimes. O Sisnad tem os seguintes princípios : Exceto.
+** A) a observância do equilíbrio entre contribuir para a inclusão social do cidadão, visando a torná-lo menos vulnerável a assumir comportamentos de risco para o uso indevido de drogas, seu tráfico ilícito e outros comportamentos correlacionados;
+** B) o respeito à diversidade e às especificidades populacionais existentes;
+** C) a promoção de consensos nacionais, de ampla participação social, para o estabelecimento dos fundamentos e estratégias do Sisnad;
+** D) a adoção de abordagem multidisciplinar que reconheça a interdependência e a natureza complementar das atividades de prevenção do uso indevido, atenção e reinserção social de usuários e dependentes de drogas, repressão da produção não autorizada e do tráfico ilícito de drogas;
+** E) o reconhecimento da intersetorialidade dos fatores correlacionados com o uso indevido de drogas, com a sua produção não autorizada e o seu tráfico ilícito;
+*** Gabarito: A
+**** Legislação Penal Especial, Lei de Tóxicos – Lei nº 11.343 de 2006
+-----
+***** Ano: 2024 | Banca: IBADE | Órgão: Prefeitura de Jaru - RO
+*Relacione a coluna 1 com a coluna 2: Coluna 1 (1) Inserção de dados falsos em sistema de informações. (2) Modificação ou alteração não autorizada de sistema de informações. (3) Violação de sigilo funcional. Coluna 2 ( ) Crime pelo qual o funcionário modifica ou altera sistema de informações ou programa de informática sem autorização ou solicitação de autoridade competente. ( ) Crime pelo qual o funcionário autorizado insere ou facilita a inserção de dados falsos, altera ou exclui indevidamente dados corretos nos sistemas informatizados ou bancos de dados da Administração Pública com o fim de obter vantagem indevida para si ou para outrem ou para causar dano. ( ) Crime pelo qual o funcionário revela fato de que tem ciência em razão do cargo e que deve permanecer em segredo, ou facilita-lhe a revelação. Em seguida, assinale a alternativa que apresenta a sequência CORRETA.
+** A) 2, 1, 3;
+** B) 1, 2, 3;
+** C) 1, 3, 2;
+** D) 2, 3, 1;
+** E) 3, 1, 2.
+*** Gabarito: A
+**** Crimes contra a administração pública
+-----
+***** Ano: 2024 | Banca: IBADE | Órgão: Prefeitura de Jaru - RO
+*O agente da defesa civil Beltrano, servidor do Município XYZ, buscando ampliar suas fontes de renda, passa a, aproveitando seus contatos dentro da Administração Pública, oferecer serviços de facilitação de encontros secretos entre empresários e secretários municipais, para que sejam celebrados acordos escusos em detrimento do bem comum. Essa prática de Beltrano pode ser caracterizada como crime?
+** A) Sim, de prevaricação;
+** B) Sim, de advocacia administrativa;
+** C) Sim, de excesso de exação;
+** D) Sim, de condescendência criminosa;
+** E) Não, trata-se de prática perfeitamente legal.
+*** Gabarito: B
+**** Crimes contra a administração pública
+-----
+***** Ano: 2024 | Banca: IBADE | Órgão: Prefeitura de Jaru - RO
+*O agente de defesa civil Sicrano, em sua atividade, faz uso de um veículo de propriedade do Município XYZ. Necessitando reformar sua casa, decide vender o veículo e ficar com o dinheiro, acreditando que ninguém irá ficar sabendo. Com base no texto acima, é possível dizer que Sicrano cometeu o crime de:
+** A) concussão;
+** B) prevaricação;
+** C) peculato culposo;
+** D) peculato;
+** E) corrupção passiva.
+*** Gabarito: D
+**** Crimes contra a administração pública, Peculato
+-----
+***** Ano: 2024 | Banca: Instituto Consulplan | Órgão: Câmara de Itajubá - MG
+*O Código Penal prevê, em seu Título XI, alguns dos crimes contra a Administração Pública. Analise as situações hipotéticas a seguir considerando que todos os personagens são servidores públicos efetivos e que foram respeitados todos os atos processuais previstos nas normativas em vigência. I. Citrino, no exercício do cargo, apropriou-se de dinheiro recebido por erro de outrem. O crime cometido é denominado peculato mediante erro de outrem e ele poderá ser apenado com reclusão, de um a quatro anos, e multa. II. Topázia, funcionária autorizada, inseriu dados falsos nos bancos de dados da Administração Pública com o fim de obter vantagem indevida para si. Ela poderá ser apenada com detenção de dois ou multa equivalente a dez salários mínimos vigentes na época dos fatos. III. Turmalina inutilizou livro oficial de que tinha guarda em razão de seu cargo. O fato praticado por ela é atípico e configura mera conduta indevida, sendo cabível advertência verbal pelo chefe do executivo. IV. Ametista deixou, por indulgência, de responsabilizar seu subordinado que cometeu infração no exercício do cargo. O crime cometido é denominado condescendência criminosa e ela poderá ser apenada com detenção, de quinze dias a um mês, ou multa. Está correto o que se afirma em
+** A) I, II, III e IV.
+** B) I e IV, apenas.
+** C) II e III, apenas.
+** D) III e IV, apenas.
+*** Gabarito: B
+**** Crimes contra a administração pública, Peculato, Condescendência criminosa
+-----
+***** Ano: 2024 | Banca: Instituto Consulplan | Órgão: Câmara de Itajubá - MG
+*Ricardo, funcionário público municipal, que, a pedido de um secretário do Município retardou a prática de ato de ofício infringindo, assim, o seu dever funcional, incorre nas penas previstas para o crime de:
+** A) Prevaricação.
+** B) Corrupção ativa.
+** C) Corrupção passiva.
+** D) Condescendência criminosa.
+*** Gabarito: A
+**** Crimes contra a administração pública, Corrupção passiva
+-----
+***** Ano: 2024 | Banca: Instituto Consulplan | Órgão: Câmara de Itajubá - MG
+*O funcionário público municipal ocupante do cargo de bibliotecário de determinada escola do Município que, durante o turno de trabalho, aproveita o fato da porta da secretaria escolar estar aberta para tirar dinheiro proveniente de verbas municipais, incorre em conduta que configura:
+** A) Concussão.
+** B) Peculato furto.
+** C) Excesso de exação.
+** D) Peculato apropriação.
+*** Gabarito: B
+**** Crimes contra a administração pública, Peculato
+-----
+***** Ano: 2024 | Banca: Instituto Consulplan | Órgão: Câmara de Itajubá - MG
+*Zé, servidor público municipal, exigiu de certo cidadão tributo que sabia ser indevido, além de ter empregado na cobrança meio vexatório que a lei não autoriza. Observado o devido processo legal, bem como o contraditório e a ampla defesa, é correto afirmar que Zé praticou o crime de:
+** A) Excesso de exação; e poderá ser apenado com reclusão, de três a oito anos, e multa.
+** B) Prevaricação; e poderá ser apenado com detenção, de três meses a um ano, e multa.
+** C) Corrupção passiva; e poderá ser apenado com reclusão, de dois a doze anos, e multa.
+** D) Violência arbitrária; e poderá ser apenado com detenção, de seis meses a três anos, além da pena correspondente à violência.
+*** Gabarito: A
+**** Crimes contra a administração pública, Concussão e Excesso de Exação
+-----
+***** Ano: 2024 | Banca: UniRV - GO | Órgão: UniRV - GO
+*Segundo o Direito Penal, falsificar, no todo ou em parte, documento público, ou alterar documento público verdadeiro constitui:
+** A) Crime contra a paz pública.
+** B) Crime contra o Estado brasileiro.
+** C) Crime contra a administração pública.
+** D) Crime contra a fé pública.
+*** Gabarito: D
+**** Crimes contra a fé pública, Falsidade de documento público
+-----
+***** Ano: 2024 | Banca: UniRV - GO | Órgão: UniRV - GO
+*O artigo primeiro do Código Penal estabelece que não há crime sem lei anterior que o defina nem pena sem prévia cominação legal. O conteúdo do mencionado artigo revela a adoção pelo legislador brasileiro de dois princípios basilares do Direito Penal, que são:
+** A) O princípio da criminalidade e o princípio da reserva legal.
+** B) O princípio da legalidade e o princípio da liberdade pessoal.
+** C) O princípio da reserva legal e o princípio da anterioridade.
+** D) O princípio da anterioridade e o princípio da criminalidade.
+*** Gabarito: C
+**** Noções Fundamentais, Princípios limitadores do poder punitivo estatal
+-----
+***** Ano: 2024 | Banca: FUNCERN | Órgão: Prefeitura de Parnamirim - RN
+*É considerado, de acordo com a Lei Federal No 13.869/2019, sujeito ativo do crime de abuso de autoridade qualquer agente público, servidor ou não, da administração direta, indireta ou fundacional de qualquer dos Poderes da União, dos Estados, do Distrito Federal, dos Municípios e de Território, compreendendo, mas não se limitando a
+** A) servidores privados ou pessoas próximas.
+** B) servidores públicos e militares ou pessoas a eles equiparadas.
+** C) membros de associações que tenham poder social.
+** D) membros de agremiações culturais que usem do poder para se beneficiarem.
+*** Gabarito: B
+**** Legislação Penal Especial, Lei do Abuso de Autoridade
+-----
+***** Ano: 2024 | Banca: FUNCERN | Órgão: Prefeitura de Parnamirim - RN
+*São considerados crimes hediondos, conforme a Lei Federal No 8.072/1990,
+** A) estupro de vulnerável, genocídio, furto qualificado e extorsão grave.
+** B) estupro de vulnerável, roubo qualificado, extorsão e lesão corporal de natureza grave.
+** C) estupro, homicídio qualificado, epidemia e porte ilegal de arma de fogo.
+** D) estupro, genocídio, extorsão mediante sequestro e lesão corporal de dolosa de natureza gravíssima.
+*** Gabarito: D
+**** Legislação Penal Especial, Lei de Crimes Hediondos – Lei nº 8.072 de 1990
+-----
+***** Ano: 2024 | Banca: FUNCERN | Órgão: Prefeitura de Parnamirim - RN
+*De acordo com a Lei Federal No 8.072/1990, que trata dos crimes hediondos, o homicídio é considerado um crime hediondo quando
+** A) cometido no período da noite.
+** B) cometido de forma culposa ou dolosa.
+** C) praticado somente por pessoa do sexo masculino.
+** D) praticado em atividade típica de grupo de extermínio ou for um homicídio qualificado.
+*** Gabarito: D
+**** Legislação Penal Especial, Lei de Crimes Hediondos – Lei nº 8.072 de 1990
+-----
+***** Ano: 2024 | Banca: FUNCERN | Órgão: Prefeitura de Parnamirim - RN
+*De acordo com o Estatuto do Desarmamento, Lei Federal No 10.826/2003, é considerado porte irregular de arma de fogo de uso permitido:
+** A) adquirir, alugar, receber, transportar, conduzir, ocultar, ter em depósito, desmontar, montar, remontar, adulterar, vender, expor à venda, utilizar, em proveito próprio ou alheio, no exercício de atividade comercial ou industrial, arma de fogo, acessório ou munição, sem autorização ou em desacordo com determinação legal ou regulamentar.
+** B) portar, deter, adquirir, fornecer, receber, ter em depósito, transportar, ceder, ainda que gratuitamente, emprestar, remeter, empregar, manter sob guarda ou ocultar arma de fogo, acessório ou munição, de uso permitido, sem autorização e em desacordo com determinação legal ou regulamentar.
+** C) possuir, deter, portar, adquirir, fornecer, receber, ter em depósito, transportar, ceder, ainda que gratuitamente, emprestar, remeter, empregar, manter sob sua guarda ou ocultar arma de fogo, acessório ou munição de uso restrito, sem autorização e em desacordo com determinação legal ou regulamentar.
+** D) possuir ou manter sob sua guarda arma de fogo, acessório ou munição, de uso permitido, em desacordo com determinação legal ou regulamentar, no interior de sua residência ou dependência desta, ou, ainda no seu local de trabalho, desde que seja o titular ou o responsável legal do estabelecimento ou empresa.
+*** Gabarito: B
+**** Legislação Penal Especial, Lei de Armas (Estatuto do Desarmamento)
+-----
+***** Ano: 2024 | Banca: FUNCERN | Órgão: Prefeitura de Parnamirim - RN
+*Apropriação indébita, de acordo com o Código Penal Brasileiro, consiste
+** A) no apoderamento de coisa alheia móvel, sem o consentimento do proprietário.
+** B) no apoderamento de coisa alheia móvel, com o fim de assenhoreamento definitivo.
+** C) em subtrair coisa móvel pertencente a outrem por meio de violência ou de grave ameaça.
+** D) em subtrair coisa alheia sem utilização de ameaça, violência, rompimento ou destruição de obstáculo.
+*** Gabarito: B
+**** Crimes contra o patrimônio, Apropriação indébita
+-----
+***** Ano: 2024 | Banca: FUNCERN | Órgão: Prefeitura de Parnamirim - RN
+*O artigo 25 do Código Penal Brasileiro prevê que uma pessoa pode se defender ou defender outra pessoa na hipótese de sofrer ou estar na iminência de sofrer uma agressão, sem que isso seja considerado um crime. Este é o conceito legal de
+** A) legítima defesa.
+** B) estado de necessidade.
+** C) estado de necessidade putativo.
+** D) exercício regular do direto.
+*** Gabarito: A
+**** Antijuridicidade, Legítima defesa
+-----
+***** Ano: 2024 | Banca: FUNCERN | Órgão: Prefeitura de Parnamirim - RN
+*Ao se apropriar de valor ou outro bem móvel particular, cuja posse detém em razão do cargo, o servidor público está praticando o crime de
+** A) furto.
+** B) peculato.
+** C) concussão.
+** D) estelionato.
+*** Gabarito: B
+**** Crimes contra a administração pública, Peculato
+-----
+***** Ano: 2024 | Banca: Instituto Access | Órgão: Prefeitura de Cariacica - ES
+*O delito de tráfico de drogas previsto no art. 33 da Lei 11.343/2006, consoante legislação, possui pena privativa de liberdade de 5 a 15 anos de reclusão, além da multa. Para esse crime, a conduta típica descrita pelo legislador consiste em importar, exportar, remeter, preparar, produzir, fabricar, adquirir, vender, expor à venda, oferecer, ter em depósito, transportar, trazer consigo, guardar, prescrever, ministrar, entregar a consumo ou fornecer drogas, ainda que gratuitamente, sem autorização ou em desacordo com determinação legal ou regulamentar. Nesse sentido e, nos termos da lei, nas mesmas penas incorre quem pratica o listado nas alternativas a seguir, à exceção de uma . Assinale-a.
+** A) importa, exporta, remete, produz, fabrica, adquire, vende, expõe à venda, oferece, fornece, tem em depósito, transporta, traz consigo ou guarda, ainda que gratuitamente, sem autorização ou em desacordo com determinação legal ou regulamentar, matéria-prima, insumo ou produto químico destinado à preparação de drogas
+** B) utiliza local ou bem de qualquer natureza de que tem a propriedade, posse, administração, guarda ou vigilância, ou consente que outrem dele se utilize, ainda que gratuitamente, sem autorização ou em desacordo com determinação legal ou regulamentar, para o tráfico ilícito de drogas
+** C) fabrica, adquire, utiliza, transporta, oferece, vende, distribui, entrega a qualquer título, possui, guarda ou fornece, ainda que gratuitamente, maquinário, aparelho, instrumento ou qualquer objeto destinado à fabricação, preparação, produção ou transformação de drogas, sem autorização ou em desacordo com determinação legal ou regulamentar
+** D) vende ou entrega drogas ou matéria-prima, insumo ou produto químico destinado à preparação de drogas, sem autorização ou em desacordo com a determinação legal ou regulamentar, a agente policial disfarçado, quando presentes elementos probatórios razoáveis de conduta criminal preexistente
+*** Gabarito: D
+**** Legislação Penal Especial, Lei de Tóxicos – Lei nº 11.343 de 2006
+-----
+***** Ano: 2024 | Banca: Instituto Access | Órgão: Prefeitura de Cariacica - ES
+*Yan, com o objetivo de satisfazer sua própria lascívia, no momento em que estava no interior de um coletivo, sentado ao lado de Julia e por ela nutrindo grande desejo sexual não correspondido, masturbou-se e chegou a ejacular próximo à vítima, cabendo destacar que Julia, em nenhum momento, anuiu com a prática do ato e sequer conhecia o agente. Nessa hipótese, é correto afirmar que Yan praticou delito de
+** A) assédio sexual.
+** B) importunação sexual.
+** C) estupro.
+** D) violação sexual mediante fraude.
+*** Gabarito: B
+**** Crimes contra a dignidade sexual, Importunação Sexual
+-----
+***** Ano: 2024 | Banca: Instituto Access | Órgão: Prefeitura de Cariacica - ES
+*O concurso de pessoas, também chamado de concurso de agentes, nos delitos de furto e roubo correspondem, respectivamente, a
+** A) circunstância qualificadora e causa de aumento.
+** B) circunstância qualificadora e circunstância qualificadora.
+** C) causa de aumento e causa de aumento.
+** D) causa de aumento e circunstância qualificadora.
+*** Gabarito: A
+**** Concurso de Pessoas, Crimes contra o patrimônio, Furto
+-----
+***** Ano: 2024 | Banca: Instituto Access | Órgão: Prefeitura de Cariacica - ES
+*Lucas deixou seu filho Bruno, de apenas 6 anos, em casa para ir a uma festa durante a noite, enquanto a criança dormia. Infelizmente ocorreu um incêndio na residência e o menino veio a falecer em decorrência do incidente. Nessa hipótese, é correto afirmar que Lucas deve responder pelo delito de
+** A) homicídio culposo.
+** B) homicídio doloso.
+** C) abandono de incapaz com resultado morte.
+** D) omissão de socorro.
+*** Gabarito: C
+**** Periclitação da vida e da saúde, Abandono de incapaz
+-----
+***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPE-TO
+*Para determinada teoria, criticada por não conseguir explicar a culpa inconsciente, a culpabilidade deve abordar os elementos subjetivos dolo e culpa, sendo a imputabilidade pressuposto para sua análise. Nessa perspectiva, a culpabilidade retira o seu fundamento do aspecto psicológico do agente. Nesse sentido, é a relação subjetiva entre o fato e o seu autor que toma relevância, pois a culpabilidade reside nela. O texto precedente refere-se à teoria
+** A) funcionalista.
+** B) finalista ou normativa pura.
+** C) social da ação ou da culpabilidade.
+** D) causal naturalista ou psicológica.
+** E) psicológico-normativa ou normativa complexa.
+*** Gabarito: D
+**** Culpabilidade, Noções Gerais da Culpabilidade
+-----
+***** Ano: 2021 | Banca: CESPE / CEBRASPE | Órgão: TC-DF
+*Julgue o item seguinte, a respeito dos princípios aplicáveis ao direito penal, da lei penal no tempo e no espaço e da irretroatividade da lei penal. No tocante às pessoas doentes mentais, o Código Penal adota o sistema biopsicológico como critério para identificação da inimputabilidade.
+** A) Certo
+** B) Errado
+*** Gabarito: A
+**** Culpabilidade, Inimputabilidade por doença mental, Irretroatividade da lei penal
+-----
