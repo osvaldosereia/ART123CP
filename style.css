@@ -230,47 +230,9 @@ input:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px color-
   *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
 }
 
-/* ===== Dark mode ===== */
-@media (prefers-color-scheme:dark){
-  :root{--bg:#0b1220;--card:#0f172a;--text:#e5e7eb;--muted:#94a3b8;--line:#243044;--shadow:0 8px 24px rgba(0,0,0,.35)}
-  .btn{background:#0f172a;color:#e5e7eb;border-color:#243044}
-  .btn:hover{background:#111a2e}
-  .dd-btn, input, textarea{background:#0f172a;border-color:#243044}
-  .dd-list{background:#0f172a;border-color:#243044}
-  .topic, .ms-item, .q{background:#0f172a}
-  .q-opts li:hover{background:#0b1429}
-  .q-opts li.hit{background:color-mix(in srgb,var(--good-bg),#0f172a 40%)}
-  .q-opts li.wrong,
-  .q-opts li.selected:not(.hit){background:color-mix(in srgb,var(--bad-bg),#0f172a 40%)}
-}
 
 /* ===== Espaçamento topbar x conteúdo ===== */
 .topbar{ height:56px; padding:8px 16px; }
 main,.main,.container,.page{ margin-top:0 !important; }
 #quizThemes{ margin-top:8px !important; }
 
-/* === Chips: cores configuráveis === */
-/* Edite os valores abaixo para trocar as cores */
-:root{
-  --chip-bg:#fff;
-  --chip-fg:#385396;
-  --chip-bd:#cbd5e1;
-  --chip-hover:#f8fafc;
-
-  --chip-on-bg:#0b0f19;
-  --chip-on-fg:#385396;
-  --chip-on-bd:#0b0f19;
-}
-
-#quizThemes .chip{
-  background:var(--chip-bg);
-  color:var(--chip-fg);
-  border:1px solid var(--chip-bd);
-  transition:background .12s ease,border-color .12s ease,color .12s ease;
-}
-#quizThemes .chip:hover{ background:var(--chip-hover); }
-#quizThemes .chip.on{
-  background:var(--chip-on-bg);
-  color:var(--chip-on-fg);
-  border-color:var(--chip-on-bd);
-}
