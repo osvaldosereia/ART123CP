@@ -48,7 +48,30 @@
     <div id="sentinel" class="sentinel">Carregando…</div>
   </main>
 
-  <!-- Template de questão -->
+  <!-- Prova (local) -->
+  <main id="exam" class="page hidden">
+    <section class="card">
+      <h2 id="examTitle">Prova</h2>
+      <div class="divider" aria-hidden="true"></div>
+
+      <div class="field">
+        <label for="examStudent" class="lbl">Seu primeiro nome</label>
+        <input id="examStudent" type="text" placeholder="Ex.: Ana" />
+      </div>
+
+      <ol id="examList" class="list"></ol>
+
+      <div class="actions">
+        <button id="examFinish" class="btn primary">Concluir</button>
+        <button id="examShareLink" class="btn ghost">Compartilhar Prova</button>
+        <button id="examShareResult" class="btn ghost">Compartilhar Resultado</button>
+      </div>
+
+      <section id="examReport" class="hidden"></section>
+    </section>
+  </main>
+
+  <!-- Template de questão (quiz) -->
   <template id="tplQuestion">
     <article class="q">
       <div class="q-head">
@@ -57,7 +80,7 @@
       <pre class="q-stem"></pre>
       <ul class="q-opts"></ul>
 
-      <div class="q-ai">
+      <div class="q-ai" style="display:flex;align-items:center;gap:.5rem;">
         <button class="btn ia" data-role="ia-toggle">Google modo I.A.</button>
         <div class="ia-menu">
           <a class="ia-item" data-ia="gabarito" target="_blank" rel="noopener">Gabarito</a>
@@ -70,6 +93,17 @@
       <div class="q-res" aria-live="polite"></div>
     </article>
   </template>
+
+  <!-- Template de questão (prova) -->
+  <template id="tplExamQuestion">
+    <li class="ex-q">
+      <pre class="ex-stem"></pre>
+      <ul class="ex-opts"></ul>
+    </li>
+  </template>
+
+  <!-- Botão flutuante Criar Prova -->
+  <button id="btnCreateExam" class="fab" aria-label="Criar Prova" title="Criar Prova">📝</button>
 
   <script src="app.js?v=2" defer></script>
 </body>
