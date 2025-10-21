@@ -1,131 +1,114 @@
-/* ================== MODO DESENHO / PASTEL ================== */
-/* Usa a paleta: #FFA45B #FFDA77 #FBF6F0 #AEE6E6 */
+/* ===== MINIMAL . MONOCHROME . “DESENHO” ===== */
+/* mexe só no CSS; usa teus mesmos nomes de classes */
 :root{
-  --orange:#FFA45B;
-  --sun:#FFDA77;
-  --paper:#FBF6F0;
-  --aqua:#AEE6E6;
+  --bg:#f7f7f5;
+  --surface:#ffffff;
+  --ink:#0e0e0e;            /* traço preto */
+  --muted:#6b6b6b;
+  --line:#e8e8e4;
 
-  --ink:#1a1a1a;              /* “tinta” do traço */
-  --bg:var(--paper);
-  --text:#262626;
-  --muted:#6b7280;
-  --line:#e7e2d9;
+  --accent:#111;            /* botões sólidos */
+  --accent-ink:#fff;
 
-  --brand:var(--orange);
-  --brand-600:#ff8a2a;
-  --brand-alt:var(--aqua);
+  --good:#16a34a;           /* feedback ainda funciona */
+  --bad:#dc2626;
 
-  --good:#12a150;
-  --bad:#d92b2b;
-
-  --radius:22px;
-  --stroke:2px;               /* espessura cartunesca */
-  --offset-shadow:0 6px 0 rgba(0,0,0,.16); /* sombra chapada “sticker” */
+  --stroke:2px;             /* espessura do traço “desenho” */
+  --radius:26px;
+  --shadow-flat:0 10px 0 rgba(0,0,0,.14); /* sombra chapada tipo sticker */
 }
 
-/* Papel com textura leve (sem imagens) */
+*{box-sizing:border-box}
 html,body{height:100%}
 body{
-  margin:0;color:var(--text);background:
-    radial-gradient(24px 24px at 12px 12px, rgba(0,0,0,.03) 1px, transparent 1px) 0 0/24px 24px,
-    linear-gradient(180deg, #fff, var(--paper) 60%) 0 0/100% 100%;
+  margin:0;color:#111;background:
+    radial-gradient(18px 18px at 16px 16px, rgba(0,0,0,.03) 1px, transparent 1px) 0 0/24px 24px,
+    linear-gradient(#fff, var(--bg) 60%);
   font:16px/1.45 ui-rounded, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Traço consistente + sombra deslocada */
-.drawn{
+/* ===== traço e “sticker” prontos ===== */
+.draw{
+  background:var(--surface);
   border:var(--stroke) solid var(--ink);
   border-radius:var(--radius);
-  background:#fff;
-  filter:drop-shadow(var(--offset-shadow));
+  filter:drop-shadow(var(--shadow-flat));
 }
 
-/* ===== Topbar “sticker” ===== */
+/* ===== Topbar minimal ===== */
 .topbar{
   position:sticky; top:0; z-index:50;
   display:flex; align-items:center; gap:12px;
   padding:12px 16px; max-width:980px; margin:12px auto 0;
-  background:#fff; border:var(--stroke) solid var(--ink); border-radius:28px;
-  filter:drop-shadow(var(--offset-shadow));
+  background:var(--surface); border:var(--stroke) solid var(--ink); border-radius:32px;
+  filter:drop-shadow(var(--shadow-flat));
 }
 .topbar.hide{ transform:translateY(-140%) }
-.topbar .logo{font-weight:900; letter-spacing:.3px; margin-right:auto}
+.topbar .logo{font-weight:900; letter-spacing:.2px; margin-right:auto}
 .topbar #btnHome{margin-left:auto}
 
-/* ===== Botões em pílula com traço grosso ===== */
+/* ===== Botões pretos e pills claras ===== */
 .btn{
-  appearance:none; cursor:pointer;
+  appearance:none; cursor:pointer; user-select:none;
   padding:12px 16px; border-radius:999px;
   border:var(--stroke) solid var(--ink);
-  background:#fff; color:var(--ink);
-  filter:drop-shadow(0 4px 0 rgba(0,0,0,.14));
-  transition:transform .08s ease;
+  background:var(--surface); color:var(--ink);
+  filter:drop-shadow(0 6px 0 rgba(0,0,0,.14));
+  transition:transform .08s ease, background .12s ease;
 }
 .btn:active{ transform:translateY(2px) }
-.btn.primary{
-  background:linear-gradient(180deg, var(--sun), var(--orange));
-  color:#152016;
-}
-.btn.ia{
-  background:linear-gradient(180deg, var(--aqua), color-mix(in srgb, var(--aqua) 60%, white 40%));
-}
+.btn.primary{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent) }
 .btn.ghost{ background:#fff }
+.btn.ia{ background:#111; color:#fff; border-color:#111 }
 .btn:disabled{ opacity:.55; cursor:not-allowed }
 
-/* ===== Cards arredondados, cabeçalho color block ===== */
+/* ===== Página e cartões ===== */
 .page{padding:96px 12px 28px; max-width:980px; margin:0 auto}
 .card{
-  background:#fff; border:var(--stroke) solid var(--ink); border-radius:28px;
-  padding:0; filter:drop-shadow(var(--offset-shadow));
-  overflow:hidden;
+  background:var(--surface); border:var(--stroke) solid var(--ink); border-radius:30px;
+  padding:18px; filter:drop-shadow(var(--shadow-flat));
 }
-.card .card-head{
-  padding:16px; background:var(--aqua);
-  border-bottom:var(--stroke) solid var(--ink);
-  font-weight:800;
-}
-.card .card-body{ padding:16px }
-
-/* ===== Inputs e dropdown com traço ===== */
 .lbl{display:block;margin:12px 0 6px;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+.actions{margin-top:12px}
+.hint{color:var(--muted);font-size:12px}
+
+/* ===== Dropdown clean ===== */
 .dropdown{position:relative}
 .dd-btn{
   width:100%; display:flex; justify-content:space-between; align-items:center;
-  padding:12px 14px; border-radius:16px;
-  border:var(--stroke) solid var(--ink); background:#fff; cursor:pointer;
+  padding:12px 14px; border-radius:18px;
+  border:var(--stroke) solid var(--ink); background:var(--surface); cursor:pointer;
 }
 .dd-list{
   list-style:none; margin:8px 0 0; padding:6px; position:absolute; left:0; right:0; max-height:260px; overflow:auto;
-  background:#fff; border:var(--stroke) solid var(--ink); border-radius:16px; display:none; z-index:20;
-  filter:drop-shadow(var(--offset-shadow));
+  background:var(--surface); border:var(--stroke) solid var(--ink); border-radius:18px; display:none; z-index:20;
+  filter:drop-shadow(var(--shadow-flat));
 }
 .dd-list.show{display:block}
 .dd-list li{padding:10px 12px; border-radius:12px; cursor:pointer}
-.dd-list li:hover{ background:color-mix(in srgb, var(--aqua) 18%, white 82%) }
+.dd-list li:hover{ background:#f3f3f1 }
 
-/* ===== Chips grandes e ícones de barra ===== */
+/* ===== Chips e tópicos ===== */
 #quizThemes.chips{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:10px 0 14px}
 #quizThemes .chip{
   padding:8px 12px; font-size:11px; border-radius:999px; cursor:pointer;
-  border:var(--stroke) solid var(--ink); background:#fff; filter:drop-shadow(0 3px 0 rgba(0,0,0,.12));
+  border:var(--stroke) solid var(--ink); background:#fff; filter:drop-shadow(0 4px 0 rgba(0,0,0,.12));
 }
-#quizThemes .chip.on{ background:linear-gradient(180deg, var(--aqua), var(--sun)) }
+#quizThemes .chip.on{ background:#111; color:#fff; border-color:#111 }
 
-/* ===== Lista de temas estilo card ===== */
 .topics{display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0}
 .topic{
   display:flex; align-items:flex-start; gap:10px; cursor:pointer; user-select:none; text-align:left;
-  padding:10px 12px; background:#fff; border:var(--stroke) solid var(--ink); border-radius:16px;
+  padding:10px 12px; background:#fff; border:var(--stroke) solid var(--ink); border-radius:18px;
   filter:drop-shadow(0 4px 0 rgba(0,0,0,.12));
 }
-.topic.on{ background:linear-gradient(180deg, var(--aqua), var(--sun)); font-weight:700 }
+.topic.on{ background:#111; color:#fff; border-color:#111; font-weight:700 }
 
-/* ===== Componentes do quiz com “ilustração” ===== */
+/* ===== Quiz monocromático ===== */
 .list{display:flex; flex-direction:column; gap:16px}
 .q{
-  background:#fff; border:var(--stroke) solid var(--ink); border-radius:24px; padding:16px;
-  filter:drop-shadow(var(--offset-shadow));
+  background:var(--surface); border:var(--stroke) solid var(--ink); border-radius:26px; padding:16px;
+  filter:drop-shadow(var(--shadow-flat));
 }
 .q-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:6px}
 .q-num{font-weight:900}
@@ -137,7 +120,7 @@ body{
   transition:transform .08s ease, background .12s ease;
   filter:drop-shadow(0 3px 0 rgba(0,0,0,.12));
 }
-.q-opts li:hover{ transform:translateY(-1px); background:color-mix(in srgb, var(--sun) 18%, white 82%) }
+.q-opts li:hover{ transform:translateY(-1px); background:#f3f3f1 }
 .q-opts li.lock{ opacity:.7; cursor:default }
 .q-opts li.hit{ border-color:var(--good); background:#ecfdf5; font-weight:800; position:relative }
 .q.ok{ border-color:var(--good); background:#f0fff7 }
@@ -149,40 +132,33 @@ body{
   font-weight:900; color:var(--good);
 }
 
-/* ===== Barras arredondadas tipo “pílula” ===== */
+/* ===== Progress pill ===== */
 .progress{
   height:12px; border-radius:999px; border:var(--stroke) solid var(--ink); background:#fff; overflow:hidden;
   filter:drop-shadow(0 3px 0 rgba(0,0,0,.12));
 }
-.progress > i{ display:block; height:100%; background:linear-gradient(180deg, var(--aqua), var(--sun)) }
+.progress > i{ display:block; height:100%; background:#111 }
 
-/* ===== Toast e Backtop desenhados ===== */
+/* ===== Toast e voltar ao topo ===== */
 .toast{
   position:fixed; left:50%; transform:translateX(-50%); bottom:16px; z-index:60;
-  background:#fff; color:var(--ink); border:var(--stroke) solid var(--ink);
-  padding:10px 16px; border-radius:14px; display:none; font-weight:800;
-  filter:drop-shadow(var(--offset-shadow));
+  background:#fff; color:#111; border:var(--stroke) solid var(--ink);
+  padding:10px 16px; border-radius:16px; display:none; font-weight:800;
+  filter:drop-shadow(var(--shadow-flat));
 }
 .toast.show{display:block}
 
 .backtop{
   position:fixed; right:16px; bottom:72px; z-index:60; display:none;
   width:46px; height:46px; border-radius:999px; cursor:pointer; font-size:18px; line-height:46px; text-align:center;
-  background:linear-gradient(180deg, var(--aqua), var(--sun));
-  border:var(--stroke) solid var(--ink); color:#111;
-  filter:drop-shadow(var(--offset-shadow));
+  background:#111; color:#fff; border:var(--stroke) solid #111;
+  filter:drop-shadow(var(--shadow-flat));
 }
 .backtop.show{ display:block }
 
-/* ===== Linhas pontilhadas “mapa” ===== */
-.path{
-  border:var(--stroke) dashed var(--ink);
-  border-radius:999px; opacity:.4;
-}
-
-/* ===== Acessibilidade: foco grosso ===== */
+/* ===== Foco grosso acessível ===== */
 :where(button,[role="button"],a,input,select,.btn,.dd-btn,.topic,.ms-item):focus-visible{
-  outline:none; box-shadow:0 0 0 4px color-mix(in srgb, var(--aqua) 50%, transparent 50%);
+  outline:none; box-shadow:0 0 0 4px rgba(0,0,0,.12);
 }
 
 /* ===== Responsividade ===== */
@@ -190,20 +166,24 @@ body{
 @media (min-width:1080px){ .topics{grid-template-columns:repeat(3,minmax(0,1fr))} }
 @media (min-width:900px){ .page{padding-top:104px} }
 
-/* ===== Dark pastel ===== */
+/* ===== Dark monocromático ===== */
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#0f1012;
-    --text:#f3f3f3;
-    --ink:#0d0d0d;        /* continua escuro para o traço */
-    --line:#2b2b2b;
+    --surface:#151719;
+    --ink:#0b0c0d;
+    --line:#2a2c2f;
+    --accent:#eaeaea;
+    --accent-ink:#111;
   }
   body{
+    color:#eaeaea;
     background:
-      radial-gradient(24px 24px at 12px 12px, rgba(255,255,255,.05) 1px, transparent 1px) 0 0/24px 24px,
-      linear-gradient(180deg, #0f1113, #121316 60%);
+      radial-gradient(18px 18px at 16px 16px, rgba(255,255,255,.05) 1px, transparent 1px) 0 0/24px 24px,
+      linear-gradient(#0f1113, #121316 60%);
   }
-  .topbar,.card,.dd-btn,.dd-list,.topic,.q,.chip,.toast,.backtop{
-    background:#1a1c1f; color:#f3f3f3;
+  .btn, .card, .dd-btn, .dd-list, .topic, .q, .toast, .topbar{
+    background:var(--surface); color:#eaeaea;
   }
+  .btn.primary{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent) }
 }
