@@ -158,6 +158,23 @@ function checkHashExam(){
   }
 }
 
+function renderExam(){
+  const el = document.getElementById("examBody");
+  if(!STATE.exam || !el) return;
+  el.innerHTML = "";
+  STATE.exam.questions.forEach((q,i)=>{
+    const wrap=document.createElement("article");
+    const h=document.createElement("h3"); h.textContent=`${i+1}. ${q.stem}`; wrap.appendChild(h);
+    const ul=document.createElement("ul");
+    q.options.forEach(o=>{
+      const li=document.createElement("li"); li.textContent=`${o.key}) ${o.text}`;
+      ul.appendChild(li);
+    });
+    wrap.appendChild(ul);
+    el.appendChild(wrap);
+  });
+}
+
 /* ====== STORY INSTAGRAM 1080x1920, 3 LAYOUTS ====== */
 function wrapLines(ctx, text, maxWidth){
   const lines=[], raw=String(text??"").replace(/\r\n?/g,"\n").split("\n");
@@ -258,7 +275,6 @@ async function renderStoryJPG(q, num){
   return cv;
 }
 
-
 async function shareOrDownload(canvas, filename="story.png"){
   const blob = await new Promise(r => canvas.toBlob(r, "image/png"));
   if(!blob) return;
@@ -271,12 +287,11 @@ async function shareOrDownload(canvas, filename="story.png"){
   a.click(); a.remove();
 }
 
-
 async function handleShareStory(q, num){
   try{
     toast("Gerando Story…");
     const cv=await renderStoryJPG(q,num);
-    await shareOrDownload(cv, `story-q${num}.jpg`);
+    await shareOrDownload(cv, `story-q${num}.png`);
     toast("Pronto");
   }catch(e){ console.error(e); toast("Falha ao gerar Story"); }
 }
@@ -407,23 +422,21 @@ async function walkGitHub(url){
 }
 
 /* ==================== ESTADO ==================== */
-const STATE = { exam: null, }
+const STATE = {
+  exam: null,
   tree: /** @type {Record<string,{label:string,files:string[]}>} */({}),
   disciplina: "",
-  temasSel: /** @type {Set<string>} */(new Set()),    // seleção feita na Home
+  temasSel: /** @type {Set<string>} */(new Set()),
   temasAll: /** @type {string[]} */([]),
-  allQuestions: /** @type {any[]} */([]),             // conjunto base do quiz
-  viewQuestions: /** @type {any[]} */([]),            // conjunto após segmentação por chips
-  activeThemes: /** @type {Set<string>} */(new Set()),// chips ativos no topo do quiz
+  allQuestions: /** @type {any[]} */([]),
+  viewQuestions: /** @type {any[]} */([]),
+  activeThemes: /** @type {Set<string>} */(new Set()),
   batchSize: 3,
   cursor: 0,
   observer: /** @type {IntersectionObserver|null} */ (null),
   cache: /** @type {Map<string,{text:string, parsed:any[]}>>} */(new Map()),
   ms:{ open:false, filter:"", list:[], listStripped:[] },
-
-  // NOVO
   poolQuestions: /** @type {any[]} */([]),
-  
 };
 
 /* ==================== UI HOME ==================== */
@@ -486,7 +499,6 @@ function fillDisciplines(keys){
   }
 }
 
-
 /* ==================== TEMAS: Multiselect tipo dropdown (Home) ==================== */
 async function buildThemesMultiselect(){
   const box=$("#chipsTemas"); box.innerHTML="";
@@ -496,14 +508,12 @@ async function buildThemesMultiselect(){
   const node = STATE.tree[STATE.disciplina];
   if(!node) return;
 
-  // helpers locais
-  const norm = (s)=>strip(String(s||"")).replace(/\s+/g," ").trim(); // sem acento, 1 espaço
+  const norm = (s)=>strip(String(s||"")).replace(/\s+/g," ").trim();
   const first3 = (s)=>{
     const w = norm(s).split(" ");
     return w.slice(0,3).join(" ");
   };
   const pickLabel = (arr)=>{
-    // menor número de palavras; em empate, menor comprimento; depois ordem local
     return arr.slice().sort((a,b)=>{
       const aw=a.trim().split(/\s+/).length, bw=b.trim().split(/\s+/).length;
       if(aw!==bw) return aw-bw;
@@ -519,8 +529,7 @@ async function buildThemesMultiselect(){
     allParsed.push(...parsed);
   }
 
-  // Agrupar por 3 primeiras palavras da forma sem acentos
-  const groups = new Map(); // key3 -> [temas originais]
+  const groups = new Map();
   for (const q of allParsed){
     if (!Array.isArray(q.themes)) continue;
     for (const t of q.themes){
@@ -531,13 +540,11 @@ async function buildThemesMultiselect(){
     }
   }
 
-  // key -> rótulo canônico
   const keyToLabel = new Map();
   for (const [k, list] of groups){
     keyToLabel.set(k, pickLabel(list));
   }
 
-  // Reescrever temas das questões para o rótulo canônico e deduplicar por questão
   for (const q of allParsed){
     if (!Array.isArray(q.themes)) { q.themes = []; continue; }
     const mapped = q.themes.map(t=>{
@@ -548,7 +555,6 @@ async function buildThemesMultiselect(){
     q.themes = mapped.filter(t=>{ if(seen.has(t)) return false; seen.add(t); return true; });
   }
 
-  // Lista final para o multiselect
   const setLabels = new Set();
   for (const q of allParsed){ for (const t of q.themes) setLabels.add(t); }
   const temas = [...setLabels].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
@@ -623,7 +629,6 @@ function updateCount(){
   const vis = getVisibleItems().length;
   const sel = STATE.temasSel.size;
 
-  // contar questões do pool que têm AO MENOS um dos temas selecionados
   let found = 0;
   if (sel > 0 && Array.isArray(STATE.poolQuestions)){
     const want = new Set(STATE.temasSel);
@@ -689,11 +694,9 @@ async function startSearch(){
   try{
     toast("Carregando questões…");
 
-    // Use o pool já normalizado por buildThemesMultiselect
     const all = Array.isArray(STATE.poolQuestions) ? STATE.poolQuestions : [];
     if (!all.length){ toast("Nenhuma questão carregada"); return; }
 
-    // Base do quiz: somente questões que contêm pelo menos um dos temas selecionados
     const wanted = new Set(STATE.temasSel);
     const filtered = all.filter(q => Array.isArray(q.themes) && q.themes.some(t => wanted.has(t)));
     if (!filtered.length){ toast("Nenhuma questão encontrada"); return; }
@@ -716,7 +719,6 @@ async function startSearch(){
   }
 }
 
-
 /* Chips de segmentação no topo do quiz */
 function renderSelectedThemesChips(){
   const quiz = $("#quiz");
@@ -726,20 +728,18 @@ function renderSelectedThemesChips(){
     box = document.createElement("div");
     box.id = "quizThemes";
     box.className = "chips";
-    box.style.justifyContent = "center"; // centralizado
+    box.style.justifyContent = "center";
     box.style.margin = "6px 0 12px";
     quiz.insertBefore(box, $("#quizList"));
   }
   box.innerHTML = "";
 
-  // Contagem por tema dentro do conjunto base
   const counts = new Map();
   for (const q of STATE.allQuestions){
     for (const t of q.themes){ if(STATE.temasSel.has(t)) counts.set(t, (counts.get(t)||0)+1); }
   }
   const temas = [...STATE.temasSel].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
 
-  // Chip "Todos"
   const chipAll = document.createElement("button");
   chipAll.className = "chip" + (STATE.activeThemes.size===0 ? " on" : "");
   chipAll.textContent = "Todos";
@@ -750,7 +750,6 @@ function renderSelectedThemesChips(){
   });
   box.appendChild(chipAll);
 
-  // Demais chips
   temas.forEach(t=>{
     const c = counts.get(t)||0;
     const b = document.createElement("button");
@@ -772,9 +771,8 @@ function applyThemeFilter(){
   const act = [...STATE.activeThemes];
 
   if (act.length === 0){
-    STATE.viewQuestions = STATE.allQuestions.slice();              // sem filtro
+    STATE.viewQuestions = STATE.allQuestions.slice();
   } else {
-    // UNIÃO: mostra questões que tenham pelo menos um dos temas ativos
     const want = new Set(act);
     STATE.viewQuestions = STATE.allQuestions.filter(q =>
       q.themes.some(t => want.has(t))
@@ -786,7 +784,6 @@ function applyThemeFilter(){
   mountInfinite();
   toast(`Filtro: ${act.length ? act.join(", ") : "Todos"} · ${STATE.viewQuestions.length} questões`);
 }
-
 
 async function loadTxt(path){
   const res = await fetch(path);
@@ -826,6 +823,7 @@ async function renderBatch(){
   }
   STATE.cursor = end;
 }
+
 function pumpIfVisible(){
   const s = document.getElementById("sentinel");
   if (!s) return;
@@ -851,14 +849,11 @@ function buildQuestion(q, num){
   const tpl = /** @type {HTMLTemplateElement} */($("#tplQuestion"));
   const node = tpl.content.firstElementChild.cloneNode(true);
 
-  // número
   node.querySelector(".q-num").textContent = `#${num}`;
 
-  // enunciado
   const stemEl = node.querySelector(".q-stem");
   stemEl.textContent = q.stem;
 
-  // metadados acima do enunciado + separador discreto
   if (q.meta){
     const meta = document.createElement("div");
     meta.className = "q-meta";
@@ -875,7 +870,6 @@ function buildQuestion(q, num){
     stemEl.parentNode.insertBefore(hr, stemEl);
   }
 
-  // alternativas
   const ol = node.querySelector(".q-opts");
   q.options.forEach(opt=>{
     const li = document.createElement("li");
@@ -885,11 +879,9 @@ function buildQuestion(q, num){
     ol.appendChild(li);
   });
 
-    // Google modo IA
   const btnIA = node.querySelector('[data-role="ia-toggle"]');
   const menu = node.querySelector(".ia-menu");
   if (btnIA && menu){
-    // adiciona "Princípios" e "Check-list"
     const addItem = (label, kind)=>{
       const a = document.createElement("a");
       a.className = "ia-item";
@@ -905,7 +897,6 @@ function buildQuestion(q, num){
 
     btnIA.addEventListener("click", ()=>{ menu.classList.toggle("show"); });
 
-    // listeners
     menu.addEventListener("click", (ev)=>{
       const link = ev.target.closest(".ia-item");
       if(!link) return;
@@ -916,16 +907,13 @@ function buildQuestion(q, num){
     });
   }
 
-  // botão Compartilhar Story
   const btnShare = node.querySelector('[data-role="share"]');
   if (btnShare){
     btnShare.addEventListener("click", ()=>handleShareStory(q, num));
   }
 
-
   return node;
 }
-
 
 function mark(card, li, q){
   const already = card.classList.contains("ok") || card.classList.contains("bad");
@@ -974,7 +962,6 @@ function buildGoogleIA(kind, q){
   }
   return `https://www.google.com/search?udm=50&hl=pt-BR&gl=BR&q=${enc(prompt)}`;
 }
-
 
 /* ==================== NAV ==================== */
 function goHome(){
