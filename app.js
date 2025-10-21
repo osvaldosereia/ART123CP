@@ -33,56 +33,69 @@ async function renderStoryJPG(q, num){
   ctx.fillStyle="#ffffff"; ctx.fillRect(0,0,W,H);
 
   // dados
-  const meta = q.meta||"";
+  const meta = q.meta||"";              // "Banca | Ano | Órgão | Prova"
   const stem = q.stem||"";
   const alts = Array.isArray(q.options)&&q.options.length
     ? q.options.map(o=>`${o.key}) ${o.text}`).join("\n") : "";
 
-  // tamanho por quantidade de caracteres
+  // tamanhos por quantidade de caracteres
   const total=(meta+stem+alts).length;
-  let S={ meta:28, stem:48, alt:36, footer:24, gap:28, top:120, bot:120, maxW:W-PAD*2 };
-  if(total<=280){ S={ meta:30, stem:56, alt:42, footer:24, gap:36, top:140, bot:140, maxW:W-PAD*2 }; }
-  else if(total>700){ S={ meta:26, stem:40, alt:32, footer:20, gap:24, top:96, bot:96, maxW:W-PAD*2 }; }
+  let S={ meta:28, stem:48, alt:36, gap:28, top:120, bot:120, maxW:W-PAD*2 };
+  if(total<=280){ S={ meta:30, stem:56, alt:42, gap:36, top:140, bot:140, maxW:W-PAD*2 }; }
+  else if(total>700){ S={ meta:26, stem:40, alt:32, gap:24, top:96, bot:96, maxW:W-PAD*2 }; }
 
   let y=S.top;
 
-  // meta
+  // 1) TAG "meujus.com.br" ANTES DA META, discreto
+  const TAG_BG="#f1f5f9";           // cinza claro
+  const TAG_FG="#1e40af";           // azul do enunciado
+  const tagPadY=12;
+  const tagH=S.meta + tagPadY*2;
+
+  ctx.fillStyle=TAG_BG;
+  ctx.fillRect(0, y, W, tagH);
+
+  ctx.font=`600 ${S.meta}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
+  ctx.fillStyle=TAG_FG;
+  ctx.fillText("meujus.com.br", PAD, y + tagPadY + S.meta);
+  y += tagH + S.gap;
+
+  // 2) META: banca | ano | órgão | prova
   if(meta){
     ctx.font=`600 ${S.meta}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
     ctx.fillStyle="#111111";
-    for(const line of wrapLines(ctx, meta, S.maxW)){ ctx.fillText(line, PAD, y+S.meta); y+=S.meta+2; }
+    for(const line of wrapLines(ctx, meta, S.maxW)){
+      ctx.fillText(line, PAD, y+S.meta);
+      y+=S.meta+2;
+    }
     y+=S.gap;
   }
 
-  // enunciado
+  // 3) ENUNCIADO azul, mais pesado
   ctx.font=`700 ${S.stem}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
   ctx.fillStyle="#1e40af";
   for(const line of wrapLines(ctx, stem, S.maxW)){
     if(y+S.stem > H-S.bot-260) break;
-    ctx.fillText(line, PAD, y+S.stem); y+=S.stem+6;
+    ctx.fillText(line, PAD, y+S.stem);
+    y+=S.stem+6;
   }
   y+=S.gap;
 
-  // alternativas
+  // 4) ALTERNATIVAS, sem gabarito
   if(alts){
     ctx.font=`400 ${S.alt}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
     ctx.fillStyle="#0b0f19";
     for(const line of wrapLines(ctx, alts, S.maxW)){
       if(y+S.alt > H-S.bot-220) break;
-      ctx.fillText(line, PAD, y+S.alt); y+=S.alt+4;
+      ctx.fillText(line, PAD, y+S.alt);
+      y+=S.alt+4;
     }
   }
 
-  // rodapé 2 linhas
-  const footer="Faça questões grátis\ncom meujus.com.br";
-  ctx.font=`500 ${S.footer}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
-  ctx.fillStyle="#6b7280";
-  const f=footer.split("\n");
-  let fy=H-S.bot-(f.length*(S.footer+2));
-  for(const line of f){ ctx.fillText(line, PAD, fy+S.footer); fy+=S.footer+2; }
-
+  // sem rodapé
   return cv;
 }
+
 
 async function shareOrDownload(canvas, filename="story.jpg"){
   const blob = await new Promise(r => canvas.toBlob(r, "image/jpeg", 0.92));
