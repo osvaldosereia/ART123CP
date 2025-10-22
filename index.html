@@ -9,7 +9,7 @@
 <body>
   <!-- Top bar fixa -->
   <header class="topbar">
-<img class="logo-img" src="logo-h.png" alt="MeuJus" />
+    <img class="logo-img" src="logo-h.png" alt="MeuJus" />
     <button id="btnHome" class="btn ghost">Início</button>
   </header>
 
@@ -53,7 +53,6 @@
     <section class="card">
       <header class="exam-head" style="display:flex;align-items:center;gap:.75rem;">
         <h2 id="examTitle" style="margin:0;">Prova</h2>
-        <button id="examShareLink" class="btn ghost" style="margin-left:auto">Compartilhar Prova</button>
       </header>
       <div class="divider" aria-hidden="true"></div>
 
@@ -62,6 +61,7 @@
 
       <div class="actions">
         <button id="examFinish" class="btn primary">Concluir</button>
+        <button id="examShareLink" class="btn ghost">Compartilhar Prova</button>
       </div>
 
       <section id="examReport" class="card hidden" aria-live="polite"></section>
@@ -92,10 +92,10 @@
   </template>
 
   <!-- Botão flutuante Criar Prova -->
-<button id="btnCreateExam" class="fab-new" aria-label="Criar Prova" title="Criar Prova">
-  <span class="fab-ico">📝</span>
-  <span class="fab-txt">Criar Prova</span>
-</button>
+  <button id="btnCreateExam" class="fab-new" aria-label="Criar Prova" title="Criar Prova">
+    <span class="fab-ico">📝</span>
+    <span class="fab-txt">Criar Prova</span>
+  </button>
 
   <script src="app.js?v=2" defer></script>
 </body>
