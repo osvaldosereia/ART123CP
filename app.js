@@ -111,21 +111,19 @@ const U = {
 async function shareCardAsStory(card) {
   const pngBlob = await renderStoryPNG(card);
   const file = new File([pngBlob], "meujus-story.png", { type: "image/png" });
+
   if (navigator.canShare && navigator.canShare({ files: [file] })) {
     try {
       await navigator.share({ files: [file], title: "MeuJus", text: "meujus.com.br" });
       return;
-    } catch (e) {}
+    } catch (e) {
+      return; // não baixa se o usuário cancelar ou falhar
+    }
   }
-  const url = URL.createObjectURL(pngBlob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "meujus-story.png";
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
+
+  alert("Seu navegador não permite compartilhar imagem diretamente.");
 }
+
 
 function px(n){ return Math.round(n); }
 function createCanvas(w, h){
