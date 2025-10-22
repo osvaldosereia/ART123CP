@@ -422,7 +422,7 @@ const actions = U.el("div", { class: "q__actions" }, pop, shareBtn);
     root.innerHTML = "";
     root.classList.add("select");
 
-    const btn = U.el("button", { class: "select__button", type: "button", "aria-haspopup": "listbox", "aria-expanded": "false" }, "Escolha a disciplina");
+    const btn = U.el("button", { class: "select__button", type: "button", "aria-haspopup": "listbox", "aria-expanded": "false" }, "Disciplina");
     const menu = U.el("div", { class: "select__menu hidden", role: "listbox" });
     let bd = null;
 
