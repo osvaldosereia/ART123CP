@@ -233,7 +233,7 @@ async function renderStoryPNG(card){
   // auto-fit com teto por seção
   const base = { refs: 22, enun: 34, alt: 28 };
   const min  = { refs: 14, enun: 20, alt: 18 };
-  const cap  = { refs: 22, enun: 34, alt: 28 }; // máximo permitido
+  const cap  = { refs: 28, enun: 42, alt: 34 }; // máximo permitido
 
   let lo = 0, hi = 1;
   const canFit = (s)=>{
