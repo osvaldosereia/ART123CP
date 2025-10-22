@@ -1077,7 +1077,7 @@ ol.appendChild(li);
   return node;
 }
 
-fufunction mark(card, li, q){
+function mark(card, li, q){
   if (card.classList.contains("ok") || card.classList.contains("bad")) return;
 
   // registra a escolha do usuário
