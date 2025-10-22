@@ -33,7 +33,16 @@
     openGoogle: q => window.open("https://www.google.com/search?udm=50&q=" + encodeURIComponent(q), "_blank"),
     onClickOutside(root, cb) { const h = ev => { if (!root.contains(ev.target)) cb(); }; document.addEventListener("mousedown", h, { once: true }); },
     fitPopover(menu, trigger) { const r = trigger.getBoundingClientRect(); if (r.top < 160) menu.classList.add("below"); else menu.classList.remove("below"); },
-    mdInline: s => (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>")
+    mdInline: s => (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>"),
+    // Backdrop para fechar dropdowns confiavelmente em mobile/desktop
+    backdrop(onClose){
+      const el = document.createElement("div");
+      el.className = "dropdown-backdrop";
+      document.body.appendChild(el);
+      const handler = () => { try{ onClose(); } finally { el.remove(); document.removeEventListener("pointerdown", handler, true); } };
+      setTimeout(() => document.addEventListener("pointerdown", handler, true), 0);
+      return el;
+    }
   };
 
   /* ------------------------------ Loader ------------------------------ */
@@ -50,50 +59,50 @@
 
   /* ------------------------------ Parser ------------------------------ */
   function parseTxt(raw) {
-  if (!raw) return [];
-  const blocks = raw.split("-----").map(s => s.trim()).filter(Boolean);
-  const cards = [];
+    if (!raw) return [];
+    const blocks = raw.split("-----").map(s => s.trim()).filter(Boolean);
+    const cards = [];
 
-  for (const block of blocks) {
-    const lines = block.split("\n").map(l => l.trim()).filter(Boolean);
-    let referencias = "", enunciado = "", gabarito = "";
-    const alternativas = [], temas = [];
+    for (const block of blocks) {
+      const lines = block.split("\n").map(l => l.trim()).filter(Boolean);
+      let referencias = "", enunciado = "", gabarito = "";
+      const alternativas = [], temas = [];
 
-    for (const line of lines) {
-      const L = line.replace(/^\uFEFF?/, ""); // remove BOM se houver
+      for (const line of lines) {
+        const L = line.replace(/^\uFEFF?/, ""); // remove BOM se houver
 
-      if (/^\*{5}\s/.test(L)) { // ***** referências
-        referencias = L.replace(/^\*{5}\s*/, "").trim(); continue;
+        if (/^\*{5}\s/.test(L)) { // ***** referências
+          referencias = L.replace(/^\*{5}\s*/, "").trim(); continue;
+        }
+        if (/^\*{3}\s/.test(L)) { // *** gabarito
+          const g = L.replace(/^\*{3}\s*/, "").trim();
+          const m = /Gabarito\s*:\s*([A-Z])/i.exec(g);
+          gabarito = m ? m[1].toUpperCase() : ""; continue;
+        }
+        if (/^\*{4}\s/.test(L)) { // **** temas
+          const t = L.replace(/^\*{4}\s*/, "").trim();
+          t.split(",").forEach(x => { const v = (x || "").trim(); if (v) temas.push(v); });
+          continue;
+        }
+        if (/^\*{2}\s/.test(L)) { // ** alternativas
+          alternativas.push(L.replace(/^\*{2}\s*/, "").trim()); continue;
+        }
+        if (/^\*\s/.test(L)) { // * enunciado
+          const part = L.replace(/^\*\s*/, "").trim();
+          enunciado = enunciado ? (enunciado + " " + part) : part;
+        }
       }
-      if (/^\*{3}\s/.test(L)) { // *** gabarito
-        const g = L.replace(/^\*{3}\s*/, "").trim();
-        const m = /Gabarito\s*:\s*([A-Z])/i.exec(g);
-        gabarito = m ? m[1].toUpperCase() : ""; continue;
-      }
-      if (/^\*{4}\s/.test(L)) { // **** temas
-        const t = L.replace(/^\*{4}\s*/, "").trim();
-        t.split(",").forEach(x => { const v = (x || "").trim(); if (v) temas.push(v); });
-        continue;
-      }
-      if (/^\*{2}\s/.test(L)) { // ** alternativas
-        alternativas.push(L.replace(/^\*{2}\s*/, "").trim()); continue;
-      }
-      if (/^\*\s/.test(L)) { // * enunciado
-        const part = L.replace(/^\*\s*/, "").trim();
-        enunciado = enunciado ? (enunciado + " " + part) : part;
-      }
+
+      cards.push({ referencias, enunciado, alternativas, gabarito, temas });
     }
-
-    cards.push({ referencias, enunciado, alternativas, gabarito, temas });
+    return cards;
   }
-  return cards;
-}
-function formatStatement(text){
-  const html = U.mdInline(text || "");
-  const parts = html.split(/(?<=[.!?])\s+/).filter(Boolean); // quebra em final de frase
-  return parts.map(p => `<p>${p}</p>`).join("");
-}
 
+  function formatStatement(text){
+    const html = U.mdInline(text || "");
+    const parts = html.split(/(?<=[.!?])\s+/).filter(Boolean); // quebra em final de frase
+    return parts.map(p => `<p>${p}</p>`).join("");
+  }
 
   /* ------------------------------ IA Prompts ------------------------------ */
   function buildPrompt(kind, card) {
@@ -201,85 +210,89 @@ function formatStatement(text){
     if (showExplain) appendGabarito(ul.parentElement, gLetter);
   }
 
- /* ------------------------------ Filtros ------------------------------ */
-function mountSelectSingle(root, { options, onChange }) {
-  root.innerHTML = "";
-  root.classList.add("select");
+  /* ------------------------------ Filtros ------------------------------ */
+  function mountSelectSingle(root, { options, onChange }) {
+    root.innerHTML = "";
+    root.classList.add("select");
 
-  const btn = U.el("button", { class: "select__button", type: "button", "aria-haspopup": "listbox", "aria-expanded": "false" }, "Escolha a disciplina");
-  const menu = U.el("div", { class: "select__menu hidden", role: "listbox" });
+    const btn = U.el("button", { class: "select__button", type: "button", "aria-haspopup": "listbox", "aria-expanded": "false" }, "Escolha a disciplina");
+    const menu = U.el("div", { class: "select__menu hidden", role: "listbox" });
+    let bd = null;
 
-  options.forEach(opt => {
-    const it = U.el("div", { class: "select__option", role: "option", "data-value": opt.label }, opt.label);
-    it.addEventListener("click", () => {
-      btn.textContent = opt.label;
-      btn.setAttribute("aria-expanded", "false");
+    function open(){
+      if (!menu.classList.contains("hidden")) return;
+      menu.classList.remove("hidden");
+      btn.setAttribute("aria-expanded","true");
+      bd = U.backdrop(close);
+    }
+    function close(){
       menu.classList.add("hidden");
-      onChange && onChange(opt);
+      btn.setAttribute("aria-expanded","false");
+      if (bd){ try{ bd.remove(); }catch{} bd = null; }
+    }
+
+    options.forEach(opt => {
+      const it = U.el("div", { class: "select__option", role: "option", "data-value": opt.label }, opt.label);
+      it.addEventListener("click", () => { btn.textContent = opt.label; close(); onChange && onChange(opt); });
+      menu.appendChild(it);
     });
-    menu.appendChild(it);
-  });
 
-  btn.addEventListener("click", () => {
-    const open = menu.classList.toggle("hidden") === false;
-    btn.setAttribute("aria-expanded", open ? "true" : "false");
-    U.onClickOutside(root, () => {
-      menu.classList.add("hidden");
-      btn.setAttribute("aria-expanded", "false");
-    });
-  });
+    btn.addEventListener("click", () => menu.classList.contains("hidden") ? open() : close());
 
-  root.appendChild(btn);
-  root.appendChild(menu);
-}
-
-function mountMultiselect(root, { options, onChange }) {
-  root.innerHTML = "";
-  const control = U.el("div", { class: "multiselect__control", role: "combobox", "aria-expanded": "false" });
-  const input = U.el("input", { class: "multiselect__input", type: "text", placeholder: "Temas..." });
-  const menu = U.el("div", { class: "multiselect__menu hidden", role: "listbox" });
-
-  function syncItems() {
-    const q = (input.value || "").toLowerCase();
-    Array.from(menu.children).forEach(item => {
-      const val = item.getAttribute("data-value");
-      const match = !q || val.toLowerCase().includes(q);
-      item.style.display = match ? "block" : "none";
-      const selected = state.temasSelecionados.has(val);
-      item.setAttribute("aria-selected", selected ? "true" : "false");
-    });
+    root.appendChild(btn);
+    root.appendChild(menu);
   }
 
-  (U.uniq(options || [])).forEach(opt => {
-    const it = U.el("div", { class: "multiselect__item", role: "option", "data-value": opt }, opt);
-    it.addEventListener("click", () => {
-      if (state.temasSelecionados.has(opt)) state.temasSelecionados.delete(opt);
-      else state.temasSelecionados.add(opt);
-      onChange && onChange(new Set(state.temasSelecionados));
-      syncItems();
-    });
-    menu.appendChild(it);
-  });
+  function mountMultiselect(root, { options, onChange }) {
+    root.innerHTML = "";
+    const control = U.el("div", { class: "multiselect__control", role: "combobox", "aria-expanded": "false" });
+    const input = U.el("input", { class: "multiselect__input", type: "text", placeholder: "Temas..." });
+    const menu  = U.el("div", { class: "multiselect__menu hidden", role: "listbox" });
+    let bd = null;
 
-  function openMenu(){
-    menu.classList.remove("hidden");
-    control.setAttribute("aria-expanded","true");
-    U.onClickOutside(root, () => {
+    function syncItems() {
+      const q = (input.value || "").toLowerCase();
+      Array.from(menu.children).forEach(item => {
+        const val = item.getAttribute("data-value");
+        const match = !q || val.toLowerCase().includes(q);
+        item.style.display = match ? "block" : "none";
+        const selected = state.temasSelecionados.has(val);
+        item.setAttribute("aria-selected", selected ? "true" : "false");
+      });
+    }
+
+    function open(){
+      if (!menu.classList.contains("hidden")) return;
+      menu.classList.remove("hidden");
+      control.setAttribute("aria-expanded","true");
+      bd = U.backdrop(close);
+      syncItems();
+    }
+    function close(){
       menu.classList.add("hidden");
       control.setAttribute("aria-expanded","false");
+      if (bd){ try{ bd.remove(); }catch{} bd = null; }
+    }
+
+    (U.uniq(options || [])).forEach(opt => {
+      const it = U.el("div", { class: "multiselect__item", role: "option", "data-value": opt }, opt);
+      it.addEventListener("click", () => {
+        if (state.temasSelecionados.has(opt)) state.temasSelecionados.delete(opt);
+        else state.temasSelecionados.add(opt);
+        onChange && onChange(new Set(state.temasSelecionados));
+        syncItems();
+      });
+      menu.appendChild(it);
     });
-    syncItems();
+
+    input.addEventListener("focus", open);
+    input.addEventListener("input", syncItems);
+    control.addEventListener("click", open);
+
+    control.appendChild(input);
+    root.appendChild(control);
+    root.appendChild(menu);
   }
-
-  input.addEventListener("focus", openMenu);
-  input.addEventListener("input", syncItems);
-  control.addEventListener("click", openMenu);
-
-  control.appendChild(input);
-  root.appendChild(control);
-  root.appendChild(menu);
-}
-
 
   /* ------------------------------ Feed incremental ------------------------------ */
   function buildFeed() {
@@ -288,7 +301,6 @@ function mountMultiselect(root, { options, onChange }) {
     const groups = [];
 
     if (temasAtivos.length === 0) {
-      // grupo ALL
       groups.push({ key: "ALL", items: state.cards.map((_, i) => i), ptr: 0 });
     } else {
       temasAtivos.forEach(t => {
@@ -342,10 +354,8 @@ function mountMultiselect(root, { options, onChange }) {
     const raw = await loadTxt();
     state.cards = parseTxt(raw);
 
-    // temas
     state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
 
-    // disciplinas disponíveis (mapeadas por pasta)
     mountSelectSingle(document.getElementById("disciplina-select"), {
       options: [
         { label: "Direito Penal", txt: "data/direito-penal/penal1.txt" },
@@ -353,7 +363,6 @@ function mountMultiselect(root, { options, onChange }) {
         { label: "Direito Processual do Trabalho", txt: "data/direito-processual-trabalho/dpt1.txt" }
       ],
       onChange: async (opt) => {
-        // troca de TXT ao mudar a disciplina
         window.history.replaceState({}, "", `?txt=${encodeURIComponent(opt.txt)}`);
         const res = await fetch(opt.txt).catch(() => null);
         const txt = res && res.ok ? await res.text() : "";
@@ -364,7 +373,7 @@ function mountMultiselect(root, { options, onChange }) {
           options: state.temasDisponiveis,
           onChange: () => { resetAndRender(); }
         });
-        resetAndRender(); // “todas” → carrega só 3
+        resetAndRender();
       }
     });
 
