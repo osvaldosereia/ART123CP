@@ -88,6 +88,11 @@
   }
   return cards;
 }
+function formatStatement(text){
+  const html = U.mdInline(text || "");
+  const parts = html.split(/(?<=[.!?])\s+/).filter(Boolean); // quebra em final de frase
+  return parts.map(p => `<p>${p}</p>`).join("");
+}
 
 
   /* ------------------------------ IA Prompts ------------------------------ */
@@ -129,7 +134,7 @@
   function buildCard(card, idx) {
     const badges = inferBadges(card.alternativas);
     const meta = U.el("div", { class: "q__meta" }, card.referencias);
-    const stmt = U.el("div", { class: "q__stmt", html: U.mdInline(card.enunciado) });
+    const stmt = U.el("div", { class: "q__stmt", html: formatStatement(card.enunciado) });
 
     const ul = U.el("ul", { class: "q__opts" });
     card.alternativas.forEach((opt, i) => {
@@ -234,20 +239,6 @@ function mountMultiselect(root, { options, onChange }) {
   const input = U.el("input", { class: "multiselect__input", type: "text", placeholder: "Temas..." });
   const menu = U.el("div", { class: "multiselect__menu hidden", role: "listbox" });
 
-  function renderTags() {
-    Array.from(control.querySelectorAll(".tag")).forEach(t => t.remove());
-    state.temasSelecionados.forEach(val => {
-      const tag = U.el("span", { class: "tag" }, val, U.el("button", { type: "button", title: "Remover" }, "×"));
-      tag.querySelector("button").addEventListener("click", () => {
-        state.temasSelecionados.delete(val);
-        renderTags();
-        onChange && onChange(new Set(state.temasSelecionados));
-        syncItems();
-      });
-      control.insertBefore(tag, input);
-    });
-  }
-
   function syncItems() {
     const q = (input.value || "").toLowerCase();
     Array.from(menu.children).forEach(item => {
@@ -259,45 +250,31 @@ function mountMultiselect(root, { options, onChange }) {
     });
   }
 
-  // popula menu com opções deduplicadas
   (U.uniq(options || [])).forEach(opt => {
     const it = U.el("div", { class: "multiselect__item", role: "option", "data-value": opt }, opt);
     it.addEventListener("click", () => {
       if (state.temasSelecionados.has(opt)) state.temasSelecionados.delete(opt);
       else state.temasSelecionados.add(opt);
-      renderTags();
       onChange && onChange(new Set(state.temasSelecionados));
       syncItems();
     });
     menu.appendChild(it);
   });
 
-  // abrir ao focar no input
-  input.addEventListener("focus", () => {
+  function openMenu(){
     menu.classList.remove("hidden");
-    control.setAttribute("aria-expanded", "true");
+    control.setAttribute("aria-expanded","true");
     U.onClickOutside(root, () => {
       menu.classList.add("hidden");
-      control.setAttribute("aria-expanded", "false");
+      control.setAttribute("aria-expanded","false");
     });
     syncItems();
-  });
+  }
 
-  // filtro de busca
+  input.addEventListener("focus", openMenu);
   input.addEventListener("input", syncItems);
+  control.addEventListener("click", openMenu);
 
-  // abrir o menu ao clicar em qualquer ponto do controle
-  control.addEventListener("click", () => {
-    menu.classList.remove("hidden");
-    control.setAttribute("aria-expanded", "true");
-    U.onClickOutside(root, () => {
-      menu.classList.add("hidden");
-      control.setAttribute("aria-expanded", "false");
-    });
-    syncItems();
-  });
-
-  renderTags();
   control.appendChild(input);
   root.appendChild(control);
   root.appendChild(menu);
