@@ -71,7 +71,7 @@ body{
 .q__opt{
   display:flex;align-items:flex-start;gap:10px;padding:6px 0;border-bottom:0;cursor:pointer
 }
-.q__opt > div:last-child{color:#8c8c8c8c} 
+.q__opt > div:last-child{color:#454141} 
 
 .q__badge{
   width:28px;height:28px;border:2px solid #cbd5e1;border-radius:999px;display:flex;align-items:center;justify-content:center;
