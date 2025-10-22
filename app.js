@@ -182,7 +182,7 @@ function measureCard(ctx, card, sizes, innerW){
   total += wrapParagraph(ctx, card.enunciado||"", innerW, sizes.enun, 500, 1.5).height + gap;   // enunciado
   for (const alt of card.alternativas||[]){                                                    // alternativas
     const clean = String(alt).replace(/^[A-E]\)\s*/i,"");
-    const h = wrapParagraph(ctx, clean, innerW - 36 - 8, sizes.alt, 400, 1.42).height;
+    const h = wrapParagraph(ctx, clean, innerW - 36 - 12, sizes.alt, 400, 1.42).height;
     total += Math.max(28, h) + 10;
   }
   return total;
@@ -206,7 +206,7 @@ async function renderStoryPNG(card){
   ctx.fillRect(0,0,W,H);
 
   // cabeçalho
-  setFont(ctx, 32, 700);
+  setFont(ctx, 28, 700);
   ctx.fillStyle = "#111827";
   ctx.textAlign = "center";
   ctx.textBaseline = "top";
@@ -230,14 +230,18 @@ async function renderStoryPNG(card){
   const innerW = cardW - innerPad*2;
   const innerH = cardH - innerPad*2;
 
-  // auto-fit por busca binária
+  // auto-fit com teto por seção
   const base = { refs: 22, enun: 34, alt: 28 };
   const min  = { refs: 14, enun: 20, alt: 18 };
+  const cap  = { refs: 22, enun: 34, alt: 28 }; // máximo permitido
+
   let lo = 0, hi = 1;
   const canFit = (s)=>{
-    const sizes = { refs: Math.max(min.refs, base.refs*s),
-                    enun: Math.max(min.enun, base.enun*s),
-                    alt:  Math.max(min.alt,  base.alt*s) };
+    const sizes = {
+      refs: Math.min(cap.refs, Math.max(min.refs, base.refs * s)),
+      enun: Math.min(cap.enun, Math.max(min.enun, base.enun * s)),
+      alt:  Math.min(cap.alt,  Math.max(min.alt,  base.alt  * s))
+    };
     return measureCard(ctx, card, sizes, innerW) <= innerH;
   };
   while (canFit(hi)) { lo = hi; hi *= 1.25; if (hi>4) break; }
@@ -246,9 +250,11 @@ async function renderStoryPNG(card){
     if (canFit(mid)) lo = mid; else hi = mid;
   }
   const s = lo;
-  const sizes = { refs: Math.max(min.refs, base.refs*s),
-                  enun: Math.max(min.enun, base.enun*s),
-                  alt:  Math.max(min.alt,  base.alt*s) };
+  const sizes = {
+    refs: Math.min(cap.refs, Math.max(min.refs, base.refs * s)),
+    enun: Math.min(cap.enun, Math.max(min.enun, base.enun * s)),
+    alt:  Math.min(cap.alt,  Math.max(min.alt,  base.alt  * s))
+  };
 
   // conteúdo: referências, enunciado, alternativas
   let yy = innerY;
@@ -257,7 +263,7 @@ async function renderStoryPNG(card){
   yy = drawWrapped(ctx, innerX, yy, innerW, card.enunciado||"", sizes.enun, "#111827", 600, 1.5);
   yy += 16;
 
-const badgeR = 20, badgeD = badgeR*2, badgePad = 12;
+  const badgeR = 20, badgeD = badgeR*2, badgePad = 12;
   const letters = ["A","B","C","D","E"];
   for (let i=0;i<(card.alternativas||[]).length;i++){
     const raw = String(card.alternativas[i]||"");
@@ -278,12 +284,12 @@ const badgeR = 20, badgeD = badgeR*2, badgePad = 12;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     setFont(ctx, Math.round(badgeR * 0.9), 700);
-ctx.fillText(letters[i]||"", innerX+badgeR, by+badgeR);
+    ctx.fillText(letters[i]||"", innerX+badgeR, by+badgeR);
 
     // texto
     ctx.textAlign = "left"; ctx.textBaseline = "top";
-const textX = innerX + badgeD + badgePad;
-const block = wrapParagraph(ctx, clean, innerW - badgeD - badgePad, sizes.alt, 400, 1.42);
+    const textX = innerX + badgeD + badgePad;
+    const block = wrapParagraph(ctx, clean, innerW - badgeD - badgePad, sizes.alt, 400, 1.42);
     setFont(ctx, sizes.alt, 400);
     let yline = yy;
     for (const L of block.lines){
@@ -379,9 +385,9 @@ const block = wrapParagraph(ctx, clean, innerW - badgeD - badgePad, sizes.alt, 4
     iaBtn.addEventListener("click", () => menu.classList.contains("hidden") ? openMenu() : closeMenu());
     pop.appendChild(iaBtn); pop.appendChild(menu);
 
-const shareBtn = U.el("button", { class: "btn", type: "button" }, "Compartilhar");
-shareBtn.addEventListener("click", () => shareCardAsStory(card));
-const actions = U.el("div", { class: "q__actions" }, pop, shareBtn);
+    const shareBtn = U.el("button", { class: "btn", type: "button" }, "Compartilhar");
+    shareBtn.addEventListener("click", () => shareCardAsStory(card));
+    const actions = U.el("div", { class: "q__actions" }, pop, shareBtn);
 
     const wrap = U.el("article", { class: "q", "data-idx": idx }, meta, stmt, ul, actions);
 
@@ -422,7 +428,7 @@ const actions = U.el("div", { class: "q__actions" }, pop, shareBtn);
     root.innerHTML = "";
     root.classList.add("select");
 
-    const btn = U.el("button", { class: "select__button", type: "button", "aria-haspopup": "listbox", "aria-expanded": "false" }, "Disciplina");
+    const btn = U.el("button", { class: "select__button", type: "button", "aria-haspopup": "listbox", "aria-expanded": "false" }, "Escolha a disciplina");
     const menu = U.el("div", { class: "select__menu hidden", role: "listbox" });
     let bd = null;
 
@@ -444,7 +450,10 @@ const actions = U.el("div", { class: "q__actions" }, pop, shareBtn);
       menu.appendChild(it);
     });
 
-    btn.addEventListener("click", () => menu.classList.contains("hidden") ? open() : close());
+    btn.addEventListener("click", () => menu.classList.contains("hidden") ? openMenu() : closeMenu());
+
+    function openMenu(){ menu.classList.remove("hidden"); open(); }
+    function closeMenu(){ menu.classList.add("hidden"); close(); }
 
     root.appendChild(btn);
     root.appendChild(menu);
