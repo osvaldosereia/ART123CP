@@ -760,7 +760,7 @@ ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, s
 ctx.textAlign = 'left';
 ctx.textBaseline = 'top';
 ctx.fillText(autor ? `— ${autor}` : '', padX, bottomY + 24);
-
+  }
 
   function autoFitFont(ctx, text, maxW, minPx, maxPx, step, family){
     let best = minPx;
