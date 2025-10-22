@@ -257,7 +257,7 @@ async function renderStoryPNG(card){
   yy = drawWrapped(ctx, innerX, yy, innerW, card.enunciado||"", sizes.enun, "#111827", 600, 1.5);
   yy += 16;
 
-  const badgeR = 20, badgeD = badgeR*2;
+const badgeR = 20, badgeD = badgeR*2, badgePad = 12;
   const letters = ["A","B","C","D","E"];
   for (let i=0;i<(card.alternativas||[]).length;i++){
     const raw = String(card.alternativas[i]||"");
@@ -282,8 +282,8 @@ ctx.fillText(letters[i]||"", innerX+badgeR, by+badgeR);
 
     // texto
     ctx.textAlign = "left"; ctx.textBaseline = "top";
-   const textX = innerX + badgeD + badgePad;   // antes: + badgeD + 8
-    const block = wrapParagraph(ctx, clean, innerW - badgeD - 8, sizes.alt, 400, 1.42);
+const textX = innerX + badgeD + badgePad;
+const block = wrapParagraph(ctx, clean, innerW - badgeD - badgePad, sizes.alt, 400, 1.42);
     setFont(ctx, sizes.alt, 400);
     let yline = yy;
     for (const L of block.lines){
