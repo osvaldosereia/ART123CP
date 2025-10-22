@@ -735,29 +735,31 @@ async function renderStoryPNG(card){
   ctx.fillText('meujus.com.br', W/2, 36);
 
   // área de texto
-  const padX = 96;
-  const innerW = W - padX*2;
-  const topY = 260;      // início do bloco de frase
-  const bottomPad = 200; // espaço para autor e respiro
-  const maxH = H - topY - bottomPad;
+  // área de texto
+const padX = 96;
+const innerW = W - padX*2;
 
-  // frase alinhada à esquerda com auto-fit de largura e altura
-  const lhK = 1.25;
-  let size = fitFontByBox(ctx, frase, innerW, maxH, 32, 96, 2, 'Times New Roman, Times, serif', lhK);
-  ctx.font = `${size}px "Times New Roman", Times, serif`;
-  ctx.textAlign = 'left';
-  ctx.textBaseline = 'top';
-  ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
+// antes: topY=260, bottomPad=200
+const topY = 220;
+const bottomPad = 260;
+const maxH = H - topY - bottomPad;
 
-  const { bottomY } = drawMultilineLeft(ctx, frase, padX, topY, innerW, size*lhK);
+// antes: fitFontByBox(..., 32, 96, 2, ..., 1.25)
+const lhK = 1.3;
+let size = fitFontByBox(ctx, frase, innerW, maxH, 28, 72, 2, 'Times New Roman, Times, serif', lhK);
+ctx.font = `${size}px "Times New Roman", Times, serif`;
+ctx.textAlign = 'left';
+ctx.textBaseline = 'top';
+ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
 
-  // autor abaixo, à esquerda, menor e itálico
-  const autorSize = Math.max(20, Math.round(size*0.42));
-  ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
-  ctx.textAlign = 'left';
-  ctx.textBaseline = 'top';
-  ctx.fillText(autor ? `— ${autor}` : '', padX, bottomY + 24);
-}
+const { bottomY } = drawMultilineLeft(ctx, frase, padX, topY, innerW, size*lhK);
+
+// autor
+const autorSize = Math.max(18, Math.round(size*0.42));
+ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
+ctx.textAlign = 'left';
+ctx.textBaseline = 'top';
+ctx.fillText(autor ? `— ${autor}` : '', padX, bottomY + 24);
 
 
   function autoFitFont(ctx, text, maxW, minPx, maxPx, step, family){
