@@ -1,124 +1,232 @@
-/* ========= BASE ========= */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial;
-  color:#111827;
-  background:#ffffff;
-  line-height:1.58;
-}
+/* =========================
+   MeuJus – estilo base
+   ========================= */
+
 :root{
-  --container:1100px;
-  --muted:#6b7280;
-  --border:#dfe3e8;
-  --shadow:0 1px 2px rgba(16,24,40,.04),0 4px 10px rgba(16,24,40,.06);
-  --radius:12px;
-  --petroleo:#0f3e4d;
-}
-.container{max-width:var(--container);margin:0 auto;padding:0 16px}
-.hidden{display:none!important}
+  --bg: #ffffff;
+  --text: #111827;        /* slate-900 */
+  --muted: #6b7280;       /* slate-500 */
+  --line: #dfe3e8;        /* light border */
+  --accent: #111827;
 
-/* ========= TOPBAR ========= */
-.topbar{background:#f3f4f6;border-bottom:1px solid var(--border)}
+  --radius: 16px;
+  --container: 960px;
+
+  /* Tipografia base */
+  --fs-xxl: clamp(28px, 3.2vw, 40px);   /* enunciado grande */
+  --fs-xl:  clamp(24px, 2.6vw, 34px);
+  --fs-lg:  clamp(20px, 2.2vw, 28px);
+  --fs-md:  clamp(18px, 1.9vw, 24px);
+  --fs-sm:  clamp(14px, 1.6vw, 18px);
+
+  --lh-tight: 1.25;
+  --lh-normal: 1.45;
+
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 20px;
+  --space-5: 28px;
+  --space-6: 36px;
+  --space-7: 48px;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hidden{ display: none !important; }
+
+/* =========================
+   Layout
+   ========================= */
+
+.container{
+  width: min(100% - 32px, var(--container));
+  margin-inline: auto;
+}
+
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
 .topbar__row{
-  display:grid;
-  grid-template-columns:auto minmax(0,1fr) minmax(0,1fr); /* logo | disciplina | temas */
-  gap:8px; align-items:center; min-height:60px; padding:8px 0;
-}
-.brand{font-weight:600;white-space:nowrap}
-.topbar__filters{display:contents}
-
-/* menus centrados e visíveis no mobile */
-@media(max-width:480px){
-  .topbar__row{padding:6px 0}
-  .select__menu,.multiselect__menu{
-    position:fixed; left:50%; transform:translateX(-50%);
-    top:66px; width:94vw; max-height:60vh; z-index:100;
-  }
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
 }
 
-/* ========= SELECT CUSTOM ========= */
-.select,.multiselect{position:relative;min-width:0;width:100%}
-.select__button,
-.multiselect__control{
-  width:100%;height:36px;padding:0 10px;border:1px solid var(--border);border-radius:10px;background:#fff;
-  display:flex;align-items:center;justify-content:space-between;cursor:pointer;overflow:hidden
+.brand{
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: 22px;
 }
-.select__menu,
-.multiselect__menu{
-  position:absolute;left:0;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--border);
-  border-radius:10px;box-shadow:var(--shadow);max-height:260px;overflow:auto;z-index:100;padding:6px
+
+.topbar__filters{
+  margin-left: auto;
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
 }
-.select__option,
-.multiselect__item{padding:8px 10px;border-radius:8px;cursor:pointer;line-height:1.6}
-.select__option:hover,
-.multiselect__item:hover{background:#f3f4f6}
-.multiselect__item[aria-selected="true"]{background:#eef2ff}
-.multiselect__input{border:0;outline:0;flex:1;min-width:60px;height:26px;font-size:14px}
 
-/* backdrop para fechar ao clicar fora */
-.dropdown-backdrop{position:fixed;inset:0;background:transparent;z-index:80}
+/* Placeholder de selects (preexistentes no app.js) */
+.select, .multiselect{
+  min-width: 160px;
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
 
-/* ========= QUESTÕES — ULTRA MINIMALISTA ========= */
-#cards{padding:16px 0 64px}
-.q{padding:16px 0;border-top:4px solid #eceff3}
-.q__meta{font-size:12px;color:var(--muted);margin-bottom:8px}
-.q__stmt{font-weight:400;color:#000; margin-bottom:10px;line-height:1.55}
-.q__stmt p{margin:0 0 8px 0} /* respiro menor entre parágrafos */
+/* =========================
+   Cartão da questão
+   ========================= */
 
-.q__opts{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.q-card{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+  margin: var(--space-6) 0;
+  background: #fff;
+}
+
+.q__meta{
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-3);
+}
+
+.q__stmt{
+  font-size: var(--fs-xxl);
+  line-height: var(--lh-normal);
+  font-weight: 600;
+  margin: 0 0 var(--space-4) 0;
+}
+
+.q__divider{
+  height: 1px;
+  background: var(--line);
+  margin: var(--space-4) 0 var(--space-4);
+}
+
+.q__options{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+
 .q__opt{
-  display:flex;align-items:flex-start;gap:10px;padding:6px 0;border-bottom:0;cursor:pointer
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  align-items: start;
+  gap: var(--space-3);
 }
-.q__opt > div:last-child{color:#454141} 
 
 .q__badge{
-  width:28px;height:28px;border:2px solid #cbd5e1;border-radius:999px;display:flex;align-items:center;justify-content:center;
-  font-weight:700;font-size:13px;flex:0 0 28px;user-select:none;background:#fff
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #cbd5e1;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+  user-select: none;
 }
-.q__opt.correct .q__badge{border-color:#22c55e;background:#dcfce7;color:#065f46}
-.q__opt.wrong .q__badge{border-color:#ef4444;background:#fee2e2;color:#991b1b}
-.q__explain{margin-top:8px;font-size:13px;color:#0f172a}
 
-/* ========= AÇÕES: GOOGLE IA ========= */
-.q__actions{display:flex;gap:10px;margin-top:10px}
+.q__opt-text{
+  font-size: var(--fs-lg);
+  line-height: var(--lh-normal);
+  color: #1f2937;
+}
+
+.q__explain{
+  margin-top: var(--space-4);
+  color: #0f172a;
+  font-size: var(--fs-sm);
+}
+
+/* =========================
+   Ações
+   ========================= */
+
+.actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
 .btn{
-  height:34px;padding:0 12px;border:1px solid var(--border);border-radius:10px;background:#eeeeee;
-  cursor:pointer
-}
-.btn:hover{background:#e7e7e7}
-.popover{position:relative}
-.popover__menu{
-  position:absolute;display:flex;flex-direction:column;gap:8px;bottom:calc(100% + 8px);left:0;background:#fff;border:1px solid var(--border);
-  border-radius:12px;padding:8px;box-shadow:var(--shadow);z-index:50
-}
-.popover__menu.below{bottom:auto;top:calc(100% + 8px)}
-.subbtn{height:30px;padding:0 10px;font-size:13px;border:1px solid #e5e7eb;border-radius:8px;background:#fff;cursor:pointer}
-.subbtn:hover{background:#f9fafb}
-
-/* ========= SENTINELA ========= */
-#sentinela{height:1px}
-
-/* garante o mesmo limite do corpo dentro da topbar */
-.topbar > .container{max-width:var(--container);margin:0 auto;padding:0 16px}
-
-/* controles menores no mobile e sem encostar nas bordas */
-@media(max-width:480px){
-  .topbar__row{grid-template-columns:auto 1fr 1fr; padding:6px 0}
-  .select,.multiselect{min-width:0;width:100%}
+  appearance: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-/* menus da TOPBAR centralizados na tela no mobile */
-@media(max-width:480px){
-  .topbar .select__menu,
-  .topbar .multiselect__menu{
-    position:fixed;
-    left:50%;
-    transform:translateX(-50%);
-    top:66px;                 /* abaixo da topbar */
-    width:min(94vw, var(--container));
-    max-height:60vh;
-    z-index:100;
-  }
+.btn:active{ transform: translateY(1px); }
+
+.btn--google{
+  border-color: #e5e7eb;
 }
+
+.btn--share{
+  border-color: #e5e7eb;
+}
+
+/* =========================
+   Utilitários tipográficos
+   ========================= */
+
+/* Variações para ajuste dinâmico no DOM (espelha a lógica do canvas) */
+.stmt--xl { font-size: var(--fs-xxl); }
+.stmt--lg { font-size: var(--fs-xl);  }
+.stmt--md { font-size: var(--fs-lg);  }
+
+.opt--lg { font-size: var(--fs-lg); }
+.opt--md { font-size: var(--fs-md); }
+.opt--sm { font-size: var(--fs-sm); }
+
+.tight   { line-height: var(--lh-tight); }
+.normal  { line-height: var(--lh-normal); }
+
+/* =========================
+   Safe area inferior (visualização da página)
+   ========================= */
+
+.safe-bottom-150{
+  padding-bottom: 150px !important; /* reserva espaço para a caixa de resposta do Instagram quando o conteúdo crescer */
+}
+
+/* Em telas estreitas, suavizar o spacing lateral para manter “respiro” maior no topo */
+@media (max-width: 480px){
+  .q-card{ padding: var(--space-5); }
+  .q__opt{ grid-template-columns: 40px 1fr; }
+}
+
+/* =========================
+   Canvas
+   ========================= */
+
+/* O canvas fica oculto; a imagem final será sempre PNG */
+#share-canvas{ display: none; }
