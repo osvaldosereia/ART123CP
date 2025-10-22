@@ -720,49 +720,45 @@ async function renderStoryPNG(card){
   }
 
   function renderFrasePNG(canvas, frase, autor, bg){
-    const ctx = canvas.getContext('2d');
-    const W = canvas.width, H = canvas.height;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
 
-    // fundo
-    ctx.fillStyle = bg;
-    ctx.fillRect(0,0,W,H);
+  // fundo
+  ctx.fillStyle = bg;
+  ctx.fillRect(0,0,W,H);
 
-    // topo “meujus.com.br”
-    ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
-    ctx.font = '28px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'top';
-    ctx.fillText('meujus.com.br', W/2, 36);
+  // topo “meujus.com.br”
+  ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
+  ctx.font = '28px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'top';
+  ctx.fillText('meujus.com.br', W/2, 36);
 
-   // área de texto
-const padX = 96;
-const innerW = W - padX*2;
-const topY = 260;            // início do bloco de frase
-const bottomPad = 200;       // espaço para autor e respiro
-const maxH = H - topY - bottomPad;
+  // área de texto
+  const padX = 96;
+  const innerW = W - padX*2;
+  const topY = 260;      // início do bloco de frase
+  const bottomPad = 200; // espaço para autor e respiro
+  const maxH = H - topY - bottomPad;
 
-// frase alinhada à ESQUERDA com auto-fit por largura e altura
-const lhK = 1.25;
-let size = fitFontByBox(ctx, frase, innerW, maxH, 32, 96, 2, 'Times New Roman, Times, serif', lhK);
-ctx.font = `${size}px "Times New Roman", Times, serif`;
-ctx.textAlign = 'left';
-ctx.textBaseline = 'top';
-ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
+  // frase alinhada à esquerda com auto-fit de largura e altura
+  const lhK = 1.25;
+  let size = fitFontByBox(ctx, frase, innerW, maxH, 32, 96, 2, 'Times New Roman, Times, serif', lhK);
+  ctx.font = `${size}px "Times New Roman", Times, serif`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
 
-const { bottomY } = drawMultilineLeft(ctx, frase, padX, topY, innerW, size*lhK);
+  const { bottomY } = drawMultilineLeft(ctx, frase, padX, topY, innerW, size*lhK);
 
+  // autor abaixo, à esquerda, menor e itálico
+  const autorSize = Math.max(20, Math.round(size*0.42));
+  ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillText(autor ? `— ${autor}` : '', padX, bottomY + 24);
+}
 
-    const centerY = H/2 - 40;
-    drawMultilineCenter(ctx, frase, W/2, centerY, innerW, size*1.25);
-
-    // autor abaixo, à esquerda, menor e itálico
-const autorSize = Math.max(20, Math.round(size*0.42));
-ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
-ctx.textAlign = 'left';
-ctx.textBaseline = 'top';
-ctx.fillText(autor ? `— ${autor}` : '', padX, bottomY + 24);
-
-  }
 
   function autoFitFont(ctx, text, maxW, minPx, maxPx, step, family){
     let best = minPx;
