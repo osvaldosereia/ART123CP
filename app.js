@@ -752,14 +752,24 @@ ctx.textAlign = 'left';
 ctx.textBaseline = 'top';
 ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
 
-const { bottomY } = drawMultilineLeft(ctx, frase, padX, topY, innerW, size*lhK);
+const lhK = 1.3;
+const lines = wrapLines(ctx, frase, innerW);
+const fraseH = lines.length * (size * lhK);
 
-// autor
-const autorSize = Math.max(18, Math.round(size*0.42));
+// centraliza a FRASE dentro da área disponível (maxH)
+const yStart = topY + Math.max(0, Math.floor((maxH - fraseH) / 2));
+
+// desenha linhas à esquerda
+let y = yStart;
+for (const line of lines) { ctx.fillText(line, padX, y); y += size * lhK; }
+
+// autor abaixo
+const autorSize = Math.max(18, Math.round(size * 0.42));
 ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
 ctx.textAlign = 'left';
 ctx.textBaseline = 'top';
-ctx.fillText(autor ? `— ${autor}` : '', padX, bottomY + 24);
+ctx.fillText(autor ? `— ${autor}` : '', padX, y + 24);
+
   }
 
   function autoFitFont(ctx, text, maxW, minPx, maxPx, step, family){
