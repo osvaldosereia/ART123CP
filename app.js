@@ -98,36 +98,87 @@
     return cards;
   }
 
-  function formatStatement(text){
-    const html = U.mdInline(text || "");
-    const parts = html.split(/(?<=[.!?])\s+/).filter(Boolean); // quebra em final de frase
-    return parts.map(p => `<p>${p}</p>`).join("");
-  }
-
   /* ------------------------------ IA Prompts ------------------------------ */
   function buildPrompt(kind, card) {
-    const join = []; join.push(card.enunciado); card.alternativas.forEach(a => join.push(a));
-    const full = join.join(" | "), withAnswer = `${full} | Gabarito: ${card.gabarito || "?"}`;
-    switch (kind) {
-      case "Gabarito": return [
-        "Papel: examinador.","Tarefa: decidir a alternativa correta.","Saída:","Gabarito: <LETRA>","Fundamentação: 3 bullets.",
-        "Se faltar dado: 'Indeterminado' + o que falta.","Questão:", full].join("\n");
-      case "Vídeo": return [
-        "Papel: curador educacional.","Tarefa: termos YouTube + roteiro 60–90s.","Saída:","1) 5 termos;","2) Roteiro em 5 tópicos;",
-        "3) 3 títulos.","Entrada:", withAnswer].join("\n");
-      case "Checklist": return [
-        "Papel: auditor.","Tarefa: checklist para resolver questões iguais.","Saída:","Pré-requisitos; Passos numerados; Erros comuns.",
-        "Entrada:", withAnswer].join("\n");
-      case "Princípios": return [
-        "Papel: professor.","Tarefa: mapear princípios e impacto em A..E.","Saída:","Lista de princípios; Impacto em A..E; Conclusão curta.",
-        "Entrada:", withAnswer].join("\n");
-      case "Inédita": return [
-        "Papel: elaborador.","Tarefa: criar 1 questão inédita do mesmo tema e nível.","Saída:",
-        "Enunciado; A) ... E); Gabarito: <LETRA>; Justificativa 2–3 linhas; Tag de temas.",
-        "Tema base:", (card.temas||[]).join(", "), "Entrada:", full].join("\n");
-      default: return full;
-    }
+  const body = [card.enunciado, ...card.alternativas].join(" | ");
+  const withAnswer = `${body} | Gabarito: ${card.gabarito || "?"}`;
+
+  switch (kind) {
+    case "Gabarito":
+      return [
+        "Papel: Professor de Direito e examinador.",
+        "Objetivo: identificar a alternativa CORRETA e fundamentar juridicamente com base legal, súmulas ou jurisprudência dominante.",
+        "Formato de saída:",
+        "Gabarito: <LETRA CORRETA>",
+        "Fundamentação: 3 a 5 tópicos objetivos, com base legal/súmula (cite o dispositivo).",
+        "Análise das demais alternativas: explique por que estão erradas, cada uma em 1 linha.",
+        "Se a questão for ambígua: escreva 'Indeterminado' e aponte o que falta.",
+        "Questão:", body
+      ].join("\n");
+
+    case "Glossário":
+      return [
+        "Papel: Professor de Direito.",
+        "Objetivo: explicar de forma objetiva todos os termos jurídicos presentes.",
+        "Formato de saída: lista termo → definição curta e clara; inclua sinônimos usuais e referências normativas quando houver.",
+        "Texto-base:", body
+      ].join("\n");
+
+    case "Vídeo":
+      return [
+        "Papel: Professor de Direito e pesquisador de vídeos.",
+        "Objetivo: listar 3 vídeos do YouTube diretamente linkados que expliquem o tema da questão.",
+        "Formato de saída:",
+        "1) Título — URL completa do YouTube;",
+        "2) Título — URL;",
+        "3) Título — URL;",
+        "Termos de busca recomendados: 5 termos entre aspas.",
+        "Tema/Questão:", withAnswer
+      ].join("\n");
+
+    case "Dicas":
+      return [
+        "Papel: Professor de Direito especialista em provas e concursos.",
+        "Objetivo: fornecer dicas práticas e pegadinhas cobradas sobre o tema.",
+        "Formato de saída:",
+        "- Como o tema é cobrado (padrões de banca);",
+        "- Dicas e pegadinhas em bullets curtos;",
+        "- Erros comuns dos candidatos;",
+        "- Mini-checklist para revisar antes de marcar.",
+        "Base:", withAnswer
+      ].join("\n");
+
+    case "Princípios":
+      return [
+        "Papel: Professor de Direito e pesquisador doutrinário.",
+        "Objetivo: listar e explicar princípios jurídicos implicitamente relacionados ao tema.",
+        "Fonte: doutrina, artigos e jurisprudência dominante.",
+        "Formato de saída:",
+        "- Princípio: explicação objetiva e incidência na questão;",
+        "- Relação com cada alternativa A..E em 1 linha;",
+        "- Conclusão que conduz ao gabarito.",
+        "Questão:", withAnswer
+      ].join("\n");
+
+    case "Inédita":
+      return [
+        "Papel: Professor de Direito especialista em concursos.",
+        "Objetivo: criar 3 versões inéditas da MESMA questão no mesmo nível.",
+        "Formato de saída para cada versão:",
+        "Enunciado;",
+        "A) ... E);",
+        "Gabarito: <LETRA>;",
+        "Comentário do gabarito em 2–3 linhas;",
+        "Tag de temas.",
+        "Tema base extraído:", (card.temas || []).join(", "),
+        "Referência da questão original:", body
+      ].join("\n");
+
+    default:
+      return body;
   }
+}
+
 
   /* ------------------------------ Badge inference ------------------------------ */
   function inferBadges(alts) {
@@ -140,63 +191,64 @@
   }
 
   /* ------------------------------ Card ------------------------------ */
-  function buildCard(card, idx) {
-    const badges = inferBadges(card.alternativas);
-    const meta = U.el("div", { class: "q__meta" }, card.referencias);
-    const stmt = U.el("div", { class: "q__stmt", html: formatStatement(card.enunciado) });
+ function buildCard(card, idx) {
+  const badges = inferBadges(card.alternativas);
+  const meta = U.el("div", { class: "q__meta" }, card.referencias);
+  const stmt = U.el("div", { class: "q__stmt", html: U.mdInline(card.enunciado) });
 
-    const ul = U.el("ul", { class: "q__opts" });
-    card.alternativas.forEach((opt, i) => {
-      const clean = opt.replace(/^[A-E]\)\s*/i, "");
-      const li = U.el("li", { class: "q__opt", "data-letter": badges[i] });
-      const badge = U.el("span", { class: "q__badge" }, badges[i]);
-      li.appendChild(badge);
-      li.appendChild(U.el("div", {}, clean));
-      ul.appendChild(li);
+  const ul = U.el("ul", { class: "q__opts" });
+  card.alternativas.forEach((opt, i) => {
+    const clean = opt.replace(/^[A-E]\)\s*/i, "");
+    const li = U.el("li", { class: "q__opt", "data-letter": badges[i] });
+    const badge = U.el("span", { class: "q__badge" }, badges[i]);
+    li.appendChild(badge);
+    li.appendChild(U.el("div", {}, clean));
+    ul.appendChild(li);
+  });
+
+  const iaBtn = U.el("button", { class: "btn", type: "button" }, "Google IA");
+  const pop = U.el("div", { class: "popover" });
+  const menu = U.el("div", { class: "popover__menu hidden" });
+  ["Gabarito", "Glossário", "Vídeo", "Dicas", "Princípios", "Inédita"].forEach(lbl => {
+    const b = U.el("button", { class: "subbtn", type: "button" }, lbl);
+    b.addEventListener("click", () => {
+      const prompt = buildPrompt(lbl, card);
+      U.copy(prompt);
+      U.openGoogle(`${lbl} | ${prompt}`);
+      if (lbl === "Gabarito") revealAnswer(ul, card.gabarito, true);
+      closeMenu();
     });
+    menu.appendChild(b);
+  });
+  function openMenu(){ menu.classList.remove("hidden"); U.fitPopover(menu, iaBtn); U.onClickOutside(pop, closeMenu); }
+  function closeMenu(){ menu.classList.add("hidden"); }
+  iaBtn.addEventListener("click", () => menu.classList.contains("hidden") ? openMenu() : closeMenu());
+  pop.appendChild(iaBtn); pop.appendChild(menu);
 
-    const iaBtn = U.el("button", { class: "btn", type: "button" }, "Google IA");
-    const pop = U.el("div", { class: "popover" });
-    const menu = U.el("div", { class: "popover__menu hidden" });
-    ["Gabarito", "Vídeo", "Checklist", "Princípios", "Inédita"].forEach(lbl => {
-      const b = U.el("button", { class: "subbtn", type: "button" }, lbl);
-      b.addEventListener("click", () => {
-        const prompt = buildPrompt(lbl, card);
-        U.copy(prompt);
-        U.openGoogle(`${lbl} | ${prompt}`);
-        if (lbl === "Gabarito") revealAnswer(ul, card.gabarito, true);
-        closeMenu();
-      });
-      menu.appendChild(b);
-    });
-    function openMenu(){ menu.classList.remove("hidden"); U.fitPopover(menu, iaBtn); U.onClickOutside(pop, closeMenu); }
-    function closeMenu(){ menu.classList.add("hidden"); }
-    iaBtn.addEventListener("click", () => menu.classList.contains("hidden") ? openMenu() : closeMenu());
-    pop.appendChild(iaBtn); pop.appendChild(menu);
+  const actions = U.el("div", { class: "q__actions" }, pop);
 
-    const actions = U.el("div", { class: "q__actions" }, pop);
+  const wrap = U.el("article", { class: "q", "data-idx": idx }, meta, stmt, ul, actions);
 
-    const wrap = U.el("article", { class: "q", "data-idx": idx }, meta, stmt, ul, actions);
+  // resposta do usuário
+  let answered = false;
+  ul.addEventListener("click", ev => {
+    const li = ev.target.closest(".q__opt");
+    if (!li || answered) return;
+    answered = true;
+    const chosen = (li.getAttribute("data-letter") || "").toUpperCase();
+    const correct = (card.gabarito || "").toUpperCase();
+    if (chosen === correct) {
+      li.classList.add("correct");
+      appendGabarito(wrap, correct);
+    } else {
+      li.classList.add("wrong");
+      revealAnswer(ul, correct, true);
+    }
+  });
 
-    // resposta do usuário
-    let answered = false;
-    ul.addEventListener("click", ev => {
-      const li = ev.target.closest(".q__opt");
-      if (!li || answered) return;
-      answered = true;
-      const chosen = (li.getAttribute("data-letter") || "").toUpperCase();
-      const correct = (card.gabarito || "").toUpperCase();
-      if (chosen === correct) {
-        li.classList.add("correct");
-        appendGabarito(wrap, correct);
-      } else {
-        li.classList.add("wrong");
-        revealAnswer(ul, correct, true);
-      }
-    });
+  return wrap;
+}
 
-    return wrap;
-  }
 
   function appendGabarito(cardEl, g) {
     const info = U.el("div", { class: "q__explain" }, `Gabarito: ${g}`);
