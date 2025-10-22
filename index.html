@@ -51,23 +51,20 @@
   <!-- Prova (local) -->
   <main id="exam" class="page hidden">
     <section class="card">
-      <h2 id="examTitle">Prova</h2>
+      <header class="exam-head" style="display:flex;align-items:center;gap:.75rem;">
+        <h2 id="examTitle" style="margin:0;">Prova</h2>
+        <button id="examShareLink" class="btn ghost" style="margin-left:auto">Compartilhar Prova</button>
+      </header>
       <div class="divider" aria-hidden="true"></div>
 
-      <div class="field">
-        <label for="examStudent" class="lbl">Seu primeiro nome</label>
-        <input id="examStudent" type="text" placeholder="Ex.: Ana" />
-      </div>
-
-      <ol id="examList" class="list"></ol>
+      <!-- Mesmos cards do quiz serão inseridos aqui via renderExam() -->
+      <section id="examList" class="list"></section>
 
       <div class="actions">
         <button id="examFinish" class="btn primary">Concluir</button>
-        <button id="examShareLink" class="btn ghost">Compartilhar Prova</button>
-        <button id="examShareResult" class="btn ghost">Compartilhar Resultado</button>
       </div>
 
-      <section id="examReport" class="hidden"></section>
+      <section id="examReport" class="card hidden" aria-live="polite"></section>
     </section>
   </main>
 
@@ -92,14 +89,6 @@
 
       <div class="q-res" aria-live="polite"></div>
     </article>
-  </template>
-
-  <!-- Template de questão (prova) -->
-  <template id="tplExamQuestion">
-    <li class="ex-q">
-      <pre class="ex-stem"></pre>
-      <ul class="ex-opts"></ul>
-    </li>
   </template>
 
   <!-- Botão flutuante Criar Prova -->
