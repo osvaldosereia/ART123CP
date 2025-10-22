@@ -99,3 +99,26 @@ body{
 
 /* ========= SENTINELA ========= */
 #sentinela{height:1px}
+
+/* garante o mesmo limite do corpo dentro da topbar */
+.topbar > .container{max-width:var(--container);margin:0 auto;padding:0 16px}
+
+/* controles menores no mobile e sem encostar nas bordas */
+@media(max-width:480px){
+  .topbar__row{grid-template-columns:auto 1fr 1fr; padding:6px 0}
+  .select,.multiselect{min-width:0;width:100%}
+}
+
+/* menus da TOPBAR centralizados na tela no mobile */
+@media(max-width:480px){
+  .topbar .select__menu,
+  .topbar .multiselect__menu{
+    position:fixed;
+    left:50%;
+    transform:translateX(-50%);
+    top:66px;                 /* abaixo da topbar */
+    width:min(94vw, var(--container));
+    max-height:60vh;
+    z-index:100;
+  }
+}
