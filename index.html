@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Questões | Parser TXT</title>
+
+  <!-- ==============================
+       CSS PRINCIPAL
+       ============================== -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ==============================
+       TOPO / TOPBAR
+       - Conteúdo limitado à largura do site
+       ============================== -->
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">QConcursos · Simulador</div>
+      <div class="actions">
+        <!-- Espaço reservado para futuras ações do topo -->
+      </div>
+    </div>
+  </header>
+
+  <!-- ==============================
+       BARRA DE FILTROS
+       - Dropdown Disciplina (custom)
+       - Dropdown Temas (multi + busca, custom)
+       - Largura limitada ao container
+       ============================== -->
+  <section class="filters">
+    <div class="container filters__row">
+      <!-- Dropdown Disciplina (não nativo) -->
+      <div id="disciplina-select" class="select select--single" data-label="Disciplina"></div>
+
+      <!-- Dropdown Temas (multi + busca, não nativo) -->
+      <div id="temas-multiselect" class="multiselect" data-label="Temas"></div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       LISTA DE QUESTÕES
+       ============================== -->
+  <main class="container">
+    <div id="cards"></div>
+  </main>
+
+  <!-- ==============================
+       ARQUIVO DE DADOS
+       - Você pode substituir a URL pelo seu TXT
+       ============================== -->
+  <script>
+    window.APP_CONFIG = {
+      txtUrl: "penal1.txt" /* caminho do TXT no mesmo diretório */
+    };
+  </script>
+
+  <!-- ==============================
+       JS PRINCIPAL
+       ============================== -->
+  <script src="app.js"></script>
+</body>
+</html>
