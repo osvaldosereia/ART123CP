@@ -686,7 +686,7 @@ async function renderStoryPNG(card){
       });
   }
 
-  ffunction sortearN(arr, n){
+  function sortearN(arr, n){
   const out = [];
   const used = new Set();
   while(out.length<n && used.size<arr.length){
@@ -735,98 +735,91 @@ function sortearERender(novo=true){
   ctx.fillText('meujus.com.br', W/2, 36);
 
   // área de texto
-  // área de texto
-const padX = 96;
-const innerW = W - padX*2;
+  const padX = 96;
+  const innerW = W - padX*2;
+  const topY = 220;
+  const bottomPad = 260;
+  const maxH = H - topY - bottomPad;
 
-// antes: topY=260, bottomPad=200
-const topY = 220;
-const bottomPad = 260;
-const maxH = H - topY - bottomPad;
+  const lhK = 1.3;
+  let size = fitFontByBox(ctx, frase, innerW, maxH, 28, 72, 2, 'Times New Roman, Times, serif', lhK);
+  ctx.font = `${size}px "Times New Roman", Times, serif`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
 
-// antes: fitFontByBox(..., 32, 96, 2, ..., 1.25)
-const lhK = 1.3;
-let size = fitFontByBox(ctx, frase, innerW, maxH, 28, 72, 2, 'Times New Roman, Times, serif', lhK);
-ctx.font = `${size}px "Times New Roman", Times, serif`;
-ctx.textAlign = 'left';
-ctx.textBaseline = 'top';
-ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
+  const lines = wrapLines(ctx, frase, innerW);
+  const fraseH = lines.length * (size * lhK);
+  const yStart = topY + Math.max(0, Math.floor((maxH - fraseH) / 2));
 
-const lhK = 1.3;
-const lines = wrapLines(ctx, frase, innerW);
-const fraseH = lines.length * (size * lhK);
+  // desenha linhas à esquerda
+  let y = yStart;
+  for (const line of lines){ ctx.fillText(line, padX, y); y += size * lhK; }
 
-// centraliza a FRASE dentro da área disponível (maxH)
-const yStart = topY + Math.max(0, Math.floor((maxH - fraseH) / 2));
+  // autor abaixo
+  const autorSize = Math.max(18, Math.round(size * 0.42));
+  ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillText(autor ? `— ${autor}` : '', padX, y + 24);
+}
 
-// desenha linhas à esquerda
-let y = yStart;
-for (const line of lines) { ctx.fillText(line, padX, y); y += size * lhK; }
-
-// autor abaixo
-const autorSize = Math.max(18, Math.round(size * 0.42));
-ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
-ctx.textAlign = 'left';
-ctx.textBaseline = 'top';
-ctx.fillText(autor ? `— ${autor}` : '', padX, y + 24);
-
+function autoFitFont(ctx, text, maxW, minPx, maxPx, step, family){
+  let best = minPx;
+  for(let s=maxPx; s>=minPx; s-=step){
+    ctx.font = `${s}px ${family}`;
+    if(measureWrapFits(ctx, text, maxW)) { best = s; break; }
   }
+  return best;
+}
 
-  function autoFitFont(ctx, text, maxW, minPx, maxPx, step, family){
-    let best = minPx;
-    for(let s=maxPx; s>=minPx; s-=step){
-      ctx.font = `${s}px ${family}`;
-      if(measureWrapFits(ctx, text, maxW)) { best = s; break; }
-    }
-    return best;
-  }
-
-  function measureWrapFits(ctx, text, maxW){
-    const words = text.split(/\s+/);
-    let line = '';
-    for(const w of words){
-      const test = line ? line + ' ' + w : w;
-      if(ctx.measureText(test).width > maxW){
-        if(line === '') return false;
-        line = w;
-        if(ctx.measureText(w).width > maxW) return false;
-      }else{
-        line = test;
-      }
-    }
-    return true;
-  }
-
-  function drawMultilineCenter(ctx, text, cx, cy, maxW, lh){
-    const lines = wrapLines(ctx, text, maxW);
-    const totalH = lines.length*lh;
-    let y = cy - totalH/2;
-    for(const line of lines){
-      ctx.fillText(line, cx, y);
-      y += lh;
+function measureWrapFits(ctx, text, maxW){
+  const words = text.split(/\s+/);
+  let line = '';
+  for(const w of words){
+    const test = line ? line + ' ' + w : w;
+    if(ctx.measureText(test).width > maxW){
+      if(line === '') return false;
+      line = w;
+      if(ctx.measureText(w).width > maxW) return false;
+    }else{
+      line = test;
     }
   }
+  return true;
+}
 
-  function wrapLines(ctx, text, maxW){
-    const words = text.split(/\s+/);
-    const lines = [];
-    let line = '';
-    for(const w of words){
-      const test = line ? line + ' ' + w : w;
-      if(ctx.measureText(test).width > maxW){
-        if(line) lines.push(line);
-        line = w;
-      }else{
-        line = test;
-      }
+function drawMultilineCenter(ctx, text, cx, cy, maxW, lh){
+  const lines = wrapLines(ctx, text, maxW);
+  const totalH = lines.length*lh;
+  let y = cy - totalH/2;
+  for(const line of lines){
+    ctx.fillText(line, cx, y);
+    y += lh;
+  }
+}
+
+function wrapLines(ctx, text, maxW){
+  const words = text.split(/\s+/);
+  const lines = [];
+  let line = '';
+  for(const w of words){
+    const test = line ? line + ' ' + w : w;
+    if(ctx.measureText(test).width > maxW){
+      if(line) lines.push(line);
+      line = w;
+    }else{
+      line = test;
     }
-    if(line) lines.push(line);
-    return lines;
   }
+  if(line) lines.push(line);
+  return lines;
+}
 
-  function countLines(ctx, text, maxW){
-    return wrapLines(ctx, text, maxW).length;
-  }
+function countLines(ctx, text, maxW){
+  return wrapLines(ctx, text, maxW).length;
+}
+
 function drawMultilineLeft(ctx, text, x, y, maxW, lh){
   const lines = wrapLines(ctx, text, maxW);
   for (const line of lines){ ctx.fillText(line, x, y); y += lh; }
