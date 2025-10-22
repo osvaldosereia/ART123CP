@@ -7,14 +7,16 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Topbar -->
   <header class="topbar">
     <img class="logo-img" src="logo-h.png" alt="MeuJus" />
-    <button id="btnOpenSearch" class="btn ghost" style="margin-left:auto">Buscar Questões</button>
+    <button id="btnSearchOpen" class="btn ghost" style="margin-left:auto">Buscar Questões</button>
   </header>
 
+  <!-- Toast -->
   <div id="toast" class="toast" aria-live="polite"></div>
 
-  <!-- Quiz (página inicial) -->
+  <!-- Quiz -->
   <main id="quiz" class="page">
     <div id="quizThemes" class="chips"></div>
     <section id="quizList" class="list"></section>
@@ -60,39 +62,36 @@
   <!-- FAB Criar Simulado -->
   <button id="btnCreateExam" class="fab" aria-label="Criar Simulado" title="Criar Simulado">Criar Simulado</button>
 
-  <!-- Modal de busca -->
-  <dialog id="searchModal" class="modal">
-    <form method="dialog" class="modal-card" id="searchForm">
-      <div class="modal-head">
-        <h3>Buscar Questões</h3>
-        <button type="button" class="iconbtn" id="btnCloseSearch">✕</button>
-      </div>
-      <label class="lbl">Disciplina</label>
-      <div class="dropdown">
-        <button class="dd-btn" id="ddDiscBtn" aria-haspopup="listbox" aria-expanded="false">
-          <span id="ddDiscLabel">Escolha a disciplina</span><span class="chev">▾</span>
-        </button>
-        <ul class="dd-list" id="ddDiscList" role="listbox" tabindex="-1"></ul>
-      </div>
+  <!-- Modal Buscar Questões -->
+  <div id="searchModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <header class="modal-head">
+        <h3 id="mTitle">Buscar Questões</h3>
+        <button class="btn ghost" type="button" data-close>Fechar</button>
+      </header>
 
-      <label class="lbl" style="margin-top:12px">Temas</label>
-      <div id="msWrap" class="ms-panel">
-        <div class="ms-head">
-          <input id="msSearch" type="text" placeholder="Buscar tema…" autocomplete="off" />
-          <div class="ms-actions">
-            <button type="button" id="msSelAll" class="btn ghost">Selecionar exibidos</button>
-            <button type="button" id="msClear" class="btn ghost">Limpar</button>
-          </div>
+      <div class="modal-body">
+        <!-- Disciplina -->
+        <label class="lbl">Disciplina</label>
+        <div class="dropdown">
+          <button class="dd-btn" id="ddDiscBtn" aria-haspopup="listbox" aria-expanded="false">
+            <span id="ddDiscLabel">Escolha a disciplina</span>
+            <span class="chev">▾</span>
+          </button>
+          <ul class="dd-list" id="ddDiscList" role="listbox" tabindex="-1"></ul>
         </div>
-        <div id="msList" class="ms-list"></div>
-        <div class="ms-foot"><span id="msCount"></span></div>
+
+        <!-- Temas multiselect -->
+        <label class="lbl" style="margin-top:12px">Temas</label>
+        <div id="chipsTemas"></div>
       </div>
 
-      <div class="actions" style="margin-top:14px">
-        <button id="btnRunSearch" class="btn primary" disabled>Buscar</button>
-      </div>
-    </form>
-  </dialog>
+      <footer class="modal-foot">
+        <button id="modalSearchBtn" class="btn primary">Buscar</button>
+      </footer>
+    </div>
+  </div>
 
   <script src="app.js?v=3" defer></script>
 </body>
