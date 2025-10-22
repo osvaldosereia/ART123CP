@@ -1,10 +1,9 @@
 "use strict";
 
 const $ = s => document.querySelector(s);
-const $$ = s => document.querySelectorAll(s);
-function toast(msg, t=2000){const el=$("#toast");el.textContent=msg;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),t);}
+function toast(msg,t=2000){const el=$("#toast");el.textContent=msg;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),t);}
 
-let DATA={}, QUESTOES=[], filtroTemas=new Set(), loaded=0;
+let QUESTOES=[], filtroTemas=new Set(), loaded=0;
 
 document.addEventListener("DOMContentLoaded",()=>{
   carregarDisciplinas();
@@ -25,7 +24,7 @@ async function carregarQuestoes(){
   QUESTOES=parseTXT(txt);
   toast(`${QUESTOES.length} questões carregadas`);
   montarTemas();
-  render(0,3);
+  render(0,3,true);
   observerSetup();
 }
 
@@ -70,6 +69,9 @@ function render(start=0,count=3,reset=false){
       <div class="options">${q.alternativas.map(a=>`<button>${a.letra}) ${a.texto}</button>`).join("")}</div>
       <div class="actions">
         <button class="ia">Google I.A.</button>
+        <div class="submenu">
+          ${["Gabarito","Vídeo","Checklist","Princípios","Inédita"].map(p=>`<button>${p}</button>`).join("")}
+        </div>
         <button class="share">Compartilhar</button>
       </div>`;
     area.appendChild(card);
@@ -82,6 +84,21 @@ function render(start=0,count=3,reset=false){
         else btn.classList.add("wrong");
       };
     });
+
+    const iaBtn=card.querySelector(".ia");
+    const submenu=card.querySelector(".submenu");
+    iaBtn.onclick=()=>submenu.style.display=submenu.style.display==="flex"?"none":"flex";
+
+    submenu.querySelectorAll("button").forEach(b=>{
+      b.onclick=()=>{
+        const query=encodeURIComponent(`${b.textContent}: ${q.enunciado}`);
+        const url=`https://www.google.com/search?udm=50&q=${query}`;
+        window.open(url,"_blank");
+      };
+    });
+
+    const shareBtn=card.querySelector(".share");
+    shareBtn.onclick=()=>gerarImagem(card);
   });
   loaded+=slice.length;
 }
@@ -90,9 +107,28 @@ function observerSetup(){
   const sentinel=document.createElement("div");
   sentinel.id="sentinel";$("#quiz").appendChild(sentinel);
   const obs=new IntersectionObserver(entries=>{
-    if(entries[0].isIntersecting){
-      render(loaded,3);
-    }
+    if(entries[0].isIntersecting) render(loaded,3);
   });
   obs.observe(sentinel);
+}
+
+async function gerarImagem(card){
+  const clone=card.cloneNode(true);
+  clone.querySelector(".actions").remove();
+  clone.style.background="#fff";
+  clone.style.maxWidth="400px";
+  clone.style.border="1px solid #ccc";
+  clone.style.padding="1rem";
+  const temp=document.createElement("div");
+  temp.style.position="fixed";
+  temp.style.left="-9999px";
+  document.body.appendChild(temp);
+  temp.appendChild(clone);
+  const canvas=await html2canvas(clone,{scale:2});
+  document.body.removeChild(temp);
+  const link=document.createElement("a");
+  link.download="questao.jpg";
+  link.href=canvas.toDataURL("image/jpeg",0.9);
+  link.click();
+  toast("Imagem gerada");
 }
