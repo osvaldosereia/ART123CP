@@ -62,21 +62,18 @@ document.addEventListener("DOMContentLoaded", async ()=>{
   }
 
   // botão compartilhar prova
-  const btnShareExam = document.getElementById("examShareLink");
-  {
-  const shareBtns = document.querySelectorAll('[data-action="share-exam"]');
-  shareBtns.forEach(btn=>{
-    btn.addEventListener("click", ()=>{
-      try{
-        if(!STATE.exam){ createExamFromView?.(); }
-        exportExamPrintView?.();
-      }catch(err){
-        console.error(err);
-        toast?.("Não foi possível compartilhar a prova");
-      }
-    });
+document.querySelectorAll('[data-action="share-exam"]').forEach((btn)=>{
+  btn.addEventListener("click", () => {
+    try{
+      if (!STATE.exam) createExamFromView();
+      exportExamPrintView();
+    }catch(err){
+      console.error(err);
+      toast("Não foi possível compartilhar a prova");
+    }
   });
 });
+
 
 /* ==================== MODAL DE BUSCA ==================== */
 function wireSearchModal(){
