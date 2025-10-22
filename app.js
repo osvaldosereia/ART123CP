@@ -734,28 +734,34 @@ async function renderStoryPNG(card){
     ctx.textBaseline = 'top';
     ctx.fillText('meujus.com.br', W/2, 36);
 
-    // área de texto
-    const padX = 96;
-    const innerW = W - padX*2;
+   // área de texto
+const padX = 96;
+const innerW = W - padX*2;
+const topY = 260;            // início do bloco de frase
+const bottomPad = 200;       // espaço para autor e respiro
+const maxH = H - topY - bottomPad;
 
-    // frase central em fonte estilo Times New Roman
-    let size = autoFitFont(ctx, frase, innerW, 54, 96, 28, 'Times New Roman, Times, serif');
-    ctx.font = `${size}px "Times New Roman", Times, serif`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
+// frase alinhada à ESQUERDA com auto-fit por largura e altura
+const lhK = 1.25;
+let size = fitFontByBox(ctx, frase, innerW, maxH, 32, 96, 2, 'Times New Roman, Times, serif', lhK);
+ctx.font = `${size}px "Times New Roman", Times, serif`;
+ctx.textAlign = 'left';
+ctx.textBaseline = 'top';
+ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
+
+const { bottomY } = drawMultilineLeft(ctx, frase, padX, topY, innerW, size*lhK);
+
 
     const centerY = H/2 - 40;
     drawMultilineCenter(ctx, frase, W/2, centerY, innerW, size*1.25);
 
-    // autor abaixo, alinhado à esquerda, menor e itálico
-    const autorSize = Math.max(22, Math.round(size*0.42));
-    ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
-    ctx.textAlign = 'left';
-    ctx.textBaseline = 'top';
-    const startX = padX;
-    const startY = centerY + size*1.25*1.2*countLines(ctx, frase, innerW) + 24;
-    ctx.fillText(autor ? `— ${autor}` : '', startX, startY);
+    // autor abaixo, à esquerda, menor e itálico
+const autorSize = Math.max(20, Math.round(size*0.42));
+ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
+ctx.textAlign = 'left';
+ctx.textBaseline = 'top';
+ctx.fillText(autor ? `— ${autor}` : '', padX, bottomY + 24);
+
   }
 
   function autoFitFont(ctx, text, maxW, minPx, maxPx, step, family){
@@ -813,6 +819,21 @@ async function renderStoryPNG(card){
   function countLines(ctx, text, maxW){
     return wrapLines(ctx, text, maxW).length;
   }
+function drawMultilineLeft(ctx, text, x, y, maxW, lh){
+  const lines = wrapLines(ctx, text, maxW);
+  for (const line of lines){ ctx.fillText(line, x, y); y += lh; }
+  return { lines, bottomY: y };
+}
+
+function fitFontByBox(ctx, text, maxW, maxH, minPx, maxPx, step, family, lhK){
+  for (let s=maxPx; s>=minPx; s-=step){
+    ctx.font = `${s}px ${family}`;
+    const lines = wrapLines(ctx, text, maxW);
+    const h = lines.length * (s*lhK);
+    if (h <= maxH) return s;
+  }
+  return minPx;
+}
 
   // ===== 4) Compartilhar: usa o canvas vizinho (vertical, com topo igual)
   function bindShareButtons(){
