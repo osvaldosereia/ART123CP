@@ -144,3 +144,67 @@ body{
 .swatch[aria-selected="true"]{outline:2px solid #111827;outline-offset:2px}
 .btn-share-vert{width:100%;border:1px solid #e5e7eb;border-radius:12px;padding:8px;cursor:pointer}
 @media (max-width:1024px){.frases-grid{grid-template-columns:1fr}}
+
+/* Modal compacto */
+.modal { position: fixed; inset: 0; display: none; }
+.modal:not(.hidden){ display: block; }
+.modal-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.4); }
+.modal-card{
+  position: relative;
+  z-index: 1;
+  margin: 6vh auto;
+  max-width: 760px;           /* largura alvo */
+  width: calc(100% - 32px);   /* respiro lateral */
+  max-height: 88vh;           /* cabe inteirinho */
+  background:#fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0,0,0,.18);
+  overflow: hidden;           /* esconde excesso */
+  display: flex; flex-direction: column;
+}
+.modal-head{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 14px 16px 0;
+  gap: 12px;
+}
+.modal-body{ padding: 12px 16px 18px; overflow:auto; }
+
+/* Paleta topo */
+.swatches{ display:flex; gap:8px; padding: 8px 0 6px; flex-wrap: wrap; }
+.swatch{
+  width:22px; height:22px; border-radius:6px; border:2px solid #1112;
+}
+.swatch[aria-selected="true"]{ outline:2px solid #111; outline-offset:2px; }
+
+/* Grid das frases: coluna única em mobile, 2 colunas em telas médias */
+.frases-grid{
+  display:grid; gap:16px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 860px){
+  .frases-grid{ grid-template-columns: 1fr 1fr; }
+}
+
+/* Item e canvas menores, com respiro */
+.frase-item{
+  background:#f8f9fb; border:1px solid #e5e7eb; border-radius:12px;
+  padding:12px; display:flex; flex-direction:column; align-items:center; gap:10px;
+}
+.frase-canvas{
+  width: 300px;      /* escala visual pequena */
+  height: auto;      /* mantém proporção */
+  display:block;
+  border-radius:10px;
+  background:#fff;
+}
+.btn-share-vert{
+  align-self:center;
+  padding:8px 12px; border:1px solid #e5e7eb; border-radius:999px; background:#fff;
+  font: 500 14px system-ui, -apple-system, Segoe UI, Roboto;
+}
+
+/* Título do modal */
+#frases-title{
+  margin: 8px 0 10px;
+  font: 700 22px system-ui, -apple-system, Segoe UI, Roboto;
+}
