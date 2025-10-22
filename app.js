@@ -2,11 +2,15 @@
 (function () {
   const { txtUrl } = window.APP_CONFIG || {};
 
+  const BATCH = 3; // carrega 3 por vez
   const state = {
     disciplina: null,
     temasDisponiveis: [],
     temasSelecionados: new Set(),
-    cards: []
+    cards: [],
+    // feed incremental
+    feedGroups: [],     // [{key:'ALL'|'tema x', items:[idxs], ptr:0}]
+    rendered: []        // índices já renderizados na ordem do feed
   };
 
   /* ------------------------------ Utils ------------------------------ */
@@ -19,7 +23,7 @@
         else if (k === "html") e.innerHTML = v;
         else e.setAttribute(k, v);
       });
-      children.flat().forEach(c => e.appendChild(typeof c === "string" ? document.createTextNode(c) : c));
+      children.flat().forEach(c => { if (c!=null) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
       return e;
     },
     trim: s => (s || "").replace(/^\s+|\s+$/g, ""),
@@ -27,17 +31,9 @@
     uniq: arr => [...new Set(arr)],
     copy: t => { try { navigator.clipboard && navigator.clipboard.writeText(t); } catch { } },
     openGoogle: q => window.open("https://www.google.com/search?q=" + encodeURIComponent(q), "_blank"),
-    onClickOutside(root, cb) {
-      const h = ev => { if (!root.contains(ev.target)) cb(); };
-      document.addEventListener("mousedown", h, { once: true });
-    },
-    fitPopover(menu, trigger) {
-      const r = trigger.getBoundingClientRect();
-      if (r.top < 160) menu.classList.add("below"); else menu.classList.remove("below");
-    },
-    mdInline(s) {
-      return (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>");
-    }
+    onClickOutside(root, cb) { const h = ev => { if (!root.contains(ev.target)) cb(); }; document.addEventListener("mousedown", h, { once: true }); },
+    fitPopover(menu, trigger) { const r = trigger.getBoundingClientRect(); if (r.top < 160) menu.classList.add("below"); else menu.classList.remove("below"); },
+    mdInline: s => (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>")
   };
 
   /* ------------------------------ Loader ------------------------------ */
@@ -47,8 +43,7 @@
       if (!res.ok) throw new Error("not found");
       return await res.text();
     } catch {
-      const mount = document.getElementById("cards");
-      mount.innerHTML = `<div class="q"><div class="q__stmt">Arquivo não encontrado: <code>${txtUrl}</code></div></div>`;
+      document.getElementById("cards").innerHTML = `<div class="q"><div class="q__stmt">Arquivo não encontrado: <code>${txtUrl}</code></div></div>`;
       return "";
     }
   }
@@ -61,109 +56,59 @@
 
     for (const block of blocks) {
       const lines = block.split("\n").map(l => l.trim()).filter(Boolean);
-      let referencias = "";
-      let enunciado = "";
-      const alternativas = [];
-      let gabarito = "";
-      const temas = [];
+      let referencias = "", enunciado = "", gabarito = "";
+      const alternativas = [], temas = [];
 
       for (const line of lines) {
         if (line.startsWith("*****")) { referencias = U.byPrefix(line, "*****") || ""; continue; }
         if (line.startsWith("***")) { const g = U.byPrefix(line, "***") || ""; const m = /Gabarito\s*:\s*([A-Z])/i.exec(g); gabarito = m ? m[1].toUpperCase() : ""; continue; }
         if (line.startsWith("****")) { const t = U.byPrefix(line, "****") || ""; t.split(",").forEach(x => { const v = U.trim(x); if (v) temas.push(v); }); continue; }
         if (line.startsWith("**")) { alternativas.push(U.byPrefix(line, "**") || ""); continue; }
-        if (line.startsWith("*")) { const part = U.byPrefix(line, "*") || ""; enunciado = enunciado ? (enunciado + " " + part) : part; }
+        if (line.startsWith("*"))  { const part = U.byPrefix(line, "*") || ""; enunciado = enunciado ? (enunciado + " " + part) : part; }
       }
       cards.push({ referencias, enunciado, alternativas, gabarito, temas });
     }
     return cards;
   }
 
-  /* ------------------------------ Badge logic ------------------------------ */
-  function inferBadges(alts) {
-    const letterMatch = alts.every(a => /^[A-E]\)/i.test(a));
-    if (letterMatch) return alts.map(a => a[0].toUpperCase()); // A..E
-
-    const text = alts.join(" ").toLowerCase();
-    if (alts.length === 2 && /certo|errado/.test(text)) return ["C", "E"];
-    if (alts.length === 2 && /verdadeiro|falso/.test(text)) return ["V", "F"];
-
-    // fallback A..E
-    return alts.map((_, i) => String.fromCharCode(65 + i));
-  }
-
   /* ------------------------------ IA Prompts ------------------------------ */
   function buildPrompt(kind, card) {
-    const join = [];
-    join.push(card.enunciado);
-    card.alternativas.forEach(a => join.push(a));
-    const full = join.join(" | ");
-    const withAnswer = `${full} | Gabarito: ${card.gabarito || "?"}`;
-
+    const join = []; join.push(card.enunciado); card.alternativas.forEach(a => join.push(a));
+    const full = join.join(" | "), withAnswer = `${full} | Gabarito: ${card.gabarito || "?"}`;
     switch (kind) {
-      case "Gabarito":
-        return [
-          "Papel: examinador.",
-          "Tarefa: decidir a alternativa correta, sem rodeios.",
-          "Saída: ",
-          "Gabarito: <LETRA>",
-          "Fundamentação: 3 bullets enxutos.",
-          "Se não houver dado suficiente: 'Indeterminado' + o que falta.",
-          "Questão:", full
-        ].join("\n");
-      case "Vídeo":
-        return [
-          "Papel: curador educacional.",
-          "Tarefa: gerar termos de busca YouTube e roteiro de 60–90s que explique a questão.",
-          "Saída:",
-          "1) 5 termos de busca exatos;",
-          "2) Roteiro em 5 tópicos;",
-          "3) 3 títulos para o vídeo.",
-          "Entrada:", withAnswer
-        ].join("\n");
-      case "Checklist":
-        return [
-          "Papel: auditor de resolução.",
-          "Tarefa: checklist objetivo para resolver questões idênticas.",
-          "Saída:",
-          "- Pré-requisitos (normas/súmulas);",
-          "- Passos numerados;",
-          "- Erros comuns.",
-          "Entrada:", withAnswer
-        ].join("\n");
-      case "Princípios":
-        return [
-          "Papel: professor de teoria.",
-          "Tarefa: mapear princípios aplicáveis e sua incidência nas alternativas.",
-          "Saída:",
-          "- Lista de princípios;",
-          "- Impacto em A..E;",
-          "- Conclusão curta até o gabarito.",
-          "Entrada:", withAnswer
-        ].join("\n");
-      case "Inédita":
-        return [
-          "Papel: elaborador de prova.",
-          "Tarefa: criar 1 questão inédita do mesmo tema e nível.",
-          "Saída:",
-          "Enunciado;",
-          "A) ... E);",
-          "Gabarito: <LETRA>;",
-          "Justificativa 2–3 linhas;",
-          "Tag de temas;",
-          "Referências normativas curtas se couber.",
-          "Tema base:", (card.temas || []).join(", "),
-          "Entrada:", full
-        ].join("\n");
-      default:
-        return full;
+      case "Gabarito": return [
+        "Papel: examinador.","Tarefa: decidir a alternativa correta.","Saída:","Gabarito: <LETRA>","Fundamentação: 3 bullets.",
+        "Se faltar dado: 'Indeterminado' + o que falta.","Questão:", full].join("\n");
+      case "Vídeo": return [
+        "Papel: curador educacional.","Tarefa: termos YouTube + roteiro 60–90s.","Saída:","1) 5 termos;","2) Roteiro em 5 tópicos;",
+        "3) 3 títulos.","Entrada:", withAnswer].join("\n");
+      case "Checklist": return [
+        "Papel: auditor.","Tarefa: checklist para resolver questões iguais.","Saída:","Pré-requisitos; Passos numerados; Erros comuns.",
+        "Entrada:", withAnswer].join("\n");
+      case "Princípios": return [
+        "Papel: professor.","Tarefa: mapear princípios e impacto em A..E.","Saída:","Lista de princípios; Impacto em A..E; Conclusão curta.",
+        "Entrada:", withAnswer].join("\n");
+      case "Inédita": return [
+        "Papel: elaborador.","Tarefa: criar 1 questão inédita do mesmo tema e nível.","Saída:",
+        "Enunciado; A) ... E); Gabarito: <LETRA>; Justificativa 2–3 linhas; Tag de temas.",
+        "Tema base:", (card.temas||[]).join(", "), "Entrada:", full].join("\n");
+      default: return full;
     }
   }
 
-  /* ------------------------------ Render Card ------------------------------ */
+  /* ------------------------------ Badge inference ------------------------------ */
+  function inferBadges(alts) {
+    const letterMatch = alts.every(a => /^[A-E]\)/i.test(a));
+    if (letterMatch) return alts.map(a => a[0].toUpperCase());
+    const text = alts.join(" ").toLowerCase();
+    if (alts.length === 2 && /certo|errado/.test(text)) return ["C", "E"];
+    if (alts.length === 2 && /verdadeiro|falso/.test(text)) return ["V", "F"];
+    return alts.map((_, i) => String.fromCharCode(65 + i));
+  }
+
+  /* ------------------------------ Card ------------------------------ */
   function buildCard(card, idx) {
     const badges = inferBadges(card.alternativas);
-
     const meta = U.el("div", { class: "q__meta" }, card.referencias);
     const stmt = U.el("div", { class: "q__stmt", html: U.mdInline(card.enunciado) });
 
@@ -172,13 +117,11 @@
       const clean = opt.replace(/^[A-E]\)\s*/i, "");
       const li = U.el("li", { class: "q__opt", "data-letter": badges[i] });
       const badge = U.el("span", { class: "q__badge" }, badges[i]);
-      const text = U.el("div", {}, clean);
       li.appendChild(badge);
-      li.appendChild(text);
+      li.appendChild(U.el("div", {}, clean));
       ul.appendChild(li);
     });
 
-    // IA popover
     const iaBtn = U.el("button", { class: "btn", type: "button" }, "Google IA");
     const pop = U.el("div", { class: "popover" });
     const menu = U.el("div", { class: "popover__menu hidden" });
@@ -188,22 +131,21 @@
         const prompt = buildPrompt(lbl, card);
         U.copy(prompt);
         U.openGoogle(`${lbl} | ${prompt}`);
-        if (lbl === "Gabarito") revealAnswer(ul, card.gabarito);
+        if (lbl === "Gabarito") revealAnswer(ul, card.gabarito, true);
         closeMenu();
       });
       menu.appendChild(b);
     });
-    function openMenu() { menu.classList.remove("hidden"); U.fitPopover(menu, iaBtn); U.onClickOutside(pop, closeMenu); }
-    function closeMenu() { menu.classList.add("hidden"); }
+    function openMenu(){ menu.classList.remove("hidden"); U.fitPopover(menu, iaBtn); U.onClickOutside(pop, closeMenu); }
+    function closeMenu(){ menu.classList.add("hidden"); }
     iaBtn.addEventListener("click", () => menu.classList.contains("hidden") ? openMenu() : closeMenu());
-    pop.appendChild(iaBtn);
-    pop.appendChild(menu);
+    pop.appendChild(iaBtn); pop.appendChild(menu);
 
     const actions = U.el("div", { class: "q__actions" }, pop);
 
     const wrap = U.el("article", { class: "q", "data-idx": idx }, meta, stmt, ul, actions);
 
-    // Resposta do usuário
+    // resposta do usuário
     let answered = false;
     ul.addEventListener("click", ev => {
       const li = ev.target.closest(".q__opt");
@@ -211,9 +153,9 @@
       answered = true;
       const chosen = (li.getAttribute("data-letter") || "").toUpperCase();
       const correct = (card.gabarito || "").toUpperCase();
-
       if (chosen === correct) {
         li.classList.add("correct");
+        appendGabarito(wrap, correct);
       } else {
         li.classList.add("wrong");
         revealAnswer(ul, correct, true);
@@ -223,40 +165,37 @@
     return wrap;
   }
 
-  function revealAnswer(ul, gLetter, showExplain = false) {
+  function appendGabarito(cardEl, g) {
+    const info = U.el("div", { class: "q__explain" }, `Gabarito: ${g}`);
+    cardEl.appendChild(info);
+  }
+
+  function revealAnswer(ul, gLetter, showExplain=false) {
     const items = Array.from(ul.children);
     const right = items.find(li => (li.getAttribute("data-letter") || "").toUpperCase() === (gLetter || "").toUpperCase());
     if (right) right.classList.add("correct");
-    if (showExplain) {
-      const info = U.el("div", { class: "q__explain" }, `Gabarito: ${gLetter}`);
-      ul.parentElement.appendChild(info);
-    }
+    if (showExplain) appendGabarito(ul.parentElement, gLetter);
   }
 
-  /* ------------------------------ Filters UI ------------------------------ */
-  function mountSelectSingle(root, { label, options, onChange }) {
+  /* ------------------------------ Filtros ------------------------------ */
+  function mountSelectSingle(root, { options, onChange }) {
     root.innerHTML = "";
     root.classList.add("select");
-    const lab = U.el("label", { class: "select__label" }, label);
-    const btn = U.el("button", { class: "select__button", type: "button" }, label);
+    const btn = U.el("button", { class: "select__button", type: "button" }, "Escolha a disciplina");
     const menu = U.el("div", { class: "select__menu hidden", role: "listbox" });
-
     options.forEach(opt => {
-      const it = U.el("div", { class: "select__option", role: "option" }, opt);
-      it.addEventListener("click", () => { btn.textContent = opt; menu.classList.add("hidden"); onChange && onChange(opt); });
+      const it = U.el("div", { class: "select__option", role: "option" }, opt.label);
+      it.addEventListener("click", () => { btn.textContent = opt.label; menu.classList.add("hidden"); onChange && onChange(opt); });
       menu.appendChild(it);
     });
-
     btn.addEventListener("click", () => { menu.classList.toggle("hidden"); U.onClickOutside(root, () => menu.classList.add("hidden")); });
-
-    root.appendChild(lab); root.appendChild(btn); root.appendChild(menu);
+    root.appendChild(btn); root.appendChild(menu);
   }
 
-  function mountMultiselect(root, { label, options, onChange }) {
+  function mountMultiselect(root, { options, onChange }) {
     root.innerHTML = "";
-    const lab = U.el("label", { class: "multiselect__label" }, label);
     const control = U.el("div", { class: "multiselect__control" });
-    const input = U.el("input", { class: "multiselect__input", type: "text", placeholder: "Buscar temas..." });
+    const input = U.el("input", { class: "multiselect__input", type: "text", placeholder: "Temas..." });
     const menu = U.el("div", { class: "multiselect__menu hidden", role: "listbox" });
 
     function renderTags() {
@@ -279,51 +218,111 @@
 
     options.forEach(opt => {
       const it = U.el("div", { class: "multiselect__item", role: "option" }, opt);
-      it.addEventListener("click", () => {
-        if (state.temasSelecionados.has(opt)) state.temasSelecionados.delete(opt); else state.temasSelecionados.add(opt);
-        renderTags(); onChange && onChange(new Set(state.temasSelecionados)); syncItems();
-      });
+      it.addEventListener("click", () => { if (state.temasSelecionados.has(opt)) state.temasSelecionados.delete(opt); else state.temasSelecionados.add(opt); renderTags(); onChange && onChange(new Set(state.temasSelecionados)); syncItems(); });
       menu.appendChild(it);
     });
 
     input.addEventListener("focus", () => { menu.classList.remove("hidden"); U.onClickOutside(root, () => menu.classList.add("hidden")); syncItems(); });
     input.addEventListener("input", syncItems);
 
-    renderTags();
-    control.appendChild(input);
-    root.appendChild(lab); root.appendChild(control); root.appendChild(menu);
+    renderTags(); control.appendChild(input);
+    root.appendChild(control); root.appendChild(menu);
   }
 
-  /* ------------------------------ Render list ------------------------------ */
-  function renderList() {
+  /* ------------------------------ Feed incremental ------------------------------ */
+  function buildFeed() {
+    state.rendered = [];
+    const temasAtivos = [...state.temasSelecionados];
+    const groups = [];
+
+    if (temasAtivos.length === 0) {
+      // grupo ALL
+      groups.push({ key: "ALL", items: state.cards.map((_, i) => i), ptr: 0 });
+    } else {
+      temasAtivos.forEach(t => {
+        const idxs = state.cards.map((c, i) => c.temas.includes(t) ? i : -1).filter(i => i >= 0);
+        groups.push({ key: t, items: idxs, ptr: 0 });
+      });
+    }
+    state.feedGroups = groups;
+  }
+
+  function nextBatch() {
+    const out = [];
+    let produced = 0;
+    while (produced < BATCH && state.feedGroups.some(g => g.ptr < g.items.length)) {
+      for (const g of state.feedGroups) {
+        if (g.ptr >= g.items.length) continue;
+        const idx = g.items[g.ptr++];
+        if (state.rendered.includes(idx)) continue;
+        state.rendered.push(idx);
+        out.push(idx);
+        produced++;
+        if (produced >= BATCH) break;
+      }
+    }
+    return out;
+  }
+
+  function renderAppend(indexes) {
     const mount = document.getElementById("cards");
-    mount.innerHTML = "";
-    const ativos = state.cards.filter(c => {
-      if (!state.temasSelecionados.size) return true;
-      return c.temas && c.temas.some(t => state.temasSelecionados.has(t));
-    });
-    ativos.forEach((c, i) => mount.appendChild(buildCard(c, i)));
+    indexes.forEach(i => mount.appendChild(buildCard(state.cards[i], i)));
+  }
+
+  function resetAndRender() {
+    document.getElementById("cards").innerHTML = "";
+    buildFeed();
+    renderAppend(nextBatch());
+  }
+
+  function mountInfiniteScroll() {
+    const sentinel = document.getElementById("sentinela");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) renderAppend(nextBatch());
+      });
+    }, { rootMargin: "600px 0px" });
+    io.observe(sentinel);
   }
 
   /* ------------------------------ Init ------------------------------ */
   async function init() {
     const raw = await loadTxt();
     state.cards = parseTxt(raw);
+
+    // temas
     state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
 
+    // disciplinas disponíveis (mapeadas por pasta)
     mountSelectSingle(document.getElementById("disciplina-select"), {
-      label: "Disciplina",
-      options: ["Direito Penal", "Direito Processual do Trabalho", "Direito Civil", "Direito Constitucional"],
-      onChange: val => state.disciplina = val
+      options: [
+        { label: "Direito Penal", txt: "data/direito-penal/penal1.txt" },
+        { label: "Direito Civil", txt: "data/direito-civil/civil1.txt" },
+        { label: "Direito Processual do Trabalho", txt: "data/direito-processual-trabalho/dpt1.txt" }
+      ],
+      onChange: async (opt) => {
+        // troca de TXT ao mudar a disciplina
+        window.history.replaceState({}, "", `?txt=${encodeURIComponent(opt.txt)}`);
+        const res = await fetch(opt.txt).catch(() => null);
+        const txt = res && res.ok ? await res.text() : "";
+        state.cards = parseTxt(txt);
+        state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
+        state.temasSelecionados.clear();
+        mountMultiselect(document.getElementById("temas-multiselect"), {
+          options: state.temasDisponiveis,
+          onChange: () => { resetAndRender(); }
+        });
+        resetAndRender(); // “todas” → carrega só 3
+      }
     });
 
     mountMultiselect(document.getElementById("temas-multiselect"), {
-      label: "Temas",
       options: state.temasDisponiveis,
-      onChange: renderList
+      onChange: () => { resetAndRender(); }
     });
 
-    renderList();
+    resetAndRender();
+    mountInfiniteScroll();
   }
 
   document.addEventListener("DOMContentLoaded", init);
