@@ -103,84 +103,38 @@ const U = {
   }
 
   /* ------------------------------ IA Prompts ------------------------------ */
-  function buildPrompt(kind, card) {
-  const body = [card.enunciado, ...card.alternativas].join(" | ");
-  const withAnswer = `${body} | Gabarito: ${card.gabarito || "?"}`;
+  ```javascript
+/* ------------------------------ IA Prompts ------------------------------ */
+function buildPrompt(kind, card) {
+  const temas = (card.temas || []).join(", ") || "geral";
+  const alts = card.alternativas.join(" | ");
+  const enun = card.enunciado;
 
   switch (kind) {
     case "Gabarito":
-      return [
-        "Papel: Professor de Direito e examinador.",
-        "Objetivo: identificar a alternativa CORRETA e fundamentar juridicamente com base legal, súmulas ou jurisprudência dominante.",
-        "Formato de saída:",
-        "Gabarito: <LETRA CORRETA>",
-        "Fundamentação: 3 a 5 tópicos objetivos, com base legal/súmula (cite o dispositivo).",
-        "Análise das demais alternativas: explique por que estão erradas, cada uma em 1 linha.",
-        "Se a questão for ambígua: escreva 'Indeterminado' e aponte o que falta.",
-        "Questão:", body
-      ].join("\n");
+      return `Atue como professor de Direito, diga qual é a alternativa correta e fundamente juridicamente de forma direta (até 5 pontos), comentando em uma linha por que cada outra alternativa está errada; Tema: ${enun}; ${alts}.`; Gabarito oficial: ${card.gabarito || "?"}.`;
 
     case "Glossário":
-      return [
-        "Papel: Professor de Direito.",
-        "Objetivo: explicar de forma objetiva todos os termos jurídicos presentes.",
-        "Formato de saída: lista termo → definição curta e clara; inclua sinônimos usuais e referências normativas quando houver.",
-        "Texto-base:", body
-      ].join("\n");
+      return `Explique em linguagem simples todos os termos jurídicos do enunciado e das alternativas, com definições curtas e referências legais quando existirem; Tema: ${enun}; ${alts}.`;
 
     case "Vídeo":
-      return [
-        "Papel: Professor de Direito e pesquisador de vídeos.",
-        "Objetivo: listar 3 vídeos do YouTube diretamente linkados que expliquem o tema da questão.",
-        "Formato de saída:",
-        "1) Título — URL completa do YouTube;",
-        "2) Título — URL;",
-        "3) Título — URL;",
-        "Termos de busca recomendados: 5 termos entre aspas.",
-        "Tema/Questão:", body
-      ].join("\n");
+      return `Liste 3 vídeos do YouTube com link direto e título curto que expliquem o tema desta questão e depois sugira 5 termos de busca entre aspas; Tema: ${enun}; ${alts}.`;
 
     case "Dicas":
-      return [
-        "Papel: Professor de Direito especialista em provas e concursos.",
-        "Objetivo: fornecer dicas práticas e pegadinhas cobradas sobre o tema.",
-        "Formato de saída:",
-        "- Como o tema é cobrado (padrões de banca);",
-        "- Dicas e pegadinhas em bullets curtos;",
-        "- Erros comuns dos candidatos;",
-        "- Mini-checklist para revisar antes de marcar.",
-        "Base:", body
-      ].join("\n");
+      return `Dê dicas objetivas para acertar questões desse tema, mostre pegadinhas comuns, erros frequentes e finalize com um checklist curto de revisão; Tema: ${enun}; ${alts}.`;
 
     case "Princípios":
-      return [
-        "Papel: Professor de Direito e pesquisador doutrinário.",
-        "Objetivo: listar e explicar princípios jurídicos implicitamente relacionados ao tema.",
-        "Fonte: doutrina, artigos e jurisprudência dominante.",
-        "Formato de saída:",
-        "- Princípio: explicação objetiva e incidência na questão;",
-        "- Relação com cada alternativa A..E em 1 linha;",
-        "- Conclusão que conduz ao gabarito.",
-        "Questão:", body
-      ].join("\n");
+      return `Aponte os princípios jurídicos relacionados ao tema, explique cada um em frase curta, diga como afetam as alternativas A..E e conclua com a alternativa que melhor se ajusta; Tema: ${enun}; ${alts}.`;
 
     case "Inédita":
-      return [
-        "Papel: Professor de Direito especialista em concursos.",
-        "Objetivo: criar 1 versão inéditas da MESMA questão no mesmo nível.",
-        "Formato de saída para cada versão:",
-        "Enunciado;",
-        "A) ... E);",
-        "Gabarito: <LETRA>;",
-        "Comentário do gabarito em 2–3 linhas;",
-        "Tema base extraído:", (card.temas || []).join(", "),
-        "Referência da questão original:", body
-      ].join("\n");
+      return `Crie 3 versões inéditas da mesma questão no mesmo nível, cada uma com enunciado, alternativas A..E, gabarito e um comentário de 2 linhas; Tema: ${enun}; ${alts}.`;
 
     default:
-      return body;
+      return `Analise e responda objetivamente; Enunciado: ${enun}; Alternativas: ${alts}.`;
   }
 }
+```
+
 
 
   /* ------------------------------ Badge inference ------------------------------ */
