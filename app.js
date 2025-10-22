@@ -20,24 +20,62 @@ function exportExamPrintView(){
   });
 
   const css = `
-    <style>
-      *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;}
-      body{padding:24px; color:#111;}
-      h1,h2,h3{margin:0 0 12px 0}
-      .meta{color:#6b7280; font-size:12px; margin:6px 0 8px}
-      .divider{border:0;border-top:1px solid #e5e7eb;margin:8px 0 12px}
-      .q{page-break-inside:avoid; margin:0 0 20px 0; padding:0 0 8px 0}
-      .stem{white-space:pre-wrap; font-weight:600; color:#1e40af; margin:4px 0 8px}
-      .opts{margin:0; padding-left:18px}
-      .opts li{margin:2px 0}
-      .badge{display:inline-block; padding:2px 6px; border-radius:6px; font-size:12px}
-      .ok{background:#dcfce7}
-      .bad{background:#fee2e2}
-      .foot{margin-top:24px; font-size:14px}
-      .report{margin-top:24px; padding:12px; border:1px solid #e5e7eb; border-radius:8px}
-      @media print {.no-print{display:none}}
-    </style>
-  `;
+  <style>
+    :root{
+      --ink:#0b0f19; --muted:#64748b; --line:#e5e7eb;
+      --brand:#1e40af; --ok:#16a34a20; --bad:#dc262620;
+      --w: 920px; /* mesma largura visual do site */
+    }
+    *{ box-sizing: border-box; }
+    html,body{ margin:0; padding:0; }
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      color: var(--ink); background: #fff;
+    }
+    .wrap{
+      max-width: var(--w); margin: 24px auto; padding: 0 18px;
+    }
+    header{
+      display:flex; justify-content:space-between; align-items:end;
+      margin: 8px 0 18px;
+      border-bottom: 1px solid var(--line); padding-bottom: 12px;
+    }
+    header h1{ font-size: 22px; margin:0; }
+    header .sub{ color: var(--muted); font-size: 12px; }
+    .divider{ height:1px; background:var(--line); margin:12px 0 18px; }
+
+    .q{
+      page-break-inside: avoid;
+      background:#fff; border:1px solid var(--line); border-radius: 10px;
+      padding: 14px 14px 10px; margin: 0 0 16px 0;
+    }
+    .q h3{ margin:0 0 8px 0; font-size:15px; color:#111; }
+    .meta{ color: var(--muted); font-size: 12px; margin: 2px 0 8px; }
+    .stem{ white-space: pre-wrap; color: var(--brand); font-weight: 700; margin: 6px 0 10px; }
+    .opts{ margin:0; padding-left: 20px; }
+    .opts li{ margin: 3px 0; }
+    .badge{ display:inline-block; padding:2px 6px; border-radius:6px; font-size:12px; vertical-align: middle; }
+    .ok{ background: var(--ok); }
+    .bad{ background: var(--bad); }
+
+    .report{
+      border:1px solid var(--line); border-radius:12px; padding:14px; margin-top: 18px;
+    }
+    .report h3{ margin:0 0 8px 0; }
+    .gabarito{ margin-top: 10px; }
+    .foot{ margin: 24px 0 8px; font-size: 12px; color: var(--muted); text-align: center; }
+    .print-btn{ margin-top:16px; }
+
+    @media print{
+      .no-print{ display:none !important; }
+      body{ background:#fff; }
+      .wrap{ margin:0 auto; padding:0; }
+      header{ border:0; margin:0 0 8px 0; padding:0; }
+      .q{ box-shadow:none; }
+    }
+  </style>
+`;
+
 
   const qHtml = STATE.exam.questions.map((q,i)=>{
     const got = STATE.exam.answers[q.id] ?? "—";
@@ -77,20 +115,43 @@ function exportExamPrintView(){
   `;
 
   const html = `
-    <html>
-      <head><meta charset="utf-8">${css}<title>Prova MeuJus</title></head>
-      <body>
-        <h1>Prova MeuJus</h1>
-        <hr class="divider">
+  <html>
+    <head><meta charset="utf-8">${css}<title>Prova MeuJus</title></head>
+    <body>
+      <div class="wrap">
+        <header>
+          <h1>Prova MeuJus</h1>
+          <div class="sub">${new Date().toLocaleString('pt-BR')}</div>
+        </header>
+
+        <div class="divider"></div>
         ${qHtml}
-        ${repHtml}
-        ${gabHtml}
+
+        <section class="report">
+          <h3>Relatório</h3>
+          <p>Acertos: <strong>${acertos}/${total}</strong> · Erros: <strong>${total-acertos}</strong></p>
+          <details class="gabarito" open>
+            <summary><strong>Gabarito e suas respostas</strong></summary>
+            <ol>
+              ${STATE.exam.questions.map((q,i)=>{
+                const got = STATE.exam.answers[q.id] ?? "—";
+                const ok  = q.answerKey;
+                const hit = got===ok;
+                return `<li>#${i+1}: você <strong>${got}</strong> · correto <strong>${ok}</strong> ${hit?"✅":"❌"}</li>`;
+              }).join("")}
+            </ol>
+          </details>
+        </section>
+
         <div class="foot no-print">
-          <button onclick="window.print()">Imprimir / Salvar como PDF</button>
+          Clique em “Imprimir” para salvar em PDF.
+          <div class="print-btn"><button onclick="window.print()">Imprimir / Salvar como PDF</button></div>
         </div>
-      </body>
-    </html>
-  `;
+      </div>
+    </body>
+  </html>
+`;
+
 
   const w = window.open("", "_blank");
   w.document.open(); w.document.write(html); w.document.close();
