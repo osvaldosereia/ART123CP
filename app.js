@@ -14,36 +14,40 @@
   };
 
   /* ------------------------------ Utils ------------------------------ */
-  const U = {
-    el(tag, attrs = {}, ...children) {
-      const e = document.createElement(tag);
-      Object.entries(attrs).forEach(([k, v]) => {
-        if (k === "class") e.className = v;
-        else if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
-        else if (k === "html") e.innerHTML = v;
-        else e.setAttribute(k, v);
-      });
-      children.flat().forEach(c => { if (c!=null) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
-      return e;
-    },
-    trim: s => (s || "").replace(/^\s+|\s+$/g, ""),
-    byPrefix: (l, p) => l.startsWith(p) ? l.slice(p.length).trim() : null,
-    uniq: arr => [...new Set(arr)],
-    copy: t => { try { navigator.clipboard && navigator.clipboard.writeText(t); } catch { } },
-    openGoogle: q => window.open("https://www.google.com/search?udm=50&q=" + encodeURIComponent(q), "_blank"),
-    onClickOutside(root, cb) { const h = ev => { if (!root.contains(ev.target)) cb(); }; document.addEventListener("mousedown", h, { once: true }); },
-    fitPopover(menu, trigger) { const r = trigger.getBoundingClientRect(); if (r.top < 160) menu.classList.add("below"); else menu.classList.remove("below"); },
-    mdInline: s => (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>"),
-    // Backdrop para fechar dropdowns confiavelmente em mobile/desktop
-    backdrop(onClose){
-      const el = document.createElement("div");
-      el.className = "dropdown-backdrop";
-      document.body.appendChild(el);
-      const handler = () => { try{ onClose(); } finally { el.remove(); document.removeEventListener("pointerdown", handler, true); } };
-      setTimeout(() => document.addEventListener("pointerdown", handler, true), 0);
-      return el;
-    }
-  };
+const U = {
+  el(tag, attrs = {}, ...children) {
+    const e = document.createElement(tag);
+    Object.entries(attrs).forEach(([k, v]) => {
+      if (k === "class") e.className = v;
+      else if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
+      else if (k === "html") e.innerHTML = v;
+      else e.setAttribute(k, v);
+    });
+    children.flat().forEach(c => { if (c!=null) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return e;
+  },
+  trim: s => (s || "").replace(/^\s+|\s+$/g, ""),
+  byPrefix: (l, p) => l.startsWith(p) ? l.slice(p.length).trim() : null,
+  uniq: arr => [...new Set(arr)],
+  copy: t => { try { navigator.clipboard && navigator.clipboard.writeText(t); } catch { } },
+  openGoogle: q => window.open("https://www.google.com/search?udm=50&q=" + encodeURIComponent(q), "_blank"),
+  onClickOutside(root, cb) { const h = ev => { if (!root.contains(ev.target)) cb(); }; document.addEventListener("mousedown", h, { once: true }); },
+  fitPopover(menu, trigger) { const r = trigger.getBoundingClientRect(); if (r.top < 160) menu.classList.add("below"); else menu.classList.remove("below"); },
+  mdInline: s => (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>"),
+  // Backdrop: fecha só quando clicado (não intercepta cliques dentro do menu)
+  backdrop(onClose){
+    const el = document.createElement("div");
+    el.className = "dropdown-backdrop";
+    const handler = () => { try { onClose(); } finally { el.remove(); } };
+    el.addEventListener("pointerdown", handler, { once: true });
+    document.body.appendChild(el);
+    // Esc fecha
+    const keyH = (e)=>{ if(e.key==="Escape"){ handler(); document.removeEventListener("keydown", keyH, true);} };
+    document.addEventListener("keydown", keyH, true);
+    return el;
+  }
+};
+
 
   /* ------------------------------ Loader ------------------------------ */
   async function loadTxt() {
@@ -263,87 +267,89 @@
 
   /* ------------------------------ Filtros ------------------------------ */
   function mountSelectSingle(root, { options, onChange }) {
-    root.innerHTML = "";
-    root.classList.add("select");
+  root.innerHTML = "";
+  root.classList.add("select");
 
-    const btn = U.el("button", { class: "select__button", type: "button", "aria-haspopup": "listbox", "aria-expanded": "false" }, "Escolha a disciplina");
-    const menu = U.el("div", { class: "select__menu hidden", role: "listbox" });
-    let bd = null;
+  const btn = U.el("button", { class: "select__button", type: "button", "aria-haspopup": "listbox", "aria-expanded": "false" }, "Escolha a disciplina");
+  const menu = U.el("div", { class: "select__menu hidden", role: "listbox" });
+  let bd = null;
 
-    function open(){
-      if (!menu.classList.contains("hidden")) return;
-      menu.classList.remove("hidden");
-      btn.setAttribute("aria-expanded","true");
-      bd = U.backdrop(close);
-    }
-    function close(){
-      menu.classList.add("hidden");
-      btn.setAttribute("aria-expanded","false");
-      if (bd){ try{ bd.remove(); }catch{} bd = null; }
-    }
-
-    options.forEach(opt => {
-      const it = U.el("div", { class: "select__option", role: "option", "data-value": opt.label }, opt.label);
-      it.addEventListener("click", () => { btn.textContent = opt.label; close(); onChange && onChange(opt); });
-      menu.appendChild(it);
-    });
-
-    btn.addEventListener("click", () => menu.classList.contains("hidden") ? open() : close());
-
-    root.appendChild(btn);
-    root.appendChild(menu);
+  function open(){
+    if (!menu.classList.contains("hidden")) return;
+    menu.classList.remove("hidden");
+    btn.setAttribute("aria-expanded","true");
+    bd = U.backdrop(close);
   }
+  function close(){
+    menu.classList.add("hidden");
+    btn.setAttribute("aria-expanded","false");
+    bd = null;
+  }
+
+  options.forEach(opt => {
+    const it = U.el("div", { class: "select__option", role: "option", "data-value": opt.label }, opt.label);
+    it.addEventListener("click", () => { btn.textContent = opt.label; close(); onChange && onChange(opt); });
+    menu.appendChild(it);
+  });
+
+  btn.addEventListener("click", () => menu.classList.contains("hidden") ? open() : close());
+
+  root.appendChild(btn);
+  root.appendChild(menu);
+}
+
 
   function mountMultiselect(root, { options, onChange }) {
-    root.innerHTML = "";
-    const control = U.el("div", { class: "multiselect__control", role: "combobox", "aria-expanded": "false" });
-    const input = U.el("input", { class: "multiselect__input", type: "text", placeholder: "Temas..." });
-    const menu  = U.el("div", { class: "multiselect__menu hidden", role: "listbox" });
-    let bd = null;
+  root.innerHTML = "";
+  const control = U.el("div", { class: "multiselect__control", role: "combobox", "aria-expanded": "false" });
+  const input = U.el("input", { class: "multiselect__input", type: "text", placeholder: "Temas..." });
+  const menu  = U.el("div", { class: "multiselect__menu hidden", role: "listbox" });
+  let bd = null;
 
-    function syncItems() {
-      const q = (input.value || "").toLowerCase();
-      Array.from(menu.children).forEach(item => {
-        const val = item.getAttribute("data-value");
-        const match = !q || val.toLowerCase().includes(q);
-        item.style.display = match ? "block" : "none";
-        const selected = state.temasSelecionados.has(val);
-        item.setAttribute("aria-selected", selected ? "true" : "false");
-      });
-    }
-
-    function open(){
-      if (!menu.classList.contains("hidden")) return;
-      menu.classList.remove("hidden");
-      control.setAttribute("aria-expanded","true");
-      bd = U.backdrop(close);
-      syncItems();
-    }
-    function close(){
-      menu.classList.add("hidden");
-      control.setAttribute("aria-expanded","false");
-      if (bd){ try{ bd.remove(); }catch{} bd = null; }
-    }
-
-    (U.uniq(options || [])).forEach(opt => {
-      const it = U.el("div", { class: "multiselect__item", role: "option", "data-value": opt }, opt);
-      it.addEventListener("click", () => {
-        if (state.temasSelecionados.has(opt)) state.temasSelecionados.delete(opt);
-        else state.temasSelecionados.add(opt);
-        onChange && onChange(new Set(state.temasSelecionados));
-        syncItems();
-      });
-      menu.appendChild(it);
+  function syncItems() {
+    const q = (input.value || "").toLowerCase();
+    Array.from(menu.children).forEach(item => {
+      const val = item.getAttribute("data-value");
+      const match = !q || val.toLowerCase().includes(q);
+      item.style.display = match ? "block" : "none";
+      const selected = state.temasSelecionados.has(val);
+      item.setAttribute("aria-selected", selected ? "true" : "false");
     });
-
-    input.addEventListener("focus", open);
-    input.addEventListener("input", syncItems);
-    control.addEventListener("click", open);
-
-    control.appendChild(input);
-    root.appendChild(control);
-    root.appendChild(menu);
   }
+
+  function open(){
+    if (!menu.classList.contains("hidden")) return;
+    menu.classList.remove("hidden");
+    control.setAttribute("aria-expanded","true");
+    bd = U.backdrop(close);
+    syncItems();
+  }
+  function close(){
+    menu.classList.add("hidden");
+    control.setAttribute("aria-expanded","false");
+    bd = null;
+  }
+
+  (U.uniq(options || [])).forEach(opt => {
+    const it = U.el("div", { class: "multiselect__item", role: "option", "data-value": opt }, opt);
+    it.addEventListener("click", () => {
+      if (state.temasSelecionados.has(opt)) state.temasSelecionados.delete(opt);
+      else state.temasSelecionados.add(opt);
+      onChange && onChange(new Set(state.temasSelecionados));
+      syncItems();
+    });
+    menu.appendChild(it);
+  });
+
+  input.addEventListener("focus", open);
+  input.addEventListener("input", syncItems);
+  control.addEventListener("click", open);
+
+  control.appendChild(input);
+  root.appendChild(control);
+  root.appendChild(menu);
+}
+
 
   /* ------------------------------ Feed incremental ------------------------------ */
   function buildFeed() {
