@@ -13,40 +13,46 @@
     rendered: []        // índices já renderizados na ordem do feed
   };
 
-  /* ------------------------------ Utils ------------------------------ */
-  const U = {
-    el(tag, attrs = {}, ...children) {
-      const e = document.createElement(tag);
-      Object.entries(attrs).forEach(([k, v]) => {
-        if (k === "class") e.className = v;
-        else if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
-        else if (k === "html") e.innerHTML = v;
-        else e.setAttribute(k, v);
-      });
-      children.flat().forEach(c => { if (c!=null) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
-      return e;
-    },
-    trim: s => (s || "").replace(/^\s+|\s+$/g, ""),
-    byPrefix: (l, p) => l.startsWith(p) ? l.slice(p.length).trim() : null,
-    uniq: arr => [...new Set(arr)],
-    copy: t => { try { navigator.clipboard && navigator.clipboard.writeText(t); } catch { } },
-    openGoogle: q => window.open("https://www.google.com/search?udm=50&q=" + encodeURIComponent(q), "_blank"),
-    onClickOutside(root, cb) { const h = ev => { if (!root.contains(ev.target)) cb(); }; document.addEventListener("mousedown", h, { once: true }); },
-    fitPopover(menu, trigger) { const r = trigger.getBoundingClientRect(); if (r.top < 160) menu.classList.add("below"); else menu.classList.remove("below"); },
-    mdInline: s => (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>"),
-    // Backdrop: fecha só quando clicado (não intercepta cliques dentro do menu)
-    backdrop(onClose){
-      const el = document.createElement("div");
-      el.className = "dropdown-backdrop";
-      const handler = () => { try { onClose(); } finally { el.remove(); } };
-      el.addEventListener("pointerdown", handler, { once: true });
-      document.body.appendChild(el);
-      // Esc fecha
-      const keyH = (e)=>{ if(e.key==="Escape"){ handler(); document.removeEventListener("keydown", keyH, true);} };
-      document.addEventListener("keydown", keyH, true);
-      return el;
+ /* ------------------------------ Utils ------------------------------ */
+const U = {
+  el(tag, attrs = {}, ...children) {
+    const e = document.createElement(tag);
+    Object.entries(attrs).forEach(([k, v]) => {
+      if (k === "class") e.className = v;
+      else if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
+      else if (k === "html") e.innerHTML = v;
+      else e.setAttribute(k, v);
+    });
+    children.flat().forEach(c => { if (c !== null && c !== undefined) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return e;
+  },
+  trim: s => (s || "").replace(/^\s+|\s+$/g, ""),
+  byPrefix: (l, p) => l.startsWith(p) ? l.slice(p.length).trim() : null,
+  uniq: arr => [...new Set(arr)],
+  shuffle(arr){
+    for(let i=arr.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [arr[i],arr[j]] = [arr[j],arr[i]];
     }
-  };
+    return arr;
+  },
+  copy: t => { try { navigator.clipboard && navigator.clipboard.writeText(t); } catch {} },
+  openGoogle: q => window.open("https://www.google.com/search?udm=50&q=" + encodeURIComponent(q), "_blank"),
+  onClickOutside(root, cb) { const h = ev => { if (!root.contains(ev.target)) cb(); }; document.addEventListener("mousedown", h, { once: true }); },
+  fitPopover(menu, trigger) { const r = trigger.getBoundingClientRect(); if (r.top < 160) menu.classList.add("below"); else menu.classList.remove("below"); },
+  mdInline: s => (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>"),
+  // Backdrop: fecha só quando clicado (não intercepta cliques dentro do menu)
+  backdrop(onClose){
+    const el = document.createElement("div");
+    el.className = "dropdown-backdrop";
+    const handler = () => { try { onClose(); } finally { el.remove(); } };
+    el.addEventListener("pointerdown", handler, { once: true });
+    document.body.appendChild(el);
+    const keyH = (e)=>{ if(e.key==="Escape"){ handler(); document.removeEventListener("keydown", keyH, true);} };
+    document.addEventListener("keydown", keyH, true);
+    return el;
+  }
+};
 
   /* ------------------------------ Loader ------------------------------ */
   async function loadTxt() {
@@ -298,20 +304,21 @@
 
   /* ------------------------------ Feed incremental ------------------------------ */
   function buildFeed() {
-    state.rendered = [];
-    const temasAtivos = [...state.temasSelecionados];
-    const groups = [];
+  state.rendered = [];
+  const temasAtivos = [...state.temasSelecionados];
+  const groups = [];
 
-    if (temasAtivos.length === 0) {
-      groups.push({ key: "ALL", items: state.cards.map((_, i) => i), ptr: 0 });
-    } else {
-      temasAtivos.forEach(t => {
-        const idxs = state.cards.map((c, i) => c.temas.includes(t) ? i : -1).filter(i => i >= 0);
-        groups.push({ key: t, items: idxs, ptr: 0 });
-      });
-    }
-    state.feedGroups = groups;
+  if (temasAtivos.length === 0) {
+    const all = U.shuffle(state.cards.map((_, i) => i));
+    groups.push({ key: "ALL", items: all, ptr: 0 });
+  } else {
+    temasAtivos.forEach(t => {
+      const idxs = state.cards.map((c, i) => c.temas.includes(t) ? i : -1).filter(i => i >= 0);
+      groups.push({ key: t, items: U.shuffle(idxs), ptr: 0 });
+    });
   }
+  state.feedGroups = groups;
+}
 
   function nextBatch() {
     const out = [];
