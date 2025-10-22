@@ -30,7 +30,7 @@
     byPrefix: (l, p) => l.startsWith(p) ? l.slice(p.length).trim() : null,
     uniq: arr => [...new Set(arr)],
     copy: t => { try { navigator.clipboard && navigator.clipboard.writeText(t); } catch { } },
-    openGoogle: q => window.open("https://www.google.com/search?q=" + encodeURIComponent(q), "_blank"),
+    openGoogle: q => window.open("https://www.google.com/search?udm=50&q=" + encodeURIComponent(q), "_blank"),
     onClickOutside(root, cb) { const h = ev => { if (!root.contains(ev.target)) cb(); }; document.addEventListener("mousedown", h, { once: true }); },
     fitPopover(menu, trigger) { const r = trigger.getBoundingClientRect(); if (r.top < 160) menu.classList.add("below"); else menu.classList.remove("below"); },
     mdInline: s => (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>")
@@ -50,26 +50,45 @@
 
   /* ------------------------------ Parser ------------------------------ */
   function parseTxt(raw) {
-    if (!raw) return [];
-    const blocks = raw.split("-----").map(s => s.trim()).filter(Boolean);
-    const cards = [];
+  if (!raw) return [];
+  const blocks = raw.split("-----").map(s => s.trim()).filter(Boolean);
+  const cards = [];
 
-    for (const block of blocks) {
-      const lines = block.split("\n").map(l => l.trim()).filter(Boolean);
-      let referencias = "", enunciado = "", gabarito = "";
-      const alternativas = [], temas = [];
+  for (const block of blocks) {
+    const lines = block.split("\n").map(l => l.trim()).filter(Boolean);
+    let referencias = "", enunciado = "", gabarito = "";
+    const alternativas = [], temas = [];
 
-      for (const line of lines) {
-        if (line.startsWith("*****")) { referencias = U.byPrefix(line, "*****") || ""; continue; }
-        if (line.startsWith("***")) { const g = U.byPrefix(line, "***") || ""; const m = /Gabarito\s*:\s*([A-Z])/i.exec(g); gabarito = m ? m[1].toUpperCase() : ""; continue; }
-        if (line.startsWith("****")) { const t = U.byPrefix(line, "****") || ""; t.split(",").forEach(x => { const v = U.trim(x); if (v) temas.push(v); }); continue; }
-        if (line.startsWith("**")) { alternativas.push(U.byPrefix(line, "**") || ""); continue; }
-        if (line.startsWith("*"))  { const part = U.byPrefix(line, "*") || ""; enunciado = enunciado ? (enunciado + " " + part) : part; }
+    for (const line of lines) {
+      const L = line.replace(/^\uFEFF?/, ""); // remove BOM se houver
+
+      if (/^\*{5}\s/.test(L)) { // ***** referências
+        referencias = L.replace(/^\*{5}\s*/, "").trim(); continue;
       }
-      cards.push({ referencias, enunciado, alternativas, gabarito, temas });
+      if (/^\*{3}\s/.test(L)) { // *** gabarito
+        const g = L.replace(/^\*{3}\s*/, "").trim();
+        const m = /Gabarito\s*:\s*([A-Z])/i.exec(g);
+        gabarito = m ? m[1].toUpperCase() : ""; continue;
+      }
+      if (/^\*{4}\s/.test(L)) { // **** temas
+        const t = L.replace(/^\*{4}\s*/, "").trim();
+        t.split(",").forEach(x => { const v = (x || "").trim(); if (v) temas.push(v); });
+        continue;
+      }
+      if (/^\*{2}\s/.test(L)) { // ** alternativas
+        alternativas.push(L.replace(/^\*{2}\s*/, "").trim()); continue;
+      }
+      if (/^\*\s/.test(L)) { // * enunciado
+        const part = L.replace(/^\*\s*/, "").trim();
+        enunciado = enunciado ? (enunciado + " " + part) : part;
+      }
     }
-    return cards;
+
+    cards.push({ referencias, enunciado, alternativas, gabarito, temas });
   }
+  return cards;
+}
+
 
   /* ------------------------------ IA Prompts ------------------------------ */
   function buildPrompt(kind, card) {
@@ -177,57 +196,113 @@
     if (showExplain) appendGabarito(ul.parentElement, gLetter);
   }
 
-  /* ------------------------------ Filtros ------------------------------ */
-  function mountSelectSingle(root, { options, onChange }) {
-    root.innerHTML = "";
-    root.classList.add("select");
-    const btn = U.el("button", { class: "select__button", type: "button" }, "Escolha a disciplina");
-    const menu = U.el("div", { class: "select__menu hidden", role: "listbox" });
-    options.forEach(opt => {
-      const it = U.el("div", { class: "select__option", role: "option" }, opt.label);
-      it.addEventListener("click", () => { btn.textContent = opt.label; menu.classList.add("hidden"); onChange && onChange(opt); });
-      menu.appendChild(it);
+ /* ------------------------------ Filtros ------------------------------ */
+function mountSelectSingle(root, { options, onChange }) {
+  root.innerHTML = "";
+  root.classList.add("select");
+
+  const btn = U.el("button", { class: "select__button", type: "button", "aria-haspopup": "listbox", "aria-expanded": "false" }, "Escolha a disciplina");
+  const menu = U.el("div", { class: "select__menu hidden", role: "listbox" });
+
+  options.forEach(opt => {
+    const it = U.el("div", { class: "select__option", role: "option", "data-value": opt.label }, opt.label);
+    it.addEventListener("click", () => {
+      btn.textContent = opt.label;
+      btn.setAttribute("aria-expanded", "false");
+      menu.classList.add("hidden");
+      onChange && onChange(opt);
     });
-    btn.addEventListener("click", () => { menu.classList.toggle("hidden"); U.onClickOutside(root, () => menu.classList.add("hidden")); });
-    root.appendChild(btn); root.appendChild(menu);
+    menu.appendChild(it);
+  });
+
+  btn.addEventListener("click", () => {
+    const open = menu.classList.toggle("hidden") === false;
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    U.onClickOutside(root, () => {
+      menu.classList.add("hidden");
+      btn.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  root.appendChild(btn);
+  root.appendChild(menu);
+}
+
+function mountMultiselect(root, { options, onChange }) {
+  root.innerHTML = "";
+  const control = U.el("div", { class: "multiselect__control", role: "combobox", "aria-expanded": "false" });
+  const input = U.el("input", { class: "multiselect__input", type: "text", placeholder: "Temas..." });
+  const menu = U.el("div", { class: "multiselect__menu hidden", role: "listbox" });
+
+  function renderTags() {
+    Array.from(control.querySelectorAll(".tag")).forEach(t => t.remove());
+    state.temasSelecionados.forEach(val => {
+      const tag = U.el("span", { class: "tag" }, val, U.el("button", { type: "button", title: "Remover" }, "×"));
+      tag.querySelector("button").addEventListener("click", () => {
+        state.temasSelecionados.delete(val);
+        renderTags();
+        onChange && onChange(new Set(state.temasSelecionados));
+        syncItems();
+      });
+      control.insertBefore(tag, input);
+    });
   }
 
-  function mountMultiselect(root, { options, onChange }) {
-    root.innerHTML = "";
-    const control = U.el("div", { class: "multiselect__control" });
-    const input = U.el("input", { class: "multiselect__input", type: "text", placeholder: "Temas..." });
-    const menu = U.el("div", { class: "multiselect__menu hidden", role: "listbox" });
-
-    function renderTags() {
-      Array.from(control.querySelectorAll(".tag")).forEach(t => t.remove());
-      state.temasSelecionados.forEach(val => {
-        const tag = U.el("span", { class: "tag" }, val, U.el("button", { type: "button", title: "Remover" }, "×"));
-        tag.querySelector("button").addEventListener("click", () => { state.temasSelecionados.delete(val); renderTags(); onChange && onChange(new Set(state.temasSelecionados)); syncItems(); });
-        control.insertBefore(tag, input);
-      });
-    }
-    function syncItems() {
-      const q = input.value.toLowerCase();
-      Array.from(menu.children).forEach(item => {
-        const match = !q || item.textContent.toLowerCase().includes(q);
-        item.style.display = match ? "block" : "none";
-        const selected = state.temasSelecionados.has(item.textContent);
-        item.setAttribute("aria-selected", selected ? "true" : "false");
-      });
-    }
-
-    options.forEach(opt => {
-      const it = U.el("div", { class: "multiselect__item", role: "option" }, opt);
-      it.addEventListener("click", () => { if (state.temasSelecionados.has(opt)) state.temasSelecionados.delete(opt); else state.temasSelecionados.add(opt); renderTags(); onChange && onChange(new Set(state.temasSelecionados)); syncItems(); });
-      menu.appendChild(it);
+  function syncItems() {
+    const q = (input.value || "").toLowerCase();
+    Array.from(menu.children).forEach(item => {
+      const val = item.getAttribute("data-value");
+      const match = !q || val.toLowerCase().includes(q);
+      item.style.display = match ? "block" : "none";
+      const selected = state.temasSelecionados.has(val);
+      item.setAttribute("aria-selected", selected ? "true" : "false");
     });
-
-    input.addEventListener("focus", () => { menu.classList.remove("hidden"); U.onClickOutside(root, () => menu.classList.add("hidden")); syncItems(); });
-    input.addEventListener("input", syncItems);
-
-    renderTags(); control.appendChild(input);
-    root.appendChild(control); root.appendChild(menu);
   }
+
+  // popula menu com opções deduplicadas
+  (U.uniq(options || [])).forEach(opt => {
+    const it = U.el("div", { class: "multiselect__item", role: "option", "data-value": opt }, opt);
+    it.addEventListener("click", () => {
+      if (state.temasSelecionados.has(opt)) state.temasSelecionados.delete(opt);
+      else state.temasSelecionados.add(opt);
+      renderTags();
+      onChange && onChange(new Set(state.temasSelecionados));
+      syncItems();
+    });
+    menu.appendChild(it);
+  });
+
+  // abrir ao focar no input
+  input.addEventListener("focus", () => {
+    menu.classList.remove("hidden");
+    control.setAttribute("aria-expanded", "true");
+    U.onClickOutside(root, () => {
+      menu.classList.add("hidden");
+      control.setAttribute("aria-expanded", "false");
+    });
+    syncItems();
+  });
+
+  // filtro de busca
+  input.addEventListener("input", syncItems);
+
+  // abrir o menu ao clicar em qualquer ponto do controle
+  control.addEventListener("click", () => {
+    menu.classList.remove("hidden");
+    control.setAttribute("aria-expanded", "true");
+    U.onClickOutside(root, () => {
+      menu.classList.add("hidden");
+      control.setAttribute("aria-expanded", "false");
+    });
+    syncItems();
+  });
+
+  renderTags();
+  control.appendChild(input);
+  root.appendChild(control);
+  root.appendChild(menu);
+}
+
 
   /* ------------------------------ Feed incremental ------------------------------ */
   function buildFeed() {
