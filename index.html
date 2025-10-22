@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- TOP BAR: uma linha, fundo cinza, centro -->
+  <!-- TOP BAR -->
   <header class="topbar">
     <div class="container topbar__row">
       <div class="brand">MeuJus</div>
@@ -22,6 +22,11 @@
     <div id="cards"></div>
     <div id="sentinela" aria-hidden="true"></div>
   </main>
+
+  <!-- Canvas offscreen para gerar a imagem 1080x1920 (PNG) -->
+  <canvas id="share-canvas" width="1080" height="1920" class="hidden" aria-hidden="true"></canvas>
+  <!-- Âncora de fallback para download do PNG -->
+  <a id="share-download" class="hidden" download="meujus_story.png" aria-hidden="true"></a>
 
   <script>
     // ?txt=data/direito-penal/penal1.txt  |  default: data/direito-penal/penal1.txt
