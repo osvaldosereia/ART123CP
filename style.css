@@ -64,14 +64,14 @@ body{
 #cards{padding:16px 0 64px}
 .q{padding:16px 0;border-top:4px solid #eceff3}
 .q__meta{font-size:12px;color:var(--muted);margin-bottom:8px}
-.q__stmt{font-weight:400;color:var(--petroleo);margin-bottom:10px;line-height:1.55}
+.q__stmt{font-weight:400;color:#000; margin-bottom:10px;line-height:1.55}
 .q__stmt p{margin:0 0 8px 0} /* respiro menor entre parágrafos */
 
 .q__opts{list-style:none;padding:0;margin:0;display:grid;gap:10px}
 .q__opt{
   display:flex;align-items:flex-start;gap:10px;padding:6px 0;border-bottom:0;cursor:pointer
 }
-.q__opt > div:last-child{color:#2a2a2a} /* 80% preto nas alternativas */
+.q__opt > div:last-child{color:#8c8c8c8c} 
 
 .q__badge{
   width:28px;height:28px;border:2px solid #cbd5e1;border-radius:999px;display:flex;align-items:center;justify-content:center;
