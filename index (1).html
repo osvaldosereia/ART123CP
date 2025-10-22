@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MeuJus</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Topbar -->
+  <header class="topbar">
+    <img class="logo-img" src="logo-h.png" alt="MeuJus" />
+    <button id="btnOpenSearch" class="btn ghost" style="margin-left:auto">Buscar Questões</button>
+  </header>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <!-- Quiz -->
+  <main id="quiz" class="page">
+    <div id="quizThemes" class="chips"></div>
+    <section id="quizList" class="list"></section>
+    <div id="sentinel" class="sentinel">Carregando…</div>
+  </main>
+
+  <!-- Simulado -->
+  <main id="exam" class="page hidden">
+    <section>
+      <header class="exam-head" style="display:flex;align-items:center;gap:.75rem;">
+        <h2 id="examTitle" style="margin:0;">Simulado</h2>
+        <button data-action="share-exam" class="btn ghost" style="margin-left:auto">Compartilhar Prova</button>
+      </header>
+      <p class="muted" id="examIntro" style="margin:6px 0 8px">10 questões aleatórias para para treinar.</p>
+      <div class="divider" aria-hidden="true"></div>
+      <section id="examList" class="list"></section>
+      <div class="actions">
+        <button id="examFinish" class="btn primary">Concluir</button>
+      </div>
+      <section id="examReport" class="card hidden" aria-live="polite"></section>
+    </section>
+  </main>
+
+  <!-- Template de questão -->
+  <template id="tplQuestion">
+    <article class="q">
+      <div class="q-head"><span class="q-num"></span></div>
+      <pre class="q-stem"></pre>
+      <ul class="q-opts"></ul>
+      <div class="q-ai">
+        <button class="btn ia" data-role="ia-toggle">Google I.A.</button>
+        <div class="ia-menu">
+          <a class="ia-item" data-ia="gabarito" target="_blank" rel="noopener">Gabarito</a>
+          <a class="ia-item" data-ia="glossario" target="_blank" rel="noopener">Glossário</a>
+          <a class="ia-item" data-ia="videos" target="_blank" rel="noopener">Vídeos</a>
+        </div>
+        <button class="btn ghost" data-role="share" style="margin-left:auto">Compartilhar Story</button>
+      </div>
+      <div class="q-res" aria-live="polite"></div>
+    </article>
+  </template>
+
+  <!-- FAB Criar Simulado -->
+  <button id="btnCreateExam" class="fab" aria-label="Criar Simulado" title="Criar Simulado">Criar Simulado</button>
+
+  <!-- Modal Buscar Questões como <dialog> para showModal/close -->
+  <dialog id="searchModal" class="modal" aria-labelledby="mTitle">
+    <div class="modal-card">
+      <header class="modal-head">
+        <h3 id="mTitle">Buscar Questões</h3>
+        <button id="btnCloseSearch" class="btn ghost" type="button">Fechar</button>
+      </header>
+
+      <div class="modal-body">
+        <!-- Disciplina -->
+        <label class="lbl">Disciplina</label>
+        <div class="dropdown">
+          <button class="dd-btn" id="ddDiscBtn" aria-haspopup="listbox" aria-expanded="false">
+            <span id="ddDiscLabel">Escolha a disciplina</span>
+            <span class="chev">▾</span>
+          </button>
+          <ul class="dd-list" id="ddDiscList" role="listbox" tabindex="-1"></ul>
+        </div>
+
+        <!-- Temas multiselect -->
+        <label class="lbl" style="margin-top:12px" for="msSearch">Temas</label>
+        <div class="ms-panel show">
+          <div class="ms-head">
+            <input id="msSearch" type="search" placeholder="Filtrar temas…" />
+            <div class="ms-actions">
+              <button id="msSelAll" type="button" class="btn">Selecionar visíveis</button>
+              <button id="msClear" type="button" class="btn ghost">Limpar</button>
+            </div>
+          </div>
+          <div id="msList" class="ms-list"></div>
+          <div class="ms-foot">
+            <span id="msCount" aria-live="polite">0 exibidos · 0 selecionados</span>
+          </div>
+        </div>
+      </div>
+
+      <footer class="modal-foot">
+        <button id="btnRunSearch" class="btn primary" disabled>Buscar</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <script src="app.js?v=4" defer></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js");
+    }
+  </script>
+</body>
+</html>
