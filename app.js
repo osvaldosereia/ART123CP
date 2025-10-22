@@ -1,5 +1,6 @@
 "use strict";
-// Compartilhar Prova: visualização de impressão → salve como PDF
+
+/* ===== Compartilhar Prova: impressão/PDF ===== */
 (function setupShareExamButton(){
   document.addEventListener("DOMContentLoaded", ()=>{
     const btn = document.getElementById("examShareLink");
@@ -12,7 +13,6 @@
 })();
 
 function exportExamPrintView(){
-  // garante correção atual
   let acertos = 0, total = STATE.exam.questions.length;
   STATE.exam.questions.forEach(q=>{
     const ans = STATE.exam.answers[q.id];
@@ -24,46 +24,41 @@ function exportExamPrintView(){
     :root{
       --ink:#0b0f19; --muted:#64748b; --line:#e5e7eb;
       --brand:#1e40af; --ok:#16a34a20; --bad:#dc262620;
-      --w: 920px; /* mesma largura visual do site */
+      --w: 920px;
     }
-    *{ box-sizing: border-box; }
+    *{ box-sizing:border-box; }
     html,body{ margin:0; padding:0; }
     body{
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial;
-      color: var(--ink); background: #fff;
+      color: var(--ink); background:#fff;
     }
-    .wrap{
-      max-width: var(--w); margin: 24px auto; padding: 0 18px;
-    }
+    .wrap{ max-width:var(--w); margin:24px auto; padding:0 18px; }
     header{
       display:flex; justify-content:space-between; align-items:end;
-      margin: 8px 0 18px;
-      border-bottom: 1px solid var(--line); padding-bottom: 12px;
+      margin:8px 0 18px; border-bottom:1px solid var(--line); padding-bottom:12px;
     }
-    header h1{ font-size: 22px; margin:0; }
-    header .sub{ color: var(--muted); font-size: 12px; }
+    header h1{ font-size:22px; margin:0; }
+    header .sub{ color:var(--muted); font-size:12px; }
     .divider{ height:1px; background:var(--line); margin:12px 0 18px; }
 
     .q{
-      page-break-inside: avoid;
-      background:#fff; border:1px solid var(--line); border-radius: 10px;
-      padding: 14px 14px 10px; margin: 0 0 16px 0;
+      page-break-inside:avoid;
+      background:#fff; border:1px solid var(--line); border-radius:10px;
+      padding:14px 14px 10px; margin:0 0 16px 0;
     }
     .q h3{ margin:0 0 8px 0; font-size:15px; color:#111; }
-    .meta{ color: var(--muted); font-size: 12px; margin: 2px 0 8px; }
-    .stem{ white-space: pre-wrap; color: var(--brand); font-weight: 700; margin: 6px 0 10px; }
-    .opts{ margin:0; padding-left: 20px; }
-    .opts li{ margin: 3px 0; }
-    .badge{ display:inline-block; padding:2px 6px; border-radius:6px; font-size:12px; vertical-align: middle; }
-    .ok{ background: var(--ok); }
-    .bad{ background: var(--bad); }
+    .meta{ color:var(--muted); font-size:12px; margin:2px 0 8px; }
+    .stem{ white-space:pre-wrap; color:var(--brand); font-weight:700; margin:6px 0 10px; }
+    .opts{ margin:0; padding-left:20px; }
+    .opts li{ margin:3px 0; }
+    .badge{ display:inline-block; padding:2px 6px; border-radius:6px; font-size:12px; vertical-align:middle; }
+    .ok{ background:var(--ok); }
+    .bad{ background:var(--bad); }
 
-    .report{
-      border:1px solid var(--line); border-radius:12px; padding:14px; margin-top: 18px;
-    }
+    .report{ border:1px solid var(--line); border-radius:12px; padding:14px; margin-top:18px; }
     .report h3{ margin:0 0 8px 0; }
-    .gabarito{ margin-top: 10px; }
-    .foot{ margin: 24px 0 8px; font-size: 12px; color: var(--muted); text-align: center; }
+    .gabarito{ margin-top:10px; }
+    .foot{ margin:24px 0 8px; font-size:12px; color:var(--muted); text-align:center; }
     .print-btn{ margin-top:16px; }
 
     @media print{
@@ -74,16 +69,14 @@ function exportExamPrintView(){
       .q{ box-shadow:none; }
     }
   </style>
-`;
-
+  `;
 
   const qHtml = STATE.exam.questions.map((q,i)=>{
     const got = STATE.exam.answers[q.id] ?? "—";
     const ok  = q.answerKey;
-    const hit = got===ok;
     return `
       <article class="q">
-<div class="meta">${escapeHtml(q.meta || "")}</div>
+        <div class="meta">${escapeHtml(q.meta || "")}</div>
         <h3>#${i+1}</h3>
         <div class="stem">${escapeHtml(q.stem)}</div>
         <ol class="opts" type="A">
@@ -98,21 +91,6 @@ function exportExamPrintView(){
       <hr class="divider">
     `;
   }).join("");
-
-  const gabHtml = `
-    <h3>Gabarito</h3>
-    <ol>
-      ${STATE.exam.questions.map((q,i)=>`<li>#${i+1}: <strong>${q.answerKey}</strong></li>`).join("")}
-    </ol>
-  `;
-
-  const repHtml = `
-    <div class="report">
-      <h3>Relatório</h3>
-      <p>Acertos: <strong>${acertos}/${total}</strong></p>
-      <p>Erros: <strong>${total-acertos}</strong></p>
-    </div>
-  `;
 
   const html = `
   <html>
@@ -150,8 +128,7 @@ function exportExamPrintView(){
       </div>
     </body>
   </html>
-`;
-
+  `;
 
   const w = window.open("", "_blank");
   w.document.open(); w.document.write(html); w.document.close();
@@ -162,207 +139,236 @@ function escapeHtml(s){
   return String(s??"").replace(/[&<>"']/g, c=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[c]));
 }
 
+/* ===== Estado mínimo ===== */
+const STATE = {
+  exam: null,
+  allQuestions: [],
+  viewQuestions: [],
+  batchSize: 3,
+  cursor: 0,
+  observer: null,
+};
 
-// monta payload mínimo da prova atual; se não houver, cria a partir do pool visível
-function buildExamPayload(){
-  if(!STATE.exam){
-    const pool = STATE.viewQuestions || [];
-    if(!pool.length) throw new Error("Sem questões para a prova");
-    const N = Math.min(10, pool.length);
-    const picked = (function pickRandomDistinct(arr, n){
-      const idx = [...Array(arr.length).keys()];
-      for(let i=idx.length-1;i>0;i--){
-        const j=(Math.random()* (i+1))|0;
-        [idx[i], idx[j]]=[idx[j], idx[i]];
+/* ===== Infinite scroll ===== */
+function mountInfinite(){
+  const sentinel=$("#sentinel");
+  STATE.observer?.disconnect();
+  STATE.observer = new IntersectionObserver(async (entries)=>{
+    const entry = entries[0];
+    if(entry.isIntersecting){
+      await renderBatch();
+      if(STATE.cursor >= STATE.viewQuestions.length){
+        $("#sentinel").textContent="Fim.";
+        toast("Fim da lista");
+        STATE.observer.disconnect();
       }
-      return idx.slice(0,n).map(i=>arr[i]);
-    })(pool, N);
-    // construir STATE.exam mínimo
-    const questions = picked.map(q=>({
-      id: q.id,
-      meta: q.meta || "",
-      stem: q.stem,
-      options: q.options.map(o=>({ k:o.key, t:o.text })), // compacto
-      answerKey: q.answer
-    }));
-    STATE.exam = {
-      id: uid(),
-      questions: questions.map(q=>({
-        id:q.id, meta:q.meta, stem:q.stem,
-        options: q.options.map(o=>({ key:o.k, text:o.t })),
-        answerKey: q.answerKey
-      })),
-      shuffleMap: {},
-      answers: Object.fromEntries(questions.map(q=>[q.id, null])),
-      student: "",
-      startedAt: Date.now(),
-      finishedAt: null
-    };
-  }
-
-  const ex = STATE.exam;
-  return {
-    v:1,
-    title: document.getElementById("examTitle")?.textContent || "Prova",
-    questions: ex.questions.map(q=>({
-      id: q.id,
-      meta: q.meta || "",
-      stem: q.stem,
-      options: q.options.map(o=>({ k:o.key, t:o.text })),
-      answerKey: q.answerKey
-    }))
-  };
-}
-
-function base64EncodeUTF8(str){ return btoa(unescape(encodeURIComponent(str))); }
-function base64DecodeUTF8(b64){ return decodeURIComponent(escape(atob(b64))); }
-
-// cria link com hash #exam=<b64>
-async function buildExamShareLink(){
-  const payload = buildExamPayload();
-  const json = JSON.stringify(payload);
-  const b64  = base64EncodeUTF8(json);
-  const base = `${location.origin}${location.pathname}`;
-  return `${base}#exam=${b64}`;
-}
-
-async function shareOrCopyLink(url){
-  try{
-    if(navigator.share){
-      await navigator.share({ title:"Prova MeuJus", text:"Faça esta prova:", url });
-      return;
+      pumpIfVisible();
     }
-  }catch(e){ /* fallback copiar */ }
-  try{
-    await navigator.clipboard.writeText(url);
-    toast("Link copiado");
-  }catch{
-    const ta=document.createElement("textarea");
-    ta.value=url; document.body.appendChild(ta); ta.select();
-    document.execCommand("copy"); ta.remove();
-    toast("Link copiado");
+  }, {rootMargin:"1000px"});
+  STATE.observer.observe(sentinel);
+  renderBatch();
+  pumpIfVisible();
+  window.addEventListener("scroll", pumpIfVisible, { passive:true });
+  window.addEventListener("resize", pumpIfVisible);
+}
+
+async function renderBatch(){
+  const start = STATE.cursor;
+  const end = Math.min(STATE.cursor + STATE.batchSize, STATE.viewQuestions.length);
+  for(let i=start;i<end;i++){
+    const q = STATE.viewQuestions[i];
+    $("#quizList").appendChild(buildQuestion(q, i+1));
   }
+  STATE.cursor = end;
 }
 
-// fallback: exportar arquivo .mjexam
-async function shareExamFile(){
-  const payload = buildExamPayload();
-  const blob = new Blob([JSON.stringify(payload,null,2)], {type:"application/json"});
-  const file = new File([blob], `prova-${(payload.title||"local").replace(/\s+/g,"-")}.mjexam`, {type:"application/json"});
-  if(navigator.canShare && navigator.canShare({files:[file]})){
-    try{ await navigator.share({files:[file], title:"Prova MeuJus"}); return; }catch{}
-  }
-  const a=document.createElement("a");
-  a.href=URL.createObjectURL(blob);
-  a.download=file.name;
-  a.click();
-}
-
-// importar prova via #exam=...
-function checkHashExam(){
-  const m = /[#&]exam=([^&]+)/.exec(location.hash);
-  if(!m) return;
-  try{
-    const json = base64DecodeUTF8(m[1]);
-    const data = JSON.parse(json);
-    if(!data || !Array.isArray(data.questions)) return;
-
-    const questions = data.questions.map(q=>{
-      // embaralhar alternativas ao abrir
-      const order = [...Array(q.options.length).keys()];
-      for(let i=order.length-1;i>0;i--){ const j=(Math.random()*(i+1))|0; [order[i],order[j]]=[order[j],order[i]]; }
-      return {
-        id: q.id,
-        meta: q.meta || "",
-        stem: q.stem,
-        options: order.map(i=>({ key:q.options[i].k, text:q.options[i].t })),
-        answerKey: q.answerKey
-      };
-    });
-
-    STATE.exam = {
-      id: uid(),
-      questions,
-      shuffleMap: {},
-      answers: Object.fromEntries(questions.map(q=>[q.id, null])),
-      student: "",
-      startedAt: Date.now(),
-      finishedAt: null
-    };
-
-    // abrir tela da prova
-    document.getElementById("home")?.classList.add("hidden");
-    document.getElementById("quiz")?.classList.add("hidden");
-    document.getElementById("exam")?.classList.remove("hidden");
-    document.getElementById("examTitle").textContent = data.title || "Prova";
-    renderExam();
-    window.scrollTo({top:0, behavior:"smooth"});
-    toast("Prova carregada");
-  }catch(e){
-    console.error(e);
-    toast("Não foi possível importar a prova");
-  }
-}
-
-function renderExam(){
-  const list = document.getElementById("examList");
-  if(!STATE.exam || !list) return;
-  list.innerHTML = "";
-  STATE.exam.questions.forEach((q, i)=>{
-    const card = buildQuestion(q, i + 1); // usa o mesmo layout do quiz
-    list.appendChild(card);
-  });
-}
-// concluir prova e exibir relatório com acertos/erros + gabarito
-(function setupExamFinish(){
-  document.addEventListener("DOMContentLoaded", ()=>{
-    const btn = document.getElementById("examFinish");
-    if(!btn) return;
-    btn.addEventListener("click", ()=>{
-      if(!STATE.exam) return;
-
-     // coleta respostas atuais a partir dos cards do layout de quiz
-STATE.exam.questions.forEach(q=>{
-  const picked = document.querySelector(`.q-opts li[data-q="${q.id}"][data-picked="1"]`);
-  STATE.exam.answers[q.id] = picked ? picked.dataset.key : null;
-});
-
-
-      // corrige
-      let acertos = 0, total = STATE.exam.questions.length;
-      STATE.exam.questions.forEach(q=>{
-        if(STATE.exam.answers[q.id] === q.answerKey) acertos++;
-      });
-
-      // relatório
-      const rep = document.getElementById("examReport");
-      if(rep){
-        rep.classList.remove("hidden");
-        rep.innerHTML = `
-          <h3>Resultado</h3>
-          <p>Acertos: <strong>${acertos}/${total}</strong></p>
-          <details open>
-            <summary>Gabarito e suas respostas</summary>
-            <ol>
-              ${STATE.exam.questions.map((q,i)=>{
-                const got = STATE.exam.answers[q.id] ?? "—";
-                const ok  = q.answerKey;
-                const hit = got===ok;
-                return `<li>#${i+1}: você <strong>${got}</strong> · correto <strong>${ok}</strong> ${hit?"✅":"❌"}</li>`;
-              }).join("")}
-            </ol>
-          </details>
-        `;
-        toast("Prova concluída");
-        rep.scrollIntoView({behavior:"smooth"});
+function pumpIfVisible(){
+  const s = document.getElementById("sentinel");
+  if (!s) return;
+  if (STATE.cursor >= STATE.viewQuestions.length) return;
+  const r = s.getBoundingClientRect();
+  const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  if (r.top - vh < 200) {
+    let guard = 0;
+    (async function loop(){
+      while (guard++ < 20 && STATE.cursor < STATE.viewQuestions.length) {
+        const before = STATE.cursor;
+        await renderBatch();
+        if (STATE.cursor === before) break;
+        const rr = s.getBoundingClientRect();
+        if (rr.top - vh > 200) break;
       }
-    });
+    })();
+  }
+}
+
+/* ===== Card da questão ===== */
+function buildQuestion(q, num){
+  const tpl = /** @type {HTMLTemplateElement} */($("#tplQuestion"));
+  const node = tpl.content.firstElementChild.cloneNode(true);
+
+  node.querySelector(".q-num").textContent = `#${num}`;
+
+  const stemEl = node.querySelector(".q-stem");
+  stemEl.textContent = q.stem;
+
+  if (q.meta){
+    const meta = document.createElement("div");
+    meta.className = "q-meta";
+    meta.textContent = q.meta;
+    meta.style.fontSize = "12px";
+    meta.style.color = "var(--muted, #6b7280)";
+    meta.style.marginBottom = "6px";
+    stemEl.parentNode.insertBefore(meta, stemEl);
+
+    const hr = document.createElement("hr");
+    hr.style.border = "0";
+    hr.style.borderTop = "1px solid #e5e7eb";
+    hr.style.margin = "0 0 8px 0";
+    stemEl.parentNode.insertBefore(hr, stemEl);
+  }
+
+  const ol = node.querySelector(".q-opts");
+  q.options.forEach(opt=>{
+    const li = document.createElement("li");
+    li.textContent = `${opt.key}) ${opt.text}`;
+    li.dataset.key = opt.key;
+    li.dataset.q = q.id;
+    li.addEventListener("click", ()=>mark(node, li, q));
+    ol.appendChild(li);
   });
-})();
 
+  const btnIA = node.querySelector('[data-role="ia-toggle"]');
+  const menu = node.querySelector(".ia-menu");
+  if (btnIA && menu){
+    const addItem = (label, kind)=>{
+      const a = document.createElement("a");
+      a.className = "ia-item";
+      a.textContent = label;
+      a.setAttribute("data-ia", kind);
+      a.setAttribute("href", "#");
+      a.setAttribute("rel", "noopener");
+      a.setAttribute("target", "_blank");
+      menu.appendChild(a);
+    };
+    addItem("Princípios", "principios");
+    addItem("Check-list", "checklist");
 
+    btnIA.addEventListener("click", ()=>{ menu.classList.toggle("show"); });
 
-/* ====== STORY INSTAGRAM 1080x1920, 3 LAYOUTS ====== */
+    menu.addEventListener("click", (ev)=>{
+      const link = ev.target.closest(".ia-item");
+      if(!link) return;
+      const kind = link.getAttribute("data-ia");
+      const url = buildGoogleIA(kind, q);
+      link.setAttribute("href", url);
+      menu.classList.remove("show");
+    });
+  }
+
+  const btnShare = node.querySelector('[data-role="share"]');
+  if (btnShare){
+    btnShare.addEventListener("click", ()=>handleShareStory(q, num));
+  }
+
+  return node;
+}
+
+/* ===== Correção ===== */
+function mark(card, li, q){
+  if (card.classList.contains("ok") || card.classList.contains("bad")) return;
+
+  card.querySelectorAll('.q-opts li').forEach(el=>el.removeAttribute('data-picked'));
+  li.setAttribute('data-picked','1');
+
+  const key = li.dataset.key;
+  const correctKey = q.answer ?? q.answerKey;
+  const correct = key === correctKey;
+  const res = card.querySelector(".q-res");
+
+  card.querySelectorAll(".q-opts li").forEach(el=>el.classList.add("lock"));
+  card.querySelectorAll(".q-opts li").forEach(el=>{ if (el.dataset.key === correctKey) el.classList.add("hit"); });
+
+  if (correct){
+    card.classList.add("ok");
+    res.textContent = "Parabéns! Resposta correta.";
+    res.className = "q-res good";
+  }else{
+    card.classList.add("bad");
+    res.textContent = `Resposta errada. Correta: ${correctKey}.`;
+    res.className = "q-res bad";
+  }
+
+  const btnIA = card.querySelector('[data-role="ia-toggle"]');
+  if (btnIA){
+    btnIA.classList.remove("ia");
+    btnIA.classList.add(correct ? "primary" : "");
+    if (!correct){ btnIA.style.background="#dc2626"; btnIA.style.borderColor="#b91c1c"; }
+  }
+}
+
+/* ===== Google IA helpers ===== */
+function buildGoogleIA(kind, q){
+  const enc = (s)=>encodeURIComponent(s);
+  const alts = q.options.map(o=>`${o.key}) ${o.text}`).join(" ");
+  const correctKey = q.answer ?? q.answerKey;
+  const correct = q.options.find(o=>o.key===correctKey);
+  const gab = correct ? `${correctKey}) ${correct.text}` : correctKey;
+  const tema = Array.isArray(q.themes) && q.themes.length ? q.themes.join(", ") : "Direito";
+
+  let prompt = "";
+  if (kind === "gabarito"){
+    prompt = `Considere a questão a seguir, analise a alternativa escolhida, explique, exemplifique e justifique juridicamente. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
+  } else if (kind === "glossario"){
+    prompt = `Liste e defina, em tópicos curtos, os termos jurídicos presentes nesta questão. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
+  } else if (kind === "principios"){
+    prompt = `Pesquise em bibliotecas e obras jurídicas reconhecidas os PRINCÍPIOS relacionados ao tema desta questão e apresente cada princípio com: (1) nome do princípio, (2) breve comentário de 1–2 frases, (3) referência completa da fonte consultada. Tema(s): ${tema}. Contexto: "${q.stem}". Gabarito: ${gab}. Alternativas: ${alts}.`;
+  } else if (kind === "checklist"){
+    prompt = `Gere um CHECK-LIST de estudo para prova com base na questão. Tópicos: conteúdos a dominar, erros comuns, dicas práticas, 3–5 microexercícios. Tema(s): ${tema}. Questão: "${q.stem}". Gabarito: ${gab}. Alternativas: ${alts}.`;
+  } else {
+    prompt = `Sugira 3 vídeos objetivos e confiáveis sobre o tema. Mostre título curto e link. Tema(s): ${tema}. Questão: "${q.stem}". Gabarito: ${gab}. Alternativas: ${alts}`;
+  }
+  return `https://www.google.com/search?udm=50&hl=pt-BR&gl=BR&q=${enc(prompt)}`;
+}
+
+/* ===== Topbar auto-hide ===== */
+function initTopbarAutoHide(){
+  const bar = document.querySelector(".topbar");
+  if (!bar) return;
+  let last = window.scrollY;
+  let hidden = false;
+  window.addEventListener("scroll", () => {
+    const y = window.scrollY;
+    const dy = y - last;
+    if (y < 48) { bar.classList.remove("hide"); hidden = false; last = y; return; }
+    if (dy > 6 && y > 80) { if (!hidden){ bar.classList.add("hide"); hidden = true; } }
+    else if (dy < -2) { if (hidden){ bar.classList.remove("hide"); hidden = false; } }
+    last = y;
+  }, { passive: true });
+}
+
+/* ===== Voltar ao topo ===== */
+function initBackToTop(){
+  const btn = document.createElement("button");
+  btn.className = "backtop";
+  btn.setAttribute("aria-label","Voltar ao topo");
+  btn.textContent = "↑";
+  document.body.appendChild(btn);
+
+  const toggle = ()=>{
+    if (window.scrollY > 400) btn.classList.add("show");
+    else btn.classList.remove("show");
+  };
+  window.addEventListener("scroll", toggle, {passive:true});
+  window.addEventListener("resize", toggle);
+  toggle();
+
+  btn.addEventListener("click", ()=>{
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+}
+
+/* ===== Story 1080x1920 ===== */
 function wrapLines(ctx, text, maxWidth){
   const lines=[], raw=String(text??"").replace(/\r\n?/g,"\n").split("\n");
   for(const par of raw){
@@ -391,25 +397,20 @@ async function renderStoryJPG(q, num){
   const cv=document.createElement("canvas"); cv.width=W; cv.height=H;
   const ctx=cv.getContext("2d");
 
-  // fundo
   ctx.fillStyle="#ffffff"; ctx.fillRect(0,0,W,H);
 
-  // dados
   const meta = q.meta||"";
   const stem = q.stem||"";
   const alts = Array.isArray(q.options)&&q.options.length
     ? q.options.map(o=>`${o.key}) ${o.text}`).join("\n") : "";
 
-  // tamanhos por quantidade de caracteres
   const total=(meta+stem+alts).length;
-  // +50px no topo e enunciado menor
   let S={ meta:28, stem:44, alt:36, gap:28, top:170, bot:120, maxW:W-PAD*2 };
   if(total<=280){ S={ meta:30, stem:50, alt:42, gap:36, top:190, bot:140, maxW:W-PAD*2 }; }
   else if(total>700){ S={ meta:26, stem:36, alt:32, gap:24, top:146, bot:96, maxW:W-PAD*2 }; }
 
   let y=S.top;
 
-  // 1) tag "meujus.com.br" com fundo cinza limitado ao texto
   const TAG_BG="#f1f5f9";
   const TAG_FG="#1e40af";
   const tagPadY=10, tagPadX=16;
@@ -427,7 +428,6 @@ async function renderStoryJPG(q, num){
   ctx.fillText(tagText, PAD + tagPadX, y + tagPadY + S.meta);
   y += tagH + S.gap;
 
-  // 2) meta: banca | ano | órgão | prova
   if(meta){
     ctx.font=`600 ${S.meta}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
     ctx.fillStyle="#111111";
@@ -438,7 +438,6 @@ async function renderStoryJPG(q, num){
     y+=S.gap;
   }
 
-  // 3) enunciado azul
   ctx.font=`700 ${S.stem}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
   ctx.fillStyle="#1e40af";
   for(const line of wrapLines(ctx, stem, S.maxW)){
@@ -448,7 +447,6 @@ async function renderStoryJPG(q, num){
   }
   y+=S.gap;
 
-  // 4) alternativas, sem gabarito
   if(alts){
     ctx.font=`400 ${S.alt}px system-ui,-apple-system,Segoe UI,Roboto,Arial`;
     ctx.fillStyle="#0b0f19";
@@ -482,16 +480,13 @@ async function handleShareStory(q, num){
     toast("Pronto");
   }catch(e){ console.error(e); toast("Falha ao gerar Story"); }
 }
-/* ====== FIM STORY ====== */
 
-/* ==================== UTIL ==================== */
-const $ = (s, r=document)=>r.querySelector(s);
+/* ===== Utils ===== */
+const $  = (s, r=document)=>r.querySelector(s);
 const $$ = (s, r=document)=>r.querySelectorAll(s);
-function toast(msg, t=3000){ const el=$("#toast"); el.textContent=msg; el.classList.add("show"); setTimeout(()=>el.classList.remove("show"), t); }
+function toast(msg, t=3000){ const el=$("#toast"); if(!el) return; el.textContent=msg; el.classList.add("show"); setTimeout(()=>el.classList.remove("show"), t); }
 function uid(){ try{ if(crypto?.randomUUID) return crypto.randomUUID(); }catch{} return "q_"+Math.random().toString(36).slice(2,10); }
-function pretty(s){ return s.replace(/[-_]/g," ").replace(/\.txt$/,""); }
-const deb = (fn,ms=150)=>{let h;return (...a)=>{clearTimeout(h);h=setTimeout(()=>fn(...a),ms);} };
-const strip = (s)=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+
 
 /* ==================== PARSER TXT (com metas ***** e temas ****) ==================== */
 function parseTxt(raw){
@@ -566,691 +561,6 @@ function trimBlank(arr){
   while (a < b && arr[a].trim() === "") a++;
   while (b > a && arr[b - 1].trim() === "") b--;
   return arr.slice(a, b);
-}
-/* ==================== DISCOVERY data/ ==================== */
-async function discoverDataTree(){
-  const gh = detectGithubRepo();
-  if (!gh) return {};
-  toast("Lendo data/…");
-  const base = `https://api.github.com/repos/${gh.owner}/${gh.repo}/contents/data`;
-  const nodes = await walkGitHub(base);
-  const map = {};
-  for(const n of nodes){
-    if(n.type!=="file" || !n.path.endsWith(".txt")) continue;
-    const rel = n.path.replace(/^data\//,"");
-    const disciplina = rel.split("/")[0];
-    if(!map[disciplina]) map[disciplina]={label:disciplina, files:[]};
-    map[disciplina].files.push(n.path);
-  }
-  return map;
-}
-function detectGithubRepo(){
-  const {host, pathname} = window.location;
-  if (!/github\.io$/.test(host)) return null;
-  const seg = pathname.replace(/^\/+/,"").split("/");
-  const repo = seg[0] || "";
-  if (!repo) return null;
-  const owner = host.split(".")[0];
-  return { owner, repo };
-}
-async function walkGitHub(url){
-  const acc=[];
-  await dfs(url);
-  return acc;
-  async function dfs(u){
-    const res = await fetch(u, {headers:{Accept:"application/vnd.github+json"}});
-    if(!res.ok) throw new Error(`GitHub API falhou: ${res.status}`);
-    const arr = await res.json();
-    for(const it of arr){
-      if(it.type==="dir") await dfs(it.url);
-      else acc.push({ type:it.type, path:it.path });
-    }
-  }
-}
-
-/* ==================== ESTADO ==================== */
-const STATE = {
-  exam: null,
-  tree: /** @type {Record<string,{label:string,files:string[]}>} */({}),
-  disciplina: "",
-  temasSel: /** @type {Set<string>} */(new Set()),
-  temasAll: /** @type {string[]} */([]),
-  allQuestions: /** @type {any[]} */([]),
-  viewQuestions: /** @type {any[]} */([]),
-  activeThemes: /** @type {Set<string>} */(new Set()),
-  batchSize: 3,
-  cursor: 0,
-  observer: /** @type {IntersectionObserver|null} */ (null),
-  cache: /** @type {Map<string,{text:string, parsed:any[]}>>} */(new Map()),
-  ms:{ open:false, filter:"", list:[], listStripped:[] },
-  poolQuestions: /** @type {any[]} */([]),
-};
-
-/* ==================== UI HOME ==================== */
-window.addEventListener("DOMContentLoaded", async ()=>{
-  $("#btnHome").addEventListener("click", goHome);
-  setupDropdown();
-  initTopbarAutoHide();
-  initBackToTop();
-  try{
-    STATE.tree = await discoverDataTree();
-    fillDisciplines(Object.keys(STATE.tree).sort());
-    toast("Pronto");
-  }catch(e){
-    console.error(e);
-    toast("Erro ao ler /data/");
-  }
-  $("#btnBuscar").addEventListener("click", startSearch);
-  document.addEventListener("keydown",(e)=>{ if(e.key==="Escape") closeThemesPanel(); });
-  document.addEventListener("click",(e)=>{
-    const wrap = $("#chipsTemas");
-    if(!wrap) return;
-    if(STATE.ms.open && !wrap.contains(e.target)) closeThemesPanel();
-  });
-// botão flutuante Criar Prova
-const btnCreate = document.getElementById("btnCreateExam");
-if (btnCreate){
-  btnCreate.addEventListener("click", ()=>{
-    const pool = STATE.viewQuestions?.length ? STATE.viewQuestions : STATE.allQuestions;
-    if(!pool?.length){ toast("Carregue questões primeiro"); return; }
-    const N = Math.min(10, pool.length);
-    const idx = [...Array(pool.length).keys()];
-    for(let i=idx.length-1;i>0;i--){ const j=(Math.random()*(i+1))|0; [idx[i],idx[j]]=[idx[j],idx[i]]; }
-    const picked = idx.slice(0,N).map(i=>pool[i]);
-
-    STATE.exam = {
-      id: uid(),
-      questions: picked.map(q=>({
-        id: q.id,
-        meta: q.meta || "",
-        stem: q.stem,
-        options: q.options.map(o=>({ key:o.key, text:o.text })),
-        answerKey: q.answer
-      })),
-      answers: Object.fromEntries(picked.map(q=>[q.id, null])),
-      student: "",
-      startedAt: Date.now(),
-      finishedAt: null
-    };
-
-    document.getElementById("home")?.classList.add("hidden");
-    document.getElementById("quiz")?.classList.add("hidden");
-    document.getElementById("exam")?.classList.remove("hidden");
-    document.getElementById("examTitle").textContent = "Prova";
-    renderExam();
-    window.scrollTo({top:0, behavior:"smooth"});
-  });
-}
-
-  // importa prova se vier no hash
-  checkHashExam();
-});
-
-// reimporta ao mudar o hash
-window.addEventListener("hashchange", checkHashExam);
-
-function setupDropdown(){
-  const btn=$("#ddDiscBtn"), list=$("#ddDiscList");
-  btn.addEventListener("click", ()=>{
-    list.classList.toggle("show");
-    btn.setAttribute("aria-expanded", list.classList.contains("show")?"true":"false");
-  });
-  document.addEventListener("click", (e)=>{
-    const dd = $(".dropdown");
-    if (dd && !dd.contains(e.target)) list.classList.remove("show");
-  });
-}
-
-function fillDisciplines(keys){
-  const ul=$("#ddDiscList"); ul.innerHTML="";
-  if(!keys.length){
-    const li=document.createElement("li"); li.textContent="Nenhuma disciplina encontrada"; li.style.color="var(--muted)";
-    ul.appendChild(li); return;
-  }
-  for(const k of keys){
-    const li=document.createElement("li");
-    li.textContent=pretty(k);
-    li.addEventListener("click", async ()=>{
-      STATE.disciplina=k;
-      $("#ddDiscLabel").textContent=pretty(k);
-      ul.classList.remove("show");
-      await buildThemesMultiselect();
-    });
-    ul.appendChild(li);
-  }
-}
-
-/* ==================== TEMAS: Multiselect tipo dropdown (Home) ==================== */
-async function buildThemesMultiselect(){
-  const box=$("#chipsTemas"); box.innerHTML="";
-  STATE.temasSel.clear();
-  $("#btnBuscar").disabled = true;
-
-  const node = STATE.tree[STATE.disciplina];
-  if(!node) return;
-
-  const norm = (s)=>strip(String(s||"")).replace(/\s+/g," ").trim();
-  const first3 = (s)=>{
-    const w = norm(s).split(" ");
-    return w.slice(0,3).join(" ");
-  };
-  const pickLabel = (arr)=>{
-    return arr.slice().sort((a,b)=>{
-      const aw=a.trim().split(/\s+/).length, bw=b.trim().split(/\s+/).length;
-      if(aw!==bw) return aw-bw;
-      if(a.length!==b.length) return a.length-b.length;
-      return a.localeCompare(b,'pt-BR',{sensitivity:"base"});
-    })[0];
-  };
-
-  toast("Lendo temas…");
-  const allParsed = [];
-  for (const path of node.files){
-    const parsed = await getParsedForPath(path);
-    allParsed.push(...parsed);
-  }
-
-  const groups = new Map();
-  for (const q of allParsed){
-    if (!Array.isArray(q.themes)) continue;
-    for (const t of q.themes){
-      const k = first3(t);
-      if(!k) continue;
-      if(!groups.has(k)) groups.set(k, []);
-      groups.get(k).push(t);
-    }
-  }
-
-  const keyToLabel = new Map();
-  for (const [k, list] of groups){
-    keyToLabel.set(k, pickLabel(list));
-  }
-
-  for (const q of allParsed){
-    if (!Array.isArray(q.themes)) { q.themes = []; continue; }
-    const mapped = q.themes.map(t=>{
-      const k = first3(t);
-      return keyToLabel.get(k) ?? t;
-    });
-    const seen = new Set();
-    q.themes = mapped.filter(t=>{ if(seen.has(t)) return false; seen.add(t); return true; });
-  }
-
-  const setLabels = new Set();
-  for (const q of allParsed){ for (const t of q.themes) setLabels.add(t); }
-  const temas = [...setLabels].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
-
-  STATE.poolQuestions = allParsed;
-  STATE.temasAll = temas;
-
-  const trigger = document.createElement("button");
-  trigger.type="button";
-  trigger.className="dd-btn ms-trigger";
-  trigger.id="msTemasBtn";
-  trigger.innerHTML = `<span id="msTemasLabel">Selecionar temas</span><span class="chev">▾</span>`;
-  trigger.addEventListener("click", toggleThemesPanel);
-  box.appendChild(trigger);
-
-  const panel = document.createElement("div");
-  panel.className="ms-panel";
-  panel.innerHTML = `
-    <div class="ms-head">
-      <input id="msSearch" type="text" placeholder="Buscar tema…" autocomplete="off" />
-      <div class="ms-actions">
-        <button type="button" id="msSelAll" class="btn ghost">Selecionar exibidos</button>
-        <button type="button" id="msClear" class="btn ghost">Limpar</button>
-      </div>
-    </div>
-    <div id="msList" class="ms-list" role="listbox" aria-multiselectable="true"></div>
-    <div class="ms-foot"><span id="msCount"></span></div>
-  `;
-  box.appendChild(panel);
-
-  STATE.ms.list = temas.slice();
-  STATE.ms.listStripped = STATE.ms.list.map(strip);
-  STATE.ms.filter = "";
-  renderMsList();
-
-  $("#msSearch").addEventListener("input", deb((e)=>{
-    STATE.ms.filter = e.target.value || "";
-    renderMsList();
-    updateCount();
-  },150));
-
-  $("#msSelAll").addEventListener("click", ()=>{
-    const visible = getVisibleItems();
-    visible.forEach(t=>STATE.temasSel.add(t));
-    $$("#msList .ms-item input").forEach(i=>{ i.checked=true; i.closest(".ms-item").classList.add("on"); });
-    updateTriggerLabel(); updateCount(); $("#btnBuscar").disabled = STATE.temasSel.size===0;
-  });
-
-  $("#msClear").addEventListener("click", ()=>{
-    STATE.temasSel.clear();
-    $$("#msList .ms-item").forEach(el=>{ el.classList.remove("on"); el.querySelector("input").checked=false; });
-    updateTriggerLabel(); updateCount(); $("#btnBuscar").disabled = true;
-  });
-}
-
-function toggleThemesPanel(){
-  const panel = $(".ms-panel");
-  if(!panel) return;
-  const open = panel.classList.toggle("show");
-  STATE.ms.open = open;
-}
-function closeThemesPanel(){
-  const panel = $(".ms-panel");
-  if(panel){ panel.classList.remove("show"); STATE.ms.open=false; }
-}
-function updateTriggerLabel(){
-  const n = STATE.temasSel.size;
-  $("#msTemasLabel").textContent = n ? `${n} tema(s) selecionado(s)` : "Selecionar temas";
-}
-
-function updateCount(){
-  const vis = getVisibleItems().length;
-  const sel = STATE.temasSel.size;
-
-  let found = 0;
-  if (sel > 0 && Array.isArray(STATE.poolQuestions)){
-    const want = new Set(STATE.temasSel);
-    for (const q of STATE.poolQuestions){
-      const th = q.themes || [];
-      for (let i = 0; i < th.length; i++){
-        if (want.has(th[i])) { found++; break; }
-      }
-    }
-  }
-
-  const suffix = sel ? ` · ${found} questões` : "";
-  $("#msCount").textContent = `${vis} exibidos · ${sel} selecionados${suffix}`;
-}
-
-function getVisibleItems(){
-  const f = strip(STATE.ms.filter);
-  if(!f) return STATE.ms.list.slice();
-  const out=[];
-  for(let i=0;i<STATE.ms.list.length;i++){
-    if(STATE.ms.listStripped[i].includes(f)) out.push(STATE.ms.list[i]);
-  }
-  return out;
-}
-
-function renderMsList(){
-  const list = $("#msList"); list.innerHTML="";
-  const items = getVisibleItems();
-  const frag = document.createDocumentFragment();
-  items.forEach(t=>{
-    const on = STATE.temasSel.has(t);
-    const row = document.createElement("div");
-    row.className = "ms-item"+(on?" on":"");
-    row.dataset.tema=t;
-    row.innerHTML = `<input type="checkbox" ${on?"checked":""} aria-label="${t}"><span>${t}</span>`;
-    frag.appendChild(row);
-  });
-  list.appendChild(frag);
-  list.onclick = (e)=>{
-    const item = e.target.closest(".ms-item");
-    if(!item || !list.contains(item)) return;
-    const tema = item.dataset.tema;
-    const ck = item.querySelector("input");
-    ck.checked = !ck.checked;
-    item.classList.toggle("on", ck.checked);
-    if(ck.checked) STATE.temasSel.add(tema); else STATE.temasSel.delete(tema);
-    updateTriggerLabel(); updateCount(); $("#btnBuscar").disabled = STATE.temasSel.size===0;
-  };
-  updateTriggerLabel(); updateCount();
-}
-
-/* Cache por arquivo */
-async function getParsedForPath(path){
-  if (STATE.cache.has(path)) return STATE.cache.get(path).parsed;
-  const text = await loadTxt(path);
-  const parsed = parseTxt(text);
-  STATE.cache.set(path, { text, parsed });
-  return parsed;
-}
-
-/* ==================== BUSCA E QUIZ ==================== */
-async function startSearch(){
-  try{
-    toast("Carregando questões…");
-
-    const all = Array.isArray(STATE.poolQuestions) ? STATE.poolQuestions : [];
-    if (!all.length){ toast("Nenhuma questão carregada"); return; }
-
-    const wanted = new Set(STATE.temasSel);
-    const filtered = all.filter(q => Array.isArray(q.themes) && q.themes.some(t => wanted.has(t)));
-    if (!filtered.length){ toast("Nenhuma questão encontrada"); return; }
-
-    STATE.allQuestions = filtered;
-    STATE.activeThemes.clear();
-    STATE.viewQuestions = STATE.allQuestions.slice();
-
-    STATE.cursor = 0;
-    $("#quizList").innerHTML="";
-    $("#home").classList.add("hidden");
-    $("#quiz").classList.remove("hidden");
-    document.getElementById("exam")?.classList.add("hidden");
-
-
-    renderSelectedThemesChips();
-    mountInfinite();
-    closeThemesPanel();
-  }catch(err){
-    console.error(err);
-    toast("Erro ao ler dados");
-  }
-}
-
-/* Chips de segmentação no topo do quiz */
-function renderSelectedThemesChips(){
-  const quiz = $("#quiz");
-  if (!quiz) return;
-  let box = $("#quizThemes");
-  if (!box){
-    box = document.createElement("div");
-    box.id = "quizThemes";
-    box.className = "chips";
-    box.style.justifyContent = "center";
-    box.style.margin = "6px 0 12px";
-    quiz.insertBefore(box, $("#quizList"));
-  }
-  box.innerHTML = "";
-
-  const counts = new Map();
-  for (const q of STATE.allQuestions){
-    for (const t of q.themes){ if(STATE.temasSel.has(t)) counts.set(t, (counts.get(t)||0)+1); }
-  }
-  const temas = [...STATE.temasSel].sort((a,b)=>a.localeCompare(b,'pt-BR',{sensitivity:"base"}));
-
-  const chipAll = document.createElement("button");
-  chipAll.className = "chip" + (STATE.activeThemes.size===0 ? " on" : "");
-  chipAll.textContent = "Todos";
-  chipAll.addEventListener("click", ()=>{
-    STATE.activeThemes.clear();
-    applyThemeFilter();
-    renderSelectedThemesChips();
-  });
-  box.appendChild(chipAll);
-
-  temas.forEach(t=>{
-    const c = counts.get(t)||0;
-    const b = document.createElement("button");
-    b.className = "chip" + (STATE.activeThemes.has(t) ? " on" : "");
-    b.textContent = c ? `${t} (${c})` : t;
-    b.dataset.tema = t;
-    b.addEventListener("click", ()=>{
-      if (STATE.activeThemes.has(t)) STATE.activeThemes.delete(t);
-      else STATE.activeThemes.add(t);
-      applyThemeFilter();
-      renderSelectedThemesChips();
-    });
-    box.appendChild(b);
-  });
-}
-
-/* Aplica interseção dos chips ativos ao conjunto base e repagina */
-function applyThemeFilter(){
-  const act = [...STATE.activeThemes];
-
-  if (act.length === 0){
-    STATE.viewQuestions = STATE.allQuestions.slice();
-  } else {
-    const want = new Set(act);
-    STATE.viewQuestions = STATE.allQuestions.filter(q =>
-      q.themes.some(t => want.has(t))
-    );
-  }
-
-  $("#quizList").innerHTML = "";
-  STATE.cursor = 0;
-  mountInfinite();
-  toast(`Filtro: ${act.length ? act.join(", ") : "Todos"} · ${STATE.viewQuestions.length} questões`);
-}
-
-async function loadTxt(path){
-  const res = await fetch(path);
-  if(!res.ok) throw new Error(`Falhou ${path}: ${res.status}`);
-  return await res.text();
-}
-
-/* ==================== INFINITE SCROLL ROBUSTO ==================== */
-function mountInfinite(){
-  const sentinel=$("#sentinel");
-  STATE.observer?.disconnect();
-  STATE.observer = new IntersectionObserver(async (entries)=>{
-    const entry = entries[0];
-    if(entry.isIntersecting){
-      await renderBatch();
-      if(STATE.cursor >= STATE.viewQuestions.length){
-        $("#sentinel").textContent="Fim.";
-        toast("Fim da lista");
-        STATE.observer.disconnect();
-      }
-      pumpIfVisible();
-    }
-  }, {rootMargin:"1000px"});
-  STATE.observer.observe(sentinel);
-  renderBatch();
-  pumpIfVisible();
-  window.addEventListener("scroll", pumpIfVisible, { passive:true });
-  window.addEventListener("resize", pumpIfVisible);
-}
-
-async function renderBatch(){
-  const start = STATE.cursor;
-  const end = Math.min(STATE.cursor + STATE.batchSize, STATE.viewQuestions.length);
-  for(let i=start;i<end;i++){
-    const q = STATE.viewQuestions[i];
-    $("#quizList").appendChild(buildQuestion(q, i+1));
-  }
-  STATE.cursor = end;
-}
-
-function pumpIfVisible(){
-  const s = document.getElementById("sentinel");
-  if (!s) return;
-  if (STATE.cursor >= STATE.viewQuestions.length) return;
-  const r = s.getBoundingClientRect();
-  const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-  if (r.top - vh < 200) {
-    let guard = 0;
-    (async function loop(){
-      while (guard++ < 20 && STATE.cursor < STATE.viewQuestions.length) {
-        const before = STATE.cursor;
-        await renderBatch();
-        if (STATE.cursor === before) break;
-        const rr = s.getBoundingClientRect();
-        if (rr.top - vh > 200) break;
-      }
-    })();
-  }
-}
-
-/* ==================== RENDER QUESTÃO ==================== */
-function buildQuestion(q, num){
-  const tpl = /** @type {HTMLTemplateElement} */($("#tplQuestion"));
-  const node = tpl.content.firstElementChild.cloneNode(true);
-
-  node.querySelector(".q-num").textContent = `#${num}`;
-
-  const stemEl = node.querySelector(".q-stem");
-  stemEl.textContent = q.stem;
-
-  if (q.meta){
-    const meta = document.createElement("div");
-    meta.className = "q-meta";
-    meta.textContent = q.meta;
-    meta.style.fontSize = "12px";
-    meta.style.color = "var(--muted, #6b7280)";
-    meta.style.marginBottom = "6px";
-    stemEl.parentNode.insertBefore(meta, stemEl);
-
-    const hr = document.createElement("hr");
-    hr.style.border = "0";
-    hr.style.borderTop = "1px solid #e5e7eb";
-    hr.style.margin = "0 0 8px 0";
-    stemEl.parentNode.insertBefore(hr, stemEl);
-  }
-
-  const ol = node.querySelector(".q-opts");
-  q.options.forEach(opt=>{
-    const li = document.createElement("li");
-li.textContent = `${opt.key}) ${opt.text}`;
-li.dataset.key = opt.key;
-li.dataset.q = q.id;              // <— adiciona o id da questão
-li.addEventListener("click", ()=>mark(node, li, q));
-ol.appendChild(li);
-
-  });
-
-  const btnIA = node.querySelector('[data-role="ia-toggle"]');
-  const menu = node.querySelector(".ia-menu");
-  if (btnIA && menu){
-    const addItem = (label, kind)=>{
-      const a = document.createElement("a");
-      a.className = "ia-item";
-      a.textContent = label;
-      a.setAttribute("data-ia", kind);
-      a.setAttribute("href", "#");
-      a.setAttribute("rel", "noopener");
-      a.setAttribute("target", "_blank");
-      menu.appendChild(a);
-    };
-    addItem("Princípios", "principios");
-    addItem("Check-list", "checklist");
-
-    btnIA.addEventListener("click", ()=>{ menu.classList.toggle("show"); });
-
-    menu.addEventListener("click", (ev)=>{
-      const link = ev.target.closest(".ia-item");
-      if(!link) return;
-      const kind = link.getAttribute("data-ia");
-      const url = buildGoogleIA(kind, q);
-      link.setAttribute("href", url);
-      menu.classList.remove("show");
-    });
-  }
-
-  const btnShare = node.querySelector('[data-role="share"]');
-  if (btnShare){
-    btnShare.addEventListener("click", ()=>handleShareStory(q, num));
-  }
-
-  return node;
-}
-
-function mark(card, li, q){
-  if (card.classList.contains("ok") || card.classList.contains("bad")) return;
-
-  // registra a escolha do usuário
-  card.querySelectorAll('.q-opts li').forEach(el=>el.removeAttribute('data-picked'));
-  li.setAttribute('data-picked','1');
-
-  const key = li.dataset.key;
-  const correctKey = q.answer ?? q.answerKey; // <- funciona para quiz e prova
-  const correct = key === correctKey;
-  const res = card.querySelector(".q-res");
-
-  // trava e realça o gabarito
-  card.querySelectorAll(".q-opts li").forEach(el=>el.classList.add("lock"));
-  card.querySelectorAll(".q-opts li").forEach(el=>{ if (el.dataset.key === correctKey) el.classList.add("hit"); });
-
-  if (correct){
-    card.classList.add("ok");
-    res.textContent = "Parabéns! Resposta correta.";
-    res.className = "q-res good";
-  }else{
-    card.classList.add("bad");
-    res.textContent = `Resposta errada. Correta: ${correctKey}.`;
-    res.className = "q-res bad";
-  }
-
-  const btnIA = card.querySelector('[data-role="ia-toggle"]');
-  if (btnIA){
-    btnIA.classList.remove("ia");
-    btnIA.classList.add(correct ? "primary" : "");
-    if (!correct){ btnIA.style.background="#dc2626"; btnIA.style.borderColor="#b91c1c"; }
-  }
-}
-
-
-
-function buildGoogleIA(kind, q){
-  const enc = (s)=>encodeURIComponent(s);
-  const alts = q.options.map(o=>`${o.key}) ${o.text}`).join(" ");
-  const correctKey = q.answer ?? q.answerKey; // <- unificado
-  const correct = q.options.find(o=>o.key===correctKey);
-  const gab = correct ? `${correctKey}) ${correct.text}` : correctKey;
-  const tema = Array.isArray(q.themes) && q.themes.length ? q.themes.join(", ") : "Direito";
-
-  let prompt = "";
-  if (kind === "gabarito"){
-    prompt = `Considere a questão a seguir, analise a alternativa escolhida, explique, exemplifique e justifique juridicamente. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
-  } else if (kind === "glossario"){
-    prompt = `Liste e defina, em tópicos curtos, os termos jurídicos presentes nesta questão. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
-  } else if (kind === "principios"){
-    prompt = `Pesquise em bibliotecas e obras jurídicas reconhecidas os PRINCÍPIOS relacionados ao tema desta questão e apresente cada princípio com: (1) nome do princípio, (2) breve comentário de 1–2 frases, (3) referência completa da fonte consultada (autor, título da obra, edição/ano e página; ou URL institucional quando aplicável). Foque em doutrina e repositórios confiáveis. Tema(s): ${tema}. Contexto: Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}. Formate em tópicos claros.`;
-  } else if (kind === "checklist"){
-    prompt = `Gere um CHECK-LIST de estudo para prova com base na questão abaixo. Estruture em tópicos: (1) o que o aluno precisa dominar (conceitos, fórmulas, dispositivos legais, súmulas), (2) erros comuns e PEGADINHAS de prova, (3) dicas práticas de resolução, (4) 3–5 microexercícios sugeridos. Seja objetivo. Tema(s): ${tema}. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}.`;
-  } else {
-    prompt = `Sugira 3 links de vídeos objetivos e confiáveis para estudar o tema desta questão. Mostre título curto e link. Tema(s): ${tema}. Questão: "${q.stem}" Gabarito: ${gab}. Alternativas: ${alts}`;
-  }
-  return `https://www.google.com/search?udm=50&hl=pt-BR&gl=BR&q=${enc(prompt)}`;
-}
-
-
-/* ==================== NAV ==================== */
-function goHome(){
-  $("#quiz")?.classList.add("hidden");
-  $("#exam")?.classList.add("hidden");
-  $("#home")?.classList.remove("hidden");
-
-  // limpa UI da prova
-  const list = document.getElementById("examList");
-  const rep  = document.getElementById("examReport");
-  if (list) list.innerHTML = "";
-  if (rep) { rep.classList.add("hidden"); rep.innerHTML = ""; }
-
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-
-/* === Topbar: esconder ao descer, mostrar rápido ao subir === */
-function initTopbarAutoHide(){
-  const bar = document.querySelector(".topbar");
-  if (!bar) return;
-  let last = window.scrollY;
-  let hidden = false;
-  window.addEventListener("scroll", () => {
-    const y = window.scrollY;
-    const dy = y - last;
-    if (y < 48) { bar.classList.remove("hide"); hidden = false; last = y; return; }
-    if (dy > 6 && y > 80) { if (!hidden){ bar.classList.add("hide"); hidden = true; } }
-    else if (dy < -2) { if (hidden){ bar.classList.remove("hide"); hidden = false; } }
-    last = y;
-  }, { passive: true });
-}
-
-/* === Botão voltar ao topo === */
-function initBackToTop(){
-  const btn = document.createElement("button");
-  btn.className = "backtop";
-  btn.setAttribute("aria-label","Voltar ao topo");
-  btn.textContent = "↑";
-  document.body.appendChild(btn);
-
-  const toggle = ()=>{
-    if (window.scrollY > 400) btn.classList.add("show");
-    else btn.classList.remove("show");
-  };
-  window.addEventListener("scroll", toggle, {passive:true});
-  window.addEventListener("resize", toggle);
-  toggle();
-
-  btn.addEventListener("click", ()=>{
-    window.scrollTo({top:0, behavior:"smooth"});
-  });
 }
 
 /* ==================== EXPOSE DEBUG ==================== */
