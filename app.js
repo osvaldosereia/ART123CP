@@ -231,7 +231,7 @@ async function renderStoryPNG(card){
   // auto-fit com teto por seção
   const base = { refs: 22, enun: 34, alt: 28 };
   const min  = { refs: 14, enun: 20, alt: 18 };
-  const cap  = { refs: 28, enun: 42, alt: 34 }; // máximo permitido
+  const cap  = { refs: 32, enun: 48, alt: 40 }; // máximo permitido
 
   let lo = 0, hi = 1;
   const canFit = (s)=>{
@@ -258,7 +258,7 @@ async function renderStoryPNG(card){
   let yy = innerY;
   yy = drawWrapped(ctx, innerX, yy, innerW, card.referencias||"", sizes.refs, "#6b7280", 400, 1.35); // cor igual ao site
   yy += 16;
-  yy = drawWrapped(ctx, innerX, yy, innerW, card.enunciado||"", sizes.enun, "#111827", 600, 1.5);
+  yy = drawWrapped(ctx, innerX, yy, innerW, card.enunciado||"", sizes.enun, "#103a9c", 600, 1.5);
   yy += 16;
 
   const badgeR = 20, badgeD = badgeR*2, badgePad = 12;
