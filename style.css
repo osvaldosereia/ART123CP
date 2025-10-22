@@ -122,3 +122,25 @@ body{
     z-index:100;
   }
 }
+
+/* style.css — ADICIONE AO FINAL */
+.modal.hidden{display:none}
+.modal{position:fixed;inset:0;z-index:60;display:grid;place-items:center}
+.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.4)}
+.modal-card{position:relative;width:min(960px,92vw);background:#fff;border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.25);padding:16px}
+.modal-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.modal-actions{display:flex;gap:8px}
+.modal-body{padding:8px}
+.frases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.frase-item{display:flex;flex-direction:column;gap:8px;align-items:center}
+.btn{padding:8px 12px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+.btn:hover{background:#f3f4f6}
+.btn-small{padding:6px 10px;font-size:.9rem}
+.btn-ghost{background:transparent;border-color:transparent}
+.btn-icon-round{width:36px;height:36px;border-radius:999px;display:grid;place-items:center;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+.btn-icon-round img{width:20px;height:20px;display:block}
+.swatches{display:flex;flex-wrap:wrap;gap:8px}
+.swatch{width:22px;height:22px;border-radius:6px;border:1px solid #d1d5db;cursor:pointer}
+.swatch[aria-selected="true"]{outline:2px solid #111827;outline-offset:2px}
+.btn-share-vert{width:100%;border:1px solid #e5e7eb;border-radius:12px;padding:8px;cursor:pointer}
+@media (max-width:1024px){.frases-grid{grid-template-columns:1fr}}
