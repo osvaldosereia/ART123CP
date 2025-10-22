@@ -3,29 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>QConcursos · Simulador</title>
+  <title>MeuJus</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- TOP BAR: uma linha no desktop (logo | disciplina | temas) -->
+  <!-- TOP BAR: uma linha, fundo cinza, centro -->
   <header class="topbar">
     <div class="container topbar__row">
-      <div class="brand">QConcursos · Simulador</div>
-      <div id="disciplina-select" class="select select--single" data-label="Disciplina"></div>
-      <div id="temas-multiselect" class="multiselect" data-label="Temas"></div>
+      <div class="brand">MeuJus</div>
+      <div class="topbar__filters">
+        <div id="disciplina-select" class="select select--single"></div>
+        <div id="temas-multiselect" class="multiselect"></div>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <div id="cards"></div>
+    <div id="sentinela" aria-hidden="true"></div>
   </main>
 
   <script>
     // ?txt=data/direito-penal/penal1.txt  |  default: data/direito-penal/penal1.txt
-    const params = new URLSearchParams(location.search);
-    window.APP_CONFIG = {
-      txtUrl: params.get('txt') || 'data/direito-penal/penal1.txt'
-    };
+    const p = new URLSearchParams(location.search);
+    window.APP_CONFIG = { txtUrl: p.get("txt") || "data/direito-penal/penal1.txt" };
   </script>
   <script src="app.js"></script>
 </body>
