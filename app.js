@@ -14,40 +14,39 @@
   };
 
   /* ------------------------------ Utils ------------------------------ */
-const U = {
-  el(tag, attrs = {}, ...children) {
-    const e = document.createElement(tag);
-    Object.entries(attrs).forEach(([k, v]) => {
-      if (k === "class") e.className = v;
-      else if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
-      else if (k === "html") e.innerHTML = v;
-      else e.setAttribute(k, v);
-    });
-    children.flat().forEach(c => { if (c!=null) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
-    return e;
-  },
-  trim: s => (s || "").replace(/^\s+|\s+$/g, ""),
-  byPrefix: (l, p) => l.startsWith(p) ? l.slice(p.length).trim() : null,
-  uniq: arr => [...new Set(arr)],
-  copy: t => { try { navigator.clipboard && navigator.clipboard.writeText(t); } catch { } },
-  openGoogle: q => window.open("https://www.google.com/search?udm=50&q=" + encodeURIComponent(q), "_blank"),
-  onClickOutside(root, cb) { const h = ev => { if (!root.contains(ev.target)) cb(); }; document.addEventListener("mousedown", h, { once: true }); },
-  fitPopover(menu, trigger) { const r = trigger.getBoundingClientRect(); if (r.top < 160) menu.classList.add("below"); else menu.classList.remove("below"); },
-  mdInline: s => (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>"),
-  // Backdrop: fecha só quando clicado (não intercepta cliques dentro do menu)
-  backdrop(onClose){
-    const el = document.createElement("div");
-    el.className = "dropdown-backdrop";
-    const handler = () => { try { onClose(); } finally { el.remove(); } };
-    el.addEventListener("pointerdown", handler, { once: true });
-    document.body.appendChild(el);
-    // Esc fecha
-    const keyH = (e)=>{ if(e.key==="Escape"){ handler(); document.removeEventListener("keydown", keyH, true);} };
-    document.addEventListener("keydown", keyH, true);
-    return el;
-  }
-};
-
+  const U = {
+    el(tag, attrs = {}, ...children) {
+      const e = document.createElement(tag);
+      Object.entries(attrs).forEach(([k, v]) => {
+        if (k === "class") e.className = v;
+        else if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
+        else if (k === "html") e.innerHTML = v;
+        else e.setAttribute(k, v);
+      });
+      children.flat().forEach(c => { if (c!=null) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+      return e;
+    },
+    trim: s => (s || "").replace(/^\s+|\s+$/g, ""),
+    byPrefix: (l, p) => l.startsWith(p) ? l.slice(p.length).trim() : null,
+    uniq: arr => [...new Set(arr)],
+    copy: t => { try { navigator.clipboard && navigator.clipboard.writeText(t); } catch { } },
+    openGoogle: q => window.open("https://www.google.com/search?udm=50&q=" + encodeURIComponent(q), "_blank"),
+    onClickOutside(root, cb) { const h = ev => { if (!root.contains(ev.target)) cb(); }; document.addEventListener("mousedown", h, { once: true }); },
+    fitPopover(menu, trigger) { const r = trigger.getBoundingClientRect(); if (r.top < 160) menu.classList.add("below"); else menu.classList.remove("below"); },
+    mdInline: s => (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>"),
+    // Backdrop: fecha só quando clicado (não intercepta cliques dentro do menu)
+    backdrop(onClose){
+      const el = document.createElement("div");
+      el.className = "dropdown-backdrop";
+      const handler = () => { try { onClose(); } finally { el.remove(); } };
+      el.addEventListener("pointerdown", handler, { once: true });
+      document.body.appendChild(el);
+      // Esc fecha
+      const keyH = (e)=>{ if(e.key==="Escape"){ handler(); document.removeEventListener("keydown", keyH, true);} };
+      document.addEventListener("keydown", keyH, true);
+      return el;
+    }
+  };
 
   /* ------------------------------ Loader ------------------------------ */
   async function loadTxt() {
@@ -102,40 +101,35 @@ const U = {
     return cards;
   }
 
-  /* ------------------------------ IA Prompts ------------------------------ */
-  ```javascript
-/* ------------------------------ IA Prompts ------------------------------ */
-function buildPrompt(kind, card) {
-  const temas = (card.temas || []).join(", ") || "geral";
-  const alts = card.alternativas.join(" | ");
-  const enun = card.enunciado;
+  /* ------------------------------ IA Prompts (simplificados p/ Google IA) ------------------------------ */
+  function buildPrompt(kind, card) {
+    const temas = (card.temas || []).join(", ") || "geral";
+    const alts = card.alternativas.join(" | ");
+    const enun = card.enunciado;
 
-  switch (kind) {
-    case "Gabarito":
-      return `Atue como professor de Direito, diga qual é a alternativa correta e fundamente juridicamente de forma direta (até 5 pontos), comentando em uma linha por que cada outra alternativa está errada; Tema: ${enun}; ${alts}.`; Gabarito oficial: ${card.gabarito || "?"}.`;
+    switch (kind) {
+      case "Gabarito":
+        return `Atue como professor de Direito e diga qual é a alternativa correta com fundamentação jurídica direta em até 5 pontos, comentando em 1 linha por que cada outra alternativa está errada; Tema: ${temas}; Enunciado: ${enun}; Alternativas: ${alts}; Gabarito oficial: ${card.gabarito || "?"}.`;
 
-    case "Glossário":
-      return `Explique em linguagem simples todos os termos jurídicos do enunciado e das alternativas, com definições curtas e referências legais quando existirem; Tema: ${enun}; ${alts}.`;
+      case "Glossário":
+        return `Explique em linguagem simples todos os termos jurídicos do enunciado e das alternativas, com definições curtas e referências legais quando existirem; Tema: ${temas}; Enunciado: ${enun}; Alternativas: ${alts}.`;
 
-    case "Vídeo":
-      return `Liste 3 vídeos do YouTube com link direto e título curto que expliquem o tema desta questão e depois sugira 5 termos de busca entre aspas; Tema: ${enun}; ${alts}.`;
+      case "Vídeo":
+        return `Liste 3 vídeos do YouTube com link direto e título curto que expliquem o tema desta questão e depois sugira 5 termos de busca entre aspas; Tema: ${temas}; Enunciado: ${enun}; Alternativas: ${alts}.`;
 
-    case "Dicas":
-      return `Dê dicas objetivas para acertar questões desse tema, mostre pegadinhas comuns, erros frequentes e finalize com um checklist curto de revisão; Tema: ${enun}; ${alts}.`;
+      case "Dicas":
+        return `Dê dicas objetivas para acertar questões desse tema, mostre pegadinhas e erros comuns e finalize com um checklist curto de revisão; Tema: ${temas}; Enunciado: ${enun}; Alternativas: ${alts}.`;
 
-    case "Princípios":
-      return `Aponte os princípios jurídicos relacionados ao tema, explique cada um em frase curta, diga como afetam as alternativas A..E e conclua com a alternativa que melhor se ajusta; Tema: ${enun}; ${alts}.`;
+      case "Princípios":
+        return `Aponte os princípios jurídicos ligados ao tema, explique cada um em frase curta, indique o impacto em A..E e conclua com a alternativa que melhor se ajusta; Tema: ${temas}; Enunciado: ${enun}; Alternativas: ${alts}.`;
 
-    case "Inédita":
-      return `Crie 3 versões inéditas da mesma questão no mesmo nível, cada uma com enunciado, alternativas A..E, gabarito e um comentário de 2 linhas; Tema: ${enun}; ${alts}.`;
+      case "Inédita":
+        return `Crie 3 versões inéditas da mesma questão no mesmo nível, cada uma com enunciado, alternativas A..E, gabarito e comentário de 2 linhas; Tema: ${temas}; Base: ${enun}; Alternativas (modelo): ${alts}.`;
 
-    default:
-      return `Analise e responda objetivamente; Enunciado: ${enun}; Alternativas: ${alts}.`;
+      default:
+        return `Responda de forma objetiva; Tema: ${temas}; Enunciado: ${enun}; Alternativas: ${alts}.`;
+    }
   }
-}
-```
-
-
 
   /* ------------------------------ Badge inference ------------------------------ */
   function inferBadges(alts) {
@@ -148,64 +142,63 @@ function buildPrompt(kind, card) {
   }
 
   /* ------------------------------ Card ------------------------------ */
- function buildCard(card, idx) {
-  const badges = inferBadges(card.alternativas);
-  const meta = U.el("div", { class: "q__meta" }, card.referencias);
-  const stmt = U.el("div", { class: "q__stmt", html: U.mdInline(card.enunciado) });
+  function buildCard(card, idx) {
+    const badges = inferBadges(card.alternativas);
+    const meta = U.el("div", { class: "q__meta" }, card.referencias);
+    const stmt = U.el("div", { class: "q__stmt", html: U.mdInline(card.enunciado) });
 
-  const ul = U.el("ul", { class: "q__opts" });
-  card.alternativas.forEach((opt, i) => {
-    const clean = opt.replace(/^[A-E]\)\s*/i, "");
-    const li = U.el("li", { class: "q__opt", "data-letter": badges[i] });
-    const badge = U.el("span", { class: "q__badge" }, badges[i]);
-    li.appendChild(badge);
-    li.appendChild(U.el("div", {}, clean));
-    ul.appendChild(li);
-  });
-
-  const iaBtn = U.el("button", { class: "btn", type: "button" }, "Google IA");
-  const pop = U.el("div", { class: "popover" });
-  const menu = U.el("div", { class: "popover__menu hidden" });
-  ["Gabarito", "Glossário", "Vídeo", "Dicas", "Princípios", "Inédita"].forEach(lbl => {
-    const b = U.el("button", { class: "subbtn", type: "button" }, lbl);
-    b.addEventListener("click", () => {
-      const prompt = buildPrompt(lbl, card);
-      U.copy(prompt);
-      U.openGoogle(`${lbl} | ${prompt}`);
-      if (lbl === "Gabarito") revealAnswer(ul, card.gabarito, true);
-      closeMenu();
+    const ul = U.el("ul", { class: "q__opts" });
+    card.alternativas.forEach((opt, i) => {
+      const clean = opt.replace(/^[A-E]\)\s*/i, "");
+      const li = U.el("li", { class: "q__opt", "data-letter": badges[i] });
+      const badge = U.el("span", { class: "q__badge" }, badges[i]);
+      li.appendChild(badge);
+      li.appendChild(U.el("div", {}, clean));
+      ul.appendChild(li);
     });
-    menu.appendChild(b);
-  });
-  function openMenu(){ menu.classList.remove("hidden"); U.fitPopover(menu, iaBtn); U.onClickOutside(pop, closeMenu); }
-  function closeMenu(){ menu.classList.add("hidden"); }
-  iaBtn.addEventListener("click", () => menu.classList.contains("hidden") ? openMenu() : closeMenu());
-  pop.appendChild(iaBtn); pop.appendChild(menu);
 
-  const actions = U.el("div", { class: "q__actions" }, pop);
+    const iaBtn = U.el("button", { class: "btn", type: "button" }, "Google IA");
+    const pop = U.el("div", { class: "popover" });
+    const menu = U.el("div", { class: "popover__menu hidden" });
+    ["Gabarito", "Glossário", "Vídeo", "Dicas", "Princípios", "Inédita"].forEach(lbl => {
+      const b = U.el("button", { class: "subbtn", type: "button" }, lbl);
+      b.addEventListener("click", () => {
+        const prompt = buildPrompt(lbl, card);
+        U.copy(prompt);
+        U.openGoogle(`${lbl} | ${prompt}`);
+        if (lbl === "Gabarito") revealAnswer(ul, card.gabarito, true);
+        closeMenu();
+      });
+      menu.appendChild(b);
+    });
+    function openMenu(){ menu.classList.remove("hidden"); U.fitPopover(menu, iaBtn); U.onClickOutside(pop, closeMenu); }
+    function closeMenu(){ menu.classList.add("hidden"); }
+    iaBtn.addEventListener("click", () => menu.classList.contains("hidden") ? openMenu() : closeMenu());
+    pop.appendChild(iaBtn); pop.appendChild(menu);
 
-  const wrap = U.el("article", { class: "q", "data-idx": idx }, meta, stmt, ul, actions);
+    const actions = U.el("div", { class: "q__actions" }, pop);
 
-  // resposta do usuário
-  let answered = false;
-  ul.addEventListener("click", ev => {
-    const li = ev.target.closest(".q__opt");
-    if (!li || answered) return;
-    answered = true;
-    const chosen = (li.getAttribute("data-letter") || "").toUpperCase();
-    const correct = (card.gabarito || "").toUpperCase();
-    if (chosen === correct) {
-      li.classList.add("correct");
-      appendGabarito(wrap, correct);
-    } else {
-      li.classList.add("wrong");
-      revealAnswer(ul, correct, true);
-    }
-  });
+    const wrap = U.el("article", { class: "q", "data-idx": idx }, meta, stmt, ul, actions);
 
-  return wrap;
-}
+    // resposta do usuário
+    let answered = false;
+    ul.addEventListener("click", ev => {
+      const li = ev.target.closest(".q__opt");
+      if (!li || answered) return;
+      answered = true;
+      const chosen = (li.getAttribute("data-letter") || "").toUpperCase();
+      const correct = (card.gabarito || "").toUpperCase();
+      if (chosen === correct) {
+        li.classList.add("correct");
+        appendGabarito(wrap, correct);
+      } else {
+        li.classList.add("wrong");
+        revealAnswer(ul, correct, true);
+      }
+    });
 
+    return wrap;
+  }
 
   function appendGabarito(cardEl, g) {
     const info = U.el("div", { class: "q__explain" }, `Gabarito: ${g}`);
@@ -221,89 +214,87 @@ function buildPrompt(kind, card) {
 
   /* ------------------------------ Filtros ------------------------------ */
   function mountSelectSingle(root, { options, onChange }) {
-  root.innerHTML = "";
-  root.classList.add("select");
+    root.innerHTML = "";
+    root.classList.add("select");
 
-  const btn = U.el("button", { class: "select__button", type: "button", "aria-haspopup": "listbox", "aria-expanded": "false" }, "Escolha a disciplina");
-  const menu = U.el("div", { class: "select__menu hidden", role: "listbox" });
-  let bd = null;
+    const btn = U.el("button", { class: "select__button", type: "button", "aria-haspopup": "listbox", "aria-expanded": "false" }, "Escolha a disciplina");
+    const menu = U.el("div", { class: "select__menu hidden", role: "listbox" });
+    let bd = null;
 
-  function open(){
-    if (!menu.classList.contains("hidden")) return;
-    menu.classList.remove("hidden");
-    btn.setAttribute("aria-expanded","true");
-    bd = U.backdrop(close);
+    function open(){
+      if (!menu.classList.contains("hidden")) return;
+      menu.classList.remove("hidden");
+      btn.setAttribute("aria-expanded","true");
+      bd = U.backdrop(close);
+    }
+    function close(){
+      menu.classList.add("hidden");
+      btn.setAttribute("aria-expanded","false");
+      bd = null;
+    }
+
+    options.forEach(opt => {
+      const it = U.el("div", { class: "select__option", role: "option", "data-value": opt.label }, opt.label);
+      it.addEventListener("click", () => { btn.textContent = opt.label; close(); onChange && onChange(opt); });
+      menu.appendChild(it);
+    });
+
+    btn.addEventListener("click", () => menu.classList.contains("hidden") ? open() : close());
+
+    root.appendChild(btn);
+    root.appendChild(menu);
   }
-  function close(){
-    menu.classList.add("hidden");
-    btn.setAttribute("aria-expanded","false");
-    bd = null;
-  }
-
-  options.forEach(opt => {
-    const it = U.el("div", { class: "select__option", role: "option", "data-value": opt.label }, opt.label);
-    it.addEventListener("click", () => { btn.textContent = opt.label; close(); onChange && onChange(opt); });
-    menu.appendChild(it);
-  });
-
-  btn.addEventListener("click", () => menu.classList.contains("hidden") ? open() : close());
-
-  root.appendChild(btn);
-  root.appendChild(menu);
-}
-
 
   function mountMultiselect(root, { options, onChange }) {
-  root.innerHTML = "";
-  const control = U.el("div", { class: "multiselect__control", role: "combobox", "aria-expanded": "false" });
-  const input = U.el("input", { class: "multiselect__input", type: "text", placeholder: "Temas..." });
-  const menu  = U.el("div", { class: "multiselect__menu hidden", role: "listbox" });
-  let bd = null;
+    root.innerHTML = "";
+    const control = U.el("div", { class: "multiselect__control", role: "combobox", "aria-expanded": "false" });
+    const input = U.el("input", { class: "multiselect__input", type: "text", placeholder: "Temas..." });
+    const menu  = U.el("div", { class: "multiselect__menu hidden", role: "listbox" });
+    let bd = null;
 
-  function syncItems() {
-    const q = (input.value || "").toLowerCase();
-    Array.from(menu.children).forEach(item => {
-      const val = item.getAttribute("data-value");
-      const match = !q || val.toLowerCase().includes(q);
-      item.style.display = match ? "block" : "none";
-      const selected = state.temasSelecionados.has(val);
-      item.setAttribute("aria-selected", selected ? "true" : "false");
-    });
-  }
+    function syncItems() {
+      const q = (input.value || "").toLowerCase();
+      Array.from(menu.children).forEach(item => {
+        const val = item.getAttribute("data-value");
+        const match = !q || val.toLowerCase().includes(q);
+        item.style.display = match ? "block" : "none";
+        const selected = state.temasSelecionados.has(val);
+        item.setAttribute("aria-selected", selected ? "true" : "false");
+      });
+    }
 
-  function open(){
-    if (!menu.classList.contains("hidden")) return;
-    menu.classList.remove("hidden");
-    control.setAttribute("aria-expanded","true");
-    bd = U.backdrop(close);
-    syncItems();
-  }
-  function close(){
-    menu.classList.add("hidden");
-    control.setAttribute("aria-expanded","false");
-    bd = null;
-  }
-
-  (U.uniq(options || [])).forEach(opt => {
-    const it = U.el("div", { class: "multiselect__item", role: "option", "data-value": opt }, opt);
-    it.addEventListener("click", () => {
-      if (state.temasSelecionados.has(opt)) state.temasSelecionados.delete(opt);
-      else state.temasSelecionados.add(opt);
-      onChange && onChange(new Set(state.temasSelecionados));
+    function open(){
+      if (!menu.classList.contains("hidden")) return;
+      menu.classList.remove("hidden");
+      control.setAttribute("aria-expanded","true");
+      bd = U.backdrop(close);
       syncItems();
+    }
+    function close(){
+      menu.classList.add("hidden");
+      control.setAttribute("aria-expanded","false");
+      bd = null;
+    }
+
+    (U.uniq(options || [])).forEach(opt => {
+      const it = U.el("div", { class: "multiselect__item", role: "option", "data-value": opt }, opt);
+      it.addEventListener("click", () => {
+        if (state.temasSelecionados.has(opt)) state.temasSelecionados.delete(opt);
+        else state.temasSelecionados.add(opt);
+        onChange && onChange(new Set(state.temasSelecionados));
+        syncItems();
+      });
+      menu.appendChild(it);
     });
-    menu.appendChild(it);
-  });
 
-  input.addEventListener("focus", open);
-  input.addEventListener("input", syncItems);
-  control.addEventListener("click", open);
+    input.addEventListener("focus", open);
+    input.addEventListener("input", syncItems);
+    control.addEventListener("click", open);
 
-  control.appendChild(input);
-  root.appendChild(control);
-  root.appendChild(menu);
-}
-
+    control.appendChild(input);
+    root.appendChild(control);
+    root.appendChild(menu);
+  }
 
   /* ------------------------------ Feed incremental ------------------------------ */
   function buildFeed() {
