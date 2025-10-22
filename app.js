@@ -133,7 +133,7 @@
         "2) Título — URL;",
         "3) Título — URL;",
         "Termos de busca recomendados: 5 termos entre aspas.",
-        "Tema/Questão:", withAnswer
+        "Tema/Questão:", body
       ].join("\n");
 
     case "Dicas":
@@ -145,7 +145,7 @@
         "- Dicas e pegadinhas em bullets curtos;",
         "- Erros comuns dos candidatos;",
         "- Mini-checklist para revisar antes de marcar.",
-        "Base:", withAnswer
+        "Base:", body
       ].join("\n");
 
     case "Princípios":
@@ -157,19 +157,18 @@
         "- Princípio: explicação objetiva e incidência na questão;",
         "- Relação com cada alternativa A..E em 1 linha;",
         "- Conclusão que conduz ao gabarito.",
-        "Questão:", withAnswer
+        "Questão:", body
       ].join("\n");
 
     case "Inédita":
       return [
         "Papel: Professor de Direito especialista em concursos.",
-        "Objetivo: criar 3 versões inéditas da MESMA questão no mesmo nível.",
+        "Objetivo: criar 1 versão inéditas da MESMA questão no mesmo nível.",
         "Formato de saída para cada versão:",
         "Enunciado;",
         "A) ... E);",
         "Gabarito: <LETRA>;",
         "Comentário do gabarito em 2–3 linhas;",
-        "Tag de temas.",
         "Tema base extraído:", (card.temas || []).join(", "),
         "Referência da questão original:", body
       ].join("\n");
