@@ -206,7 +206,7 @@ async function renderStoryPNG(card){
   ctx.fillRect(0,0,W,H);
 
   // cabeçalho
-  setFont(ctx, 28, 700);
+  setFont(ctx, 32, 700);
   ctx.fillStyle = "#111827";
   ctx.textAlign = "center";
   ctx.textBaseline = "top";
