@@ -1,74 +1,69 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MeuJus</title>
+  <link rel="icon" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Topbar -->
   <header class="topbar">
     <img class="logo-img" src="logo-h.png" alt="MeuJus" />
-    <button id="btnSearchOpen" class="btn ghost" style="margin-left:auto">Buscar Questões</button>
+    <button id="btnOpenSearch" class="btn ghost" style="margin-left:auto">Buscar Questões</button>
+    <button id="btnCreateExam" class="btn">Gerar Prova</button>
+    <button id="examShareLink" class="btn primary">Compartilhar Prova</button>
   </header>
 
   <!-- Toast -->
   <div id="toast" class="toast" aria-live="polite"></div>
 
-  <!-- Quiz -->
-  <main id="quiz" class="page">
+  <!-- Página principal -->
+  <main class="page">
+    <!-- Chips dos temas ativos no quiz -->
     <div id="quizThemes" class="chips"></div>
-    <section id="quizList" class="list"></section>
-    <div id="sentinel" class="sentinel">Carregando…</div>
-  </main>
 
-  <!-- Simulado -->
-  <main id="exam" class="page hidden">
-    <section>
-      <header class="exam-head" style="display:flex;align-items:center;gap:.75rem;">
-        <h2 id="examTitle" style="margin:0;">Simulado</h2>
-        <button id="examShareLink" class="btn ghost" style="margin-left:auto">Compartilhar Prova</button>
+    <!-- Container do quiz -->
+    <section id="quiz" class="section">
+      <ul id="quizList" class="cards"></ul>
+      <div id="sentinel"></div>
+    </section>
+
+    <!-- Seção de prova -->
+    <section id="exam" class="section hidden">
+      <header class="exam-head">
+        <h1 id="examTitle">Prova</h1>
+        <button id="examFinish" class="btn bad">Finalizar</button>
+        <button id="examShareLink" class="btn">Compartilhar</button>
       </header>
-      <p class="muted" id="examIntro" style="margin:6px 0 8px">10 questões aleatórias para para treinar.</p>
-      <div class="divider" aria-hidden="true"></div>
-      <section id="examList" class="list"></section>
-      <div class="actions">
-        <button id="examFinish" class="btn primary">Concluir</button>
-      </div>
-      <section id="examReport" class="card hidden" aria-live="polite"></section>
+      <div id="examIntro" class="muted">Selecione questões e gere a prova.</div>
+      <ol id="examList" class="exam-list"></ol>
+      <div id="examReport" class="exam-report hidden"></div>
     </section>
   </main>
 
   <!-- Template de questão -->
   <template id="tplQuestion">
-    <article class="q">
-      <div class="q-head"><span class="q-num"></span></div>
-      <pre class="q-stem"></pre>
-      <ul class="q-opts"></ul>
-      <div class="q-ai">
-        <button class="btn ia" data-role="ia-toggle">Google I.A.</button>
-        <div class="ia-menu">
-          <a class="ia-item" data-ia="gabarito" target="_blank" rel="noopener">Gabarito</a>
-          <a class="ia-item" data-ia="glossario" target="_blank" rel="noopener">Glossário</a>
-          <a class="ia-item" data-ia="videos" target="_blank" rel="noopener">Vídeos</a>
-        </div>
-        <button class="btn ghost" data-role="share" style="margin-left:auto">Compartilhar Story</button>
-      </div>
-      <div class="q-res" aria-live="polite"></div>
-    </article>
+    <li class="card">
+      <article class="question">
+        <header class="q-head">
+          <span class="q-meta"></span>
+          <button class="btn ghost q-copy" type="button">Copiar</button>
+          <button class="btn ghost q-add" type="button">Adicionar à Prova</button>
+        </header>
+        <div class="q-body"></div>
+      </article>
+    </li>
   </template>
 
-  <!-- FAB Criar Simulado -->
-  <button id="btnCreateExam" class="fab" aria-label="Criar Simulado" title="Criar Simulado">Criar Simulado</button>
-
   <!-- Modal Buscar Questões -->
-  <div id="searchModal" class="modal hidden" aria-hidden="true">
-    <div class="modal-backdrop" data-close></div>
-    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <dialog id="searchModal" class="modal" aria-labelledby="mTitle">
+    <div class="modal-card">
       <header class="modal-head">
         <h3 id="mTitle">Buscar Questões</h3>
-        <button class="btn ghost" type="button" data-close>Fechar</button>
+        <button id="btnCloseSearch" class="btn ghost" type="button">Fechar</button>
       </header>
 
       <div class="modal-body">
@@ -84,15 +79,32 @@
 
         <!-- Temas multiselect -->
         <label class="lbl" style="margin-top:12px">Temas</label>
-        <div id="chipsTemas"></div>
+        <div class="ms-panel show">
+          <div class="ms-head">
+            <input id="msSearch" type="search" placeholder="Filtrar temas…" />
+            <div class="ms-actions">
+              <button id="msSelAll" type="button" class="btn">Selecionar visíveis</button>
+              <button id="msClear" type="button" class="btn ghost">Limpar</button>
+            </div>
+          </div>
+          <div id="msList" class="ms-list"></div>
+          <div class="ms-foot">
+            <span id="msCount">0 exibidos · 0 selecionados</span>
+          </div>
+        </div>
       </div>
 
       <footer class="modal-foot">
-        <button id="modalSearchBtn" class="btn primary">Buscar</button>
+        <button id="btnRunSearch" class="btn primary" disabled>Buscar</button>
       </footer>
     </div>
-  </div>
+  </dialog>
 
-  <script src="app.js?v=3" defer></script>
+  <script src="app.js" defer></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js");
+    }
+  </script>
 </body>
 </html>
