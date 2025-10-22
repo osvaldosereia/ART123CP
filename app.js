@@ -1,21 +1,106 @@
 "use strict";
-// === Compartilhar Prova: link com payload no hash; fallback arquivo ===
+// Compartilhar Prova: visualização de impressão → salve como PDF
 (function setupShareExamButton(){
   document.addEventListener("DOMContentLoaded", ()=>{
     const btn = document.getElementById("examShareLink");
     if(!btn) return;
-    btn.addEventListener("click", async ()=>{
-      try{
-        const url = await buildExamShareLink(); // cria #exam=…
-        if (url.length <= 1800){
-          await shareOrCopyLink(url);
-        }else{
-          await shareExamFile(); // fallback .mjexam
-        }
-      }catch(e){ console.error(e); toast("Falha ao compartilhar a prova"); }
+    btn.addEventListener("click", ()=>{
+      if(!STATE.exam){ toast("Nenhuma prova carregada"); return; }
+      exportExamPrintView();
     });
   });
 })();
+
+function exportExamPrintView(){
+  // garante correção atual
+  let acertos = 0, total = STATE.exam.questions.length;
+  STATE.exam.questions.forEach(q=>{
+    const ans = STATE.exam.answers[q.id];
+    if(ans === q.answerKey) acertos++;
+  });
+
+  const css = `
+    <style>
+      *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;}
+      body{padding:24px; color:#111;}
+      h1,h2,h3{margin:0 0 12px 0}
+      .meta{color:#6b7280; font-size:12px; margin:6px 0 8px}
+      .divider{border:0;border-top:1px solid #e5e7eb;margin:8px 0 12px}
+      .q{page-break-inside:avoid; margin:0 0 20px 0; padding:0 0 8px 0}
+      .stem{white-space:pre-wrap; font-weight:600; color:#1e40af; margin:4px 0 8px}
+      .opts{margin:0; padding-left:18px}
+      .opts li{margin:2px 0}
+      .badge{display:inline-block; padding:2px 6px; border-radius:6px; font-size:12px}
+      .ok{background:#dcfce7}
+      .bad{background:#fee2e2}
+      .foot{margin-top:24px; font-size:14px}
+      .report{margin-top:24px; padding:12px; border:1px solid #e5e7eb; border-radius:8px}
+      @media print {.no-print{display:none}}
+    </style>
+  `;
+
+  const qHtml = STATE.exam.questions.map((q,i)=>{
+    const got = STATE.exam.answers[q.id] ?? "—";
+    const ok  = q.answerKey;
+    const hit = got===ok;
+    return `
+      <article class="q">
+<div class="meta">${escapeHtml(q.meta || "")}</div>
+        <h3>#${i+1}</h3>
+        <div class="stem">${escapeHtml(q.stem)}</div>
+        <ol class="opts" type="A">
+          ${q.options.map(o=>{
+            const isUser = got===o.key;
+            const isOk   = ok===o.key;
+            const mark = isOk ? `<span class="badge ok">correta</span>` : (isUser ? `<span class="badge bad">sua</span>` : ``);
+            return `<li>${escapeHtml(o.text)} ${mark}</li>`;
+          }).join("")}
+        </ol>
+      </article>
+      <hr class="divider">
+    `;
+  }).join("");
+
+  const gabHtml = `
+    <h3>Gabarito</h3>
+    <ol>
+      ${STATE.exam.questions.map((q,i)=>`<li>#${i+1}: <strong>${q.answerKey}</strong></li>`).join("")}
+    </ol>
+  `;
+
+  const repHtml = `
+    <div class="report">
+      <h3>Relatório</h3>
+      <p>Acertos: <strong>${acertos}/${total}</strong></p>
+      <p>Erros: <strong>${total-acertos}</strong></p>
+    </div>
+  `;
+
+  const html = `
+    <html>
+      <head><meta charset="utf-8">${css}<title>Prova MeuJus</title></head>
+      <body>
+        <h1>Prova MeuJus</h1>
+        <hr class="divider">
+        ${qHtml}
+        ${repHtml}
+        ${gabHtml}
+        <div class="foot no-print">
+          <button onclick="window.print()">Imprimir / Salvar como PDF</button>
+        </div>
+      </body>
+    </html>
+  `;
+
+  const w = window.open("", "_blank");
+  w.document.open(); w.document.write(html); w.document.close();
+  w.focus();
+}
+
+function escapeHtml(s){
+  return String(s??"").replace(/[&<>"']/g, c=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[c]));
+}
+
 
 // monta payload mínimo da prova atual; se não houver, cria a partir do pool visível
 function buildExamPayload(){
@@ -158,34 +243,16 @@ function checkHashExam(){
   }
 }
 
-// SUBSTITUA sua função renderExam por esta
 function renderExam(){
   const list = document.getElementById("examList");
   if(!STATE.exam || !list) return;
   list.innerHTML = "";
-  const tpl = /** @type {HTMLTemplateElement} */(document.getElementById("tplExamQuestion"));
-
   STATE.exam.questions.forEach((q, i)=>{
-    const li = tpl.content.firstElementChild.cloneNode(true);
-    li.querySelector(".ex-stem").textContent = `${i+1}. ${q.stem}`;
-
-    const ul = li.querySelector(".ex-opts");
-    q.options.forEach(o=>{
-      const item = document.createElement("li");
-      const id = `${q.id}_${o.key}`;
-      item.innerHTML = `
-        <label for="${id}">
-          <input type="radio" name="${q.id}" id="${id}" value="${o.key}">
-          <span>${o.key}) ${o.text}</span>
-        </label>
-      `;
-      ul.appendChild(item);
-    });
-
-    list.appendChild(li);
+    const card = buildQuestion(q, i + 1); // usa o mesmo layout do quiz
+    list.appendChild(card);
   });
 }
-// concluir prova e exibir relatório simples
+// concluir prova e exibir relatório com acertos/erros + gabarito
 (function setupExamFinish(){
   document.addEventListener("DOMContentLoaded", ()=>{
     const btn = document.getElementById("examFinish");
@@ -193,34 +260,28 @@ function renderExam(){
     btn.addEventListener("click", ()=>{
       if(!STATE.exam) return;
 
-      // capturar nome
-      const name = document.getElementById("examStudent")?.value?.trim() || "";
-      STATE.exam.student = name;
+     // coleta respostas atuais a partir dos cards do layout de quiz
+STATE.exam.questions.forEach(q=>{
+  const picked = document.querySelector(`.q-opts li[data-q="${q.id}"][data-picked="1"]`);
+  STATE.exam.answers[q.id] = picked ? picked.dataset.key : null;
+});
 
-      // coletar respostas
-      STATE.exam.questions.forEach(q=>{
-        const sel = document.querySelector(`input[name="${q.id}"]:checked`);
-        STATE.exam.answers[q.id] = sel ? sel.value : null;
-      });
-      STATE.exam.finishedAt = Date.now();
 
-      // corrigir
-      let acertos = 0;
+      // corrige
+      let acertos = 0, total = STATE.exam.questions.length;
       STATE.exam.questions.forEach(q=>{
         if(STATE.exam.answers[q.id] === q.answerKey) acertos++;
       });
 
-      // render relatório
+      // relatório
       const rep = document.getElementById("examReport");
       if(rep){
-        const total = STATE.exam.questions.length;
         rep.classList.remove("hidden");
         rep.innerHTML = `
           <h3>Resultado</h3>
-          <p>Aluno: <strong>${name || "—"}</strong></p>
           <p>Acertos: <strong>${acertos}/${total}</strong></p>
-          <details>
-            <summary>Gabarito</summary>
+          <details open>
+            <summary>Gabarito e suas respostas</summary>
             <ol>
               ${STATE.exam.questions.map((q,i)=>{
                 const got = STATE.exam.answers[q.id] ?? "—";
@@ -237,6 +298,7 @@ function renderExam(){
     });
   });
 })();
+
 
 
 /* ====== STORY INSTAGRAM 1080x1920, 3 LAYOUTS ====== */
@@ -971,10 +1033,12 @@ function buildQuestion(q, num){
   const ol = node.querySelector(".q-opts");
   q.options.forEach(opt=>{
     const li = document.createElement("li");
-    li.textContent = `${opt.key}) ${opt.text}`;
-    li.dataset.key = opt.key;
-    li.addEventListener("click", ()=>mark(node, li, q));
-    ol.appendChild(li);
+li.textContent = `${opt.key}) ${opt.text}`;
+li.dataset.key = opt.key;
+li.dataset.q = q.id;              // <— adiciona o id da questão
+li.addEventListener("click", ()=>mark(node, li, q));
+ol.appendChild(li);
+
   });
 
   const btnIA = node.querySelector('[data-role="ia-toggle"]');
@@ -1013,15 +1077,21 @@ function buildQuestion(q, num){
   return node;
 }
 
-function mark(card, li, q){
-  const already = card.classList.contains("ok") || card.classList.contains("bad");
-  if (already) return;
+fufunction mark(card, li, q){
+  if (card.classList.contains("ok") || card.classList.contains("bad")) return;
+
+  // registra a escolha do usuário
+  card.querySelectorAll('.q-opts li').forEach(el=>el.removeAttribute('data-picked'));
+  li.setAttribute('data-picked','1');
 
   const key = li.dataset.key;
-  const correct = key === q.answer;
+  const correctKey = q.answer ?? q.answerKey; // <- funciona para quiz e prova
+  const correct = key === correctKey;
   const res = card.querySelector(".q-res");
+
+  // trava e realça o gabarito
   card.querySelectorAll(".q-opts li").forEach(el=>el.classList.add("lock"));
-  card.querySelectorAll(".q-opts li").forEach(el=>{ if (el.dataset.key === q.answer) el.classList.add("hit"); });
+  card.querySelectorAll(".q-opts li").forEach(el=>{ if (el.dataset.key === correctKey) el.classList.add("hit"); });
 
   if (correct){
     card.classList.add("ok");
@@ -1029,21 +1099,26 @@ function mark(card, li, q){
     res.className = "q-res good";
   }else{
     card.classList.add("bad");
-    res.textContent = `Resposta errada. Correta: ${q.answer}.`;
+    res.textContent = `Resposta errada. Correta: ${correctKey}.`;
     res.className = "q-res bad";
   }
 
   const btnIA = card.querySelector('[data-role="ia-toggle"]');
-  btnIA.classList.remove("ia");
-  btnIA.classList.add(correct ? "primary" : "");
-  if (!correct){ btnIA.style.background="#dc2626"; btnIA.style.borderColor="#b91c1c"; }
+  if (btnIA){
+    btnIA.classList.remove("ia");
+    btnIA.classList.add(correct ? "primary" : "");
+    if (!correct){ btnIA.style.background="#dc2626"; btnIA.style.borderColor="#b91c1c"; }
+  }
 }
+
+
 
 function buildGoogleIA(kind, q){
   const enc = (s)=>encodeURIComponent(s);
   const alts = q.options.map(o=>`${o.key}) ${o.text}`).join(" ");
-  const correct = q.options.find(o=>o.key===q.answer);
-  const gab = correct ? `${q.answer}) ${correct.text}` : q.answer;
+  const correctKey = q.answer ?? q.answerKey; // <- unificado
+  const correct = q.options.find(o=>o.key===correctKey);
+  const gab = correct ? `${correctKey}) ${correct.text}` : correctKey;
   const tema = Array.isArray(q.themes) && q.themes.length ? q.themes.join(", ") : "Direito";
 
   let prompt = "";
@@ -1060,6 +1135,7 @@ function buildGoogleIA(kind, q){
   }
   return `https://www.google.com/search?udm=50&hl=pt-BR&gl=BR&q=${enc(prompt)}`;
 }
+
 
 /* ==================== NAV ==================== */
 function goHome(){
