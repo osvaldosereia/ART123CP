@@ -869,6 +869,8 @@ async function startSearch(){
     $("#quizList").innerHTML="";
     $("#home").classList.add("hidden");
     $("#quiz").classList.remove("hidden");
+    document.getElementById("exam")?.classList.add("hidden");
+
 
     renderSelectedThemesChips();
     mountInfinite();
@@ -1139,10 +1141,19 @@ function buildGoogleIA(kind, q){
 
 /* ==================== NAV ==================== */
 function goHome(){
-  $("#quiz").classList.add("hidden");
-  $("#home").classList.remove("hidden");
-  window.scrollTo({top:0,behavior:"smooth"});
+  $("#quiz")?.classList.add("hidden");
+  $("#exam")?.classList.add("hidden");
+  $("#home")?.classList.remove("hidden");
+
+  // limpa UI da prova
+  const list = document.getElementById("examList");
+  const rep  = document.getElementById("examReport");
+  if (list) list.innerHTML = "";
+  if (rep) { rep.classList.add("hidden"); rep.innerHTML = ""; }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
 
 /* === Topbar: esconder ao descer, mostrar rápido ao subir === */
 function initTopbarAutoHide(){
