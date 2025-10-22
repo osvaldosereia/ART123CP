@@ -256,7 +256,7 @@ async function renderStoryPNG(card){
 
   // conteúdo: referências, enunciado, alternativas
   let yy = innerY;
-  yy = drawWrapped(ctx, innerX, yy, innerW, card.referencias||"", sizes.refs, "#6b7280", 400, 1.35); // cor igual ao site
+  yy = drawWrapped(ctx, innerX, yy, innerW, card.referencias||"", sizes.refs, "#6b7280", 400, 1.35);
   yy += 16;
   yy = drawWrapped(ctx, innerX, yy, innerW, card.enunciado||"", sizes.enun, "#103a9c", 600, 1.5);
   yy += 16;
@@ -386,6 +386,9 @@ async function renderStoryPNG(card){
     const shareBtn = U.el("button", { class: "btn", type: "button" }, "Compartilhar");
     shareBtn.addEventListener("click", () => shareCardAsStory(card));
     const actions = U.el("div", { class: "q__actions" }, pop, shareBtn);
+
+    // botão redondo de frases
+    appendFrasesButton(actions);
 
     const wrap = U.el("article", { class: "q", "data-idx": idx }, meta, stmt, ul, actions);
 
@@ -599,6 +602,249 @@ async function renderStoryPNG(card){
 
     resetAndRender();
     mountInfiniteScroll();
+  }
+
+  // ===== 1) Botão redondo ao lado dos botões do card =====
+  function appendFrasesButton(actionsEl){
+    const btn = document.createElement('button');
+    btn.className = 'btn-icon-round';
+    btn.title = 'Frases';
+    btn.innerHTML = '<img src="assets/icons/frases.png" alt="Frases">';
+    btn.addEventListener('click', openFrasesModal);
+    actionsEl.appendChild(btn);
+  }
+
+  // ===== 2) Modal: estados, paleta, carregar e sortear =====
+  const FRASES_TXT_URL = 'data/frases/frases.txt';
+  const PALETA = [
+    {name:'Preto', val:'#000000'}, {name:'Branco', val:'#FFFFFF'},
+    {name:'Cinza claro', val:'#E5E7EB'}, {name:'Azul pastel', val:'#BFDBFE'},
+    {name:'Verde pastel', val:'#BBF7D0'}, {name:'Lilás pastel', val:'#E9D5FF'},
+    {name:'Pêssego', val:'#FED7AA'}, {name:'Amarelo', val:'#FEF3C7'},
+    {name:'Rosa', val:'#FBCFE8'}, {name:'Água', val:'#CFFAFE'},
+  ];
+
+  let frasesCache = null;
+  let bgAtual = '#FFFFFF';
+
+  async function openFrasesModal(){
+    await ensureFrases();
+    mountSwatches();
+    sortearERender();
+    bindShareButtons();
+    bindShuffle();
+    bindClose();
+    document.getElementById('frases-modal').classList.remove('hidden');
+  }
+
+  function bindClose(){
+    const modal = document.getElementById('frases-modal');
+    modal.querySelectorAll('[data-close="true"]').forEach(el=>{
+      el.onclick = ()=> modal.classList.add('hidden');
+    });
+    modal.querySelector('.modal-backdrop').onclick = ()=> modal.classList.add('hidden');
+  }
+
+  function bindShuffle(){
+    const b = document.getElementById('frases-shuffle');
+    b.onclick = ()=> sortearERender();
+  }
+
+  function mountSwatches(){
+    const wrap = document.getElementById('frases-swatches');
+    wrap.innerHTML = '';
+    PALETA.forEach((c)=>{
+      const s = document.createElement('button');
+      s.className = 'swatch';
+      s.style.background = c.val;
+      s.title = c.name;
+      if(c.val === bgAtual) s.setAttribute('aria-selected','true');
+      s.onclick = ()=>{
+        bgAtual = c.val;
+        wrap.querySelectorAll('.swatch').forEach(x=>x.removeAttribute('aria-selected'));
+        s.setAttribute('aria-selected','true');
+        sortearERender(false); // re-render sem novo sorteio
+      };
+      wrap.appendChild(s);
+    });
+  }
+
+  async function ensureFrases(){
+    if(frasesCache) return;
+    const res = await fetch(FRASES_TXT_URL);
+    const txt = await res.text();
+    // Formatos aceitos por linha:
+    // "frase | autor"  ou  "frase - autor"  ou  "frase — autor"
+    frasesCache = txt
+      .split(/\r?\n/)
+      .map(l=>l.trim())
+      .filter(l=>l.length>0 && !l.startsWith('#'))
+      .map(l=>{
+        let [frase, autor] = l.split(/\s[|\-—]\s/);
+        if(!autor){ autor=''; frase=l; }
+        return {frase, autor};
+      });
+  }
+
+  function sortear3(arr){
+    const out = [];
+    const used = new Set();
+    while(out.length<3 && used.size<arr.length){
+      const i = Math.floor(Math.random()*arr.length);
+      if(used.has(i)) continue;
+      used.add(i);
+      out.push(arr[i]);
+    }
+    return out;
+  }
+
+  function sortearERender(novo=true){
+    const picks = novo ? sortear3(frasesCache) : getUltimasFrases() || sortear3(frasesCache);
+    setUltimasFrases(picks);
+    const canvases = Array.from(document.querySelectorAll('#frases-modal .frase-canvas'));
+    canvases.forEach((cv, i)=>{
+      const it = picks[i] || picks[0];
+      renderFrasePNG(cv, it.frase, it.autor, bgAtual);
+    });
+  }
+
+  // ===== 3) Render PNG frase + compartilhar =====
+  function isDark(hex){
+    const h = hex.replace('#','');
+    const bigint = parseInt(h,16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+    const lum = 0.2126*r + 0.7152*g + 0.0722*b;
+    return lum < 140; // corte simples
+  }
+
+  function renderFrasePNG(canvas, frase, autor, bg){
+    const ctx = canvas.getContext('2d');
+    const W = canvas.width, H = canvas.height;
+
+    // fundo
+    ctx.fillStyle = bg;
+    ctx.fillRect(0,0,W,H);
+
+    // topo “meujus.com.br”
+    ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
+    ctx.font = '28px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+    ctx.fillText('meujus.com.br', W/2, 36);
+
+    // área de texto
+    const padX = 96;
+    const innerW = W - padX*2;
+
+    // frase central em fonte estilo Times New Roman
+    let size = autoFitFont(ctx, frase, innerW, 54, 96, 28, 'Times New Roman, Times, serif');
+    ctx.font = `${size}px "Times New Roman", Times, serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
+
+    const centerY = H/2 - 40;
+    drawMultilineCenter(ctx, frase, W/2, centerY, innerW, size*1.25);
+
+    // autor abaixo, alinhado à esquerda, menor e itálico
+    const autorSize = Math.max(22, Math.round(size*0.42));
+    ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'top';
+    const startX = padX;
+    const startY = centerY + size*1.25*1.2*countLines(ctx, frase, innerW) + 24;
+    ctx.fillText(autor ? `— ${autor}` : '', startX, startY);
+  }
+
+  function autoFitFont(ctx, text, maxW, minPx, maxPx, step, family){
+    let best = minPx;
+    for(let s=maxPx; s>=minPx; s-=step){
+      ctx.font = `${s}px ${family}`;
+      if(measureWrapFits(ctx, text, maxW)) { best = s; break; }
+    }
+    return best;
+  }
+
+  function measureWrapFits(ctx, text, maxW){
+    const words = text.split(/\s+/);
+    let line = '';
+    for(const w of words){
+      const test = line ? line + ' ' + w : w;
+      if(ctx.measureText(test).width > maxW){
+        if(line === '') return false;
+        line = w;
+        if(ctx.measureText(w).width > maxW) return false;
+      }else{
+        line = test;
+      }
+    }
+    return true;
+  }
+
+  function drawMultilineCenter(ctx, text, cx, cy, maxW, lh){
+    const lines = wrapLines(ctx, text, maxW);
+    const totalH = lines.length*lh;
+    let y = cy - totalH/2;
+    for(const line of lines){
+      ctx.fillText(line, cx, y);
+      y += lh;
+    }
+  }
+
+  function wrapLines(ctx, text, maxW){
+    const words = text.split(/\s+/);
+    const lines = [];
+    let line = '';
+    for(const w of words){
+      const test = line ? line + ' ' + w : w;
+      if(ctx.measureText(test).width > maxW){
+        if(line) lines.push(line);
+        line = w;
+      }else{
+        line = test;
+      }
+    }
+    if(line) lines.push(line);
+    return lines;
+  }
+
+  function countLines(ctx, text, maxW){
+    return wrapLines(ctx, text, maxW).length;
+  }
+
+  // ===== 4) Compartilhar: usa o canvas vizinho (vertical, com topo igual)
+  function bindShareButtons(){
+    const items = Array.from(document.querySelectorAll('#frases-modal .frase-item'));
+    items.forEach((it)=>{
+      const btn = it.querySelector('.btn-share-vert');
+      const cv = it.querySelector('.frase-canvas');
+      btn.textContent = 'Compartilhar';
+      btn.onclick = async ()=>{
+        const blob = await new Promise(r=>cv.toBlob(r,'image/png',1));
+        const file = new File([blob], 'frase.png', {type:'image/png'});
+        if(navigator.canShare && navigator.canShare({files:[file]})){
+          await navigator.share({files:[file], title:'Frase', text:'meujus.com.br'});
+        }else{
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url; a.download = 'frase.png'; a.click();
+          URL.revokeObjectURL(url);
+        }
+      };
+    });
+  }
+
+  // ===== 5) Persistir últimas frases para re-render sem novo sorteio
+  function setUltimasFrases(arr){
+    try{ sessionStorage.setItem('frases:last', JSON.stringify(arr)); }catch(_){}
+  }
+  function getUltimasFrases(){
+    try{
+      const s = sessionStorage.getItem('frases:last');
+      return s ? JSON.parse(s) : null;
+    }catch(_){ return null; }
   }
 
   document.addEventListener("DOMContentLoaded", init);
