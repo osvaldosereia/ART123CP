@@ -686,20 +686,20 @@ async function renderStoryPNG(card){
       });
   }
 
-  function sortear3(arr){
-    const out = [];
-    const used = new Set();
-    while(out.length<3 && used.size<arr.length){
-      const i = Math.floor(Math.random()*arr.length);
-      if(used.has(i)) continue;
-      used.add(i);
-      out.push(arr[i]);
-    }
-    return out;
+  ffunction sortearN(arr, n){
+  const out = [];
+  const used = new Set();
+  while(out.length<n && used.size<arr.length){
+    const i = Math.floor(Math.random()*arr.length);
+    if(used.has(i)) continue;
+    used.add(i);
+    out.push(arr[i]);
   }
+  return out;
+}
 
-  function sortearERender(novo=true){
-    const picks = novo ? sortear3(frasesCache) : getUltimasFrases() || sortear3(frasesCache);
+function sortearERender(novo=true){
+  const picks = novo ? sortearN(frasesCache, 6) : getUltimasFrases() || sortearN(frasesCache, 6);
     setUltimasFrases(picks);
     const canvases = Array.from(document.querySelectorAll('#frases-modal .frase-canvas'));
     canvases.forEach((cv, i)=>{
