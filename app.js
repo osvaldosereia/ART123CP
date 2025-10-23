@@ -569,10 +569,18 @@ async function renderStoryPNG(card){
 
 /* ------------------------------ Init ------------------------------ */
 async function init() {
-  // não carrega nada de início — só mostra a mensagem de boas-vindas
-  state.cards = [];
-  state.temasDisponiveis = [];
-  state.temasSelecionados.clear();
+  // tenta carregar o arquivo da URL se existir, mas sem mostrar erro na tela
+  let raw = "";
+  try {
+    const res = await fetch(txtUrl);
+    if (res.ok) raw = await res.text();
+  } catch {
+    console.warn("Arquivo não encontrado:", txtUrl);
+  }
+
+  // se houver conteúdo, parseia normalmente
+  state.cards = parseTxt(raw);
+  state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
 
   // cria o seletor de disciplinas
   mountSelectSingle(document.getElementById("disciplina-select"), {
@@ -590,48 +598,52 @@ async function init() {
     onChange: async (opt) => {
       const urls = Array.isArray(opt.txt) ? opt.txt : [opt.txt];
 
-      // atualiza a URL (para manter histórico)
+      // Atualiza a URL com a lista dos arquivos
       const txtParam = urls.join(",");
       window.history.replaceState({}, "", `?txt=${encodeURIComponent(txtParam)}`);
 
-      // baixa e concatena os arquivos selecionados
+      // Baixa e concatena todos os arquivos selecionados
       const parts = await Promise.all(
         urls.map(u => fetch(u).then(r => (r.ok ? r.text() : "")).catch(() => ""))
       );
       const txt = parts.join("\n-----\n");
 
-      // atualiza estado
+      // Atualiza o estado com os dados carregados
       state.cards = parseTxt(txt);
       state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
       state.temasSelecionados.clear();
 
-      // cria o seletor de temas com base na disciplina escolhida
+      // Esconde a frase de boas-vindas
+      const welcome = document.getElementById("welcome");
+      if (welcome) welcome.style.display = "none";
+
+      // Cria o seletor de temas com base nos arquivos carregados
       mountMultiselect(document.getElementById("temas-multiselect"), {
         options: state.temasDisponiveis,
         onChange: () => resetAndRender()
       });
 
-      // esconde a mensagem de boas-vindas e mostra as questões
-      const welcome = document.getElementById("welcome");
-      if (welcome) welcome.style.display = "none";
-
+      // Renderiza as questões
       resetAndRender();
     }
   });
 
-  // cria o multiselect vazio (só será preenchido após escolher disciplina)
+  // Cria o seletor de temas (vazio até escolher disciplina)
   mountMultiselect(document.getElementById("temas-multiselect"), {
-    options: [],
+    options: state.temasDisponiveis,
     onChange: () => resetAndRender()
   });
 
-  // monta o observer para carregamento infinito (sem renderizar ainda)
-  mountInfiniteScroll();
-
-  // mantém a frase de boas-vindas visível até o usuário selecionar disciplina
+  // Mostra a frase de boas-vindas se não houver conteúdo
   const welcome = document.getElementById("welcome");
-  if (welcome) welcome.style.display = "block";
+  if (state.cards.length === 0 && welcome) welcome.style.display = "block";
+  else if (welcome) welcome.style.display = "none";
+
+  // Monta o carregamento incremental
+  resetAndRender();
+  mountInfiniteScroll();
 }
+
 
 
 
