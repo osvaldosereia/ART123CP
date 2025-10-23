@@ -929,4 +929,244 @@ function fitFontByBox(ctx, text, maxW, maxH, minPx, maxPx, step, family, lhK){
 
 
   document.addEventListener("DOMContentLoaded", init);
+// ===================== Impressora / PDF =====================
+(function(){
+  const btn = document.getElementById('btn-impressora');
+  const modal = document.getElementById('modal-impressora');
+  const closeEls = modal.querySelectorAll('[data-close-impressora]');
+  const lista = document.getElementById('imp-lista');
+  const loading = document.getElementById('imp-loading');
+  const btnExportar = document.getElementById('imp-exportar');
+  const contadorEl = document.getElementById('imp-contador');
+  const radioCols = () => Number(document.querySelector('input[name="imp-colunas"]:checked').value);
+
+  let selected = new Map();         // id -> questão
+  let cursor = null;                // paginação
+  let isLoading = false;
+  let hasMore = true;
+  let initialFocusId = null;
+
+  // ADAPTER: fonte de questões já usada no app
+  // Prioriza cache global caso exista. Caso contrário, dispara mesma API do app, se exposta.
+  async function fetchQuestoes(nextCursor){
+    if (window.QUESTOES_FETCH_PAGE) {
+      return await window.QUESTOES_FETCH_PAGE(nextCursor);
+    }
+    if (window.QUESTOES_CACHE && Array.isArray(window.QUESTOES_CACHE)) {
+      // Simula paginação sobre cache
+      const pageSize = 20;
+      const start = nextCursor ? nextCursor : 0;
+      const slice = window.QUESTOES_CACHE.slice(start, start+pageSize);
+      return { itens: slice, nextCursor: (start+pageSize<window.QUESTOES_CACHE.length) ? start+pageSize : null };
+    }
+    // Falha controlada
+    return { itens: [], nextCursor: null };
+  }
+
+  function openModal(focusId){
+    initialFocusId = focusId || null;
+    modal.classList.remove('hidden');
+    lista.scrollTop = 0;
+    selected.clear();
+    updateCounter();
+    cursor = null;
+    hasMore = true;
+    lista.innerHTML = '';
+    lista.appendChild(loading);
+    loadMore();
+  }
+
+  function closeModal(){
+    modal.classList.add('hidden');
+  }
+
+  function updateCounter(){
+    contadorEl.textContent = selected.size;
+    btnExportar.disabled = selected.size === 0;
+  }
+
+  function makeCard(q){
+    // Campos esperados: id, titulo, enunciado (HTML ou texto), disciplina, banca, ano
+    const card = document.createElement('article');
+    card.className = 'imp-card';
+    card.dataset.id = q.id;
+
+    const h = document.createElement('h3');
+    h.textContent = q.titulo || `Questão ${q.id ?? ''}`.trim();
+
+    const meta = document.createElement('div');
+    meta.className = 'imp-metadados';
+    const parts = [];
+    if (q.disciplina) parts.push(q.disciplina);
+    if (q.banca) parts.push(q.banca);
+    if (q.ano) parts.push(q.ano);
+    meta.textContent = parts.join(' • ');
+
+    const enun = document.createElement('div');
+    enun.className = 'imp-enunciado';
+    enun.innerHTML = q.enunciado || q.texto || '';
+
+    const sel = document.createElement('label');
+    sel.className = 'imp-selecionar';
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.addEventListener('change', () => {
+      if (cb.checked) {
+        if (selected.size >= 20) { cb.checked = false; return; }
+        selected.set(q.id, q);
+      } else {
+        selected.delete(q.id);
+      }
+      updateCounter();
+    });
+    sel.appendChild(cb);
+    sel.appendChild(document.createTextNode('Selecionar'));
+
+    card.appendChild(h);
+    if (meta.textContent) card.appendChild(meta);
+    card.appendChild(enun);
+    card.appendChild(sel);
+
+    return card;
+  }
+
+  async function loadMore(){
+    if (isLoading || !hasMore) return;
+    isLoading = true;
+    loading.classList.remove('hidden');
+
+    const page = await fetchQuestoes(cursor);
+    const itens = page.itens || [];
+    cursor = page.nextCursor;
+    hasMore = Boolean(cursor);
+
+    // render
+    if (loading.parentNode) loading.remove();
+    const frag = document.createDocumentFragment();
+    itens.forEach(q => frag.appendChild(makeCard(normalizeQuestao(q))));
+    lista.appendChild(frag);
+    lista.appendChild(loading);
+    loading.classList.add('hidden');
+    isLoading = false;
+
+    // foco inicial
+    if (initialFocusId != null) {
+      const el = lista.querySelector(`[data-id="${initialFocusId}"]`);
+      if (el) el.scrollIntoView({ block: 'center' });
+      initialFocusId = null;
+    }
+  }
+
+  function normalizeQuestao(q){
+    // Harmoniza nomes de campos comuns
+    return {
+      id: q.id ?? q._id ?? q.codigo ?? q.uid,
+      titulo: q.titulo ?? q.cabecalho ?? q.header ?? null,
+      enunciado: q.enunciado ?? q.html ?? q.conteudo ?? q.texto ?? '',
+      disciplina: q.disciplina ?? q.area ?? null,
+      banca: q.banca ?? q.org ?? null,
+      ano: q.ano ?? q.data?.slice?.(0,4) ?? null
+    };
+  }
+
+  // Infinite scroll
+  lista.addEventListener('scroll', () => {
+    const nearBottom = lista.scrollTop + lista.clientHeight >= lista.scrollHeight - 200;
+    if (nearBottom) loadMore();
+  });
+
+  // Abrir/fechar
+  btn?.addEventListener('click', () => openModal(null));
+  closeEls.forEach(el => el.addEventListener('click', closeModal));
+  modal.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // Exportar
+  btnExportar.addEventListener('click', () => {
+    const colunas = radioCols();
+    const itens = Array.from(selected.values());
+    exportarPDF(itens, { colunas });
+  });
+
+  // Permitir abrir com a questão clicada em foco via evento global
+  // Dispare window.dispatchEvent(new CustomEvent('abrirImpressora',{detail:{id: <questaoId>}}))
+  window.addEventListener('abrirImpressora', (e) => {
+    const id = e?.detail?.id ?? null;
+    openModal(id);
+  });
+
+  // Gerador de PDF
+  function exportarPDF(questoes, { colunas = 1 } = {}){
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ unit: 'mm', format: 'a4', putOnlyUsedFonts: true });
+
+    const pageW = doc.internal.pageSize.getWidth();
+    const pageH = doc.internal.pageSize.getHeight();
+    const margin = 15; // área de respiro
+    const gutter = 8;
+    const contentW = pageW - margin*2;
+    const colW = colunas === 2 ? (contentW - gutter)/2 : contentW;
+    const lineH = 5; // ~11-12pt
+    const fontSize = 12;
+
+    let x = margin;
+    let y = margin;
+
+    doc.setFont('Times','Normal');
+    doc.setFontSize(fontSize);
+
+    function addPage(){
+      doc.addPage();
+      x = margin; y = margin;
+    }
+
+    function nextLine(h=lineH){
+      y += h;
+      const bottom = pageH - margin;
+      if (y > bottom) {
+        if (colunas === 2 && x === margin) {
+          // vai para segunda coluna
+          x = margin + colW + gutter;
+          y = margin;
+        } else {
+          addPage();
+        }
+      }
+    }
+
+    function writeWrapped(text, bold=false){
+      const cleaned = stripHtml(text);
+      doc.setFont('Times', bold ? 'Bold' : 'Normal');
+      const split = doc.splitTextToSize(cleaned, colW);
+      split.forEach((line, idx) => {
+        doc.text(line, x, y);
+        if (idx < split.length - 1) nextLine();
+      });
+      doc.setFont('Times','Normal');
+    }
+
+    questoes.forEach((q, idx) => {
+      const titulo = q.titulo ? `${idx+1}. ${q.titulo}` : `${idx+1}. Questão`;
+      // espaço antes do bloco se não é o primeiro da coluna
+      if (!(x === margin && y === margin)) nextLine(3);
+      writeWrapped(titulo, true); nextLine();
+      writeWrapped(q.enunciado || ''); nextLine();
+
+      // separador visual discreto
+      doc.setDrawColor(200);
+      doc.line(x, y, x + colW, y);
+      nextLine(3);
+    });
+
+    doc.save('prova.pdf');
+  }
+
+  function stripHtml(html){
+    try{
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html || '';
+      // decodifica entidades e remove múltiplos espaços
+      const raw = tmp.textContent || tmp.innerText || '';
+      return (window.he ? he.decode(raw) : raw).replace(/\s+\n/g,'\n').replace(/[ \t]+/g,' ').trim();
+    }catch(_){ return ''; }
+  }
 })();
