@@ -23,48 +23,29 @@
     <div id="sentinela" aria-hidden="true"></div>
   </main>
 
- <!-- MODAL DE FRASES -->
+<!-- MODAL DE FRASES -->
 <div id="frases-modal" class="modal hidden" aria-hidden="true">
   <div class="modal-backdrop" data-close="true"></div>
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="frases-title">
     <div class="modal-head">
       <div class="swatches" id="frases-swatches" aria-label="Escolher cor de fundo"></div>
       <div class="modal-actions">
-        <button id="frases-shuffle" class="btn btn-small" type="button">Trocar frases</button>
+        <!-- botão "Trocar frases" removido -->
         <button class="btn btn-ghost" type="button" data-close="true">Fechar</button>
       </div>
     </div>
     <div class="modal-body">
       <h2 id="frases-title" class="visually-hidden">Sugestões de frases</h2>
-      <div class="frases-grid">
-        <div class="frase-item">
-          <canvas class="frase-canvas" width="1080" height="1350" aria-label="Frase 1"></canvas>
-          <button class="btn-share-vert" type="button" aria-label="Compartilhar frase 1"></button>
-        </div>
-        <div class="frase-item">
-          <canvas class="frase-canvas" width="1080" height="1350" aria-label="Frase 2"></canvas>
-          <button class="btn-share-vert" type="button" aria-label="Compartilhar frase 2"></button>
-        </div>
-        <div class="frase-item">
-          <canvas class="frase-canvas" width="1080" height="1350" aria-label="Frase 3"></canvas>
-          <button class="btn-share-vert" type="button" aria-label="Compartilhar frase 3"></button>
-        </div>
-        <div class="frase-item">
-          <canvas class="frase-canvas" width="1080" height="1350" aria-label="Frase 4"></canvas>
-          <button class="btn-share-vert" type="button" aria-label="Compartilhar frase 4"></button>
-        </div>
-        <div class="frase-item">
-          <canvas class="frase-canvas" width="1080" height="1350" aria-label="Frase 5"></canvas>
-          <button class="btn-share-vert" type="button" aria-label="Compartilhar frase 5"></button>
-        </div>
-        <div class="frase-item">
-          <canvas class="frase-canvas" width="1080" height="1350" aria-label="Frase 6"></canvas>
-          <button class="btn-share-vert" type="button" aria-label="Compartilhar frase 6"></button>
-        </div>
-      </div>
+
+      <!-- grid vazio para rolagem infinita -->
+      <div id="frases-grid" class="frases-grid"></div>
+
+      <!-- sentinela para IntersectionObserver -->
+      <div id="frases-sentinela" aria-hidden="true"></div>
     </div>
   </div>
 </div>
+
 
 
   <script>
