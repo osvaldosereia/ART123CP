@@ -55,16 +55,18 @@ const U = {
 };
 
   /* ------------------------------ Loader ------------------------------ */
-  async function loadTxt() {
-    try {
-      const res = await fetch(txtUrl);
-      if (!res.ok) throw new Error("not found");
-      return await res.text();
-    } catch {
-      document.getElementById("cards").innerHTML = `<div class="q"><div class="q__stmt">Arquivo não encontrado: <code>${txtUrl}</code></div></div>`;
-      return "";
-    }
+async function loadTxt() {
+  if (!txtUrl) return ""; // evita erro se não houver URL definida
+  try {
+    const res = await fetch(txtUrl);
+    if (!res.ok) throw new Error("not found");
+    return await res.text();
+  } catch {
+    console.warn("Arquivo não encontrado ou ausente:", txtUrl);
+    return ""; // não exibe nada na tela
   }
+}
+
 
   /* ------------------------------ Parser ------------------------------ */
   function parseTxt(raw) {
