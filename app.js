@@ -606,13 +606,18 @@ async function renderStoryPNG(card){
 
   // ===== 1) Botão redondo ao lado dos botões do card =====
   function appendFrasesButton(actionsEl){
-    const btn = document.createElement('button');
-    btn.className = 'btn-icon-round';
-    btn.title = 'Frases';
-    btn.innerHTML = '<img src="assets/icons/frases.png" alt="Frases">';
-    btn.addEventListener('click', openFrasesModal);
-    actionsEl.appendChild(btn);
-  }
+  const btn = document.createElement('button');
+  btn.className = 'btn-icon-round';
+  btn.title = 'Frases';
+  btn.innerHTML = '<img src="assets/icons/frases.png" alt="Frases">';
+  btn.addEventListener('click', openFrasesModal);
+
+  // empurra o botão para a extrema direita
+  btn.style.marginLeft = 'auto';
+
+  actionsEl.appendChild(btn);
+}
+
 
   // ===== 2) Modal: estados, paleta, carregar e sortear =====
   const FRASES_TXT_URL = 'data/frases/frases.txt';
