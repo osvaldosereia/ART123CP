@@ -23,13 +23,13 @@ body{
 .topbar{background:#f3f4f6;border-bottom:1px solid var(--border)}
 .topbar__row{
   display:grid;
-  grid-template-columns:auto minmax(0,1fr) minmax(0,1fr); /* logo | disciplina | temas */
+  grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);
   gap:8px; align-items:center; min-height:60px; padding:8px 0;
 }
 .brand{font-weight:600;white-space:nowrap}
 .topbar__filters{display:contents}
 
-/* menus centrados e visíveis no mobile */
+/* menus centrados no mobile */
 @media(max-width:480px){
   .topbar__row{padding:6px 0}
   .select__menu,.multiselect__menu{
@@ -60,19 +60,15 @@ body{
 /* backdrop para fechar ao clicar fora */
 .dropdown-backdrop{position:fixed;inset:0;background:transparent;z-index:80}
 
-/* ========= QUESTÕES — ULTRA MINIMALISTA ========= */
+/* ========= QUESTÕES ========= */
 #cards{padding:16px 0 64px}
 .q{padding:16px 0;border-top:4px solid #eceff3}
 .q__meta{font-size:12px;color:var(--muted);margin-bottom:8px}
-.q__stmt{font-weight:400;color:#103a9c; margin-bottom:10px;line-height:1.55}
+.q__stmt{font-weight:400;color:#103a9c;margin-bottom:10px;line-height:1.55}
 .q__stmt p{margin:0 0 8px 0}
-
 .q__opts{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.q__opt{
-  display:flex;align-items:flex-start;gap:10px;padding:6px 0;border-bottom:0;cursor:pointer
-}
+.q__opt{display:flex;align-items:flex-start;gap:10px;padding:6px 0;cursor:pointer}
 .q__opt > div:last-child{color:#454141}
-
 .q__badge{
   width:28px;height:28px;border:2px solid #cbd5e1;border-radius:999px;display:flex;align-items:center;justify-content:center;
   font-weight:700;font-size:13px;flex:0 0 28px;user-select:none;background:#fff
@@ -81,12 +77,9 @@ body{
 .q__opt.wrong .q__badge{border-color:#ef4444;background:#fee2e2;color:#991b1b}
 .q__explain{margin-top:8px;font-size:13px;color:#0f172a}
 
-/* ========= AÇÕES: GOOGLE IA ========= */
+/* ========= AÇÕES ========= */
 .q__actions{display:flex;gap:10px;margin-top:10px}
-.btn{
-  height:34px;padding:0 12px;border:1px solid var(--border);border-radius:10px;background:#eeeeee;
-  cursor:pointer
-}
+.btn{height:34px;padding:0 12px;border:1px solid var(--border);border-radius:10px;background:#eeeeee;cursor:pointer}
 .btn:hover{background:#e7e7e7}
 .popover{position:relative}
 .popover__menu{
@@ -100,125 +93,72 @@ body{
 /* ========= SENTINELA ========= */
 #sentinela{height:1px}
 
-/* garante o mesmo limite do corpo dentro da topbar */
+/* limite do container dentro da topbar */
 .topbar > .container{max-width:var(--container);margin:0 auto;padding:0 16px}
 
-/* controles menores no mobile e sem encostar nas bordas */
+/* controles menores no mobile */
 @media(max-width:480px){
   .topbar__row{grid-template-columns:auto 1fr 1fr; padding:6px 0}
   .select,.multiselect{min-width:0;width:100%}
 }
 
-/* menus da TOPBAR centralizados na tela no mobile */
-@media(max-width:480px){
-  .topbar .select__menu,
-  .topbar .multiselect__menu{
-    position:fixed;
-    left:50%;
-    transform:translateX(-50%);
-    top:66px;                 /* abaixo da topbar */
-    width:min(94vw, var(--container));
-    max-height:60vh;
-    z-index:100;
-  }
-}
-
-/* ========= MODAL COMPACTO (único) ========= */
-.modal { position: fixed; inset: 0; display: none; }
-.modal:not(.hidden){ display: block; }
-.modal-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.4); }
+/* ========= MODAL (CENTRADO) ========= */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:60}
+.modal:not(.hidden){display:flex}
+.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.4)}
 .modal-card{
-  position: relative;
-  z-index: 1;
-  margin: 6vh auto;
-  max-width: 760px;
-  width: calc(100% - 32px);
-  max-height: 88vh;
-  background:#fff;
-  border-radius: 18px;
-  box-shadow: 0 12px 32px rgba(0,0,0,.18);
-  overflow: hidden;
-  display: flex; flex-direction: column;
+  position:relative;z-index:1;
+  width:min(720px,94vw);
+  max-height:92vh;
+  background:#fff;border-radius:18px;box-shadow:0 12px 32px rgba(0,0,0,.18);
+  display:flex;flex-direction:column;overflow:hidden
 }
-.modal-head{
-  display:flex; align-items:center; justify-content:space-between;
-  padding: 14px 16px 0;
-  gap: 12px;
-}
-.modal-body{ padding: 12px 16px 18px; overflow:auto; }
+.modal-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 0;gap:12px}
+.modal-body{padding:12px 16px 18px;overflow:auto}
 
-/* Paleta topo */
-.swatches{ display:flex; gap:8px; padding: 8px 0 6px; flex-wrap: wrap; }
-.swatch{
-  width:22px; height:22px; border-radius:6px; border:2px solid #1112;
-}
-.swatch[aria-selected="true"]{ outline:2px solid #111; outline-offset:2px; }
+/* Paleta */
+.swatches{display:flex;gap:8px;padding:8px 0 6px;flex-wrap:wrap}
+.swatch{width:22px;height:22px;border-radius:6px;border:2px solid #1112}
+.swatch[aria-selected="true"]{outline:2px solid #111;outline-offset:2px}
 
-/* Grid das frases (genérico, será sobrescrito no escopo do modal) */
-.frases-grid{
-  display:grid; gap:16px;
-  grid-template-columns: 1fr;
+/* Botão pequeno */
+.btn-icon-round{
+  width:28px;height:28px;padding:0;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid #e5e7eb;background:#fff
 }
-@media (min-width: 860px){
-  .frases-grid{ grid-template-columns: 1fr 1fr; }
-}
+.btn-icon-round img{width:14px;height:14px}
+.q__actions{display:flex;align-items:center;gap:8px}
 
-/* Item e canvas menores, com respiro */
-.frase-item{
-  background:#f8f9fb; border:1px solid #e5e7eb; border-radius:12px;
-  padding:12px; display:flex; flex-direction:column; align-items:center; gap:10px;
+/* ========= MODAL DE FRASES (SEM SCROLL HORIZONTAL) ========= */
+#frases-modal .modal-card{max-width:min(100vw,980px)}
+#frases-modal .modal-body{overflow-x:hidden}
+
+/* colunas: 1 móvel, 2 médio, 3 desktop. Nunca 4 */
+#frases-modal .frases-grid{
+  display:grid;gap:16px;width:100%;max-width:100%;overflow-x:hidden;
+  grid-template-columns:1fr;
 }
-.frase-canvas{
-  width: 300px;
-  height: auto;
-  display:block;
-  border-radius:10px;
-  background:#fff;
+@media (min-width:600px){
+  #frases-modal .frases-grid{grid-template-columns:1fr 1fr}
 }
-.btn-share-vert{
-  align-self:center;
-  padding:8px 12px; border:1px solid #e5e7eb; border-radius:999px; background:#fff;
-  font: 500 14px system-ui, -apple-system, Segoe UI, Roboto;
+@media (min-width:1024px){
+  #frases-modal .frases-grid{grid-template-columns:1fr 1fr 1fr}
 }
 
-/* Título do modal */
-#frases-title{
-  margin: 8px 0 10px;
-  font: 700 22px system-ui, -apple-system, Segoe UI, Roboto;
+#frases-modal .frase-item{
+  background:#f8f9fb;border:1px solid #e5e7eb;border-radius:12px;
+  padding:12px;display:flex;flex-direction:column;align-items:center;gap:10px;width:100%;
 }
-
-/* botão menor */
-.btn-icon-round {
-  width: 28px;
-  height: 28px;
-  padding: 0;
-  border-radius: 9999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #e5e7eb;
-  background: #fff;
+#frases-modal .frase-canvas{width:100%;height:auto;display:block;border-radius:10px;background:#fff}
+#frases-modal .btn-share-vert{
+  align-self:center;padding:8px 12px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;
+  font:500 14px system-ui,-apple-system,Segoe UI,Roboto;
 }
-.btn-icon-round img { width: 14px; height: 14px; }
+#frases-title{margin:8px 0 10px;font:700 22px system-ui,-apple-system,Segoe UI,Roboto}
+#frases-sentinela{height:1px;width:100%}
 
-/* garante barra de ações em linha */
-.q__actions { display: flex; align-items: center; gap: 8px; }
-
-/* ========= ESCOPO DO MODAL DE FRASES (anti-scroll horizontal) ========= */
-#frases-modal .modal-card { max-width: min(100vw, 980px); }
-#frases-modal .modal-body { overflow-x: hidden; }
-#frases-modal .frases-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-#frases-modal .frase-item { width: 100%; }
-#frases-modal .frase-canvas { width: 100%; height: auto; display: block; }
-#frases-sentinela { height: 1px; width: 100%; }
-@media (max-width: 480px){
-  #frases-modal .modal-card { margin: 0; border-radius: 0; }
-  #frases-modal .modal-body { padding-left: 12px; padding-right: 12px; }
+/* ajustes extras mobile do modal */
+@media (max-width:480px){
+  #frases-modal .modal-card{margin:0;border-radius:12px;width:94vw}
+  #frases-modal .modal-body{padding-left:12px;padding-right:12px}
 }
