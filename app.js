@@ -511,8 +511,17 @@ async function renderStoryPNG(card){
     root.appendChild(menu);
   }
 
-  /* ------------------------------ Feed incremental ------------------------------ */
-  function buildFeed() {
+ /* ------------------------------ Feed incremental ------------------------------ */
+
+// esconde/mostra a frase inicial conforme há cartões a renderizar
+function toggleWelcome(count){
+  const el = document.getElementById("welcome");
+  if (!el) return;
+  if (count > 0) el.classList.add("hidden");
+  else el.classList.remove("hidden");
+}
+
+function buildFeed() {
   state.rendered = [];
   const temasAtivos = [...state.temasSelecionados];
   const groups = [];
@@ -529,43 +538,46 @@ async function renderStoryPNG(card){
   state.feedGroups = groups;
 }
 
-  function nextBatch() {
-    const out = [];
-    let produced = 0;
-    while (produced < BATCH && state.feedGroups.some(g => g.ptr < g.items.length)) {
-      for (const g of state.feedGroups) {
-        if (g.ptr >= g.items.length) continue;
-        const idx = g.items[g.ptr++];
-        if (state.rendered.includes(idx)) continue;
-        state.rendered.push(idx);
-        out.push(idx);
-        produced++;
-        if (produced >= BATCH) break;
-      }
+function nextBatch() {
+  const out = [];
+  let produced = 0;
+  while (produced < BATCH && state.feedGroups.some(g => g.ptr < g.items.length)) {
+    for (const g of state.feedGroups) {
+      if (g.ptr >= g.items.length) continue;
+      const idx = g.items[g.ptr++];
+      if (state.rendered.includes(idx)) continue;
+      state.rendered.push(idx);
+      out.push(idx);
+      produced++;
+      if (produced >= BATCH) break;
     }
-    return out;
   }
+  return out;
+}
 
-  function renderAppend(indexes) {
-    const mount = document.getElementById("cards");
-    indexes.forEach(i => mount.appendChild(buildCard(state.cards[i], i)));
-  }
+function renderAppend(indexes) {
+  const mount = document.getElementById("cards");
+  indexes.forEach(i => mount.appendChild(buildCard(state.cards[i], i)));
+}
 
-  function resetAndRender() {
-    document.getElementById("cards").innerHTML = "";
-    buildFeed();
-    renderAppend(nextBatch());
-  }
+function resetAndRender() {
+  document.getElementById("cards").innerHTML = "";
+  buildFeed();
+  const batch = nextBatch();
+  toggleWelcome(batch.length);   // <- esconde a frase ao carregar uma disciplina
+  renderAppend(batch);
+}
 
-  function mountInfiniteScroll() {
-    const sentinel = document.getElementById("sentinela");
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) renderAppend(nextBatch());
-      });
-    }, { rootMargin: "600px 0px" });
-    io.observe(sentinel);
-  }
+function mountInfiniteScroll() {
+  const sentinel = document.getElementById("sentinela");
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) renderAppend(nextBatch());
+    });
+  }, { rootMargin: "600px 0px" });
+  io.observe(sentinel);
+}
+
 
  /* ------------------------------ Init ------------------------------ */
 async function init() {
