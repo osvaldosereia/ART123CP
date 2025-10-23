@@ -35,12 +35,12 @@ body{
   .select__menu,.multiselect__menu{
     position:fixed;
     top:66px;
-    left:50%;
-    transform:translateX(-50%);
-    width:calc(100vw - 24px); /* respiro lateral de 12px */
-    max-width:100vw;
-    right:auto;
-    padding:10px;              /* já conta no width */
+    left:12px;               /* margem segura */
+    right:12px;              /* margem segura */
+    transform:none;
+    width:auto;              /* usa left/right */
+    max-width:none;
+    padding:10px;            /* já conta no width */
     box-sizing:border-box;
     max-height:60vh;
     overflow:auto;
