@@ -567,7 +567,7 @@ async function renderStoryPNG(card){
     io.observe(sentinel);
   }
 
- /* ------------------------------ Init ------------------------------ */
+/* ------------------------------ Init ------------------------------ */
 async function init() {
   const raw = await loadTxt();
   state.cards = parseTxt(raw);
@@ -599,38 +599,34 @@ async function init() {
           fetch(u).then(r => (r.ok ? r.text() : "")).catch(() => "")
         )
       );
-      const txt = parts.join("\n-----\n"); // separador seguro
+      const txt = parts.join("\n-----\n");
 
       // Atualiza estado
       state.cards = parseTxt(txt);
       state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
       state.temasSelecionados.clear();
 
-      // Recria multiselect de temas
+      // Esconde mensagem de boas-vindas ao escolher disciplina
+      const welcome = document.getElementById("welcome");
+      if (welcome) welcome.style.display = "none";
+
+      // Recria multiselect e renderiza
       mountMultiselect(document.getElementById("temas-multiselect"), {
         options: state.temasDisponiveis,
         onChange: () => resetAndRender()
       });
 
-      // Esconde mensagem de boas-vindas
-      const welcome = document.getElementById("welcome");
-      if (welcome) welcome.style.display = "none";
-
       resetAndRender();
     }
   });
 
-  // Inicializa multiselect inicial
+  // Cria multiselect inicial, mas mantém a tela inicial visível
   mountMultiselect(document.getElementById("temas-multiselect"), {
     options: state.temasDisponiveis,
     onChange: () => resetAndRender()
   });
 
-  // Esconde mensagem inicial ao carregar as primeiras questões
-  const welcome = document.getElementById("welcome");
-  if (welcome) welcome.style.display = "none";
-
-  resetAndRender();
+  // Exibe a mensagem inicial até o usuário escolher uma disciplina
   mountInfiniteScroll();
 }
 
