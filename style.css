@@ -195,3 +195,31 @@ body{
 .multiselect__menu .multiselect__item + .multiselect__item{
   border-top:1px solid rgba(17,24,39,.08); /* discreta */
 }
+/* Hint inicial abaixo dos selects */
+.start-hint{
+  margin: 10px 0 6px;
+  font-size: 14px;
+  color: #6b7280;
+  text-align: left; /* alinha com os selects */
+}
+
+/* Setas discretas sob Disciplina e Temas (apenas enquanto o hint estiver ativo) */
+body.hint-on #disciplina-select::after,
+body.hint-on #temas-multiselect::after{
+  content: "▾";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -14px;          /* fica logo abaixo do campo */
+  font-size: 14px;
+  line-height: 1;
+  color: rgba(17,24,39,.45);
+  pointer-events: none;
+}
+
+/* pequenos ajustes no mobile */
+@media (max-width:480px){
+  .start-hint{ margin-top: 8px; }
+  body.hint-on #disciplina-select::after,
+  body.hint-on #temas-multiselect::after{ bottom: -12px; }
+}
