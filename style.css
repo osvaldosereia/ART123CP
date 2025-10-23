@@ -137,7 +137,7 @@ body{
 .btn:hover{background:#f3f4f6}
 .btn-small{padding:6px 10px;font-size:.9rem}
 .btn-ghost{background:transparent;border-color:transparent}
-.btn-icon-round{width:36px;height:36px;border-radius:999px;display:grid;place-items:center;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+.btn-icon-round{width:28px;height:28px;border-radius:999px;display:grid;place-items:center;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
 .btn-icon-round img{width:20px;height:20px;display:block}
 .swatches{display:flex;flex-wrap:wrap;gap:8px}
 .swatch{width:22px;height:22px;border-radius:6px;border:1px solid #d1d5db;cursor:pointer}
