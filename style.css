@@ -210,8 +210,8 @@ body{
 }
 /* botão menor */
 .btn-icon-round {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   padding: 0;
   border-radius: 9999px;
   display: inline-flex;
@@ -220,7 +220,7 @@ body{
   border: 1px solid #e5e7eb;
   background: #fff;
 }
-.btn-icon-round img { width: 18px; height: 18px; }
+.btn-icon-round img { width: 14px; height: 14px; }
 
 /* garante barra de ações em linha */
 .q__actions { display: flex; align-items: center; gap: 8px; }
