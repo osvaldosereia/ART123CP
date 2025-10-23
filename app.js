@@ -576,58 +576,75 @@ async function init() {
 
   mountSelectSingle(document.getElementById("disciplina-select"), {
     options: [
-      { label: "Direito Penal", txt: [
-        "data/direito-penal/penal1.txt",
-        "data/direito-penal/penal2.txt"
-      ]},
+      {
+        label: "Direito Penal",
+        txt: [
+          "data/direito-penal/penal1.txt",
+          "data/direito-penal/penal2.txt"
+        ]
+      },
       { label: "Direito Civil", txt: "data/direito-civil/civil1.txt" },
       { label: "Direito Processual do Trabalho", txt: "data/direito-processual-trabalho/dpt1.txt" }
     ],
     onChange: async (opt) => {
       const urls = Array.isArray(opt.txt) ? opt.txt : [opt.txt];
 
-      // Atualiza a URL com lista separada por vírgulas
+      // Atualiza a URL
       const txtParam = urls.join(",");
       window.history.replaceState({}, "", `?txt=${encodeURIComponent(txtParam)}`);
 
       // Baixa e concatena todos os arquivos
       const parts = await Promise.all(
-        urls.map(u => fetch(u).then(r => r.ok ? r.text() : "").catch(() => ""))
+        urls.map(u =>
+          fetch(u).then(r => (r.ok ? r.text() : "")).catch(() => "")
+        )
       );
       const txt = parts.join("\n-----\n"); // separador seguro
 
+      // Atualiza estado
       state.cards = parseTxt(txt);
       state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
       state.temasSelecionados.clear();
 
+      // Recria multiselect de temas
       mountMultiselect(document.getElementById("temas-multiselect"), {
         options: state.temasDisponiveis,
-        onChange: () => { resetAndRender(); }
+        onChange: () => resetAndRender()
       });
+
+      // Esconde mensagem de boas-vindas
+      const welcome = document.getElementById("welcome");
+      if (welcome) welcome.style.display = "none";
 
       resetAndRender();
     }
   });
 
+  // Inicializa multiselect inicial
   mountMultiselect(document.getElementById("temas-multiselect"), {
     options: state.temasDisponiveis,
-    onChange: () => { resetAndRender(); }
+    onChange: () => resetAndRender()
   });
+
+  // Esconde mensagem inicial ao carregar as primeiras questões
+  const welcome = document.getElementById("welcome");
+  if (welcome) welcome.style.display = "none";
 
   resetAndRender();
   mountInfiniteScroll();
 }
 
 /* botão de frases à direita, menor */
-function appendFrasesButton(actionsEl){
-  const btn = document.createElement('button');
-  btn.className = 'btn-icon-round';
-  btn.title = 'Frases';
+function appendFrasesButton(actionsEl) {
+  const btn = document.createElement("button");
+  btn.className = "btn-icon-round";
+  btn.title = "Frases";
   btn.innerHTML = '<img src="assets/icons/frases.png" alt="Frases">';
-  btn.addEventListener('click', openFrasesModal);
-  btn.style.marginLeft = 'auto'; // direita
+  btn.addEventListener("click", openFrasesModal);
+  btn.style.marginLeft = "auto"; // direita
   actionsEl.appendChild(btn);
 }
+
 
 
 
