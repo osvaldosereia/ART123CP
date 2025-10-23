@@ -182,3 +182,16 @@ body{
   .brand--full{ display:none; }
   .brand--short{ display:inline; }
 }
+/* Dropdowns: texto menor e divisórias discretas */
+.select__menu .select__option,
+.multiselect__menu .multiselect__item{
+  font-size:13px;         /* menor */
+  line-height:1.4;
+  padding:6px 10px;       /* compacto */
+}
+
+/* linha separadora entre itens (exceto o primeiro) */
+.select__menu .select__option + .select__option,
+.multiselect__menu .multiselect__item + .multiselect__item{
+  border-top:1px solid rgba(17,24,39,.08); /* discreta */
+}
