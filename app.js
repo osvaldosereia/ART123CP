@@ -569,10 +569,10 @@ async function renderStoryPNG(card){
 
 /* ------------------------------ Init ------------------------------ */
 async function init() {
-  const raw = await loadTxt();
-  state.cards = parseTxt(raw);
-
-  state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
+  // não carrega nada no início
+  state.cards = [];
+  state.temasDisponiveis = [];
+  state.temasSelecionados.clear();
 
   mountSelectSingle(document.getElementById("disciplina-select"), {
     options: [
@@ -593,24 +593,21 @@ async function init() {
       const txtParam = urls.join(",");
       window.history.replaceState({}, "", `?txt=${encodeURIComponent(txtParam)}`);
 
-      // Baixa e concatena todos os arquivos
+      // Baixa e concatena os arquivos escolhidos
       const parts = await Promise.all(
-        urls.map(u =>
-          fetch(u).then(r => (r.ok ? r.text() : "")).catch(() => "")
-        )
+        urls.map(u => fetch(u).then(r => (r.ok ? r.text() : "")).catch(() => ""))
       );
       const txt = parts.join("\n-----\n");
 
-      // Atualiza estado
+      // Atualiza estado e interface
       state.cards = parseTxt(txt);
       state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
       state.temasSelecionados.clear();
 
-      // Esconde mensagem de boas-vindas ao escolher disciplina
+      // Esconde mensagem de boas-vindas
       const welcome = document.getElementById("welcome");
       if (welcome) welcome.style.display = "none";
 
-      // Recria multiselect e renderiza
       mountMultiselect(document.getElementById("temas-multiselect"), {
         options: state.temasDisponiveis,
         onChange: () => resetAndRender()
@@ -620,28 +617,15 @@ async function init() {
     }
   });
 
-  // Cria multiselect inicial, mas mantém a tela inicial visível
+  // Cria dropdown de temas vazio até o usuário escolher disciplina
   mountMultiselect(document.getElementById("temas-multiselect"), {
-    options: state.temasDisponiveis,
+    options: [],
     onChange: () => resetAndRender()
   });
 
-  // Exibe a mensagem inicial até o usuário escolher uma disciplina
+  // Mantém a mensagem inicial visível
   mountInfiniteScroll();
 }
-
-/* botão de frases à direita, menor */
-function appendFrasesButton(actionsEl) {
-  const btn = document.createElement("button");
-  btn.className = "btn-icon-round";
-  btn.title = "Frases";
-  btn.innerHTML = '<img src="assets/icons/frases.png" alt="Frases">';
-  btn.addEventListener("click", openFrasesModal);
-  btn.style.marginLeft = "auto"; // direita
-  actionsEl.appendChild(btn);
-}
-
-
 
 
   // ===== 2) Modal: estados, paleta, carregar aleatório e rolagem infinita =====
