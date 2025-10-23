@@ -15825,7 +15825,7 @@
 ** D) a suspensão condicional da pena é vedada nos crimes de abuso de autoridade;
 ** E) constitui crime de abuso de autoridade o responsável pelas investigações divulgar a atribuição de culpa, após concluídas as apurações e formalizada a acusação.
 *** Gabarito: A
-**** Legislação Especial (Lei do Abuso de Autoridade)
+**** Abuso de Autoridade
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: TCE-TO
@@ -15892,7 +15892,7 @@
 ** D) comete o crime de excesso de exação o funcionário que exige tributo ou contribuição social que o sabe indevido;
 ** E) considera-se atípica penalmente a modalidade culposa do crime de peculato.
 *** Gabarito: D
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: Senado Federal
@@ -15935,7 +15935,7 @@
 ** D) João cometeu o delito de corrupção ativa ao instigar um funcionário público a obter vantagem indevida.
 ** E) Paulo será isento de pena se, antes do trânsito em julgado da condenação, restituir à empresa pública todo o valor sacado.
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: Senado Federal
@@ -15962,7 +15962,7 @@
 ** D) I e III, apenas.
 ** E) II e IV, apenas.
 *** Gabarito: D
-**** Legislação Especial (Lei do Abuso de Autoridade)
+**** Abuso de Autoridade
 -----
 
 ***** Ano: 2022 | Banca: MPT | Órgão: MPT
@@ -15978,7 +15978,7 @@
 ** D) Todas as assertivas estão corretas.
 ** E) Não respondida.
 *** Gabarito: D
-**** Parte Especial (crimes contra a pessoa)
+**** Crimes contra a pessoa
 -----
 
 ***** Ano: 2022 | Banca: MPT | Órgão: MPT
@@ -15989,7 +15989,7 @@
 ** D) Procede-se mediante ação penal pública condicionada à representação da vítima.
 ** E) Não respondida.
 *** Gabarito: D
-**** Parte Especial (crimes contra a pessoa)
+**** Crimes contra a pessoa
 -----
 
 ***** Ano: 2022 | Banca: MPT | Órgão: MPT
@@ -16022,7 +16022,7 @@
 ** D) corrupção ativa.
 ** E) contrabando.
 *** Gabarito: B
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: FADESP | Órgão: SEFAZ-PA
@@ -16033,7 +16033,7 @@
 ** D) a secretária pode ser considerada coautora, pois não realiza diretamente o núcleo do tipo penal, mas, de qualquer modo, concorreu para o crime.
 ** E) é necessário um vínculo subjetivo acerca da conduta entre os agentes para configuração da coautoria.
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: FADESP | Órgão: SEFAZ-PA
@@ -16064,7 +16064,7 @@
 ** C) perda do pátrio poder
 ** D) prestação de serviços à comunidade ou a entidades públicas
 *** Gabarito: D
-**** Legislação Especial (Lei do Abuso de Autoridade)
+**** Abuso de Autoridade
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: DPE-MT
@@ -16074,7 +16074,7 @@
 ** C) roubo circunstanciado pelo emprego de arma de fogo
 ** D) epidemia com resultado morte
 *** Gabarito: B
-**** Legislação Especial (Lei de Crimes Hediondos)
+**** Crimes Hediondos
 -----
 
 ***** Ano: 2022 | Banca: UNIOESTE | Órgão: Prefeitura de Guaratuba - PR
@@ -16085,7 +16085,7 @@
 ** D) Retardar ou deixar de praticar, indevidamente, ato de ofício, ou praticá-lo contra disposição expressa de lei, para satisfazer interesse ou sentimento pessoal, corresponde ao crime de concussão.
 ** E) Solicitar ou receber, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida, ou aceitar promessa de tal vantagem, corresponde ao crime de peculato.
 *** Gabarito: C
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: SESACRE
@@ -16096,7 +16096,7 @@
 ** C) reclusão de um a seis anos, e multa, se o documento é público, e reclusão, de um a três anos, e multa, se o documento é particular
 ** D) reclusão de dois a seis anos, e multa, se o documento é público, e reclusão, de um a cinco anos, e multa, se o documento é particular
 *** Gabarito: D
-**** Parte Especial (fé pública)
+**** Fé pública
 -----
 
 ***** Ano: 2022 | Banca: IBADE | Órgão: INOVA Capixaba - ES
@@ -16107,7 +16107,7 @@
 ** D) peculato.
 ** E) violência arbitrária.
 *** Gabarito: D
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: TCE-PB
@@ -16116,7 +16116,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Parte Especial (fé pública)
+**** Fé pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: TCE-PB
@@ -16125,7 +16125,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (fé pública)
+**** Fé pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: TCE-PB
@@ -16134,7 +16134,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: TCE-PB
@@ -16143,7 +16143,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Parte Geral (concurso de pessoas)
+**** Concurso de Pessoas
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: TCE-PB
@@ -16152,7 +16152,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: TCE-PB
@@ -16161,7 +16161,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: TJ-PE
@@ -16173,7 +16173,7 @@
 ** D) a transferência de José para Petrolina/PE dependerá da conveniência da Administração e pode ser negada por decisão fundamentada do juízo da execução penal;
 ** E) a transferência de José para Petrolina/PE somente pode ser negada em caso de o apenado estar em regime disciplinar diferenciado ou de inexistência de vagas em estabelecimento prisional.
 *** Gabarito: D
-**** Legislação Especial (Lei de Execução Penal)
+**** Lei de Execução Penal
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: TJ-PE
@@ -16185,7 +16185,7 @@
 ** D) ao contrário do crime de corrupção ativa cometido por Tomás, que é formal, o crime de corrupção passiva exige para a consumação o efetivo recebimento da vantagem, para si ou para outrem;
 ** E) Tomás praticou o crime de corrupção ativa ao oferecer o dinheiro a Agostinho para determiná-lo a omitir ou retardar ato de ofício relacionado com o cometimento do crime de posse de drogas para uso próprio.
 *** Gabarito: E
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: TJ-PE
@@ -16197,7 +16197,7 @@
 ** D) ausência de culpabilidade, pela inexigibilidade de conduta diversa;
 ** E) ausência de culpabilidade, por erro de proibição.
 *** Gabarito: B
-**** Parte Geral (tipicidade)
+**** Tipicidade
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: TJ-PE
@@ -16209,7 +16209,7 @@
 ** D) a escalada e a prática de furto no período noturno são circunstâncias que devem ser analisadas na terceira etapa da dosimetria penal;
 ** E) não seria aplicável a causa de aumento relativa ao furto noturno na hipótese em que a casa estivesse desabitada, por ausência de violação ao bem jurídico tutelado pela majorante.
 *** Gabarito: C
-**** Parte Especial (patrimônio)
+**** Patrimônio
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: TJ-PE
@@ -16221,7 +16221,7 @@
 ** D) tentativa de homicídio, com fundamento na teoria da causalidade adequada, também adotada pelo ordenamento jurídico;
 ** E) tentativa de homicídio, em razão da existência de concausa concomitante para o resultado morte: o disparo de arma de fogo e o vazamento de gás.
 *** Gabarito: D
-**** Parte Geral (tipicidade)
+**** Tipicidade
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: TJ-PE
@@ -16233,7 +16233,7 @@
 ** D) a aplicação da referida minorante constitui direito subjetivo do acusado, não sendo possível obstar sua aplicação com base em considerações subjetivas do juiz. Portanto, em que pese a quantidade de drogas apreendidas, a causa de diminuição só poderia ser afastada em caso de reincidência de José;
 ** E) é vedada a utilização de inquéritos policiais e ações penais em curso seja para agravar a pena-base, seja para afastar a aplicação da causa de diminuição referida, seja para aferir a periculosidade do agente para fins de fundamentar eventual prisão cautelar, sob pena de ferir a presunção de inocência.
 *** Gabarito: C
-**** Legislação Especial (Lei de Drogas)
+**** Lei de Drogas
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: TJ-PE
@@ -16245,7 +16245,7 @@
 ** D) o calendário prévio das saídas temporárias deve ser fixado pelo Juízo das Execuções, sendo possível delegar à autoridade prisional a escolha das datas específicas nas quais o apenado irá usufruir os benefícios, desde que tenha cumprido o mínimo de 1/6 da pena, se primário, e 1/4, se reincidente, e haja compatibilidade do benefício com os objetivos da pena;
 ** E) respeitado o limite anual de trinta e cinco dias, estabelecido na LEP, é cabível a concessão de maior número de autorizações de curta duração, até o limite de cinco vezes ao ano, já intercaladas durante os doze meses, com ou sem pernoite, desde que tenha cumprido o mínimo de 1/6 da pena, se primário, e 1/4, se reincidente, e haja compatibilidade do benefício com os objetivos da pena.
 *** Gabarito: B
-**** Legislação Especial (Lei de Execução Penal)
+**** Lei de Execução Penal
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: TJ-PE
@@ -16257,7 +16257,7 @@
 ** D) associação criminosa e roubo simples, em concurso formal;
 ** E) roubo majorado pelo concurso de pessoas, ficando a associação criminosa consumida.
 *** Gabarito: A
-**** Parte Geral (concurso de crimes)
+**** Concurso de crimes
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: TJ-PE
@@ -16268,7 +16268,7 @@
 ** D) o período de cumprimento de medida cautelar de monitoração eletrônica possibilita a contagem de tempo para efeito de concessão da detração penal;
 ** E) é incabível a detração, na pena privativa de liberdade, no momento de cumprimento do recolhimento domiciliar no período noturno, com ou sem monitoração eletrônica.
 *** Gabarito: C
-**** Parte Geral (pena)
+**** Pena
 -----
 
 ***** Ano: 2022 | Banca: IDECAN | Órgão: TJ-PI
@@ -16279,7 +16279,7 @@
 ** D) impedimento ou perturbação de cerimônia ou culto religioso (art. 208, segunda parte do CP)
 ** E) estelionato (art. 171 do CP)
 *** Gabarito: D
-**** Parte Especial (crimes contra o sentimento religioso)
+**** Crimes contra o Sentimento Religioso
 -----
 
 ***** Ano: 2022 | Banca: IDECAN | Órgão: TJ-PI
@@ -16290,7 +16290,7 @@
 ** D) crime algum.
 ** E) estupro.
 *** Gabarito: E
-**** Parte Especial (crimes contra a dignidade sexual)
+**** Crimes contra a dignidade sexual
 -----
 
 ***** Ano: 2022 | Banca: IDECAN | Órgão: TJ-PI
@@ -16301,7 +16301,7 @@
 ** D) O crime de vilipêndio a cadáver é um delito formal.
 ** E) O crime de ultraje a culto e impedimento ou perturbação de ato a ele relativo é um tipo misto cumulativo.
 *** Gabarito: C
-**** Parte Especial (crimes contra o sentimento religioso)
+**** Crimes contra o Sentimento Religioso
 -----
 
 ***** Ano: 2022 | Banca: IDECAN | Órgão: TJ-PI
@@ -16312,7 +16312,7 @@
 ** D) As penas cominadas nos artigos mencionados no enunciado são aumentadas de um terço, se, em consequência do aborto ou dos meios empregados para provocá-lo, a gestante sofre lesão corporal de natureza grave.
 ** E) O crime de aborto pode ser praticado da forma omissiva — omissão imprópria.
 *** Gabarito: D
-**** Parte Especial (crimes contra a pessoa)
+**** Crimes contra a pessoa
 -----
 
 ***** Ano: 2022 | Banca: IDECAN | Órgão: TJ-PI
@@ -16323,7 +16323,7 @@
 ** D) para efeitos da prescrição, deve-se levar em conta o dia em que o crime se consumou e, no caso de tentativa, do dia que cessou a atividade criminosa.
 ** E) relevante valor social é o motivo que atende aos interesses da coletividade, i.e., não interessa apenas ao agente, mas sim ao corpo social.
 *** Gabarito: B
-**** Parte Especial (crimes contra a pessoa)
+**** Crimes contra a pessoa
 -----
 
 ***** Ano: 2022 | Banca: IDECAN | Órgão: TJ-PI
@@ -16334,7 +16334,7 @@
 ** D) falsificação de documento particular.
 ** E) falsificação de documento público.
 *** Gabarito: E
-**** Parte Especial (fé pública)
+**** Fé pública
 -----
 
 ***** Ano: 2022 | Banca: FUNDEP (Gestão de Concursos) | Órgão: MPE-MG
@@ -16344,7 +16344,7 @@
 ** C) O art. 5º, LVII da CF/88 garante aos acusados a situação jurídica de não culpados, mas textualmente não veda a prisão antes do trânsito em julgado, nem mesmo em execução provisória de pena.
 ** D) Segundo a jurisprudência do Supremo Tribunal Federal, o crime de injúria racial é imprescritível, por força do art. 5º, XLII, CR/88.
 *** Gabarito: B
-**** Parte Geral (princípios limitadores)
+**** Princípios limitadores
 -----
 
 ***** Ano: 2022 | Banca: FUNDEP (Gestão de Concursos) | Órgão: MPE-MG
@@ -16354,7 +16354,7 @@
 ** C) O crime de omissão de socorro pode ser cometido por pessoa que não se encontra no local onde está a vítima.
 ** D) O crime de maus-tratos não pode ser cometido por professores contra seus alunos, mas somente pelos pais ou tutores da vítima.
 *** Gabarito: C
-**** Parte Especial (crimes contra a pessoa)
+**** Crimes contra a pessoa
 -----
 
 ***** Ano: 2022 | Banca: FUNDEP (Gestão de Concursos) | Órgão: MPE-MG
@@ -16364,7 +16364,7 @@
 ** C) Causa de extinção da punibilidade.
 ** D) Causa de exclusão da tipicidade.
 *** Gabarito: C
-**** Parte Geral (extinção da punibilidade)
+**** Extinção da punibilidade
 -----
 
 ***** Ano: 2022 | Banca: FUNDEP (Gestão de Concursos) | Órgão: MPE-MG
@@ -16374,7 +16374,7 @@
 ** C) O ilícito pessoal não se esgota no desvalor de resultado e se co-constitui pelo desvalor da ação, devendo, o resultado, ser considerado como “obra do autor”.
 ** D) A culpabilidade mantém-se como uma categoria psicológica, desprovida de aspectos valorativos/normativos.
 *** Gabarito: D
-**** Parte Geral (teoria do crime)
+**** Teoria do crime
 -----
 
 ***** Ano: 2022 | Banca: FUNDEP (Gestão de Concursos) | Órgão: MPE-MG
@@ -16384,7 +16384,7 @@
 ** C) No caso da injúria, a circunstância de a vítima ser maior de 60 anos ou portadora de deficiência configura causa de especial aumento de pena.
 ** D) Em todas as espécies de delito contra a honra, a retratação cabal pelo querelado, antes da sentença, isenta de pena.
 *** Gabarito: B
-**** Parte Especial (crimes contra a pessoa)
+**** Crimes contra a pessoa
 -----
 
 ***** Ano: 2022 | Banca: FUNDEP (Gestão de Concursos) | Órgão: MPE-MG
@@ -16394,7 +16394,7 @@
 ** C) A pena é aumentada se o agente praticar o delito em ocasião de desgraça particular do ofendido.
 ** D) A pena é aumentada no caso de o agente coagir outrem a participar, de qualquer modo, do delito.
 *** Gabarito: C
-**** Parte Geral (pena)
+**** Pena
 -----
 
 ***** Ano: 2022 | Banca: FUNDEP (Gestão de Concursos) | Órgão: MPE-MG
@@ -16404,7 +16404,7 @@
 ** C) O delito de “fazer declaração falsa sobre bens ou rendas (...)”, tipificado no artigo 2º, I, da Lei nº 8.137/90, demanda elemento subjetivo especial.
 ** D) A “exigência” e a “solicitação” de vantagem, feitas por funcionário público para deixar de cobrar tributo, são condutas punidas em tipos penais autônomos, de modo paralelo ao regime de tipificação da concussão e da corrupção passiva do Código Penal, havendo variações nos preceitos secundários.
 *** Gabarito: D
-**** Legislação Especial (Ordem Tributária)
+**** Ordem Tributária
 -----
 
 ***** Ano: 2022 | Banca: FUNDEP (Gestão de Concursos) | Órgão: MPE-MG
@@ -16414,7 +16414,7 @@
 ** C) Ocorrendo erro na execução (*aberratio ictus*), e sendo atingida também a vítima visada, aplica-se a regra do concurso material.
 ** D) No concurso material, caso aplicada pena privativa de liberdade suspensa para um dos crimes, será incabível, para os demais, a substituição de que trata o artigo 44 do CP.
 *** Gabarito: B
-**** Parte Geral (concurso de crimes)
+**** Concurso de crimes
 -----
 
 ***** Ano: 2022 | Banca: FUNDEP (Gestão de Concursos) | Órgão: MPE-MG
@@ -16424,7 +16424,7 @@
 ** C) Segundo a “teoria objetiva-formal”, autor é aquele que realiza o núcleo do tipo, como também aquele que atua com “ânimo de autor”, dominando o fato.
 ** D) Nos denominados crimes plurissubjetivos as condutas podem ser paralelas, contrapostas ou convergentes.
 *** Gabarito: C
-**** Parte Geral (concurso de pessoas)
+**** Concurso de Pessoas
 -----
 
 ***** Ano: 2022 | Banca: FUNDEP (Gestão de Concursos) | Órgão: MPE-MG
@@ -16434,7 +16434,7 @@
 ** C) Segundo a “teoria limitada do dolo”, o erro de proibição, ainda que seja motivado por cegueira jurídica, afasta a culpabilidade.
 ** D) Aplicada a “teoria limitada da culpabilidade”, não é possível que se reconheça a tentativa em caso de erro de tipo permissivo evitável.
 *** Gabarito: D
-**** Parte Geral (culpabilidade)
+**** Culpabilidade
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: SEJUSP-MG
@@ -16445,7 +16445,7 @@
 ** D) Pedro cometeu falta grave, ainda que não tenha sido flagrado, efetivamente, estabelecendo comunicação com o ambiente externo. Portanto, estará sujeito às sanções disciplinares previamente estabelecidas e o prazo para a obtenção da progressão de regime de cumprimento da pena será interrompido. Caso em que o reinício de sua contagem terá como base a pena remanescente.
 ** E) Pedro cometeu falta média, pois a falta grave somente se configura quando o detento é flagrado utilizando efetivamente o aparelho telefônico ou outro similar para estabelecer comunicação com o ambiente externo. Portanto, estará sujeito às sanções disciplinares previamente estabelecidas e o prazo para a obtenção da progressão de regime de cumprimento da pena será majorado para 60% (sessenta por cento) da pena fixada em sentença.
 *** Gabarito: D
-**** Legislação Especial (Lei de Execução Penal)
+**** Lei de Execução Penal
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: SEJUSP-MG
@@ -16460,7 +16460,7 @@
 ** D) F – V – V.
 ** E) F – F – F
 *** Gabarito: C
-**** Legislação Especial (Lei de Execução Penal)
+**** Lei de Execução Penal
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: SEJUSP-MG
@@ -16473,7 +16473,7 @@
 ** D) Gabriel, caso condenado, terá aplicada uma causa de aumento de pena, por ser agente público.
 ** E) A condenação de Gabriel acarretará a perda do cargo, função ou emprego público e a interdição para seu exercício pelo triplo do prazo da pena aplicada.
 *** Gabarito: D
-**** Legislação Especial (Lei dos Crimes de Tortura)
+**** Crimes de Tortura
 -----
 
 ***** Ano: 2022 | Banca: FGV | Órgão: SEJUSP-MG
@@ -16489,7 +16489,7 @@
 ** D) II e III, apenas.
 ** E) I e II, apenas.
 *** Gabarito: C
-**** Legislação Especial (Lei do Abuso de Autoridade)
+**** Abuso de Autoridade
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16501,7 +16501,7 @@
 ** D) há evidente sonegação do estado de filiação com o fim de prejudicar direito inerente ao estado civil.
 ** E) se Gabriel tiver praticado o crime por motivo de reconhecida nobreza, o juiz poderá deixar de aplicar a pena.
 *** Gabarito: E
-**** Parte Especial (crimes contra a família)
+**** Crimes contra a família
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16512,7 +16512,7 @@
 ** D) patrocínio simultâneo ou tergiversação.
 ** E) coação no curso do processo.
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16524,7 +16524,7 @@
 ** D) o delegado pode arquivar o inquérito policial se não reunir indícios suficientes de autoria contra Lisa.
 ** E) caso Lisa seja denunciada e condenada, a pena será aumentada em até um terço se ficar comprovada sua liderança em grupo virtual.
 *** Gabarito: C
-**** Parte Especial (crimes contra a pessoa)
+**** Crimes contra a pessoa
 -----
 
 ***** Ano: 2022 | Banca: CONSULPLAN | Órgão: MPE-PA
@@ -16534,7 +16534,7 @@
 ** C) 50% (cinquenta por cento) da pena
 ** D) 60% (sessenta por cento) da pena
 *** Gabarito: B
-**** Legislação Especial (Lei de Execução Penal)
+**** Lei de Execução Penal
 -----
 
 ***** Ano: 2022 | Banca: CONSULPLAN | Órgão: MPE-PA
@@ -16544,7 +16544,7 @@
 ** C) A pena aumenta-se, necessariamente, se o crime de tortura for cometido por agente público.
 ** D) O condenado por crime de tortura, em quaisquer de suas modalidades, iniciará o cumprimento da pena em regime fechado.
 *** Gabarito: C
-**** Legislação Especial (Lei dos Crimes de Tortura)
+**** Crimes de Tortura
 -----
 
 ***** Ano: 2022 | Banca: CONSULPLAN | Órgão: MPE-PA
@@ -16554,7 +16554,7 @@
 ** C) O delito de epidemia somente será reconhecido como hediondo se da sua prática advier o resultado morte.
 ** D) É hediondo o crime de roubo quando cometido com destruição ou rompimento de obstáculo mediante o emprego de explosivo.
 *** Gabarito: D
-**** Legislação Especial (Lei de Crimes Hediondos)
+**** Crimes Hediondos
 -----
 
 ***** Ano: 2022 | Banca: CONSULPLAN | Órgão: MPE-PA
@@ -16564,7 +16564,7 @@
 ** C) As escusas absolutórias previstas nos delitos patrimoniais constituem causa de exclusão da culpabilidade e se comunicam na hipótese de concurso de agentes.
 ** D) No delito de roubo, a pena é majorada se a violência ou ameaça é exercida com o emprego de arma de fogo, inexistindo majoração se a violência ou grave ameaça se der com a utilização de arma branca.
 *** Gabarito: A
-**** Parte Especial (patrimônio)
+**** Patrimônio
 -----
 
 ***** Ano: 2022 | Banca: CONSULPLAN | Órgão: MPE-PA
@@ -16579,7 +16579,7 @@
 ** C) II e III.
 ** D) III e IV.
 *** Gabarito: D
-**** Parte Geral (princípios limitadores)
+**** Princípios limitadores
 -----
 
 ***** Ano: 2022 | Banca: CONSULPLAN | Órgão: MPE-PA
@@ -16589,7 +16589,7 @@
 ** C) A analogia, modalidade de interpretação, permite ao julgador atuar sempre no preenchimento de lacunas da Lei.
 ** D) Na interpretação teleológica, o intérprete da Lei penal busca simplesmente o real e efetivo significado das palavras.
 *** Gabarito: B
-**** Parte Geral (a norma penal)
+**** Norma penal
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16600,7 +16600,7 @@
 ** D) Sendo razoável exigir-se o sacrifício do direito ameaçado no estado de necessidade, a pena será agravada.
 ** E) O agente que tem o dever legal de enfrentar o perigo não pode alegar estado de necessidade.
 *** Gabarito: E
-**** Parte Geral (ilicitude)
+**** Ilicitude
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16612,7 +16612,7 @@
 ** D) Configura causa de aumento de pena nos crimes sexuais o fato de o agente ser empregador da vítima.
 ** E) Dada a falta do exame de corpo de delito, eventual confissão de Carlos pode suprir a ausência da perícia.
 *** Gabarito: D
-**** Parte Especial (crimes contra a dignidade sexual)
+**** Crimes contra a dignidade sexual
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16623,7 +16623,7 @@
 ** D) São puníveis as contravenções praticadas nas formas tentada e consumada.
 ** E) Nas contravenções penais, é possível a conversão da pena de multa em prisão simples.
 *** Gabarito: C
-**** Legislação Especial (Lei de Contravenções Penais)
+**** Lei de Contravenções Penais
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16635,7 +16635,7 @@
 ** D) Se a casa funcionar como boca de fumo, os policiais somente poderão invadir a casa, sem o consentimento do morador, entre 6h e 18h.
 ** E) Acontecimentos como a ocorrência de denúncia anônima da prática de tráfico de drogas e uma possível fuga do morador da casa ao avistar a polícia configuram, sozinhos, fundadas razões para autorizar o ingresso policial no referido domicílio, sem o consentimento do morador ou sem uma determinação judicial.
 *** Gabarito: B
-**** Legislação Especial (Lei de Drogas)
+**** Lei de Drogas
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16647,7 +16647,7 @@
 ** D) primário, e o regime cabível é o aberto, visto que o período depurador foi cumprido sem revogação e a pena é inferior a quatro anos.
 ** E) reincidente, e o regime cabível é o semiaberto, visto que, dada a pena aplicada, incide no caso a súmula n.º 269 do STJ.
 *** Gabarito: D
-**** Parte Geral (pena)
+**** Pena
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16658,7 +16658,7 @@
 ** D) excludente da ilicitude.
 ** E) indiferente na imputabilidade penal.
 *** Gabarito: B
-**** Parte Geral (culpabilidade)
+**** Culpabilidade
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16670,7 +16670,7 @@
 ** D) erro sobre a ilicitude do fato, excluindo-se a culpabilidade pela exigibilidade de conduta diversa.
 ** E) erro sobre o elemento constitutivo do tipo penal que, sendo vencível, passa a ser punível por culpa.
 *** Gabarito: C
-**** Parte Geral (tipicidade)
+**** Tipicidade
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16682,7 +16682,7 @@
 ** D) elementos negativos do tipo.
 ** E) imputação objetiva.
 *** Gabarito: B
-**** Parte Geral (culpabilidade)
+**** Culpabilidade
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16694,7 +16694,7 @@
 ** D) motivadora.
 ** E) promocional.
 *** Gabarito: B
-**** Parte Geral (noções fundamentais)
+**** Noções fundamentais
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: PC-RO
@@ -16705,7 +16705,7 @@
 ** D) Os crimes contra as finanças públicas classificam-se como crimes de resultado e de mão própria, a que uma eventual condenação acarretaria a perda automática de cargo público.
 ** E) A lei expressamente equipara a modalidade tentada ao crime consumado e comina pena de multa a todas as infrações.
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
 * Ainda no que se refere ao processo penal brasileiro, julgue o item subsequente.
@@ -16713,7 +16713,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Legislação Especial (Lei da Lavagem de Dinheiro)
+**** Lavagem de Dinheiro
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16722,7 +16722,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (fé pública)
+**** Fé pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16731,7 +16731,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16740,7 +16740,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (patrimônio)
+**** Patrimônio
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16749,7 +16749,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16758,7 +16758,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Legislação Especial (Lei do Abuso de Autoridade)
+**** Abuso de Autoridade
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16767,7 +16767,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Legislação Especial (Lei do Abuso de Autoridade)
+**** Abuso de Autoridade
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16776,7 +16776,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16785,7 +16785,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16794,7 +16794,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16803,7 +16803,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16812,7 +16812,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16821,7 +16821,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16831,7 +16831,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (patrimônio)
+**** Patrimônio
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16841,7 +16841,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Parte Geral (pena)
+**** Pena
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16851,7 +16851,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Parte Geral (concurso de pessoas)
+**** Concurso de Pessoas
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16861,7 +16861,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Especial (patrimônio)
+**** Patrimônio
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16870,7 +16870,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Legislação Especial (Lei da Lavagem de Dinheiro)
+**** Lavagem de Dinheiro
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: MPC-SC
@@ -16879,7 +16879,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Legislação Especial (Lei da Lavagem de Dinheiro)
+**** Lavagem de Dinheiro
 -----
 
 ***** Ano: 2022 | Banca: COPESE - UFPI | Órgão: Prefeitura de União - PI
@@ -16890,7 +16890,7 @@
 ** D) A perda do cargo, do mandato ou da função pública é efeito da condenação.
 ** E) As responsabilidades civil e administrativa são independentes da criminal, não se podendo mais questionar sobre a existência ou a autoria do fato quando essas questões tenham sido decididas no juízo criminal.
 *** Gabarito: C
-**** Legislação Especial (Lei do Abuso de Autoridade)
+**** Abuso de Autoridade
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: SECONT-ES
@@ -16899,7 +16899,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Geral (pena)
+**** Pena
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: SECONT-ES
@@ -16908,7 +16908,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: B
-**** Parte Geral (pena)
+**** Pena
 -----
 
 ***** Ano: 2022 | Banca: CESPE / CEBRASPE | Órgão: SECONT-ES
@@ -16917,7 +16917,7 @@
 ** A) Certo
 ** B) Errado
 *** Gabarito: A
-**** Parte Geral (pena)
+**** Pena
 -----
 
 ***** Ano: 2022 | Banca: IVIN | Órgão: Prefeitura de Estreito - MA
@@ -16928,7 +16928,7 @@
 ** D) 2030.
 ** E) 2032.
 *** Gabarito: C
-**** Legislação Especial (Lei do Abuso de Autoridade)
+**** Abuso de Autoridade
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AM
@@ -16939,7 +16939,7 @@
 ** D) do dolo por erro de proibição.
 ** E) de ilicitude.
 *** Gabarito: A
-**** Parte Geral (tipicidade)
+**** Tipicidade
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AM
@@ -16950,7 +16950,7 @@
 ** D) arrependimento posterior.
 ** E) crime impossível.
 *** Gabarito: C
-**** Parte Geral (tipicidade)
+**** Tipicidade
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AM
@@ -16961,7 +16961,7 @@
 ** D) ainda que não tenha cessado a permanência, a lei penal mais grave não pode retroagir em prejuízo do réu.
 ** E) é possível que Alfredo seja punido pela lei penal mais grave, uma vez que se trata de crime permanente, de modo que a lei mais grave pode ser aplicada enquanto não cessada a permanência.
 *** Gabarito: E
-**** Parte Geral (teoria do crime)
+**** Teoria do crime
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AM
@@ -16972,7 +16972,7 @@
 ** D) na primeira fase, a pena será fixada conforme disposto no art. 59 do Código Penal; após, serão consideradas as circunstâncias atenuantes e agravantes na segunda fase; e, na terceira fase, serão analisadas as causas de diminuição e de aumento de pena.
 ** E) para a primeira fase, o Código disciplina que a pena-base será fixada com base no livre convencimento motivado do juiz; em seguida, serão consideradas as causas de diminuição e de aumento da pena; por último, na terceira fase, circunstâncias atenuantes e agravantes.
 *** Gabarito: D
-**** Parte Geral (pena)
+**** Pena
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AM
@@ -16983,7 +16983,7 @@
 ** D) isonomia.
 ** E) ampla defesa.
 *** Gabarito: B
-**** Parte Geral (teoria do crime)
+**** Teoria do crime
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AM
@@ -16994,7 +16994,7 @@
 ** D) prevaricação.
 ** E) condescendência criminosa.
 *** Gabarito: D
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: FEPESE | Órgão: Prefeitura de Chapecó - SC
@@ -17005,7 +17005,7 @@
 ** D) Da Administração Pública.
 ** E) Do Grupo Técnico de Classificação.
 *** Gabarito: A
-**** Legislação Especial (Lei de Execução Penal)
+**** Lei de Execução Penal
 -----
 
 ***** Ano: 2022 | Banca: FEPESE | Órgão: Prefeitura de Chapecó - SC
@@ -17016,7 +17016,7 @@
 ** D) Os seus antecedentes e personalidade.
 ** E) Sua natureza racial.
 *** Gabarito: D
-**** Legislação Especial (Lei de Execução Penal)
+**** Lei de Execução Penal
 -----
 
 ***** Ano: 2022 | Banca: FEPESE | Órgão: Prefeitura de Chapecó - SC
@@ -17027,7 +17027,7 @@
 ** D) Excesso de exação.
 ** E) Condescendência criminosa.
 *** Gabarito: A
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: FEPESE | Órgão: Prefeitura de Chapecó - SC
@@ -17038,7 +17038,7 @@
 ** D) Advocacia administrativa.
 ** E) Exercício funcional ilegalmente antecipado.
 *** Gabarito: D
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: OBJETIVA | Órgão: Condesus - RS
@@ -17050,7 +17050,7 @@
 ** C) C - E.
 ** D) E - E.
 *** Gabarito: B
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: OBJETIVA | Órgão: Condesus - RS
@@ -17063,7 +17063,7 @@
 ** C) C - E - C.
 ** D) E - C - C.
 *** Gabarito: C
-**** Parte Geral (culpabilidade)
+**** Culpabilidade
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: Câmara de Franca - SP
@@ -17073,7 +17073,7 @@
 ** C) Apropriar-se o funcionário público de dinheiro, valor ou qualquer outro bem móvel, público ou particular, de que tem a posse em razão do cargo, ou desviá-lo, em proveito próprio ou alheio
 ** D) Deixar o funcionário, por indulgência, de responsabilizar subordinado que cometeu infração no exercício do cargo ou, quando lhe falte competência, não levar o fato ao conhecimento da autoridade competente
 *** Gabarito: D
-**** Parte Especial (administração pública)
+**** Administração Pública
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: Câmara de Franca - SP
@@ -17116,7 +17116,7 @@
 ** D) fotografar, filmar ou registrar, por qualquer meio, conteúdo com cena de nudez ou ato sexual ou libidinoso de caráter íntimo e privado sem autorização dos participantes
 ** E) induzir alguém menor de 14 (catorze) anos a satisfazer a lascívia de outrem
 *** Gabarito: B
-**** Parte Especial (crimes contra a pessoa)
+**** Crimes contra a pessoa
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: PC-BA
@@ -17127,7 +17127,7 @@
 ** D) incapacidade permanente para o trabalho
 ** E) deformidade permanente
 *** Gabarito: A
-**** Parte Especial (crimes contra a pessoa)
+**** Crimes contra a pessoa
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: PC-BA
@@ -17138,7 +17138,7 @@
 ** D) A pena pode ser reduzida de um a dois terços, se o agente, era, ao tempo da ação ou da omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento
 ** E) Não exclui a imputabilidade penal a embriaguez culposa por substância de efeitos análogos ao álcool
 *** Gabarito: D
-**** Parte Geral (culpabilidade)
+**** Culpabilidade
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: PC-BA
@@ -17149,7 +17149,7 @@
 ** D) Crime praticado sob o domínio de violenta emoção, logo em seguida a injusta provocação da vítima
 ** E) Crime impelido por motivo de relevante valor social
 *** Gabarito: C
-**** Parte Especial (crimes contra a pessoa)
+**** Crimes contra a pessoa
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: PC-BA
@@ -17160,7 +17160,7 @@
 ** D) Não pode alegar estado de necessidade quem tinha o dever legal de enfrentar o perigo
 ** E) Embora seja razoável exigir-se o sacrifício do direito ameaçado, é vedado, nesta hipótese, a redução de pena
 *** Gabarito: E
-**** Parte Geral (ilicitude)
+**** Ilicitude
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: PC-BA
@@ -17171,7 +17171,7 @@
 ** D) O erro quanto à pessoa contra a qual o crime é praticado não isenta de pena, sendo certo que, neste caso, devem ser consideradas as condições ou qualidades da vítima
 ** E) Pelo resultado que agrava especialmente a pena, só responde o agente que o houver causado ao menos culposamente
 *** Gabarito: D
-**** Parte Geral (tipicidade)
+**** Tipicidade
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: PC-BA
@@ -17182,7 +17182,7 @@
 ** D) A omissão é penalmente relevante quando o omitente devia e podia agir para evitar o resultado
 ** E) Salvo disposição em contrário, pune-se a tentativa com a pena correspondente ao crime consumado, diminuída de um a dois terços
 *** Gabarito: A
-**** Parte Geral (teoria do crime)
+**** Teoria do crime
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: PC-BA
@@ -17193,7 +17193,7 @@
 ** D) de genocídio, quando o agente for brasileiro ou estrangeiro
 ** E) praticados em aeronaves de propriedade privada, quando em território estrangeiro
 *** Gabarito: B
-**** Parte Geral (teoria do crime)
+**** Teoria do crime
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: PC-BA
@@ -17204,7 +17204,7 @@
 ** D) Condutas historicamente aceitas e consideradas adequadas pela sociedade em tese não merecem intervenção penal punitiva, não sendo abrangidas pelos tipos penais
 ** E) Decorrente do princípio da dignidade da pessoa humana, impõe impedir que a pena venha a ser empregada como instrumento de violência, com tratamento desumano ou cruel
 *** Gabarito: C
-**** Parte Geral (teoria do crime)
+**** Teoria do crime
 -----
 
 ***** Ano: 2022 | Banca: IBFC | Órgão: PC-BA
@@ -17241,7 +17241,7 @@
 ** D) A pena para o crime de tortura é aumentada de um sexto até um terço, se o crime é cometido por agente público ou se é cometido contra criança, gestante, portador de deficiência, adolescente ou mais de sessenta anos, ou ainda, se o crime é cometido mediante sequestro
 ** E) Por força do §6º, do art. 1º da lei de Tortura, o crime de tortura é inafiançável e insuscetível de graça e anistia
 *** Gabarito: C
-**** Legislação Especial (Lei dos Crimes de Tortura)
+**** Crimes de Tortura
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AP
@@ -17252,7 +17252,7 @@
 ** D) deve utilizar o marco etário de 60 anos em razão do disposto no Estatuto do Idoso.
 ** E) é cabível excepcionalmente em regime fechado para mãe cujo cuidado do filho seja imprescindível.
 *** Gabarito: E
-**** Legislação Especial (Lei de Execução Penal)
+**** Lei de Execução Penal
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AP
@@ -17263,7 +17263,7 @@
 ** D) tem o dever de colaborar com a administração penitenciária pelo período de dois anos.
 ** E) tem direito à assistência social prevista em lei, desde que repare o dano, em norma autoritária e de constitucionalidade duvidosa.
 *** Gabarito: C
-**** Legislação Especial (Lei de Execução Penal)
+**** Lei de Execução Penal
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AP
@@ -17275,7 +17275,7 @@
 ** D) correta, desde que haja a comprovação de incapacidade permanente da vítima para o trabalho.
 ** E) correta, pois essa qualificadora abrange somente lesões que resultam em danos psicológicos.
 *** Gabarito: A
-**** Parte Especial (crimes contra a pessoa)
+**** Crimes contra a pessoa
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AP
@@ -17297,7 +17297,7 @@
 ** D) primeira fase, exceto se a majorante trouxer patamar variável.
 ** E) segunda fase, somente.
 *** Gabarito: B
-**** Parte Geral (pena)
+**** Pena
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AP
@@ -17308,7 +17308,7 @@
 ** D) Não influencia a vetorial da culpabilidade do agente o fato de ser integrante de carreira policial e haver cometido o delito valendo-se do cargo.
 ** E) Em nada influencia a eleição do regime prisional, uma vez que é etapa antecedente na fixação da pena e se relacionada ao seu *quantum*.
 *** Gabarito: C
-**** Parte Geral (pena)
+**** Pena
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AP
@@ -17319,7 +17319,7 @@
 ** D) a perda de bens e valores e a multa.
 ** E) a interdição temporária de direitos e a prestação de serviços a entidades públicas.
 *** Gabarito: E
-**** Parte Geral (pena)
+**** Pena
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AP
@@ -17330,7 +17330,7 @@
 ** D) como circunstância judicial permite a exclusão da punibilidade quando valorada positivamente.
 ** E) fundamenta a exclusão da punibilidade em caso de erro sobre os elementos constitutivos do tipo penal.
 *** Gabarito: C
-**** Parte Geral (culpabilidade)
+**** Culpabilidade
 -----
 
 ***** Ano: 2022 | Banca: FCC | Órgão: DPE-AP
@@ -17341,7 +17341,7 @@
 ** D) a pena de prisão não produz qualquer efeito de acordo com a teoria agnóstica e negativa da pena.
 ** E) as políticas de confinamento extremo, como o regime disciplinar diferenciado, coadunam-se com os ideais da teoria da prevenção especial negativa.
 *** Gabarito: E
-**** Parte Geral (pena)
+**** Pena
 -----
 ***** Ano: 2022 | Banca: IBADE | Órgão: Prefeitura de Costa Marques - RO
 * A Lei 8.137/1990 define crimes contra a ordem tributária, econômica e contra as relações de consumo, e dá outras providências. O seu Artigo 1º versa que suprimir ou reduzir tributos, ou contribuição social e quaisquer acessórios são considerados crimes que atentam contra a referida Lei. Assinale a alternativa correta que corresponda às condutas impróprias e/ou crimes contra a ordem tributária.
