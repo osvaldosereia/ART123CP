@@ -569,10 +569,26 @@ async function renderStoryPNG(card){
 
 /* ------------------------------ Init ------------------------------ */
 async function init() {
-  // não carrega nada no início
-  state.cards = [];
-  state.temasDisponiveis = [];
-  state.temasSelecionados.clear();
+  // tenta carregar apenas se o parâmetro ?txt existir na URL
+  const p = new URLSearchParams(location.search);
+  const txtParam = p.get("txt");
+  let raw = "";
+
+  if (txtParam) {
+    try {
+      const urls = txtParam.split(",");
+      const parts = await Promise.all(
+        urls.map(u => fetch(u).then(r => (r.ok ? r.text() : "")).catch(() => ""))
+      );
+      raw = parts.join("\n-----\n");
+    } catch (err) {
+      console.warn("Falha ao carregar:", txtParam);
+    }
+  }
+
+  // se não houver txt, começa vazio e mostra apenas a frase
+  state.cards = raw ? parseTxt(raw) : [];
+  state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
 
   mountSelectSingle(document.getElementById("disciplina-select"), {
     options: [
@@ -589,22 +605,22 @@ async function init() {
     onChange: async (opt) => {
       const urls = Array.isArray(opt.txt) ? opt.txt : [opt.txt];
 
-      // Atualiza a URL
-      const txtParam = urls.join(",");
-      window.history.replaceState({}, "", `?txt=${encodeURIComponent(txtParam)}`);
+      // atualiza URL
+      const joined = urls.join(",");
+      window.history.replaceState({}, "", `?txt=${encodeURIComponent(joined)}`);
 
-      // Baixa e concatena os arquivos escolhidos
+      // carrega e concatena textos
       const parts = await Promise.all(
         urls.map(u => fetch(u).then(r => (r.ok ? r.text() : "")).catch(() => ""))
       );
       const txt = parts.join("\n-----\n");
 
-      // Atualiza estado e interface
+      // atualiza estado e interface
       state.cards = parseTxt(txt);
       state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
       state.temasSelecionados.clear();
 
-      // Esconde mensagem de boas-vindas
+      // esconde a mensagem de boas-vindas
       const welcome = document.getElementById("welcome");
       if (welcome) welcome.style.display = "none";
 
@@ -617,15 +633,22 @@ async function init() {
     }
   });
 
-  // Cria dropdown de temas vazio até o usuário escolher disciplina
+  // inicializa o multiselect (pode ficar vazio até carregar)
   mountMultiselect(document.getElementById("temas-multiselect"), {
-    options: [],
+    options: state.temasDisponiveis,
     onChange: () => resetAndRender()
   });
 
-  // Mantém a mensagem inicial visível
+  // só renderiza se houver conteúdo
+  if (state.cards.length) {
+    const welcome = document.getElementById("welcome");
+    if (welcome) welcome.style.display = "none";
+    resetAndRender();
+  }
+
   mountInfiniteScroll();
 }
+
 
 
   // ===== 2) Modal: estados, paleta, carregar aleatório e rolagem infinita =====
