@@ -22,10 +22,12 @@
 </header>
 
 <main class="container">
+  <!-- HINT INICIAL -->
+  <div id="start-hint" class="start-hint">Começe aqui</div>
+
   <div id="cards"></div>
   <div id="sentinela" aria-hidden="true"></div>
 </main>
-
 
 <!-- MODAL DE FRASES -->
 <div id="frases-modal" class="modal hidden" aria-hidden="true">
@@ -34,29 +36,22 @@
     <div class="modal-head">
       <div class="swatches" id="frases-swatches" aria-label="Escolher cor de fundo"></div>
       <div class="modal-actions">
-        <!-- botão "Trocar frases" removido -->
         <button class="btn btn-ghost" type="button" data-close="true">Fechar</button>
       </div>
     </div>
     <div class="modal-body">
       <h2 id="frases-title" class="visually-hidden">Sugestões de frases</h2>
-
-      <!-- grid vazio para rolagem infinita -->
       <div id="frases-grid" class="frases-grid"></div>
-
-      <!-- sentinela para IntersectionObserver -->
       <div id="frases-sentinela" aria-hidden="true"></div>
     </div>
   </div>
 </div>
 
-
-
-  <script>
-    // ?txt=data/direito-penal/penal1.txt  |  default: data/direito-penal/penal1.txt
-    const p = new URLSearchParams(location.search);
-    window.APP_CONFIG = { txtUrl: p.get("txt") || "data/direito-penal/penal1.txt" };
-  </script>
-  <script src="app.js"></script>
+<script>
+  // ?txt=data/direito-penal/penal1.txt  |  default: data/direito-penal/penal1.txt
+  const p = new URLSearchParams(location.search);
+  window.APP_CONFIG = { txtUrl: p.get("txt") || "data/direito-penal/penal1.txt" };
+</script>
+<script src="app.js"></script>
 </body>
 </html>
