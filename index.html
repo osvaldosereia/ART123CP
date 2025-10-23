@@ -7,21 +7,25 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- TOP BAR -->
-  <header class="topbar">
-    <div class="container topbar__row">
-      <div class="brand">MeuJus</div>
-      <div class="topbar__filters">
-        <div id="disciplina-select" class="select select--single"></div>
-        <div id="temas-multiselect" class="multiselect"></div>
-      </div>
+ <!-- TOP BAR -->
+<header class="topbar">
+  <div class="container topbar__row">
+    <div class="brand">
+      <span class="brand--full">MeuJus</span>
+      <span class="brand--short" aria-hidden="true">MJ</span>
     </div>
-  </header>
+    <div class="topbar__filters">
+      <div id="disciplina-select" class="select select--single"></div>
+      <div id="temas-multiselect" class="multiselect"></div>
+    </div>
+  </div>
+</header>
 
-  <main class="container">
-    <div id="cards"></div>
-    <div id="sentinela" aria-hidden="true"></div>
-  </main>
+<main class="container">
+  <div id="cards"></div>
+  <div id="sentinela" aria-hidden="true"></div>
+</main>
+
 
 <!-- MODAL DE FRASES -->
 <div id="frases-modal" class="modal hidden" aria-hidden="true">
