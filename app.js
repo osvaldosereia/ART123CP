@@ -567,56 +567,68 @@ async function renderStoryPNG(card){
     io.observe(sentinel);
   }
 
-  /* ------------------------------ Init ------------------------------ */
-  async function init() {
-    const raw = await loadTxt();
-    state.cards = parseTxt(raw);
+ /* ------------------------------ Init ------------------------------ */
+async function init() {
+  const raw = await loadTxt();
+  state.cards = parseTxt(raw);
 
-    state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
+  state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
 
-    mountSelectSingle(document.getElementById("disciplina-select"), {
-      options: [
-        { label: "Direito Penal", txt: "data/direito-penal/penal1.txt" },
-        { label: "Direito Civil", txt: "data/direito-civil/civil1.txt" },
-        { label: "Direito Processual do Trabalho", txt: "data/direito-processual-trabalho/dpt1.txt" }
-      ],
-      onChange: async (opt) => {
-        window.history.replaceState({}, "", `?txt=${encodeURIComponent(opt.txt)}`);
-        const res = await fetch(opt.txt).catch(() => null);
-        const txt = res && res.ok ? await res.text() : "";
-        state.cards = parseTxt(txt);
-        state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
-        state.temasSelecionados.clear();
-        mountMultiselect(document.getElementById("temas-multiselect"), {
-          options: state.temasDisponiveis,
-          onChange: () => { resetAndRender(); }
-        });
-        resetAndRender();
-      }
-    });
+  mountSelectSingle(document.getElementById("disciplina-select"), {
+    options: [
+      { label: "Direito Penal", txt: [
+        "data/direito-penal/penal1.txt",
+        "data/direito-penal/penal2.txt"
+      ]},
+      { label: "Direito Civil", txt: "data/direito-civil/civil1.txt" },
+      { label: "Direito Processual do Trabalho", txt: "data/direito-processual-trabalho/dpt1.txt" }
+    ],
+    onChange: async (opt) => {
+      const urls = Array.isArray(opt.txt) ? opt.txt : [opt.txt];
 
-    mountMultiselect(document.getElementById("temas-multiselect"), {
-      options: state.temasDisponiveis,
-      onChange: () => { resetAndRender(); }
-    });
+      // Atualiza a URL com lista separada por vírgulas
+      const txtParam = urls.join(",");
+      window.history.replaceState({}, "", `?txt=${encodeURIComponent(txtParam)}`);
 
-    resetAndRender();
-    mountInfiniteScroll();
-  }
+      // Baixa e concatena todos os arquivos
+      const parts = await Promise.all(
+        urls.map(u => fetch(u).then(r => r.ok ? r.text() : "").catch(() => ""))
+      );
+      const txt = parts.join("\n-----\n"); // separador seguro
 
-  // ===== 1) Botão redondo ao lado dos botões do card =====
-  function appendFrasesButton(actionsEl){
+      state.cards = parseTxt(txt);
+      state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
+      state.temasSelecionados.clear();
+
+      mountMultiselect(document.getElementById("temas-multiselect"), {
+        options: state.temasDisponiveis,
+        onChange: () => { resetAndRender(); }
+      });
+
+      resetAndRender();
+    }
+  });
+
+  mountMultiselect(document.getElementById("temas-multiselect"), {
+    options: state.temasDisponiveis,
+    onChange: () => { resetAndRender(); }
+  });
+
+  resetAndRender();
+  mountInfiniteScroll();
+}
+
+/* botão de frases à direita, menor */
+function appendFrasesButton(actionsEl){
   const btn = document.createElement('button');
   btn.className = 'btn-icon-round';
   btn.title = 'Frases';
   btn.innerHTML = '<img src="assets/icons/frases.png" alt="Frases">';
   btn.addEventListener('click', openFrasesModal);
-
-  // empurra o botão para a extrema direita
-  btn.style.marginLeft = 'auto';
-
+  btn.style.marginLeft = 'auto'; // direita
   actionsEl.appendChild(btn);
 }
+
 
 
   // ===== 2) Modal: estados, paleta, carregar e sortear =====
