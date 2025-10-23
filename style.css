@@ -141,7 +141,10 @@ body{
 .q__actions{display:flex;align-items:center;gap:8px}
 
 /* ========= MODAL DE FRASES (SEM SCROLL HORIZONTAL) ========= */
-#frases-modal .modal-card{max-width:min(100vw,980px)}
+#frases-modal .modal-card{
+  width: min(1100px, 94vw);
+  max-width: 100vw;
+}
 #frases-modal .modal-body{overflow-x:hidden}
 
 /* colunas: 1 móvel, 2 médio, 3 desktop. Nunca 4 */
