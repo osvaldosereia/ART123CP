@@ -39,7 +39,6 @@
     onClickOutside(root, cb) { const h = ev => { if (!root.contains(ev.target)) cb(); }; document.addEventListener("mousedown", h, { once: true }); },
     fitPopover(menu, trigger) { const r = trigger.getBoundingClientRect(); if (r.top < 160) menu.classList.add("below"); else menu.classList.remove("below"); },
     mdInline: s => (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>"),
-    // Backdrop utilitário usado nos selects
     backdrop(onClose){
       const el = document.createElement("div");
       el.className = "dropdown-backdrop";
@@ -66,36 +65,35 @@
 
   /* ------------------------------ Parser ------------------------------ */
   function parseTxt(raw) {
-  if (!raw) return [];
-  const blocks = raw.split("-----").map(s => s.trim()).filter(Boolean);
-  const out = [];
+    if (!raw) return [];
+    const blocks = raw.split("-----").map(s => s.trim()).filter(Boolean);
+    const out = [];
 
-  for (const block of blocks) {
-    const lines = block
-      .split("\n")
-      .map(l => l.replace(/^\uFEFF?/, "").trim())
-      .filter(l => l.length);
+    for (const block of blocks) {
+      const lines = block
+        .split("\n")
+        .map(l => l.replace(/^\uFEFF?/, "").trim())
+        .filter(l => l.length);
 
-    let referencias = "", enunciado = "", gabarito = "";
-    const alternativas = [], temas = [];
-    let inEnunciado = false;
+      let referencias = "", enunciado = "", gabarito = "";
+      const alternativas = [], temas = [];
+      let inEnunciado = false;
 
-    for (const L of lines) {
-      if (/^\*{5}\s/.test(L)) { referencias = L.replace(/^\*{5}\s*/, "").trim(); inEnunciado = false; continue; }
-      if (/^\*{4}\s/.test(L)) { L.replace(/^\*{4}\s*/, "").split(",").forEach(t => { t = t.trim(); if (t) temas.push(t); }); inEnunciado = false; continue; }
-      if (/^\*{3}\s/.test(L)) { const m = /Gabarito\s*:\s*([A-Z])/i.exec(L.replace(/^\*{3}\s*/, "")); gabarito = m ? m[1].toUpperCase() : ""; inEnunciado = false; continue; }
-      if (/^\*{2}\s/.test(L)) { alternativas.push(L.replace(/^\*{2}\s*/, "").trim()); inEnunciado = false; continue; }
-      if (/^\*\s/.test(L))   { const part = L.replace(/^\*\s*/, "").trim(); enunciado = enunciado ? enunciado + " " + part : part; inEnunciado = true; continue; }
+      for (const L of lines) {
+        if (/^\*{5}\s/.test(L)) { referencias = L.replace(/^\*{5}\s*/, "").trim(); inEnunciado = false; continue; }
+        if (/^\*{4}\s/.test(L)) { L.replace(/^\*{4}\s*/, "").split(",").forEach(t => { t = t.trim(); if (t) temas.push(t); }); inEnunciado = false; continue; }
+        if (/^\*{3}\s/.test(L)) { const m = /Gabarito\s*:\s*([A-Z])/i.exec(L.replace(/^\*{3}\s*/, "")); gabarito = m ? m[1].toUpperCase() : ""; inEnunciado = false; continue; }
+        if (/^\*{2}\s/.test(L)) { alternativas.push(L.replace(/^\*{2}\s*/, "").trim()); inEnunciado = false; continue; }
+        if (/^\*\s/.test(L))   { const part = L.replace(/^\*\s*/, "").trim(); enunciado = enunciado ? enunciado + " " + part : part; inEnunciado = true; continue; }
 
-      // linha sem marcador: continua o enunciado atual
-      if (inEnunciado) enunciado += (enunciado ? " " : "") + L;
+        // linha sem marcador: continua o enunciado atual
+        if (inEnunciado) enunciado += (enunciado ? " " : "") + L;
+      }
+
+      out.push({ referencias, enunciado, alternativas, gabarito, temas });
     }
-
-    out.push({ referencias, enunciado, alternativas, gabarito, temas });
+    return out;
   }
-  return out;
-}
-
 
   /* ------ Fonte paginada p/ modal Impressora: segue filtros e ordem atual ------ */
   (function exposePagedSource(){
@@ -129,7 +127,6 @@
         return `${letra}) ${texto}`;
       });
 
-      // visual no modal igual aos cartões do site (sem meta “***** …”)
       const html = [
         `<div class="q__stmt">${U.mdInline(c.enunciado || "")}</div>`,
         alts.length
@@ -144,12 +141,11 @@
       ].join("");
 
       return {
-        id: i + 1,                                // usado para focar ao abrir o modal
-        enunciadoHtml: html,                      // render do modal
-        enunciadoPlain: c.enunciado || "",        // base do PDF
-        alternativas: alts,                       // A)..E) já normalizadas
-        gabarito: String(c.gabarito || "")        // usado no gabarito da última página do PDF
-                  .trim().toUpperCase()
+        id: i + 1,
+        enunciadoHtml: html,
+        enunciadoPlain: c.enunciado || "",
+        alternativas: alts,
+        gabarito: String(c.gabarito || "").trim().toUpperCase()
       };
     }
 
@@ -864,15 +860,12 @@ function renderFrasePNG(canvas, frase, autor, bg){
   }
 
   // ---------- Hifenização pt-BR (heurística leve) ----------
-  // Regras simples de sílaba para português. Não é TeX completo, mas atende bem.
   function hyphenPoints(word){
     const w = word.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
     const pts = [];
-    // V = vogal; C = consoante; ditongos tratados como V
-    const V = /[aeiouy]/; // y em estrangeirismos
+    const V = /[aeiouy]/;
     for(let i=1;i<w.length-1;i++){
       const a=w[i-1], b=w[i], c=w[i+1];
-      // VC|V  ou  V|CV  ou  C|CV  ou  CC|V (com exceções br, cr, dr, fr, gr, pr, tr, bl, cl, fl, gl, pl)
       const cl = a+b, cr = b+c;
       const cons = (x)=>!V.test(x);
       const twoCons = ['br','cr','dr','fr','gr','pr','tr','bl','cl','fl','gl','pl'];
@@ -880,11 +873,9 @@ function renderFrasePNG(canvas, frase, autor, bg){
       else if (V.test(a) && cons(b) && cons(c) && !twoCons.includes(cr)) pts.push(i+1);
       else if (cons(a) && cons(b) && V.test(c) && !twoCons.includes(cl)) pts.push(i);
     }
-    // nunca hifenizar com 2 ou menos letras em qualquer lado
     return pts.filter(p=>p>=2 && p<=w.length-2);
   }
   function splitWithHyphen(word, maxWidth, doc){
-    // tenta quebrar palavra com hífen para caber no espaço
     const pts = hyphenPoints(word);
     for(let k=pts.length-1;k>=0;k--){
       const left = word.slice(0, pts[k]) + '-';
@@ -924,23 +915,22 @@ function renderFrasePNG(canvas, frase, autor, bg){
       if (curW + spaceW + wW <= maxWidth){
         cur.push(w); curW += spaceW + wW;
       } else {
-        // tenta hifenar a palavra atual
         const room = maxWidth - curW - spaceW;
         const hp = room>0 ? splitWithHyphen(w, room, doc) : null;
         if (hp){
           cur.push(hp[0]); pushLine(); words.splice(i+1,0,hp[1]);
         }else{
-          pushLine(); i--; // reprocessa w na próxima linha
+          pushLine(); i--;
         }
       }
     }
-    pushLine(true); // última linha sempre esquerda
+    pushLine(true);
     return lines;
   }
   function drawJustified(doc, x, y, lines, lh){
     const spaceW = doc.getTextWidth(' ');
     let yy = y;
-    lines.forEach((ln, idx)=>{
+    lines.forEach((ln)=>{
       let xx = x;
       if (!ln.justify){
         ln.words.forEach((w,j)=>{
@@ -959,123 +949,156 @@ function renderFrasePNG(canvas, frase, autor, bg){
     return yy;
   }
 
-  // ---------- Exportação PDF com ajustes visuais ----------
-// ---------- Exportação PDF via HTML (doc.html + html2canvas) ----------
-async function exportarPDF_HTML(questoes){
-  const root = document.getElementById('pdf-root');
-  root.innerHTML = '';
+  // ---------- Exportação PDF via HTML (doc.html + html2canvas) ----------
+  async function exportarPDF_HTML(questoes){
+    const root = document.getElementById('pdf-root');
+    root.innerHTML = '';
 
-  // Página de questões
-  const page1 = document.createElement('div');
-  page1.className = 'pdf-prova';
+    // Página de questões
+    const page1 = document.createElement('div');
+    page1.className = 'pdf-prova';
+    page1.style.cssText = `
+      box-sizing:border-box;
+      width:794px; padding:0;
+      font: 13px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:#111; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    `;
 
-  questoes.forEach((q, i) => {
-    const art = document.createElement('article');
-    art.className = 'pdf-q';
+    questoes.forEach((q, i) => {
+      const art = document.createElement('article');
+      art.className = 'pdf-q';
+      art.style.cssText = `
+        break-inside:avoid; page-break-inside:avoid;
+        margin:0 0 16px 0; padding:0;
+      `;
 
-    const titulo = document.createElement('div');
-    titulo.className = 'pdf-titulo';
-    titulo.textContent = `Questão ${i + 1}`;
+      const titulo = document.createElement('div');
+      titulo.className = 'pdf-titulo';
+      titulo.textContent = `Questão ${i + 1}`;
+      titulo.style.cssText = `font-weight:700;margin:0 0 6px 0;`;
 
-    const enun = document.createElement('div');
-    enun.className = 'pdf-enun';
-    // preserva quebras simples
-    (String(q.enunciadoPlain || '').split(/\n+/)).forEach(p => {
-      const d = document.createElement('div');
-      d.textContent = p;
-      enun.appendChild(d);
+      const enun = document.createElement('div');
+      enun.className = 'pdf-enun';
+      enun.style.cssText = `margin:0 0 8px 0;`;
+
+      (String(q.enunciadoPlain || '').split(/\n+/)).forEach(p => {
+        const d = document.createElement('div');
+        d.textContent = p;
+        d.style.cssText = `margin:0 0 6px 0;`;
+        enun.appendChild(d);
+      });
+
+      const ul = document.createElement('ul');
+      ul.className = 'pdf-opts';
+      ul.style.cssText = `list-style:none; padding:0; margin:0;`;
+
+      (q.alternativas || []).forEach((a, k) => {
+        const li = document.createElement('li');
+        li.className = 'pdf-opt';
+        li.style.cssText = `
+          display:flex; align-items:flex-start; gap:8px;
+          margin:6px 0; break-inside:avoid; page-break-inside:avoid;
+        `;
+
+        const badge = document.createElement('span');
+        badge.className = 'pdf-badge';
+        badge.textContent = String.fromCharCode(65 + k);
+        badge.style.cssText = `
+          flex:0 0 auto; display:inline-block; width:22px; height:22px;
+          border:1px solid #999; border-radius:50%;
+          text-align:center; line-height:22px; font-weight:700;
+        `;
+
+        const tx = document.createElement('div');
+        tx.textContent = String(a).replace(/^[A-E]\)\s*/i, '');
+        tx.style.cssText = `flex:1 1 auto;`;
+
+        li.appendChild(badge);
+        li.appendChild(tx);
+        ul.appendChild(li);
+      });
+
+      art.appendChild(titulo);
+      art.appendChild(enun);
+      art.appendChild(ul);
+      page1.appendChild(art);
     });
 
-    const ul = document.createElement('ul');
-    ul.className = 'pdf-opts';
+    // Duas colunas opcionais no PDF
+    if (radioCols() === 2) {
+      page1.style.columnCount = 2;
+      page1.style.columnGap = '24px';
+    }
 
-    (q.alternativas || []).forEach((a, k) => {
-      const li = document.createElement('li');
-      li.className = 'pdf-opt';
+    root.appendChild(page1);
 
-      const badge = document.createElement('span');
-      badge.className = 'pdf-badge';
-      badge.textContent = String.fromCharCode(65 + k);
+    // Página de gabarito
+    const page2 = document.createElement('div');
+    page2.className = 'pdf-prova';
+    page2.style.cssText = `
+      box-sizing:border-box;
+      width:794px; padding:0;
+      font: 13px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:#111;
+    `;
 
-      const tx = document.createElement('div');
-      tx.textContent = String(a).replace(/^[A-E]\)\s*/i, '');
+    const h = document.createElement('h2');
+    h.style.cssText = 'text-align:center;margin:0 0 12px 0;font-weight:700;';
+    h.textContent = 'Gabarito';
 
-      li.appendChild(badge);
-      li.appendChild(tx);
-      ul.appendChild(li);
-    });
+    const colsWrap = document.createElement('div');
+    colsWrap.style.cssText = 'display:flex; gap:4%;';
+    const L = document.createElement('div');
+    const R = document.createElement('div');
+    [L, R].forEach(c => { c.style.cssText = 'width:48%;'; });
 
-    art.appendChild(titulo);
-    art.appendChild(enun);
-    art.appendChild(ul);
-    page1.appendChild(art);
+    const mid = Math.ceil(questoes.length / 2);
+    const mk = (n, g) => `${n}) ${String(g || '-').toUpperCase().replace(/[^A-E]/g, '')}`;
+
+    L.innerHTML = questoes.slice(0, mid).map((q, i) => `<div style="margin:3px 0">${mk(i + 1, q.gabarito)}</div>`).join('');
+    R.innerHTML = questoes.slice(mid).map((q, i) => `<div style="margin:3px 0">${mk(mid + i + 1, q.gabarito)}</div>`).join('');
+
+    colsWrap.appendChild(L);
+    colsWrap.appendChild(R);
+
+    page2.appendChild(h);
+    page2.appendChild(colsWrap);
+    root.appendChild(page2);
+
+    // Renderização em PDF
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ unit: 'px', format: 'a4', compress: true });
+    doc.setProperties({ title: 'Prova MeuJus' });
+
+    const PAGE_W = 794; // px na A4 do jsPDF quando unit:'px'
+    const M = 24;
+    const CONTENT_W = PAGE_W - M * 2;
+
+    await new Promise(res => doc.html(page1, {
+      x: M, y: M, width: CONTENT_W, windowWidth: PAGE_W,
+      html2canvas: { scale: 2, useCORS: true },
+      autoPaging: 'text',
+      callback: res
+    }));
+
+    doc.addPage();
+
+    await new Promise(res => doc.html(page2, {
+      x: M, y: M, width: CONTENT_W, windowWidth: PAGE_W,
+      html2canvas: { scale: 2, useCORS: true },
+      autoPaging: 'text',
+      callback: res
+    }));
+
+    doc.save('prova.pdf');
+  }
+
+  btnExportar?.addEventListener('click', async () => {
+    const itens = Array.from(selected.values());
+    await exportarPDF_HTML(itens);
   });
 
-  root.appendChild(page1);
-
-  // Página de gabarito
-  const page2 = document.createElement('div');
-  page2.className = 'pdf-prova';
-
-  const h = document.createElement('h2');
-  h.style.textAlign = 'center';
-  h.textContent = 'Gabarito';
-
-  const colsWrap = document.createElement('div');
-  const L = document.createElement('div');
-  const R = document.createElement('div');
-  [L, R].forEach(c => { c.style.display = 'inline-block'; c.style.width = '48%'; c.style.verticalAlign = 'top'; });
-
-  const mid = Math.ceil(questoes.length / 2);
-  const mk = (n, g) => `${n}) ${String(g || '-').toUpperCase().replace(/[^A-E]/g, '')}`;
-
-  L.innerHTML = questoes.slice(0, mid).map((q, i) => `<div>${mk(i + 1, q.gabarito)}</div>`).join('');
-  R.innerHTML = questoes.slice(mid).map((q, i) => `<div>${mk(mid + i + 1, q.gabarito)}</div>`).join('');
-
-  colsWrap.appendChild(L);
-  colsWrap.appendChild(R);
-
-  page2.appendChild(h);
-  page2.appendChild(colsWrap);
-  root.appendChild(page2);
-
-  // Renderização em PDF
- const { jsPDF } = window.jspdf;
-const doc = new jsPDF({ unit: 'mm', format: 'a4', compress: true });
-doc.setProperties({ title: 'Prova MeuJus' });
-
-const PAGE_W = doc.internal.pageSize.getWidth();
-const M = 10; // margem 10mm
-const CONTENT_W = PAGE_W - M * 2;
-
-await new Promise(res => doc.html(page1, {
-  x: M, y: M, width: CONTENT_W,
-  html2canvas: { scale: 2, useCORS: true, letterRendering: true },
-  callback: res
-}));
-
-doc.addPage();
-
-await new Promise(res => doc.html(page2, {
-  x: M, y: M, width: CONTENT_W,
-  html2canvas: { scale: 2, useCORS: true, letterRendering: true },
-  callback: res
-}));
-
-
-  doc.save('prova.pdf');
-}
-
-
-
-btnExportar?.addEventListener('click', async () => {
-  const itens = Array.from(selected.values());
-  await exportarPDF_HTML(itens);
-});
-
 })();
-
-
 
 /* =================== Botão Impressora em cada card =================== */
 function appendImpressoraButton(actionsEl, idx){
