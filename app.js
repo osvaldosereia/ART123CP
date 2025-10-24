@@ -1052,10 +1052,11 @@ async function exportarPDF_PURO(questoes){
     // espaço extra entre linha separadora e próximo título
     const pre = qi>0 ? PRE_TITLE : 0;
 
-    // garantir título + gaps + 1ª linha do enunciado juntos
-    setTit();
-    const minBlock = pre + LH_TIT + TITLE_GAP + LH_ENUN;
-    ensureSpace(minBlock);
+    // garantir título + gaps (sem exigir 1ª linha do enunciado)
+setTit();
+const minBlock = pre + LH_TIT + TITLE_GAP;
+ensureSpace(minBlock);
+
 
     if (pre) curY += PRE_TITLE;
 
@@ -1063,15 +1064,18 @@ async function exportarPDF_PURO(questoes){
     doc.text(`Questão ${qi+1}`, curX, curY);
     curY += TITLE_GAP;
 
-    // Enunciado
-    setEnun();
-    const enunParas = String(q.enunciadoPlain||'').replace(/\r/g,'').split(/\n+/).filter(Boolean);
-    for (let i=0;i<enunParas.length;i++){
-      const lines = layoutLines(doc, enunParas[i], COL_W);
-      ensureSpace(lines.length*LH_ENUN + (i?LH_ENUN*0.5:0));
-      if (i) curY += LH_ENUN*0.5;
-      curY = drawJustified(doc, curX, curY, lines, LH_ENUN);
-    }
+   // Enunciado (quebra linha a linha, permitindo partir de coluna/página)
+setEnun();
+const enunParas = String(q.enunciadoPlain||'').replace(/\r/g,'').split(/\n+/).filter(Boolean);
+for (let pi=0; pi<enunParas.length; pi++){
+  const lines = layoutLines(doc, enunParas[pi], COL_W);
+  if (pi) { ensureSpace(LH_ENUN*0.5); curY += LH_ENUN*0.5; } // espaço entre parágrafos
+  for (let li=0; li<lines.length; li++){
+    ensureSpace(LH_ENUN);
+    curY = drawJustified(doc, curX, curY, [lines[li]], LH_ENUN);
+  }
+}
+
 
     // Respiro entre enunciado e alternativas
     curY += ENUN_TO_ALTS;
