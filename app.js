@@ -1117,8 +1117,8 @@ function exportarPDF(questoes, { colunas = 1 } = {}) {
 
       // primeira linha: prefixo + texto
       drawPrefix(s.x + SAFE_L, letter);
-      s.y = drawJustified(s.x + SAFE_L + pw, s.y, [lines[0]], BASE_LH);
-
+      if (lines.length) s.y = drawJustified(s.x + SAFE_L + pw, s.y, [lines[0]], BASE_LH);
+      
       // continua demais linhas com mesmo recuo, quebrando entre colunas/páginas se preciso
       if (lines.length > 1){
         s.y = drawJustified(s.x + SAFE_L + pw, s.y, lines.slice(1), BASE_LH);
