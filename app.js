@@ -852,17 +852,21 @@ async function handleCriarProva(){
 
   const counts = pickCountsByTema(buckets, 20);
 
-  // limpar seleção atual e aplicar nova
+  // limpar seleção atual e aplicar nova com limite de 20
   selected.clear();
   const chosen = [];
-  Object.keys(counts).forEach(t => {
+  outer: for (const t of Object.keys(counts)){
     const need = counts[t];
     const arr = buckets[t];
-    for (let i=0;i<need && i<arr.length;i++){
+    for (let i=0; i<need && i<arr.length; i++){
       const q = arr[i];
-      if (!selected.has(q.id)){ selected.set(q.id, q); chosen.push(q.id); }
+      if (!selected.has(q.id)){
+        selected.set(q.id, q);
+        chosen.push(q.id);
+        if (selected.size >= 20) break outer; // limite absoluto
+      }
     }
-  });
+  }
 
   updateCounter();
 
@@ -873,6 +877,7 @@ async function handleCriarProva(){
     if (cb) cb.checked = selected.has(id);
   });
 }
+
 
 // limpar cache ao abrir o modal para refletir filtros/ordem atuais
 // (complemento em openModal)
