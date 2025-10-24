@@ -780,55 +780,62 @@ if (btnExportar && btnExportar.parentNode) {
 }
 
 // --- Navegação rápida entre selecionadas ---
+// === Navegação rápida entre selecionadas — lateral esquerda do modal ===
+
+// contêiner lateral dentro do modal da impressora
+const impNav = document.createElement('div');
+impNav.id = 'imp-nav';
+if (modal) modal.appendChild(impNav);
+
+// botões pequenos só com ícone. Não usar .btn
 const btnPrevSel = document.createElement('button');
-btnPrevSel.id = 'imp-prev-sel';
 btnPrevSel.type = 'button';
-btnPrevSel.className = 'btn';
-btnPrevSel.textContent = '← Selecionada';
+btnPrevSel.className = 'imp-nav-btn';
+btnPrevSel.setAttribute('aria-label', 'Selecionada anterior');
+btnPrevSel.innerHTML = '▲';
 
 const btnNextSel = document.createElement('button');
-btnNextSel.id = 'imp-next-sel';
 btnNextSel.type = 'button';
-btnNextSel.className = 'btn';
-btnNextSel.textContent = 'Selecionada →';
+btnNextSel.className = 'imp-nav-btn';
+btnNextSel.setAttribute('aria-label', 'Próxima selecionada');
+btnNextSel.innerHTML = '▼';
+
+impNav.appendChild(btnPrevSel);
+impNav.appendChild(btnNextSel);
 
 function getRootScroll(){
   return modal?.querySelector('.modal-body') || lista || document.scrollingElement || document.documentElement;
 }
-
 function selectedEls(){
   if (!lista) return [];
   const ids = new Set([...selected.keys()]);
   return Array.from(lista.querySelectorAll('.imp-card'))
     .filter(el => ids.has(Number(el.dataset.id || '0')))
-    .sort((a,b)=>a.getBoundingClientRect().top - b.getBoundingClientRect().top);
+    .sort((a,b)=>a.offsetTop - b.offsetTop);
 }
-
 function alignTop(el){
   const root = getRootScroll();
   if (!root || !el) return;
   const rr = root.getBoundingClientRect();
   const er = el.getBoundingClientRect();
-  const delta = er.top - rr.top;
+  const delta = er.top - rr.top; // alinhar topo do card ao topo da área visível
   root.scrollTo({ top: (root.scrollTop || 0) + delta, behavior: 'smooth' });
 }
-
 function jumpToSelected(dir){
   const root = getRootScroll();
-  const rr = root.getBoundingClientRect();
+  const viewTop = root?.scrollTop || 0;
   const els = selectedEls();
   if (!els.length) return;
 
   let target = null;
   if (dir > 0){
-    target = els.find(el => el.getBoundingClientRect().top > rr.top + 2) || els[0];
+    target = els.find(el => el.offsetTop > viewTop + 2) || els[0];
   } else {
-    const before = els.filter(el => el.getBoundingClientRect().top < rr.top - 2);
+    const before = els.filter(el => el.offsetTop < viewTop - 2);
     target = before.length ? before[before.length - 1] : els[els.length - 1];
   }
   if (target) alignTop(target);
 }
-
 function updateNavButtons(){
   const any = selected.size > 0;
   btnPrevSel.disabled = !any;
@@ -837,14 +844,7 @@ function updateNavButtons(){
 
 btnPrevSel.addEventListener('click', () => jumpToSelected(-1));
 btnNextSel.addEventListener('click', () => jumpToSelected(1));
-
-// Inserção visual: [Prev] [Criar Prova] [Next] [Exportar]
-if (btnExportar && btnExportar.parentNode){
-  btnExportar.parentNode.insertBefore(btnPrevSel, btnCriar);
-  btnExportar.parentNode.insertBefore(btnNextSel, btnExportar);
-}
-// não declarar `selected` aqui e não chamar `updateNavButtons()` aqui
-
+// não inserir perto do Exportar. Sem uso de .btn aqui.
 
 async function getAllItems(){
   if (allItemsCache) return allItemsCache.slice();
