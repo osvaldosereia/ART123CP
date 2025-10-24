@@ -829,6 +829,8 @@ if (btnExportar && btnExportar.parentNode){
   btnExportar.parentNode.insertBefore(btnPrevSel, btnCriar);
   btnExportar.parentNode.insertBefore(btnNextSel, btnExportar);
 }
+let selected = new Map();   // id -> questão
+// ...
 updateNavButtons();
 
 
