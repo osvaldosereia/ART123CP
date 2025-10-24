@@ -20,7 +20,7 @@ body{
 .hidden{display:none!important}
 
 /* ========= TOPBAR ========= */
-.topbar{background:#f3f4f6;border-bottom:1px solid var(--border)}
+.topbar{background:#f3f4f6;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:90}
 .topbar__row{
   display:grid;
   grid-template-columns:auto minmax(0,1fr) minmax(0,1fr);
@@ -30,37 +30,20 @@ body{
 .topbar__filters{display:contents}
 .topbar > .container{max-width:var(--container);margin:0 auto;padding:0 16px}
 
-/* menus centrados no mobile */
-@media(max-width:480px){
-  .topbar__row{padding:6px 0}
-  .select__menu,.multiselect__menu{
-    position:fixed;
-    top:66px;
-    left:12px;
-    right:12px;
-    transform:none;
-    width:auto;
-    max-width:none;
-    padding:10px;
-    box-sizing:border-box;
-    max-height:60vh;
-    overflow:auto;
-    z-index:100;
-    border-radius:12px;
-  }
-}
-
-/* ========= SELECT CUSTOM ========= */
+/* ========= SELECTS ========= */
 .select,.multiselect{position:relative;min-width:0;width:100%}
 .select__button,
 .multiselect__control{
   width:100%;height:36px;padding:0 10px;border:1px solid var(--border);border-radius:10px;background:#fff;
   display:flex;align-items:center;justify-content:space-between;cursor:pointer;overflow:hidden
 }
+.select__button:focus-visible,
+.multiselect__control:focus-visible{outline:2px solid #103a9c;outline-offset:2px}
 .select__menu,
 .multiselect__menu{
   position:absolute;left:0;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--border);
-  border-radius:10px;box-shadow:var(--shadow);max-height:260px;overflow:auto;z-index:100;padding:6px
+  border-radius:10px;box-shadow:var(--shadow);max-height:260px;overflow:auto;z-index:100;padding:6px;
+  -webkit-overflow-scrolling:touch
 }
 .select__option,
 .multiselect__item{padding:8px 10px;border-radius:8px;cursor:pointer;line-height:1.6}
@@ -93,34 +76,30 @@ body{
 .q__actions{display:flex;gap:10px;margin-top:10px;align-items:center}
 .btn{height:34px;padding:0 12px;border:1px solid var(--border);border-radius:10px;background:#eeeeee;cursor:pointer}
 .btn:hover{background:#e7e7e7}
+.btn:focus-visible{outline:2px solid #103a9c;outline-offset:2px}
 .popover{position:relative}
 .popover__menu{
   position:absolute;display:flex;flex-direction:column;gap:8px;bottom:calc(100% + 8px);left:0;background:#fff;border:1px solid var(--border);
-  border-radius:12px;padding:8px;box-shadow:var(--shadow);z-index:50
+  border-radius:12px;padding:8px;box-shadow:var(--shadow);z-index:120
 }
 .popover__menu.below{bottom:auto;top:calc(100% + 8px)}
 .subbtn{height:30px;padding:0 10px;font-size:13px;border:1px solid #e5e7eb;border-radius:8px;background:#fff;cursor:pointer}
 .subbtn:hover{background:#f9fafb}
+.subbtn:focus-visible{outline:2px solid #103a9c;outline-offset:2px}
 
-/* Botões redondos pequenos dentro do card */
+/* Botões redondos pequenos */
 .btn-icon-round{
   width:28px;height:28px;padding:0;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;
   border:1px solid #e5e7eb;background:#fff;cursor:pointer
 }
 .btn-icon-round:hover{background:#f5f5f5}
-.btn-icon-round img{width:14px;height:14px}
+.btn-icon-round img,.btn-icon-round svg{width:14px;height:14px}
 
 /* ========= SENTINELA ========= */
 #sentinela{height:1px}
 
-/* controles menores no mobile */
-@media(max-width:480px){
-  .topbar__row{grid-template-columns:auto 1fr 1fr; padding:6px 0}
-  .select,.multiselect{min-width:0;width:100%}
-}
-
 /* ========= MODAL BASE ========= */
-.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:60}
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:110}
 .modal:not(.hidden){display:flex}
 .modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.4);z-index:10}
 .modal-card{
@@ -140,6 +119,7 @@ body{
 .swatches{display:flex;gap:8px;padding:8px 0 6px;flex-wrap:wrap}
 .swatch{width:22px;height:22px;border-radius:6px;border:2px solid #1112}
 .swatch[aria-selected="true"]{outline:2px solid #111;outline-offset:2px}
+.swatch:focus-visible{outline:2px solid #103a9c;outline-offset:2px}
 
 /* Grid de frases */
 #frases-modal .frases-grid{
@@ -163,30 +143,37 @@ body{
 }
 #frases-sentinela{height:1px;width:100%}
 
-/* ajustes extras mobile */
-@media (max-width:480px){
-  #frases-modal .modal-card{margin:0;border-radius:12px;width:94vw}
-  #frases-modal .modal-body{padding-left:12px;padding-right:12px}
+/* ========= MODAL IMPRESSORA ========= */
+#modal-impressora.modal{z-index:130}
+#modal-impressora .modal-card{
+  max-width:960px;height:90vh;margin:5vh 0;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.15)
 }
+#modal-impressora .modal-head__top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+#modal-impressora .imp-headbar{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:4px 0 6px;
+  border-top:1px solid #eee;margin-top:8px
+}
+#modal-impressora .imp-headbar .layout-cols label{margin-right:12px;white-space:nowrap}
+#modal-impressora .modal-foot{padding:12px 20px;border-top:1px solid #eee;display:flex;justify-content:flex-end}
+#modal-impressora .modal-body{padding:16px;overflow:auto}
+#modal-impressora .lista-questoes{min-height:200px}
+#modal-impressora .loading{text-align:center;padding:12px;color:#777}
+#imp-exportar.btn{background:#111;color:#fff;border-color:#111}
+#imp-exportar.btn:disabled{opacity:.5;cursor:not-allowed}
 
-/* Brand responsiva */
-.brand--short{display:none}
-@media (max-width:480px){
-  .brand--full{display:none}
-  .brand--short{display:inline}
-}
+/* Questões no modal */
+.imp-card{padding:16px 0;border:none;border-top:4px solid #eceff3;background:transparent;border-radius:0;margin:0}
+.imp-card:first-child{border-top:0}
+.imp-card .q__meta{margin-bottom:8px;color:var(--muted);font-size:12px}
+.imp-card .q__stmt{margin-bottom:10px;color:#103a9c}
+.imp-card .q__opts{gap:10px}
+.imp-selecionar{margin-top:10px;display:inline-flex;align-items:center;gap:8px}
+.imp-selecionar input[type="checkbox"]{transform:scale(1.2)}
 
-/* Dropdowns mais compactos */
-.select__menu .select__option,
-.multiselect__menu .multiselect__item{
-  font-size:13px;
-  line-height:1.4;
-  padding:6px 10px;
-}
-.select__menu .select__option + .select__option,
-.multiselect__menu .multiselect__item + .multiselect__item{
-  border-top:1px solid rgba(17,24,39,.08);
-}
+/* Lista dentro do modal */
+#imp-lista .q{padding:16px 0;border-top:4px solid #eceff3}
+#imp-lista .q:first-child{border-top:0;padding-top:0}
+#imp-lista .q .q__meta{display:none}
 
 /* ========= PÁGINA INICIAL ========= */
 .welcome{
@@ -203,101 +190,37 @@ body{
   margin-top:8px;
 }
 
-/* ========= MODAL IMPRESSORA ========= */
-#modal-impressora.modal{z-index:70}
-#modal-impressora .modal-backdrop{background:rgba(0,0,0,.4);z-index:70}
-#modal-impressora .modal-card{
-  max-width:960px;height:90vh;margin:5vh 0;z-index:80;
-  border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.15)
-}
-/* Cabeçalho profissional com barra de status (selecionadas/colunas) */
-#modal-impressora .modal-head__top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-#modal-impressora .imp-headbar{
-  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:4px 0 6px;
-}
-#modal-impressora .imp-headbar .layout-cols label{margin-right:12px;white-space:nowrap}
+/* ========= BRAND ========= */
+.brand--short{display:none}
 @media (max-width:480px){
-  #modal-impressora .imp-headbar{flex-direction:column;align-items:flex-start;gap:8px}
+  .brand--full{display:none}
+  .brand--short{display:inline}
 }
 
-#modal-impressora .modal-foot{padding:12px 20px;border-top:1px solid #eee;display:flex;justify-content:flex-end}
-#modal-impressora .modal-body{padding:16px;overflow:auto}
-#modal-impressora .lista-questoes{min-height:200px}
-#modal-impressora .loading{text-align:center;padding:12px;color:#777}
-#imp-exportar.btn-primary{padding:10px 16px;border-radius:10px;border:none;background:#111;color:#fff;cursor:pointer}
-#imp-exportar.btn-primary:disabled{opacity:.5;cursor:not-allowed}
-
-/* Questões no modal: sem caixa, só separador como no site */
-.imp-card{
-  padding:16px 0;
-  border:none;
-  border-top:4px solid #eceff3; /* igual .q */
-  background:transparent;
-  border-radius:0;
-  margin:0;
-}
-.imp-card:first-child{border-top:0}
-.imp-card .q__meta{margin-bottom:8px;color:var(--muted);font-size:12px}
-.imp-card .q__stmt{margin-bottom:10px;color:#103a9c}
-.imp-card .q__opts{gap:10px}
-.imp-selecionar{margin-top:10px;display:inline-flex;align-items:center;gap:8px}
-.imp-selecionar input[type="checkbox"]{transform:scale(1.2)}
-
-/* ===== Ajustes do modal Impressora (sem caixas, só separadores como no site) ==== */
-#modal-impressora .imp-card{border:0;background:transparent;padding:0;margin:0}
-#modal-impressora .imp-card .imp-body{padding:0}
-#modal-impressora .imp-selecionar{margin:10px 0 0 0}
-
-/* título + barra de status logo abaixo do título */
-#modal-impressora .modal-head{padding:14px 16px;border-bottom:1px solid var(--border)}
-#modal-impressora .imp-toolbar{
-  padding:8px 16px 0 16px;
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
-  font-size:14px;color:#374151;
-}
-@media (max-width:480px){
-  #modal-impressora .imp-toolbar{flex-direction:column;align-items:flex-start;gap:6px}
+/* ========= MOBILE AJUSTES ========= */
+@media(max-width:480px){
+  .topbar__row{grid-template-columns:auto 1fr 1fr; padding:6px 0}
+  .select,.multiselect{min-width:0;width:100%}
+  .select__menu,.multiselect__menu{
+    position:fixed;
+    top:60px; /* alinhado à topbar */
+    left:12px;
+    right:12px;
+    transform:none;
+    width:auto;
+    max-width:none;
+    padding:10px;
+    box-sizing:border-box;
+    max-height:60vh;
+    overflow:auto;
+    z-index:200;
+    border-radius:12px;
+  }
+  #frases-modal .modal-card{margin:0;border-radius:12px;width:94vw}
+  #frases-modal .modal-body{padding-left:12px;padding-right:12px}
 }
 
-/* lista dentro do modal segue o visual das questões do site */
-#modal-impressora .lista-questoes .q{padding:16px 0;border-top:4px solid #eceff3}
-#modal-impressora .lista-questoes .q:first-child{border-top:0;padding-top:0}
-#modal-impressora .lista-questoes .q__stmt{color:#103a9c;margin-bottom:10px;line-height:1.55}
-#modal-impressora .lista-questoes .q__opts{display:grid;gap:10px}
-
-/* botão redondo (impressora/frases) consistente */
-.btn-icon-round{
-  width:28px;height:28px;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;
-  border:1px solid #e5e7eb;background:#fff;cursor:pointer
-}
-.btn-icon-round:hover{background:#f5f5f5}
-.btn-icon-round svg{width:14px;height:14px}
-
-/* rodapé do modal */
-#modal-impressora .modal-foot{padding:12px 16px;border-top:1px solid var(--border);display:flex;justify-content:flex-end}
-#imp-exportar.btn{background:#111;color:#fff;border-color:#111}
-#imp-exportar.btn:disabled{opacity:.5;cursor:not-allowed}
-
-/* loading e sentinela */
-#imp-loading{padding:12px;text-align:center;color:#6b7280}
-#imp-sentinela{height:1px}
-
-/* Head do modal impressora */
-.imp-headbar{
-  display:flex; align-items:center; justify-content:space-between;
-  gap:12px; padding:8px 0 0;
-  border-top:1px solid #eee; margin-top:8px;
-}
-.imp-headbar .layout-cols label{ margin-right:10px; }
-@media (max-width:520px){
-  .imp-headbar{ flex-direction:column; align-items:flex-start; }
-}
-
-/* Lista dentro do modal usa o mesmo visual dos cards, sem caixas extras */
-#imp-lista .q{ padding:16px 0; border-top:4px solid #eceff3; }
-#imp-lista .q .q__meta{ display:none; }    /* oculta linha “***** …” no modal */
-
-/* impressão A4 */
+/* ========= PRINT / PDF ========= */
 @media print{
   .page{page-break-after:always}
 }
@@ -310,12 +233,3 @@ body{
 .pdf-opt{display:flex;align-items:flex-start;gap:8px}
 .pdf-badge{font-weight:700;border:2px solid #cbd5e1;border-radius:999px;min-width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:12px}
 .pdf-sep{border-top:1px solid #ddd;margin-top:8px}
-
-@page { size: A4; margin: 10mm; }
-.pdf-prova { max-width: 740px; margin: 0 auto; }
-.q { padding: 8px 0; border-top: 1px solid #e5e7eb; }
-.q:first-child { border-top: 0; }
-.q__stmt { margin: 4px 0; line-height: 1.5; }
-.q__opts { list-style: none; padding: 0; margin: 6px 0 0; display: grid; gap: 6px; }
-.q__opt { display: flex; gap: 8px; align-items: flex-start; }
-.q__badge { border: 2px solid #cbd5e1; border-radius: 999px; min-width: 20px; height: 20px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:12px; }
