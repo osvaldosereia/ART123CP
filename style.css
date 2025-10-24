@@ -247,3 +247,16 @@ body{
 }
 .imp-selecionar input[type="checkbox"]{transform:scale(1.2)}
 .hidden{display:none}
+
+/* Modal Impressora alinhado ao modal já existente */
+#modal-impressora .modal-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.4); z-index:10; }
+#modal-impressora .modal-card{ position:relative; margin:5vh auto; max-width:960px; height:90vh;
+  background:#fff; border-radius:12px; display:flex; flex-direction:column; overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.15); z-index:20;
+}
+#modal-impressora .modal-head, 
+#modal-impressora .modal-foot{ padding:12px 20px; border-bottom:1px solid #eee; display:flex; align-items:center; justify-content:space-between; }
+#modal-impressora .modal-foot{ border-top:1px solid #eee; border-bottom:0; justify-content:flex-end; }
+#modal-impressora .modal-body{ flex:1; overflow:auto; padding:16px; }
+#modal-impressora .imp-toolbar{ display:flex; gap:16px; align-items:center; justify-content:space-between; margin-bottom:12px; }
+#modal-impressora .lista-questoes{ min-height:200px; }
