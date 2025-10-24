@@ -619,6 +619,76 @@ async function ensureFrases(){
       return {frase, autor};
     });
 }
+// ===== Helpers de renderização do PNG de frases =====
+function isDark(hex){
+  const h = String(hex||'#000000').replace('#','');
+  const n = parseInt(h,16);
+  const r = (n>>16)&255, g = (n>>8)&255, b = n&255;
+  const lum = 0.2126*r + 0.7152*g + 0.0722*b;
+  return lum < 140;
+}
+function wrapLines(ctx, text, maxW){
+  const words = String(text||'').split(/\s+/).filter(Boolean);
+  const lines = [];
+  let line = '';
+  for(const w of words){
+    const test = line ? line + ' ' + w : w;
+    if(ctx.measureText(test).width > maxW){
+      if(line) lines.push(line);
+      line = w;
+    }else line = test;
+  }
+  if(line) lines.push(line);
+  return lines;
+}
+function fitFontByBox(ctx, text, maxW, maxH, minPx, maxPx, step, family, lh){
+  for (let s=maxPx; s>=minPx; s-=step){
+    ctx.font = `${s}px ${family}`;
+    const h = wrapLines(ctx, text, maxW).length * (s*lh);
+    if (h <= maxH) return s;
+  }
+  return minPx;
+}
+function renderFrasePNG(canvas, frase, autor, bg){
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+
+  // fundo
+  ctx.fillStyle = bg || '#FFFFFF';
+  ctx.fillRect(0,0,W,H);
+
+  // header
+  ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
+  ctx.font = '28px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'top';
+  ctx.fillText('meujus.com.br', W/2, 36);
+
+  // área interna
+  const padX = 96;
+  const innerW = W - padX*2;
+  const topY = 220;
+  const bottomPad = 260;
+  const maxH = H - topY - bottomPad;
+
+  // frase
+  const lh = 1.3;
+  const size = fitFontByBox(ctx, frase, innerW, maxH, 28, 72, 2, 'Times New Roman, Times, serif', lh);
+  ctx.font = `${size}px "Times New Roman", Times, serif`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
+
+  const lines = wrapLines(ctx, frase, innerW);
+  const fraseH = lines.length * (size*lh);
+  let y = topY + Math.max(0, Math.floor((maxH - fraseH)/2));
+  for (const L of lines){ ctx.fillText(L, padX, y); y += size*lh; }
+
+  // autor
+  const aSize = Math.max(18, Math.round(size * 0.42));
+  ctx.font = `italic ${aSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
+  ctx.fillText(autor ? `— ${autor}` : '', padX, y + 24);
+}
 
 function makeFraseItem(it){
   const item = document.createElement('div');
