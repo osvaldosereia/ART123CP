@@ -1040,23 +1040,28 @@ async function exportarPDF_HTML(questoes){
   root.appendChild(page2);
 
   // Renderização em PDF
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit: 'px', format: 'a4', compress: true });
-  doc.setProperties({ title: 'Prova MeuJus' });
+ const { jsPDF } = window.jspdf;
+const doc = new jsPDF({ unit: 'mm', format: 'a4', compress: true });
+doc.setProperties({ title: 'Prova MeuJus' });
 
-  await new Promise(res => doc.html(page1, {
-    x: 24, y: 24, width: 794 - 48,
-    html2canvas: { scale: 2, useCORS: true, letterRendering: true },
-    callback: res
-  }));
+const PAGE_W = doc.internal.pageSize.getWidth();
+const M = 10; // margem 10mm
+const CONTENT_W = PAGE_W - M * 2;
 
-  doc.addPage();
+await new Promise(res => doc.html(page1, {
+  x: M, y: M, width: CONTENT_W,
+  html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+  callback: res
+}));
 
-  await new Promise(res => doc.html(page2, {
-    x: 24, y: 24, width: 794 - 48,
-    html2canvas: { scale: 2, useCORS: true, letterRendering: true },
-    callback: res
-  }));
+doc.addPage();
+
+await new Promise(res => doc.html(page2, {
+  x: M, y: M, width: CONTENT_W,
+  html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+  callback: res
+}));
+
 
   doc.save('prova.pdf');
 }
