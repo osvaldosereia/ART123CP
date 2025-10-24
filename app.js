@@ -793,28 +793,42 @@ btnNextSel.className = 'btn';
 btnNextSel.textContent = 'Selecionada →';
 
 function getRootScroll(){
-  return modal?.querySelector('.modal-body') || lista || document;
+  return modal?.querySelector('.modal-body') || lista || document.scrollingElement || document.documentElement;
 }
+
 function selectedEls(){
+  if (!lista) return [];
   const ids = new Set([...selected.keys()]);
   return Array.from(lista.querySelectorAll('.imp-card'))
-    .filter(el => ids.has(Number(el.dataset.id || '0')));
+    .filter(el => ids.has(Number(el.dataset.id || '0')))
+    .sort((a,b)=>a.getBoundingClientRect().top - b.getBoundingClientRect().top);
 }
+
+function alignTop(el){
+  const root = getRootScroll();
+  if (!root || !el) return;
+  const rr = root.getBoundingClientRect();
+  const er = el.getBoundingClientRect();
+  const delta = er.top - rr.top;
+  root.scrollTo({ top: (root.scrollTop || 0) + delta, behavior: 'smooth' });
+}
+
 function jumpToSelected(dir){
   const root = getRootScroll();
-  const viewTop = root.scrollTop || 0;
+  const rr = root.getBoundingClientRect();
   const els = selectedEls();
   if (!els.length) return;
 
   let target = null;
   if (dir > 0){
-    target = els.find(el => el.offsetTop > viewTop + 5) || els[0];
+    target = els.find(el => el.getBoundingClientRect().top > rr.top + 2) || els[0];
   } else {
-    const before = els.filter(el => el.offsetTop < viewTop - 5);
+    const before = els.filter(el => el.getBoundingClientRect().top < rr.top - 2);
     target = before.length ? before[before.length - 1] : els[els.length - 1];
   }
-  target?.scrollIntoView({ block: 'center' });
+  if (target) alignTop(target);
 }
+
 function updateNavButtons(){
   const any = selected.size > 0;
   btnPrevSel.disabled = !any;
@@ -975,6 +989,7 @@ function openModal(focusId){
   loadMore();
   mountImpInfiniteScroll();
 }
+
 
 
 
