@@ -117,36 +117,35 @@
     }
 
     function normalizeForPrint(c, i){
-  const alts = (c.alternativas || []).map((raw, k) => {
-    const letra = String.fromCharCode(65 + k);
-    const texto = String(raw || "").replace(/^[A-E]\)\s*/i, "");
-    return `${letra}) ${texto}`;
-  });
+      const alts = (c.alternativas || []).map((raw, k) => {
+        const letra = String.fromCharCode(65 + k);
+        const texto = String(raw || "").replace(/^[A-E]\)\s*/i, "");
+        return `${letra}) ${texto}`;
+      });
 
-  // visual no modal igual aos cartões do site (sem meta “***** …”)
-  const html = [
-    `<div class="q__stmt">${U.mdInline(c.enunciado || "")}</div>`,
-    alts.length
-      ? `<ul class="q__opts">${alts
-          .map(a => {
-            const letra = a.slice(0,1);
-            const texto = a.replace(/^[A-E]\)\s*/i,"").replace(/^[A-E]\)\s*/i,"");
-            return `<li class="q__opt"><span class="q__badge">${letra}</span><div>${texto}</div></li>`;
-          })
-          .join("")}</ul>`
-      : ""
-  ].join("");
+      // visual no modal igual aos cartões do site (sem meta “***** …”)
+      const html = [
+        `<div class="q__stmt">${U.mdInline(c.enunciado || "")}</div>`,
+        alts.length
+          ? `<ul class="q__opts">${alts
+              .map(a => {
+                const letra = a.slice(0,1);
+                const texto = a.replace(/^[A-E]\)\s*/i,"").replace(/^[A-E]\)\s*/i,"");
+                return `<li class="q__opt"><span class="q__badge">${letra}</span><div>${texto}</div></li>`;
+              })
+              .join("")}</ul>`
+          : ""
+      ].join("");
 
-  return {
-    id: i + 1,                                // usado para focar ao abrir o modal
-    enunciadoHtml: html,                      // render do modal
-    enunciadoPlain: c.enunciado || "",        // base do PDF
-    alternativas: alts,                       // A)..E) já normalizadas
-    gabarito: String(c.gabarito || "")        // usado no gabarito da última página do PDF
-              .trim().toUpperCase()
-  };
-}
-
+      return {
+        id: i + 1,                                // usado para focar ao abrir o modal
+        enunciadoHtml: html,                      // render do modal
+        enunciadoPlain: c.enunciado || "",        // base do PDF
+        alternativas: alts,                       // A)..E) já normalizadas
+        gabarito: String(c.gabarito || "")        // usado no gabarito da última página do PDF
+                  .trim().toUpperCase()
+      };
+    }
 
     window.QUESTOES_FETCH_PAGE = async function(cursor){
       const pageSize = 20;
@@ -859,216 +858,216 @@ function renderFrasePNG(canvas, frase, autor, bg){
   }
 
   // PDF: margens iguais 10mm, gutter maior, separador pontilhado,
-// alinhamento à esquerda, círculos menores sem contorno,
-// barras e espaçamentos ajustados e consistentes.
-function exportarPDF(questoes, { colunas = 1 } = {}) {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit: 'mm', format: 'a4', putOnlyUsedFonts: true });
+  // alinhamento à esquerda, círculos menores sem contorno,
+  // barras e espaçamentos ajustados e consistentes.
+  function exportarPDF(questoes, { colunas = 1 } = {}) {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ unit: 'mm', format: 'a4', putOnlyUsedFonts: true });
 
-  // --- Geometria A4 e áreas úteis ---
-  const pageW = doc.internal.pageSize.getWidth();
-  const pageH = doc.internal.pageSize.getHeight();
-  const margin = 10;                  // 10mm em TODAS as bordas
-  const gutter = colunas === 2 ? 16 : 0; // espaço entre colunas
-  const contentW = pageW - margin * 2;
-  const colW = colunas === 2 ? (contentW - gutter) / 2 : contentW;
+    // --- Geometria A4 e áreas úteis ---
+    const pageW = doc.internal.pageSize.getWidth();
+    const pageH = doc.internal.pageSize.getHeight();
+    const margin = 10;                  // 10mm em TODAS as bordas
+    const gutter = colunas === 2 ? 16 : 0; // espaço entre colunas
+    const contentW = pageW - margin * 2;
+    const colW = colunas === 2 ? (contentW - gutter) / 2 : contentW;
 
-  // “safe paddings” para não encostar em bordas nem no divisor
-  const SAFE_L = 1.5;                 // margem interna esquerda
-  const SAFE_R = 1.5;                 // margem interna direita
-  const TEXT_W = colW - SAFE_L - SAFE_R;
+    // “safe paddings” para não encostar em bordas nem no divisor
+    const SAFE_L = 1.5;                 // margem interna esquerda
+    const SAFE_R = 1.5;                 // margem interna direita
+    const TEXT_W = colW - SAFE_L - SAFE_R;
 
-  // --- Tipografia / espaçamentos ---
-  const ENUN_SIZE = 9;                // -1px em relação ao anterior
-  const ALT_SIZE  = 9;                // alternativas levemente menores
-  const ENUN_LH   = 5.2;
-  const ALT_LH    = 5.0;
-  const GAP_BLOCK_TOP   = 3.2;
-  const GAP_ENUN_ALTS   = 3.4;
-  const GAP_ALT         = 2.4;
-  const SEP_LINE_W      = 0.45;
-  const SEP_AFTER_GAP   = 3.2;
+    // --- Tipografia / espaçamentos ---
+    const ENUN_SIZE = 9;                // -1px em relação ao anterior
+    const ALT_SIZE  = 9;                // alternativas levemente menores
+    const ENUN_LH   = 5.2;
+    const ALT_LH    = 5.0;
+    const GAP_BLOCK_TOP   = 3.2;
+    const GAP_ENUN_ALTS   = 3.4;
+    const GAP_ALT         = 2.4;
+    const SEP_LINE_W      = 0.45;
+    const SEP_AFTER_GAP   = 3.2;
 
-  // Bolas das alternativas: menores, sem contorno, fundo ~15% cinza
-  const DOT_R = 2.1;
-  const DOT_FILL = 230;               // mais claro que antes
+    // Bolas das alternativas: menores, sem contorno, fundo ~15% cinza
+    const DOT_R = 2.1;
+    const DOT_FILL = 230;               // mais claro que antes
 
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(0, 0, 0);
-
-  // Estado do fluxo
-  const s = { x: margin, y: margin, col: 1 };
-
-  function newColumnOrPage() {
-    if (colunas === 2 && s.col === 1) {
-      s.x = margin + colW + gutter;
-      s.y = margin;
-      s.col = 2;
-      drawColumnDivider();
-    } else {
-      doc.addPage();
-      doc.setFont('helvetica', 'normal'); doc.setTextColor(0,0,0);
-      s.x = margin; s.y = margin; s.col = 1;
-      drawColumnDivider();
-    }
-  }
-  const bottom = () => pageH - margin;
-  function ensureLines(n, lh) { if (s.y + n * lh > bottom()) newColumnOrPage(); }
-  function split(text, width) { return doc.splitTextToSize(text, width); }
-  function stripHtml(html){
-    try{
-      const tmp = document.createElement('div'); tmp.innerHTML = html || '';
-      const raw = tmp.textContent || tmp.innerText || '';
-      return (window.he ? he.decode(raw) : raw).replace(/\s+\n/g,'\n').replace(/[ \t]+/g,' ').trim();
-    }catch{ return ''; }
-  }
-
-  // divisor de colunas tracejado e com margem de segurança já respeitada pelo TEXT_W
-  function drawColumnDivider() {
-    if (colunas !== 2) return;
-    const cx = margin + colW + gutter / 2;
-    doc.setDrawColor(180);
-    doc.setLineWidth(0.2);
-    doc.setLineDash([1.2, 1.8], 0);
-    for (let y = margin; y < pageH - margin; y += 3) {
-      doc.line(cx, y, cx, Math.min(y + 1.2, pageH - margin));
-    }
-    doc.setLineDash([]); // reset
-    doc.setDrawColor(0);
-  }
-
-  // linha separadora de questões
-  function drawSeparator() {
-    ensureLines(1, 1);
-    doc.setDrawColor(0);
-    doc.setLineWidth(SEP_LINE_W);
-    doc.setLineDash([], 0);
-    doc.line(s.x, s.y, s.x + colW, s.y);
-    s.y += SEP_AFTER_GAP;
-  }
-
-  // alternativa com bolinha alinhada ao topo da primeira linha + linha tracejada entre alternativas
-  function renderAlternatives(rawAlts) {
-    const alts = Array.isArray(rawAlts) ? rawAlts : [];
     doc.setFont('helvetica', 'normal');
-    doc.setFontSize(ALT_SIZE);
+    doc.setTextColor(0, 0, 0);
 
-    alts.forEach((t, i) => {
-      const letter = String.fromCharCode(65 + i);
-      const clean = String(t).replace(/^[A-E]\)\s*/i, '');
-      const txt = `${letter}) ${clean}`;
+    // Estado do fluxo
+    const s = { x: margin, y: margin, col: 1 };
 
-      const xText = s.x + SAFE_L + DOT_R * 2 + 3;     // recuo do texto
-      const usableW = TEXT_W - (DOT_R * 2 + 3);       // largura de quebra
-      const lines = split(txt, usableW);
+    function newColumnOrPage() {
+      if (colunas === 2 && s.col === 1) {
+        s.x = margin + colW + gutter;
+        s.y = margin;
+        s.col = 2;
+        drawColumnDivider();
+      } else {
+        doc.addPage();
+        doc.setFont('helvetica', 'normal'); doc.setTextColor(0,0,0);
+        s.x = margin; s.y = margin; s.col = 1;
+        drawColumnDivider();
+      }
+    }
+    const bottom = () => pageH - margin;
+    function ensureLines(n, lh) { if (s.y + n * lh > bottom()) newColumnOrPage(); }
+    function split(text, width) { return doc.splitTextToSize(text, width); }
+    function stripHtml(html){
+      try{
+        const tmp = document.createElement('div'); tmp.innerHTML = html || '';
+        const raw = tmp.textContent || tmp.innerText || '';
+        return (window.he ? he.decode(raw) : raw).replace(/\s+\n/g,'\n').replace(/[ \t]+/g,' ').trim();
+      }catch{ return ''; }
+    }
 
-      // Garante espaço para todas as linhas desta alternativa
-      ensureLines(lines.length, ALT_LH);
+    // divisor de colunas tracejado e com margem de segurança já respeitada pelo TEXT_W
+    function drawColumnDivider() {
+      if (colunas !== 2) return;
+      const cx = margin + colW + gutter / 2;
+      doc.setDrawColor(180);
+      doc.setLineWidth(0.2);
+      doc.setLineDash([1.2, 1.8], 0);
+      for (let y = margin; y < pageH - margin; y += 3) {
+        doc.line(cx, y, cx, Math.min(y + 1.2, pageH - margin));
+      }
+      doc.setLineDash([]); // reset
+      doc.setDrawColor(0);
+    }
 
-      // y da primeira linha (baseline)
-      const y0 = s.y;
+    // linha separadora de questões
+    function drawSeparator() {
+      ensureLines(1, 1);
+      doc.setDrawColor(0);
+      doc.setLineWidth(SEP_LINE_W);
+      doc.setLineDash([], 0);
+      doc.line(s.x, s.y, s.x + colW, s.y);
+      s.y += SEP_AFTER_GAP;
+    }
 
-      // bolinha: topo da bolinha alinhado ao topo da linha (aproximação)
-      // topo da "linha" ~ y0 - ALT_LH*0.8. Queremos (cy - DOT_R) ≈ y0 - ALT_LH*0.8
-      const cy = y0 - ALT_LH * 0.8 + DOT_R;
-      const cx = s.x + SAFE_L + DOT_R + 1.2;
-
-      doc.setFillColor(DOT_FILL, DOT_FILL, DOT_FILL);
-      doc.circle(cx, cy, DOT_R, 'F'); // sem contorno
-
-      // letra centralizada na bolinha
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(ALT_SIZE + 0.8);
-      // jsPDF não tem baseline=middle. Compensação vertical:
-      const ly = cy + (ALT_SIZE * 0.32);
-      doc.text(letter, cx, ly, { align: 'center' });
-
-      // texto da alternativa
+    // alternativa com bolinha alinhada ao topo da primeira linha + linha tracejada entre alternativas
+    function renderAlternatives(rawAlts) {
+      const alts = Array.isArray(rawAlts) ? rawAlts : [];
       doc.setFont('helvetica', 'normal');
       doc.setFontSize(ALT_SIZE);
-      lines.forEach(ln => {
-        // remove "A) " da linha, já está na bolinha
-        doc.text(ln.replace(/^[A-E]\)\s*/i, ''), xText, s.y);
-        s.y += ALT_LH;
+
+      alts.forEach((t, i) => {
+        const letter = String.fromCharCode(65 + i);
+        const clean = String(t).replace(/^[A-E]\)\s*/i, '');
+        const txt = `${letter}) ${clean}`;
+
+        const xText = s.x + SAFE_L + DOT_R * 2 + 3;     // recuo do texto
+        const usableW = TEXT_W - (DOT_R * 2 + 3);       // largura de quebra
+        const lines = split(txt, usableW);
+
+        // Garante espaço para todas as linhas desta alternativa
+        ensureLines(lines.length, ALT_LH);
+
+        // y da primeira linha (baseline)
+        const y0 = s.y;
+
+        // bolinha: topo da bolinha alinhado ao topo da linha (aproximação)
+        // topo da "linha" ~ y0 - ALT_LH*0.8. Queremos (cy - DOT_R) ≈ y0 - ALT_LH*0.8
+        const cy = y0 - ALT_LH * 0.8 + DOT_R;
+        const cx = s.x + SAFE_L + DOT_R + 1.2;
+
+        doc.setFillColor(DOT_FILL, DOT_FILL, DOT_FILL);
+        doc.circle(cx, cy, DOT_R, 'F'); // sem contorno
+
+        // letra centralizada na bolinha
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(ALT_SIZE + 0.8);
+        // jsPDF não tem baseline=middle. Compensação vertical:
+        const ly = cy + (ALT_SIZE * 0.32);
+        doc.text(letter, cx, ly, { align: 'center' });
+
+        // texto da alternativa
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(ALT_SIZE);
+        lines.forEach(ln => {
+          // remove "A) " da linha, já está na bolinha
+          doc.text(ln.replace(/^[A-E]\)\s*/i, ''), xText, s.y);
+          s.y += ALT_LH;
+        });
+
+        // linha tracejada fina entre alternativas
+        if (i < alts.length - 1) {
+          doc.setDrawColor(170);
+          doc.setLineWidth(0.2);
+          doc.setLineDash([1.5, 1.5], 0);
+          const x1 = s.x + SAFE_L + DOT_R * 2 + 3;
+          const x2 = s.x + colW - SAFE_R;
+          doc.line(x1, s.y - GAP_ALT * 0.5, x2, s.y - GAP_ALT * 0.5);
+          doc.setLineDash([]); doc.setDrawColor(0);
+        }
+
+        s.y += GAP_ALT; // respiro entre alternativas
+      });
+    }
+
+    function renderQuestao(q, n) {
+      const enunPlain = q.enunciadoPlain ? String(q.enunciadoPlain) : stripHtml(q.enunciado);
+      const enunLines = split(enunPlain, TEXT_W);
+
+      // topo do bloco
+      ensureLines(Math.ceil(GAP_BLOCK_TOP / ENUN_LH), ENUN_LH);
+      s.y += GAP_BLOCK_TOP;
+
+      // Título
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(ENUN_SIZE);
+      ensureLines(1, ENUN_LH);
+      doc.text(`Questão ${n}`, s.x + SAFE_L, s.y);
+      s.y += ENUN_LH * 0.9;
+
+      // Enunciado
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(ENUN_SIZE);
+      enunLines.forEach(ln => {
+        ensureLines(1, ENUN_LH);
+        doc.text(ln, s.x + SAFE_L, s.y);
+        s.y += ENUN_LH;
       });
 
-      // linha tracejada fina entre alternativas
-      if (i < alts.length - 1) {
-        doc.setDrawColor(170);
-        doc.setLineWidth(0.2);
-        doc.setLineDash([1.5, 1.5], 0);
-        const x1 = s.x + SAFE_L + DOT_R * 2 + 3;
-        const x2 = s.x + colW - SAFE_R;
-        doc.line(x1, s.y - GAP_ALT * 0.5, x2, s.y - GAP_ALT * 0.5);
-        doc.setLineDash([]); doc.setDrawColor(0);
-      }
+      // Espaço antes das alternativas
+      s.y += GAP_ENUN_ALTS;
 
-      s.y += GAP_ALT; // respiro entre alternativas
-    });
-  }
+      // Alternativas
+      renderAlternatives(q.alternativas);
 
-  function renderQuestao(q, n) {
-    const enunPlain = q.enunciadoPlain ? String(q.enunciadoPlain) : stripHtml(q.enunciado);
-    const enunLines = split(enunPlain, TEXT_W);
-
-    // topo do bloco
-    ensureLines(Math.ceil(GAP_BLOCK_TOP / ENUN_LH), ENUN_LH);
-    s.y += GAP_BLOCK_TOP;
-
-    // Título
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(ENUN_SIZE);
-    ensureLines(1, ENUN_LH);
-    doc.text(`Questão ${n}`, s.x + SAFE_L, s.y);
-    s.y += ENUN_LH * 0.9;
-
-    // Enunciado
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(ENUN_SIZE);
-    enunLines.forEach(ln => {
-      ensureLines(1, ENUN_LH);
-      doc.text(ln, s.x + SAFE_L, s.y);
-      s.y += ENUN_LH;
-    });
-
-    // Espaço antes das alternativas
-    s.y += GAP_ENUN_ALTS;
-
-    // Alternativas
-    renderAlternatives(q.alternativas);
-
-    // Separador final
-    drawSeparator();
-  }
-
-  // Início
-  drawColumnDivider();
-  const itens = questoes.map((q, i) => ({ ...q, _n: i + 1 }));
-  itens.forEach(q => renderQuestao(q, q._n));
-
-  // Gabarito em página isolada
-  doc.addPage(); drawColumnDivider();
-  doc.setFont('helvetica', 'bold'); doc.setFontSize(11);
-  const title = 'Gabarito';
-  const cx = pageW / 2; const tW = doc.getTextWidth(title);
-  doc.text(title, cx - tW / 2, margin + 2);
-
-  doc.setFont('helvetica', 'normal'); doc.setFontSize(10);
-  const keyLH = 6, keyColGap = 20, keyColW = (contentW - keyColGap) / 2;
-  let kx = margin, ky = margin + 10, kcol = 0;
-
-  itens.forEach(({ _n, gabarito }) => {
-    const g = (gabarito || '').replace(/[^A-E]/gi, '').toUpperCase() || '-';
-    if (ky + keyLH > pageH - margin) {
-      if (kcol === 0) { kx = margin + keyColW + keyColGap; ky = margin + 10; kcol = 1; }
-      else { doc.addPage(); drawColumnDivider(); kx = margin; ky = margin + 10; kcol = 0; }
+      // Separador final
+      drawSeparator();
     }
-    doc.text(`${_n}) ${g}`, kx, ky);
-    ky += keyLH;
-  });
 
-  doc.save('prova.pdf');
-}
+    // Início
+    drawColumnDivider();
+    const itens = questoes.map((q, i) => ({ ...q, _n: i + 1 }));
+    itens.forEach(q => renderQuestao(q, q._n));
+
+    // Gabarito em página isolada
+    doc.addPage(); drawColumnDivider();
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(11);
+    const title = 'Gabarito';
+    const cx = pageW / 2; const tW = doc.getTextWidth(title);
+    doc.text(title, cx - tW / 2, margin + 2);
+
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(10);
+    const keyLH = 6, keyColGap = 20, keyColW = (contentW - keyColGap) / 2;
+    let kx = margin, ky = margin + 10, kcol = 0;
+
+    itens.forEach(({ _n, gabarito }) => {
+      const g = (gabarito || '').replace(/[^A-E]/gi, '').toUpperCase() || '-';
+      if (ky + keyLH > pageH - margin) {
+        if (kcol === 0) { kx = margin + keyColW + keyColGap; ky = margin + 10; kcol = 1; }
+        else { doc.addPage(); drawColumnDivider(); kx = margin; ky = margin + 10; kcol = 0; }
+      }
+      doc.text(`${_n}) ${g}`, kx, ky);
+      ky += keyLH;
+    });
+
+    doc.save('prova.pdf');
+  }
 
 
   function stripHtml(html){
