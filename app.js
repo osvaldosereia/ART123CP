@@ -1057,23 +1057,39 @@ function exportarPDF(questoes, { colunas = 1 } = {}) {
     return lines;
   }
   // imprime com quebra por linha respeitando colunas/páginas
-  function drawJustified(x, y, lines, lh){
-    const spaceW = doc.getTextWidth(' ');
-    let yy = y;
-    lines.forEach(ln=>{
-      ensureLines(1, lh);
-      let xx = x;
-      if (!ln.justify){
-        ln.words.forEach((w,j)=>{ doc.text(w, xx, s.y); xx += doc.getTextWidth(w) + (j<ln.words.length-1?spaceW:0); });
-      }else{
-        const add = ln.extra/ln.gaps;
-        ln.words.forEach((w,j)=>{ doc.text(w, xx, s.y); xx += doc.getTextWidth(w) + (j<ln.words.length-1?(spaceW+add):0); });
-      }
-      s.y += lh;
-      yy = s.y;
-    });
-    return yy;
-  }
+  // imprime com quebra por linha respeitando colunas/páginas
+function drawJustified(x, y, lines, lh){
+  if (!lines || !lines.length) return y;
+  const spaceW = doc.getTextWidth(' ');
+  s.y = y;
+  let yy = y;
+
+  lines.forEach(ln=>{
+    ensureLines(1, lh);
+    let xx = x;
+
+    if (!ln.justify){
+      ln.words.forEach((w,j)=>{
+        const withSpace = w + (j < ln.words.length - 1 ? ' ' : '');
+        doc.text(withSpace, xx, s.y);
+        xx += doc.getTextWidth(w) + (j < ln.words.length - 1 ? spaceW : 0);
+      });
+    } else {
+      const add = ln.extra / ln.gaps;
+      ln.words.forEach((w,j)=>{
+        const withSpace = w + (j < ln.words.length - 1 ? ' ' : '');
+        doc.text(withSpace, xx, s.y);
+        xx += doc.getTextWidth(w) + (j < ln.words.length - 1 ? (spaceW + add) : 0);
+      });
+    }
+
+    s.y += lh;
+    yy = s.y;
+  });
+
+  return yy;
+}
+
   function stripHtml(html){
     try{
       const tmp = document.createElement('div'); tmp.innerHTML = html || '';
