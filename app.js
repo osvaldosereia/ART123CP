@@ -97,27 +97,31 @@
   /* ------ Fonte paginada p/ modal Impressora ------ */
   (function exposePagedSource(){
     function computeOrderFromState(){
-      const temasAtivos = [...state.temasSelecionados];
-      if (temasAtivos.length === 0) return state.cards.map((_, i) => i);
-      const groups = [];
-      temasAtivos.forEach(t => {
-        const idxs = state.cards.map((c, i) => c.temas.includes(t) ? i : -1).filter(i => i >= 0);
-        groups.push({ items: idxs, ptr: 0 });
-      });
-      const order = [];
-      let moved = true;
-      while (moved) {
-        moved = false;
-        for (const g of groups) {
-          if (g.ptr < g.items.length) {
-            const i = g.items[g.ptr++];
-            if (!order.includes(i)) order.push(i);
-            moved = true;
-          }
-        }
-      }
-      return order;
+  // 1) começa exatamente pelo feed atual já renderizado
+  const order = [...state.rendered];
+  const seen = new Set(order);
+
+  // 2) continua o mesmo ciclo dos grupos a partir dos ponteiros atuais
+  const clones = (state.feedGroups || []).map(g => ({
+    items: [...(g.items || [])],
+    ptr: g.ptr || 0
+  }));
+
+  let moved = true;
+  while (moved) {
+    moved = false;
+    for (const g of clones) {
+      if (g.ptr >= g.items.length) continue;
+      const idx = g.items[g.ptr++];
+      if (!seen.has(idx)) { order.push(idx); seen.add(idx); }
+      moved = true;
     }
+  }
+  return order;
+}
+// expõe a ordem atual para o listener da impressora
+window.QUESTOES_CURRENT_ORDER = computeOrderFromState;
+
 
     function normalizeForPrint(c, i){
       const alts = (c.alternativas || []).map((raw, k) => {
@@ -801,7 +805,18 @@ function rerenderVisibleFrases(){
   closeEls.forEach(el => el.addEventListener('click', closeModal));
   modal?.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-  window.addEventListener('abrirImpressora', (e) => { const id = e?.detail?.id ?? null; openModal(id); });
+window.addEventListener('abrirImpressora', (e) => {
+  const id = e?.detail?.id ?? null;            // id = idx+1 do card clicado
+  try {
+    const order = (window.QUESTOES_CURRENT_ORDER && window.QUESTOES_CURRENT_ORDER()) || [];
+    // faz a lista da impressora começar na questão clicada
+    if (Number.isInteger(id)) {
+      const pos = order.findIndex(i => i + 1 === id);
+      if (pos >= 0) cursor = pos;              // usa o cursor já existente no escopo do modal
+    }
+  } catch {}
+  openModal(id);                                // mantém foco/scroll para o id
+});
 
   function updateCounter(){ if (contadorEl) contadorEl.textContent = selected.size; if (btnExportar) btnExportar.disabled = selected.size === 0; }
 
