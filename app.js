@@ -883,26 +883,27 @@ async function exportarPDF_PURO(questoes){
   const PAGE_W = doc.internal.pageSize.getWidth();
   const PAGE_H = doc.internal.pageSize.getHeight();
 
-  const M = 10;                 // margens iguais 10mm
-  const TOP_EXTRA = 3;          // +~10px de respiro no topo
+  const M = 10;                       // margens iguais 10mm
+  const TOP_EXTRA = 3;                // respiro topo
   const COLS = Number(document.querySelector('input[name="imp-colunas"]:checked')?.value || 1);
-  const GAP  = COLS === 2 ? 10 : 0; // margem entre colunas
+  const GAP  = COLS === 2 ? 10 : 0;   // margem entre colunas
   const COL_W = COLS === 2 ? (PAGE_W - 2*M - GAP)/2 : (PAGE_W - 2*M);
 
   // Fontes e espaçamentos
-  const ENUN_FS = 10;           // enunciado: -1 px (aprox.)
-  const ALT_FS  = 9;            // alternativas: ~2 px menor
+  const ENUN_FS = 11;                 // +1
+  const ALT_FS  = 10;                 // +1
   const TIT_FS  = 11;
 
-  const LH_ENUN = 4.8;          // line-height enunciado (mm)
-  const LH_ALT  = 4.6;          // line-height alternativas (mm)
+  const LH_ENUN = 4.8;
+  const LH_ALT  = 4.6;
   const LH_TIT  = 5.2;
 
-  const TITLE_GAP = LH_ENUN * 1.0; // enunciado começa claramente abaixo do título
-  const ENUN_TO_ALTS = 6;          // mais respiro entre enunciado e alternativas
-  const ALT_IND = 2;               // recuo menor na margem esquerda das alternativas
-
-  const SEP = 5;                   // separador com respiro igual acima/abaixo
+  const SEP = 5;                      // separador com respiro simétrico
+  const PRE_TITLE = 2.7;              // +10px entre linha e "Questão X"
+  const TITLE_GAP = LH_ENUN + 2.7;    // +10px entre "Questão X" e início do enunciado
+  const ENUN_TO_ALTS = 6;             // respiro entre enunciado e alternativas
+  const ALT_IND = 1.0;                // recuo menor à esquerda
+  const ALT_GAP = 1.2;                // respiro entre alternativas
 
   function setEnun(){ doc.setFont('Helvetica',''); doc.setFontSize(ENUN_FS); }
   function setAlt(){  doc.setFont('Helvetica',''); doc.setFontSize(ALT_FS);  }
@@ -930,7 +931,7 @@ async function exportarPDF_PURO(questoes){
     if (curY + need > PAGE_H - M) nextColumnOrPage();
   }
 
-  // Quebra e justificação
+  // Quebra + justificação
   function layoutLines(doc, text, maxWidth){
     const words = String(text||'').split(/\s+/).filter(Boolean);
     const lines = [];
@@ -973,10 +974,15 @@ async function exportarPDF_PURO(questoes){
 
   // Render
   questoes.forEach((q, qi)=>{
-    // Garantir que título + gap + 1ª linha do enunciado fiquem juntos
+    // espaço extra entre linha separadora e próximo título
+    const pre = qi>0 ? PRE_TITLE : 0;
+
+    // garantir título + gaps + 1ª linha do enunciado juntos
     setTit();
-    const minBlock = LH_TIT + TITLE_GAP + LH_ENUN;
+    const minBlock = pre + LH_TIT + TITLE_GAP + LH_ENUN;
     ensureSpace(minBlock);
+
+    if (pre) curY += PRE_TITLE;
 
     // Título
     doc.text(`Questão ${qi+1}`, curX, curY);
@@ -999,34 +1005,41 @@ async function exportarPDF_PURO(questoes){
     setAlt();
     (q.alternativas||[]).forEach((a, k)=>{
       const label = `[ ${String.fromCharCode(65+k)} ] - `;
-      const labelW = doc.getTextWidth(label);
       const text = String(a).replace(/^[A-E]\)\s*/i,'').trim();
+
+      // largura e linhas
+      doc.setFont('Helvetica','bold'); // letras um pouco mais pesadas
+      const labelW = doc.getTextWidth(label);
+      doc.setFont('Helvetica','');     // texto normal
 
       const maxTextW = Math.max(COL_W - labelW - ALT_IND, 10);
       const lines = layoutLines(doc, text, maxTextW);
 
-      const need = lines.length*LH_ALT + LH_ALT*0.25;
+      const need = lines.length*LH_ALT + LH_ALT*0.25 + ALT_GAP;
       ensureSpace(need);
 
       let y0 = curY;
-      // label fixo
+
+      // label
+      doc.setFont('Helvetica','bold');
       doc.text(label, curX, y0);
+      doc.setFont('Helvetica',''); // volta
 
       // primeira linha ao lado do label
       const first = lines.shift();
       if (first){
         y0 = drawJustified(doc, curX + labelW + ALT_IND, y0, [first], LH_ALT);
       }
-      // demais linhas alinhadas ao texto
+      // demais linhas
       if (lines.length){
         y0 = drawJustified(doc, curX + labelW + ALT_IND, y0, lines, LH_ALT);
       }
-      curY = y0 + LH_ALT*0.25;
+      curY = y0 + ALT_GAP; // respiro entre alternativas
     });
 
     // Separador com respiro simétrico
     curY += SEP;
-    ensureSpace(0); // se precisar, quebra antes da linha
+    ensureSpace(0);
     doc.setLineWidth(0.2);
     doc.line(curX, curY, curX + COL_W, curY);
     curY += SEP;
@@ -1039,7 +1052,7 @@ async function exportarPDF_PURO(questoes){
   doc.setFont('Helvetica',''); doc.setFontSize(ENUN_FS);
 
   const half = Math.ceil(questoes.length/2);
-  const colGap = 18;                  // leitura
+  const colGap = 18;
   const gabColW = (COL_W - colGap)/2;
 
   const colA = questoes.slice(0, half).map((q,i)=>`${i+1}) ${String(q.gabarito||'-').toUpperCase().replace(/[^A-E]/g,'')}`);
