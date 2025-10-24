@@ -835,6 +835,102 @@ if (bar) {
   document.head.appendChild(style);
 })();
 
+// ===== Helpers do "Criar Prova" =====
+let allItemsCache = null;
+
+async function fetchQuestoes(nextCursor){
+  if (window.QUESTOES_FETCH_PAGE) return await window.QUESTOES_FETCH_PAGE(nextCursor);
+  return { itens: [], nextCursor: null };
+}
+
+async function getAllItems(){
+  if (allItemsCache) return allItemsCache.slice();
+  let cur = null, acc = [];
+  while (true){
+    const page = await fetchQuestoes(cur);
+    const itens = page?.itens || [];
+    acc = acc.concat(itens);
+    cur = page?.nextCursor ?? null;
+    if (cur == null) break;
+  }
+  allItemsCache = acc.slice();
+  return acc;
+}
+
+function shuffleInPlace(arr){
+  for (let i=arr.length-1;i>0;i--){
+    const j = (Math.random()*(i+1))|0;
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+  return arr;
+}
+
+function pickCountsByTema(buckets, total){
+  const temas = Object.keys(buckets);
+  if (!temas.length) return {};
+  const counts = {};
+  const N = Math.min(total, Object.values(buckets).reduce((s,a)=>s+a.length,0));
+  temas.forEach(t => counts[t] = Math.min(1, buckets[t].length));
+  let used = temas.reduce((s,t)=>s+counts[t],0);
+  if (used < N){
+    const totalAvail = temas.reduce((s,t)=>s + Math.max(buckets[t].length - counts[t], 0), 0);
+    if (totalAvail > 0){
+      temas.forEach(t => {
+        if (used >= N) return;
+        const room = Math.max(buckets[t].length - counts[t], 0);
+        const share = Math.floor((room / totalAvail) * (N - used));
+        const add = Math.min(share, room);
+        counts[t] += add; used += add;
+      });
+    }
+  }
+  let k = 0;
+  while (used < N){
+    const t = temas[k % temas.length];
+    if (counts[t] < buckets[t].length){ counts[t]++; used++; }
+    k++;
+  }
+  return counts;
+}
+
+// ===== Ação "Criar Prova" =====
+async function handleCriarProva(){
+  const all = await getAllItems();
+  if (!all.length) return;
+
+  const buckets = {};
+  for (const it of all){
+    const ts = (Array.isArray(it.temas) && it.temas.length) ? it.temas : ['__SEM_TEMA__'];
+    ts.forEach(t => { (buckets[t] ||= []).push(it); });
+  }
+  Object.values(buckets).forEach(shuffleInPlace);
+
+  const counts = pickCountsByTema(buckets, 20);
+
+  selected.clear();
+  outer: for (const t of Object.keys(counts)){
+    const need = counts[t];
+    const arr = buckets[t];
+    for (let i=0; i<need && i<arr.length; i++){
+      const q = arr[i];
+      if (!selected.has(q.id)){
+        selected.set(q.id, q);
+        if (selected.size >= 20) break outer;
+      }
+    }
+  }
+
+  updateCounter();
+
+  // espelha seleção nos cards já renderizados
+  lista.querySelectorAll('.imp-card').forEach(card => {
+    const id = Number(card.dataset.id || '0');
+    const cb = card.querySelector('input[type="checkbox"]');
+    if (cb) cb.checked = selected.has(id);
+  });
+}
+
+  
 // helpers e navegação
 let navIndex = -1;
 
@@ -900,15 +996,7 @@ btnNextSel.addEventListener('click', () => jumpToSelected(1));
 // fim das setas
 
 
-  updateCounter();
 
-  // refletir visualmente nos cards já renderizados
-  lista.querySelectorAll('.imp-card').forEach(card => {
-    const id = Number(card.dataset.id || '0');
-    const cb = card.querySelector('input[type="checkbox"]');
-    if (cb) cb.checked = selected.has(id);
-  });
-}
 
 
 // limpar cache ao abrir o modal para refletir filtros/ordem atuais
