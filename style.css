@@ -260,4 +260,37 @@ body{
   cursor:pointer;
 }
 #imp-nav .imp-nav-btn:disabled{ opacity:.5; cursor:default; }
+/* Navegação lateral do modal da impressora */
+#modal-impressora { position: relative; }
+
+#imp-nav {
+  position: absolute;
+  left: 8px;               /* dentro do modal, lado esquerdo */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2;              /* acima do corpo da lista */
+  pointer-events: none;    /* para o contêiner não bloquear rolagem */
+}
+
+#imp-nav .imp-nav-btn {
+  pointer-events: auto;    /* mas os botões clicam */
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border, #d1d5db);
+  background: var(--bg, #fff);
+  font-size: 14px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+}
+#imp-nav .imp-nav-btn:disabled {
+  opacity: .45;
+  cursor: default;
+}
 
