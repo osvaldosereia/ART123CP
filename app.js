@@ -1433,3 +1433,4 @@ function appendImpressoraButton(actionsEl, idx){
   });
   actionsEl.appendChild(btn);
 }
+
