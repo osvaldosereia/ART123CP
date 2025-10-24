@@ -857,61 +857,151 @@ function renderFrasePNG(canvas, frase, autor, bg){
     }
   }
 
-  // PDF: margens iguais 10mm, gutter maior, divisor de colunas tracejado,
-  // alinhamento à esquerda, círculos menores sem contorno, tudo alinhado.
+  // ---------- Hifenização pt-BR (heurística leve) ----------
+  // Regras simples de sílaba para português. Não é TeX completo, mas atende bem.
+  function hyphenPoints(word){
+    const w = word.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    const pts = [];
+    // V = vogal; C = consoante; ditongos tratados como V
+    const V = /[aeiouy]/; // y em estrangeirismos
+    for(let i=1;i<w.length-1;i++){
+      const a=w[i-1], b=w[i], c=w[i+1];
+      // VC|V  ou  V|CV  ou  C|CV  ou  CC|V (com exceções br, cr, dr, fr, gr, pr, tr, bl, cl, fl, gl, pl)
+      const cl = a+b, cr = b+c;
+      const cons = (x)=>!V.test(x);
+      const twoCons = ['br','cr','dr','fr','gr','pr','tr','bl','cl','fl','gl','pl'];
+      if (V.test(a) && cons(b) && V.test(c)) pts.push(i);
+      else if (V.test(a) && cons(b) && cons(c) && !twoCons.includes(cr)) pts.push(i+1);
+      else if (cons(a) && cons(b) && V.test(c) && !twoCons.includes(cl)) pts.push(i);
+    }
+    // nunca hifenizar com 2 ou menos letras em qualquer lado
+    return pts.filter(p=>p>=2 && p<=w.length-2);
+  }
+  function splitWithHyphen(word, maxWidth, doc){
+    // tenta quebrar palavra com hífen para caber no espaço
+    const pts = hyphenPoints(word);
+    for(let k=pts.length-1;k>=0;k--){
+      const left = word.slice(0, pts[k]) + '-';
+      if (doc.getTextWidth(left) <= maxWidth) return [left, word.slice(pts[k])];
+    }
+    return null;
+  }
+
+  // ---------- Quebra + justificação ----------
+  function layoutLines(doc, text, maxWidth){
+    const words = text.split(/\s+/).filter(Boolean);
+    const lines = [];
+    const spaceW = doc.getTextWidth(' ');
+    let cur = [], curW = 0;
+
+    function pushLine(forceLeft=false){
+      if (cur.length === 0) return;
+      const gaps = Math.max(cur.length-1, 1);
+      const natural = cur.reduce((s,w)=>s+doc.getTextWidth(w),0) + (cur.length-1)*spaceW;
+      const extra = Math.max(maxWidth - natural, 0);
+      lines.push({ words: cur.slice(), justify: !forceLeft && cur.length>1, natural, extra, gaps });
+      cur = []; curW = 0;
+    }
+
+    for (let i=0;i<words.length;i++){
+      const w = words[i];
+      const wW = doc.getTextWidth(w);
+      if (cur.length === 0){
+        if (wW <= maxWidth){ cur.push(w); curW = wW; }
+        else{
+          const hp = splitWithHyphen(w, maxWidth, doc);
+          if (hp){ cur.push(hp[0]); pushLine(true); words.splice(i+1,0,hp[1]); }
+          else { cur.push(w); pushLine(true); }
+        }
+        continue;
+      }
+      if (curW + spaceW + wW <= maxWidth){
+        cur.push(w); curW += spaceW + wW;
+      } else {
+        // tenta hifenar a palavra atual
+        const room = maxWidth - curW - spaceW;
+        const hp = room>0 ? splitWithHyphen(w, room, doc) : null;
+        if (hp){
+          cur.push(hp[0]); pushLine(); words.splice(i+1,0,hp[1]);
+        }else{
+          pushLine(); i--; // reprocessa w na próxima linha
+        }
+      }
+    }
+    pushLine(true); // última linha sempre esquerda
+    return lines;
+  }
+  function drawJustified(doc, x, y, lines, lh){
+    const spaceW = doc.getTextWidth(' ');
+    let yy = y;
+    lines.forEach((ln, idx)=>{
+      let xx = x;
+      if (!ln.justify){
+        ln.words.forEach((w,j)=>{
+          doc.text(w, xx, yy);
+          xx += doc.getTextWidth(w) + (j<ln.words.length-1?spaceW:0);
+        });
+      }else{
+        const add = ln.extra / ln.gaps;
+        ln.words.forEach((w,j)=>{
+          doc.text(w, xx, yy);
+          xx += doc.getTextWidth(w) + (j<ln.words.length-1?(spaceW+add):0);
+        });
+      }
+      yy += lh;
+    });
+    return yy;
+  }
+
+  // ---------- Exportação PDF com ajustes visuais ----------
   function exportarPDF(questoes, { colunas = 1 } = {}) {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF({ unit: 'mm', format: 'a4', putOnlyUsedFonts: true });
 
-    // Geometria A4
+    // Geometria
     const pageW = doc.internal.pageSize.getWidth();
     const pageH = doc.internal.pageSize.getHeight();
-    const margin = 10;                       // 10mm em todas as bordas
-    const gutter = colunas === 2 ? 18 : 0;   // um pouco maior entre colunas
+    const margin = 10;
+    const gutter = colunas === 2 ? 16 : 0;
     const contentW = pageW - margin * 2;
     const colW = colunas === 2 ? (contentW - gutter) / 2 : contentW;
 
-    // Safe paddings para não encostar nas bordas e no divisor
-    const SAFE_L = 2.0;
-    const SAFE_R = 2.0;
+    // Safe paddings
+    const SAFE_L = 1.5, SAFE_R = 1.5;
     const TEXT_W = colW - SAFE_L - SAFE_R;
 
-    // Tipografia e espaçamentos
-    const ENUN_SIZE = 8;     // 1px menor
-    const ALT_SIZE  = 9;
-    const ENUN_LH   = 5.0;
-    const ALT_LH    = 5.0;
-    const GAP_BLOCK_TOP   = 3.0;
-    const GAP_ENUN_ALTS   = 3.4;
-    const GAP_ALT         = 2.4;
-    const SEP_LINE_W      = 0.45;
-    const SEP_AFTER_GAP   = 3.0;
+    // Tipografia unificada e mais “fechada”
+    const BASE_SIZE = 9;      // mesmo tamanho em enunciado e alternativas
+    const BASE_LH   = 4.6;    // entrelinha menor
+    const GAP_BLOCK_TOP = 3.0;
+    const GAP_ENUN_ALTS = 3.0;
+    const GAP_ALT       = 2.0;
 
-    // Bolas das alternativas: menores, sem contorno, cinza claro
+    // Bolas menores e centradas
     const DOT_R = 1.9;
     const DOT_FILL = 235;
 
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(0, 0, 0);
+    doc.setFont('helvetica', 'normal'); doc.setTextColor(0,0,0);
 
     const s = { x: margin, y: margin, col: 1 };
+    const bottom = () => pageH - margin;
 
-    function newColumnOrPage() {
-      if (colunas === 2 && s.col === 1) {
-        s.x = margin + colW + gutter;
-        s.y = margin;
-        s.col = 2;
-        drawColumnDivider();
-      } else {
-        doc.addPage();
-        doc.setFont('helvetica', 'normal'); doc.setTextColor(0,0,0);
-        s.x = margin; s.y = margin; s.col = 1;
-        drawColumnDivider();
+    function drawColumnDivider(){
+      if (colunas !== 2) return;
+      const cx = margin + colW + gutter/2;
+      doc.setDrawColor(192); doc.setLineWidth(0.2); doc.setLineDash([1.2,1.8],0);
+      for(let y=margin;y<pageH-margin;y+=3){ doc.line(cx,y,cx,Math.min(y+1.2,pageH-margin)); }
+      doc.setLineDash([]); doc.setDrawColor(0);
+    }
+    function newColumnOrPage(){
+      if (colunas === 2 && s.col === 1){
+        s.x = margin + colW + gutter; s.y = margin; s.col = 2; drawColumnDivider();
+      }else{
+        doc.addPage(); doc.setFont('helvetica','normal'); s.x = margin; s.y = margin; s.col = 1; drawColumnDivider();
       }
     }
-    const bottom = () => pageH - margin;
-    function ensureLines(n, lh) { if (s.y + n * lh > bottom()) newColumnOrPage(); }
-    const split = (t, w) => doc.splitTextToSize(t, w);
+    function ensureLines(n, lh){ if (s.y + n*lh > bottom()) newColumnOrPage(); }
+
     function stripHtml(html){
       try{
         const tmp = document.createElement('div'); tmp.innerHTML = html || '';
@@ -920,133 +1010,111 @@ function renderFrasePNG(canvas, frase, autor, bg){
       }catch{ return ''; }
     }
 
-    function drawColumnDivider() {
-      if (colunas !== 2) return;
-      const cx = margin + colW + gutter / 2;
-      doc.setDrawColor(180);
-      doc.setLineWidth(0.2);
-      doc.setLineDash([1.2, 1.8], 0);
-      for (let y = margin; y < pageH - margin; y += 3) {
-        doc.line(cx, y, cx, Math.min(y + 1.2, pageH - margin));
-      }
-      doc.setLineDash([]);
-      doc.setDrawColor(0);
-    }
-
-    function drawSeparator() {
-      ensureLines(1, 1);
-      doc.setDrawColor(0);
-      doc.setLineWidth(SEP_LINE_W);
-      doc.setLineDash([], 0);
+    function drawSeparator(){
+      ensureLines(1,1);
+      doc.setDrawColor(0); doc.setLineWidth(0.45); doc.setLineDash([],0);
       doc.line(s.x, s.y, s.x + colW, s.y);
-      s.y += SEP_AFTER_GAP;
+      s.y += 3.0;
     }
 
-    // Alternativas alinhadas à esquerda, sem linha entre alternativas
-    function renderAlternatives(rawAlts) {
+    // Desenha bloco justificado e retorna y final
+    function drawParagraph(text){
+      const lines = layoutLines(doc, text, TEXT_W);
+      return drawJustified(doc, s.x + SAFE_L, s.y, lines, BASE_LH);
+    }
+
+    function renderAlternatives(rawAlts){
       const alts = Array.isArray(rawAlts) ? rawAlts : [];
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(ALT_SIZE);
+      doc.setFont('helvetica','normal'); doc.setFontSize(BASE_SIZE);
+      const spaceW = doc.getTextWidth(' ');
 
-      alts.forEach((t, i) => {
-        const letter = String.fromCharCode(65 + i);
-        const clean = String(t).replace(/^[A-E]\)\s*/i, '');
-        const lines = split(clean, TEXT_W - (DOT_R * 2 + 3));
+      alts.forEach((alt, i)=>{
+        const letter = String.fromCharCode(65+i);
+        const clean = String(alt).replace(/^[A-E]\)\s*/i,'');
+        const lineBlocks = layoutLines(doc, `${letter}) ${clean}`, TEXT_W - (DOT_R*2 + 3));
 
-        ensureLines(lines.length, ALT_LH);
-
+        // Centraliza a bolinha ao meio do bloco
+        const blockH = lineBlocks.length * BASE_LH;
+        ensureLines(lineBlocks.length, BASE_LH);
         const y0 = s.y;
+        const cy = y0 + blockH/2 - 0.2;                    // ajuste ótico
         const cx = s.x + SAFE_L + DOT_R + 1.2;
-        const cy = y0 - ALT_LH * 0.82 + DOT_R;   // topo da bola ≈ topo da linha
 
-        // bola
         doc.setFillColor(DOT_FILL, DOT_FILL, DOT_FILL);
         doc.circle(cx, cy, DOT_R, 'F');
 
-        // letra centralizada na bola
-        const letterSize = Math.min(ALT_SIZE + 1, DOT_R * 1.9);
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(letterSize);
-        const ly = cy + (letterSize * 0.33);
-        doc.text(letter, cx, ly, { align: 'center' });
+        doc.setFont('helvetica','bold'); doc.setFontSize(BASE_SIZE+0.6);
+        // centralização ótica vertical
+        doc.text(letter, cx, cy+0.3, {align:'center'});
 
-        // texto da alternativa
-        const xText = Math.ceil(s.x + SAFE_L + DOT_R * 2 + 3);
-        doc.setFont('helvetica', 'normal');
-        doc.setFontSize(ALT_SIZE);
-        lines.forEach(ln => {
-          doc.text(ln, xText, s.y);
-          s.y += ALT_LH;
+        // texto (sem o “A) ” porque está na bolinha)
+        doc.setFont('helvetica','normal'); doc.setFontSize(BASE_SIZE);
+        let xx = s.x + SAFE_L + DOT_R*2 + 3, yy = y0;
+        lineBlocks.forEach((ln, idx)=>{
+          let xrun = xx;
+          if (!ln.justify){
+            ln.words.forEach((w,j)=>{ doc.text(w.replace(/^[A-E]\)$/,''), xrun, yy); xrun += doc.getTextWidth(w)+ (j<ln.words.length-1?spaceW:0); });
+          }else{
+            const add = ln.extra/ln.gaps;
+            ln.words.forEach((w,j)=>{ doc.text(w.replace(/^[A-E]\)$/,''), xrun, yy); xrun += doc.getTextWidth(w) + (j<ln.words.length-1?(spaceW+add):0); });
+          }
+          yy += BASE_LH;
         });
 
-        s.y += GAP_ALT;
+        s.y = y0 + blockH + GAP_ALT;
       });
     }
 
-    function renderQuestao(q, n) {
-      const enunPlain = q.enunciadoPlain ? String(q.enunciadoPlain) : stripHtml(q.enunciado);
-      const enunLines = split(enunPlain, TEXT_W);
-
-      ensureLines(Math.ceil(GAP_BLOCK_TOP / ENUN_LH), ENUN_LH);
+    function renderQuestao(q, n){
+      // topo bloco
+      ensureLines(Math.ceil(GAP_BLOCK_TOP/BASE_LH), BASE_LH);
       s.y += GAP_BLOCK_TOP;
 
-      // Título
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(ENUN_SIZE);
-      ensureLines(1, ENUN_LH);
+      // título
+      doc.setFont('helvetica','bold'); doc.setFontSize(BASE_SIZE);
+      ensureLines(1, BASE_LH);
       doc.text(`Questão ${n}`, s.x + SAFE_L, s.y);
-      s.y += ENUN_LH * 0.9;
+      s.y += BASE_LH*0.9;
 
-      // Enunciado
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(ENUN_SIZE);
-      enunLines.forEach(ln => {
-        ensureLines(1, ENUN_LH);
-        doc.text(ln, s.x + SAFE_L, s.y);
-        s.y += ENUN_LH;
-      });
+      // enunciado justificado com hifenização
+      doc.setFont('helvetica','normal'); doc.setFontSize(BASE_SIZE);
+      const enun = q.enunciadoPlain ? String(q.enunciadoPlain) : stripHtml(q.enunciado);
+      s.y = drawParagraph(enun);
 
+      // espaço e alternativas
       s.y += GAP_ENUN_ALTS;
-
       renderAlternatives(q.alternativas);
 
+      // separador
       drawSeparator();
     }
 
+    // Render
     drawColumnDivider();
-    const itens = questoes.map((q, i) => ({ ...q, _n: i + 1 }));
-    itens.forEach(q => renderQuestao(q, q._n));
+    const itens = questoes.map((q,i)=>({...q,_n:i+1}));
+    itens.forEach(q=>renderQuestao(q, q._n));
 
-    // Gabarito
+    // Gabarito em página exclusiva
     doc.addPage(); drawColumnDivider();
-    doc.setFont('helvetica', 'bold'); doc.setFontSize(11);
+    doc.setFont('helvetica','bold'); doc.setFontSize(11);
     const title = 'Gabarito';
-    const cx = pageW / 2; const tW = doc.getTextWidth(title);
-    doc.text(title, cx - tW / 2, margin + 2);
+    const cx = pageW/2, tW = doc.getTextWidth(title);
+    doc.text(title, cx - tW/2, margin + 2);
 
-    doc.setFont('helvetica', 'normal'); doc.setFontSize(10);
-    const keyLH = 6, keyColGap = 20, keyColW = (contentW - keyColGap) / 2;
+    doc.setFont('helvetica','normal'); doc.setFontSize(10);
+    const keyLH = 6, keyColGap = 20, keyColW = (contentW - keyColGap)/2;
     let kx = margin, ky = margin + 10, kcol = 0;
 
-    itens.forEach(({ _n, gabarito }) => {
-      const g = (gabarito || '').replace(/[^A-E]/gi, '').toUpperCase() || '-';
-      if (ky + keyLH > pageH - margin) {
-        if (kcol === 0) { kx = margin + keyColW + keyColGap; ky = margin + 10; kcol = 1; }
+    itens.forEach(({_n, gabarito})=>{
+      const g = (gabarito || '').replace(/[^A-E]/gi,'').toUpperCase() || '-';
+      if (ky + keyLH > pageH - margin){
+        if (kcol === 0){ kx = margin + keyColW + keyColGap; ky = margin + 10; kcol = 1; }
         else { doc.addPage(); drawColumnDivider(); kx = margin; ky = margin + 10; kcol = 0; }
       }
-      doc.text(`${_n}) ${g}`, kx, ky);
-      ky += keyLH;
+      doc.text(`${_n}) ${g}`, kx, ky); ky += keyLH;
     });
 
     doc.save('prova.pdf');
-  }
-
-  function stripHtml(html){
-    try{
-      const tmp = document.createElement('div'); tmp.innerHTML = html || '';
-      const raw = tmp.textContent || tmp.innerText || '';
-      return (window.he ? he.decode(raw) : raw).replace(/\s+\n/g,'\n').replace(/[ \t]+/g,' ').trim();
-    }catch{ return ''; }
   }
 
   btnExportar?.addEventListener('click', () => {
@@ -1055,6 +1123,7 @@ function renderFrasePNG(canvas, frase, autor, bg){
     exportarPDF(itens, { colunas });
   });
 })();
+
 
 
 /* =================== Botão Impressora em cada card =================== */
