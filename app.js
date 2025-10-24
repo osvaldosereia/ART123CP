@@ -644,19 +644,19 @@
   }
 
   /* botão de impressora ao lado do de frases, foca a questão clicada */
-  function appendImpressoraButton(actionsEl, idx){
-    const btn = document.createElement('button');
-    btn.className = 'btn-icon-round';
-    btn.title = 'Impressora';
-    btn.innerHTML = '<img src="assets/icons/print.png" alt="Impressora">';
-    btn.addEventListener('click', () => {
-      if (!window.QUESTOES_CACHE || window.QUESTOES_CACHE.length !== state.cards.length) {
-        exposeQuestoesCache();
-      }
-      window.dispatchEvent(new CustomEvent('abrirImpressora', { detail: { id: idx + 1 } }));
-    });
-    actionsEl.appendChild(btn);
-  }
+ function appendImpressoraButton(actionsEl, idx){
+  const btn = document.createElement('button');
+  btn.className = 'btn-icon-round';
+  btn.title = 'Impressora';
+  btn.innerHTML = `
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+      <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2m-12 0v3h12v-3M8 14h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`;
+  btn.addEventListener('click', () => {
+    window.dispatchEvent(new CustomEvent('abrirImpressora', { detail: { id: idx + 1 } }));
+  });
+  actionsEl.appendChild(btn);
+}
 
   // ===== 2) Modal: estados, paleta, carregar aleatório e rolagem infinita =====
   const FRASES_TXT_URL = 'data/frases/frases.txt';
