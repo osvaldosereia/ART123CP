@@ -296,3 +296,17 @@ body{
 /* Lista dentro do modal usa o mesmo visual dos cards, sem caixas extras */
 #imp-lista .q{ padding:16px 0; border-top:4px solid #eceff3; }
 #imp-lista .q .q__meta{ display:none; }    /* oculta linha “***** …” no modal */
+
+/* impressão A4 */
+@media print{
+  .page{page-break-after:always}
+}
+.pdf-prova{max-width:794px;margin:0 auto;padding:12px 16px;font:400 12px system-ui}
+.pdf-q{padding:12px 0;border-top:4px solid #eceff3}
+.pdf-q:first-child{border-top:0}
+.pdf-titulo{font-weight:700;margin:0 0 8px}
+.pdf-enun{color:#103a9c;line-height:1.55;margin:0 0 8px}
+.pdf-opts{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.pdf-opt{display:flex;align-items:flex-start;gap:8px}
+.pdf-badge{font-weight:700;border:2px solid #cbd5e1;border-radius:999px;min-width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:12px}
+.pdf-sep{border-top:1px solid #ddd;margin-top:8px}
