@@ -1,3 +1,5 @@
+cofnere ai
+
 /* ============================== APP ============================== */
 (function () {
   const { txtUrl } = window.APP_CONFIG || {};
