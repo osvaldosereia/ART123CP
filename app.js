@@ -86,7 +86,6 @@
         if (/^\*{2}\s/.test(L)) { alternativas.push(L.replace(/^\*{2}\s*/, "").trim()); inEnunciado = false; continue; }
         if (/^\*\s/.test(L))   { const part = L.replace(/^\*\s*/, "").trim(); enunciado = enunciado ? enunciado + " " + part : part; inEnunciado = true; continue; }
 
-        // linha sem marcador: continua o enunciado atual
         if (inEnunciado) enunciado += (enunciado ? " " : "") + L;
       }
 
@@ -95,7 +94,7 @@
     return out;
   }
 
-  /* ------ Fonte paginada p/ modal Impressora: segue filtros e ordem atual ------ */
+  /* ------ Fonte paginada p/ modal Impressora ------ */
   (function exposePagedSource(){
     function computeOrderFromState(){
       const temasAtivos = [...state.temasSelecionados];
@@ -163,7 +162,7 @@
     };
   })();
 
-  /* ------------------------------ Compartilhar Story (PNG 1080x1920) ------------------------------ */
+  /* ------------------------------ Story PNG ------------------------------ */
   async function shareCardAsStory(card) {
     const pngBlob = await renderStoryPNG(card);
     const file = new File([pngBlob], "meujus-story.png", { type: "image/png" });
@@ -674,81 +673,6 @@ function rerenderVisibleFrases(){
   });
 }
 
-// ===== Render PNG frase =====
-function isDark(hex){
-  const h = hex.replace('#','');
-  const bigint = parseInt(h,16);
-  const r = (bigint >> 16) & 255;
-  const g = (bigint >> 8) & 255;
-  const b = bigint & 255;
-  const lum = 0.2126*r + 0.7152*g + 0.0722*b;
-  return lum < 140;
-}
-function wrapLines(ctx, text, maxW){
-  const words = text.split(/\s+/);
-  const lines = [];
-  let line = '';
-  for(const w of words){
-    const test = line ? line + ' ' + w : w;
-    if(ctx.measureText(test).width > maxW){
-      if(line) lines.push(line);
-      line = w;
-    }else{
-      line = test;
-    }
-  }
-  if(line) lines.push(line);
-  return lines;
-}
-function fitFontByBox(ctx, text, maxW, maxH, minPx, maxPx, step, family, lhK){
-  for (let s=maxPx; s>=minPx; s-=step){
-    ctx.font = `${s}px ${family}`;
-    const lines = wrapLines(ctx, text, maxW);
-    const h = lines.length * (s*lhK);
-    if (h <= maxH) return s;
-  }
-  return minPx;
-}
-function renderFrasePNG(canvas, frase, autor, bg){
-  const ctx = canvas.getContext('2d');
-  const W = canvas.width, H = canvas.height;
-
-  ctx.fillStyle = bg;
-  ctx.fillRect(0,0,W,H);
-
-  ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
-  ctx.font = '28px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'top';
-  ctx.fillText('meujus.com.br', W/2, 36);
-
-  const padX = 96;
-  const innerW = W - padX*2;
-  const topY = 220;
-  const bottomPad = 260;
-  const maxH = H - topY - bottomPad;
-
-  const lhK = 1.3;
-  let size = fitFontByBox(ctx, frase, innerW, maxH, 28, 72, 2, 'Times New Roman, Times, serif', lhK);
-  ctx.font = `${size}px "Times New Roman", Times, serif`;
-  ctx.textAlign = 'left';
-  ctx.textBaseline = 'top';
-  ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
-
-  const lines = wrapLines(ctx, frase, innerW);
-  const fraseH = lines.length * (size * lhK);
-  const yStart = topY + Math.max(0, Math.floor((maxH - fraseH) / 2));
-
-  let y = yStart;
-  for (const line of lines){ ctx.fillText(line, padX, y); y += size * lhK; }
-
-  const autorSize = Math.max(18, Math.round(size * 0.42));
-  ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
-  ctx.textAlign = 'left';
-  ctx.textBaseline = 'top';
-  ctx.fillText(autor ? `— ${autor}` : '', padX, y + 24);
-}
-
 /* ===================== Impressora / PDF ===================== */
 (function(){
   const modal = document.getElementById('modal-impressora');
@@ -886,7 +810,7 @@ function renderFrasePNG(canvas, frase, autor, bg){
 
   // ---------- Quebra + justificação ----------
   function layoutLines(doc, text, maxWidth){
-    const words = text.split(/\s+/).filter(Boolean);
+    const words = String(text||'').split(/\s+/).filter(Boolean);
     const lines = [];
     const spaceW = doc.getTextWidth(' ');
     let cur = [], curW = 0;
@@ -949,153 +873,138 @@ function renderFrasePNG(canvas, frase, autor, bg){
     return yy;
   }
 
-  // ---------- Exportação PDF via HTML (doc.html + html2canvas) ----------
-  async function exportarPDF_HTML(questoes){
-    const root = document.getElementById('pdf-root');
-    root.innerHTML = '';
-
-    // Página de questões
-    const page1 = document.createElement('div');
-    page1.className = 'pdf-prova';
-    page1.style.cssText = `
-      box-sizing:border-box;
-      width:794px; padding:0;
-      font: 13px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:#111; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-    `;
-
-    questoes.forEach((q, i) => {
-      const art = document.createElement('article');
-      art.className = 'pdf-q';
-      art.style.cssText = `
-        break-inside:avoid; page-break-inside:avoid;
-        margin:0 0 16px 0; padding:0;
-      `;
-
-      const titulo = document.createElement('div');
-      titulo.className = 'pdf-titulo';
-      titulo.textContent = `Questão ${i + 1}`;
-      titulo.style.cssText = `font-weight:700;margin:0 0 6px 0;`;
-
-      const enun = document.createElement('div');
-      enun.className = 'pdf-enun';
-      enun.style.cssText = `margin:0 0 8px 0;`;
-
-      (String(q.enunciadoPlain || '').split(/\n+/)).forEach(p => {
-        const d = document.createElement('div');
-        d.textContent = p;
-        d.style.cssText = `margin:0 0 6px 0;`;
-        enun.appendChild(d);
-      });
-
-      const ul = document.createElement('ul');
-      ul.className = 'pdf-opts';
-      ul.style.cssText = `list-style:none; padding:0; margin:0;`;
-
-      (q.alternativas || []).forEach((a, k) => {
-        const li = document.createElement('li');
-        li.className = 'pdf-opt';
-        li.style.cssText = `
-          display:flex; align-items:flex-start; gap:8px;
-          margin:6px 0; break-inside:avoid; page-break-inside:avoid;
-        `;
-
-        const badge = document.createElement('span');
-        badge.className = 'pdf-badge';
-        badge.textContent = String.fromCharCode(65 + k);
-        badge.style.cssText = `
-          flex:0 0 auto; display:inline-block; width:22px; height:22px;
-          border:1px solid #999; border-radius:50%;
-          text-align:center; line-height:22px; font-weight:700;
-        `;
-
-        const tx = document.createElement('div');
-        tx.textContent = String(a).replace(/^[A-E]\)\s*/i, '');
-        tx.style.cssText = `flex:1 1 auto;`;
-
-        li.appendChild(badge);
-        li.appendChild(tx);
-        ul.appendChild(li);
-      });
-
-      art.appendChild(titulo);
-      art.appendChild(enun);
-      art.appendChild(ul);
-      page1.appendChild(art);
-    });
-
-    // Duas colunas opcionais no PDF
-    if (radioCols() === 2) {
-      page1.style.columnCount = 2;
-      page1.style.columnGap = '24px';
-    }
-
-    root.appendChild(page1);
-
-    // Página de gabarito
-    const page2 = document.createElement('div');
-    page2.className = 'pdf-prova';
-    page2.style.cssText = `
-      box-sizing:border-box;
-      width:794px; padding:0;
-      font: 13px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:#111;
-    `;
-
-    const h = document.createElement('h2');
-    h.style.cssText = 'text-align:center;margin:0 0 12px 0;font-weight:700;';
-    h.textContent = 'Gabarito';
-
-    const colsWrap = document.createElement('div');
-    colsWrap.style.cssText = 'display:flex; gap:4%;';
-    const L = document.createElement('div');
-    const R = document.createElement('div');
-    [L, R].forEach(c => { c.style.cssText = 'width:48%;'; });
-
-    const mid = Math.ceil(questoes.length / 2);
-    const mk = (n, g) => `${n}) ${String(g || '-').toUpperCase().replace(/[^A-E]/g, '')}`;
-
-    L.innerHTML = questoes.slice(0, mid).map((q, i) => `<div style="margin:3px 0">${mk(i + 1, q.gabarito)}</div>`).join('');
-    R.innerHTML = questoes.slice(mid).map((q, i) => `<div style="margin:3px 0">${mk(mid + i + 1, q.gabarito)}</div>`).join('');
-
-    colsWrap.appendChild(L);
-    colsWrap.appendChild(R);
-
-    page2.appendChild(h);
-    page2.appendChild(colsWrap);
-    root.appendChild(page2);
-
-    // Renderização em PDF
+  // ---------- Exportação PDF 100% texto (A4, 1–2 colunas, sem cortes) ----------
+  async function exportarPDF_PURO(questoes){
     const { jsPDF } = window.jspdf;
-    const doc = new jsPDF({ unit: 'px', format: 'a4', compress: true });
+    const doc = new jsPDF({ unit:'mm', format:'a4', compress:true });
     doc.setProperties({ title: 'Prova MeuJus' });
 
-    const PAGE_W = 794; // px na A4 do jsPDF quando unit:'px'
-    const M = 24;
-    const CONTENT_W = PAGE_W - M * 2;
+    // Métricas
+    const PAGE_W = doc.internal.pageSize.getWidth();
+    const PAGE_H = doc.internal.pageSize.getHeight();
+    const M = 12;                 // margens
+    const COLS = Number(document.querySelector('input[name="imp-colunas"]:checked')?.value || 1);
+    const GAP = 6;                // espaço entre colunas
+    const COL_W = COLS === 2 ? (PAGE_W - 2*M - GAP)/2 : (PAGE_W - 2*M);
+    const LH = 5.2;               // line-height em mm
+    const TITLE_GAP = 3;
 
-    await new Promise(res => doc.html(page1, {
-      x: M, y: M, width: CONTENT_W, windowWidth: PAGE_W,
-      html2canvas: { scale: 2, useCORS: true },
-      autoPaging: 'text',
-      callback: res
-    }));
+    function newPage(){
+      doc.addPage();
+      curX = M; curY = M; curCol = 0;
+    }
+    function nextColumnOrPage(){
+      if (COLS === 2 && curCol === 0){
+        curCol = 1;
+        curX = M + COL_W + GAP;
+        curY = M;
+      } else {
+        newPage();
+      }
+    }
+    function ensureSpace(need){
+      if (curY + need > PAGE_H - M) nextColumnOrPage();
+    }
 
-    doc.addPage();
+    // Fontes
+    doc.setFont('Helvetica','');
+    doc.setFontSize(11);
 
-    await new Promise(res => doc.html(page2, {
-      x: M, y: M, width: CONTENT_W, windowWidth: PAGE_W,
-      html2canvas: { scale: 2, useCORS: true },
-      autoPaging: 'text',
-      callback: res
-    }));
+    let curX = M, curY = M, curCol = 0;
+
+    // Questões
+    questoes.forEach((q, qi)=>{
+      // Título
+      const titulo = `Questão ${qi+1}`;
+      const tW = doc.getTextWidth(titulo);
+      ensureSpace(LH + TITLE_GAP);
+      doc.setFont('Helvetica','bold'); doc.text(titulo, curX, curY); doc.setFont('Helvetica','');
+      curY += LH + TITLE_GAP;
+
+      // Enunciado
+      const enun = String(q.enunciadoPlain || '').replace(/\r/g,'');
+      const enunParas = enun.split(/\n+/).filter(Boolean);
+      enunParas.forEach((p, idx)=>{
+        const lines = layoutLines(doc, p, COL_W);
+        ensureSpace(lines.length * LH + (idx?LH*0.5:0));
+        if (idx) curY += LH*0.5;
+        curY = drawJustified(doc, curX, curY, lines, LH);
+      });
+
+      // Alternativas
+      (q.alternativas || []).forEach((a, k)=>{
+        const label = String.fromCharCode(65+k) + ') ';
+        const text = String(a).replace(/^[A-E]\)\s*/i,'');
+        // mede label
+        const labelW = doc.getTextWidth(label);
+        // quebra a alternativa, respeitando recuo
+        const words = (label + text).split(/\s+/).filter(Boolean);
+        let line = [], curW = 0, lines = [];
+        const spaceW = doc.getTextWidth(' ');
+        words.forEach((w,i)=>{
+          const wW = doc.getTextWidth(w);
+          if (line.length===0){
+            if (wW <= COL_W){ line.push(w); curW = wW; }
+            else { line.push(w); lines.push(line.slice()); line = []; curW = 0; }
+          } else {
+            if (curW + spaceW + wW <= COL_W){
+              line.push(w); curW += spaceW + wW;
+            } else {
+              lines.push(line.slice()); line = [w]; curW = wW;
+            }
+          }
+          if (i === words.length-1 && line.length) lines.push(line.slice());
+        });
+
+        // aplica justificação, mantendo primeira linha com label
+        ensureSpace(lines.length * LH + LH*0.25);
+        lines.forEach((arr, li)=>{
+          let xx = curX;
+          // printa palavra a palavra sem justificar a última linha
+          const natural = arr.reduce((s,w)=>s+doc.getTextWidth(w),0) + (arr.length-1)*spaceW;
+          const justify = (li < lines.length-1) && arr.length>1;
+          const extra = Math.max(COL_W - natural, 0);
+          const add = justify ? extra/(arr.length-1) : 0;
+          arr.forEach((w,j)=>{
+            doc.text(w, xx, curY);
+            xx += doc.getTextWidth(w) + (j<arr.length-1 ? spaceW + add : 0);
+          });
+          curY += LH;
+        });
+        curY += LH*0.25;
+      });
+
+      // Espaço após questão
+      curY += LH*0.5;
+    });
+
+    // Página de gabarito
+    nextColumnOrPage(); // força nova página/coluna
+    doc.setFont('Helvetica','bold'); doc.text('Gabarito', curX, curY); doc.setFont('Helvetica','');
+    curY += LH*1.2;
+
+    const half = Math.ceil(questoes.length/2);
+    const cols = [
+      questoes.slice(0, half).map((q,i)=>`${i+1}) ${String(q.gabarito||'-').toUpperCase().replace(/[^A-E]/g,'')}`),
+      questoes.slice(half).map((q,i)=>`${half+i+1}) ${String(q.gabarito||'-').toUpperCase().replace(/[^A-E]/g,'')}`)
+    ];
+    const colGap = 15; // mm
+    const colW = (COL_W - colGap)/2;
+
+    const maxRows = Math.max(cols[0].length, cols[1].length);
+    for (let r=0; r<maxRows; r++){
+      ensureSpace(LH);
+      if (cols[0][r]) doc.text(cols[0][r], curX, curY);
+      if (cols[1][r]) doc.text(cols[1][r], curX + colW + colGap, curY);
+      curY += LH;
+    }
 
     doc.save('prova.pdf');
   }
 
   btnExportar?.addEventListener('click', async () => {
     const itens = Array.from(selected.values());
-    await exportarPDF_HTML(itens);
+    await exportarPDF_PURO(itens);
   });
 
 })();
