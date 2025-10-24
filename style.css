@@ -294,3 +294,28 @@ body{
   cursor: default;
 }
 
+/* linha de ações do modal impressora */
+.imp-actions-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;                /* distância padrão entre botões */
+}
+
+/* botões mini de navegação */
+.imp-mini{
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* afasta Criar Prova de Exportar PDF um pouco mais */
+.imp-gap-right{ margin-right: 8px; }
+.imp-gap-left{  margin-left: 8px;  }
