@@ -788,6 +788,7 @@ impNav.id = 'imp-nav';
 if (modal) modal.appendChild(impNav);
 
 // botões pequenos só com ícone. Não usar .btn
+// === Botões de navegação por selecionadas (inline, na mesma linha dos botões) ===
 const btnPrevSel = document.createElement('button');
 btnPrevSel.type = 'button';
 btnPrevSel.className = 'imp-nav-btn';
@@ -800,8 +801,16 @@ btnNextSel.className = 'imp-nav-btn';
 btnNextSel.setAttribute('aria-label', 'Próxima selecionada');
 btnNextSel.innerHTML = '▼';
 
-impNav.appendChild(btnPrevSel);
-impNav.appendChild(btnNextSel);
+// inserir setas antes de "Criar Prova" e manter tudo na mesma linha
+if (btnExportar && btnExportar.parentNode) {
+  const bar = btnExportar.parentNode;
+  bar.insertBefore(btnPrevSel, btnCriar);
+  bar.insertBefore(btnNextSel, btnCriar);
+
+  // separa "Criar Prova" de "Exportar PDF"
+  btnCriar.style.marginRight = '8px';
+  btnExportar.style.marginLeft = '8px';
+}
 
 function getRootScroll(){
   return modal?.querySelector('.modal-body') || lista || document.scrollingElement || document.documentElement;
@@ -818,7 +827,7 @@ function alignTop(el){
   if (!root || !el) return;
   const rr = root.getBoundingClientRect();
   const er = el.getBoundingClientRect();
-  const delta = er.top - rr.top; // alinhar topo do card ao topo da área visível
+  const delta = er.top - rr.top; // alinhar topo do card ao topo visível
   root.scrollTo({ top: (root.scrollTop || 0) + delta, behavior: 'smooth' });
 }
 function jumpToSelected(dir){
@@ -844,45 +853,9 @@ function updateNavButtons(){
 
 btnPrevSel.addEventListener('click', () => jumpToSelected(-1));
 btnNextSel.addEventListener('click', () => jumpToSelected(1));
-// não inserir perto do Exportar. Sem uso de .btn aqui.
 
-async function getAllItems(){
-  if (allItemsCache) return allItemsCache.slice();
-  let cur = null, acc = [];
-  while (true){
-    const page = await fetchQuestoes(cur);
-    const itens = page?.itens || [];
-    acc = acc.concat(itens);
-    cur = page?.nextCursor ?? null;
-    if (cur == null) break;
-  }
-  allItemsCache = acc.slice();
-  return acc;
-}
+// (resto do arquivo permanece igual)
 
-function pickCountsByTema(buckets, total){
-  const temas = Object.keys(buckets);
-  if (temas.length === 0) return {};
-  const counts = {};
-  const N = Math.min(total, Object.values(buckets).reduce((s,a)=>s+a.length,0));
-
-  // pelo menos 1 por tema, se possível
-  temas.forEach(t => counts[t] = Math.min(1, buckets[t].length));
-  let used = temas.reduce((s,t)=>s+counts[t],0);
-
-  // proporcional ao tamanho do bucket
-  if (used < N){
-    const totalAvail = temas.reduce((s,t)=>s + Math.max(buckets[t].length - counts[t], 0), 0);
-    if (totalAvail > 0){
-      temas.forEach(t => {
-        if (used >= N) return;
-        const room = Math.max(buckets[t].length - counts[t], 0);
-        const share = Math.floor((room / totalAvail) * (N - used));
-        const add = Math.min(share, room);
-        counts[t] += add; used += add;
-      });
-    }
-  }
 
   // round-robin para completar sobras
   let k = 0;
