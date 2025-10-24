@@ -779,11 +779,7 @@ if (btnExportar && btnExportar.parentNode) {
   btnExportar.parentNode.insertBefore(btnCriar, btnExportar);
 }
 
-// --- Navegação rápida entre selecionadas ---
-// === Navegação rápida entre selecionadas — lateral esquerda do modal ===
-
-
-// --- Navegação rápida entre selecionadas (setas inline na barra do modal) ---
+/// --- Navegação rápida entre selecionadas (setas inline na barra do modal) ---
 const bar = btnExportar && btnExportar.parentNode ? btnExportar.parentNode : null;
 
 // grupo de navegação à ESQUERDA
@@ -901,8 +897,8 @@ function updateNavButtons(){
 
 btnPrevSel.addEventListener('click', () => jumpToSelected(-1));
 btnNextSel.addEventListener('click', () => jumpToSelected(1));
-
 // fim das setas
+
 
   updateCounter();
 
