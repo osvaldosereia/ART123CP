@@ -1,32 +1,135 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Modal demo</title>
+  <title>Modal com log de entrada/saída</title>
   <style>
-    body {font-family: system-ui, -apple-system, Arial, sans-serif}
-    .backdrop{position:fixed;inset:0;display:none;align-items:center;justify-content:center}
-    .backdrop.is-open{display:flex}
-    .scrim{position:absolute;inset:0;opacity:.5;background:#000}
-    .modal{position:relative;min-width:320px;max-width:90vw;background:#fff;border-radius:12px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
-    .row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+    :root { --border:#e5e7eb; --muted:#6b7280; --bg:#fafafa }
+    * { box-sizing: border-box }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; display: grid; grid-template-columns: 1fr 360px; min-height: 100vh; background: #fff; color: #111 }
+    header { grid-column: 1 / -1; padding: 12px 16px; border-bottom: 1px solid var(--border) }
+    main { padding: 16px }
+    aside { border-left: 1px solid var(--border); padding: 12px; background: var(--bg) }
+    button { appearance: none; border: 1px solid var(--border); background: #fff; padding: 8px 12px; border-radius: 10px; cursor: pointer }
+    button:focus { outline: 2px solid #3b82f6; outline-offset: 2px }
+    /* Modal */
+    .backdrop { position: fixed; inset: 0; display: none; align-items: center; justify-content: center }
+    .backdrop.is-open { display: flex }
+    .scrim { position: absolute; inset: 0; background: #000; opacity: .5 }
+    .modal { position: relative; min-width: 320px; max-width: min(560px, 90vw); background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.3) }
+    .row { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px }
+    /* Log */
+    .feed { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column-reverse; gap: 6px; max-height: calc(100vh - 120px); overflow: auto }
+    .item { padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: #fff; font-size: 14px }
+    .t { font-variant-numeric: tabular-nums; color: var(--muted); margin-right: 8px }
+    .badge { font-size: 12px; padding: 2px 6px; border-radius: 999px; border: 1px solid var(--border); margin-right: 6px }
+    .badge.entra { background: #e6f6ee }
+    .badge.sai { background: #fdecec }
+    .badge.acao { background: #eef3ff }
+    .kbd { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; background: #f3f3f3; border: 1px solid #e2e2e2; padding: 1px 4px; border-radius: 6px }
   </style>
 </head>
 <body>
-  <button id="openModal">Abrir modal</button>
+  <header>
+    <button id="openModal" type="button" aria-controls="modalBackdrop">Abrir modal</button>
+  </header>
 
-  <div id="modalBackdrop" class="backdrop" aria-hidden="true">
-    <div class="scrim" id="scrim" tabindex="-1"></div>
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <h2 id="modalTitle">Título</h2>
-      <p>Conteúdo do modal.</p>
-      <div class="row">
-        <button id="closeModal">Fechar</button>
+  <main>
+    <p>Conteúdo da página.</p>
+
+    <div id="modalBackdrop" class="backdrop" aria-hidden="true">
+      <div class="scrim" id="scrim" tabindex="-1" aria-label="Fundo do modal"></div>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <h2 id="modalTitle">Título</h2>
+        <p>Conteúdo do modal.</p>
+        <div class="row">
+          <button id="closeModal" type="button">Fechar</button>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
-  <script src="app.js" defer></script>
+  <aside>
+    <h3 style="margin:6px 0 10px">Eventos do app</h3>
+    <ul id="eventFeed" class="feed" aria-live="polite" aria-relevant="additions"></ul>
+    <p style="margin-top:10px;font-size:12px;color:var(--muted)">
+      Dicas: clique em “Abrir modal”, clique na <span class="kbd">scrim</span>, no botão <span class="kbd">Fechar</span> ou pressione <span class="kbd">Esc</span>.
+    </p>
+  </aside>
+
+  <script>
+    (function () {
+      const $ = (id) => document.getElementById(id);
+      const openBtn = $('openModal');
+      const closeBtn = $('closeModal');
+      const scrim = $('scrim');
+      const backdrop = $('modalBackdrop');
+      const feed = $('eventFeed');
+      if (!openBtn || !closeBtn || !scrim || !backdrop || !feed) return;
+
+      const now = () => new Date().toLocaleTimeString([], { hour12: false });
+      function log(type, msg, meta = '') {
+        const li = document.createElement('li');
+        li.className = 'item';
+        const badgeClass = type === 'ENTRA' ? 'entra' : (type === 'SAI' ? 'sai' : 'acao');
+        li.innerHTML =
+          '<span class="t">' + now() + '</span>' +
+          '<span class="badge ' + badgeClass + '">' + type + '</span>' +
+          '<strong>' + msg + '</strong>' +
+          (meta ? ' <span style="color:#6b7280">(' + meta + ')</span>' : '');
+        feed.prepend(li);
+      }
+
+      const isOpen = () => backdrop.classList.contains('is-open');
+      function openModal(origin) {
+        if (isOpen()) return;
+        backdrop.classList.add('is-open');
+        backdrop.setAttribute('aria-hidden', 'false');
+        closeBtn.focus();
+        document.addEventListener('keydown', onEsc);
+        log('ENTRA', 'Modal abriu', 'gatilho: ' + origin);
+      }
+      function closeModal(origin) {
+        if (!isOpen()) return;
+        backdrop.classList.remove('is-open');
+        backdrop.setAttribute('aria-hidden', 'true');
+        openBtn.focus();
+        document.removeEventListener('keydown', onEsc);
+        log('SAI', 'Modal fechou', 'gatilho: ' + origin);
+      }
+      function onEsc(e) {
+        if (e.key === 'Escape') {
+          log('ACAO', 'Tecla Esc', 'keydown');
+          closeModal('Esc');
+        }
+      }
+
+      openBtn.addEventListener('click', () => { log('ACAO', 'Clique', '#openModal'); openModal('botão abrir'); });
+      closeBtn.addEventListener('click', () => { log('ACAO', 'Clique', '#closeModal'); closeModal('botão fechar'); });
+      scrim.addEventListener('click', () => { log('ACAO', 'Clique', 'scrim'); closeModal('scrim'); });
+
+      backdrop.addEventListener('focusin', (e) => { if (isOpen()) log('ACAO', 'Foco entrou', selectorOf(e.target)); });
+      backdrop.addEventListener('focusout', (e) => { if (isOpen()) log('ACAO', 'Foco saiu', selectorOf(e.target)); });
+
+      new MutationObserver((muts) => {
+        for (const m of muts) {
+          if (m.type === 'attributes' && m.attributeName === 'class') {
+            log('ACAO', 'Classe alterada', 'is-open=' + isOpen());
+          }
+        }
+      }).observe(backdrop, { attributes: true });
+
+      function selectorOf(el) {
+        if (!(el instanceof Element)) return '';
+        if (el.id) return '#' + el.id;
+        const name = el.tagName.toLowerCase();
+        const cls = (el.className || '').toString().trim().split(/\s+/).filter(Boolean)[0];
+        return name + (cls ? '.' + cls : '');
+      }
+
+      log('ACAO', 'App pronto', 'modal ' + (isOpen() ? 'aberto' : 'fechado'));
+    })();
+  </script>
 </body>
 </html>
