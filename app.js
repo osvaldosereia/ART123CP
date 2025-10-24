@@ -765,7 +765,7 @@ function rerenderVisibleFrases(){
   const radioCols = () => Number(document.querySelector('input[name="imp-colunas"]:checked')?.value || 1);
 
   // --- Botão "Criar Prova" + seleção aleatória balanceada por tema ---
-let allItemsCache = null;
+
 
 const btnCriar = document.createElement('button');
 btnCriar.id = 'imp-criar';
@@ -837,11 +837,6 @@ if (bar) {
 
 // ===== Helpers do "Criar Prova" =====
 let allItemsCache = null;
-
-async function fetchQuestoes(nextCursor){
-  if (window.QUESTOES_FETCH_PAGE) return await window.QUESTOES_FETCH_PAGE(nextCursor);
-  return { itens: [], nextCursor: null };
-}
 
 async function getAllItems(){
   if (allItemsCache) return allItemsCache.slice();
