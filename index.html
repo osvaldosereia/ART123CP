@@ -86,15 +86,14 @@
   <div id="pdf-root" style="position:fixed;left:-10000px;top:0;visibility:hidden;width:794px;"></div>
 
   <script>
-    // ?txt=data/direito-penal/penal1.txt  |  default: data/direito-penal/penal1.txt
     const p = new URLSearchParams(location.search);
     window.APP_CONFIG = { txtUrl: p.get("txt") || "data/direito-penal/penal1.txt" };
   </script>
 
   <!-- Dependências para geração de PDF -->
-  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/he@1.2.0/he.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/he@1.2.0/he.min.js" crossorigin="anonymous"></script>
 
-  <script src="app.js"></script>
+  <script defer src="app.js"></script>
 </body>
 </html>
