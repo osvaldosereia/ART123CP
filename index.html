@@ -51,22 +51,22 @@
     </div>
   </div>
 
-  <!-- MODAL IMPRESSORA (mesmo padrão visual do modal de frases) -->
+  <!-- MODAL IMPRESSORA -->
   <div id="modal-impressora" class="modal hidden" aria-hidden="true">
     <div class="modal-backdrop" data-close-impressora></div>
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="imp-titulo">
       <div class="modal-head">
-        <div class="modal-head__top">
+        <div class="modal-head__top" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
           <h2 id="imp-titulo">Selecionar questões para PDF</h2>
           <div class="modal-actions">
             <button class="btn btn-ghost" type="button" data-close-impressora>Fechar</button>
           </div>
         </div>
-        <div class="imp-headbar">
+        <div class="imp-headbar" style="margin-top:6px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between">
           <div><strong>Selecionadas:</strong> <span id="imp-contador">0</span>/20</div>
           <div class="layout-cols" role="group" aria-label="Layout do PDF">
             <label><input type="radio" name="imp-colunas" value="1" checked> 1 coluna</label>
-            <label><input type="radio" name="imp-colunas" value="2"> 2 colunas</label>
+            <label style="margin-left:10px"><input type="radio" name="imp-colunas" value="2"> 2 colunas</label>
           </div>
         </div>
       </div>
