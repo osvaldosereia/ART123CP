@@ -838,6 +838,17 @@ if (bar) {
 // ===== Helpers do "Criar Prova" =====
 let allItemsCache = null;
 
+  async function ensureSelecionadasNoDOM(){
+  const need = new Set([...selected.keys()]);
+  // já renderizadas?
+  document.querySelectorAll('.imp-card').forEach(el => need.delete(Number(el.dataset.id||0)));
+  while (need.size && hasMore && !isLoading){
+    await loadMore(); // avança a paginação normal
+    document.querySelectorAll('.imp-card').forEach(el => need.delete(Number(el.dataset.id||0)));
+  }
+}
+
+
 async function getAllItems(){
   if (allItemsCache) return allItemsCache.slice();
   let cur = null, acc = [];
@@ -888,6 +899,7 @@ function pickCountsByTema(buckets, total){
   return counts;
 }
 
+  
 // ===== Ação "Criar Prova" =====
 async function handleCriarProva(){
   const all = await getAllItems();
@@ -923,6 +935,10 @@ async function handleCriarProva(){
     const cb = card.querySelector('input[type="checkbox"]');
     if (cb) cb.checked = selected.has(id);
   });
+    await ensureSelecionadasNoDOM();
+  navIndex = -1;
+  jumpToSelected(1);
+
 }
 
   
