@@ -8,9 +8,8 @@
     temasDisponiveis: [],
     temasSelecionados: new Set(),
     cards: [],
-    // feed incremental
-    feedGroups: [],     // [{key:'ALL'|'tema x', items:[idxs], ptr:0}]
-    rendered: []        // índices já renderizados na ordem do feed
+    feedGroups: [],   // [{key:'ALL'|'tema x', items:[idxs], ptr:0}]
+    rendered: []      // índices já renderizados na ordem do feed
   };
 
   /* ------------------------------ Utils ------------------------------ */
@@ -27,7 +26,6 @@
       return e;
     },
     trim: s => (s || "").replace(/^\s+|\s+$/g, ""),
-    byPrefix: (l, p) => l.startsWith(p) ? l.slice(p.length).trim() : null,
     uniq: arr => [...new Set(arr)],
     shuffle(arr){
       for(let i=arr.length-1;i>0;i--){
@@ -41,7 +39,7 @@
     onClickOutside(root, cb) { const h = ev => { if (!root.contains(ev.target)) cb(); }; document.addEventListener("mousedown", h, { once: true }); },
     fitPopover(menu, trigger) { const r = trigger.getBoundingClientRect(); if (r.top < 160) menu.classList.add("below"); else menu.classList.remove("below"); },
     mdInline: s => (s || "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>"),
-    // Backdrop: fecha só quando clicado (não intercepta cliques dentro do menu)
+    // Backdrop utilitário usado nos selects
     backdrop(onClose){
       const el = document.createElement("div");
       el.className = "dropdown-backdrop";
@@ -77,100 +75,103 @@
       let referencias = "", enunciado = "", gabarito = "";
       const alternativas = [], temas = [];
 
-      for (const line of lines) {
-        const L = line.replace(/^\uFEFF?/, ""); // remove BOM se houver
-
-        if (/^\*{5}\s/.test(L)) { // ***** referências
-          referencias = L.replace(/^\*{5}\s*/, "").trim(); continue;
-        }
-        if (/^\*{3}\s/.test(L)) { // *** gabarito
-          const g = L.replace(/^\*{3}\s*/, "").trim();
-          const m = /Gabarito\s*:\s*([A-Z])/i.exec(g);
-          gabarito = m ? m[1].toUpperCase() : ""; continue;
-        }
-        if (/^\*{4}\s/.test(L)) { // **** temas
-          const t = L.replace(/^\*{4}\s*/, "").trim();
-          t.split(",").forEach(x => { const v = (x || "").trim(); if (v) temas.push(v); });
-          continue;
-        }
-        if (/^\*{2}\s/.test(L)) { // ** alternativas
-          alternativas.push(L.replace(/^\*{2}\s*/, "").trim()); continue;
-        }
-        if (/^\*\s/.test(L)) { // * enunciado
-          const part = L.replace(/^\*\s*/, "").trim();
-          enunciado = enunciado ? (enunciado + " " + part) : part;
-        }
+      for (const L0 of lines) {
+        const L = L0.replace(/^\uFEFF?/, ""); // remove BOM se houver
+        if (/^\*{5}\s/.test(L)) { referencias = L.replace(/^\*{5}\s*/, "").trim(); continue; }          // ***** referências
+        if (/^\*{3}\s/.test(L)) { const g = L.replace(/^\*{3}\s*/, "").trim();                           // *** gabarito
+          const m = /Gabarito\s*:\s*([A-Z])/i.exec(g); gabarito = m ? m[1].toUpperCase() : ""; continue; }
+        if (/^\*{4}\s/.test(L)) { const t = L.replace(/^\*{4}\s*/, "").trim();                           // **** temas
+          t.split(",").forEach(x => { const v = (x || "").trim(); if (v) temas.push(v); }); continue; }
+        if (/^\*{2}\s/.test(L)) { alternativas.push(L.replace(/^\*{2}\s*/, "").trim()); continue; }      // ** alternativas
+        if (/^\*\s/.test(L)) { const part = L.replace(/^\*\s*/, "").trim();                              // * enunciado
+          enunciado = enunciado ? (enunciado + " " + part) : part; }
       }
-
       cards.push({ referencias, enunciado, alternativas, gabarito, temas });
     }
     return cards;
   }
 
-  /* ---------------- Expor questões p/ modal Impressora ---------------- */
-  function exposeQuestoesCache(){
-    window.QUESTOES_CACHE = state.cards.map((c, i) => {
+  /* ------ Fonte paginada p/ modal Impressora: segue filtros e ordem atual ------ */
+  (function exposePagedSource(){
+    function computeOrderFromState(){
+      const temasAtivos = [...state.temasSelecionados];
+      if (temasAtivos.length === 0) return state.cards.map((_, i) => i);
+      const groups = [];
+      temasAtivos.forEach(t => {
+        const idxs = state.cards.map((c, i) => c.temas.includes(t) ? i : -1).filter(i => i >= 0);
+        groups.push({ items: idxs, ptr: 0 });
+      });
+      const order = [];
+      let moved = true;
+      while (moved) {
+        moved = false;
+        for (const g of groups) {
+          if (g.ptr < g.items.length) {
+            const i = g.items[g.ptr++];
+            if (!order.includes(i)) order.push(i);
+            moved = true;
+          }
+        }
+      }
+      return order;
+    }
+
+    function normalizeForPrint(c, i){
       const alts = (c.alternativas || []).map((raw, k) => {
         const letra = String.fromCharCode(65 + k);
         const texto = String(raw || "").replace(/^[A-E]\)\s*/i, "");
         return `${letra}) ${texto}`;
       });
       const html = [
-        U.mdInline(c.enunciado || ""),
-        alts.length ? "<br>" + alts.join("<br>") : ""
+        (c.referencias || "").trim() ? `<div class="q__meta"><strong>${c.referencias}</strong></div>` : "",
+        `<div class="q__stmt">${U.mdInline(c.enunciado || "")}</div>`,
+        alts.length ? `<ul class="q__opts">${alts.map(a=>`<li class="q__opt"><span class="q__badge">${a.slice(0,1)}</span><div>${a.replace(/^[A-E]\)\s*/i,"")}</div></li>`).join("")}</ul>` : ""
       ].join("");
       return {
         id: i + 1,
-        titulo: (c.referencias || "").trim() || null,
-        enunciado: html,
+        enunciadoHtml: html,              // para exibir no modal
+        enunciadoPlain: c.enunciado || "",// para o PDF
         alternativas: alts
       };
-    });
-  }
+    }
+
+    window.QUESTOES_FETCH_PAGE = async function(cursor){
+      const pageSize = 20;
+      const order = computeOrderFromState();
+      const start = Number.isInteger(cursor) ? cursor : 0;
+      const end = Math.min(start + pageSize, order.length);
+      const itens = [];
+      for (let i=start;i<end;i++){
+        const idx = order[i];
+        itens.push(normalizeForPrint(state.cards[idx], idx));
+      }
+      return { itens, nextCursor: end < order.length ? end : null };
+    };
+  })();
 
   /* ------------------------------ Compartilhar Story (PNG 1080x1920) ------------------------------ */
   async function shareCardAsStory(card) {
     const pngBlob = await renderStoryPNG(card);
     const file = new File([pngBlob], "meujus-story.png", { type: "image/png" });
-
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      try {
-        await navigator.share({ files: [file], title: "MeuJus", text: "meujus.com.br" });
-        return;
-      } catch (e) {
-        return;
-      }
+      try { await navigator.share({ files: [file], title: "MeuJus", text: "meujus.com.br" }); return; } catch {}
     }
-
     alert("Seu navegador não permite compartilhar imagem diretamente.");
   }
 
   function px(n){ return Math.round(n); }
-  function createCanvas(w, h){
-    const c = document.createElement("canvas");
-    c.width = w; c.height = h;
-    return [c, c.getContext("2d")];
-  }
-  function setFont(ctx, size, weight=400){
-    ctx.font = `${weight} ${px(size)}px system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica, Arial`;
-  }
+  function createCanvas(w, h){ const c = document.createElement("canvas"); c.width = w; c.height = h; return [c, c.getContext("2d")]; }
+  function setFont(ctx, size, weight=400){ ctx.font = `${weight} ${px(size)}px system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica, Arial`; }
   function wrapParagraph(ctx, text, maxWidth, size, weight=400, lineHeight=1.42){
     setFont(ctx, size, weight);
-    const words = String(text||"").split(/\s+/);
-    const lines = [];
-    let line = "";
+    const words = String(text||"").split(/\s+/); const lines = []; let line = "";
     for (const w of words){
       const test = line ? (line + " " + w) : w;
-      if (ctx.measureText(test).width <= maxWidth) { line = test; }
-      else {
-        if (line) lines.push(line);
+      if (ctx.measureText(test).width <= maxWidth) line = test;
+      else { if (line) lines.push(line);
         if (ctx.measureText(w).width > maxWidth){
-          let acc = "";
-          for (const ch of w){
-            const t2 = acc + ch;
-            if (ctx.measureText(t2).width <= maxWidth) acc = t2;
-            else { if (acc) { lines.push(acc); acc = ch; } }
-          }
+          let acc = ""; for (const ch of w){ const t2 = acc + ch;
+            if (ctx.measureText(t2).width <= maxWidth) acc = t2; else { if (acc) { lines.push(acc); acc = ch; } } }
           line = acc;
         } else line = w;
       }
@@ -180,22 +181,13 @@
     return { lines, height: h, lineGap: px(size*lineHeight) };
   }
   function drawWrapped(ctx, x, y, maxWidth, text, size, color, weight=400, lineHeight=1.42, align="left"){
-    ctx.fillStyle = color;
-    setFont(ctx, size, weight);
-    ctx.textAlign = align;
-    ctx.textBaseline = "top";
+    ctx.fillStyle = color; setFont(ctx, size, weight); ctx.textAlign = align; ctx.textBaseline = "top";
     const { lines, lineGap } = wrapParagraph(ctx, text, maxWidth, size, weight, lineHeight);
-    let yy = y;
-    for (const L of lines){
-      const dx = align==="center" ? x + maxWidth/2 : x;
-      ctx.fillText(L, dx, yy);
-      yy += lineGap;
-    }
+    let yy = y; for (const L of lines){ const dx = align==="center" ? x + maxWidth/2 : x; ctx.fillText(L, dx, yy); yy += lineGap; }
     return yy;
   }
   function measureCard(ctx, card, sizes, innerW){
-    const gap = 16;
-    let total = 0;
+    const gap = 16; let total = 0;
     total += wrapParagraph(ctx, card.referencias||"", innerW, sizes.refs, 400, 1.35).height + gap;
     total += wrapParagraph(ctx, card.enunciado||"", innerW, sizes.enun, 500, 1.5).height + gap;
     for (const alt of card.alternativas||[]){
@@ -207,124 +199,45 @@
   }
   function roundRect(ctx, x, y, w, h, r){
     const rr = Math.min(r, w/2, h/2);
-    ctx.beginPath();
-    ctx.moveTo(x+rr, y);
-    ctx.arcTo(x+w, y, x+w, y+h, rr);
-    ctx.arcTo(x+w, y+h, x, y+h, rr);
-    ctx.arcTo(x, y+h, x, y, rr);
-    ctx.arcTo(x, y, x+w, y, rr);
-    ctx.closePath();
+    ctx.beginPath(); ctx.moveTo(x+rr, y);
+    ctx.arcTo(x+w, y, x+w, y+h, rr); ctx.arcTo(x+w, y+h, x, y+h, rr);
+    ctx.arcTo(x, y+h, x, y, rr); ctx.arcTo(x, y, x+w, y, rr); ctx.closePath();
   }
   async function renderStoryPNG(card){
-    const W=1080, H=1920;
-    const [cv, ctx] = createCanvas(W, H);
-
-    ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0,0,W,H);
-
-    setFont(ctx, 28, 700);
-    ctx.fillStyle = "#111827";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "top";
-    ctx.fillText("meujus.com.br", W/2, 48);
-
-    const marginX = 96, topSafe = 120;
-    const cardW = W - marginX*2;
-    const cardH = H - topSafe - 140;
-    const x = marginX, y = topSafe + 40;
-
-    ctx.fillStyle = "#ffffff";
-    ctx.strokeStyle = "#e5e7eb";
-    ctx.lineWidth = 2;
-    roundRect(ctx, x, y, cardW, cardH, 24);
-    ctx.fill(); ctx.stroke();
-
-    const innerPad = 36;
-    const innerX = x + innerPad;
-    const innerY = y + innerPad;
-    const innerW = cardW - innerPad*2;
-    const innerH = cardH - innerPad*2;
-
-    const base = { refs: 22, enun: 34, alt: 28 };
-    const min  = { refs: 14, enun: 20, alt: 18 };
-    const cap  = { refs: 32, enun: 48, alt: 40 };
-
-    let lo = 0, hi = 1;
-    const canFit = (s)=>{
-      const sizes = {
-        refs: Math.min(cap.refs, Math.max(min.refs, base.refs * s)),
-        enun: Math.min(cap.enun, Math.max(min.enun, base.enun * s)),
-        alt:  Math.min(cap.alt,  Math.max(min.alt,  base.alt  * s))
-      };
-      return measureCard(ctx, card, sizes, innerW) <= innerH;
-    };
-    while (canFit(hi)) { lo = hi; hi *= 1.25; if (hi>4) break; }
-    for (let i=0;i<18;i++){
-      const mid = (lo+hi)/2;
-      if (canFit(mid)) lo = mid; else hi = mid;
-    }
-    const s = lo;
-    const sizes = {
-      refs: Math.min(cap.refs, Math.max(min.refs, base.refs * s)),
-      enun: Math.min(cap.enun, Math.max(min.enun, base.enun * s)),
-      alt:  Math.min(cap.alt,  Math.max(min.alt,  base.alt  * s))
-    };
-
-    let yy = innerY;
-    yy = drawWrapped(ctx, innerX, yy, innerW, card.referencias||"", sizes.refs, "#6b7280", 400, 1.35);
-    yy += 16;
-    yy = drawWrapped(ctx, innerX, yy, innerW, card.enunciado||"", sizes.enun, "#103a9c", 600, 1.5);
-    yy += 16;
-
-    const badgeR = 20, badgeD = badgeR*2, badgePad = 12;
-    const letters = ["A","B","C","D","E"];
+    const W=1080, H=1920; const [cv, ctx] = createCanvas(W, H);
+    ctx.fillStyle = "#ffffff"; ctx.fillRect(0,0,W,H);
+    setFont(ctx, 28, 700); ctx.fillStyle = "#111827"; ctx.textAlign = "center"; ctx.textBaseline = "top"; ctx.fillText("meujus.com.br", W/2, 48);
+    const marginX = 96, topSafe = 120; const cardW = W - marginX*2; const cardH = H - topSafe - 140; const x = marginX, y = topSafe + 40;
+    ctx.fillStyle = "#ffffff"; ctx.strokeStyle = "#e5e7eb"; ctx.lineWidth = 2; roundRect(ctx, x, y, cardW, cardH, 24); ctx.fill(); ctx.stroke();
+    const innerPad = 36; const innerX = x + innerPad; const innerY = y + innerPad; const innerW = cardW - innerPad*2; const innerH = cardH - innerPad*2;
+    const base = { refs: 22, enun: 34, alt: 28 }; const min  = { refs: 14, enun: 20, alt: 18 }; const cap  = { refs: 32, enun: 48, alt: 40 };
+    let lo = 0, hi = 1; const canFit = (s)=>{ const sizes = { refs: Math.min(cap.refs, Math.max(min.refs, base.refs * s)), enun: Math.min(cap.enun, Math.max(min.enun, base.enun * s)), alt:  Math.min(cap.alt,  Math.max(min.alt,  base.alt  * s)) }; return measureCard(ctx, card, sizes, innerW) <= innerH; };
+    while (canFit(hi)) { lo = hi; hi *= 1.25; if (hi>4) break; } for (let i=0;i<18;i++){ const mid = (lo+hi)/2; if (canFit(mid)) lo = mid; else hi = mid; }
+    const s = lo; const sizes = { refs: Math.min(cap.refs, Math.max(min.refs, base.refs * s)), enun: Math.min(cap.enun, Math.max(min.enun, base.enun * s)), alt:  Math.min(cap.alt,  Math.max(min.alt,  base.alt  * s)) };
+    let yy = innerY; yy = drawWrapped(ctx, innerX, yy, innerW, card.referencias||"", sizes.refs, "#6b7280", 400, 1.35); yy += 16;
+    yy = drawWrapped(ctx, innerX, yy, innerW, card.enunciado||"", sizes.enun, "#103a9c", 600, 1.5); yy += 16;
+    const badgeR = 20, badgeD = badgeR*2, badgePad = 12; const letters = ["A","B","C","D","E"];
     for (let i=0;i<(card.alternativas||[]).length;i++){
-      const raw = String(card.alternativas[i]||"");
-      const clean = raw.replace(/^[A-E]\)\s*/i,"");
-
-      const by = yy + 2;
-      ctx.fillStyle = "#ffffff";
-      ctx.strokeStyle = "#cbd5e1";
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.arc(innerX+badgeR, by+badgeR, badgeR, 0, Math.PI*2);
-      ctx.closePath();
-      ctx.fill(); ctx.stroke();
-
-      ctx.fillStyle = "#111827";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      setFont(ctx, Math.round(badgeR * 0.9), 700);
-      ctx.fillText(letters[i]||"", innerX+badgeR, by+badgeR);
-
+      const raw = String(card.alternativas[i]||""); const clean = raw.replace(/^[A-E]\)\s*/i,"");
+      const by = yy + 2; ctx.fillStyle = "#ffffff"; ctx.strokeStyle = "#cbd5e1"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(innerX+badgeR, by+badgeR, badgeR, 0, Math.PI*2); ctx.closePath(); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = "#111827"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; setFont(ctx, Math.round(badgeR * 0.9), 700); ctx.fillText(letters[i]||"", innerX+badgeR, by+badgeR);
       ctx.textAlign = "left"; ctx.textBaseline = "top";
       const textX = innerX + badgeD + badgePad;
       const block = wrapParagraph(ctx, clean, innerW - badgeD - badgePad, sizes.alt, 400, 1.42);
       setFont(ctx, sizes.alt, 400);
-      let yline = yy;
-      for (const L of block.lines){
-        ctx.fillStyle = "#454141";
-        ctx.fillText(L, textX, yline);
-        yline += block.lineGap;
-      }
+      let yline = yy; for (const L of block.lines){ ctx.fillStyle = "#454141"; ctx.fillText(L, textX, yline); yline += block.lineGap; }
       yy = Math.max(yy, yline) + 10;
     }
-
-    const blob = await new Promise(res=> cv.toBlob(b => res(b), "image/png"));
-    if (blob) return blob;
-    const d = cv.toDataURL("image/png");
-    const bin = atob(d.split(",")[1]);
-    const buf = new Uint8Array(bin.length);
-    for (let i=0;i<bin.length;i++) buf[i] = bin.charCodeAt(i);
+    const blob = await new Promise(res=> cv.toBlob(b => res(b), "image/png")); if (blob) return blob;
+    const d = cv.toDataURL("image/png"); const bin = atob(d.split(",")[1]); const buf = new Uint8Array(bin.length); for (let i=0;i<bin.length;i++) buf[i] = bin.charCodeAt(i);
     return new Blob([buf], {type:"image/png"});
   }
 
-  /* ------------------------------ IA Prompts (simplificados p/ Google IA) ------------------------------ */
+  /* ------------------------------ IA Prompts ------------------------------ */
   function buildPrompt(kind, card) {
     const temas = (card.temas || []).join(", ") || "geral";
     const alts = card.alternativas.join(" | ");
     const enun = card.enunciado;
-
     switch (kind) {
       case "Gabarito":
         return `Atue como professor de Direito e diga qual é a alternativa correta com fundamentação jurídica direta em até 5 pontos, comentando em 1 linha por que cada outra alternativa está errada; Tema: ${temas}; Enunciado: ${enun}; Alternativas: ${alts}; Gabarito oficial: ${card.gabarito || "?"}.`;
@@ -404,23 +317,14 @@
       answered = true;
       const chosen = (li.getAttribute("data-letter") || "").toUpperCase();
       const correct = (card.gabarito || "").toUpperCase();
-      if (chosen === correct) {
-        li.classList.add("correct");
-        appendGabarito(wrap, correct);
-      } else {
-        li.classList.add("wrong");
-        revealAnswer(ul, correct, true);
-      }
+      if (chosen === correct) { li.classList.add("correct"); appendGabarito(wrap, correct); }
+      else { li.classList.add("wrong"); revealAnswer(ul, correct, true); }
     });
 
     return wrap;
   }
 
-  function appendGabarito(cardEl, g) {
-    const info = U.el("div", { class: "q__explain" }, `Gabarito: ${g}`);
-    cardEl.appendChild(info);
-  }
-
+  function appendGabarito(cardEl, g) { cardEl.appendChild(U.el("div", { class: "q__explain" }, `Gabarito: ${g}`)); }
   function revealAnswer(ul, gLetter, showExplain=false) {
     const items = Array.from(ul.children);
     const right = items.find(li => (li.getAttribute("data-letter") || "").toUpperCase() === (gLetter || "").toUpperCase());
@@ -430,24 +334,12 @@
 
   /* ------------------------------ Filtros ------------------------------ */
   function mountSelectSingle(root, { options, onChange }) {
-    root.innerHTML = "";
-    root.classList.add("select");
-
+    root.innerHTML = ""; root.classList.add("select");
     const btn = U.el("button", { class: "select__button", type: "button", "aria-haspopup": "listbox", "aria-expanded": "false" }, "Disciplina");
     const menu = U.el("div", { class: "select__menu hidden", role: "listbox" });
-    let bd = null;
 
-    function open(){
-      if (!menu.classList.contains("hidden")) return;
-      menu.classList.remove("hidden");
-      btn.setAttribute("aria-expanded","true");
-      bd = U.backdrop(close);
-    }
-    function close(){
-      menu.classList.add("hidden");
-      btn.setAttribute("aria-expanded","false");
-      bd = null;
-    }
+    function open(){ if (!menu.classList.contains("hidden")) return; menu.classList.remove("hidden"); btn.setAttribute("aria-expanded","true"); U.backdrop(close); }
+    function close(){ menu.classList.add("hidden"); btn.setAttribute("aria-expanded","false"); }
 
     options.forEach(opt => {
       const it = U.el("div", { class: "select__option", role: "option", "data-value": opt.label }, opt.label);
@@ -455,13 +347,8 @@
       menu.appendChild(it);
     });
 
-    btn.addEventListener("click", () => menu.classList.contains("hidden") ? openMenu() : closeMenu());
-
-    function openMenu(){ menu.classList.remove("hidden"); open(); }
-    function closeMenu(){ menu.classList.add("hidden"); close(); }
-
-    root.appendChild(btn);
-    root.appendChild(menu);
+    btn.addEventListener("click", () => menu.classList.contains("hidden") ? open() : close());
+    root.appendChild(btn); root.appendChild(menu);
   }
 
   function mountMultiselect(root, { options, onChange }) {
@@ -469,7 +356,6 @@
     const control = U.el("div", { class: "multiselect__control", role: "combobox", "aria-expanded": "false" });
     const input = U.el("input", { class: "multiselect__input", type: "text", placeholder: "Temas..." });
     const menu  = U.el("div", { class: "multiselect__menu hidden", role: "listbox" });
-    let bd = null;
 
     function syncItems() {
       const q = (input.value || "").toLowerCase();
@@ -482,18 +368,8 @@
       });
     }
 
-    function open(){
-      if (!menu.classList.contains("hidden")) return;
-      menu.classList.remove("hidden");
-      control.setAttribute("aria-expanded","true");
-      bd = U.backdrop(close);
-      syncItems();
-    }
-    function close(){
-      menu.classList.add("hidden");
-      control.setAttribute("aria-expanded","false");
-      bd = null;
-    }
+    function open(){ if (!menu.classList.contains("hidden")) return; menu.classList.remove("hidden"); control.setAttribute("aria-expanded","true"); U.backdrop(close); syncItems(); }
+    function close(){ menu.classList.add("hidden"); control.setAttribute("aria-expanded","false"); }
 
     (U.uniq(options || [])).forEach(opt => {
       const it = U.el("div", { class: "multiselect__item", role: "option", "data-value": opt }, opt);
@@ -517,10 +393,8 @@
 
   /* ------------------------------ Feed incremental ------------------------------ */
   function toggleWelcome(count){
-    const el = document.getElementById("welcome");
-    if (!el) return;
-    if (count > 0) el.classList.add("hidden");
-    else el.classList.remove("hidden");
+    const el = document.getElementById("welcome"); if (!el) return;
+    if (count > 0) el.classList.add("hidden"); else el.classList.remove("hidden");
   }
 
   function buildFeed() {
@@ -573,9 +447,7 @@
   function mountInfiniteScroll() {
     const sentinel = document.getElementById("sentinela");
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) renderAppend(nextBatch());
-      });
+      entries.forEach(e => { if (e.isIntersecting) renderAppend(nextBatch()); });
     }, { rootMargin: "600px 0px" });
     io.observe(sentinel);
   }
@@ -584,8 +456,6 @@
   async function init() {
     const raw = await loadTxt();
     state.cards = parseTxt(raw);
-    exposeQuestoesCache();
-
     state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
 
     mountSelectSingle(document.getElementById("disciplina-select"), {
@@ -599,26 +469,17 @@
       ],
       onChange: async (opt) => {
         const urls = Array.isArray(opt.txt) ? opt.txt : [opt.txt];
-
         const txtParam = urls.join(",");
         window.history.replaceState({}, "", `?txt=${encodeURIComponent(txtParam)}`);
-
-        const parts = await Promise.all(
-          urls.map(u => fetch(u).then(r => r.ok ? r.text() : "").catch(() => ""))
-        );
+        const parts = await Promise.all(urls.map(u => fetch(u).then(r => r.ok ? r.text() : "").catch(() => "")));
         const txt = parts.join("\n-----\n");
-
         state.cards = parseTxt(txt);
-        exposeQuestoesCache();
-
         state.temasDisponiveis = U.uniq(state.cards.flatMap(c => c.temas || [])).sort();
         state.temasSelecionados.clear();
-
         mountMultiselect(document.getElementById("temas-multiselect"), {
           options: state.temasDisponiveis,
           onChange: () => { resetAndRender(); }
         });
-
         resetAndRender();
       }
     });
@@ -632,318 +493,250 @@
     mountInfiniteScroll();
   }
 
-  /* botão de frases à direita, menor */
-  function appendFrasesButton(actionsEl){
-    const btn = document.createElement('button');
-    btn.className = 'btn-icon-round';
-    btn.title = 'Frases';
-    btn.innerHTML = '<img src="assets/icons/frases.png" alt="Frases">';
-    btn.addEventListener('click', openFrasesModal);
-    btn.style.marginLeft = 'auto';
-    actionsEl.appendChild(btn);
-  }
-
-  /* botão de impressora ao lado do de frases, foca a questão clicada */
- function appendImpressoraButton(actionsEl, idx){
-  const btn = document.createElement('button');
-  btn.className = 'btn-icon-round';
-  btn.title = 'Impressora';
-  btn.innerHTML = `
-    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-      <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2m-12 0v3h12v-3M8 14h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`;
-  btn.addEventListener('click', () => {
-    window.dispatchEvent(new CustomEvent('abrirImpressora', { detail: { id: idx + 1 } }));
-  });
-  actionsEl.appendChild(btn);
-}
-
-  // ===== 2) Modal: estados, paleta, carregar aleatório e rolagem infinita =====
-  const FRASES_TXT_URL = 'data/frases/frases.txt';
-  const PALETA = [
-    {name:'Preto', val:'#000000'}, {name:'Branco', val:'#FFFFFF'},
-    {name:'Cinza claro', val:'#E5E7EB'}, {name:'Azul pastel', val:'#BFDBFE'},
-    {name:'Verde pastel', val:'#BBF7D0'}, {name:'Lilás pastel', val:'#E9D5FF'},
-    {name:'Pêssego', val:'#FED7AA'}, {name:'Amarelo', val:'#FEF3C7'},
-    {name:'Rosa', val:'#FBCFE8'}, {name:'Água', val:'#CFFAFE'},
-    {name:'Verde petróleo', val:'#0B3D2E'}, {name:'Ameixa profunda', val:'#2E0530'},
-  ];
-
-  let frasesCache = null;
-  let bgAtual = '#FFFFFF';
-
-  const FRASES_BATCH = 6;
-  let frasesOrder = [];
-  let frasesPtr = 0;
-  let frasesObserver = null;
-
-  function shuffleArray(a){
-    for(let i=a.length-1;i>0;i--){
-      const j = (Math.random()*(i+1))|0;
-      [a[i],a[j]] = [a[j],a[i]];
-    }
-    return a;
-  }
-
-  function resetFrasesOrder(){
-    frasesOrder = Array.from({length: frasesCache.length}, (_,i)=>i);
-    shuffleArray(frasesOrder);
-    frasesPtr = 0;
-  }
-
-  function nextFrases(n){
-    const out = [];
-    while(out.length < n){
-      if(frasesPtr >= frasesOrder.length) resetFrasesOrder();
-      out.push(frasesCache[frasesOrder[frasesPtr++]]);
-    }
-    return out;
-  }
-
-  async function openFrasesModal(){
-    await ensureFrases();
-    mountSwatches();
-    const grid = document.getElementById('frases-grid');
-    if(grid) grid.innerHTML = '';
-    resetFrasesOrder();
-    loadNextBatch(FRASES_BATCH);
-    mountFrasesInfiniteScroll();
-    bindClose();
-    document.getElementById('frases-modal').classList.remove('hidden');
-  }
-
-  function bindClose(){
-    const modal = document.getElementById('frases-modal');
-    const hide = ()=>{
-      modal.classList.add('hidden');
-      if(frasesObserver) frasesObserver.disconnect();
-    };
-    modal.querySelectorAll('[data-close="true"]').forEach(el=>{ el.onclick = hide; });
-    const bd = modal.querySelector('.modal-backdrop');
-    if(bd) bd.onclick = hide;
-  }
-
-  function mountSwatches(){
-    const wrap = document.getElementById('frases-swatches');
-    wrap.innerHTML = '';
-    PALETA.forEach((c)=>{
-      const s = document.createElement('button');
-      s.className = 'swatch';
-      s.style.background = c.val;
-      s.title = c.name;
-      if(c.val === bgAtual) s.setAttribute('aria-selected','true');
-      s.onclick = ()=>{
-        bgAtual = c.val;
-        wrap.querySelectorAll('.swatch').forEach(x=>x.removeAttribute('aria-selected'));
-        s.setAttribute('aria-selected','true');
-        rerenderVisibleFrases();
-      };
-      wrap.appendChild(s);
-    });
-  }
-
-  async function ensureFrases(){
-    if(frasesCache) return;
-    const res = await fetch(FRASES_TXT_URL);
-    const txt = await res.text();
-    // "frase | autor"  ou  "frase - autor"  ou  "frase — autor"
-    frasesCache = txt
-      .split(/\r?\n/)
-      .map(l=>l.trim())
-      .filter(l=>l.length>0 && !l.startsWith('#'))
-      .map(l=>{
-        let [frase, autor] = l.split(/\s[|\-—]\s/);
-        if(!autor){ autor=''; frase=l; }
-        return {frase, autor};
-      });
-  }
-
-  function makeFraseItem(it){
-    const item = document.createElement('div');
-    item.className = 'frase-item';
-
-    const cv = document.createElement('canvas');
-    cv.className = 'frase-canvas';
-    cv.width = 1080; cv.height = 1350;
-    cv.setAttribute('aria-label', 'Frase');
-    cv.dataset.frase = it.frase;
-    cv.dataset.autor = it.autor;
-
-    renderFrasePNG(cv, it.frase, it.autor, bgAtual);
-
-    const btn = document.createElement('button');
-    btn.className = 'btn-share-vert';
-    btn.type = 'button';
-    btn.setAttribute('aria-label', 'Compartilhar frase');
-    btn.textContent = 'Compartilhar';
-    btn.onclick = async ()=>{
-      const blob = await new Promise(r=>cv.toBlob(r,'image/png',1));
-      const file = new File([blob], 'frase.png', {type:'image/png'});
-      if(navigator.canShare && navigator.canShare({files:[file]})){
-        await navigator.share({files:[file], title:'Frase', text:'meujus.com.br'});
-      }else{
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url; a.download = 'frase.png'; a.click();
-        URL.revokeObjectURL(url);
-      }
-    };
-
-    item.appendChild(cv);
-    item.appendChild(btn);
-    return item;
-  }
-
-  function loadNextBatch(n){
-    const grid = document.getElementById('frases-grid');
-    nextFrases(n).forEach(it => grid.appendChild(makeFraseItem(it)));
-  }
-
-  function mountFrasesInfiniteScroll(){
-    const root = document.querySelector('#frases-modal .modal-body');
-    const sent = document.getElementById('frases-sentinela');
-    if(frasesObserver) frasesObserver.disconnect();
-    frasesObserver = new IntersectionObserver((entries)=>{
-      if(entries.some(e=>e.isIntersecting)) loadNextBatch(FRASES_BATCH);
-    }, { root, rootMargin: '400px' });
-    frasesObserver.observe(sent);
-  }
-
-  function rerenderVisibleFrases(){
-    document.querySelectorAll('#frases-grid .frase-canvas').forEach(cv=>{
-      renderFrasePNG(cv, cv.dataset.frase, cv.dataset.autor, bgAtual);
-    });
-  }
-
-  // ===== 3) Render PNG frase + compartilhar =====
-  function isDark(hex){
-    const h = hex.replace('#','');
-    const bigint = parseInt(h,16);
-    const r = (bigint >> 16) & 255;
-    const g = (bigint >> 8) & 255;
-    const b = bigint & 255;
-    const lum = 0.2126*r + 0.7152*g + 0.0722*b;
-    return lum < 140;
-  }
-
-  function renderFrasePNG(canvas, frase, autor, bg){
-    const ctx = canvas.getContext('2d');
-    const W = canvas.width, H = canvas.height;
-
-    ctx.fillStyle = bg;
-    ctx.fillRect(0,0,W,H);
-
-    ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
-    ctx.font = '28px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'top';
-    ctx.fillText('meujus.com.br', W/2, 36);
-
-    const padX = 96;
-    const innerW = W - padX*2;
-    const topY = 220;
-    const bottomPad = 260;
-    const maxH = H - topY - bottomPad;
-
-    const lhK = 1.3;
-    let size = fitFontByBox(ctx, frase, innerW, maxH, 28, 72, 2, 'Times New Roman, Times, serif', lhK);
-    ctx.font = `${size}px "Times New Roman", Times, serif`;
-    ctx.textAlign = 'left';
-    ctx.textBaseline = 'top';
-    ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
-
-    const lines = wrapLines(ctx, frase, innerW);
-    const fraseH = lines.length * (size * lhK);
-    const yStart = topY + Math.max(0, Math.floor((maxH - fraseH) / 2));
-
-    let y = yStart;
-    for (const line of lines){ ctx.fillText(line, padX, y); y += size * lhK; }
-
-    const autorSize = Math.max(18, Math.round(size * 0.42));
-    ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
-    ctx.textAlign = 'left';
-    ctx.textBaseline = 'top';
-    ctx.fillText(autor ? `— ${autor}` : '', padX, y + 24);
-  }
-
-  function autoFitFont(ctx, text, maxW, minPx, maxPx, step, family){
-    let best = minPx;
-    for(let s=maxPx; s>=minPx; s-=step){
-      ctx.font = `${s}px ${family}`;
-      if(measureWrapFits(ctx, text, maxW)) { best = s; break; }
-    }
-    return best;
-  }
-
-  function measureWrapFits(ctx, text, maxW){
-    const words = text.split(/\s+/);
-    let line = '';
-    for(const w of words){
-      const test = line ? line + ' ' + w : w;
-      if(ctx.measureText(test).width > maxW){
-        if(line === '') return false;
-        line = w;
-        if(ctx.measureText(w).width > maxW) return false;
-      }else{
-        line = test;
-      }
-    }
-    return true;
-  }
-
-  function drawMultilineCenter(ctx, text, cx, cy, maxW, lh){
-    const lines = wrapLines(ctx, text, maxW);
-    const totalH = lines.length*lh;
-    let y = cy - totalH/2;
-    for(const line of lines){
-      ctx.fillText(line, cx, y);
-      y += lh;
-    }
-  }
-
-  function wrapLines(ctx, text, maxW){
-    const words = text.split(/\s+/);
-    const lines = [];
-    let line = '';
-    for(const w of words){
-      const test = line ? line + ' ' + w : w;
-      if(ctx.measureText(test).width > maxW){
-        if(line) lines.push(line);
-        line = w;
-      }else{
-        line = test;
-      }
-    }
-    if(line) lines.push(line);
-    return lines;
-  }
-
-  function countLines(ctx, text, maxW){
-    return wrapLines(ctx, text, maxW).length;
-  }
-
-  function drawMultilineLeft(ctx, text, x, y, maxW, lh){
-    const lines = wrapLines(ctx, text, maxW);
-    for (const line of lines){ ctx.fillText(line, x, y); y += lh; }
-    return { lines, bottomY: y };
-  }
-
-  function fitFontByBox(ctx, text, maxW, maxH, minPx, maxPx, step, family, lhK){
-    for (let s=maxPx; s>=minPx; s-=step){
-      ctx.font = `${s}px ${family}`;
-      const lines = wrapLines(ctx, text, maxW);
-      const h = lines.length * (s*lhK);
-      if (h <= maxH) return s;
-    }
-    return minPx;
-  }
-
   document.addEventListener("DOMContentLoaded", init);
 })();
 
+/* ===================== MODAL DE FRASES ===================== */
+const FRASES_TXT_URL = 'data/frases/frases.txt';
+const PALETA = [
+  {name:'Preto', val:'#000000'}, {name:'Branco', val:'#FFFFFF'},
+  {name:'Cinza claro', val:'#E5E7EB'}, {name:'Azul pastel', val:'#BFDBFE'},
+  {name:'Verde pastel', val:'#BBF7D0'}, {name:'Lilás pastel', val:'#E9D5FF'},
+  {name:'Pêssego', val:'#FED7AA'}, {name:'Amarelo', val:'#FEF3C7'},
+  {name:'Rosa', val:'#FBCFE8'}, {name:'Água', val:'#CFFAFE'},
+  {name:'Verde petróleo', val:'#0B3D2E'}, {name:'Ameixa profunda', val:'#2E0530'},
+];
+
+let frasesCache = null;
+let bgAtual = '#FFFFFF';
+const FRASES_BATCH = 6;
+let frasesOrder = [];
+let frasesPtr = 0;
+let frasesObserver = null;
+
+function appendFrasesButton(actionsEl){
+  const btn = document.createElement('button');
+  btn.className = 'btn-icon-round';
+  btn.title = 'Frases';
+  btn.innerHTML = '<img src="assets/icons/frases.png" alt="Frases">';
+  btn.addEventListener('click', openFrasesModal);
+  btn.style.marginLeft = 'auto';
+  actionsEl.appendChild(btn);
+}
+
+function shuffleArray(a){
+  for(let i=a.length-1;i>0;i--){
+    const j = (Math.random()*(i+1))|0;
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
+}
+function resetFrasesOrder(){
+  frasesOrder = Array.from({length: frasesCache.length}, (_,i)=>i);
+  shuffleArray(frasesOrder);
+  frasesPtr = 0;
+}
+function nextFrases(n){
+  const out = [];
+  while(out.length < n){
+    if(frasesPtr >= frasesOrder.length) resetFrasesOrder();
+    out.push(frasesCache[frasesOrder[frasesPtr++]]);
+  }
+  return out;
+}
+
+async function openFrasesModal(){
+  await ensureFrases();
+  mountSwatches();
+  const grid = document.getElementById('frases-grid');
+  if(grid) grid.innerHTML = '';
+  resetFrasesOrder();
+  loadNextBatch(FRASES_BATCH);
+  mountFrasesInfiniteScroll();
+  bindCloseFrases();
+  document.getElementById('frases-modal').classList.remove('hidden');
+}
+
+function bindCloseFrases(){
+  const modal = document.getElementById('frases-modal');
+  const hide = ()=>{
+    modal.classList.add('hidden');
+    if(frasesObserver) frasesObserver.disconnect();
+  };
+  modal.querySelectorAll('[data-close="true"]').forEach(el=>{ el.onclick = hide; });
+  const bd = modal.querySelector('.modal-backdrop');
+  if(bd) bd.onclick = hide;
+}
+
+function mountSwatches(){
+  const wrap = document.getElementById('frases-swatches');
+  wrap.innerHTML = '';
+  PALETA.forEach((c)=>{
+    const s = document.createElement('button');
+    s.className = 'swatch';
+    s.style.background = c.val;
+    s.title = c.name;
+    if(c.val === bgAtual) s.setAttribute('aria-selected','true');
+    s.onclick = ()=>{
+      bgAtual = c.val;
+      wrap.querySelectorAll('.swatch').forEach(x=>x.removeAttribute('aria-selected'));
+      s.setAttribute('aria-selected','true');
+      rerenderVisibleFrases();
+    };
+    wrap.appendChild(s);
+  });
+}
+
+async function ensureFrases(){
+  if(frasesCache) return;
+  const res = await fetch(FRASES_TXT_URL);
+  const txt = await res.text();
+  // "frase | autor"  ou  "frase - autor"  ou  "frase — autor"
+  frasesCache = txt
+    .split(/\r?\n/)
+    .map(l=>l.trim())
+    .filter(l=>l.length>0 && !l.startsWith('#'))
+    .map(l=>{
+      let [frase, autor] = l.split(/\s[|\-—]\s/);
+      if(!autor){ autor=''; frase=l; }
+      return {frase, autor};
+    });
+}
+
+function makeFraseItem(it){
+  const item = document.createElement('div');
+  item.className = 'frase-item';
+
+  const cv = document.createElement('canvas');
+  cv.className = 'frase-canvas';
+  cv.width = 1080; cv.height = 1350;
+  cv.setAttribute('aria-label', 'Frase');
+  cv.dataset.frase = it.frase;
+  cv.dataset.autor = it.autor;
+
+  renderFrasePNG(cv, it.frase, it.autor, bgAtual);
+
+  const btn = document.createElement('button');
+  btn.className = 'btn-share-vert';
+  btn.type = 'button';
+  btn.setAttribute('aria-label', 'Compartilhar frase');
+  btn.textContent = 'Compartilhar';
+  btn.onclick = async ()=>{
+    const blob = await new Promise(r=>cv.toBlob(r,'image/png',1));
+    const file = new File([blob], 'frase.png', {type:'image/png'});
+    if(navigator.canShare && navigator.canShare({files:[file]})){
+      await navigator.share({files:[file], title:'Frase', text:'meujus.com.br'});
+    }else{
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'frase.png'; a.click();
+      URL.revokeObjectURL(url);
+    }
+  };
+
+  item.appendChild(cv);
+  item.appendChild(btn);
+  return item;
+}
+
+function loadNextBatch(n){
+  const grid = document.getElementById('frases-grid');
+  nextFrases(n).forEach(it => grid.appendChild(makeFraseItem(it)));
+}
+
+function mountFrasesInfiniteScroll(){
+  const root = document.querySelector('#frases-modal .modal-body');
+  const sent = document.getElementById('frases-sentinela');
+  if(frasesObserver) frasesObserver.disconnect();
+  frasesObserver = new IntersectionObserver((entries)=>{
+    if(entries.some(e=>e.isIntersecting)) loadNextBatch(FRASES_BATCH);
+  }, { root, rootMargin: '400px' });
+  frasesObserver.observe(sent);
+}
+
+function rerenderVisibleFrases(){
+  document.querySelectorAll('#frases-grid .frase-canvas').forEach(cv=>{
+    renderFrasePNG(cv, cv.dataset.frase, cv.dataset.autor, bgAtual);
+  });
+}
+
+// ===== Render PNG frase =====
+function isDark(hex){
+  const h = hex.replace('#','');
+  const bigint = parseInt(h,16);
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+  const lum = 0.2126*r + 0.7152*g + 0.0722*b;
+  return lum < 140;
+}
+function wrapLines(ctx, text, maxW){
+  const words = text.split(/\s+/);
+  const lines = [];
+  let line = '';
+  for(const w of words){
+    const test = line ? line + ' ' + w : w;
+    if(ctx.measureText(test).width > maxW){
+      if(line) lines.push(line);
+      line = w;
+    }else{
+      line = test;
+    }
+  }
+  if(line) lines.push(line);
+  return lines;
+}
+function fitFontByBox(ctx, text, maxW, maxH, minPx, maxPx, step, family, lhK){
+  for (let s=maxPx; s>=minPx; s-=step){
+    ctx.font = `${s}px ${family}`;
+    const lines = wrapLines(ctx, text, maxW);
+    const h = lines.length * (s*lhK);
+    if (h <= maxH) return s;
+  }
+  return minPx;
+}
+function renderFrasePNG(canvas, frase, autor, bg){
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+
+  ctx.fillStyle = bg;
+  ctx.fillRect(0,0,W,H);
+
+  ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
+  ctx.font = '28px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'top';
+  ctx.fillText('meujus.com.br', W/2, 36);
+
+  const padX = 96;
+  const innerW = W - padX*2;
+  const topY = 220;
+  const bottomPad = 260;
+  const maxH = H - topY - bottomPad;
+
+  const lhK = 1.3;
+  let size = fitFontByBox(ctx, frase, innerW, maxH, 28, 72, 2, 'Times New Roman, Times, serif', lhK);
+  ctx.font = `${size}px "Times New Roman", Times, serif`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
+
+  const lines = wrapLines(ctx, frase, innerW);
+  const fraseH = lines.length * (size * lhK);
+  const yStart = topY + Math.max(0, Math.floor((maxH - fraseH) / 2));
+
+  let y = yStart;
+  for (const line of lines){ ctx.fillText(line, padX, y); y += size * lhK; }
+
+  const autorSize = Math.max(18, Math.round(size * 0.42));
+  ctx.font = `italic ${autorSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.fillText(autor ? `— ${autor}` : '', padX, y + 24);
+}
+
 /* ===================== Impressora / PDF ===================== */
 (function(){
-  const btn = document.getElementById('btn-impressora');
   const modal = document.getElementById('modal-impressora');
   const closeEls = modal?.querySelectorAll?.('[data-close-impressora]') || [];
   const lista = document.getElementById('imp-lista');
@@ -952,23 +745,29 @@
   const contadorEl = document.getElementById('imp-contador');
   const radioCols = () => Number(document.querySelector('input[name="imp-colunas"]:checked')?.value || 1);
 
-  let selected = new Map();         // id -> questão
-  let cursor = null;                // paginação
+  let selected = new Map();   // id -> questão
+  let cursor = null;          // paginação
   let isLoading = false;
   let hasMore = true;
   let initialFocusId = null;
+  let impObserver = null;
 
-  // Fonte de questões: usa API se existir, senão cache global.
+  function ensureSentinel(){
+    let sent = document.getElementById('imp-sentinela');
+    if (!sent) { sent = document.createElement('div'); sent.id = 'imp-sentinela'; sent.setAttribute('aria-hidden','true'); lista?.appendChild(sent); }
+    return sent;
+  }
+  function mountImpInfiniteScroll(){
+    if (!modal || !lista) return;
+    const root = modal.querySelector('.modal-body') || lista;
+    const sent = ensureSentinel();
+    if (impObserver) impObserver.disconnect();
+    impObserver = new IntersectionObserver((entries)=>{ if (entries.some(e=>e.isIntersecting)) loadMore(); }, { root, rootMargin: '600px 0px' });
+    impObserver.observe(sent);
+  }
+
   async function fetchQuestoes(nextCursor){
-    if (window.QUESTOES_FETCH_PAGE) {
-      return await window.QUESTOES_FETCH_PAGE(nextCursor);
-    }
-    if (window.QUESTOES_CACHE && Array.isArray(window.QUESTOES_CACHE)) {
-      const pageSize = 20;
-      const start = nextCursor ? nextCursor : 0;
-      const slice = window.QUESTOES_CACHE.slice(start, start+pageSize);
-      return { itens: slice, nextCursor: (start+pageSize<window.QUESTOES_CACHE.length) ? start+pageSize : null };
-    }
+    if (window.QUESTOES_FETCH_PAGE) return await window.QUESTOES_FETCH_PAGE(nextCursor);
     return { itens: [], nextCursor: null };
   }
 
@@ -976,47 +775,31 @@
     if (!modal) return;
     initialFocusId = focusId || null;
     modal.classList.remove('hidden');
-    if (lista) lista.scrollTop = 0;
+    if (lista) { lista.innerHTML = ''; lista.appendChild(loading); lista.appendChild(ensureSentinel()); lista.scrollTop = 0; }
     selected.clear();
     updateCounter();
     cursor = null;
     hasMore = true;
-    if (lista){
-      lista.innerHTML = '';
-      if (loading) lista.appendChild(loading);
-    }
     loadMore();
+    mountImpInfiniteScroll();
   }
 
-  function closeModal(){
-    if (!modal) return;
-    modal.classList.add('hidden');
-  }
+  function closeModal(){ if (!modal) return; modal.classList.add('hidden'); if (impObserver) impObserver.disconnect(); }
+  closeEls.forEach(el => el.addEventListener('click', closeModal));
+  modal?.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-  function updateCounter(){
-    if (contadorEl) contadorEl.textContent = selected.size;
-    if (btnExportar) btnExportar.disabled = selected.size === 0;
-  }
+  window.addEventListener('abrirImpressora', (e) => { const id = e?.detail?.id ?? null; openModal(id); });
+
+  function updateCounter(){ if (contadorEl) contadorEl.textContent = selected.size; if (btnExportar) btnExportar.disabled = selected.size === 0; }
 
   function makeCard(q){
-    const card = document.createElement('article');
-    card.className = 'imp-card';
-    card.dataset.id = q.id;
+    const article = document.createElement('article');
+    article.className = 'q imp-card';
+    article.dataset.id = q.id;
 
-    const h = document.createElement('h3');
-    h.textContent = q.titulo || `Questão ${q.id ?? ''}`.trim();
-
-    const meta = document.createElement('div');
-    meta.className = 'imp-metadados';
-    const parts = [];
-    if (q.disciplina) parts.push(q.disciplina);
-    if (q.banca) parts.push(q.banca);
-    if (q.ano) parts.push(q.ano);
-    meta.textContent = parts.join(' • ');
-
-    const enun = document.createElement('div');
-    enun.className = 'imp-enunciado';
-    enun.innerHTML = q.enunciado || q.texto || '';
+    const body = document.createElement('div');
+    body.className = 'imp-body';
+    body.innerHTML = q.enunciadoHtml || '';
 
     const sel = document.createElement('label');
     sel.className = 'imp-selecionar';
@@ -1026,20 +809,15 @@
       if (cb.checked) {
         if (selected.size >= 20) { cb.checked = false; return; }
         selected.set(q.id, q);
-      } else {
-        selected.delete(q.id);
-      }
+      } else selected.delete(q.id);
       updateCounter();
     });
     sel.appendChild(cb);
     sel.appendChild(document.createTextNode('Selecionar'));
 
-    card.appendChild(h);
-    if (meta.textContent) card.appendChild(meta);
-    card.appendChild(enun);
-    card.appendChild(sel);
-
-    return card;
+    article.appendChild(body);
+    article.appendChild(sel);
+    return article;
   }
 
   async function loadMore(){
@@ -1054,12 +832,10 @@
 
     if (loading?.parentNode) loading.remove();
     const frag = document.createDocumentFragment();
-    itens.forEach(q => frag.appendChild(makeCard(normalizeQuestao(q))));
+    itens.forEach(q => frag.appendChild(makeCard(q)));
     lista.appendChild(frag);
-    if (loading) {
-      lista.appendChild(loading);
-      loading.classList.add('hidden');
-    }
+    lista.appendChild(ensureSentinel());
+    if (loading) loading.classList.add('hidden');
     isLoading = false;
 
     if (initialFocusId != null) {
@@ -1069,40 +845,7 @@
     }
   }
 
-  function normalizeQuestao(q){
-    return {
-      id: q.id ?? q._id ?? q.codigo ?? q.uid,
-      titulo: q.titulo ?? q.cabecalho ?? q.header ?? null,
-      enunciado: q.enunciado ?? q.html ?? q.conteudo ?? q.texto ?? '',
-      disciplina: q.disciplina ?? q.area ?? null,
-      banca: q.banca ?? q.org ?? null,
-      ano: q.ano ?? q.data?.slice?.(0,4) ?? null,
-      alternativas: q.alternativas ?? q.alts ?? q.opcoes ?? null
-    };
-  }
-
-  if (lista){
-    lista.addEventListener('scroll', () => {
-      const nearBottom = lista.scrollTop + lista.clientHeight >= lista.scrollHeight - 200;
-      if (nearBottom) loadMore();
-    });
-  }
-
-  btn?.addEventListener('click', () => openModal(null));
-  closeEls.forEach(el => el.addEventListener('click', closeModal));
-  modal?.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-  btnExportar?.addEventListener('click', () => {
-    const colunas = radioCols();
-    const itens = Array.from(selected.values());
-    exportarPDF(itens, { colunas });
-  });
-
-  window.addEventListener('abrirImpressora', (e) => {
-    const id = e?.detail?.id ?? null;
-    openModal(id);
-  });
-
+  // Exportar PDF — sem meta, numeração no enunciado, fonte sans-serif, ajuste ±2px
   function exportarPDF(questoes, { colunas = 1 } = {}){
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF({ unit: 'mm', format: 'a4', putOnlyUsedFonts: true });
@@ -1113,96 +856,96 @@
     const gutter = 8;
     const contentW = pageW - margin*2;
     const colW = colunas === 2 ? (contentW - gutter)/2 : contentW;
-    const lineH = 5;
-    const fontSize = 12;
 
-    let x = margin;
-    let y = margin;
+    const BASE = 12, MINF = 10, MAXF = 14;
+    doc.setFont('helvetica','normal');
 
-    doc.setFont('Times','Normal');
-    doc.setFontSize(fontSize);
-
-    function addPage(){
-      doc.addPage();
-      x = margin; y = margin;
+    function measureQuestao(q, fontSize){
+      const lineH = fontSize * 0.42;
+      const enunLines = doc.splitTextToSize(stripHtml(q.enunciadoPlain || ''), colW);
+      const altLines = (Array.isArray(q.alternativas)? q.alternativas:[]).flatMap(a => doc.splitTextToSize(String(a), colW));
+      const totalLines = (enunLines.length > 0 ? enunLines.length : 1) + altLines.length + 1; // +1 separador
+      return totalLines * lineH + 3;
     }
 
-    function nextLine(h=lineH){
-      y += h;
+    function renderQuestao(q, fontSize, st){
+      const lineH = fontSize * 0.42;
+      doc.setFontSize(fontSize);
+
+      const enunLines = doc.splitTextToSize(stripHtml(q.enunciadoPlain || ''), colW);
+      const altLines = (Array.isArray(q.alternativas)? q.alternativas:[]).flatMap(a => doc.splitTextToSize(String(a), colW));
+
+      const first = `${q.index}. ${enunLines.shift() || ""}`;
+      doc.text(first, st.x, st.y); st.y += lineH;
+      enunLines.forEach(l => { doc.text(l, st.x, st.y); st.y += lineH; });
+      altLines.forEach(l => { doc.text(l, st.x, st.y); st.y += lineH; });
+
+      doc.setDrawColor(220);
+      doc.line(st.x, st.y, st.x + colW, st.y);
+      st.y += 3;
+    }
+
+    function newState(){ return { x: margin, y: margin, col: 1 }; }
+    function nextColumnOrPage(st){
+      if (colunas === 2 && st.col === 1) { st.x = margin + colW + gutter; st.y = margin; st.col = 2; }
+      else { doc.addPage(); doc.setFont('helvetica','normal'); st.x = margin; st.y = margin; st.col = 1; }
+    }
+
+    let st = newState();
+    const items = questoes.map((q, i) => ({ ...q, index: i+1 }));
+
+    for (const q of items){
+      let chosen = BASE;
+      let h = measureQuestao(q, chosen);
       const bottom = pageH - margin;
-      if (y > bottom) {
-        if (colunas === 2 && x === margin) {
-          x = margin + colW + gutter;
-          y = margin;
-        } else {
-          addPage();
+
+      if (st.y + h > bottom) {
+        for (let fs = BASE - 1; fs >= MINF; fs--){
+          if (st.y + measureQuestao(q, fs) <= bottom) { chosen = fs; h = measureQuestao(q, fs); break; }
+        }
+        if (st.y + h > bottom) {
+          nextColumnOrPage(st);
+          chosen = BASE;
+          h = measureQuestao(q, chosen);
+          for (let fs = BASE + 1; fs <= MAXF; fs++){
+            const hh = measureQuestao(q, fs);
+            if (margin + hh <= bottom) { chosen = fs; h = hh; } else break;
+          }
         }
       }
+
+      if (st.y + h > bottom) { nextColumnOrPage(st); chosen = Math.min(MAXF, BASE + 1); h = measureQuestao(q, chosen); }
+      renderQuestao(q, chosen, st);
     }
-
-    function writeWrapped(text, bold=false){
-      const cleaned = stripHtml(text);
-      doc.setFont('Times', bold ? 'Bold' : 'Normal');
-      const split = doc.splitTextToSize(cleaned, colW);
-      split.forEach((line, idx) => {
-        doc.text(line, x, y);
-        if (idx < split.length - 1) nextLine();
-      });
-      doc.setFont('Times','Normal');
-    }
-
-    questoes.forEach((q, idx) => {
-      const titulo = q.titulo ? `${idx+1}. ${q.titulo}` : `${idx+1}. Questão`;
-      if (!(x === margin && y === margin)) nextLine(3);
-      writeWrapped(titulo, true); nextLine();
-
-      const cleaned = stripHtml(q.enunciado || '');
-      writeWrapped(cleaned); nextLine();
-
-      if (Array.isArray(q.alternativas) && q.alternativas.length){
-        q.alternativas.forEach((alt) => {
-          writeWrapped(String(alt));
-          nextLine();
-        });
-      }
-
-      doc.setDrawColor(200);
-      doc.line(x, y, x + colW, y);
-      nextLine(3);
-    });
 
     doc.save('prova.pdf');
   }
 
   function stripHtml(html){
     try{
-      const tmp = document.createElement('div');
-      tmp.innerHTML = html || '';
+      const tmp = document.createElement('div'); tmp.innerHTML = html || '';
       const raw = tmp.textContent || tmp.innerText || '';
       return (window.he ? he.decode(raw) : raw).replace(/\s+\n/g,'\n').replace(/[ \t]+/g,' ').trim();
-    }catch(_){ return ''; }
+    }catch{ return ''; }
   }
+
+  btnExportar?.addEventListener('click', () => {
+    const colunas = radioCols();
+    const itens = Array.from(selected.values());
+    exportarPDF(itens, { colunas });
+  });
 })();
 
-/* =================== Helpers de UI locais =================== */
-function appendFrasesButton(actionsEl){
-  const btn = document.createElement('button');
-  btn.className = 'btn-icon-round';
-  btn.title = 'Frases';
-  btn.innerHTML = '<img src="assets/icons/frases.png" alt="Frases">';
-  btn.addEventListener('click', openFrasesModal);
-  btn.style.marginLeft = 'auto';
-  actionsEl.appendChild(btn);
-}
+/* =================== Botão Impressora em cada card =================== */
 function appendImpressoraButton(actionsEl, idx){
   const btn = document.createElement('button');
   btn.className = 'btn-icon-round';
   btn.title = 'Impressora';
-  btn.innerHTML = '<img src="assets/icons/print.png" alt="Impressora">';
+  btn.innerHTML = `
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+      <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2m-12 0v3h12v-3M8 14h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`;
   btn.addEventListener('click', () => {
-    if (!window.QUESTOES_CACHE || window.QUESTOES_CACHE.length !== (window.state?.cards?.length || 0)) {
-      // fallback benigno: tenta abrir mesmo assim
-    }
     window.dispatchEvent(new CustomEvent('abrirImpressora', { detail: { id: idx + 1 } }));
   });
   actionsEl.appendChild(btn);
