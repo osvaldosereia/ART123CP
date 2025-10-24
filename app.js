@@ -861,6 +861,7 @@ function renderFrasePNG(canvas, frase, autor, bg){
   // PDF: fontes menores, margens menores, gutter maior, enunciado TODO em negrito,
 // entrelinhas maiores, mais respiro antes das alternativas, alternativas menores,
 // separador forte e página final exclusiva com gabarito.
+// ===== PDF: justificado, "Questão N", enunciado normal, alternativas com recuo e badge =====
 function exportarPDF(questoes, { colunas = 1 } = {}){
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ unit: 'mm', format: 'a4', putOnlyUsedFonts: true });
@@ -868,25 +869,34 @@ function exportarPDF(questoes, { colunas = 1 } = {}){
   // Layout
   const pageW = doc.internal.pageSize.getWidth();
   const pageH = doc.internal.pageSize.getHeight();
-  const margin = 12;           // laterais/topo/base menores
-  const gutter = 12;           // espaço maior entre colunas
+  const margin = 12;            // laterais/topo/base
+  const gutter = 16;            // espaço entre colunas mais generoso
   const contentW = pageW - margin*2;
   const colW = colunas === 2 ? (contentW - gutter)/2 : contentW;
 
   // Tipografia
-  const ENUN_SIZE = 11;        // enunciado
-  const ALT_SIZE  = 10;        // alternativas um pouco menores
-  const ENUN_LH   = 5.8;       // entrelinhas levemente maiores
-  const ALT_LH    = 5.4;
-  const GAP_ENUN_ALTS = 4;     // respiro entre enunciado e alternativas
-  const BLOCK_TOP  = 4;        // respiro antes de cada questão
-  const SEP_LINE_W = 0.7;      // separador visível
-  const SEP_GAP    = 6;        // respiro após separador
+  const TITLE_SIZE = 11.5;      // "Questão N"
+  const ENUN_SIZE  = 11;        // enunciado normal
+  const ALT_SIZE   = 10;        // alternativas ligeiramente menores
+  const ENUN_LH    = 6.0;       // entrelinhas um pouco maiores
+  const ALT_LH     = 5.6;
+
+  // Espaçamentos
+  const BLOCK_TOP     = 5;      // respiro antes do bloco
+  const GAP_ENUN_ALTS = 5;      // respiro entre enunciado e alternativas
+  const ALT_GAP       = 2.5;    // respiro extra entre alternativas
+  const SEP_LINE_W    = 0.7;    // separador visível
+  const SEP_GAP       = 7;
+
+  // Badge das alternativas
+  const ALT_INDENT = 2.5;       // recuo do bloco das alternativas
+  const BADGE_R    = 3.2;       // raio do círculo
+  const BADGE_PAD  = 2.5;       // espaço entre círculo e texto
 
   doc.setFont('helvetica','normal');
   doc.setTextColor(0,0,0);
 
-  // Estado
+  // Estado de escrita
   const state = { x: margin, y: margin, col: 1 };
 
   function newColumnOrPage(){
@@ -905,26 +915,72 @@ function exportarPDF(questoes, { colunas = 1 } = {}){
     const bottom = pageH - margin;
     if (state.y + (lines * lh) > bottom) newColumnOrPage();
   }
+
+  function normalizeAltList(q){
+    const arr = Array.isArray(q.alternativas) ? q.alternativas : [];
+    return arr.map((t, i) => {
+      const letra = String.fromCharCode(65 + i);
+      const clean = String(t).replace(/^[A-E]\)\s*/i,'').trim();
+      return { letra, texto: clean };
+    });
+  }
+
   function stripHtml(html){
     try{
       const tmp = document.createElement('div');
       tmp.innerHTML = html || '';
       const raw = tmp.textContent || tmp.innerText || '';
-      return (window.he ? he.decode(raw) : raw)
-        .replace(/\s+\n/g,'\n').replace(/[ \t]+/g,' ').trim();
+      return (window.he ? he.decode(raw) : raw).replace(/\s+\n/g,'\n').replace(/[ \t]+/g,' ').trim();
     }catch{ return ''; }
   }
-  const split = (t, w) => doc.splitTextToSize(t, w);
 
-  function writeLines(lines, size, lh, style='normal'){
-    doc.setFont('helvetica', style);
+  // --- Quebra e desenho justificado ---
+  function breakLines(text, width){
+    const words = String(text||'').split(/\s+/).filter(Boolean);
+    const lines = [];
+    let line = [];
+    const spaceW = doc.getTextWidth(' ');
+    function lineWidth(ws){
+      if (ws.length === 0) return 0;
+      const wordsW = ws.reduce((acc,w)=>acc + doc.getTextWidth(w), 0);
+      return wordsW + spaceW * (ws.length - 1);
+    }
+    for(const w of words){
+      if (line.length === 0){ line = [w]; continue; }
+      const test = [...line, w];
+      if (lineWidth(test) <= width) line.push(w);
+      else { lines.push(line); line = [w]; }
+    }
+    if (line.length) lines.push(line);
+    return lines;
+  }
+  function drawJustified(text, x, y, width, size, lh){
     doc.setFontSize(size);
-    for (const ln of lines){
+    // mede usando o tamanho atual
+    const lines = breakLines(text, width);
+    const spaceW = doc.getTextWidth(' ');
+    for (let i=0;i<lines.length;i++){
       ensureSpace(1, lh);
-      doc.text(ln, state.x, state.y);
+      const words = lines[i];
+      const last = (i === lines.length - 1);
+      if (words.length === 1 || last){
+        // última ou linha com uma palavra: esquerda normal
+        doc.text(words.join(' '), x, state.y);
+      } else {
+        // justificar: distribuir espaço extra
+        const wordsW = words.reduce((acc,w)=>acc + doc.getTextWidth(w), 0);
+        const gaps = words.length - 1;
+        const extra = (width - wordsW) / gaps;
+        let cx = x;
+        for (let j=0;j<words.length;j++){
+          doc.text(words[j], cx, state.y);
+          if (j < words.length-1) cx += doc.getTextWidth(words[j]) + spaceW + extra;
+        }
+      }
       state.y += lh;
     }
   }
+
   function separator(){
     ensureSpace(1, 1);
     doc.setDrawColor(0);
@@ -932,38 +988,58 @@ function exportarPDF(questoes, { colunas = 1 } = {}){
     doc.line(state.x, state.y, state.x + colW, state.y);
     state.y += SEP_GAP;
   }
-  function normalizeAltList(q){
-    const arr = Array.isArray(q.alternativas) ? q.alternativas : [];
-    return arr.map((t, i) => {
-      const letra = String.fromCharCode(65 + i);
-      const clean = String(t).replace(/^[A-E]\)\s*/i,'');
-      return `${letra}) ${clean}`;
-    });
-  }
 
-  const answerKey = []; // {n, g}
+  // Página final: gabarito
+  const answerKey = []; // {n,g}
 
   function renderQuestao(q, n){
-  const enunPlain = String(q.enunciadoPlain || "");
-    const enunLines = split(enunPlain, colW);
-    const altsLines = normalizeAltList(q).flatMap(a => split(a, colW));
-
     // topo do bloco
     ensureSpace(Math.ceil(BLOCK_TOP / ENUN_LH), ENUN_LH);
     state.y += BLOCK_TOP;
 
-    // enunciado TODO em negrito (primeira linha com numeração)
-    const first = `${n}. ${enunLines.shift() ?? ''}`;
-    writeLines([first], ENUN_SIZE, ENUN_LH, 'bold');
-    if (enunLines.length) writeLines(enunLines, ENUN_SIZE, ENUN_LH, 'bold');
+    // Título "Questão N"
+    doc.setFont('helvetica','bold');
+    doc.setFontSize(TITLE_SIZE);
+    doc.text(`Questão ${n}`, state.x, state.y);
+    state.y += ENUN_LH;
+
+    // Enunciado normal, justificado
+    doc.setFont('helvetica','normal');
+    drawJustified(q.enunciadoPlain ? String(q.enunciadoPlain) : stripHtml(q.enunciado),
+                  state.x, state.y, colW, ENUN_SIZE, ENUN_LH);
 
     // respiro antes das alternativas
     state.y += GAP_ENUN_ALTS;
 
-    // alternativas
-    if (altsLines.length) writeLines(altsLines, ALT_SIZE, ALT_LH, 'normal');
+    // Alternativas com recuo, badge circular e texto justificado
+    const alts = normalizeAltList(q);
+    const textStartX = state.x + ALT_INDENT + BADGE_R*2 + BADGE_PAD;
+    const textWidth  = colW - (textStartX - state.x);
 
-    // separador
+    for (let i=0;i<alts.length;i++){
+      ensureSpace(1, ALT_LH);
+
+      // círculo + letra
+      const cy = state.y - ALT_SIZE*0.2; // leve ajuste vertical
+      const cx = state.x + ALT_INDENT + BADGE_R;
+      doc.setDrawColor(0);
+      doc.setLineWidth(0.4);
+      doc.circle(cx, cy, BADGE_R);
+      doc.setFont('helvetica','bold');
+      doc.setFontSize(ALT_SIZE-1);
+      // centraliza a letra
+      const lw = doc.getTextWidth(alts[i].letra);
+      doc.text(alts[i].letra, cx - lw/2, cy + (ALT_SIZE*0.35));
+
+      // texto da alternativa, um pouco “mais leve” que o título mas claro
+      doc.setFont('helvetica','normal');
+      drawJustified(alts[i].texto, textStartX, state.y, textWidth, ALT_SIZE, ALT_LH);
+
+      // respiro extra entre alternativas
+      state.y += ALT_GAP;
+    }
+
+    // separador entre questões
     separator();
 
     // gabarito
@@ -971,21 +1047,20 @@ function exportarPDF(questoes, { colunas = 1 } = {}){
     answerKey.push({ n, g });
   }
 
-  // Render
+  // Render de todas
   const items = questoes.map((q, i) => ({ ...q, _n: i+1 }));
   items.forEach(q => renderQuestao(q, q._n));
 
   // Página final exclusiva: Gabarito
   doc.addPage();
+  doc.setFont('helvetica','bold'); doc.setFontSize(13);
   const title = 'Gabarito';
-  doc.setFont('helvetica','bold'); doc.setFontSize(12);
   const cx = pageW / 2;
   const tW = doc.getTextWidth(title);
-  const topY = margin;
-  doc.text(title, cx - tW/2, topY);
+  doc.text(title, cx - tW/2, margin);
 
   doc.setFont('helvetica','normal'); doc.setFontSize(11);
-  const keyTop = topY + 8;
+  const keyTop = margin + 8;
   const keyColGap = 20;
   const keyColW = (contentW - keyColGap) / 2;
   const keyLH = 6;
