@@ -1100,7 +1100,7 @@ async function exportarPDF_PURO(questoes){
   const PAGE_W = doc.internal.pageSize.getWidth();
   const PAGE_H = doc.internal.pageSize.getHeight();
 
-  const M = 10;                       // margens iguais 10mm
+  const M = 8;                       // margens iguais 10mm
   const TOP_EXTRA = 3;                // respiro topo
   const COLS = Number(document.querySelector('input[name="imp-colunas"]:checked')?.value || 1);
   const GAP  = COLS === 2 ? 10 : 0;   // margem entre colunas
