@@ -1184,7 +1184,7 @@ btnExportar?.addEventListener('click', () => {
   const itens = Array.from(selected.values());
   exportarPDF(itens, { colunas });
 });
-
+})();
 
 
 
