@@ -66,30 +66,36 @@
 
   /* ------------------------------ Parser ------------------------------ */
   function parseTxt(raw) {
-    if (!raw) return [];
-    const blocks = raw.split("-----").map(s => s.trim()).filter(Boolean);
-    const cards = [];
+  if (!raw) return [];
+  const blocks = raw.split("-----").map(s => s.trim()).filter(Boolean);
+  const out = [];
 
-    for (const block of blocks) {
-      const lines = block.split("\n").map(l => l.trim()).filter(Boolean);
-      let referencias = "", enunciado = "", gabarito = "";
-      const alternativas = [], temas = [];
+  for (const block of blocks) {
+    const lines = block
+      .split("\n")
+      .map(l => l.replace(/^\uFEFF?/, "").trim())
+      .filter(l => l.length);
 
-      for (const L0 of lines) {
-        const L = L0.replace(/^\uFEFF?/, ""); // remove BOM se houver
-        if (/^\*{5}\s/.test(L)) { referencias = L.replace(/^\*{5}\s*/, "").trim(); continue; }          // ***** referências
-        if (/^\*{3}\s/.test(L)) { const g = L.replace(/^\*{3}\s*/, "").trim();                           // *** gabarito
-          const m = /Gabarito\s*:\s*([A-Z])/i.exec(g); gabarito = m ? m[1].toUpperCase() : ""; continue; }
-        if (/^\*{4}\s/.test(L)) { const t = L.replace(/^\*{4}\s*/, "").trim();                           // **** temas
-          t.split(",").forEach(x => { const v = (x || "").trim(); if (v) temas.push(v); }); continue; }
-        if (/^\*{2}\s/.test(L)) { alternativas.push(L.replace(/^\*{2}\s*/, "").trim()); continue; }      // ** alternativas
-        if (/^\*\s/.test(L)) { const part = L.replace(/^\*\s*/, "").trim();                              // * enunciado
-          enunciado = enunciado ? (enunciado + " " + part) : part; }
-      }
-      cards.push({ referencias, enunciado, alternativas, gabarito, temas });
+    let referencias = "", enunciado = "", gabarito = "";
+    const alternativas = [], temas = [];
+    let inEnunciado = false;
+
+    for (const L of lines) {
+      if (/^\*{5}\s/.test(L)) { referencias = L.replace(/^\*{5}\s*/, "").trim(); inEnunciado = false; continue; }
+      if (/^\*{4}\s/.test(L)) { L.replace(/^\*{4}\s*/, "").split(",").forEach(t => { t = t.trim(); if (t) temas.push(t); }); inEnunciado = false; continue; }
+      if (/^\*{3}\s/.test(L)) { const m = /Gabarito\s*:\s*([A-Z])/i.exec(L.replace(/^\*{3}\s*/, "")); gabarito = m ? m[1].toUpperCase() : ""; inEnunciado = false; continue; }
+      if (/^\*{2}\s/.test(L)) { alternativas.push(L.replace(/^\*{2}\s*/, "").trim()); inEnunciado = false; continue; }
+      if (/^\*\s/.test(L))   { const part = L.replace(/^\*\s*/, "").trim(); enunciado = enunciado ? enunciado + " " + part : part; inEnunciado = true; continue; }
+
+      // linha sem marcador: continua o enunciado atual
+      if (inEnunciado) enunciado += (enunciado ? " " : "") + L;
     }
-    return cards;
+
+    out.push({ referencias, enunciado, alternativas, gabarito, temas });
   }
+  return out;
+}
+
 
   /* ------ Fonte paginada p/ modal Impressora: segue filtros e ordem atual ------ */
   (function exposePagedSource(){
