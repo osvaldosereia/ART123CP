@@ -954,7 +954,7 @@ function renderFrasePNG(canvas, frase, autor, bg){
   }
 
   // ---------- Exportação PDF com ajustes visuais ----------
-  function exportarPDF(questoes, { colunas = 1 } = {}) {
+function exportarPDF(questoes, { colunas = 1 } = {}) {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ unit: 'mm', format: 'a4', putOnlyUsedFonts: true });
 
@@ -974,12 +974,12 @@ function renderFrasePNG(canvas, frase, autor, bg){
   const BASE_SIZE = 9;      // enunciado e alternativas
   const BASE_LH   = 4.6;    // entrelinha
   const GAP_BLOCK_TOP   = 3.0;
-  const GAP_TITLE_ENUN  = 3.2; // mais respiro entre título e enunciado
+  const GAP_TITLE_ENUN  = 3.6; // mais respiro entre "Questão X" e enunciado
   const GAP_ENUN_ALTS   = 3.0;
   const GAP_ALT         = 2.0;
 
   // Prefixo “[ A ] - ” das alternativas
-  const PREF_GAP = 2.0;  // espaço após o prefixo
+  const PREF_GAP = 1.0;  // texto mais próximo do " - "
 
   doc.setFont('helvetica', 'normal'); doc.setTextColor(0,0,0);
 
@@ -1056,18 +1056,21 @@ function renderFrasePNG(canvas, frase, autor, bg){
     pushLine(true);
     return lines;
   }
+  // imprime com quebra por linha respeitando colunas/páginas
   function drawJustified(x, y, lines, lh){
     const spaceW = doc.getTextWidth(' ');
     let yy = y;
     lines.forEach(ln=>{
+      ensureLines(1, lh);
       let xx = x;
       if (!ln.justify){
-        ln.words.forEach((w,j)=>{ doc.text(w, xx, yy); xx += doc.getTextWidth(w) + (j<ln.words.length-1?spaceW:0); });
+        ln.words.forEach((w,j)=>{ doc.text(w, xx, s.y); xx += doc.getTextWidth(w) + (j<ln.words.length-1?spaceW:0); });
       }else{
         const add = ln.extra/ln.gaps;
-        ln.words.forEach((w,j)=>{ doc.text(w, xx, yy); xx += doc.getTextWidth(w) + (j<ln.words.length-1?(spaceW+add):0); });
+        ln.words.forEach((w,j)=>{ doc.text(w, xx, s.y); xx += doc.getTextWidth(w) + (j<ln.words.length-1?(spaceW+add):0); });
       }
-      yy += lh;
+      s.y += lh;
+      yy = s.y;
     });
     return yy;
   }
@@ -1094,12 +1097,12 @@ function renderFrasePNG(canvas, frase, autor, bg){
     doc.setFont('helvetica','normal'); const w2 = doc.getTextWidth(' ] - ');
     return w1 + wL + w2 + PREF_GAP;
   }
-  function drawPrefix(x, y, letter){
-    doc.setFont('helvetica','normal'); doc.text('[ ', x, y);
+  function drawPrefix(x, letter){
+    doc.setFont('helvetica','normal'); doc.text('[ ', x, s.y);
     const xL = x + doc.getTextWidth('[ ');
-    doc.setFont('helvetica','bold');  doc.text(letter, xL, y);
+    doc.setFont('helvetica','bold');  doc.text(letter, xL, s.y);
     const xR = xL + doc.getTextWidth(letter);
-    doc.setFont('helvetica','normal'); doc.text(' ] - ', xR, y);
+    doc.setFont('helvetica','normal'); doc.text(' ] - ', xR, s.y);
   }
 
   function renderAlternatives(rawAlts){
@@ -1110,23 +1113,18 @@ function renderFrasePNG(canvas, frase, autor, bg){
       const letter = String.fromCharCode(65+i);
       const clean = String(alt).replace(/^[A-E]\)\s*/i,'');
       const pw = prefixWidth(letter);
-
-      // layout com indent fixo (igual em todas as linhas da alternativa)
       const lines = layoutLines(clean, TEXT_W - pw);
-      ensureLines(lines.length, BASE_LH);
 
-      // primeira linha: desenha prefixo e texto; demais: só texto com o mesmo recuo
-      const xText = s.x + SAFE_L + pw;
-      let yy = s.y;
+      // primeira linha: prefixo + texto
+      drawPrefix(s.x + SAFE_L, letter);
+      s.y = drawJustified(s.x + SAFE_L + pw, s.y, [lines[0]], BASE_LH);
 
-      // prefixo na primeira linha
-      drawPrefix(s.x + SAFE_L, yy, letter);
+      // continua demais linhas com mesmo recuo, quebrando entre colunas/páginas se preciso
+      if (lines.length > 1){
+        s.y = drawJustified(s.x + SAFE_L + pw, s.y, lines.slice(1), BASE_LH);
+      }
 
-      // desenha linhas justificadas a partir do recuo
-      yy = drawJustified(xText, yy, lines, BASE_LH);
-
-      // avança bloco
-      s.y = yy + GAP_ALT;
+      s.y += GAP_ALT;
     });
   }
 
@@ -1138,9 +1136,9 @@ function renderFrasePNG(canvas, frase, autor, bg){
     doc.setFont('helvetica','bold'); doc.setFontSize(BASE_SIZE);
     ensureLines(1, BASE_LH);
     doc.text(`Questão ${n}`, s.x + SAFE_L, s.y);
-    s.y += GAP_TITLE_ENUN; // mais respiro antes do enunciado
+    s.y += GAP_TITLE_ENUN;
 
-    // enunciado justificado
+    // enunciado justificado com quebra por linha/coluna
     doc.setFont('helvetica','normal'); doc.setFontSize(BASE_SIZE);
     const enun = q.enunciadoPlain ? String(q.enunciadoPlain) : stripHtml(q.enunciado);
     const lines = layoutLines(enun, TEXT_W);
@@ -1181,12 +1179,12 @@ function renderFrasePNG(canvas, frase, autor, bg){
   doc.save('prova.pdf');
 }
 
-  btnExportar?.addEventListener('click', () => {
-    const colunas = radioCols();
-    const itens = Array.from(selected.values());
-    exportarPDF(itens, { colunas });
-  });
-})();
+btnExportar?.addEventListener('click', () => {
+  const colunas = radioCols();
+  const itens = Array.from(selected.values());
+  exportarPDF(itens, { colunas });
+});
+
 
 
 
