@@ -18,7 +18,6 @@
         <div id="disciplina-select" class="select select--single"></div>
         <div id="temas-multiselect" class="multiselect"></div>
       </div>
-      <!-- sem botões extras na topbar -->
     </div>
   </header>
 
@@ -53,13 +52,13 @@
 
   <!-- MODAL IMPRESSORA -->
   <div id="modal-impressora" class="modal hidden" aria-hidden="true">
-    <div class="modal-backdrop" data-close-impressora></div>
+    <div class="modal-backdrop" data-close-impressora="true"></div>
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="imp-titulo">
       <div class="modal-head">
         <div class="modal-head__top" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
           <h2 id="imp-titulo">Selecionar questões para PDF</h2>
           <div class="modal-actions">
-            <button class="btn btn-ghost" type="button" data-close-impressora>Fechar</button>
+            <button class="btn btn-ghost" type="button" data-close-impressora="true">Fechar</button>
           </div>
         </div>
         <div class="imp-headbar" style="margin-top:6px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between">
@@ -82,6 +81,9 @@
       </div>
     </div>
   </div>
+
+  <!-- RAIZ OCULTA PARA RENDERIZAÇÃO DO PDF VIA doc.html/html2canvas -->
+  <div id="pdf-root" style="position:fixed;left:-10000px;top:0;visibility:hidden;width:794px;"></div>
 
   <script>
     // ?txt=data/direito-penal/penal1.txt  |  default: data/direito-penal/penal1.txt
