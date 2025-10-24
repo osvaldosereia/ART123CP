@@ -782,32 +782,25 @@ if (btnExportar && btnExportar.parentNode) {
 // --- Navegação rápida entre selecionadas ---
 // === Navegação rápida entre selecionadas — lateral esquerda do modal ===
 
-// contêiner lateral dentro do modal da impressora
-const impNav = document.createElement('div');
-impNav.id = 'imp-nav';
-if (modal) modal.appendChild(impNav);
 
-// botões pequenos só com ícone. Não usar .btn
-// === Botões de navegação por selecionadas (inline, na mesma linha dos botões) ===
+// --- Navegação rápida entre selecionadas (setas inline na barra do modal) ---
 const btnPrevSel = document.createElement('button');
 btnPrevSel.type = 'button';
 btnPrevSel.className = 'imp-nav-btn';
 btnPrevSel.setAttribute('aria-label', 'Selecionada anterior');
-btnPrevSel.innerHTML = '▲';
+btnPrevSel.textContent = '▲';
 
 const btnNextSel = document.createElement('button');
 btnNextSel.type = 'button';
 btnNextSel.className = 'imp-nav-btn';
 btnNextSel.setAttribute('aria-label', 'Próxima selecionada');
-btnNextSel.innerHTML = '▼';
+btnNextSel.textContent = '▼';
 
-// inserir setas antes de "Criar Prova" e manter tudo na mesma linha
+// inserir setas antes de "Criar Prova" e separar "Criar Prova" de "Exportar"
 if (btnExportar && btnExportar.parentNode) {
   const bar = btnExportar.parentNode;
   bar.insertBefore(btnPrevSel, btnCriar);
   bar.insertBefore(btnNextSel, btnCriar);
-
-  // separa "Criar Prova" de "Exportar PDF"
   btnCriar.style.marginRight = '8px';
   btnExportar.style.marginLeft = '8px';
 }
@@ -827,7 +820,7 @@ function alignTop(el){
   if (!root || !el) return;
   const rr = root.getBoundingClientRect();
   const er = el.getBoundingClientRect();
-  const delta = er.top - rr.top; // alinhar topo do card ao topo visível
+  const delta = er.top - rr.top;
   root.scrollTo({ top: (root.scrollTop || 0) + delta, behavior: 'smooth' });
 }
 function jumpToSelected(dir){
@@ -835,7 +828,6 @@ function jumpToSelected(dir){
   const viewTop = root?.scrollTop || 0;
   const els = selectedEls();
   if (!els.length) return;
-
   let target = null;
   if (dir > 0){
     target = els.find(el => el.offsetTop > viewTop + 2) || els[0];
@@ -850,12 +842,47 @@ function updateNavButtons(){
   btnPrevSel.disabled = !any;
   btnNextSel.disabled = !any;
 }
-
 btnPrevSel.addEventListener('click', () => jumpToSelected(-1));
 btnNextSel.addEventListener('click', () => jumpToSelected(1));
+// fim das setas
 
-// (resto do arquivo permanece igual)
+async function getAllItems(){
+  if (allItemsCache) return allItemsCache.slice();
+  let cur = null, acc = [];
+  while (true){
+    const page = await fetchQuestoes(cur);
+    const itens = page?.itens || [];
+    acc = acc.concat(itens);
+    cur = page?.nextCursor ?? null;
+    if (cur == null) break;
+  }
+  allItemsCache = acc.slice();
+  return acc;
+}
 
+function pickCountsByTema(buckets, total){
+  const temas = Object.keys(buckets);
+  if (temas.length === 0) return {};
+  const counts = {};
+  const N = Math.min(total, Object.values(buckets).reduce((s,a)=>s+a.length,0));
+
+  // pelo menos 1 por tema, se possível
+  temas.forEach(t => counts[t] = Math.min(1, buckets[t].length));
+  let used = temas.reduce((s,t)=>s+counts[t],0);
+
+  // proporcional ao tamanho do bucket
+  if (used < N){
+    const totalAvail = temas.reduce((s,t)=>s + Math.max(buckets[t].length - counts[t], 0), 0);
+    if (totalAvail > 0){
+      temas.forEach(t => {
+        if (used >= N) return;
+        const room = Math.max(buckets[t].length - counts[t], 0);
+        const share = Math.floor((room / totalAvail) * (N - used));
+        const add = Math.min(share, room);
+        counts[t] += add; used += add;
+      });
+    }
+  }
 
   // round-robin para completar sobras
   let k = 0;
@@ -866,6 +893,7 @@ btnNextSel.addEventListener('click', () => jumpToSelected(1));
   }
   return counts;
 }
+
 
 function shuffleInPlace(arr){
   for (let i=arr.length-1;i>0;i--){
