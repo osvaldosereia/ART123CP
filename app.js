@@ -829,9 +829,7 @@ if (btnExportar && btnExportar.parentNode){
   btnExportar.parentNode.insertBefore(btnPrevSel, btnCriar);
   btnExportar.parentNode.insertBefore(btnNextSel, btnExportar);
 }
-let selected = new Map();   // id -> questão
-// ...
-updateNavButtons();
+// não declarar `selected` aqui e não chamar `updateNavButtons()` aqui
 
 
 async function getAllItems(){
