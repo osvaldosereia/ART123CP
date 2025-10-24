@@ -857,45 +857,43 @@ function renderFrasePNG(canvas, frase, autor, bg){
     }
   }
 
-  // PDF: margens iguais 10mm, gutter maior, separador pontilhado,
-  // alinhamento à esquerda, círculos menores sem contorno,
-  // barras e espaçamentos ajustados e consistentes.
+  // PDF: margens iguais 10mm, gutter maior, divisor de colunas tracejado,
+  // alinhamento à esquerda, círculos menores sem contorno, tudo alinhado.
   function exportarPDF(questoes, { colunas = 1 } = {}) {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF({ unit: 'mm', format: 'a4', putOnlyUsedFonts: true });
 
-    // --- Geometria A4 e áreas úteis ---
+    // Geometria A4
     const pageW = doc.internal.pageSize.getWidth();
     const pageH = doc.internal.pageSize.getHeight();
-    const margin = 10;                  // 10mm em TODAS as bordas
-    const gutter = colunas === 2 ? 16 : 0; // espaço entre colunas
+    const margin = 10;                       // 10mm em todas as bordas
+    const gutter = colunas === 2 ? 18 : 0;   // um pouco maior entre colunas
     const contentW = pageW - margin * 2;
     const colW = colunas === 2 ? (contentW - gutter) / 2 : contentW;
 
-    // “safe paddings” para não encostar em bordas nem no divisor
-    const SAFE_L = 1.5;                 // margem interna esquerda
-    const SAFE_R = 1.5;                 // margem interna direita
+    // Safe paddings para não encostar nas bordas e no divisor
+    const SAFE_L = 2.0;
+    const SAFE_R = 2.0;
     const TEXT_W = colW - SAFE_L - SAFE_R;
 
-    // --- Tipografia / espaçamentos ---
-    const ENUN_SIZE = 9;                // -1px em relação ao anterior
-    const ALT_SIZE  = 9;                // alternativas levemente menores
-    const ENUN_LH   = 5.2;
+    // Tipografia e espaçamentos
+    const ENUN_SIZE = 8;     // 1px menor
+    const ALT_SIZE  = 9;
+    const ENUN_LH   = 5.0;
     const ALT_LH    = 5.0;
-    const GAP_BLOCK_TOP   = 3.2;
+    const GAP_BLOCK_TOP   = 3.0;
     const GAP_ENUN_ALTS   = 3.4;
     const GAP_ALT         = 2.4;
     const SEP_LINE_W      = 0.45;
-    const SEP_AFTER_GAP   = 3.2;
+    const SEP_AFTER_GAP   = 3.0;
 
-    // Bolas das alternativas: menores, sem contorno, fundo ~15% cinza
-    const DOT_R = 2.1;
-    const DOT_FILL = 230;               // mais claro que antes
+    // Bolas das alternativas: menores, sem contorno, cinza claro
+    const DOT_R = 1.9;
+    const DOT_FILL = 235;
 
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
 
-    // Estado do fluxo
     const s = { x: margin, y: margin, col: 1 };
 
     function newColumnOrPage() {
@@ -913,7 +911,7 @@ function renderFrasePNG(canvas, frase, autor, bg){
     }
     const bottom = () => pageH - margin;
     function ensureLines(n, lh) { if (s.y + n * lh > bottom()) newColumnOrPage(); }
-    function split(text, width) { return doc.splitTextToSize(text, width); }
+    const split = (t, w) => doc.splitTextToSize(t, w);
     function stripHtml(html){
       try{
         const tmp = document.createElement('div'); tmp.innerHTML = html || '';
@@ -922,7 +920,6 @@ function renderFrasePNG(canvas, frase, autor, bg){
       }catch{ return ''; }
     }
 
-    // divisor de colunas tracejado e com margem de segurança já respeitada pelo TEXT_W
     function drawColumnDivider() {
       if (colunas !== 2) return;
       const cx = margin + colW + gutter / 2;
@@ -932,11 +929,10 @@ function renderFrasePNG(canvas, frase, autor, bg){
       for (let y = margin; y < pageH - margin; y += 3) {
         doc.line(cx, y, cx, Math.min(y + 1.2, pageH - margin));
       }
-      doc.setLineDash([]); // reset
+      doc.setLineDash([]);
       doc.setDrawColor(0);
     }
 
-    // linha separadora de questões
     function drawSeparator() {
       ensureLines(1, 1);
       doc.setDrawColor(0);
@@ -946,7 +942,7 @@ function renderFrasePNG(canvas, frase, autor, bg){
       s.y += SEP_AFTER_GAP;
     }
 
-    // alternativa com bolinha alinhada ao topo da primeira linha + linha tracejada entre alternativas
+    // Alternativas alinhadas à esquerda, sem linha entre alternativas
     function renderAlternatives(rawAlts) {
       const alts = Array.isArray(rawAlts) ? rawAlts : [];
       doc.setFont('helvetica', 'normal');
@@ -955,54 +951,35 @@ function renderFrasePNG(canvas, frase, autor, bg){
       alts.forEach((t, i) => {
         const letter = String.fromCharCode(65 + i);
         const clean = String(t).replace(/^[A-E]\)\s*/i, '');
-        const txt = `${letter}) ${clean}`;
+        const lines = split(clean, TEXT_W - (DOT_R * 2 + 3));
 
-        const xText = s.x + SAFE_L + DOT_R * 2 + 3;     // recuo do texto
-        const usableW = TEXT_W - (DOT_R * 2 + 3);       // largura de quebra
-        const lines = split(txt, usableW);
-
-        // Garante espaço para todas as linhas desta alternativa
         ensureLines(lines.length, ALT_LH);
 
-        // y da primeira linha (baseline)
         const y0 = s.y;
-
-        // bolinha: topo da bolinha alinhado ao topo da linha (aproximação)
-        // topo da "linha" ~ y0 - ALT_LH*0.8. Queremos (cy - DOT_R) ≈ y0 - ALT_LH*0.8
-        const cy = y0 - ALT_LH * 0.8 + DOT_R;
         const cx = s.x + SAFE_L + DOT_R + 1.2;
+        const cy = y0 - ALT_LH * 0.82 + DOT_R;   // topo da bola ≈ topo da linha
 
+        // bola
         doc.setFillColor(DOT_FILL, DOT_FILL, DOT_FILL);
-        doc.circle(cx, cy, DOT_R, 'F'); // sem contorno
+        doc.circle(cx, cy, DOT_R, 'F');
 
-        // letra centralizada na bolinha
+        // letra centralizada na bola
+        const letterSize = Math.min(ALT_SIZE + 1, DOT_R * 1.9);
         doc.setFont('helvetica', 'bold');
-        doc.setFontSize(ALT_SIZE + 0.8);
-        // jsPDF não tem baseline=middle. Compensação vertical:
-        const ly = cy + (ALT_SIZE * 0.32);
+        doc.setFontSize(letterSize);
+        const ly = cy + (letterSize * 0.33);
         doc.text(letter, cx, ly, { align: 'center' });
 
         // texto da alternativa
+        const xText = Math.ceil(s.x + SAFE_L + DOT_R * 2 + 3);
         doc.setFont('helvetica', 'normal');
         doc.setFontSize(ALT_SIZE);
         lines.forEach(ln => {
-          // remove "A) " da linha, já está na bolinha
-          doc.text(ln.replace(/^[A-E]\)\s*/i, ''), xText, s.y);
+          doc.text(ln, xText, s.y);
           s.y += ALT_LH;
         });
 
-        // linha tracejada fina entre alternativas
-        if (i < alts.length - 1) {
-          doc.setDrawColor(170);
-          doc.setLineWidth(0.2);
-          doc.setLineDash([1.5, 1.5], 0);
-          const x1 = s.x + SAFE_L + DOT_R * 2 + 3;
-          const x2 = s.x + colW - SAFE_R;
-          doc.line(x1, s.y - GAP_ALT * 0.5, x2, s.y - GAP_ALT * 0.5);
-          doc.setLineDash([]); doc.setDrawColor(0);
-        }
-
-        s.y += GAP_ALT; // respiro entre alternativas
+        s.y += GAP_ALT;
       });
     }
 
@@ -1010,7 +987,6 @@ function renderFrasePNG(canvas, frase, autor, bg){
       const enunPlain = q.enunciadoPlain ? String(q.enunciadoPlain) : stripHtml(q.enunciado);
       const enunLines = split(enunPlain, TEXT_W);
 
-      // topo do bloco
       ensureLines(Math.ceil(GAP_BLOCK_TOP / ENUN_LH), ENUN_LH);
       s.y += GAP_BLOCK_TOP;
 
@@ -1030,22 +1006,18 @@ function renderFrasePNG(canvas, frase, autor, bg){
         s.y += ENUN_LH;
       });
 
-      // Espaço antes das alternativas
       s.y += GAP_ENUN_ALTS;
 
-      // Alternativas
       renderAlternatives(q.alternativas);
 
-      // Separador final
       drawSeparator();
     }
 
-    // Início
     drawColumnDivider();
     const itens = questoes.map((q, i) => ({ ...q, _n: i + 1 }));
     itens.forEach(q => renderQuestao(q, q._n));
 
-    // Gabarito em página isolada
+    // Gabarito
     doc.addPage(); drawColumnDivider();
     doc.setFont('helvetica', 'bold'); doc.setFontSize(11);
     const title = 'Gabarito';
@@ -1069,7 +1041,6 @@ function renderFrasePNG(canvas, frase, autor, bg){
     doc.save('prova.pdf');
   }
 
-
   function stripHtml(html){
     try{
       const tmp = document.createElement('div'); tmp.innerHTML = html || '';
@@ -1084,6 +1055,7 @@ function renderFrasePNG(canvas, frase, autor, bg){
     exportarPDF(itens, { colunas });
   });
 })();
+
 
 /* =================== Botão Impressora em cada card =================== */
 function appendImpressoraButton(actionsEl, idx){
