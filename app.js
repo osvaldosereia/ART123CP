@@ -964,17 +964,18 @@ async function handleCriarProva(){
 
 function openModal(focusId){
   if (!modal) return;
-  allItemsCache = null; // zera cache para refletir estado atual
+  allItemsCache = null;
   initialFocusId = focusId || null;
   modal.classList.remove('hidden');
   if (lista) { lista.innerHTML = ''; lista.appendChild(loading); lista.appendChild(ensureSentinel()); lista.scrollTop = 0; }
   selected.clear();
   updateCounter();
-if (cursor == null) cursor = 0;
+  if (cursor == null) cursor = 0;   // mantém cursor calculado
   hasMore = true;
   loadMore();
   mountImpInfiniteScroll();
 }
+
 
 
   function closeModal(){ if (!modal) return; modal.classList.add('hidden'); if (impObserver) impObserver.disconnect(); }
@@ -982,17 +983,18 @@ if (cursor == null) cursor = 0;
   modal?.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 window.addEventListener('abrirImpressora', (e) => {
-  const id = e?.detail?.id ?? null;            // id = idx+1 do card clicado
+  const raw = e?.detail?.id;
+  const id = Number(raw);                       // força número
   try {
     const order = (window.QUESTOES_CURRENT_ORDER && window.QUESTOES_CURRENT_ORDER()) || [];
-    // faz a lista da impressora começar na questão clicada
-    if (Number.isInteger(id)) {
-      const pos = order.findIndex(i => i + 1 === id);
-      if (pos >= 0) cursor = pos;              // usa o cursor já existente no escopo do modal
+    if (Number.isFinite(id)) {
+      const pos = order.findIndex(idx => idx + 1 === id);
+      if (pos >= 0) cursor = pos;
     }
   } catch {}
-  openModal(id);                                // mantém foco/scroll para o id
+  openModal(Number.isFinite(id) ? id : null);
 });
+
 
 function updateCounter(){
   if (contadorEl) contadorEl.textContent = selected.size;
