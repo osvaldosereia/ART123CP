@@ -18,14 +18,7 @@
         <div id="disciplina-select" class="select select--single"></div>
         <div id="temas-multiselect" class="multiselect"></div>
       </div>
-      <!-- AÇÕES: botão impressora ao lado do botão de frases (quando existir) -->
-      <div class="topbar__actions">
-        <button id="btn-impressora" class="btn-circular" aria-label="Imprimir prova" title="Imprimir prova">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-            <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2m-12 0v4h12v-4M8 14h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </div>
+      <!-- sem botões extras na topbar -->
     </div>
   </header>
 
@@ -52,40 +45,40 @@
         </div>
       </div>
       <div class="modal-body">
-        <h2 id="frases-title" class="visually-hidden">Sugestões de frases</h2>
+        <h2 id="frases-title" class="visualmente-hidden">Sugestões de frases</h2>
         <div id="frases-grid" class="frases-grid"></div>
         <div id="frases-sentinela" aria-hidden="true"></div>
       </div>
     </div>
   </div>
 
-  <!-- MODAL IMPRESSORA -->
-  <div id="modal-impressora" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="imp-titulo">
-    <div class="modal-content">
-      <header class="modal-header">
-        <h2 id="imp-titulo">Selecionar questões para PDF</h2>
-        <button class="modal-close" data-close-impressora aria-label="Fechar">×</button>
-      </header>
-
-      <section class="modal-controls">
-        <div class="contador">
-          Selecionadas: <span id="imp-contador">0</span>/20
-        </div>
-        <div class="layout-cols">
-          <label><input type="radio" name="imp-colunas" value="1" checked> 1 coluna</label>
-          <label><input type="radio" name="imp-colunas" value="2"> 2 colunas</label>
-        </div>
-      </section>
-
-      <section id="imp-lista" class="lista-questoes" data-scroll-sentinel>
-        <div class="loading" id="imp-loading">Carregando…</div>
-      </section>
-
-      <footer class="modal-footer">
-        <button id="imp-exportar" class="btn-primary" disabled>Exportar PDF</button>
-      </footer>
-    </div>
+  <!-- MODAL IMPRESSORA (mesmo padrão visual do modal de frases) -->
+  <div id="modal-impressora" class="modal hidden" aria-hidden="true">
     <div class="modal-backdrop" data-close-impressora></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="imp-titulo">
+      <div class="modal-head">
+        <h2 id="imp-titulo">Selecionar questões para PDF</h2>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" type="button" data-close-impressora>Fechar</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="imp-toolbar">
+          <div>Selecionadas: <span id="imp-contador">0</span>/20</div>
+          <div class="layout-cols">
+            <label><input type="radio" name="imp-colunas" value="1" checked> 1 coluna</label>
+            <label><input type="radio" name="imp-colunas" value="2"> 2 colunas</label>
+          </div>
+        </div>
+
+        <section id="imp-lista" class="lista-questoes" data-scroll-sentinel>
+          <div class="loading" id="imp-loading">Carregando…</div>
+        </section>
+      </div>
+      <div class="modal-foot">
+        <button id="imp-exportar" class="btn" disabled>Exportar PDF</button>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -94,7 +87,7 @@
     window.APP_CONFIG = { txtUrl: p.get("txt") || "data/direito-penal/penal1.txt" };
   </script>
 
-  <!-- Depêndencias para geração de PDF -->
+  <!-- Dependências para geração de PDF -->
   <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/he@1.2.0/he.min.js" crossorigin="anonymous"></script>
 
