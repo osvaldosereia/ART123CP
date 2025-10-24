@@ -310,3 +310,12 @@ body{
 .pdf-opt{display:flex;align-items:flex-start;gap:8px}
 .pdf-badge{font-weight:700;border:2px solid #cbd5e1;border-radius:999px;min-width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:12px}
 .pdf-sep{border-top:1px solid #ddd;margin-top:8px}
+
+@page { size: A4; margin: 10mm; }
+.pdf-prova { max-width: 740px; margin: 0 auto; }
+.q { padding: 8px 0; border-top: 1px solid #e5e7eb; }
+.q:first-child { border-top: 0; }
+.q__stmt { margin: 4px 0; line-height: 1.5; }
+.q__opts { list-style: none; padding: 0; margin: 6px 0 0; display: grid; gap: 6px; }
+.q__opt { display: flex; gap: 8px; align-items: flex-start; }
+.q__badge { border: 2px solid #cbd5e1; border-radius: 999px; min-width: 20px; height: 20px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:12px; }
