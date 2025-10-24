@@ -1107,19 +1107,19 @@ async function exportarPDF_PURO(questoes){
   const COL_W = COLS === 2 ? (PAGE_W - 2*M - GAP)/2 : (PAGE_W - 2*M);
 
   // Fontes e espaçamentos
-  const ENUN_FS = 11;                 // +1
+  const ENUN_FS = 10;                 // +1
   const ALT_FS  = 10;                 // +1
-  const TIT_FS  = 11;
+  const TIT_FS  = 10;
 
-  const LH_ENUN = 4.8;
-  const LH_ALT  = 4.6;
+  const LH_ENUN = 4.7;
+  const LH_ALT  = 4.5;
   const LH_TIT  = 5.2;
 
   const SEP = 5;                      // separador com respiro simétrico
   const PRE_TITLE = 2.7;              // +10px entre linha e "Questão X"
   const TITLE_GAP = LH_ENUN + 2.7;    // +10px entre "Questão X" e início do enunciado
   const ENUN_TO_ALTS = 6;             // respiro entre enunciado e alternativas
-  const ALT_IND = 1.0;                // recuo menor à esquerda
+  const ALT_IND = 0.8;                // recuo menor à esquerda
   const ALT_GAP = 1.2;                // respiro entre alternativas
 
   function setEnun(){ doc.setFont('Helvetica',''); doc.setFontSize(ENUN_FS); }
