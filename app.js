@@ -954,252 +954,56 @@ function renderFrasePNG(canvas, frase, autor, bg){
   }
 
   // ---------- Exportação PDF com ajustes visuais ----------
-function exportarPDF(questoes, { colunas = 1 } = {}) {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit: 'mm', format: 'a4', putOnlyUsedFonts: true });
+// ---------- Exportação PDF via HTML (doc.html + html2canvas) ----------
+async function exportarPDF_HTML(questoes){
+  const root = document.getElementById('pdf-root');
+  root.innerHTML = '';
 
-  // Geometria
-  const pageW = doc.internal.pageSize.getWidth();
-  const pageH = doc.internal.pageSize.getHeight();
-  const margin = 10;
-  const gutter = colunas === 2 ? 16 : 0;
-  const contentW = pageW - margin * 2;
-  const colW = colunas === 2 ? (contentW - gutter) / 2 : contentW;
-
-  // Safe paddings
-  const SAFE_L = 1.5, SAFE_R = 1.5;
-  const TEXT_W = colW - SAFE_L - SAFE_R;
-
-  // Tipografia unificada
-  const BASE_SIZE = 9;      // enunciado e alternativas
-  const BASE_LH   = 4.6;    // entrelinha
-  const GAP_BLOCK_TOP   = 3.0;
-  const GAP_TITLE_ENUN  = 3.6; // mais respiro entre "Questão X" e enunciado
-  const GAP_ENUN_ALTS   = 3.0;
-  const GAP_ALT         = 2.0;
-
-  // Prefixo “[ A ] - ” das alternativas
-  const PREF_GAP = 1.0;  // texto mais próximo do " - "
-
-  doc.setFont('helvetica', 'normal'); doc.setTextColor(0,0,0);
-
-  const s = { x: margin, y: margin, col: 1 };
-  const bottom = () => pageH - margin;
-
-  // divisor de colunas
-  function drawColumnDivider(){
-    if (colunas !== 2) return;
-    const cx = margin + colW + gutter/2;
-    doc.setDrawColor(192); doc.setLineWidth(0.2); doc.setLineDash([1.2,1.8],0);
-    for(let y=margin;y<pageH-margin;y+=3){ doc.line(cx,y,cx,Math.min(y+1.2,pageH-margin)); }
-    doc.setLineDash([]); doc.setDrawColor(0);
-  }
-  function newColumnOrPage(){
-    if (colunas === 2 && s.col === 1){
-      s.x = margin + colW + gutter; s.y = margin; s.col = 2; drawColumnDivider();
-    }else{
-      doc.addPage(); doc.setFont('helvetica','normal'); s.x = margin; s.y = margin; s.col = 1; drawColumnDivider();
-    }
-  }
-  function ensureLines(n, lh){ if (s.y + n*lh > bottom()) newColumnOrPage(); }
-
-  // -------- util: hifenização simples pt-BR + justificado ----------
-  function hyphenPoints(word){
-    const w = word.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-    const V = /[aeiouy]/; const pts = []; const noSplit = ['br','cr','dr','fr','gr','pr','tr','bl','cl','fl','gl','pl'];
-    for(let i=1;i<w.length-1;i++){
-      const a=w[i-1], b=w[i], c=w[i+1], cl=a+b, cr=b+c;
-      const cons = x=>!V.test(x);
-      if (V.test(a) && cons(b) && V.test(c)) pts.push(i);
-      else if (V.test(a) && cons(b) && cons(c) && !noSplit.includes(cr)) pts.push(i+1);
-      else if (cons(a) && cons(b) && V.test(c) && !noSplit.includes(cl)) pts.push(i);
-    }
-    return pts.filter(p=>p>=2 && p<=w.length-2);
-  }
-  function splitWithHyphen(word, maxWidth){
-    const pts = hyphenPoints(word);
-    for(let k=pts.length-1;k>=0;k--){
-      const left = word.slice(0, pts[k]) + '-';
-      doc.setFont('helvetica','normal'); doc.setFontSize(BASE_SIZE);
-      if (doc.getTextWidth(left) <= maxWidth) return [left, word.slice(pts[k])];
-    }
-    return null;
-  }
-  function layoutLines(text, maxWidth){
-    const words = text.split(/\s+/).filter(Boolean);
-    const lines = []; const spaceW = doc.getTextWidth(' ');
-    let cur=[], curW=0;
-    function pushLine(forceLeft=false){
-      if (!cur.length) return;
-      const gaps = Math.max(cur.length-1,1);
-      const natural = cur.reduce((s,w)=>s+doc.getTextWidth(w),0) + (cur.length-1)*spaceW;
-      const extra = Math.max(maxWidth - natural, 0);
-      lines.push({ words: cur.slice(), justify: !forceLeft && cur.length>1, extra, gaps });
-      cur=[]; curW=0;
-    }
-    for (let i=0;i<words.length;i++){
-      const w = words[i], wW = doc.getTextWidth(w);
-      if (!cur.length){
-        if (wW <= maxWidth){ cur.push(w); curW=wW; }
-        else{ const hp=splitWithHyphen(w,maxWidth); if(hp){cur.push(hp[0]);pushLine(true);words.splice(i+1,0,hp[1]);} else {cur.push(w);pushLine(true);} }
-        continue;
-      }
-      const spaceWplus = curW + spaceW + wW;
-      if (spaceWplus <= maxWidth){ cur.push(w); curW=spaceWplus; }
-      else{
-        const room = maxWidth - curW - spaceW;
-        const hp = room>0 ? splitWithHyphen(w, room) : null;
-        if (hp){ cur.push(hp[0]); pushLine(); words.splice(i+1,0,hp[1]); }
-        else{ pushLine(); i--; }
-      }
-    }
-    pushLine(true);
-    return lines;
-  }
-  // imprime com quebra por linha respeitando colunas/páginas
-  // imprime com quebra por linha respeitando colunas/páginas
-function drawJustified(x, y, lines, lh){
-  if (!lines || !lines.length) return y;
-  const spaceW = doc.getTextWidth(' ');
-  s.y = y;
-  let yy = y;
-
-  lines.forEach(ln=>{
-    ensureLines(1, lh);
-    let xx = x;
-
-    if (!ln.justify){
-      ln.words.forEach((w,j)=>{
-        const withSpace = w + (j < ln.words.length - 1 ? ' ' : '');
-        doc.text(withSpace, xx, s.y);
-        xx += doc.getTextWidth(w) + (j < ln.words.length - 1 ? spaceW : 0);
-      });
-    } else {
-      const add = ln.extra / ln.gaps;
-      ln.words.forEach((w,j)=>{
-        const withSpace = w + (j < ln.words.length - 1 ? ' ' : '');
-        doc.text(withSpace, xx, s.y);
-        xx += doc.getTextWidth(w) + (j < ln.words.length - 1 ? (spaceW + add) : 0);
-      });
-    }
-
-    s.y += lh;
-    yy = s.y;
-  });
-
-  return yy;
-}
-
-  function stripHtml(html){
-    try{
-      const tmp = document.createElement('div'); tmp.innerHTML = html || '';
-      const raw = tmp.textContent || tmp.innerText || '';
-      return (window.he ? he.decode(raw) : raw).replace(/\s+\n/g,'\n').replace(/[ \t]+/g,' ').trim();
-    }catch{ return ''; }
-  }
-
-  function drawSeparator(){
-    ensureLines(1,1);
-    doc.setDrawColor(0); doc.setLineWidth(0.45); doc.setLineDash([],0);
-    doc.line(s.x, s.y, s.x + colW, s.y);
-    s.y += 3.0;
-  }
-
-  // mede largura do prefixo “[ A ] - ”
-  function prefixWidth(letter){
-    doc.setFont('helvetica','normal'); doc.setFontSize(BASE_SIZE);
-    const w1 = doc.getTextWidth('[ ');
-    doc.setFont('helvetica','bold');  const wL = doc.getTextWidth(letter);
-    doc.setFont('helvetica','normal'); const w2 = doc.getTextWidth(' ] - ');
-    return w1 + wL + w2 + PREF_GAP;
-  }
-  function drawPrefix(x, letter){
-    doc.setFont('helvetica','normal'); doc.text('[ ', x, s.y);
-    const xL = x + doc.getTextWidth('[ ');
-    doc.setFont('helvetica','bold');  doc.text(letter, xL, s.y);
-    const xR = xL + doc.getTextWidth(letter);
-    doc.setFont('helvetica','normal'); doc.text(' ] - ', xR, s.y);
-  }
-
-  function renderAlternatives(rawAlts){
-    const alts = Array.isArray(rawAlts) ? rawAlts : [];
-    doc.setFont('helvetica','normal'); doc.setFontSize(BASE_SIZE);
-
-    alts.forEach((alt, i)=>{
-      const letter = String.fromCharCode(65+i);
-      const clean = String(alt).replace(/^[A-E]\)\s*/i,'');
-      const pw = prefixWidth(letter);
-      const lines = layoutLines(clean, TEXT_W - pw);
-
-      // primeira linha: prefixo + texto
-      drawPrefix(s.x + SAFE_L, letter);
-      if (lines.length) s.y = drawJustified(s.x + SAFE_L + pw, s.y, [lines[0]], BASE_LH);
-      
-      // continua demais linhas com mesmo recuo, quebrando entre colunas/páginas se preciso
-      if (lines.length > 1){
-        s.y = drawJustified(s.x + SAFE_L + pw, s.y, lines.slice(1), BASE_LH);
-      }
-
-      s.y += GAP_ALT;
+  const page1 = document.createElement('div');
+  page1.className = 'pdf-prova';
+  questoes.forEach((q,i)=>{
+    const art = document.createElement('article'); art.className='q';
+    const t = document.createElement('div'); t.className='q__stmt'; t.textContent=`Questão ${i+1}`;
+    const e = document.createElement('div'); e.className='q__stmt'; e.textContent=q.enunciadoPlain||'';
+    const ul=document.createElement('ul'); ul.className='q__opts';
+    (q.alternativas||[]).forEach((a,k)=>{
+      const li=document.createElement('li'); li.className='q__opt';
+      const b=document.createElement('span'); b.className='q__badge'; b.textContent=String.fromCharCode(65+k);
+      const tx=document.createElement('div'); tx.textContent=String(a).replace(/^[A-E]\)\s*/i,'');
+      li.appendChild(b); li.appendChild(tx); ul.appendChild(li);
     });
-  }
-
-  function renderQuestao(q, n){
-    ensureLines(Math.ceil(GAP_BLOCK_TOP/BASE_LH), BASE_LH);
-    s.y += GAP_BLOCK_TOP;
-
-    // título
-    doc.setFont('helvetica','bold'); doc.setFontSize(BASE_SIZE);
-    ensureLines(1, BASE_LH);
-    doc.text(`Questão ${n}`, s.x + SAFE_L, s.y);
-    s.y += GAP_TITLE_ENUN;
-
-    // enunciado justificado com quebra por linha/coluna
-    doc.setFont('helvetica','normal'); doc.setFontSize(BASE_SIZE);
-    const enun = q.enunciadoPlain ? String(q.enunciadoPlain) : stripHtml(q.enunciado);
-    const lines = layoutLines(enun, TEXT_W);
-    s.y = drawJustified(s.x + SAFE_L, s.y, lines, BASE_LH);
-
-    // alternativas
-    s.y += GAP_ENUN_ALTS;
-    renderAlternatives(q.alternativas);
-
-    drawSeparator();
-  }
-
-  // Render
-  drawColumnDivider();
-  const itens = questoes.map((q,i)=>({...q,_n:i+1}));
-  itens.forEach(q=>renderQuestao(q, q._n));
-
-  // Gabarito
-  doc.addPage(); drawColumnDivider();
-  doc.setFont('helvetica','bold'); doc.setFontSize(11);
-  const title = 'Gabarito';
-  const cx = pageW/2, tW = doc.getTextWidth(title);
-  doc.text(title, cx - tW/2, margin + 2);
-
-  doc.setFont('helvetica','normal'); doc.setFontSize(10);
-  const keyLH = 6, keyColGap = 20, keyColW = (contentW - keyColGap)/2;
-  let kx = margin, ky = margin + 10, kcol = 0;
-
-  itens.forEach(({_n, gabarito})=>{
-    const g = (gabarito || '').replace(/[^A-E]/gi,'').toUpperCase() || '-';
-    if (ky + keyLH > pageH - margin){
-      if (kcol === 0){ kx = margin + keyColW + keyColGap; ky = margin + 10; kcol = 1; }
-      else { doc.addPage(); drawColumnDivider(); kx = margin; ky = margin + 10; kcol = 0; }
-    }
-    doc.text(`${_n}) ${g}`, kx, ky); ky += keyLH;
+    art.appendChild(t); art.appendChild(e); art.appendChild(ul);
+    page1.appendChild(art);
   });
+  root.appendChild(page1);
 
+  const page2 = document.createElement('div');
+  page2.className='pdf-prova';
+  const h=document.createElement('h2'); h.style.textAlign='center'; h.textContent='Gabarito';
+  const L=document.createElement('div'), R=document.createElement('div');
+  L.style.display=R.style.display='inline-block'; L.style.width=R.style.width='48%'; L.style.verticalAlign=R.style.verticalAlign='top';
+  const mid=Math.ceil(questoes.length/2);
+  const mk=(n,g)=>`${n}) ${(g||'-').toString().toUpperCase().replace(/[^A-E]/g,'')}`;
+  L.innerHTML = questoes.slice(0,mid).map((q,i)=>`<div>${mk(i+1,q.gabarito)}</div>`).join('');
+  R.innerHTML = questoes.slice(mid).map((q,i)=>`<div>${mk(mid+i+1,q.gabarito)}</div>`).join('');
+  page2.appendChild(h); page2.appendChild(L); page2.appendChild(R);
+  root.appendChild(page2);
+
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ unit:'px', format:'a4', compress:true });
+
+  await new Promise(res=>doc.html(page1, { x:24, y:24, width:794-48, html2canvas:{scale:2,useCORS:true}, callback:res }));
+  doc.addPage();
+  await new Promise(res=>doc.html(page2, { x:24, y:24, width:794-48, html2canvas:{scale:2,useCORS:true}, callback:res }));
   doc.save('prova.pdf');
 }
 
-btnExportar?.addEventListener('click', () => {
-  const colunas = radioCols();
+
+btnExportar?.addEventListener('click', async () => {
   const itens = Array.from(selected.values());
-  exportarPDF(itens, { colunas });
+  await exportarPDF_HTML(itens);
 });
+
 })();
 
 
