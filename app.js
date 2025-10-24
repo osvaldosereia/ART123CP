@@ -143,13 +143,15 @@ window.QUESTOES_CURRENT_ORDER = computeOrderFromState;
           : ""
       ].join("");
 
-      return {
-        id: i + 1,
-        enunciadoHtml: html,
-        enunciadoPlain: c.enunciado || "",
-        alternativas: alts,
-        gabarito: String(c.gabarito || "").trim().toUpperCase()
-      };
+     return {
+  id: i + 1,
+  enunciadoHtml: html,
+  enunciadoPlain: c.enunciado || "",
+  alternativas: alts,
+  gabarito: String(c.gabarito || "").trim().toUpperCase(),
+  temas: Array.isArray(c.temas) ? c.temas.slice() : []
+};
+
     }
 
     window.QUESTOES_FETCH_PAGE = async function(cursor){
@@ -762,6 +764,120 @@ function rerenderVisibleFrases(){
   const contadorEl = document.getElementById('imp-contador');
   const radioCols = () => Number(document.querySelector('input[name="imp-colunas"]:checked')?.value || 1);
 
+  // --- Botão "Criar Prova" + seleção aleatória balanceada por tema ---
+let allItemsCache = null;
+
+const btnCriar = document.createElement('button');
+btnCriar.id = 'imp-criar';
+btnCriar.type = 'button';
+btnCriar.className = 'btn';
+btnCriar.textContent = 'Criar Prova';
+btnCriar.addEventListener('click', handleCriarProva);
+
+// coloca antes do Exportar
+if (btnExportar && btnExportar.parentNode) {
+  btnExportar.parentNode.insertBefore(btnCriar, btnExportar);
+}
+
+async function getAllItems(){
+  if (allItemsCache) return allItemsCache.slice();
+  let cur = null, acc = [];
+  while (true){
+    const page = await fetchQuestoes(cur);
+    const itens = page?.itens || [];
+    acc = acc.concat(itens);
+    cur = page?.nextCursor ?? null;
+    if (cur == null) break;
+  }
+  allItemsCache = acc.slice();
+  return acc;
+}
+
+function pickCountsByTema(buckets, total){
+  const temas = Object.keys(buckets);
+  if (temas.length === 0) return {};
+  const counts = {};
+  const N = Math.min(total, Object.values(buckets).reduce((s,a)=>s+a.length,0));
+
+  // pelo menos 1 por tema, se possível
+  temas.forEach(t => counts[t] = Math.min(1, buckets[t].length));
+  let used = temas.reduce((s,t)=>s+counts[t],0);
+
+  // proporcional ao tamanho do bucket
+  if (used < N){
+    const totalAvail = temas.reduce((s,t)=>s + Math.max(buckets[t].length - counts[t], 0), 0);
+    if (totalAvail > 0){
+      temas.forEach(t => {
+        if (used >= N) return;
+        const room = Math.max(buckets[t].length - counts[t], 0);
+        const share = Math.floor((room / totalAvail) * (N - used));
+        const add = Math.min(share, room);
+        counts[t] += add; used += add;
+      });
+    }
+  }
+
+  // round-robin para completar sobras
+  let k = 0;
+  while (used < N){
+    const t = temas[k % temas.length];
+    if (counts[t] < buckets[t].length){ counts[t]++; used++; }
+    k++;
+  }
+  return counts;
+}
+
+function shuffleInPlace(arr){
+  for (let i=arr.length-1;i>0;i--){
+    const j = (Math.random()*(i+1))|0;
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+  return arr;
+}
+
+async function handleCriarProva(){
+  const all = await getAllItems();
+  if (!all.length) return;
+
+  // buckets por tema; itens sem tema vão para "__SEM_TEMA__"
+  const buckets = {};
+  for (const it of all){
+    const ts = (Array.isArray(it.temas) && it.temas.length) ? it.temas : ['__SEM_TEMA__'];
+    ts.forEach(t => {
+      if (!buckets[t]) buckets[t] = [];
+      buckets[t].push(it);
+    });
+  }
+  Object.values(buckets).forEach(shuffleInPlace);
+
+  const counts = pickCountsByTema(buckets, 20);
+
+  // limpar seleção atual e aplicar nova
+  selected.clear();
+  const chosen = [];
+  Object.keys(counts).forEach(t => {
+    const need = counts[t];
+    const arr = buckets[t];
+    for (let i=0;i<need && i<arr.length;i++){
+      const q = arr[i];
+      if (!selected.has(q.id)){ selected.set(q.id, q); chosen.push(q.id); }
+    }
+  });
+
+  updateCounter();
+
+  // refletir visualmente nos cards já renderizados
+  lista.querySelectorAll('.imp-card').forEach(card => {
+    const id = Number(card.dataset.id || '0');
+    const cb = card.querySelector('input[type="checkbox"]');
+    if (cb) cb.checked = selected.has(id);
+  });
+}
+
+// limpar cache ao abrir o modal para refletir filtros/ordem atuais
+// (complemento em openModal)
+
+
   let selected = new Map();   // id -> questão
   let cursor = null;          // paginação
   let isLoading = false;
@@ -788,18 +904,20 @@ function rerenderVisibleFrases(){
     return { itens: [], nextCursor: null };
   }
 
-  function openModal(focusId){
-    if (!modal) return;
-    initialFocusId = focusId || null;
-    modal.classList.remove('hidden');
-    if (lista) { lista.innerHTML = ''; lista.appendChild(loading); lista.appendChild(ensureSentinel()); lista.scrollTop = 0; }
-    selected.clear();
-    updateCounter();
-    cursor = null;
-    hasMore = true;
-    loadMore();
-    mountImpInfiniteScroll();
-  }
+function openModal(focusId){
+  if (!modal) return;
+  allItemsCache = null; // zera cache para refletir estado atual
+  initialFocusId = focusId || null;
+  modal.classList.remove('hidden');
+  if (lista) { lista.innerHTML = ''; lista.appendChild(loading); lista.appendChild(ensureSentinel()); lista.scrollTop = 0; }
+  selected.clear();
+  updateCounter();
+  cursor = null;
+  hasMore = true;
+  loadMore();
+  mountImpInfiniteScroll();
+}
+
 
   function closeModal(){ if (!modal) return; modal.classList.add('hidden'); if (impObserver) impObserver.disconnect(); }
   closeEls.forEach(el => el.addEventListener('click', closeModal));
@@ -831,15 +949,19 @@ window.addEventListener('abrirImpressora', (e) => {
 
     const sel = document.createElement('label');
     sel.className = 'imp-selecionar';
-    const cb = document.createElement('input');
-    cb.type = 'checkbox';
-    cb.addEventListener('change', () => {
-      if (cb.checked) {
-        if (selected.size >= 20) { cb.checked = false; return; }
-        selected.set(q.id, q);
-      } else selected.delete(q.id);
-      updateCounter();
-    });
+   const cb = document.createElement('input');
+cb.type = 'checkbox';
+cb.checked = selected.has(q.id); // respeita seleção programática
+cb.addEventListener('change', () => {
+  if (cb.checked) {
+    if (selected.size >= 20 && !selected.has(q.id)) { cb.checked = false; return; }
+    selected.set(q.id, q);
+  } else {
+    selected.delete(q.id);
+  }
+  updateCounter();
+});
+
     sel.appendChild(cb);
     sel.appendChild(document.createTextNode('Selecionar'));
 
