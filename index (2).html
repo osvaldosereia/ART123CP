@@ -1,2 +1,100 @@
-429: Too Many Requests
-For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MeuJus</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="container topbar__row">
+      <div class="brand">
+        <span class="brand--full">MeuJus</span>
+        <span class="brand--short" aria-hidden="true">MJ</span>
+      </div>
+      <div class="topbar__filters">
+        <div id="disciplina-select" class="select select--single"></div>
+        <div id="temas-multiselect" class="multiselect"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container">
+    <div id="welcome" class="welcome">
+      <p>Bem-vindo ao <strong>MeuJus</strong> — seu espaço gratuito para estudar Direito com questões.<br>
+      <span class="muted">Escolha a disciplina e os temas para começar a praticar.</span></p>
+    </div>
+
+    <div id="cards"></div>
+    <div id="sentinela" aria-hidden="true"></div>
+  </main>
+
+  <!-- MODAL DE FRASES -->
+  <div id="frases-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="frases-title">
+      <div class="modal-head">
+        <div class="swatches" id="frases-swatches" aria-label="Escolher cor de fundo"></div>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" type="button" data-close="true">Fechar</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <h2 id="frases-title" class="visually-hidden">Sugestões de frases</h2>
+        <div id="frases-grid" class="frases-grid"></div>
+        <div id="frases-sentinela" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL IMPRESSORA -->
+  <div id="modal-impressora" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-close-impressora="true"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="imp-titulo">
+      <div class="modal-head">
+        <div class="modal-head__top" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+          <h2 id="imp-titulo">Selecionar questões para PDF</h2>
+          <div class="modal-actions">
+            <button class="btn btn-ghost" type="button" data-close-impressora="true">Fechar</button>
+          </div>
+        </div>
+        <div class="imp-headbar" style="margin-top:6px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+          <div><strong>Selecionadas:</strong> <span id="imp-contador">0</span>/20</div>
+          <div class="layout-cols" role="group" aria-label="Layout do PDF">
+            <label><input type="radio" name="imp-colunas" value="1" checked> 1 coluna</label>
+            <label style="margin-left:10px"><input type="radio" name="imp-colunas" value="2"> 2 colunas</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <section id="imp-lista" class="lista-questoes" data-scroll-sentinel>
+          <div class="loading" id="imp-loading">Carregando…</div>
+        </section>
+      </div>
+
+      <div class="modal-foot">
+        <button id="imp-exportar" class="btn" disabled>Exportar PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RAIZ OCULTA PARA RENDERIZAÇÃO DO PDF -->
+  <div id="pdf-root" style="position:fixed;left:-10000px;top:0;visibility:hidden;width:210mm;"></div>
+
+  <script>
+    const p = new URLSearchParams(location.search);
+    window.APP_CONFIG = { txtUrl: p.get("txt") || "data/direito-penal/penal1.txt" };
+  </script>
+
+  <!-- Dependências para geração de PDF -->
+  <script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/he@1.2.0/he.min.js" crossorigin="anonymous"></script>
+
+  <script defer src="app.js"></script>
+</body>
+</html>
