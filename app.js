@@ -562,23 +562,27 @@ async function openFrasesModal(){
   await ensureFrases();
   mountSwatches();
   const grid = document.getElementById('frases-grid');
-  if(grid) grid.innerHTML = '';
+  if (grid) grid.innerHTML = '';
   resetFrasesOrder();
   loadNextBatch(FRASES_BATCH);
   mountFrasesInfiniteScroll();
   bindCloseFrases();
-  document.getElementById('frases-modal').classList.remove('hidden');
+
+  const modal = document.getElementById('frases-modal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden','false'); // acessível e visível
 }
 
 function bindCloseFrases(){
   const modal = document.getElementById('frases-modal');
   const hide = ()=>{
     modal.classList.add('hidden');
-    if(frasesObserver) frasesObserver.disconnect();
+    modal.setAttribute('aria-hidden','true');   // oculta e remove do fluxo
+    if (frasesObserver) frasesObserver.disconnect();
   };
   modal.querySelectorAll('[data-close="true"]').forEach(el=>{ el.onclick = hide; });
   const bd = modal.querySelector('.modal-backdrop');
-  if(bd) bd.onclick = hide;
+  if (bd) bd.onclick = hide;
 }
 
 function mountSwatches(){
@@ -589,7 +593,7 @@ function mountSwatches(){
     s.className = 'swatch';
     s.style.background = c.val;
     s.title = c.name;
-    if(c.val === bgAtual) s.setAttribute('aria-selected','true');
+    if (c.val === bgAtual) s.setAttribute('aria-selected','true');
     s.onclick = ()=>{
       bgAtual = c.val;
       wrap.querySelectorAll('.swatch').forEach(x=>x.removeAttribute('aria-selected'));
@@ -601,7 +605,7 @@ function mountSwatches(){
 }
 
 async function ensureFrases(){
-  if(frasesCache) return;
+  if (frasesCache) return;
   const res = await fetch(FRASES_TXT_URL);
   const txt = await res.text();
   // "frase | autor"  ou  "frase - autor"  ou  "frase — autor"
@@ -611,7 +615,7 @@ async function ensureFrases(){
     .filter(l=>l.length>0 && !l.startsWith('#'))
     .map(l=>{
       let [frase, autor] = l.split(/\s[|\-—]\s/);
-      if(!autor){ autor=''; frase=l; }
+      if (!autor){ autor=''; frase=l; }
       return {frase, autor};
     });
 }
@@ -637,9 +641,9 @@ function makeFraseItem(it){
   btn.onclick = async ()=>{
     const blob = await new Promise(r=>cv.toBlob(r,'image/png',1));
     const file = new File([blob], 'frase.png', {type:'image/png'});
-    if(navigator.canShare && navigator.canShare({files:[file]})){
+    if (navigator.canShare && navigator.canShare({files:[file]})){
       await navigator.share({files:[file], title:'Frase', text:'meujus.com.br'});
-    }else{
+    } else {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url; a.download = 'frase.png'; a.click();
@@ -660,9 +664,9 @@ function loadNextBatch(n){
 function mountFrasesInfiniteScroll(){
   const root = document.querySelector('#frases-modal .modal-body');
   const sent = document.getElementById('frases-sentinela');
-  if(frasesObserver) frasesObserver.disconnect();
+  if (frasesObserver) frasesObserver.disconnect();
   frasesObserver = new IntersectionObserver((entries)=>{
-    if(entries.some(e=>e.isIntersecting)) loadNextBatch(FRASES_BATCH);
+    if (entries.some(e=>e.isIntersecting)) loadNextBatch(FRASES_BATCH);
   }, { root, rootMargin: '400px' });
   frasesObserver.observe(sent);
 }
@@ -672,6 +676,7 @@ function rerenderVisibleFrases(){
     renderFrasePNG(cv, cv.dataset.frase, cv.dataset.autor, bgAtual);
   });
 }
+
 
 /* ===================== Impressora / PDF ===================== */
 (function(){
