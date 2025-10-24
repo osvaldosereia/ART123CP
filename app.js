@@ -117,23 +117,36 @@
     }
 
     function normalizeForPrint(c, i){
-      const alts = (c.alternativas || []).map((raw, k) => {
-        const letra = String.fromCharCode(65 + k);
-        const texto = String(raw || "").replace(/^[A-E]\)\s*/i, "");
-        return `${letra}) ${texto}`;
-      });
-      const html = [
-        (c.referencias || "").trim() ? `<div class="q__meta"><strong>${c.referencias}</strong></div>` : "",
-        `<div class="q__stmt">${U.mdInline(c.enunciado || "")}</div>`,
-        alts.length ? `<ul class="q__opts">${alts.map(a=>`<li class="q__opt"><span class="q__badge">${a.slice(0,1)}</span><div>${a.replace(/^[A-E]\)\s*/i,"")}</div></li>`).join("")}</ul>` : ""
-      ].join("");
-      return {
-        id: i + 1,
-        enunciadoHtml: html,              // para exibir no modal
-        enunciadoPlain: c.enunciado || "",// para o PDF
-        alternativas: alts
-      };
-    }
+  const alts = (c.alternativas || []).map((raw, k) => {
+    const letra = String.fromCharCode(65 + k);
+    const texto = String(raw || "").replace(/^[A-E]\)\s*/i, "");
+    return `${letra}) ${texto}`;
+  });
+
+  // visual no modal igual aos cartões do site (sem meta “***** …”)
+  const html = [
+    `<div class="q__stmt">${U.mdInline(c.enunciado || "")}</div>`,
+    alts.length
+      ? `<ul class="q__opts">${alts
+          .map(a => {
+            const letra = a.slice(0,1);
+            const texto = a.replace(/^[A-E]\)\s*/i,"").replace(/^[A-E]\)\s*/i,"");
+            return `<li class="q__opt"><span class="q__badge">${letra}</span><div>${texto}</div></li>`;
+          })
+          .join("")}</ul>`
+      : ""
+  ].join("");
+
+  return {
+    id: i + 1,                                // usado para focar ao abrir o modal
+    enunciadoHtml: html,                      // render do modal
+    enunciadoPlain: c.enunciado || "",        // base do PDF
+    alternativas: alts,                       // A)..E) já normalizadas
+    gabarito: String(c.gabarito || "")        // usado no gabarito da última página do PDF
+              .trim().toUpperCase()
+  };
+}
+
 
     window.QUESTOES_FETCH_PAGE = async function(cursor){
       const pageSize = 20;
@@ -845,8 +858,9 @@ function renderFrasePNG(canvas, frase, autor, bg){
     }
   }
 
-  // Exportar PDF — sem meta, numeração no enunciado, fonte sans-serif, ajuste ±2px
-  // Exportar PDF — fonte única, sem ajuste dinâmico; separador forte e bom respiro
+  // PDF: fontes menores, margens menores, gutter maior, enunciado TODO em negrito,
+// entrelinhas maiores, mais respiro antes das alternativas, alternativas menores,
+// separador forte e página final exclusiva com gabarito.
 function exportarPDF(questoes, { colunas = 1 } = {}){
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ unit: 'mm', format: 'a4', putOnlyUsedFonts: true });
@@ -854,24 +868,28 @@ function exportarPDF(questoes, { colunas = 1 } = {}){
   // Layout
   const pageW = doc.internal.pageSize.getWidth();
   const pageH = doc.internal.pageSize.getHeight();
-  const margin = 15;
-  const gutter = 8;
+  const margin = 12;           // laterais/topo/base menores
+  const gutter = 12;           // espaço maior entre colunas
   const contentW = pageW - margin*2;
   const colW = colunas === 2 ? (contentW - gutter)/2 : contentW;
 
-  // Tipografia: sans-serif, preto
-  const FONT_SIZE = 12;               // único tamanho
-  const LINE_H = 5.2;                 // ~14pt de leading
-  const TITLE_GAP = 2.5;              // após primeira linha “N. …”
-  const BLOCK_TOP = 4;                // respiro antes da questão
-  const BLOCK_BOTTOM = 6;             // respiro após separador
+  // Tipografia
+  const ENUN_SIZE = 11;        // enunciado
+  const ALT_SIZE  = 10;        // alternativas um pouco menores
+  const ENUN_LH   = 5.8;       // entrelinhas levemente maiores
+  const ALT_LH    = 5.4;
+  const GAP_ENUN_ALTS = 4;     // respiro entre enunciado e alternativas
+  const BLOCK_TOP  = 4;        // respiro antes de cada questão
+  const SEP_LINE_W = 0.7;      // separador visível
+  const SEP_GAP    = 6;        // respiro após separador
 
   doc.setFont('helvetica','normal');
   doc.setTextColor(0,0,0);
 
-  // Estado de coluna
+  // Estado
   const state = { x: margin, y: margin, col: 1 };
-  function nextColumnOrPage(){
+
+  function newColumnOrPage(){
     if (colunas === 2 && state.col === 1){
       state.x = margin + colW + gutter;
       state.y = margin;
@@ -883,32 +901,38 @@ function exportarPDF(questoes, { colunas = 1 } = {}){
       state.x = margin; state.y = margin; state.col = 1;
     }
   }
-
-  // Quebra por linha: antes de imprimir cada linha, verifica espaço
-  function ensureSpace(linesToGo = 1){
+  function ensureSpace(lines, lh){
     const bottom = pageH - margin;
-    if (state.y + (linesToGo * LINE_H) > bottom) nextColumnOrPage();
+    if (state.y + (lines * lh) > bottom) newColumnOrPage();
   }
+  function stripHtml(html){
+    try{
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html || '';
+      const raw = tmp.textContent || tmp.innerText || '';
+      return (window.he ? he.decode(raw) : raw)
+        .replace(/\s+\n/g,'\n').replace(/[ \t]+/g,' ').trim();
+    }catch{ return ''; }
+  }
+  const split = (t, w) => doc.splitTextToSize(t, w);
 
-  function writeLines(lines){
-    doc.setFontSize(FONT_SIZE);
-    lines.forEach((ln, i) => {
-      ensureSpace(1);
+  function writeLines(lines, size, lh, style='normal'){
+    doc.setFont('helvetica', style);
+    doc.setFontSize(size);
+    for (const ln of lines){
+      ensureSpace(1, lh);
       doc.text(ln, state.x, state.y);
-      state.y += LINE_H;
-    });
+      state.y += lh;
+    }
   }
-
-  function writeSeparator(){
-    ensureSpace(2);
-    doc.setDrawColor(0);   // preto
-    doc.setLineWidth(0.6); // mais visível
+  function separator(){
+    ensureSpace(1, 1);
+    doc.setDrawColor(0);
+    doc.setLineWidth(SEP_LINE_W);
     doc.line(state.x, state.y, state.x + colW, state.y);
-    state.y += BLOCK_BOTTOM;
+    state.y += SEP_GAP;
   }
-
   function normalizeAltList(q){
-    // já vem pronto no modal, mas garantimos “A) …”
     const arr = Array.isArray(q.alternativas) ? q.alternativas : [];
     return arr.map((t, i) => {
       const letra = String.fromCharCode(65 + i);
@@ -917,50 +941,70 @@ function exportarPDF(questoes, { colunas = 1 } = {}){
     });
   }
 
-  function stripHtml(html){
-    try{
-      const tmp = document.createElement('div');
-      tmp.innerHTML = html || '';
-      const raw = tmp.textContent || tmp.innerText || '';
-      return (window.he ? he.decode(raw) : raw).replace(/\s+\n/g,'\n').replace(/[ \t]+/g,' ').trim();
-    }catch{ return ''; }
-  }
+  const answerKey = []; // {n, g}
 
-  // Render de uma questão: numeração na primeira linha, sem meta
-  function renderQuestao(q, index){
-    const enun = stripHtml(q.enunciadoPlain || '');
-    const enunLines = doc.splitTextToSize(enun, colW);
-    const alts = normalizeAltList(q).flatMap(a => doc.splitTextToSize(a, colW));
+  function renderQuestao(q, n){
+  const enunPlain = String(q.enunciadoPlain || "");
+    const enunLines = split(enunPlain, colW);
+    const altsLines = normalizeAltList(q).flatMap(a => split(a, colW));
 
-    // respiro antes do bloco
-    ensureSpace(Math.ceil(BLOCK_TOP / LINE_H));
+    // topo do bloco
+    ensureSpace(Math.ceil(BLOCK_TOP / ENUN_LH), ENUN_LH);
     state.y += BLOCK_TOP;
 
-    // primeira linha: "N. " + primeira linha do enunciado
-    const first = `${index}. ${enunLines.shift() || ''}`;
-    doc.setFont('helvetica','bold');
-    writeLines([first]);
+    // enunciado TODO em negrito (primeira linha com numeração)
+    const first = `${n}. ${enunLines.shift() ?? ''}`;
+    writeLines([first], ENUN_SIZE, ENUN_LH, 'bold');
+    if (enunLines.length) writeLines(enunLines, ENUN_SIZE, ENUN_LH, 'bold');
 
-    // pequeno gap do título para o resto do enunciado
-    state.y += TITLE_GAP;
-
-    // restante do enunciado
-    doc.setFont('helvetica','normal');
-    writeLines(enunLines);
+    // respiro antes das alternativas
+    state.y += GAP_ENUN_ALTS;
 
     // alternativas
-    if (alts.length) writeLines(alts);
+    if (altsLines.length) writeLines(altsLines, ALT_SIZE, ALT_LH, 'normal');
 
-    // separador + respiro
-    writeSeparator();
+    // separador
+    separator();
+
+    // gabarito
+    const g = (q.gabarito || '').replace(/[^A-E]/gi,'').toUpperCase() || '-';
+    answerKey.push({ n, g });
   }
 
-  // Numerar na ordem apresentada
-  const items = questoes.map((q, i) => ({ ...q, index: i+1 }));
-  items.forEach(q => renderQuestao(q, q.index));
+  // Render
+  const items = questoes.map((q, i) => ({ ...q, _n: i+1 }));
+  items.forEach(q => renderQuestao(q, q._n));
+
+  // Página final exclusiva: Gabarito
+  doc.addPage();
+  const title = 'Gabarito';
+  doc.setFont('helvetica','bold'); doc.setFontSize(12);
+  const cx = pageW / 2;
+  const tW = doc.getTextWidth(title);
+  const topY = margin;
+  doc.text(title, cx - tW/2, topY);
+
+  doc.setFont('helvetica','normal'); doc.setFontSize(11);
+  const keyTop = topY + 8;
+  const keyColGap = 20;
+  const keyColW = (contentW - keyColGap) / 2;
+  const keyLH = 6;
+  let kx = margin, ky = keyTop, colIx = 0;
+
+  items.forEach(({ _n }, idx) => {
+    const g = answerKey[idx]?.g || '-';
+    const line = `${_n}) ${g}`;
+    if (ky + keyLH > pageH - margin){
+      if (colIx === 0){ kx = margin + keyColW + keyColGap; ky = keyTop; colIx = 1; }
+      else { doc.addPage(); doc.setFont('helvetica','normal'); doc.setFontSize(11); kx = margin; ky = keyTop; colIx = 0; }
+    }
+    doc.text(line, kx, ky);
+    ky += keyLH;
+  });
 
   doc.save('prova.pdf');
 }
+
 
   function stripHtml(html){
     try{
