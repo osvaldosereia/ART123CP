@@ -130,7 +130,7 @@ body{
   background:#fff;border-radius:18px;box-shadow:0 12px 32px rgba(0,0,0,.18);
   display:flex;flex-direction:column;overflow:hidden
 }
-.modal-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 0;gap:12px}
+.modal-head{display:flex;flex-direction:column;gap:8px;padding:14px 16px 0;border-bottom:1px solid #eee}
 .modal-body{padding:12px 16px 18px;overflow:auto}
 
 /* ========= MODAL DE FRASES ========= */
@@ -210,23 +210,35 @@ body{
   max-width:960px;height:90vh;margin:5vh 0;z-index:80;
   border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.15)
 }
-#modal-impressora .modal-head{padding:16px 20px;border-bottom:1px solid #eee}
+/* Cabeçalho profissional com barra de status (selecionadas/colunas) */
+#modal-impressora .modal-head__top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+#modal-impressora .imp-headbar{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:4px 0 6px;
+}
+#modal-impressora .imp-headbar .layout-cols label{margin-right:12px;white-space:nowrap}
+@media (max-width:480px){
+  #modal-impressora .imp-headbar{flex-direction:column;align-items:flex-start;gap:8px}
+}
+
 #modal-impressora .modal-foot{padding:12px 20px;border-top:1px solid #eee;display:flex;justify-content:flex-end}
 #modal-impressora .modal-body{padding:16px;overflow:auto}
-#modal-impressora .imp-toolbar{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:12px}
-#modal-impressora .contador{font-weight:600}
-#modal-impressora .layout-cols label{margin-right:12px}
 #modal-impressora .lista-questoes{min-height:200px}
 #modal-impressora .loading{text-align:center;padding:12px;color:#777}
 #imp-exportar.btn-primary{padding:10px 16px;border-radius:10px;border:none;background:#111;color:#fff;cursor:pointer}
 #imp-exportar.btn-primary:disabled{opacity:.5;cursor:not-allowed}
 
-/* Cards dentro do modal (mesmo visual dos cartões) */
+/* Questões no modal: sem caixa, só separador como no site */
 .imp-card{
-  border:1px solid #e7e7e7;border-radius:10px;padding:12px;margin-bottom:12px;background:#fff;
+  padding:16px 0;
+  border:none;
+  border-top:4px solid #eceff3; /* igual .q */
+  background:transparent;
+  border-radius:0;
+  margin:0;
 }
-.imp-card .q__meta{margin-bottom:8px}
-.imp-card .q__stmt{margin-bottom:10px}
+.imp-card:first-child{border-top:0}
+.imp-card .q__meta{margin-bottom:8px;color:var(--muted);font-size:12px}
+.imp-card .q__stmt{margin-bottom:10px;color:#103a9c}
 .imp-card .q__opts{gap:10px}
 .imp-selecionar{margin-top:10px;display:inline-flex;align-items:center;gap:8px}
 .imp-selecionar input[type="checkbox"]{transform:scale(1.2)}
