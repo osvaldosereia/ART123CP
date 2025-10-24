@@ -779,6 +779,59 @@ if (btnExportar && btnExportar.parentNode) {
   btnExportar.parentNode.insertBefore(btnCriar, btnExportar);
 }
 
+// --- Navegação rápida entre selecionadas ---
+const btnPrevSel = document.createElement('button');
+btnPrevSel.id = 'imp-prev-sel';
+btnPrevSel.type = 'button';
+btnPrevSel.className = 'btn';
+btnPrevSel.textContent = '← Selecionada';
+
+const btnNextSel = document.createElement('button');
+btnNextSel.id = 'imp-next-sel';
+btnNextSel.type = 'button';
+btnNextSel.className = 'btn';
+btnNextSel.textContent = 'Selecionada →';
+
+function getRootScroll(){
+  return modal?.querySelector('.modal-body') || lista || document;
+}
+function selectedEls(){
+  const ids = new Set([...selected.keys()]);
+  return Array.from(lista.querySelectorAll('.imp-card'))
+    .filter(el => ids.has(Number(el.dataset.id || '0')));
+}
+function jumpToSelected(dir){
+  const root = getRootScroll();
+  const viewTop = root.scrollTop || 0;
+  const els = selectedEls();
+  if (!els.length) return;
+
+  let target = null;
+  if (dir > 0){
+    target = els.find(el => el.offsetTop > viewTop + 5) || els[0];
+  } else {
+    const before = els.filter(el => el.offsetTop < viewTop - 5);
+    target = before.length ? before[before.length - 1] : els[els.length - 1];
+  }
+  target?.scrollIntoView({ block: 'center' });
+}
+function updateNavButtons(){
+  const any = selected.size > 0;
+  btnPrevSel.disabled = !any;
+  btnNextSel.disabled = !any;
+}
+
+btnPrevSel.addEventListener('click', () => jumpToSelected(-1));
+btnNextSel.addEventListener('click', () => jumpToSelected(1));
+
+// Inserção visual: [Prev] [Criar Prova] [Next] [Exportar]
+if (btnExportar && btnExportar.parentNode){
+  btnExportar.parentNode.insertBefore(btnPrevSel, btnCriar);
+  btnExportar.parentNode.insertBefore(btnNextSel, btnExportar);
+}
+updateNavButtons();
+
+
 async function getAllItems(){
   if (allItemsCache) return allItemsCache.slice();
   let cur = null, acc = [];
@@ -941,7 +994,11 @@ window.addEventListener('abrirImpressora', (e) => {
   openModal(id);                                // mantém foco/scroll para o id
 });
 
-  function updateCounter(){ if (contadorEl) contadorEl.textContent = selected.size; if (btnExportar) btnExportar.disabled = selected.size === 0; }
+function updateCounter(){
+  if (contadorEl) contadorEl.textContent = selected.size;
+  if (btnExportar) btnExportar.disabled = selected.size === 0;
+  if (typeof updateNavButtons === 'function') updateNavButtons();
+}
 
   function makeCard(q){
     const article = document.createElement('article');
