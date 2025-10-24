@@ -242,3 +242,42 @@ body{
 .imp-card .q__opts{gap:10px}
 .imp-selecionar{margin-top:10px;display:inline-flex;align-items:center;gap:8px}
 .imp-selecionar input[type="checkbox"]{transform:scale(1.2)}
+
+/* ===== Ajustes do modal Impressora (sem caixas, só separadores como no site) ==== */
+#modal-impressora .imp-card{border:0;background:transparent;padding:0;margin:0}
+#modal-impressora .imp-card .imp-body{padding:0}
+#modal-impressora .imp-selecionar{margin:10px 0 0 0}
+
+/* título + barra de status logo abaixo do título */
+#modal-impressora .modal-head{padding:14px 16px;border-bottom:1px solid var(--border)}
+#modal-impressora .imp-toolbar{
+  padding:8px 16px 0 16px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  font-size:14px;color:#374151;
+}
+@media (max-width:480px){
+  #modal-impressora .imp-toolbar{flex-direction:column;align-items:flex-start;gap:6px}
+}
+
+/* lista dentro do modal segue o visual das questões do site */
+#modal-impressora .lista-questoes .q{padding:16px 0;border-top:4px solid #eceff3}
+#modal-impressora .lista-questoes .q:first-child{border-top:0;padding-top:0}
+#modal-impressora .lista-questoes .q__stmt{color:#103a9c;margin-bottom:10px;line-height:1.55}
+#modal-impressora .lista-questoes .q__opts{display:grid;gap:10px}
+
+/* botão redondo (impressora/frases) consistente */
+.btn-icon-round{
+  width:28px;height:28px;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid #e5e7eb;background:#fff;cursor:pointer
+}
+.btn-icon-round:hover{background:#f5f5f5}
+.btn-icon-round svg{width:14px;height:14px}
+
+/* rodapé do modal */
+#modal-impressora .modal-foot{padding:12px 16px;border-top:1px solid var(--border);display:flex;justify-content:flex-end}
+#imp-exportar.btn{background:#111;color:#fff;border-color:#111}
+#imp-exportar.btn:disabled{opacity:.5;cursor:not-allowed}
+
+/* loading e sentinela */
+#imp-loading{padding:12px;text-align:center;color:#6b7280}
+#imp-sentinela{height:1px}
