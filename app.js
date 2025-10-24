@@ -879,37 +879,58 @@ async function exportarPDF_PURO(questoes){
   const doc = new jsPDF({ unit:'mm', format:'a4', compress:true });
   doc.setProperties({ title: 'Prova MeuJus' });
 
-  // Métricas e estilos
+  // Métricas
   const PAGE_W = doc.internal.pageSize.getWidth();
   const PAGE_H = doc.internal.pageSize.getHeight();
 
-  const M = 10;           // margens iguais 10mm
+  const M = 10;                 // margens iguais 10mm
+  const TOP_EXTRA = 3;          // +~10px de respiro no topo
   const COLS = Number(document.querySelector('input[name="imp-colunas"]:checked')?.value || 1);
-  const GAP = COLS === 2 ? 10 : 0;     // mais espaço entre colunas
+  const GAP  = COLS === 2 ? 10 : 0; // margem entre colunas
   const COL_W = COLS === 2 ? (PAGE_W - 2*M - GAP)/2 : (PAGE_W - 2*M);
 
-  const BASE_FS = 11;     // texto normal
-  const ALT_FS  = 9;      // alternativas 2pt menor
-  const LH_BASE = 5.2;    // line-height base em mm (corresponde ao FS 11)
-  const LH_ALT  = 4.6;    // line-height p/ alternativas
-  const SEP_PAD = 3;      // respiro antes/pois do separador
-  const ENUN_TO_ALTS = 4; // respiro entre enunciado e alternativas
-  const ALT_IND = 3;      // recuo extra à esquerda do texto das alternativas
+  // Fontes e espaçamentos
+  const ENUN_FS = 10;           // enunciado: -1 px (aprox.)
+  const ALT_FS  = 9;            // alternativas: ~2 px menor
+  const TIT_FS  = 11;
 
-  function setBase(){ doc.setFont('Helvetica',''); doc.setFontSize(BASE_FS); }
+  const LH_ENUN = 4.8;          // line-height enunciado (mm)
+  const LH_ALT  = 4.6;          // line-height alternativas (mm)
+  const LH_TIT  = 5.2;
+
+  const TITLE_GAP = LH_ENUN * 1.0; // enunciado começa claramente abaixo do título
+  const ENUN_TO_ALTS = 6;          // mais respiro entre enunciado e alternativas
+  const ALT_IND = 2;               // recuo menor na margem esquerda das alternativas
+
+  const SEP = 5;                   // separador com respiro igual acima/abaixo
+
+  function setEnun(){ doc.setFont('Helvetica',''); doc.setFontSize(ENUN_FS); }
   function setAlt(){  doc.setFont('Helvetica',''); doc.setFontSize(ALT_FS);  }
+  function setTit(){  doc.setFont('Helvetica','bold'); doc.setFontSize(TIT_FS); }
+
+  // Fluxo de página/coluna
+  let curCol = 0;
+  let curX = M;
+  let curY = M + TOP_EXTRA;
 
   function newPage(){
     doc.addPage();
-    curX = M; curY = M; curCol = 0;
+    curCol = 0;
+    curX = M;
+    curY = M + TOP_EXTRA;
   }
   function nextColumnOrPage(){
-    if (COLS === 2 && curCol === 0){ curCol = 1; curX = M + COL_W + GAP; curY = M; }
-    else newPage();
+    if (COLS === 2 && curCol === 0){
+      curCol = 1;
+      curX = M + COL_W + GAP;
+      curY = M + TOP_EXTRA;
+    } else newPage();
   }
-  function ensureSpace(need){ if (curY + need > PAGE_H - M) nextColumnOrPage(); }
+  function ensureSpace(need){
+    if (curY + need > PAGE_H - M) nextColumnOrPage();
+  }
 
-  // layout util
+  // Quebra e justificação
   function layoutLines(doc, text, maxWidth){
     const words = String(text||'').split(/\s+/).filter(Boolean);
     const lines = [];
@@ -919,7 +940,7 @@ async function exportarPDF_PURO(questoes){
       if (!cur.length) return;
       const natural = cur.reduce((s,w)=>s+doc.getTextWidth(w),0) + (cur.length-1)*spaceW;
       const extra = Math.max(maxWidth - natural, 0);
-      lines.push({ words: cur.slice(), justify: !forceLeft && cur.length>1, natural, extra, gaps: Math.max(cur.length-1,1) });
+      lines.push({ words: cur.slice(), justify: !forceLeft && cur.length>1, extra, gaps: Math.max(cur.length-1,1) });
       cur = []; curW = 0;
     }
     for (let i=0;i<words.length;i++){
@@ -950,96 +971,86 @@ async function exportarPDF_PURO(questoes){
     return yy;
   }
 
-  // estado de cursor
-  let curX = M, curY = M, curCol = 0;
-
-  // Questões
-  setBase();
+  // Render
   questoes.forEach((q, qi)=>{
+    // Garantir que título + gap + 1ª linha do enunciado fiquem juntos
+    setTit();
+    const minBlock = LH_TIT + TITLE_GAP + LH_ENUN;
+    ensureSpace(minBlock);
+
     // Título
-    const titulo = `Questão ${qi+1}`;
-    ensureSpace(LH_BASE*1.8);
-    doc.setFont('Helvetica','bold'); doc.text(titulo, curX, curY); doc.setFont('Helvetica','');
-    curY += LH_BASE*1.2;
+    doc.text(`Questão ${qi+1}`, curX, curY);
+    curY += TITLE_GAP;
 
     // Enunciado
+    setEnun();
     const enunParas = String(q.enunciadoPlain||'').replace(/\r/g,'').split(/\n+/).filter(Boolean);
     for (let i=0;i<enunParas.length;i++){
       const lines = layoutLines(doc, enunParas[i], COL_W);
-      ensureSpace(lines.length*LH_BASE + (i?LH_BASE*0.5:0));
-      if (i) curY += LH_BASE*0.5;
-      curY = drawJustified(doc, curX, curY, lines, LH_BASE);
+      ensureSpace(lines.length*LH_ENUN + (i?LH_ENUN*0.5:0));
+      if (i) curY += LH_ENUN*0.5;
+      curY = drawJustified(doc, curX, curY, lines, LH_ENUN);
     }
 
-    // Respiro maior entre enunciado e alternativas
+    // Respiro entre enunciado e alternativas
     curY += ENUN_TO_ALTS;
 
     // Alternativas
     setAlt();
-    const labelTemplate = (k)=>`[ ${String.fromCharCode(65+k)} ] - `;
     (q.alternativas||[]).forEach((a, k)=>{
-      const text = String(a).replace(/^[A-E]\)\s*/i,'').trim();
-      const label = labelTemplate(k);
+      const label = `[ ${String.fromCharCode(65+k)} ] - `;
       const labelW = doc.getTextWidth(label);
+      const text = String(a).replace(/^[A-E]\)\s*/i,'').trim();
 
-      const maxTextW = COL_W - labelW - ALT_IND;
-      const lines = layoutLines(doc, text, Math.max(maxTextW, 10));
+      const maxTextW = Math.max(COL_W - labelW - ALT_IND, 10);
+      const lines = layoutLines(doc, text, maxTextW);
 
-      // altura necessária
       const need = lines.length*LH_ALT + LH_ALT*0.25;
       ensureSpace(need);
 
-      // linha 1: imprime label fixo e texto justificado ao lado
       let y0 = curY;
-      doc.text(label, curX, y0); // label
-      // redesenha a primeira linha deslocada
-      const l1 = lines.shift();
-      if (l1){
-        const xText = curX + labelW + ALT_IND;
-        // para a primeira, justificar se houver sobra
-        const first = [{...l1}];
-        y0 = drawJustified(doc, xText, y0, first, LH_ALT);
-      }
+      // label fixo
+      doc.text(label, curX, y0);
 
-      // demais linhas com o mesmo recuo
+      // primeira linha ao lado do label
+      const first = lines.shift();
+      if (first){
+        y0 = drawJustified(doc, curX + labelW + ALT_IND, y0, [first], LH_ALT);
+      }
+      // demais linhas alinhadas ao texto
       if (lines.length){
-        const xText = curX + labelW + ALT_IND;
-        y0 = drawJustified(doc, xText, y0, lines, LH_ALT);
+        y0 = drawJustified(doc, curX + labelW + ALT_IND, y0, lines, LH_ALT);
       }
-
       curY = y0 + LH_ALT*0.25;
     });
-    setBase();
 
-    // Separador entre questões
-    curY += SEP_PAD;
-    ensureSpace(LH_BASE + SEP_PAD);
+    // Separador com respiro simétrico
+    curY += SEP;
+    ensureSpace(0); // se precisar, quebra antes da linha
     doc.setLineWidth(0.2);
     doc.line(curX, curY, curX + COL_W, curY);
-    curY += SEP_PAD;
+    curY += SEP;
   });
 
-  // Página/coluna para gabarito
+  // Gabarito
   nextColumnOrPage();
-  doc.setFont('Helvetica','bold'); doc.setFontSize(BASE_FS); doc.text('Gabarito', curX, curY);
-  doc.setFont('Helvetica',''); doc.setFontSize(BASE_FS);
-  curY += LH_BASE*1.2;
+  setTit(); doc.text('Gabarito', curX, curY);
+  curY += LH_TIT;
+  doc.setFont('Helvetica',''); doc.setFontSize(ENUN_FS);
 
   const half = Math.ceil(questoes.length/2);
-  const cols = [
-    questoes.slice(0, half).map((q,i)=>`${i+1}) ${String(q.gabarito||'-').toUpperCase().replace(/[^A-E]/g,'')}`),
-    questoes.slice(half).map((q,i)=>`${half+i+1}) ${String(q.gabarito||'-').toUpperCase().replace(/[^A-E]/g,'')}`)
-  ];
+  const colGap = 18;                  // leitura
+  const gabColW = (COL_W - colGap)/2;
 
-  const COL_GAB_GAP = 18;               // um pouco maior para leitura
-  const colW = (COL_W - COL_GAB_GAP)/2;
-  const maxRows = Math.max(cols[0].length, cols[1].length);
+  const colA = questoes.slice(0, half).map((q,i)=>`${i+1}) ${String(q.gabarito||'-').toUpperCase().replace(/[^A-E]/g,'')}`);
+  const colB = questoes.slice(half).map((q,i)=>`${half+i+1}) ${String(q.gabarito||'-').toUpperCase().replace(/[^A-E]/g,'')}`);
+  const maxRows = Math.max(colA.length, colB.length);
 
   for (let r=0; r<maxRows; r++){
-    ensureSpace(LH_BASE);
-    if (cols[0][r]) doc.text(cols[0][r], curX, curY);
-    if (cols[1][r]) doc.text(cols[1][r], curX + colW + COL_GAB_GAP, curY);
-    curY += LH_BASE;
+    ensureSpace(LH_ENUN);
+    if (colA[r]) doc.text(colA[r], curX, curY);
+    if (colB[r]) doc.text(colB[r], curX + gabColW + colGap, curY);
+    curY += LH_ENUN;
   }
 
   doc.save('prova.pdf');
