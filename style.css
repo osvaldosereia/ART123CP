@@ -28,6 +28,7 @@ body{
 }
 .brand{font-weight:600;white-space:nowrap}
 .topbar__filters{display:contents}
+.topbar > .container{max-width:var(--container);margin:0 auto;padding:0 16px}
 
 /* menus centrados no mobile */
 @media(max-width:480px){
@@ -89,7 +90,7 @@ body{
 .q__explain{margin-top:8px;font-size:13px;color:#0f172a}
 
 /* ========= AÇÕES ========= */
-.q__actions{display:flex;gap:10px;margin-top:10px}
+.q__actions{display:flex;gap:10px;margin-top:10px;align-items:center}
 .btn{height:34px;padding:0 12px;border:1px solid var(--border);border-radius:10px;background:#eeeeee;cursor:pointer}
 .btn:hover{background:#e7e7e7}
 .popover{position:relative}
@@ -101,11 +102,16 @@ body{
 .subbtn{height:30px;padding:0 10px;font-size:13px;border:1px solid #e5e7eb;border-radius:8px;background:#fff;cursor:pointer}
 .subbtn:hover{background:#f9fafb}
 
+/* Botões redondos pequenos dentro do card */
+.btn-icon-round{
+  width:28px;height:28px;padding:0;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid #e5e7eb;background:#fff;cursor:pointer
+}
+.btn-icon-round:hover{background:#f5f5f5}
+.btn-icon-round img{width:14px;height:14px}
+
 /* ========= SENTINELA ========= */
 #sentinela{height:1px}
-
-/* limite do container dentro da topbar */
-.topbar > .container{max-width:var(--container);margin:0 auto;padding:0 16px}
 
 /* controles menores no mobile */
 @media(max-width:480px){
@@ -113,12 +119,12 @@ body{
   .select,.multiselect{min-width:0;width:100%}
 }
 
-/* ========= MODAL (CENTRADO) ========= */
+/* ========= MODAL BASE ========= */
 .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:60}
 .modal:not(.hidden){display:flex}
-.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.4)}
+.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.4);z-index:10}
 .modal-card{
-  position:relative;z-index:1;
+  position:relative;z-index:20;
   width:min(720px,94vw);
   max-height:92vh;
   background:#fff;border-radius:18px;box-shadow:0 12px 32px rgba(0,0,0,.18);
@@ -127,27 +133,15 @@ body{
 .modal-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 0;gap:12px}
 .modal-body{padding:12px 16px 18px;overflow:auto}
 
-/* Paleta */
+/* ========= MODAL DE FRASES ========= */
+#frases-modal .modal-card{width:min(1100px,94vw);max-width:100vw}
+#frases-modal .modal-body{overflow-x:hidden}
+#frases-title{margin:8px 0 10px;font:700 22px system-ui,-apple-system,Segoe UI,Roboto}
 .swatches{display:flex;gap:8px;padding:8px 0 6px;flex-wrap:wrap}
 .swatch{width:22px;height:22px;border-radius:6px;border:2px solid #1112}
 .swatch[aria-selected="true"]{outline:2px solid #111;outline-offset:2px}
 
-/* Botão pequeno */
-.btn-icon-round{
-  width:28px;height:28px;padding:0;border-radius:9999px;display:inline-flex;align-items:center;justify-content:center;
-  border:1px solid #e5e7eb;background:#fff
-}
-.btn-icon-round img{width:14px;height:14px}
-.q__actions{display:flex;align-items:center;gap:8px}
-
-/* ========= MODAL DE FRASES ========= */
-#frases-modal .modal-card{
-  width: min(1100px, 94vw);
-  max-width: 100vw;
-}
-#frases-modal .modal-body{overflow-x:hidden}
-
-/* colunas responsivas */
+/* Grid de frases */
 #frases-modal .frases-grid{
   display:grid;gap:16px;width:100%;max-width:100%;overflow-x:hidden;
   grid-template-columns:1fr;
@@ -158,7 +152,6 @@ body{
 @media (min-width:1024px){
   #frases-modal .frases-grid{grid-template-columns:1fr 1fr 1fr}
 }
-
 #frases-modal .frase-item{
   background:#f8f9fb;border:1px solid #e5e7eb;border-radius:12px;
   padding:12px;display:flex;flex-direction:column;align-items:center;gap:10px;width:100%;
@@ -166,9 +159,8 @@ body{
 #frases-modal .frase-canvas{width:100%;height:auto;display:block;border-radius:10px;background:#fff}
 #frases-modal .btn-share-vert{
   align-self:center;padding:8px 12px;border:1px solid #e5e7eb;border-radius:999px;background:#fff;
-  font:500 14px system-ui,-apple-system,Segoe UI,Roboto;
+  font:500 14px system-ui,-apple-system,Segoe UI,Roboto
 }
-#frases-title{margin:8px 0 10px;font:700 22px system-ui,-apple-system,Segoe UI,Roboto}
 #frases-sentinela{height:1px;width:100%}
 
 /* ajustes extras mobile */
@@ -178,10 +170,10 @@ body{
 }
 
 /* Brand responsiva */
-.brand--short{display:none;}
+.brand--short{display:none}
 @media (max-width:480px){
-  .brand--full{display:none;}
-  .brand--short{display:inline;}
+  .brand--full{display:none}
+  .brand--short{display:inline}
 }
 
 /* Dropdowns mais compactos */
@@ -210,53 +202,31 @@ body{
   color:#6b7280;
   margin-top:8px;
 }
-/* Botão circular igual ao "frases" */
-.btn-circular{
-  width:44px;height:44px;border-radius:9999px;
-  display:inline-flex;align-items:center;justify-content:center;
-  border:1px solid var(--border,#ddd);background:var(--bg,#fff);cursor:pointer;
-}
-.btn-circular:hover{background:#f5f5f5}
 
-/* Modal base (reusa padrão do modal frases) */
-#modal-impressora.modal{position:fixed;inset:0;z-index:60}
-#modal-impressora .modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.4)}
-#modal-impressora .modal-content{
-  position:relative;margin:5vh auto;max-width:960px;height:90vh;background:#fff;border-radius:12px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.15)
+/* ========= MODAL IMPRESSORA ========= */
+#modal-impressora.modal{z-index:70}
+#modal-impressora .modal-backdrop{background:rgba(0,0,0,.4);z-index:70}
+#modal-impressora .modal-card{
+  max-width:960px;height:90vh;margin:5vh 0;z-index:80;
+  border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.15)
 }
-#modal-impressora .modal-header{padding:16px 20px;border-bottom:1px solid #eee;display:flex;align-items:center;justify-content:space-between}
-#modal-impressora .modal-close{font-size:22px;line-height:1;border:none;background:transparent;cursor:pointer}
-#modal-impressora .modal-controls{display:flex;gap:16px;align-items:center;padding:12px 20px;border-bottom:1px solid #f1f1f1}
+#modal-impressora .modal-head{padding:16px 20px;border-bottom:1px solid #eee}
+#modal-impressora .modal-foot{padding:12px 20px;border-top:1px solid #eee;display:flex;justify-content:flex-end}
+#modal-impressora .modal-body{padding:16px;overflow:auto}
+#modal-impressora .imp-toolbar{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:12px}
 #modal-impressora .contador{font-weight:600}
 #modal-impressora .layout-cols label{margin-right:12px}
-#modal-impressora .lista-questoes{flex:1;overflow:auto;padding:16px;position:relative}
+#modal-impressora .lista-questoes{min-height:200px}
 #modal-impressora .loading{text-align:center;padding:12px;color:#777}
-#modal-impressora .modal-footer{padding:12px 20px;border-top:1px solid #eee;display:flex;justify-content:flex-end}
 #imp-exportar.btn-primary{padding:10px 16px;border-radius:10px;border:none;background:#111;color:#fff;cursor:pointer}
 #imp-exportar.btn-primary:disabled{opacity:.5;cursor:not-allowed}
 
-/* Card simplificado para impressão */
+/* Cards dentro do modal (mesmo visual dos cartões) */
 .imp-card{
   border:1px solid #e7e7e7;border-radius:10px;padding:12px;margin-bottom:12px;background:#fff;
 }
-.imp-card h3{font-size:16px;margin:0 0 8px 0}
-.imp-metadados{font-size:12px;color:#666;margin-bottom:8px}
-.imp-enunciado{font-size:14px;color:#222}
-.imp-selecionar{
-  margin-top:10px;display:inline-flex;align-items:center;gap:8px;
-}
+.imp-card .q__meta{margin-bottom:8px}
+.imp-card .q__stmt{margin-bottom:10px}
+.imp-card .q__opts{gap:10px}
+.imp-selecionar{margin-top:10px;display:inline-flex;align-items:center;gap:8px}
 .imp-selecionar input[type="checkbox"]{transform:scale(1.2)}
-.hidden{display:none}
-
-/* Modal Impressora alinhado ao modal já existente */
-#modal-impressora .modal-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.4); z-index:10; }
-#modal-impressora .modal-card{ position:relative; margin:5vh auto; max-width:960px; height:90vh;
-  background:#fff; border-radius:12px; display:flex; flex-direction:column; overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,.15); z-index:20;
-}
-#modal-impressora .modal-head, 
-#modal-impressora .modal-foot{ padding:12px 20px; border-bottom:1px solid #eee; display:flex; align-items:center; justify-content:space-between; }
-#modal-impressora .modal-foot{ border-top:1px solid #eee; border-bottom:0; justify-content:flex-end; }
-#modal-impressora .modal-body{ flex:1; overflow:auto; padding:16px; }
-#modal-impressora .imp-toolbar{ display:flex; gap:16px; align-items:center; justify-content:space-between; margin-bottom:12px; }
-#modal-impressora .lista-questoes{ min-height:200px; }
