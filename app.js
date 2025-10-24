@@ -846,80 +846,121 @@ function renderFrasePNG(canvas, frase, autor, bg){
   }
 
   // Exportar PDF — sem meta, numeração no enunciado, fonte sans-serif, ajuste ±2px
-  function exportarPDF(questoes, { colunas = 1 } = {}){
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF({ unit: 'mm', format: 'a4', putOnlyUsedFonts: true });
+  // Exportar PDF — fonte única, sem ajuste dinâmico; separador forte e bom respiro
+function exportarPDF(questoes, { colunas = 1 } = {}){
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ unit: 'mm', format: 'a4', putOnlyUsedFonts: true });
 
-    const pageW = doc.internal.pageSize.getWidth();
-    const pageH = doc.internal.pageSize.getHeight();
-    const margin = 15;
-    const gutter = 8;
-    const contentW = pageW - margin*2;
-    const colW = colunas === 2 ? (contentW - gutter)/2 : contentW;
+  // Layout
+  const pageW = doc.internal.pageSize.getWidth();
+  const pageH = doc.internal.pageSize.getHeight();
+  const margin = 15;
+  const gutter = 8;
+  const contentW = pageW - margin*2;
+  const colW = colunas === 2 ? (contentW - gutter)/2 : contentW;
 
-    const BASE = 12, MINF = 10, MAXF = 14;
-    doc.setFont('helvetica','normal');
+  // Tipografia: sans-serif, preto
+  const FONT_SIZE = 12;               // único tamanho
+  const LINE_H = 5.2;                 // ~14pt de leading
+  const TITLE_GAP = 2.5;              // após primeira linha “N. …”
+  const BLOCK_TOP = 4;                // respiro antes da questão
+  const BLOCK_BOTTOM = 6;             // respiro após separador
 
-    function measureQuestao(q, fontSize){
-      const lineH = fontSize * 0.42;
-      const enunLines = doc.splitTextToSize(stripHtml(q.enunciadoPlain || ''), colW);
-      const altLines = (Array.isArray(q.alternativas)? q.alternativas:[]).flatMap(a => doc.splitTextToSize(String(a), colW));
-      const totalLines = (enunLines.length > 0 ? enunLines.length : 1) + altLines.length + 1; // +1 separador
-      return totalLines * lineH + 3;
+  doc.setFont('helvetica','normal');
+  doc.setTextColor(0,0,0);
+
+  // Estado de coluna
+  const state = { x: margin, y: margin, col: 1 };
+  function nextColumnOrPage(){
+    if (colunas === 2 && state.col === 1){
+      state.x = margin + colW + gutter;
+      state.y = margin;
+      state.col = 2;
+    } else {
+      doc.addPage();
+      doc.setFont('helvetica','normal');
+      doc.setTextColor(0,0,0);
+      state.x = margin; state.y = margin; state.col = 1;
     }
-
-    function renderQuestao(q, fontSize, st){
-      const lineH = fontSize * 0.42;
-      doc.setFontSize(fontSize);
-
-      const enunLines = doc.splitTextToSize(stripHtml(q.enunciadoPlain || ''), colW);
-      const altLines = (Array.isArray(q.alternativas)? q.alternativas:[]).flatMap(a => doc.splitTextToSize(String(a), colW));
-
-      const first = `${q.index}. ${enunLines.shift() || ""}`;
-      doc.text(first, st.x, st.y); st.y += lineH;
-      enunLines.forEach(l => { doc.text(l, st.x, st.y); st.y += lineH; });
-      altLines.forEach(l => { doc.text(l, st.x, st.y); st.y += lineH; });
-
-      doc.setDrawColor(220);
-      doc.line(st.x, st.y, st.x + colW, st.y);
-      st.y += 3;
-    }
-
-    function newState(){ return { x: margin, y: margin, col: 1 }; }
-    function nextColumnOrPage(st){
-      if (colunas === 2 && st.col === 1) { st.x = margin + colW + gutter; st.y = margin; st.col = 2; }
-      else { doc.addPage(); doc.setFont('helvetica','normal'); st.x = margin; st.y = margin; st.col = 1; }
-    }
-
-    let st = newState();
-    const items = questoes.map((q, i) => ({ ...q, index: i+1 }));
-
-    for (const q of items){
-      let chosen = BASE;
-      let h = measureQuestao(q, chosen);
-      const bottom = pageH - margin;
-
-      if (st.y + h > bottom) {
-        for (let fs = BASE - 1; fs >= MINF; fs--){
-          if (st.y + measureQuestao(q, fs) <= bottom) { chosen = fs; h = measureQuestao(q, fs); break; }
-        }
-        if (st.y + h > bottom) {
-          nextColumnOrPage(st);
-          chosen = BASE;
-          h = measureQuestao(q, chosen);
-          for (let fs = BASE + 1; fs <= MAXF; fs++){
-            const hh = measureQuestao(q, fs);
-            if (margin + hh <= bottom) { chosen = fs; h = hh; } else break;
-          }
-        }
-      }
-
-      if (st.y + h > bottom) { nextColumnOrPage(st); chosen = Math.min(MAXF, BASE + 1); h = measureQuestao(q, chosen); }
-      renderQuestao(q, chosen, st);
-    }
-
-    doc.save('prova.pdf');
   }
+
+  // Quebra por linha: antes de imprimir cada linha, verifica espaço
+  function ensureSpace(linesToGo = 1){
+    const bottom = pageH - margin;
+    if (state.y + (linesToGo * LINE_H) > bottom) nextColumnOrPage();
+  }
+
+  function writeLines(lines){
+    doc.setFontSize(FONT_SIZE);
+    lines.forEach((ln, i) => {
+      ensureSpace(1);
+      doc.text(ln, state.x, state.y);
+      state.y += LINE_H;
+    });
+  }
+
+  function writeSeparator(){
+    ensureSpace(2);
+    doc.setDrawColor(0);   // preto
+    doc.setLineWidth(0.6); // mais visível
+    doc.line(state.x, state.y, state.x + colW, state.y);
+    state.y += BLOCK_BOTTOM;
+  }
+
+  function normalizeAltList(q){
+    // já vem pronto no modal, mas garantimos “A) …”
+    const arr = Array.isArray(q.alternativas) ? q.alternativas : [];
+    return arr.map((t, i) => {
+      const letra = String.fromCharCode(65 + i);
+      const clean = String(t).replace(/^[A-E]\)\s*/i,'');
+      return `${letra}) ${clean}`;
+    });
+  }
+
+  function stripHtml(html){
+    try{
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html || '';
+      const raw = tmp.textContent || tmp.innerText || '';
+      return (window.he ? he.decode(raw) : raw).replace(/\s+\n/g,'\n').replace(/[ \t]+/g,' ').trim();
+    }catch{ return ''; }
+  }
+
+  // Render de uma questão: numeração na primeira linha, sem meta
+  function renderQuestao(q, index){
+    const enun = stripHtml(q.enunciadoPlain || '');
+    const enunLines = doc.splitTextToSize(enun, colW);
+    const alts = normalizeAltList(q).flatMap(a => doc.splitTextToSize(a, colW));
+
+    // respiro antes do bloco
+    ensureSpace(Math.ceil(BLOCK_TOP / LINE_H));
+    state.y += BLOCK_TOP;
+
+    // primeira linha: "N. " + primeira linha do enunciado
+    const first = `${index}. ${enunLines.shift() || ''}`;
+    doc.setFont('helvetica','bold');
+    writeLines([first]);
+
+    // pequeno gap do título para o resto do enunciado
+    state.y += TITLE_GAP;
+
+    // restante do enunciado
+    doc.setFont('helvetica','normal');
+    writeLines(enunLines);
+
+    // alternativas
+    if (alts.length) writeLines(alts);
+
+    // separador + respiro
+    writeSeparator();
+  }
+
+  // Numerar na ordem apresentada
+  const items = questoes.map((q, i) => ({ ...q, index: i+1 }));
+  items.forEach(q => renderQuestao(q, q.index));
+
+  doc.save('prova.pdf');
+}
 
   function stripHtml(html){
     try{
