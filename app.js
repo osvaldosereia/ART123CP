@@ -970,7 +970,7 @@ function openModal(focusId){
   if (lista) { lista.innerHTML = ''; lista.appendChild(loading); lista.appendChild(ensureSentinel()); lista.scrollTop = 0; }
   selected.clear();
   updateCounter();
-  cursor = null;
+if (cursor == null) cursor = 0;
   hasMore = true;
   loadMore();
   mountImpInfiniteScroll();
