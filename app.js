@@ -959,44 +959,102 @@ async function exportarPDF_HTML(questoes){
   const root = document.getElementById('pdf-root');
   root.innerHTML = '';
 
+  // Página de questões
   const page1 = document.createElement('div');
   page1.className = 'pdf-prova';
-  questoes.forEach((q,i)=>{
-    const art = document.createElement('article'); art.className='q';
-    const t = document.createElement('div'); t.className='q__stmt'; t.textContent=`Questão ${i+1}`;
-    const e = document.createElement('div'); e.className='q__stmt'; e.textContent=q.enunciadoPlain||'';
-    const ul=document.createElement('ul'); ul.className='q__opts';
-    (q.alternativas||[]).forEach((a,k)=>{
-      const li=document.createElement('li'); li.className='q__opt';
-      const b=document.createElement('span'); b.className='q__badge'; b.textContent=String.fromCharCode(65+k);
-      const tx=document.createElement('div'); tx.textContent=String(a).replace(/^[A-E]\)\s*/i,'');
-      li.appendChild(b); li.appendChild(tx); ul.appendChild(li);
+
+  questoes.forEach((q, i) => {
+    const art = document.createElement('article');
+    art.className = 'pdf-q';
+
+    const titulo = document.createElement('div');
+    titulo.className = 'pdf-titulo';
+    titulo.textContent = `Questão ${i + 1}`;
+
+    const enun = document.createElement('div');
+    enun.className = 'pdf-enun';
+    // preserva quebras simples
+    (String(q.enunciadoPlain || '').split(/\n+/)).forEach(p => {
+      const d = document.createElement('div');
+      d.textContent = p;
+      enun.appendChild(d);
     });
-    art.appendChild(t); art.appendChild(e); art.appendChild(ul);
+
+    const ul = document.createElement('ul');
+    ul.className = 'pdf-opts';
+
+    (q.alternativas || []).forEach((a, k) => {
+      const li = document.createElement('li');
+      li.className = 'pdf-opt';
+
+      const badge = document.createElement('span');
+      badge.className = 'pdf-badge';
+      badge.textContent = String.fromCharCode(65 + k);
+
+      const tx = document.createElement('div');
+      tx.textContent = String(a).replace(/^[A-E]\)\s*/i, '');
+
+      li.appendChild(badge);
+      li.appendChild(tx);
+      ul.appendChild(li);
+    });
+
+    art.appendChild(titulo);
+    art.appendChild(enun);
+    art.appendChild(ul);
     page1.appendChild(art);
   });
+
   root.appendChild(page1);
 
+  // Página de gabarito
   const page2 = document.createElement('div');
-  page2.className='pdf-prova';
-  const h=document.createElement('h2'); h.style.textAlign='center'; h.textContent='Gabarito';
-  const L=document.createElement('div'), R=document.createElement('div');
-  L.style.display=R.style.display='inline-block'; L.style.width=R.style.width='48%'; L.style.verticalAlign=R.style.verticalAlign='top';
-  const mid=Math.ceil(questoes.length/2);
-  const mk=(n,g)=>`${n}) ${(g||'-').toString().toUpperCase().replace(/[^A-E]/g,'')}`;
-  L.innerHTML = questoes.slice(0,mid).map((q,i)=>`<div>${mk(i+1,q.gabarito)}</div>`).join('');
-  R.innerHTML = questoes.slice(mid).map((q,i)=>`<div>${mk(mid+i+1,q.gabarito)}</div>`).join('');
-  page2.appendChild(h); page2.appendChild(L); page2.appendChild(R);
+  page2.className = 'pdf-prova';
+
+  const h = document.createElement('h2');
+  h.style.textAlign = 'center';
+  h.textContent = 'Gabarito';
+
+  const colsWrap = document.createElement('div');
+  const L = document.createElement('div');
+  const R = document.createElement('div');
+  [L, R].forEach(c => { c.style.display = 'inline-block'; c.style.width = '48%'; c.style.verticalAlign = 'top'; });
+
+  const mid = Math.ceil(questoes.length / 2);
+  const mk = (n, g) => `${n}) ${String(g || '-').toUpperCase().replace(/[^A-E]/g, '')}`;
+
+  L.innerHTML = questoes.slice(0, mid).map((q, i) => `<div>${mk(i + 1, q.gabarito)}</div>`).join('');
+  R.innerHTML = questoes.slice(mid).map((q, i) => `<div>${mk(mid + i + 1, q.gabarito)}</div>`).join('');
+
+  colsWrap.appendChild(L);
+  colsWrap.appendChild(R);
+
+  page2.appendChild(h);
+  page2.appendChild(colsWrap);
   root.appendChild(page2);
 
+  // Renderização em PDF
   const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit:'px', format:'a4', compress:true });
+  const doc = new jsPDF({ unit: 'px', format: 'a4', compress: true });
+  doc.setProperties({ title: 'Prova MeuJus' });
 
-  await new Promise(res=>doc.html(page1, { x:24, y:24, width:794-48, html2canvas:{scale:2,useCORS:true}, callback:res }));
+  await new Promise(res => doc.html(page1, {
+    x: 24, y: 24, width: 794 - 48,
+    html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+    callback: res
+  }));
+
   doc.addPage();
-  await new Promise(res=>doc.html(page2, { x:24, y:24, width:794-48, html2canvas:{scale:2,useCORS:true}, callback:res }));
+
+  await new Promise(res => doc.html(page2, {
+    x: 24, y: 24, width: 794 - 48,
+    html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+    callback: res
+  }));
+
   doc.save('prova.pdf');
 }
+
 
 
 btnExportar?.addEventListener('click', async () => {
