@@ -1,0 +1,12 @@
+{
+  "name": "meujus",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:manifest": "node scripts/build_manifest.mjs",
+    "format": "prettier -w ."
+  },
+  "devDependencies": {
+    "prettier": "3.3.3"
+  }
+}
