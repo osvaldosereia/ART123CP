@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MeuJus – Questões</title>
+
+  <!-- CSS do seu projeto -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Libs usadas pelo app.js -->
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js" defer></script>
+
+  <!-- Config inicial lida pelo app.js -->
+  <script>
+    (function () {
+      const params = new URLSearchParams(location.search);
+      const txtParam = params.get("txt") || "data/direito-penal/penal1.txt";
+      window.APP_CONFIG = { txtUrl: txtParam };
+    })();
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1 class="logo" aria-label="MeuJus">MeuJus</h1>
+      <nav class="filters" aria-label="Filtros">
+        <div id="disciplina-select" class="filter-item" aria-live="polite"></div>
+        <div id="temas-multiselect" class="filter-item" aria-live="polite"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="welcome" class="welcome">
+      <h2>Selecione uma disciplina ou comece a rolar</h2>
+      <p>Use os filtros acima para ver questões por tema.</p>
+    </section>
+
+    <section id="cards" class="cards" aria-live="polite"></section>
+    <div id="sentinela" aria-hidden="true"></div>
+  </main>
+
+  <!-- Modal: Frases -->
+  <div id="frases-modal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="frases-title">
+    <div class="modal-backdrop" data-close="true" aria-hidden="true"></div>
+    <div class="modal-dialog">
+      <header class="modal-header">
+        <h3 id="frases-title">Frases</h3>
+        <button type="button" class="btn-close" data-close="true" aria-label="Fechar">×</button>
+      </header>
+      <div class="modal-toolbar">
+        <div id="frases-swatches" class="swatches" aria-label="Cores de fundo"></div>
+      </div>
+      <div class="modal-body">
+        <div id="frases-grid" class="frases-grid"></div>
+        <div id="frases-sentinela" aria-hidden="true"></div>
+      </div>
+      <footer class="modal-footer">
+        <button type="button" class="btn" data-close="true">Fechar</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Modal: Impressora / Provas -->
+  <div id="modal-impressora" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="imp-title">
+    <div class="modal-backdrop" data-close-impressora aria-hidden="true"></div>
+    <div class="modal-dialog modal-xl">
+      <header class="modal-header">
+        <h3 id="imp-title">Montar Prova</h3>
+        <button type="button" class="btn-close" data-close-impressora aria-label="Fechar">×</button>
+      </header>
+
+      <div class="modal-toolbar">
+        <div class="group">
+          <span>Colunas:</span>
+          <label><input type="radio" name="imp-colunas" value="1" checked> 1</label>
+          <label><input type="radio" name="imp-colunas" value="2"> 2</label>
+        </div>
+        <div class="group">
+          <span>Selecionadas: <strong id="imp-contador">0</strong></span>
+        </div>
+        <div class="group">
+          <button id="imp-exportar" class="btn" type="button" disabled>Exportar PDF</button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div id="imp-loading" class="loading hidden">Carregando…</div>
+        <div id="imp-lista" class="imp-lista"></div>
+      </div>
+
+      <footer class="modal-footer">
+        <button type="button" class="btn" data-close-impressora>Fechar</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Mini-modal: criar versões embaralhadas -->
+  <div id="modal-versoes" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="versoes-title">
+    <div class="modal-backdrop" aria-hidden="true"></div>
+    <div class="modal-dialog">
+      <header class="modal-header">
+        <h3 id="versoes-title">Gerar mais versões?</h3>
+      </header>
+      <div class="modal-body">
+        <p>Deseja gerar mais 2 versões embaralhadas da prova?</p>
+      </div>
+      <footer class="modal-footer">
+        <button id="btnVersoesSim" class="btn" type="button">Sim</button>
+        <button id="btnVersoesNao" class="btn" type="button">Não</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Ícones usados no app (garanta os arquivos em assets/icons) -->
+  <!-- <img src="assets/icons/frases.png" alt="" hidden> -->
+
+  <!-- Seu app -->
+  <script src="app.js" defer></script>
+</body>
+</html>
