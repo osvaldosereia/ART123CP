@@ -97,31 +97,30 @@
   /* ------ Fonte paginada p/ modal Impressora ------ */
   (function exposePagedSource(){
     function computeOrderFromState(){
-  // 1) começa exatamente pelo feed atual já renderizado
-  const order = [...state.rendered];
-  const seen = new Set(order);
+      // 1) começa exatamente pelo feed atual já renderizado
+      const order = [...state.rendered];
+      const seen = new Set(order);
 
-  // 2) continua o mesmo ciclo dos grupos a partir dos ponteiros atuais
-  const clones = (state.feedGroups || []).map(g => ({
-    items: [...(g.items || [])],
-    ptr: g.ptr || 0
-  }));
+      // 2) continua o mesmo ciclo dos grupos a partir dos ponteiros atuais
+      const clones = (state.feedGroups || []).map(g => ({
+        items: [...(g.items || [])],
+        ptr: g.ptr || 0
+      }));
 
-  let moved = true;
-  while (moved) {
-    moved = false;
-    for (const g of clones) {
-      if (g.ptr >= g.items.length) continue;
-      const idx = g.items[g.ptr++];
-      if (!seen.has(idx)) { order.push(idx); seen.add(idx); }
-      moved = true;
+      let moved = true;
+      while (moved) {
+        moved = false;
+        for (const g of clones) {
+          if (g.ptr >= g.items.length) continue;
+          const idx = g.items[g.ptr++];
+          if (!seen.has(idx)) { order.push(idx); seen.add(idx); }
+          moved = true;
+        }
+      }
+      return order;
     }
-  }
-  return order;
-}
-// expõe a ordem atual para o listener da impressora
-window.QUESTOES_CURRENT_ORDER = computeOrderFromState;
-
+    // expõe a ordem atual para o listener da impressora
+    window.QUESTOES_CURRENT_ORDER = computeOrderFromState;
 
     function normalizeForPrint(c, i){
       const alts = (c.alternativas || []).map((raw, k) => {
@@ -143,15 +142,14 @@ window.QUESTOES_CURRENT_ORDER = computeOrderFromState;
           : ""
       ].join("");
 
-     return {
-  id: i + 1,
-  enunciadoHtml: html,
-  enunciadoPlain: c.enunciado || "",
-  alternativas: alts,
-  gabarito: String(c.gabarito || "").trim().toUpperCase(),
-  temas: Array.isArray(c.temas) ? c.temas.slice() : []
-};
-
+      return {
+        id: i + 1,
+        enunciadoHtml: html,
+        enunciadoPlain: c.enunciado || "",
+        alternativas: alts,
+        gabarito: String(c.gabarito || "").trim().toUpperCase(),
+        temas: Array.isArray(c.temas) ? c.temas.slice() : []
+      };
     }
 
     window.QUESTOES_FETCH_PAGE = async function(cursor){
@@ -452,7 +450,7 @@ window.QUESTOES_CURRENT_ORDER = computeOrderFromState;
 
   function renderAppend(indexes) {
     const mount = document.getElementById("cards");
-    indexes.forEach(i => mount.appendChild(buildCard(state.cards[i], i)));
+    indexes.forEach	i => mount.appendChild(buildCard(state.cards[i], i));
   }
 
   function resetAndRender() {
@@ -576,14 +574,14 @@ async function openFrasesModal(){
 
   const modal = document.getElementById('frases-modal');
   modal.classList.remove('hidden');
-  modal.setAttribute('aria-hidden','false'); // acessível e visível
+  modal.setAttribute('aria-hidden','false');
 }
 
 function bindCloseFrases(){
   const modal = document.getElementById('frases-modal');
   const hide = ()=>{
     modal.classList.add('hidden');
-    modal.setAttribute('aria-hidden','true');   // oculta e remove do fluxo
+    modal.setAttribute('aria-hidden','true');
     if (frasesObserver) frasesObserver.disconnect();
   };
   modal.querySelectorAll('[data-close="true"]').forEach(el=>{ el.onclick = hide; });
@@ -614,7 +612,6 @@ async function ensureFrases(){
   if (frasesCache) return;
   const res = await fetch(FRASES_TXT_URL);
   const txt = await res.text();
-  // "frase | autor"  ou  "frase - autor"  ou  "frase — autor"
   frasesCache = txt
     .split(/\r?\n/)
     .map(l=>l.trim())
@@ -625,7 +622,6 @@ async function ensureFrases(){
       return {frase, autor};
     });
 }
-// ===== Helpers de renderização do PNG de frases =====
 function isDark(hex){
   const h = String(hex||'#000000').replace('#','');
   const n = parseInt(h,16);
@@ -659,25 +655,21 @@ function renderFrasePNG(canvas, frase, autor, bg){
   const ctx = canvas.getContext('2d');
   const W = canvas.width, H = canvas.height;
 
-  // fundo
   ctx.fillStyle = bg || '#FFFFFF';
   ctx.fillRect(0,0,W,H);
 
-  // header
   ctx.fillStyle = isDark(bg) ? '#FFFFFF' : '#000000';
   ctx.font = '28px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'top';
   ctx.fillText('meujus.com.br', W/2, 36);
 
-  // área interna
   const padX = 96;
   const innerW = W - padX*2;
   const topY = 220;
   const bottomPad = 260;
   const maxH = H - topY - bottomPad;
 
-  // frase
   const lh = 1.3;
   const size = fitFontByBox(ctx, frase, innerW, maxH, 28, 72, 2, 'Times New Roman, Times, serif', lh);
   ctx.font = `${size}px "Times New Roman", Times, serif`;
@@ -690,7 +682,6 @@ function renderFrasePNG(canvas, frase, autor, bg){
   let y = topY + Math.max(0, Math.floor((maxH - fraseH)/2));
   for (const L of lines){ ctx.fillText(L, padX, y); y += size*lh; }
 
-  // autor
   const aSize = Math.max(18, Math.round(size * 0.42));
   ctx.font = `italic ${aSize}px ui-serif, Georgia, "Times New Roman", Times, serif`;
   ctx.fillText(autor ? `— ${autor}` : '', padX, y + 24);
@@ -765,255 +756,236 @@ function rerenderVisibleFrases(){
   const radioCols = () => Number(document.querySelector('input[name="imp-colunas"]:checked')?.value || 1);
 
   // --- Botão "Criar Prova" + seleção aleatória balanceada por tema ---
+  const btnCriar = document.createElement('button');
+  btnCriar.id = 'imp-criar';
+  btnCriar.type = 'button';
+  btnCriar.className = 'btn';
+  btnCriar.textContent = 'Criar Prova';
+  btnCriar.addEventListener('click', handleCriarProva);
 
+  // coloca antes do Exportar
+  if (btnExportar && btnExportar.parentNode) {
+    btnExportar.parentNode.insertBefore(btnCriar, btnExportar);
+  }
 
-const btnCriar = document.createElement('button');
-btnCriar.id = 'imp-criar';
-btnCriar.type = 'button';
-btnCriar.className = 'btn';
-btnCriar.textContent = 'Criar Prova';
-btnCriar.addEventListener('click', handleCriarProva);
+  /// --- Navegação rápida entre selecionadas (setas inline na barra do modal) ---
+  const bar = btnExportar && btnExportar.parentNode ? btnExportar.parentNode : null;
 
-// coloca antes do Exportar
-if (btnExportar && btnExportar.parentNode) {
-  btnExportar.parentNode.insertBefore(btnCriar, btnExportar);
-}
+  // grupo de navegação à ESQUERDA
+  const leftGroup = document.createElement('div');
+  leftGroup.style.display = 'flex';
+  leftGroup.style.alignItems = 'center';
+  leftGroup.style.gap = '6px';
 
-/// --- Navegação rápida entre selecionadas (setas inline na barra do modal) ---
-const bar = btnExportar && btnExportar.parentNode ? btnExportar.parentNode : null;
-
-// grupo de navegação à ESQUERDA
-const leftGroup = document.createElement('div');
-leftGroup.style.display = 'flex';
-leftGroup.style.alignItems = 'center';
-leftGroup.style.gap = '6px';
-
-const btnPrevSel = document.createElement('button');
-btnPrevSel.type = 'button';
-btnPrevSel.className = 'imp-nav-btn';
-btnPrevSel.setAttribute('aria-label', 'Selecionada anterior');
-btnPrevSel.innerHTML = `
+  const btnPrevSel = document.createElement('button');
+  btnPrevSel.type = 'button';
+  btnPrevSel.className = 'imp-nav-btn';
+  btnPrevSel.setAttribute('aria-label', 'Selecionada anterior');
+  btnPrevSel.innerHTML = `
   <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
     <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>`;
 
-const btnNextSel = document.createElement('button');
-btnNextSel.type = 'button';
-btnNextSel.className = 'imp-nav-btn';
-btnNextSel.setAttribute('aria-label', 'Próxima selecionada');
-btnNextSel.innerHTML = `
+  const btnNextSel = document.createElement('button');
+  btnNextSel.type = 'button';
+  btnNextSel.className = 'imp-nav-btn';
+  btnNextSel.setAttribute('aria-label', 'Próxima selecionada');
+  btnNextSel.innerHTML = `
   <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
     <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>`;
 
-leftGroup.appendChild(btnPrevSel);
-leftGroup.appendChild(btnNextSel);
+  leftGroup.appendChild(btnPrevSel);
+  leftGroup.appendChild(btnNextSel);
 
-// ancora à ESQUERDA da barra
-if (bar) {
-  bar.style.display = 'flex';
-  bar.style.alignItems = 'center';
-  bar.style.flexWrap = 'wrap';
-  bar.style.gap = '8px';
-  bar.insertBefore(leftGroup, bar.firstChild);
-  btnCriar.style.marginRight = '8px';
-  btnExportar.style.marginLeft = '8px';
-}
+  if (bar) {
+    bar.style.display = 'flex';
+    bar.style.alignItems = 'center';
+    bar.style.flexWrap = 'wrap';
+    bar.style.gap = '8px';
+    bar.insertBefore(leftGroup, bar.firstChild);
+    btnCriar.style.marginRight = '8px';
+    btnExportar.style.marginLeft = '8px';
+  }
 
-// estilo mínimo
-(() => {
-  const style = document.createElement('style');
-  style.textContent = `
-    .imp-nav-btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      height:28px;min-width:28px;padding:0 6px;border:1px solid #d1d5db;
-      border-radius:6px;background:#fff;cursor:pointer;font:inherit;
-    }
-    .imp-nav-btn:disabled{opacity:.5;cursor:not-allowed}
-    .imp-nav-btn:hover:not(:disabled){background:#f9fafb}
-  `;
-  document.head.appendChild(style);
-})();
+  (() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .imp-nav-btn{
+        display:inline-flex;align-items:center;justify-content:center;
+        height:28px;min-width:28px;padding:0 6px;border:1px solid #d1d5db;
+        border-radius:6px;background:#fff;cursor:pointer;font:inherit;
+      }
+      .imp-nav-btn:disabled{opacity:.5;cursor:not-allowed}
+      .imp-nav-btn:hover:not(:disabled){background:#f9fafb}
+    `;
+    document.head.appendChild(style);
+  })();
 
-// ===== Helpers do "Criar Prova" =====
-let allItemsCache = null;
+  // ===== Helpers do "Criar Prova" =====
+  let allItemsCache = null;
 
   async function ensureSelecionadasNoDOM(){
-  const need = new Set([...selected.keys()]);
-  // já renderizadas?
-  document.querySelectorAll('.imp-card').forEach(el => need.delete(Number(el.dataset.id||0)));
-  while (need.size && hasMore && !isLoading){
-    await loadMore(); // avança a paginação normal
+    const need = new Set([...selected.keys()]);
     document.querySelectorAll('.imp-card').forEach(el => need.delete(Number(el.dataset.id||0)));
-  }
-}
-
-
-async function getAllItems(){
-  if (allItemsCache) return allItemsCache.slice();
-  let cur = null, acc = [];
-  while (true){
-    const page = await fetchQuestoes(cur);
-    const itens = page?.itens || [];
-    acc = acc.concat(itens);
-    cur = page?.nextCursor ?? null;
-    if (cur == null) break;
-  }
-  allItemsCache = acc.slice();
-  return acc;
-}
-
-function shuffleInPlace(arr){
-  for (let i=arr.length-1;i>0;i--){
-    const j = (Math.random()*(i+1))|0;
-    [arr[i],arr[j]] = [arr[j],arr[i]];
-  }
-  return arr;
-}
-
-function pickCountsByTema(buckets, total){
-  const temas = Object.keys(buckets);
-  if (!temas.length) return {};
-  const counts = {};
-  const N = Math.min(total, Object.values(buckets).reduce((s,a)=>s+a.length,0));
-  temas.forEach(t => counts[t] = Math.min(1, buckets[t].length));
-  let used = temas.reduce((s,t)=>s+counts[t],0);
-  if (used < N){
-    const totalAvail = temas.reduce((s,t)=>s + Math.max(buckets[t].length - counts[t], 0), 0);
-    if (totalAvail > 0){
-      temas.forEach(t => {
-        if (used >= N) return;
-        const room = Math.max(buckets[t].length - counts[t], 0);
-        const share = Math.floor((room / totalAvail) * (N - used));
-        const add = Math.min(share, room);
-        counts[t] += add; used += add;
-      });
+    while (need.size && hasMore && !isLoading){
+      await loadMore();
+      document.querySelectorAll('.imp-card').forEach(el => need.delete(Number(el.dataset.id||0)));
     }
   }
-  let k = 0;
-  while (used < N){
-    const t = temas[k % temas.length];
-    if (counts[t] < buckets[t].length){ counts[t]++; used++; }
-    k++;
+
+  async function getAllItems(){
+    if (allItemsCache) return allItemsCache.slice();
+    let cur = null, acc = [];
+    while (true){
+      const page = await fetchQuestoes(cur);
+      const itens = page?.itens || [];
+      acc = acc.concat(itens);
+      cur = page?.nextCursor ?? null;
+      if (cur == null) break;
+    }
+    allItemsCache = acc.slice();
+    return acc;
   }
-  return counts;
-}
 
-  
-// ===== Ação "Criar Prova" =====
-async function handleCriarProva(){
-  const all = await getAllItems();
-  if (!all.length) return;
-
-  const buckets = {};
-  for (const it of all){
-    const ts = (Array.isArray(it.temas) && it.temas.length) ? it.temas : ['__SEM_TEMA__'];
-    ts.forEach(t => { (buckets[t] ||= []).push(it); });
+  function shuffleInPlace(arr){
+    for (let i=arr.length-1;i>0;i--){
+      const j = (Math.random()*(i+1))|0;
+      [arr[i],arr[j]] = [arr[j],arr[i]];
+    }
+    return arr;
   }
-  Object.values(buckets).forEach(shuffleInPlace);
 
-  const counts = pickCountsByTema(buckets, 20);
-
-  selected.clear();
-  outer: for (const t of Object.keys(counts)){
-    const need = counts[t];
-    const arr = buckets[t];
-    for (let i=0; i<need && i<arr.length; i++){
-      const q = arr[i];
-      if (!selected.has(q.id)){
-        selected.set(q.id, q);
-        if (selected.size >= 20) break outer;
+  function pickCountsByTema(buckets, total){
+    const temas = Object.keys(buckets);
+    if (!temas.length) return {};
+    const counts = {};
+    const N = Math.min(total, Object.values(buckets).reduce((s,a)=>s+a.length,0));
+    temas.forEach(t => counts[t] = Math.min(1, buckets[t].length));
+    let used = temas.reduce((s,t)=>s+counts[t],0);
+    if (used < N){
+      const totalAvail = temas.reduce((s,t)=>s + Math.max(buckets[t].length - counts[t], 0), 0);
+      if (totalAvail > 0){
+        temas.forEach(t => {
+          if (used >= N) return;
+          const room = Math.max(buckets[t].length - counts[t], 0);
+          const share = Math.floor((room / totalAvail) * (N - used));
+          const add = Math.min(share, room);
+          counts[t] += add; used += add;
+        });
       }
     }
+    let k = 0;
+    while (used < N){
+      const t = temas[k % temas.length];
+      if (counts[t] < buckets[t].length){ counts[t]++; used++; }
+      k++;
+    }
+    return counts;
   }
 
-  updateCounter();
+  // ===== Ação "Criar Prova" =====
+  async function handleCriarProva(){
+    const all = await getAllItems();
+    if (!all.length) return;
 
-  // espelha seleção nos cards já renderizados
-  lista.querySelectorAll('.imp-card').forEach(card => {
-    const id = Number(card.dataset.id || '0');
-    const cb = card.querySelector('input[type="checkbox"]');
-    if (cb) cb.checked = selected.has(id);
-  });
+    const buckets = {};
+    for (const it of all){
+      const ts = (Array.isArray(it.temas) && it.temas.length) ? it.temas : ['__SEM_TEMA__'];
+      ts.forEach(t => { (buckets[t] ||= []).push(it); });
+    }
+    Object.values(buckets).forEach(shuffleInPlace);
+
+    const counts = pickCountsByTema(buckets, 20);
+
+    selected.clear();
+    outer: for (const t of Object.keys(counts)){
+      const need = counts[t];
+      const arr = buckets[t];
+      for (let i=0; i<need && i<arr.length; i++){
+        const q = arr[i];
+        if (!selected.has(q.id)){
+          selected.set(q.id, q);
+          if (selected.size >= 20) break outer;
+        }
+      }
+    }
+
+    updateCounter();
+
+    lista.querySelectorAll('.imp-card').forEach(card => {
+      const id = Number(card.dataset.id || '0');
+      const cb = card.querySelector('input[type="checkbox"]');
+      if (cb) cb.checked = selected.has(id);
+    });
     await ensureSelecionadasNoDOM();
-  navIndex = -1;
-  jumpToSelected(1);
-
-}
-
-  
-// helpers e navegação
-let navIndex = -1;
-
-function getRootScroll(){
-  return modal?.querySelector('.modal-body') || lista || document.scrollingElement || document.documentElement;
-}
-function selectedEls(){
-  if (!lista) return [];
-  const ids = new Set([...selected.keys()]);
-  return Array.from(lista.querySelectorAll('.imp-card'))
-    .filter(el => ids.has(Number(el.dataset.id || '0')))
-    .sort((a,b)=>a.offsetTop - b.offsetTop);
-}
-function alignTop(el){
-  const root = getRootScroll();
-  if (!root || !el) return;
-  const rr = root.getBoundingClientRect();
-  const er = el.getBoundingClientRect();
-  const delta = er.top - rr.top;
-  root.scrollTo({ top: (root.scrollTop || 0) + delta, behavior: 'smooth' });
-}
-function currentIndexFromScroll(arr){
-  const root = getRootScroll();
-  const viewTop = root?.scrollTop || 0;
-  let i = arr.findIndex(el => el.offsetTop >= viewTop + 1);
-  if (i < 0) i = arr.length - 1;
-  return i;
-}
-function jumpToSelected(dir){
-  const arr = selectedEls();
-  if (!arr.length) return;
-
-  if (navIndex < 0 || navIndex >= arr.length) navIndex = currentIndexFromScroll(arr);
-  navIndex = (navIndex + (dir > 0 ? 1 : -1) + arr.length) % arr.length;
-
-  alignTop(arr[navIndex]);
-  updateNavButtons();
-}
-function updateNavButtons(){
-  const any = selected.size > 0;
-  btnPrevSel.disabled = !any;
-  btnNextSel.disabled = !any;
-  if (!any) navIndex = -1;
-  else {
-    const arr = selectedEls();
-    if (navIndex >= arr.length) navIndex = arr.length - 1;
+    navIndex = -1;
+    jumpToSelected(1);
   }
-}
 
-// mantém navIndex coerente ao rolar manualmente
-(() => {
-  const root = getRootScroll();
-  if (!root) return;
-  root.addEventListener('scroll', () => {
+  // helpers e navegação
+  let navIndex = -1;
+
+  function getRootScroll(){
+    return modal?.querySelector('.modal-body') || lista || document.scrollingElement || document.documentElement;
+  }
+  function selectedEls(){
+    if (!lista) return [];
+    const ids = new Set([...selected.keys()]);
+    return Array.from(lista.querySelectorAll('.imp-card'))
+      .filter(el => ids.has(Number(el.dataset.id || '0')))
+      .sort((a,b)=>a.offsetTop - b.offsetTop);
+  }
+  function alignTop(el){
+    const root = getRootScroll();
+    if (!root || !el) return;
+    const rr = root.getBoundingClientRect();
+    const er = el.getBoundingClientRect();
+    const delta = er.top - rr.top;
+    root.scrollTo({ top: (root.scrollTop || 0) + delta, behavior: 'smooth' });
+  }
+  function currentIndexFromScroll(arr){
+    const root = getRootScroll();
+    const viewTop = root?.scrollTop || 0;
+    let i = arr.findIndex(el => el.offsetTop >= viewTop + 1);
+    if (i < 0) i = arr.length - 1;
+    return i;
+  }
+  function jumpToSelected(dir){
     const arr = selectedEls();
-    if (!arr.length) { navIndex = -1; return; }
-    navIndex = currentIndexFromScroll(arr);
-  }, { passive: true });
-})();
+    if (!arr.length) return;
 
-btnPrevSel.addEventListener('click', () => jumpToSelected(-1));
-btnNextSel.addEventListener('click', () => jumpToSelected(1));
-// fim das setas
+    if (navIndex < 0 || navIndex >= arr.length) navIndex = currentIndexFromScroll(arr);
+    navIndex = (navIndex + (dir > 0 ? 1 : -1) + arr.length) % arr.length;
 
+    alignTop(arr[navIndex]);
+    updateNavButtons();
+  }
+  function updateNavButtons(){
+    const any = selected.size > 0;
+    btnPrevSel.disabled = !any;
+    btnNextSel.disabled = !any;
+    if (!any) navIndex = -1;
+    else {
+      const arr = selectedEls();
+      if (navIndex >= arr.length) navIndex = arr.length - 1;
+    }
+  }
 
+  (() => {
+    const root = getRootScroll();
+    if (!root) return;
+    root.addEventListener('scroll', () => {
+      const arr = selectedEls();
+      if (!arr.length) { navIndex = -1; return; }
+      navIndex = currentIndexFromScroll(arr);
+    }, { passive: true });
+  })();
 
+  btnPrevSel.addEventListener('click', () => jumpToSelected(-1));
+  btnNextSel.addEventListener('click', () => jumpToSelected(1));
 
-
-// limpar cache ao abrir o modal para refletir filtros/ordem atuais
-// (complemento em openModal)
-
-
+  // limpar cache ao abrir o modal
   let selected = new Map();   // id -> questão
   let cursor = null;          // paginação
   let isLoading = false;
@@ -1040,46 +1012,42 @@ btnNextSel.addEventListener('click', () => jumpToSelected(1));
     return { itens: [], nextCursor: null };
   }
 
-function openModal(focusId){
-  if (!modal) return;
-  allItemsCache = null;
-  initialFocusId = focusId || null;
-  modal.classList.remove('hidden');
-  if (lista) { lista.innerHTML = ''; lista.appendChild(loading); lista.appendChild(ensureSentinel()); lista.scrollTop = 0; }
-  selected.clear();
-  updateCounter();
-  if (cursor == null) cursor = 0;   // mantém cursor calculado
-  hasMore = true;
-  loadMore();
-  mountImpInfiniteScroll();
-}
-
-
-
+  function openModal(focusId){
+    if (!modal) return;
+    allItemsCache = null;
+    initialFocusId = focusId || null;
+    modal.classList.remove('hidden');
+    if (lista) { lista.innerHTML = ''; lista.appendChild(loading); lista.appendChild(ensureSentinel()); lista.scrollTop = 0; }
+    selected.clear();
+    updateCounter();
+    if (cursor == null) cursor = 0;
+    hasMore = true;
+    loadMore();
+    mountImpInfiniteScroll();
+  }
 
   function closeModal(){ if (!modal) return; modal.classList.add('hidden'); if (impObserver) impObserver.disconnect(); }
   closeEls.forEach(el => el.addEventListener('click', closeModal));
   modal?.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-window.addEventListener('abrirImpressora', (e) => {
-  const raw = e?.detail?.id;
-  const id = Number(raw);                       // força número
-  try {
-    const order = (window.QUESTOES_CURRENT_ORDER && window.QUESTOES_CURRENT_ORDER()) || [];
-    if (Number.isFinite(id)) {
-      const pos = order.findIndex(idx => idx + 1 === id);
-      if (pos >= 0) cursor = pos;
-    }
-  } catch {}
-  openModal(Number.isFinite(id) ? id : null);
-});
+  window.addEventListener('abrirImpressora', (e) => {
+    const raw = e?.detail?.id;
+    const id = Number(raw);
+    try {
+      const order = (window.QUESTOES_CURRENT_ORDER && window.QUESTOES_CURRENT_ORDER()) || [];
+      if (Number.isFinite(id)) {
+        const pos = order.findIndex(idx => idx + 1 === id);
+        if (pos >= 0) cursor = pos;
+      }
+    } catch {}
+    openModal(Number.isFinite(id) ? id : null);
+  });
 
-
-function updateCounter(){
-  if (contadorEl) contadorEl.textContent = selected.size;
-  if (btnExportar) btnExportar.disabled = selected.size === 0;
-  if (typeof updateNavButtons === 'function') updateNavButtons();
-}
+  function updateCounter(){
+    if (contadorEl) contadorEl.textContent = selected.size;
+    if (btnExportar) btnExportar.disabled = selected.size === 0;
+    if (typeof updateNavButtons === 'function') updateNavButtons();
+  }
 
   function makeCard(q){
     const article = document.createElement('article');
@@ -1092,18 +1060,18 @@ function updateCounter(){
 
     const sel = document.createElement('label');
     sel.className = 'imp-selecionar';
-   const cb = document.createElement('input');
-cb.type = 'checkbox';
-cb.checked = selected.has(q.id); // respeita seleção programática
-cb.addEventListener('change', () => {
-  if (cb.checked) {
-    if (selected.size >= 20 && !selected.has(q.id)) { cb.checked = false; return; }
-    selected.set(q.id, q);
-  } else {
-    selected.delete(q.id);
-  }
-  updateCounter();
-});
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.checked = selected.has(q.id);
+    cb.addEventListener('change', () => {
+      if (cb.checked) {
+        if (selected.size >= 20 && !selected.has(q.id)) { cb.checked = false; return; }
+        selected.set(q.id, q);
+      } else {
+        selected.delete(q.id);
+      }
+      updateCounter();
+    });
 
     sel.appendChild(cb);
     sel.appendChild(document.createTextNode('Selecionar'));
@@ -1228,225 +1196,377 @@ cb.addEventListener('change', () => {
     return yy;
   }
 
-  // ---------- Exportação PDF 100% texto (A4, 1–2 colunas, sem cortes) ----------
-async function exportarPDF_PURO(questoes){
+  // ====== QR, Códigos e auxiliares ======
   const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit:'mm', format:'a4', compress:true });
-  doc.setProperties({ title: 'Prova MeuJus' });
 
-  // Métricas
-  const PAGE_W = doc.internal.pageSize.getWidth();
-  const PAGE_H = doc.internal.pageSize.getHeight();
-
-  const M = 8;                       // margens iguais 10mm
-  const TOP_EXTRA = 3;                // respiro topo
-  const COLS = Number(document.querySelector('input[name="imp-colunas"]:checked')?.value || 1);
-  const GAP  = COLS === 2 ? 10 : 0;   // margem entre colunas
-  const COL_W = COLS === 2 ? (PAGE_W - 2*M - GAP)/2 : (PAGE_W - 2*M);
-
-  // Fontes e espaçamentos
-  const ENUN_FS = 10;                 // +1
-  const ALT_FS  = 10;                 // +1
-  const TIT_FS  = 10;
-
-  const LH_ENUN = 4.7;
-  const LH_ALT  = 4.5;
-  const LH_TIT  = 5.2;
-
-  const SEP = 5;                      // separador com respiro simétrico
-  const PRE_TITLE = 2.7;              // +10px entre linha e "Questão X"
-  const TITLE_GAP = LH_ENUN + 2.7;    // +10px entre "Questão X" e início do enunciado
-  const ENUN_TO_ALTS = 6;             // respiro entre enunciado e alternativas
-  const ALT_IND = 0.8;                // recuo menor à esquerda
-  const ALT_GAP = 1.2;                // respiro entre alternativas
-
-  function setEnun(){ doc.setFont('Helvetica',''); doc.setFontSize(ENUN_FS); }
-  function setAlt(){  doc.setFont('Helvetica',''); doc.setFontSize(ALT_FS);  }
-  function setTit(){  doc.setFont('Helvetica','bold'); doc.setFontSize(TIT_FS); }
-
-  // Fluxo de página/coluna
-  let curCol = 0;
-  let curX = M;
-  let curY = M + TOP_EXTRA;
-
-  function newPage(){
-    doc.addPage();
-    curCol = 0;
-    curX = M;
-    curY = M + TOP_EXTRA;
-  }
-  function nextColumnOrPage(){
-    if (COLS === 2 && curCol === 0){
-      curCol = 1;
-      curX = M + COL_W + GAP;
-      curY = M + TOP_EXTRA;
-    } else newPage();
-  }
-  function ensureSpace(need){
-    if (curY + need > PAGE_H - M) nextColumnOrPage();
+  function gerarCodigoProva(prefixo="PRV"){
+    const t = Date.now().toString(36).toUpperCase();
+    const r = Math.random().toString(36).slice(2,6).toUpperCase();
+    return `${prefixo}-${t}${r}`;
   }
 
-  // Quebra + justificação
-  function layoutLines(doc, text, maxWidth){
-    const words = String(text||'').split(/\s+/).filter(Boolean);
-    const lines = [];
-    const spaceW = doc.getTextWidth(' ');
-    let cur = [], curW = 0;
-    function pushLine(forceLeft=false){
-      if (!cur.length) return;
-      const natural = cur.reduce((s,w)=>s+doc.getTextWidth(w),0) + (cur.length-1)*spaceW;
-      const extra = Math.max(maxWidth - natural, 0);
-      lines.push({ words: cur.slice(), justify: !forceLeft && cur.length>1, extra, gaps: Math.max(cur.length-1,1) });
-      cur = []; curW = 0;
-    }
-    for (let i=0;i<words.length;i++){
-      const w = words[i], wW = doc.getTextWidth(w);
-      if (!cur.length){
-        if (wW <= maxWidth){ cur.push(w); curW = wW; }
-        else { cur.push(w); pushLine(true); }
-        continue;
-      }
-      if (curW + spaceW + wW <= maxWidth){ cur.push(w); curW += spaceW + wW; }
-      else { pushLine(); i--; }
-    }
-    pushLine(true);
-    return lines;
-  }
-  function drawJustified(doc, x, y, lines, lh){
-    const spaceW = doc.getTextWidth(' ');
-    let yy = y;
-    for (const ln of lines){
-      let xx = x;
-      const add = ln.justify ? ln.extra/ln.gaps : 0;
-      ln.words.forEach((w,j)=>{
-        doc.text(w, xx, yy);
-        xx += doc.getTextWidth(w) + (j<ln.words.length-1 ? spaceW + add : 0);
-      });
-      yy += lh;
-    }
-    return yy;
+  function gerarPayloadQR({ codigo, versao, ordem, gabarito, total }){
+    return JSON.stringify({ tipo:"folha_respostas", codigo, versao, total, ordem, gabarito });
   }
 
-  // Render
-  questoes.forEach((q, qi)=>{
-    // espaço extra entre linha separadora e próximo título
-    const pre = qi>0 ? PRE_TITLE : 0;
-
-    // garantir título + gaps (sem exigir 1ª linha do enunciado)
-setTit();
-const minBlock = pre + LH_TIT + TITLE_GAP;
-ensureSpace(minBlock);
-
-
-    if (pre) curY += PRE_TITLE;
-
-    // Título
-    doc.text(`Questão ${qi+1}`, curX, curY);
-    curY += TITLE_GAP;
-
-   // Enunciado (quebra linha a linha, permitindo partir de coluna/página)
-setEnun();
-const enunParas = String(q.enunciadoPlain||'').replace(/\r/g,'').split(/\n+/).filter(Boolean);
-for (let pi=0; pi<enunParas.length; pi++){
-  const lines = layoutLines(doc, enunParas[pi], COL_W);
-  if (pi) { ensureSpace(LH_ENUN*0.5); curY += LH_ENUN*0.5; } // espaço entre parágrafos
-  for (let li=0; li<lines.length; li++){
-    ensureSpace(LH_ENUN);
-    curY = drawJustified(doc, curX, curY, [lines[li]], LH_ENUN);
-  }
-}
-
-
-    // Respiro entre enunciado e alternativas
-    curY += ENUN_TO_ALTS;
-
-    // Alternativas
-    setAlt();
-    (q.alternativas||[]).forEach((a, k)=>{
-      const label = `[ ${String.fromCharCode(65+k)} ] - `;
-      const text = String(a).replace(/^[A-E]\)\s*/i,'').trim();
-
-      // largura e linhas
-      doc.setFont('Helvetica','bold'); // letras um pouco mais pesadas
-      const labelW = doc.getTextWidth(label);
-      doc.setFont('Helvetica','');     // texto normal
-
-      const maxTextW = Math.max(COL_W - labelW - ALT_IND, 10);
-      const lines = layoutLines(doc, text, maxTextW);
-
-      const need = lines.length*LH_ALT + LH_ALT*0.25 + ALT_GAP;
-      ensureSpace(need);
-
-      let y0 = curY;
-
-      // label
-      doc.setFont('Helvetica','bold');
-      doc.text(label, curX, y0);
-      doc.setFont('Helvetica',''); // volta
-
-      // primeira linha ao lado do label
-      const first = lines.shift();
-      if (first){
-        y0 = drawJustified(doc, curX + labelW + ALT_IND, y0, [first], LH_ALT);
-      }
-      // demais linhas
-      if (lines.length){
-        y0 = drawJustified(doc, curX + labelW + ALT_IND, y0, lines, LH_ALT);
-      }
-      curY = y0 + ALT_GAP; // respiro entre alternativas
+  function gerarQRCodeDataURL(texto){
+    return new Promise((resolve, reject)=>{
+      try{
+        const canvas = document.createElement("canvas");
+        window.QRCode.toCanvas(canvas, texto, { errorCorrectionLevel: "M" }, err=>{
+          if (err) reject(err); else resolve(canvas.toDataURL("image/png"));
+        });
+      }catch(e){ reject(e); }
     });
-
-    // Separador com respiro simétrico
-    curY += SEP;
-    ensureSpace(0);
-    doc.setLineWidth(0.2);
-    doc.line(curX, curY, curX + COL_W, curY);
-    curY += SEP;
-  });
-
-  // Gabarito
-  nextColumnOrPage();
-  setTit(); doc.text('Gabarito', curX, curY);
-  curY += LH_TIT;
-  doc.setFont('Helvetica',''); doc.setFontSize(ENUN_FS);
-
-  const half = Math.ceil(questoes.length/2);
-  const colGap = 18;
-  const gabColW = (COL_W - colGap)/2;
-
-  const colA = questoes.slice(0, half).map((q,i)=>`${i+1}) ${String(q.gabarito||'-').toUpperCase().replace(/[^A-E]/g,'')}`);
-  const colB = questoes.slice(half).map((q,i)=>`${half+i+1}) ${String(q.gabarito||'-').toUpperCase().replace(/[^A-E]/g,'')}`);
-  const maxRows = Math.max(colA.length, colB.length);
-
-  for (let r=0; r<maxRows; r++){
-    ensureSpace(LH_ENUN);
-    if (colA[r]) doc.text(colA[r], curX, curY);
-    if (colB[r]) doc.text(colB[r], curX + gabColW + colGap, curY);
-    curY += LH_ENUN;
   }
 
-  doc.save('prova.pdf');
-}
+  // ====== Páginas especiais ======
+  async function desenharFolhaDeRostoQuadro(doc, n, instrucoes, qrDataURL){
+    const boxW = 200, boxH = 200; // mm
+    const pageW = doc.internal.pageSize.getWidth();
+    const pageH = doc.internal.pageSize.getHeight();
+    const boxX = (pageW - boxW)/2;
+    const boxY = (pageH - boxH)/2;
+
+    doc.setDrawColor(0); doc.setLineWidth(0.4);
+    doc.rect(boxX, boxY, boxW, boxH);
+
+    const pad = 8;
+    const innerX = boxX + pad;
+    const innerY = boxY + pad;
+    const innerW = boxW - pad*2;
+    const innerH = boxH - pad*2;
+
+    doc.setFont("Helvetica","bold"); doc.setFontSize(12);
+    doc.text("Instruções:", innerX, innerY + 4);
+    doc.setFont("Helvetica",""); doc.setFontSize(10);
+
+    const wrap = (t, x, y, w, lh)=>{
+      const lines = layoutLines(doc, t, w);
+      let yy = y;
+      for (const ln of lines){ yy = drawJustified(doc, x, yy, [ln], lh); }
+      return yy;
+    };
+    wrap(instrucoes, innerX, innerY + 10, innerW, 5);
+
+    const instrH = 24, gap = 6, qrSize = 40;
+    const contentTopY = innerY + instrH;
+    const contentH = innerH - instrH;
+
+    const qrX = innerX + innerW - qrSize;
+    const qrY = innerY + innerH - qrSize;
+    doc.addImage(qrDataURL, "PNG", qrX, qrY, qrSize, qrSize);
+
+    const tableX = innerX;
+    const tableY = contentTopY;
+    const tableW = innerW - (qrSize + gap);
+    const rowH = 6, headerH = rowH;
+    const usableH = contentH - (qrSize + gap);
+    const rowsPerCol = Math.max(1, Math.floor((usableH - headerH)/rowH));
+    const neededCols = Math.max(1, Math.ceil(n/rowsPerCol));
+    const blockGap = 4;
+    const blockW = (tableW - (neededCols - 1)*blockGap)/neededCols;
+
+    for (let b=0;b<neededCols;b++){
+      const bx = tableX + b*(blockW + blockGap);
+      desenharBlocoTabela(doc, n, b, rowsPerCol, bx, tableY, blockW, rowH);
+    }
+  }
+
+  function desenharBlocoTabela(doc, total, blockIdx, rowsPerCol, x, y, w, rowH){
+    const cols = ["Q","A","B","C","D","E"];
+    const colW = [12, (w-12)/5, (w-12)/5, (w-12)/5, (w-12)/5, (w-12)/5];
+
+    doc.setFont("Helvetica","bold"); doc.setFontSize(10);
+    let cx = x;
+    for (let i=0;i<cols.length;i++){
+      doc.rect(cx, y, colW[i], rowH);
+      doc.text(cols[i], cx + colW[i]/2, y + rowH/2 + 3, { align:"center" });
+      cx += colW[i];
+    }
+
+    doc.setFont("Helvetica","");
+    const startIdx = blockIdx * rowsPerCol;
+    for (let r=0;r<rowsPerCol;r++){
+      const qIdx = startIdx + r;
+      if (qIdx >= total) break;
+      let rx = x;
+      const ry = y + rowH*(r+1);
+      for (let c=0;c<cols.length;c++){
+        doc.rect(rx, ry, colW[c], rowH);
+        if (c===0) doc.text(String(qIdx+1), rx + colW[c]/2, ry + rowH/2 + 3, { align:"center" });
+        rx += colW[c];
+      }
+    }
+  }
+
+  function adicionarPaginaGabarito(doc, gabarito){
+    doc.addPage();
+    doc.setFont("Helvetica","bold"); doc.setFontSize(18);
+    doc.text("Gabarito", 105, 20, { align:"center" });
+    doc.setFont("Helvetica",""); doc.setFontSize(12);
+
+    const startY = 35, lineH = 8, colX = 30, colGap = 70;
+    const porColuna = Math.ceil(gabarito.length/2);
+    for (let i=0;i<gabarito.length;i++){
+      const col = i < porColuna ? 0 : 1;
+      const row = i < porColuna ? i : i - porColuna;
+      const x = col === 0 ? colX : colX + colGap;
+      const y = startY + row*lineH;
+      doc.text(`Q${i+1}: ${String(gabarito[i]).toUpperCase()}`, x, y);
+    }
+  }
+
+  function adicionarPaginaFolhaRespostas(doc, n, instrucoes, qrDataURL){
+    doc.addPage();
+    doc.setFont("Helvetica","bold"); doc.setFontSize(16);
+    doc.text("Folha de Respostas", 105, 18, { align:"center" });
+
+    doc.setFont("Helvetica",""); doc.setFontSize(11);
+
+    const lines = layoutLines(doc, instrucoes, 170);
+    let yy = 28;
+    for (const ln of lines){ yy = drawJustified(doc, 20, yy, [ln], 6); }
+
+    const cols = ["Q","A","B","C","D","E"];
+    const x = 20, y = 50, w = 170, rowH = 8;
+    const colW = [14, (w-14)/5, (w-14)/5, (w-14)/5, (w-14)/5, (w-14)/5];
+
+    doc.setFont("Helvetica","bold");
+    let cx = x;
+    for (let i=0;i<cols.length;i++){
+      doc.rect(cx, y, colW[i], rowH);
+      doc.text(cols[i], cx + colW[i]/2, y + rowH/2 + 3, { align:"center" });
+      cx += colW[i];
+    }
+
+    doc.setFont("Helvetica","");
+    for (let r=0;r<n;r++){
+      let rx = x;
+      const ry = y + rowH*(r+1);
+      for (let c=0;c<cols.length;c++){
+        doc.rect(rx, ry, colW[c], rowH);
+        if (c===0) doc.text(String(r+1), rx + colW[c]/2, ry + rowH/2 + 3, { align:"center" });
+        rx += colW[c];
+      }
+    }
+
+    const qrSize = 40;
+    doc.addImage(qrDataURL, "PNG", 190 - qrSize, 280 - qrSize, qrSize, qrSize);
+  }
+
+  // ====== Renderização das questões em páginas subsequentes ======
+  function desenharQuestoes(doc, questoes){
+    const PAGE_W = doc.internal.pageSize.getWidth();
+    const PAGE_H = doc.internal.pageSize.getHeight();
+
+    const M = 12;
+    const COLS = 1;
+    const GAP = 0;
+    const COL_W = COLS === 2 ? (PAGE_W - 2*M - GAP)/2 : (PAGE_W - 2*M);
+
+    const ENUN_FS = 11;
+    const ALT_FS  = 11;
+    const LH_ENUN = 5;
+    const LH_ALT  = 4.8;
+    const TITLE_GAP = 6;
+    const ENUN_TO_ALTS = 6;
+    const ALT_IND = 1;
+    const ALT_GAP = 2;
+
+    function setEnun(){ doc.setFont('Helvetica',''); doc.setFontSize(ENUN_FS); }
+    function setAlt(){  doc.setFont('Helvetica',''); doc.setFontSize(ALT_FS);  }
+    function setTit(){  doc.setFont('Helvetica','bold'); doc.setFontSize(12); }
+
+    let curCol = 0, curX = M, curY = M;
+
+    function newPage(){ doc.addPage(); curCol = 0; curX = M; curY = M; }
+    function nextColumnOrPage(){
+      if (COLS === 2 && curCol === 0){ curCol = 1; curX = M + COL_W + GAP; curY = M; }
+      else newPage();
+    }
+    function ensureSpace(need){ if (curY + need > PAGE_H - M) nextColumnOrPage(); }
+
+    for (let qi=0; qi<questoes.length; qi++){
+      const q = questoes[qi];
+
+      setTit();
+      const needMin = 6 + TITLE_GAP;
+      ensureSpace(needMin);
+
+      doc.text(`Questão ${qi+1}`, curX, curY);
+      curY += TITLE_GAP;
+
+      setEnun();
+      const enunParas = String(q.enunciadoPlain||'').replace(/\r/g,'').split(/\n+/).filter(Boolean);
+      for (let pi=0; pi<enunParas.length; pi++){
+        const lines = layoutLines(doc, enunParas[pi], COL_W);
+        if (pi) { ensureSpace(LH_ENUN*0.5); curY += LH_ENUN*0.5; }
+        for (const ln of lines){ ensureSpace(LH_ENUN); curY = drawJustified(doc, curX, curY, [ln], LH_ENUN); }
+      }
+
+      curY += ENUN_TO_ALTS;
+
+      setAlt();
+      (q.alternativas||[]).forEach((a, k)=>{
+        const label = `[ ${String.fromCharCode(65+k)} ] - `;
+        const text = String(a).replace(/^[A-E]\)\s*/i,'').trim();
+
+        doc.setFont('Helvetica','bold');
+        const labelW = doc.getTextWidth(label);
+        doc.setFont('Helvetica','');
+
+        const maxTextW = Math.max(COL_W - labelW - ALT_IND, 10);
+        const lines = layoutLines(doc, text, maxTextW);
+
+        const need = lines.length*LH_ALT + LH_ALT*0.25 + ALT_GAP;
+        ensureSpace(need);
+
+        let y0 = curY;
+        doc.setFont('Helvetica','bold'); doc.text(label, curX, y0);
+        doc.setFont('Helvetica','');
+
+        const first = lines.shift();
+        if (first){ y0 = drawJustified(doc, curX + labelW + ALT_IND, y0, [first], LH_ALT); }
+        if (lines.length){ y0 = drawJustified(doc, curX + labelW + ALT_IND, y0, lines, LH_ALT); }
+        curY = y0 + ALT_GAP;
+      });
+
+      // separador fino
+      curY += 3;
+      ensureSpace(0);
+      doc.setLineWidth(0.2);
+      doc.line(curX, curY, curX + COL_W, curY);
+      curY += 3;
+    }
+  }
+
+  // ====== Exportação de PROVA com QR, gabarito isolado e folha de respostas isolada ======
+  async function exportarPDF_PROVA(questoes, { versao = 1, codigo, ordem, gabaritoArray }){
+    const doc = new jsPDF({ unit:'mm', format:'a4', compress:true });
+    doc.setProperties({ title: `Prova ${codigo} v${versao}` });
+
+    const payload = gerarPayloadQR({
+      codigo, versao, ordem,
+      gabarito: gabaritoArray,
+      total: questoes.length
+    });
+    const qrDataURL = await gerarQRCodeDataURL(payload);
+
+    // 1) Folha de rosto com quadro 20x20, tabela, instruções e QR
+    await desenharFolhaDeRostoQuadro(
+      doc,
+      questoes.length,
+      "Marque apenas uma alternativa por questão na tabela. Preencha com X. Não rasure. Entregue esta folha ao final.",
+      qrDataURL
+    );
+
+    // 2) Páginas de questões
+    desenharQuestoes(doc, questoes);
+
+    // 3) Gabarito isolado
+    adicionarPaginaGabarito(doc, gabaritoArray);
+
+    // 4) Folha de respostas isolada, com mesmo QR
+    adicionarPaginaFolhaRespostas(
+      doc,
+      questoes.length,
+      "Preencha apenas uma alternativa por questão. Entregue esta folha junto à prova.",
+      qrDataURL
+    );
+
+    // salvar
+    doc.save(`prova_${codigo}_v${versao}.pdf`);
+  }
+
+  // ====== Fluxo: gerar 1 prova e perguntar sobre 2 versões embaralhadas ======
+  const miniModal = document.getElementById('modal-versoes');
+  const miniSim = document.getElementById('btnVersoesSim');
+  const miniNao = document.getElementById('btnVersoesNao');
+
+  function abrirMiniModal(onSim, onNao){
+    if (!miniModal) return;
+    const yesH = ()=>{ fechar(); onSim && onSim(); };
+    const noH = ()=>{ fechar(); onNao && onNao(); };
+    function fechar(){
+      miniSim?.removeEventListener('click', yesH);
+      miniNao?.removeEventListener('click', noH);
+      miniModal.classList.add('hidden');
+    }
+    miniModal.classList.remove('hidden');
+    miniSim?.addEventListener('click', yesH);
+    miniNao?.addEventListener('click', noH);
+  }
+
+  function embaralharVersao(itens){
+    const idx = Array.from({ length: itens.length }, (_, i) => i);
+    for (let i=idx.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [idx[i], idx[j]] = [idx[j], idx[i]];
+    }
+    const reord = idx.map(i => itens[i]);
+    return { ordem: idx, itens: reord };
+  }
 
   btnExportar?.addEventListener('click', async () => {
     const itens = Array.from(selected.values());
-    await exportarPDF_PURO(itens);
+    if (!itens.length) return;
+
+    // base: ordem identidade
+    const ordemBase = Array.from({ length: itens.length }, (_, i)=>i);
+    const gabaritoBase = itens.map(q => String(q.gabarito||'').toUpperCase());
+    const codigoBase = gerarCodigoProva();
+
+    await exportarPDF_PROVA(itens, {
+      versao: 1,
+      codigo: codigoBase,
+      ordem: ordemBase,
+      gabaritoArray: gabaritoBase
+    });
+
+    abrirMiniModal(async ()=>{
+      // v2
+      const v2 = embaralharVersao(itens);
+      const gab2 = v2.itens.map(q => String(q.gabarito||'').toUpperCase());
+      const codigo2 = gerarCodigoProva();
+      await exportarPDF_PROVA(v2.itens, {
+        versao: 2,
+        codigo: codigo2,
+        ordem: v2.ordem,
+        gabaritoArray: gab2
+      });
+
+      // v3
+      const v3 = embaralharVersao(itens);
+      const gab3 = v3.itens.map(q => String(q.gabarito||'').toUpperCase());
+      const codigo3 = gerarCodigoProva();
+      await exportarPDF_PROVA(v3.itens, {
+        versao: 3,
+        codigo: codigo3,
+        ordem: v3.ordem,
+        gabaritoArray: gab3
+      });
+
+      // volta ao modal de provas (este é o modal-impressora já aberto)
+      // nenhuma ação extra necessária
+    }, ()=>{
+      // Não: somente fecha o mini modal e permanece no modal atual
+    });
   });
+
+  // =================== Botão Impressora em cada card ===================
+  window.appendImpressoraButton = function appendImpressoraButton(actionsEl, idx){
+    const btn = document.createElement('button');
+    btn.className = 'btn-icon-round';
+    btn.title = 'Impressora';
+    btn.innerHTML = `
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+        <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2m-12 0v3h12v-3M8 14h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`;
+    btn.addEventListener('click', () => {
+      window.dispatchEvent(new CustomEvent('abrirImpressora', { detail: { id: idx + 1 } }));
+    });
+    actionsEl.appendChild(btn);
+  };
 
 })();
-
-/* =================== Botão Impressora em cada card =================== */
-function appendImpressoraButton(actionsEl, idx){
-  const btn = document.createElement('button');
-  btn.className = 'btn-icon-round';
-  btn.title = 'Impressora';
-  btn.innerHTML = `
-    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-      <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2m-12 0v3h12v-3M8 14h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`;
-  btn.addEventListener('click', () => {
-    window.dispatchEvent(new CustomEvent('abrirImpressora', { detail: { id: idx + 1 } }));
-  });
-  actionsEl.appendChild(btn);
-}
-
