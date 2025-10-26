@@ -10,7 +10,7 @@
 <script>
 // Register SW asap without blocking rendering
 if ('serviceWorker' in navigator) {
-window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(()=>{}));
+window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(()=>{}));
 }
 </script>
 </head>
@@ -18,7 +18,7 @@ window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js')
 <header class="topbar">
 <div class="brand">meujus</div>
 <nav class="selectors" aria-label="Seleção">
-<div class="select" id="disc-select" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="disc-list" tabindex="0">
+<button class="select" id="disc-select" type="button" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="disc-list" tabindex="0">
 <span class="select-label">DISCIPLINA</span>
 <span class="select-value" data-default="Escolha">Escolha</span>
 <svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
@@ -26,7 +26,7 @@ window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js')
 <ul id="disc-list" class="listbox" role="listbox" hidden></ul>
 
 
-<div class="select" id="tema-select" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="tema-list" tabindex="0" aria-disabled="true">
+<button class="select" id="tema-select" type="button" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="tema-list" tabindex="0" aria-disabled="true">
 <span class="select-label">TEMAS</span>
 <span class="select-value" data-default="Escolha">Escolha</span>
 <svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
