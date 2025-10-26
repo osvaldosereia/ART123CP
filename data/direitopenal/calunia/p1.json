@@ -1,0 +1,51 @@
+[
+  {
+    "id": "dp_cal_q1",
+    "metadata": "Ano: 2023 | Banca: FCC | Órgão: TJ-SP",
+    "enunciado": "De acordo com o Código Penal, a conduta de 'imputar falsamente a alguém fato definido como crime' configura o delito de:",
+    "alternativas": [
+      { "letra": "A", "texto": "Difamação" },
+      { "letra": "B", "texto": "Injúria" },
+      { "letra": "C", "texto": "Calúnia" },
+      { "letra": "D", "texto": "Falsa identidade" },
+      { "letra": "E", "texto": "Denunciação caluniosa" }
+    ],
+    "gabarito": "C"
+  },
+  {
+    "id": "dp_cal_q2",
+    "metadata": "Ano: 2022 | Banca: VUNESP | Órgão: PC-SP",
+    "enunciado": "Mévio, sabendo ser falsa a informação, espalha para três amigos que Tício subtraiu um relógio na loja X. O fato (subtração) é definido como crime. Mévio praticou:",
+    "alternativas": [
+      { "letra": "A", "texto": "Fato atípico, pois não houve registro policial." },
+      { "letra": "B", "texto": "Injúria, pois ofendeu a honra subjetiva de Tício." },
+      { "letra": "C", "texto": "Difamação, pois ofendeu a reputação de Tício." },
+      { "letra": "D", "texto": "Calúnia, pois imputou falsamente fato definido como crime." }
+    ],
+    "gabarito": "D"
+  },
+  {
+    "id": "dp_cal_q3",
+    "metadata": "Ano: 2024 | Banca: CESPE/CEBRASPE | Órgão: PRF",
+    "enunciado": "Acerca dos crimes contra a honra, assinale a alternativa correta.",
+    "alternativas": [
+      { "letra": "A", "texto": "A calúnia contra os mortos é punível." },
+      { "letra": "B", "texto": "Não se admite exceção da verdade no crime de calúnia." },
+      { "letra": "C", "texto": "A injúria consiste em imputar fato ofensivo à reputação." },
+      { "letra": "D", "texto": "A difamação exige que o fato imputado seja falso." }
+    ],
+    "gabarito": "A"
+  },
+  {
+    "id": "dp_cal_q4",
+    "metadata": "Ano: 2021 | Banca: FGV | Órgão: OAB",
+    "enunciado": "Para a configuração do crime de calúnia, é necessário que a imputação falsa de fato criminoso seja feita:",
+    "alternativas": [
+      { "letra": "A", "texto": "Apenas na presença da vítima." },
+      { "letra": "B", "texto": "Perante autoridade policial, obrigatoriamente." },
+      { "letra": "C", "texto": "Na presença de várias pessoas, configurando publicidade." },
+      { "letra": "D", "texto": "Perante terceiro, não sendo necessário que seja perante várias pessoas." }
+    ],
+    "gabarito": "D"
+  }
+]
