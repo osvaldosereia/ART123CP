@@ -1,5 +1,5 @@
 // meujus service worker — cache shell, revalidate data
-const VER = 'v1';
+const VER = 'v2';
 const SHELL = [
 '/',
 '/index.html',
